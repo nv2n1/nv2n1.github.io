@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdwctype(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdwctype/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdwctype(3)</h1>
+
+
+
+
+
+<p>std::wctype - std::wctype</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cwctype&gt;
+    std::wctype_t wctype(const char *str);</code></pre> 
+<p>Constructs a value of type std::wctype_t that describes a LC_CTYPE category of wide character classification. It may be one of the standard classification categories, or a locale-specific category, such as &quot;jkanji&quot;.</p>
+<h2>Parameters</h2>
+<p>str - C string holding the name of the desired category</p>
+<p>The following values of str are supported in all C locales:</p>
+<p>value of str effect
+&quot;alnum&quot; identifies the category used by std::iswalnum
+&quot;alpha&quot; identifies the category used by std::iswalpha
+&quot;blank&quot; identifies the category used by std::iswblank <i>(C++11)</i>
+&quot;cntrl&quot; identifies the category used by std::iswcntrl
+&quot;digit&quot; identifies the category used by std::iswdigit
+&quot;graph&quot; identifies the category used by std::iswgraph
+&quot;lower&quot; identifies the category used by std::iswlower
+&quot;print&quot; identifies the category used by std::iswprint
+&quot;space&quot; identifies the category used by std::iswspace
+&quot;upper&quot; identifies the category used by std::iswupper
+&quot;xdigit&quot; identifies the category used by std::iswxdigit</p>
+<h2>Return value</h2>
+<p>std::wctype_t object suitable for use with std::iswctype to classify wide characters according to the named category of the current C locale or zero if str does not name a category supported by the current C locale.</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> classifies a wide character according to the specified LC_CTYPE category
+iswctype <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>l2tp-secrets(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-l2tp-secrets/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>l2tp-secrets(5)</h1>
+
+
+
+
+
+<p>l2tp-secrets - L2TPD secrets file</p>
+<h2>Description</h2>
+<p>The l2tp-secrets file contains challenge-response authentication information for xl2tpd, the implementation of l2tp protocol. The format of the file is derived from the pap and chap secrets file format used in pppd. The secrets file is composed of zero or more lines with 3 fields each. Each line represents an authentication secret. The 3 fields represent our hostname, the remote hostname and the secret used in the authentication process. The first field is for our hostname, a &quot;<em>&quot; may be used as a wildcard. The second field is for the remote system&rsquo;s hostname. Again, a &quot;</em>&quot; may be used as a wildcard. The third field is the secret used if the previous two fields match the hostnames of the systems involved. The secret should, ideally, be at 16 characters long (the length of an MD5 digest output), and should probably be longer to ensure sufficient security. There is no minimum length requirement, however.</p>
+<h2>Files</h2>
+<p>/etc/xl2tpd/xl2tpd.conf /etc/xl2tpd/l2tp-secrets /var/run/xl2tpd/l2tp-control</p>
+<h2>Bugs</h2>
+<p>Please address bugs and comment to xl2tpd [at] lists.xelerance.com</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-xl2tpd/">xl2tpd</a>(8) <a HREF="/docs/linux/man/5-xl2tpd-conf/">xl2tpd.conf</a>(5)</p>
+<h2>Authors</h2>
+<p>Michael Richardson &lt;mcr [at] xelerance.com&gt; Paul Wouters &lt;paul [at] xelerance.com&gt;</p>
+<p>Patched contributed by:
+ <wbr> <wbr>Jacco de Leeuw <wbr>&lt;jacco2 [at] dds.nl&gt;
+ <wbr> <wbr>Cedric Schieli <wbr>&lt;cschieli [at] gmail.com&gt;</p>
+<p>Previous development was hosted at sourceforge (<a rel="nofollow" HREF="http://www.sourceforge.net/projects/l2tpd)"><a href="http://www.sourceforge.net/projects/l2tpd">http://www.sourceforge.net/projects/l2tpd</a>)</a> by:</p>
+<p>Scott Balmos &lt;sbalmos [at] iglou.com&gt;
+David Stipp &lt;dstipp [at] one.net&gt;
+Jeff McAdams &lt;jeffm [at] iglou.com&gt;</p>
+<p>Based off of l2tpd version 0.60
+Copyright (C)1998 Adtran, Inc.
+Mark Spencer &lt;markster [at] marko.net&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_iio_trigger(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_iio_trigger – industrial I/O trigger device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_iio_trigger/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_iio_trigger(9)</h1>
+
+
+
+
+
+<p>struct_iio_trigger &#8211; industrial I/O trigger device</p>
+<h2>Synopsis</h2>
+<pre><code>struct iio_trigger {
+    const struct iio_trigger_ops *ops;
+    int id;
+    const char *name;
+    struct device dev;
+    struct list_head list;
+    struct list_head alloc_list;
+    atomic_t use_count;
+    struct irq_chip subirq_chip;
+    int subirq_base;
+    struct iio_subirq subirqs[CONFIG_IIO_CONSUMERS_PER_TRIGGER];
+    unsigned long pool[BITS_TO_LONGS(CONFIG_IIO_CONSUMERS_PER_TRIGGER)];
+    struct mutex pool_lock;
+    bool attached_own_device;
+};</code></pre>
+<h2>Members</h2>
+<p>ops</p>
+<dl>
+<dd>[DRIVER] operations structure</dd></dl>
+<p> id</p>
+<dl>
+<dd>[INTERN] unique id number</dd></dl>
+<p> name</p>
+<dl>
+<dd>[DRIVER] unique name</dd></dl>
+<p> dev</p>
+<dl>
+<dd>[DRIVER] associated device (if relevant)</dd></dl>
+<p> list</p>
+<dl>
+<dd>[INTERN] used in maintenance of global trigger list</dd></dl>
+<p> alloc_list</p>
+<dl>
+<dd>[DRIVER] used for driver specific trigger list</dd></dl>
+<p> use_count</p>
+<dl>
+<dd>use count for the trigger</dd></dl>
+<p> subirq_chip</p>
+<dl>
+<dd>[INTERN] associate &#8216;virtual&#8217; irq chip.</dd></dl>
+<p> subirq_base</p>
+<dl>
+<dd>[INTERN] base number for irqs provided by trigger.</dd></dl>
+<p> subirqs[CONFIG_IIO_CONSUMERS_PER_TRIGGER]</p>
+<dl>
+<dd>[INTERN] information about the &#8216;child&#8217; irqs.</dd></dl>
+<p> pool[BITS_TO_LONGS(CONFIG_IIO_CONSUMERS_PER_TRIGGER)]</p>
+<dl>
+<dd>[INTERN] bitmap of irqs currently in use.</dd></dl>
+<p> pool_lock</p>
+<dl>
+<dd>[INTERN] protection of the irq pool.</dd></dl>
+<p> attached_own_device</p>
+<dl>
+<dd>[INTERN] if we are using our own device as trigger, i.e. if we registered a poll function to the same device as the one providing the trigger.</dd></dl>
+<h2>Author</h2>
+<p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

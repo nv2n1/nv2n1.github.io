@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbsearch(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbsearch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbsearch(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::bsearch - std::bsearch</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdlib&gt;
+    void *bsearch(const void *key, const void *ptr, std::size_t count,
+                  std::size_t size, /*compare-pred*/ *comp);
+(1)
+    void *bsearch(const void *key, const void *ptr, std::size_t count,
+                  std::size_t size, /*c-compare-pred*/ *comp);
+extern &quot;C++&quot; using /*compare-pred*/ = int(const void *, const void *); // exposition-only (2)
+extern &quot;C&quot; using /*c-compare-pred*/ = int(const void *, const void *); // exposition-only</code></pre> 
+<p>Finds an element equal to element pointed to by key in an array pointed to by ptr. The array contains count elements of size bytes each and must be partitioned with respect to the object pointed to by key, that is, all the elements that compare less than must appear before all the elements that compare equal to, and those must appear before all the elements that compare greater than the key object. A fully sorted array satisfies these requirements. The elements are compared using function pointed to by comp.
+The behavior is undefined if the array is not already partitioned in ascending order with respect to key, according to the same criterion that comp uses.
+If the array contains several elements that comp would indicate as equal to the element searched for, then it is unspecified which element the function will return as the result.</p>
+<h2>Parameters</h2>
+<p>key - pointer to the element to search for
+ptr - pointer to the array to examine
+count - number of element in the array
+size - size of each element in the array in bytes
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> comparison function which returns a negative integer value if the first argument is less than the second,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> a positive integer value if the first argument is greater than the second and zero if the arguments are equal. key is passed as the first argument, an element from the array as the second.
+comp - The signature of the comparison function should be equivalent to the following:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> int cmp(const void *a, const void *b);
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> The function must not modify the objects passed to it and must return consistent results when called for the same objects, regardless of their positions in the array.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </p>
+<h2>Return value</h2>
+<p>Pointer to the found element or null pointer if the element has not been found.</p>
+<h2>Notes</h2>
+<p>Despite the name, neither C nor POSIX standards require this function to be implemented using binary search or make any complexity guarantees.
+The two overloads provided by the C++ standard library are distinct because the types of the parameter comp are distinct (language_linkage is part of its type)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+int compare(const void *ap, const void *bp)
+{
+const int *a = (int *)ap;
+const int *b = (int *)bp;
+if (*a &lt; *b)
+return -1;
+else if (*a &gt; *b)
+return 1;
+else
+return 0;
+}
+int main(int argc, char **argv)
+{
+const int ARR_SIZE = 8;
+int arr[ARR_SIZE] = {1, 2, 3, 4, 5, 6, 7, 8};
+int key1 = 4;
+int *p1 = (int *)std::bsearch(&amp;key1, arr, ARR_SIZE, sizeof(arr[0]), compare);
+if (p1)
+std::cout &lt;&lt; &quot;value &quot; &lt;&lt; key1 &lt;&lt; &quot; found at position &quot; &lt;&lt; (p1 - arr) &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &quot;value &quot; &lt;&lt; key1 &lt;&lt; &quot; not found\n&quot;;
+int key2 = 9;
+int *p2 = (int *)std::bsearch(&amp;key2, arr, ARR_SIZE, sizeof(arr[0]), compare);
+if (p2)
+std::cout &lt;&lt; &quot;value &quot; &lt;&lt; key2 &lt;&lt; &quot; found at position &quot; &lt;&lt; (p2 - arr) &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &quot;value &quot; &lt;&lt; key2 &lt;&lt; &quot; not found\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> value 4 found at position 3
+ <wbr> value 9 not found</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sorts a range of elements with unspecified type
+qsort <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns range of elements matching a specific key
+equal_range <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smmapd(8) · Linux Manual Pages</title>
+<meta name="description" content="SMMAPD – Sendmail socket map daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-smmapd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>smmapd(8)</h1>
+
+
+
+
+
+<p>&nbsp;<wbr>*</p>
+<h2>Name</h2>
+<p>SMMAPD &#8211; Sendmail socket map daemon</p>
+<h2>Synopsis</h2>
+<p><code>smmapd</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] </p>
+<p>&nbsp;<wbr>[ <code>-D</code> ]</p>
+<h2>Description</h2>
+<p><code>SMMAPD</code> is a Sendmail socket map daemon which is used to verify that a Cyrus mailbox exists, that it is postable and it is under quota. It accepts commands on its standard input and responds on its standard output. It MUST be invoked by <i><a href="/docs/linux/man/8-master/">master</a></i>(8) with those descriptors attached to a remote client connection. </p>
+<p> <code>SMMAPD</code> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-U</code><i> uses</i></dt>
+<dd>The maximum number of times that the process should be used for new connections before shutting down. The default is 250.</dd>
+<dt><code>-T</code><i> timeout</i></dt>
+<dd>The number of seconds that the process will wait for a new connection before shutting down. Note that a value of 0 (zero) will disable the timeout. The default is 60.</dd>
+<dt><code>-D</code></dt>
+<dd>Run external debugger specified in debug_command.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd>Default configuration file.</dd>
+<dt><code>/etc/cyrus.conf</code></dt>
+<dd>Cyrus Master process configuration file. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

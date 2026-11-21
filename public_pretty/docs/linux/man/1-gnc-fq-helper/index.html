@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnc-fq-helper(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gnc-fq-helper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gnc-fq-helper(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>gnc-fq-helper - allows gnucash to communicate with Finance::Quote
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>over pipes from guile. The requests and responses
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>are scheme forms.</p>
+<h2>SYNOPSIS</h2>
+<p>gnc-fq-helper</p>
+<h2>DESCRIPTION</h2>
+<p>Input: (on standard input - one entry per line and one line per entry, and double quotes must only be delimiters, not string content &mdash; remember, we don&rsquo;t have a real scheme parser on the perl side :&gt;).</p>
+<p>(&lt;method-name&gt; symbol symbol symbol &hellip;)</p>
+<p>where &lt;method-name&gt; indicates the desired Finance::Quote method. The currently recognized subset is yahoo, yahoo_europe, fidelity_direct, troweprice_direct, vanguard, asx, tiaacref, and currency.</p>
+<p>For currency quotes, the symbols alternate between the &lsquo;from&rsquo; and &rsquo;to&rsquo; currencies.</p>
+<p>For example:</p>
+<p>(yahoo <code>&lt;font SIZE=&quot;-1&quot;&gt;IBM&lt;/font&gt;'' </code><font SIZE="-1">LNUX</font>&rsquo;&rsquo;) (fidelity_direct <code>&lt;font SIZE=&quot;-1&quot;&gt;FBIOX&lt;/font&gt;'' </code><font SIZE="-1">FSELX</font>&rsquo;&rsquo;) (currency <code>&lt;font SIZE=&quot;-1&quot;&gt;USD&lt;/font&gt;'' </code><font SIZE="-1">AUD</font>&rsquo;&rsquo;)</p>
+<p>Output (on standard output, one output form per input line):</p>
+<p>Schemified version of gnc-fq&rsquo;s output, basically an alist of alists, as in the example below. Right now, only the fields that this script knows about (and knows how to convert to scheme) are returned, so the conversion function will have to be updated whenever Finance::Quote changes. Currently you&rsquo;ll get symbol, gnc:time-no-zone, and currency, and either last, nav, or price. Fields with gnc: prefixes are non-Finance::Quote fields. gnc:time-no-zone is returned as a string of the form ``YYYY-MM-DD <font SIZE="-1">HH:MM:SS</font>&rsquo;&rsquo;, basically the unmolested (and underspecified) output of the quote source. It&rsquo;s up to you to know what it&rsquo;s proper timezone really is. i.e. if you know the time was in America/Chicago, you&rsquo;ll need to convert it to that.</p>
+<p>For example:</p>
+ <pre>
+ $ echo '(yahoo &quot;CSCO&quot; &quot;JDSU&quot; &quot;^IXIC&quot;)' | ./gnc-fq-helper
+((&quot;CSCO&quot; (symbol . &quot;CSCO&quot;)
+         (gnc:time-no-zone . &quot;2001-03-13 19:27:00&quot;)
+         (last . 20.375)
+         (currency . &quot;USD&quot;))
+ (&quot;JDSU&quot; (symbol . &quot;JDSU&quot;)
+         (gnc:time-no-zone . &quot;2001-03-13 19:27:00&quot;)
+         (last . 23.5625)
+         (currency . &quot;USD&quot;))
+(&quot;^IXIC&quot; (symbol . ^IXIC)
+         (gnc:time-no-zone . 2002-12-04 17:16:00)
+         (last . 1430.35)
+         (currency . failed-conversion)))
+</pre> 
+<p>On error, the overall result may be #f, or on individual errors, the list sub-item for a given symbol may be #f, like this:</p>
+ <pre>
+ $ echo '(yahoo &quot;CSCO&quot; &quot;JDSU&quot;)' | ./gnc-fq-helper
+(#f
+ (&quot;JDSU&quot; (symbol . &quot;JDSU&quot;)
+         (gnc:time-no-zone . &quot;2001-03-13 19:27:00&quot;)
+         (last . 23.5625)
+         (currency . &quot;USD&quot;)))
+</pre> 
+<p>further, errors may be stored with each quote as indicated in Finance::Quote, and whenever the conversion to scheme data fails, the field will have the value &lsquo;failed-conversion, and accordingly this symbol will never be a legitimate conversion.</p>
+<p>Exit status</p>
+<p>0 - success non-zero - failure</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

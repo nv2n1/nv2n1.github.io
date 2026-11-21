@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fwb_pix(1) · Linux Manual Pages</title>
+<meta name="description" content="fwb_ipt – Policy compiler for Cisco PIX">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fwb_pix/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fwb_pix(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> fwb_ipt &#8211; Policy compiler for Cisco PIX</p>
+<h2>SYNOPSIS</h2>
+<p> <code>fwb_pix</code> <code>[-vVi]</code> <code>[-d wdir]</code> <code>-f data_file.xml</code> object_name </p>
+<h2>DESCRIPTION</h2>
+<p> <code>fwb_pix</code> is firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates resultant Cisco PIX configuration file. The configuration is written to the file with the name the same as the name of the firewall object, plus extension &quot;.fw&quot;. </p>
+<p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-f FILE</dt>
+<dd> Specify the name of the data file to be processed. </dd>
+<dt>-d wdir</dt>
+<dd> Specify working directory. Compiler creates file with PIX configuration in this directory. If this parameter is missing, then PIX configuration will be placed in the current working directory. </dd>
+<dt>-v</dt>
+<dd> Be verbose: compiler prints diagnostic messages when it works. </dd>
+<dt>-V</dt>
+<dd> Print version number and quit. </dd>
+<dt>-i</dt>
+<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </dd>
+</dl>
+<h2>URL</h2>
+<p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>
+<h2>BUGS</h2>
+<p> Please report bugs using bug tracking system on SourceForge: </p>
+<p> <code><a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=5314">http://sourceforge.net/tracker/?group_id=5314</a>&amp;atid=105314</code> </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1),</code> <code><a href="/docs/linux/man/1-fwb_ipf/">fwb_ipf</a>(1),</code> <code><a href="/docs/linux/man/1-fwb_ipt/">fwb_ipt</a>(1)</code> <code><a href="/docs/linux/man/1-fwb_pf/">fwb_pf</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

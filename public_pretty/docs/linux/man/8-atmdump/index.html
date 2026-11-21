@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>atmdump(8) · Linux Manual Pages</title>
+<meta name="description" content="atmdump – capture or generate ATM cells">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-atmdump/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>atmdump(8)</h1>
+
+
+
+
+
+<p>atmdump &#8211; capture or generate ATM cells</p>
+<h2>Synopsis</h2>
+<p><code>atmdump</code> [<code>-i</code>] [ <code>-t&nbsp;<wbr></code><i>type</i> [<code>-g&nbsp;<wbr></code><i>gfc</i>] [<code>-c</code>] ] [<i>itf</i>.]<i>vpi</i>.<i>vci</i></p>
+<h2>Description</h2>
+<p><code>atmdump</code> captures or generates single ATM cells (&quot;AAL0&quot;). When capturing cells, a time stamp, the cell header contents, and a hex dump of the cell payload are shown. When sending cells, the payload type, the generic flow control (GFC), and the cell loss priority (CLP) can be set. </p>
+<p> In both modes of operation, the interface number, the VPI, and the VCI have to be specified. </p>
+<p> When sending, <code>atmdump</code> expects the cell payload on standard input. If only less than 48 bytes can be read, the remaining space is padded with zero bytes.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i</code></dt>
+<dd>displays timestamps as the interval since the last cell reception. By default, the absolute time is displayed. This options is ignored in transmit mode.</dd>
+<dt><code>-t&nbsp;<wbr></code><i>type</i></dt>
+<dd>selects transmit mode and specifies the payload type. A list of valid payload type numbers can be obtained by invoking <code>atmdump</code> without any arguments.</dd>
+<dt><code>-g&nbsp;<wbr></code><i>gfc</i></dt>
+<dd>specifies the value of the GFC field. <i>gfc</i> has to be in the range from 0 to 15, default is zero.</dd>
+<dt><code>-c</code></dt>
+<dd>sets the cell loss priority flag, indicating low priority. By default, CLP is not set.</dd></dl>
+<h2>Restrictions</h2>
+<p>Some device drivers may not pass OAM cells transparently.</p>
+<h2>Author</h2>
+<p>Werner Almesberger, EPFL ICA &lt;Werner.Almesberger [at] epfl.ch&gt;</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-atmdiag/">atmdiag</a>(8), clip(8), sonetdiag(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

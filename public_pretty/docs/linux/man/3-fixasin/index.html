@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fixasin(3) · Linux Manual Pages</title>
+<meta name="description" content="fixasin – Fixed point inverse sine lookup table. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fixasin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fixasin(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> fixasin &#8211; Fixed point inverse sine lookup table. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>fixed fixasin(fixed x);</code></p>
+<h2>DESCRIPTION</h2>
+<p> This function finds the inverse sine of a value using a lookup table. The input value must be a fixed point value. The inverse sine is defined only in the domain from `-1&#8242; to `1&#8242;. Outside of this input range, the function will set `errno&#8217; to EDOM and return zero. Example: </p>
+<pre><code>
+float angle;
+fixed val;
+/* Sets `val' to a right binary angle (`64'). */
+val = fixasin(itofix(1));
+/* Sets `angle' to 0.2405. */
+angle = fixtof(fixmul(fixasin(ftofix(0.238)), fixtorad_r));
+/* This will trigger the assert. */
+val = fixasin(ftofix(-1.09));
+ASSERT(!errno);
+</code></pre>
+<h2>RETURN VALUE</h2>
+<p> Returns the inverse sine of a fixed point value, measured as fixed point binary format angle, or zero if the input was out of the range. All return values of this function will be in the range `-64&#8242; to `64&#8242;. </p>
+<h2>SEE ALSO</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

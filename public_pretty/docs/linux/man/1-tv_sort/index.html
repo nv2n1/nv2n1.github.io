@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tv_sort(1) · Linux Manual Pages</title>
+<meta name="description" content="tv_sort – Sort XMLTV listings files by date, and add stop times.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tv_sort/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tv_sort(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tv_sort &#8211; Sort XMLTV listings files by date, and add stop times. </p>
+<h2>SYNOPSIS</h2>
+<p> tv_sort [&#8211;help] [&#8211;by-channel] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
+<p> Read <font SIZE="-1">XMLTV</font> data and write out the same data sorted in date order. Where stop times of programmes are missing, guess them from the start time of the next programme on the same channel. For the last programme of a channel, no stop time can be added. </p>
+<p> Tv_sort also performs some sanity checks such as making sure no two programmes on the same channel overlap. </p>
+<p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>
+<p> <code>&#8211;by-channel</code> sort first by channel id, then by date within each<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>channel. </p>
+<p> <code>&#8211;duplicate-error</code> If the input contains the same programme more than once,<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>consider this as an error. Default is to silently<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ignore duplicate entries. </p>
+<p> The time sorting is by start time, then by stop time. Without <code>&#8211;by-channel</code>, if start times and stop times are equal then two programmes are sorted by internal channel id. With <code>&#8211;by-channel</code>, channel id is compared first and then times. </p>
+<p> You can think of tv_sort as converting <font SIZE="-1">XMLTV</font> data into a canonical form, useful for diffing two files.</p>
+<h2>EXAMPLES</h2>
+<p> At a typical Unix shell or Windows command prompt:</p>
+<dl>
+<dt>tv_sort &lt;in.xml &gt;out.xml</dt>
+<dd>
+</dd><dt>tv_sort in.xml &#8211;output out.xml</dt>
+<dd></dd></dl>
+<p> These are different ways of saying the same thing.</p>
+<h2>AUTHOR</h2>
+<p> Ed Avis, ed [at] membled.com </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

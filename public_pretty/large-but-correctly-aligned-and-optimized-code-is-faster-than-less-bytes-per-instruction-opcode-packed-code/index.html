@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code alignment matters more than code size for performance - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/large-but-correctly-aligned-and-optimized-code-is-faster-than-less-bytes-per-instruction-opcode-packed-code/">
+  <meta name="description" content="The conventional wisdom that smaller code is always better has been thoroughly invalidated on modern processors. A statement from kernel development circles …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Code alignment matters more than code size for performance">
+  <meta property="og:url" content="https://www.systutorials.com/large-but-correctly-aligned-and-optimized-code-is-faster-than-less-bytes-per-instruction-opcode-packed-code/">
+  <meta property="og:description" content="The conventional wisdom that smaller code is always better has been thoroughly invalidated on modern processors. A statement from kernel development circles …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Code alignment matters more than code size for performance</h1>
+        <time class="post-date" datetime="2018-03-24T07:56:40Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The conventional wisdom that smaller code is always better has been thoroughly invalidated on modern processors. A statement from kernel development circles captured this well: for performance-critical paths like interrupt handlers, large-but-correctly-aligned-and-optimized code consistently outperforms byte-packed alternatives.</p>
+<p>Consider this comparison:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">eax</span><span class="p">,</span> <span class="p">[</span><span class="no">foo</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">add</span> <span class="no">eax</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="p">[</span><span class="no">foo</span><span class="p">],</span> <span class="no">eax</span>
+</span></span></code></pre></div><p>versus:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">inc</span> <span class="p">[</span><span class="no">foo</span><span class="p">]</span>
+</span></span></code></pre></div><p>The three-instruction sequence is faster on contemporary CPUs, despite being larger. This counterintuitive result stems from how modern processors actually execute code.</p>
+<h2 id="why-alignment-and-decoded-instruction-cache-matter">Why Alignment and Decoded Instruction Cache Matter</h2>
+<p>Modern x86-64 CPUs don’t execute raw bytes—they execute decoded micro-operations (µops). The instruction decoder itself is a bottleneck. When instructions are misaligned or tightly packed, the decoder must work harder:</p>
+<ul>
+<li><strong>Instruction boundaries become ambiguous</strong>: The decoder must track where one instruction ends and the next begins, consuming decode cycles</li>
+<li><strong>Decoded µop cache misses increase</strong>: CPUs like recent Intel and AMD designs cache decoded instructions. Poor alignment reduces hit rates</li>
+<li><strong>Front-end stalls occur</strong>: When the decoder can’t keep up, the pipeline stalls waiting for the next batch of µops</li>
+</ul>
+<p>The <code>inc [foo]</code> instruction, while shorter, requires a memory read-modify-write cycle with additional complexity. The three-instruction sequence allows the CPU to:</p>
+<ul>
+<li>Fetch <code>mov eax, [foo]</code> cleanly</li>
+<li>Process <code>add eax, 1</code> as a simple ALU operation</li>
+<li>Write back with <code>mov [foo], eax</code></li>
+</ul>
+<h2 id="alignment-in-practice">Alignment in Practice</h2>
+<p>Proper alignment means:</p>
+<ul>
+<li><strong>Function entry points</strong>: Align to 16 bytes for modern CPUs (some benefit from 32-byte alignment)</li>
+<li><strong>Loop headers</strong>: Align hot loops to 16-byte boundaries</li>
+<li><strong>Branch targets</strong>: Align jump destinations when possible</li>
+</ul>
+<p>Use compiler flags to enforce this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -O3 -falign-functions<span class="o">=</span><span class="m">16</span> -falign-loops<span class="o">=</span><span class="m">16</span> code.c
+</span></span><span class="line"><span class="cl">clang -O3 -falign-functions<span class="o">=</span><span class="m">16</span> -falign-loops<span class="o">=</span><span class="m">16</span> code.c
+</span></span></code></pre></div><h2 id="instruction-selection-and-front-end-throughput">Instruction Selection and Front-End Throughput</h2>
+<p>The three-instruction sequence wins because:</p>
+<ul>
+<li>Each instruction decodes independently without stalling the decoder</li>
+<li>The CPU can execute them in parallel through superscalar execution</li>
+<li>Register pressure is lighter (data flows through <code>eax</code>)</li>
+<li>Memory dependencies are explicit and easier for the CPU to predict</li>
+</ul>
+<p>The <code>inc [foo]</code> variant creates a memory dependency that serializes execution and forces the decoder to handle a more complex instruction form.</p>
+<h2 id="real-world-impact-interrupt-handlers">Real-World Impact: Interrupt Handlers</h2>
+<p>Interrupt handlers exemplify where this matters. They run in privileged mode where:</p>
+<ul>
+<li>Cache hierarchies may be less predictable</li>
+<li>Context switches are expensive</li>
+<li>Latency is critical</li>
+<li>Code paths must be optimized for common cases</li>
+</ul>
+<p>An interrupt handler saving registers might use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="p">[</span><span class="no">rsp</span> <span class="p">-</span> <span class="mi">8</span><span class="p">],</span> <span class="no">rax</span>      <span class="c1">; align store
+</span></span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="p">[</span><span class="no">rsp</span> <span class="p">-</span> <span class="mi">16</span><span class="p">],</span> <span class="no">rcx</span>     <span class="c1">; separate instructions
+</span></span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="p">[</span><span class="no">rsp</span> <span class="p">-</span> <span class="mi">24</span><span class="p">],</span> <span class="no">rdx</span>
+</span></span></code></pre></div><p>Rather than attempting to pack these into fewer bytes, explicit alignment ensures the front-end never stalls.</p>
+<h2 id="modern-compiler-behavior">Modern Compiler Behavior</h2>
+<p>Modern compilers (GCC 11+, Clang 13+) generally understand these principles and will:</p>
+<ul>
+<li>Avoid <code>inc [mem]</code> and <code>dec [mem]</code> forms in favor of load-modify-store</li>
+<li>Maintain alignment automatically with <code>-O3</code></li>
+<li>Use profile-guided optimization (PGO) to align hot paths</li>
+</ul>
+<p>Hand-written assembly should follow the same logic. Benchmarking with <code>perf</code> will confirm:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">perf stat -e cycles,instructions,stalled-cycles-frontend ./your_binary
+</span></span></code></pre></div><p>If stalled-cycles-frontend is high relative to total cycles, you likely have front-end pressure from misalignment or dense packing.</p>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>On processors from the last decade onward, code density is rarely the limiting factor. The instruction decoder and µop cache are far more constrained than instruction bandwidth. Larger, well-aligned code that respects instruction boundaries outperforms shorter, tightly-packed alternatives in real workloads.</p>
+<p>This principle applies beyond interrupts: it matters for any latency-sensitive code path where front-end efficiency determines throughput. When optimizing, measure with <code>perf</code>, profile with hardware counters, and don’t assume smaller is faster.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

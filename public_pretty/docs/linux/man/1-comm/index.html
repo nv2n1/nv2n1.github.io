@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>comm(1) · Linux Manual Pages</title>
+<meta name="description" content="comm – compare two sorted files line by line">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-comm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>comm(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> comm &#8211; compare two sorted files line by line </p>
+<h2>SYNOPSIS</h2>
+<p> <code>comm</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>
+<h2>DESCRIPTION</h2>
+<p> Compare sorted files FILE1 and FILE2 line by line. </p>
+<p> When FILE1 or FILE2 (not both) is -, read standard input. </p>
+<p> With no options, produce three-column output. Column one contains lines unique to FILE1, column two contains lines unique to FILE2, and column three contains lines common to both files.</p>
+<dl>
+<dt><code>-1</code></dt>
+<dd> suppress column 1 (lines unique to FILE1)</dd>
+<dt><code>-2</code></dt>
+<dd> suppress column 2 (lines unique to FILE2)</dd>
+<dt><code>-3</code></dt>
+<dd> suppress column 3 (lines that appear in both files)</dd>
+<dt><code>&#8211;check-order</code></dt>
+<dd> check that the input is correctly sorted, even if all input lines are pairable</dd>
+<dt><code>&#8211;nocheck-order</code></dt>
+<dd> do not check that the input is correctly sorted</dd>
+<dt><code>&#8211;output-delimiter</code>=<i>,STR/</i></dt>
+<dd> separate columns with STR</dd>
+<dt><code>&#8211;total</code></dt>
+<dd> output a summary</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<p> Note, comparisons honor the rules specified by &#8216;LC_COLLATE&#8217;.</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>comm -12 file1 file2</dt>
+<dd> Print only lines present in both file1 and file2.</dd>
+<dt>comm -3 file1 file2</dt>
+<dd> Print lines in file1 not in file2, and vice versa.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Richard M. Stallman and David MacKenzie.</p>
+<h2>REPORTING BUGS</h2>
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-join/">join</a>(1), <a href="/docs/linux/man/1-uniq/">uniq</a>(1) </p>
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/comm">https://www.gnu.org/software/coreutils/comm</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) comm invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

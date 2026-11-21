@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_share(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_SHARE – specify share handle to use">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_share/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_share(3)</h1>
+
+
+
+
+
+<p>CURLOPT_SHARE &#8211; specify share handle to use</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_SHARE, CURLSH *share);</p>
+<h2>Description</h2>
+<p>Pass a <i>share</i> handle as a parameter. The share handle must have been created by a previous call to <i><a href="/docs/linux/man/3-curl_share_init/">curl_share_init</a>(3)</i>. Setting this option, will make this curl handle use the data from the shared handle instead of keeping the data to itself. This enables several curl handles to share data. If the curl handles are used simultaneously in multiple threads, you <code>MUST</code> use the locking methods in the share handle. See <i><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a>(3)</i> for details. </p>
+<p> If you add a share that is set to share cookies, your easy handle will use that cookie cache and get the cookie engine enabled. If you unshare an object that was using cookies (or change to another object that doesn&#8217;t share cookies), the easy handle will get its cookie engine disabled. </p>
+<p> Data that the share object is not set to share will be dealt with the usual way, as if no share was used. </p>
+<p> Set this option to NULL again to stop using that share object.</p>
+<h2>Default</h2>
+<p>NULL</p>
+<h2>Protocols</h2>
+<p>All</p>
+<h2>Example</h2>
+<p>TODO</p>
+<h2>Availability</h2>
+<p>Always</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_cookie/">CURLOPT_COOKIE</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

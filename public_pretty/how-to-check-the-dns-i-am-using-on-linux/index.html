@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Check Your DNS Server on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-check-the-dns-i-am-using-on-linux/">
+  <meta name="description" content="When you run cat /etc/resolv.conf on a modern Linux system, you’ll often see nameserver 127.0.0.1 or 127.0.1.1 pointing to localhost. This doesn’t mean you’re …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Check Your DNS Server on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-check-the-dns-i-am-using-on-linux/">
+  <meta property="og:description" content="When you run cat /etc/resolv.conf on a modern Linux system, you’ll often see nameserver 127.0.0.1 or 127.0.1.1 pointing to localhost. This doesn’t mean you’re …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>How to Check Your DNS Server on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:35Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you run <code>cat /etc/resolv.conf</code> on a modern Linux system, you’ll often see <code>nameserver 127.0.0.1</code> or <code>127.0.1.1</code> pointing to localhost. This doesn’t mean you’re actually using your ISP’s DNS directly — it usually means your system is running a local DNS stub resolver or caching service like systemd-resolved or dnsmasq. To find out which actual upstream DNS servers you’re using, you need to look elsewhere.</p>
+<h2 id="using-systemd-resolved-most-common">Using systemd-resolved (Most Common)</h2>
+<p>Most modern Linux distributions now use <strong>systemd-resolved</strong> instead of traditional resolv.conf. Check your DNS configuration with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl status
+</span></span></code></pre></div><p>This shows your configured DNS servers, search domains, and DNSSEC status. For a specific interface:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl status eth0
+</span></span></code></pre></div><p>You can also query DNS resolution statistics:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl statistics
+</span></span></code></pre></div><h2 id="using-networkmanager">Using NetworkManager</h2>
+<p>If you’re on a system with NetworkManager (common on Ubuntu, Fedora, and Mint):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli device show <span class="p">|</span> grep IP4.DNS
+</span></span></code></pre></div><p>This displays the DNS servers for all network interfaces. For a specific connection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli connection show <span class="s2">&#34;Your Connection Name&#34;</span> <span class="p">|</span> grep ipv4.dns
+</span></span></code></pre></div><p>The older <code>nm-tool</code> command is deprecated and no longer available in current versions.</p>
+<h2 id="reading-systemd-resolved-configuration">Reading systemd-resolved Configuration</h2>
+<p>Check what DNS servers systemd-resolved is actually using:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/systemd/resolved.conf
+</span></span></code></pre></div><p>Look for the <code>DNS=</code> and <code>FallbackDNS=</code> lines. If they’re commented out, your system uses DHCP-provided DNS servers (set by your network).</p>
+<h2 id="checking-dhcp-provided-dns">Checking DHCP-Provided DNS</h2>
+<p>If your system gets DNS from DHCP, inspect what your DHCP client received:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -i nameserver /var/lib/dhcp/dhclient.eth0.leases <span class="p">|</span> tail -1
+</span></span></code></pre></div><p>Replace <code>eth0</code> with your interface name. For systemd-networkd:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">networkctl status eth0
+</span></span></code></pre></div><h2 id="testing-dns-resolution">Testing DNS Resolution</h2>
+<p>Verify which server actually handles your DNS queries:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig @127.0.0.1 example.com +short
+</span></span></code></pre></div><p>Or trace the full resolution path:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig example.com +trace
+</span></span></code></pre></div><p>For a quick check of all configured resolvers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">getent ahosts example.com
+</span></span></code></pre></div><h2 id="temporary-dns-override">Temporary DNS Override</h2>
+<p>To test a different DNS server without changing your configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolvectl query --server 8.8.8.8 example.com
+</span></span></code></pre></div><p>Or with dig:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig @8.8.8.8 example.com
+</span></span></code></pre></div><h2 id="common-dns-services">Common DNS Services</h2>
+<ul>
+<li><strong>systemd-resolved</strong>: Default on most modern distributions</li>
+<li><strong>dnsmasq</strong>: Often used with NetworkManager for caching</li>
+<li><strong>unbound</strong>: A validating, recursive, and caching DNS resolver</li>
+<li><strong>bind</strong>: Full-featured DNS server (overkill for most desktops)</li>
+</ul>
+<p>Most desktop systems run a local stub resolver that caches queries and forwards unknown records to your ISP’s DNS or a public resolver like Cloudflare (1.1.1.1) or Google (8.8.8.8).</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

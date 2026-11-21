@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beakerlib-journal(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-beakerlib-journal/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>beakerlib-journal(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>BeakerLib - journal - journalling functionality</p>
+<h2>DESCRIPTION</h2>
+<p>Routines for initializing the journalling features and pretty printing journal contents.</p>
+<h2>FUNCTIONS</h2>
+<h3>Journalling</h3>
+<p><i>rlJournalStart</i></p>
+<p>Initialize the journal file.</p>
+ <pre>
+    rlJournalStart
+</pre> 
+<p>Run on the very beginning of your script to initialize journalling functionality.</p>
+<p><i>rlJournalEnd</i></p>
+<p>Summarize the test run and upload the journal file.</p>
+ <pre>
+    rlJournalEnd
+</pre> 
+<p>Run on the very end of your script to print summary of the whole test run, generate <font SIZE="-1">OUTPUTFILE</font> and include journal in Beaker logs.</p>
+<p><i>rlJournalPrint</i></p>
+<p>Print the content of the journal in pretty xml format.</p>
+ <pre>
+    rlJournalPrint [type]
+</pre>
+<dl>
+<dt>type
+</dt><dd> Can be either 'raw' or 'pretty', with the latter as a default. Raw: xml is in raw form, no indentation etc Pretty: xml is pretty printed, indented, with one record per line</dd></dl>
+<p>Example:</p>
+ <pre><code>
+    &lt;?xml version="1.0"?&gt;
+    &lt;BEAKER_TEST&gt;
+      &lt;test_id&gt;debugging&lt;/test_id&gt;
+      &lt;package&gt;setup&lt;/package&gt;
+      &lt;pkgdetails&gt;setup-2.8.9-1.fc12.noarch&lt;/pkgdetails&gt;
+      &lt;starttime&gt;2010-02-08 15:17:47&lt;/starttime&gt;
+      &lt;endtime&gt;2010-02-08 15:17:47&lt;/endtime&gt;
+      &lt;testname&gt;/examples/beakerlib/Sanity/simple&lt;/testname&gt;
+      &lt;release&gt;Fedora release 12 (Constantine)&lt;/release&gt;
+      &lt;hostname&gt;localhost&lt;/hostname&gt;
+      &lt;arch&gt;i686&lt;/arch&gt;
+      &lt;purpose&gt;PURPOSE of /examples/beakerlib/Sanity/simple
+        Description: Minimal BeakerLib sanity test
+        Author: Petr Splichal &amp;lt;psplicha [at] redhat.com&amp;gt;
+        This is a minimal sanity test for BeakerLib. It contains a single
+        phase with a couple of asserts. We Just check that the "setup"
+        package is installed and that there is a sane /etc/passwd file.
+      &lt;/purpose&gt;
+      &lt;log&gt;
+        &lt;phase endtime="2010-02-08 15:17:47" name="Test" result="PASS"
+                score="0" starttime="2010-02-08 15:17:47" type="FAIL"&gt;
+          &lt;test message="Checking for the presence of setup rpm"&gt;PASS&lt;/test&gt;
+          &lt;test message="File /etc/passwd should exist"&gt;PASS&lt;/test&gt;
+          &lt;test message="File '/etc/passwd' should contain 'root'"&gt;PASS&lt;/test&gt;
+        &lt;/phase&gt;
+      &lt;/log&gt;
+    &lt;/BEAKER_TEST&gt;
+</code></pre> 
+<p><i>rlJournalPrintText</i></p>
+<p>Print the content of the journal in pretty text format.</p>
+ <pre>
+    rlJournalPrintText [--full-journal]
+</pre>
+<dl>
+<dt>--full-journal
+</dt><dd> With this option, additional items like some <font SIZE="-1">HW</font> information will be printed in the journal.</dd></dl>
+<p>Example:</p>
+ <pre><code>
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :: [   LOG    ] :: TEST PROTOCOL
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :: [   LOG    ] :: Test run ID   : debugging
+    :: [   LOG    ] :: Package       : debugging
+    :: [   LOG    ] :: Test started  : 2010-02-08 14:45:57
+    :: [   LOG    ] :: Test finished : 2010-02-08 14:45:58
+    :: [   LOG    ] :: Test name     :
+    :: [   LOG    ] :: Distro:       : Fedora release 12 (Constantine)
+    :: [   LOG    ] :: Hostname      : localhost
+    :: [   LOG    ] :: Architecture  : i686
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :: [   LOG    ] :: Test description
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    PURPOSE of /examples/beakerlib/Sanity/simple
+    Description: Minimal BeakerLib sanity test
+    Author: Petr Splichal &lt;psplicha [at] redhat.com&gt;
+    This is a minimal sanity test for BeakerLib. It contains a single
+    phase with a couple of asserts. We Just check that the "setup"
+    package is installed and that there is a sane /etc/passwd file.
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :: [   LOG    ] :: Test
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :: [   PASS   ] :: Checking for the presence of setup rpm
+    :: [   PASS   ] :: File /etc/passwd should exist
+    :: [   PASS   ] :: File '/etc/passwd' should contain 'root'
+    :: [   LOG    ] :: Duration: 1s
+    :: [   LOG    ] :: Assertions: 3 good, 0 bad
+    :: [   PASS   ] :: RESULT: Test
+</code></pre> 
+<p><i>rlGetTestState</i></p>
+<p>Returns number of failed asserts in so far, 255 if there are more then 255 failures.</p>
+ <pre>
+    rlGetTestState
+</pre> 
+<p><i>rlGetPhaseState</i></p>
+<p>Returns number of failed asserts in current phase so far, 255 if there are more then 255 failures.</p>
+ <pre>
+    rlGetPhaseState
+</pre>
+<h2>AUTHORS</h2>
+<dl>
+<dt>&bull;
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

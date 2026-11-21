@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_field_list(3) · Linux Manual Pages</title>
+<meta name="description" content="get_field_list — retrieve a list of fields in a dirfile">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-get_field_list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>get_field_list(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> get_field_list &#8212; retrieve a list of fields in a dirfile</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
+<dl>
+<dt> <code>const char **get_field_list(DIRFILE *</code><i>dirfile</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>get_field_list</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns a read-only list of names of the all fields defined in the database. Notably, this list does not include /META subfields. </dd>
+<p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
+<p> The array returned will be de-allocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3) and should not be de-allocated by the caller. The list returned should not be assumed to be in any particular order. The array is terminated by a NULL pointer. The number of strings in the array can be obtained from a call to <code><a href="/docs/linux/man/3-get_nfields/">get_nfields</a></code>(3). </p>
+<p> The caller may not modify any strings in the array, or the array itself. Doing so may cause database corruption. The pointer returned is guaranteed to be valid until <code>get_field_list</code>() is called again on the same DIRFILE object, or until the array is deallocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3). </p>
+<h2>RETURN VALUE</h2>
+<p> Upon successful completion, <code>get_field_list</code>() returns a pointer to an array of strings containing the names of all the fields defined in the dirfile database. On error it returns NULL and sets the dirfile error to a non-zero error value. Possible error values are:</p>
+<dl>
+<dt><code>GD_E_ALLOC</code></dt>
+<dd> The library was unable to allocate memory.</dd>
+<dt><code>GD_E_BAD_DIRFILE</code></dt>
+<dd> The supplied dirfile was invalid. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered can be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/3-get_field_list_by_type/">get_field_list_by_type</a></code>(3), <code><a href="/docs/linux/man/3-get_mfield_list/">get_mfield_list</a></code>(3), <code><a href="/docs/linux/man/3-get_nfields/">get_nfields</a></code>(3), <code><a href="/docs/linux/man/3-get_vector_list/">get_vector_list</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

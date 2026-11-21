@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_cpsps2(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_cpsps2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_cpsps2(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>CPSPS2 - Interpolates from an array of data on a &quot;sparse&quot; rectangular grid which is irregularly spaced in X and Y to an array of data on a &quot;dense&quot; rectangular grid and initializes contouring from the array on the dense grid. (By a &quot;sparse&quot; grid is meant one whose dimensions are smaller than one would like, so that contour lines constructed directly on it are composed of long straight segments.) CPSPS2 may be viewed as a data smoothing routine.</p>
+<h2>Synopsis</h2>&nbsp;<wbr>CALL CPSPS2&nbsp;<wbr>(XSPS, YSPS, ZSPS, KSPS, MSPS, NSPS, RWRK,&nbsp;<wbr> 
+ + LRWK, IWRK, LIWK, ZDAT, LZDT)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/ncargC.h&gt; 
+<p>void c_cpsps2 (float *xsps, float *ysps, float *zsps,
+int ksps, int msps, int nsps, float *rwrk, int lrwk,
+int *iwrk, int liwk, float *zdat, int lzdt)</p>
+<h2>Description</h2><dl COMPACT><dt>XSPS
+</dt><dd>(REAL array, dimensioned MSPS) is the array of X coordinates of the irregular rectangular grid. These must be in strictly increasing numerical order.
+</dd><dt>YSPS
+</dt><dd>(REAL array, dimensioned NSPS) is the array of Y coordinates of the irregular rectangular grid. These must be in strictly increasing numerical order.
+</dd><dt>ZSPS
+</dt><dd>(REAL array, dimensioned KSPS x n, where &quot;n&quot; is greater than or equal to NSPS, input) is the &quot;sparse&quot; array of data, from which the &quot;dense&quot; array is to be generated.
+</dd><dt>KSPS
+</dt><dd>(INTEGER, input) is the first dimension of the array ZSPS.
+</dd><dt>MSPS
+</dt><dd>(INTEGER, input) is the first dimension of the &quot;sparse&quot; array of data in ZSPS. MSPS must be less than or equal to KSPS.
+</dd><dt>NSPS
+</dt><dd>(INTEGER, input) is the second dimension of the &quot;sparse&quot; array of data in ZSPS. NSPS must be less than or equal to the declared second dimension of the array ZSPS.
+</dd><dt>RWRK
+</dt><dd>(REAL array, dimensioned LRWK, input/output) is the real work array.
+</dd><dt>LRWK
+</dt><dd>(INTEGER, input) is the length of RWRK.
+</dd><dt>IWRK
+</dt><dd>(INTEGER array, dimensioned LIWK, input/output) is the integer work array.
+</dd><dt>LIWK
+</dt><dd>(INTEGER, input) is the length of IWRK.
+</dd><dt>ZDAT
+</dt><dd>(REAL array, dimensioned LZDT, output) is the array in which the interpolated &quot;dense&quot; array of data is to be returned. The dimensions of the interpolated array may be supplied by the user or determined by Conpack, depending on the value of the parameter 'ZDS'. Note that, if Conpack determines the dimensions of the &quot;dense&quot; array, it will attempt to use an aspect ratio which is close to that implied by the value of the ratio
+</dd><dl COMPACT><dd>(XSPS(MSPS)-XSPS(1))/(YSPS(NSPS)-YSPS(1))</dd></dl><dt>LZDT
+</dt><dd>(INTEGER, input) is the length of ZDAT.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions, with the following exceptions: 
+<dl COMPACT><dt>zsps(l,ksps)
+</dt><dd>Dimensioned l by ksps, where l &le; nsps.
+</dd><dt>ksps
+</dt><dd>The second dimension of the array zsps.
+</dd><dt>msps
+</dt><dd>The second dimension of the sparse array of data in zsps. msps &le; ksps.
+</dd><dt>nsps
+</dt><dd>The first dimension of the sparse array of data in zsps. nsps &le; l, the declared first dimension of the array zsps.</dd></dl><h2>Usage</h2>CPSPS2 performs the same functions as CPRECT, but, in addition, it interpolates from a sparse array of data to a dense array of data. CPSPS2 does this by using the routines SURF1 and SURF2, from the package Fitpack, by Alan K. Cline, to fit bicubic splines under tension to the sparse array of data and to compute the dense grid of data that is returned to you. The tension on the spline surfaces is specified by the parameter 'T3D'. By default, CPSPS2 selects the dimensions of the dense array of data; if desired, you can specify these dimensions by setting the parameter 'ZDS' non-zero and the parameters 'ZD1', 'ZDM', and 'ZDN' to the desired values. In either case, once 'ZD1', 'ZDM', and 'ZDN' are set, they should not be reset by you until the contour plot is complete and a different contour plot is to be drawn. 
+<p>Because the routines SURF1 and SURF2 do not have a built-in special value feature, if the special value parameter &lsquo;SPV&rsquo; is set non-zero and the sparse array contains occurrences of that value, special action must be taken. The indices of the special values in the sparse array are saved in a part of the integer workspace array; the special values are then replaced by values interpolated from adjacent grid points and the resulting array is used to obtain the dense array; then, the special values in the sparse array are restored and the corresponding elements of the dense array are also given the special value.</p>
+<h2>Examples</h2>Use the ncargex command to see the following relevant example: ccpsps2.
+<h2>Access</h2>To use CPSPS2 or c_cpsps2, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
+<h2>Messages</h2>See the conpack man page for a description of all Conpack error messages and/or informational messages.
+<h2>See Also</h2>Online: conpack, cpback, cpchcf, cpchcl, cpchhl, cpchil, cpchll, cpcica, cpclam, cpcldm, cpcldr, cpcltr, cpcnrc, cpdrpl, cpezct, cpgetc, cpgeti, cpgetr, cplbam, cplbdr, cpmpxy, cpmviw, cpmvrw, cppkcl, cppklb, cprect, cprset, cpscae, cpsetc, cpseti, cpsetr, cpsps1, ncarg_cbind 
+<p>Hardcopy: NCAR Graphics Contouring and Mapping Tutorial</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

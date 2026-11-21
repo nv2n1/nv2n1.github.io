@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-action-analyze-c(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-abrt-action-analyze-c/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>abrt-action-analyze-c(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>abrt-action-analyze-c - Calculate and save UUID for a problem data directory DIR with coredump.</p>
+<h2>SYNOPSIS</h2>
+<p><i>abrt-action-analyze-c</i> [-v] [-d DIR]</p>
+<h2>DESCRIPTION</h2>
+<p>The tool reads the file named <i>coredump</i> from a problem data directory, processes it and generates a universally unique identifier (UUID). Then it saves this data as new element <i>uuid</i>.</p>
+<h3>Integration with ABRT events</h3>
+<p><i>abrt-action-analyze-c</i> can be used to generate the UUID of a newly saved coredump.</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+EVENT=post-create analyzer=CCpp   abrt-action-analyze-c
+</pre></dd></dl>
+<h2>OPTIONS</h2>
+<p>-d DIR</p>
+<dl>
+<dt>
+</dt><dd> Path to a problem directory. Current working directory is used when this option is not provided.</dd></dl>
+<p>-v</p>
+<dl>
+<dt>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
+<h2>AUTHORS</h2>
+<dl>
+<dt>
+</dt><dd> &bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

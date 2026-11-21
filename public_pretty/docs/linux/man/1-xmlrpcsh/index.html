@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmlrpcsh(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xmlrpcsh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xmlrpcsh(1)</h1>
+
+
+
+
+
+<p>XMLRPCsh.pl - Interactive shell for XMLRPC calls</p>
+<h2>Synopsis</h2><pre> perl XMLRPCsh.pl <a rel="nofollow" HREF="http://betty.userland.com/RPC2">http://betty.userland.com/RPC2</a> 
+ &gt; examples.getStateName(2)
+ &gt; examples.getStateNames(1,2,3,7)
+ &gt; examples.getStateList([1,9])
+ &gt; examples.getStateStruct({a=&gt;1, b=&gt;24})
+ &gt; Ctrl-D (Ctrl-Z on Windows)</pre>or 
+ <pre> # all parameters after uri will be executed as methods
+ perl XMLRPCsh.pl <a rel="nofollow" HREF="http://betty.userland.com/RPC2">http://betty.userland.com/RPC2</a> examples.getStateName(2)
+ &gt; Ctrl-D (Ctrl-Z on Windows)</pre><h2>Description</h2>XMLRPCsh.pl is a shell for making <font SIZE="-1">XMLRPC</font> calls. It takes one parameter, endpoint (actually it will tell you about it if you try to run it). Additional commands can follow. 
+<p>After that you&rsquo;ll be able to run any methods of XMLRPC::Lite, like autotype, readable, etc. You can run it the same way as you do it in your Perl script. You&rsquo;ll see output from method, result of <font SIZE="-1">XMLRPC</font> call, detailed info on <font SIZE="-1">XMLRPC</font> faulure or transport error.</p>
+<p>For full list of available methods see documentation for XMLRPC::Lite.</p>
+<p>Along with methods of XMLRPC::Lite you&rsquo;ll be able (and that&rsquo;s much more interesting) run any <font SIZE="-1">XMLRPC</font> methods you know about on remote server and see processed results. You can even switch on debugging (with call something like: <tt>&quot;on_debug(sub{print@_})&quot;</tt>) and see <font SIZE="-1">XMLRPC</font> code with headers sent and recieved.</p>
+<h2>Copyright</h2>Copyright (C) 2000 Paul Kulchenko. All rights reserved.
+<h2>Author</h2>Paul Kulchenko (paulclinger [at] yahoo.com)
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

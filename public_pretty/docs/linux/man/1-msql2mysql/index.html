@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>msql2mysql(1) · Linux Manual Pages</title>
+<meta name="description" content="msql2mysql – convert mSQL programs for use with MySQL">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-msql2mysql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>msql2mysql(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> msql2mysql &#8211; convert mSQL programs for use with MySQL </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>msql2mysql</code><i>C-source-file</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>Initially, the MySQL C API was developed to be very similar to that for the mSQL database system. Because of this, mSQL programs often can be converted relatively easily for use with MySQL by changing the names of the C API functions. </dd>
+<p> The <code>msql2mysql</code> utility performs the conversion of mSQL C API function calls to their MySQL equivalents. <code>msql2mysql</code> converts the input file in place, so make a copy of the original before converting it. For example, use <code>msql2mysql</code> like this: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+shell&gt; <code>cp client-prog.c client-prog.c.orig</code>
+shell&gt; <code>msql2mysql client-prog.c</code>
+client-prog.c converted
+</pre>
+</dd></dl>
+<p> Then examine client-prog.c and make any post-conversion revisions that may be necessary. </p>
+<p> <code>msql2mysql</code> uses the <code>replace</code> utility to make the function name substitutions. See <code><a href="/docs/linux/man/1-replace/">replace</a></code>(1).</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright 2007-2008 MySQL AB, 2008-2010 Sun Microsystems, Inc., 2010-2015 MariaDB Foundation </p>
+<p> This documentation is free software; you can redistribute it and/or modify it only under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License. </p>
+<p> This documentation is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
+<p> You should have received a copy of the GNU General Public License along with the program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA or see <a rel="nofollow" href="http://www.gnu.org/licenses/.">http://www.gnu.org/licenses/.</a> </p>
+<h2>SEE ALSO</h2>
+<p> For more information, please refer to the MariaDB Knowledge Base, available online at <a rel="nofollow" href="https://mariadb.com/kb/">https://mariadb.com/kb/</a></p>
+<h2>AUTHOR</h2>
+<p> MariaDB Foundation (<a rel="nofollow" href="http://www.mariadb.org/">http://www.mariadb.org/</a>). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

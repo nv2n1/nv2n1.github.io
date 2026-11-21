@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrtd(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-abrtd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>abrtd(8)</h1>
+
+
+
+
+
+<p>abrtd - automated bug reporting tool&rsquo;s daemon.</p>
+<h2>Synopsis</h2>
+<p><i>abrtd</i> [-dsv[v]&hellip;]</p>
+<h2>Description</h2>
+<p><i>abrtd</i> is a daemon that watches for application crashes. When a crash occurs, it collects the problem data (core file, application&rsquo;s command line etc.) and takes action according to the type of application that crashed and according to the configuration in the <i>abrt.conf</i> config file. There are plugins for various actions: for example to report the crash to Bugzilla, to mail the report, or to transfer the report via FTP or SCP. See the manual pages for the respective plugins.</p>
+<h2>Options</h2>
+<p>-v</p>
+<dl><dd>Log more detailed debugging information.</dd></dl>
+<p>-d</p>
+<dl><dd>Stay in the foreground and log to standard error.</dd></dl>
+<p>-s</p>
+<dl><dd>Log to system log even with option -d.</dd></dl>
+<p>-t NUM</p>
+<dl><dd>Exit after NUM seconds of inactivity.</dd></dl>
+<p>-p</p>
+<dl><dd>Add program names to log.</dd></dl>
+<h2>Caveats</h2>
+<p>When you use some other crash-catching tool specific for an application or an application type (for example BugBuddy for GNOME applications), crashes of this type will be handled by that tool and not by <i>abrtd</i>. If you want <i>abrtd</i> to handle these crashes, turn off the higher-level crash-catching tool.</p>
+<h2>Authors</h2>
+<dl><dd>&bull; ABRT team</dd></dl>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a>(5)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

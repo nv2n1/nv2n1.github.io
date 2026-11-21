@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutswapbuffers(3) · Linux Manual Pages</title>
+<meta name="description" content="glutSwapBuffers – Swaps the buffers for the current window.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutswapbuffers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutswapbuffers(3)</h1>
+
+
+
+
+
+<p><code>glutSwapBuffers</code> &#8211; Swaps the buffers for the current window.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; window</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutSwapBuffers void</p>
+<h2>Description</h2>
+<p>This function signals to OpenGLUT that you are done drawing to the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>for now.&nbsp;<wbr>&nbsp;<wbr>If your window is double-buffered ( Bf Sy<br />
+&nbsp;<wbr>GLUT_DOUBLE Ef<br />
+&nbsp;<wbr>param to glutInitDisplayMode()), then OpenGLUT will swap the front buffer with the back buffer. </p>
+<p> This also computes your current frame-rate and prints the result on Bf Sy<br />
+&nbsp;<wbr>stderr Ef<br />
+&nbsp;<wbr>if indicated by the&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_FPS Ef<br />
+&nbsp;<wbr>environment variable. The computed value is not necessarily the total frame rate, if you have multiple windows, as the statistic is the total number of buffer-swaps for the entire program. </p>
+<h2>Caveats</h2>
+<p>This function has no effect if your window is Bf Sy<br />
+&nbsp;<wbr>GLUT_SINGLE Ef<br />
+&nbsp;<wbr>. </p>
+<p> Frame rate is only calculated for double-buffered windows. </p>
+<h2>Todo</h2>
+<p>How does this interact with overlays? </p>
+<p> Consider making Bf Sy<br />
+&nbsp;<wbr>GLUT_FPS Ef<br />
+&nbsp;<wbr>keep per-window stats in a multi-window program. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutpostredisplay/">glutPostRedisplay</a>(3) <a href="/docs/linux/man/3-glutpostoverlayredisplay/">glutPostOverlayRedisplay</a>(3) <a href="/docs/linux/man/3-glutpostwindowredisplay/">glutPostWindowRedisplay</a>(3) <a href="/docs/linux/man/3-glutpostwindowoverlayredisplay/">glutPostWindowOverlayRedisplay</a>(3) <a href="/docs/linux/man/3-glutinitdisplaymode/">glutInitDisplaymode</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-info(1) · Linux Manual Pages</title>
+<meta name="description" content="git-info – Returns information on current repository">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-info(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>git-info</code> &#8211; Returns information on current repository</p>
+<h2>SYNOPSIS</h2>
+<p> <code>git-info</code></p>
+<h2>DESCRIPTION</h2>
+<p> Shows the following information about a repository:</p>
+<dl>
+<dt>1.</dt>
+<dd> Remote Url(s)</dd>
+<dt>2.</dt>
+<dd> Remote Branches</dd>
+<dt>3.</dt>
+<dd> Local Branches</dd>
+<dt>4.</dt>
+<dd> Most recent commit</dd>
+<dt>5.</dt>
+<dd> Configuration Info</dd>
+</dl>
+<h2>OPTIONS</h2>
+<p> N/A</p>
+<h2>EXAMPLES</h2>
+<p> Outputs info about a repo:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+$ git info
+## Remote URLs:
+origin      git [at] github.com:sampleAuthor/git-extras.git (fetch)
+origin      git [at] github.com:sampleAuthor/git-extras.git (push)
+## Remote Branches:
+origin/HEAD -&gt; origin/master
+origin/myBranch
+## Local Branches:
+myBranch
+* master
+## Most Recent Commit:
+commit e3952df2c172c6f3eb533d8d0b1a6c77250769a7
+Author: Sample Author &lt;sampleAuthor [at] gmail.com&gt;
+Added git-info command.
+Type 'git log' for more commits, or 'git show &lt;commit id&gt;' for full commit details.
+## Configuration (.git/config):
+color.diff=auto
+color.status=auto
+color.branch=auto
+user.name=Sample Author
+user.email=sampleAuthor [at] gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.url=git [at] github.com:mub/git-extras.git
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+</code></pre>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Leila Muhtasib &lt;<i>muhtasib [at] gmail.com</i>&gt;</p>
+<h2>REPORTING BUGS</h2>
+<p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras/issues">https://github.com/tj/git-extras/issues</a></i>&gt;</p>
+<h2>SEE ALSO</h2>
+<p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

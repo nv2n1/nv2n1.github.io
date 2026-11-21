@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ib_acme(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ib_acme/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ib_acme(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>ib_acme - test and configuration utility for the IB ACM</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+ib_acme[-f addr_format][-s src_addr] - d dest_addr[-v][-c][-e][-P][-S svc_addr][-C repetitions]
+</code></pre> <pre><code>
+<p>ib_acme[-A[addr_file]][-O[opt_file]][-D dest_dir][-V]
+</code></pre></p>
+<h2>DESCRIPTION</h2>
+<p>ib_acme provides assistance configuring and testing the ibacm service. The first usage of the service will test that the ibacm is running and operating correctly. The second usage model will automatically create address and configuration files for the ibacm service.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-f addr_format
+</dt><dd> Specifies the format of the src_addr and dest_addr parameters. Valid address formats are: 'i' ip address, 'n' host name, 'l' lid, 'g' gid, and 'u' unspecified. If the -f option is omitted, an unspecified address format is assumed. ib_acme will use getaddrinfo or other mechanisms to determine which format the address uses.
+</dd><dt>-s src_addr
+</dt><dd> Specifies the local source address of the path to resolve. The source address can be an IP address, system network name, or LID, as indicated by the addr_format option.
+</dd><dt>-d dest_addr
+</dt><dd> Specifies the destination address of the path to resolve. The destination address can be an IP address, system network name, or LID, as indicated by the addr_format option.
+</dd><dt>-v
+</dt><dd> Indicates that the resolved path information should be verified with the active IB SA. Use of the -v option provides a sanity check that resolved path information is usable given the current cluster configuration.
+</dd><dt>-c
+</dt><dd> Instructs the ACM service to only returned information that currently resides in its local cache.
+</dd><dt>-e [N]
+</dt><dd> Displays one (N = 1, 2, ...) or all endpoints (N = 0 or not present).
+</dd><dt>-P [opt]
+</dt><dd> Queries performance data from the destination service. Valid options are: &quot;col&quot; for outputting combined data in column format, &quot;N&quot; (N = 1, 2, ...) for outputing data for a specific endpoint N, &quot;all&quot; for outputting data for all endpoints, and &quot;s&quot; for outputting data for a specific endpoint with the address given by the -s option.
+</dd><dt>-S svc_addr
+</dt><dd> address of ACM service, default: local service
+</dd><dt>-C repetitions
+</dt><dd> number of repetitions to perform resolution. Used to measure performance of ACM cache lookups. Defaults to 1.
+</dd><dt>-A [addr_file]
+</dt><dd> With this option, the ib_acme utility automatically generates the address configuration file ibacm_addr.cfg. The generated file is constructed using the system host name.
+</dd><dt>-O [opt_file]
+</dt><dd> With this option, the ib_acme utility automatically generates the option configuration file ibacm_opts.cfg. The generated file is currently generated using static information.
+</dd><dt>-D dest_dir
+</dt><dd> Specify the destination directory for the output files.
+</dd><dt>-V
+</dt><dd> Enables verbose output. When combined with -A or -O options, ib_acme will display additional details, such as generated address information saved to the ibacm_addr.cfg file.</dd></dl>
+<h2>NOTES</h2>
+<p>The ib_acme utility performs two main functions. With the -A and -O options, it automatically generates address or options configuration files. The generated files are text based and may be edited. These options are intended to provide a simple way to configure address and option information on all nodes on a cluster.</p>
+<p>The other function of the ib_acme utility is to test the ibacm service, including helping to verify that the service is usable given the current cluster configuration. The ib_acme utility can resolve IP addresses, network names, or IB LIDs into a path record. It can then compare that path record against one obtained by the SA. When used to test the ibacm service, the ib_acme utility has the side effect of loading the ibacm caches.</p>
+<p>Multiple, numerical destinations can be specified by adding brackets [] to the end of a base destination name or address. Users may specify a list of numerical ranges inside the brackets using the following example as a guide: node[1-3,5,7-8]. This will result in testing node1, node2, node3, node5, node7, and node8.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/7-ibacm/">ibacm</a>(7), <a HREF="/docs/linux/man/1-ibacm/">ibacm</a>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

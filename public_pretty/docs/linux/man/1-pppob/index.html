@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pppob(1) · Linux Manual Pages</title>
+<meta name="description" content="pppob – Barry Project’s program to access the Blackberry modem for pppd">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pppob/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pppob(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>pppob</code> &#8211; Barry Project&#8217;s program to access the Blackberry modem for pppd </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pppob</code> [-l filename][-p pin][-P password][-s][-v]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pppob</code> is a program suitable for use in pppd&#8217;s pty option file. It talks to an available Blackberry and provides modem access on stdin and stdout.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-l filename</code></dt>
+<dd> Causes verbose debug output from the -v switch to be written to filename instead of stderr.</dd>
+<dt><code>-p pin</code></dt>
+<dd> PIN of device to talk with. Only needed if you have more than one Blackberry connected at once.</dd>
+<dt><code>-P password</code></dt>
+<dd> Simplistic method to specify device password. In a real application, this would be done using a more secure prompt.</dd>
+<dt><code>-s</code></dt>
+<dd> Use Serial mode instead of the default IpModem mode. Older Blackberries used a serial mode based on a similar protocol to what database access uses for retrieving data. Each packet had a size and socket number prepended to the actual modem data. Newer Blackberries have dedicated USB endpoints that behave as read/write points, and do not bother with this size/socket format, and therefore transfer less data across the USB bus. By default, pppob tries to use IpModem mode if proper endpoints are detected, and otherwise falls back to Serial mode. This switch skips IpModem mode entirely and tries Serial mode immediately.</dd>
+<dt><code>-v</code></dt>
+<dd> Dump verbose protocol data to stderr during operation. </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> <code>pppob</code> is part of the Barry project.</p>
+<h2>SEE ALSO</h2>
+<p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbgetkeytypes(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbGetKeyTypes – Obtain the list of available key types in the server’s keyboard mapping">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbgetkeytypes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbgetkeytypes(3)</h1>
+
+
+
+
+
+<p>XkbGetKeyTypes &#8211; Obtain the list of available key types in the server&#8217;s keyboard mapping </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Status XkbGetKeyTypes</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>first</i><code>,</code> <code>unsigned int </code><i>num</i><code>,</code> <code>XkbDescPtr </code><i>xkb</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; first</i></dt>
+<dd>index to first type to get, 0 =&gt; 1st type</dd>
+<dt><i>&#8211; num</i></dt>
+<dd>number of key types to be returned</dd>
+<dt><i>&#8211; xkb</i></dt>
+<dd>keyboard description containing client map to update</dd></dl>
+<h2>Description</h2>
+<p><i>XkbGetKeyTypes </i> queries the server for the desired types, waits for a reply, and returns the desired types in the <i>xkb-&gt;map-&gt;types. </i> If successful, it returns Success. </p>
+<p> <i>XkbGetKeyTypes </i> returns BadAccess if the Xkb extension has not been properly initialized and BadValue if the combination of <i>first </i> and <i>num </i> results in numbers out of valid range. </p>
+<p> <code>NOTE: </code> <i>XkbGetKeyTypes </i> is used to obtain descriptions of the key types themselves, not the key types bound to individual keys. To obtain the key types bound to an individual key, refer to the <i>key_sym_map </i> field of the client map.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadAccess</code></dt>
+<dd>The Xkb extension has not been properly initialized</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbkeytype/">XkbKeyType</a></code>(3), <code><a href="/docs/linux/man/3-xkbkeytypeindex/">XkbKeyTypeIndex</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

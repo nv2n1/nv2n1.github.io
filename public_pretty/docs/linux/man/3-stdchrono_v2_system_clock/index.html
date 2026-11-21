@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchrono_v2_system_clock(3) · Linux Manual Pages</title>
+<meta name="description" content="std::chrono::_V2::system_clock –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchrono_v2_system_clock/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchrono_v2_system_clock(3)</h1>
+
+
+
+
+
+<p>std::chrono::_V2::system_clock &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Public Types</h3>
+<p>typedef <code>chrono::nanoseconds</code> <code>duration</code> </p>
+<p> typedef duration::period <code>period</code> </p>
+<p> typedef duration::rep <code>rep</code> </p>
+<p> typedef <code>chrono::time_point</code><br />
+ &lt; <code>system_clock</code>, <code>duration</code> &gt; <code>time_point</code>&quot;</p>
+<h3>Public Member Functions</h3>
+<p>&lt; system_clock::duration::zero(),&#8217;aclock&#8217;sminimumdurationcannotbelessthanitsepoch&#8217;);staticconstexprboolis_steady=false;statictime_pointnow()<br />
+ noexcept;staticstd::time_tto_time_t(consttime_point<br />
+ &amp;__t) noexcept{returnstd::time_t(<code>duration_cast</code><br />
+ &lt; <code>chrono::seconds</code> &gt; __t <code>time_since_epoch</code> ()).<code>count</code>())&quot;</p>
+<h3>Static Public Member Functions</h3>
+<pre><code>static time_point from_time_t (std::time_t __t) noexcept</code></pre>
+<h2>Detailed Description</h2>
+<p>System clock. </p>
+<p> Time returned represents wall time from the system-wide clock. </p>
+<p> Definition at line 715 of file chrono.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for libstdc++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

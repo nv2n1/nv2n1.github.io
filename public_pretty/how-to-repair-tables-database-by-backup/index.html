@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Repair Database Tables Using Backups - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-repair-tables-database-by-backup/">
+  <meta name="description" content="Database corruption happens. Whether it’s from unexpected shutdown, filesystem errors, or hardware issues, knowing how to recover from backups is essential …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Repair Database Tables Using Backups">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-repair-tables-database-by-backup/">
+  <meta property="og:description" content="Database corruption happens. Whether it’s from unexpected shutdown, filesystem errors, or hardware issues, knowing how to recover from backups is essential …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>How to Repair Database Tables Using Backups</h1>
+        <time class="post-date" datetime="2018-03-24T08:17:17Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Database corruption happens. Whether it’s from unexpected shutdown, filesystem errors, or hardware issues, knowing how to recover from backups is essential sysadmin knowledge.</p>
+<h3 id="when-to-use-backups-vs-native-repair-tools">When to Use Backups vs. Native Repair Tools</h3>
+<p>Before jumping to restore from backup, consider your options:</p>
+<ul>
+<li><strong>Native repair tools</strong> (REPAIR TABLE, CHECK TABLE) are faster and preserve recent data</li>
+<li><strong>Backup restoration</strong> is necessary when corruption is severe or native tools fail</li>
+<li><strong>Point-in-time recovery</strong> combines both approaches for minimal data loss</li>
+</ul>
+<h3 id="mysqlmariadb-recovery-workflow">MySQL/MariaDB Recovery Workflow</h3>
+<h4 id="step-1-identify-the-problem">Step 1: Identify the Problem</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysqlcheck -u root -p --all-databases --check
+</span></span></code></pre></div><p>This scans all tables and reports corruption. Look for “error” or “corrupt” in output.</p>
+<p>For a specific database:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysqlcheck -u root -p database_name --check
+</span></span></code></pre></div><h4 id="step-2-attempt-native-repair">Step 2: Attempt Native Repair</h4>
+<p>If corruption is minor, try repair first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysqlcheck -u root -p database_name --repair
+</span></span></code></pre></div><p>Or via SQL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">REPAIR</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">CHECK</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><h4 id="step-3-restore-from-backup-if-repair-fails">Step 3: Restore from Backup if Repair Fails</h4>
+<p>If native repair doesn’t work or reports unrecoverable errors, restore from your most recent backup.</p>
+<p><strong>From a full backup dump:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql -u root -p &lt; /path/to/backup.sql
+</span></span></code></pre></div><p><strong>From a compressed backup:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gunzip &lt; /path/to/backup.sql.gz <span class="p">|</span> mysql -u root -p
+</span></span></code></pre></div><p><strong>From a directory backup (using mysqldump):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql -u root -p database_name &lt; /path/to/database_backup.sql
+</span></span></code></pre></div><h4 id="step-4-recover-recent-changes">Step 4: Recover Recent Changes</h4>
+<p>If your backup is hours or days old, use binary logs to replay transactions after the restore:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysqlbinlog /var/lib/mysql/mysql-bin.000123 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --start-datetime<span class="o">=</span><span class="s2">&#34;2026-01-15 10:00:00&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --stop-datetime<span class="o">=</span><span class="s2">&#34;2026-01-15 14:30:00&#34;</span> <span class="p">|</span> mysql -u root -p
+</span></span></code></pre></div><p>Replace the datetime range with the period you need to recover.</p>
+<h3 id="postgresql-recovery">PostgreSQL Recovery</h3>
+<p>PostgreSQL handles recovery differently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pg_dump -U postgres -Fc database_name &gt; backup.dump
+</span></span></code></pre></div><p>Restore:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pg_restore -U postgres -d database_name backup.dump
+</span></span></code></pre></div><p>For point-in-time recovery with WAL files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pg_wal_replay_until_timeline_id --directory<span class="o">=</span>/var/lib/postgresql/data
+</span></span></code></pre></div><h3 id="best-practices-to-avoid-corruption">Best Practices to Avoid Corruption</h3>
+<ol>
+<li><strong>Regular automated backups</strong> — daily or more frequently for critical databases</li>
+<li><strong>Test restores monthly</strong> — backups are useless if they don’t work</li>
+<li><strong>Enable crash recovery</strong> — MySQL has <code>innodb_flush_log_at_trx_commit=1</code> for durability</li>
+<li><strong>Monitor disk health</strong> — use <code>smartctl</code> to catch failing drives early</li>
+<li><strong>Use appropriate storage</strong> — avoid ext3 for databases; ext4, XFS, or ZFS are better</li>
+<li><strong>Keep binary logs</strong> — essential for point-in-time recovery</li>
+</ol>
+<h3 id="important-caveats">Important Caveats</h3>
+<ul>
+<li><strong>Data loss is possible</strong> — backups may not contain very recent transactions</li>
+<li><strong>Application consistency matters</strong> — restored backups may leave your app in an inconsistent state; coordinate with development</li>
+<li><strong>Downtime required</strong> — expect service interruption during large restores</li>
+<li><strong>Verify after recovery</strong> — always run application-level consistency checks post-restore</li>
+</ul>
+<p>The key is having a tested backup strategy <em>before</em> you need it. Corruption at 3 AM is not the time to discover your backups don’t work.</p>
+<h2 id="2026-best-practices-and-advanced-techniques">2026 Best Practices and Advanced Techniques</h2>
+<p>For How to Repair Database Tables Using Backups, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.</p>
+<h2 id="troubleshooting-and-debugging">Troubleshooting and Debugging</h2>
+<p>When issues arise, a systematic approach saves time. Start by checking logs for error messages or warnings. Test individual components in isolation before integrating them. Use verbose modes and debug flags to gather more information when standard output is not enough to diagnose the problem.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor system resources to identify bottlenecks</li>
+<li>Use caching strategies to reduce redundant computation</li>
+<li>Keep software updated for security patches and performance improvements</li>
+<li>Profile code before applying optimizations</li>
+<li>Use connection pooling and keep-alive for network operations</li>
+</ul>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data in transit, and follow the principle of least privilege for access controls. Regular security audits and penetration testing help maintain system integrity.</p>
+<h2 id="related-tools-and-commands">Related Tools and Commands</h2>
+<p>These complementary tools expand your capabilities:</p>
+<ul>
+<li>Monitoring: top, htop, iotop, vmstat for system resources</li>
+<li>Networking: ping, traceroute, ss, tcpdump for connectivity</li>
+<li>Files: find, locate, fd for searching; rsync for syncing</li>
+<li>Logs: journalctl, dmesg, tail -f for real-time monitoring</li>
+<li>Testing: curl for HTTP requests, nc for ports, openssl for crypto</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Consider automation and containerization for consistency across environments. Infrastructure as code tools enable reproducible deployments. CI/CD pipelines automate testing and deployment, reducing human error and speeding up delivery cycles.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<p>This extended guide covers the topic beyond the original article scope. For specialized needs, refer to official documentation or community resources. Practice in test environments before production deployment.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

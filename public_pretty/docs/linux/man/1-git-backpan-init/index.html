@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-backpan-init(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-backpan-init/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-backpan-init(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>git-backpan-init - Initialize a repository for a CPAN module with full history from the backpan.</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+git backpan - init[--help | --man][--mkdir&lt;directory&gt;][--force] Foo::Bar
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>This command is like <tt>&quot;cpan-init&quot;</tt> except it imports all the historical versions of a module as well, allowing you to run <tt>&quot;git bisect&quot;</tt> or to browse history.</p>
+<p>The name of the module can be written with double-colons or dashes (i.e., <i>Foo::Bar</i> or <i>Foo-Bar</i>).</p>
+<p>Unless the <i>-force</i> option is used, the command will abort if a git repository is found to be already present in the directory.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>--mkdir <i>directory</i>
+</dt><dd> Creates a sub-directory and create the git repository there instead than in the current directory. If no directory name is given, figures one out based on the name of the module.
+</dd><dt>--force, -f
+</dt><dd> Forces the imports, even if a git repository was already present in the directory.
+</dd><dt>--help, -h
+</dt><dd> Prints the synopsis and valid options and exits.
+</dd><dt>--man
+</dt><dd> Prints the man page and exits.</dd></dl>
+<h2>EXAMPLES</h2>
+<p>Most of the time, you want to use <i>git backpan-init</i> like this:</p>
+ <pre>
+    % cd ~/work/
+    % git backpan-init -mkdir Foo::Bar
+</pre>
+<h2>VERSION</h2>
+<p>This document describes git-backpan-init version 0.2.1</p>
+<h2>BUGS AND LIMITATIONS</h2>
+<p>When importing a package history with git-backpan-init, version checking will be automatically turned off. This is to circumvent the cases where, e.g., version 0.38.1 (morphed into 0.038001 by the module <i>version</i>) follows version 0.38. We are making the (hopefully reasonable) assumption that the chronological order reported by the Backpan trumps all.</p>
+<p>If a version of the package can&rsquo;t be extracted, <i>git-backpan-init</i> will issue a warning and skip to the next version.</p>
+<p>Please report any bugs or feature requests to <tt>&quot;bug-git-cpan-patch [at] rt.cpan.org&quot;</tt>, or through the web interface at &lt;<a rel="nofollow" HREF="http://rt.cpan.org"><a href="http://rt.cpan.org">http://rt.cpan.org</a></a>&gt;.</p>
+<h2>AUTHORS</h2>
+<p>Yanick Champoux <tt>&quot;&lt;yanick [at] cpan.org&gt;&quot;</tt></p>
+<p>Yuval Kogman <tt>&quot;&lt;nothingmuch [at] woobling.org&gt;&quot;</tt></p>
+<h2>LICENCE</h2>
+<p>This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself. See perlartistic.</p>
+<h2>SEE ALSO</h2>
+<p>Git::CPAN::Patch</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_collection_validate(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_collection_validate() – This function is a helper function to execute the validate MongoDB command.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_collection_validate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_collection_validate(3)</h1>
+
+
+
+
+
+<p>mongoc_collection_validate() &#8211; This function is a helper function to execute the validate MongoDB command.</p>
+<h2>Synopsis</h2>
+<pre>bool
+mongoc_collection_validate (mongoc_collection_t *collection,
+ const bson_t *options,
+ bson_t *reply,
+ bson_error_t *error);</pre>
+<h2>Parameters</h2>
+<dl COMPACT>
+<dt><code>collection</code></dt>
+<dd>A <code>mongoc_collection_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>options</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>reply</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
+<dl COMPACT>
+<dt><code>error</code></dt>
+<dd>An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
+<h2>Description</h2>
+<p>This function is a helper function to execute the <code>validate</code> MongoDB command. </p>
+<p> Currently, the only supported options are <code>full</code> , which is a boolean and <code>scandata</code> , also a boolean. </p>
+<p> See the MongoDB documentation for more information on this command. </p>
+<h2>Errors</h2>
+<p>Errors are propagated via the <code>error</code> parameter. </p>
+<h2>Returns</h2>
+<p>true if successful, otherwise false and error is set. </p>
+<p> <code>reply</code> is always initialized and must be destroyed with <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> \&amp;. </p>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

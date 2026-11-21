@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlmint(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlmint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlmint(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>README.mint - Perl version 5 on Atari MiNT</p>
+<h2>DESCRIPTION</h2>
+<p>There is a binary version of perl available from the FreeMiNT project <a rel="nofollow" HREF="http://freemint.de/"><a href="http://freemint.de/">http://freemint.de/</a></a> You may wish to use this instead of trying to compile yourself.</p>
+<p><b>The following advice is from perl 5.004_02 and is probably rather out of date.</b></p>
+<p>If you want to build perl yourself on MiNT (or maybe on an Atari without MiNT) you may want to accept some advice from somebody who already did it&hellip;</p>
+<p>There was a perl port for Atari <font SIZE="-1">ST</font> done by ++jrb bammi [at] cadence.com. This port tried very hard to build on non-MiNT-systems. For the sake of efficiency I&rsquo;ve left this way. Yet, I haven&rsquo;t removed bammi&rsquo;s patches but left them intact. Unfortunately some of the files that bammi contributed to the perl distribution seem to have vanished?</p>
+<p>So, how can you distinguish my patches from bammi&rsquo;s patches? All of bammi&rsquo;s stuff is embedded in <code>#ifdef atarist'' preprocessor macros. My MiNT port uses </code>#ifdef <strong>MINT</strong>&rsquo;&rsquo; instead (and unconditionally undefines <code>atarist''. If you want to continue on bammi's port, all you have to do is to swap the </code>-D&rsquo;&rsquo; and <code>-U'' switches for </code><strong>MINT</strong>&rsquo;&rsquo; and ``atarist&rsquo;&rsquo; in the variable ccflags.</p>
+<p>However, I think that my version will still run on non-MiNT-systems provided that the user has a Eunuchs-like environment (i.e. the standard envariables like <tt>$PATH</tt>, <tt>$HOME</tt>, &hellip; are set, there is a <font SIZE="-1">POSIX</font> compliant shell in /bin/sh, and&hellip;)</p>
+<h2>Known problems with Perl on MiNT</h2>
+<p>The problems you may encounter when building perl on your machine are most probably due to deficiencies in MiNT resp. the Atari platform in general.</p>
+<p>First of all, if you have less than 8 <font SIZE="-1">MB</font> of <font SIZE="-1">RAM</font> you shouldn&rsquo;t even try to build Perl yourself. Better grab a binary pre-compiled version somewhere. Even if you have more memory you should take some care. Try to run in a fresh environment (without memory fragmented too much) with as few daemons, accessories, xcontrol modules etc. as possible. If you run some <font SIZE="-1">AES</font> you should consider to start a console based environment instead.</p>
+<p>A problem has been reported with sed. Sed is used to create some configuration files based on the answers you have given to the Configure script. Unfortunately the Perl Configure script shows sed on MiNT its limits. I have sed 2.05 with a stacksize of 64k and I have encountered no problems. If sed crashes during your configuration process you should first try to augment sed&rsquo;s stacksize:</p>
+ <pre>
+        fixstk 64k /usr/bin/sed
+</pre> 
+<p>(or similar). If it still doesn&rsquo;t help you may have a look which other versions of sed are installed on your system. If you have a <font SIZE="-1">KGMD</font> 1.0 installation you will find three in /usr/bin. Have a look there.</p>
+<p>Perl has some <code>mammut'' C files. If gcc reports </code>internal compiler error: program cc1 got fatal signal 10&rsquo;&rsquo; this is very likely due to a stack overflow in program cc1. Find cc1 and fix its stack. I have made good experiences with</p>
+ <pre>
+        fixstk 2 cc1
+</pre> 
+<p>This doesn&rsquo;t establish a stack of 2 Bytes only as you might think. It really reserves one half of the available memory for cc1&rsquo;s stack. A setting of 1 would reserve the entire memory for cc1, 3 would reserve three fourths. You will have to find out the value that suits to your system yourself.</p>
+<p>To find out the location of the program ``cc1&rsquo;&rsquo; simply type `gcc &ndash;print-prog-name cc1&rsquo; at your shell prompt.</p>
+<p>Now run make (maybe ``make -k&rsquo;&rsquo;). If you get a fatal signal 10 increase cc1&rsquo;s stacksize, if you run out of memory you should either decrease the stacksize or follow some more hints:</p>
+<p>Perl&rsquo;s building process is very handy on machines with a lot of virtual memory but may result in a disaster if you are short of memory. If gcc fails to compile many source files you should reduce the optimization. Grep for ``optimize&rsquo;&rsquo; in the file config.sh and change the flags.</p>
+<p>If only several huge files cause problems (actually it is not a matter of the file size resp. the amount of code but depends on the size of the individual functions) it is useful to bypass the make program and compile these files directly from the command line. For example if you got something like the following from make:</p>
+ <pre>
+        CCCMD = gcc -DPERL_CORE ....
+        ...
+        ...: virtual memory exhausted
+</pre> 
+<p>you should hack into the shell:</p>
+ <pre>
+        gcc -DPERL_CORE ... toke.c
+</pre> 
+<p>Please note that you have to add the name of the source file (here toke.c) at the end.</p>
+<p>If none of this helps, you&rsquo;re helpless. Wait for a binary release. If you have succeeded you may encounter another problem at the linking process. If gcc complains that it can&rsquo;t find some libraries within the perl distribution you probably have an old linker. If it complains for example about ``file not found for xxx.olb&rsquo;&rsquo; you should cd into the directory in question and</p>
+ <pre>
+        ln -s libxxx.a xxx.olb
+</pre> 
+<p>This will fix the problem.</p>
+<p>This version (5.00402) of perl has passed most of the tests on my system:</p>
+ <pre><code>
+Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --io / pipe.t 10 2 20.00 % 7, 9 io / tell.t 13 1 7.69 % 12 lib / complex.t 762 13 1.71 % 84 - 85, 248 - 251, 257, 272 - 273,
+    371, 380, 419 - 420 lib / io_pipe.t 10 1 10.00 % 9 lib / io_tell.t 13 1 7.69 % 12 op / magic.t 30 2 6.67 % 29 - 30 Failed 6 / 152 test scripts, 96.05 % okay.20 / 4359 subtests failed, 99.54 % okay.
+</code></pre> 
+<p>Pipes always cause problems with MiNT, it&rsquo;s actually a surprise that most of the tests did work. I&rsquo;ve got no idea why the ``tell&rsquo;&rsquo; test failed, this shouldn&rsquo;t mean too big a problem however.</p>
+<p>Most of the failures of lib/complex seem to be harmless, actually errors far right to the decimal point&hellip; Two failures seem to be serious: The sign of the results is reversed. I would say that this is due to minor bugs in the portable math lib that I compiled perl with.</p>
+<p>I haven&rsquo;t bothered very much to find the reason for the failures with op/magic.t and op/stat.t. Maybe you&rsquo;ll find it out.</p>
+<p>##########################################################################</p>
+<p>Another possible problem may arise from the implementation of the ``pwd&rsquo;&rsquo; command. It happened to add a carriage return and newline to its output no matter what the setting of <tt>$UNIXMODE</tt> is. This is quite annoying since many library modules for perl take the output of pwd, chop off the trailing newline character and then expect to see a valid path in that. But the carriage return (last but second character!) isn&rsquo;t chopped off. You can either try to patch all library modules (at the price of performance for the extra transformation) or you can use my version of pwd that doesn&rsquo;t suffer from this deficiency.</p>
+<p>The fixed implementation is in the mint subdirectory. Running ``Configure&rsquo;&rsquo; will attempt to build and install it if necessary (hints/mint.sh will do this work) but you can build and install it explicitly by:</p>
+ <pre>
+        cd mint
+        make install
+</pre> 
+<p>This is the fastest solution.</p>
+<p>Just in case you want to go the hard way: perl won&rsquo;t even build with a broken pwd! You will have to fix the library modules (ext/POSIX/POSIX.pm, lib/Cwd.pm, lib/pwd.pl) at last after building miniperl.</p>
+<p>A major nuisance of current MiNTLib versions is the implementation of <i>system()</i> which is far from being <font SIZE="-1">POSIX</font> compliant. A real <i>system()</i> should fork and then exec /bin/sh with its argument as a command line to the shell. The MiNTLib <i>system()</i> however doesn&rsquo;t expect that every user has a <font SIZE="-1">POSIX</font> shell in /bin/sh. It tries to work around the problem by forking and exec&rsquo;ing the first token in its argument string. To get a little bit of compliance to <font SIZE="-1">POSIX</font> <i>system()</i> it tries to handle at least redirection (<code>&amp;lt;'' or </code>&gt;&rsquo;&rsquo;) on its own behalf.</p>
+<p>This isn&rsquo;t a good idea since many programs expect that they can pass a command line to <i>system()</i> that exploits all features of a <font SIZE="-1">POSIX</font> shell. If you use the MiNTLib version of <i>system()</i> with perl the Perl function <i>system()</i> will suffer from the same deficiencies.</p>
+<p>You will find a fixed version of <i>system()</i> in the mint subdirectory. You can easily insert this version into your system libc:</p>
+ <pre>
+        cd mint
+        make system.o
+        ar r /usr/lib/libc.a
+        ranlib /usr/lib/libc.a
+</pre> 
+<p>If you are suspicious you should either back up your libc before or extract the original system.o from your libc with ``ar x /usr/lib/libc.a system.o&rsquo;&rsquo;. You can then backup the system.o module somewhere before you succeed.</p>
+<p>Anything missing? Yep, I&rsquo;ve almost forgotten&hellip; No file in this distribution without a fine saying. Take this one:</p>
+ <pre><code>
+"From a thief you should learn: (1) to work at night;
+    (2) if one cannot gain what one wants in one night to
+    try again the next night;
+(3) to love one's coworkers just as thieves love each other; (4) to be willing to
+        risk one's life even for a little thing; (5) not to 
+        attach too much value to things even though one has 
+        risked one's life for them - just as a thief will resell
+        a stolen article for a fraction of its real value;
+(6) to withstand all kinds of beatings and tortures
+    but to remain what you are;
+and(7) to believe your
+    work is worthwhile
+    and not be willing to change it."
+            --Rabbi Dov Baer,
+    Maggid of Mezeritch
+</code></pre> 
+<p><font SIZE="-1">OK</font>, this was my motto while working on Perl for MiNT, especially rule (1)&hellip;</p>
+<p>Have fun with Perl!</p>
+<h2>AUTHOR</h2>
+<p>Guido Flohr</p>
+ <pre>
+        mailto:guido [at] FreeMiNT.de
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

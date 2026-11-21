@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbernoulli_distribution(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbernoulli_distribution/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbernoulli_distribution(3)</h1>
+
+
+
+
+
+<p>std::bernoulli_distribution - std::bernoulli_distribution</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;random&gt;
+class bernoulli_distribution; <i>(since C++11)</i>
+Produces random boolean values, according to the discrete probability function. The probability of true is <pre><code>P(b|p) =⎧
+⎨
+⎩p if b == true
+1 − p if b == false</code></pre>
+std::bernoulli_distribution satisfies RandomNumberDistribution</p>
+<h2>Member types</h2>
+<p>Member type Definition
+result_type bool
+param_type the type of the parameter set, see RandomNumberDistribution.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs new distribution
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> resets the internal state of the distribution
+reset <i>(public member function)</i></p>
+<h2>Generation</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> generates the next random number in the distribution
+operator() <i>(public member function)</i></p>
+<h2>Characteristics</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the p distribution parameter (probability of generating true)
+p <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> gets or sets the distribution parameter object
+param <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the minimum potentially generated value
+min <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the maximum potentially generated value
+max <i>(public member function)</i></p>
+<h2>Non-member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares two distribution objects
+operator== <i>(function)</i>
+operator!=
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> performs stream input and output on pseudo-random number distribution
+operator&lt;&lt; <i>(function template)</i>
+operator&gt;&gt;</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+#include &lt;random&gt;
+int main()
+{
+std::random_device rd;
+std::mt19937 gen(rd());
+// give &quot;true&quot; 1/4 of the time
+// give &quot;false&quot; 3/4 of the time
+std::bernoulli_distribution d(0.25);
+std::map&lt;bool, int&gt; hist;
+for (int n = 0; n &lt; 10000; ++n) {
+++hist[d(gen)];
+}
+for (auto p : hist) {
+std::cout &lt;&lt; std::boolalpha &lt;&lt; std::setw(5) &lt;&lt; p.first
+&lt;&lt; &rsquo; &rsquo; &lt;&lt; std::string(p.second / 500, &lsquo;*&rsquo;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> false ***************
+ <wbr> <wbr> true ****</p>
+<h2>External links</h2>
+<p>Weisstein,<em>Eric_W.</em>&quot;Bernoulli_Distribution.&quot; From MathWorld&ndash;A Wolfram Web Resource.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

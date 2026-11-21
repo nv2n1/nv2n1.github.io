@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vss_strip(8) · Linux Manual Pages</title>
+<meta name="description" content="vss_strip – program for extracting file data from a file containing VSS headers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vss_strip/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vss_strip(8)</h1>
+
+
+
+
+
+<p>vss_strip &#8211; program for extracting file data from a file containing VSS headers</p>
+<h2>Synopsis</h2>
+<p><code>vss_strip</code> [<i>options</i>]<br />
+ A program for extracting file data from a file containing VSS headers. This program comes with the burp backup and restore package. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i</code> <code>path</code></dt>
+<dd>Input file. If -i is not given, input will be read on stdin.</dd>
+<dt><code>-o</code> <code>path</code></dt>
+<dd>Output file. If -o is not given, output will be read on stdout.</dd>
+<dt><code>-p</code></dt>
+<dd>Print VSS header info.</dd>
+<dt><code>-h|-?</code></dt>
+<dd>Print help text and exit. </dd>
+</dl>
+<h2>Examples</h2>
+<dl>
+<dt><code>vss_strip -i infile -o outfile</code></dt>
+<dd>Takes uncompressed infile, and extracts the file data to outfile.</dd>
+<dt><code>zcat infile.gz | vss_strip</code></dt>
+<dd>Takes the output of zcat as input, and outputs to stdout. </dd>
+<h2>Bugs</h2>
+<p>If you find bugs, please report them to the email list. See the website &lt;<a rel="nofollow" href="http://burp.grke.net/">http://burp.grke.net/</a>&gt; for details. </p>
+<h2>Author</h2>
+<p>The main author of Burp is Graham Keeling.</p>
+<h2>Copyright</h2>
+<p>See the LICENCE file included with the source distribution.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

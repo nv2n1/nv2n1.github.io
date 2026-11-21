@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetching Webpages as a Mobile Browser Using curl - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-fetch-a-webpage-as-a-mobile-browser-with-curl-on-linux/">
+  <meta name="description" content="You can fetch a webpage as if you’re requesting from a mobile device by setting curl’s User-Agent header to match a mobile browser. Remote servers use the …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fetching Webpages as a Mobile Browser Using curl">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-fetch-a-webpage-as-a-mobile-browser-with-curl-on-linux/">
+  <meta property="og:description" content="You can fetch a webpage as if you’re requesting from a mobile device by setting curl’s User-Agent header to match a mobile browser. Remote servers use the …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Fetching Webpages as a Mobile Browser Using curl</h1>
+        <time class="post-date" datetime="2018-03-24T11:40:17Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>You can fetch a webpage as if you’re requesting from a mobile device by setting curl’s User-Agent header to match a mobile browser. Remote servers use the User-Agent header to decide whether to serve mobile or desktop versions of pages.</p>
+<h2 id="basic-syntax">Basic syntax</h2>
+<p>Use the <code>-A</code> (or <code>--user-agent</code>) flag to specify a mobile User-Agent string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1&#34;</span> https://example.com/
+</span></span></code></pre></div><h2 id="current-mobile-user-agent-strings">Current mobile User-Agent strings</h2>
+<p>Different devices and browsers require different User-Agent strings. These are current as of 2026:</p>
+<p><strong>iPhone (Safari)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1&#34;</span> https://example.com/
+</span></span></code></pre></div><p><strong>Android Chrome</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36&#34;</span> https://example.com/
+</span></span></code></pre></div><p><strong>Android Firefox</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (Android 15; Mobile; rv:135.0) Gecko/135.0 Firefox/135.0&#34;</span> https://example.com/
+</span></span></code></pre></div><p><strong>Samsung Galaxy (Chrome)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (Linux; Android 15; SM-G990B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36&#34;</span> https://example.com/
+</span></span></code></pre></div><p>When in doubt, the Android Chrome string works for most sites that differentiate mobile content.</p>
+<h2 id="building-realistic-mobile-requests">Building realistic mobile requests</h2>
+<p>Combine the User-Agent with other headers to mimic real mobile browser behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Accept-Language: en-US,en;q=0.9&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Accept-Encoding: gzip, deflate, br&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Viewport-Width: 390&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Sec-CH-UA-Mobile: ?1&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -L <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/
+</span></span></code></pre></div><p><strong>Flag reference:</strong></p>
+<ul>
+<li><code>-A</code> — Sets the User-Agent string</li>
+<li><code>-H</code> — Add custom headers to match browser behavior</li>
+<li><code>-L</code> — Follow redirects (many sites redirect mobile traffic differently)</li>
+<li><code>-i</code> — Include response headers in output</li>
+<li><code>-v</code> — Verbose mode (shows headers, SSL handshake, timing)</li>
+<li><code>-o &lt;file&gt;</code> — Save output to file</li>
+<li><code>-D &lt;file&gt;</code> — Save cookies to file (for stateful requests)</li>
+</ul>
+<h2 id="verify-what-the-server-received">Verify what the server received</h2>
+<p>Test endpoints confirm the User-Agent the server sees:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X)&#34;</span> https://httpbin.org/user-agent
+</span></span></code></pre></div><p>Returns JSON with the User-Agent string the server recorded. Useful for debugging if mobile content isn’t being served.</p>
+<h2 id="save-mobile-pages-to-disk">Save mobile pages to disk</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/ -o mobile-page.html
+</span></span></code></pre></div><p>Include response headers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X)&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -i https://example.com/ &gt; mobile-response.txt
+</span></span></code></pre></div><h2 id="handling-cookies-and-sessions">Handling cookies and sessions</h2>
+<p>Some sites require cookies for proper mobile detection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X)&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -c cookies.txt <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -b cookies.txt <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/
+</span></span></code></pre></div><p>The <code>-c</code> flag saves cookies; <code>-b</code> loads them for subsequent requests.</p>
+<h2 id="common-issues-and-solutions">Common issues and solutions</h2>
+<p><strong>User-Agent strings change frequently</strong></p>
+<p>Mobile OS versions and browser versions update multiple times per year. If a particular User-Agent stops working, check current strings at <a href="https://www.whatismybrowser.com/" rel="nofollow noopener" target="_blank">whatismybrowser.com</a> or capture one from a real device using browser DevTools.</p>
+<p><strong>Servers validate beyond User-Agent</strong></p>
+<p>Some sites check additional mobile headers like <code>Sec-CH-UA-Mobile</code>, viewport dimensions, or connection type. Try adding:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (Linux; Android 15)&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Sec-CH-UA-Mobile: ?1&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Sec-Fetch-Dest: document&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Sec-Fetch-Mode: navigate&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/
+</span></span></code></pre></div><p><strong>JavaScript-rendered content</strong></p>
+<p>curl only fetches raw HTML. If a site renders mobile content via JavaScript, curl won’t see the rendered output. Use headless browsers instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Using Playwright (Node.js)</span>
+</span></span><span class="line"><span class="cl">npx playwright codegen --device <span class="s2">&#34;iPhone 12&#34;</span> https://example.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Using Selenium (Python)</span>
+</span></span><span class="line"><span class="cl">from selenium import webdriver
+</span></span><span class="line"><span class="cl">from selenium.webdriver.common.by import By
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">driver</span> <span class="o">=</span> webdriver.Chrome<span class="o">()</span>
+</span></span><span class="line"><span class="cl">driver.set_window_size<span class="o">(</span>390, 844<span class="o">)</span>  <span class="c1"># iPhone viewport</span>
+</span></span><span class="line"><span class="cl">driver.get<span class="o">(</span><span class="s2">&#34;https://example.com/&#34;</span><span class="o">)</span>
+</span></span></code></pre></div><p><strong>Rate limiting and blocking</strong></p>
+<p>Aggressive scraping triggers rate limits and IP bans regardless of User-Agent. Respect <code>robots.txt</code>, add delays between requests, and rotate IPs if necessary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X)&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --max-time <span class="m">10</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --retry <span class="m">2</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --retry-delay <span class="m">5</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/
+</span></span></code></pre></div><p><strong>Certificate issues with old systems</strong></p>
+<p>On systems with outdated CA certificates, add <code>--cacert</code> or disable verification (for testing only):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -A <span class="s2">&#34;Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X)&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --cacert /etc/ssl/certs/ca-certificates.crt <span class="se">\
+</span></span></span><span class="line"><span class="cl">  https://example.com/
+</span></span></code></pre></div><p>Never disable SSL verification (<code>-k</code>) in production.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

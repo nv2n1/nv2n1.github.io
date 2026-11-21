@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fli_bmp_dirty_from(3) · Linux Manual Pages</title>
+<meta name="description" content="fli_bmp_dirty_from, fli_bmp_dirty_to – Indicate which parts of the image have changed. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fli_bmp_dirty_from/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fli_bmp_dirty_from(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> fli_bmp_dirty_from, fli_bmp_dirty_to &#8211; Indicate which parts of the image have changed. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>extern int fli_bmp_dirty_from;</code> </p>
+<p> <code>extern int fli_bmp_dirty_to;</code></p>
+<h2>DESCRIPTION</h2>
+<p> These variables are set by next_fli_frame() to indicate which part of the fli_bitmap has changed since the last call to reset_fli_variables(). If fli_bmp_dirty_from is greater than fli_bmp_dirty_to, the bitmap has not changed, otherwise lines fli_bmp_dirty_from to fli_bmp_dirty_to (inclusive) have altered. You can use these when copying the fli_bitmap onto the screen, to avoid moving data unnecessarily. Example: </p>
+<pre><code>
+if (fli_bmp_dirty_from &lt;= fli_bmp_dirty_to)
+    blit(fli_bitmap, screen, 0, fli_bmp_dirty_from,
+         0, fli_bmp_dirty_from, fli_bitmap-&gt;w,
+         fli_bmp_dirty_to - fli_bmp_dirty_from + 1);
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code>fli_bitmap</code>(3), <code>reset_fli_variables</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

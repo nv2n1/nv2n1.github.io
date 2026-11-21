@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdnullptr_t(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdnullptr_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdnullptr_t(3)</h1>
+
+
+
+
+
+<p>std::nullptr_t - std::nullptr_t</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;cstddef&gt;
+typedef decltype(nullptr) nullptr_t; <i>(since C++11)</i>
+std::nullptr_t is the type of the null pointer literal, nullptr. It is a distinct type that is not itself a pointer type or a pointer to member type.</p>
+<h2>Example</h2>
+<p>If two or more overloads accept different pointer types, an overload for std::nullptr_t is necessary to accept a null pointer argument.
+// Run this code <pre><code>#include &lt;cstddef&gt;
+#include &lt;iostream&gt;
+void f(int *pi)
+{
+std::cout &lt;&lt; &quot;Pointer to integer overload\n&quot;;
+}
+void f(double *pd)
+{
+std::cout &lt;&lt; &quot;Pointer to double overload\n&quot;;
+}
+void f(std::nullptr_t nullp)
+{
+std::cout &lt;&lt; &quot;null pointer overload\n&quot;;
+}
+int main()
+{
+int *pi;
+double *pd;
+f(pi);
+f(pd);
+f(nullptr); // would be ambiguous without void f(nullptr_t)
+// f(0);  // ambiguous call: all three functions are candidates
+// f(NULL); // ambiguous if NULL is an integral null pointer constant
+// (as is the case in most implementations)
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Pointer to integer overload
+ <wbr> Pointer to double overload
+ <wbr> null pointer overload</p>
+<h2>See also</h2>
+<p>nullptr the pointer literal which specifies a null pointer value <i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> implementation-defined null pointer constant
+NULL (macro constant)
+is_null_pointer checks if a type is std::nullptr_t
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++14)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

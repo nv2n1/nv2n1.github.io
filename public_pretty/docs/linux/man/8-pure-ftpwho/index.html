@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pure-ftpwho(8) · Linux Manual Pages</title>
+<meta name="description" content="pure-ftpwho – Report current FTP sessions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pure-ftpwho/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pure-ftpwho(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pure-ftpwho &#8211; Report current FTP sessions</p>
+<h2>Syntax</h2>
+<p>pure-ftpwho [<i>-c</i>] [<i>-h</i>] [<i>-H</i>] [<i>-n</i>] [<i>-p</i>] [<i>-s</i>] [<i>-v</i>] [<i>-w</i>] [<i>-W</i>] [<i>-x</i>]</p>
+<h2>Description</h2>
+<p>pure-ftpwho shows current Pure-FTPd client sessions. Only the system administrator may run this. Output can be text (default), HTML, XML data and parser-optimized. The server has to be compiled with <code>&#8211;with-ftpwho</code> to support this command.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd>the program is called via a web server (CGI interface) . Output is a full HTML page with the initial content-type header. This option is automatically enabled if an environment variable called GATEWAY_INTERFACE is found. This is the default if you can the program from a CGI-enabled web server (Apache, Roxen, Caudium, WN, &#8230;) .</dd>
+<dt><code>-h</code></dt>
+<dd>Output help information and exit.</dd>
+<dt><code>-H</code></dt>
+<dd>Don&#8217;t resolve host names, and only show IP addresses (faster).</dd>
+<dt><code>-n</code></dt>
+<dd>A synonym for -H.</dd>
+<dt><code>-p</code></dt>
+<dd>Output Mac OSX / GNUStep plist data.</dd>
+<dt><code>-s</code></dt>
+<dd>Output only one line per client, with only numeric data, delimited by a | character. It&#8217;s not very human-readable, but it&#8217;s designed for easy parsing by shell scripts (cut/sed) . &#8216;|&#8217; characters in user names or file names are quoted (\|) .</dd>
+<dt><code>-v</code></dt>
+<dd>Output an ASCII table (just like the default mode), with more info. The verbose output includes the local IP, the local port, the total size of transfered files and the current number of transfered bytes.</dd>
+<dt><code>-w</code></dt>
+<dd>Output a complete HTML page (web mode).</dd>
+<dt><code>-W</code></dt>
+<dd>Output an HTML page with no header and no footer. This is an embedded mode, suitable for inline calls from CGI, SSI or PHP scripts.</dd>
+<dt><code>-x</code></dt>
+<dd>Output well-formed XML data for post-processing. </dd>
+</dl>
+<h2>Files</h2>
+<p><code>/var/run/pure-ftpd/</code> Scoreboard directory. Should always owned by root and on a lockable filesystem.</p>
+<h2>Environment Variables</h2>
+<dl>
+<dt><code>GATEWAY_INTERFACE</code></dt>
+<dd>If found, automatically run in CGI mode and output HTML data. </dd>
+</dl>
+<h2>Authors</h2>
+<p>Frank DENIS &lt;j at pureftpd dot org&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-ftp/">ftp</a>(1)</code>, <code><a href="/docs/linux/man/8-pure-ftpd/">pure-ftpd</a>(8)</code> <code><a href="/docs/linux/man/8-pure-ftpwho/">pure-ftpwho</a>(8)</code> <code><a href="/docs/linux/man/8-pure-mrtginfo/">pure-mrtginfo</a>(8)</code> <code><a href="/docs/linux/man/8-pure-uploadscript/">pure-uploadscript</a>(8)</code> <code><a href="/docs/linux/man/8-pure-statsdecode/">pure-statsdecode</a>(8)</code> <code><a href="/docs/linux/man/8-pure-pw/">pure-pw</a>(8)</code> <code><a href="/docs/linux/man/8-pure-quotacheck/">pure-quotacheck</a>(8)</code> <code><a href="/docs/linux/man/8-pure-authd/">pure-authd</a>(8)</code> <code>RFC 959</code>, <code>RFC 2389,</code> <code>RFC 2228</code> and <code>RFC 2428</code>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

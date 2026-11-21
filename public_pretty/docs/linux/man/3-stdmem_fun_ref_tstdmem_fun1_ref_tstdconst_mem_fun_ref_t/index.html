@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmem_fun_ref_tstdmem_fun1_ref_tstdconst_mem_fun_ref_t(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmem_fun_ref_tstdmem_fun1_ref_tstdconst_mem_fun_ref_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmem_fun_ref_tstdmem_fun1_ref_tstdconst_mem_fun_ref_t(3)</h1>
+
+
+
+
+
+<p>std::mem_fun_ref_t,std::mem_fun1_ref_t,std::const_mem_fun_ref_t, - std::mem_fun_ref_t,std::mem_fun1_ref_t,std::const_mem_fun_ref_t,</p>
+<h2>Synopsis</h2>
+<p>template&lt; <wbr>class S, class T <wbr>&gt; <pre><code>class mem_fun_ref_t : public unary_function&lt;T, S&gt;
+{
+public:
+(1)(deprecated in C++ 11)
+explicit mem_fun_ref_t(S (T::*p)());
+(removed in C++ 17)
+S
+operator()(T &amp;p) const;
+};
+template &lt;class S, class T&gt;
+class const_mem_fun_ref_t : public unary_function&lt;T, S&gt;
+{
+public:
+(2)(deprecated in C++ 11)
+explicit const_mem_fun_ref_t(S (T::*p)() const);
+(removed in C++ 17)
+S
+operator()(const T &amp;p) const;
+};
+template &lt;class S, class T, class A&gt;
+class mem_fun1_ref_t : public binary_function&lt;T, A, S&gt;
+{
+public:
+(3)(deprecated in C++ 11)
+explicit mem_fun1_ref_t(S (T::*p)(A));
+(removed in C++ 17)
+S
+operator()(T &amp;p, A x) const;
+};
+template &lt;class S, class T, class A&gt;
+class const_mem_fun1_ref_t : public binary_function&lt;T, A, S&gt;
+{
+(deprecated in C++ 11)
+public : (4)(removed in C++ 17)
+explicit const_mem_fun1_ref_t(S (T::*p)(A) const);
+S operator()(const T &amp;p, A x) const;
+};</code></pre>
+Wrapper around a member function pointer. The class instance whose member function
+to call is passed as a reference to the operator().
+1) <wbr>Wraps a non-const member function with no parameters.
+2) <wbr>Wraps a const member function with no parameters.
+3) <wbr>Wraps a non-const member function with a single parameter.
+4) <wbr>Wraps a const member function with a single parameter.</p>
+<h2>See also</h2>
+<p>mem_fun_ref <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>creates a wrapper from a pointer to member function, callable
+(deprecated in C++11) <wbr>with a reference to object
+(removed in C++17) <wbr> <wbr> <wbr> <wbr><i>(function template)</i>
+mem_fun_t
+mem_fun1_t <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>wrapper for a pointer to nullary or unary member function,
+const_mem_fun_t <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>callable with a pointer to object
+const_mem_fun1_t <wbr> <wbr> <wbr> <wbr> <wbr> <wbr><i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>phy_poll_reset(9) · Linux Manual Pages</title>
+<meta name="description" content="phy_poll_reset – Safely wait until a PHY reset has properly completed">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-phy_poll_reset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>phy_poll_reset(9)</h1>
+
+
+
+
+
+<p>phy_poll_reset &#8211; Safely wait until a PHY reset has properly completed</p>
+<h2>Synopsis</h2>
+<pre><code>int phy_poll_reset(struct phy_device *phydev);</code></pre>
+<h2>Arguments</h2>
+<p><i>phydev</i></p>
+<dl>
+<dd>
+</dd><dd>The PHY device to poll</dd></dl>
+<h2>Description</h2>
+<p>According to IEEE 802.3, Section 2, Subsection 22.2.4.1.1, as published in 2008, a PHY reset may take up to 0.5 seconds. The MII BMCR register must be polled until the BMCR_RESET bit clears. </p>
+<p> Furthermore, any attempts to write to PHY registers may have no effect or even generate MDIO bus errors until this is complete. </p>
+<p> Some PHYs (such as the Marvell 88E1111) don&#8217;t entirely conform to the standard and do not fully reset after the BMCR_RESET bit is set, and may even *REQUIRE* a soft-reset to properly restart autonegotiation. In an effort to support such broken PHYs, this function is separate from the standard <code>phy_init_hw</code> which will zero all the other bits in the BMCR and reapply all driver-specific and board-specific fixups.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

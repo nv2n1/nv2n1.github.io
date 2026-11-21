@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_color(3) · Linux Manual Pages</title>
+<meta name="description" content="set_color – Sets the specified palette entry to the specified RGB triplet. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-set_color/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>set_color(3)</h1>
+
+
+
+
+
+<p>set_color &#8211; Sets the specified palette entry to the specified RGB triplet. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+void set_color(int index, const RGB *p);</code></pre>
+<h2>Description</h2>
+<p>Sets the specified palette entry to the specified RGB triplet. Unlike the other palette functions this doesn&#8217;t do any retrace synchronisation, so you should call vsync() before it to prevent snow problems. Example: </p>
+<pre> RGB rgb;
+ ...
+ vsync();
+ set_color(192, &amp;rgb);</pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-set_palette/">set_palette</a></code>(3), <code>get_color</code>(3), <code>_set_color</code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3), <code><a href="/docs/linux/man/3-exscroll/">exscroll</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mount-exfat-fuse(8) · Linux Manual Pages</title>
+<meta name="description" content="mount.exfat-fuse – mount an exFAT file system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mount-exfat-fuse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mount-exfat-fuse(8)</h1>
+
+
+
+
+
+<p>mount.exfat-fuse &#8211; mount an exFAT file system</p>
+<h2>Synopsis</h2>
+<p><code>mount.exfat-fuse</code> [ <code>-d</code> ] [ <code>-n</code> ] [ <code>-o</code> <i>options</i> ] [ <code>-V</code> ] [ <code>-v</code> ] <i>device dir</i> </p>
+<h2>Description</h2>
+<p><code>mount.exfat-fuse</code> is a free exFAT file system implementation with write support. exFAT is a simple file system created by Microsoft. It is intended to replace FAT32 removing some of its limitations. exFAT is a standard FS for SDXC memory cards. </p>
+<h2>Command Line Options</h2>
+<p>Command line options available:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd>Enable debug logging and do not detach from shell.</dd>
+<dt><code>-n</code></dt>
+<dd>Ignored.</dd>
+<dt><code>-o</code><i> options</i></dt>
+<dd>File system specific options. For more details see <code>FILE SYSTEM OPTIONS</code> section below.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright.</dd>
+<dt><code>-v</code></dt>
+<dd>Ignored. </dd>
+</dl>
+<h2>File System Options</h2>
+<dl>
+<dt><code>umask=</code><i>value</i></dt>
+<dd>Set the umask (the bitmask of the permissions that are <code>not</code> present, in octal). The default is 0.</dd>
+<dt><code>dmask=</code><i>value</i></dt>
+<dd>Set the umask for directories only.</dd>
+<dt><code>fmask=</code><i>value</i></dt>
+<dd>Set the umask for files only.</dd>
+<dt><code>uid=</code><i>n</i></dt>
+<dd>Set the owner for all files and directories. The default is the owner of the current process.</dd>
+<dt><code>gid=</code><i>n</i></dt>
+<dd>Set the group for all files and directories. The default is the group of the current process.</dd>
+<dt><code>ro</code></dt>
+<dd>Mount the file system in read only mode.</dd>
+<dt><code>noatime</code></dt>
+<dd>Do not update access time when file is read. </dd>
+</dl>
+<h2>Exit Codes</h2>
+<p>Zero is returned on successful mount. Any other code means an error.</p>
+<h2>Bugs</h2>
+<p>exFAT is a case-insensitive file system. Some things can behave unexpectedly, e.g. directory renaming that changes only case of some characters: <code> $ mv FOO Foo</code><br />
+ <code> mv: cannot move &#8216;FOO&#8217; to a subdirectory of itself, &#8216;Foo/FOO&#8217;</code> This happens because <code>mv</code> finds that destination exists (for case-insensitive file systems <code>FOO</code> and <code>Foo</code> are the same thing) and adds source basename to the destination. The file system gets <code>rename(&quot;FOO&quot;,&nbsp;&quot;Foo/FOO&quot;)</code> syscall and returns an error. </p>
+<h2>Author</h2>
+<p>Andrew Nayenko</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

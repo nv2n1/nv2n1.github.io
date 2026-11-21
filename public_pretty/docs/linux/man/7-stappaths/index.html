@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stappaths(7) · Linux Manual Pages</title>
+<meta name="description" content="stappaths – systemtap configurable file paths">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-stappaths/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>stappaths(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>stappaths &#8211; systemtap configurable file paths </p>
+<h2>Description</h2>
+<p>This manual page was generated on 2017-08-03 for systemtap 3.1. The following section will list the main paths in systemtap that are important to know and may be required to reference.</p>
+<dl>
+<dt>/usr/share/systemtap/tapset/</dt>
+<dd>The directory for the standard probe-alias / function tapset library, unless overridden by the <i>SYSTEMTAP_TAPSET</i> environment variable or the <i>XDG_DATA_DIRS</i> environment variable. These are described in the <i>stapprobes</i>(3stap), <i>probe::*</i>(3stap), and <i>function::*</i>(3stap) manual pages.</dd>
+<dt>/usr/share/systemtap/runtime/</dt>
+<dd>The runtime sources, unless overridden by the <i>SYSTEMTAP_RUNTIME</i> environment variable.</dd>
+<dt>/usr/bin/staprun</dt>
+<dd>The auxiliary program supervising module loading, interaction, and unloading.</dd>
+<dt>/usr/libexec/systemtap/stapio</dt>
+<dd>The auxiliary program for module input and output handling.</dd>
+<dt>/usr/include/sys/sdt.h</dt>
+<dd>Location of the &lt;sys/sdt.h&gt; headers.</dd>
+<dt>Kernel debuginfo Path: /usr/lib/debug/lib/modules/$(uname -r)/</dt>
+<dd>The location of kernel debugging information when packaged into the <i>kernel-debuginfo</i> RPM, unless overridden by the <i>SYSTEMTAP_DEBUGINFO_PATH</i> environment variable. The default value for this variable is <i>+:.debug:/usr/lib/debug:build</i>. elfutils searches vmlinux in this path and it interprets the path as a base directory of which various subdirectories will be searched for finding debuginfo for the kernel, kernel modules, and user-space binaries. By default, systemtap will also look for vmlinux in these locations: </dd>
+<dl>
+<dd>
+<pre>/boot/vmlinux-`uname -r` 
+/lib/modules/`uname -r`/vmlinux
+/lib/modules/`uname -r`/vmlinux.debug
+/lib/modules/`uname -r`/build/vmlinux
+/lib/modules/`uname -r`/.debug/vmlinux.debug
+/usr/lib/debug/lib/modules/`uname -r`/vmlinux.debug
+/var/cache/abrt-di/usr/debug/lib/modules/`uname -r`/
+/var/cache/abrt-di/usr/lib/debug/lib/modules/`uname -r`/vmlinux.debug</pre>
+</dd></dl>
+<dd>Corresponding source files are usually located under /usr/src/debug/. Further file information on user-space applications can be determined per-basis using rpm -ql &lt;package&gt;-debuginfo. For supported user-space applications information please visit the systemtap wiki.</dd>
+<dt>$HOME/.systemtap</dt>
+<dd>Systemtap data directory for cached systemtap files, unless overridden by the <i>SYSTEMTAP_DIR</i> environment variable.</dd>
+<dt>/tmp/stapXXXXXX</dt>
+<dd>Temporary directory for systemtap files, including translated C code and kernel object.</dd>
+<dt>/lib/modules/VERSION/build</dt>
+<dd>The location of kernel module building infrastructure.</dd>
+<dt>/usr/share/doc/systemtap*/examples</dt>
+<dd>Examples with greater detail can be found here. Each example comes with a .txt or .meta file explaining what the example, sample or demo does and how it is ordinarily run. See also <i><a rel="nofollow" href="http://sourceware.org/systemtap/examples/">http://sourceware.org/systemtap/examples/</a></i></dd>
+<dt>$SYSTEMTAP_DIR/ssl/server</dt>
+<dd>User&#8217;s server-side SSL certificate database. If SYSTEMTAP_DIR is not set, the default is $HOME/.systemtap.</dd>
+<dt>$SYSTEMTAP_DIR/ssl/client</dt>
+<dd>User&#8217;s private client-side SSL certificate database. If SYSTEMTAP_DIR is not set, the default is $HOME/.systemtap.</dd>
+<dt>/etc/systemtap/ssl/client</dt>
+<dd>Global client-side SSL certificate database.</dd>
+<dt>/etc/systemtap/staprun/</dt>
+<dd><i>staprun</i>&#8216;s trusted signer certificate database.</dd>
+<dt>/etc/sysconfig/stap-server/</dt>
+<dd>stap-server service global configuration file.</dd>
+<dt>/etc/stap-server/conf.d/*.conf</dt>
+<dd>stap-server service configuration files for default servers.</dd>
+<dt>/var/run/stap-server/</dt>
+<dd>stap-server service default location of status files for running servers.</dd>
+<dt>/var/log/stap-server/log</dt>
+<dd>stap-server service default log file. </dd>
+<h2>Files</h2>
+<p><i>/usr/share/systemtap/tapset</i></p>
+<h2>See Also</h2>
+<pre><i>stapprobes</i>(3stap),
+<i><a href="//www.systutorials.com/docs/linux/man/8-staprun/">staprun</a></i>(8),
+<i>stapvars</i>(3stap),
+<i>stapex</i>(3stap),
+<i><a href="//www.systutorials.com/docs/linux/man/8-stap-server/">stap-server</a></i>(8),
+<i><a href="//www.systutorials.com/docs/linux/man/1-awk/">awk</a></i>(1),
+<i><a href="//www.systutorials.com/docs/linux/man/1-gdb/">gdb</a></i>(1)</pre>
+<h2>Bugs</h2>
+<p>Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sourceware.org/systemtap/">http://sourceware.org/systemtap/</a></code>,<code>&lt;systemtap [at] sourceware.org&gt;</code>. </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>asn1_length_der(3) · Linux Manual Pages</title>
+<meta name="description" content="asn1_length_der – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-asn1_length_der/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>asn1_length_der(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> asn1_length_der &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;libtasn1.h&gt;</code> </p>
+<p> <code>void asn1_length_der(unsigned long int </code><i>len</i><code>, unsigned char * </code><i>der</i><code>, int * </code><i>der_len</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>unsigned long int len</dt>
+<dd> value to convert.</dd>
+<dt>unsigned char * der</dt>
+<dd> buffer to hold the returned encoding (may be <code>NULL</code>).</dd>
+<dt>int * der_len</dt>
+<dd> number of meaningful bytes of ANS (der[0]..der[der_len-1]).</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Creates the DER encoding of the provided length value. The <i>der</i> buffer must have enough room for the output. The maximum length this function will encode is <code>ASN1_MAX_LENGTH_SIZE</code>. </p>
+<p> To know the size of the DER encoding use a <code>NULL</code> value for <i>der</i> .</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
+<dl>
+<dt>
+</dt><dd> <code>info libtasn1</code></dd></dl>
+<p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
+<dl>
+<dt>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

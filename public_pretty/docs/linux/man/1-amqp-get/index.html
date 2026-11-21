@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amqp-get(1) · Linux Manual Pages</title>
+<meta name="description" content="amqp-get – Get a message from a queue on an AMQP server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-amqp-get/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>amqp-get(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> amqp-get &#8211; Get a message from a queue on an AMQP server </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>amqp-get</code> [<i>OPTION</i>&#8230;] {-q&nbsp;<wbr><i>queue name</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>amqp-get</code></p>
+<dd>attempts to consume a single message from a queue on an AMQP server, and exits. Unless the queue was empty, the body of the resulting message is sent to standard output.</dd>
+<h2>OPTIONS</h2>
+<p> <code>-q</code>, <code>&#8211;queue</code>=<i>queue name</i></p>
+<dl>
+<dt>
+</dt><dd> The name of the queue to consume messages from.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> If the queue is not empty, and a message is successfully retrieved, the exit status is 0. If an error occurs, the exit status is 1. If the queue is found to be empty, the exit status is 2.</p>
+<h2>EXAMPLES</h2>
+<p> Get a message from the queue &#8220;myqueue&#8221;, and display its body on standard output:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ <code>amqp-get -q myqueue</code>
+</pre>
+</dd></dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-librabbitmq-tools/">librabbitmq-tools</a></code>(7) describes connection-related options common to all the RabbitMQ C Client tools.</p>
+<h2>AUTHOR</h2>
+<p> <code>The RabbitMQ Team &lt;</code><code>m[blue]&lt;info [at] rabbitmq.com&gt;</code>m[]<code>&gt;</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

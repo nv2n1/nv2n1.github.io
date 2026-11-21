@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ibcacheedit(8) · Linux Manual Pages</title>
+<meta name="description" content="IBCACHEEDIT –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ibcacheedit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ibcacheedit(8)</h1>
+
+
+
+
+
+<p>IBCACHEEDIT &#8211;</p>
+<h2>Edit An Ibnetdiscover Cache</h2>
+<h3>Synopsis</h3>
+<p>ibcacheedit [options] &lt;orig.cache&gt; &lt;new.cache&gt;</p>
+<h3>Description</h3>
+<p>ibcacheedit allows users to edit an ibnetdiscover cache created through the <code>&#8211;cache</code> option in <code><a href="/docs/linux/man/8-ibnetdiscover/">ibnetdiscover</a>(8)</code> .</p>
+<h3>Options</h3>
+<dl>
+<dt><code>&#8211;switchguid BEFOREGUID:AFTERGUID</code></dt>
+<dd>Specify a switchguid that should be changed. The before and after guid should be separated by a colon. On switches, port guids are identical to the switch guid, so port guids will be adjusted as well on switches.</dd>
+<dt><code>&#8211;caguid BEFOREGUID:AFTERGUID</code></dt>
+<dd>Specify a caguid that should be changed. The before and after guid should be separated by a colon.</dd>
+<dt><code>&#8211;sysimgguid BEFOREGUID:AFTERGUID</code></dt>
+<dd>Specify a sysimgguid that should be changed. The before and after guid should be spearated by a colon.</dd>
+<dt><code>&#8211;portguid NODEGUID:BEFOREGUID:AFTERGUID</code></dt>
+<dd>Specify a portguid that should be changed. The nodeguid of the port (e.g. switchguid or caguid) should be specified first, followed by a colon, the before port guid, another colon, then the after port guid. On switches, port guids are identical to the switch guid, so the switch guid will be adjusted as well on switches.</dd></dl>
+<h3>Debugging flags</h3>
+<p><code>-h, &#8211;help</code> show the usage message </p>
+<p> <code>-V, &#8211;version</code> show the version info.</p>
+<h3>Authors</h3>
+<dl>
+<dt><code>Albert Chu</code></dt>
+<dd>&lt; <i>chu11 [at] llnl.gov</i> &gt; </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

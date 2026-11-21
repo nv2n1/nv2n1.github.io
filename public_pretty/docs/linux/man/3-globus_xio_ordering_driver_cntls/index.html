@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_xio_ordering_driver_cntls(3) · Linux Manual Pages</title>
+<meta name="description" content="Attributes and Cntls –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_xio_ordering_driver_cntls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_xio_ordering_driver_cntls(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> Attributes and Cntls &#8211; </p>
+<h3>Enumerations</h3>
+<p> enum <code>globus_xio_ordering_cmd_t</code> { <code>GLOBUS_XIO_ORDERING_SET_OFFSET</code>, <code>GLOBUS_XIO_ORDERING_SET_MAX_READ_COUNT</code>, <code>GLOBUS_XIO_ORDERING_GET_MAX_READ_COUNT</code>, <code>GLOBUS_XIO_ORDERING_SET_BUFFERING</code>, <code>GLOBUS_XIO_ORDERING_GET_BUFFERING</code>, <code>GLOBUS_XIO_ORDERING_SET_BUF_SIZE</code>, <code>GLOBUS_XIO_ORDERING_GET_BUF_SIZE</code>, <code>GLOBUS_XIO_ORDERING_SET_MAX_BUF_COUNT</code>, <code>GLOBUS_XIO_ORDERING_GET_MAX_BUF_COUNT</code> } </p>
+<h3>Functions</h3>
+<p> globus_result_t <code>globus_xio_handle_cntl</code> (handle, driver, <code>GLOBUS_XIO_ORDERING_SET_OFFSET</code>, globus_off_t offset) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_MAX_READ_COUNT</code>, int max_read_count) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_MAX_READ_COUNT</code>, int *max_read_count_out) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_BUFFERING</code>, globus_bool_t buffering) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_BUFFERING</code>, globus_bool_t *buffering_out) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_BUF_SIZE</code>, int buf_size) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_BUF_SIZE</code>, int *buf_size_out) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_MAX_BUF_COUNT</code>, int max_buf_count) </p>
+<p> globus_result_t <code>globus_xio_attr_cntl</code> (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_MAX_BUF_COUNT</code>, int *max_buf_count_out) </p>
+<h2>Detailed Description</h2>
+<p> Ordering driver specific attrs and cntls. </p>
+<p> <code>See Also:</code></p>
+<dl>
+<dt>
+</dt><dd> <code>globus_xio_attr_cntl()</code> </dd>
+<p> <code>globus_xio_handle_cntl()</code></dl>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_xio_ordering_cmd_t</code></h3>
+<p> ORDERING driver specific cntls </p>
+<p> <code>Enumerator</code></p>
+<dl>
+<dt><i>GLOBUS_XIO_ORDERING_SET_OFFSET </i></dt>
+<dd> See usage for: <code>globus_xio_handle_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_SET_MAX_READ_COUNT </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_GET_MAX_READ_COUNT </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_SET_BUFFERING </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_GET_BUFFERING </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_SET_BUF_SIZE </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_GET_BUF_SIZE </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_SET_MAX_BUF_COUNT </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd>
+<dt><i>GLOBUS_XIO_ORDERING_GET_MAX_BUF_COUNT </i></dt>
+<dd> See usage for: <code>globus_xio_attr_cntl </code></dd></dl>
+<h2>Function Documentation</h2>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_MAX_READ_COUNT</code>, intmax_read_count)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the maximum number of reads that ordering driver can have outstanding on driver(s) below. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>max_read_count</i> Specifies the maximum number of parallel reads (default is 1).</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_MAX_READ_COUNT</code>, int *max_read_count_out)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the maximum number of parallel reads set on the attr. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>max_read_count_out</i> The maximum number of parallel reads allowed will be stored here.</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_BUFFERING</code>, globus_bool_tbuffering)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. This driver can be used in 2 modes; ordering (care about offsets of the data read &#8211; underlying transport driver may deliver data out of order &#8211; this driver will rearrange data based on the offset and deliver inorder to user) and buffering (do not care about offsets &#8211; just buffer the data read abd deliver it when requested). This attribute control can be used to enable buffering. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>buffering</i> GLOBUS_TRUE to enable buffering, GLOBUS_FALSE (default) to disable buffering.</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_BUFFERING</code>, globus_bool_t *buffering_out)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the buffering flag on the attr. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>buffering_out</i> Buffering flag will be stored in here.</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_BUF_SIZE</code>, intbuf_size)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the size of the buffer that ordering driver creates to use for reading data from the driver below it. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>buf_size</i> Specifies the buffer size for internal reads (default is 100 KB).</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_BUF_SIZE</code>, int *buf_size_out)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the size of the buffer used for the internal reads. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>buf_size_out</i> The buffer size will be stored in here.</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_SET_MAX_BUF_COUNT</code>, intmax_buf_count)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set the maximum number of buffers that this driver can create for reading data from the driver below it. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>max_buf_count</i> Specifies the max buffer count for internal reads (default is 100).</dd></dl>
+<h3>globus_result_t globus_xio_attr_cntl (attr, driver, <code>GLOBUS_XIO_ORDERING_GET_MAX_BUF_COUNT</code>, int *max_buf_count_out)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Get the maximum buffer count set on the attr. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>max_buf_count_out</i> The maximun buffer count will be stored in here.</dd></dl>
+<h3>globus_result_t globus_xio_handle_cntl (handle, driver, <code>GLOBUS_XIO_ORDERING_SET_OFFSET</code>, globus_off_toffset)</h3>
+<p> This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Set offset for the next IO operation. This is not allowed when there is an outstanding IO operation. This operation clears all the buffered data. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>offset</i> Specifies the offset to use in the next IO operation.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_xio from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAH">Function Documentation</a></dt>
+<dd>
+</dd><dt><a href="#lbAR">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

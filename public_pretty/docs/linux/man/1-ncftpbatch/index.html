@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncftpbatch(1) · Linux Manual Pages</title>
+<meta name="description" content="ncftpbatch – Individual batch FTP job processor">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ncftpbatch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ncftpbatch(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ncftpbatch &#8211; Individual batch FTP job processor</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ncftpbatch</code> -d </p>
+<p> <code>ncftpbatch</code> -l </p>
+<p> <code>ncftpbatch</code> -D</p>
+<h2>OPTIONS</h2>
+<h3>Command line flags:</h3>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Begin background processing of FTP jobs in the current user&#8217;s $HOME/.ncftp/spool directory. This returns immediately, because a daemon process is spawned and ran in the background.</dd>
+<dt><code>-l</code></dt>
+<dd> Lists the contents of the user&#8217;s job queue.</dd>
+<dt><code>-D</code></dt>
+<dd> This is like <code>-d</code>, except that the process does not become a daemon.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This program is responsible for processing background FTP requests. It is normally only run by <i>ncftp</i> and not manually by a human being, however you can run it to manually process the FTP job queue. </p>
+<p> The jobs are spool files written to a user&#8217;s $HOME/.ncftp/spool directory and have a special format and file-naming convention (which contains when the job is to be run). <i>ncftp</i> runs this program when it needs to, but if the <i>ncftpbatch</i> daemon dies unexpectedly the jobs that are left in the queue will not be processed until another instance of <i>ncftpbatch</i> is run. </p>
+<p> <i>ncftpget</i> and <i>ncftpput</i> can also be used to submit jobs for batch processing, using those utilities&#8217; <code>-b</code> command-line flag. If desired, you can also manually create the spool files although this procedure is not documented here (see the manual page for <i>ncftpspooler</i> for more information on how to do that).</p>
+<h2>DIAGNOSTICS</h2>
+<p> <i>ncftpbatch</i> writes to its own log file, the $HOME/.ncftp/spool/log file. This file should be examined to determine if any <i>ncftpbatch</i> processes are actively working on jobs.</p>
+<h2>AUTHOR</h2>
+<p> Mike Gleason, NcFTP Software (<a rel="nofollow" href="http://www.ncftp.com">http://www.ncftp.com</a>).</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-ncftp/">ncftp</a></i>(1), <i><a href="/docs/linux/man/1-ncftpput/">ncftpput</a></i>(1), <i><a href="/docs/linux/man/1-ncftpget/">ncftpget</a></i>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

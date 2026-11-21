@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xdriver(1) · Linux Manual Pages</title>
+<meta name="description" content="XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 environment">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xdriver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xdriver(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <i></i><code>XDRIVER &#8211; GRASS Monitor</code> &#8211; driver to display GRASS maps in X11 environment </p>
+<p>&nbsp;<wbr> <i>(drivers)</i></p>
+<h2>DESCRIPTION</h2>
+<p> The GRASS XDRIVER can be used to display GRASS maps in X11 environment.</p>
+<h2>Usage in details</h2>
+<p> Variables:</p>
+<dl>
+<dl>
+<dt>
+</dt><dd> GRASS_WIDTH </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>set the x size in pixel for the XDRIVER&nbsp;<wbr>(default: 640)</p>
+<dt>
+</dt><dd> GRASS_HEIGHT </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>set the y size in pixel for the XDRIVER&nbsp;<wbr>(default: 480)</p>
+<dt>
+</dt><dd> XDRIVER_TRUECOLOR=[TRUE|FALSE] </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>Look for a TrueColor visual&nbsp;<wbr>(?)</p>
+<dt>
+</dt><dd> XDRIVER_WINDOW </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>?</p>
+<dt>
+</dt><dd> XDRIVER_PRIVATE_CMAP </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>Private color map&nbsp;<wbr>(?)</p>
+<dt>
+</dt><dd> XDRIVER_LEFT </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>defines the left position of GRASS monitor&nbsp;<wbr>(<i>removed?</i>)</p>
+<dt>
+</dt><dd> XDRIVER_TOP </dd>
+<p>&nbsp;<wbr>&nbsp;<wbr>define the upper position of GRASS monitor&nbsp;<wbr>(<i>removed?</i>)</dl>
+</dl>
+<h3>Set the XDRIVER size</h3>
+<p> # bash shell syntax:<br />
+ export GRASS_WIDTH=xxx<br />
+ export GRASS_HEIGHT=yyy </p>
+<p> # c shell syntax:<br />
+ setenv GRASS_WIDTH xxx<br />
+ setenv GRASS_HEIGHT yyy<br />
+ To control the XDRIVER, use the d.mon module. </p>
+<p> The maximum color depth depends on the current X Server settings.</p>
+<h2>SEE ALSO</h2>
+<p> <i> HTML map driver, PNG driver, PostScript driver<br />
+ d.frame, d.mon, g.region </i> </p>
+<h2>AUTHORS</h2>
+<p> CERL<br />
+ various improvements from several authors.<br />
+ Rewritten 2001 by Glynn Clements </p>
+<p> <i>Last changed: $Date: 2007-05-14 08:26:06 +0200 (Mon, 14 May 2007) $</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

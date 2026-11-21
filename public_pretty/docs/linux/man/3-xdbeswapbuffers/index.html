@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xdbeswapbuffers(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xdbeswapbuffers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xdbeswapbuffers(3)</h1>
+
+
+
+
+
+<p>XdbeSwapBuffers - swaps front and back DBE buffers.</p>
+<h2>Synopsis</h2>#include &lt;X11/extensions/Xdbe.h&gt; 
+<p>Status XdbeSwapBuffers(
+ <wbr> <wbr> <wbr> Display <wbr> <wbr> <wbr> <wbr> <wbr> *dpy,
+ <wbr> <wbr> <wbr> XdbeSwapInfo *swap_info,
+ <wbr> <wbr> <wbr> int <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> num_windows)</p>
+<h2>Description</h2>This function swaps the front and back buffers for a list of windows. The argument <i>num_windows</i> specifies how many windows are to have their buffers swapped; it is the number of elements in the <i>swap_info</i> array. The argument <i>swap_info</i> specifies the information needed per window to do the swap. 
+<p>The <i>XdbeSwapInfo</i> structure has the following fields:</p>
+<p> <wbr> <wbr> <wbr> <wbr> Window <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> swap_window
+ <wbr> <wbr> <wbr> <wbr> XdbeSwapAction <wbr> <wbr> <wbr> swap_action</p>
+<p><i>swap_window</i> specifies the window for which to swap buffers. <i>swap_action</i> specifies the swap action to use for this <i>swap_window.</i></p>
+<p><i>swap_action</i> determines what will happen to the new back buffer of the <i>swap_window</i> it is paired with in the list in addition to making the old back buffer become visible. The defined actions are as follows:</p>
+<dl COMPACT><dt>XdbeUndefined
+</dt><dd>The contents of the new back buffer become undefined. This may be the most efficient action since it allows the implementation to discard the contents of the buffer if it needs to.
+</dd><dt>XdbeBackground
+</dt><dd>The unobscured region of the new back buffer will be tiled with the window background. The background action allows devices to use a fast clear capability during a swap.
+</dd><dt>XdbeUntouched
+</dt><dd>The unobscured region of the new back buffer will be unmodified by the swap.
+</dd><dt>XdbeCopied
+</dt><dd>The unobscured region of the new back buffer will be the contents of the old back buffer</dd></dl><h2>Errors</h2><dl COMPACT><dt>BadMatch
+</dt><dd>A non-double-buffered window was specified or a window was specified twice.
+</dd><dt>BadWindow
+</dt><dd>An invalid window was specified.
+</dd><dt>BadValue
+</dt><dd>An invalid swap action was specified.</dd></dl><h2>See Also</h2>DBE, <i>XdbeAllocateBackBufferName(),</i> <i>XdbeBeginIdiom(),</i> <i>XdbeDeallocateBackBufferName(),</i> <i>XdbeEndIdiom(),</i> <i>XdbeFreeVisualInfo(),</i> <i>XdbeGetBackBufferAttributes(),</i> <i>XdbeGetVisualInfo(),</i> <i>XdbeQueryExtension().</i>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

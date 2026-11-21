@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gresource(1) · Linux Manual Pages</title>
+<meta name="description" content="gresource – GResource tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gresource/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gresource(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gresource &#8211; GResource tool </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] list <i>FILE</i> [<i>PATH</i>]</dt>
+<dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] details <i>FILE</i> [<i>PATH</i>]</dt>
+<dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] extract <i>FILE</i> <i>PATH</i></dt>
+<dt> <code>gresource</code> sections <i>FILE</i></dt>
+<dt> <code>gresource</code> help [<i>COMMAND</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>gresource</code></p>
+<dd>offers a simple commandline interface to <code>GResource</code>. It lets you list and extract resources that have been compiled into a resource file or included in an elf file (a binary or a shared library). </dd>
+<p> The file to operate on is specified by the <i>FILE</i> argument. </p>
+<p> If an elf file includes multiple sections with resources, it is possible to select which one to operate on with the &#8211;section option. Use the sections command to find available sections.</p>
+<h2>COMMANDS</h2>
+<p> <code>list</code></p>
+<dl>
+<dt>
+</dt><dd> Lists resources. If <i>SECTION</i> is given, only list resources in this section. If <i>PATH</i> is given, only list matching resources.</dd></dl>
+<p> <code>details</code></p>
+<dl>
+<dt>
+</dt><dd> Lists resources with details. If <i>SECTION</i> is given, only list resources in this section. If <i>PATH</i> is given, only list matching resources. Details include the section, size and compression of each resource.</dd></dl>
+<p> <code>extract</code></p>
+<dl>
+<dt>
+</dt><dd> Extracts the resource named by <i>PATH</i> to stdout. Note that resources may contain binary data.</dd></dl>
+<p> <code>sections</code></p>
+<dl>
+<dt>
+</dt><dd> Lists sections containing resources. This is only interesting if <i>FILE</i> is an elf file.</dd></dl>
+<p> <code>help</code></p>
+<dl>
+<dt>
+</dt><dd> Prints help and exits.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

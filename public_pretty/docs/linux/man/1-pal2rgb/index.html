@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pal2rgb(1) · Linux Manual Pages</title>
+<meta name="description" content="pal2rgb – convert a palette color TIFF image to a full color image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pal2rgb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pal2rgb(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pal2rgb &#8211; convert a palette color <font SIZE="-1">TIFF</font> image to a full color image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pal2rgb</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>Pal2rgb</i> converts a palette color <font SIZE="-1">TIFF</font> image to a full color image by applying the colormap of the palette image to each sample to generate a full color <font SIZE="-1">RGB</font> image.</p>
+<h2>OPTIONS</h2>
+<p> Options that affect the interpretation of input data are:</p>
+<dl>
+<dt><code>-C</code></dt>
+<dd> This option overrides the default behavior of <i>pal2rgb</i> in determining whether or not colormap entries contain 16-bit or 8-bit values. By default the colormap is inspected and if no colormap entry greater than 255 is found, the colormap is assumed to have only 8-bit values; otherwise 16-bit values (as required by the <font SIZE="-1">TIFF</font> specification) are assumed. The <code>-C</code> option can be used to explicitly specify the number of bits for colormap entries: <code>-C 8</code> for 8-bit values, <code>-C 16</code> for 16-bit values.</dd></dl>
+<p> Options that affect the output file format are:</p>
+<dl>
+<dt><code>-p</code></dt>
+<dd> Explicitly select the planar configuration used in organizing data samples in the output image: <code>-p contig</code> for samples packed contiguously, and <code>-p separate</code> for samples stored separately. By default samples are packed.</dd>
+<dt><code>-c</code></dt>
+<dd> Use the specific compression algorithm to encoded image data in the output file: <code>-c packbits</code> for Macintosh Packbits, <code>-c lzw</code> for Lempel-Ziv &amp; Welch, <code>-c zip</code> for Deflate, <code>-c none</code> for no compression. If no compression-related option is specified, the input file&#8217;s compression algorithm is used.</dd>
+<dt><code>-r</code></dt>
+<dd> Explicitly specify the number of rows in each strip of the output file. If the <code>-r</code> option is not specified, a number is selected such that each output strip has approximately 8 kilobytes of data in it.</dd></dl>
+<h2>BUGS</h2>
+<p> Only 8-bit images are handled.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code><a href="/docs/linux/man/1-tiffmedian/">tiffmedian</a></code>(1), <code>libtiff</code>(3) </p>
+<p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

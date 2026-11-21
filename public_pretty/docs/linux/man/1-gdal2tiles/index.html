@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gdal2tiles(1) · Linux Manual Pages</title>
+<meta name="description" content="gdal2tiles – gdal2tiles.py generates directory with TMS tiles, KMLs and simple web viewers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gdal2tiles/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gdal2tiles(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gdal2tiles &#8211; gdal2tiles.py generates directory with TMS tiles, KMLs and simple web viewers </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+gdal2tiles.py[-p profile][-r resampling][-s srs][-z zoom]
+             [-e][-a nodata][-v][-h][-k][-n][-u url]
+             [-w webviewer][-t title][-c copyright]
+             [-g googlekey][-b bingkey] input_file[output_dir]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> This utility generates a directory with small tiles and metadata, following the OSGeo Tile Map Service Specification. Simple web pages with viewers based on Google Maps and OpenLayers are generated as well &#8211; so anybody can comfortably explore your maps on-line and you do not need to install or configure any special software (like MapServer) and the map displays very fast in the web browser. You only need to upload the generated directory onto a web server. </p>
+<p> GDAL2Tiles also creates the necessary metadata for Google Earth (KML SuperOverlay), in case the supplied map uses EPSG:4326 projection. </p>
+<p> World files and embedded georeferencing is used during tile generation, but you can publish a picture without proper georeferencing too. </p>
+<dl>
+<dt><code>-p</code> <i>PROFILE</i>, &#8211;profile=<i>PROFILE</i>:</dt>
+<dd> Tile cutting profile (mercator,geodetic,raster) &#8211; default &#8216;mercator&#8217; (Google Maps compatible).</dd>
+<dt><code>-r</code> <i>RESAMPLING</i>, &#8211;resampling=<i>RESAMPLING</i>:</dt>
+<dd> Resampling method (average,near,bilinear,cubic,cubicspline,lanczos,antialias) &#8211; default &#8216;average&#8217;.</dd>
+<dt><code>-s</code> <i>SRS</i>, &#8211;s_srs=<i>SRS</i>:</dt>
+<dd> The spatial reference system used for the source input data.</dd>
+<dt><code>-z</code> <i>ZOOM</i>, &#8211;zoom=<i>ZOOM</i>:</dt>
+<dd> Zoom levels to render (format:&#8217;2-5&#8242; or &#8217;10&#8217;).</dd>
+<dt><code>-e</code>, &#8211;resume:</dt>
+<dd> Resume mode. Generate only missing files.</dd>
+<dt><code>-a</code> <i>NODATA</i>, &#8211;srcnodata=<i>NODATA</i>:</dt>
+<dd> NODATA transparency value to assign to the input data.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Generate verbose output of tile generation.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show program&#8217;s version number and exit.</dd></dl>
+<p> <code>KML (Google Earth) options:</code> </p>
+<p> Options for generated Google Earth SuperOverlay metadata</p>
+<dl>
+<dt><code>-k, &#8211;force-kml</code></dt>
+<dd> Generate KML for Google Earth &#8211; default for &#8216;geodetic&#8217; profile and &#8216;raster&#8217; in EPSG:4326. For a dataset with different projection use with caution!</dd>
+<dt><code>-n, &#8211;no-kml</code>:</dt>
+<dd> Avoid automatic generation of KML files for EPSG:4326.</dd>
+<dt><code>-u</code> <i>URL</i>, &#8211;url=<i>URL</i>:</dt>
+<dd> URL address where the generated tiles are going to be published.</dd></dl>
+<p> <code>Web viewer options:</code> </p>
+<p> Options for generated HTML viewers a la Google Maps</p>
+<dl>
+<dt><code>-w</code> <i>WEBVIEWER</i>, &#8211;webviewer=<i>WEBVIEWER</i>:</dt>
+<dd> Web viewer to generate (all,google,openlayers,none) &#8211; default &#8216;all&#8217;.</dd>
+<dt><code>-t</code> <i>TITLE</i>, &#8211;title=<i>TITLE</i>:</dt>
+<dd> Title of the map.</dd>
+<dt><code>-c</code> <i>COPYRIGHT</i>, &#8211;copyright=<i>COPYRIGHT</i>:</dt>
+<dd> Copyright for the map.</dd>
+<dt><code>-g</code> <i>GOOGLEKEY</i>, &#8211;googlekey=<i>GOOGLEKEY</i>:</dt>
+<dd> Google Maps API key from <a rel="nofollow" href="http://code.google.com/apis/maps/signup.html.">http://code.google.com/apis/maps/signup.html.</a></dd>
+<dt><code>-b</code> <i>BINGKEY</i>, &#8211;bingkey=<i>BINGKEY</i>:</dt>
+<dd> Bing Maps API key from <a rel="nofollow" href="https://www.bingmapsportal.com/">https://www.bingmapsportal.com/</a></dd></dl>
+<p> NOTE: gdal2tiles.py is a Python script that needs to be run against &#8216;new generation&#8217; Python GDAL binding.</p>
+<h2>AUTHORS</h2>
+<p> Klokan Petr Pridal klokan [at] klokan.cz as a Google SoC 2007 Project. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

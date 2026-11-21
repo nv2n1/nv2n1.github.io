@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_snd_dmaengine_pcm_config(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_snd_dmaengine_pcm_config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_snd_dmaengine_pcm_config(9)</h1>
+
+
+
+
+
+<p>struct_snd_dmaengine_pcm_config - Configuration data for dmaengine based PCM</p>
+<h2>Synopsis</h2>
+<pre><code>struct snd_dmaengine_pcm_config {
+    int (*prepare_slave_config)(struct snd_pcm_substream *substream, struct snd_pcm_hw_params *params, struct dma_slave_config *slave_config);
+    struct dma_chan *(*compat_request_channel)(struct snd_soc_pcm_runtime *rtd, struct snd_pcm_substream *substream);
+    dma_filter_fn compat_filter_fn;
+    struct device *dma_dev;
+    const char *chan_names[SNDRV_PCM_STREAM_LAST + 1];
+    const struct snd_pcm_hardware *pcm_hardware;
+    unsigned int prealloc_buffer_size;
+};</code></pre>
+<h2>Members</h2>
+<p>prepare_slave_config</p>
+<dl><dd>Callback used to fill in the DMA slave_config for a PCM substream. Will be called from the PCM drivers hwparams callback.</dd></dl>
+<p>compat_request_channel</p>
+<dl><dd>Callback to request a DMA channel for platforms which do not use devicetree.</dd></dl>
+<p>compat_filter_fn</p>
+<dl><dd>Will be used as the filter function when requesting a channel for platforms which do not use devicetree. The filter parameter will be the DAI's DMA data.</dd></dl>
+<p>dma_dev</p>
+<dl><dd>If set, request DMA channel on this device rather than the DAI device.</dd></dl>
+<p>chan_names[SNDRV_PCM_STREAM_LAST + 1]</p>
+<dl><dd>If set, these custom DMA channel names will be requested at registration time.</dd></dl>
+<p>pcm_hardware</p>
+<dl><dd>snd_pcm_hardware struct to be used for the PCM.</dd></dl>
+<p>prealloc_buffer_size</p>
+<dl><dd>Size of the preallocated audio buffer.</dd></dl>
+<h2>Note</h2>
+<p>If both compat_request_channel and compat_filter_fn are set compat_request_channel will be used to request the channel and compat_filter_fn will be ignored. Otherwise the channel will be requested using dma_request_channel with compat_filter_fn as the filter function.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

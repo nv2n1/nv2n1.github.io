@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fapg(1) · Linux Manual Pages</title>
+<meta name="description" content="fapg – Fast Audio Playlist Generator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fapg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fapg(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> fapg &#8211; Fast Audio Playlist Generator</p>
+<h2>SYNOPSIS</h2>
+<p> <code>fapg [</code> <i>options</i> <code>]</code> <i>/path/to/mp3/dir1 </i> <code>[</code> <i>/path/to/mp3/dir2 </i> <code>&#8230; ]</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>fapg</code> is a tool to generate list of audio files (Wav, MP2, MP3, Ogg, etc) in various formats (M3U, PLS, XSPF, HTML, RSS, etc). It is very useful if you have a large amount of audio files and you want to quickly and frequently build a playlist. It is coded in C to be as fast as possible, and does not use any specific audio library (like ID3Lib). This allow you to deploy it faster and easier, and to have better performances since the less informations are loaded. On the other hand, this tool is not (yet) compatible with all the known formats. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-b|&#8211;backslash</dt>
+<dd> Replace the &#8216;/&#8217; with &#8221; in Unix path.</dd>
+<dt>-d|&#8211;debug</dt>
+<dd> Display useful messages if the program fails ;)</dd>
+<dt>-f|&#8211;format=m3u|pls|xspf|html|rss|pla|txx</dt>
+<dd> Choose which format of playlist you want to generate (default is m3u).</dd>
+<dt>-g|&#8211;genre=#:#:&#8230;</dt>
+<dd> Choose which genres (numerical values only) will be included in the generated playlist (default is all).</dd>
+<dt>-n|&#8211;nohardlink</dt>
+<dd> Avoid to parse twice the files because of hardlinks.</dd>
+<dt>-o|&#8211;output=/path/to/file.m3u</dt>
+<dd> Choose the name of the playlist file to generate (default behavior is to display on standard output).</dd>
+<dt>-p|&#8211;prefix=/the/prefix</dt>
+<dd> Replace the Unix path with another string (useful to give a Samba path for example).</dd>
+<dt>-r|&#8211;recursive</dt>
+<dd> Recursively read the subdirectories.</dd>
+<dt>-w|&#8211;windows</dt>
+<dd> Replace all Unix characters with Windows characters.</dd>
+<dt>-x|&#8211;exclude=#:#:&#8230;</dt>
+<dd> Choose which genres (numerical values only) will be excluded in the generated playlist (default is none).</dd>
+<dt>-c|&#8211;command=&lt;intern|&#8230;&gt;</dt>
+<dd> External binary or script that produces additional fields for RSS feeds (slow).</dd>
+<dt>-s|&#8211;stdin</dt>
+<dd> Read filenames and/or directories from standard input instead of command line. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<p> Generate a PLS playlist for an album: <code>fapg &#8211;format=pls &#8211;output=~/path/to/album/list.pls ~/path/to/album</code><br />
+&nbsp;<wbr> You have a file server using Samba which shares a large amount of audio files for Windows powered computers using Winamp. The directory on the server containing the files is <i>/samba/mp3 </i> and is visible on the Windows network as <i>\\server\mp3</i> : <code>cd /samba/mp3 &amp;&amp; fapg &#8211;backslash &#8211;output=/samba/mp3/list.m3u &#8211;prefix=&#8217;\\server\mp3\&#8217; &#8211;recursive &#8211;windows ./</code><br />
+&nbsp;<wbr> An HTML playlist for an album: <code>fapg &#8211;output=fapg.html ~/path/to/album</code> </p>
+<p> A playlist that contains all your classical tracks may receive the genres to include (or exclude) in one or multiple portions <code>fapg &#8211;genre=32:105 &#8211;genre=106:104:103 /path/to/all/music</code> </p>
+<p> Generate a podcasting XML file using an external program rss.sh to generate a detailed description: <code>fapg &#8211;output=dir.xml -f rss -c /usr/local/bin/rss.sh -r &#8211;prefix=<a rel="nofollow" href="http://thisserver/basedir">http://thisserver/basedir</a> path/to/mp3</code> </p>
+<p> Generate a playlist that will work on a Sansa e200 series MP3 player: <code>fapg -f pla -o /path/to/playlist.pla /path/to/all/music</code> </p>
+<p> if command starts with <i>intern</i> the build-in description (Author,Title,Link) is generated. Please note that in all given directories ( and in &#8230;basedir/xml ) files called podcast.jpg are referenced. Many header fields are set to defaults using environment variables like LOGNAME or LANG. </p>
+<h2>AUTHOR</h2>
+<p> Antoine Jacquet &lt;royale [at] zerezo.com&gt;, <a rel="nofollow" href="http://royale.zerezo.com/fapg/.">http://royale.zerezo.com/fapg/.</a> Manpage by Thomas Kappler &lt;thomas.kappler [at] stud.uni-karlsruhe.de&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

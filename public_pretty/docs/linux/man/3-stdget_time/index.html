@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdget_time(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdget_time/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdget_time(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::get_time - std::get_time</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;iomanip&gt;
+    template &lt;class CharT&gt;
+    (since C++ 11)
+    /*unspecified*/ get_time(std::tm *tmb, const CharT *fmt);</code></pre> 
+<p>When used in an expression in &gt;&gt; get_time(tmb, fmt), parses the character input as a date/time value according to format string fmt according to the std::time_get facet of the locale currently imbued in the input stream in. The resultant value is stored in a std::tm object pointed to by tmb.</p>
+<h2>Parameters</h2>
+<p>tmb - valid pointer to the std::tm object where the result will be stored
+ <wbr> <wbr> <wbr> <wbr> <wbr> pointer to a null-terminated CharT string specifying the conversion format
+ <wbr> <wbr> <wbr> <wbr> <wbr> The format string consists of zero or more conversion specifiers, whitespace characters, and ordinary characters (except %). Each ordinary character is expected to match one character in the input stream in case-insensitive comparison. Each whitespace character matches arbitrary whitespace in the input string. Each conversion specification begins with % character, optionally followed by E or O modifier (ignored if unsupported by the locale), followed by the character that determines the behavior of the specifier. The format specifiers match the POSIX function strptime():</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> Conversion Explanation Writes to fields
+ <wbr> <wbr> <wbr> <wbr> <wbr> specifier
+ <wbr> <wbr> <wbr> <wbr> <wbr> % matches a literal %. The full conversion specification must be %%. <i>(none)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> t matches any whitespace. <i>(none)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> n matches any whitespace. <i>(none)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> Year
+ <wbr> <wbr> <wbr> <wbr> <wbr> Y parses full year as a 4 digit decimal number, leading zeroes permitted but not required tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> EY parses year in the alternative representation, e.g.平成23年 (year Heisei 23) which writes 2011 to tm_year in ja_JP locale tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> y parses last 2 digits of year as a decimal number. Range [69,99] results in values 1969 to 1999, range [00,68] results in 2000-2068 tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> Oy parses last 2 digits of year using the alternative numeric system, e.g. 十一 is parsed as 11 in ja_JP locale tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> Ey parses year as offset from locale&rsquo;s alternative calendar period %EC tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> C parses the first 2 digits of year as a decimal number (range [00,99]) tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> EC parses the name of the base year (period) in the locale&rsquo;s alternative representation, e.g. 平成 (Heisei era) in ja_JP tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> Month
+ <wbr> <wbr> <wbr> <wbr> <wbr> b parses the month name, either full or abbreviated, e.g. Oct tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> h synonym of b tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> B synonym of b tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> m parses the month as a decimal number (range [01,12]), leading zeroes permitted but not required tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> Om parses the month using the alternative numeric system, e.g. 十二 parses as 12 in ja_JP locale tm_mon
+ <wbr> <wbr> <wbr> <wbr> <wbr> Week
+ <wbr> <wbr> <wbr> <wbr> <wbr> U parses the week of the year as a decimal number (Sunday is the first day of the week) (range [00,53]), leading zeroes permitted but not required tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> OU parses the week of the year, as by %U, using the alternative numeric system, e.g. 五十二 parses as 52 in ja_JP locale tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> W parses the week of the year as a decimal number (Monday is the first day of the week) (range [00,53]), leading zeroes permitted but not required tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> OW parses the week of the year, as by %W, using the alternative numeric system, e.g. 五十二 parses as 52 in ja_JP locale tm_year, tm_wday, tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> Day of the year/month
+ <wbr> <wbr> <wbr> <wbr> <wbr> j parses day of the year as a decimal number (range [001,366]), leading zeroes permitted but not required tm_yday
+ <wbr> <wbr> <wbr> <wbr> <wbr> d parses the day of the month as a decimal number (range [01,31]), leading zeroes permitted but not required tm_mday
+fmt - Od parses the day of the month using the alternative numeric system, e.g 二十七 parses as 27 in ja_JP locale, leading zeroes permitted but not reqtm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> e synonym of d tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> Oe synonym of Od tm_mday
+ <wbr> <wbr> <wbr> <wbr> <wbr> Day of the week
+ <wbr> <wbr> <wbr> <wbr> <wbr> a parses the name of the day of the week, either full or abbreviated, e.g. Fri tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> A synonym of a tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> w parses weekday as a decimal number, where Sunday is 0 (range [0-6]) tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> Ow parses weekday as a decimal number, where Sunday is 0, using the alternative numeric system, e.g. 二 parses as 2 in ja_JP locale tm_wday
+ <wbr> <wbr> <wbr> <wbr> <wbr> Hour, minute, second
+ <wbr> <wbr> <wbr> <wbr> <wbr> H parses the hour as a decimal number, 24 hour clock (range [00-23]), leading zeroes permitted but not required tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> OH parses hour from 24-hour clock using the alternative numeric system, e.g. 十八 parses as 18 in ja_JP locale tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> I parses hour as a decimal number, 12 hour clock (range [01,12]), leading zeroes permitted but not required tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> OI parses hour from 12-hour clock using the alternative numeric system, e.g. 六 reads as 06 in ja_JP locale tm_hour
+ <wbr> <wbr> <wbr> <wbr> <wbr> M parses minute as a decimal number (range [00,59]), leading zeroes permitted but not required tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> OM parses minute using the alternative numeric system, e.g. 二十五 parses as 25 in ja_JP locale tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> S parses second as a decimal number (range [00,60]), leading zeroes permitted but not required tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> OS parses second using the alternative numeric system, e.g. 二十四 parses as 24 in ja_JP locale tm_sec</p>
+<h2>Other</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> c parses the locale&rsquo;s standard date and time string format, e.g. Sun Oct 17 04:41:13 2010 (locale dependent) all
+ <wbr> <wbr> <wbr> <wbr> <wbr> Ec parses the locale&rsquo;s alternative date and time string format, e.g. expecting 平成23年 (year Heisei 23) instead of 2011年 (year 2011) in ja_JP lallle
+ <wbr> <wbr> <wbr> <wbr> <wbr> x parses the locale&rsquo;s standard date representation all
+ <wbr> <wbr> <wbr> <wbr> <wbr> Ex parses the locale&rsquo;s alternative date representation, e.g. expecting 平成23年 (year Heisei 23) instead of 2011年 (year 2011) in ja_JP locale all
+ <wbr> <wbr> <wbr> <wbr> <wbr> X parses the locale&rsquo;s standard time representation all
+ <wbr> <wbr> <wbr> <wbr> <wbr> EX parses the locale&rsquo;s alternative time representation all
+ <wbr> <wbr> <wbr> <wbr> <wbr> D equivalent to &quot;%m / %d / %y &quot; tm_mon, tm_mday, tm_year
+ <wbr> <wbr> <wbr> <wbr> <wbr> r parses locale&rsquo;s standard 12-hour clock time (in POSIX, &quot;%I : %M : %S %p&quot;) tm_hour, tm_min, tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> R equivalent to &quot;%H : %M&quot; tm_hour, tm_min
+ <wbr> <wbr> <wbr> <wbr> <wbr> T equivalent to &quot;%H : %M : %S&quot; tm_hour, tm_min, tm_sec
+ <wbr> <wbr> <wbr> <wbr> <wbr> p parses the locale&rsquo;s equivalent of a.m. or p.m. tm_hour</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> Note: tm_isdst is not written to, and needs to be set explicitly for use with functions such as mktime</p>
+<h2>Return value</h2>
+<p>Returns an object of unspecified type such that if in is the name of an input stream of type std::basic_istream&lt;CharT, Traits&gt;, then the expression in &gt;&gt; get_time(tmb, fmt) behaves as if the following code was executed :</p>
+<pre><code>typedef std::istreambuf_iterator&amp;lt;CharT, Traits&amp;gt; Iter;
+</code></pre>
+<p>typedef std::time_get&lt;CharT, Iter&gt; TimeGet;</p>
+<p>std::ios_base::iostate err = std::ios_base::goodbit;</p>
+<p>const TimeGet &amp;tg = std::use_facet&lt;TimeGet&gt;(in.getloc());</p>
+<p>tg.get(Iter(in.rdbuf()), Iter(), in, err, tmb, fmt, fmt + traits::length(fmt));</p>
+<p>if (err != std::ios_base::goodbit)</p>
+<pre><code>in.setstate(err);
+</code></pre>
+<h2>Notes</h2>
+<p>As specified in std::time_get::do_get, which this function calls, it&rsquo;s unspecified if this function zero out the fields in *tmb that are not set directly by the conversion specifiers that appear in fmt: portable programs should initialize every field of *tmb to zero before calling std::get_time.</p>
+<h2>Example</h2>
+<p>note: choose clang to observe the output. libstdc++ does not correctly implement the %b specifier: bug_78714
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;locale&gt;
+#include &lt;iomanip&gt;
+int main()
+{
+std::tm t = {};
+std::istringstream ss(&quot;2011-Februar-18 23:12:34&quot;);
+ss.imbue(std::locale(&quot;de_DE.utf-8&quot;));
+ss &gt;&gt; std::get_time(&amp;t, &quot;%Y-%b-%d %H:%M:%S&quot;);
+if (ss.fail()) {
+std::cout &lt;&lt; &quot;Parse failed\n&quot;;
+} else {
+std::cout &lt;&lt; std::put_time(&amp;t, &quot;%c&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Sun Feb 18 23:12:34 2011</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> parses time/date values from an input character sequence into struct std::tm
+time_get <i>(class template)</i>
+put_time formats and outputs a date/time value according to the specified format
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

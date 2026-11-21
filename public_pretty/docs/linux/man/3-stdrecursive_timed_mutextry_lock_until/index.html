@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrecursive_timed_mutextry_lock_until(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrecursive_timed_mutextry_lock_until/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrecursive_timed_mutextry_lock_until(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::recursive_timed_mutex::try_lock_until - std::recursive_timed_mutex::try_lock_until</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class Clock, class Duration&gt;
+(since C++ 11)
+    bool try_lock_until(const std::chrono::time_point&lt;Clock, Duration&gt; &amp;timeout_time);</code></pre> 
+<p>Tries to lock the mutex. Blocks until specified timeout_time has been reached or the lock is acquired, whichever comes first. On successful lock acquisition returns true, otherwise returns false.
+If timeout_time has already passed, this function behaves like try_lock().
+The clock tied to timeout_time is used, which means that adjustments of the clock are taken into account. Thus, the maximum duration of the block might, but might not, be less or more than timeout_time - Clock::now() at the time of the call, depending on the direction of the adjustment. The function also may block for longer than until after timeout_time has been reached due to scheduling or resource contention delays.
+As with try_lock(), this function is allowed to fail spuriously and return false even if the mutex was not locked by any other thread at some point before timeout_time.
+Prior unlock() operation on the same mutex synchronizes-with (as defined in std::memory_order) this operation if it returns true.
+A thread may call try_lock_until on a recursive mutex repeatedly. Successful calls to try_lock_until increment the ownership count: the mutex will only be released after the thread makes a matching number of calls to unlock.
+The maximum number of levels of ownership is unspecified. A call to try_lock_until will return false if this number is exceeded.</p>
+<h2>Parameters</h2>
+<p>timeout_time - maximum time point to block until</p>
+<h2>Return value</h2>
+<p>true if the lock was acquired successfully, otherwise false.</p>
+<h2>Exceptions</h2>
+<p>Any exception thrown by clock, time_point, or duration during the execution (clocks, time points, and durations provided by the standard library never throw)</p>
+<h2>Example</h2>
+<p>This example shows a 10 seconds block
+// Run this code <pre><code>#include &lt;thread&gt;
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;mutex&gt;
+std::recursive_timed_mutex test_mutex;
+void f()
+{
+auto now = std::chrono::steady_clock::now();
+test_mutex.try_lock_until(now + std::chrono::seconds(10));
+std::cout &lt;&lt; &quot;hello world\n&quot;;
+}
+int main()
+{
+std::lock_guard&lt;std::recursive_timed_mutex&gt; l(test_mutex);
+std::thread t(f);
+t.join();
+}
+</code></pre></p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> locks the mutex, blocks if the mutex is not available
+lock <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> tries to lock the mutex, returns if the mutex is not available
+try_lock <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> tries to lock the mutex, returns if the mutex has been
+try_lock_for unavailable for the specified timeout duration
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unlocks the mutex
+unlock <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hash Tables in C: Building and Using Them Effectively - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/hashing-library-for-c/">
+  <meta name="description" content="When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options—from POSIX standard library functions to …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hash Tables in C: Building and Using Them Effectively">
+  <meta property="og:url" content="https://www.systutorials.com/hashing-library-for-c/">
+  <meta property="og:description" content="When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options—from POSIX standard library functions to …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/algorithms-data-structures/">Algorithms &amp; Data Structures</a>
+        </nav>
+        
+        <h1>Hash Tables in C: Building and Using Them Effectively</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:47Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When building applications requiring fast key-value lookups, hash tables are fundamental. C offers several options—from POSIX standard library functions to specialized third-party libraries. The right choice depends on your dataset characteristics, memory constraints, and whether you need dynamic resizing.</p>
+<h2 id="standard-library-hsearch">Standard Library: hsearch()</h2>
+<p>The simplest option is <code>hsearch()</code> from <code>&lt;search.h&gt;</code> in POSIX-compliant systems. It provides basic hash table functionality for small to medium datasets.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;search.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">hcreate</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>  <span class="c1">// Initialize table with approximate capacity
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">ENTRY</span> <span class="n">item</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#34;key1&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="s">&#34;value1&#34;</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">hsearch</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">ENTER</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">item</span><span class="p">.</span><span class="n">key</span> <span class="o">=</span> <span class="s">&#34;key1&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ENTRY</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="nf">hsearch</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">FIND</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Found: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">hdestroy</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Limitations are significant: fixed maximum size set at <code>hcreate()</code>, poor collision handling in some implementations, and minimal API. Use <code>hsearch()</code> only for simple tools or embedded scenarios where external dependencies aren’t acceptable.</p>
+<h2 id="modern-header-only-libraries-uthash-and-khash">Modern Header-Only Libraries: uthash and khash</h2>
+<p>For new projects, uthash and khash are the de facto standards. Both are header-only or single-file, requiring no build system integration.</p>
+<h3 id="uthash-type-safe-macro-based-hashing">uthash: Type-Safe Macro-Based Hashing</h3>
+<p>uthash generates type-safe operations via preprocessor macros. Your data structures gain hash capabilities by including a <code>UT_hash_handle</code> field.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;uthash.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">user</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">UT_hash_handle</span> <span class="n">hh</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">user</span> <span class="o">*</span><span class="n">users</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Insert
+</span></span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">user</span> <span class="o">*</span><span class="n">u</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">user</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u</span><span class="o">-&gt;</span><span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">u</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="s">&#34;alice&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">HASH_ADD_INT</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Lookup
+</span></span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">user</span> <span class="o">*</span><span class="n">found</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">HASH_FIND_INT</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="kt">int</span><span class="p">){</span><span class="mi">1</span><span class="p">},</span> <span class="n">found</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Found: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">found</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Iterate and cleanup
+</span></span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">user</span> <span class="o">*</span><span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">HASH_ITER</span><span class="p">(</span><span class="n">hh</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">HASH_DEL</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">free</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>uthash supports multiple key types: integers, strings, or custom structures. Macro-based generation means compilation overhead but excellent runtime performance and type safety.</p>
+<h3 id="khash-minimal-overhead-performance">khash: Minimal Overhead Performance</h3>
+<p>khash prioritizes minimal code footprint and speed with straightforward C semantics.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;khash.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">KHASH_MAP_INIT_STR</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">khash_t</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="o">*</span><span class="n">h</span> <span class="o">=</span> <span class="nf">kh_init</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">khiter_t</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Insert
+</span></span></span><span class="line"><span class="cl">    <span class="n">k</span> <span class="o">=</span> <span class="nf">kh_put</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="s">&#34;key1&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ret</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">kh_val</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Lookup
+</span></span></span><span class="line"><span class="cl">    <span class="n">k</span> <span class="o">=</span> <span class="nf">kh_get</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="s">&#34;key1&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">!=</span> <span class="nf">kh_end</span><span class="p">(</span><span class="n">h</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Value: %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">kh_val</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">k</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Delete
+</span></span></span><span class="line"><span class="cl">    <span class="nf">kh_del</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">k</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Cleanup
+</span></span></span><span class="line"><span class="cl">    <span class="nf">kh_destroy</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">h</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>khash generates specialized code for each key-value type pair, resulting in tight, predictable memory usage. Return codes from <code>kh_put()</code> distinguish insertions from updates, enabling conditional logic without extra lookups.</p>
+<h2 id="cmph-perfect-hashing-for-static-data">CMPH: Perfect Hashing for Static Data</h2>
+<p>For deterministic, space-efficient lookups on static datasets, CMPH (C Minimal Perfect Hashing Library) is unmatched. A perfect hash function maps n keys to n hash values with zero collisions.</p>
+<p>CMPH excels with massive, immutable datasets (100+ million keys) that fit in memory. It generates minimal perfect hash functions serializable to disk for reuse across processes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Build a perfect hash function from a wordlist</span>
+</span></span><span class="line"><span class="cl">cmph -g czech -c <span class="m">10</span> -k wordlist.txt -m chd -o wordlist.cmph
+</span></span></code></pre></div><p>Use CMPH when:</p>
+<ul>
+<li>Your dataset is static or changes rarely</li>
+<li>Memory efficiency is critical</li>
+<li>You need reproducible hash functions across processes or applications</li>
+<li>Zero hash collisions matter for guaranteed O(1) lookups</li>
+</ul>
+<h2 id="libghthash-dynamic-hash-tables-with-complex-types">libghthash: Dynamic Hash Tables with Complex Types</h2>
+<p>libghthash provides a more flexible, production-ready hash table supporting arbitrary data types and custom comparisons. Unlike <code>hsearch()</code>, it handles dynamic resizing and heterogeneous objects cleanly.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ghthash.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">GHashTable</span> <span class="o">*</span><span class="n">table</span> <span class="o">=</span> <span class="nf">ghthash_create_table</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ghthash_insert</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s">&#34;username&#34;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s">&#34;alice&#34;</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="o">*</span><span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="nf">ghthash_lookup</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s">&#34;username&#34;</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;User: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">ghthash_remove</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="s">&#34;username&#34;</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">ghthash_destroy_table</span><span class="p">(</span><span class="n">table</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Key advantages:</p>
+<ul>
+<li>Custom hash and comparison functions</li>
+<li>Automatic resizing as load factor increases</li>
+<li>Handles binary data and non-string keys</li>
+<li>Portable across Linux, BSD, and Windows</li>
+</ul>
+<h2 id="choosing-the-right-library">Choosing the Right Library</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Use Case</th>
+					<th>Best Choice</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Toy projects, minimal dependencies</td>
+					<td><code>hsearch()</code></td>
+			</tr>
+			<tr>
+					<td>Enormous static datasets, memory-critical</td>
+					<td>CMPH</td>
+			</tr>
+			<tr>
+					<td>Dynamic data, complex heterogeneous types</td>
+					<td>libghthash</td>
+			</tr>
+			<tr>
+					<td>New production code, embedded systems</td>
+					<td>uthash or khash</td>
+			</tr>
+	</tbody>
+</table>
+<p>For most modern C projects, <strong>uthash</strong> or <strong>khash</strong> are the pragmatic default: they require no external build dependencies, compile quickly, and provide excellent performance with clean APIs. Choose uthash for type safety via macros; choose khash for minimal overhead and explicit control.</p>
+<p>If you’re integrating with large ecosystems, check whether your project already uses GLib (which includes its own hash table) before adding another dependency.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

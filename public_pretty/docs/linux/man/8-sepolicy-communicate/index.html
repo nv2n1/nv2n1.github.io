@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sepolicy-communicate(8) · Linux Manual Pages</title>
+<meta name="description" content="sepolicy-communicate – Generate a report showing if two SELinux Policy Domains can communicate">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sepolicy-communicate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sepolicy-communicate(8)</h1>
+
+
+
+
+
+<p>sepolicy-communicate &#8211; Generate a report showing if two SELinux Policy Domains can communicate </p>
+<h2>Synopsis</h2>
+<p><code>sepolicy communicate [-h] -s SOURCE -t TARGET [-c TCLASS] [-S SOURCEACCESS] [-T TARGETACCESS]</code> </p>
+<h2>Description</h2>
+<p>Use sepolicy communicate to examine SELinux Policy to if a source SELinux Domain can communicate with a target SELinux Domain. The default command looks to see if there are any file types that the source domain can write, which the target domain can read. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-c, &#8211;class</i></dt>
+<dd>Specify the SELinux class which the source domain will attempt to communicate with the target domain. (Default file)</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message</dd>
+<dt><i>-s, &#8211;source</i></dt>
+<dd>Specify the source SELinux domain type.</dd>
+<dt><i>-S, &#8211;sourceaccess</i></dt>
+<dd>Specify the list of accesses used by the source SELinux domain type to communicate with the target domain. Default Open, Write.</dd>
+<dt><i>-t, &#8211;target</i></dt>
+<dd>Specify the target SELinux domain type.</dd>
+<dt><i>-T, &#8211;targetaccess</i></dt>
+<dd>Specify the list of accesses used by the target SELinux domain type to receive communications from the source domain. Default Open, Read. </dd>
+</dl>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-sepolicy/">sepolicy</a>(8), <a href="/docs/linux/man/8-selinux/">selinux</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

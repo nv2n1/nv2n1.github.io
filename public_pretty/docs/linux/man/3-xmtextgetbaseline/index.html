@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtextgetbaseline(3) · Linux Manual Pages</title>
+<meta name="description" content="XmTextGetBaseline — A Text function that accesses the y position of the baseline">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtextgetbaseline/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtextgetbaseline(3)</h1>
+
+
+
+
+
+<p><code>XmTextGetBaseline</code> &#8212; A Text function that accesses the y position of the baseline</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Text.h&gt;
+<code>int XmTextGetBaseline</code>(
+<code>Widget widget</code>);</pre>
+<h2>Description</h2>
+<p><code>XmTextGetBaseline</code> accesses the <i>y</i> position of the baseline in the Text widget, relative to the <i>y</i> position of the top of the widget. </p>
+<p> In vertical mode (when the <code>XmNlayoutDirection</code> resource is <code>XmTOP_TO_BOTTOM</code>) this function returns 0 and the program should use <code>XmTextGetCenterline</code> </p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
+<p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
+<h2>Return</h2>
+<p>Returns an integer value that indicates the <i>y</i> position of the baseline in the Text widget. The calculation takes into account the margin height, shadow thickness, highlight thickness, and font ascent of the first font (set) in the fontlist used for drawing text. In this calculation, the <i>y</i> position of the top of the widget is 0 (zero).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3), <code><a href="/docs/linux/man/3-xmtextgetcenterline/">XmTextGetCenterline</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

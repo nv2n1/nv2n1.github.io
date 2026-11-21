@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deb-postrm(5) · Linux Manual Pages</title>
+<meta name="description" content="deb-postrm – package post-removal maintainer script">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-deb-postrm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>deb-postrm(5)</h1>
+
+
+
+
+
+<p>deb-postrm &#8211; package post-removal maintainer script</p>
+<h2>Synopsis</h2>
+<p><code>DEBIAN/postrm</code></p>
+<h2>Description</h2>
+<p>A package can perform several post-removal actions via maintainer scripts, by including an executable <i>postrm</i> file in its control archive (i.e. <i>DEBIAN/postrm</i> during package creation). </p>
+<p> The script can be called in the following ways:</p>
+<dl>
+<dt><i>postrm</i> <code>remove</code></dt>
+<dd>After the package was removed.</dd>
+<dt><i>postrm</i> <code>purge</code></dt>
+<dd>After the package was purged.</dd>
+<dt><i>old-postrm</i> <code>upgrade</code> <i>new-version</i></dt>
+<dd>After the package was upgraded.</dd>
+<dt><i>new-postrm</i> <code>failed-upgrade</code> <i>old-version</i> <i>new-version</i></dt>
+<dd>If the above <code>upgrade</code> call fails. </dd>
+<p> The <i>new-version</i> is passed only since dpkg 1.18.5.</p>
+<dt><i>postrm</i> <code>disappear</code> <i>overwriter-package</i> <i>overwriter-version</i></dt>
+<dd>After all of the packages files have been replaced.</dd>
+<dt><i>new-postrm</i> <code>abort-install</code></dt>
+<dd>If <i>preinst</i> fails during install.</dd>
+<dt><i>new-postrm</i> <code>abort-install</code> <i>old-version new-version</i></dt>
+<dd>If <i>preinst</i> fails during upgrade of removed package. </dd>
+<p> The <i>new-version</i> is passed only since dpkg 1.18.5.</p>
+<dt><i>new-postrm</i> <code>abort-upgrade</code> <i>old-version new-version</i></dt>
+<dd>If <i>preinst</i> fails during upgrade. </dd>
+<p> The <i>new-version</i> is passed only since dpkg 1.18.5.</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

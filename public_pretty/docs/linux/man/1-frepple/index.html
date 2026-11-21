@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>frepple(1) · Linux Manual Pages</title>
+<meta name="description" content="frepple – open source production planning and scheduling">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-frepple/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>frepple(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> frepple &#8211; open source production planning and scheduling </p>
+<h2>SYNOPSIS</h2>
+<p> <code>frepple [options]</code> <i>&lt;files&gt;</i><br />
+ <code>frepple [options]</code> <i>&lt;directories&gt;</i><br />
+ <code>frepple [options]</code> </p>
+<h2>DESCRIPTION</h2>
+<p> FrePPLe is an open source production planning and scheduling application. </p>
+<p> This program reads XML input data, and also embeds a Python interpeter to execute instructions in the Python language. </p>
+<p> The input data can be provided in the following ways:<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more XML files.<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more directories as arguments.<br />
+&nbsp;<wbr>The program will process all files with the extension&nbsp;<wbr>&#8216;.xml&#8217;&nbsp;<wbr>found<br />
+&nbsp;<wbr>in the directories in alphabetical order.<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Passing one or more Python files with the extension&nbsp;<wbr>&#8216;.py&#8217;.<br />
+&nbsp;<wbr>The Python commands are executed in the embedded interpreter.<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; When passing no file or directory arguments, input will be read<br />
+&nbsp;<wbr>from the standard input. XML data can be redirected or piped to the<br />
+&nbsp;<wbr>application. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-validate -v</code></dt>
+<dd> Validate the xml input for correctness.</dd>
+<dt><code>-check -c</code></dt>
+<dd> Only validate the input, without executing the content.</dd>
+<dt><code>-? -h -help</code></dt>
+<dd> Show instructions. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt>FREPPLE_HOME</dt>
+<dd> Optionally points to a directory where the initialization files will be searched. </dd>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt>./init.xml $FREPPLE_HOME/init.xml /usr/share/frepple/init.xml</dt>
+<dd> XML data automatically loaded upon startup. The first file with the name init.xml in the above sequence is processed. </dd>
+<dt>./frepple.xsd $FREPPLE_HOME/frepple.xsd /usr/share/frepple/frepple.xsd</dt>
+<dd> XML Schema definition for validation of the XML input data. The first file with the name frepple.xsd in the above sequence is processed. </dd>
+<dt>./init.py $FREPPLE_HOME/init.py /usr/share/frepple/init.py</dt>
+<dd> Python commands executed automatically upon startup. The first file with the name init.py in the above sequence is processed. </dd>
+</dl>
+<h2>RETURNS</h2>
+<p> 0 when successful, non-zero in case of errors </p>
+<h2>AUTHORS</h2>
+<p> <code>FrePPLe</code> is developed as Open Source under the AGPL license, v3 or later. </p>
+<p> The authors and contributors are listed on <a rel="nofollow" href="http://frepple.com.">http://frepple.com.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

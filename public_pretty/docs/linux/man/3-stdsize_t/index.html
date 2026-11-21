@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsize_t(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsize_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsize_t(3)</h1>
+
+
+
+
+
+<p>std::size_t - std::size_t</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;cstddef&gt;
+Defined in header &lt;cstdio&gt;
+Defined in header &lt;cstdlib&gt;
+Defined in header &lt;cstring&gt;
+Defined in header &lt;ctime&gt;
+Defined in header &lt;cwchar&gt;
+typedef /*implementation-defined*/ size_t;</code></pre> 
+<p>std::size_t is the unsigned integer type of the result of the sizeof operator
+as well as the sizeof&hellip; operator and the alignof operator
+<i>(since C++11)</i>.</p>
+<h2>Notes</h2>
+<p>std::size_t can store the maximum size of a theoretically possible object of any type (including array).
+A type whose size cannot be represented by std::size_t is ill-formed
+<i>(since C++14)</i> On many platforms (an exception is systems with segmented addressing) std::size_t can safely store the value of any non-member pointer, in which case it is synonymous with std::uintptr_t.
+std::size_t is commonly used for array indexing and loop counting. Programs that use other types, such as unsigned int, for array indexing may fail on, e.g. 64-bit systems when the index exceeds UINT_MAX or if it relies on 32-bit modular arithmetic.
+When indexing C++ containers, such as std::string, std::vector, etc, the appropriate type is the member typedef size_type provided by such containers. It is usually defined as a synonym for std::size_t.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstddef&gt;
+#include &lt;iostream&gt;
+#include &lt;array&gt;
+int main()
+{
+std::array&lt;std::size_t, 10&gt; a;
+for (std::size_t i = 0; i != a.size(); ++i)
+a[i] = i;
+for (std::size_t i = a.size() - 1; i &lt; a.size(); &ndash;i)
+std::cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 9 8 7 6 5 4 3 2 1 0</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> signed integer type returned when subtracting two pointers
+ptrdiff_t <i>(typedef)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> byte offset from the beginning of a standard-layout type to specified member
+offsetof <i>(function macro)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

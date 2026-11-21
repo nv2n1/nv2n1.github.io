@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>capifaxrcvd(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-capifaxrcvd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>capifaxrcvd(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>capifaxrcvd — a FAX receive daemon for CAPI</p>
+<h2>SYNOPSIS</h2>
+<p>capifaxrcvd [-i stationID] [-h header] [-l listenNumber] [-n notifyCmd] rcvDirectory</p>
+<h2>DESCRIPTION</h2>
+<p>capifaxrcvd is a daemon to receive faxes via CAPI; you need a CAPI capable ISDN card with the appropriate drivers.</p>
+<p>The final argument must be the directory in which the received faxes are to be placed. The filenames of the received faxes are of the form: f[fn]xxxtttttttt [fn] indicates the resolution (fine or normal), xxx indicated the number of pages, tttttttt is the (hexadecimal) timestamp of the fax (seconds since the Unix epoch, 00:00 on January 1st, 1970 UTC).</p>
+<p>The daemon will fork itself into the background.</p>
+<p>This stuff is based heavily on AVM&rsquo;s CAPI-adk for linux.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-i station_ID
+</dt><dd> 
+&nbsp;<wbr>the station ID. Typically the company name or similar.
+</dd><dt>-h headline
+</dt><dd> 
+&nbsp;<wbr>title of sent document.&nbsp;<wbr>(?)
+</dd><dt>-l listenNumber
+</dt><dd> 
+&nbsp;<wbr>the phone number on which to receive faxes, i.e. the number to listen on.
+</dd><dt>-n notifyCmd
+</dt><dd> 
+&nbsp;<wbr>command to execute when a fax has been received. It will be called with one argument, namely the filename of the received fax&nbsp;<wbr>(without the directory name).</dd></dl>
+<h2>AUTHOR</h2>
+<p>manpage written from C source by Paul Slootman &lt;paul [at] debian.org&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

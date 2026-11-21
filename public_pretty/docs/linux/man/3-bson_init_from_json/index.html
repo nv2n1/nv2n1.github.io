@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_init_from_json(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_init_from_json() – The bson_init_from_json() function will initialize a new bson_t by parsing the JSON found in data. Only a single JSON object may exist in data or an error will be set and fa...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_init_from_json/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_init_from_json(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_init_from_json() &#8211; The bson_init_from_json() function will initialize a new bson_t by parsing the JSON found in data. Only a single JSON object may exist in data or an error will be set and false returned.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+bool bson_init_from_json(bson_t *bson,
+                         const char *data,
+                         ssize_t len,
+                         bson_error_t *error);
+</code></pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
+<dl>
+<dt><code>data</code></dt>
+<dd> A UTF-8 encoded string containing valid JSON.</dd></dl>
+<dl>
+<dt><code>len</code></dt>
+<dd> The length of <code>data</code> in bytes excluding a trailing <code>
+</dd></dl>
+</code>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

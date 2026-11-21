@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>varnishtest(1) · Linux Manual Pages</title>
+<meta name="description" content="varnishtest – Test program for Varnish">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-varnishtest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>varnishtest(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> varnishtest &#8211; Test program for Varnish</p>
+<h2>SYNOPSIS</h2>
+<p> varnishtest [-iklLqv] [-n iter] [-D name=val] [-j jobs] [-t duration] file [file &#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> The varnishtest program is a script driven program used to test the Varnish Cache. </p>
+<p> The varnishtest program, when started and given one or more script files, can create a number of threads representing backends, some threads representing clients, and a varnishd process. This is then used to simulate a transaction to provoke a specific behavior. </p>
+<p> The following options are available: </p>
+<p> -D name=val Define macro for use in scripts</p>
+<dl>
+<dt><code>-i</code></dt>
+<dd> Find varnishd in build tree</dd>
+<dt><code>-j</code><i>&nbsp;<wbr>jobs</i></dt>
+<dd> Run this many tests in parallel</dd>
+<dt><code>-k</code></dt>
+<dd> Continue on test failure</dd>
+<dt><code>-l</code></dt>
+<dd> Leave temporary vtc.* if test fails</dd>
+<dt><code>-L</code></dt>
+<dd> Always leave temporary vtc.*</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>iterations</i></dt>
+<dd> Run tests this many times</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode: report only failures</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>duration</i></dt>
+<dd> Time tests out after this long</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode: always report test log</dd>
+<dt><code>-h</code></dt>
+<dd> Show help </dd>
+<p> file File to use as a script </p>
+<p> Macro definitions that can be overridden. </p>
+<p> varnishd Path to varnishd to use [varnishd] </p>
+<p> If <i>TMPDIR</i> is set in the environment, varnishtest creates temporary <i>vtc.*</i> directories for each test in <i>$TMPDIR</i>, otherwise in <i>/tmp</i>.</dl>
+<h2>SCRIPTS</h2>
+<p> The script language used for Varnishtest is not a strictly defined language. The best reference for writing scripts is the varnishtest program itself. In the Varnish source code repository, under <i>bin/varnishtest/tests/</i>, all the regression tests for Varnish are kept. </p>
+<p> An example: </p>
+<pre><code>
+varnishtest "#1029" server s1{
+    rxreq
+        expect req.url == "/bar" txresp - gzipbody{[bar]} rxreq expect req.url ==
+    "/foo" txresp - body{&lt;h1&gt; FOO &lt; esi : include src = "/bar" / &gt; BARF&lt;/ h1&gt;}} -
+    start
+        varnish v1 -
+    vcl + backend{sub vcl_backend_response{set beresp.do_esi = true;
+if (bereq.url == "/foo") {
+    set beresp.ttl = 0s;
+} else {
+    set beresp.ttl = 10m;
+}
+}
+}
+- start
+        client c1{
+            txreq - url "/bar" - hdr "Accept-Encoding: gzip" rxresp gunzip expect resp.bodylen == 5 txreq - url "/foo" - hdr "Accept-Encoding: gzip" rxresp expect resp.bodylen == 21} -
+    run
+</code></pre>
+<p> When run, the above script will simulate a server (s1) that expects two different requests. It will start a Varnish server (v1) and add the backend definition to the VCL specified (-vcl+backend). Finally it starts the c1-client, which is a single client sending two requests.</p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> varnishtest source code repository with tests</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishhist/">varnishhist</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishlog/">varnishlog</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishncsa/">varnishncsa</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishstat/">varnishstat</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishtop/">varnishtop</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/7-vcl/">vcl</a>(7)</dd></dl>
+<h2>HISTORY</h2>
+<p> The varnishtest program was developed by Poul-Henning Kamp &lt;<i>phk [at] phk.freebsd.dk</i>&gt; in cooperation with Varnish Software AS. This manual page was originally written by Stig Sandbeck Mathisen &lt;<i>ssm [at] linpro.no</i>&gt; and updated by Kristian Lyngstøl &lt;<i>kristian [at] varnish-cache.org</i>&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> This document is licensed under the same licence as Varnish itself. See LICENCE for details.</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

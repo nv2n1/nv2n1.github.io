@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdatafieldsetselection(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDataFieldSetSelection — A DataField function that sets the primary selection of the text">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdatafieldsetselection/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdatafieldsetselection(3)</h1>
+
+
+
+
+
+<p><code>XmDataFieldSetSelection</code> &#8212; A DataField function that sets the primary selection of the text</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/DataF.h&gt;
+<code>void XmDataFieldSetSelection</code>(
+<code>Widget widget</code>,
+<code>XmTextPosition first</code>,
+<code>XmTextPosition last</code>,
+<code>Time time</code>);</pre>
+<h2>Description</h2>
+<p><code>XmDataFieldSetSelection</code> sets the primary selection of the text in the widget. It also sets the insertion cursor position to the last position of the selection and calls the widget&#8217;s <code>XmNmotionVerifyCallback</code> callbacks. <code>XmDataFieldSetSelection</code> always generates an <code>XmNgainPrimaryCallback</code> unless it fails to take ownership of the primary text selection.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the DataField widget ID</dd>
+<dt><i>first</i></dt>
+<dd>Marks the first character position of the text to be selected</dd>
+<dt><i>last</i></dt>
+<dd>Marks the last position of the text to be selected</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the time at which the selection value is desired. This should be the same as the time of the event that triggered this request. One source of a valid time stamp is the function <code>XtLastTimestampProcessed</code>.</dd></dl>
+<p> For a complete definition of DataField and its associated resources, see <code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdatafield/">XmDataField</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

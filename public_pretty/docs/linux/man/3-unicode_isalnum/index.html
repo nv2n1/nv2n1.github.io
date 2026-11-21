@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unicode_isalnum(3) · Linux Manual Pages</title>
+<meta name="description" content="unicode_category_lookup, unicode_isalnum, unicode_isalpha, unicode_isblank, unicode_isdigit, unicode_isgraph, unicode_islower, unicode_ispunct, unicode_isspace, unicode_isupper – unicode character ...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-unicode_isalnum/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>unicode_isalnum(3)</h1>
+
+
+
+
+
+<p>unicode_category_lookup, unicode_isalnum, unicode_isalpha, unicode_isblank, unicode_isdigit, unicode_isgraph, unicode_islower, unicode_ispunct, unicode_isspace, unicode_isupper &#8211; unicode character categorization</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;courier-unicode.h&gt;
+uint32_t unicode_category_lookup(unicode_char c);
+int unicode_isalnum(unicode_char c);
+int unicode_isalpha(unicode_char c);
+int unicode_isblank(unicode_char c);
+int unicode_isdigit(unicode_char c);
+int unicode_isgraph(unicode_char c);
+int unicode_islower(unicode_char c);
+int unicode_ispunct(unicode_char c);
+int unicode_isspace(unicode_char c);
+int unicode_isupper(unicode_char c);</code></pre>
+<h2>Description</h2>
+<p><code>unicode_category_lookup</code>() looks up the m[blue]<code>unicode character&#8217;s categorization</code>m[]<font SIZE="-2">[1]</font>. <code>unicode_category_lookup</code>() returns a 32 bit value. The value&#8217;s</p>
+<dd>UNICODE_CATEGORY_1 bits specify the first level of the unicode character&#8217;s category, with UNICODE_CATEGORY_2, UNICODE_CATEGORY_3, and UNICODE_CATEGORY_4 bits specifying the 2nd, 3rd, and 4th level, if given. A value of 0 for each corresponding bit set indicates that no category is specified for this level, for this character; otherwise the possible values are defined in &lt;courier-unicode.h&gt;. </dd>
+<p> The remaining functions implement comparable equivalents of their non-unicode versions in the standard C library, as follows: </p>
+<p> <code>unicode_isalnum</code>()</p>
+<dl>
+<dd>Returns non-0 for all <code>unicode_isalpha</code>() or <code>unicode_isdigit</code>().</dd></dl>
+<p> <code>unicode_isalpha</code>()</p>
+<dl>
+<dd>Returns non-0 for all UNICODE_CATEGORY_1_LETTER.</dd></dl>
+<p> <code>unicode_isblank</code>()</p>
+<dl>
+<dd>Return non-0 for TAB, and all UNICODE_CATEGORY_2_SPACE.</dd></dl>
+<p> <code>unicode_isdigit</code>()</p>
+<dl>
+<dd>Returns non-0 for all UNICODE_CATEGORY_1_NUMBER | UNICODE_CATEGORY_2_DIGIT, only (no third categories).</dd></dl>
+<p> <code>unicode_isgraph</code>()</p>
+<dl>
+<dd>Returns non-0 for all codepoints above SPACE which are not <code>unicode_isspace</code>().</dd></dl>
+<p> <code>unicode_islower</code>()</p>
+<dl>
+<dd>Returns non-0 for all <code>unicode_isalpha</code>() for which the character is equal to <code><a href="/docs/linux/man/3-unicode_lc/">unicode_lc</a></code>(3) of itself.</dd></dl>
+<p> <code>unicode_ispunct</code>()</p>
+<dl>
+<dd>Returns non-0 for all UNICODE_CATEGORY_1_PUNCTUATION.</dd></dl>
+<p> <code>unicode_isspace</code>()</p>
+<dl>
+<dd>Returns non-0 for unicode_isblank() or for unicode characters with linebreaking properties of BK, CR, LF, NL, and SP.</dd></dl>
+<p> <code>unicode_isupper</code>()</p>
+<dl>
+<dd>Returns non-0 for all <code>unicode_isalpha</code>() for which the character is equal to <code><a href="/docs/linux/man/3-unicode_uc/">unicode_uc</a></code>(3) of itself.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-courier-unicode/">courier-unicode</a></code>(7), <code><a href="/docs/linux/man/3-unicode_convert_tocase/">unicode_convert_tocase</a></code>(3).</p>
+<h2>Author</h2>
+<p><code>Sam Varshavchik</code></p>
+<dl>
+<dd>Author</dd></dl>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd>unicode character&#8217;s categorization</dd>
+<dl>
+<dd><a rel="nofollow" href="http://unicode.org/notes/tn36/">http://unicode.org/notes/tn36/</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

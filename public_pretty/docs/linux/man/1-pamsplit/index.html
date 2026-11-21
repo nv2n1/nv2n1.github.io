@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamsplit(1) · Linux Manual Pages</title>
+<meta name="description" content="pamsplit – split a multi-image Netpbm file into single-image files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamsplit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamsplit(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pamsplit &#8211; split a multi-image Netpbm file into single-image files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamsplit</code> </p>
+<p> [<i>netpbmfile</i> </p>
+<p> [<i> output_file_pattern</i>]] </p>
+<p> [<code>-padname=</code><i>n</i>] </p>
+<p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamsplit</code> reads a PNM or PAM stream as input. It copies each image in the input into a separate file, in the same format. </p>
+<p> <i>netpbmfile</i> is the file name of the input file, or <code>&#8211;</code> to indicate Standard Input. The default is Standard Input. </p>
+<p> <i>output_file_pattern</i> tells how to name the output files. It is the file name of the output file, except that the first occurrence of &#8216;%d&#8217; in it is replaced by the image sequence number in unpadded ASCII decimal, with the sequence starting at 0. If there is no &#8216;%d&#8217; in the pattern, <code>pamsplit</code> fails. </p>
+<p> The default output file pattern is &#8216;image%d&#8217;. </p>
+<p> The <code>-padname</code> option specifies to how many characters you want the image sequence number in the output file name padded with zeroes. <code>pamsplit</code> adds leading zeroes to the image sequence number to get up to at least that number of characters. This is just the number of characters in the sequence number part of the name. For example, <tt>pamsplit - outputfile%d.ppm -padname=3</tt> would yield output filenames <code>outputfile000.ppm</code>, <code>outputfile001.ppm</code>, etc. </p>
+<p> The default is no padding (equivalent to <code>-padname=0</code>). </p>
+<p> The <code>-padname</code> option was new in Netpbm 10.23 (July 2004). Before that, there was never any padding. </p>
+<p> Note that to do the reverse operation (combining multiple single-image Netpbm files into a multi-image one), there is no special Netpbm program. Just use <code>cat</code>. </p>
+<p> If you just want to find out basic information about the images in a stream, you can use <code>pamfile</code> on the stream. </p>
+<p> To extract images from a stream and generate a single stream containing them, use <code>pampick</code>. </p>
+<p> To run a program on each image in a stream without the hassle of temporary files, use <code>pamexec</code>. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>cat</code> man page </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

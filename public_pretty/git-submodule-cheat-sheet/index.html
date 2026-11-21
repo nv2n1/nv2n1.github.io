@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing Git Submodules: Add, Update, and Remove - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/git-submodule-cheat-sheet/">
+  <meta name="description" content="Git submodules let you keep external repositories as subdirectories within your project while maintaining separate commit histories. They’re useful for managing …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing Git Submodules: Add, Update, and Remove">
+  <meta property="og:url" content="https://www.systutorials.com/git-submodule-cheat-sheet/">
+  <meta property="og:description" content="Git submodules let you keep external repositories as subdirectories within your project while maintaining separate commit histories. They’re useful for managing …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>Managing Git Submodules: Add, Update, and Remove</h1>
+        <time class="post-date" datetime="2014-05-29T12:04:56Z">May 29, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Git submodules let you keep external repositories as subdirectories within your project while maintaining separate commit histories. They’re useful for managing dependencies, shared libraries, or multi-repo projects—but they require explicit commands to work properly.</p>
+<h2 id="adding-a-submodule">Adding a Submodule</h2>
+<p>To add a submodule to your repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add https://github.com/user/repo.git ./path/to/submodule
+</span></span></code></pre></div><p>This creates or updates <code>.gitmodules</code> and clones the repository into the specified path. The parent repo tracks only the specific commit the submodule points to, not its entire history.</p>
+<p>To track a specific branch instead of the default:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add -b main https://github.com/user/repo.git ./path/to/submodule
+</span></span></code></pre></div><p>To pin a submodule to a specific commit or tag immediately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ./path/to/submodule
+</span></span><span class="line"><span class="cl">git checkout v1.2.3
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">git add ./path/to/submodule
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Pin submodule to v1.2.3&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div><h2 id="cloning-repositories-with-submodules">Cloning Repositories with Submodules</h2>
+<p>By default, <code>git clone</code> doesn’t fetch submodule contents. Clone with submodules included:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone --recursive https://github.com/user/repo.git
+</span></span></code></pre></div><p>If you’ve already cloned without <code>--recursive</code>, initialize and fetch all submodules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span></code></pre></div><p>For a single submodule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --init ./path/to/submodule
+</span></span></code></pre></div><p>For faster cloning of repositories with large or many submodules, use a shallow clone:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone --recursive --depth <span class="m">1</span> https://github.com/user/repo.git
+</span></span></code></pre></div><h2 id="updating-submodules">Updating Submodules</h2>
+<p>Fetch and merge the latest changes from each submodule’s remote tracking branch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --recursive --remote
+</span></span></code></pre></div><p>This updates submodules to the latest commit on their configured branch. To rebase instead of merge:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --recursive --remote --rebase
+</span></span></code></pre></div><p>Update a single submodule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --remote ./path/to/submodule
+</span></span></code></pre></div><h2 id="running-commands-across-submodules">Running Commands Across Submodules</h2>
+<p>The <code>foreach</code> command executes operations in each submodule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule foreach --recursive git pull
+</span></span></code></pre></div><p>Check out a specific branch in all submodules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule foreach --recursive git checkout main
+</span></span></code></pre></div><p>Combine multiple operations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule foreach --recursive <span class="s1">&#39;git checkout main &amp;&amp; git pull&#39;</span>
+</span></span></code></pre></div><p>Get the path and status of each submodule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule foreach --recursive <span class="nb">pwd</span>
+</span></span></code></pre></div><h2 id="updating-submodule-references-in-parent-repo">Updating Submodule References in Parent Repo</h2>
+<p>When you update which commit a submodule points to, commit that change to the parent repository:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ./path/to/submodule
+</span></span><span class="line"><span class="cl">git checkout &lt;commit-or-tag&gt;
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">git add ./path/to/submodule
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Update submodule to v1.5.0&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div><p>Team members will receive the updated reference when they pull. They should then run <code>git submodule update --recursive</code> to sync their local submodules.</p>
+<h2 id="removing-a-submodule">Removing a Submodule</h2>
+<p>Remove a submodule completely:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule deinit -f ./path/to/submodule
+</span></span><span class="line"><span class="cl">git rm -f ./path/to/submodule
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Remove submodule&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div><p>The <code>deinit</code> command unregisters the submodule, and <code>git rm</code> deletes the directory and its <code>.gitmodules</code> entry. The <code>-f</code> flag forces removal if the submodule has uncommitted changes.</p>
+<p>Team members who pull the removal should clean up their local submodule directory if it persists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf .git/modules/path/to/submodule
+</span></span></code></pre></div><h2 id="viewing-submodule-status">Viewing Submodule Status</h2>
+<p>See which submodules exist and their current commit:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --file .gitmodules --get-regexp path
+</span></span></code></pre></div><p>Check submodule status in your working directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule status
+</span></span></code></pre></div><p>Output shows the commit hash and path for each submodule. A <code>+</code> prefix indicates uncommitted changes; a <code>-</code> prefix indicates the submodule isn’t initialized.</p>
+<h2 id="common-issues">Common Issues</h2>
+<p><strong>Detached HEAD in submodule</strong>: After updating, submodules check out a specific commit rather than a branch. To work on a branch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ./path/to/submodule
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span></code></pre></div><p><strong>Uncommitted submodule changes</strong>: Modifications inside a submodule stay in that submodule’s repo—they don’t affect the parent repo unless you explicitly push from within the submodule. Always remember to commit and push submodule changes separately.</p>
+<p><strong><code>.gitmodules</code> merge conflicts</strong>: If two branches modify submodule entries differently, manually resolve the conflict in <code>.gitmodules</code>, then:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .gitmodules
+</span></span><span class="line"><span class="cl">git commit
+</span></span></code></pre></div><p><strong>Submodule appears as untracked directory</strong>: This usually means the submodule wasn’t properly initialized. Run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span></code></pre></div><p><strong>Accidental submodule additions</strong>: If you added a submodule by mistake, remove it using the deletion commands above before pushing.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

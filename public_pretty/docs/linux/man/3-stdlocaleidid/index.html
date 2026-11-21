@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlocaleidid(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlocaleidid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlocaleidid(3)</h1>
+
+
+
+
+
+<p>std::locale::id::id - std::locale::id::id</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;locale&gt;
+id();
+(1)
+    id(const id &amp;) = delete;
+(2)</code></pre> 
+<ol>
+<li>default constructor: creates an object of type std::locale::id with implementation-specific content.</li>
+<li>copy constructor is deleted; std::locale::id is not copyable.</li>
+</ol>
+<h2>Notes</h2>
+<p>Because locales and facets must be available for the IO stream objects with static storage duration, such as std::cout, typical implementations let implicit default constructor zero-initialize the contents of std::locale::id during static initialization (before constructors run for static objects), and when a facet is added to any locale for the first time, the locale completes initialization of the facet&rsquo;s id.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

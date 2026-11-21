@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting Packets to the FORWARD Chain with iptables and DNAT - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-divert-connection-or-packet-before-routing-decision-entering-the-default/">
+  <meta name="description" content="Intercepting traffic before normal routing decisions requires understanding packet flow through iptables chains. If you need incoming packets to bypass the …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Redirecting Packets to the FORWARD Chain with iptables and DNAT">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-divert-connection-or-packet-before-routing-decision-entering-the-default/">
+  <meta property="og:description" content="Intercepting traffic before normal routing decisions requires understanding packet flow through iptables chains. If you need incoming packets to bypass the …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/databases-storage/">Databases &amp; Storage</a>
+        </nav>
+        
+        <h1>Redirecting Packets to the FORWARD Chain with iptables and DNAT</h1>
+        <time class="post-date" datetime="2018-04-02T15:25:40Z">April 2, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Intercepting traffic before normal routing decisions requires understanding packet flow through iptables chains. If you need incoming packets to bypass the INPUT chain and process through FORWARD instead, you’ll use the PREROUTING chain with Destination NAT (DNAT).</p>
+<h2 id="packet-flow-through-iptables">Packet Flow Through iptables</h2>
+<p>When a packet arrives at your system, it traverses these chains in order:</p>
+<ol>
+<li><strong>PREROUTING</strong> – Executes before the kernel’s routing decision. This is where you redirect traffic.</li>
+<li><strong>Routing decision</strong> – Kernel determines if the packet is destined for a local process or should be forwarded through the system.</li>
+<li><strong>INPUT</strong> – Processes packets bound for local applications.</li>
+<li><strong>FORWARD</strong> – Processes packets the kernel will route through the system.</li>
+<li><strong>POSTROUTING</strong> – Executes after routing decision, before transmission.</li>
+</ol>
+<p>To force packets into FORWARD instead of INPUT, modify the destination address in PREROUTING. This changes the routing decision so the kernel treats the packet as forwarded traffic.</p>
+<h2 id="enable-ip-forwarding">Enable IP Forwarding</h2>
+<p>Before using DNAT to redirect traffic, enable IP forwarding:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Temporary (lost on reboot)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Persistent (edit and run sysctl)</span>
+</span></span><span class="line"><span class="cl">sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+</span></span></code></pre></div><p>For persistence across reboots, add this to <code>/etc/sysctl.d/99-forwarding.conf</code>:</p>
+<pre><code>net.ipv4.ip_forward = 1
+</code></pre>
+<p>Then apply it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sysctl -p /etc/sysctl.d/99-forwarding.conf
+</span></span></code></pre></div><h2 id="dnat-rule-implementation">DNAT Rule Implementation</h2>
+<p>Use DNAT in the PREROUTING chain to change the packet’s destination address:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Redirect inbound traffic on port 443 from specific source</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -i eth0 -p tcp <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -s 100.43.1.10 -d 192.168.1.100 --dport <span class="m">443</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -j DNAT --to-destination 192.168.1.50:443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Allow these packets through FORWARD chain</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -i eth0 -p tcp <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -s 100.43.1.10 --dport <span class="m">443</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Allow return traffic</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -p tcp --sport <span class="m">443</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span></code></pre></div><p>This redirects connections from <code>100.43.1.10</code> destined for <code>192.168.1.100:443</code> to <code>192.168.1.50:443</code> instead, and routes them through the FORWARD chain.</p>
+<h2 id="critical-configuration-points">Critical Configuration Points</h2>
+<p><strong>Match destination ports, not source ports</strong>: Source ports are ephemeral and unreliable for filtering. Always use <code>--dport</code> in filter rules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Good</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -p tcp --dport <span class="m">443</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Avoid</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -p tcp --sport <span class="m">443</span> -j ACCEPT
+</span></span></code></pre></div><p><strong>Use stateful rules</strong>: Enable connection tracking to handle bidirectional traffic:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -m state --state INVALID -j DROP
+</span></span></code></pre></div><p><strong>Remove conflicting INPUT rules</strong>: If you previously dropped port 443 traffic in the INPUT chain, remove or modify that rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List INPUT rules with line numbers</span>
+</span></span><span class="line"><span class="cl">iptables -L INPUT -n -v --line-numbers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Delete the conflicting rule (e.g., line 5)</span>
+</span></span><span class="line"><span class="cl">iptables -D INPUT <span class="m">5</span>
+</span></span></code></pre></div><h2 id="complete-working-example">Complete Working Example</h2>
+<p>Here’s a minimal, functional ruleset:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Enable forwarding</span>
+</span></span><span class="line"><span class="cl">sysctl -w net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Clear existing rules</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -F PREROUTING
+</span></span><span class="line"><span class="cl">iptables -F FORWARD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># NAT rule: redirect inbound HTTPS traffic</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A PREROUTING -i eth0 -p tcp <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -s 203.0.113.5 -d 192.168.1.100 --dport <span class="m">443</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -j DNAT --to-destination 192.168.1.50:443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># FORWARD rules: allow the redirected traffic</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -i eth0 -p tcp <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -s 203.0.113.5 --dport <span class="m">443</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -p tcp --sport <span class="m">443</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Drop invalid packets</span>
+</span></span><span class="line"><span class="cl">iptables -A FORWARD -m state --state INVALID -j DROP
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Masquerade outgoing traffic</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -A POSTROUTING -o eth0 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -m state --state NEW,RELATED,ESTABLISHED -j MASQUERADE
+</span></span></code></pre></div><h2 id="debugging-and-verification">Debugging and Verification</h2>
+<p>Check your active rules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># View all rules with line numbers</span>
+</span></span><span class="line"><span class="cl">iptables -L -n -v --line-numbers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View NAT table specifically</span>
+</span></span><span class="line"><span class="cl">iptables -t nat -L -n -v --line-numbers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Monitor active connections matching port 443</span>
+</span></span><span class="line"><span class="cl">watch -n <span class="m">1</span> <span class="s1">&#39;conntrack -L | grep 443&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check packet counters</span>
+</span></span><span class="line"><span class="cl">iptables -L -n -v
+</span></span></code></pre></div><p>If packets aren’t reaching FORWARD, verify with tcpdump:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Capture on ingress interface</span>
+</span></span><span class="line"><span class="cl">sudo tcpdump -i eth0 -n tcp and port <span class="m">443</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Capture on system with verbose output</span>
+</span></span><span class="line"><span class="cl">sudo tcpdump -i any -n tcp and port <span class="m">443</span> -vv
+</span></span></code></pre></div><h2 id="migration-to-nftables">Migration to nftables</h2>
+<p>Modern Linux systems (kernel 3.13+) support nftables, which offers cleaner syntax and better performance. The equivalent nftables rules:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create table and chain</span>
+</span></span><span class="line"><span class="cl">nft add table inet filter
+</span></span><span class="line"><span class="cl">nft add chain inet filter forward <span class="o">{</span> <span class="nb">type</span> filter hook forward priority <span class="m">0</span> <span class="se">\;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add FORWARD rules</span>
+</span></span><span class="line"><span class="cl">nft add rule inet filter forward ip saddr 203.0.113.5 tcp dport <span class="m">443</span> accept
+</span></span><span class="line"><span class="cl">nft add rule inet filter forward tcp sport <span class="m">443</span> ct state established,related accept
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create NAT table for PREROUTING</span>
+</span></span><span class="line"><span class="cl">nft add table inet nat
+</span></span><span class="line"><span class="cl">nft add chain inet nat prerouting <span class="o">{</span> <span class="nb">type</span> nat hook prerouting priority <span class="m">0</span> <span class="se">\;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">nft add rule inet nat prerouting ip saddr 203.0.113.5 tcp dport <span class="m">443</span> dnat to 192.168.1.50:443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View complete ruleset</span>
+</span></span><span class="line"><span class="cl">nft list ruleset
+</span></span></code></pre></div><p>nftables rules persist across reboots when saved to <code>/etc/nftables.conf</code>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

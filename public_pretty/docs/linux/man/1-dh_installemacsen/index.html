@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dh_installemacsen(1) · Linux Manual Pages</title>
+<meta name="description" content="dh_installemacsen – register an Emacs add on package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dh_installemacsen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dh_installemacsen(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dh_installemacsen &#8211; register an Emacs add on package </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dh_installemacsen</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;priority=</code><i>n</i>] [<code>&#8211;flavor=</code><i>foo</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>dh_installemacsen</code> is a debhelper program that is responsible for installing files used by the Debian <code>emacsen-common</code> package into package build directories. </p>
+<p> It also automatically generates the <i>preinst</i> <i>postinst</i> and <i>prerm</i> commands needed to register a package as an Emacs add on package. The commands are added to the maintainer scripts by <code>dh_installdeb</code>. See <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1) for an explanation of how this works.</p>
+<h2>FILES</h2>
+<dl>
+<dt>debian/<i>package</i>.emacsen-compat</dt>
+<dd> Installed into <i>usr/lib/emacsen-common/packages/compat/package</i> in the package build directory.</dd>
+<dt>debian/<i>package</i>.emacsen-install</dt>
+<dd> Installed into <i>usr/lib/emacsen-common/packages/install/package</i> in the package build directory.</dd>
+<dt>debian/<i>package</i>.emacsen-remove</dt>
+<dd> Installed into <i>usr/lib/emacsen-common/packages/remove/package</i> in the package build directory.</dd>
+<dt>debian/<i>package</i>.emacsen-startup</dt>
+<dd> Installed into etc/emacs/site-start.d/50<i>package</i>.el in the package build directory. Use <code>&#8211;priority</code> to use a different priority than 50.</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-n</code>, <code>&#8211;no-scripts</code></dt>
+<dd> Do not modify <i>postinst</i>/<i>prerm</i> scripts.</dd>
+<dt><code>&#8211;priority=</code><i>n</i></dt>
+<dd> Sets the priority number of a <i>site-start.d</i> file. Default is 50.</dd>
+<dt><code>&#8211;flavor=</code><i>foo</i></dt>
+<dd> Sets the flavor a <i>site-start.d</i> file will be installed in. Default is <code>emacs</code>, alternatives include <code>xemacs</code> and <code>emacs20</code>.</dd></dl>
+<h2>NOTES</h2>
+<p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) &#8220;usr/share/doc/emacsen-common/debian-emacs-policy.gz&#8221; </p>
+<p> This program is a part of debhelper.</p>
+<h2>AUTHOR</h2>
+<p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

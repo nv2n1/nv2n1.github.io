@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_driver_claim_interface(9) · Linux Manual Pages</title>
+<meta name="description" content="usb_driver_claim_interface – bind a driver to an interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_driver_claim_interface/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_driver_claim_interface(9)</h1>
+
+
+
+
+
+<p>usb_driver_claim_interface &#8211; bind a driver to an interface</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_driver_claim_interface(struct usb_driver *driver, struct usb_interface *iface, void *priv);</code></pre>
+<h2>Arguments</h2>
+<p><i>driver</i></p>
+<dl>
+<dd>
+</dd><dd>the driver to be bound</dd></dl>
+<p> <i>iface</i></p>
+<dl>
+<dd>the interface to which it will be bound; must be in the usb device&#8217;s active configuration</dd></dl>
+<p> <i>priv</i></p>
+<dl>
+<dd>driver data associated with that interface</dd></dl>
+<h2>Description</h2>
+<p>This is used by usb device drivers that need to claim more than one interface on a device when probing (audio and acm are current examples). No device driver should directly modify internal usb_interface or usb_device structure members. </p>
+<p> Few drivers should need to use this routine, since the most natural way to bind to an interface is to return the private data from the driver&#8217;s <code>probe</code> method. </p>
+<p> Callers must own the device lock, so driver <code>probe</code> entries don&#8217;t need extra locking, but other call contexts may need to explicitly claim that lock.</p>
+<h2>Return</h2>
+<p>0 on success.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

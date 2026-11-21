@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronomonth(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronomonth/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronomonth(3)</h1>
+
+
+
+
+
+<p>std::chrono::month - std::chrono::month</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;chrono&gt;
+class month; <i>(since C++20)</i>
+inline constexpr std::chrono::month January{1}; <i>(since C++20)</i>
+inline constexpr std::chrono::month February{2}; <i>(since C++20)</i>
+inline constexpr std::chrono::month March{3}; <i>(since C++20)</i>
+inline constexpr std::chrono::month April{4}; <i>(since C++20)</i>
+inline constexpr std::chrono::month May{5}; <i>(since C++20)</i>
+inline constexpr std::chrono::month June{6}; <i>(since C++20)</i>
+inline constexpr std::chrono::month July{7}; <i>(since C++20)</i>
+inline constexpr std::chrono::month August{8}; <i>(since C++20)</i>
+inline constexpr std::chrono::month September{9}; <i>(since C++20)</i>
+inline constexpr std::chrono::month October{10}; <i>(since C++20)</i>
+inline constexpr std::chrono::month November{11}; <i>(since C++20)</i>
+inline constexpr std::chrono::month December{12}; <i>(since C++20)</i>
+The class month represents a month in a year. Its normal range is [1, 12], but it may hold any number in [0, 255]. Twelve named constants are predefined in the std::chrono namespace for the twelve months of the year.
+month is a TriviallyCopyable StandardLayoutType.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a month
+constructor <i>(public member function)</i></p>
+<p>operator++ increments or decrements the month
+operator++(int) <i>(public member function)</i>
+operator&ndash;
+operator&ndash;(int)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> adds or subtracts a number of months
+operator+= <i>(public member function)</i>
+operator-=
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> retrieves the stored month value
+operator_unsigned <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> checks if the stored month value is in the normal range
+ok <i>(public member function)</i></p>
+<p>Nonmember functions</p>
+<p>operator==
+operator!= compares two month objects
+operator&lt; <i>(function)</i>
+operator&lt;=
+operator&gt;
+operator&gt;=
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> performs arithmetic on months
+operator+ <i>(function)</i>
+operator-
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> outputs a month into a stream
+operator&lt;&lt; <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> outputs a month into a stream according to the provided format
+to_stream <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> parses a month from a stream according to the provided format
+from_stream <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

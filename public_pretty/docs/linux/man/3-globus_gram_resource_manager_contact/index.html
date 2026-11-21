@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gram_resource_manager_contact(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gram_resource_manager_contact/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gram_resource_manager_contact(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>globus_gram_resource_manager_contact - Resource Manager Contact The resource manager contact string is used by the GRAM Client to connect to, authenticate to, and request service from a GRAM resource manager. The simplest contact string is just a host name, but additional fields may be present in the name to qualify the TCP port number it is listening on, the service name (for example, to choose a specific scheduler), and the subject name (security identity) of the resource manager.</p>
+<p>For those resource manager contacts which omit the port, service or subject field the following defaults are used:</p>
+ <pre>
+port = 2119 (assigned by IANA)
+service = jobmanager 
+subject = subject based on hostname
+</pre> 
+<p>The following contain all of the acceptable formats of a GRAM Resource Manager Contact:</p>
+<dl>
+<dt>&bull;
+</dt><dd> host
+</dd><dt>&bull;
+</dt><dd> host:port
+</dd><dt>&bull;
+</dt><dd> host:port/service
+</dd><dt>&bull;
+</dt><dd> host/service
+</dd><dt>&bull;
+</dt><dd> host:/service
+</dd><dt>&bull;
+</dt><dd> host::subject
+</dd><dt>&bull;
+</dt><dd> host:port:subject
+</dd><dt>&bull;
+</dt><dd> host/service:subject
+</dd><dt>&bull;
+</dt><dd> host:/service:subject
+</dd><dt>&bull;
+</dt><dd> host:port/service:subject</dd></dl>
+<p>Note: Any of the above forms may be preceded by an optional &lsquo;&lt;b&gt;https&lt;/b&gt;&lt;b&gt;://&lt;/b&gt;&rsquo;.</p>
+ <hr>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

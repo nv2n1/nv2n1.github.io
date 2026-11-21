@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtremoveactionhook(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAppAddActionHook, XtRemoveActionHook – register an action hook procedure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtremoveactionhook/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtremoveactionhook(3)</h1>
+
+
+
+
+
+<p>XtAppAddActionHook, XtRemoveActionHook &#8211; register an action hook procedure </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>XtActionHookId XtAppAddActionHook(XtAppContext <i>app_context</i>, XtActionHookProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRemoveActionHook(XtActionHookId <i>id</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the action hook procedure.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the application-specific data to be passed to the action hook.</dd></dl>
+<h2>Description</h2>
+<p><code>XtAppAddActionHook</code> adds the specified procedure to the front of a list maintained in the application context. In the future, when an action routine is about to be invoked for any widget in this application context, either through the translation manager or via <code>XtCallActionProc</code>, the action hohok procedures will be called in reverse order of registration jut prior to invoking the action routine. </p>
+<p> Action hook procedures are removed automatically and the <code>XtActionHookId</code> s destroyed when the application context in which they were added is destroyed. </p>
+<p> <code>XtRemoveActionHook</code> removes the specified action hook procedure from the list in which it was registered.</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

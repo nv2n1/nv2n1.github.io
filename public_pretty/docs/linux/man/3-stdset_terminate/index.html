@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdset_terminate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdset_terminate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdset_terminate(3)</h1>
+
+
+
+
+
+<p>std::set_terminate - std::set_terminate</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;exception&gt;
+std::terminate_handler set_terminate( std::terminate_handler f ) throw(); <i>(until C++11)</i>
+std::terminate_handler set_terminate( std::terminate_handler f ) noexcept; <i>(since C++11)</i>
+Makes f the new global terminate handler function and returns the previously installed std::terminate_handler.
+This function is thread-safe. Every call to std::set_terminate synchronizes-with (see std::memory_order) the subsequent std::set_terminate and std::get_terminate <i>(since C++11)</i></p>
+<h2>Parameters</h2>
+<p>f - pointer to function of type std::terminate_handler, or null pointer</p>
+<h2>Return value</h2>
+<p>The previously-installed terminate handler, or a null pointer value if none was installed.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;exception&gt;
+int main()
+{
+std::set_terminate(<a href=""></a> { std::cout &lt;&lt; &quot;Unhandled exception\n&quot;; std::abort(); });
+throw 1;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Unhandled exception
+ <wbr> bash: line 7: 7743 Aborted (core dumped) ./a.out</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> function called when exception handling fails
+terminate <i>(function)</i>
+get_terminate obtains the current terminate_handler
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the type of the function called by std::terminate
+terminate_handler <i>(typedef)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

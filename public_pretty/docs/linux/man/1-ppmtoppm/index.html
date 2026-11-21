@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ppmtoppm(1) · Linux Manual Pages</title>
+<meta name="description" content="ppmtoppm – copy PPM image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ppmtoppm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ppmtoppm(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ppmtoppm &#8211; copy PPM image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ppmtoppm</code> </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>ppmtoppm</code> simply copies a PPM image from Standard Input to Standard Output. This may seem an unnecessary duplication of <code>cat</code>, but remember that a PPM program can read a PBM or PGM image, and the right kind of PAM, as if it were PPM. So <code>ppmtoppm</code> can read either a PBM, PGM, or PPM image and produce a PPM image as output. </p>
+<p> Even that is of limited usefulness because of the fact that almost any program to which you would feed the resulting PPM image could also just take the original image directly. However, sometimes you really need a true PPM image. </p>
+<p> When you know you have a PGM image and want a PPM image, <code>pgmtoppm</code> is a more general way to do that conversion. When you know you have a PBM image, use that and <code>pbmtopgm</code>. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pgmtopgm/">pgmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopam/">pamtopam</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code>ppm</code>(1) , <code>ppm</code>(1) , <code>ppm</code>(1) , </p>
+<h2>HISTORY</h2>
+<p> This program was added to Netpbm in Release 10.9 (September 2002). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

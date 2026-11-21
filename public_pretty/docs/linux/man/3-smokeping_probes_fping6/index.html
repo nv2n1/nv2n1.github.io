@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smokeping_probes_fping6(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-smokeping_probes_fping6/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>smokeping_probes_fping6(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Smokeping::probes::FPing6 - FPing6 Probe for SmokePing</p>
+<h2>Synopsis</h2><pre> *** Probes ***
+ +FPing6
+ binary = /usr/bin/fping6 # mandatory
+ blazemode = true
+ hostinterval = 1.5
+ mininterval = 0.001
+ offset = 50%
+ packetsize = 5000
+ pings = 20
+ sourceaddress = ::1
+ step = 300
+ timeout = 1.5
+ tos = 0x20
+ usestdout = true
+ # [...]
+ *** Targets ***
+ probe = FPing6 # if this should be the default probe
+ # [...]
+ + mytarget
+ # probe = FPing6 # if the default probe is something else
+ host = my.host</pre><h2>Description</h2>Integrates FPing6 as a probe into smokeping. This probe is derived from FPing; the only difference is that the target host used for checking the fping command output is ::1 instead of localhost.
+<h2>Variables</h2>Supported probe-specific variables:
+<dl COMPACT><dt>binary
+</dt><dd>The location of your fping binary. 
+ Example value: /usr/bin/fping6 
+ This setting is mandatory.
+</dd><dt>blazemode
+</dt><dd>Send an extra ping and then discarge the first answer since the first is bound to be an outliner. 
+ Example value: true
+</dd><dt>hostinterval
+</dt><dd>The fping ``-p'' parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): 
+ This parameter sets the time that fping waits between successive packets to an individual target. 
+ Example value: 1.5
+</dd><dt>mininterval
+</dt><dd>The fping ``-i'' parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. From <i>fping</i>(1): 
+ The minimum amount of time between sending a ping packet to any target. 
+ Example value: 0.001 
+ Default value: 0.01
+</dd><dt>offset
+</dt><dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as 'random', and the offset from the 'General' section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+ Example value: 50%
+</dd><dt>packetsize
+</dt><dd>The ping packet size (in the range of 12-64000 bytes). 
+ Example value: 5000
+</dd><dt>pings
+</dt><dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. 
+ Example value: 20
+</dd><dt>sourceaddress
+</dt><dd>The fping ``-S'' parameter . From <i>fping</i>(1): 
+ Set source address. 
+ Example value: ::1
+</dd><dt>step
+</dt><dd>Duration of the base interval that this probe should use, if different from the one specified in the 'Database' section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you'll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable 'concurrentprobes' is set in the 'General' section.) 
+ Example value: 300
+</dd><dt>timeout
+</dt><dd>The fping ``-t'' parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. Note that as Smokeping uses the fping 'counting' mode (-C), this apparently only affects the last ping. 
+ Example value: 1.5
+</dd><dt>tos
+</dt><dd>Set the type of service (<font SIZE="-1">TOS</font>) of outgoing <font SIZE="-1">ICMP</font> packets. You need at laeast fping-2.4b2_to3-ipv6 for this to work. Find a copy on <a rel="nofollow" HREF="http://www.smokeping.org">www.smokeping.org</a>/pub. 
+ Example value: 0x20
+</dd><dt>usestdout
+</dt><dd>Listen for FPing output on stdout instead of stderr ... (version 3.3+ sends its statistics on stdout). 
+ Example value: true</dd></dl><h2>Authors</h2>Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; 
+<p>Niko Tyni &lt;ntyni [at] iki.fi&gt;</p>
+<h2>See Also</h2>Smokeping::probes::FPing
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

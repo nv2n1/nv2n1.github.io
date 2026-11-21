@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glite-proxy-renewd(8) · Linux Manual Pages</title>
+<meta name="description" content="glite-proxy-renewd – proxy renewal daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-glite-proxy-renewd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>glite-proxy-renewd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>glite-proxy-renewd &#8211; proxy renewal daemon</p>
+<h2>Synopsis</h2>
+<p><code>glite-proxy-renewd</code> [<i>options</i>] </p>
+<h2>Description</h2>
+<p><code>glite-proxy-renewd</code> registers X.509 proxy certificates and periodicaly renews them using a MyProxy repository. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-A</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></dt>
+<dd>Renew also VOMS attributes if they are embeded in the renewed proxy. If the option is given, the renewal daemon will retrieve a fresh copy of the VOMS attributes and place it inside the new proxy. </dd>
+<dt><code>-C</code><i> DIR</i>, &#8211;CAdir <i>DIR</i></dt>
+<dd>An alternative directory with trusted root anchors. This option overrides the $X509_USER_DIR environment variable. </dd>
+<dt><code>-c</code><i> NUM</i>, &#8211;condor-limit <i>NUM</i></dt>
+<dd>Specifies how many <i>NUM</i> seconds before expiration of a proxy should the renewal process be started. It defaults to 1800 seconds. </dd>
+<dt><code>-d</code><i></i>, &#8211;debug</dt>
+<dd>Don&#8217;t daemonize and start logging to stdout. Increased level of debugging is enabled, too. </dd>
+<dt><code>-G</code><i> FILE</i>, &#8211;voms-config <i>FILE</i></dt>
+<dd>An alternative location of the VOMS configuration. </dd>
+<dt><code>-h</code><i></i>, &#8211;help</dt>
+<dd>Display a list of valid options. </dd>
+<dt><code>-k</code><i> FILE</i>, &#8211;key <i>FILE</i></dt>
+<dd>Get certificate from <i>FILE</i>. This option overrides the $X509_USER_CERT environment variable. </dd>
+<dt><code>-O</code><i></i>, &#8211;order-attributes</dt>
+<dd>Make sure that the order of renewed VOMS attributes is retained. Enabling this option may cause crashes of old VOMS servers (older than 1.8.12). </dd>
+<dt><code>-r</code><i> DIR</i>, &#8211;repository <i>DIR</i></dt>
+<dd>All registered proxies and corresponding metadata will be stored in <i>repository</i>. The directory must exist and be writeable by the proxy renewal daemon. </dd>
+<dt><code>-t</code><i> FILE</i>, &#8211;cert <i>FILE</i></dt>
+<dd>Get private key from <i>FILE</i>. This option overrides the $X509_USER_KEY environment variable. </dd>
+<dt><code>-V</code><i> DIR</i>, &#8211;VOMSdir <i>DIR</i></dt>
+<dd>An alternative directory with trusted VOMS certificates </dd>
+<dt><code>-v</code><i></i>, &#8211;version</dt>
+<dd>Display the version of the proxy renewal daemon. </dd>
+</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/tmp/dgpr_renew_&lt;uid&gt;</i></dt>
+<dd>A unix socket used to talk to the daemon. It is created the daemon upon its start </dd>
+<dt><i>proxy repository</i></dt>
+<dd>A directory containing all the registered proxy certificates and additional meta-data. </dd>
+<dt>There is no configuration file used the proxy renewal daemon.</dt>
+<dd></dd></dl>
+<h2>Environment</h2>
+<dl>
+<dt><code>GLITE_PR_TIMEOUT</code></dt>
+<dd>Sets the maximum number of seconds that the daemon can spend on serving the client over the unix socket. The default value is 120 seconds. </dd>
+<dt>Also, standard globus variables are honoured:</dt>
+<dd>
+</dd><dt><code>X509_USER_KEY</code></dt>
+<dd>If $X509_USER_KEY is set, it is used to locate the private key file. </dd>
+<dt><code>X509_USER_CERT</code></dt>
+<dd>If $X509_USER_CERT is set, it is used to locate the certificate file. </dd>
+<dt><code>X509_CERT_DIR</code></dt>
+<dd>If $X509_CERT_DIR is set, it is used to locate trusted CA&#8217;s certificates and ca-signing-policy files. </dd>
+</dl>
+<h2>Bugs</h2>
+<p>Please report all bugs to CESNET gLite Proxyrenewal issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/proxyrenewal/issues">https://github.com/CESNET/proxyrenewal/issues</a></i> </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-glite-proxy-renew/">glite-proxy-renew</a></code>(1) </p>
+<h2>Author</h2>
+<p>EU EGEE, EU EMI</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

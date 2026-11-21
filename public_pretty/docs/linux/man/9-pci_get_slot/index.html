@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pci_get_slot(9) · Linux Manual Pages</title>
+<meta name="description" content="pci_get_slot – locate PCI device for a given PCI slot">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-pci_get_slot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>pci_get_slot(9)</h1>
+
+
+
+
+
+<p>pci_get_slot &#8211; locate PCI device for a given PCI slot</p>
+<h2>Synopsis</h2>
+<pre><code>struct pci_dev *pci_get_slot(struct pci_bus *bus, unsigned int devfn);</code></pre>
+<h2>Arguments</h2>
+<p><i>bus</i></p>
+<dl>
+<dd>
+</dd><dd>PCI bus on which desired PCI device resides</dd></dl>
+<p> <i>devfn</i></p>
+<dl>
+<dd>encodes number of PCI slot in which the desired PCI device resides and the logical device number within that slot in case of multi-function devices.</dd></dl>
+<h2>Description</h2>
+<p>Given a PCI bus and slot/function number, the desired PCI device is located in the list of PCI devices. If the device is found, its reference count is increased and this function returns a pointer to its data structure. The caller must decrement the reference count by calling <code>pci_dev_put</code>. If no device is found, <code>NULL</code> is returned.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

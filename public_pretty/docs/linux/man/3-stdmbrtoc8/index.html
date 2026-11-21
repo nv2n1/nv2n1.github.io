@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmbrtoc8(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmbrtoc8/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmbrtoc8(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::mbrtoc8 - std::mbrtoc8</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cuchar&gt;
+    std::size_t mbrtoc8(char8_t *pc8,
+                        const char *s, (since C++ 20)
+                                           std::size_t n,
+                        std::mbstate_t *ps);</code></pre> 
+<p>Converts a narrow multibyte character to UTF-8 encoding.
+If s is not a null pointer, inspects at most n bytes of the multibyte character string, beginning with the byte pointed to by s to determine the number of bytes necessary to complete the next multibyte character (including any shift sequences). If the function determines that the next multibyte character in s is complete and valid, converts it to UTF-8 and stores the first UTf-8 code unit in *pc8 (if pc8 is not null).
+If UTF-8 encoding of the multibyte character in *s consists of more than one UTF-8 code unit, then after the first call to this function, *ps is updated in such a way that the next call to mbrtoc8 will write out the additional UTF-8 code units, without considering *s.
+If s is a null pointer, the values of n and pc8 are ignored and the call is equivalent to std::mbrtoc8(NULL, &quot;&quot;, 1, ps).
+If UTF-8 code unit produced is u8&rsquo;\0&rsquo;, the conversion state *ps represents the initial shift state.
+The multibyte encoding used by this function is specified by the currently active C locale.</p>
+<h2>Parameters</h2>
+<p>pc8 - pointer to the location where the resulting UTF-8 code units will be written
+s - pointer to the multibyte character string used as input
+n - limit on the number of bytes in s that can be examined
+ps - pointer to the conversion state object used when interpreting the multibyte string</p>
+<h2>Return value</h2>
+<p>The first of the following that applies:</p>
+<ul>
+<li>0 if the character converted from s (and stored in *pc8 if non-null) was the null character</li>
+<li>the number of bytes [1&hellip;n] of the multibyte character successfully converted from s</li>
+<li>-3 if the next UTF-8 code unit from a character whose encoding consists of multiple code units has now been written to *pc8. No bytes are processed from the input in this case.</li>
+<li>-2 if the next n bytes constitute an incomplete, but so far valid, multibyte character. Nothing is written to *pc8.</li>
+<li>-1 if encoding error occurs. Nothing is written to *pc8, the value EILSEQ is stored in errno and the value of *ps is unspecified.</li>
+</ul>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p>c8rtomb converts UTF-8 string to narrow multibyte encoding
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

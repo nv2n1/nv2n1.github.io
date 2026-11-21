@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>register_font_file_type(3) · Linux Manual Pages</title>
+<meta name="description" content="register_font_file_type – Register a new font loading function. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-register_font_file_type/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>register_font_file_type(3)</h1>
+
+
+
+
+
+<p>register_font_file_type &#8211; Register a new font loading function. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+void register_font_file_type(const char *ext,
+                             FONT *(*load)(const char *filename, RGB *pal, void *param));</code></pre>
+<h2>Description</h2>
+<p>Informs the load_font() functions of a new file type, providing a routine to read fonts in this format. The function you supply must follow the following prototype: </p>
+<pre> FONT *load_my_font(const char *filename, RGB *pal, void *param)
+ {
+ ...
+ }</pre>
+<p>The pal parameter can optionally be used to return a palette for the FONT. The parameter param can be anything you like: you can use this to pass information to your loading routine, such as for instance the font height, the character range to load or the index number of a font in a datafile. If you choose to write your own font loading code, your function should be prepared to deal with a value of NULL for either of these parameters. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-load_font/">load_font</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remotectl(8) · Linux Manual Pages</title>
+<meta name="description" content="remotectl – Remote Access Configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-remotectl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>remotectl(8)</h1>
+
+
+
+
+
+<p>remotectl &#8211; Remote Access Configuration</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>remotectl</code> {COMMAND} [OPTIONS&#8230;]</dt></dl>
+<h2>Description</h2>
+<dd>The <code>remotectl</code> program will configure remote access to the system. Currently it manages cockpit&#8217;s SSL certificate.</dd>
+<h2>Commands</h2>
+<p><code>certificate</code></p>
+<dl>
+<dd>Manage Cockpit&#8217;s SSL certificate. If used without options will check if cockpit has a valid certificate without making any changes. </dd>
+<p> <code>&#8211;ensure</code> Ensure that a certificate exists and can be loaded. Certificate will be created if it does not already exist. </p>
+<p> <code>&#8211;user username</code> The unix user that should own the certificate. Only takes effect if used with <code>&#8211;ensure</code>. </p>
+<p> <code>&#8211;group groupname</code> The unix group that should read the certificate. Only takes effect if used with <code>&#8211;ensure</code>. </p>
+<p> If any additional arguments are given, they are treated as files that should be combined to create a certificate file. If the combined files validate, they will be saved in the appropriate location using the name of the first file given with the extension changed to .cert. For example: </p>
+<p> <code>remotectl certificate server.pem chain.pem key.pem</code> </p>
+<p> will result in server.cert. If server.cert already exists it will be overwritten.</dl>
+<h2>Options</h2>
+<p><code>&#8211;help</code></p>
+<dl>
+<dd>Show help options.</dd></dl>
+<p> <code>&#8211;verbose</code></p>
+<dl>
+<dd>Print verbose messages about the task</dd></dl>
+<h2>Bugs</h2>
+<p>Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[1]</font>.</p>
+<h2>Author</h2>
+<p>Cockpit has been written by many m[blue]<code>contributors</code>m[]<font SIZE="-2">[2]</font>.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8)</p>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd>upstream bug tracker</dd>
+<dl>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dd></dl>
+<dt> 2.</dt>
+<dd>contributors</dd>
+<dl>
+<dd><a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

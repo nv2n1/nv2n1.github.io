@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knock(1) · Linux Manual Pages</title>
+<meta name="description" content="knock – port-knock client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-knock/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>knock(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> knock &#8211; port-knock client</p>
+<h2>SYNOPSIS</h2>
+<p> <code>knock [options] &lt;host&gt; &lt;port[:proto]&gt; [port[:proto]] &#8230;</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>knock</code> is a <i>port-knock</i> client. It sends TCP/UDP packets to each specified <i>port</i> on <i>host</i>, creating a special knock sequence on the listening server (see the <code>knockd</code> manpage for more info on this).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-u, &#8211;udp</code></dt>
+<dd> Make all port hits use UDP (default is TCP). If you want each port to use a different protocol (TCP or UDP), then you can specify the protocol on a per-port basis. See the example below.</dd>
+<dt><code>-d &lt;t&gt;, &#8211;delay &lt;t&gt;</code></dt>
+<dd> Wait &lt;t&gt; milliseconds between each port hit. This can be used in situations where a router mistakes your stream of SYN packets as a port scan and blocks them. If the packet rate is slowed with &#8211;delay, then the router should let the packets through.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Output verbose status messages.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display the version.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Syntax help.</dd></dl>
+<h2>EXAMPLES</h2>
+<pre>
+knock myserver.example.com 123:tcp 456:udp 789:tcp
+knock -u myserver.example.com 8284 4721 18592 42912
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>knockd</code> is the accompanying port-knock server.</p>
+<h2>AUTHOR</h2>
+<pre>
+Judd Vinet &lt;jvinet [at] zeroflux.org&gt;
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

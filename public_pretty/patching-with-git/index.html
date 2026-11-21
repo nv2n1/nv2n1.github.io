@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Patches: Create, Apply, and Debug Issues - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/patching-with-git/">
+  <meta name="description" content="The standard way to generate patches from git commits is git format-patch. This creates email-ready patch files that include commit messages, author …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Git Patches: Create, Apply, and Debug Issues">
+  <meta property="og:url" content="https://www.systutorials.com/patching-with-git/">
+  <meta property="og:description" content="The standard way to generate patches from git commits is git format-patch. This creates email-ready patch files that include commit messages, author …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/scripting-automation/">Scripting &amp; Automation</a>
+        </nav>
+        
+        <h1>Git Patches: Create, Apply, and Debug Issues</h1>
+        <time class="post-date" datetime="2018-03-24T11:41:06Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The standard way to generate patches from git commits is <code>git format-patch</code>. This creates email-ready patch files that include commit messages, author information, and metadata.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a patch from the last commit</span>
+</span></span><span class="line"><span class="cl">git format-patch -1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create patches for the last N commits</span>
+</span></span><span class="line"><span class="cl">git format-patch -3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create patches from a specific commit onwards</span>
+</span></span><span class="line"><span class="cl">git format-patch abc1234..HEAD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create patches from a range of commits</span>
+</span></span><span class="line"><span class="cl">git format-patch abc1234..def5678
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Output patches to a directory</span>
+</span></span><span class="line"><span class="cl">git format-patch -o /tmp/patches -1
+</span></span></code></pre></div><p>The <code>-1</code> flag tells git how many commits back to start from. Each commit generates a separate numbered patch file like <code>0001-commit-message.patch</code>.</p>
+<p>For a single logical change across multiple commits, use <code>--stdout</code> to combine them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git format-patch -3 --stdout &gt; my-feature.patch
+</span></span></code></pre></div><h2 id="customizing-patch-output">Customizing patch output</h2>
+<p>Control what gets included in your patches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Include a cover letter (useful for series)</span>
+</span></span><span class="line"><span class="cl">git format-patch -3 --cover-letter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use a custom prefix instead of &#34;PATCH&#34;</span>
+</span></span><span class="line"><span class="cl">git format-patch -3 --subject-prefix<span class="o">=</span><span class="s2">&#34;RFC&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Number patches even if there&#39;s only one</span>
+</span></span><span class="line"><span class="cl">git format-patch -1 -N
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Include diffstat</span>
+</span></span><span class="line"><span class="cl">git format-patch -1 --stat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Sign patches with GPG</span>
+</span></span><span class="line"><span class="cl">git format-patch -1 -S
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create patches with a custom subject line format</span>
+</span></span><span class="line"><span class="cl">git format-patch -1 --pretty<span class="o">=</span>format:<span class="s2">&#34;%h %s&#34;</span>
+</span></span></code></pre></div><h2 id="applying-patches">Applying patches</h2>
+<p>Use <code>git apply</code> for simple patches or <code>git am</code> (apply mail) for patches created with <code>git format-patch</code>. The key difference: <code>git am</code> preserves commits and metadata, while <code>git apply</code> just applies the diff without creating new commits.</p>
+<h3 id="with-git-am-preferred-for-format-patch">With git am (preferred for format-patch)</h3>
+<p><code>git am</code> handles email headers, author info, and commit metadata properly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Apply a single patch</span>
+</span></span><span class="line"><span class="cl">git am 0001-fix-bug.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply all patches in a directory</span>
+</span></span><span class="line"><span class="cl">git am /tmp/patches/*.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Continue after resolving conflicts</span>
+</span></span><span class="line"><span class="cl">git am --continue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Skip a problematic patch</span>
+</span></span><span class="line"><span class="cl">git am --skip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort the entire operation</span>
+</span></span><span class="line"><span class="cl">git am --abort
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply without verifying GPG signatures</span>
+</span></span><span class="line"><span class="cl">git am --no-verify
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply and sign commits with your GPG key</span>
+</span></span><span class="line"><span class="cl">git am -S
+</span></span></code></pre></div><h3 id="with-git-apply">With git apply</h3>
+<p><code>git apply</code> just applies the diff without creating commits. Useful for non-git projects, testing changes before committing, or applying partial diffs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Apply a patch</span>
+</span></span><span class="line"><span class="cl">git apply my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check if a patch applies cleanly (dry run)</span>
+</span></span><span class="line"><span class="cl">git apply --check my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply with whitespace fixes (tabs/spaces)</span>
+</span></span><span class="line"><span class="cl">git apply --whitespace<span class="o">=</span>fix my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reverse a patch</span>
+</span></span><span class="line"><span class="cl">git apply -R my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply with strict whitespace checking</span>
+</span></span><span class="line"><span class="cl">git apply --whitespace<span class="o">=</span>error my-patch.patch
+</span></span></code></pre></div><h2 id="handling-patch-conflicts">Handling patch conflicts</h2>
+<p>When patches don’t apply cleanly due to conflicting changes, resolve them manually:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># After resolving conflicts in your editor</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git am --continue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or to edit the commit message during apply</span>
+</span></span><span class="line"><span class="cl">git am --allow-empty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort if things get messy</span>
+</span></span><span class="line"><span class="cl">git am --abort
+</span></span></code></pre></div><p>For complex scenarios, use <code>git apply --reject</code> to generate <code>.rej</code> files for manual inspection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git apply --reject my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Review the .rej files</span>
+</span></span><span class="line"><span class="cl">cat file.rej
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Manually fix the changes, then add and commit</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit
+</span></span></code></pre></div><p>If you’re applying a series of patches and one fails, you have options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Skip just that one patch and continue with the rest</span>
+</span></span><span class="line"><span class="cl">git am --skip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reset and try a different approach (e.g., cherry-pick instead)</span>
+</span></span><span class="line"><span class="cl">git am --abort
+</span></span><span class="line"><span class="cl">git cherry-pick abc1234..def5678
+</span></span></code></pre></div><h2 id="patch-workflow-example">Patch workflow example</h2>
+<p>A typical workflow for receiving and testing patches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a feature branch for testing</span>
+</span></span><span class="line"><span class="cl">git checkout -b test-patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply patches with am (preserves commits)</span>
+</span></span><span class="line"><span class="cl">git am /path/to/patches/*.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Review changes</span>
+</span></span><span class="line"><span class="cl">git log --oneline -5
+</span></span><span class="line"><span class="cl">git diff main..HEAD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If everything looks good, merge to main</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git merge test-patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If there are issues, abort and try again</span>
+</span></span><span class="line"><span class="cl">git am --abort
+</span></span><span class="line"><span class="cl">git checkout test-patch
+</span></span></code></pre></div><h2 id="creating-patches-from-uncommitted-changes">Creating patches from uncommitted changes</h2>
+<p>To create a patch from your working directory without committing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Patch of all unstaged changes</span>
+</span></span><span class="line"><span class="cl">git diff &gt; local-changes.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Patch of staged changes only</span>
+</span></span><span class="line"><span class="cl">git diff --cached &gt; staged.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Patch including both staged and unstaged</span>
+</span></span><span class="line"><span class="cl">git diff HEAD &gt; all-changes.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply uncommitted patches with git apply</span>
+</span></span><span class="line"><span class="cl">git apply local-changes.patch
+</span></span></code></pre></div><p>This approach works well for sharing work-in-progress changes or applying changes across branches without creating intermediate commits.</p>
+<h2 id="combining-patches-and-stashing">Combining patches and stashing</h2>
+<p>For temporary work, stashes can be cleaner than patches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Save uncommitted changes to a stash</span>
+</span></span><span class="line"><span class="cl">git stash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Later, apply the stash</span>
+</span></span><span class="line"><span class="cl">git stash pop
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Export a stash as a patch</span>
+</span></span><span class="line"><span class="cl">git stash show -p stash@<span class="o">{</span>0<span class="o">}</span> &gt; my-stash.patch
+</span></span></code></pre></div><h2 id="verifying-patches-before-applying">Verifying patches before applying</h2>
+<p>Before applying patches from untrusted sources:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Preview a patch without applying it</span>
+</span></span><span class="line"><span class="cl">git apply --check my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Review the actual diff content</span>
+</span></span><span class="line"><span class="cl">git diff &lt; my-patch.patch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check patch statistics</span>
+</span></span><span class="line"><span class="cl">git apply --stat my-patch.patch
+</span></span></code></pre></div><p>If <code>git apply --check</code> reports errors, the patch won’t apply cleanly and you’ll need to manually adjust it or resolve conflicts during <code>git am</code>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

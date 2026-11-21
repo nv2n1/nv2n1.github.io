@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evas_object_image_border_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Image Object Border Functions – Functions that adjust the unscaled image border of image objects.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-evas_object_image_border_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>evas_object_image_border_group(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Image Object Border Functions &#8211; Functions that adjust the unscaled image border of image objects. </p>
+<h3>Functions</h3>
+<p>EAPI void <code>evas_object_image_border_set</code> (<code>Evas_Object</code> *obj, int l, int r, int t, int b)<br />
+ <i>Sets how much of each border of the given image object is not to be scaled. </i><br />
+ EAPI void <code>evas_object_image_border_get</code> (const <code>Evas_Object</code> *obj, int *l, int *r, int *t, int *b)<br />
+ <i>Retrieves how much of each border of the given image object is not to be scaled. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that adjust the unscaled image border of image objects.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI void evas_object_image_border_get (const <code>Evas_Object</code> * obj, int * l, int * r, int * t, int * b)</h3>
+<p>Retrieves how much of each border of the given image object is not to be scaled. </p>
+<p> See <code>evas_object_image_border_set</code> for more details. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>obj</i> The given image object.<br />
+ <i>l</i> Location to store the left border width in, or NULL.<br />
+ <i>r</i> Location to store the right border width in, or NULL.<br />
+ <i>t</i> Location to store the top border width in, or NULL.<br />
+ <i>b</i> Location to store the bottom border width in, or NULL.</dd></dl>
+<h3>EAPI void evas_object_image_border_set (<code>Evas_Object</code> * obj, int l, int r, int t, int b)</h3>
+<p>Sets how much of each border of the given image object is not to be scaled. </p>
+<p> When rendering, the image may be scaled to fit the size of the image object. This function sets what area around the border of the image is not to be scaled. This sort of function is useful for widget theming, where, for example, buttons may be of varying sizes, but the border size must remain constant. </p>
+<p> The units used for l, r, t and b are output units. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>obj</i> The given image object.<br />
+ <i>l</i> Distance of the left border that is not to be stretched.<br />
+ <i>r</i> Distance of the right border that is not to be stretched.<br />
+ <i>t</i> Distance of the top border that is not to be stretched.<br />
+ <i>b</i> Distance of the bottom border that is not to be stretched.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Evas from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

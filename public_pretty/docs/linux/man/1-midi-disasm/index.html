@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>midi-disasm(1) · Linux Manual Pages</title>
+<meta name="description" content="midi-disasm – disassemble midi files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-midi-disasm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>midi-disasm(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> midi-disasm &#8211; disassemble midi files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>midi-disasm</code> [ <code>-d</code> ] [ <code>-s</code> ] [ <code>-q</code> ] [ file ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>midi-disasm</i> disassembles a standard <code>midi</code> file into readable/editable text. <i>midi-disasm</i> prefers the file suffix &quot;.mid&quot; &#8212; it will supply it if a file by the name given on the command line cannot be found. Its output is to <i>stdout</i>. </p>
+<p> There are the following options for <i>midi-disasm</i>:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd> displays times as deltas from the time of the last midi event. A keyword &quot;DELTA&quot; is placed in the header line in the disassembly.</dd>
+<dt><code>-s</code></dt>
+<dd> displays times in seconds and factions instead of midi ticks; the format is &quot;&lt;seconds&gt;.&lt;centiseconds&gt;.&lt;16nths of a centisecond&gt;&quot;.</dd>
+<dt><code>-q</code></dt>
+<dd> suppresses note-on and note-off output lines.</dd></dl>
+<h2>AUTHORS</h2>
+<p> The code for <i>midi-disasm</i> is an elaboration of the program <i>mftext</i> by Tim Thompson, &#8230;twitch!glimmer!tjt, who also wrote the first version of the library functions in midifile.c, which were elaborated for midi file output by M. Czeiszperger.<br />
+ The rest is by Greg Lee, lee [at] Hawaii.edu. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

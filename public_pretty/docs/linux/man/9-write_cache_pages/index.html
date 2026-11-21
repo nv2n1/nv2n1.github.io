@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>write_cache_pages(9) · Linux Manual Pages</title>
+<meta name="description" content="write_cache_pages – walk the list of dirty pages of the given address space and write all of them.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-write_cache_pages/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>write_cache_pages(9)</h1>
+
+
+
+
+
+<p>write_cache_pages &#8211; walk the list of dirty pages of the given address space and write all of them.</p>
+<h2>Synopsis</h2>
+<pre><code>int write_cache_pages(struct address_space *mapping, struct writeback_control *wbc, writepage_t writepage, void *data);</code></pre>
+<h2>Arguments</h2>
+<p><i>mapping</i></p>
+<dl>
+<dd>
+</dd><dd>address space structure to write</dd></dl>
+<p> <i>wbc</i></p>
+<dl>
+<dd>subtract the number of written pages from *<i>wbc</i>-&gt;nr_to_write</dd></dl>
+<p> <i>writepage</i></p>
+<dl>
+<dd>function called for each page</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>data passed to writepage function</dd></dl>
+<h2>Description</h2>
+<p>If a page is already under I/O, <code>write_cache_pages</code> skips it, even if it&#8217;s dirty. This is desirable behaviour for memory-cleaning writeback, but it is INCORRECT for data-integrity system calls such as <code>fsync</code>. <code>fsync</code> and <code>msync</code> need to guarantee that all the data which was dirty at the time the call was made get new I/O started against them. If wbc-&gt;sync_mode is WB_SYNC_ALL then we were called for data integrity and we must wait for existing IO to complete. </p>
+<p> To avoid livelocks (when other process dirties new pages), we first tag pages which should be written back with TOWRITE tag and only then start writing them. For data-integrity sync we have to be careful so that we do not miss some pages (e.g., because some other process has cleared TOWRITE tag we set). The rule we follow is that TOWRITE tag can be cleared only by the process clearing the DIRTY tag (and submitting the page for IO).</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

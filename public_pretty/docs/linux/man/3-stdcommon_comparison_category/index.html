@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcommon_comparison_category(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcommon_comparison_category/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcommon_comparison_category(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::common_comparison_category - std::common_comparison_category</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;compare&gt;
+    template &lt;class... Ts&gt;
+    struct common_comparison_category {
+    (since C++ 20)
+        using type = /*see below*/;
+};</code></pre> 
+<p>The class template std::common_comparison_category provides an alias (as the member typedef type) for the strongest comparison category to which all of the template arguments Ts&hellip; can be converted.
+In detail, the common comparison type of a list of n types T0&hellip;Tn-1 is defined as follows:</p>
+<ul>
+<li>If any Ti is not a comparison category type (std::weak_equality, std::strong_equality, std::partial_ordering, std::weak_ordering, std::strong_ordering), U is void.</li>
+<li>Otherwise, if at least one Ti is std::weak_equality or at least one Ti is std::strong_equality and at least one Ti is std::partial_ordering or std::weak_ordering, U is std::weak_equality</li>
+<li>Otherwise, if at least one Ti is std::strong_equality, U is std::strong_equality</li>
+<li>Otherwise, (if there is no std::weak_equality and no std::strong_equality) if at least one Ti is std::partial_ordering, U is std::partial_ordering</li>
+<li>Otherwise, if at least one Ti is std::weak_ordering, U is std::weak_ordering</li>
+<li>Otherwise (if every Ti is std::strong_ordering, or if the list is empty), U is std::strong_ordering.</li>
+</ul>
+<h2>Template parameters</h2>
+<p>&hellip;Ts - a possibly empty list of types</p>
+<p>Helper template</p>
+<p>template&lt; class&hellip; Ts &gt; <i>(since C++20)</i>
+using common_comparison_category_t = typename common_comparison_category&lt;Ts&hellip;&gt;::type;</p>
+<h2>Member types</h2>
+<p>Member type Definition
+type the strongest common comparison category (as defined above)</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p>strong_ordering the result type of 3-way comparison that supports all 6 operators and is substitutable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)
+weak_ordering the result type of 3-way comparison that supports all 6 operators and is not substitutable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)
+partial_ordering the result type of 3-way comparison that supports all 6 operators, is not substitutable, and allows incomparable values
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)
+strong_equality the result type of 3-way comparison that supports only equality/inequality and is substitutable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)
+weak_equality the result type of 3-way comparison that supports only equality/inequality and is not substitutable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

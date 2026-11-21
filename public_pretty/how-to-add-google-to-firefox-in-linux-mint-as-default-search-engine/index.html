@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set Google as Default Search in Firefox on Linux Mint - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-add-google-to-firefox-in-linux-mint-as-default-search-engine/">
+  <meta name="description" content="Firefox on Linux Mint doesn’t include Google in its default search engine list. Linux Mint deliberately curates search engines based on revenue-sharing …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Set Google as Default Search in Firefox on Linux Mint">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-add-google-to-firefox-in-linux-mint-as-default-search-engine/">
+  <meta property="og:description" content="Firefox on Linux Mint doesn’t include Google in its default search engine list. Linux Mint deliberately curates search engines based on revenue-sharing …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Set Google as Default Search in Firefox on Linux Mint</h1>
+        <time class="post-date" datetime="2015-12-12T08:13:12Z">December 12, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Firefox on Linux Mint doesn’t include Google in its default search engine list. Linux Mint deliberately curates search engines based on revenue-sharing agreements — only search engines that share ad revenue with Linux Mint appear by default. Google doesn’t participate in this arrangement, so you need to add it manually if you prefer it over the included options.</p>
+<h2 id="adding-google-to-firefox">Adding Google to Firefox</h2>
+<p>The fastest way is to use the Linux Mint Search Engines page, which hosts searchable shortcuts for popular engines.</p>
+<ol>
+<li>Open Firefox and navigate to <code>https://linuxmint.com/searchengines.php</code></li>
+<li>Locate the Google option and click it</li>
+<li>Firefox will display a dropdown or popup prompting you to add Google</li>
+<li>Click <strong>“Add Google”</strong> to confirm</li>
+</ol>
+<p>You’ll see a small green plus icon appear in the Firefox search bar once the engine is added successfully.</p>
+<h2 id="setting-google-as-default">Setting Google as Default</h2>
+<p>After adding Google, make it your default search engine:</p>
+<ol>
+<li>Open Firefox preferences in a new tab: <code>about:preferences#search</code></li>
+<li>Under <strong>“Default Search Engine,”</strong> select <strong>Google</strong> from the dropdown menu</li>
+<li>Your changes save automatically</li>
+</ol>
+<h2 id="alternative-manual-search-engine-addition">Alternative: Manual Search Engine Addition</h2>
+<p>If you prefer not to use the Linux Mint page, you can add Google directly:</p>
+<ol>
+<li>Visit <code>https://www.google.com</code> in Firefox</li>
+<li>Right-click the address bar and select <strong>“Add Search Engine”</strong></li>
+<li>Firefox will prompt you to confirm — click <strong>Add</strong></li>
+</ol>
+<p>This works for any website with a searchable interface. Google will then appear in your search engine list.</p>
+<h2 id="verify-the-change">Verify the Change</h2>
+<p>To confirm Google is now your default:</p>
+<ol>
+<li>Click the search bar in a new tab — it should show the Google logo</li>
+<li>Type a search term and press Enter — results should come from Google</li>
+</ol>
+<h2 id="why-remove-other-search-engines">Why Remove Other Search Engines?</h2>
+<p>Linux Mint’s defaults include DuckDuckGo, Ecosia, and others. If you want to clean up your search engine list and only keep Google:</p>
+<ol>
+<li>Go to <code>about:preferences#search</code> again</li>
+<li>Hover over unwanted engines — a trash icon appears</li>
+<li>Click the trash icon to remove them</li>
+</ol>
+<h2 id="note-on-linux-mints-philosophy">Note on Linux Mint’s Philosophy</h2>
+<p>Linux Mint prioritizes search engines that contribute revenue back to the project. This funds development and keeps the distribution free. If you’re comfortable with alternatives like DuckDuckGo (privacy-focused) or Ecosia (environmental), consider keeping them in rotation. However, Google remains fully functional and available in Linux Mint’s Firefox — there’s no restriction preventing its use.</p>
+<p>Your choice of search engine doesn’t affect Firefox’s performance or Linux Mint’s functionality either way.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>When encountering problems on Linux systems, follow a systematic approach. Check system logs first using journalctl for systemd-based distributions. Verify service status with systemctl before attempting restarts. For network issues, use ip addr and ss -tulpn to diagnose connectivity problems.</p>
+<p>Package management issues often stem from stale caches. Run dnf clean all on Fedora or apt clean on Ubuntu before retrying failed installations. If a package has unmet dependencies, try resolving them with dnf autoremove or apt autoremove.</p>
+<h2 id="related-system-commands">Related System Commands</h2>
+<p>These commands are frequently used alongside the tools discussed in this article:</p>
+<ul>
+<li>systemctl status service-name – Check if a service is running</li>
+<li>journalctl -u service-name -f – Follow service logs in real time</li>
+<li>rpm -qi package-name – Query installed package information</li>
+<li>dnf history – View package transaction history</li>
+<li>top or htop – Monitor system resource usage</li>
+</ul>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

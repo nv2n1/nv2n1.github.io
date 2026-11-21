@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vsftpd(8) · Linux Manual Pages</title>
+<meta name="description" content="vsftpd – Very Secure FTP Daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-vsftpd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>vsftpd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>vsftpd</code> &#8211; Very Secure FTP Daemon</p>
+<h2>Synopsis</h2>
+<p><code>vsftpd</code> [<i>configuration file and / or options</i> ]</p>
+<h2>Description</h2>
+<p><code>vsftpd</code> is the Very Secure File Transfer Protocol Daemon. The server can be launched via a &#8220;super-server&#8221; such as inetd(8) or <a href="/docs/linux/man/8-xinetd/">xinetd</a>(8). Alternatively, vsftpd can be launched in standalone mode, in which case vsftpd itself will listen on the network. This latter mode is easier to use, and recommended. It is activated by setting listen=YES in /etc/vsftpd/vsftpd.conf Direct execution of the <code>vsftpd</code> binary will then launch the FTP service ready for immediate client connections. </p>
+<p> Systemd changes the vsftpd daemon start-up. The vsftpd package contains vsftpd-generator script generating symbolic links to /var/run/systemd/generator/vsftpd.target.wants directory. The generator is called during e.g. &#8216;systemctl &#8211;system daemon-reload&#8217;. All these symbolic links link /usr/lib/systemd/system/vsftpd [at] .service file. The vsftpd daemon(s) is/are controlled by one of following ways: </p>
+<p> 1. Single daemon using default /etc/vsftpd/vsftpd.conf configuration file<br />
+ # systemctl {start,stop,&#8230;} vsftpd[.service] </p>
+<p> 2. Single daemon using /etc/vsftpd/&lt;conf-name&gt;.conf<br />
+ # systemctl {start,stop,&#8230;} vsftpd@&lt;conf-name&gt;[.service] </p>
+<p> 3. All instances together<br />
+ # systemctl {restart,stop} vsftpd.target </p>
+<p> See <a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a>(5), <a href="/docs/linux/man/5-systemd-target/">systemd.target</a>(5) for further details.</p>
+<h2>Options</h2>
+<p>An optional configuration file or files may be given on the command line. These files must be owned as root if running as root. Any command line option not starting with a &quot;-&quot; character is treated as a config file that will be loaded. Note that config files are loaded in the strict order that they are encountered on the command line. If no config files are specified, the default configuration file of /etc/vsftpd/vsftpd.conf will be loaded, after all other command line options are processed. </p>
+<p> Supported options are:</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd>Print the version information and exit, even if other options are encountered.</dd>
+<dt><code>-ooption=value</code></dt>
+<dd>Set a single option, value pair as per the format in the config file. Multiple -o options are supported, and they are applied in strict order relative to their appearance on the command line, including intermingling with loading of config files.</dd></dl>
+<h2>Examples</h2>
+<p>vsftpd -olisten=NO /etc/vsftpd/vsftpd.conf -oftpd_banner=blah </p>
+<p> That example overrides vsftpd&#8217;s built-in default for the &quot;listen&quot; option to be NO, but then loads /etc/vsftpd/vsftpd.conf which may override that setting. Finally, the &quot;ftpd_banner&quot; setting is set to &quot;blah&quot;, which overrides any default vsftpd setting and any identical setting that was in the config file.</p>
+<h2>Files</h2>
+<p>/etc/vsftpd/vsftpd.conf </p>
+<p> /usr/lib/systemd/system/vsftpd.service </p>
+<p> /usr/lib/systemd/system/vsftpd [at] .service </p>
+<p> /usr/lib/systemd/system/vsftpd.target</p>
+<h2>See Also</h2>
+<p>vsftpd.conf5 systemd.unit5 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

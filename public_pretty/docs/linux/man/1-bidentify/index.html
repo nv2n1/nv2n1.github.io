@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bidentify(1) · Linux Manual Pages</title>
+<meta name="description" content="bidentify – Barry Project’s program to identify BlackBerry handhelds">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bidentify/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bidentify(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>bidentify</code> &#8211; Barry Project&#8217;s program to identify BlackBerry handhelds </p>
+<h2>SYNOPSIS</h2>
+<p> <code>bidentify</code> [-B busname][-N devname][-h][-v]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>bidentify</code> scans the USB system for available BlackBerry devices and probes each one it finds, then sends the identifying information to stdout in a computer-friendly format.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-B busname</code></dt>
+<dd> Specify the USB bus to search for Blackberry devices on. This is the first number displayed in the output from the lsusb command, such as 002. If the busname is numeric on your system, 2 and 002 are equal. See also the -N option, which can be used together with this option to precisely select the device to work with.</dd>
+<dt><code>-N devname</code></dt>
+<dd> Specify the USB device name. This is the second number displayed in the output from the lsusb command, such as 005. If the device name is numeric on your system, 5 and 005 are equal. See also the -B option.</dd>
+<dt><code>-v</code></dt>
+<dd> Dump verbose protocol data during operation.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options. </dd>
+</dl>
+<h2>RETURN STATUS</h2>
+<p> If <code>bidentify</code> detects a BlackBerry device, but cannot access it for some reason, it will write an error message to stderr describing the access problem, and return a count of the number of such failed devices as the error code. A return code of 0 means there were no BlackBerry devices found that could not be probed. </p>
+<p> In the event of a fatal error, the message will be written to stderr, with an error code of 1. </p>
+<h2>AUTHOR</h2>
+<p> <code>bidentify</code> is part of the Barry project. This manual page was written by Chris Frey.</p>
+<h2>SEE ALSO</h2>
+<p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

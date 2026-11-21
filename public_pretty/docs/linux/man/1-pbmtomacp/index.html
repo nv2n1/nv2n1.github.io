@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbmtomacp(1) · Linux Manual Pages</title>
+<meta name="description" content="pbmtomacp – convert a portable bitmap into a MacPaint file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pbmtomacp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pbmtomacp(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pbmtomacp &#8211; convert a portable bitmap into a MacPaint file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pbmtomacp</code> [<code>-l</code> <i>left</i>] [<code>-r</code> <i>right</i>] [<code>-b</code> <i>bottom</i>] [<code>-t</code> <i>top</i>] [<i>pbmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Reads a portable bitmap as input. If no input-file is given, standard input is assumed. Produces a MacPaint file as output. </p>
+<p> The generated file is only the data fork of a picture. You will need a program such as <i>mcvert</i> to generate a Macbinary or a BinHex file that contains the necessary information to identify the file as a PNTG file to MacOS.</p>
+<h2>OPTIONS</h2>
+<p> Left, right, bottom &amp; top let you define a square into the pbm file, that must be converted. Default is the whole file. If the file is too large for a MacPaint-file, the bitmap is cut to fit from ( left, top ).</p>
+<h2>BUGS</h2>
+<p> The source code contains comments in a language other than English.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-ppmtopict/">ppmtopict</a>(1), <a href="/docs/linux/man/1-macptopbm/">macptopbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), mcvert(1)</p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1988 by Douwe van der Schaaf (&#8230;!mcvax!uvapsy!vdschaaf). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

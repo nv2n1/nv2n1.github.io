@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antlr3-settokenstream(3) · Linux Manual Pages</title>
+<meta name="description" content="src/antlr3parser.c –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-antlr3-settokenstream/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>antlr3-settokenstream(3)</h1>
+
+
+
+
+
+<p>src/antlr3parser.c &#8211; </p>
+<p> Implementation of the base functionality for an ANTLR3 parser.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/antlr3parser.h">antlr3parser.h</a>&gt; </p>
+<h3>Functions</h3>
+<p>ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNew</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
+<p> ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNewStream</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
+<p> ANTLR3_API <code>pANTLR3_PARSER</code> <code>antlr3ParserNewStreamDbg</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>
+<p> static void <code>freeParser</code> (<code>pANTLR3_PARSER</code> parser) </p>
+<p> static <code>pANTLR3_TOKEN_STREAM</code> <code>getTokenStream</code> (<code>pANTLR3_PARSER</code> parser) </p>
+<p> static void <code>setDebugListener</code> (<code>pANTLR3_PARSER</code> parser, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg) </p>
+<p> static void <code>setTokenStream</code> (<code>pANTLR3_PARSER</code> parser, <code>pANTLR3_TOKEN_STREAM</code>) </p>
+<h2>Detailed Description</h2>
+<p>Implementation of the base functionality for an ANTLR3 parser. </p>
+<h2>Function Documentation</h2>
+<h3>ANTLR3_API <code>pANTLR3_PARSER</code> antlr3ParserNew (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>
+<p>References ANTLR3_MALLOC, ANTLR3_TYPE_PARSER, antlr3BaseRecognizerNew(), antlr3MTExceptionNew(), ANTLR3_BASE_RECOGNIZER_struct::exConstruct, ANTLR3_PARSER_struct::free, freeParser(), getTokenStream(), ANTLR3_PARSER_struct::getTokenStream, ANTLR3_PARSER_struct::rec, setDebugListener(), ANTLR3_PARSER_struct::setDebugListener, setTokenStream(), ANTLR3_PARSER_struct::setTokenStream, and ANTLR3_BASE_RECOGNIZER_struct::super. </p>
+<p> Referenced by antlr3ParserNewStream().</p>
+<h3>ANTLR3_API <code>pANTLR3_PARSER</code> antlr3ParserNewStream (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>
+<p>References antlr3ParserNew(), and ANTLR3_PARSER_struct::setTokenStream. </p>
+<p> Referenced by antlr3ParserNewStreamDbg().</p>
+<h3>ANTLR3_API <code>pANTLR3_PARSER</code> antlr3ParserNewStreamDbg (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_TOKEN_STREAM</code> tstream, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state)</h3>
+<p>References antlr3ParserNewStream(), and ANTLR3_PARSER_struct::setDebugListener.</p>
+<h3>static void freeParser (<code>pANTLR3_PARSER</code> parser) [static]</h3>
+<p>References ANTLR3_FREE, ANTLR3_RECOGNIZER_SHARED_STATE_struct::following, ANTLR3_BASE_RECOGNIZER_struct::free, ANTLR3_STACK_struct::free, ANTLR3_PARSER_struct::rec, and ANTLR3_BASE_RECOGNIZER_struct::state. </p>
+<p> Referenced by antlr3ParserNew().</p>
+<h3>static <code>pANTLR3_TOKEN_STREAM</code> getTokenStream (<code>pANTLR3_PARSER</code> parser) [static]</h3>
+<p>References ANTLR3_PARSER_struct::tstream. </p>
+<p> Referenced by antlr3ParserNew().</p>
+<h3>static void setDebugListener (<code>pANTLR3_PARSER</code> parser, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> dbg) [static]</h3>
+<p>References ANTLR3_BASE_RECOGNIZER_struct::debugger, ANTLR3_PARSER_struct::rec, ANTLR3_TOKEN_STREAM_struct::setDebugListener, and ANTLR3_PARSER_struct::tstream. </p>
+<p> Referenced by antlr3ParserNew().</p>
+<h3>static void setTokenStream (<code>pANTLR3_PARSER</code> parser, <code>pANTLR3_TOKEN_STREAM</code> tstream) [static]</h3>
+<p>References ANTLR3_PARSER_struct::rec, ANTLR3_BASE_RECOGNIZER_struct::reset, and ANTLR3_PARSER_struct::tstream. </p>
+<p> Referenced by antlr3ParserNew().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for ANTLR3C from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

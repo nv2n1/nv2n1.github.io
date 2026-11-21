@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_gl_getprocaddress(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_GL_GetProcAddress – Get the address of a GL function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_gl_getprocaddress/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_gl_getprocaddress(3)</h1>
+
+
+
+
+
+<p>SDL_GL_GetProcAddress &#8211; Get the address of a GL function</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> void *SDL_GL_GetProcAddress</code>(<code>const char* proc</code>);</p>
+<h2>Description</h2>
+<p>Returns the address of the GL function <code>proc</code>, or <code>NULL</code> if the function is not found. If the GL library is loaded at runtime, with <i></i><code>SDL_GL_LoadLibrary</code>, then <i>all</i> GL functions must be retrieved this way. Usually this is used to retrieve function pointers to OpenGL extensions.</p>
+<h2>Example</h2>
+<pre><tt>typedef void (*GL_ActiveTextureARB_Func)(unsigned int);
+GL_ActiveTextureARB_Func glActiveTextureARB_ptr = 0;
+int has_multitexture=1;
+.
+.
+.
+/* Get function pointer */
+glActiveTextureARB_ptr=(GL_ActiveTextureARB_Func) SDL_GL_GetProcAddress(&quot;glActiveTextureARB&quot;);
+/* Check for a valid function ptr */
+if(!glActiveTextureARB_ptr){
+ fprintf(stderr, &quot;Multitexture Extensions not present.
+&quot;);
+ has_multitexture=0;
+}
+.
+.
+.
+.
+if(has_multitexture){
+ glActiveTextureARB_ptr(GL_TEXTURE0_ARB);
+ .
+ .
+}
+else{
+ .
+ .
+}</tt></pre>
+<h2>See Also</h2>
+<p><i></i><code>SDL_GL_LoadLibrary</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

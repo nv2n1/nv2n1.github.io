@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrlen(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrlen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrlen(3)</h1>
+
+
+
+
+
+<p>std::strlen - std::strlen</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstring&gt;
+    std::size_t strlen(const char *str);</code></pre> 
+<p>Returns the length of the given byte string, that is, the number of characters in a character array whose first element is pointed to by str up to and not including the first null character. The behavior is undefined if there is no null character in the character array pointed to by str.</p>
+<h2>Parameters</h2>
+<p>str - pointer to the null-terminated byte string to be examined</p>
+<h2>Return value</h2>
+<p>The length of the null-terminated string str.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+int main()
+{
+const char str[] = &quot;How many characters does this string contain?&quot;;
+std::cout &lt;&lt; &quot;without null character: &quot; &lt;&lt; std::strlen(str) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;with null character: &quot; &lt;&lt; sizeof str &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> without null character: 45
+ <wbr> with null character: 46</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the length of a wide string
+wcslen <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the number of bytes in the next multibyte character
+mblen <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

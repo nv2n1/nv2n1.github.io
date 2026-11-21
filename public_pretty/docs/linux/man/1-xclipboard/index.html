@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xclipboard(1) · Linux Manual Pages</title>
+<meta name="description" content="xclipboard – X clipboard client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xclipboard/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xclipboard(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xclipboard &#8211; X clipboard client </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xclipboard</code> [ <i>-toolkitoption</i> &#8230; ] [ <code>-w</code> ] [ <code>-nw</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> The <i>xclipboard</i> program is used to collect and display text selections that are sent to the CLIPBOARD by other clients. It is typically used to save CLIPBOARD selections for later use. It stores each CLIPBOARD selection as a separate string, each of which can be selected. Each time CLIPBOARD is asserted by another application, <i>xclipboard</i> transfers the contents of that selection to a new buffer and displays it in the text window. Buffers are never automatically deleted, so you&#8217;ll want to use the delete button to get rid of useless items. </p>
+<p> Since <i>xclipboard</i> uses a Text Widget to display the contents of the clipboard, text sent to the CLIPBOARD may be re-selected for use in other applications. <i>xclipboard</i> also responds to requests for the CLIPBOARD selection from other clients by sending the entire contents of the currently displayed buffer. </p>
+<p> An <i>xclipboard</i> window has the following buttons across the top:</p>
+<dl>
+<dt><i>quit</i></dt>
+<dd> When this button is pressed, <i>xclipboard</i> exits.</dd>
+<dt><i>delete</i></dt>
+<dd> When this button is pressed, the current buffer is deleted and the next one displayed.</dd>
+<dt><i>new</i></dt>
+<dd> Creates a new buffer with no contents. Useful in constructing a new CLIPBOARD selection by hand.</dd>
+<dt><i>save</i></dt>
+<dd> Displays a File Save dialog box. Pressing the Accept button saves the currently displayed buffer to the file specified in the text field.</dd>
+<dt><i>next</i></dt>
+<dd> Displays the next buffer in the list.</dd>
+<dt><i>previous</i></dt>
+<dd> Displays the previous buffer.</dd></dl>
+<h2>OPTIONS</h2>
+<p> The <i>xclipboard</i> program accepts all of the standard X Toolkit command line options as well as the following:</p>
+<dl>
+<dt><code>-w</code></dt>
+<dd> This option indicates that lines of text that are too long to be displayed on one line in the clipboard should wrap around to the following lines.</dd>
+<dt><code>-nw</code></dt>
+<dd> This option indicates that long lines of text should not wrap around. This is the default behavior.</dd></dl>
+<h2>WIDGETS</h2>
+<p> In order to specify resources, it is useful to know the hierarchy of the widgets which compose <i>xclipboard</i>. In the notation below, indentation indicates hierarchical structure. The widget class name is given first, followed by the widget instance name. </p>
+<pre>
+XClipboard  xclipboard
+        Form  form
+                Command  Quit
+                Command  delete
+                Command  new
+                Command  Save
+                Command  next
+                Command  prev
+                Label  index
+                Text  text
+        TransientShell  fileDialogShell
+                Dialog  fileDialog
+                        Label  label
+                        Command  accept
+                        Command  cancel
+                        Text value
+        TransientShell  failDialogShell
+                Dialog  failDialog
+                        Label  label
+                        Command  continue
+</pre>
+<h2>SENDING/RETRIEVING CLIPBOARD CONTENTS</h2>
+<p> Text is copied to the clipboard whenever a client asserts ownership of the <code>CLIPBOARD</code> selection. Text is copied from the clipboard whenever a client requests the contents of the <code>CLIPBOARD</code> selection. Examples of event bindings that a user may wish to include in a resource configuration file to use the clipboard are: </p>
+<pre>
+*VT100.Translations: #override \
+        &lt;Btn3Up&gt;:       select-end(CLIPBOARD) 
+\
+        &lt;Btn2Up&gt;:       insert-selection(PRIMARY,CLIPBOARD) 
+\
+        &lt;Btn2Down&gt;:     ignore ()
+</pre>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xcutsel/">xcutsel</a>(1), <a href="/docs/linux/man/1-xterm/">xterm</a>(1), individual client documentation for how to make a selection and send it to the CLIPBOARD.</p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number.</dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><i>/etc/X11/app-defaults/XClipboard</i></dt>
+<dd> specifies required resources</dd></dl>
+<h2>AUTHOR</h2>
+<p> Ralph R. Swick, DEC/MIT Project Athena<br />
+ Chris D. Peterson, MIT X Consortium<br />
+ Keith Packard, MIT X Consortium </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

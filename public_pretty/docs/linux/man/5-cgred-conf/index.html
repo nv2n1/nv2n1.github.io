@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cgred-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="cgred.conf – libcgroup configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-cgred-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>cgred-conf(5)</h1>
+
+
+
+
+
+<p>cgred.conf &#8211; libcgroup configuration file</p>
+<h2>Description</h2>
+<p><code>cgred.conf</code> is cgred service configuration file. In this file there could be defined several internal values. Defining anything else in this file will cause the CGroup Rules Daemon program to fail.</p>
+<dl>
+<dd><code>CONFIG_FILE</code> specifies the configuration file for cgred service</dd>
+<dt><code>LOG_FILE</code></dt>
+<dd>variable specifies the file to which logs will be written (by default they are not sent to a file but to syslog)</dd>
+<dt><code>NODAEMON</code></dt>
+<dd>if it is equal to &quot;&#8211;nodamon&quot; then run cgred in non-daemon mode</dd>
+<dt><code>LOG</code></dt>
+<dd>define the verbosity of logging. Accepted values are &#8216;-v&#8217;, &#8216;-vv&#8217;, &#8216;-q&#8217; and &#8216;&#8211;nolog&#8217;.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/cgred.conf</code></dt>
+<dd>
+</dd><dt>default libcgroup configuration file</dt>
+<dd></dd></dl>
+<h2>See Also</h2>
+<p>cgrules.conf (5), cgconfig.conf (5), cgrules.d (5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

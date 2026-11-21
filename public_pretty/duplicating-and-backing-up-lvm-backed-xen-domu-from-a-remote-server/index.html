@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backing Up LVM-Based Xen DomUs Over the Network - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/duplicating-and-backing-up-lvm-backed-xen-domu-from-a-remote-server/">
+  <meta name="description" content="LVM snapshots provide a fast, efficient way to duplicate virtual machines across servers. This technique applies to any LVM-backed hypervisor including Xen, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Backing Up LVM-Based Xen DomUs Over the Network">
+  <meta property="og:url" content="https://www.systutorials.com/duplicating-and-backing-up-lvm-backed-xen-domu-from-a-remote-server/">
+  <meta property="og:description" content="LVM snapshots provide a fast, efficient way to duplicate virtual machines across servers. This technique applies to any LVM-backed hypervisor including Xen, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Backing Up LVM-Based Xen DomUs Over the Network</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:18Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>LVM snapshots provide a fast, efficient way to duplicate virtual machines across servers. This technique applies to any LVM-backed hypervisor including Xen, KVM, and Proxmox. The process uses LVM snapshots on the source server, then transfers the snapshot image to the destination using standard Unix tools.</p>
+<h3 id="scenario">Scenario</h3>
+<ul>
+<li>Source server: <code>10.0.0.10</code> with VM stored in <code>/dev/vg_xen/vm-10.0.0.123</code></li>
+<li>Destination server: <code>10.0.0.11</code> where we’ll create <code>/dev/vg_xen/vm-10.0.0.124</code></li>
+<li>New VM IP address: <code>10.0.0.124</code></li>
+<li>For backup-only workflows, you can stop after step 3</li>
+</ul>
+<h3 id="step-1-create-an-lvm-snapshot-on-the-source-server">Step 1: Create an LVM Snapshot on the Source Server</h3>
+<p>Create a snapshot of the source logical volume. The snapshot size should match or exceed the actual data used (not the full volume size). If the source has 20GB allocated but only 5GB used, a 10GB snapshot is sufficient:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvcreate -L20480 -s -n <span class="s1">&#39;vm-10.0.0.123-snapshot&#39;</span> /dev/vg_xen/vm-10.0.0.123
+</span></span></code></pre></div><p><strong>Critical</strong>: Shut down the source VM before creating the snapshot to ensure clean filesystem state and avoid dirty cache writes. Even with snapshots, a running system can leave the filesystem in an inconsistent state.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xl shutdown vm-10.0.0.123
+</span></span></code></pre></div><p>Or for KVM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh shutdown vm-10.0.0.123
+</span></span></code></pre></div><h3 id="step-2-image-the-snapshot">Step 2: Image the Snapshot</h3>
+<p>Transfer the snapshot to a file using <code>dd</code>. Use a block size appropriate for your storage—4M is generally faster than 1K for modern disks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/vg_xen/vm-10.0.0.123-snapshot <span class="nv">of</span><span class="o">=</span>/home/backups/vm-10.0.0.123-lv.img <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">conv</span><span class="o">=</span>fsync
+</span></span></code></pre></div><p>The <code>conv=fsync</code> option ensures data is written to disk and not buffered, preventing data loss on unexpected shutdown. For faster transfers if bandwidth is the bottleneck, pipe through compression:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/vg_xen/vm-10.0.0.123-snapshot <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">conv</span><span class="o">=</span>fsync <span class="p">|</span> gzip -1 &gt; /home/backups/vm-10.0.0.123-lv.img.gz
+</span></span></code></pre></div><p>Use level 1 compression (<code>-1</code>) to minimize CPU overhead while still achieving 20-30% size reduction. Once complete, remove the snapshot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvremove -f /dev/vg_xen/vm-10.0.0.123-snapshot
+</span></span></code></pre></div><h3 id="step-3-transfer-the-image-to-the-destination-server">Step 3: Transfer the Image to the Destination Server</h3>
+<p>Use <code>scp</code> or <code>rsync</code>. <code>rsync</code> is preferable for large files since it can resume and verify checksums:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --progress /home/backups/vm-10.0.0.123-lv.img root@10.0.0.11:/home/backups/
+</span></span></code></pre></div><p>For encrypted, high-speed transfer over SSH, rsync uses the SSH cipher configured in your SSH config. Avoid manually specifying weak ciphers—modern SSH (OpenSSH 7.1+) disables arcfour by default for security reasons. Instead, ensure your SSH config uses reasonable defaults:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ~/.ssh/config</span>
+</span></span><span class="line"><span class="cl">Host 10.0.0.11
+</span></span><span class="line"><span class="cl">    Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+</span></span><span class="line"><span class="cl">    Compression yes
+</span></span></code></pre></div><p>If the image is compressed, decompress on arrival:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gunzip /home/backups/vm-10.0.0.123-lv.img.gz
+</span></span></code></pre></div><h3 id="step-4-create-a-logical-volume-on-the-destination">Step 4: Create a Logical Volume on the Destination</h3>
+<p>On the destination server, create a new logical volume with the same size:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvcreate -L20480 -n <span class="s1">&#39;vm-10.0.0.124&#39;</span> vg_xen
+</span></span></code></pre></div><h3 id="step-5-write-the-image-to-the-new-logical-volume">Step 5: Write the Image to the New Logical Volume</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/home/backups/vm-10.0.0.123-lv.img <span class="nv">of</span><span class="o">=</span>/dev/vg_xen/vm-10.0.0.124 <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">conv</span><span class="o">=</span>fsync
+</span></span></code></pre></div><p>Verify the write succeeded by checking inode counts match:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dumpe2fs /dev/vg_xen/vm-10.0.0.124 <span class="p">|</span> grep <span class="s2">&#34;Inode count&#34;</span>
+</span></span><span class="line"><span class="cl">dumpe2fs /home/backups/vm-10.0.0.123-lv.img <span class="p">|</span> grep <span class="s2">&#34;Inode count&#34;</span>
+</span></span></code></pre></div><h3 id="step-6-create-vm-configuration">Step 6: Create VM Configuration</h3>
+<p>For Xen (legacy xl config):</p>
+<pre><code>name=&quot;10.0.0.124&quot;
+cpus=2
+memory=2048
+disk=['phy:vg_xen/vm-10.0.0.124,xvda,w']
+vif=['bridge=xenbr0']
+bootloader = &quot;/usr/bin/pygrub&quot;
+on_reboot = 'restart'
+on_crash = 'restart'
+</code></pre>
+<p>For KVM/libvirt (define via XML):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virt-install --name vm-10.0.0.124 --memory <span class="m">2048</span> --vcpus <span class="m">2</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --disk /dev/vg_xen/vm-10.0.0.124 --import --os-type linux
+</span></span></code></pre></div><h3 id="step-7-boot-and-configure-the-vm">Step 7: Boot and Configure the VM</h3>
+<p>Start the VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xl create /etc/xen/vm-10.0.0.124.cfg
+</span></span><span class="line"><span class="cl">xl console vm-10.0.0.124
+</span></span></code></pre></div><p>Or for libvirt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh start vm-10.0.0.124
+</span></span><span class="line"><span class="cl">virsh console vm-10.0.0.124
+</span></span></code></pre></div><p>Inside the guest, update network configuration. For systemd-networkd:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; /etc/systemd/network/10-eth0.network <span class="s">&lt;&lt; EOF
+</span></span></span><span class="line"><span class="cl"><span class="s">[Match]
+</span></span></span><span class="line"><span class="cl"><span class="s">Name=eth0
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">[Network]
+</span></span></span><span class="line"><span class="cl"><span class="s">Address=10.0.0.124/24
+</span></span></span><span class="line"><span class="cl"><span class="s">Gateway=10.0.0.1
+</span></span></span><span class="line"><span class="cl"><span class="s">DNS=8.8.8.8
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">systemctl restart systemd-networkd
+</span></span></code></pre></div><p>For older systems using <code>/etc/sysconfig/network-scripts/</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/IPADDR=10.0.0.123/IPADDR=10.0.0.124/&#39;</span> /etc/sysconfig/network-scripts/ifcfg-eth0
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove HWADDR if using bridge networking</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;/^HWADDR=/d&#39;</span> /etc/sysconfig/network-scripts/ifcfg-eth0
+</span></span><span class="line"><span class="cl">systemctl restart network
+</span></span></code></pre></div><p>Exit the console with <strong>Ctrl+]</strong> for Xen or <strong>Ctrl+^</strong> for some libvirt setups.</p>
+<h3 id="automation">Automation</h3>
+<p>Wrap these steps in a Bash script for repeatable deployments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nv">SOURCE_HOST</span><span class="o">=</span><span class="s2">&#34;10.0.0.10&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SOURCE_LV</span><span class="o">=</span><span class="s2">&#34;/dev/vg_xen/vm-10.0.0.123&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEST_LV</span><span class="o">=</span><span class="s2">&#34;/dev/vg_xen/vm-10.0.0.124&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">BACKUP_PATH</span><span class="o">=</span><span class="s2">&#34;/home/backups&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remote: create snapshot and image</span>
+</span></span><span class="line"><span class="cl">ssh root@<span class="nv">$SOURCE_HOST</span> <span class="s">&lt;&lt;&#39;REMOTE&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">lvcreate -L20480 -s -n &#39;vm-10.0.0.123-snapshot&#39; /dev/vg_xen/vm-10.0.0.123
+</span></span></span><span class="line"><span class="cl"><span class="s">dd if=/dev/vg_xen/vm-10.0.0.123-snapshot of=/home/backups/vm-10.0.0.123-lv.img bs=4M conv=fsync
+</span></span></span><span class="line"><span class="cl"><span class="s">lvremove -f /dev/vg_xen/vm-10.0.0.123-snapshot
+</span></span></span><span class="line"><span class="cl"><span class="s">REMOTE</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Local: transfer and write</span>
+</span></span><span class="line"><span class="cl">rsync -avz root@<span class="nv">$SOURCE_HOST</span>:<span class="nv">$BACKUP_PATH</span>/vm-10.0.0.123-lv.img <span class="nv">$BACKUP_PATH</span>/
+</span></span><span class="line"><span class="cl">lvcreate -L20480 -n <span class="s1">&#39;vm-10.0.0.124&#39;</span> vg_xen
+</span></span><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span><span class="nv">$BACKUP_PATH</span>/vm-10.0.0.123-lv.img <span class="nv">of</span><span class="o">=</span><span class="nv">$DEST_LV</span> <span class="nv">bs</span><span class="o">=</span>4M <span class="nv">conv</span><span class="o">=</span>fsync
+</span></span></code></pre></div><h3 id="performance-considerations">Performance Considerations</h3>
+<ul>
+<li><strong>Block size</strong>: Use 4M or 16M for modern storage; 1K is too small and creates unnecessary overhead</li>
+<li><strong>Compression</strong>: Only compress for network transfer; decompress before writing to avoid CPU bottleneck</li>
+<li><strong>Snapshot size</strong>: Monitor snapshot usage during the dd phase; if it fills, the snapshot becomes invalid. Use <code>lvs</code> to monitor</li>
+<li><strong>Parallel transfers</strong>: For multiple VMs, transfer images concurrently to better saturate network bandwidth</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSH Auto-Login Without Passwords: Troubleshooting Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/pass-less-ssh-auto-login-problem/">
+  <meta name="description" content="When passwordless SSH authentication fails despite proper key setup, start by checking the SSH daemon logs to identify the actual problem.
+Checking SSH Logs The …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SSH Auto-Login Without Passwords: Troubleshooting Guide">
+  <meta property="og:url" content="https://www.systutorials.com/pass-less-ssh-auto-login-problem/">
+  <meta property="og:description" content="When passwordless SSH authentication fails despite proper key setup, start by checking the SSH daemon logs to identify the actual problem.
+Checking SSH Logs The …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>SSH Auto-Login Without Passwords: Troubleshooting Guide</h1>
+        <time class="post-date" datetime="2018-03-24T08:04:15Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When passwordless SSH authentication fails despite proper key setup, start by checking the SSH daemon logs to identify the actual problem.</p>
+<h2 id="checking-ssh-logs">Checking SSH Logs</h2>
+<p>The SSH daemon logs are your primary diagnostic tool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tail -f /var/log/auth.log          <span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo tail -f /var/log/secure            <span class="c1"># RHEL/CentOS/Fedora</span>
+</span></span><span class="line"><span class="cl">sudo journalctl -u ssh -f               <span class="c1"># systemd-based systems</span>
+</span></span></code></pre></div><p>Watch the log while attempting to connect to see detailed rejection reasons.</p>
+<h2 id="common-permission-issues">Common Permission Issues</h2>
+<p>The most frequent cause is incorrect file or directory permissions. SSH is strict about this for security reasons.</p>
+<h3 id="home-directory-permissions">Home Directory Permissions</h3>
+<p>If you see <code>Authentication refused: bad ownership or modes for directory</code>, fix the home directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">700</span> /home/username
+</span></span></code></pre></div><p>The home directory must be owned by the user and readable only by that user. If ownership is wrong:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chown username:username /home/username
+</span></span></code></pre></div><h3 id="ssh-directory-and-key-permissions">SSH Directory and Key Permissions</h3>
+<p>Similarly, the <code>.ssh</code> directory and authorized_keys file have strict requirements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">700</span> /home/username/.ssh
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /home/username/.ssh/authorized_keys
+</span></span><span class="line"><span class="cl">chown -R username:username /home/username/.ssh
+</span></span></code></pre></div><p>If these are wrong, you’ll see errors like <code>Authentication refused: bad ownership or modes for /home/username/.ssh</code> or similar.</p>
+<h3 id="private-key-file-permissions-local-machine">Private Key File Permissions (Local Machine)</h3>
+<p>On the machine where you’re initiating the connection, your private key must also have restricted permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/id_ed25519
+</span></span></code></pre></div><h2 id="setting-up-passwordless-login">Setting Up Passwordless Login</h2>
+<p>If you’re starting fresh, use <code>ssh-copy-id</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_rsa username@remote_host
+</span></span><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_rsa -p <span class="m">2222</span> username@remote_host  <span class="c1"># non-standard port</span>
+</span></span></code></pre></div><p>This command automatically creates the <code>.ssh</code> directory with correct permissions and appends your public key to <code>authorized_keys</code>.</p>
+<p>Manual setup if needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># On the remote host</span>
+</span></span><span class="line"><span class="cl">mkdir -p ~/.ssh
+</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> ~/.ssh
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;your_public_key_content&#34;</span> &gt;&gt; ~/.ssh/authorized_keys
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div><h2 id="selinux-considerations">SELinux Considerations</h2>
+<p>On SELinux-enforcing systems (RHEL, CentOS, Fedora), incorrect contexts can block SSH even with correct Unix permissions. Check the context:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -Z ~/.ssh
+</span></span></code></pre></div><p>If needed, restore the default SELinux context:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">restorecon -Rv ~/.ssh
+</span></span></code></pre></div><p>Rather than disabling SELinux entirely, let it restore proper contexts for SSH to function.</p>
+<h2 id="ssh-daemon-configuration">SSH Daemon Configuration</h2>
+<p>Verify that your SSH daemon configuration allows public key authentication:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -E <span class="s2">&#34;PubkeyAuthentication|PasswordAuthentication&#34;</span> /etc/ssh/sshd_config
+</span></span></code></pre></div><p>Ensure <code>PubkeyAuthentication yes</code> is set and not commented out. After making changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo sshd -t                    <span class="c1"># Test configuration syntax</span>
+</span></span><span class="line"><span class="cl">sudo systemctl restart sshd     <span class="c1"># Apply changes</span>
+</span></span></code></pre></div><h2 id="debugging-with-ssh-client">Debugging with SSH Client</h2>
+<p>Use verbose output from the client side to see the authentication flow:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -vvv username@remote_host
+</span></span></code></pre></div><p>Look for messages about key offerings and responses from the server. If you see “Offering public key” but the server doesn’t accept it, that points to a server-side permission problem.</p>
+<p>For a specific key file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -i ~/.ssh/id_rsa -vvv username@remote_host
+</span></span></code></pre></div><h2 id="verify-key-generation">Verify Key Generation</h2>
+<p>Ensure your keys were generated correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -l -f ~/.ssh/id_rsa.pub
+</span></span><span class="line"><span class="cl">ssh-keygen -l -f ~/.ssh/id_rsa
+</span></span></code></pre></div><p>Both should produce fingerprints. Modern best practice is to use Ed25519 keys:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C <span class="s2">&#34;your_email@example.com&#34;</span>
+</span></span><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/id_ed25519 username@remote_host
+</span></span></code></pre></div><h2 id="common-checklist">Common Checklist</h2>
+<ul>
+<li>Remote home directory: <code>700</code> ownership</li>
+<li>Remote <code>.ssh</code> directory: <code>700</code> ownership</li>
+<li>Remote <code>authorized_keys</code>: <code>600</code> ownership</li>
+<li>Local private key: <code>600</code> permissions</li>
+<li>Local public key: <code>644</code> permissions (or <code>600</code>)</li>
+<li>SSH daemon is running: <code>systemctl status ssh</code></li>
+<li>SSH daemon config has <code>PubkeyAuthentication yes</code></li>
+<li>No typos in usernames or hostnames</li>
+<li>Correct port if not using 22</li>
+</ul>
+<p>Work through these systematically with verbose output and log checking, and you’ll identify the issue quickly.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ck_pr_stall(3) · Linux Manual Pages</title>
+<meta name="description" content="ck_pr_stall – busy-wait primitive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ck_pr_stall/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ck_pr_stall(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>ck_pr_stall</code> &#8211; busy-wait primitive</p>
+<h2>LIBRARY</h2>
+<p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
+<p> In ck_pr.h Ft void Fn ck_pr_stall void</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn ck_pr_stall 3 function should be used inside retry paths of busy-wait loops. It not only serves as a compiler barrier, but on some architectures it emits cycle-saving instructions.</p>
+<h2>EXAMPLE</h2>
+<blockquote>
+<pre><code>
+#include &lt;ck_pr.h&gt;
+static int ready = 0;
+void function(void)
+{
+    /* Busy-wait until ready is non-zero. */
+    while (ck_pr_load_int(&amp;ready) == 0)
+        ck_pr_stall();
+    return;
+}
+</code></pre>
+</blockquote>
+<h2>SEE ALSO</h2>
+<p> ck_pr_fence_load3, ck_pr_fence_load_depends3, ck_pr_fence_store3, ck_pr_fence_memory3, ck_pr_barrier3, ck_pr_fas3, ck_pr_load3, ck_pr_store3, ck_pr_faa3, ck_pr_inc3, ck_pr_dec3, ck_pr_neg3, ck_pr_not3, ck_pr_add3, ck_pr_sub3, ck_pr_and3, ck_pr_or3, ck_pr_xor3, ck_pr_cas3, ck_pr_btc3, ck_pr_bts3, ck_pr_btr3 </p>
+<p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mallex(1) · Linux Manual Pages</title>
+<meta name="description" content="mallex – generate a Malaga run-time lexicon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mallex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mallex(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> mallex &#8211; generate a Malaga run-time lexicon</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mallex</code> [<code>-binary</code>|<code>-readable</code>|<code>-prelex</code>] <i>project-file</i> </p>
+<p> <code>mallex</code> [<code>-binary</code>|<code>-readable</code>|<code>-prelex</code>] <i>symbol-file</i> <i>rule-file</i> [<i>lexicon-file</i>] [<i>prelex-file</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
+<p> The program <code>mallex</code> generates a Malaga run-time lexicon by letting allomorph rules process a base-form lexicon. It can be started in <i>interactive mode</i> to help find bugs in the base-form lexicon or in the allomorph rules. </p>
+<p> <code>mallex</code> uses the following grammar components:</p>
+<dl>
+<dt><i>symbol-file</i></dt>
+<dd> The <i>symbol-file</i> has the suffix <code>.sym</code> and contains the symbols that are used in the lexicon and/or the allomorph rules.</dd>
+<dt><i>rule-file</i></dt>
+<dd> The <i>rule-file</i> has the suffix <code>.all</code> and contains the allomorph rules used to create the runtime-lexicon.</dd>
+<dt><i>lexicon-file</i></dt>
+<dd> The <i>lexicon-file</i> has the suffix <code>.lex</code> and contains the base-form lexicon entries that are used as input for the allomorph rules.</dd>
+<dt><i>prelex-file</i> (optional)</dt>
+<dd> The <i>prelex-file</i> has the suffix <code>.prelex</code> and contains precompiled allomorph entries, which have been created by a former run of <code>mallex</code> with the option <code>-prelex</code>.</dd></dl>
+<p> You can give the names of the grammar components as command line arguments, in any order. Alternatively, you can describe these components in a <i>project-file</i> and use the name of the project file as <code>mallex</code>&#8216; single command-line argument. A project file has the suffix <code>.pro</code>. </p>
+<p> If no command line options are given, <code>mallex</code> runs in interactive mode, and you can enter commands. The <i>lexicon-file</i> and <i>prelex-file</i> are not used in interactive mode. If you are not sure about the name of a command, use the command <code>help</code> to get an overview of all <code>mallex</code> commands. </p>
+<p> If you want to quit <code>mallex</code>, enter the command <code>quit</code>. </p>
+<p> See <code>info Malaga</code> for details. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-b</code>[<code>inary</code>]</dt>
+<dd> Create the run time lexicon file from the base form lexicon file and the optional prelex file, and save it as a binary run-time lexicon, which can be used by <code>malaga</code>.</dd>
+<dt><code>-h</code>[<code>elp</code>]</dt>
+<dd> Print a help text about <code>mallex</code>&#8216; command line arguments and exit.</dd>
+<dt><code>-p</code>[<code>relex</code>]</dt>
+<dd> Create the run time lexicon, and save it as a binary <i>prelex-file</i>, which can be read in later by another <code>mallex</code> run. output stream.</dd>
+<dt><code>-r</code>[<code>eadable</code>]</dt>
+<dd> Create the run time lexicon but don&#8217;t save it, but print its entries in human-readable form on the standard output stream.</dd>
+<dt><code>-v</code>[<code>ersion</code>]</dt>
+<dd> Print <code>mallex</code>&#8216; version number and exit. </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> Malaga has been developed by Bjoern Beutel. Numerous other people distributed to it. This manpage was originally written for the Debian distribution by Antti-Juhani Kaijanaho. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-malaga/">malaga</a></code>(1), <code><a href="/docs/linux/man/1-malmake/">malmake</a></code>(1), <code><a href="/docs/linux/man/1-malrul/">malrul</a></code>(1), <code><a href="/docs/linux/man/1-malshow/">malshow</a></code>(1), <code><a href="/docs/linux/man/1-malsym/">malsym</a></code>(1) </p>
+<p> &#8220;Malaga 7, User&#8217;s and Programmer&#8217;s Manual&#8221;. Available in Debian systems via <code>info Malaga</code>, and, if the malaga-doc package is installed, in various formats (DVI, Postscript, PDF, HTML) under <i>/usr/share/doc/malaga-doc/</i>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

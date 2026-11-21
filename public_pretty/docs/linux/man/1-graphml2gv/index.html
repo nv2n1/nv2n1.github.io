@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>graphml2gv(1) · Linux Manual Pages</title>
+<meta name="description" content="graphml2gv – GRAPHML-DOT converter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-graphml2gv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>graphml2gv(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> graphml2gv &#8211; GRAPHML-DOT converter </p>
+<h2>SYNOPSIS</h2>
+<p> <code>graphml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>graphml2gv</code> converts a graph specified in the GRAPHML format to a graph in the GV (formerly DOT) format.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Turns on verbose mode</dd>
+<dt><code>-?</code></dt>
+<dd> Prints usage information and exits.</dd>
+<dt><code>-g</code><i>gname</i></dt>
+<dd> The string <i>gname</i> is used as the name of the generated graph. If multiple graphs are generated, subsequent graphs use the name <i>gname</i> appended with an integer.</dd>
+<dt><code>-o</code><i>outfile</i></dt>
+<dd> Prints output to the file <i>outfile</i>. If not given, <code>graphml2gv</code> uses stdout.</dd>
+<dt></dt></dl>
+<h2>OPERANDS</h2>
+<dd> The following operand is supported:</dd>
+<dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in GRAPHML. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
+<h2>RETURN CODES</h2>
+<p> Return <code>0</code> if there were no problems during conversion; and non-zero if any error occurred.</p>
+<h2>LIMITATIONS</h2>
+<p> As both the graph and graphics models of GV and GML differ significantly, the conversion can only be at best approximate. In particular, GV currently has no notion of hyperedges or edges containing graphs. </p>
+<p> At present, <code>graphml2gv</code> only supports the basic graph topology. Specifically, the &lt;KEY&gt; and &lt;DATA&gt; elements are not handled, though they could be.</p>
+<h2>AUTHORS</h2>
+<p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-dot/">dot</a>(1), libcgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

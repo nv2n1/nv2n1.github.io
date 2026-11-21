@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meson(1) · Linux Manual Pages</title>
+<meta name="description" content="meson – a high productivity build system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-meson/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>meson(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> meson &#8211; a high productivity build system </p>
+<h2>DESCRIPTION</h2>
+<p> Meson is a build system designed to optimize programmer productivity. It aims to do this by providing simple, out-of-the-box support for modern software development tools and practices, such as unit tests, coverage reports, Valgrind, Ccache and the like. </p>
+<p> The main Meson executable provides many subcommands to access all the functionality. </p>
+<h2>The setup command</h2>
+<p> Using Meson is simple and follows the common two-phase process of most build systems. First you run Meson to configure your build: </p>
+<p> <code>meson setup [</code> <i>options</i> <code>] [</code> <i>build directory</i> <code>] [</code> <i>source directory</i> <code>]</code> </p>
+<p> Note that the build directory must be different from the source directory. Meson does not support building inside the source directory and attempting to do that leads to an error. </p>
+<p> After a successful configuration step you can build the source by running the actual build command in the build directory. The default backend of Meson is Ninja, which can be invoked like this. </p>
+<p> <code>ninja [</code> <i>target</i> <code>]</code> </p>
+<p> You only need to run the Meson command once: when you first configure your build dir. After that you just run the build command. Meson will autodetect changes in your source tree and regenerate all files needed to build the project. </p>
+<p> The setup command is the default operation. If no actual command is specified, Meson will assume you meant to do a setup. That means that you can set up a build directory without the setup command like this: </p>
+<p> <code>meson [</code> <i>options</i> <code>] [</code> <i>build directory</i> <code>] [</code> <i>source directory</i> <code>]</code> </p>
+<h3>options:</h3>
+<dl>
+<dt><code>&#8211;version</code></dt>
+<dd> print version number</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print command line help </dd>
+</dl>
+<h2>The configure command</h2>
+<p> <code>meson configure</code> provides a way to configure a Meson project from the command line. Its usage is simple: </p>
+<p> <code>meson configure [</code> <i>build directory</i> <code>] [</code> <i>options to set</i> <code>]</code> </p>
+<p> If build directory is omitted, the current directory is used instead. </p>
+<p> If no parameters are set, <code>meson configure</code> will print the value of all build options to the console. </p>
+<p> To set values, use the -D command line argument like this. </p>
+<p> <code>meson configure -Dopt1=value1 -Dopt2=value2</code> </p>
+<h2>The introspect command</h2>
+<p> Meson introspect is a command designed to make it simple to integrate with other tools, such as IDEs. The output of this command is in JSON. </p>
+<p> <code>meson introspect [</code> <i>build directory</i> <code>] [</code> <i>option</i> <code>]</code> </p>
+<p> If build directory is omitted, the current directory is used instead. </p>
+<h3>options:</h3>
+<dl>
+<dt><code>&#8211;targets</code></dt>
+<dd> print all top level targets (executables, libraries, etc)</dd>
+<dt><code>&#8211;target-files</code></dt>
+<dd> print the source files of the given target</dd>
+<dt><code>&#8211;buildsystem-files</code></dt>
+<dd> print all files that make up the build system (meson.build, meson_options.txt etc)</dd>
+<dt><code>&#8211;tests</code></dt>
+<dd> print all unit tests</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print command line help </dd>
+</dl>
+<h2>The test command</h2>
+<p> <code>meson test</code> is a helper tool for running test suites of projects using Meson. The default way of running tests is to invoke the default build command: </p>
+<p> <code>ninja [</code> <i>test</i> <code>]</code> </p>
+<p> <code>meson test</code> provides a richer set of tools for invoking tests. </p>
+<p> <code>meson test</code> automatically rebuilds the necessary targets to run tests when used with the Ninja backend. Upon build failure, <code>meson test</code> will return an exit code of 125. This return code tells <code>git bisect run</code> to skip the current commit. Thus bisecting using git can be done conveniently like this. </p>
+<p> <code>git bisect run meson test -C build_dir</code> </p>
+<h3>options:</h3>
+<dl>
+<dt><code>&#8211;repeat</code></dt>
+<dd> run tests as many times as specified</dd>
+<dt><code>&#8211;gdb</code></dt>
+<dd> run tests under gdb</dd>
+<dt><code>&#8211;list</code></dt>
+<dd> list all available tests</dd>
+<dt><code>&#8211;wrapper</code></dt>
+<dd> invoke all tests via the given wrapper (e.g. valgrind)</dd>
+<dt><code>-C</code></dt>
+<dd> Change into the given directory before running tests (must be root of build directory).</dd>
+<dt><code>&#8211;suite</code></dt>
+<dd> run tests in this suite</dd>
+<dt><code>&#8211;no-suite</code></dt>
+<dd> do not run tests in this suite</dd>
+<dt><code>&#8211;no-stdsplit</code></dt>
+<dd> do not split stderr and stdout in test logs</dd>
+<dt><code>&#8211;benchmark</code></dt>
+<dd> run benchmarks instead of tests</dd>
+<dt><code>&#8211;logbase</code></dt>
+<dd> base of file name to use for writing test logs</dd>
+<dt><code>&#8211;num-processes</code></dt>
+<dd> how many parallel processes to use to run tests</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> do not redirect stdout and stderr</dd>
+<dt><code>-t</code></dt>
+<dd> a multiplier to use for test timeout values (usually something like 100 for Valgrind)</dd>
+<dt><code>&#8211;setup</code></dt>
+<dd> use the specified test setup </dd>
+</dl>
+<h2>The wrap command</h2>
+<p> Wraptool is a helper utility to manage source dependencies using the online wrapdb service. </p>
+<p> <code>meson wrap &lt;</code> <i>command</i> <code>&gt; [</code> <i>options</i> <code>]</code> </p>
+<p> You should run this command in the top level source directory of your project. </p>
+<h3>Commands:</h3>
+<dl>
+<dt><code>list</code></dt>
+<dd> list all available projects</dd>
+<dt><code>search</code></dt>
+<dd> search projects by name</dd>
+<dt><code>install</code></dt>
+<dd> install a project with the given name</dd>
+<dt><code>update</code></dt>
+<dd> update the specified project to latest available version</dd>
+<dt><code>info</code></dt>
+<dd> show available versions of the specified project</dd>
+<dt><code>status</code></dt>
+<dd> show installed and available versions of currently used subprojects </dd>
+</dl>
+<h2>EXIT STATUS</h2>
+<dl>
+<dt><code>0</code></dt>
+<dd> Successful.</dd>
+<dt><code>1</code></dt>
+<dd> Usage error, or an error parsing or executing meson.build.</dd>
+<dt><code>2</code></dt>
+<dd> Internal error.</dd>
+<dt><code>125</code></dt>
+<dd> <code>meson test</code> could not rebuild the required targets.</dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <a rel="nofollow" href="http://mesonbuild.com/">http://mesonbuild.com/</a> </p>
+<p> <a rel="nofollow" href="https://wrapdb.mesonbuild.com/">https://wrapdb.mesonbuild.com/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

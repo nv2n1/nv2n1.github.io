@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sync-available(8) · Linux Manual Pages</title>
+<meta name="description" content="sync-available – sync dpkg’s available database with apt’s database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sync-available/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sync-available(8)</h1>
+
+
+
+
+
+<p>sync-available &#8211; sync dpkg&#8217;s available database with apt&#8217;s database</p>
+<h2>Synopsis</h2>
+<p><code>sync-available</code> </p>
+<p> <code>sync-available &#8211;version</code> </p>
+<p> <code>sync-available &#8211;help</code></p>
+<h2>Description</h2>
+<p>This program updates the <code>dpkg</code>(8) <i>available</i> database with the data in the <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) package database. This is required for <code><a href="/docs/linux/man/1-grep-available/">grep-available</a></code>(1) and other similar programs to give up-to-date results. </p>
+<p> The same functionality is available through <code>dselect</code>(8), when it is configured to use <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) as its acquisition method. However, this program does not require that <code>dselect</code>(8) is installed.</p>
+<h2>Exit Status</h2>
+<p>The program exits with status code <code>0</code> if all went well, and a non-zero status code otherwise.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;version</dt>
+<dd>Output the name and version of the program onto standard output stream.</dd>
+<dt>&#8211;help</dt>
+<dd>Give a brief usage statement on the standard output stream.</dd></dl>
+<p> </code></p>
+<h2>Environment</h2>
+<dl>
+<dt><code>TMPDIR</dt>
+<dd>The name of the directory where temporary files are created. Default is </code><i>/tmp</i>.</dd></dl>
+<h2>Author</h2>
+<p>The program and this manual page were written by Antti-Juhani Kaijanaho &lt;ajk [at] debian.org&gt;.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-grep-available/">grep-available</a></code>(1), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8), <code>dpkg</code>(8), <code>dselect</code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

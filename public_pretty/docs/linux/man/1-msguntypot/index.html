@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>msguntypot(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-msguntypot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>msguntypot(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>msguntypot - update po files when a typo is fixed in pot file</p>
+<h2>SYNOPSIS</h2>
+<p>msguntypot -o &lt;old_pot&gt; -n &lt;new_pot&gt; pofiles&hellip;</p>
+<h2>DESCRIPTION</h2>
+<p>When you fix a trivial error which surely doesn&rsquo;t affect translations (e.g. a typo) in a .pot file, you should unfuzzy the corresponding msgstr in the translated .po files to avoid so extra work to the translators.</p>
+<p>This task is difficult and error prone when done manually, and this tool is there to help doing so correctly. You just need to provide the two versions of the pot file: before the edition and after as marked in the above synopsis, and it all becomes automatic.</p>
+<h2>HOW TO USE IT</h2>
+<p>In short, when you discover a typo in one of your [english] message, do the following:</p>
+<dl>
+<dt>- Regenerate your pot and po files.
+</dt><dd> <pre>
+  make -C po/ update-po # for message program translations
+  debconf-updatepo      # for debconf translations
+  po4a po4a.conf        # for po4a based documentation translations
+</pre> 
+ or something else, depending on your project's building settings. You know how to make sure your pot an po files are uptodate, don't you??
+</dd><dt>- Make a copy of your pot file.
+</dt><dd> <pre>
+  cp myfile.pot myfile.pot.orig
+</pre>
+</dd><dt>- Make a copy of all your files.
+</dt><dd> <pre>
+  mkdir po_fridge; cp *.po po_fridge
+</pre>
+</dd><dt>- Fix your typo
+</dt><dd> <tt>$EDITOR</tt> the_file_in_which_there_is_a_typo
+</dd><dt>- Regenerate your pot and po files.
+</dt><dd> See above.</dd></dl>
+<p>At this point, the typo fix fuzzied all the translations, and this unfortunate change is the only one between the po files of your main directory and the one from the fridge. Here is how to solve this.</p>
+<dl>
+<dt>- Discard fuzzy translation, restore the ones from the fridge.
+</dt><dd> <pre>
+  cp po_fridge/*.po .
+</pre>
+</dd><dt>- Manually merge the po files with the new pot file, but taking the useless fuzzy into account
+</dt><dd> <pre>
+  msguntypot -o myfile.pot.orig -n myfile.pot *.po
+</pre>
+</dd><dt>- Cleanups.
+</dt><dd> <pre>
+  rm -rf myfile.pot.orig po_fridge
+</pre></dd></dl>
+<p>You&rsquo;re done. The typo was eradicated from msgstr of both your pot and po files, and the po files were not fuzzyied in the process. Your translators love you already.</p>
+<h2>SEE ALSO</h2>
+<p>Despite its name, this tool is not part of the gettext tool suite. It is instead part of po4a. More precisely, it&rsquo;s a random perl script using the fine po4a modules. For more information about po4a, please see:</p>
+<p><i><a HREF="/docs/linux/man/7-po4a/">po4a</a></i>(7).</p>
+<h2>AUTHORS</h2>
+ <pre>
+ Martin Quinson (mquinson#debian,org)
+</pre>
+<h2>COPYRIGHT AND LICENSE</h2>
+<p>Copyright 2005 by <font SIZE="-1">SPI</font>, inc.</p>
+<p>This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

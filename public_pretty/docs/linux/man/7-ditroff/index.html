@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ditroff(7) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-ditroff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>ditroff(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ditroff - classical device-independent roff</p>
+<h2>Description</h2>
+<p>The name <i>ditroff</i> refers to a historical development stage of the <i><a HREF="/docs/linux/man/7-roff/">roff</a></i>(7) text processing system. In <i>roff</i> systems extant today, the name <i>troff</i> is a synonym for <i>ditroff</i>.</p>
+<p>Early versions of <i>roff</i> by Joe Ossanna generated two programs from the same sources, using conditional compilation to distinguish them. <i>nroff</i> produced text-oriented TTY output, while <i>troff</i> generated graphical output for exactly one output device, the Wang Graphic Systems CAT phototypesetter.</p>
+<p>In 1979, Brian Kernighan rewrote <i>troff</i> to support more devices by creating an intermediate output format for <i>troff</i> that could be fed into postprocessor programs which actually do the printout on the device. Kernighan&rsquo;s version marks what is known as &ldquo;classical troff&rdquo; today. In order to distinguish it from Ossanna&rsquo;s original version, it was called <i>ditroff</i> (<i>d</i>evice <i>i</i>ndependent <i>t</i>roff) on some systems, though this naming isn&rsquo;t mentioned in the classical documentation.</p>
+<p>Today, all existing <i>roff</i> systems are based on Kernighan&rsquo;s multi-device <i>troff</i>. The distinction between <i>troff</i> and <i>ditroff</i> is no longer necessary; each modern <i>troff</i> provides the complete functionality of <i>ditroff</i>.</p>
+<p>The easiest way to use <i>ditroff</i> is via the GNU <i>roff</i> system, <i>groff</i>. The <i><a HREF="/docs/linux/man/1-groff/">groff</a></i>(1) program is a wrapper around <i>(di)troff</i> that automatically handles device postprocessing.</p>
+<h2>Authors</h2>
+<p>This document was written by Bernd Warken</p>
+<h2>See Also</h2>
+<dl><dt>CSTR~#54
+</dt><dd>refers to the 1992 revision of the <i>Nroff/Troff User's Manual</i> by J. F. Ossanna and Brian Kernighan.
+</dd><dt>CSTR~#97
+</dt><dd>refers to <i>A Typesetter-independent TROFF</i>, by Brian Kernighan and is the original documentation of the first multi-device <i>troff</i> (<i>ditroff</i>).
+</dd><dt><i><a HREF="/docs/linux/man/7-roff/">roff</a></i>(7)
+</dt><dd>provides a history and conceptual overview of <i>roff</i> systems.
+</dd><dt><i><a HREF="/docs/linux/man/1-troff/">troff</a></i>(1)
+</dt><dd>describes the GNU implementation of <i>(di)troff</i>.
+</dd><dt><i><a HREF="/docs/linux/man/1-groff/">groff</a></i>(1)
+</dt><dd>documents the GNU <i>roff</i> program and includes pointers to further documentation about <i>groff</i>.
+</dd><dt><i><a HREF="/docs/linux/man/5-groff_out/">groff_out</a></i>(5)
+</dt><dd>describes the <i>groff</i> version of the intermediate output language, the basis for multi-device output. 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

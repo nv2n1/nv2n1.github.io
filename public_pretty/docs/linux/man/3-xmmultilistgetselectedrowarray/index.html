@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmmultilistgetselectedrowarray(3) · Linux Manual Pages</title>
+<meta name="description" content="XmMultiListGetSelectedRowArray — an MultiList function that returns an array of integers which are selected row numbers.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmmultilistgetselectedrowarray/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmmultilistgetselectedrowarray(3)</h1>
+
+
+
+
+
+<p><code>XmMultiListGetSelectedRowArray</code> &#8212; an MultiList function that returns an array of integers which are selected row numbers.</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/MultiList.h&gt;
+<code>int * XmMultiListGetSelectedRowArray</code>(
+<code>Widget widget</code>,
+<code>int * num_rows</code>);</pre>
+<h2>Description</h2>
+<p>This routine creates an array of integers which are selected row numbers in the MultiList widget.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the MultiList widget.</dd>
+<dt><i>num_rows</i></dt>
+<dd>Specifies pointer to the integer indicates number of returned row numbers.</dd></dl>
+<p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
+<h2>Return</h2>
+<p>The <code>int *</code> returned by this function contains a selected rows numbers array. The calling routine is responsible for freeing the returned pointer with XtFree(). The function will return NULL if no elements are selected.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

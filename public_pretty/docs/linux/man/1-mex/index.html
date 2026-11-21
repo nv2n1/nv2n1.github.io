@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mex(1) · Linux Manual Pages</title>
+<meta name="description" content="pdftex – PDF output from TeX">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mex(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pdftex &#8211; PDF output from TeX </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pdftex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>
+<h2>DESCRIPTION</h2>
+<p> Run the pdfTeX typesetter on <i>file</i>, usually creating <i>file.pdf</i>. If the file argument has no extension, &quot;.tex&quot; will be appended to it. Instead of a filename, a set of pdfTeX commands can be given, the first of which must start with a backslash. With a <code>&amp;</code><i>format</i> argument pdfTeX uses a different set of precompiled commands, contained in <i>format</i><code>.fmt</code>; it is usually better to use the <code>-fmt</code> <i>format</i> option instead. </p>
+<p> pdfTeX is a version of TeX, with the e-TeX extensions, that can create PDF files as well as DVI files. </p>
+<p> In DVI mode, pdfTeX can be used as a complete replacement for the TeX engine. </p>
+<p> The typical use of pdfTeX is with a pregenerated formats for which PDF output has been enabled. The <code>pdftex</code> command uses the equivalent of the plain TeX format, and the <code>pdflatex</code> command uses the equivalent of the LaTeX format. To generate formats, use the <code>-ini</code> switch. </p>
+<p> The <code>pdfinitex</code> and <code>pdfvirtex</code> commands are pdfTeX&#8217;s analogues to the <code>initex</code> and <code>virtex</code> commands. In this installation, if the links exist, they are symbolic links to the <code>pdftex</code> executable. </p>
+<p> In PDF mode, pdfTeX can natively handle the <i>PDF</i>, <i>JPG</i>, <i>JBIG2</i>, and <i>PNG</i> graphics formats. pdfTeX cannot include PostScript or Encapsulated PostScript (EPS) graphics files; first convert them to PDF using <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1). pdfTeX&#8217;s handling of its command-line arguments is similar to that of of the other TeX programs in the <i>web2c</i> implementation. </p>
+<p> Starting with version 1.40, pdfTeX incorporates the e-TeX extensions, and pdfeTeX is just a copy of pdfTeX. See <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1).</p>
+<h2>OPTIONS</h2>
+<p> This version of pdfTeX understands the following command line options.</p>
+<dl>
+<dt><code>-cnf-line</code><i>&nbsp;string</i></dt>
+<dd> Parse <i>string</i> as a <i>texmf.cnf</i> configuration line. See the Kpathsea manual.</dd>
+<dt><code>-draftmode</code></dt>
+<dd> Sets \pdfdraftmode so pdfTeX doesn&#8217;t write a PDF and doesn&#8217;t read any included images, thus speeding up execution.</dd>
+<dt><code>-enc</code></dt>
+<dd> Enable the encTeX extensions. This option is only effective in combination with <code>-ini</code>. For documentation of the encTeX extensions see <a rel="nofollow" href="http://www.olsak.net/enctex.html.">http://www.olsak.net/enctex.html.</a></dd>
+<dt><code>-etex</code></dt>
+<dd> Enable the e-TeX extensions. This option is only effective in combination with <code>-ini</code>. See <code><a href="/docs/linux/man/1-etex/">etex</a></code>(1).</dd>
+<dt><code>-file-line-error</code></dt>
+<dd> Print error messages in the form <i>file:line:error</i> which is similar to the way many compilers format them.</dd>
+<dt><code>-no-file-line-error</code></dt>
+<dd> Disable printing error messages in the <i>file:line:error</i> style.</dd>
+<dt><code>-file-line-error-style</code></dt>
+<dd> This is the old name of the <code>-file-line-error</code> option.</dd>
+<dt><code>-fmt</code><i>&nbsp;format</i></dt>
+<dd> Use <i>format</i> as the name of the format to be used, instead of the name by which pdfTeX was called or a <i>%&amp;</i> line.</dd>
+<dt><code>-halt-on-error</code></dt>
+<dd> Exit with an error code when an error is encountered during processing.</dd>
+<dt><code>-help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>-ini</code></dt>
+<dd> Start in <i>INI</i> mode, which is used to dump formats. The <i>INI</i> mode can be used for typesetting, but no format is preloaded, and basic initializations like setting catcodes may be required.</dd>
+<dt><code>-interaction</code><i>&nbsp;mode</i></dt>
+<dd> Sets the interaction mode. The mode can be either <i>batchmode</i>, <i>nonstopmode</i>, <i>scrollmode</i>, and <i>errorstopmode</i>. The meaning of these modes is the same as that of the corresponding 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>serialver-java-1-6-0-openjdk(1) · Linux Manual Pages</title>
+<meta name="description" content="serialver – The Serial Version Command">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-serialver-java-1-6-0-openjdk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>serialver-java-1-6-0-openjdk(1)</h1>
+
+
+
+
+
+<p>serialver &#8211; The Serial Version Command </p>
+<p> The <code>serialver</code> command returns the <i>serialVersionUID</i>.</p>
+<h2>Synopsis</h2>
+<pre><code>serialver</code> [ options ] [ classnames ]</pre>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt>options</dt>
+<dd>Command-line options, as specified in this document.</dd>
+<dt>classnames</dt>
+<dd>One or more class names</dd></dl>
+</dl>
+<h2>Description</h2>
+<p><code>serialver</code> returns the <i>serialVersionUID</i> for one or more classes in a form suitable for copying into an evolving class. When invoked with no arguments it prints a usage line. </p>
+<h2>Options</h2>
+<dl COMPACT>
+<dt>-classpath &lt;directories and zip/jar files separated</dt>
+<dd>by :&gt; Set search path for application classes and resources.</dd></dl>
+<dl COMPACT>
+<dt>-show</dt>
+<dd>Displays a simple user interface. Enter the full class name and press either the Enter key or the Show button to display the serialVersionUID.</dd>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes.</dd></dl>
+<h2>Notes</h2>
+<p>The <code>serialver</code> command loads and initializes the specified classes in its virtual machine, and by default, it does not set a security manager. If <code>serialver</code> is to be run with untrusted classes, a security manager can be set with the following option: </p>
+<dl COMPACT>
+<dd><i>-J-Djava.security.manager</i> </dd>
+</dl>
+<p> and, if necessary, a security policy can be specified with the following option: </p>
+<dl COMPACT>
+<dd><i>-J-Djava.security.policy=&lt;policy file&gt;</i> </dd>
+</dl>
+<h2>See Also</h2>
+<p><i>java.io.ObjectStreamClass</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/api/java/io/objectstreamclass.html">http://java.sun.com/javase/6/docs/api/java/io/objectstreamclass.html</a> </p>
+<p>&nbsp;<wbr></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

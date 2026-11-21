@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xca(1) · Linux Manual Pages</title>
+<meta name="description" content="xca – X Certificate and key management A GUI for handling X509 certificates, RSA/DSA/EC keys, PKCS#10 Requests and CRLs in Software and on Smartcards.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xca/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xca(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> xca &#8211; X Certificate and key management<br />
+ A GUI for handling X509 certificates, RSA/DSA/EC keys, PKCS#10 Requests and CRLs in Software and on Smartcards.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>xca</code> [<i>-v</i>] [<i>-d</i>] [<i>-x</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This application is intended as CA, certificate- and Key store. It uses a single file to store the items. Supported are Certificate signing requests (PKCS#10), Certificates (X509v3), RSA, DSA and EC keys and Certificate revokation lists. The signing of requests, and the creation of selfsigned certificates is supported. Both can use templates for simplicity. The PKI structures can be imported and exported in several formats like PKCS#12, PEM, DER, PKCS#8, PKCS#7.<br />
+ XCA enables users to manage smartcards via the PKCS#11 interface </p>
+<h2>OPTIONS</h2>
+<p> A summary of options are included below. There are some deprecated legacy options: [<i>-k</i>] [<i>-r</i>] [<i>-c</i>] [<i>-p</i>] [<i>-7</i>] [<i>-l</i>] [<i>-t</i>] [<i>-P</i>]<br />
+ Before XCA 0.9.0, the type of the items had to be given. This was removed since. Just put all keys, certs, requests and the database unsorted on the commandline. For backwards compatibility those options are ignored when found.</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Show version information and exit.</dd>
+<dt><code>-d</code></dt>
+<dd> expect the following argument to be a new database to use.</dd>
+<dt><code>-x</code></dt>
+<dd> Exit after processing all commandline options. Usually after importing the items from commandline the application will startup as usual. With the <i>-x</i> option given it will exit after finishing the import dialog. This is useful if xca is used as default application for viewing certificates, keys or requests. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> A more detailed HTML documentation can be found in the doc directory, in the &quot;Help&quot; menu of the application or on <a rel="nofollow" href="http://xca.sf.net">http://xca.sf.net</a> </p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Christian Hohnstaedt &lt;christian [at] hohnstaedt.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

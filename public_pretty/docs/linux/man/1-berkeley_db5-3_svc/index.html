@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>berkeley_db5-3_svc(1) · Linux Manual Pages</title>
+<meta name="description" content="berkeley_db5.3_svc – Berkeley DB RPC server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-berkeley_db5-3_svc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>berkeley_db5-3_svc(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>berkeley_db5.3_svc &#8211; Berkeley DB RPC server </p>
+<h2>Synopsis</h2>
+<p><code>berkeley_db5.3_svc</code> [-Vv] [-h home] [-I seconds] [-L file] [-t seconds] [-T seconds]</p>
+<h2>Description</h2>
+<p>The berkeley_db5.3_svc utility is the Berkeley DB RPC server.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Add the specified home directory to the list of allowed home directories that can be specified by the client. The home directory should be an absolute pathname. The last component of each home directory specified must be unique because that is how clients specify which database environment they want to join. </dd>
+<p> Recovery will be run on each specified environment before the server begins accepting requests from clients. For this reason, only one copy of the server program should ever be run at any time because recovery must always be single-threaded.</p>
+<dt><code>-I</code></dt>
+<dd>Set the default idle timeout for client environments to the specified number of seconds. The default timeout is 24 hours.</dd>
+<dt><code>-L</code></dt>
+<dd>Log the execution of the berkeley_db5.3_svc utility to the specified file in the following format, where <i>###</i> is the process ID, and the date is the time the utility was started. </dd>
+<p> berkeley_db5.3_svc: ### Wed Jun 15 01:23:45 EDT 1995 </p>
+<p> This file will be removed if the berkeley_db5.3_svc utility exits gracefully.</p>
+<dt><code>-t</code></dt>
+<dd>Set the default timeout for client resources (idle transactions and cursors) to the specified number of seconds. When the timeout expires, if the resource is a transaction, it is aborted; if the resource is a cursor, it is closed. The default timeout is 5 minutes.</dd>
+<dt><code>-T</code></dt>
+<dd>Set the maximum timeout allowed for client resources. The default timeout is 20 minutes. If a client application requests a server timeout greater than the maximum timeout set for this server, the client&#8217;s timeout will be capped at the maximum timeout value.</dd>
+<dt><code>-V</code></dt>
+<dd>Write the library version number to the standard output, and exit.</dd>
+<dt><code>-v</code></dt>
+<dd>Run in verbose mode.</dd></dl>
+<p> The berkeley_db5.3_svc utility exits 0 on success, and &gt;0 if an error occurs.</p>
+<h2>Environment</h2>
+<dl>
+<dt><code>DB_HOME</code></dt>
+<dd>If the <code>-h</code> option is not specified and the environment variable DB_HOME is set, it is used as the path of the database home, as described in DB_ENV-&gt;open.</dd></dl>
+<h2>Authors</h2>
+<p>Sleepycat Software, Inc. This manual page was created based on the HTML documentation for berkeley_db_svc from Sleepycat, by Thijs Kinkhorst &lt;thijs [at] kinkhorst.com&gt;, for the Debian system (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

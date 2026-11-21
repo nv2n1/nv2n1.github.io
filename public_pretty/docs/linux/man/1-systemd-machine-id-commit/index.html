@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-machine-id-commit(1) · Linux Manual Pages</title>
+<meta name="description" content="systemd-machine-id-commit – Commit transient machine ID to /etc/machine-id">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-systemd-machine-id-commit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>systemd-machine-id-commit(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> systemd-machine-id-commit &#8211; Commit transient machine ID to /etc/machine-id </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>systemd-machine-id-commit</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>systemd-machine-id-commit</code></p>
+<dd>may be used to write on disk any transient machine ID mounted as a temporary file system in /etc/machine-id at boot time. See <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) for more information about this file. </dd>
+<p> This tool will execute no operation if /etc/machine-id doesn&#8217;t contain any valid machine ID, isn&#8217;t mounted as an independent temporary file system, of /etc is read-only. If those conditions are met, it will then write current machine ID to disk and unmount the transient /etc/machine-id file in a race-free manner to ensure that this file is always valid for other processes. </p>
+<p> Note that the traditional way to initialize the machine ID in /etc/machine-id is to use <code>systemd-machine-id-setup</code> by system installer tools. You can also use <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) to initialize the machine ID on mounted (but not booted) system images.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>&#8211;root=</code><i>root</i></p>
+<dl>
+<dt>
+</dt><dd> Takes a directory path as an argument. All paths will be prefixed with the given alternate <i>root</i> path, including config search paths.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short help text and exit.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short version string and exit.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> On success, 0 is returned, a non-zero failure code otherwise.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></code>(1), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

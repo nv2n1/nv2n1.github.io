@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sync_client(8) · Linux Manual Pages</title>
+<meta name="description" content="sync_client – client side of the synchronization (replication) engine">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sync_client/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sync_client(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>&nbsp;<wbr>*</p>
+<h2>Name</h2>
+<p>sync_client &#8211; client side of the synchronization (replication) engine</p>
+<h2>Synopsis</h2>
+<p><code>sync_client</code> [ <code>-v</code> ] [ <code>-l</code> ] [ <code>-z</code> ] [ <code>-C</code> <i>config-file</i> ] [ <code>-S</code> <i>servername</i> ] </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-f</code> <i>input-file</i> ] [ <code>-F</code> <i>shutdown_file</i> ] [ <code>-w</code> <i>wait_interval</i> ] </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-t</code> <i>timeout</i> ] [ <code>-d</code> <i>delay</i> ] [ <code>-r</code> ] [ <code>-u</code> ] [ <code>-m</code> ] </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-s</code> ] <i>objects</i>&#8230; </p>
+<h2>Description</h2>
+<p><i>Sync_client</i> is the client side of the replication system. It runs on the client (master) system and connects to the target (replica) system and generates an appropriate sequence of transactions to synchronize the replica system with the master system.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-v</code></dt>
+<dd>Verbose mode.</dd>
+<dt><code>-l</code></dt>
+<dd>Verbose logging mode.</dd>
+<dt><code>-o</code></dt>
+<dd>Only attempt to connect to the backend server once rather than waiting up to 1000 seconds before giving up.</dd>
+<dt><code>-z</code></dt>
+<dd>Enable compress. If you set &#8216;sync_compress&#8217; in the imapd.conf or pass -z to sync_client, the replication protocol will attempt to enable deflate compression on the connection.</dd>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-S</code><i> servername</i></dt>
+<dd>Tells <code>sync_client</code> which server to communicate with. Overrides the <i>sync_host</i> configuration option.</dd>
+<dt><code>-f</code><i> input-file</i></dt>
+<dd>In mailbox or user replication mode: provides list of users or mailboxes to replicate. In rolling replication mode, specifies an alternate log file (sync_client will exit after processing the log file).</dd>
+<dt><code>-F</code><i> shutdown-file</i></dt>
+<dd>Rolling replication checks for this file at the end of each replication cycle and shuts down if it is present. Used to request nice clean shutdown at first convenient point. The file in question is removed on shutdown. Overrides <i>sync_shutdown_file</i> option in <i>imapd.conf</i></dd>
+<dt><code>-w</code><i> interval</i></dt>
+<dd>Wait this long before starting. Typically used so that we can attach a debugger to one end of the replication system or the other.</dd>
+<dt><code>-t</code><i> timeout</i></dt>
+<dd>Timeout for single replication run in rolling replication. <code>sync_client</code> will negotiate a restart after this many seconds. Default: 600 seconds</dd>
+<dt><code>-d</code><i> delay</i></dt>
+<dd>Minimum delay between replication runs in rolling replication mode. Larger values provide better efficiency as transactions can be merged. Smaller values mean that the replica system is more up to date and that you don&#8217;t end up with large blocks of replication transactions as a single group. Default: 3 seconds.</dd>
+<dt><code>-r</code></dt>
+<dd>Rolling (repeat) replication mode. Pick up a list of actions recorded by the <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8), imapd(8), popd(8) and <a href="/docs/linux/man/8-nntpd/">nntpd</a>(8)</code> daemons from the file specified in <i>sync_log_file.</i> Repeat until <i>sync_shutdwon_file</i> appears.</dd>
+<dt><code>-n</code></dt>
+<dd>Use the named channel for rolling replication mode. If multiple channels are specified in <i>sync_log_channels</i> then use one of them. This option is probably best combined with -S to connect to a different server with each channel.</dd>
+<dt><code>-u</code></dt>
+<dd>User mode. Remaining arguments are list of users who should be replicated.</dd>
+<dt><code>-m</code></dt>
+<dd>Mailbox mode. Remaining arguments are list of mailboxes which should be replicated.</dd>
+<dt><code>-s</code></dt>
+<dd>Sieve mode. Remaining arguments are list of users whose Sieve files should be replicated. Principally used for debugging purposes: not exposed to <code><a href="/docs/linux/man/8-sync_client/">sync_client</a>(8).</code></dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-sync_server/">sync_server</a>(8)</code></p>
+<h2>Authors</h2>
+<p>David Carter (dpc22 [at] cam.ac.uk), Ken Murchison (ken [at] oceana.com)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

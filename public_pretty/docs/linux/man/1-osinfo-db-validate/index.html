@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>osinfo-db-validate(1) · Linux Manual Pages</title>
+<meta name="description" content="osinfo-db-validate – Validate libosinfo XML data files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-osinfo-db-validate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>osinfo-db-validate(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> osinfo-db-validate &#8211; Validate libosinfo XML data files </p>
+<h2>SYNOPSIS</h2>
+<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] </p>
+<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">LOCAL-PATH1</font> [<font SIZE="-1">LOCAL-PATH2&#8230;</font>] </p>
+<p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">URI1</font> [<font SIZE="-1">URI2&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>osinfo-db-validate</code> tool is able to validate <font SIZE="-1">XML</font> files in one of the osinfo database locations for compliance with the <font SIZE="-1">RNG</font> schema.</p>
+<dl>
+<dt><code>system</code></dt>
+<dd> This is the primary system-wide database location, intended for use by operating system vendors distributing database files in the native package format. The <font SIZE="-1">RNG</font> schema is expected to be present in this location.</dd>
+<dt><code>local</code></dt>
+<dd> This is the secondary system-wide database location, intended for use by system administrators wishing to provide an updated database for all users. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the system location will be used.</dd>
+<dt><code>user</code></dt>
+<dd> This is the user private database location, intended for use by unprivileged local users wishing to provide applications they use with an updated database. This location may provide an <font SIZE="-1">RNG</font> schema override, otherwise the <font SIZE="-1">RNG</font> schema from the local location will be used, or failing that the system location.</dd></dl>
+<p> If run by a privileged account (ie root), the <code>local</code> database location will be validate by default, otherwise the <code>user</code> location will be validated. </p>
+<p> Alternatively it is possible to directly provide a list of files to be validated using the (<tt>&quot;LOCAL-PATH1&quot;</tt> or <tt>&quot;URI1&quot;</tt>) arguments. </p>
+<p> Any validation errors will be displayed on the console when detected.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;user</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>user</code> database location.</dd>
+<dt><code>&#8211;local</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>local</code> database location.</dd>
+<dt><code>&#8211;system</code></dt>
+<dd> Override the default behaviour to force validating files from the <code>system</code> database location.</dd>
+<dt><code>&#8211;dir=PATH</code></dt>
+<dd> Override the default behaviour to force validating files from the custom directory <font SIZE="-1"><code>PATH</code></font>.</dd>
+<dt><code>&#8211;root=PATH</code></dt>
+<dd> Prefix the database location with the root directory given by <tt>&quot;PATH&quot;</tt>. This is useful when wishing to validate files that are in a chroot environment or equivalent.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display verbose progress information when validating files</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> The exit status will be 0 if all files passed validation, or 1 if a validation error was hit.</p>
+<h2>SEE ALSO</h2>
+<p> <tt>&quot;<a href="/docs/linux/man/1-osinfo-db-path/">osinfo-db-path</a>(1)&quot;</tt></p>
+<h2>AUTHORS</h2>
+<p> Daniel P. Berrange &lt;berrange [at] redhat.com&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2012-2016 Red Hat, Inc.</p>
+<h2>LICENSE</h2>
+<p> <tt>&quot;osinfo-db-validate&quot;</tt> is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

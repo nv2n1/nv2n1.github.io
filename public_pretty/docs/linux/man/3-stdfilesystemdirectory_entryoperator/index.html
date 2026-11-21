@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemdirectory_entryoperator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::filesystem::directory_entry::operator==,!=,&lt;,&lt;=,&gt;,&gt;= – std::filesystem::directory_entry::operator==,!=,&lt;,&lt;=,&gt;,&gt;=">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemdirectory_entryoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemdirectory_entryoperator(3)</h1>
+
+
+
+
+
+<p>std::filesystem::directory_entry::operator==,!=,&lt;,&lt;=,&gt;,&gt;= &#8211; std::filesystem::directory_entry::operator==,!=,&lt;,&lt;=,&gt;,&gt;=</p>
+<h2>Synopsis</h2>
+<p>bool operator==( const directory_entry&amp; rhs ) const noexcept; <code>(1)</code> <i>(since C++17)</i><br />
+bool operator!=( const directory_entry&amp; rhs ) const noexcept; <code>(2)</code> <i>(since C++17)</i><br />
+bool operator&lt;( const directory_entry&amp; rhs ) const noexcept; <code>(3)</code> <i>(since C++17)</i><br />
+bool operator&lt;=( const directory_entry&amp; rhs ) const noexcept; <code>(4)</code> <i>(since C++17)</i><br />
+bool operator&gt;( const directory_entry&amp; rhs ) const noexcept; <code>(5)</code> <i>(since C++17)</i><br />
+bool operator&gt;=( const directory_entry&amp; rhs ) const noexcept; <code>(6)</code> <i>(since C++17)</i><br />
+Compares the path with the directory entry rhs. </p>
+<h2>Parameters</h2>
+<p>rhs &#8211; directory_entry to compare</p>
+<h2>Return value</h2>
+<p>1) true if path() == rhs.path(), false otherwise.<br />
+2) true if path() != rhs.path(), false otherwise.<br />
+3) true if path() &lt; rhs.path(), false otherwise.<br />
+4) true if path() &lt;= rhs.path(), false otherwise.<br />
+5) true if path() &gt; rhs.path(), false otherwise.<br />
+6) true if path() &gt;= rhs.path(), false otherwise. </p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;returns the path the entry refers to<br />
+path <i>(public member function)</i><br />
+operator_const_path&amp; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

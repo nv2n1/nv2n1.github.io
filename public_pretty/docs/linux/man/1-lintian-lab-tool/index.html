@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintian-lab-tool(1) · Linux Manual Pages</title>
+<meta name="description" content="lintian-lab-tool – perform common operations on/involving laboratories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lintian-lab-tool/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lintian-lab-tool(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> lintian-lab-tool &#8211; perform common operations on/involving laboratories </p>
+<h2>SYNOPSIS</h2>
+<p> <code>lintian-lab-tool</code> &lt;cmd&gt; &lt;lab&gt; [&#8230;] </p>
+<p> <code>lintian-lab-tool</code> help</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>lintian-lab-tool</code> &#8230;</p>
+<h2>OPERATIONS</h2>
+<dl>
+<dt><code>create-lab</code> <i>laboratory-dir</i></dt>
+<dd> Creates a new permanent Lintian laboratory in the directory denoted by <code>laboratory-dir</code>.</dd>
+<dt><code>help</code> [<i>cmd</i>]</dt>
+<dd> Display the synopsis of this tool or one of its operations.</dd>
+<dt><code>remove-lab</code> <i>laboratory-dir</i></dt>
+<dd> Removes a permanent Lintian laboratory in the directory denoted by <code>laboratory-dir</code>.</dd>
+<dt><code>remove-pkgs</code> <i>laboratory-dir</i> <i>query</i> [&#8230; <i>query</i>]</dt>
+<dd> Removes all packages matching the given <i>queries</i> from the permanent Lintian laboratory denoted by <code>laboratory-dir</code>.</dd>
+<dt><code>scrub-lab</code> <i>laboratory-dir</i></dt>
+<dd> Attempt to fix common metadata issues in an existing laboratory. </dd>
+<p> This command can correct <i>some</i> corruptions caused by programs that failed to synchronize the laboratory metadata with the actual contents. Almost all corrections involve discarding corrupted entries. </p>
+<p> These issues usually occur because:</p>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> Two processes update the laboratory concurrently.</dd>
+<dt>&bull;</dt>
+<dd> A process updated the laboratory but was killed / crashed before it properly close the laboratory.</dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
+<p> Note that Lintian tools will fix these issues automatically as the tools happen to run into the issues.</dd></dl>
+</dl>
+<h2>CAVEAT</h2>
+<p> Laboratories are not designed to have multiple processes working on them concurrently.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-lintian/">lintian</a></i>(1)</p>
+<h2>AUTHORS</h2>
+<p> Niels Thykier &lt;niels [at] thykier.net&gt; </p>
+<p> Richard Braakman &lt;dark [at] xs4all.nl&gt; </p>
+<p> Christian Schwarz &lt;schwarz [at] monet.m.isar.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

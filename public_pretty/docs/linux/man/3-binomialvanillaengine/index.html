@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>binomialvanillaengine(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BinomialVanillaEngine – Pricing engine for vanilla options using binomial trees.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-binomialvanillaengine/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>binomialvanillaengine(3)</h1>
+
+
+
+
+
+<p>QuantLib::BinomialVanillaEngine &#8211; Pricing engine for vanilla options using binomial trees. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/pricingengines/vanilla/binomialengine.hpp&gt; </p>
+<p> Inherits QuantLib::OneAssetOption::engine. </p>
+<h3>Public Member Functions</h3>
+<p><code>BinomialVanillaEngine</code> (const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp;process, Size timeSteps) </p>
+<p> void <code>calculate</code> () const </p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class T&gt; class QuantLib::BinomialVanillaEngine&lt; T &gt;</h3>
+<p>Pricing engine for vanilla options using binomial trees. </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned values is tested by checking it against analytic results.</dd></dl>
+<p> <code>Possible enhancements</code></p>
+<dl COMPACT>
+<dd><code>Greeks</code> are not overly accurate. They could be improved by building a tree so that it has three points at the current time. The value would be fetched from the middle one, while the two side points would be used for estimating partial derivatives.</dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>EquityOption.cpp</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

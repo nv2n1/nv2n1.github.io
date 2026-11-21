@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ql_max_integer(3) · Linux Manual Pages</title>
+<meta name="description" content="Numeric limits –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ql_max_integer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ql_max_integer(3)</h1>
+
+
+
+
+
+<p>Numeric limits &#8211; </p>
+<h3>Defines</h3>
+<p>#define <code>QL_MIN_INTEGER</code> ((std::numeric_limits&lt;QL_INTEGER&gt;::min)()) </p>
+<p> #define <code>QL_MAX_INTEGER</code> ((std::numeric_limits&lt;QL_INTEGER&gt;::max)()) </p>
+<p> #define <code>QL_MIN_REAL</code> -((std::numeric_limits&lt;QL_REAL&gt;::max)()) </p>
+<p> #define <code>QL_MIN_POSITIVE_REAL</code> ((std::numeric_limits&lt;QL_REAL&gt;::min)()) </p>
+<p> #define <code>QL_MAX_REAL</code> ((std::numeric_limits&lt;QL_REAL&gt;::max)()) </p>
+<p> #define <code>QL_EPSILON</code> ((std::numeric_limits&lt;QL_REAL&gt;::epsilon)()) </p>
+<p> #define <code>QL_NULL_INTEGER</code> ((std::numeric_limits&lt;int&gt;::max)()) </p>
+<p> #define <code>QL_NULL_REAL</code> ((std::numeric_limits&lt;float&gt;::max)()) </p>
+<h2>Detailed Description</h2>
+<p>Some compilers do not give an implementation of &lt;limits&gt; yet. For the code to be portable these macros should be used instead of the corresponding method of std::numeric_limits or the corresponding macro defined in &lt;<a href="file:/usr/include/limits.h">limits.h</a>&gt;.</p>
+<h2>Define Documentation</h2>
+<h3>#define QL_MIN_INTEGER ((std::numeric_limits&lt;QL_INTEGER&gt;::min)())</h3>
+<p>Defines the value of the largest representable negative integer value</p>
+<h3>#define QL_MAX_INTEGER ((std::numeric_limits&lt;QL_INTEGER&gt;::max)())</h3>
+<p>Defines the value of the largest representable integer value</p>
+<h3>#define QL_MIN_REAL -((std::numeric_limits&lt;QL_REAL&gt;::max)())</h3>
+<p>Defines the value of the largest representable negative floating-point value</p>
+<h3>#define QL_MIN_POSITIVE_REAL ((std::numeric_limits&lt;QL_REAL&gt;::min)())</h3>
+<p>Defines the value of the smallest representable positive double value</p>
+<h3>#define QL_MAX_REAL ((std::numeric_limits&lt;QL_REAL&gt;::max)())</h3>
+<p>Defines the value of the largest representable floating-point value</p>
+<h3>#define QL_EPSILON ((std::numeric_limits&lt;QL_REAL&gt;::epsilon)())</h3>
+<p>Defines the machine precision for operations over doubles </p>
+<p> <code>Examples: </code> <code>CallableBonds.cpp</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

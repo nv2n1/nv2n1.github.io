@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exporting and Importing Thunderbird Message Filters - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-export-and-import-message-filters-of-thunderbird/">
+  <meta name="description" content="Thunderbird stores message filters in per-account configuration files, making it inconvenient to replicate filters across multiple accounts or installations. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Exporting and Importing Thunderbird Message Filters">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-export-and-import-message-filters-of-thunderbird/">
+  <meta property="og:description" content="Thunderbird stores message filters in per-account configuration files, making it inconvenient to replicate filters across multiple accounts or installations. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Exporting and Importing Thunderbird Message Filters</h1>
+        <time class="post-date" datetime="2018-03-24T08:21:05Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Thunderbird stores message filters in per-account configuration files, making it inconvenient to replicate filters across multiple accounts or installations. Rather than recreating filters manually, you can copy filter files directly or use symbolic links to keep filters synchronized.</p>
+<h2 id="where-thunderbird-stores-filters">Where Thunderbird Stores Filters</h2>
+<p>Thunderbird saves filter rules in <code>msgFilterRules.dat</code>, a plain text configuration file. Each account maintains its own copy in its local mail directory. On Linux, your profile location is <code>~/.thunderbird/</code>.</p>
+<p>Find all filter files across your profile:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find ~/.thunderbird/ -name msgFilterRules.dat
+</span></span></code></pre></div><p>Output typically shows:</p>
+<pre><code>~/.thunderbird/[profile-hash].default/Mail/Local Folders/msgFilterRules.dat
+~/.thunderbird/[profile-hash].default/Mail/[account-name]/msgFilterRules.dat
+</code></pre>
+<p>Account-specific filters live in their respective mail directories. The Local Folders filter file can serve as a central source for distributing filters to multiple accounts.</p>
+<h2 id="backing-up-and-copying-filters-between-accounts">Backing Up and Copying Filters Between Accounts</h2>
+<p>Before making any changes, close Thunderbird completely. Thunderbird rewrites <code>msgFilterRules.dat</code> on exit, so any manual edits while the application runs will be lost.</p>
+<p>To copy filters from one account to another:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Close Thunderbird first</span>
+</span></span><span class="line"><span class="cl">cp ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>source-account<span class="o">]</span>/msgFilterRules.dat <span class="se">\
+</span></span></span><span class="line"><span class="cl">   ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>dest-account<span class="o">]</span>/msgFilterRules.dat
+</span></span></code></pre></div><p>Replace <code>[profile]</code>, <code>[source-account]</code>, and <code>[dest-account]</code> with your actual profile hash and account names.</p>
+<p>If your filters reference custom headers, also copy that setting from <code>prefs.js</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep mailnews.customHeaders ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/prefs.js
+</span></span></code></pre></div><p>Add the output to the destination profile’s <code>prefs.js</code> if the setting doesn’t already exist.</p>
+<h2 id="using-symbolic-links-for-unified-filters">Using Symbolic Links for Unified Filters</h2>
+<p>For a cleaner approach that keeps all accounts synchronized without manual duplication, use symbolic links. This way, editing filters in one place affects all linked accounts.</p>
+<p>Choose a source filter file (Local Folders works well if you don’t use it for mail storage):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">SOURCE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.thunderbird/[profile].default/Mail/Local Folders/msgFilterRules.dat&#34;</span>
+</span></span></code></pre></div><p>For each account that should use these filters, replace its filter file with a symbolic link:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>account-name<span class="o">]</span>/
+</span></span><span class="line"><span class="cl">ln -bsv ../../Mail/Local<span class="se">\ </span>Folders/msgFilterRules.dat msgFilterRules.dat
+</span></span></code></pre></div><p>The <code>-b</code> flag backs up the original <code>msgFilterRules.dat</code> as <code>msgFilterRules.dat~</code> before creating the link, preserving your previous configuration.</p>
+<p>Verify the links are in place:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -la ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/*/msgFilterRules.dat
+</span></span></code></pre></div><p>All symlinked accounts now reference the same filter file.</p>
+<h2 id="restoring-symlinks-after-gui-edits">Restoring Symlinks After GUI Edits</h2>
+<p>When you edit filters through the Thunderbird GUI (Message → Filters and Search → Mail Filters), Thunderbird may replace the symlink with a regular file. After making filter changes, verify your symlinks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>account-name<span class="o">]</span>/msgFilterRules.dat
+</span></span></code></pre></div><p>If a symlink was replaced with a regular file, restore it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm ~/.thoroughbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>account-name<span class="o">]</span>/msgFilterRules.dat
+</span></span><span class="line"><span class="cl">ln -bsv ../../Mail/Local<span class="se">\ </span>Folders/msgFilterRules.dat msgFilterRules.dat
+</span></span></code></pre></div><p>Restart Thunderbird to reload the filters.</p>
+<h2 id="direct-editing-of-filter-files">Direct Editing of Filter Files</h2>
+<p>The <code>msgFilterRules.dat</code> file is plain text and can be edited directly while Thunderbird is closed. This is useful for bulk modifications, merging filters from multiple sources, or version control.</p>
+<p>Each filter rule follows this structure:</p>
+<pre><code>[num1]
+name=Filter Name
+enabled=yes
+account=account-name
+action=copy
+actionValue=/path/to/folder
+condition=&quot;Subject contains test OR From contains example@example.com&quot;
+</code></pre>
+<p>Always back up before manual edits:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp msgFilterRules.dat msgFilterRules.dat.backup
+</span></span></code></pre></div><p>Edit with your preferred text editor:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim ~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/<span class="o">[</span>account-name<span class="o">]</span>/msgFilterRules.dat
+</span></span></code></pre></div><p>Common filter actions include:</p>
+<ul>
+<li><code>action=copy</code> — Copy matching messages to a folder</li>
+<li><code>action=move</code> — Move matching messages to a folder</li>
+<li><code>action=delete</code> — Permanently delete matching messages</li>
+<li><code>action=mark</code> — Mark messages as read, flagged, or with a tag</li>
+</ul>
+<p>Conditions support boolean logic with <code>AND</code>, <code>OR</code>, and <code>NOT</code> operators:</p>
+<pre><code>condition=&quot;(Subject contains Invoice) AND (From contains @company.com)&quot;
+</code></pre>
+<h2 id="syncing-filters-across-multiple-machines">Syncing Filters Across Multiple Machines</h2>
+<p>For different machines, copy the filter file via SSH:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user@remote-machine:~/.thunderbird/<span class="o">[</span>profile<span class="o">]</span>.default/Mail/Local<span class="se">\ </span>Folders/msgFilterRules.dat ~/
+</span></span></code></pre></div><p>Then import using the backup-and-copy method described earlier.</p>
+<p>For multiple profiles on the same machine, replicate the symlink approach for each profile directory.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If filters don’t appear after importing, check:</p>
+<ul>
+<li>The destination account folder exists</li>
+<li>Thunderbird was closed before copying files</li>
+<li>File permissions are readable by your user</li>
+<li>The folder paths in filter actions exist and are accessible</li>
+</ul>
+<p>Restart Thunderbird after any manual changes to <code>msgFilterRules.dat</code>. The application caches filter rules in memory, so it won’t recognize direct file edits until restart.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

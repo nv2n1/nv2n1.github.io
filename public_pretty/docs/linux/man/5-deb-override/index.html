@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deb-override(5) · Linux Manual Pages</title>
+<meta name="description" content="deb-override – Debian archive override file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-deb-override/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>deb-override(5)</h1>
+
+
+
+
+
+<p>deb-override &#8211; Debian archive override file</p>
+<h2>Synopsis</h2>
+<p><code>override</code></p>
+<h2>Description</h2>
+<p>While most information about a package can be found in the control file, some is managed centrally by the distribution czars rather than by the maintainer in order to offer some global consistency. This information is found in the override file. </p>
+<p> The override file has a simple whitespace-delimited format. Comments are allowed (denoted with a <code>#</code>). </p>
+<dl>
+<dd><i>package</i> <i>priority</i> <i>section</i> [<i>maintainer-info</i>]</dd></dl>
+<p> <i>package</i> is the name of the package. Entries in the override file for packages not found in the tree of binary packages are ignored. </p>
+<p> <i>priority</i> and <i>section</i> correspond to the respective control fields available in the .deb. The allowed values are specific to each distribution archive. </p>
+<p> <i>maintainer-info</i>, if present, can be either the name of a maintainer for an unconditional override, or else <i>old-maintainer</i> <code>=&gt;</code> <i>new-maintainer</i> to perform a substitution. </p>
+<p> The override files used to make the official Packages lists may be found in the <i>indices</i> directory on any Debian mirror.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-dpkg-scanpackages/">dpkg-scanpackages</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-scansources/">dpkg-scansources</a></code>(1), <code><a href="/docs/linux/man/1-apt-ftparchive/">apt-ftparchive</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_rs_control(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_rs_control – rs control structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_rs_control/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_rs_control(9)</h1>
+
+
+
+
+
+<p>struct_rs_control &#8211; rs control structure</p>
+<h2>Synopsis</h2>
+<pre><code>struct rs_control {
+    int mm;
+    int nn;
+    uint16_t *alpha_to;
+    uint16_t *index_of;
+    uint16_t *genpoly;
+    int nroots;
+    int fcr;
+    int prim;
+    int iprim;
+    int gfpoly;
+    int (*gffunc)(int);
+    int users;
+    struct list_head list;
+};</code></pre>
+<h2>Members</h2>
+<p>mm</p>
+<dl>
+<dd>Bits per symbol</dd></dl>
+<p> nn</p>
+<dl>
+<dd>Symbols per block (= (1&lt;&lt;mm)-1)</dd></dl>
+<p> alpha_to</p>
+<dl>
+<dd>log lookup table</dd></dl>
+<p> index_of</p>
+<dl>
+<dd>Antilog lookup table</dd></dl>
+<p> genpoly</p>
+<dl>
+<dd>Generator polynomial</dd></dl>
+<p> nroots</p>
+<dl>
+<dd>Number of generator roots = number of parity symbols</dd></dl>
+<p> fcr</p>
+<dl>
+<dd>First consecutive root, index form</dd></dl>
+<p> prim</p>
+<dl>
+<dd>Primitive element, index form</dd></dl>
+<p> iprim</p>
+<dl>
+<dd>prim-th root of 1, index form</dd></dl>
+<p> gfpoly</p>
+<dl>
+<dd>The primitive generator polynominal</dd></dl>
+<p> gffunc</p>
+<dl>
+<dd>Function to generate the field, if non-canonical representation</dd></dl>
+<p> users</p>
+<dl>
+<dd>Users of this structure</dd></dl>
+<p> list</p>
+<dl>
+<dd>List entry for the rs control list</dd></dl>
+<h2>Author</h2>
+<p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

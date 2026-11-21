@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xml2ag(1) · Linux Manual Pages</title>
+<meta name="description" content="xml2ag – XML to AutoGen Definiton Converter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xml2ag/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xml2ag(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> xml2ag &#8211; XML to AutoGen Definiton Converter </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xml2ag</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
+<p> This program will convert any arbitrary XML file into equivalent AutoGen definitions, and invoke AutoGen.</p>
+<h2>DESCRIPTION</h2>
+<p> The template will be derived from either:<br />
+ * the <code>&#8211;override-tpl</code> command line option<br />
+ * a top level XML attribute named, &quot;template&quot;<br />
+ One or the other <code>must</code> be provided, or the program will exit with a failure message. </p>
+<p> The &#8220;base-name&#8221; for the output will similarly be either:<br />
+ * the <code>&#8211;base-name</code> command line option<br />
+ * the base name of the .xml file</p>
+<h2>OPTIONS</h2>
+<h3>All other options are derived from autogen</h3>
+<dl>
+<dt><code>-O</code> <i>file</i>, <code>&#8211;output</code>=<i>file</i></dt>
+<dd> Output file in lieu of AutoGen processing. </dd>
+<p> By default, the output is handed to an AutoGen for processing. However, you may save the definitions to a file instead.</dl>
+<h3>All other options</h3>
+<p> These options are <i>mostly</i> just passed throug to <code>autogen</code>. The one exception is <code>&#8211;override-tpl</code> which replaces the default template in the output definitions. It does not get passed through on the command line.</p>
+<dl>
+<dt><code>-L</code> <i>dir</i>, <code>&#8211;templ-dirs</code>=<i>dir</i></dt>
+<dd> Search for templates in <i>DIR</i>. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-T</code> <i>tpl-file</i>, <code>&#8211;override-tpl</code>=<i>tpl-file</i></dt>
+<dd> Use <i>TPL-FILE</i> for the template. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-l</code> <i>tpl-file</i>, <code>&#8211;lib-template</code>=<i>tpl-file</i></dt>
+<dd> Load AutoGen macros from <i>TPL-FILE</i>. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument </p>
+<p> <code>NOTE: THIS OPTION IS DEPRECATED</code></p>
+<dt><code>&#8211;definitions</code>=<i>file</i></dt>
+<dd> Read definitions from <i>FILE</i>. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;shell</code>=<i>shell</i></dt>
+<dd> name or path name of shell to use. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-m</code>, <code>&#8211;no-fmemopen</code></dt>
+<dd> Do not use in-mem streams. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;equate</code>=<i>char-list</i></dt>
+<dd> characters considered equivalent. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-b</code> <i>name</i>, <code>&#8211;base-name</code>=<i>name</i></dt>
+<dd> Specify <code>NAME</code> as the base name for output. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;source-time</code></dt>
+<dd> set mod times to latest source. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;writable,</code> <code>&#8211;not-writable</code></dt>
+<dd> Allow output files to be writable. The <i>not-writable</i> form will disable the option. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;loop-limit</code>=<i>lim</i></dt>
+<dd> Limit on increment loops. This option takes an integer number as its argument. The value of <i>lim</i> is constrained to being: </dd>
+<pre>
+exactly -1, or
+in the range  1 through 0x1000000
+</pre>
+<p> The default <i>lim</i> for this option is:<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+&nbsp;<wbr>256 </p>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-t</code> <i>seconds</i>, <code>&#8211;timeout</code>=<i>seconds</i></dt>
+<dd> Limit server shell operations to <code>SECONDS</code>. This option takes an integer number as its argument. The value of <i>seconds</i> is constrained to being: </dd>
+<pre>
+in the range  0 through 3600
+</pre>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;trace</code>=<i>level</i></dt>
+<dd> tracing level of detail. This option takes a keyword as its argument. The argument sets an enumeration value that can be tested by comparing them against the option value macro. The available keywords are: </dd>
+<pre>
+nothing       debug-message server-shell
+templates     block-macros  expressions
+everything
+</pre>
+<p> or their numeric equivalent. </p>
+<p> The default <i>level</i> for this option is:<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><br />
+&nbsp;<wbr>nothing </p>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;trace-out</code>=<i>file</i></dt>
+<dd> tracing output file or filter. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;show-defs</code></dt>
+<dd> Show the definition tree. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>&#8211;used-defines</code></dt>
+<dd> Show the definitions used. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-C</code>, <code>&#8211;core</code></dt>
+<dd> Leave a core dump on a failure exit. </dd>
+<p> Many systems default to a zero sized core limit. If the system has the sys/resource.h header and if this option is supplied, then in the failure exit path, autogen will attempt to set the soft core limit to whatever the hard core limit is. If that does not work, then an administrator must raise the hard core size limit.</p>
+<dt><code>-s</code> <i>suffix</i>, <code>&#8211;skip-suffix</code>=<i>suffix</i></dt>
+<dd> Skip the file with this <i>SUFFIX</i>. This option may appear an unlimited number of times. This option must not appear in combination with any of the following options: select-suffix. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-o</code> <i>suffix</i>, <code>&#8211;select-suffix</code>=<i>suffix</i></dt>
+<dd> specify this output suffix. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-D</code> <i>value</i>, <code>&#8211;define</code>=<i>value</i></dt>
+<dd> name to add to definition list. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-U</code> <i>name-pat</i>, <code>&#8211;undefine</code>=<i>name-pat</i></dt>
+<dd> definition list removal pattern. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-M</code> <i>type</i>, <code>&#8211;make-dep</code>[<code>=</code><i>type</i>]</dt>
+<dd> emit make dependency file. This option may appear an unlimited number of times. </dd>
+<p> Pass-through AutoGen argument</p>
+<dt><code>-?</code>,<code> &#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-!</code>,<code> &#8211;more-help</code></dt>
+<dd> Pass the extended usage information through a pager.</dd>
+<dt><code>-v</code> [{<i>v|c|n</i>}],<code> &#8211;version</code>[={<i>v|c|n</i>}]</dt>
+<dd> Output version of program and exit. The default mode is `v&#8217;, a simple version. The `c&#8217; mode will print copyright information and `n&#8217; will print the full copyright notice.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> One of the following exit values will be returned:</p>
+<dl>
+<dt><code>0</code> (EXIT_SUCCESS)</dt>
+<dd> Successful program execution.</dd>
+<dt><code>1</code> (EXIT_FAILURE)</dt>
+<dd> The operation failed or the command syntax was not valid.</dd>
+<dt><code>70</code> (EX_SOFTWARE)</dt>
+<dd> libopts had an internal operational error. Please report it to autogen-users [at] lists.sourceforge.net. Thank you.</dd></dl>
+<h2>AUTHORS</h2>
+<p> Bruce Korb</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 1992-2013 Bruce Korb all rights reserved. This program is released under the terms of the GNU General Public License, version 3 or later.</p>
+<h2>BUGS</h2>
+<p> Please send bug reports to: autogen-users [at] lists.sourceforge.net</p>
+<h2>NOTES</h2>
+<p> This manual page was <i>AutoGen</i>-erated from the <code>xml2ag</code> option definitions. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

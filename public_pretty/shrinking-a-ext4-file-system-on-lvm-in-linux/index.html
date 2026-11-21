@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safely Shrinking Ext4 Filesystems on LVM - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/shrinking-a-ext4-file-system-on-lvm-in-linux/">
+  <meta name="description" content="Shrinking an ext4 filesystem on LVM is riskier than expanding—it requires the filesystem offline and careful size planning. The operation can take hours on …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Safely Shrinking Ext4 Filesystems on LVM">
+  <meta property="og:url" content="https://www.systutorials.com/shrinking-a-ext4-file-system-on-lvm-in-linux/">
+  <meta property="og:description" content="Shrinking an ext4 filesystem on LVM is riskier than expanding—it requires the filesystem offline and careful size planning. The operation can take hours on …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>Safely Shrinking Ext4 Filesystems on LVM</h1>
+        <time class="post-date" datetime="2015-01-09T08:04:32Z">January 9, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Shrinking an ext4 filesystem on LVM is riskier than expanding—it requires the filesystem offline and careful size planning. The operation can take hours on large volumes, and mistakes can destroy data. This guide walks through the safe path with verification at each step.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting:</p>
+<ul>
+<li><strong>Backup everything</strong>. A full backup of the data being resized is mandatory. Test the backup restoration.</li>
+<li><strong>Calculate actual usage</strong>: Run <code>df -h</code> and <code>du -sh</code> to see what’s actually consuming space. Identify files to delete if the filesystem is too full.</li>
+<li><strong>Leave breathing room</strong>: Never shrink to exactly the size of your data. Plan for 10–20% free space after the operation completes.</li>
+<li><strong>Schedule downtime</strong>: Block out time—this can take hours on filesystems larger than 500GB.</li>
+<li><strong>Check for errors first</strong>: Run <code>fsck.ext4 -n /dev/vg/lv_data</code> while mounted (read-only check) to catch corruption before shrinking.</li>
+</ul>
+<h2 id="the-safe-shrink-procedure">The Safe Shrink Procedure</h2>
+<p>Assume you have:</p>
+<ul>
+<li>Physical volume: <code>/dev/sdb1</code> in volume group <code>vg</code></li>
+<li>Logical volume: <code>lv_data</code> with ext4 filesystem</li>
+<li>Current mount point: <code>/mnt/data</code></li>
+<li>Target size: 200GB</li>
+</ul>
+<h3 id="step-1-unmount-the-filesystem">Step 1: Unmount the filesystem</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount /mnt/data
+</span></span></code></pre></div><p>This is non-negotiable. Shrinking touches allocation metadata that the kernel actively manages on a mounted filesystem. Unmounting prevents corruption and ensures safe metadata writes.</p>
+<p>Verify it’s unmounted:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk <span class="p">|</span> grep lv_data
+</span></span></code></pre></div><h3 id="step-2-run-fsck-before-shrinking">Step 2: Run fsck before shrinking</h3>
+<p>Always check the filesystem before resize operations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fsck.ext4 -f /dev/vg/lv_data
+</span></span></code></pre></div><p>The <code>-f</code> flag forces a check even if the filesystem appears clean. Address any errors reported before proceeding.</p>
+<h3 id="step-3-shrink-the-filesystem-and-lv-together">Step 3: Shrink the filesystem and LV together</h3>
+<p>Use <code>lvresize</code> with <code>--resizefs</code> to handle both operations atomically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvresize --resizefs --size 200G /dev/vg/lv_data
+</span></span></code></pre></div><p>The <code>--resizefs</code> flag is critical—it automatically runs <code>resize2fs</code> before shrinking the LV, preventing size mismatches that can corrupt the filesystem. Avoid running <code>resize2fs</code> and <code>lvresize</code> separately unless you have a specific reason.</p>
+<p>Expected output:</p>
+<pre><code>fsck from util-linux 2.39.1
+/dev/mapper/vg-lv_data: 1523/6553600 files (0.2% non-contiguous), 892145/26214400 blocks
+resize2fs 1.47.0 (5-Feb-2023)
+Resizing the filesystem on /dev/mapper/vg-lv_data to 52428800 (4k) blocks.
+Reducing logical volume lv_data to 200.00 GiB
+Logical volume lv_data successfully resized
+</code></pre>
+<p><strong>Don’t interrupt this.</strong> On a 500GB filesystem with heavy fragmentation, this can take 2–4 hours. Monitor progress in another terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvs -o lv_name,lv_size vg
+</span></span></code></pre></div><h3 id="step-4-remount-and-verify">Step 4: Remount and verify</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /mnt/data
+</span></span><span class="line"><span class="cl">df -hT /mnt/data
+</span></span></code></pre></div><p>Confirm the size and that the filesystem is readable. Check for any kernel errors in <code>dmesg</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> tail -20
+</span></span></code></pre></div><p>Run a second <code>fsck</code> to validate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">umount /mnt/data
+</span></span><span class="line"><span class="cl">fsck.ext4 -n /dev/vg/lv_data
+</span></span><span class="line"><span class="cl">mount /mnt/data
+</span></span></code></pre></div><h2 id="freeing-space-in-the-volume-group">Freeing Space in the Volume Group</h2>
+<p>The space freed from shrinking the LV now belongs to the volume group:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vgs vg
+</span></span></code></pre></div><p>You can allocate this to other LVs or leave it available for future growth.</p>
+<h2 id="removing-a-physical-volume-optional">Removing a Physical Volume (Optional)</h2>
+<p>If you’re decommissioning the disk entirely:</p>
+<h3 id="move-data-off-the-pv">Move data off the PV</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pvmove /dev/sdb1
+</span></span></code></pre></div><p>This migrates all data from <code>/dev/sdb1</code> to other PVs in <code>vg</code>. Check free space first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vgs vg
+</span></span><span class="line"><span class="cl">lvs -o +devices vg
+</span></span></code></pre></div><p>The move can take hours on large LVs. Don’t interrupt it.</p>
+<h3 id="remove-the-pv-from-the-vg">Remove the PV from the VG</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vgreduce vg /dev/sdb1
+</span></span><span class="line"><span class="cl">pvremove /dev/sdb1
+</span></span></code></pre></div><p>The disk can now be physically removed or repurposed.</p>
+<h2 id="shrinking-the-partition-optional">Shrinking the Partition (Optional)</h2>
+<p>If you want to reclaim raw disk space, shrink both the PV metadata and partition boundary.</p>
+<h3 id="shrink-the-physical-volume">Shrink the physical volume</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pvresize --setphysicalvolumesize 650G /dev/sdb1
+</span></span></code></pre></div><p>Verify:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pvs -o pv_name,pv_size
+</span></span></code></pre></div><h3 id="shrink-the-partition-boundary">Shrink the partition boundary</h3>
+<p>With <code>parted</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">parted /dev/sdb
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> print
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> resizepart <span class="m">1</span> 650GB
+</span></span><span class="line"><span class="cl"><span class="o">(</span>parted<span class="o">)</span> quit
+</span></span></code></pre></div><p>Confirm the kernel sees the change:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">partprobe /dev/sdb
+</span></span><span class="line"><span class="cl">fdisk -l /dev/sdb <span class="p">|</span> head -20
+</span></span></code></pre></div><p>If <code>partprobe</code> fails silently, reboot to force partition table re-read.</p>
+<p>For automated/scriptable shrinking, use <code>parted</code> in non-interactive mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">parted -s /dev/sdb resizepart <span class="m">1</span> 650GB
+</span></span></code></pre></div><p>For GPT partitions with strict alignment requirements, <code>gdisk</code> offers finer control:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdisk /dev/sdb
+</span></span><span class="line"><span class="cl"><span class="c1"># Command: p (print)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Command: d (delete partition 1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Command: n (new partition, set end sector manually)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Command: w (write and exit)</span>
+</span></span></code></pre></div><h2 id="final-verification">Final Verification</h2>
+<p>After all operations, validate the system state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvs -o lv_name,lv_size,lv_attr vg
+</span></span><span class="line"><span class="cl">pvs -o pv_name,pv_size
+</span></span><span class="line"><span class="cl">vgs vg
+</span></span><span class="line"><span class="cl">df -h /mnt/data
+</span></span></code></pre></div><p>Run your workloads on the shrunken filesystem for at least 24 hours before removing the backup. Watch <code>dmesg</code> and system logs for any ext4-related warnings.</p>
+<h2 id="common-failure-points">Common Failure Points</h2>
+<ul>
+<li><strong>Partition not aligned</strong>: Shrinking to an unaligned sector boundary can cause partition table corruption on GPT disks. Use <code>parted</code> defaults or calculate alignment explicitly (typically 1MB boundaries).</li>
+<li><strong>Not enough free space on other PVs</strong>: <code>pvmove</code> fails if the target PVs can’t hold the migrated data. Check <code>vgs</code> output before running it.</li>
+<li><strong>Filesystem too fragmented</strong>: Highly fragmented ext4 filesystems resize slowly. Use <code>e4defrag</code> before shrinking if the operation stalls.</li>
+<li><strong>Kernel doesn’t reread partition table</strong>: <code>partprobe</code> doesn’t always work. Reboot if partition changes don’t take effect.</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

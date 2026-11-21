@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsub_matchcompare(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsub_matchcompare/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsub_matchcompare(3)</h1>
+
+
+
+
+
+<p>std::sub_match&lt;BidirIt&gt;::compare - std::sub_match&lt;BidirIt&gt;::compare</p>
+<h2>Synopsis</h2>
+<pre><code>int compare(const sub_match &amp;m) const;
+(1)(since C++ 11)
+    int compare(const string_type &amp;s) const;
+(2)(since C++ 11)
+    int compare(const value_type *c) const;
+(3)(since C++ 11)</code></pre> 
+<ol>
+<li>Compares two sub_match directly by comparing their underlying character sequences. Equivalent to str().compare(m.str()).</li>
+<li>Compares a sub_match with a std::basic_string. Equivalent to str().compare(s).</li>
+<li>Compares a sub_match with a null-terminated sequence of the underlying character type pointed to by s. Equivalent to str().compare(c).
+This function is infrequently used directly by application code. Instead, one of the non-member comparison operators are used.</li>
+</ol>
+<h2>Parameters</h2>
+<p>m - a reference to another sub_match
+s - a reference to a string to compare to
+c - a pointer to a null-terminated character sequence of the underlying value_type to compare to</p>
+<h2>Return value</h2>
+<p>A value less than zero if this sub_match is less than the other character sequence, zero if the both underlying character sequences are equal, greater than zero if this sub_match is greater than the other character sequence.</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> compares two strings
+compare <i>(public member function of std::basic_string&lt;CharT,Traits,Allocator&gt;)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts to the underlying string type
+str <i>(public member function)</i>
+operator_string_type
+operator==
+operator!= compares two sub_match objects
+operator&lt; <i>(function template)</i>
+operator&lt;=
+operator&gt;
+operator&gt;=</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

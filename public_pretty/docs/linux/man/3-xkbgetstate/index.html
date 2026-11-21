@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbgetstate(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbGetState – Obtains the keyboard state">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbgetstate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbgetstate(3)</h1>
+
+
+
+
+
+<p>XkbGetState &#8211; Obtains the keyboard state </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Status XkbGetState</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbStatePtr </code><i>state_return</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>
+</dd><dd>connection to the X server</dd>
+<dt><i>device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>state_return</i></dt>
+<dd>backfilled with Xkb state</dd></dl>
+<h2>Description</h2>
+<p>The <i>XkbGetState </i> function queries the server for the current keyboard state, waits for a reply, and then backfills <i>state_return </i> with the results. </p>
+<p> All group values are expressed as group indices in the range [0..3]. Modifiers and the compatibility modifier state values are expressed as the bitwise union of the core X11 modifier masks. The pointer button state is reported as in the core X11 protocol.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

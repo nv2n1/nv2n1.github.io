@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdremove_cvstdremove_conststdremove_volatile(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdremove_cvstdremove_conststdremove_volatile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdremove_cvstdremove_conststdremove_volatile(3)</h1>
+
+
+
+
+
+<p>std::remove_cv,std::remove_const,std::remove_volatile - std::remove_cv,std::remove_const,std::remove_volatile</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class T&gt;
+    (1)(since C++ 11)
+        struct remove_cv;
+template &lt;class T&gt;
+(2)(since C++ 11)
+    struct remove_const;
+template &lt;class T&gt;
+(3)(since C++ 11)
+    struct remove_volatile;</code></pre> 
+<p>Provides the member typedef type which is the same as T, except that its topmost cv-qualifiers are removed.</p>
+<ol>
+<li>removes the topmost const, the topmost volatile, or both, if present.</li>
+<li>removes the topmost const</li>
+<li>removes the topmost volatile</li>
+</ol>
+<h2>Member types</h2>
+<p>Name Definition
+type the type T without cv-qualifier</p>
+<h2>Helper types</h2>
+<p>template&lt; class T &gt; <i>(since C++14)</i>
+using remove_cv_t = typename remove_cv&lt;T&gt;::type;
+template&lt; class T &gt; <i>(since C++14)</i>
+using remove_const_t = typename remove_const&lt;T&gt;::type;
+template&lt; class T &gt; <i>(since C++14)</i>
+using remove_volatile_t = typename remove_volatile&lt;T&gt;::type;</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt; class T &gt;
+ <wbr> struct remove_cv {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typedef typename std::remove_volatile&lt;typename std::remove_const&lt;T&gt;::type&gt;::type type;
+ <wbr> };</p>
+<p> <wbr> template&lt; class T &gt; struct remove_const { typedef T type; };
+ <wbr> template&lt; class T &gt; struct remove_const&lt;const T&gt; { typedef T type; };</p>
+<p> <wbr> template&lt; class T &gt; struct remove_volatile { typedef T type; };
+ <wbr> template&lt; class T &gt; struct remove_volatile&lt;volatile T&gt; { typedef T type; };</p>
+<h2>Example</h2>
+<p>Removing const/volatile from const volatile int * does not modify the type, because the pointer itself is neither const nor volatile.
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+typedef std::remove_cv&lt;const int&gt;::type type1;
+typedef std::remove_cv&lt;volatile int&gt;::type type2;
+typedef std::remove_cv&lt;const volatile int&gt;::type type3;
+typedef std::remove_cv&lt;const volatile int *&gt;::type type4;
+typedef std::remove_cv&lt;int *const volatile&gt;::type type5;
+std::cout &lt;&lt; &quot;test1 &quot; &lt;&lt; (std::is_same&lt;int, type1&gt;::value ? &quot;passed&quot; : &quot;failed&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;test2 &quot; &lt;&lt; (std::is_same&lt;int, type2&gt;::value ? &quot;passed&quot; : &quot;failed&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;test3 &quot; &lt;&lt; (std::is_same&lt;int, type3&gt;::value ? &quot;passed&quot; : &quot;failed&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;test4 &quot; &lt;&lt; (std::is_same&lt;const volatile int *, type4&gt;::value ? &quot;passed&quot; : &quot;failed&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;test5 &quot; &lt;&lt; (std::is_same&lt;int *, type5&gt;::value ? &quot;passed&quot; : &quot;failed&quot;) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> test1 passed
+ <wbr> test2 passed
+ <wbr> test3 passed
+ <wbr> test4 passed
+ <wbr> test5 passed</p>
+<h2>See also</h2>
+<p>is_const checks if a type is const-qualified
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+is_volatile checks if a type is volatile-qualified
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+add_cv
+add_const
+add_volatile adds const or/and volatile specifiers to the given type
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+remove_cvref combines std::remove_cv and std::remove_reference
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(C++20)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

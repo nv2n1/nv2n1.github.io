@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-get-tar-commit-id(1) · Linux Manual Pages</title>
+<meta name="description" content="git-get-tar-commit-id – Extract commit ID from an archive created using git-archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-get-tar-commit-id/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-get-tar-commit-id(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-get-tar-commit-id &#8211; Extract commit ID from an archive created using git-archive </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<i>git get-tar-commit-id</i>
+</pre>
+<h2>DESCRIPTION</h2>
+<p> Read a tar archive created by <i>git archive</i> from the standard input and extract the commit ID stored in it. It reads only the first 1024 bytes of input, thus its runtime is not influenced by the size of the tar archive very much. </p>
+<p> If no commit ID is found, <i>git get-tar-commit-id</i> quietly exists with a return code of 1. This can happen if the archive had not been created using <i>git archive</i> or if the first parameter of <i>git archive</i> had been a tree ID instead of a commit ID or tag.</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

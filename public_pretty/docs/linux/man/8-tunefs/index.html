@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tunefs(8) · Linux Manual Pages</title>
+<meta name="description" content="tunefs.ocfs2 – Change OCFS2 file system parameters.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tunefs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tunefs(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>tunefs.ocfs2 &#8211; Change <i>OCFS2</i> file system parameters.</p>
+<h2>Synopsis</h2>
+<p><code>tunefs.ocfs2</code> [<code>&#8211;cloned-volume</code>[=<i>new-label</i>] [<code>&#8211;fs-features=</code><i>list-of-features</i>] [<code>-J</code> <i>journal-options</i>] [<code>-L</code> <i>volume-label</i>] [<code>-N</code> <i>number-of-node-slots</i>] [<code>-Q</code> <i>query-format</i>] [<code>-ipqnSUvVy</code>] [<code>&#8211;backup-super</code>] [<code>&#8211;list-sparse</code>] <i>device</i> [<i>blocks-count</i>] </p>
+<h2>Description</h2>
+<p><code>tunefs.ocfs2</code> is used to adjust <i>OCFS2</i> file system parameters on disk. The tool expects the cluster to be online as it needs to take the appropriate cluster locks to write safely to disk. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;cloned-volume</code>[=<i>new-label]</i></dt>
+<dd>Change the volume UUID (auto-generated) and the label, if provided, of a cloned <i>OCFS2</i> volume. This option does <code>not</code> perform volume cloning. It only changes the UUID and label on a cloned volume so that it can be mounted on the node that has the original volume mounted. </dd>
+<dt><code>&#8211;fs-features=</code><i>[no]sparse&#8230;</i></dt>
+<dd>Turn specific file system features on or off. <i>tunefs.ocfs2</i> will attempt to enable or disable the feature list provided. To enable a feature, include it in the list. To disable a feature, prepend <code>no</code> to the name. For a list of feature names, see the man page for <code>mkfs.ocfs2</code>. </dd>
+<dt><code>-J, &#8211;journal-options</code> <i>options</i></dt>
+<dd>Modify the journal using options specified on the command-line. Journal options are comma separated, and may take an argument using the equals (&#8216;=&#8217;) sign. For a list of possible options, see the man page for <code>mkfs.ocfs2</code>. </dd>
+<dt><code>-L, &#8211;label</code> <i>volume-label</i></dt>
+<dd>Change the volume label of the file system. Limit the label to under 64 bytes. </dd>
+<dt><code>-N, &#8211;node-slots</code> <i>number-of-node-slots</i></dt>
+<dd>Valid number ranges from 1 to 255. This number specifies the maximum number of nodes that can concurrently mount the partition. Use this to increase or decrease the number of node slots. One reason to decrease could be to release the space consumed by the journals for those slots. </dd>
+<dt><code>-S, &#8211;volume-size</code></dt>
+<dd>Grow the size of the <i>OCFS2</i> file system. If <i>blocks-count</i> is not specified, <i>tunefs.ocfs2</i> extends the volume to the current size of the device. </dd>
+<dt><code>-Q, &#8211;query</code> <i>query-format</i></dt>
+<dd>Query the file system for its attributes like block size, label, etc. Query formats are modified versions of the standard <a href="/docs/linux/man/3-printf/">printf</a>(3) formatting. The format is made up of static strings (which may include standard C character escapes for newlines, tabs, and other special characters) and <a href="/docs/linux/man/3-printf/">printf</a>(3) type formatters. The list of type specifiers is as follows:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>B</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Block size in bytes</dt>
+<dd>
+</dd><dt><code>T</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Cluster size in bytes</dt>
+<dd>
+</dd><dt><code>N</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Number of node slots</dt>
+<dd>
+</dd><dt><code>R</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Root directory block number</dt>
+<dd>
+</dd><dt><code>Y</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>System directory block number</dt>
+<dd>
+</dd><dt><code>P</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>First cluster group block number</dt>
+<dd>
+</dd><dt><code>V</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Volume label</dt>
+<dd>
+</dd><dt><code>U</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Volume uuid</dt>
+<dd>
+</dd><dt><code>M</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Compat flags</dt>
+<dd>
+</dd><dt><code>H</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Incompat flags</dt>
+<dd>
+</dd><dt><code>O</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>RO Compat flags</dt>
+<dd></dd></dl>
+</dl>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd>Quiet mode. </dd>
+<dt><code>-U, &#8211;uuid-reset</code></dt>
+<dd>Change the volume UUID (auto-generated) for the file system. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Verbose mode. </dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show version and exit. </dd>
+<dt><code>-y, &#8211;yes</code></dt>
+<dd>Always answer Yes in interactive command line. </dd>
+<dt><code>-n, &#8211;no</code></dt>
+<dd>Always answer No in interactive command line. </dd>
+<dt><code>&#8211;backup-super</code></dt>
+<dd>Backs up the superblock to fixed offsets (1G, 4G, 16G, 64G, 256G and 1T) on disk. This option is useful for users to backup the superblock on volumes that the user either explicitly disallowed while formatting, or, used a version of <i>mkfs.ocfs2</i> (1.2.2 or older) that did not provide this facility. </dd>
+<dt><code>&#8211;list-sparse</code></dt>
+<dd>Lists the files having holes. This option is useful when disabling the <i>sparse</i> feature. </dd>
+<dt><code>&#8211;update-cluster-stack</code></dt>
+<dd>Updating on-disk cluster information to match the running cluster. </dd>
+<dt><i>blocks-count</i></dt>
+<dd>During resize, <i>tunefs.ocfs2</i> automatically determines the size of the given device and grows the file system such that it uses all of the available space on the device. This optional argument specifies that the file system should be extended to consume only the given number of file system blocks on the device. </dd>
+</dl>
+<h2>Examples</h2>
+<p>[root [at] node1 ~]# tunefs.ocfs2 -Q &quot;UUID = %U
+NumSlots = %N
+&quot; /dev/sda1<br />
+ UUID = CBB8D5E0C169497C8B52A0FD555C7A3E<br />
+ NumSlots = 4 </p>
+<h2>See Also</h2>
+<p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>debugfs.ocfs2(8)</code> <code>mounted.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> <code><a href="/docs/linux/man/7-o2cb/">o2cb</a>(7)</code> </p>
+<h2>Authors</h2>
+<p>Oracle Corporation</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2004, 2009 Oracle. All rights reserved.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

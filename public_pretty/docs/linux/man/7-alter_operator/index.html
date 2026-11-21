@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>alter_operator(7) · Linux Manual Pages</title>
+<meta name="description" content="ALTER OPERATOR – change the definition of an operator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-alter_operator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>alter_operator(7)</h1>
+
+
+
+
+
+<p>ALTER OPERATOR &#8211; change the definition of an operator </p>
+<h2>Synopsis</h2>
+<pre>ALTER OPERATOR <i>name</i> ( { <i>lefttype</i> | NONE } , { <i>righttype</i> | NONE } ) OWNER TO <i>newowner</i></pre>
+<h2>Description</h2>
+<p><code>ALTER OPERATOR</code> changes the definition of an operator. The only currently available functionality is to change the owner of the operator. </p>
+<p> You must own the operator to use <code>ALTER OPERATOR</code>. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have CREATE privilege on the operator&#8217;s schema. (These restrictions enforce that altering the owner doesn&#8217;t do anything you couldn&#8217;t do by dropping and recreating the operator. However, a superuser can alter ownership of any operator anyway.)</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing operator.</dd>
+<dt><i>lefttype</i></dt>
+<dd>The data type of the operator&#8217;s left operand; write NONE if the operator has no left operand.</dd>
+<dt><i>righttype</i></dt>
+<dd>The data type of the operator&#8217;s right operand; write NONE if the operator has no right operand.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the operator.</dd></dl>
+<h2>Examples</h2>
+<p>Change the owner of a custom operator a @@ b for type <code>text</code>: </p>
+<pre>ALTER OPERATOR @@ (text, text) OWNER TO joe;</pre>
+<h2>Compatibility</h2>
+<p>There is no <code>ALTER OPERATOR</code> statement in the SQL standard.</p>
+<h2>See Also</h2>
+<p>CREATE OPERATOR [<code><a href="/docs/linux/man/7-create_operator/">create_operator</a></code>(7)], DROP OPERATOR [<code><a href="/docs/linux/man/7-drop_operator/">drop_operator</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

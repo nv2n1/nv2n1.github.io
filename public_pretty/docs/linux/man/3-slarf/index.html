@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slarf(3) · Linux Manual Pages</title>
+<meta name="description" content="slarf.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-slarf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>slarf(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> slarf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>slarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
+ <i></i><code>SLARF</code> applies an elementary reflector to a general rectangular matrix.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine slarf (characterSIDE, integerM, integerN, real, dimension( * )V, integerINCV, realTAU, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK)</h3>
+<p> <code>SLARF</code> applies an elementary reflector to a general rectangular matrix. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+ SLARF applies a real elementary reflector H to a real m by n matrix
+ C, from either the left or the right. H is represented in the form
+       H = I - tau * v * v**T
+ where tau is a real scalar and v is a real vector.
+ If tau = 0, then H is taken to be the unit matrix.
+</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>SIDE</i> </dd>
+<pre>
+          SIDE is CHARACTER*1
+          = 'L': form  H * C
+          = 'R': form  C * H
+</pre>
+<p> <i>M</i> </p>
+<pre>
+          M is INTEGER
+          The number of rows of the matrix C.
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The number of columns of the matrix C.
+</pre>
+<p> <i>V</i> </p>
+<pre>
+          V is REAL array, dimension
+                     (1 + (M-1)*abs(INCV)) if SIDE = 'L'
+                  or (1 + (N-1)*abs(INCV)) if SIDE = 'R'
+          The vector v in the representation of H. V is not used if
+          TAU = 0.
+</pre>
+<p> <i>INCV</i> </p>
+<pre>
+          INCV is INTEGER
+          The increment between elements of v. INCV &lt;&gt; 0.
+</pre>
+<p> <i>TAU</i> </p>
+<pre>
+          TAU is REAL
+          The value tau in the representation of H.
+</pre>
+<p> <i>C</i> </p>
+<pre>
+          C is REAL array, dimension (LDC,N)
+          On entry, the m by n matrix C.
+          On exit, C is overwritten by the matrix H * C if SIDE = 'L',
+          or C * H if SIDE = 'R'.
+</pre>
+<p> <i>LDC</i> </p>
+<pre>
+          LDC is INTEGER
+          The leading dimension of the array C. LDC &gt;= max(1,M).
+</pre>
+<p> <i>WORK</i> </p>
+<pre>
+          WORK is REAL array, dimension
+                         (N) if SIDE = 'L'
+                      or (M) if SIDE = 'R'
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+</dt><dd> Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+</dt><dd> September 2012</dd></dl>
+<p> Definition at line 125 of file slarf.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

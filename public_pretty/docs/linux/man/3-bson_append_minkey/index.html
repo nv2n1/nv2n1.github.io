@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_append_minkey(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_append_minkey() – The bson_append_minkey() function shall append an element of type BSON_TYPE_MINKEY to a bson document. This is primarily used in queries and unlikely to be used when storing ...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_append_minkey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_append_minkey(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_append_minkey() &#8211; The bson_append_minkey() function shall append an element of type BSON_TYPE_MINKEY to a bson document. This is primarily used in queries and unlikely to be used when storing a document to MongoDB.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+bool bson_append_minkey(bson_t *bson,
+                        const char *key,
+                        int key_length);
+</code></pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
+<dl>
+<dt><code>key</code></dt>
+<dd> An ASCII C string containing the name of the field.</dd></dl>
+<dl>
+<dt><code>key_length</code></dt>
+<dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The <code><a href="/docs/linux/man/3-bson_append_minkey/">bson_append_minkey</a>(3)</code> function shall append an element of type BSON_TYPE_MINKEY to a bson document. This is primarily used in queries and unlikely to be used when storing a document to MongoDB. </p>
+<h2>RETURNS</h2>
+<p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>
+<h2>COLOPHON</h2>
+<p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

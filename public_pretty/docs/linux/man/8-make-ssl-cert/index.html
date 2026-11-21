@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make-ssl-cert(8) · Linux Manual Pages</title>
+<meta name="description" content="make-ssl-cert – Debconf wrapper for openssl">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-make-ssl-cert/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>make-ssl-cert(8)</h1>
+
+
+
+
+
+<p>make-ssl-cert &#8211; Debconf wrapper for openssl</p>
+<h2>Synopsis</h2>
+<p><code>make-ssl-cert</code> [<i>,OPTION/</i>]&#8230; <i>template</i> <i>output-certificate</i><br />
+ <code>make-ssl-cert [</code><i>,OPTION/</i>]&#8230; generate-default-snakeoil</p>
+<h2>Description</h2>
+<p>make-ssl-cert is a simple debconf to openssl wrapper to create self-signed certificates. It requires a source template (Ex: /usr/share/ssl-cert/ssleay.cnf) and it will place the new generated certificate in the specified output file.<br />
+ Invoked with &quot;generate-default-snakeoil&quot;, it will generate /etc/ssl/certs/ssl-cert-snakeoil.pem and /etc/ssl/private/ssl-cert-snakeoil.key.</p>
+<h2>Options</h2>
+<p>A summary of options are included below.</p>
+<dl>
+<dt><code>&#8211;force-overwrite</code></dt>
+<dd>Always create a new certificate, even if the file already exists. For backwards compatibility with 1.0.x, this option can be given as last argument, too.</dd>
+<dt><code>&#8211;no-overwrite</code></dt>
+<dd>Never overwrite an existing file, even if the old certificate&#8217;s key length is too small or if it uses an obsoltete signature algorithm.</dd>
+<dt><code>&#8211;expiration-days </code><i>N</i></dt>
+<dd>Make the new certificate expire in <i>N</i> days. Default is 3650.</dd></dl>
+<h2>See Also</h2>
+<p><i>openssl</i>(1)</p>
+<h2>Author</h2>
+<p>The program author is Thom May &lt;thom [at] debian.org&gt;, manual page was written for completeness by Fabio M. Di Nitto &lt;fabbione [at] fabbione.net&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

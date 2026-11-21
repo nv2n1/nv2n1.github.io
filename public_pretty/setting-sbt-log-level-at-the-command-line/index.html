@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controlling SBT Log Levels from the CLI and Configuration - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/setting-sbt-log-level-at-the-command-line/">
+  <meta name="description" content="The simplest approach is passing log level flags directly to sbt:
+sbt --error &#34;compile&#34; sbt --warn &#34;clean compile&#34; sbt --info &#34;test&#34; sbt …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Controlling SBT Log Levels from the CLI and Configuration">
+  <meta property="og:url" content="https://www.systutorials.com/setting-sbt-log-level-at-the-command-line/">
+  <meta property="og:description" content="The simplest approach is passing log level flags directly to sbt:
+sbt --error &#34;compile&#34; sbt --warn &#34;clean compile&#34; sbt --info &#34;test&#34; sbt …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/command-line-text-tools/">Command Line &amp; Text Tools</a>
+        </nav>
+        
+        <h1>Controlling SBT Log Levels from the CLI and Configuration</h1>
+        <time class="post-date" datetime="2018-03-24T11:41:06Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The simplest approach is passing log level flags directly to sbt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt --error <span class="s2">&#34;compile&#34;</span>
+</span></span><span class="line"><span class="cl">sbt --warn <span class="s2">&#34;clean compile&#34;</span>
+</span></span><span class="line"><span class="cl">sbt --info <span class="s2">&#34;test&#34;</span>
+</span></span><span class="line"><span class="cl">sbt --debug <span class="s2">&#34;publishLocal&#34;</span>
+</span></span></code></pre></div><p>Common log level flags:</p>
+<ul>
+<li><code>--error</code> — errors only</li>
+<li><code>--warn</code> — warnings and errors (default)</li>
+<li><code>--info</code> — info, warnings, and errors</li>
+<li><code>--debug</code> — verbose debugging output</li>
+<li><code>--trace</code> — most verbose, rarely needed</li>
+</ul>
+<p>You can combine log level flags with other sbt options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt --error --offline <span class="s2">&#34;compile&#34;</span>
+</span></span><span class="line"><span class="cl">sbt --warn -Dsbt.log.noformat<span class="o">=</span><span class="nb">true</span> <span class="s2">&#34;test&#34;</span>
+</span></span><span class="line"><span class="cl">sbt --info -mem <span class="m">2048</span> <span class="s2">&#34;publishLocal&#34;</span>
+</span></span></code></pre></div><p>The <code>-Dsbt.log.noformat=true</code> flag strips ANSI color codes—useful in CI/CD where colored output breaks log parsing or causes formatting issues.</p>
+<h2 id="interactive-shell">Interactive shell</h2>
+<p>If you’re already in the sbt shell, adjust log level without restarting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt
+</span></span><span class="line"><span class="cl">&gt; <span class="nb">set</span> logLevel :<span class="o">=</span> Level.Error
+</span></span><span class="line"><span class="cl">&gt; compile
+</span></span><span class="line"><span class="cl">&gt; <span class="nb">set</span> logLevel :<span class="o">=</span> Level.Info
+</span></span><span class="line"><span class="cl">&gt; <span class="nb">test</span>
+</span></span></code></pre></div><p>Available levels are <code>Level.Error</code>, <code>Level.Warn</code>, <code>Level.Info</code>, <code>Level.Debug</code>, and <code>Level.Trace</code>.</p>
+<h2 id="persistent-configuration">Persistent configuration</h2>
+<p>For consistent settings across all projects, add to <code>~/.sbt/1.0/global.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Warn</span>
+</span></span></code></pre></div><p>For project-specific settings, add to <code>build.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Info</span>
+</span></span></code></pre></div><p>You can set different log levels for specific tasks using scoped settings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Warn</span>
+</span></span><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="n">in</span> <span class="n">compile</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Debug</span>
+</span></span><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="n">in</span> <span class="n">test</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Info</span>
+</span></span></code></pre></div><p>In newer sbt versions (1.4+), use the <code>Compile / compile / logLevel</code> syntax:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Warn</span>
+</span></span><span class="line"><span class="cl"><span class="nc">Compile</span> <span class="o">/</span> <span class="n">compile</span> <span class="o">/</span> <span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Debug</span>
+</span></span><span class="line"><span class="cl"><span class="nc">Test</span> <span class="o">/</span> <span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Info</span>
+</span></span></code></pre></div><h2 id="fine-grained-logger-control">Fine-grained logger control</h2>
+<p>For finer control over which loggers are active, configure them in <code>build.sbt</code>. This is useful when dependencies emit excessive debug output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">logLevel</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Level</span><span class="o">.</span><span class="nc">Info</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">loggers</span> <span class="k">:</span><span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">val</span> <span class="n">console</span> <span class="k">=</span> <span class="k">new</span> <span class="n">sbt</span><span class="o">.</span><span class="nc">BasicLogger</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="n">log</span><span class="o">(</span><span class="n">level</span><span class="k">:</span> <span class="kt">sbt.Level.Value</span><span class="o">,</span> <span class="n">message</span><span class="k">:</span> <span class="o">=&gt;</span> <span class="nc">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">(</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="n">sbt</span><span class="o">.</span><span class="nc">Level</span><span class="o">.</span><span class="nc">Warn</span><span class="o">)</span> <span class="n">println</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">Seq</span><span class="o">(</span><span class="n">console</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>You can add filtering logic to silence specific modules while preserving warnings from others:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">loggers</span> <span class="k">:</span><span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">val</span> <span class="n">console</span> <span class="k">=</span> <span class="k">new</span> <span class="n">sbt</span><span class="o">.</span><span class="nc">BasicLogger</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="n">log</span><span class="o">(</span><span class="n">level</span><span class="k">:</span> <span class="kt">sbt.Level.Value</span><span class="o">,</span> <span class="n">message</span><span class="k">:</span> <span class="o">=&gt;</span> <span class="nc">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">val</span> <span class="n">msg</span> <span class="k">=</span> <span class="n">message</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// Suppress debug logs from netty and akka
+</span></span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">(!</span><span class="n">msg</span><span class="o">.</span><span class="n">contains</span><span class="o">(</span><span class="s">&#34;[netty]&#34;</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">msg</span><span class="o">.</span><span class="n">contains</span><span class="o">(</span><span class="s">&#34;[akka]&#34;</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="n">sbt</span><span class="o">.</span><span class="nc">Level</span><span class="o">.</span><span class="nc">Debug</span><span class="o">)</span> <span class="n">println</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">level</span> <span class="o">&gt;=</span> <span class="n">sbt</span><span class="o">.</span><span class="nc">Level</span><span class="o">.</span><span class="nc">Warn</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">Seq</span><span class="o">(</span><span class="n">console</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>This approach is more maintainable than grepping logs after builds complete.</p>
+<h2 id="cicd-environments">CI/CD environments</h2>
+<p>GitHub Actions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build with sbt</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">sbt --error &#34;clean compile test&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Jenkins:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">sbt --warn <span class="s2">&#34;clean compile publishLocal&#34;</span>
+</span></span></code></pre></div><p>GitLab CI:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">sbt --warn &#34;clean compile&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">logs</span><span class="p">:</span><span class="w"> </span><span class="l">build.log</span><span class="w">
+</span></span></span></code></pre></div><p>In CI, prefer <code>--error</code> or <code>--warn</code> to keep logs readable and catch only real issues. Pipeline systems often have log size limits; reducing noise helps you stay within quotas and makes troubleshooting faster.</p>
+<h2 id="practical-debugging-workflow">Practical debugging workflow</h2>
+<p>Start with <code>--warn</code> for local development to catch issues without drowning in details. Use <code>--error</code> in CI pipelines to reduce noise. Switch to <code>--debug</code> only when investigating build failures or dependency resolution problems.</p>
+<p>For long-running builds, <code>--info</code> serves as a middle ground—it shows compilation progress and test counts without excessive verbosity.</p>
+<p>If a build hangs or behaves unexpectedly, combine flags to diagnose the issue:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt --debug -Dsbt.log.noformat<span class="o">=</span><span class="nb">true</span> <span class="s2">&#34;compile&#34;</span>
+</span></span></code></pre></div><p>This often reveals the root cause, especially with classpath issues or Ivy resolution deadlocks. Add <code>--trace</code> if <code>--debug</code> doesn’t provide enough detail.</p>
+<h2 id="environment-variables">Environment variables</h2>
+<p>You can also set log level via environment variables for CI environments where modifying commands is inconvenient:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SBT_OPTS</span><span class="o">=</span><span class="s2">&#34;-Dsbt.log.level=warn&#34;</span>
+</span></span><span class="line"><span class="cl">sbt <span class="s2">&#34;clean compile&#34;</span>
+</span></span></code></pre></div><p>Valid values: <code>error</code>, <code>warn</code>, <code>info</code>, <code>debug</code>, <code>trace</code>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

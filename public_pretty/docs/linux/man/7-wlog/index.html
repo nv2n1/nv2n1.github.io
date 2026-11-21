@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wlog(7) · Linux Manual Pages</title>
+<meta name="description" content="wLog – WinPR logging facility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-wlog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>wlog(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>wLog &#8211; WinPR logging facility</p>
+<h2>Description</h2>
+<p>wLog is a configurable and flexible logging system used throughout WinPR and FreeRDP. The primary concept is to have a hierarchy of loggers that can be be configured independently. </p>
+<h2>Appenders</h2>
+<p>WLog uses different appenders that define where the log output should be written to. If the application doesn&#8217;t explicitly configure the appenders the below described variable WLOG_APPENDER can be used to choose one appender. </p>
+<p> The following kind of appenders are available: </p>
+<dl>
+<dt>Binary</dt>
+<dd>Write the log data into a binary format file. </dd>
+<dt>Console</dt>
+<dd>The console appender writes to the console. Depending of the operating system the application runs on, the output might be handled differently. For example on android log print would be used. </dd>
+<dt>File</dt>
+<dd>The file appender writes the textual output to a file. </dd>
+<dt>Udp</dt>
+<dd>This appender sends the logging messages to a pre-defined remote host via UDP. </dd>
+<p> If no target is set the default one 127.0.0.1:20000 is used. To receive the log messages one can use netcat. To receive the default target the following command can be used: nc -u 127.0.0.1 -p 20000 -l</p>
+<dt>Syslog</dt>
+<dd>Use syslog for outputting the debug messages.</dd>
+<dt>Journald</dt>
+<dd>This appender outputs messages to journald. </dd>
+</dl>
+<h2>Levels</h2>
+<p>The WLog are complementary, the higher level always includes the lower ones. The level list below is top down. Top the highest level. </p>
+<dl>
+<dt>TRACE</dt>
+<dd>print everything including packets dumps</dd>
+<dt>DEBUG</dt>
+<dd>debug messages</dd>
+<dt>INFO</dt>
+<dd>general information</dd>
+<dt>WARN</dt>
+<dd>warnings</dd>
+<dt>ERROR</dt>
+<dd>errors</dd>
+<dt>FATAL</dt>
+<dd>fatal problems</dd>
+<dt>OFF</dt>
+<dd>completely disable the wlog output </dd>
+</dl>
+<h2>Formats</h2>
+<p>The format a logger prints has the following possible options: </p>
+<dl>
+<dt>lv</dt>
+<dd>log level</dd>
+<dt>mn</dt>
+<dd>module name</dd>
+<dt>fl</dt>
+<dd>file name</dd>
+<dt>fn</dt>
+<dd>function</dd>
+<dt>ln</dt>
+<dd>line number</dd>
+<dt>pid</dt>
+<dd>process id</dd>
+<dt>tid</dt>
+<dd>thread id</dd>
+<dt>yr</dt>
+<dd>year</dd>
+<dt>mo</dt>
+<dd>month</dd>
+<dt>dw</dt>
+<dd>day of week</dd>
+<dt>hr</dt>
+<dd>hour</dd>
+<dt>mi</dt>
+<dd>minute</dd>
+<dt>se</dt>
+<dd>second</dd>
+<dt>ml</dt>
+<dd>millisecond</dd></dl>
+<p> A maximum of 16 options can be used per format string. </p>
+<p> An example that generally sets the WLOG_PREFIX for xfreerdp would look like: WLOG_PREFIX=&quot;pid=%pid:tid=%tid:fn=%fn -&quot; xfreerdp /v:xxx</p>
+<h2>Environment</h2>
+<dl>
+<dt>WLOG_APPENDER</dt>
+<dd>The kind of appender, the accepted values are: CONSOLE, FILE, BINARY, SYSLOG, JOURNALD or UDP </dd>
+<dt>WLOG_PREFIX</dt>
+<dd>configure the prefix used for outputting the message (see Format for more details and examples) </dd>
+<dt>WLOG_LEVEL</dt>
+<dd>the level to output messages for </dd>
+<dt>WLOG_FILTER</dt>
+<dd>sets a filter for WLog messages. Only the filtered messages are printed. The format of the filter is a series of &lt;logger name&gt;:&lt;level&gt; separated by comas </dd>
+<p> example: WLOG_FILTER=core.channel:DEBUG,dummy:TRACE will display debug messages for the core.channel logger and trace level for the dummy logger </p>
+<dt>WLOG_FILEAPPENDER_OUTPUT_FILE_PATH</dt>
+<dd>When using the file appender it may contains the output log file&#8217;s path </dd>
+<dt>WLOG_FILEAPPENDER_OUTPUT_FILE_NAME</dt>
+<dd>When using the file appender it may contains the output log file&#8217;s name </dd>
+<dt>WLOG_JOURNALD_ID</dt>
+<dd>When using the systemd journal appender, this variable contains the id used with the journal (by default the executable&#8217;s name) </dd>
+<dt>WLOG_UDP_TARGET</dt>
+<dd>target to use for the UDP appender in the format <code>host:port</code> </dd>
+</dl>
+<h2>Bugs</h2>
+<p>Please report any bugs using the bug reporting form on the <code>FreeRDP</code> web site </p>
+<h2>See Also</h2>
+<p>Additional information and the latest version is available at the web site: <code><a rel="nofollow" href="http://www.freerdp.com">http://www.freerdp.com</a></code> </p>
+<h2>Author</h2>
+<p>David Fort &lt;contact [at] hardening-consulting.com&gt; wrote this manpage from materials written by Bernhard Miklautz &lt;bernhard.miklautz [at] thincast.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

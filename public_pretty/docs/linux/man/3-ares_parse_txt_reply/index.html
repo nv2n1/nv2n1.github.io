@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_parse_txt_reply(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_parse_txt_reply – Parse a reply to a DNS query of type TXT">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_parse_txt_reply/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_parse_txt_reply(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_parse_txt_reply &#8211; Parse a reply to a DNS query of type TXT</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+int ares_parse_txt_reply(const unsigned char *abuf, int alen,
+                         struct ares_txt_reply **txt_out);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>ares_parse_txt_reply</code> function parses the response to a query of type TXT into a linked list (one element per sub-string) of <i>struct ares_txt_reply </i> The parameters <i>abuf</i> and <i>alen</i> give the contents of the response. The result is stored in allocated memory and a pointer to it stored into the variable pointed to by <i>txt_out</i>. It is the caller&#8217;s responsibility to free the resulting <i>txt_out</i> structure when it is no longer needed using the function <code>ares_free_data</code> </p>
+<p> The structure <i>ares_txt_reply</i> contains the following fields: </p>
+<pre><code>
+struct ares_txt_reply {
+    struct ares_txt_reply *next;
+    unsigned int length;
+    unsigned char *txt;
+};
+</code></pre>
+<h2>RETURN VALUES</h2>
+<p> <code>ares_parse_txt_reply</code> can return any of the following values:</p>
+<dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> The response was successfully parsed.</dd>
+<dt><code>ARES_EBADRESP</code></dt>
+<dd> The response was malformatted.</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> The response did not contain an answer to the query.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd></dl>
+<h2>AVAILABILITY</h2>
+<p> This function was first introduced in c-ares version 1.7.0.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_query/">ares_query</a></code>(3) <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a></code>(3)</p>
+<h2>AUTHOR</h2>
+<p> Written by Jakub Hrozek &lt;jhrozek [at] redhat.com&gt;, on behalf of Red Hat, Inc <a rel="nofollow" href="http://www.redhat.com">http://www.redhat.com</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

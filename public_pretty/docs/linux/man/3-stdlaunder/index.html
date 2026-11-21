@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdlaunder(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdlaunder/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdlaunder(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::launder - std::launder</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;new&gt;
+template &lt;class T&gt;                                  (since C++17)
+constexpr T* launder(T* p) noexcept;                (until C++20)
+template &lt;class T&gt;                                  (since C++20)
+[[nodiscard]] constexpr T* launder(T* p) noexcept;</code></pre> 
+<p>Obtains a pointer to the object located at the address represented by p.
+Formally, given</p>
+<ul>
+<li>the pointer p represents the address A of a byte in memory</li>
+<li>an object X is located at the address A</li>
+<li>X is within its lifetime</li>
+<li>the type of X is the same as T, ignoring cv-qualifiers at every level</li>
+<li>every byte that would be reachable through the result is reachable through p (bytes are reachable through a pointer that points to an object Y if those bytes are within the storage of an object Z that is pointer-interconvertible with Y, or within the immediately enclosing array of which Z is an element)
+Then std::launder(p) returns a value of type T* that points to the object X. Otherwise, the behavior is undefined.
+The program is ill-formed if T is a function type or (possibly cv-qualified) void.
+std::launder may be used in a core_constant_expression if the value of its argument may be used in a core constant expression.</li>
+</ul>
+<h2>Notes</h2>
+<p>std::launder has no effect on its argument. Its return value must be used to access the object. Thus, it&rsquo;s always an error to discard the return value.</p>
+<p>Typical uses of std::launder include:</p>
+<ul>
+<li>Obtaining a pointer to an object created in the storage of an existing object of the same type, where pointers to the old object cannot be reused because the object has const or reference data members, or because either object is a base class subobject;</li>
+<li>Obtaining a pointer to an object created by placement new from a pointer to an object providing storage for that object.
+The reachability restriction ensures that std::launder cannot be used to access bytes not accessible through the original pointer, thereby interfering with the compiler&rsquo;s escape analysis. int x[10];</li>
+</ul>
+<p>auto p = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x[0])); // OK
+int x2[2][10];</p>
+<p>auto p2 = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x2[0][0]));</p>
+<p>// Undefined behavior: x2[1] would be reachable through the resulting pointer to x2[0]</p>
+<p>// but is not reachable from the source
+struct X {
+int a[10];
+} x3, x4[2]; // standard layout; assume no padding</p>
+<p>auto p3 = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x3.a[0])); // OK</p>
+<p>auto p4 = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x4[0].a[0]));</p>
+<p>// Undefined behavior: x4[1] would be reachable through the resulting pointer to x4[0].a</p>
+<p>// (which is pointer-interconvertible with x4[0]) but is not reachable from the source
+struct Y {
+int a[10];
+double y;
+} x5;</p>
+<p>auto p5 = std::launder(reinterpret_cast&lt;int (*)[10]&gt;(&amp;x5.a[0]));</p>
+<p>// Undefined behavior: x5.y would be reachable through the resulting pointer to x5.a</p>
+<p>// but is not reachable from the source</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;new&gt;
+#include &lt;cstddef&gt;
+#include &lt;cassert&gt;
+struct X {
+const int n; // note: X has a const member
+int m;
+};
+struct Y {
+int z;
+};
+struct A {
+virtual int transmogrify();
+};
+struct B : A {
+int transmogrify() override
+{
+new (this) A;
+return 2;
+}
+};
+int A::transmogrify()
+{
+new (this) B;
+return 1;
+}
+static_assert(sizeof(B) == sizeof(A));
+int main()
+{
+X *p = new X{3, 4};
+const int a = p-&gt;n;
+X *np = new (p) X{5, 6};          // p does not point to new object because X::n is const; np does
+const int b = p-&gt;n;               // undefined behavior
+const int c = p-&gt;m;               // undefined behavior (even though m is non-const, p can&rsquo;t be used)
+const int d = std::launder(p)-&gt;n; // OK, std::launder(p) points to new object
+const int e = np-&gt;n;              // OK
+alignas(Y) std::byte s[sizeof(Y)];
+Y *q = new (&amp;s) Y{2};
+const int f = reinterpret_cast&lt;Y <em>&gt;(&amp;s)-&gt;z;               // Class member access is undefined behavior:
+// reinterpret_cast&lt;Y</em>&gt;(&amp;s) has value &quot;pointer to s&quot;
+// and does not point to a Y object
+const int g = q-&gt;z;                                       // OK
+const int h = std::launder(reinterpret_cast&lt;Y *&gt;(&amp;s))-&gt;z; // OK
+A i;
+int n = i.transmogrify();
+// int m = i.transmogrify(); // undefined behavior
+int m = std::launder(&amp;i)-&gt;transmogrify(); // OK
+assert(m + n == 3);
+}
+</code></pre></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

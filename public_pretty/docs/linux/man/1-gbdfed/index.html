@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gbdfed(1) · Linux Manual Pages</title>
+<meta name="description" content="gbdfed – GTK-based BDF font editor">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gbdfed/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gbdfed(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> gbdfed &#8211; GTK-based BDF font editor </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gbdfed</code> [<i>options</i>] [<i>fonts &#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> <i>gbdfed</i> lets you interactively create new bitmap font files or modify existing ones. It allows editing multiple fonts and multiple glyphs, it allows cut and paste operations between fonts and glyphs and editing font properties. <i>gbdfed</i> can import Metafont PK/GF fonts, Han Bitmap Font Format (HBF) fonts, Linux console fonts (PSF, CP, and EGA/VGA) fonts, Sun VF fonts, OpenType/TrueType (OTF/TTF) fonts, or grab a font from the X server (when running under X11). <i>gbdfed</i> can export PSF2 Linux console fonts and HEX fonts (see online help). </p>
+<p> <i>gbdfed</i> works on X Window System Version 11 (X11), Release 5 or 6, with GTK+ 2.6 or greater. It may work on Windows, but hasn&#8217;t been tested yet. </p>
+<h2>OPTIONS</h2>
+<p> <i>gbdfed</i> accepts the following command line arguments: </p>
+<dl>
+<dt><i>-nc</i></dt>
+<dd> do not preserve comments (by default, <i>gbdfed</i> automatically collects comments that are saved with the font).</dd></dl>
+<dl>
+<dt><i>-nu</i></dt>
+<dd> do not preserve unencoded glyphs (by default, <i>gbdfed</i> preserves the unencoded glyphs).</dd></dl>
+<dl>
+<dt><i>-nm</i></dt>
+<dd> do not make metrics corrections (by default, <i>gbdfed</i> attempts to make metrics corrections automatically).</dd></dl>
+<dl>
+<dt><i>-np</i></dt>
+<dd> do not pad character-cell bitmaps (by default, <i>gbdfed</i> pads character-cell bitmaps with 0&#8217;s to the cell dimensions when the font is saved).</dd></dl>
+<dl>
+<dt><i>-bp</i></dt>
+<dd> allow blank pages (by default, <i>gbdfed</i> skips blank pages).</dd></dl>
+<dl>
+<dt><i>-ed</i></dt>
+<dd> do not present the &quot;Really Exit?&quot; dialog (by default, this dialog always presented).</dd></dl>
+<dl>
+<dt><i>-ps n</i></dt>
+<dd> set default point size (if unspecified, <i>gbdfed</i> sets it to 12).</dd></dl>
+<dl>
+<dt><i>-hres n</i></dt>
+<dd> set default horizontal resolution.</dd></dl>
+<dl>
+<dt><i>-vres n</i></dt>
+<dd> set default vertical resolution.</dd></dl>
+<dl>
+<dt><i>-res n</i></dt>
+<dd> set both default resolutions (if unspecified, <i>gbdfed</i> sets both horizontal and vertical resolution to that of display, (e.g. 90&#215;90 dpi for Sun workstations).</dd></dl>
+<dl>
+<dt><i>-sp s</i></dt>
+<dd> set the default font spacing (&quot;p&quot; for Proportional, &quot;m&quot; for Monowidth, or &quot;c&quot; for Character Cell).</dd></dl>
+<dl>
+<dt><i>-eol e</i></dt>
+<dd> set the default end-of-line type (&quot;u&quot; for Unix LF, &quot;d&quot; for DOS/Windows CRLF, or &quot;m&quot; for Macintosh CR). CR)</dd></dl>
+<dl>
+<dt><i>-g glyph-code</i></dt>
+<dd> specify the initial glyph code at startup. The glyph code can be specified in decimal, octal, or hex. Octal numbers must be prefixed with the digit 0, and hex numbers must be prefixed with one of: <i>0x, 0X, U+, U-, 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

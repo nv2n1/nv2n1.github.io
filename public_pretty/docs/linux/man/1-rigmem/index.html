@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rigmem(1) · Linux Manual Pages</title>
+<meta name="description" content="rigmem – backup and restore memory of radio transceivers and receivers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rigmem/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rigmem(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> rigmem &#8211; backup and restore memory of radio transceivers and receivers </p>
+<h2>SYNOPSIS</h2>
+<p> <code>rigmem</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Backup and restore memory of radio transceivers and receivers. <code>rigmem</code> accepts <i>commands</i> from the command line only. </p>
+<p> Keep in mind that <code>Hamlib</code> is BETA level software. While a lot of backend libraries lack complete rig support, the basic functions are usually well supported. The API may change without publicized notice, while an advancement of the minor version (e.g. 1.1.x to 1.2.x) indicates such a change. </p>
+<p> Please report bugs and provide feedback at the e-mail address given in the REPORTING BUGS section. Patches and code enhancements are also welcome.</p>
+<h2>OPTIONS</h2>
+<p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
+<p> Here is a summary of the supported options:</p>
+<dl>
+<dt><code>-m, &#8211;model=id</code></dt>
+<dd> Select radio model number. See model list (use &#8216;rigctl -l&#8217;).<br />
+ NB: <code>rigmem</code> (or third party software) will use rig model 1901 when using <code>rpc.rigd</code>.</dd>
+<dt><code>-r, &#8211;rig-file=device</code></dt>
+<dd> Use <i>device</i> as the file name of the port the radio is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd> Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rig backend capabilities as the default.</dd>
+<dt><code>-c, &#8211;civaddr=id</code></dt>
+<dd> Use <i>id</i> as the CI-V address to communicate with the rig. Only useful for Icom rigs.<br />
+ NB: the <i>id</i> is in decimal notation, unless prefixed by <i>0x</i>, in which case it is hexadecimal.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
+<dd> Set config parameter. e.g. stop_bits=2<br />
+ Use -L option of <code>rigctl</code> for a list.</dd>
+<dt><code>-x, &#8211;xml</code></dt>
+<dd> Use XML format instead of CSV, if libxml2 is available.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Set verbose mode, cumulative (see DIAGNOSTICS below).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show a summary of these options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of <code>rigmem</code> and exit.</dd></dl>
+<p> <code>NOTE!</code> Some options may not be implemented by a given backend and will return an error. This is most likely to occur with the <i>&#8211;set-conf</i> option.</p>
+<h2>COMMANDS</h2>
+<p> Backup and restore are supported for basic CSV file and XML format where available. </p>
+<p> Please note that the backend for the radio to be controlled, or the radio itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error message. </p>
+<p> Here is a summary of the supported commands:</p>
+<dl>
+<dt><code>save</code></dt>
+<dd> Save all the content of memory in a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>load</code></dt>
+<dd> Load the content into all the memory from a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>save_parm</code></dt>
+<dd> Save all the parameters of the radio in a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>load_parm</code></dt>
+<dd> Load the parameters of the radio from a CSV (or XML) file given as an argument to the command.</dd>
+<dt><code>clear</code></dt>
+<dd> This is a very <code>DANGEROUS</code> command, as it will completely clear out everything you have programmed in the memory of your radio. <code>ALL DATA WILL BE LOST</code>. Use at your own risk!</dd></dl>
+<h2>DIAGNOSTICS</h2>
+<p> The <code>-v</code>, <code>&#8211;version</code> option allows different levels of diagnostics to be output to <code>stderr</code> and correspond to -v for BUG, -vv for ERR, -vvv for WARN, -vvvv for VERBOSE, or -vvvvv for TRACE. </p>
+<p> A given verbose level is useful for providing needed debugging information to the email address below. For example, TRACE output shows all of the values sent to and received from the radio which is very useful for radio backend library development and may be requested by the developers.</p>
+<h2>EXIT STATUS</h2>
+<p> <code>rigmem</code> exits with:<br />
+ 0 if all operations completed normally;<br />
+ 1 if there was an invalid command line option or argument;<br />
+ 2 if an error was returned by <code>Hamlib</code>.<br />
+ 3 the <code>Hamlib</code> backend has no memory support implemented and/or<br />
+&nbsp;<wbr>&nbsp;<wbr>the rig has no memory access available.</p>
+<h2>BUGS</h2>
+<p> This empty section&#8230;</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;hamlib-developer [at] lists.sourceforge.net&gt;.<br />
+ We are already aware of the bug in the previous section :-)</p>
+<h2>AUTHOR</h2>
+<p> Written by Stephane Fillod and the Hamlib Group<br />
+ &lt;<a rel="nofollow" href="http://www.hamlib.org">http://www.hamlib.org</a>&gt;.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2000-2009 Stephane Fillod and the Hamlib Group.<br />
+ This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1), <code>hamlib</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

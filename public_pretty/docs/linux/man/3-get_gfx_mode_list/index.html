@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_gfx_mode_list(3) · Linux Manual Pages</title>
+<meta name="description" content="get_gfx_mode_list – Obtains a list of available video modes. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-get_gfx_mode_list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>get_gfx_mode_list(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> get_gfx_mode_list &#8211; Obtains a list of available video modes. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>GFX_MODE_LIST *get_gfx_mode_list(int card);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Attempts to create a list of all the supported video modes for a certain graphics driver, made up from the GFX_MODE_LIST structure, which has the following definition: </p>
+<pre><code>
+typedef struct GFX_MODE_LIST {
+    int num_modes;
+    GFX_MODE *mode;
+} GFX_MODE_LIST;
+</code></pre>
+<p> The mode entry points to the actual list of video modes. </p>
+<pre><code>
+typedef struct GFX_MODE {
+    int width, height, bpp;
+} GFX_MODE;
+</code></pre>
+<p> This list of video modes is terminated with an { 0, 0, 0 } entry. </p>
+<p> Note that the card parameter must refer to a _real_ driver. This function fails if you pass GFX_SAFE, GFX_AUTODETECT, or any other &quot;magic&quot; driver.</p>
+<h2>RETURN VALUE</h2>
+<p> Returns a pointer to a list structure of the type GFX_MODE_LIST or NULL if the request could not be satisfied. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-destroy_gfx_mode_list/">destroy_gfx_mode_list</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

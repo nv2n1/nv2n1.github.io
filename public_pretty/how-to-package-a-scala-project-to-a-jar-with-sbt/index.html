@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Executable JARs in Scala with sbt - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-package-a-scala-project-to-a-jar-with-sbt/">
+  <meta name="description" content="The simplest approach creates a JAR with just your project’s compiled classes:
+sbt package This outputs to target/scala-2.x.y/projectname_2.x.y-zz.jar. The …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Building Executable JARs in Scala with sbt">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-package-a-scala-project-to-a-jar-with-sbt/">
+  <meta property="og:description" content="The simplest approach creates a JAR with just your project’s compiled classes:
+sbt package This outputs to target/scala-2.x.y/projectname_2.x.y-zz.jar. The …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Building Executable JARs in Scala with sbt</h1>
+        <time class="post-date" datetime="2018-03-24T11:41:00Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The simplest approach creates a JAR with just your project’s compiled classes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt package
+</span></span></code></pre></div><p>This outputs to <code>target/scala-2.x.y/projectname_2.x.y-zz.jar</code>. The naming convention includes the Scala version to prevent classpath conflicts when multiple Scala versions coexist.</p>
+<p>For iterative development, use watch mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt ~package
+</span></span></code></pre></div><p>This rebuilds the JAR after every source change. However, this JAR only contains your project’s code—not its dependencies. Use it for publishing to repositories where dependency management is handled separately.</p>
+<h2 id="standalone-jar-with-dependencies">Standalone JAR with Dependencies</h2>
+<p>For a self-contained executable JAR that includes all dependencies, use the sbt-assembly plugin. This is the standard approach for distributable applications.</p>
+<p>Add it to <code>project/plugins.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">addSbtPlugin</span><span class="o">(</span><span class="s">&#34;com.eed3si9n&#34;</span> <span class="o">%</span> <span class="s">&#34;sbt-assembly&#34;</span> <span class="o">%</span> <span class="s">&#34;2.2.0&#34;</span><span class="o">)</span>
+</span></span></code></pre></div><p>Then build the assembly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt assembly
+</span></span></code></pre></div><p>This produces <code>target/scala-2.x.y/projectname-assembly-x.y.jar</code>—a single JAR with everything bundled.</p>
+<p>Run it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -jar projectname-assembly-x.y.jar <span class="o">[</span>arguments<span class="o">]</span>
+</span></span></code></pre></div><h3 id="setting-a-main-class">Setting a Main Class</h3>
+<p>If your project has a main class, configure it in <code>build.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">mainClass</span> <span class="k">:</span><span class="o">=</span> <span class="nc">Some</span><span class="o">(</span><span class="s">&#34;com.example.Main&#34;</span><span class="o">)</span>
+</span></span></code></pre></div><p>Then the JAR runs without specifying the class name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -jar projectname-assembly-x.y.jar
+</span></span></code></pre></div><p>If you don’t set a main class and want to run a specific one, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java -cp projectname-assembly-x.y.jar com.example.Main <span class="o">[</span>arguments<span class="o">]</span>
+</span></span></code></pre></div><h2 id="handling-merge-conflicts">Handling Merge Conflicts</h2>
+<p>When combining dependencies, you may encounter conflicting files (META-INF resources, logging configs, or duplicate files). Configure merge strategies in <code>build.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">assemblyMergeStrategy</span> <span class="k">:</span><span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nc">PathList</span><span class="o">(</span><span class="s">&#34;META-INF&#34;</span><span class="o">,</span> <span class="n">xs</span> <span class="k">@</span> <span class="k">_</span><span class="o">*)</span> <span class="k">=&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xs</span> <span class="k">match</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="s">&#34;services&#34;</span> <span class="k">:</span><span class="kt">:</span> <span class="kt">xs</span> <span class="o">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">filterDistinctLines</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="s">&#34;MANIFEST.MF&#34;</span> <span class="k">:</span><span class="kt">:</span> <span class="kt">Nil</span> <span class="o">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">discard</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">first</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="s">&#34;application.conf&#34;</span> <span class="k">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">concat</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="s">&#34;reference.conf&#34;</span> <span class="k">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">concat</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="n">x</span> <span class="k">=&gt;</span> <span class="nc">MergeStrategy</span><span class="o">.</span><span class="n">first</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>Common strategies:</p>
+<ul>
+<li><code>MergeStrategy.discard</code> — ignore the file</li>
+<li><code>MergeStrategy.first</code> — keep the first occurrence</li>
+<li><code>MergeStrategy.concat</code> — merge text files (useful for configs)</li>
+<li><code>MergeStrategy.filterDistinctLines</code> — combine and deduplicate lines</li>
+</ul>
+<p>If a particular dependency causes conflicts, you can also exclude it entirely:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">assemblyExcludedJars</span> <span class="k">:</span><span class="o">=</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">val</span> <span class="n">cp</span> <span class="k">=</span> <span class="o">(</span><span class="n">assembly</span> <span class="o">/</span> <span class="n">fullClasspath</span><span class="o">).</span><span class="n">value</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cp</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">getName</span> <span class="o">==</span> <span class="s">&#34;some-dependency.jar&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="excluding-the-scala-runtime">Excluding the Scala Runtime</h2>
+<p>If your deployment environment already provides Scala (Spark clusters, for example), exclude it to reduce JAR size:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">assemblyOption</span> <span class="k">:</span><span class="o">=</span> <span class="o">(</span><span class="n">assembly</span> <span class="o">/</span> <span class="n">assemblyOption</span><span class="o">).</span><span class="n">value</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">includeScala</span> <span class="k">=</span> <span class="kc">false</span><span class="o">)</span>
+</span></span></code></pre></div><p>This can reduce JAR size from 30+ MB to a few MB depending on your dependencies.</p>
+<h2 id="skipping-tests">Skipping Tests</h2>
+<p>Speed up packaging by skipping test compilation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbt <span class="s1">&#39;set test in assembly := {}&#39;</span> assembly
+</span></span></code></pre></div><p>Or configure it permanently in <code>build.sbt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">test</span> <span class="k">:</span><span class="o">=</span> <span class="o">{}</span>
+</span></span></code></pre></div><h2 id="verifying-the-jar">Verifying the JAR</h2>
+<p>List contents to confirm everything is included:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jar tf projectname-assembly-x.y.jar <span class="p">|</span> head -20
+</span></span></code></pre></div><p>Check the manifest to verify the main class:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jar xf projectname-assembly-x.y.jar META-INF/MANIFEST.MF
+</span></span><span class="line"><span class="cl">cat META-INF/MANIFEST.MF
+</span></span></code></pre></div><p>Look for the <code>Main-Class</code> entry. Count total class files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jar tf projectname-assembly-x.y.jar <span class="p">|</span> grep <span class="s1">&#39;\.class$&#39;</span> <span class="p">|</span> wc -l
+</span></span></code></pre></div><p>Check JAR size:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">du -h projectname-assembly-x.y.jar
+</span></span></code></pre></div><h2 id="publishing-vs-distribution">Publishing vs Distribution</h2>
+<p>Use plain <code>sbt package</code> when publishing to Maven Central or a private repository—the dependency manager will resolve transitive dependencies at install time.</p>
+<p>Use <code>sbt assembly</code> when building a final application for distribution, especially if the end user doesn’t manage Scala dependencies themselves or when you need a standalone executable.</p>
+<p>For reproducible builds, pin the sbt-assembly version in <code>project/plugins.sbt</code> and consider using <code>assembly / assemblyJarName</code> to control output naming:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">assembly</span> <span class="o">/</span> <span class="n">assemblyJarName</span> <span class="k">:</span><span class="o">=</span> <span class="s">s&#34;</span><span class="si">${</span><span class="n">name</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s">-</span><span class="si">${</span><span class="n">version</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s">.jar&#34;</span>
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

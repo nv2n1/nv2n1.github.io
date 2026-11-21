@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>virt-get-kernel(1) · Linux Manual Pages</title>
+<meta name="description" content="virt-get-kernel – Extract kernel and ramdisk from guests">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-virt-get-kernel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>virt-get-kernel(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> virt-get-kernel &#8211; Extract kernel and ramdisk from guests </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+virt - get - kernel[--options] - d domname virt - get - kernel[--options] - a disk.img
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> This option extracts the kernel and initramfs from a guest. </p>
+<p> The format of the disk image is automatically detected unless you specify it by using the <i>&#8211;format</i> option. </p>
+<p> In the case where the guest contains multiple kernels, the one with the highest version number is chosen. To extract arbitrary kernels from the disk image, see <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). To extract the entire <tt>&quot;/boot&quot;</tt> directory of a guest, see <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>-a</code> file</dt>
+<dd>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. </dd>
+<p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format</i> option.</p>
+<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
+<dd>
+</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a remote disk. The <font SIZE="-1">URI</font> format is compatible with guestfish. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>&#8211;colors</code></dt>
+<dd>
+</dd><dt><code>&#8211;colours</code></dt>
+<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
+<dd>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
+<p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
+<dt><code>-d</code> guest</dt>
+<dd>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;format</code> raw|qcow2|..</dt>
+<dd>
+</dd><dt><code>&#8211;format</code> auto</dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for the <i>-a</i> option on the command line. </dd>
+<p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
+<dt><code>&#8211;machine-readable</code></dt>
+<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</dd>
+<dt><code>-o</code> directory</dt>
+<dd>
+</dd><dt><code>&#8211;output</code> directory</dt>
+<dd> This option specifies the output directory where kernel and initramfs from the guest are written. </dd>
+<p> If not specified, the default output is the current directory.</p>
+<dt><code>&#8211;prefix</code> prefix</dt>
+<dd> This option specifies a prefix for the extracted files. </dd>
+<p> If a prefix is specified, then there will be a dash (<tt>&quot;-&quot;</tt>) after the prefix and before the rest of the file name; for example, a kernel in the guest like <tt>&quot;vmlinuz-3.19.0-20-generic&quot;</tt> is saved as <tt>&quot;mydistro-vmlinuz-3.19.0-20-generic&quot;</tt> when the prefix is <tt>&quot;mydistro&quot;</tt>. </p>
+<p> See also <i>&#8211;unversioned-names</i>.</p>
+<dt><code>-q</code></dt>
+<dd>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t print ordinary progress messages.</dd>
+<dt><code>&#8211;unversioned-names</code></dt>
+<dd> This option affects the destination file name of extracted files. </dd>
+<p> If enabled, files will be saved locally just with the base name; for example, kernel and ramdisk in the guest like <tt>&quot;vmlinuz-3.19.0-20-generic&quot;</tt> and <tt>&quot;initrd.img-3.19.0-20-generic&quot;</tt> are saved respectively as <tt>&quot;vmlinuz&quot;</tt> and <tt>&quot;initrd.img&quot;</tt>. </p>
+<p> See also <i>&#8211;prefix</i>.</p>
+<dt><code>-v</code></dt>
+<dd>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
+<dd>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
+<h2>MACHINE READABLE OUTPUT</h2>
+<p> The <i>&#8211;machine-readable</i> option can be used to make the output more machine friendly, which is useful when calling virt-get-kernel from other programs, GUIs etc. </p>
+<p> Use the option on its own to query the capabilities of the virt-get-kernel binary. Typical output looks like this: </p>
+<pre>
+ $ virt-get-kernel --machine-readable
+ virt-get-kernel
+</pre>
+<p> A list of features is printed, one per line, and the program exits with status 0.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> For other environment variables which affect all libguestfs programs, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
+<h2>EXIT STATUS</h2>
+<p> This program returns 0 if successful, or non-zero if there was an error.</p>
+<h2>SEE ALSO</h2>
+<p> <i>guestfs</i>(3), <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<h2>AUTHOR</h2>
+<p> Richard W.M. Jones <a rel="nofollow" href="http://people.redhat.com/~rjones/">http://people.redhat.com/~rjones/</a></p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2013-2016 Red Hat Inc.</p>
+<h2>LICENSE</h2>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
+<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<h2>BUGS</h2>
+<p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> When reporting a bug, please supply:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

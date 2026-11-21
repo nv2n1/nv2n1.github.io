@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cfetoolinfo(8) · Linux Manual Pages</title>
+<meta name="description" content="cfetool info – Get information about a database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-cfetoolinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>cfetoolinfo(8)</h1>
+
+
+
+
+
+<p>cfetool info &#8211; Get information about a database</p>
+<h2>Synopsis</h2>
+<p><code>cfetool</code> <code>info</code> <i>name</i> [<code>&#8211;path</code>|<code>-p</code>&nbsp;<wbr><i>directory name</i>] [<code>&#8211;daily</code>|<code>-d</code>] [<code>&#8211;weekly</code>|<code>-w</code>] [<code>&#8211;yearly</code>|<code>-y</code>] [<code>&#8211;verbose</code>|<code>-v</code>] [<code>&#8211;help</code>|<code>-h</code>]</p>
+<h2>Description</h2>
+<p>Prints out some basic information about the specified database, including: the location of the database, the location of the histogram file (if there is one), the step interval, the database age, the time it was last updated, and the current overall average and variation.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;path</code>|<code>-p</code> <i>directory name</i></dt>
+<dd>The directory in which to find the database folder. If this argument is not provided, the current working directory will be assumed.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Provide information about the daily averages database.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Provide information about the weekly averages database.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Provide information about the yearly averages database.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream.</dd>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Prints a short help message and then exits.</dd></dl>
+<h2>Example</h2>
+<pre> % cfetool info temperature --path /my/path</pre>
+<pre> Weekly average database:
+ Database Location: /my/path/temperature/weekly.db
+ Histogram file: /my/path/temperature/weekly.hist
+ Step: 10 minutes
+ Database Age: 0.000992 weeks (1 steps)
+ Last update: Mon Sep 13 16:20:40 2004 (1095117640)
+ Current average: 7.105000, Var: 38.280217</pre>
+<h2>Authors</h2>
+<p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
+<dl>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
+<dd>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
+<h2>Copyright And Disclaimer</h2>
+<pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
+ Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;
+ All rights reserved.</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

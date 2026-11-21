@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-instaweb(1) · Linux Manual Pages</title>
+<meta name="description" content="git-instaweb – Instantly browse your working repository in gitweb">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-instaweb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-instaweb(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-instaweb &#8211; Instantly browse your working repository in gitweb </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
+            [--browser = &lt;browser&gt;] git instaweb[--start][--stop][--restart]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> A simple script to set up <code>gitweb</code> and a web server for browsing the local repository.</p>
+<h2>OPTIONS</h2>
+<p> -l, &#8211;local</p>
+<dl>
+<dt>
+</dt><dd> Only bind the web server to the local IP (127.0.0.1).</dd></dl>
+<p> -d, &#8211;httpd</p>
+<dl>
+<dt>
+</dt><dd> The HTTP daemon command-line that will be executed. Command-line options may be specified here, and the configuration file will be added at the end of the command-line. Currently apache2, lighttpd, mongoose, plackup, python and webrick are supported. (Default: lighttpd)</dd></dl>
+<p> -m, &#8211;module-path</p>
+<dl>
+<dt>
+</dt><dd> The module path (only needed if httpd is Apache). (Default: /usr/lib/apache2/modules)</dd></dl>
+<p> -p, &#8211;port</p>
+<dl>
+<dt>
+</dt><dd> The port number to bind the httpd to. (Default: 1234)</dd></dl>
+<p> -b, &#8211;browser</p>
+<dl>
+<dt>
+</dt><dd> The web browser that should be used to view the gitweb page. This will be passed to the <i>git web&#8211;browse</i> helper script along with the URL of the gitweb instance. See <code>git-web&#8211;browse</code>(1) for more information about this. If the script fails, the URL will be printed to stdout.</dd></dl>
+<p> start, &#8211;start</p>
+<dl>
+<dt>
+</dt><dd> Start the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dd></dl>
+<p> stop, &#8211;stop</p>
+<dl>
+<dt>
+</dt><dd> Stop the httpd instance and exit. This does not generate any of the configuration files for spawning a new instance, nor does it close the browser.</dd></dl>
+<p> restart, &#8211;restart</p>
+<dl>
+<dt>
+</dt><dd> Restart the httpd instance and exit. Regenerate configuration files as necessary for spawning a new instance.</dd></dl>
+<h2>CONFIGURATION</h2>
+<p> You may specify configuration in your .git/config </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+[instaweb]
+        local = true
+        httpd = apache2 -f
+        port = 4321
+        browser = konqueror
+        modulePath = /usr/lib/apache2/modules
+</pre>
+</dd></dl>
+<p> If the configuration variable <code>instaweb.browser</code> is not set, <code>web.browser</code> will be used instead if it is defined. See <code>git-web&#8211;browse</code>(1) for more information about this.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1)</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

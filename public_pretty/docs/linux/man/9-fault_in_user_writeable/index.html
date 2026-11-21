@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fault_in_user_writeable(9) · Linux Manual Pages</title>
+<meta name="description" content="fault_in_user_writeable – Fault in user address and verify RW access">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-fault_in_user_writeable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>fault_in_user_writeable(9)</h1>
+
+
+
+
+
+<p>fault_in_user_writeable &#8211; Fault in user address and verify RW access</p>
+<h2>Synopsis</h2>
+<pre><code>int fault_in_user_writeable(u32 __user *uaddr);</code></pre>
+<h2>Arguments</h2>
+<p><i>uaddr</i></p>
+<dl>
+<dd>
+</dd><dd>pointer to faulting user space address</dd></dl>
+<h2>Description</h2>
+<p>Slow path to fixup the fault we just took in the atomic write access to <i>uaddr</i>. </p>
+<p> We have no generic implementation of a non-destructive write to the user address. We know that we faulted in the atomic pagefault disabled section so we can as well avoid the #PF overhead by calling <code>get_user_pages</code> right away.</p>
+<h2>Author</h2>
+<p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

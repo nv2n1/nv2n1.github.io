@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converting Unix Timestamps in C - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-c/">
+  <meta name="description" content="The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access — whether for logging, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Converting Unix Timestamps in C">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-c/">
+  <meta property="og:description" content="The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access — whether for logging, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Converting Unix Timestamps in C</h1>
+        <time class="post-date" datetime="2018-03-24T11:52:20Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The epoch timestamp (seconds since January 1, 1970 UTC) is fundamental for Unix timekeeping. Every process needs reliable time access — whether for logging, scheduling, or benchmarking.</p>
+<h2 id="basic-second-level-precision">Basic Second-Level Precision</h2>
+<p>For simple timestamp needs, use <code>time()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">time_t</span> <span class="n">now</span> <span class="o">=</span> <span class="nf">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Current epoch: %ld</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">now</span><span class="p">);</span>
+</span></span></code></pre></div><p>This returns seconds since epoch as a <code>time_t</code>. It’s portable, lightweight, and fine for most applications. However, <code>time()</code> has resolution limitations — typically one second — and calling it repeatedly can be slow on some systems.</p>
+<h2 id="nanosecond-precision-with-clock_gettime">Nanosecond Precision with clock_gettime()</h2>
+<p>When you need finer granularity, use <code>clock_gettime()</code> with <code>CLOCK_REALTIME</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">timespec</span> <span class="n">ts</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">clock_gettime</span><span class="p">(</span><span class="n">CLOCK_REALTIME</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="n">nanoseconds</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)</span><span class="n">ts</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">*</span> <span class="mi">1000000000ULL</span> <span class="o">+</span> <span class="n">ts</span><span class="p">.</span><span class="n">tv_nsec</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Nanoseconds since epoch: %lu</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">nanoseconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Or just milliseconds if that&#39;s sufficient
+</span></span></span><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="n">milliseconds</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)</span><span class="n">ts</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">+</span> <span class="n">ts</span><span class="p">.</span><span class="n">tv_nsec</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Milliseconds since epoch: %lu</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">milliseconds</span><span class="p">);</span>
+</span></span></code></pre></div><p><code>clock_gettime()</code> gives you the struct with <code>tv_sec</code> (seconds) and <code>tv_nsec</code> (nanoseconds). This is the preferred method for performance measurement, high-frequency logging, or any timing-critical code.</p>
+<h2 id="monotonic-vs-realtime-clocks">Monotonic vs. Realtime Clocks</h2>
+<p>Important distinction: <code>CLOCK_REALTIME</code> can jump backward if the system clock is adjusted. For measuring elapsed time, use <code>CLOCK_MONOTONIC</code> instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">timespec</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">clock_gettime</span><span class="p">(</span><span class="n">CLOCK_MONOTONIC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">start</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ... do work ...
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">clock_gettime</span><span class="p">(</span><span class="n">CLOCK_MONOTONIC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">end</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="n">elapsed_ns</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)(</span><span class="n">end</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">-</span> <span class="n">start</span><span class="p">.</span><span class="n">tv_sec</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000000000ULL</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">                      <span class="p">(</span><span class="n">end</span><span class="p">.</span><span class="n">tv_nsec</span> <span class="o">-</span> <span class="n">start</span><span class="p">.</span><span class="n">tv_nsec</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Elapsed nanoseconds: %lu</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">elapsed_ns</span><span class="p">);</span>
+</span></span></code></pre></div><p><code>CLOCK_MONOTONIC</code> is immune to NTP adjustments and system clock changes, making it ideal for timeouts, performance timers, and any code that cares about elapsed duration rather than wall-clock time.</p>
+<h2 id="handling-timezones-and-utc">Handling Timezones and UTC</h2>
+<p>Always store and log timestamps in UTC. Convert to local time only for display:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">time_t</span> <span class="n">now</span> <span class="o">=</span> <span class="nf">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">tm</span> <span class="o">*</span><span class="n">utc_time</span> <span class="o">=</span> <span class="nf">gmtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">now</span><span class="p">);</span>  <span class="c1">// Use gmtime, not localtime
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nf">strftime</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buffer</span><span class="p">),</span> <span class="s">&#34;%Y-%m-%dT%H:%M:%SZ&#34;</span><span class="p">,</span> <span class="n">utc_time</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;ISO 8601 UTC: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">buffer</span><span class="p">);</span>
+</span></span></code></pre></div><p>This keeps your internal time representation unambiguous and portable across systems with different timezone configurations. If you need local time for user display, convert it separately with <code>localtime()</code> and apply timezone info explicitly.</p>
+<h2 id="platform-considerations">Platform Considerations</h2>
+<p>On Linux, <code>clock_gettime()</code> is reliable and fast. Windows systems need <code>GetSystemTimeAsFileTime()</code> or the POSIX compatibility layer. If you’re targeting multiple platforms, consider wrapping these calls:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#ifdef _WIN32
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="nf">get_epoch_nanos</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FILETIME</span> <span class="n">ft</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">GetSystemTimeAsFileTime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ft</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint64_t</span> <span class="n">filetime</span> <span class="o">=</span> <span class="p">((</span><span class="kt">uint64_t</span><span class="p">)</span><span class="n">ft</span><span class="p">.</span><span class="n">dwHighDateTime</span> <span class="o">&lt;&lt;</span> <span class="mi">32</span><span class="p">)</span> <span class="o">|</span> <span class="n">ft</span><span class="p">.</span><span class="n">dwLowDateTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">filetime</span> <span class="o">-</span> <span class="mi">116444736000000000ULL</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else
+</span></span></span><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="nf">get_epoch_nanos</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">timespec</span> <span class="n">ts</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">clock_gettime</span><span class="p">(</span><span class="n">CLOCK_REALTIME</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)</span><span class="n">ts</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">*</span> <span class="mi">1000000000ULL</span> <span class="o">+</span> <span class="n">ts</span><span class="p">.</span><span class="n">tv_nsec</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></div><h2 id="performance-notes">Performance Notes</h2>
+<ul>
+<li><code>time()</code> is cheap but has poor resolution</li>
+<li><code>clock_gettime(CLOCK_REALTIME)</code> is fast on modern Linux but slower on some BSD systems</li>
+<li>Calling these repeatedly in tight loops adds measurable overhead — cache results if precision allows</li>
+<li>Check return values; <code>clock_gettime()</code> can fail if the clock isn’t supported</li>
+</ul>
+<p>Use <code>CLOCK_REALTIME</code> for timestamps you’ll log or store, and <code>CLOCK_MONOTONIC</code> for measuring elapsed time within a running process.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Converting Unix Timestamps in C with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Converting Unix Timestamps in C. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

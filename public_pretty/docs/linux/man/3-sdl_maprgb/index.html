@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_maprgb(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_MapRGB – Map a RGB color value to a pixel format.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_maprgb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_maprgb(3)</h1>
+
+
+
+
+
+<p>SDL_MapRGB &#8211; Map a RGB color value to a pixel format.</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> Uint32 SDL_MapRGB</code>(<code>SDL_PixelFormat *fmt, Uint8 r, Uint8 g, Uint8 b</code>);</p>
+<h2>Description</h2>
+<p>Maps the RGB color value to the specified pixel format and returns the pixel value as a 32-bit int. </p>
+<p> If the format has a palette (8-bit) the index of the closest matching color in the palette will be returned. </p>
+<p> If the specified pixel format has an alpha component it will be returned as all 1 bits (fully opaque).</p>
+<h2>Return Value</h2>
+<p>A pixel value best approximating the given RGB color value for a given pixel format. If the pixel format bpp (color depth) is less than 32-bpp then the unused upper bits of the return value can safely be ignored (e.g., with a 16-bpp format the return value can be assigned to a <code>Uint16</code>, and similarly a <code>Uint8</code> for an 8-bpp format).</p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_GetRGB</code>, <i></i><code>SDL_GetRGBA</code>, <i></i><code>SDL_MapRGBA</code>, <i></i><code>SDL_PixelFormat</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

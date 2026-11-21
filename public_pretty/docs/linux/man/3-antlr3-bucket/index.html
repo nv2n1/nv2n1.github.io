@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>antlr3-bucket(3) · Linux Manual Pages</title>
+<meta name="description" content="ANTLR3_HASH_ENUM_struct –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-antlr3-bucket/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>antlr3-bucket(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ANTLR3_HASH_ENUM_struct &#8211; </p>
+<p> Internal structure representing an enumeration of a table.</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
+<h3>Data Fields</h3>
+<p> <code>ANTLR3_UINT32</code> <code>bucket</code> </p>
+<p> <code>pANTLR3_HASH_ENTRY</code> <code>entry</code> </p>
+<p> void(* <code>free</code> )(struct <code>ANTLR3_HASH_ENUM_struct</code> *<code>table</code>) </p>
+<p> int(* <code>next</code> )(struct <code>ANTLR3_HASH_ENUM_struct</code> *en, <code>pANTLR3_HASH_KEY</code> *key, void **data) </p>
+<p> <code>pANTLR3_HASH_TABLE</code> <code>table</code> </p>
+<h2>Detailed Description</h2>
+<p> Internal structure representing an enumeration of a table. </p>
+<p> This is returned by antlr3Enumeration() Allows the programmer to traverse the table in hash order without knowing what is in the actual table. </p>
+<p> Note that it is up to the caller to ensure that the table structure does not change in the hash bucket that is currently being enumerated as this structure just tracks the next pointers in the bucket series.</p>
+<h2>Field Documentation</h2>
+<h3><code>ANTLR3_UINT32</code> <code>ANTLR3_HASH_ENUM_struct::bucket</code></h3>
+<p> Referenced by antlr3EnumNew(), antlr3EnumNext(), and antlr3EnumNextEntry().</p>
+<h3><code>pANTLR3_HASH_ENTRY</code> <code>ANTLR3_HASH_ENUM_struct::entry</code></h3>
+<p> Referenced by antlr3EnumNew(), antlr3EnumNext(), and antlr3EnumNextEntry().</p>
+<h3>void(* <code>ANTLR3_HASH_ENUM_struct::free</code>)(struct <code>ANTLR3_HASH_ENUM_struct</code> *<code>table</code>)</h3>
+<p> Referenced by antlr3BitsetList(), and antlr3EnumNew().</p>
+<h3>int(* <code>ANTLR3_HASH_ENUM_struct::next</code>)(struct <code>ANTLR3_HASH_ENUM_struct</code> *en, <code>pANTLR3_HASH_KEY</code> *key, void **data)</h3>
+<p> Referenced by antlr3BitsetList(), and antlr3EnumNew().</p>
+<h3><code>pANTLR3_HASH_TABLE</code> <code>ANTLR3_HASH_ENUM_struct::table</code></h3>
+<p> Referenced by antlr3EnumNew(), antlr3EnumNext(), and antlr3EnumNextEntry(). </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

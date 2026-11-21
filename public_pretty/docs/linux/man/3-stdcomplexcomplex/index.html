@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcomplexcomplex(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcomplexcomplex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcomplexcomplex(3)</h1>
+
+
+
+
+
+<p>std::complex&lt;T&gt;::complex - std::complex&lt;T&gt;::complex</p>
+<h2>Synopsis</h2>
+<pre><code>primary template complex&lt;T&gt;
+complex(const T &amp;re = T(), const T &amp;im = T());
+(1)(until C++ 14)
+    constexpr complex(const T &amp;re = T(), const T &amp;im = T());
+(1)(since C++ 14)
+    complex(const complex &amp;other);
+(2)(until C++ 14)
+    constexpr complex(const complex &amp;other);
+(2)(since C++ 14)
+    template &lt;class X&gt;
+    (3)(until C++ 14)
+        complex(const complex&lt;X&gt; &amp;other);
+template &lt;class X&gt;
+(3)(since C++ 14)
+    constexpr complex(const complex&lt;X&gt; &amp;other);
+specialization complex&lt;float&gt;
+complex(float re = 0.0f, float im = 0.0f);
+(1)(until C++ 11)
+    constexpr complex(float re = 0.0f, float im = 0.0f);
+(1)(since C++ 11)
+    explicit complex(const complex&lt;double&gt; &amp;other);
+(3)(until C++ 11)
+    explicit complex(const complex&lt;long double&gt; &amp;other);
+explicit constexpr complex(const complex&lt;double&gt; &amp;other);
+(3)(since C++ 11)
+    explicit constexpr complex(const complex&lt;long double&gt; &amp;other);
+specialization complex&lt;double&gt;
+complex(double re = 0.0, double im = 0.0);
+(1)(until C++ 11)
+    constexpr complex(double re = 0.0, double im = 0.0);
+(1)(since C++ 11)
+    complex(const complex&lt;float&gt; &amp;other);
+(3)(until C++ 11)
+    explicit complex(const complex&lt;long double&gt; &amp;other);
+constexpr complex(const complex&lt;float&gt; &amp;other);
+(3)(since C++ 11)
+    explicit constexpr complex(const complex&lt;long double&gt; &amp;other);
+specialization complex&lt;long double&gt;
+complex(long double re = 0.0L, long double im = 0.0L);
+(1)(until C++ 11)
+    constexpr complex(long double re = 0.0L, long double im = 0.0L);
+(1)(since C++ 11)
+    complex(const complex&lt;float&gt; &amp;other);
+(3)(until C++ 11)
+    complex(const complex&lt;double&gt; &amp;other);
+constexpr complex(const complex&lt;float&gt; &amp;other);
+(3)(since C++ 11)
+    constexpr complex(const complex&lt;double&gt; &amp;other);</code></pre> 
+<p>Constructs the std::complex object.</p>
+<ol>
+<li>Constructs the complex number from real and imaginary parts.</li>
+<li>Copy constructor. Constructs the object with the copy of the contents of other. The copy constructor is implicit in the standard specializations.</li>
+<li>Converting_constructor. Constructs the object from a complex number of a different type.</li>
+</ol>
+<h2>Parameters</h2>
+<p>re - the real part
+im - the imaginary part
+other - another complex to use as source</p>
+<h2>See also</h2>
+<pre><code>assigns the contents
+operator=    (public member function)</code></pre> 
+<p>operator&quot;&quot;if
+operator&quot;&quot;i A std::complex literal representing pure imaginary number
+operator&quot;&quot;il <i>(function)</i>
+<i>(C++14)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

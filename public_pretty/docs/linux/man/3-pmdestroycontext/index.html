@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmdestroycontext(3) · Linux Manual Pages</title>
+<meta name="description" content="pmDestroyContext – destroy a PMAPI context">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pmdestroycontext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pmdestroycontext(3)</h1>
+
+
+
+
+
+<p><code>pmDestroyContext</code> &#8211; destroy a PMAPI context</p>
+<h2>C Synopsis</h2>
+<p><code> #include &lt;pcp/pmapi.h&gt; </p>
+<p> int pmDestroyContext(int </code><i>handle</i>); </p>
+<p> cc &#8230; -lpcp</p>
+<h2>Description</h2>
+<p>An application using the Performance Metrics Application Programming Interface (PMAPI) may manipulate several concurrent contexts, each associated with a source of performance metrics, e.g. <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on some host, or an archive log of performance metrics as created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
+<p> <code>pmDestroyContext</code> destroys the PMAPI context identified by <i>handle</i>. Typically this would imply some termination of a connection to a PMCD or closing an archive log file, and orderly clean-up. </p>
+<p> The context must have been previously created using <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3) or <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3). </p>
+<p> On success, <code>pmDestroyContext</code> returns zero. If <i>handle</i> was the current PMAPI context, then the current context becomes undefined. This means the application must explicitly re-establish a valid PMAPI context with <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3), or create a new context with <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3) or <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3), before the next PMAPI operation that requires a PMAPI context.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdupcontext/">pmDupContext</a></code>(3), <code><a href="/docs/linux/man/3-pmnewcontext/">pmNewContext</a></code>(3), <code><a href="/docs/linux/man/3-pmusecontext/">pmUseContext</a></code>(3) and <code><a href="/docs/linux/man/3-pmwhichcontext/">pmWhichContext</a></code>(3).</p>
+<h2>Diagnostics</h2>
+<p><code>PM_ERR_NOCONTEXT</code></p>
+<dl>
+<dd><i>handle</i> does not identify a valid PMAPI context </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

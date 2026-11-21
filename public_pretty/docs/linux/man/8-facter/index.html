@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>facter(8) · Linux Manual Pages</title>
+<meta name="description" content="facter – Gather system information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-facter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>facter(8)</h1>
+
+
+
+
+
+<p><code>facter</code> &#8211; Gather system information</p>
+<h2>Synopsis</h2>
+<p>Collect and display facts about the system.</p>
+<h2>Usage</h2>
+<pre>facter [-h|--help] [-t|--timing] [-d|--debug] [-p|--puppet] [-v|--version]
+ [-y|--yaml] [-j|--json] [--plaintext] [--external-dir DIR] [--no-external-dir]
+ [fact] [fact] [...]</pre>
+<h2>Description</h2>
+<p>Collect and display facts about the current system. The library behind Facter is easy to expand, making Facter an easy way to collect information about a system from within the shell or within Ruby. </p>
+<p> If no facts are specifically asked for, then all facts will be returned.</p>
+<h2>Example</h2>
+<p>Display all facts:</p>
+<dl>
+<dd>
+<pre>$ facter
+architecture =&gt; amd64
+blockdevices =&gt; sda,sr0
+domain =&gt; example.com
+fqdn =&gt; puppet.example.com
+hardwaremodel =&gt; x86_64
+[...]</pre>
+</dd><dd></dd></dl>
+<p> Display a single fact:</p>
+<dl>
+<dd>
+<pre>$ facter kernel
+Linux</pre>
+</dd><dd></dd></dl>
+<p> Format facts as JSON:</p>
+<dl>
+<dd>
+<pre>$ facter --json architecture kernel hardwaremodel
+{
+ &quot;architecture&quot;: &quot;amd64&quot;,
+ &quot;kernel&quot;: &quot;Linux&quot;,
+ &quot;hardwaremodel&quot;: &quot;x86_64&quot;
+}</pre>
+</dd><dd></dd></dl>
+<h2>Author</h2>
+<p>Luke Kanies</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2011-2014 Puppet Labs, Inc Licensed under the Apache 2.0 license</p>
+<h2>Options</h2>
+<pre>-y, --yaml Emit facts in YAML format.
+-j, --json Emit facts in JSON format.
+ --plaintext Emit facts in plaintext format.
+ --trace Enable backtraces.
+ --external-dir DIR The directory to use for external facts.
+ --no-external-dir Turn off external facts.
+-d, --debug Enable debugging.
+-t, --timing Enable timing.
+-p, --puppet Load the Puppet libraries, thus allowing Facter to load Puppet-specific facts.
+-v, --version Print the version and exit.
+-h, --help Print this help message.</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pdfbook2(1) · Linux Manual Pages</title>
+<meta name="description" content="pdfbook2 – transform pdf files into booklets for double-sided printing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pdfbook2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pdfbook2(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pdfbook2 &#8211; transform pdf files into booklets for double-sided printing</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pdfbook2</code> [ <i>options</i> ] <i>INPUT</i> [ <i>INPUT</i>, &#8230;] </p>
+<h2>DESCRIPTION</h2>
+<p> Create print-ready PDF files from some <i>INPUT</i> PDF files for booklet printing. The resulting files need to be printed in landscape/long edge double sided printing. The default paper format depends on the locale and is choosen by pdfjam. It can be set with the &#8211;paper option. </p>
+<p> Before the pdf is composed the <i>INPUT</i> file is cropped to the relevant area in order to discard unnecessary white spaces. In this process, all pages are cropped to the same dimensions. Extra margins can be defined at the edges of the booklet and in the middle where the binding occurs. </p>
+<p> The <i>OUTPUT</i> is written to <i>INPUT</i>-book.pdf. Existing files will be overwritten. All input files are processed seperatly. </p>
+<h2>EXAMPLE</h2>
+<p> To simply <code>create a booklet</code> from input.pdf you can use </p>
+<pre>
+<dl><dt></dt><dd>pdfbook2 input.pdf
+</dd></dl>
+</pre>
+<p> to create input-book.pdf. To select a special <code>type of paper</code> you can do </p>
+<pre>
+<dl><dt></dt><dd>pdfbook2 --paper=letter input.pdf
+</dd></dl>
+</pre>
+<p> for letter or </p>
+<pre>
+<dl><dt></dt><dd>pdfbook2 --paper=a4paper input.pdf
+</dd></dl>
+</pre>
+<p> for standard A4. To increase the <code>inner margin for binding</code> use </p>
+<pre>
+<dl><dt></dt><dd>pdfbook2 --inner-margin=200 input.pdf
+</dd></dl>
+</pre>
+<p> to increase the default value of 150. You can submit <code>multiple files</code> to the script for processing like </p>
+<pre>
+<dl><dt></dt><dd>pdfbook2 input1.pdf input2.pdf
+</dd></dl>
+</pre>
+<p> which will result in input1-book.pdf and input2-book.pdf. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show help message and exit </dd>
+</dl>
+<h3>GENERAL</h3>
+<dl>
+<dt><code>-p</code>, <code>&#8211;paper</code>=<i>STR</i></dt>
+<dd> Format of the output paper dimensions as latex keyword (e.g. a4paper, letterpaper, legalpaper, &#8230;)</dd>
+<dt><code>-s</code>, <code>&#8211;short-edge</code></dt>
+<dd> Format the booklet for short-edge double-sided printing</dd>
+<dt><code>-n</code>, <code>&#8211;no-crop</code></dt>
+<dd> Prevent the cropping to the content area </dd>
+</dl>
+<h3>MARGINS</h3>
+<dl>
+<dt><code>-o</code>, <code>&#8211;outer-margin</code>=<i>INT</i></dt>
+<dd> Defines the outer margin in the booklet (default: 40)</dd>
+<dt><code>-i</code>, <code>&#8211;inner-margin</code>=<i>INT</i></dt>
+<dd> Defines the inner margin between the pages in the booklet (default: 150)</dd>
+<dt><code>-t</code>, <code>&#8211;top-margin</code>=<i>INT</i></dt>
+<dd> Defines the top margin in the booklet (default: 30)</dd>
+<dt><code>-b</code>, <code>&#8211;bottom-margin</code>=<i>INT</i></dt>
+<dd> Defines the bottom margin in the booklet (default: 30) </dd>
+</dl>
+<h3>ADVANCED</h3>
+<dl>
+<dt><code>&#8211;signature</code>=<i>INT</i></dt>
+<dd> Define the signature for the booklet handed to pdfjam, needs to be multiple of 4 (default: 4)</dd>
+<dt><code>&#8211;signature*</code>=<i>INT</i></dt>
+<dd> Same as &#8211;signature</dd>
+<dt><code>&#8211;resolution</code>=<i>INT</i></dt>
+<dd> Resolution used by ghostscript in bp (default: 72) </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code>pdfbook</code>(1), <code><a href="/docs/linux/man/1-pdfjam/">pdfjam</a></code>(1), <code>pdfcrop</code>(1) </p>
+<h2>ABOUT</h2>
+<p> pdfbook2 v1.4 (<a rel="nofollow" href="https://github.com/jenom/pdfbook2)">https://github.com/jenom/pdfbook2)</a><br />
+ (c) 2015 &#8211; 2020 Johannes Neumann (<a rel="nofollow" href="http://www.neumannjo.de)">http://www.neumannjo.de)</a><br />
+ licensed under GPLv3 (<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-3.0)">http://www.gnu.org/licenses/gpl-3.0)</a><br />
+ based on pdfbook by David Firth with help from Marco Pessotto </p>
+<h2>LICENSE</h2>
+<p> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

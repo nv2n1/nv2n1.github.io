@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generating RSA Key Pairs with OpenSSL - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-generate-a-pair-of-rsa-private-and-public-key-in-linux/">
+  <meta name="description" content="RSA (Rivest–Shamir–Adleman) underpins SSH authentication, TLS certificates, code signing, and encryption across most Linux systems. OpenSSL is the standard tool …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Generating RSA Key Pairs with OpenSSL">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-generate-a-pair-of-rsa-private-and-public-key-in-linux/">
+  <meta property="og:description" content="RSA (Rivest–Shamir–Adleman) underpins SSH authentication, TLS certificates, code signing, and encryption across most Linux systems. OpenSSL is the standard tool …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/security-cryptography-path/">Security &amp; Cryptography Path</a>
+          &rsaquo; <a href="/category/cryptography-keys/">Cryptography &amp; Keys</a>
+        </nav>
+        
+        <h1>Generating RSA Key Pairs with OpenSSL</h1>
+        <time class="post-date" datetime="2019-11-17T05:04:25Z">November 17, 2019</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated May 17, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>RSA (Rivest–Shamir–Adleman) underpins SSH authentication, TLS certificates, code signing, and encryption across most Linux systems. OpenSSL is the standard tool for generating and managing these keys.</p>
+<h2 id="verify-openssl-installation">Verify OpenSSL Installation</h2>
+<p>OpenSSL is bundled with virtually all distributions. Check your version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl version
+</span></span></code></pre></div><p>If it’s missing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Ubuntu/Debian</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install openssl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS/Fedora</span>
+</span></span><span class="line"><span class="cl">sudo dnf install openssl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Alpine</span>
+</span></span><span class="line"><span class="cl">apk add openssl
+</span></span></code></pre></div><h2 id="generate-a-private-key">Generate a Private Key</h2>
+<p>Use <code>openssl genpkey</code> to create RSA private keys. This is the modern standard; the older <code>genrsa</code> command is deprecated.</p>
+<p>For most use cases (development, testing, internal services):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+</span></span></code></pre></div><p>For production systems, certificates, or anything handling sensitive data:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
+</span></span></code></pre></div><h2 id="encrypt-your-private-key">Encrypt Your Private Key</h2>
+<p>Always protect your private key with a passphrase. Add the <code>-aes256</code> flag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096 -aes256
+</span></span></code></pre></div><p>You’ll be prompted twice:</p>
+<pre><code>Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+</code></pre>
+<p>Without encryption, anyone with filesystem access can use your key. Store passphrases in a password manager or secure vault—you’ll need it every time you use the key.</p>
+<h2 id="extract-the-public-key">Extract the Public Key</h2>
+<p>Generate the corresponding public key from your encrypted (or unencrypted) private key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in private_key.pem -pubout -out public_key.pem
+</span></span></code></pre></div><p>If your private key is encrypted, you’ll be prompted for the passphrase. The <code>pkey</code> command transparently handles both PKCS#1 and PKCS#8 formats.</p>
+<h2 id="inspect-your-keys">Inspect Your Keys</h2>
+<p>View the private key structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in private_key.pem -text -noout
+</span></span></code></pre></div><p>Output includes the RSA modulus, public exponent, private exponent, and prime factors:</p>
+<pre><code>Private-Key: (4096 bit, 2 primes)
+modulus:
+    00:c8:ef:d4:50:2f:8b:66:86:a5:fe:d4:ed:17:3a:
+    ...
+publicExponent: 65537 (0x10001)
+privateExponent:
+    ...
+</code></pre>
+<p>View the public key structure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in public_key.pem -pubin -text -noout
+</span></span></code></pre></div><p>This shows the modulus and public exponent (typically 65537).</p>
+<p>Check the file format directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat private_key.pem
+</span></span></code></pre></div><p>Encrypted keys display as:</p>
+<pre><code>-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIa1lJ...
+-----END ENCRYPTED PRIVATE KEY-----
+</code></pre>
+<p>Public keys show as:</p>
+<pre><code>-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2v3lFA...
+-----END PUBLIC KEY-----
+</code></pre>
+<h2 id="key-size-guidelines">Key Size Guidelines</h2>
+<ul>
+<li><strong>2048 bits</strong>: Acceptable for most applications and non-critical internal services. Equivalent to 112-bit symmetric security.</li>
+<li><strong>3072 bits</strong>: Better long-term security margin. Good compromise for certificates and general production use.</li>
+<li><strong>4096 bits</strong>: Recommended for sensitive applications, high-value targets, and new key material. Slightly slower but the performance cost is negligible.</li>
+<li><strong>8192+ bits or larger</strong>: Rarely justified in practice. The additional security gain doesn’t offset the computational overhead.</li>
+</ul>
+<h2 id="generate-ssh-keys">Generate SSH Keys</h2>
+<p>Create a passwordless or passphrase-protected SSH key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm RSA -out ~/.ssh/id_rsa -pkeyopt rsa_keygen_bits:4096 -aes256
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/id_rsa
+</span></span></code></pre></div><p>Extract the public key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in ~/.ssh/id_rsa -pubout -out ~/.ssh/id_rsa.pub
+</span></span><span class="line"><span class="cl">chmod <span class="m">644</span> ~/.ssh/id_rsa.pub
+</span></span></code></pre></div><p>Add the public key to remote servers for passwordless authentication:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</span></span></code></pre></div><p>On target servers, ensure <code>~/.ssh/authorized_keys</code> contains your public key and has correct permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div><p>Note: If you prefer using <code>ssh-keygen</code> instead, it generates keys in OpenSSH format by default. Either tool works, but OpenSSL’s <code>pkey</code> command integrates better with certificate and CSR workflows.</p>
+<h2 id="create-tls-certificate-signing-requests">Create TLS Certificate Signing Requests</h2>
+<p>Generate a private key for a web server or CSR:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl genpkey -algorithm RSA -out server.key -pkeyopt rsa_keygen_bits:2048
+</span></span></code></pre></div><p>Create a certificate signing request (CSR) to submit to a certificate authority:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl req -new -key server.key -out server.csr
+</span></span></code></pre></div><p>You’ll be prompted for certificate details: country, organization, common name (domain), and other fields. Fill them accurately—the CA will verify them.</p>
+<h2 id="verify-key-pair-consistency">Verify Key Pair Consistency</h2>
+<p>Confirm that a public and private key belong together by comparing their moduli:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in private_key.pem -noout -modulus <span class="p">|</span> openssl md5
+</span></span><span class="line"><span class="cl">openssl pkey -in public_key.pem -pubin -noout -modulus <span class="p">|</span> openssl md5
+</span></span></code></pre></div><p>Both commands must produce identical MD5 hashes. If they differ, the keys don’t belong together and you’ve likely mixed up key files.</p>
+<h2 id="convert-between-key-formats">Convert Between Key Formats</h2>
+<p>Older systems or legacy software may require PKCS#1 format instead of the modern PKCS#8 default. Convert when necessary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl pkey -in private_key.pem -traditional -out private_key_legacy.pem
+</span></span></code></pre></div><p>The <code>-traditional</code> flag outputs the older, simpler format. This is rarely needed with modern tooling.</p>
+<p>To convert a public key from PEM to OpenSSH format (for <code>authorized_keys</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -f public_key.pem -i -mPKCS8 &gt; id_rsa.pub
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Permission denied errors</strong>: Private keys must be readable only by the owner:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> private_key.pem
+</span></span></code></pre></div><p><strong>Bad password read</strong>: Passphrases are case-sensitive. Verify capitalization and special characters carefully.</p>
+<p><strong>Key generation hangs or is very slow</strong>: On systems with low entropy, key generation can stall. Check available entropy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/sys/kernel/random/entropy_avail
+</span></span></code></pre></div><p>If consistently below 1000, install an entropy provider:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Ubuntu/Debian</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install rng-tools
+</span></span><span class="line"><span class="cl">sudo systemctl start rng-tools
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS/Fedora</span>
+</span></span><span class="line"><span class="cl">sudo dnf install rng-tools
+</span></span><span class="line"><span class="cl">sudo systemctl start rngd
+</span></span></code></pre></div><p><strong>Incompatible format errors</strong>: If legacy tools reject your key, try the PKCS#1 conversion above or verify the tool’s documentation for supported formats.</p>
+<p><strong>Can’t read encrypted key</strong>: Ensure the passphrase is entered correctly. If you’ve forgotten it, the key is effectively lost—generate a new one.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

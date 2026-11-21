@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zzip_dir_stat(3) · Linux Manual Pages</title>
+<meta name="description" content="zzip_dir_stat, zzip_file_stat, zzip_fstat – …">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zzip_dir_stat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zzip_dir_stat(3)</h1>
+
+
+
+
+
+<p>zzip_dir_stat, zzip_file_stat, zzip_fstat &#8211; &#8230;</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;zzip/lib.h&gt;
+int zzip_dir_stat((ZZIP_DIR * dir, zzip_char_t *name, ZZIP_STAT *zs, int flags));
+int zzip_file_stat((ZZIP_FILE * file, ZZIP_STAT *zs));
+int zzip_fstat((ZZIP_FILE * file, ZZIP_STAT *zs));</code></pre>
+<h2>Description</h2>
+<dd>The <code>zzip_file_stat</code> function will obtain information about a opened file _within_ a zip-archive. The file is supposed to be open (otherwise -1 is returned). The st_size stat-member contains the uncompressed size. The optional d_name is never set here. </dd>
+<p> The <code>zzip_fstat</code> function will obtain information about a opened file which may be either real/zipped. The file is supposed to be open (otherwise -1 is returned). The st_size stat-member contains the uncompressed size. The optional d_name is never set here. For a real file, we do set the d_csize := st_size and d_compr := 0 for meaningful defaults.</p>
+<h2>Author</h2>
+<dl>
+<dd>&bull; Guido Draheim &lt;guidod [at] gmx.de&gt; Tomi Ollila &lt;Tomi.Ollila [at] iki.fi&gt;</dd></dl>
+<h2>Copyright</h2>
+<p>Copyright (c) 1999,2000,2001,2002 Guido Draheim All rights reserved, use under the restrictions of the Lesser GNU General Public License or alternatively the restrictions of the Mozilla Public License 1.1</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afpfsd(1) · Linux Manual Pages</title>
+<meta name="description" content="afpfsd – Daemon to manage AFP sessions for the afpfs-ng FUSE client.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-afpfsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>afpfsd(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> afpfsd &#8211; Daemon to manage AFP sessions for the afpfs-ng FUSE client.</p>
+<h2>SYNOPSIS</h2>
+<p> <i>afpfsd</i> [<code>-l|logmethod=method</code> [f|&#8211;foreground [d|&#8211;debug </p>
+<h2>DESCRIPTION</h2>
+<p> afpfsd is a daemon that manages AFP sessions. Functions (like mounting, getting status, etc) can be performed using the <a href="/docs/linux/man/1-afp_client/">afp_client</a>(1) tool. This client communicates with the daemon over a named pipe. </p>
+<p> afpfsd will not start if another instance is already running. There needs to be one copy of afpfsd running per user. </p>
+<h2>OPTIONS</h2>
+<p> <code>-l|&#8211;logmethod</code> sets the method used to log; values are stdout or syslog </p>
+<p> <code>-f|&#8211;foreground</code> doesn&#8217;t fork the daemon </p>
+<p> <code>-f|&#8211;debug</code> puts the daemon in the foreground and dumps logs to stdout </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-afp_client/">afp_client</a></code>(1), <code><a href="/docs/linux/man/1-mount_afp/">mount_afp</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

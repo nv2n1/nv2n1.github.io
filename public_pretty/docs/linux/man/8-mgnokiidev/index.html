@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mgnokiidev(8) · Linux Manual Pages</title>
+<meta name="description" content="mgnokiidev – links /dev/gnokii to a virtual modem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mgnokiidev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mgnokiidev(8)</h1>
+
+
+
+
+
+<p>mgnokiidev &#8211; links /dev/gnokii to a virtual modem</p>
+<h2>Synopsis</h2>
+<p><code>mgnokiidev </code><i>/dev/pts/?</i> </p>
+<h2>Description</h2>
+<p><code>mgnokiidev</code> is a tool from the gnokii tool suite used to create the link /dev/gnokii that points to a pseudo-tty (/dev/pts/?). It is called after <code>gnokiid</code> has created a virtual modem that is attached to the pty. It&#8217;s operation is transparent under normal usage as gnokiid takes care of calling it when required. Since <code>mgnokiidev</code> must modifiy files in /dev, it must be either run as root or SUID root. The latter is the preferred method. Normally the <code>mgnokiidev</code> binary is chmod 4750 and owned by root.gnokii. gnokii is a Linux/Unix tool suite and (eventually) modem/fax driver for Nokia mobile phones, released under the GPL. gnokii supports most phones from the 3810/8110 and 5110/6110 series, details including bugs specific to each series appear in the files Docs/README-3810 and Docs/README-6110 respectively. </p>
+<h2>Diagnostics</h2>
+<p>Various error messages are printed to STDERR.</p>
+<h2>Bugs</h2>
+<p>None reported. </p>
+<h2>Author</h2>
+<p>Hugh Blemings &lt;hugh [at] blemings.org&gt; and Pavel Janik ml. &lt;Pavel.Janik [at] suse.cz&gt; are the authors of the gnokii tool suite. </p>
+<p> This manual page was written by Erik Rossen &lt;rossen [at] freesurf.ch&gt;. </p>
+<p> See also Docs/CREDITS from the gnokii sources.</p>
+<h2>Copying</h2>
+<p>This program is distributed under the GNU Public License.</p>
+<h2>See Also</h2>
+<p>gnokiid, gnokii </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

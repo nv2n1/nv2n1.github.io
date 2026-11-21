@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>virt-xml-validate(1) · Linux Manual Pages</title>
+<meta name="description" content="virt-xml-validate – validate libvirt XML files against a schema">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-virt-xml-validate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>virt-xml-validate(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> virt-xml-validate &#8211; validate libvirt XML files against a schema </p>
+<h2>SYNOPSIS</h2>
+<p> <code>virt-xml-validate</code> <i>XML-FILE</i> [<i>SCHEMA-NAME</i>] </p>
+<p> <code>virt-xml-validate</code> <i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>
+<h2>DESCRIPTION</h2>
+<p> Validates a libvirt <font SIZE="-1">XML</font> for compliance with the published schema. The first compulsory argument is the path to the <font SIZE="-1">XML</font> file to be validated. The optional second argument is the name of the schema to validate against. If omitted, the schema name will be inferred from the name of the root element in the <font SIZE="-1">XML</font> document. </p>
+<p> Valid schema names currently include</p>
+<dl>
+<dt>&quot;domainsnapshot&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by domain snapshot configuration</dd>
+<dt>&quot;domain&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by guest domains configuration</dd>
+<dt>&quot;network&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by virtual network configuration</dd>
+<dt>&quot;storagepool&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by storage pool configuration</dd>
+<dt>&quot;storagevol&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by storage volume descriptions</dd>
+<dt>&quot;nodedev&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by node device descriptions</dd>
+<dt>&quot;capability&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used to declare driver capabilities</dd>
+<dt>&quot;nwfilter&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by network traffic filters</dd>
+<dt>&quot;secret&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by secrets descriptions</dd>
+<dt>&quot;interface&quot;</dt>
+<dd> The schema for the <font SIZE="-1">XML</font> format used by physical host interfaces</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display command line help usage then exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information then exit.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> Upon successful validation, an exit status of 0 will be set. Upon failure a non-zero status will be set.</p>
+<h2>AUTHOR</h2>
+<p> Daniel P.Berrange</p>
+<h2>BUGS</h2>
+<p> Report any bugs discovered to the libvirt community via the mailing list &lt;<a rel="nofollow" href="http://libvirt.org/contact.html">http://libvirt.org/contact.html</a>&gt; or bug tracker &lt;<a rel="nofollow" href="http://libvirt.org/bugs.html">http://libvirt.org/bugs.html</a>&gt;. Alternatively report bugs to your software distributor / vendor.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2009-2013 by Red Hat, Inc. Copyright (C) 2009 by Daniel P. Berrange</p>
+<h2>LICENSE</h2>
+<p> virt-xml-validate is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online <font SIZE="-1">XML</font> format descriptions &lt;<a rel="nofollow" href="http://libvirt.org/format.html">http://libvirt.org/format.html</a>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

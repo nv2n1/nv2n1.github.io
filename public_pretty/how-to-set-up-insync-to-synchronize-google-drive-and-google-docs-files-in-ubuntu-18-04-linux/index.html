@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing and Configuring Insync for Google Drive on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/">
+  <meta name="description" content="Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap—it’s a third-party sync tool that …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing and Configuring Insync for Google Drive on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/">
+  <meta property="og:description" content="Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap—it’s a third-party sync tool that …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Installing and Configuring Insync for Google Drive on Linux</h1>
+        <time class="post-date" datetime="2018-11-25T05:54:57Z">November 25, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap—it’s a third-party sync tool that actually works well and maintains local file access rather than relying on virtual filesystems.</p>
+<h2 id="why-insync-over-alternatives">Why Insync Over Alternatives</h2>
+<p>Insync’s main advantage is that Google Drive files appear in your actual filesystem with proper directory structure and filenames. Unlike GNOME Online Accounts, which uses virtual mounts only accessible through Nautilus, Insync gives you real files you can access from any application.</p>
+<p>The most valuable feature for many users is Google Docs/Sheets/Slides conversion. Insync can download converted copies of these files (as DOCX, XLSX, or PPTX) whether you created them or they were shared with you. Changes sync bidirectionally. This is genuinely useful for backup purposes and for workflows where you need native Office files alongside cloud documents.</p>
+<p>Insync costs $29.99 for a one-time license, but a 15-day free trial lets you test whether the features justify the cost. It supports Ubuntu, Debian, Linux Mint, Fedora, and other distributions.</p>
+<h2 id="installation-on-ubuntudebianmint">Installation on Ubuntu/Debian/Mint</h2>
+<p><strong>Add the GPG key:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/apt/keyrings
+</span></span><span class="line"><span class="cl">curl -fsSL https://d2t3ff60b2tol4.cloudfront.net/linux/key.asc <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  sudo gpg --dearmor -o /etc/apt/keyrings/insync-archive-keyring.gpg
+</span></span></code></pre></div><p><strong>Add the repository:</strong></p>
+<p>For Ubuntu 24.04 LTS (Noble):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/insync-archive-keyring.gpg] http://apt.insync.io/ubuntu noble non-free contrib&#34;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  sudo tee /etc/apt/sources.list.d/insync.list
+</span></span></code></pre></div><p>For Ubuntu 22.04 LTS (Jammy):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/insync-archive-keyring.gpg] http://apt.insync.io/ubuntu jammy non-free contrib&#34;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  sudo tee /etc/apt/sources.list.d/insync.list
+</span></span></code></pre></div><p>For Debian 12 (Bookworm):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/insync-archive-keyring.gpg] http://apt.insync.io/debian bookworm non-free contrib&#34;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  sudo tee /etc/apt/sources.list.d/insync.list
+</span></span></code></pre></div><p>For Linux Mint 21.x (based on Jammy):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/insync-archive-keyring.gpg] http://apt.insync.io/ubuntu jammy non-free contrib&#34;</span> <span class="p">|</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  sudo tee /etc/apt/sources.list.d/insync.list
+</span></span></code></pre></div><p><strong>Update and install:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install insync
+</span></span></code></pre></div><p>The installation adds the required <code>fs.inotify.max_user_watches</code> kernel parameter automatically to handle large directory watching.</p>
+<h2 id="file-manager-integration">File Manager Integration</h2>
+<p>Insync integrates with multiple file managers. Install the appropriate plugin for your environment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># For GNOME (Nautilus)</span>
+</span></span><span class="line"><span class="cl">sudo apt install insync-nautilus
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># For KDE (Dolphin)</span>
+</span></span><span class="line"><span class="cl">sudo apt install insync-dolphin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># For Cinnamon (Nemo)</span>
+</span></span><span class="line"><span class="cl">sudo apt install insync-nemo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># For Xfce (Thunar)</span>
+</span></span><span class="line"><span class="cl">sudo apt install insync-thunar
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># For MATE (Caja)</span>
+</span></span><span class="line"><span class="cl">sudo apt install insync-caja
+</span></span></code></pre></div><p>These plugins add context menu options to open files in Google Drive web view and display sync status badges.</p>
+<h2 id="initial-setup">Initial Setup</h2>
+<p>Launch Insync from your application menu or run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">insync start
+</span></span></code></pre></div><p>The first time, you’ll see the authentication window. Click to authorize access to your Google account. Insync only requests Google Drive permissions—it doesn’t ask for full account access.</p>
+<p>Once authorized, Insync begins syncing immediately. By default, it creates an <code>~/Insync</code> folder containing your Drive contents mirrored locally.</p>
+<h2 id="configuring-google-docs-conversion">Configuring Google Docs Conversion</h2>
+<p>To enable Office file conversion (essential if you work with Google Docs):</p>
+<ol>
+<li>Right-click the Insync system tray icon → <strong>Preferences</strong></li>
+<li>Select your Google account</li>
+<li>Under <strong>File Conversion</strong>, check:
+<ul>
+<li>“Convert Google Docs to .docx”</li>
+<li>“Convert Google Sheets to .xlsx”</li>
+<li>“Convert Google Slides to .pptx”</li>
+</ul>
+</li>
+</ol>
+<p>Insync will download converted versions alongside the original files. Edits to converted files sync back to Google Drive.</p>
+<h2 id="handling-multiple-accounts">Handling Multiple Accounts</h2>
+<p>To sync multiple Google Drive accounts:</p>
+<ol>
+<li>Click <strong>Add Account</strong> in Insync preferences</li>
+<li>Authorize the additional account</li>
+<li>Configure conversion and sync settings per account</li>
+</ol>
+<p>Each account syncs to its own folder under <code>~/Insync</code>.</p>
+<h2 id="bandwidth-and-selective-sync">Bandwidth and Selective Sync</h2>
+<p>For large Drive accounts, you can selectively sync folders:</p>
+<ol>
+<li>Open Insync preferences</li>
+<li>Under your account, click <strong>Selective Sync</strong></li>
+<li>Uncheck folders you don’t need locally</li>
+</ol>
+<p>This saves bandwidth and disk space for archived or rarely-accessed content.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If sync stalls, restart the daemon:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">insync quit
+</span></span><span class="line"><span class="cl">insync start
+</span></span></code></pre></div><p>Check sync status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">insync get_status
+</span></span></code></pre></div><p>For detailed logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">insync get_log
+</span></span></code></pre></div><p>If you hit the inotify limit with very large local filesystems, manually increase it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;fs.inotify.max_user_watches = 2097152&#34;</span> <span class="p">|</span> sudo tee -a /etc/sysctl.conf
+</span></span><span class="line"><span class="cl">sudo sysctl -p
+</span></span></code></pre></div><h2 id="alternatives-worth-considering">Alternatives Worth Considering</h2>
+<p><strong>Rclone</strong> is a lightweight command-line option for syncing Google Drive without a GUI or daemon—good if you only need periodic backups. <strong>Nextcloud</strong> works well if you self-host. <strong>GNOME Online Accounts</strong> is built-in but limited to read-only virtual mounts.</p>
+<p>For active editing workflows where you need real files and want Google Docs integration, Insync remains the most complete solution for Linux.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

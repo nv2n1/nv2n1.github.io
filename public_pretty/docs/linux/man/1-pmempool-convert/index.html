@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmempool-convert(1) · Linux Manual Pages</title>
+<meta name="description" content="pmempool-convert – Convert pool files from old layout versions to the newest one.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pmempool-convert/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pmempool-convert(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pmempool-convert &#8211; Convert pool files from old layout versions to the newest one.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pmempool convert</code> &lt;file&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>pmempool</code> invoked with the <code>convert</code> command performs a conversion of the specified pool to the newest layout supported by this tool. Currently only <code>libpmemobj(3)</code> pools are supported. It is advised to have a backup of the pool before conversion. The conversion process is not fail-safe &#8211; power interruption may damage the pool.</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>pmempool convert pool.obj</dt>
+<dd> # Updates pool.obj to the latest layout version.</dd>
+<dt></dt></dl>
+<h2>SEE ALSO</h2>
+<dd> <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1) <a href="/docs/linux/man/1-pmempool-info/">pmempool-info</a>(1) libpmemobj(3)</code></dd>
+<h2>PMEMPOOL</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

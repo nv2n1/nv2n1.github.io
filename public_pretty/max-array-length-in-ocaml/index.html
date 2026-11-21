@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCaml Array Length Limits Explained - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/max-array-length-in-ocaml/">
+  <meta name="description" content="[md] The maximum array length in OCaml is platform-dependent and can be queried at runtime using Sys.max_array_length:
+# Sys.max_array_length;; - : int = …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OCaml Array Length Limits Explained">
+  <meta property="og:url" content="https://www.systutorials.com/max-array-length-in-ocaml/">
+  <meta property="og:description" content="[md] The maximum array length in OCaml is platform-dependent and can be queried at runtime using Sys.max_array_length:
+# Sys.max_array_length;; - : int = …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>OCaml Array Length Limits Explained</h1>
+        <time class="post-date" datetime="2018-03-24T08:17:45Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>[md]
+The maximum array length in OCaml is platform-dependent and can be queried at runtime using <code>Sys.max_array_length</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Sys.max_array_length;;
+- : int = 4611686018427387903
+</code></pre><p>## Values by Platform</p>
+<p>**64-bit systems:**</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Sys.max_array_length;;
+- : int = 4611686018427387903
+</code></pre><p>**32-bit systems:**</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Sys.max_array_length;;
+- : int = 1073741823
+</code></pre><p>Note that 32-bit OCaml support has been deprecated in recent versions. Modern OCaml distributions primarily target 64-bit architectures, and OCaml 5.0+ dropped official support for 32-bit platforms entirely.</p>
+<p>## Why These Limits Exist</p>
+<p>OCaml’s array length limit stems from how the runtime represents values in memory. Arrays store a length field alongside the data, and this length is encoded in a tagged integer. On 64-bit systems, OCaml uses 63 bits for value representation (one bit reserved for tagging), giving the theoretical maximum of 2^62 – 1 elements.</p>
+<p>The practical limit accounts for:</p>
+<p>– The tag bit reserved by OCaml’s garbage collector
+– Memory alignment requirements
+– The need to distinguish between different value types</p>
+<p>## Memory Consumption</p>
+<p>While the theoretical limits are enormous, you’ll hit memory constraints long before reaching <code>Sys.max_array_length</code>. Here’s the actual memory usage for OCaml arrays:</p>
+<p>– <code>int array</code> — 8 bytes per element on 64-bit (tagged integers)
+– <code>float array</code> — 8 bytes per element (unboxed in dedicated float arrays)
+– <code>string array</code> — 8 bytes per pointer + string data</p>
+<p>A float array with 100 million elements uses ~800MB. A billion elements requires ~8GB — feasible on modern hardware but beyond typical workstation workloads.</p>
+<p>## Practical Alternatives for Large Data</p>
+<p>For handling datasets that approach memory limits, consider these alternatives:</p>
+<p>**Bigarrays** for C-interop and memory-mapped I/O:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">let big_arr = Bigarray.Array1.create Bigarray.float64 Bigarray.c_layout 100_000_000
+</code></pre><p>Bigarrays have their own limit (<code>Sys.max_bigarray_length</code>), which is typically larger than regular arrays, and they can be memory-mapped to files for persistent storage.</p>
+<p>**Buffers for byte data:**</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">let buf = Buffer.create 65536
+Buffer.add_string buf &#34;data&#34;
+</code></pre><p>**Bytes for mutable byte sequences:**</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">let b = Bytes.make 1024 &#39;\\000&#39;
+</code></pre><p>**Persistent data structures** from libraries like Core or Base when immutability is needed:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">(* Using Core_kernel *)
+let arr = Array.of_list [1; 2; 3]
+</code></pre><p>## OCaml 5.0 Parallelism Changes</p>
+<p>OCaml 5.0 introduced major changes to the runtime that affect array behavior in parallel contexts:</p>
+<p>– **Domains** — OCaml 5’s parallelism unit. Each domain has its own minor heap but shares the major heap.
+– Arrays in shared memory are accessible from multiple domains, but you need proper synchronization for mutation.
+– The <code>Domain</code> module enables parallel computation on array segments:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">let parallel_map f arr =
+  let n = Array.length arr in
+  let domain_count = Domain.recommended_domain_count () in
+  let chunk_size = n / domain_count in
+  let domains = Array.init domain_count (fun i -&gt;
+    let start = i * chunk_size in
+    let stop = min ((i + 1) * chunk_size) n in
+    Domain.spawn (fun () -&gt;
+      Array.init (stop - start) (fun j -&gt; f arr.(start + j))
+    )
+  ) in
+  Array.concat_map (Domain.join) domains
+</code></pre><p>## Check Your Actual Limits</p>
+<p>In a running OCaml session:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">let () =
+  Printf.printf &#34;Max array length: %d\n&#34; Sys.max_array_length;
+  Printf.printf &#34;Max bigarray length: %d\n&#34; Sys.max_bigarray_length;
+  Printf.printf &#34;System word size: %d bits\n&#34; Sys.word_size;
+  Printf.printf &#34;OCaml version: %s\n&#34; Sys.ocaml_version
+</code></pre><p>For safe array allocation without exceeding available memory, validate requested sizes against both <code>Sys.max_array_length</code> and available heap space before allocation.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

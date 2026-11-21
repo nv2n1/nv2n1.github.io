@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/">
+  <meta name="description" content="Email sender fraud remains a persistent problem in email infrastructure. Attackers send messages spoofing legitimate domains, damaging sender reputation and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained">
+  <meta property="og:url" content="https://www.systutorials.com/setting-up-spf-dkim-and-dmarc-for-domain-to-stop-email-sender-fraud/">
+  <meta property="og:description" content="Email sender fraud remains a persistent problem in email infrastructure. Attackers send messages spoofing legitimate domains, damaging sender reputation and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/security-cryptography-path/">Security &amp; Cryptography Path</a>
+          &rsaquo; <a href="/category/tls-email-security/">TLS &amp; Email Security</a>
+        </nav>
+        
+        <h1>Email Authentication Fundamentals: SPF, DKIM, and DMARC Explained</h1>
+        <time class="post-date" datetime="2021-10-30T16:17:04Z">October 30, 2021</time> <span class="post-author">&middot; <a href="/author/davidyang/">David Yang</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Email sender fraud remains a persistent problem in email infrastructure. Attackers send messages spoofing legitimate domains, damaging sender reputation and causing rejected mail that creates administrative overhead. SPF, DKIM, and DMARC are DNS-based authentication standards designed to verify email senders and prevent domain spoofing.</p>
+<h2 id="sender-policy-framework-spf">Sender Policy Framework (SPF)</h2>
+<p>Sender Policy Framework (SPF) is a DNS-based authentication method that lets receiving mail servers verify an email originates from an authorized sender for that domain. An SPF record is a TXT record in your domain’s DNS containing a policy that lists which IP addresses or mail servers are authorized to send email on behalf of your domain.</p>
+<p>When a receiving mail server processes an incoming email, it:</p>
+<ol>
+<li>Looks up the SPF record for the sender’s domain via DNS query</li>
+<li>Extracts the sender’s IP address</li>
+<li>Compares that IP against the authorized IPs listed in the SPF record</li>
+<li>Accepts, rejects, or flags the email based on the match result</li>
+</ol>
+<p>SPF is defined in RFC 7208.</p>
+<p><strong>SPF Record Example:</strong></p>
+<pre><code>v=spf1 ip4:192.0.2.0 include:_spf.google.com ~all
+</code></pre>
+<p>The <code>v=spf1</code> tag denotes the version. Common mechanisms include:</p>
+<ul>
+<li><code>ip4:</code> or <code>ip6:</code> — authorizes specific IP addresses</li>
+<li><code>include:</code> — references another domain’s SPF record</li>
+<li><code>a:</code>, <code>mx:</code> — authorizes servers listed in A or MX records</li>
+<li><code>+all</code> — accept all (rarely used, insecure)</li>
+<li><code>~all</code> — soft-fail unauthorized senders (default)</li>
+<li><code>-all</code> — hard-fail unauthorized senders (strictest)</li>
+</ul>
+<p>Mail hosting providers typically supply SPF records for their customers. Query your domain with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig -t TXT yourdomain.com +short <span class="p">|</span> grep spf
+</span></span></code></pre></div><h2 id="domainkeys-identified-mail-dkim">DomainKeys Identified Mail (DKIM)</h2>
+<p>DomainKeys Identified Mail (DKIM) uses public-key cryptography to digitally sign emails. The receiving server verifies the signature against the sender’s public key published in DNS, ensuring the message wasn’t forged or modified in transit.</p>
+<p>DKIM setup requires:</p>
+<ol>
+<li>Domain owner publishes a public cryptographic key as a TXT record in a subdomain</li>
+<li>Outbound mail server adds a digital signature (using the private key) to email headers</li>
+<li>Receiving server retrieves the public key from DNS and verifies the signature</li>
+</ol>
+<p>The DNS record lives in a subdomain using the format <code>&lt;selector&gt;._domainkey.yourdomain.com</code>, where the selector is a label identifying the key pair (e.g., <code>default</code>, <code>mail</code>, <code>2024</code>).</p>
+<p>DKIM is defined in RFC 6376.</p>
+<p><strong>DKIM Record Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig -t TXT default._domainkey.yourdomain.com +short
+</span></span></code></pre></div><p>Returns:</p>
+<pre><code>v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBxxxxxxxxxx
+</code></pre>
+<p>The fields mean:</p>
+<ul>
+<li><code>v=DKIM1</code> — DKIM version</li>
+<li><code>k=rsa</code> — key type (RSA is standard; ed25519 support is growing)</li>
+<li><code>p=</code> — the public key (base64-encoded)</li>
+<li><code>t=s</code> (optional) — test mode flag</li>
+<li><code>t=y</code> (optional) — domain owner’s assertion of DKIM deployment</li>
+</ul>
+<p>Mail hosting providers generate and manage DKIM keys. You typically paste the public key into your DNS; the provider keeps the private key on their mail servers.</p>
+<h2 id="domain-based-message-authentication-reporting--conformance-dmarc">Domain-based Message Authentication, Reporting &amp; Conformance (DMARC)</h2>
+<p>DMARC is a policy framework that combines SPF and DKIM results and instructs receiving servers how to handle authentication failures. It also enables aggregate and forensic reporting on email authentication.</p>
+<p>DMARC records are TXT records in the <code>_dmarc</code> subdomain of your domain.</p>
+<p>DMARC is defined in RFC 7489.</p>
+<p><strong>DMARC Record Example:</strong></p>
+<pre><code>v=DMARC1; p=quarantine; rua=mailto:dmarc@yourdomain.com; ruf=mailto:forensics@yourdomain.com; fo=1; pct=100
+</code></pre>
+<p><strong>DMARC Record Fields:</strong></p>
+<ul>
+<li><code>v=DMARC1</code> — DMARC version (required)</li>
+<li><code>p=</code> — policy for failed authentication (required)
+<ul>
+<li><code>none</code> — monitor only, no action</li>
+<li><code>quarantine</code> — route to spam folder</li>
+<li><code>reject</code> — refuse delivery</li>
+</ul>
+</li>
+<li><code>sp=</code> — subdomain policy (optional; overrides <code>p=</code> for subdomains)</li>
+<li><code>rua=</code> — aggregate report recipient email (recommended)</li>
+<li><code>ruf=</code> — forensic report recipient email (optional; verbose, high volume)</li>
+<li><code>fo=</code> — forensic reporting options (0=default, 1=all, d=dkim-only, s=spf-only)</li>
+<li><code>pct=100</code> — percentage of mail to apply the policy to (useful for gradual rollout; start at 10-20%, increase to 100)</li>
+<li><code>adkim=r</code> — DKIM alignment mode (r=relaxed, s=strict; relaxed is default)</li>
+<li><code>aspf=r</code> — SPF alignment mode (relaxed vs. strict)</li>
+</ul>
+<p>Query your domain:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dig -t TXT _dmarc.yourdomain.com +short
+</span></span></code></pre></div><h2 id="implementation-best-practices">Implementation Best Practices</h2>
+<p><strong>Start with SPF and DKIM first.</strong> Both are easier to deploy and have higher adoption. SPF is straightforward if your email provider supplies records. DKIM requires generating keys, but providers handle this.</p>
+<p><strong>Roll out DMARC gradually.</strong> Begin with <code>p=none</code> to collect data, then move to <code>p=quarantine</code> when confident, then <code>p=reject</code>. Use <code>pct=</code> to apply policies to a percentage of mail during testing.</p>
+<p><strong>Monitor reports.</strong> Set up aggregate report recipients (<code>rua=</code>) to track authentication success rates. Forensic reports (<code>ruf=</code>) are more verbose; use them only if needed for debugging.</p>
+<p><strong>Align identifiers.</strong> DMARC checks alignment between the “From” header domain and SPF/DKIM domains. Subdomains may fail alignment; use <code>sp=</code> to set different policies.</p>
+<p><strong>Use strict rejection cautiously.</strong> <code>p=reject</code> is powerful but risky. Legitimate mail might fail alignment or pass neither SPF nor DKIM. Confirm infrastructure is solid before deploying.</p>
+<p><strong>Validate DNS records:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check SPF</span>
+</span></span><span class="line"><span class="cl">dig -t TXT yourdomain.com +short
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check DKIM (replace &#39;default&#39; with your selector)</span>
+</span></span><span class="line"><span class="cl">dig -t TXT default._domainkey.yourdomain.com +short
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check DMARC</span>
+</span></span><span class="line"><span class="cl">dig -t TXT _dmarc.yourdomain.com +short
+</span></span></code></pre></div><p><strong>Tools for testing:</strong></p>
+<ul>
+<li>Use <code>nslookup</code>, <code>dig</code>, or online DMARC/SPF validators to confirm records are published</li>
+<li>Send test emails to check headers for authentication results (look for <code>Authentication-Results:</code> headers)</li>
+<li>Deploy SPF, DKIM, and DMARC together for maximum protection against spoofing and phishing</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

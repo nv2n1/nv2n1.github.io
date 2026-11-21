@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slaswp-f(3) · Linux Manual Pages</title>
+<meta name="description" content="slaswp.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-slaswp-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>slaswp-f(3)</h1>
+
+
+
+
+
+<p>slaswp.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>slaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br />
+ <i></i><code>SLASWP</code> performs a series of row interchanges on a general rectangular matrix.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine slaswp (integerN, real, dimension( lda, * )A, integerLDA, integerK1, integerK2, integer, dimension( * )IPIV, integerINCX)</h3>
+<p><code>SLASWP</code> performs a series of row interchanges on a general rectangular matrix. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> SLASWP performs a series of row interchanges on the matrix A.
+ One row interchange is initiated for each of rows K1 through K2 of A.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>N</i> </dd>
+<pre> N is INTEGER
+ The number of columns of the matrix A.</pre>
+<p><i>A</i> </p>
+<pre> A is REAL array, dimension (LDA,N)
+ On entry, the matrix of column dimension N to which the row
+ interchanges will be applied.
+ On exit, the permuted matrix.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A.</pre>
+<p><i>K1</i> </p>
+<pre> K1 is INTEGER
+ The first element of IPIV for which a row interchange will
+ be done.</pre>
+<p><i>K2</i> </p>
+<pre> K2 is INTEGER
+ The last element of IPIV for which a row interchange will
+ be done.</pre>
+<p><i>IPIV</i> </p>
+<pre> IPIV is INTEGER array, dimension (K2*abs(INCX))
+ The vector of pivot indices. Only the elements in positions
+ K1 through K2 of IPIV are accessed.
+ IPIV(K) = L implies rows K and L are to be interchanged.</pre>
+<p><i>INCX</i> </p>
+<pre> INCX is INTEGER
+ The increment between successive values of IPIV. If IPIV
+ is negative, the pivots are applied in reverse order.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> <code>Further Details: </code></p>
+<dl>
+<dd>
+<pre> Modified by
+ R. C. Whaley, Computer Science Dept., Univ. of Tenn., Knoxville, USA</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> Definition at line 115 of file slaswp.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ne_buffer_append(3) · Linux Manual Pages</title>
+<meta name="description" content="ne_buffer_append, ne_buffer_zappend, ne_buffer_concat – append data to a string buffer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ne_buffer_append/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ne_buffer_append(3)</h1>
+
+
+
+
+
+<p>ne_buffer_append, ne_buffer_zappend, ne_buffer_concat &#8211; append data to a string buffer</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;ne_string.h&gt;
+void ne_buffer_append(ne_buffer *buf, const char *string, size_t len);
+void ne_buffer_zappend(ne_buffer *buf, const char *string);
+void ne_buffer_concat(ne_buffer *buf, const char *str, ...);</code></pre>
+<h2>Description</h2>
+<dd>The <code>ne_buffer_append</code> and <code>ne_buffer_zappend</code> functions append a string to the end of a buffer; extending the buffer as necessary. The <i>len</i> passed to <code>ne_buffer_append</code> specifies the length of the string to append; there must be no NUL terminator in the first <i>len</i> bytes of the string. <code>ne_buffer_zappend</code> must be passed a NUL-terminated string. </dd>
+<p> The <code>ne_buffer_concat</code> function takes a variable-length argument list following <i>str</i>; each argument must be a <code>char *</code> pointer to a NUL-terminated string. A NULL pointer must be given as the last argument to mark the end of the list. The strings (including <i>str</i>) are appended to the buffer in the order given. None of the strings passed to <code>ne_buffer_concat</code> are modified.</p>
+<h2>Examples</h2>
+<p>The following code will output &quot;Hello, world. And goodbye.&quot;. </p>
+<pre><code>ne_buffer *buf = ne_buffer_create();
+ne_buffer_zappend(buf, &quot;Hello&quot;);
+ne_buffer_concat(buf, &quot;, world. &quot;, &quot;And &quot;, &quot;goodbye.&quot;, NULL);
+puts(buf-&gt;data);
+ne_buffer_destroy(buf);</code></pre>
+<h2>See Also</h2>
+<p>ne_buffer, ne_buffer_create, ne_buffer_destroy</p>
+<h2>Author</h2>
+<p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

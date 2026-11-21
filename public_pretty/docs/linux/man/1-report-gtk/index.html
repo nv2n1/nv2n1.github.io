@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>report-gtk(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-report-gtk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>report-gtk(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>report-gtk - GUI tool to analyze and report ABRT problems</p>
+<h2>SYNOPSIS</h2>
+<p><i>report-gtk</i> [-vpdx] [-e EVENT] [-g GUI_FILE] PROBLEM_DIR</p>
+<h2>DESCRIPTION</h2>
+<p><i>report-gtk</i> is a graphical tool that reports application crashes and other problems caught by abrtd daemon, or created by other programs using libreport. report-gtk works with a single problem saved in specified PROBLEM_DIR. In the expert mode it enables access to and manipulation of problem data.</p>
+<h2>OPTIONS</h2>
+<p>-d, &ndash;delete</p>
+<dl>
+<dt>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
+<p>-e EVENT</p>
+<dl>
+<dt>
+</dt><dd> Run only theset EVENTs on PROBLEM_DIR</dd></dl>
+<p>-g FILE</p>
+<dl>
+<dt>
+</dt><dd> Alternate GUI file</dd></dl>
+<p>-p</p>
+<dl>
+<dt>
+</dt><dd> Add program names to log</dd></dl>
+<p>-v, &ndash;verbose</p>
+<dl>
+<dt>
+</dt><dd> Be verbose</dd></dl>
+<p>-V, &ndash;version</p>
+<dl>
+<dt>
+</dt><dd> Display version and exit</dd></dl>
+<p>-x, &ndash;expert</p>
+<dl>
+<dt>
+</dt><dd> Enabled advanced features</dd></dl>
+<h2>CONFIGURATION</h2>
+<h3>Reporting work flow configuration</h3>
+<p>These configuration files are placed in /usr/share/libreport/workflows.</p>
+<p>Each file has XML formatting with the following DTD:</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+&lt;!ELEMENT workflow    (name+,description+,events*)&gt;
+&lt;!ELEMENT name        (#PCDATA)&gt;
+&lt;!ATTLIST name         xml:lang CDATA #IMPLIED&gt;
+&lt;!ELEMENT description (#PCDATA)&gt;
+&lt;!ATTLIST description  xml:lang CDATA #IMPLIED&gt;
+&lt;!ELEMENT events =    (event)+&gt;
+&lt;!ELEMENT event =     (#PCDATA)&gt;
+</pre></dd></dl>
+<p>name</p>
+<dl>
+<dt>
+</dt><dd> User visible name</dd></dl>
+<p>description</p>
+<dl>
+<dt>
+</dt><dd> User visible description</dd></dl>
+<p>events</p>
+<dl>
+<dt>
+</dt><dd> List of executed events</dd></dl>
+<p>event</p>
+<dl>
+<dt>
+</dt><dd> Name of event. If event is not applicable on the problem data or if it is not defined then process continues with next event sibling.</dd></dl>
+<h2>EXAMPLES</h2>
+<h3>Simple reporting work flow</h3>
+<dl>
+<dt>
+</dt><dd> <pre>
+&lt;workflow&gt;
+  &lt;name xml:lang=&quot;en&quot;&gt;Example&lt;/name&gt;
+  &lt;name xml:lang=&quot;cs&quot;&gt;Př&iacute;klad&lt;/name&gt;
+  &lt;description xml:lang=&quot;en&quot;&gt;Example description&lt;/description&gt;
+  &lt;description xml:lang=&quot;cs&quot;&gt;Př&iacute;klad popisu&lt;/description&gt;
+  &lt;evetns&gt;
+     &lt;event&gt;analyze_example&lt;/event&gt;
+     &lt;event&gt;collect_example&lt;/event&gt;
+     &lt;event&gt;report_example&lt;/event&gt;
+  &lt;/events&gt;
+&lt;/workflow&gt;
+</pre></dd></dl>
+<h2>AUTHORS</h2>
+<dl>
+<dt>
+</dt><dd> &bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

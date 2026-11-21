@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sucrack(1) · Linux Manual Pages</title>
+<meta name="description" content="sucrack is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sucrack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sucrack(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>sucrack</code> is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>sucrack </code> [options] wordlist </p>
+<h2>DESCRIPTION</h2>
+<p> <code>sucrack</code> is a multithreaded Linux/UNIX tool brute-force cracking tool that drives <a href="/docs/linux/man/1-su/">su</a>(1) with referencing a specific user and uses words from a wordlist as passwords. Running <code>sucrack</code> does not require high privileges on the target system. </p>
+<h2>OPTIONS</h2>
+<p> <code>sucrack</code> allows reading passwords from stdin. In that case, use &#8216;-&#8216; instead of a filename as wordlist parameter.</p>
+<dl>
+<dt><code>Common options:</code></dt>
+<dd>
+</dd><dt><i>-h</i></dt>
+<dd> print help message</dd>
+<dt><i>-a</i></dt>
+<dd> use ansi escape codes for nice looking statistics (requires &#8211;enable-statistics configuration flag)</dd>
+<dt><i>-s &lt;seconds&gt;</i></dt>
+<dd> statistics display intervall (requires &#8211;enable-statistics configuration flag)</dd>
+<dt><i>-c</i></dt>
+<dd> only print statistics if a key other than `q&#8217; is pressed</dd>
+<dt><i>-r</i></dt>
+<dd> enable rewriting of dictionary words (see rules below)</dd>
+<dt><i>-w &lt;num&gt;</i></dt>
+<dd> number of threads to run with.</dd>
+<dt><i>-b &lt;size&gt;</i></dt>
+<dd> size of the word list buffer</dd>
+<dt><i>-u &lt;user&gt;</i></dt>
+<dd> user account to su to</dd>
+<dt><i>-l &lt;rules&gt;</i></dt>
+<dd> specify certain rules for the rewriting process</dd></dl>
+<dl>
+<dt><code>Rewriting rules:</code></dt>
+<dd>
+</dd><dt><i>A</i></dt>
+<dd> Rewrite word with only upper case characters</dd>
+<dt><i>F</i></dt>
+<dd> Rewrite word with first character as upper case</dd>
+<dt><i>L</i></dt>
+<dd> Rewrite word with last character as upper case</dd>
+<dt><i>a</i></dt>
+<dd> Rewrite word with only lower case characters</dd>
+<dt><i>f</i></dt>
+<dd> Rewrite word with first character as lower case</dd>
+<dt><i>l</i></dt>
+<dd> Rewrite word with last character as lower case</dd>
+<dt><i>D</i></dt>
+<dd> Prepend each digit (0-9) to the word</dd>
+<dt><i>d</i></dt>
+<dd> Append each digit (0-9) to the word</dd>
+<dt><i>e</i></dt>
+<dd> enleet the word</dd>
+<dt><i>x</i></dt>
+<dd> apply all rules to a word </dd>
+</dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><i>SUCRACK_SU_PATH</i></dt>
+<dd> The path to su (usually /bin/su or /usr/bin/su)</dd>
+<dt><i>SUCRACK_AUTH_FAILURE</i></dt>
+<dd> The message su returns on an authentication failure (like &quot;su: Authentication failure&quot; or &quot;su: Sorry&quot;)</dd>
+<dt><i>SUCRACK_AUTH_SUCCESS</i></dt>
+<dd> The message that indicates an authentication success. This message must not be a password listed in the wordlist (default is &quot;SUCRACK_SUCCESS&quot;) </dd>
+</dl>
+<h2>AUTHOR</h2>
+<dl>
+<dt>Nico Leidecker &lt;nfl [at] portcullis-security.com&gt;</dt>
+<dd> <a rel="nofollow" href="http://www.leidecker.info">http://www.leidecker.info</a> </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<dl>
+<dt><code><a href="/docs/linux/man/1-su/">su</a>(1)</code></dt>
+<dd>
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

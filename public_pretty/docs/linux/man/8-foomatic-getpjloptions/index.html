@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>foomatic-getpjloptions(8) · Linux Manual Pages</title>
+<meta name="description" content="foomatic-getpjloptions – &lt;put a short description here&gt;">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-foomatic-getpjloptions/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>foomatic-getpjloptions(8)</h1>
+
+
+
+
+
+<p>foomatic-getpjloptions &#8211; &lt;put a short description here&gt;</p>
+<h2>Synopsis</h2>
+<p><code>foomatic-getpjloptions</code><i> device</i> <code>foomatic-getpjloptions</code><i> hostname port</i> </p>
+<h2>Description</h2>
+<p><code>foomatic-getpjloptions</code> Sends a set of PJL commands and reads back the PJL options and status from a printer over a network connection or device bidirectional interface such as parallel, USB, serial. printers to standard output. The output can be piped into foomatic-addpjloptions to add options to the database.</p>
+<h3>Options</h3>
+<dl>
+<dt><code>device</code></dt>
+<dd>The interface to which a local printer is connected, e.g. /dev/lp0, /dev/usb/lp0, /dev/tty00, etc. For a parallel port, you must have bidirectional support enabled at the BIOS level and the parallel port driver must support the bidirectional mode. Check your parallel port BIOS settings for EPP/bi-directional mode.</dd>
+<dt><code>hostname</code></dt>
+<dd>Host name or IP address of a network printer (HP JetDirect, DLINK, etc.).</dd>
+<dt><code>port</code></dt>
+<dd>Port on which your network printer listens for socket (Appsocket) connections. Most common ports are 9100 (JetDirect), 10000 (DLINK). Usually you can configure the port via a configuration interface. </dd>
+<h2>Exit Status</h2>
+<p><code>foomatic-getpjloptions</code> returns ???</p>
+<h2>Author</h2>
+<p>Manfred Wassmann &lt;<i>manolo [at] NCC-1701.B.Shuttle.de</i>&gt; for the foomatic project using output from the associated binary. Modified by Patrick Powell &lt;papowell at lprng.com&gt; to provide betters support for network printers, error messages, and remove CR and FF from output.</p>
+<h2>Warnings</h2>
+<p>Uni-directional protocols as remote LPD are not supported as no status is returned. Some network print servers which attach to a printer parallel port do not support bidirectional mode.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

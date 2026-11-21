@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cgiwrap_iterenv(3) · Linux Manual Pages</title>
+<meta name="description" content="cgiwrap_iterenv – iterater for env vars">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cgiwrap_iterenv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cgiwrap_iterenv(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cgiwrap_iterenv &#8211; iterater for env vars </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;cgi/cgiwrap.h&gt;
+</code></pre>
+<pre><code>
+NEOERR *cgiwrap_iterenv(int n, char **k, char **v);
+</code></pre>
+<h2>ARGUMENTS</h2>
+<p> n &#8211; variable to return. This should start at 0 and increment<br />
+ until you receive a NULL return value. </p>
+<h2>DESCRIPTION</h2>
+<p> cgiwrap_iterenv allows a program to iterate over all the environment variables. This is probably mostly used by the default debug output. </p>
+<h2>RETURN VALUE</h2>
+<p> k &#8211; a malloc&#8217;d copy of the variable name<br />
+ v &#8211; a malloc&#8217;d copy of the variable value </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-cgiwrap_iterenv/">cgiwrap_iterenv</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_putenv/">cgiwrap_putenv</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_init_emu/">cgiwrap_init_emu</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_writef/">cgiwrap_writef</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_init_std/">cgiwrap_init_std</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_writevf/">cgiwrap_writevf</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_read/">cgiwrap_read</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_write/">cgiwrap_write</a><code>(3), cgiwrap_getenv</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

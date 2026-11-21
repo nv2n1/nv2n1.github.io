@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker-latest-export(1) · Linux Manual Pages</title>
+<meta name="description" content="docker-export – Export the contents of a container’s filesystem as a tar archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-docker-latest-export/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>docker-latest-export(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> docker-export &#8211; Export the contents of a container&#8217;s filesystem as a tar archive </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker export</code> [<code>&#8211;help</code>] [<code>-o</code>|<code>&#8211;output</code>[=<i>&quot;&quot;</i>]] CONTAINER </p>
+<h2>DESCRIPTION</h2>
+<p> Export the contents of a container&#8217;s filesystem using the full or shortened container ID or container name. The output is exported to STDOUT and can be redirected to a tar file. </p>
+<p> Stream to a file instead of STDOUT by using <code>-o</code>. </p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;help</code><br />
+&nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
+<p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot;<br />
+&nbsp;<wbr>&nbsp;<wbr>Write to a file, instead of STDOUT </p>
+<h2>EXAMPLES</h2>
+<p> Export the contents of the container called angry_bell to a tar file called angry_bell.tar: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+# docker export angry_bell &gt; angry_bell.tar
+# docker export --output=angry_bell-latest.tar angry_bell
+# ls -sh angry_bell.tar
+321M angry_bell.tar
+# ls -sh angry_bell-latest.tar
+321M angry_bell-latest.tar
+</pre>
+</dd></dl>
+<h2>See also</h2>
+<p> <code><a href="/docs/linux/man/1-docker-import/">docker-import</a>(1)</code> to create an empty filesystem image and import the contents of the tarball into it, then optionally tag it. </p>
+<h2>HISTORY</h2>
+<p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; January 2015, updated by Joseph Kern (josephakern at gmail dot com) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

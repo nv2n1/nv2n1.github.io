@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nameclt(1) · Linux Manual Pages</title>
+<meta name="description" content="nameclt – Naming Service client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nameclt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nameclt(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> nameclt &#8211; Naming Service client</p>
+<h2>SYNOPSIS</h2>
+<p> <code>nameclt</code> [-ior &lt;object-reference&gt;] [-advanced] &lt;operation&gt; </p>
+<h2>DESCRIPTION</h2>
+<p> The nameclt command invokes operations on the Naming Service. The allowed operations are:</p>
+<dl>
+<dl>
+<dt>list&nbsp;<wbr>&lt;context-name&gt;</dt>
+<dd> lists contexts and objects bound in the context with the specified name.</dd>
+<dt>bind_new_context&nbsp;<wbr>&lt;context-name&gt;</dt>
+<dd> binds name to a new context, and returns the stringified context IOR.</dd>
+<dt>remove_context&nbsp;<wbr>&lt;context-name&gt;</dt>
+<dd> unbinds and destroys the named context, as long as it is empty.</dd>
+<dt>bind&nbsp;<wbr>&lt;object-name&gt;&nbsp;<wbr>&lt;stringified-IOR&gt;</dt>
+<dd> binds name to object.</dd>
+<dt>unbind&nbsp;<wbr>&lt;object-name&gt;</dt>
+<dd> unbinds name and object.</dd>
+<dt>resolve&nbsp;<wbr>&lt;object-name&gt;</dt>
+<dd> returns stringified IOR bound to specified name.</dd></dl>
+</dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-ior NameService-object-reference</code></dt>
+<dd> Use the given stringified IOR as the &quot;root&quot; context of the naming service. By default, nameclt uses the object reference returned by calling CORBA::ORB::resolve_initial_references(&quot;NameService&quot;).</dd>
+<dt><code>-advanced</code></dt>
+<dd> Allow advanced operations. These are operations which should not normally need to be used. They may however be useful for testing the naming service and also for cleaning up in the event of a client messing up the namespace. The operations are:</dd>
+<dl>
+<dl>
+<dt>bind_context&nbsp;<wbr>&lt;context-name&gt;&nbsp;<wbr>&lt;stringified-IOR&gt;</dt>
+<dd> binds name to context.</dd>
+<dt>rebind&nbsp;<wbr>&lt;object-name&gt;&nbsp;<wbr>&lt;stringified-IOR&gt;</dt>
+<dd> binds name to object even if binding already exists.</dd>
+<dt>rebind_context&nbsp;<wbr>&lt;context-name&gt;&nbsp;<wbr>&lt;stringified-IOR&gt;</dt>
+<dd> binds name to context even if binding already exists.</dd>
+<dt>new_context</dt>
+<dd> returns stringified IOR for a new context.</dd>
+<dt>destroy</dt>
+<dd> destroys the naming context given with -ior flag.</dd></dl>
+</dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> omniNames(1) </p>
+<h2>AUTHOR</h2>
+<p> Tristan Richardson, ORL (Olivetti &amp; Oracle Research Laboratory) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

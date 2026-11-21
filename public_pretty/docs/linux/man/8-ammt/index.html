@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ammt(8) · Linux Manual Pages</title>
+<meta name="description" content="ammt – Amanda version of mt">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ammt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ammt(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ammt &#8211; Amanda version of mt</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>ammt</code> [-d] [-f | -t | <i>device</i>] <i>command</i> [<i>count</i>]</dt></dl>
+<h2>Description</h2>
+<p><code>Ammt</code></p>
+<dd>provides just enough of the standard UNIX <code>mt</code> command for the needs of <i>Amanda</i>. This is handy when doing a full restore and the standard <code>mt</code> program has not yet been found. </dd>
+<p> <code>Ammt</code> also provides access to the <i>Amanda</i> output drivers that support various tape simulations. </p>
+<p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about <i>Amanda</i>. See the <code>OUTPUT DRIVERS</code> section of <i><a href="/docs/linux/man/8-amanda/">amanda</a>(8)</i> for more information on the <i>Amanda</i> output drivers.</p>
+<h2>Options</h2>
+<p><code>-d</code></p>
+<dl>
+<dd>Turn on debugging output.</dd></dl>
+<p> <code>-f</code><i> device</i></p>
+<dl>
+<dd>Access tape device <i>device</i>. If not specified, the <code>TAPE</code> environment variable is used.</dd></dl>
+<p> <code>-t</code><i> device</i></p>
+<dl>
+<dd>Same as <code>-f</code>.</dd></dl>
+<p> <code>command</code><i> count</i></p>
+<dl>
+<dd>Which command to issue, and an optional count of operations.</dd></dl>
+<h2>Commands</h2>
+<p>Each command may be abbreviated to whatever length makes it unique. </p>
+<p> <code>eof|weof</code><i> count</i></p>
+<dl>
+<dd>Write <i>count</i> (default: 1) end of file marks (tapemarks).</dd></dl>
+<p> <code>fsf</code><i> count</i></p>
+<dl>
+<dd>Skip forward <i>count</i> (default: 1) files.</dd></dl>
+<p> <code>bsf</code><i> count</i></p>
+<dl>
+<dd>Skip backward <i>count</i> (default: 1) files.</dd></dl>
+<p> <code>asf</code><i> count</i></p>
+<dl>
+<dd>Position to file number <i>count</i> (default: 0) where zero is beginning of tape. This is the same as a <code>rewind</code> followed by a <code>fsf</code> <i>count</i>.</dd></dl>
+<p> <code>rewind</code></p>
+<dl>
+<dd>Rewind to beginning of tape.</dd></dl>
+<p> <code>offline|rewoffl</code></p>
+<dl>
+<dd>Rewind to beginning of tape and unload the tape from the drive.</dd></dl>
+<p> <code>status</code></p>
+<dl>
+<dd>Report status information about the drive. Which data reported, and what it means, depends on the underlying operating system, and may include: </dd>
+<p> ONLINE</p>
+<dl>
+<dd>Indicates the drive is online and ready.</dd></dl>
+<p> OFFLINE</p>
+<dl>
+<dd>Indicates the drive is offline or not ready.</dd></dl>
+<p> BOT</p>
+<dl>
+<dd>Indicates the drive is at beginning of tape.</dd></dl>
+<p> EOT</p>
+<dl>
+<dd>Indicates the drive is at end of tape.</dd></dl>
+<p> PROTECTED</p>
+<dl>
+<dd>Indicates the tape is write protected.</dd></dl>
+<p> ds</p>
+<dl>
+<dd>Device status.</dd></dl>
+<p> er</p>
+<dl>
+<dd>Error register.</dd></dl>
+<p> fileno</p>
+<dl>
+<dd>Current tape file number.</dd></dl>
+<p> blkno</p>
+<dl>
+<dd>Current tape block number file.</dd></dl>
+</dl>
+<p> Note </p>
+<p> Many systems only report good data when a tape is in the drive and ready.</p>
+<h2>Author</h2>
+<p>Marc Mengel &lt;mengel [at] fnal.gov&gt;, John R. Jackson &lt;jrj [at] purdue.edu&gt;: Original text </p>
+<p> Stefan G. Weichinger, &lt;sgw [at] amanda.org&gt;, maintainer of the <i>Amanda</i>-documentation: XML-conversion</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), : <a rel="nofollow" href="http://wiki.zmanda.com">http://wiki.zmanda.com</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

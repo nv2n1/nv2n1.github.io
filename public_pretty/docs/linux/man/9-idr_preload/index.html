@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>idr_preload(9) · Linux Manual Pages</title>
+<meta name="description" content="idr_preload – preload for idr_alloc">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-idr_preload/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>idr_preload(9)</h1>
+
+
+
+
+
+<p>idr_preload &#8211; preload for <code>idr_alloc</code></p>
+<h2>Synopsis</h2>
+<pre><code>void idr_preload(gfp_t gfp_mask);</code></pre>
+<h2>Arguments</h2>
+<p><i>gfp_mask</i></p>
+<dl>
+<dd>
+</dd><dd>allocation mask to use for preloading</dd></dl>
+<h2>Description</h2>
+<p>Preload per-cpu layer buffer for <code>idr_alloc</code>. Can only be used from process context and each <code>idr_preload</code> invocation should be matched with <code>idr_preload_end</code>. Note that preemption is disabled while preloaded. The first <code>idr_alloc</code> in the preloaded section can be treated as if it were invoked with <i>gfp_mask</i> used for preloading. This allows using more permissive allocation masks for idrs protected by spinlocks. For example, if <code>idr_alloc</code> below fails, the failure can be treated as if <code>idr_alloc</code> were called with GFP_KERNEL rather than GFP_NOWAIT. idr_preload(GFP_KERNEL); spin_lock(lock); </p>
+<pre><code>id = idr_alloc(idr, ptr, start, end, GFP_NOWAIT);
+spin_unlock(lock);
+idr_preload_end;
+if (id &lt; 0)
+    error;</code></pre>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

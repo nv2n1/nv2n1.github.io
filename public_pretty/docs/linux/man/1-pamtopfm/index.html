@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamtopfm(1) · Linux Manual Pages</title>
+<meta name="description" content="pamtopfm – Convert Netpbm image to PFM (Portable Float Map)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamtopfm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamtopfm(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> pamtopfm &#8211; Convert Netpbm image to PFM (Portable Float Map) </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamtopfm</code> [<code>-endian=</code>{<code>big</code>|<code>little</code>}] [<code>-scale=</code><i>float</i>] [<i>imagefile</i>] </p>
+<p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamtopfm</code> reads a Netpbm image (PNM or PAM) and converts it to a PFM (Portable Float Map) image. </p>
+<p> The PFM (Portable Float Map) image format is a lot like PPM, but uses floating point numbers with no maxval to achieve a High Dynamic Range (HDR) format. That means it doesn&#8217;t have a concept of absolute color and it can represent generic light intensity information rather than just visual information like PPM does. For example, two pixels that are so close in intensity that the human eye cannot tell them apart are not visually distinct, so a visual image format such as PPM would have no reason to use different sample values for them. But an HDR format would. </p>
+<p> There are details of the PFM format in the <code>PFM</code> Format Description (1) </p>
+<p> USC&#8217;s HDRShop program and a program called Lefty use it. </p>
+<p> <code>pamtopfm</code> creates a color PFM image if its input is RGB (PPM) and a non-color PFM otherwise. </p>
+<p> Use <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1)<br />
+&nbsp;<wbr>to convert a PFM image to Netpbm format. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-scale=</code><i>float</i></dt>
+<dd>
+<p> This specifies the scale factor of the PFM image.<br />
+&nbsp;<wbr>&nbsp;<wbr>Scale factor is a component of the PFM format.<br />
+&nbsp;<wbr>&nbsp;<wbr>Default is 1.0. </p>
+</dd><dt><code>-endian=</code>{<code>big</code>|<code>little</code>}</dt>
+<dd>
+<p> This specifies the endianness of the PFM image. The samples<br />
+&nbsp;<wbr>&nbsp;<wbr>in the raster of a PFM image are 4 byte IEEE floating point<br />
+&nbsp;<wbr>&nbsp;<wbr>numbers.&nbsp;<wbr>&nbsp;<wbr>A parameter of the IEEE format, and therefore the PFM<br />
+&nbsp;<wbr>&nbsp;<wbr>format, is endianness, i.e. whether the specified bytes are<br />
+&nbsp;<wbr>&nbsp;<wbr>ordered from low addresses to high addresses or vice versa. </p>
+<p> <code>big</code> means big endian &#8212; the natural ordering;<br />
+&nbsp;<wbr>&nbsp;<wbr><code>little</code>&nbsp;<wbr>means little-endian, the Intel-friendly ordering. </p>
+<p> Default is whichever endianness the machine on which <code>pamtopfm</code><br />
+&nbsp;<wbr>&nbsp;<wbr>runs uses internally, which results in the faster execution. </p>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) , <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1) , <code>pam</code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamtopfm</code> was added to Netpbm in Release 10.22 (April 2004). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

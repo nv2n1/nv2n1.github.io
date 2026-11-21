@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_w1_netlink_cmd(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_w1_netlink_cmd – holds the command and data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_w1_netlink_cmd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_w1_netlink_cmd(9)</h1>
+
+
+
+
+
+<p>struct_w1_netlink_cmd &#8211; holds the command and data</p>
+<h2>Synopsis</h2>
+<pre><code>struct w1_netlink_cmd {
+    __u8 cmd;
+    __u8 res;
+    __u16 len;
+    __u8 data[0];
+};</code></pre>
+<h2>Members</h2>
+<p>cmd</p>
+<dl>
+<dd>one of enum w1_commands</dd></dl>
+<p> res</p>
+<dl>
+<dd>reserved</dd></dl>
+<p> len</p>
+<dl>
+<dd>length of data following w1_netlink_cmd</dd></dl>
+<p> data[0]</p>
+<dl>
+<dd>start address of any following data</dd></dl>
+<h2>Description</h2>
+<p>One or more struct w1_netlink_cmd is placed starting at w1_netlink_msg.data each with optional data.</p>
+<h2>Author</h2>
+<p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

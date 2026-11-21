@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mdb-export(1) · Linux Manual Pages</title>
+<meta name="description" content="mdb-export – Export data in an MDB database table to CSV format.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mdb-export/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mdb-export(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>mdb-export </code>&#8211; Export data in an MDB database table to CSV format.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+mdb - export[-H][-d delimiter][-R row_delim][[-Q] | [-q quote[-X escape]]][-I backend][-D format][-N namespace][-b strip | raw | octal] database table
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>mdb-export</code> is a utility program distributed with MDB Tools. </p>
+<p> It produces a CSV (comma separated value) output for the given <i>table</i>. Such output is suitable for importation into databases or spreadsheets.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-H</code></dt>
+<dd> Supress header row</dd>
+<dt><code>-Q</code></dt>
+<dd> Don&#8217;t wrap text-like fields (text, memo, date) in quotes. If not specified text fiels will be surrounded by &quot; (double <i>quote</i>) characters.</dd>
+<dt><code>-d</code></dt>
+<dd> Specify an alternative column <i>delimiter</i> If no <i>delimiter</i> is specified, <i>table</i> names will be delimited by a , (comma) character.</dd>
+<dt><code>-R</code></dt>
+<dd> Specify a row <i>delimiter</i></dd>
+<dt><code>-I</code> <i>backend</i></dt>
+<dd> INSERT statements (instead of CSV). You must specify which SQL <i>backend</i> dialect to use. Allowed values are: access, sybase, oracle, postgres, mysql and sqlite.</dd>
+<dt><code>-D</code></dt>
+<dd> Set the date <i>format</i> (see <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) for details)</dd>
+<dt><code>-q</code></dt>
+<dd> Use to wrap text-like fields. Default is &quot;.</dd>
+<dt><code>-X</code></dt>
+<dd> Use to <i>escape</i> quoted characters within a field. Default is doubling.</dd>
+<dt><code>-N</code> <i>namespace</i></dt>
+<dd> Prefix identifiers with <i>namespace</i>.</dd>
+<dt><code>-b</code> strip|raw|octal</dt>
+<dd> Binary export mode: strip binaries, export as-is, or output style octal data.</dd></dl>
+<h2>NOTES</h2>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>MDB_JET3_CHARSET</code></dt>
+<dd> Defines the charset of the input JET3 (access 97) file. Default is CP1252. See <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1).</dd>
+<dt><code>MDBICONV</code></dt>
+<dd> Defines the output charset to use for the SQL file. Default is UTF-8. mdbtools must have been compiled with iconv.</dd>
+<dt><code>MDBOPTS</code></dt>
+<dd> semi-column separated list of options:</dd>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> use_index</dd>
+<dt>&bull;</dt>
+<dd> no_memo</dd>
+<dt>&bull;</dt>
+<dd> debug_like</dd>
+<dt>&bull;</dt>
+<dd> debug_write</dd>
+<dt>&bull;</dt>
+<dd> debug_usage</dd>
+<dt>&bull;</dt>
+<dd> debug_ole</dd>
+<dt>&bull;</dt>
+<dd> debug_row</dd>
+<dt>&bull;</dt>
+<dd> debug_props</dd>
+<dt>&bull;</dt>
+<dd> debug_all is a shortcut for all debug_* options</dd></dl>
+</dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gmdb2/">gmdb2</a></code>(1) <code><a href="/docs/linux/man/1-mdb-hexdump/">mdb-hexdump</a></code>(1) <code><a href="/docs/linux/man/1-mdb-prop/">mdb-prop</a></code>(1) <code><a href="/docs/linux/man/1-mdb-sql/">mdb-sql</a></code>(1) <code><a href="/docs/linux/man/1-mdb-ver/">mdb-ver</a></code>(1) <code><a href="/docs/linux/man/1-mdb-array/">mdb-array</a></code>(1) <code><a href="/docs/linux/man/1-mdb-header/">mdb-header</a></code>(1) <code><a href="/docs/linux/man/1-mdb-parsecsv/">mdb-parsecsv</a></code>(1) <code><a href="/docs/linux/man/1-mdb-schema/">mdb-schema</a></code>(1) <code><a href="/docs/linux/man/1-mdb-tables/">mdb-tables</a></code>(1)</p>
+<h2>HISTORY</h2>
+<p> <code>mdb-export</code> first appeared in MDB Tools 0.1.</p>
+<h2>AUTHORS</h2>
+<p> The <code>mdb-export</code> utility was written by Brian Bruns.</p>
+<h2>BUGS</h2>
+<p> Memo fields are allowed to contain a newline characters, the current program does nothing about this. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

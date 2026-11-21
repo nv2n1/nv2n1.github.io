@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>elks(1) · Linux Manual Pages</title>
+<meta name="description" content="elksemu – Embedded Linux Kernel Subset emulator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-elks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>elks(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> elksemu &#8211; Embedded Linux Kernel Subset emulator </p>
+<h2>SYNOPSIS</h2>
+<p> <code>/lib/elksemu</code> <code>program</code> [<code>arguments</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Elksemu</code> is a program that allows 8086 <code>ELKS</code> programs to be run under Linux-i386. These programs can be compiled using the <code><a href="/docs/linux/man/1-bcc/">bcc</a>(1)</code> C compiler. </p>
+<p> Yom may use the <i>binfmt-misc</i> module under Linux 2.1.43 or greater as described in the elksemu README which will cause the kernel to run <i>elksemu</i> with the correct arguments whenever the user tries to execute an ELKS executable directly. </p>
+<h2>OPTIONS</h2>
+<p> There are no flag options to elksemu, the first argument is the name of the program to run the rest are arguments that are passed to the Elks program. </p>
+<h2>SECURITY</h2>
+<p> The <code>elksemu</code> program may be installed suid-root and in this event it is able to run execute only (chmod 111) elks executables and act correctly on the suid permission bits on any executable. This should be considered a security hazard so elksemu does <i>not</i> have to be installed suid-root. If you consider using this facility you should also be aware that it will override the &#8216;nosuid&#8217; <a href="/docs/linux/man/8-mount/">mount</a>(8) option. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-bcc/">bcc</a>(1), <a href="/docs/linux/man/1-as86/">as86</a>(1), <a href="/docs/linux/man/1-ld86/">ld86</a>(1)</p>
+<h2>BUGS</h2>
+<p> Elksemu is incomplete. </p>
+<p> The program may still have security bugs! </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

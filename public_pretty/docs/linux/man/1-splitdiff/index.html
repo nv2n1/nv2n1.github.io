@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>splitdiff(1) · Linux Manual Pages</title>
+<meta name="description" content="splitdiff – separate out incremental patches">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-splitdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>splitdiff(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> splitdiff &#8211; separate out incremental patches </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>splitdiff</code> [-a] [-d] [-D&nbsp;<i>dir</i>] [-p&nbsp;<i>n</i>] [-E] [<i>file</i>]</dt>
+<dt> <code>splitdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>If you have a patch file composed of several incremental patches, you can use splitdiff to separate them out. You may want to do this in preparation for re-combining them with <code><a href="/docs/linux/man/1-combinediff/">combinediff</a></code>(1). </dd>
+<p> The effect of running splitdiff is to separate its input into a set of output files, with no output file patching the same file more than once.</p>
+<h2>OPTIONS</h2>
+<p> <code>-a</code></p>
+<dl>
+<dt>
+</dt><dd> Split out every single file-level patch.</dd></dl>
+<p> <code>-d</code></p>
+<dl>
+<dt>
+</dt><dd> Create file names such as a_b.c.patch for a patch that modifies a/b.c.</dd></dl>
+<p> <code>-D</code> <i>dir</i></p>
+<dl>
+<dt>
+</dt><dd> Write output files into subdirectory <i>dir</i>. Implies <code>-d</code>.</dd></dl>
+<p> <code>-p</code> <i>n</i></p>
+<dl>
+<dt>
+</dt><dd> Strip the first <i>n</i> components of the pathname to aid comparisons.</dd></dl>
+<p> <code>-E</code></p>
+<dl>
+<dt>
+</dt><dd> Don&#8217;t use .patch filename extension when writing output files.</dd></dl>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display a short usage message.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the version number of splitdiff.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-combinediff/">combinediff</a></code>(1), <code><a href="/docs/linux/man/1-lsdiff/">lsdiff</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Package maintainer</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

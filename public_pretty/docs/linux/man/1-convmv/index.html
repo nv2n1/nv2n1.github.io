@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>convmv(1) · Linux Manual Pages</title>
+<meta name="description" content="convmv – converts filenames from one encoding to another">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-convmv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>convmv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> convmv &#8211; converts filenames from one encoding to another </p>
+<h2>SYNOPSIS</h2>
+<p> <code>convmv</code> [<code>options</code>] <font SIZE="-1">FILE</font>(S) &#8230; <font SIZE="-1">DIRECTORY</font>(S)</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f </code><font SIZE="-1"><code>ENCODING</code></font></dt>
+<dd> specify the current encoding of the filename(s) from which should be converted</dd>
+<dt><code>-t </code><font SIZE="-1"><code>ENCODING</code></font></dt>
+<dd> specify the encoding to which the filename(s) should be converted</dd>
+<dt><code>-i</code></dt>
+<dd> interactive mode (ask y/n for each action)</dd>
+<dt><code>-r</code></dt>
+<dd> recursively go through directories</dd>
+<dt><code>&#8211;nfc</code></dt>
+<dd> target files will be normalization form C for <font SIZE="-1">UTF-8 </font>(Linux etc.)</dd>
+<dt><code>&#8211;nfd</code></dt>
+<dd> target files will be normalization form D for <font SIZE="-1">UTF-8 </font>(<font SIZE="-1">OS X</font> etc.).</dd>
+<dt><code>&#8211;qfrom</code> , <code>&#8211;qto</code></dt>
+<dd> be more quiet about the &#8220;from&#8221; or &#8220;to&#8221; of a rename (if it screws up your terminal e.g.). This will in fact do nothing else than replace any non-ASCII character (bytewise) with ? and any control character with * on printout, this does not affect rename operation itself.</dd>
+<dt><code>&#8211;exec</code> command</dt>
+<dd> execute the given command. You have to quote the command and #1 will be substituted by the old, #2 by the new filename. Using this option link targets will stay untouched. </dd>
+<p> Example: </p>
+<p> convmv -f latin1 -t utf-8 -r &#8211;exec &#8220;echo #1 should be renamed to #2&#8221; path/to/files</p>
+<dt><code>&#8211;list</code></dt>
+<dd> list all available encodings. To get support for more Chinese or Japanese encodings install the Perl HanExtra or <font SIZE="-1">JIS2K</font> Encode packages.</dd>
+<dt><code>&#8211;lowmem</code></dt>
+<dd> keep memory footprint low by not creating a hash of all files. This disables checking if symlink targets are in subtree. Symlink target pointers will be converted regardlessly. If you convert multiple hundredthousands or millions of files the memory usage of convmv might grow quite high. This option would help you out in that case.</dd>
+<dt><code>&#8211;nosmart</code></dt>
+<dd> by default convmv will detect if a filename is already <font SIZE="-1">UTF8</font> encoded and will skip this file if conversion from some charset to <font SIZE="-1">UTF8</font> should be performed. <tt>&quot;--nosmart&quot;</tt> will also force conversion to <font SIZE="-1">UTF-8</font> for such files, which might result in &#8220;double encoded <font SIZE="-1">UTF-8&#8221; </font>(see section below).</dd>
+<dt><code>&#8211;fixdouble</code></dt>
+<dd> using the <tt>&quot;--fixdouble&quot;</tt> option convmv does only convert files which will still be <font SIZE="-1">UTF-8</font> encoded after conversion. That&#8217;s useful for fixing double-encoded <font SIZE="-1">UTF-8</font> files. All files which are not <font SIZE="-1">UTF-8</font> or will not result in <font SIZE="-1">UTF-8</font> after conversion will not be touched. Also see chapter &#8220;How to undo double <font SIZE="-1">UTF-8 &#8230;&#8221;</font> below.</dd>
+<dt><code>&#8211;notest</code></dt>
+<dd> Needed to actually rename the files. By default convmv will just print what it wants to do.</dd>
+<dt><code>&#8211;parsable</code></dt>
+<dd> This is an advanced option that people who want to write a <font SIZE="-1">GUI</font> front end will find useful (some others maybe, too). It will convmv make print out what it would do in an easy parsable way. The first column contains the action or some kind of information, the second column mostly contains the file that is to be modified and if appropriate the third column contains the modified value. Each column is separated by 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>phy_attach(9) · Linux Manual Pages</title>
+<meta name="description" content="phy_attach – attach a network device to a particular PHY device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-phy_attach/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>phy_attach(9)</h1>
+
+
+
+
+
+<p>phy_attach &#8211; attach a network device to a particular PHY device</p>
+<h2>Synopsis</h2>
+<pre><code>struct phy_device *phy_attach(struct net_device *dev, const char *bus_id, phy_interface_t interface);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>network device to attach</dd></dl>
+<p> <i>bus_id</i></p>
+<dl>
+<dd>Bus ID of PHY device to attach</dd></dl>
+<p> <i>interface</i></p>
+<dl>
+<dd>PHY device&#8217;s interface</dd></dl>
+<h2>Description</h2>
+<p>Same as <code>phy_attach_direct</code> except that a PHY bus_id string is passed instead of a pointer to a struct phy_device.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

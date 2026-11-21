@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grd2rgb(1) · Linux Manual Pages</title>
+<meta name="description" content="grd2rgb – Write r/g/b grid files from a grid file, a raw RGB file, or SUN rasterfile">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grd2rgb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grd2rgb(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> grd2rgb &#8211; Write r/g/b grid files from a grid file, a raw RGB file, or SUN rasterfile</p>
+<h2>SYNOPSIS</h2>
+<p> <code>grd2rgb</code> <i>infile</i> <i>template</i> [ <i>cpt</i> ] [ <i>xinc</i>[<code>m</code>|<code>s</code>][/<i>yinc</i>[<code>m</code>|<code>s</code>]] ] [ <i>layer</i> ] <i>region</i> [<i>level</i>] [ <i>width</i>/<i>height</i>[/<i>n_bytes</i>] ] [ <code>-r</code> ] </p>
+<p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
+<p> <code>grd2rgb</code> reads one of three types of input files: (1) A Sun 8-, 24-, or 32-bit raster file; we the write out the red, green, and blue components (0-255 range) to separate grid files. Since the raster file header is limited you may use the <code>-R</code>, <code>-I</code>, <code>-r</code> options to set a complete header record [Default is simply based on the number of rows and columns]. (2) A binary 2-D grid file; we then convert the z-values to red, green, blue via the provided CPT file. Optionally, only write out one of the r, g, b, layers. (3) A RGB or RGBA raw raster file. Since raw rasterfiles have no header, you have to give the image dimensions via the <code>-W</code> option.</p>
+<h2>REQUIRED ARGUMENTS</h2>
+<dl>
+<dt><i>infile</i></dt>
+<dd> The (1) Sun raster file, (2) 2-D binary grid file, or (3) raw raster file to be converted.</dd>
+<dt><code>-G</code><i>template</i></dt>
+<dd> Provide an output name template for the three output grids. The template should be a regular grid file name except it must contain the string %c which on output will be replaced by r, g, or b.</dd></dl>
+<h2>OPTIONAL ARGUMENTS</h2>
+<dl>
+<dt><code>-C</code><i>cpt</i></dt>
+<dd> name of the color palette table (for 2-D binary input grid only).</dd>
+<dt><code>-I</code><i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]]</dt>
+<dd> <i>x_inc</i> [and optionally <i>y_inc</i>] is the grid spacing. Optionally, append a suffix modifier. <code>Geographical (degrees) coordinates</code>: Append <code>m</code> to indicate arc minutes or <code>s</code> to indicate arc seconds. If one of the units <code>e</code>, <code>f</code>, <code>k</code>, <code>M</code>, <code>n</code> or <code>u</code> is appended instead, the increment is assumed to be given in meter, foot, km, Mile, nautical mile or US survey foot, respectively, and will be converted to the equivalent degrees longitude at the middle latitude of the region (the conversion depends on <i>PROJ_ELLIPSOID</i>). If /<i>y_inc</i> is given but set to 0 it will be reset equal to <i>x_inc</i>; otherwise it will be converted to degrees latitude. <code>All coordinates</code>: If <code>=</code> is appended then the corresponding max <i>x</i> (<i>east</i>) or <i>y</i> (<i>north</i>) may be slightly adjusted to fit exactly the given increment [by default the increment may be adjusted slightly to fit the given domain]. Finally, instead of giving an increment you may specify the <i>number of nodes</i> desired by appending <code>+</code> to the supplied integer argument; the increment is then recalculated from the number of nodes and the domain. The resulting increment value depends on whether you have selected a gridline-registered or pixel-registered grid; see <i>App-file-formats</i> for details. Note: if <code>-R</code><i>grdfile</i> is used then the grid spacing has already been initialized; use <code>-I</code> to override the values.</dd>
+<dt><code>-L</code><i>layer</i></dt>
+<dd> Output only the specified layer (r, g, or b). [Default outputs all 3 layers].</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code><i>width</i>/<i>height</i>[/<i>n_bytes</i>]</dt>
+<dd> Sets the size of the raw raster file. By default an RGB file (which has 3 bytes/pixel) is assumed. For RGBA files use <i>n_bytes</i> = 4. Use <code>-W</code> for guessing the image size of a RGB raw file, and <code>-W</code><i>=/=/4</i> if the raw image is of the RGBA type. Notice that this might be a bit slow because the guessing algorithm makes uses of FFTs.</dd>
+<dt><code>-r</code> <i>(more &#8230;)</i></dt>
+<dd> Set pixel node registration [gridline].</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To use the color palette topo.cpt to create r, g, b component grids from hawaii_grv.nc file, use </p>
+<pre>
+gmt grd2rgb hawaii_grv.nc -Ctopo.cpt -Ghawaii_grv_%c.nc
+</pre>
+<p> To output the red component from the Sun raster radiation.ras file, use </p>
+<pre>
+gmt grd2rgb radiation.ras -Lr -Gcomp_%c.nc
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>gmt</code>, <code>gmt.conf</code>, <code>grdedit</code>, <code>grdimage</code>, <code>grdmath</code> , <code>grdview</code></p>
+<h2>COPYRIGHT</h2>
+<p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

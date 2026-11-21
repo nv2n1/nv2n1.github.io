@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pkcsslotd(8) · Linux Manual Pages</title>
+<meta name="description" content="pkcsslotd – shared memory manager for opencryptoki">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pkcsslotd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pkcsslotd(8)</h1>
+
+
+
+
+
+<p>pkcsslotd &#8211; shared memory manager for opencryptoki </p>
+<h2>Description</h2>
+<p>The <code>pkcsslotd</code> daemon manages PKCS#11 objects between PKCS#11-enabled applications. When 2 or more processes are accessing the same cryptographic token, the daemon is notified and updates each application when the token&#8217;s objects change. </p>
+<h2>Notes</h2>
+<p>Only one instance of the pkcsslotd daemon should be running on any given host. If a prior instance of pkcsslotd did not shut down cleanly, then it may leave an allocated shared memory segment on the system. The allocated memory segment can be identified by its key and can be safely removed once the daemon is stopped with the ipcrm command, such as: <i>ipcrm -M 0x6202AB38</i> The daemon creates the shared memory segment with group ownership by the <i>pkcs11</i> group. All non-root users that should be able to use openCryptoki need to be members of the group. Only trusted users should be assigned to the group, see the &quot;SECURITY NOTE&quot; in the <code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7) manual page for details. </p>
+<h2>See Also</h2>
+<dl>
+<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</dt>
+<dd>
+</dd><dt><code><a href="/docs/linux/man/5-opencryptoki-conf/">opencryptoki.conf</a></code>(5),</dt>
+<dd>
+</dd><dt><code><a href="/docs/linux/man/1-pkcsconf/">pkcsconf</a></code>(1),</dt>
+<dd>
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

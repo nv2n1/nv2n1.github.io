@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libcurl-easy(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libcurl-easy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libcurl-easy(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>libcurl-easy - easy interface overview</p>
+<h2>DESCRIPTION</h2>
+<p>When using libcurl&rsquo;s &quot;easy&quot; interface you init your session and get a handle (often referred to as an &quot;easy handle&quot;), which you use as input to the easy interface functions you use. Use <i><a HREF="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a>(3)</i> to get the handle.</p>
+<p>You continue by setting all the options you want in the upcoming transfer, the most important among them is the URL itself (you can&rsquo;t transfer anything without a specified URL as you may have figured out yourself). You might want to set some callbacks as well that will be called from the library when data is available etc. <i><a HREF="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> is used for all this.</p>
+<p>When all is setup, you tell libcurl to perform the transfer using <i><a HREF="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i>. It will then do the entire operation and won&rsquo;t return until it is done (successfully or not).</p>
+<p>After the transfer has been made, you can set new options and make another transfer, or if you&rsquo;re done, cleanup the session by calling <i><a HREF="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i>. If you want persistent connections, you don&rsquo;t cleanup immediately, but instead run ahead and perform other transfers using the same easy handle.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipseckey(1) · Linux Manual Pages</title>
+<meta name="description" content="ipseckey – Generate IPSECKEY records on libreswan IPsec servers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ipseckey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ipseckey(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ipseckey &#8211; Generate IPSECKEY records on libreswan IPsec servers </p>
+<h2>SYNTAX</h2>
+<p> ipseckey</p>
+<h2>DESCRIPTION</h2>
+<p> ipseckey generates RFC-4025 IPSECKEY DNS records based on the public key of the IPsec server. Supported IPsec software is libreswan and some versions of openswan (depending on its implementation of showhostkey). The record is displayed will have the label of the hostname. This can be manually changed. </p>
+<p> (TODO: allow specifying &#8211;hostname and allow &#8211;reverse for creating in-addr.arpa. entries)</p>
+<h2>OPTIONS</h2>
+<p> <code>-h / &#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Output help information and exit.</dd></dl>
+<p> <code>-v / &#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Output version information and exit.</dd></dl>
+<h2>FILES</h2>
+<p> The NSS IPsec database in /etc/ipsec.d/*.db or for older openswan without NSS /etc/ipsec.secrets</p>
+<h2>REQUIREMENTS</h2>
+<p> ipseckey MUST be run on the IPsec gateway itself because unlike TLS, IPsec servers do not present their public RSA key any client. Currently, only libreswan IPsec is supported (m[blue]<code><a rel="nofollow" href="https://libreswan.org">https://libreswan.org</a></code>m[]) although some versions of openswan might work as well. Root access is needed because the public key is pulled from /etc/ipsec.secrets which can contain secrets and is therefor only readable by root (even though with libreswan, ipsec.secrets does not contain the any private RSA keys)</p>
+<h2>BUGS</h2>
+<p> Some other IPsec software is not yet supported</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-ipsec_showhostkey/">ipsec_showhostkey</a></code>(8) and RFC-4025</p>
+<h2>AUTHORS</h2>
+<p> Paul Wouters &lt;pwouters [at] redhat.com&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright 2015 Paul Wouters </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See &lt;m[blue]<code><a rel="nofollow" href="http://www.fsf.org/copyleft/gpl.txt">http://www.fsf.org/copyleft/gpl.txt</a></code>m[]&gt;. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (file COPYING in the distribution) for more details. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

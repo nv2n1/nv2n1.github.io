@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>voikkospell(1) · Linux Manual Pages</title>
+<meta name="description" content="voikkospell – test program for Voikko spell checker">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-voikkospell/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>voikkospell(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> voikkospell &#8211; test program for Voikko spell checker </p>
+<h2>SYNOPSIS</h2>
+<p> <code>voikkospell</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>voikkospell</code> is a test program for spell checking functionality in libvoikko, library of Finnish language tools. It reads words from stdin (one word on a line) and print them to stdout, adding &quot;C: &quot; in front of correct words and &quot;W: &quot; in front of incorrect words. </p>
+<p> Common options of different Voikko test programs are listed in COMMON OPTIONS.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-m</code></dt>
+<dd> In addition to spelling result, prints morphological analysis info (A:) for recognized words.</dd>
+<dt><code>-M</code></dt>
+<dd> Prints morphological analysis info (A:) for recognized words without displaying spelling result.</dd>
+<dt><code>-t</code></dt>
+<dd> Prints only &quot;C&quot; or &quot;W&quot; instead of typical full output.</dd>
+<dt><code>-tt</code></dt>
+<dd> Prints only misspelled words.</dd>
+<dt><code>-s</code></dt>
+<dd> Prints suggestions (S:) for incorrectly spelled words.</dd>
+<dt><code>-c</code><i>n</i></dt>
+<dd> Set cache size parameter to <i>n</i>. -1 disables the cache and 0 is the default. For checking large amounts of unsorted text you may want to set <i>n</i> to 5 to get better performance.</dd>
+<dt><code>-j</code><i> n</i></dt>
+<dd> Use <i>n</i> threads for spell checking. When more than one thread is used checking is performed using large internal buffers which is why this mode should only be used for batch processing.</dd>
+<dt><code>-x</code><i>c</i></dt>
+<dd> Like <code>voikkospell -s</code> but output is printed on one line separated by character <i>c</i> without &quot;C&quot;, &quot;W&quot; or &quot;S&quot; in front of the words. If <i>c</i> is not defined words are separated by space and suggestions that have spaces in them are not printed.</dd>
+<dt><code>-l</code></dt>
+<dd> Prints a list of available dictionary variants and exits. The first variant is the default to be used when no specific variant has been requested.</dd>
+<dt><code>ignore_nonwords=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>accept_first_uppercase=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>accept_extra_hyphens=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>accept_missing_hyphens=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>ocr_suggestions=</code><i>n</i></dt>
+<dd>
+ Set the value of the specified boolean option. <i>n</i> can be either 0 (false) or 1 (true).</dd></dl>
+<h2>COMMON OPTIONS</h2>
+<dl>
+<dt><code>-p</code><i> directory</i></dt>
+<dd> (voikkospell, voikkohyphenate, voikkogc) Look from <i>directory</i> before the standard locations when searching for dictionary files.</dd>
+<dt><code>-d</code><i> variant</i></dt>
+<dd> (voikkospell, voikkohyphenate, voikkogc) Use dictionary variant <i>variant</i> instead of the default dictionary variant. The variant must be represented as a BCP 47 language tag.</dd>
+<dt><code>ignore_dot=</code><i>n</i></dt>
+<dd> (voikkospell, voikkohyphenate)</dd>
+<dt><code>ignore_numbers=</code><i>n</i></dt>
+<dd> (voikkospell, voikkohyphenate)<br />
+ Set the value of the specified boolean option. <i>n</i> can be either 0 (false) or 1 (true).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version numbers for libvoikko and the test tool.</dd></dl>
+<h2>AUTHOR</h2>
+<p> voikkospell and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

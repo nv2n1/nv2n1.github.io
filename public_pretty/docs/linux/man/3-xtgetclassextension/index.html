@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtgetclassextension(3) · Linux Manual Pages</title>
+<meta name="description" content="XtGetClassExtension – locate a class extension record">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtgetclassextension/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtgetclassextension(3)</h1>
+
+
+
+
+
+<p>XtGetClassExtension &#8211; locate a class extension record </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>XtPointer XtGetClassExtension(WidgetClass <i>object_class</i>, Cardinal <i>byte_offset</i>, XrmQuark <i>type</i>, long <i>version</i>, Cardinal <i>record_size</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>object_class</i></dt>
+<dd>Specifies the widget class containing the extension list to be searched.</dd>
+<dt><i>byte_offset</i></dt>
+<dd>Specifies the offset in bytes form the base of the widget class of the extension field to be searched.</dd>
+<dt><i>type</i></dt>
+<dd>Specifies the name of the class extension to be located.</dd>
+<dt><i>version</i></dt>
+<dd>Specifies the minimum acceptable version of the class extension required for a match.</dd>
+<dt><i>record_size</i></dt>
+<dd>Specifies the minimum acceptable length of the class extension record required for match, or 0.</dd></dl>
+<h2>Description</h2>
+<p>The list of extension records at the specified offset in the specified <i>widget_class</i> will be searched for a match on the specified <i>type</i>, a version greater than or equal to the specified <i>version</i>, and a record size greater than or equal the specified <i>record_size</i> if it is nonzero. <code>XtGetClassExtension</code> returns a pointer to a matching extension record or NULL if no match is found. The returned extension record is owned by the widget class and must not be modified or freed by the caller, except possibly to be modified by the widget class owner.</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

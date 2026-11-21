@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lnst-pool-wizard(1) · Linux Manual Pages</title>
+<meta name="description" content="lnst-pool-wizard – Linux Network Stack Test Pool Wizard">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lnst-pool-wizard/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lnst-pool-wizard(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> lnst-pool-wizard &#8211; Linux Network Stack Test Pool Wizard </p>
+<h2>SYNOPSIS</h2>
+<p> <code>lnst-pool-wizard</code> [<code>-h</code>] [<i>MODE</i>] [<code>-p </code><i>pool_dir</i>] [<i>HOSTNAME[:PORT]</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> Linux Network Stack Test is a tool that supports development and execution of automated and portable network tests. For detailed description of the architecture of LNST please refer to project website (link listed on <code>INTERNET RESOURCES</code> bellow). </p>
+<p> <code>lnst-pool-wizard</code> is a script that runs wizard for creating slave machine description XML files</p>
+<h2>MODES</h2>
+<dl>
+<dt><code>-i, &#8211;interactive</code></dt>
+<dd> If any hostnames are specified, wizard will try to connect to them, get available interfaces and ask user which of the interfaces should be added to the result description XML file. If no hostname is specified, wizard will ask for hostname via prompt.</dd>
+<dt><code>-n, &#8211;noninteractive</code></dt>
+<dd> Wizard will try to connect to all hostnames specified in arguments and for each one create XML file with all available interfaces.</dd>
+<dt><code>-v, &#8211;virtual</code></dt>
+<dd> This mode is for virtual hosts created by libvirt. Wizard queries user for libvirt domain and tries to retrieve IP address from DHCP Leases. This IP address will be used as hostname in Slave Description XML file.</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display usage of this command.</dd>
+<dt><code>-p, &#8211;pool_dir=</code><i>directory</i></dt>
+<dd> Directory where result XML files will be stored. If none is entered default location will be used (~/.lnst/pool)</dd></dl>
+<h2>INTERNET RESOURCES</h2>
+<p> Project Homepage: <a rel="nofollow" href="http://lnst-project.org/">http://lnst-project.org/</a><br />
+ Online Documentation: <a rel="nofollow" href="https://github.com/jpirko/lnst/wiki#learn">https://github.com/jpirko/lnst/wiki#learn</a><br />
+ Git Source Tree: <a rel="nofollow" href="https://github.com/jpirko/lnst">https://github.com/jpirko/lnst</a><br />
+ Mailing List: &lt;lnst-developers [at] lists.fedorahosted.org&gt; </p>
+<h2>AUTHORS</h2>
+<p> <code>Jiri Pirko</code> &lt;jiri [at] resnulli.us&gt;<br />
+ <code>Jan Tluka</code> &lt;jtluka [at] redhat.com&gt;<br />
+ <code>Ondrej Lichtner</code> &lt;olichtne [at] redhat.com&gt;<br />
+ <code>Jiri Prochazka</code> &lt;jprochaz [at] redhat.com&gt;<br />
+ <code>Jiri Zupka</code> &lt;jzupka [at] redhat.com&gt;<br />
+ <code>Radek Pazdera</code> &lt;radek [at] pazdera.co.uk&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2011-2015 Red Hat, Inc. </p>
+<p> LNST is distributed under GNU General Public License version 2. See the file &quot;COPYING&quot; in the source distribution for information on terms &amp; conditions for accessing and otherwise using LNST. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

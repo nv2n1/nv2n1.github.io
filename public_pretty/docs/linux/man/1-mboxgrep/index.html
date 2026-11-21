@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mboxgrep(1) · Linux Manual Pages</title>
+<meta name="description" content="mboxgrep – displays email messages matching a pattern">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mboxgrep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mboxgrep(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> mboxgrep &#8211; displays email messages matching a pattern</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mboxgrep</code> [<i>OPTIONS</i>] PATTERN [<i>MAILBOX</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> This manual page refers to <code>mboxgrep</code> version <code>0.7.9</code>. </p>
+<p> <code>mboxgrep</code> scans a <i>MAILBOX</i> and displays messages matching <i>PATTERN.</i> </p>
+<p> If a mailbox name is ommited, or a single dash (-) is given instead, it reads from standard input. It can read mbox folders or output from another <code>mboxgrep</code> process from standard input. </p>
+<p> <code>mboxgrep</code> understands POSIX regular expressions, as well as Perl compatible regular expressions (if enabled at compile time). <i>MAILBOX</i> can be either a:</p>
+<dl>
+<dt>*</dt>
+<dd> mbox folder (either plain or compressed)</dd>
+<dt>*</dt>
+<dd> MH folder</dd>
+<dt>*</dt>
+<dd> Gnus nnmh or nnml folder</dd>
+<dt>*</dt>
+<dd> qmail-style maildir folder</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display a help screen and exit.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display version and copyright information and exit.</dd>
+<dt>-r, &#8211;recursive</dt>
+<dd> Descend into directories recursively.</dd>
+<dt>-E, &#8211;extended-regexp</dt>
+<dd> PATTERN is an extended regular expression. This is default.</dd>
+<dt>-G, &#8211;basic-regexp</dt>
+<dd> PATTERN is a basic regular expression.</dd>
+<dt>-P, &#8211;perl-regexp</dt>
+<dd> PATTERN is a Perl regular expression. Works only if enabled at compile time.</dd>
+<dt>-e, &#8211;regexp=PATTERN</dt>
+<dd> Use PATTERN as a regular expression.</dd>
+<dt>-i, &#8211;ignore-case</dt>
+<dd> Ignore case distinctions.</dd>
+<dt>-v, &#8211;invert-match</dt>
+<dd> Select messages which don&#8217;t match PATTERN.</dd>
+<dt>-H, &#8211;headers</dt>
+<dd> Match PATTERN against message headers.</dd>
+<dt>-B, &#8211;body</dt>
+<dd> Match PATTERN against message body.</dd>
+<dt>-l, &#8211;file-lock=METHOD</dt>
+<dd> Select file locking METHOD. METHOD is `fcntl&#8217;, `flock&#8217;, or `none&#8217;.</dd>
+<dt>-nl, &#8211;no-file-lock</dt>
+<dd> Do not lock files. This option is meaningful only if a mbox folder (see below) is scanned.</dd>
+<dt>-c, &#8211;count</dt>
+<dd> Suppress normal output and print a count of matching messages.</dd>
+<dt>-o, &#8211;output=FOLDER</dt>
+<dd> Suppress normal output and write messages to destination folder FOLDER instead.</dd>
+<dt>-p, &#8211;pipe=COMMAND</dt>
+<dd> Pipe each found message to COMMAND</dd>
+<dt>-d, &#8211;delete</dt>
+<dd> Suppress normal output and delete selected messages instead. Use with caution.</dd>
+<dt>-nd, &#8211;no-duplicates</dt>
+<dd> Ignore duplicate messages.</dd>
+<dt>-m, &#8211;mailbox-format=TYPE</dt>
+<dd> Select input and output mailbox TYPE. TYPE can be either `mbox&#8217; (default), `zmbox&#8217; (meaning `gzip compressed mbox&#8217;), `bz2mbox&#8217; (meaning `bzip2 compressed mbox&#8217;), `mh&#8217;, `nnml&#8217;, `nnmh&#8217; or `maildir&#8217;.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>*</dt>
+<dd> Search $MAIL for messages from Dirty Harry:</dd></dl>
+<p> mboxgrep &#8216;^From:.*callahan [at] homicide\.SFPD\.gov&#8217; $MAIL</p>
+<dl>
+<dt>*</dt>
+<dd> Display all messages contained in folder ~/Mail/incoming, except those that appear to originate from AOL:</dd></dl>
+<p> mboxgrep -v &#8216;Received:.*aol\.com&#8217; ~/Mail/incoming</p>
+<h2>BUGS</h2>
+<p> Report them to address below.</p>
+<h2>NOTICE</h2>
+<p> Mboxgrep was alomost completely rewritten since version 0.5.3. Additionally, there was no stable 0.6.x branch between 0.5.3 and 0.7.0.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/7-regex/">regex</a>(7), <a href="/docs/linux/man/1-perlre/">perlre</a>(1), <a href="/docs/linux/man/5-mbox/">mbox</a>(5), RFC 2822</p>
+<h2>DEDICATION</h2>
+<p> Mboxgrep is dedicated in loving memory of Vicky, my cat who died of tumor on Sep 12, 2002. </p>
+<p> You haven&#8217;t been long with us, but you gave us a lot of joy and all your big heart that stopped ticking too early. I will never forget you. Sleep well, little friend.</p>
+<h2>URL</h2>
+<p> <a rel="nofollow" href="http://www.mboxgrep.org/">http://www.mboxgrep.org/</a></p>
+<h2>AUTHOR</h2>
+<p> Daniel Spiljar &lt;dspiljar [at] world.std.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

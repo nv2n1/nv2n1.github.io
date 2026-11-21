@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Importing Self-Signed Certificates into Chrome on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/making-chrome-accept-self-signed-certificates-on-linux/">
+  <meta name="description" content="Chrome on Linux uses NSS (Network Security Services) for certificate management. Install the certutil utility from your distribution:
+Debian/Ubuntu/Linux Mint: …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Importing Self-Signed Certificates into Chrome on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/making-chrome-accept-self-signed-certificates-on-linux/">
+  <meta property="og:description" content="Chrome on Linux uses NSS (Network Security Services) for certificate management. Install the certutil utility from your distribution:
+Debian/Ubuntu/Linux Mint: …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Importing Self-Signed Certificates into Chrome on Linux</h1>
+        <time class="post-date" datetime="2014-10-08T04:29:13Z">October 8, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Chrome on Linux uses NSS (Network Security Services) for certificate management. Install the <code>certutil</code> utility from your distribution:</p>
+<p><strong>Debian/Ubuntu/Linux Mint:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install libnss3-tools
+</span></span></code></pre></div><p><strong>CentOS/Fedora/RHEL:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install nss-tools
+</span></span></code></pre></div><p><strong>Arch Linux:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nss
+</span></span></code></pre></div><h2 id="extract-and-import-the-certificate">Extract and Import the Certificate</h2>
+<p>The most reliable approach is to extract the certificate directly from the server and import it into Chrome’s NSS database. This script handles both tasks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> &lt;hostname&gt; [port]&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">hostname</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">port</span><span class="o">=</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">443</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Fetching certificate from </span><span class="nv">$hostname</span><span class="s2">:</span><span class="nv">$port</span><span class="s2">...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Extract the certificate chain</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> Q <span class="p">|</span> openssl s_client -servername <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">&#34;</span> -connect <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">:</span><span class="nv">$port</span><span class="s2">&#34;</span> -showcerts 2&gt;/dev/null <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> sed -ne <span class="s1">&#39;/BEGIN CERTIFICATE/,/END CERTIFICATE/p&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    &gt; <span class="s2">&#34;/tmp/cert-</span><span class="nv">$hostname</span><span class="s2">.pem&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -s <span class="s2">&#34;/tmp/cert-</span><span class="nv">$hostname</span><span class="s2">.pem&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: Failed to retrieve certificate from </span><span class="nv">$hostname</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Import into NSS database</span>
+</span></span><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -A -t <span class="s2">&#34;P,,&#34;</span> -n <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">&#34;</span> -i <span class="s2">&#34;/tmp/cert-</span><span class="nv">$hostname</span><span class="s2">.pem&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Certificate imported successfully for </span><span class="nv">$hostname</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -L -n <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: Failed to import certificate&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Cleanup</span>
+</span></span><span class="line"><span class="cl">rm -f <span class="s2">&#34;/tmp/cert-</span><span class="nv">$hostname</span><span class="s2">.pem&#34;</span>
+</span></span></code></pre></div><p>Save this as <code>add-cert.sh</code>, make it executable, and run it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x add-cert.sh
+</span></span><span class="line"><span class="cl">./add-cert.sh your.internal.site
+</span></span></code></pre></div><p>For non-standard ports:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./add-cert.sh your.internal.site <span class="m">8443</span>
+</span></span></code></pre></div><h2 id="verify-the-import">Verify the Import</h2>
+<p>List all imported certificates:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -L
+</span></span></code></pre></div><p>View details for a specific certificate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -L -n <span class="s2">&#34;your.internal.site&#34;</span>
+</span></span></code></pre></div><p>The output shows the certificate’s trust flags. The <code>P</code> flag indicates it’s trusted for websites.</p>
+<h2 id="restart-chrome">Restart Chrome</h2>
+<p>Close all Chrome/Chromium instances, including background processes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">killall chrome chromium chromium-browser google-chrome 2&gt;/dev/null
+</span></span></code></pre></div><p>Wait a moment for all processes to terminate, then reopen the browser. The certificate warning should no longer appear.</p>
+<h2 id="remove-a-certificate">Remove a Certificate</h2>
+<p>If you need to delete a certificate later:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -D -n <span class="s2">&#34;your.internal.site&#34;</span>
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>NSS database doesn’t exist</strong></p>
+<p>The <code>~/.pki/nssdb</code> directory may not be present on fresh Linux installs. Create and initialize it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/.pki/nssdb
+</span></span><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -N --empty-password
+</span></span></code></pre></div><p><strong>Certificate still shows warnings after import</strong></p>
+<p>Ensure Chrome is completely closed. Background processes can persist in the system tray. Verify with <code>ps aux | grep chrome</code> and force-kill if necessary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">killall -9 chrome chromium google-chrome 2&gt;/dev/null
+</span></span></code></pre></div><p><strong>Hostname mismatch errors</strong></p>
+<p>Chrome validates the certificate’s Common Name (CN) or Subject Alternative Name (SAN) against the hostname. If they don’t match, the browser warns even after import. Check the certificate’s CN:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> Q <span class="p">|</span> openssl s_client -servername <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">&#34;</span> -connect <span class="s2">&#34;</span><span class="nv">$hostname</span><span class="s2">:443&#34;</span> 2&gt;/dev/null <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> openssl x509 -text -noout <span class="p">|</span> grep -A1 <span class="s2">&#34;Subject:&#34;</span>
+</span></span></code></pre></div><p>If the CN doesn’t match your hostname, you need a certificate with the correct CN or SAN field, or access the site using the hostname in the certificate.</p>
+<p><strong>Certificate chain issues</strong></p>
+<p>If the server uses intermediate certificates, the extraction script captures the full chain. However, some servers don’t send the complete chain. You may need to import the CA certificate separately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Save the CA cert to a file, then import it</span>
+</span></span><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -A -t <span class="s2">&#34;CT,,&#34;</span> -n <span class="s2">&#34;ca-cert-name&#34;</span> -i /path/to/ca.pem
+</span></span></code></pre></div><p>Use <code>CT,,</code> trust flags for CA certificates instead of <code>P,,</code>.</p>
+<h2 id="chromium-brave-and-other-chromium-based-browsers">Chromium, Brave, and Other Chromium-Based Browsers</h2>
+<p>This process works identically for Chromium, Google Chrome, Brave, and Edge. All Chromium-based browsers share the same NSS database, so importing a certificate once makes it available to all of them.</p>
+<p>To verify which browsers use your NSS database:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">certutil -d <span class="s2">&#34;sql:</span><span class="nv">$HOME</span><span class="s2">/.pki/nssdb&#34;</span> -L
+</span></span></code></pre></div><p>If a certificate appears here, all installed Chromium-based browsers recognize it.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

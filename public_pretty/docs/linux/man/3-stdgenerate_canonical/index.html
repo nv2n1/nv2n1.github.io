@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdgenerate_canonical(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdgenerate_canonical/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdgenerate_canonical(3)</h1>
+
+
+
+
+
+<p>std::generate_canonical - std::generate_canonical</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;random&gt;
+template&lt; class RealType, size_t bits, class Generator &gt;  (since C++11)
+RealType generate_canonical( Generator&amp; g );
+Generates a random floating point number in range [0, 1).
+To generate enough entropy, generate_canonical() will call g() exactly k times, where \(k = max(1, \lceil \frac{b}{log_2 R} \rceil)\)k = max(1, ⌈ b / log
+2 R ⌉) and
+* b = std::min&lt;std::size_t&gt;(bits, std::numeric_limits&lt;RealType&gt;::digits)
+* R = g.max() - g.min() + 1.
+</code></pre>
+<h2>Parameters</h2>
+<p>g - generator to use to acquire entropy</p>
+<h2>Return value</h2>
+<p>Floating point value in range [0, 1).</p>
+<h2>Exceptions</h2>
+<p>None except from those thrown by g</p>
+<h2>Notes</h2>
+<p>Some existing implementations have a bug where they may occasionally return 1.0 if RealType is float GCC_#63176 LLVM_#18767. This is LWG_issue_2524</p>
+<h2>Example</h2>
+<p>produce random numbers with 10 bits of randomness: this may produce only k*R distinct values
+// Run this code <pre><code>#include &lt;random&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::random_device rd;
+std::mt19937 gen(rd());
+for (int n = 0; n &lt; 10; ++n) {
+std::cout &lt;&lt; std::generate_canonical&lt;double, 10&gt;(gen) &lt;&lt; &rsquo; &lsquo;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> 0.208143 0.824147 0.0278604 0.343183 0.0173263 0.864057 0.647037 0.539467 0.0583497 0.609219</p>
+<h2>See also</h2>
+<p>uniform_real_distribution produces real values evenly distributed across a range
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

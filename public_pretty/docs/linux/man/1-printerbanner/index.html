@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>printerbanner(1) · Linux Manual Pages</title>
+<meta name="description" content="printerbanner – print large banner on printer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-printerbanner/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>printerbanner(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>printerbanner</code> &#8211; print large banner on printer </p>
+<h2>SYNOPSIS</h2>
+<p> [-<code>d</code> ] [-<code>t</code> ] [-<code>w </code><i>width</i> ] <i>message &#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>Banner</code> prints a large, high quality banner on the standard output. If the message is omitted, it prompts for and reads one line of its standard input. </p>
+<p> The output should be printed on paper of the appropriate width, with no breaks between the pages. </p>
+<p> The following options are available:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Enable debug.</dd>
+<dt><code>-t</code></dt>
+<dd> Enable trace.</dd>
+<dt><code>-w </code><i>width</i></dt>
+<dd> Change the output from a width of 132 to <i>width</i> suitable for a narrow terminal.</dd></dl>
+<h2>AUTHORS</h2>
+<p> An Mark Horton</p>
+<h2>BUGS</h2>
+<p> Several <code>ASCII</code> characters are not defined, notably &lt;, &gt;, [, ], \, ^, _, {, }, |, and ~. The same holds for all non <code>ASCII</code> characters. Also, the characters &quot;, &#8216;, and &amp; are funny looking (but in a useful way.) </p>
+<p> The &#8211;<code>w</code> option is implemented by skipping some rows and columns. The smaller it gets, the grainier the output. Sometimes it runs letters together. </p>
+<p> Messages are limited to 1024 characters in length. </p>
+<p> This program is called just banner on FreeBSD. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

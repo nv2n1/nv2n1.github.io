@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbignoreextension(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbIgnoreExtension – Prevents core X library keyboard functions from using the X Keyboard Extension">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbignoreextension/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbignoreextension(3)</h1>
+
+
+
+
+
+<p>XkbIgnoreExtension &#8211; Prevents core X library keyboard functions from using the X Keyboard Extension </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbIgnoreExtension</code> <code>(Bool *</code><i>ignore</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>ignore</i></dt>
+<dd>
+</dd><dd>True means ignore the extension</dd></dl>
+<h2>Description</h2>
+<p>If a server supports the Xkb extension, the X library normally implements preXkb keyboard functions using the Xkb keyboard description and state. The server Xkb keyboard state may differ from the preXkb keyboard state. This difference does not affect most clients, but there are exceptions. To allow these clients to work properly, you may instruct the extension not to use Xkb functionality. </p>
+<p> Call <i>XkbIgnoreExtension </i> to prevent core X library keyboard functions from using the X Keyboard Extension. You must call <i>XkbIgnoreExtension </i> before you open a server connection; Xkb does not provide a way to enable or disable use of the extension once a connection is established. </p>
+<p> <i>XkbIgnoreExtension </i> tells the X library whether to use the X Keyboard Extension on any subsequently opened X display connections. If ignore is True, the library does not initialize the Xkb extension when it opens a new display. This forces the X server to use compatibility mode and communicate with the client using only core protocol requests and events. If ignore is False, the library treats subsequent calls to <i>XOpenDisplay </i> normally and uses Xkb extension requests, events, and state. Do not explicitly use Xkb on a connection for which it is disabled. <i>XkbIgnoreExtension </i> returns False if it was unable to apply the ignore request.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The <i>XkbIgnoreExtension </i> returns True if</dd>
+<dt>False</dt>
+<dd>The <i>XkbIgnoreExtension </i> function returns False if it was unable to apply the ignore request.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xopendisplay/">XOpenDisplay</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

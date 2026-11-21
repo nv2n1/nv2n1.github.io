@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>at(5) · Linux Manual Pages</title>
+<meta name="description" content="at.allow, at.deny – determine who can submit jobs via at or batch">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-at/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>at(5)</h1>
+
+
+
+
+
+<p>at.allow, at.deny &#8211; determine who can submit jobs via at or batch</p>
+<h2>Description</h2>
+<p>The <i>/etc/at.allow</i> and <i>/etc/at.deny</i> files determine which user can submit commands for later execution via <code><a href="/docs/linux/man/1-at/">at</a></code>(1) or <code>batch</code>(1)<code>.</code> </p>
+<p> The format of the files is a list of usernames, one on each line. Whitespace is not permitted. </p>
+<p> If the file <i>/etc/at.allow</i> exists, only usernames mentioned in it are allowed to use <code>at</code>. </p>
+<p> If <i>/etc/at.allow</i> does not exist, <i>/etc/at.deny</i> is checked, every username not mentioned in it is then allowed to use <code>at</code>. </p>
+<p> An empty <i>/etc/at.deny</i> means that every user may use <code>at</code>. </p>
+<p> If neither exists, only the superuser is allowed to use at.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-at/">at</a></code>(1), <code><a href="/docs/linux/man/8-cron/">cron</a></code>(8), <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/8-atd/">atd</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

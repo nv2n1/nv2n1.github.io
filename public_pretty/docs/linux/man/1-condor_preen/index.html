@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>condor_preen(1) · Linux Manual Pages</title>
+<meta name="description" content="condor_preen remove extraneous files from HTCondor directories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-condor_preen/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>condor_preen(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>Name</h2>
+<p> <i>condor_preen</i> remove extraneous files from HTCondor directories </p>
+<h2>Synopsis</h2>
+<p> <i>condor_preen</i> [ <code>-mail</code> ] [ <code>-remove</code> ] [ <code>-verbose</code> ] [ <code>-debug</code> ] </p>
+<h2>Description</h2>
+<p> <i>condor_preen</i> examines the directories belonging to HTCondor, and removes extraneous files and directories which may be left over from HTCondor processes which terminated abnormally either due to internal errors or a system crash. The directories checked are the LOG , EXECUTE , and SPOOL directories as defined in the HTCondor configuration files. <i>condor_preen</i> is intended to be run as user root or user condor periodically as a backup method to ensure reasonable file system cleanliness in the face of errors. This is done automatically by default by the <i>condor_master</i> daemon. It may also be explicitly invoked on an as needed basis. </p>
+<p> When <i>condor_preen</i> cleans the SPOOL directory, it always leaves behind the files specified in the configuration variables VALID_SPOOL_FILES and SYSTEM_VALID_SPOOL_FILES , as given by the configuration. For the LOG directory, the only files removed or reported are those listed within the configuration variable INVALID_LOG_FILES list. The reason for this difference is that, in general, the files in the LOG directory ought to be left alone, with few exceptions. An example of exceptions are core files. As there are new log files introduced regularly, it is less effort to specify those that ought to be removed than those that are not to be removed. </p>
+<h2>Options</h2>
+<p> <code>-mail</code></p>
+<dl>
+<dt>
+</dt><dd> Send mail to the user defined in the PREEN_ADMIN configuration variable, instead of writing to the standard output.</dd>
+</dl>
+<p> <code>-remove</code></p>
+<dl>
+<dt>
+</dt><dd> Remove the offending files and directories rather than reporting on them.</dd>
+</dl>
+<p> <code>-verbose</code></p>
+<dl>
+<dt>
+</dt><dd> List all files found in the Condor directories, even those which are not considered extraneous.</dd>
+</dl>
+<p> <code>-debug</code></p>
+<dl>
+<dt>
+</dt><dd> Print extra debugging information as the command executes.</dd>
+</dl>
+<h2>Exit Status</h2>
+<p> <i>condor_preen</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
+<h2>Author</h2>
+<p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
+<h2>Copyright</h2>
+<p> Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afsetvirtualchannels(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-afsetvirtualchannels/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>afsetvirtualchannels(3)</h1>
+
+
+
+
+
+<p>afSetVirtualByteOrder, afSetVirtualChannels, afSetVirtualPCMMapping, afSetVirtualSampleFormat - set the virtual data format for a track in an audio file</p>
+<h2>Synopsis</h2><pre>#include &lt;audiofile.h&gt;</pre><pre>int afSetVirtualByteOrder (AFfilehandle file, int track, int byteOrder);</pre><pre>int afSetVirtualChannels (AFfilehandle file, int track, int channels);</pre><pre>int afSetVirtualSampleFormat (AFfilehandle file, int track,
+ int sampleFormat, int sampleWidth);</pre><pre>int afSetVirtualPCMMapping (AFfilehandle file, int track,
+ double slope, double intercept, double minclip, double maxclip);</pre><h2>Parameters</h2><dl COMPACT><dd>&bull; 
+ <i>file</i> is an AFfilehandle which refers to an open audio file and is usually created by afOpenFile.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>track</i> is an integer which identifies a particular track in an open audio file. The only valid track is AF_DEFAULT_TRACK for all currently supported file formats.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>sampleFormat</i> is an integer which denotes a virtual sample format. Valid values are AF_SAMPFMT_TWOSCOMP, AF_SAMPFMT_UNSIGNED, AF_SAMPFMT_FLOAT, and AF_SAMPFMT_DOUBLE.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>sampleWidth</i> is a positive integer which specifies the number of bits in a sample.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>channels</i> is a positive integer which specifies the number of interleaved audio channels in the given audio track.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>byteOrder</i> is an integer which specifies the virtual byte order of samples in the given audio track. <i>byteOrder</i> can be either AF_BYTEORDER_BIGENDIAN or AF_BYTEORDER_LITTLEENDIAN.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>slope</i> and <i>intercept</i> are double-precision floating point values which indicate the audio data sample slope and zero-crossing value, respectively, for the given sample format.</dd></dl><dl COMPACT><dd>&bull; 
+ <i>minclip</i> and <i>maxclip</i> are double-precision floating point values which indicates the minimum or maximum sample values to be returned. Any values less than <i>minclip</i> will be set to <i>minclip</i>, and any values greater than <i>maxclip</i> will be set to <i>maxclip</i>.</dd></dl><h2>Return Value</h2>These functions return 0 for success and -1 for failure.
+<h2>Author</h2>Michael Pruett &lt;michael [at] 68k.org&gt;
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_pipe_inode_info(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_pipe_inode_info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_pipe_inode_info(9)</h1>
+
+
+
+
+
+<p>struct_pipe_inode_info - a linux kernel pipe</p>
+<h2>Synopsis</h2>
+<pre><code>struct pipe_inode_info {
+    struct mutex mutex;
+    wait_queue_head_t wait;
+    unsigned int nrbufs;
+    unsigned int curbuf;
+    unsigned int buffers;
+    unsigned int readers;
+    unsigned int writers;
+    unsigned int files;
+    unsigned int waiting_writers;
+    unsigned int r_counter;
+    unsigned int w_counter;
+    struct page *tmp_page;
+    struct fasync_struct *fasync_readers;
+    struct fasync_struct *fasync_writers;
+    struct pipe_buffer *bufs;
+    struct user_struct *user;
+};</code></pre>
+<h2>Members</h2>
+<p>mutex</p>
+<dl><dd>mutex protecting the whole thing</dd></dl>
+<p>wait</p>
+<dl><dd>reader/writer wait point in case of empty/full pipe</dd></dl>
+<p>nrbufs</p>
+<dl><dd>the number of non-empty pipe buffers in this pipe</dd></dl>
+<p>curbuf</p>
+<dl><dd>the current pipe buffer entry</dd></dl>
+<p>buffers</p>
+<dl><dd>total number of buffers (should be a power of 2)</dd></dl>
+<p>readers</p>
+<dl><dd>number of current readers of this pipe</dd></dl>
+<p>writers</p>
+<dl><dd>number of current writers of this pipe</dd></dl>
+<p>files</p>
+<dl><dd>number of struct file referring this pipe (protected by -&gt;i_lock)</dd></dl>
+<p>waiting_writers</p>
+<dl><dd>number of writers blocked waiting for room</dd></dl>
+<p>r_counter</p>
+<dl><dd>reader counter</dd></dl>
+<p>w_counter</p>
+<dl><dd>writer counter</dd></dl>
+<p>tmp_page</p>
+<dl><dd>cached released page</dd></dl>
+<p>fasync_readers</p>
+<dl><dd>reader side fasync</dd></dl>
+<p>fasync_writers</p>
+<dl><dd>writer side fasync</dd></dl>
+<p>bufs</p>
+<dl><dd>the circular array of pipe buffers</dd></dl>
+<p>user</p>
+<dl><dd>the user who created this pipe</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

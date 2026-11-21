@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtcompass(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtCompass –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtcompass/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtcompass(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QwtCompass &#8211; </p>
+<p> A Compass Widget.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;qwt_compass.h&gt; </p>
+<p> Inherits <code>QwtDial</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>QwtCompass</code> (QWidget *parent=NULL)<br />
+ <i>Constructor. </i><br />
+ virtual <code>~QwtCompass</code> ()<br />
+ <i>Destructor. </i><br />
+ void <code>setRose</code> (<code>QwtCompassRose</code> *<code>rose</code>) </p>
+<p> const <code>QwtCompassRose</code> * <code>rose</code> () const </p>
+<p> <code>QwtCompassRose</code> * <code>rose</code> () </p>
+<h3>Protected Member Functions</h3>
+<p>virtual void <code>drawRose</code> (QPainter *, const QPointF &amp;center, double radius, double north, QPalette::ColorGroup) const </p>
+<p> virtual void <code>drawScaleContents</code> (QPainter *, const QPointF &amp;center, double radius) const </p>
+<p> virtual void <code>keyPressEvent</code> (QKeyEvent *) </p>
+<h3>Additional Inherited Members</h3>
+<h2>Detailed Description</h2>
+<p>A Compass Widget. </p>
+<p> <code>QwtCompass</code> is a widget to display and enter directions. It consists of a scale, an optional needle and rose. </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>The examples/dials example shows how to use <code>QwtCompass</code>.</dd></dl>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3>QwtCompass::QwtCompass (QWidget *parent = NULL) [explicit]</h3>
+<p>Constructor. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>parent</i> Parent widget</dd></dl>
+<p> Create a compass widget with a scale, no needle and no rose. The default origin is 270.0 with no valid value. It accepts mouse and keyboard inputs and has no step size. The default mode is <code>QwtDial::RotateNeedle</code>.</p>
+<h2>Member Function Documentation</h2>
+<h3>void QwtCompass::drawRose (QPainter *painter, const QPointF &amp;center, doubleradius, doublenorth, QPalette::ColorGroupcg) const [protected], [virtual]</h3>
+<p>Draw the compass rose </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>painter</i> Painter<br />
+ <i>center</i> Center of the compass<br />
+ <i>radius</i> of the circle, where to paint the rose<br />
+ <i>north</i> Direction pointing north, in degrees counter clockwise<br />
+ <i>cg</i> Color group</dd></dl>
+<h3>void QwtCompass::drawScaleContents (QPainter *painter, const QPointF &amp;center, doubleradius) const [protected], [virtual]</h3>
+<p>Draw the contents of the scale </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>painter</i> Painter<br />
+ <i>center</i> Center of the content circle<br />
+ <i>radius</i> Radius of the content circle</dd></dl>
+<p> Reimplemented from <code>QwtDial</code>.</p>
+<h3>void QwtCompass::keyPressEvent (QKeyEvent *kev) [protected], [virtual]</h3>
+<p>Handles key events </p>
+<p> Beside the keys described in <code>QwtDial::keyPressEvent</code> numbers from 1-9 (without 5) set the direction according to their position on the num pad. </p>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>isReadOnly()</code></dd></dl>
+<p> Reimplemented from <code>QwtAbstractSlider</code>.</p>
+<h3>const <code>QwtCompassRose</code> * QwtCompass::rose () const</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>rose</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setRose()</code></dd></dl>
+<h3><code>QwtCompassRose</code> * QwtCompass::rose ()</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>rose</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>setRose()</code></dd></dl>
+<h3>void QwtCompass::setRose (<code>QwtCompassRose</code> *rose)</h3>
+<p>Set a rose for the compass </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>rose</i> Compass rose</dd></dl>
+<p> <code>Warning:</code></p>
+<dl COMPACT>
+<dd>The rose will be deleted, when a different rose is set or in ~QwtCompass</dd></dl>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>rose()</code></dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

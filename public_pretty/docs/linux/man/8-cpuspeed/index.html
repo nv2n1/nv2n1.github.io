@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cpuspeed(8) · Linux Manual Pages</title>
+<meta name="description" content="cpuspeed – user-space cpu frequency scaling program, v1.5.1">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-cpuspeed/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>cpuspeed(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>cpuspeed &#8211; user-space cpu frequency scaling program, v1.5.1</p>
+<h2>Synopsis</h2>
+<p><code>cpuspeed</code> [<i>Options</i>]</p>
+<h2>Description</h2>
+<p>cpuspeed v1.5.1 </p>
+<p> This program monitors the system&#8217;s idle percentage and reduces or raises the CPUs&#8217; clock speeds and voltages accordingly to minimize power consumption when idle and maximize performance when needed. This is the default. </p>
+<p> The program may also optionally be configured to reduce the CPUs&#8217; clock speeds if the temperature gets too high, NOT minimize their speeds if the computer&#8217;s AC adapter is disconnected or maximize their speeds when the AC adapter is connected. </p>
+<p> By default this program will manage every CPU found in the system.</p>
+<dl>
+<dd>Options:</dd>
+<dt> <code>-d</code></dt>
+<dd>
+</dd><dd>Tells the process to daemonize itself (run in background).</dd>
+<dt> <code>-i</code> &lt;interval&gt;</dt>
+<dd>
+</dd><dd>Sets the interval between idle percentage tests and possible speed changes in tenths of a second (default is 20).</dd>
+<dt> <code>-p</code> &lt;fast up&gt; &lt;threshold&gt;</dt>
+<dd>
+</dd><dd>Sets the CPU core idle percentage thresholds. &lt;fast up&gt; is the idle percentage below which a CPU core will be set to the highest possible speed. &lt;threshold&gt; is the idle percentage above which a CPU core&#8217;s speed will be decreased and below which a CPU core&#8217;s speed will be increased (defaults are 10 and 25).</dd>
+<dt> <code>-m</code> &lt;minimum speed&gt;</dt>
+<dd>
+</dd><dd>Sets the minimum speed in KHz below which a CPU core will not be set.</dd>
+<dt> <code>-M</code> &lt;maximum speed&gt;</dt>
+<dd>
+</dd><dd>Sets the maximum speed in KHz above which a CPU core will not be set.</dd>
+<dt> <code>-n</code></dt>
+<dd>
+</dd><dd>Do not treat niced programs as idle time.</dd>
+<dt> <code>-w</code></dt>
+<dd>
+</dd><dd>Do not treat time waiting for IO as idle time.</dd>
+<dt> <code>-t</code> &lt;temp file&gt; &lt;maxtemp&gt;</dt>
+<dd>
+</dd><dd>Sets the ACPI temperature file and the temperature at which CPUs will be set to minimum speed.</dd>
+<dt> <code>-T</code> &lt;interval&gt;</dt>
+<dd>
+</dd><dd>Sets the interval at which the temperature will be polled in tenths of a second (default is 10). (Requires the &#8216;-t&#8217; option above.)</dd>
+<dt> <code>-a</code> &lt;AC file&gt;</dt>
+<dd>
+</dd><dd>Sets the ACPI AC adapter state file and tells the program to set the CPUs to minimum speed when the AC adapter is disconnected. (This is the default but is changeable by the &#8216;-D&#8217; option below).</dd>
+<dt> <code>-A</code> &lt;interval&gt;</dt>
+<dd>
+</dd><dd>Sets the interval at which the AC adapter state will be polled in tenths of a second (default is 50). (Requires the &#8216;-a&#8217; option above.)</dd>
+<dt> <code>-C</code></dt>
+<dd>
+</dd><dd>Run at maximum speed when AC adapter is connected. (Requires the &#8216;-a&#8217; option above.)</dd>
+<dt> <code>-D</code></dt>
+<dd>
+</dd><dd>Do NOT force minimum speed when AC adapter is disconnected. (Requires the &#8216;-a&#8217; option above.)</dd>
+<dt> <code>-r</code></dt>
+<dd>
+</dd><dd>Restores previous speed on program exit.</dd>
+<dt> <code>-S</code> &lt;CPU core 1&gt; [[&lt;CPU core 2&gt;] &#8230;]</dt>
+<dd>
+</dd><dd>Manage only a single group of CPU cores. All of the specified cores will controlled as a single group (locked to the same speed) and are in the range 0 to n-1 where &#8216;n&#8217; is the total number of CPU cores in the system. Note that when specifying multiple cores the list must be enclosed in quotes. Without this option the program creates copies of itself to manage every core of every CPU in the system and automatically determines core groups. If you are running on an old kernel and get an error message about not being able to open an &quot;affected_cpus&quot; file then you must run this program separately for each group of cores that must be controlled together (which probably means for each physical CPU) and use this option.</dd></dl>
+<h3>Notes:</h3>
+<p>To have a CPU core stay at the highest clock speed to maximize performance send the process controlling that CPU core the SIGUSR1 signal. </p>
+<p> To have a CPU core stay at the lowest clock speed to maximize battery life send the process controlling that CPU core the SIGUSR2 signal. </p>
+<p> To resume having a CPU core&#8217;s clock speed dynamically scaled send the process controlling that CPU core the SIGHUP signal. </p>
+<p> Many modern Linux systems support in-kernel cpu frequency scaling. The cpuspeed daemon only works in conjunction with the &#8216;userspace&#8217; frequency scaling governor. Other governors, such as &#8216;ondemand&#8217; and &#8216;conservative&#8217;, rely on the Linux kernel to adjust cpu frequencies on the fly without the need of any user-space assistance, such as that provided by cpuspeed. </p>
+<p> Red Hat and Fedora distributions employ a unified configuration file for both scenarios, as well as a cpuspeed init script that will configure either cpuspeed or in-kernel cpu frequency scaling, as appropriate.</p>
+<h2>Files</h2>
+<pre>/etc/sysconfig/cpuspeed, configuration file
+/etc/init.d/cpuspeed, initialzation script
+/usr/sbin/cpuspeed, cpuspeed program</pre>
+<h2>See Also</h2>
+<p>The CPUSpeed web page:<br />
+&nbsp;<wbr>&nbsp;<wbr><code>&nbsp;<wbr><a rel="nofollow" href="http://carlthompson.net/Software/CPUSpeed">http://carlthompson.net/Software/CPUSpeed</a></code></p>
+<h2>License</h2>
+<p>CPUSpeed is released under the GNU General Public License version 2 (or if you wish any later version). This license allows you to use, copy, distribute and modify the software with very few restrictions. The full text of the license may be found here:<br />
+&nbsp;<wbr>&nbsp;<wbr><code><a rel="nofollow" href="http://carlthompson.net/Software/CPUSpeed/License">http://carlthompson.net/Software/CPUSpeed/License</a></code></p>
+<h2>Author(S):</h2>
+<dl>
+<dt>CPUSpeed daemon, original init script and configuration file:</dt>
+<dd>
+<pre>Carl Thompson - cet [at] carlthompson.net
+ (copyright 2002 - 2008)
+</dd><dt>Modernized init script, configuration file and man page:</dt><dd>Dave Jones - davej [at] redhat.com
+Michal Jaegermann - michal [at] harddata.com
+Jarod Wilson - jwilson [at] redhat.com
+</dd></dl></pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

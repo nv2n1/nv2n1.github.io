@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gsi_driver_errors(3) · Linux Manual Pages</title>
+<meta name="description" content="Error Types –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gsi_driver_errors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gsi_driver_errors(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Error Types &#8211; </p>
+<p> The GSI driver uses mostly GSSAPI calls, so it generally just wraps the underlying GSSAPI errors or uses generic xio errors.</p>
+<h3>Enumerations</h3>
+<p> enum <code>globus_xio_gsi_error_t</code> { <code>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL</code>, <code>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI</code>, <code>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME</code>, <code>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME</code>, <code>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED</code>, <code>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG</code> } </p>
+<h2>Detailed Description</h2>
+<p> The GSI driver uses mostly GSSAPI calls, so it generally just wraps the underlying GSSAPI errors or uses generic xio errors. </p>
+<p> <code>See also:</code></p>
+<dl>
+<dt>
+</dt><dd> globus_xio_driver_error_match() </dd>
+<p> globus_error_gssapi_match() </p>
+<p> globus_error_match_openssl_error()</dl>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_xio_gsi_error_t</code></h3>
+<p> GSI driver specific error types. </p>
+<p> <code>Enumerator: </code></p>
+<dl>
+<dt><i>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL </i></dt>
+<dd> Indicates that the established context does not meet the required protecetion level.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI </i></dt>
+<dd> Wraps a GSSAPI error.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_IDENTITY_AUTHORIZATION is set but that the target name is empty.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME </i></dt>
+<dd> Indicates that GLOBUS_XIO_GSI_HOST_AUTHORIZATION is set but that no host name is available.</dd>
+<dt><i>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED </i></dt>
+<dd> Indicates that the peer is not authorized.</dd>
+<dt><i>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG </i></dt>
+<dd> Indicates the the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAG">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

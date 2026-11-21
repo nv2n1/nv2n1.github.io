@@ -1,7 +1,7 @@
 name: Build and deploy site
 
-# Builds the Jekyll blog (site root) and the Hugo man pages
-# (/docs/linux/man/) into one artifact and deploys it to GitHub Pages.
+# Builds the Hugo site (blog at the root plus the Linux man pages under
+# /docs/linux/man/) and deploys it to GitHub Pages.
 # Requires repo Settings -> Pages -> Source: GitHub Actions.
 
 on:
@@ -24,36 +24,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build blog with Jekyll
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-      - run: gem install 'jekyll:~>4.3' jekyll-sitemap jekyll-feed --no-document
-      - run: jekyll build --destination _site
-        env:
-          JEKYLL_ENV: production
-      # Pages serves the Actions artifact without Jekyll processing, so this
-      # is only a guard in case the Pages source ever flips to a branch.
-      - run: touch _site/.nojekyll
-
-      - name: Build man pages with Hugo
+      - name: Build site with Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
       # Tag man pages short/long by body word count; the man single layout
       # skips the ad unit on short pages. Data file is generated, not committed.
-      - run: python3 scripts/gen-man-page-length.py man-src man-site/data
-      # Build outside _site, then copy only docs/ in: Hugo's sitemap.xml and
-      # any other root files must not clobber the Jekyll blog's.
-      - run: hugo --source man-site --destination ../_man_out --minify
-      - run: cp -a _man_out/docs _site/
+      - run: python3 scripts/gen-man-page-length.py man-src data
+      - run: hugo --minify
       # Chunked sitemap index for the ~56k man pages (over the 50k single-file limit)
-      - run: python3 scripts/gen-man-sitemap.py _man_out/docs _site/docs
+      - run: python3 scripts/gen-man-sitemap.py public/docs public/docs
+      # Pages serves the Actions artifact without Jekyll processing, so this
+      # is only a guard in case the Pages source ever flips to a branch.
+      - run: touch public/.nojekyll
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: public
 
   deploy:
     needs: build

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>statgrab(1) · Linux Manual Pages</title>
+<meta name="description" content="statgrab – sysctl-style interface to system statistics">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-statgrab/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>statgrab(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> statgrab &#8211; sysctl-style interface to system statistics</p>
+<h2>SYNOPSIS</h2>
+<p> <code>statgrab</code> [OPTION]&#8230; [STAT]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>statgrab</code> provides a sysctl-style interface to all the system statistics available through libstatgrab. This is useful for applications that don&#8217;t want to make library calls, but still want to access the statistics. </p>
+<p> An example of such an application is mrtg, for which scripts are provided to generate configuration files.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported.</p>
+<dl>
+<dt><code>-l</code></dt>
+<dd> Linux sysctl-style output (default)</dd>
+<dt><code>-b</code></dt>
+<dd> BSD sysctl-style output</dd>
+<dt><code>-m</code></dt>
+<dd> MRTG-compatible output</dd>
+<dt><code>-u</code></dt>
+<dd> Plain output (only show values)</dd>
+<dt><code>-n</code></dt>
+<dd> Display cumulative stats once (default)</dd>
+<dt><code>-s</code></dt>
+<dd> Display stat differences repeatedly</dd>
+<dt><code>-o</code></dt>
+<dd> Display stat differences once</dd>
+<dt><code>-t</code> <i>DELAY</i></dt>
+<dd> When repeating, wait DELAY seconds between updates (default 1)</dd>
+<dt><code>-p</code></dt>
+<dd> Display CPU usage differences as percentages rather than absolute values</dd>
+<dt><code>-f</code> <i>FACTOR</i></dt>
+<dd> Display floating-point values as integers scaled by FACTOR</dd>
+<dt><code>-K</code></dt>
+<dd> Display byte counts in kibibytes</dd>
+<dt><code>-M</code></dt>
+<dd> Display byte counts in mebibytes</dd>
+<dt><code>-G</code></dt>
+<dd> Display byte counts in gibibytes</dd></dl>
+<p> If no <code>STAT</code> options are given, all will be displayed. Specify &#8216;STAT.&#8217; to display all statistics starting with that prefix.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-statgrab-make-mrtg-config/">statgrab-make-mrtg-config</a></code>(1) <code><a href="/docs/linux/man/1-statgrab-make-mrtg-index/">statgrab-make-mrtg-index</a></code>(1) <code><a href="/docs/linux/man/1-saidar/">saidar</a></code>(1) <code><a href="/docs/linux/man/3-statgrab/">statgrab</a></code>(3)</p>
+<h2>AUTHORS</h2>
+<p> This man page was derived from the man page written by Bartosz Fenski for the Debian GNU/Linux distribution.</p>
+<h2>WEBSITE</h2>
+<p> &lt;<a rel="nofollow" href="http://www.i-scream.org/libstatgrab/">http://www.i-scream.org/libstatgrab/</a>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

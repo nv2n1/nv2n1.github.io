@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>volpack(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-volpack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>volpack(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>VolPack - introduction to VolPack, a library for volume rendering</p>
+<h2>Synopsis</h2>#include &lt;<a HREF="file:/usr/include/volpack.h">volpack.h</a>&gt; 
+<p>cc file.c -lvolpack -lm</p>
+<h2>Description</h2>VolPack is a portable software library for volume rendering. It is based on a new family of fast volume rendering algorithms (see Philippe Lacroute and Marc Levoy, Fast Volume Rendering Using a Shear-Warp Factorization of the Viewing Transformation, Proc. SIGGRAPH '94, in <i>Computer Graphics</i>, Annual Conference Series, 1994, pp. 451-458). For a tutorial introduction to the library see the <i>VolPack User's Guide.</i> 
+<p>The following list includes all of the functions in the library grouped by general function, along with the corresponding man pages.</p>
+<h3>Rendering Contexts</h3>vpCreateContext<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3)
+<p>vpDestroyContext<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3)</p>
+<h3>Volumes</h3>vpSetVolumeSize<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpsetvolumesize/">vpSetVolumeSize</a>(3)
+<p>vpSetVoxelSize<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetvoxelsize/">vpSetVoxelSize</a>(3)</p>
+<p>vpSetVoxelField<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetvoxelfield/">vpSetVoxelField</a>(3)</p>
+<p>vpFieldOffset<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetvoxelfield/">vpSetVoxelField</a>(3)</p>
+<p>vpSetRawVoxels<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetrawvoxels/">vpSetRawVoxels</a>(3)</p>
+<p>vpVolumeNormals<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpvolumenormals/">vpVolumeNormals</a>(3)</p>
+<p>vpScanlineNormals<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpscanlinenormals/">vpScanlineNormals</a>(3)</p>
+<p>vpNormalIndex<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpnormalindex/">vpNormalIndex</a>(3)</p>
+<p>vpNormal<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpnormalindex/">vpNormalIndex</a>(3)</p>
+<h3>Classified Volumes</h3>vpSetClassifierTable<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpsetclassifiertable/">vpSetClassifierTable</a>(3)
+<p>vpClassifyVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpclassifyvolume/">vpClassifyVolume</a>(3)</p>
+<p>vpDestroyClassifiedVolume<tt> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpclassifyvolume/">vpClassifyVolume</a>(3)</p>
+<p>vpClassifyScalars<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpclassifyscalars/">vpClassifyScalars</a>(3)</p>
+<p>vpClassifyScanline<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpclassifyscanline/">vpClassifyScanline</a>(3)</p>
+<h3>Min-Max Octrees</h3>vpCreateMinMaxOctree<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpcreateminmaxoctree/">vpCreateMinMaxOctree</a>(3)
+<p>vpMinMaxOctreeThreshold<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpcreateminmaxoctree/">vpCreateMinMaxOctree</a>(3)</p>
+<p>vpDestroyMinMaxOctree<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpcreateminmaxoctree/">vpCreateMinMaxOctree</a>(3)</p>
+<p>vpOctreeMask<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpoctreemask/">vpOctreeMask</a>(3)</p>
+<h3>View Transformations</h3>vpCurrentMatrix<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpcurrentmatrix/">vpCurrentMatrix</a>(3)
+<p>vpIdentityMatrix<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpidentitymatrix/">vpIdentityMatrix</a>(3)</p>
+<p>vpTranslate<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vptranslate/">vpTranslate</a>(3)</p>
+<p>vpRotate<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vprotate/">vpRotate</a>(3)</p>
+<p>vpScale<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpscale/">vpScale</a>(3)</p>
+<p>vpMultMatrix<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpmultmatrix/">vpMultMatrix</a>(3)</p>
+<p>vpSetMatrix<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetmatrix/">vpSetMatrix</a>(3)</p>
+<p>vpWindow<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpwindow/">vpWindow</a>(3)</p>
+<p>vpWindowPHIGS<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpwindowphigs/">vpWindowPHIGS</a>(3)</p>
+<h3>Shading and Lighting</h3>vpSetLookupShader<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpsetlookupshader/">vpSetLookupShader</a>(3)
+<p>vpSetShadowLookupShader<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetshadowlookupshader/">vpSetShadowLookupShader</a>(3)</p>
+<p>vpSetLight<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetlight/">vpSetLight</a>(3)</p>
+<p>vpSetMaterial<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetmaterial/">vpSetMaterial</a>(3)</p>
+<p>vpShadeTable<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpshadetable/">vpShadeTable</a>(3)</p>
+<p>vpSetDepthCueing<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetdepthcueing/">vpSetDepthCueing</a>(3)</p>
+<h3>Rendering</h3>vpSetImage<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpsetimage/">vpSetImage</a>(3)
+<p>vpRenderClassifiedVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vprenderrawvolume/">vpRenderRawVolume</a>(3)</p>
+<p>vpRenderRawVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vprenderrawvolume/">vpRenderRawVolume</a>(3)</p>
+<h3>State Variables</h3>vpEnable<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpenable/">vpEnable</a>(3)
+<p>vpSeti<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpseti/">vpSeti</a>(3)</p>
+<p>vpSetd<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpseti/">vpSeti</a>(3)</p>
+<p>vpGeti<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpgeti/">vpGeti</a>(3)</p>
+<p>vpGetd<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpgeti/">vpGeti</a>(3)</p>
+<p>vpGetp<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpgeti/">vpGeti</a>(3)</p>
+<p>vpGetMatrix<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpgetmatrix/">vpGetMatrix</a>(3)</p>
+<p>vpGetMaterial<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>vpGetvpSetMaterial(3)</p>
+<p>vpGetLight<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>vpGetvpSetLight(3)</p>
+<p>vpSetCallback<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetcallback/">vpSetCallback</a>(3)</p>
+<p>vpSetClientData<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetclientdata/">vpSetClientData</a>(3)</p>
+<h3>File I/O</h3>vpLoadClassifiedVolume<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3)
+<p>vpLoadMinMaxOctree<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3)</p>
+<p>vpLoadRawVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3)</p>
+<p>vpLoadContext<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vploadrawvolume/">vpLoadRawVolume</a>(3)</p>
+<p>vpStoreClassifiedVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3)</p>
+<p>vpStoreMinMaxOctree<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3)</p>
+<p>vpStoreRawVolume<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3)</p>
+<p>vpStoreContext<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpstorerawvolume/">vpStoreRawVolume</a>(3)</p>
+<h3>Utility Functions</h3>vpRamp<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpramp/">vpRamp</a>(3)
+<p>vpExtract<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpextract/">vpExtract</a>(3)</p>
+<p>vpTranspose<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vptranspose/">vpTranspose</a>(3)</p>
+<p>vpResample<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpresample/">vpResample</a>(3)</p>
+<p>vpSetFilter<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpsetfilter/">vpSetFilter</a>(3)</p>
+<p>vpBoxFilter<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpboxfilter/">vpBoxFilter</a>(3)</p>
+<p>vpLinearFilter<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpboxfilter/">vpBoxFilter</a>(3)</p>
+<p>vpBicubicFilter<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpboxfilter/">vpBoxFilter</a>(3)</p>
+<p>vpGaussianFilter<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpboxfilter/">vpBoxFilter</a>(3)</p>
+<p>vpIdentity3<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpIdentity4<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpSetVector3<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpSetVector4<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpNormalize3<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpMatrixVectorMult4<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpMatrixMult4<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpCrossProduct<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<p>vpSolveSystem4<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-linearalgebra/">LinearAlgebra</a>(3)</p>
+<h3>Error Handling</h3>vpGetError<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpgeterror/">vpGetError</a>(3)
+<p>vpGetErrorString<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpgeterror/">vpGetError</a>(3)</p>
+<h3>Debugging</h3>vpSetDebug<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><a HREF="/docs/linux/man/3-vpsetdebug/">vpSetDebug</a>(3)
+<p>vpTracePixel<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vptracepixel/">vpTracePixel</a>(3)</p>
+<p>vpGetImage<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt>vpGetvpSetImage(3)</p>
+<p>vpBruteForceRender<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></tt><a HREF="/docs/linux/man/3-vpbruteforcerender/">vpBruteForceRender</a>(3)</p>
+<h2>Data Types</h2>The following data types are declared in the VolPack header file (volpack.h):
+<dl COMPACT><dt>vpContext
+</dt><dd>An opaque handle for a rendering context. A context contains all of the information required to render a volume, including classification and shading parameters, the view transformation, a description of the format of the volume data, and private data structures used by the rendering routines.
+</dd><dt>vpResult
+</dt><dd>A result code. Most of the library routines return the code VP_OK upon successful completion, or an error code if the library call fails.
+</dd><dt>vpVector3
+</dt><dd>A three-element linear array of double-precision elements (double[3]).
+</dd><dt>vpVector4
+</dt><dd>A four-element linear array of double-precisions elements (double[4]).
+</dd><dt>vpMatrix3
+</dt><dd>A three-by-three array of double-precision elements (double[3][3]).
+</dd><dt>vpMatrix4
+</dt><dd>A four-by-four array of double-precision elements (double[4][4]).</dd></dl><h2>Availability</h2>Source code and documentation for VolPack are available free via the World Wide Web (<a rel="nofollow" HREF="http://www-graphics.stanford.edu/software/volpack)">http://www-graphics.stanford.edu/software/volpack)</a> or by anonymous ftp (<a HREF="ftp://graphics.stanford.edu/pub/volpack">ftp://graphics.stanford.edu/pub/volpack</a>).
+<h2>See Also</h2><i>VolPack User's Guide</i>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pdfcrack(1) · Linux Manual Pages</title>
+<meta name="description" content="pdfcrack – Password recovery tool for PDF-files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pdfcrack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pdfcrack(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pdfcrack &#8211; Password recovery tool for PDF-files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pdfcrack </code> [ <code>-f</code> ] FILE [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>PDFCrack </code> is a tool for recovering passwords and content from PDF-files. </p>
+<p> If aborted with Ctrl-C or by receiving a SIGINT signal, <code>pdfcrack</code> will automatically save current position. The position will be saved in a file called <code>savedstate.sav</code> in current working directory. </p>
+<p> Mandatory arguments for long options are mandatory for short options too.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>
+&nbsp;<wbr><code>-b</code>,&nbsp;<wbr><code>&#8211;bench</code></dt>
+<dd> perform benchmark and exit</dd>
+<dt>
+&nbsp;<wbr><code>-c</code>,&nbsp;<wbr><code>&#8211;charset=</code><i>STRING</i></dt>
+<dd> Use the characters in <i>STRING</i> as charset</dd>
+<dt><code>-w</code>, <code>&#8211;wordlist=</code><i>FILE</i></dt>
+<dd> Use <i>FILE</i> as source of passwords to try</dd>
+<dt><code>-n</code>, <code>&#8211;minpw=</code><i>INTEGER</i></dt>
+<dd> Skip trying passwords shorter than <i>INTEGER</dd>
+<dt></i><code>-m</code>, <code>&#8211;maxpw=</code><i>INTEGER</i></dt>
+<dd> Stop when reaching this <i>INTEGER</i> passwordlength</dd>
+<dt><code>-l</code>, <code>&#8211;loadstate=</code><i>FILE</i></dt>
+<dd>
+&nbsp;<wbr>Continue from the state saved in&nbsp;<wbr><i>FILE</dd>
+<dt>
+&nbsp;<wbr></i><code>-o</code>,&nbsp;<wbr><code>&#8211;owner</code></dt>
+<dd> Work with the ownerpassword</dd>
+<dt>
+&nbsp;<wbr><code>-u</code>,&nbsp;<wbr><code>&#8211;user</code></dt>
+<dd> Work with the userpassword (default)</dd>
+<dt>
+&nbsp;<wbr><code>-p</code>,&nbsp;<wbr><code>&#8211;password=</code><i>STRING</i></dt>
+<dd> Give userpassword to speed up breaking ownerpassword (implies <code>-o</code>)</dd>
+<dt>
+&nbsp;<wbr><code>-q</code>,&nbsp;<wbr><code>&#8211;quiet</code></dt>
+<dd> Run quietly</dd>
+<dt><code>-s</code>, <code>&#8211;permutate</code></dt>
+<dd> Try permutating the passwords (currently only supports switching first character to uppercase)</dd>
+<dt>
+&nbsp;<wbr><code>-v</code>,&nbsp;<wbr><code>&#8211;version</code></dt>
+<dd> Print version and exit</dd></dl>
+<h2>REPORTING BUGS</h2>
+<p> Via e-mail to Henning Noren &lt;confusion42 [at] users.sourceforge.net&gt; or report on project page at <a rel="nofollow" href="http://pdfcrack.sourceforge.net/">http://pdfcrack.sourceforge.net/</a></p>
+<h2>AUTHOR</h2>
+<p> Henning Noren</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2009 Henning Noren &lt;confusion42 [at] users.sourceforge.net&gt;<br />
+ This is free software. You may redistribute copies of it under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

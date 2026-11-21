@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snmptable(1) · Linux Manual Pages</title>
+<meta name="description" content="snmptable – retrieve an SNMP table and display it in tabular form">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-snmptable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>snmptable(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> snmptable &#8211; retrieve an SNMP table and display it in tabular form</p>
+<h2>SYNOPSIS</h2>
+<p> <code>snmptable</code> [COMMON OPTIONS] [-Cb] [-CB] [-Ch] [-CH] [-Ci] [-Cf STRING] [-Cw WIDTH] AGENT TABLE-OID</p>
+<h2>DESCRIPTION</h2>
+<p> <code>snmptable</code> is an SNMP application that repeatedly uses the SNMP GETNEXT or GETBULK requests to query for information on a network entity. The parameter <i>TABLE-OID</i> must specify an SNMP table. </p>
+<p> snmptable is an SNMP application that repeatedly uses the SNMP GETNEXT or GETBULK requests to query for information on a network entity. The parameter TABLE-OID must specify an SNMP table. </p>
+<p> AGENT identifies a target SNMP agent, which is instrumented to monitor the gievn objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a full list of the possible formats for AGENT.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>COMMON OPTIONS</code></dt>
+<dd> Please see <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a list of possible values for COMMON OPTIONS as well as their descriptions.</dd>
+<dt><code>-Cb</code></dt>
+<dd> Display only a brief heading. Any common prefix of the table field names will be deleted.</dd>
+<dt><code>-CB</code></dt>
+<dd> Do not use GETBULK requests to retrieve data, only GETNEXT.</dd>
+<dt><code>-Cc</code><i> CHARS</i></dt>
+<dd> Print table in columns of <i>CHARS</i> characters width.</dd>
+<dt><code>-Cf</code><i> STRING</i></dt>
+<dd> The string <i>STRING</i> is used to separate table columns. With this option, each table entry will be printed in compact form, just with the string given to separate the columns (useful if you want to import it into a database). Otherwise it is printed in nicely aligned columns.</dd>
+<dt><code>-Ch</code></dt>
+<dd> Display <i>only</i> the column headings.</dd>
+<dt><code>-CH</code></dt>
+<dd> Do not display the column headings.</dd>
+<dt><code>-Ci</code></dt>
+<dd> This option prepends the index of the entry to all printed lines.</dd>
+<dt><code>-Cl</code></dt>
+<dd> Left justify the data in each column.</dd>
+<dt><code>-Cr</code><i> REPEATERS</i></dt>
+<dd> For GETBULK requests, <i>REPEATERS</i> specifies the max-repeaters value to use. For GETNEXT requests, <i>REPEATERS</i> specifies the number of entries to retrieve at a time.</dd>
+<dt><code>-Cw</code><i> WIDTH</i></dt>
+<dd> Specifies the width of the lines when the table is printed. If the lines will be longer, the table will be printed in sections of at most <i>WIDTH </i> characters. If <i>WIDTH</i> is less than the length of the contents of a single column, then that single column will still be printed.</dd></dl>
+<p> Note that <code>snmptable</code> REQUIRES an argument specifying the agent to query and exactly one OID argument, as described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. This OID <code>must</code> be that of a MIB table object.</p>
+<h2>EXAMPLES</h2>
+<p> $ snmptable -v 2c -c public localhost at.atTable </p>
+<p> SNMP table: at.atTable RFC1213-MIB::atTable </p>
+<p> atIfIndex atPhysAddress atNetAddress<br />
+&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>8:0:20:20:0:ab 130.225.243.33 </p>
+<p> $ snmptable -v 2c -c public -Cf + localhost at.atTable </p>
+<p> SNMP table: at.atTable </p>
+<p> atIfIndex+atPhysAddress+atNetAddress 1+8:0:20:20:0:ab+130.225.243.33 </p>
+<pre><code>
+$ snmptable localhost - Cl - CB - Ci - OX - Cb - Cc 16 - Cw 64 ifTable SNMP table : ifTable Index Descr Type Mtu Speed PhysAddress AdminStatus OperStatus LastChange InOctets InUcastPkts InNUcastPkts InDiscards InErrors InUnknownProtos OutOctets OutUcastPkts OutNUcastPkts OutDiscards OutErrors OutQLen Specific index : [1] 1 lo softwareLoopbac 16436 10000000 up up
+    ? 2837283786 3052466 ? 0 0 ? 2837283786 3052466 ? 0 0 0 zeroDotZero
+                                                          index
+                                                    : [2] 2 eth0 ethernetCsmacd 1500 10000000 0
+                               : 5
+                         : 5d
+    : d1 : f7 : cf up up
+                ? 2052604234 44252973
+                ? 0 0
+                ? 149778187 65897282
+                ? 0 0 0 zeroDotZero
+</code></pre>
+<h2>BUGS</h2>
+<p> The test for <i>TABLE-OID</i> actually specifying a table is rather heuristic. Note also that the test requires the defining MIB file to be loaded. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

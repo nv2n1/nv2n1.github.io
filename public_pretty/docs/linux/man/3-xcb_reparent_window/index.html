@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcb_reparent_window(3) · Linux Manual Pages</title>
+<meta name="description" content="xcb_reparent_window – Reparents a window">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcb_reparent_window/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcb_reparent_window(3)</h1>
+
+
+
+
+
+<p>xcb_reparent_window &#8211; Reparents a window</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;xcb/xproto.h&gt;
+Request function
+xcb_void_cookie_t xcb_reparent_window(xcb_connection_t *conn, xcb_window_t window, xcb_window_t parent, int16_t x, int16_t y);</code></pre>
+<h2>Request Arguments</h2>
+<dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>window</i></dt>
+<dd>The window to reparent.</dd>
+<dt><i>parent</i></dt>
+<dd>The new parent of the window.</dd>
+<dt><i>x</i></dt>
+<dd>The X position of the window within its new parent.</dd>
+<dt><i>y</i></dt>
+<dd>The Y position of the window within its new parent.</dd></dl>
+<h2>Description</h2>
+<p>Makes the specified window a child of the specified parent window. If the window is mapped, it will automatically be unmapped before reparenting and re-mapped after reparenting. The window is placed in the stacking order on top with respect to sibling windows. </p>
+<p> After reparenting, a ReparentNotify event is generated.</p>
+<h2>Return Value</h2>
+<p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>
+<p> If you want to handle errors directly with <i>xcb_request_check</i> instead, use <i>xcb_reparent_window_checked</i>. See <code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a>(3)</code> for details.</p>
+<h2>Errors</h2>
+<dl>
+<dt><i>xcb_match_error_t</i></dt>
+<dd>The new parent window is not on the same screen as the old parent window. </dd>
+<p> The new parent window is the specified window or an inferior of the specified window. </p>
+<p> The new parent is InputOnly and the window is not. </p>
+<p> The specified window has a ParentRelative background and the new parent window is not the same depth as the specified window.</p>
+<dt><i>xcb_window_error_t</i></dt>
+<dd>The specified window does not exist.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code><a href="/docs/linux/man/3-xcb_map_window/">xcb_map_window</a></code>(3), <code><a href="/docs/linux/man/3-xcb_reparent_notify_event_t/">xcb_reparent_notify_event_t</a></code>(3), <code><a href="/docs/linux/man/3-xcb_unmap_window/">xcb_unmap_window</a></code>(3)</p>
+<h2>Author</h2>
+<p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

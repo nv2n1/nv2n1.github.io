@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>byobu-select-session(1) · Linux Manual Pages</title>
+<meta name="description" content="byobu-select-session – select and connect to a byobu session">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-byobu-select-session/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>byobu-select-session(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> byobu-select-session &#8211; select and connect to a byobu session </p>
+<h2>DESCRIPTION</h2>
+<p> <code>byobu-select-session</code> is an application that lists the available screen sessions running on the system, and prompts the user to select one. The user also has the option to create a new Byobu session, or launch the default shell without Byobu. </p>
+<p> If an invalid selection is chosen 3 times in a row, the user is connected to the youngest session. </p>
+<p> By default, if only one session exists, the user is connected to that session, and if no sessions exist, a new session is created &#8212; such that there is no interactive prompt in the normal behavior. However, some users may choose to always be prompted, by touching the file $BYOBU_CONFIG_DIR/.always-select. </p>
+<p> Note that BYOBU_CONFIG_DIR=$HOME/.byobu. </p>
+<p> Named sessions that begin with a &quot;.&quot; are &quot;hidden&quot; from <code><a href="/docs/linux/man/1-byobu-select-session/">byobu-select-session</a></code>(1). This is useful, for instance, if you do not want a session to be automatically selected at login. Example:<br />
+&nbsp;<wbr>&nbsp;<wbr>byobu -S .hidden </p>
+<h2>FILES</h2>
+<p> <i>$BYOBU_CONFIG_DIR/.always-select</i> </p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt><code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1)</dt>
+<dd>
+</dd><dt><i><a rel="nofollow" href="http://byobu.co">http://byobu.co</a></i></dt>
+<dd>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> This manpage and the utility were written by Dustin Kirkland &lt;kirkland [at] byobu.co&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>
+<p> The complete text of the GNU General Public License can be found in <i>/usr/share/common-licenses/GPL</i> on Debian/Ubuntu systems, or in <i>/usr/share/doc/fedora-release-*/GPL</i> on Fedora systems, or on the web at <i><a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a></i>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

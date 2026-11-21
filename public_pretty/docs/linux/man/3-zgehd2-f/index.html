@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zgehd2-f(3) · Linux Manual Pages</title>
+<meta name="description" content="zgehd2.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zgehd2-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zgehd2-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>zgehd2.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>zgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br />
+ <i></i><code>ZGEHD2</code> reduces a general square matrix to upper Hessenberg form using an unblocked algorithm.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine zgehd2 (integerN, integerILO, integerIHI, complex*16, dimension( lda, * )A, integerLDA, complex*16, dimension( * )TAU, complex*16, dimension( * )WORK, integerINFO)</h3>
+<p><code>ZGEHD2</code> reduces a general square matrix to upper Hessenberg form using an unblocked algorithm. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> ZGEHD2 reduces a complex general matrix A to upper Hessenberg form H
+ by a unitary similarity transformation: Q**H * A * Q = H .</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>N</i> </dd>
+<pre> N is INTEGER
+ The order of the matrix A. N &gt;= 0.</pre>
+<p><i>ILO</i> </p>
+<pre> ILO is INTEGER</pre>
+<p><i>IHI</i> </p>
+<pre> IHI is INTEGER
+ It is assumed that A is already upper triangular in rows
+ and columns 1:ILO-1 and IHI+1:N. ILO and IHI are normally
+ set by a previous call to ZGEBAL; otherwise they should be
+ set to 1 and N respectively. See Further Details.
+ 1 &lt;= ILO &lt;= IHI &lt;= max(1,N).</pre>
+<p><i>A</i> </p>
+<pre> A is COMPLEX*16 array, dimension (LDA,N)
+ On entry, the n by n general matrix to be reduced.
+ On exit, the upper triangle and the first subdiagonal of A
+ are overwritten with the upper Hessenberg matrix H, and the
+ elements below the first subdiagonal, with the array TAU,
+ represent the unitary matrix Q as a product of elementary
+ reflectors. See Further Details.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,N).</pre>
+<p><i>TAU</i> </p>
+<pre> TAU is COMPLEX*16 array, dimension (N-1)
+ The scalar factors of the elementary reflectors (see Further
+ Details).</pre>
+<p><i>WORK</i> </p>
+<pre> WORK is COMPLEX*16 array, dimension (N)</pre>
+<p><i>INFO</i> </p>
+<pre> INFO is INTEGER
+ = 0: successful exit
+ &lt; 0: if INFO = -i, the i-th argument had an illegal value.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> <code>Further Details: </code></p>
+<dl>
+<dd>
+<pre> The matrix Q is represented as a product of (ihi-ilo) elementary
+ reflectors
+ Q = H(ilo) H(ilo+1) . . . H(ihi-1).
+ Each H(i) has the form
+ H(i) = I - tau * v * v**H
+ where tau is a complex scalar, and v is a complex vector with
+ v(1:i) = 0, v(i+1) = 1 and v(ihi+1:n) = 0; v(i+2:ihi) is stored on
+ exit in A(i+2:ihi,i), and tau in TAU(i).
+ The contents of A are illustrated by the following example, with
+ n = 7, ilo = 2 and ihi = 6:
+ on entry, on exit,
+ ( a a a a a a a ) ( a a h h h h a )
+ ( a a a a a a ) ( a h h h h a )
+ ( a a a a a a ) ( h h h h h h )
+ ( a a a a a a ) ( v2 h h h h h )
+ ( a a a a a a ) ( v2 v3 h h h h )
+ ( a a a a a a ) ( v2 v3 v4 h h h )
+ ( a ) ( a )
+ where a denotes an element of the original matrix A, h denotes a
+ modified element of the upper Hessenberg matrix H, and vi denotes an
+ element of the vector defining H(i).</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> Definition at line 150 of file zgehd2.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>createrepo_c(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-createrepo_c/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>createrepo_c(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>createrepo_c - Create rpm-md format (xml-rpm-metadata) repository</p>
+<h2>Synopsis</h2>
+<p>createrepo_c [options] &lt;directory&gt;</p>
+<h2>Options</h2>
+<h3>-V --version</h3>
+<p>Show program&rsquo;s version number and exit.</p>
+<h3>-q --quiet</h3>
+<p>Run quietly.</p>
+<h3>-v --verbose</h3>
+<p>Run verbosely.</p>
+<h3>-x --excludes &lt;packages&gt;</h3>
+<p>File globs to exclude, can be specified multiple times.</p>
+<h3>--basedir &lt;basedir&gt;</h3>
+<p>Basedir for path to directories.</p>
+<h3>-u --baseurl &lt;URL&gt;</h3>
+<p>Optional base URL location for all files.</p>
+<h3>-g --groupfile GROUPFILE</h3>
+<p>Path to groupfile to include in metadata.</p>
+<h3>-s --checksum &lt;checksum_type&gt;</h3>
+<p>Choose the checksum type used in repomd.xml and for packages in the metadata. The default is now sha256.</p>
+<h3>-p --pretty</h3>
+<p>Make sure all xml generated is formatted (default)</p>
+<h3>-d --database</h3>
+<p>Generate sqlite databases for use with yum.</p>
+<h3>--no-database</h3>
+<p>Do not generate sqlite databases in the repository.</p>
+<h3>--update</h3>
+<p>If metadata already exists in the outputdir and an rpm is unchanged (based on file size and mtime) since the metadata was generated, reuse the existing metadata rather than recalculating it. In the case of a large repository with only a few new or modified rpms this can significantly reduce I/O and processing time.</p>
+<h3>--update-md-path</h3>
+<p>Use the existing repodata for &ndash;update from this path.</p>
+<h3>--skip-stat</h3>
+<p>Skip the stat() call on a &ndash;update, assumes if the filename is the same then the file is still the same (only use this if you&rsquo;re fairly trusting or gullible).</p>
+<h3>-i --pkglist &lt;filename&gt;</h3>
+<p>Specify a text file which contains the complete list of files to include in the repository from the set found in the directory. File format is one package per line, no wildcards or globs.</p>
+<h3>-n --includepkg &lt;packages&gt;</h3>
+<p>Specify pkgs to include on the command line. Takes urls as well as local paths.</p>
+<h3>-o --outputdir &lt;URL&gt;</h3>
+<p>Optional output directory.</p>
+<h3>-S --skip-symlinks</h3>
+<p>Ignore symlinks of packages.</p>
+<h3>--changelog-limit &lt;number&gt;</h3>
+<p>Only import the last N changelog entries, from each rpm, into the metadata.</p>
+<h3>--unique-md-filenames</h3>
+<p>Include the file&rsquo;s checksum in the metadata filename, helps HTTP caching (default).</p>
+<h3>--simple-md-filenames</h3>
+<p>Do not include the file&rsquo;s checksum in the metadata filename.</p>
+<h3>--retain-old-md &lt;N&gt;</h3>
+<p>Keep around the latest (by timestamp) N copies of the old repodata.</p>
+<h3>--distro DISTRO</h3>
+<p>Distro tag and optional cpeid: &ndash;distro&rsquo;cpeid,textname'.</p>
+<h3>--content CONTENT_TAGS</h3>
+<p>Tags for the content in the repository.</p>
+<h3>--repo REPO_TAGS</h3>
+<p>Tags to describe the repository itself.</p>
+<h3>--revision REVISION</h3>
+<p>User-specified revision for this repository.</p>
+<h3>--read-pkgs-list READ_PKGS_LIST</h3>
+<p>Output the paths to the pkgs actually read useful with &ndash;update.</p>
+<h3>--workers</h3>
+<p>Number of workers to spawn to read rpms.</p>
+<h3>--xz</h3>
+<p>Use xz for repodata compression.</p>
+<h3>--compress-type &lt;compress_type&gt;</h3>
+<p>Which compression type to use.</p>
+<h3>--keep-all-metadata</h3>
+<p>Keep groupfile and updateinfo from source repo during update.</p>
+<h3>--compatibility</h3>
+<p>Enforce maximal compatibility with classical createrepo.</p>
+<h3>--retain-old-md-by-age AGE</h3>
+<p>During &ndash;update, remove all files in repodata/ which are older then the specified period of time. (e.g. &lsquo;2h&rsquo;, &lsquo;30d&rsquo;, &hellip;). Available units (m - minutes, h - hours, d - days)</p>
+<h3>-c --cachedir CACHEDIR.</h3>
+<p>Set path to cache dir</p>
+<h3>--deltas</h3>
+<p>Tells createrepo to generate deltarpms and the delta metadata.</p>
+<h3>--oldpackagedirs PATH</h3>
+<p>Paths to look for older pkgs to delta against. Can be specified multiple times.</p>
+<h3>--num-deltas INT</h3>
+<p>The number of older versions to make deltas against. Defaults to 1.</p>
+<h3>--max-delta-rpm-size MAX_DELTA_RPM_SIZE</h3>
+<p>Max size of an rpm that to run deltarpm against (in bytes).</p>
+<h3>--local-sqlite</h3>
+<p>Gen sqlite DBs locally (into a directory for temporary files). Sometimes, sqlite has a trouble to gen DBs on a NFS mount, use this option in such cases. This option could lead to a higher memory consumption if TMPDIR is set to /tmp or not set at all, because then the /tmp is used and /tmp dir is often a ramdisk.</p>
+<h3>--cut-dirs NUM</h3>
+<p>Ignore NUM of directory components in location_href during repodata generation</p>
+<h3>--location-prefix PREFIX</h3>
+<p>Append this prefix before location_href in output repodata</p>
+<h3>--ignore-lock</h3>
+<p>Expert (risky) option: Ignore an existing .repodata/. (Remove the existing .repodata/ and create an empty new one to serve as a lock for other createrepo intances. For the repodata generation, a different temporary dir with the name in format .repodata.time.microseconds.pid/ will be used). NOTE: Use this option on your own risk! If two createrepos run simultaneously, then the state of the generated metadata is not guaranted - it can be inconsistent and wrong.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

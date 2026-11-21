@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtclipper(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtClipper –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtclipper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtclipper(3)</h1>
+
+
+
+
+
+<p>QwtClipper &#8211; </p>
+<p> Some clipping algorithms.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;qwt_clipper.h&gt;</p>
+<h3>Static Public Member Functions</h3>
+<p>static QPolygon <code>clipPolygon</code> (const QRect &amp;, const QPolygon &amp;, bool closePolygon=false) </p>
+<p> static QPolygon <code>clipPolygon</code> (const QRectF &amp;, const QPolygon &amp;, bool closePolygon=false) </p>
+<p> static QPolygonF <code>clipPolygonF</code> (const QRectF &amp;, const QPolygonF &amp;, bool closePolygon=false) </p>
+<p> static QVector&lt; <code>QwtInterval</code> &gt; <code>clipCircle</code> (const QRectF &amp;, const QPointF &amp;, double radius) </p>
+<h2>Detailed Description</h2>
+<p>Some clipping algorithms.</p>
+<h2>Member Function Documentation</h2>
+<h3>QVector&lt; <code>QwtInterval</code> &gt; QwtClipper::clipCircle (const QRectF &amp;clipRect, const QPointF &amp;center, doubleradius) [static]</h3>
+<p>Circle clipping </p>
+<p> <code>clipCircle()</code> divides a circle into intervals of angles representing arcs of the circle. When the circle is completely inside the clip rectangle an interval [0.0, 2 * M_PI] is returned. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>clipRect</i> Clip rectangle<br />
+ <i>center</i> Center of the circle<br />
+ <i>radius</i> Radius of the circle</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Arcs of the circle</dd></dl>
+<h3>QPolygon QwtClipper::clipPolygon (const QRect &amp;clipRect, const QPolygon &amp;polygon, boolclosePolygon = false) [static]</h3>
+<p>Sutherland-Hodgman polygon clipping </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>clipRect</i> Clip rectangle<br />
+ <i>polygon</i> Polygon<br />
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Clipped polygon</dd></dl>
+<h3>QPolygon QwtClipper::clipPolygon (const QRectF &amp;clipRect, const QPolygon &amp;polygon, boolclosePolygon = false) [static]</h3>
+<p>Sutherland-Hodgman polygon clipping </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>clipRect</i> Clip rectangle<br />
+ <i>polygon</i> Polygon<br />
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Clipped polygon</dd></dl>
+<h3>QPolygonF QwtClipper::clipPolygonF (const QRectF &amp;clipRect, const QPolygonF &amp;polygon, boolclosePolygon = false) [static]</h3>
+<p>Sutherland-Hodgman polygon clipping </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>clipRect</i> Clip rectangle<br />
+ <i>polygon</i> Polygon<br />
+ <i>closePolygon</i> True, when the polygon is closed</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>Clipped polygon</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

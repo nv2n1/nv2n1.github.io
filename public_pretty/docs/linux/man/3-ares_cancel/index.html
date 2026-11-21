@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_cancel(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_cancel – Cancel a resolve">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_cancel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_cancel(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_cancel &#8211; Cancel a resolve</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+void ares_cancel(ares_channel channel)
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>ares_cancel</code> function cancels all lookups/requests made on the the name service channel identified by <i>channel</i>. <code>ares_cancel</code> invokes the callbacks for each pending query on the channel, passing a status of <code>ARES_ECANCELLED</code>. These calls give the callbacks a chance to clean up any state which might have been stored in their arguments. If such a callback invocation adds a new request to the channel, that request will <i>not</i> be cancelled by the current invocation of <code>ares_cancel</code>.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_init/">ares_init</a></code>(3) <code><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a></code>(3)</p>
+<h2>NOTES</h2>
+<p> This function was added in c-ares 1.2.0 </p>
+<p> c-ares 1.6.0 and earlier pass a status of <code>ARES_ETIMEOUT</code> instead of <code>ARES_ECANCELLED</code>.</p>
+<h2>AUTHOR</h2>
+<p> Dirk Manske </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

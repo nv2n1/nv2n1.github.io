@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lzdiff(1) · Linux Manual Pages</title>
+<meta name="description" content="xzcmp, xzdiff, lzcmp, lzdiff – compare compressed files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lzdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lzdiff(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> xzcmp, xzdiff, lzcmp, lzdiff &#8211; compare compressed files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xzcmp</code> [<i>cmp_options</i>] <i>file1</i> [<i>file2</i>]<br />
+ <code>xzdiff</code> [<i>diff_options</i>] <i>file1</i> [<i>file2</i>]<br />
+ <code>lzcmp</code> [<i>cmp_options</i>] <i>file1</i> [<i>file2</i>]<br />
+ <code>lzdiff</code> [<i>diff_options</i>] <i>file1</i> [<i>file2</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>xzcmp</code> and <code>xzdiff</code> invoke <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) on files compressed with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), or <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1). All options specified are passed directly to <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1). If only one file is specified, then the files compared are <i>file1</i> (which must have a suffix of a supported compression format) and <i>file1</i> from which the compression format suffix has been stripped. If two files are specified, then they are uncompressed if necessary and fed to <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1). The exit status from <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) is preserved. </p>
+<p> The names <code>lzcmp</code> and <code>lzdiff</code> are provided for backward compatibility with LZMA Utils.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), <code><a href="/docs/linux/man/1-zdiff/">zdiff</a></code>(1)</p>
+<h2>BUGS</h2>
+<p> Messages from the <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) programs refer to temporary filenames instead of those specified. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

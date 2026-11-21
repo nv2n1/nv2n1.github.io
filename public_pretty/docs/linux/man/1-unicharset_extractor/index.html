@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unicharset_extractor(1) · Linux Manual Pages</title>
+<meta name="description" content="unicharset_extractor – extract unicharset from Tesseract boxfiles">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-unicharset_extractor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>unicharset_extractor(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> unicharset_extractor &#8211; extract unicharset from Tesseract boxfiles </p>
+<h2>SYNOPSIS</h2>
+<p> <code>unicharset_extractor</code> <i>[-D dir]</i> <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Tesseract needs to know the set of possible characters it can output. To generate the unicharset data file, use the unicharset_extractor program on the same training pages bounding box files as used for clustering: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+unicharset_extractor fontfile_1.box fontfile_2.box ...
+</pre>
+</dd></dl>
+<p> The unicharset will be put into the file <i>dir/unicharset</i>, or simply <i>./unicharset</i> if no output directory is provided. </p>
+<p> Tesseract also needs to have access to character properties isalpha, isdigit, isupper, islower, ispunctuation. all of this auxilury data and more is encoded in this file. (See <a href="/docs/linux/man/5-unicharset/">unicharset</a>(5)) </p>
+<p> If your system supports the wctype functions, these values will be set automatically by unicharset_extractor and there is no need to edit the unicharset file. On some older systems (eg Windows 95), the unicharset file must be edited by hand to add these property description codes. </p>
+<p> <code>NOTE</code> The unicharset file must be regenerated whenever inttemp, normproto and pffmtable are generated (i.e. they must all be recreated when the box file is changed) as they have to be in sync. This is made easier than in previous versions by running unicharset_extractor before mftraining and cntraining, and giving the unicharset to mftraining.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-tesseract/">tesseract</a>(1), <a href="/docs/linux/man/5-unicharset/">unicharset</a>(5) </p>
+<p> m[blue]<code><a rel="nofollow" href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract</a></code>m[]</p>
+<h2>HISTORY</h2>
+<p> unicharset_extractor first appeared in Tesseract 2.00.</p>
+<h2>COPYING</h2>
+<p> Copyright (C) 2006, Google Inc. Licensed under the Apache License, Version 2.0</p>
+<h2>AUTHOR</h2>
+<p> The Tesseract OCR engine was written by Ray Smith and his research groups at Hewlett Packard (1985-1995) and Google (2006-present). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

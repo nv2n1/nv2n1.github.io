@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pspsvg(1) · Linux Manual Pages</title>
+<meta name="description" content="pspsvg – convert PaintShop Pro® gradients (jgd, PspGradient) to the SVG format.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pspsvg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pspsvg(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pspsvg &#8211; convert PaintShop Pro&#174; gradients (jgd, PspGradient) to the SVG format. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>pspsvg</code> [-g&nbsp;<wbr><i>geometry</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>pspsvg</code> utility converts the gradient files used by PaintShop Pro (which usually have the extension jgd or PspGradient) to the Scalar Vector Graphics (SVG) format. </dd>
+<p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
+<p> The output is formatted for machines to read, rather than humans. A post-processor such as <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1) could be used in the latter case.</p>
+<h2>OPTIONS</h2>
+<p> <code>-g</code>, <code>&#8211;geometry</code> <i>width</i>x<i>height</i></p>
+<dl>
+<dt>
+</dt><dd> Specify the size of the SVG preview in pixels.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Brief help.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Write the output to <i>file</i>, rather than stdout.</dd></dl>
+<p> <code>-p</code>, <code>&#8211;preview</code></p>
+<dl>
+<dt>
+</dt><dd> Include a preview in the SVG output. See also the <code>&#8211;geometry</code> option.</dd></dl>
+<p> <code>-v</code>, <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose operation.</dd></dl>
+<p> <code>-V</code>, <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Version information.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Create a machine-readable SVG file: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  pspsvg -v -o new.svg old.jgd
+</pre>
+</dd></dl>
+<p> Create a human-readable SVG file: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+  pspsvg old.jgd | tidy -xml -indent -o new.svg
+</pre>
+</dd></dl>
+<h2>NOTES</h2>
+<p> The author could find no public documentation for the PaintShop Pro gradient file format and so has reverse-engineered it. A technical description of the format can be found in the file src/common/README.psp included in the cptutils source distribution. </p>
+<p> The PaintShop Pro format can be read by Photoshop, but Photoshop&#8217;s native (grd) gradient format cannot be read by this program. To convert Photoshop gradients, see the <code><a href="/docs/linux/man/1-pssvg/">pssvg</a></code>(1) documentation. </p>
+<p> PaintShop Pro&#174; is a trademark of the Corel Corporation. Adobe Photoshop&#174; is a trademark of Adobe Systems Inc.</p>
+<h2>AUTHOR</h2>
+<p> J.J. Green</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pssvg/">pssvg</a></code>(1), <code>svgpsp</code>(1), <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

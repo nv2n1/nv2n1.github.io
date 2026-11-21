@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_inode_nowait(9) · Linux Manual Pages</title>
+<meta name="description" content="find_inode_nowait – find an inode in the inode cache">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-find_inode_nowait/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>find_inode_nowait(9)</h1>
+
+
+
+
+
+<p>find_inode_nowait &#8211; find an inode in the inode cache</p>
+<h2>Synopsis</h2>
+<pre><code>struct inode *find_inode_nowait(struct super_block *sb, unsigned long hashval, int (*match)(struct inode *, unsigned long, void *), void *data);</code></pre>
+<h2>Arguments</h2>
+<p><i>sb</i></p>
+<dl>
+<dd>
+</dd><dd>super block of file system to search</dd></dl>
+<p> <i>hashval</i></p>
+<dl>
+<dd>hash value (usually inode number) to search for</dd></dl>
+<p> <i>match</i></p>
+<dl>
+<dd>callback used for comparisons between inodes</dd></dl>
+<p> <i>data</i></p>
+<dl>
+<dd>opaque data pointer to pass to <i>match</i></dd></dl>
+<h2>Description</h2>
+<p>Search for the inode specified by <i>hashval</i> and <i>data</i> in the inode cache, where the helper function <i>match</i> will return 0 if the inode does not match, 1 if the inode does match, and -1 if the search should be stopped. The <i>match</i> function must be responsible for taking the i_lock spin_lock and checking i_state for an inode being freed or being initialized, and incrementing the reference count before returning 1. It also must not sleep, since it is called with the inode_hash_lock spinlock held. </p>
+<p> This is a even more generalized version of <code>ilookup5</code> when the function must never block &#8212; <code>find_inode</code> can block in <code>__wait_on_freeing_inode</code> &#8212; or when the caller can not increment the reference count because the resulting <code>iput</code> might cause an inode eviction. The tradeoff is that the <i>match</i> funtion must be very carefully implemented.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snmpbulkget(1) · Linux Manual Pages</title>
+<meta name="description" content="snmpbulkget – communicates with a network entity using SNMP GETBULK requests.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-snmpbulkget/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>snmpbulkget(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> snmpbulkget &#8211; communicates with a network entity using SNMP GETBULK requests.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>snmpbulkget</code> [COMMON OPTIONS] [-Cn &lt;num&gt;] [-Cr &lt;NUM&gt;] AGENT OID [OID]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>snmpbulkget</code> is an SNMP application that uses the SNMP GETBULK request to query a network entity efficiently for information. One or more object identifiers (OIDs) may be given as arguments on the command line. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. </p>
+<p> If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint why the request was malformed.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-Cn</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>non-repeaters</i> field in the GETBULK PDU. This specifies the number of supplied variables that should not be iterated over. The default is 0.</dd>
+<dt><code>-Cr</code><i>&lt;NUM&gt;</i></dt>
+<dd> Set the <i>max-repetitions</i> field in the GETBULK PDU. This specifies the maximum number of iterations over the repeating variables. The default is 10.</dd></dl>
+<p> In addition to these options, <code>snmpbulkget</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpbulkget</code> REQUIRES an argument specifying the agent to query and at least one OID argument, as described there.</p>
+<h2>EXAMPLE</h2>
+<p> The command: </p>
+<p> snmpbulkget -v2c -Cn1 -Cr5 -Os -c public zeus system ifTable </p>
+<p> will retrieve the variable system.sysDescr.0 (which is the lexicographically next object to system) and the first 5 objects in the ifTable: </p>
+<p> sysDescr.0 = STRING: &quot;SunOS zeus.net.cmu.edu 4.1.3_U1 1 sun4m&quot;<br />
+ ifIndex.1 = INTEGER: 1<br />
+ ifIndex.2 = INTEGER: 2<br />
+ ifDescr.1 = STRING: &quot;lo0&quot;<br />
+ et cetera.</p>
+<h2>NOTE</h2>
+<p> As the name implies, <code>snmpbulkget</code> utilizes the SNMP GETBULK message, which is not available in SNMPv1.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5), RFC 1905. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

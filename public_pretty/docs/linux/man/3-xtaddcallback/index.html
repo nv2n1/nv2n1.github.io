@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtaddcallback(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAddCallback, XtAddCallbacks, XtRemoveCallback, XtRemoveCallbacks, XtRemoveAllCallbacks – add and remove callback procedures">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtaddcallback/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtaddcallback(3)</h1>
+
+
+
+
+
+<p>XtAddCallback, XtAddCallbacks, XtRemoveCallback, XtRemoveCallbacks, XtRemoveAllCallbacks &#8211; add and remove callback procedures </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>void XtAddCallback(Widget <i>w</i>, const char *<i>callback_name</i>, XtCallbackProc <i>callback</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtAddCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>, XtCallbackList <i>callbacks</i>);</dd>
+<dd>void XtRemoveCallback(Widget <i>w</i>, const char *<i>callback_name</i>, XtCallbackProc <i>callback</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRemoveCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>, XtCallbackList <i>callbacks</i>);</dd>
+<dd>void XtRemoveAllCallbacks(Widget <i>w</i>, const char *<i>callback_name</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>callback</i></dt>
+<dd>Specifies the callback procedure.</dd>
+<dt><i>callbacks</i></dt>
+<dd>Specifies the null-terminated list of callback procedures and corresponding client data.</dd>
+<dt><i>callback_name</i></dt>
+<dd>Specifies the callback list to which the procedure is to be appended or deleted.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the argument that is to be passed to the specified procedure when it is invoked by XtCallbacks or NULL, or the client data to match on the registered callback procedures.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtAddCallback</code> function adds the specified callback procedure to the specified widget&#8217;s callback list. </p>
+<p> The <code>XtAddCallbacks</code> add the specified list of callbacks to the specified widget&#8217;s callback list. </p>
+<p> The <code>XtRemoveCallback</code> function removes a callback only if both the procedure and the client data match. </p>
+<p> The <code>XtRemoveCallbacks</code> function removes the specified callback procedures from the specified widget&#8217;s callback list. </p>
+<p> The <code>XtRemoveAllCallbacks</code> function removes all the callback procedures from the specified widget&#8217;s callback list.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xtcallcallbacks/">XtCallCallbacks</a>(3)<br />
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

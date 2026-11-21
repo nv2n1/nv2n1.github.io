@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcb_ungrab_key_checked(3) · Linux Manual Pages</title>
+<meta name="description" content="xcb_ungrab_key – release a key combination">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcb_ungrab_key_checked/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcb_ungrab_key_checked(3)</h1>
+
+
+
+
+
+<p>xcb_ungrab_key &#8211; release a key combination</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;xcb/xproto.h&gt;
+Request function
+xcb_void_cookie_t xcb_ungrab_key(xcb_connection_t *conn, xcb_keycode_t key, xcb_window_t grab_window, uint16_t modifiers);</code></pre>
+<h2>Request Arguments</h2>
+<dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>key</i></dt>
+<dd>The keycode of the specified key combination. </dd>
+<p> Using the special value <i>XCB_GRAB_ANY</i> means releasing all possible key codes.</p>
+<dt><i>grab_window</i></dt>
+<dd>The window on which the grabbed key combination will be released.</dd>
+<dt><i>modifiers</i></dt>
+<dd>The modifiers of the specified key combination. </dd>
+<p> Using the special value <i>XCB_MOD_MASK_ANY</i> means releasing the key combination with every possible modifier combination.</dl>
+<h2>Description</h2>
+<p>Releases the key combination on <i>grab_window</i> if you grabbed it using <i>xcb_grab_key</i> before.</p>
+<h2>Return Value</h2>
+<p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>
+<p> If you want to handle errors directly with <i>xcb_request_check</i> instead, use <i>xcb_ungrab_key_checked</i>. See <code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a>(3)</code> for details.</p>
+<h2>Errors</h2>
+<dl>
+<dt><i>xcb_value_error_t</i></dt>
+<dd>TODO: reasons?</dd>
+<dt><i>xcb_window_error_t</i></dt>
+<dd>The specified <i>grab_window</i> does not exist.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xcb-requests/">xcb-requests</a></code>(3), <code><a href="/docs/linux/man/3-xcb_grab_key/">xcb_grab_key</a></code>(3), <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1)</p>
+<h2>Author</h2>
+<p>Generated from xproto.xml. Contact xcb [at] lists.freedesktop.org for corrections and improvements.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

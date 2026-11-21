@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pwmake(1) · Linux Manual Pages</title>
+<meta name="description" content="pwmake – simple tool for generating random relatively easily pronounceable passwords">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pwmake/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pwmake(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pwmake &#8211; simple tool for generating random relatively easily pronounceable passwords</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pwmake</code> &lt;entropy-bits&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pwmake</code> is a simple configurable tool for generating random and relatively easily pronounceable passwords. The tool allows you to specify the number of entropy bits that are used to generate the password. </p>
+<p> The entropy is pulled from <code>/dev/urandom</code>. </p>
+<p> The minimum number of bits is <code>56</code> which is usable for passwords on systems/services where brute force attacks are of very limited rate of tries. The <code>64</code> bits should be adequate for applications where the attacker does not have direct access to the password hash file. For situations where the attacker might obtain the direct access to the password hash or the password is used as an encryption key <code>80</code> to <code>128</code> bits should be used depending on your level of paranoia. </p>
+<h2>OPTIONS</h2>
+<p> The first and only argument is the number of bits of entropy used to generate the password. </p>
+<h2>FILES</h2>
+<p> <code>/etc/security/pwquality.conf</code> &#8211; The configuration file for the libpwquality library. </p>
+<h2>RETURN CODES</h2>
+<p> <code>pwmake</code> returns 0 on success, non zero on error. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-pwscore/">pwscore</a>(1), <a href="/docs/linux/man/8-pam_pwquality/">pam_pwquality</a>(8) </p>
+<h2>AUTHORS</h2>
+<pre>
+Tomas Mraz &lt;tmraz [at] redhat.com&gt;
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmrendertableremoverenditions(3) · Linux Manual Pages</title>
+<meta name="description" content="XmRenderTableRemoveRenditions — A convenience function that removes renditions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmrendertableremoverenditions/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmrendertableremoverenditions(3)</h1>
+
+
+
+
+
+<p><code>XmRenderTableRemoveRenditions</code> &#8212; A convenience function that removes renditions</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>XmRenderTable XmRenderTableRemoveRenditions</code>(
+<code>XmRenderTable oldtable</code>,
+<code>XmStringTag *tags</code>,
+<code>int tag_count</code>);</pre>
+<h2>Description</h2>
+<p><code>XmRenderTableRemoveRenditions</code> removes from <i>oldtable</i> the renditions whose tags match the tags specified in <i>tags</i>, then places the remaining renditions in a newly created render table.</p>
+<dl COMPACT>
+<dt><i>oldtable</i></dt>
+<dd>Specifies the render table from which renditions are to be removed. This function deallocates the original render table and the matching renditions after extracting the required information.</dd>
+<dt><i>tags</i></dt>
+<dd>Specifies an array of tags, whose corresponding renditions are to be removed from <i>oldtable</i>.</dd>
+<dt><i>tag_count</i></dt>
+<dd>Specifies the number of tags in <i>tags</i>.</dd></dl>
+<h2>Return</h2>
+<p>If <i>oldtable</i> or <i>tags</i> is NULL, or <i>tag_count</i> is 0 (zero), or no renditions are removed from <i>oldtable</i>, this function returns <i>oldtable</i>. Otherwise, it returns a newly allocated <code>XmRenderTable</code>. The application is responsible for managing this allocated render table. The application can recover this allocated space by calling <code>XmRenderTableFree</code>.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmrendition/">XmRendition</a></code>(3) and <code><a href="/docs/linux/man/3-xmrendertablefree/">XmRenderTableFree</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

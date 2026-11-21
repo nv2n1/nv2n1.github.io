@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sla_gerpvgrw(3) · Linux Manual Pages</title>
+<meta name="description" content="sla_gerpvgrw.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sla_gerpvgrw/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sla_gerpvgrw(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> sla_gerpvgrw.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> REAL function <code>sla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
+ <i></i><code>SLA_GERPVGRW</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>REAL function sla_gerpvgrw (integerN, integerNCOLS, real, dimension( lda, * )A, integerLDA, real, dimension( ldaf, * )AF, integerLDAF)</h3>
+<p> <code>SLA_GERPVGRW</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+ SLA_GERPVGRW computes the reciprocal pivot growth factor
+ norm(A)/norm(U). The &quot;max absolute element&quot; norm is used. If this is
+ much less than 1, the stability of the LU factorization of the
+ (equilibrated) matrix A could be poor. This also means that the
+ solution X, estimated condition numbers, and error bounds could be
+ unreliable.
+</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>N</i> </dd>
+<pre>
+          N is INTEGER
+     The number of linear equations, i.e., the order of the
+     matrix A.  N &gt;= 0.
+</pre>
+<p> <i>NCOLS</i> </p>
+<pre>
+          NCOLS is INTEGER
+     The number of columns of the matrix A. NCOLS &gt;= 0.
+</pre>
+<p> <i>A</i> </p>
+<pre>
+          A is REAL array, dimension (LDA,N)
+     On entry, the N-by-N matrix A.
+</pre>
+<p> <i>LDA</i> </p>
+<pre>
+          LDA is INTEGER
+     The leading dimension of the array A.  LDA &gt;= max(1,N).
+</pre>
+<p> <i>AF</i> </p>
+<pre>
+          AF is REAL array, dimension (LDAF,N)
+     The factors L and U from the factorization
+     A = P*L*U as computed by SGETRF.
+</pre>
+<p> <i>LDAF</i> </p>
+<pre>
+          LDAF is INTEGER
+     The leading dimension of the array AF.  LDAF &gt;= max(1,N).
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+</dt><dd> Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+</dt><dd> November 2011</dd></dl>
+<p> Definition at line 98 of file sla_gerpvgrw.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

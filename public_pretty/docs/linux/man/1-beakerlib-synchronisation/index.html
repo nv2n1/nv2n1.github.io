@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beakerlib-synchronisation(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-beakerlib-synchronisation/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>beakerlib-synchronisation(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>BeakerLib - synchronisation - Process synchronisation routines</p>
+<h2>DESCRIPTION</h2>
+<p>This is a library of helpers for process synchronisation of applications.</p>
+<p><font SIZE="-1">NOTE:</font> none of this commands will cause the test proper to fail, even in case of critical errors during their invocation. If you want your test to fail if those test fail, use their return codes and <i>rlFail()</i>.</p>
+<h2>FUNCTIONS</h2>
+<h3>Process Synchronisation</h3>
+<p><i>rlWaitForCmd</i></p>
+<p>Pauses script execution until command exit status is the expeced value. Logs a <font SIZE="-1">WARNING</font> and returns 1 if the command didn&rsquo;t exit successfully before timeout elapsed or a maximum number of invocations has been reached.</p>
+ <pre><code>
+rlWaitForCmd command[-p PID][-t time][-m count][-d delay][-r retval]
+</code></pre>
+<dl>
+<dt>command
+</dt><dd> Command that will be executed until its return code is equal 0 or value speciefied as option to `-r'.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds, default=120. If the command doesn't return 0 before time elapses, the command will be killed.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process to check before running command. If the process exits before the socket is opened, the command will log a <font SIZE="-1">WARNING.</font>
+</dd><dt>-m count
+</dt><dd> Maximum number of `command' executions before continuing anyway. Default is infite. Returns 1 if the maximum was reached.
+</dd><dt>-d delay
+</dt><dd> Delay between `command' invocations. Default 1.
+</dd><dt>-r retval
+</dt><dd> Expected return value of command. Default 0.</dd></dl>
+<p><i>rlWaitForFile</i></p>
+<p>Pauses script execution until specified file or directory starts existing. Returns 0 if file started existing, 1 if timeout was reached or <font SIZE="-1">PID</font> exited. Return code is greater than 1 in case of error.</p>
+<p>rlWaitForFile path[-p PID][-t time][-d delay]</p>
+<dl>
+<dt>path
+</dt><dd> Path to file that should start existing.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=120). If the file isn't opened before the time elapses the command returns 1.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the file is created, the command returns with status code of 1.
+</dd><dt>-d delay
+</dt><dd> Delay between subsequent checks for existence of file. Default 1.</dd></dl>
+<p><i>rlWaitForSocket</i></p>
+<p>Pauses script execution until socket starts listening. Returns 0 if socket started listening, 1 if timeout was reached or <font SIZE="-1">PID</font> exited. Return code is greater than 1 in case of error.</p>
+<p>rlWaitForSocket{port | path}[-p PID][-t time][-d delay][&ndash;close]</p>
+<dl>
+<dt>port|path
+</dt><dd> Network port to wait for opening or a path to <font SIZE="-1">UNIX</font> socket. Regular expressions are also supported.
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=120). If the socket isn't opened before the time elapses the command returns 1.
+</dd><dt>-p <font SIZE="-1">PID</font>
+</dt><dd> <font SIZE="-1">PID</font> of the process that should also be running. If the process exits before the socket is opened, the command returns with status code of 1.
+</dd><dt>-d delay
+</dt><dd> Delay between subsequent checks for availability of socket. Default 1.
+</dd><dt>--close
+</dt><dd> Wait for the socket to stop listening.</dd></dl>
+<p><i>rlWait</i></p>
+<p>Wrapper around bash builtin `wait&rsquo; command. See <i>bash_builtins</i>(1) man page. Kills the process and all its children if the timeout elapses.</p>
+ <pre><code>
+rlWaitFor[n...][-s SIGNAL][-t time]
+</code></pre>
+<dl>
+<dt>n
+</dt><dd> List of PIDs to wait for. They need to be background tasks of current shell. See <i>bash_builtins</i>(1) section for `wait' command/
+</dd><dt>-t time
+</dt><dd> Timeout in seconds (optional, default=30). If the wait isn't successful before the time elapses then all specified tasks are killed.
+</dd><dt>-s <font SIZE="-1">SIGNAL</font>
+</dt><dd> Signal used to kill the process, optional <font SIZE="-1">SIGTERM</font> by default.</dd></dl>
+<h2>AUTHORS</h2>
+<dl>
+<dt>&bull;
+</dt><dd> Hubert Kario &lt;hkario [at] redhat.com&gt; 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

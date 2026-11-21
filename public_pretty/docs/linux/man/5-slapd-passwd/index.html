@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slapd-passwd(5) · Linux Manual Pages</title>
+<meta name="description" content="slapd-passwd – /etc/passwd backend to slapd">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-slapd-passwd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>slapd-passwd(5)</h1>
+
+
+
+
+
+<p>slapd-passwd &#8211; /etc/passwd backend to slapd</p>
+<h2>Synopsis</h2>
+<p>/etc/openldap/slapd.conf</p>
+<h2>Description</h2>
+<p>The PASSWD backend to <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) serves up the user account information listed in the system <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) file. This backend is provided for demonstration purposes only. The DN of each entry is &quot;uid=&lt;username&gt;,&lt;suffix&gt;&quot;. Note that non-base searches scan the entire passwd file, and are best suited for hosts with small passwd files.</p>
+<h2>Configuration</h2>
+<p>This <code>slapd.conf</code> option applies to the PASSWD backend database. That is, it must follow a &quot;database passwd&quot; line and come before any subsequent &quot;backend&quot; or &quot;database&quot; lines. Other database options are described in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) manual page.</p>
+<dl>
+<dt><code>file &lt;filename&gt;</code></dt>
+<dd>Specifies an alternate passwd file to use. The default is <code>/etc/passwd</code>.</dd></dl>
+<h2>Access Control</h2>
+<p>The <code>passwd</code> backend does not honor any of the access control semantics described in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5). Only <code>read (=r)</code> access to the <code>entry</code> pseudo-attribute and to the other attribute values of the entries returned by the <code>search</code> operation is honored, which is performed by the frontend.</p>
+<h2>Files</h2>
+<dl>
+<dt>/etc/openldap/slapd.conf</dt>
+<dd>default slapd configuration file</dd>
+<dt>/etc/passwd</dt>
+<dd>user account information</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

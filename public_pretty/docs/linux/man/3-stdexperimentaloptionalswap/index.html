@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentaloptionalswap(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentaloptionalswap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentaloptionalswap(3)</h1>
+
+
+
+
+
+<p>std::experimental::optional&lt;T&gt;::swap - std::experimental::optional&lt;T&gt;::swap</p>
+<h2>Synopsis</h2>
+<pre><code>void swap(optional &amp;other) noexcept(/* see below */);
+(library fundamentals TS)</code></pre> 
+<p>Swaps the contents with those of other.</p>
+<ul>
+<li>If neither *this nor other contain a value, the function has no effect.</li>
+<li>If only one of *this and other contains a value (let&rsquo;s call this object in and the other un), the contained value of un is direct-initialized from std::move(*in), followed by destruction of the contained value of in as if by in.val-&gt;T::~T(). After this call, in does not contain a value un contains a value.</li>
+<li>If both *this and other contain values, the contained values are exchanged by calling using std::swap; swap(**this, *other). T lvalues must satisfy Swappable.</li>
+</ul>
+<h2>Parameters</h2>
+<p>other - the optional object to exchange the contents with</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p>noexcept specification:
+noexcept(std::is_nothrow_move_constructible&lt;T&gt;::value &amp;&amp;
+noexcept(swap(std::declval&lt;T&amp;&gt;(), std::declval&lt;T&amp;&gt;())))
+In the case of thrown exception, the states of the contained values of *this and other are determined by the exception safety guarantees of swap of type T or T&rsquo;s move constructor, whichever is called. For both *this and other, if the object contained a value, it is left containing a value, and the other way round.</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> specializes the std::swap algorithm
+std::swap(std::experimental::optional) <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

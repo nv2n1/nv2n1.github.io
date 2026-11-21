@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ .Content }}
+
+<h2 id="posts">Recent Posts</h2>
+
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ range first 10 $posts.ByDate.Reverse }}
+  <article class="recent-post">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="meta"><time>{{ .Date | time.Format "January 2, 2006" }}</time>{{ with .Params.author }} &middot; {{ . }}{{ end }}</p>
+  </article>
+{{ end }}
+
+<p><a href="/archive/">Browse all {{ $posts | len }} posts &rarr;</a></p>
+
+<h2>Recent Updates</h2>
+
+<ul class="posts">
+{{ range first 10 (sort $posts "Params.modified" "desc") }}
+  <li><time>{{ .Lastmod | time.Format "Jan 2, 2006" }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+
+<h2>Browse by Category</h2>
+
+<p>Every category is a learning topic in an academy and learning path. See <a href="/categories/">all categories</a>, or start from an <a href="/#academies">academy</a>.</p>
+{{ end }}

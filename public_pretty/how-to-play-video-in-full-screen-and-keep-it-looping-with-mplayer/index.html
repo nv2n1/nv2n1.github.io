@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop Videos in Fullscreen with mpv on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-play-video-in-full-screen-and-keep-it-looping-with-mplayer/">
+  <meta name="description" content="mpv is a powerful media player for Linux that supports looping videos with minimal configuration. Here’s how to loop videos in fullscreen mode using mpv.
+Loop a …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Loop Videos in Fullscreen with mpv on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-play-video-in-full-screen-and-keep-it-looping-with-mplayer/">
+  <meta property="og:description" content="mpv is a powerful media player for Linux that supports looping videos with minimal configuration. Here’s how to loop videos in fullscreen mode using mpv.
+Loop a …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Loop Videos in Fullscreen with mpv on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T11:49:37Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>mpv is a powerful media player for Linux that supports looping videos with minimal configuration. Here’s how to loop videos in fullscreen mode using mpv.</p>
+<h2 id="loop-a-single-video">Loop a Single Video</h2>
+<p>The simplest way — use the <code>--loop</code> flag:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">mpv --fullscreen --loop video.mp4
+</code></pre><p><code>--loop</code> replays the video infinitely. To loop a specific number of times:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Loop 5 times
+mpv --fullscreen --loop=5 video.mp4
+</code></pre><h2 id="loop-a-playlist">Loop a Playlist</h2>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Loop all videos in a directory
+mpv --fullscreen --loop-playlist ~/Videos/*.mp4
+
+# Loop playlist infinitely
+mpv --fullscreen --loop-playlist=inf ~/Videos/*.mp4
+
+# Shuffle and loop
+mpv --fullscreen --loop-playlist --shuffle ~/Music/*.flac
+</code></pre><h2 id="loop-a-portion-of-a-video-a-b-loop">Loop a Portion of a Video (A-B Loop)</h2>
+<p>During playback, set A-B loop points to repeat a section:</p>
+<ol>
+<li>Press <strong>l</strong> at the start point (sets point A)</li>
+<li>Press <strong>l</strong> again at the end point (sets point B)</li>
+<li>The section between A and B loops continuously</li>
+<li>Press <strong>l</strong> a third time to disable A-B loop</li>
+</ol>
+<h2 id="configuration-file">Configuration File</h2>
+<p>Set default looping behavior in mpv’s config file:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># ~/.config/mpv/mpv.conf
+# Default to fullscreen and loop
+fullscreen=yes
+loop-playlist=inf
+
+# Always loop the current file
+loop-file=inf
+
+# Useful quality-of-life settings
+keep-open=yes           # Don&#39;t close after playback ends
+save-position-on-quit=yes  # Remember where you stopped
+</code></pre><h2 id="keyboard-shortcuts-for-looping">Keyboard Shortcuts for Looping</h2>
+<p>During playback, these shortcuts control looping:</p>
+<ul>
+<li><strong>l</strong> — Set/clear A-B loop points</li>
+<li><strong>Shift+l</strong> — Toggle infinite file loop</li>
+<li><strong>Shift+L</strong> — Toggle playlist loop</li>
+<li><strong>LEFT/RIGHT</strong> — Seek 5 seconds</li>
+<li><strong>UP/DOWN</strong> — Seek 60 seconds</li>
+<li><strong>f</strong> — Toggle fullscreen</li>
+<li><strong>ESC</strong> — Exit fullscreen</li>
+<li><strong>q</strong> — Quit</li>
+</ul>
+<h2 id="loop-with-audio-visualization">Loop with Audio Visualization</h2>
+<p>For audio files, add visualizations while looping:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Audio with visualizer
+mpv --fullscreen --loop --audio-visualizer=avdebug ~/Music/song.flac
+</code></pre><h2 id="loop-for-digital-signage-or-kiosks">Loop for Digital Signage or Kiosks</h2>
+<p>For unattended displays, configure mpv for reliable looping:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">mpv --fullscreen \
+    --loop-playlist=inf \
+    --no-osd-bar \
+    --no-stop-screensaver \
+    --profile=pseudo-gui \
+    --force-window \
+    playlist.m3u
+</code></pre><p>Create the playlist file:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># playlist.m3u
+video1.mp4
+video2.mp4
+video3.mp4
+</code></pre><p>For truly unattended operation, wrap it in a script that restarts mpv if it crashes:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">#!/bin/bash
+while true; do
+    mpv --fullscreen --loop-playlist=inf --no-osd-bar playlist.m3u
+    sleep 2
+done
+</code></pre><h2 id="gpu-accelerated-video-looping">GPU-Accelerated Video Looping</h2>
+<p>For smooth 4K looping, ensure hardware decoding is active:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">mpv --fullscreen --loop --hwdec=auto 4kvideo.mp4
+</code></pre><p>Check if hardware decoding is working:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">mpv --fullscreen --loop --hwdec=auto --msg-level=all=info 4kvideo.mp4 2&gt;&amp;1 | grep hwdec
+</code></pre><h2 id="streaming-video-loops">Streaming Video Loops</h2>
+<p>mpv can loop network streams as well:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Loop a live stream
+mpv --fullscreen --loop https://stream.example.com/live.m3u8
+
+# Loop a YouTube video (requires yt-dlp)
+mpv --fullscreen --loop &#34;https://youtube.com/watch?v=VIDEO_ID&#34;
+</code></pre><p>Install yt-dlp for YouTube and other streaming platform support:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">pip install yt-dlp
+# Or
+sudo dnf install yt-dlp    # Fedora
+sudo apt install yt-dlp    # Ubuntu
+</code></pre><h2 id="mpv-configuration-for-ambient-displays">mpv Configuration for Ambient Displays</h2>
+<p>For always-on ambient displays or art installations:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># ~/.config/mpv/mpv.conf for ambient display
+fullscreen=yes
+loop-playlist=inf
+no-osd-bar=yes
+no-input-default-bindings=yes
+input-vo-keyboard=no
+profile=gpu-hq
+dither-depth=auto
+gpu-api=vulkan
+</code></pre><p>This configuration maximizes video quality while disabling all keyboard input to prevent accidental interruption.</p>
+<h2 id="mpv-scripting-for-advanced-loop-control">mpv Scripting for Advanced Loop Control</h2>
+<p>mpv supports Lua scripts for custom behavior. Create a script that loops specific files differently:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">-- ~/.config/mpv/scripts/smart-loop.lua
+-- Auto-loop short clips, play once for long videos
+mp.register_event(&#34;file-loaded&#34;, function()
+    local duration = mp.get_property_number(&#34;duration&#34;)
+    if duration and duration &lt; 60 then
+        mp.set_property(&#34;loop-file&#34;, &#34;inf&#34;)
+        mp.msg.info(&#34;Short clip detected, enabling loop&#34;)
+    end
+end)
+</code></pre><p>Save as <code>~/.config/mpv/scripts/smart-loop.lua</code> and mpv loads it automatically on startup.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

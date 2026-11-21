@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Backup: Comparing offlineimap, mbsync, and doveadm - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-back-up-a-complete-imap-account/">
+  <meta name="description" content="Backing up a complete IMAP account with thousands of messages across nested folders requires automation to preserve folder structure and avoid manual errors. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Email Backup: Comparing offlineimap, mbsync, and doveadm">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-back-up-a-complete-imap-account/">
+  <meta property="og:description" content="Backing up a complete IMAP account with thousands of messages across nested folders requires automation to preserve folder structure and avoid manual errors. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Email Backup: Comparing offlineimap, mbsync, and doveadm</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:58Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Backing up a complete IMAP account with thousands of messages across nested folders requires automation to preserve folder structure and avoid manual errors. This guide covers three modern tools and provides detailed setup for the most flexible option.</p>
+<h2 id="choosing-your-backup-tool">Choosing your backup tool</h2>
+<p><strong>offlineimap</strong> — Most flexible for complex folder structures and label handling. Active maintenance resumed, widely packaged.</p>
+<p><strong>mbsync (isync)</strong> — Lightweight and fast, excellent for large accounts (500k+ messages). Minimal configuration, efficient sync algorithm.</p>
+<p><strong>doveadm</strong> — Built-in to Dovecot servers, useful if backing up directly from your mail server. Best for local or nearby systems.</p>
+<p><strong>imapync</strong> — Simple one-way sync, good for straightforward backups, but less flexible for folder mapping.</p>
+<p>This guide uses offlineimap for its maturity and control, but includes mbsync alternatives where applicable.</p>
+<h2 id="installing-offlineimap">Installing offlineimap</h2>
+<p>On Fedora/RHEL/CentOS:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install offlineimap
+</span></span></code></pre></div><p>On Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install offlineimap
+</span></span></code></pre></div><p>On Arch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S offlineimap
+</span></span></code></pre></div><p>Verify installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">offlineimap --version
+</span></span></code></pre></div><h2 id="basic-configuration">Basic configuration</h2>
+<p>Create <code>~/.offlineimaprc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[general]</span>
+</span></span><span class="line"><span class="cl"><span class="na">accounts</span> <span class="o">=</span> <span class="s">MyIMAP</span>
+</span></span><span class="line"><span class="cl"><span class="na">maxsyncaccount</span> <span class="o">=</span> <span class="s">1</span>
+</span></span><span class="line"><span class="cl"><span class="na">autorefresh</span> <span class="o">=</span> <span class="s">0</span>
+</span></span><span class="line"><span class="cl"><span class="na">socktimeout</span> <span class="o">=</span> <span class="s">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Account MyIMAP]</span>
+</span></span><span class="line"><span class="cl"><span class="na">localrepository</span> <span class="o">=</span> <span class="s">Local</span>
+</span></span><span class="line"><span class="cl"><span class="na">remoterepository</span> <span class="o">=</span> <span class="s">Remote</span>
+</span></span><span class="line"><span class="cl"><span class="na">synclabels</span> <span class="o">=</span> <span class="s">yes</span>
+</span></span><span class="line"><span class="cl"><span class="na">readonly</span> <span class="o">=</span> <span class="s">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Repository Local]</span>
+</span></span><span class="line"><span class="cl"><span class="na">type</span> <span class="o">=</span> <span class="s">Maildir</span>
+</span></span><span class="line"><span class="cl"><span class="na">localfolders</span> <span class="o">=</span> <span class="s">~/Mail/backup</span>
+</span></span><span class="line"><span class="cl"><span class="na">createfolders</span> <span class="o">=</span> <span class="s">yes</span>
+</span></span><span class="line"><span class="cl"><span class="na">sep</span> <span class="o">=</span> <span class="s">/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Repository Remote]</span>
+</span></span><span class="line"><span class="cl"><span class="na">type</span> <span class="o">=</span> <span class="s">IMAP</span>
+</span></span><span class="line"><span class="cl"><span class="na">remotehost</span> <span class="o">=</span> <span class="s">imap.example.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">remoteuser</span> <span class="o">=</span> <span class="s">your.email@example.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">remotepass</span> <span class="o">=</span> <span class="s">your_password_here</span>
+</span></span><span class="line"><span class="cl"><span class="na">ssl</span> <span class="o">=</span> <span class="s">yes</span>
+</span></span><span class="line"><span class="cl"><span class="na">sslcacertfile</span> <span class="o">=</span> <span class="s">/etc/ssl/certs/ca-certificates.crt</span>
+</span></span><span class="line"><span class="cl"><span class="na">keepalive</span> <span class="o">=</span> <span class="s">60</span>
+</span></span><span class="line"><span class="cl"><span class="na">timeout</span> <span class="o">=</span> <span class="s">30</span>
+</span></span></code></pre></div><p>Key configuration points:</p>
+<ul>
+<li><code>readonly = true</code> — Prevents accidental writes to the IMAP server during backup</li>
+<li><code>ssl = yes</code> — Required for modern servers; verify your CA certificate path</li>
+<li><code>createfolders = yes</code> — Creates local directories matching remote folder structure</li>
+<li><code>socktimeout = 30</code> — Prevents hangs on slow connections</li>
+<li><code>keepalive = 60</code> — Maintains connection stability; increase to 120 for large syncs</li>
+</ul>
+<h2 id="secure-credential-handling">Secure credential handling</h2>
+<p>Never store plaintext passwords in config files. Use a separate password file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Repository Remote]</span>
+</span></span><span class="line"><span class="cl"><span class="na">remotepassfile</span> <span class="o">=</span> <span class="s">~/.config/offlineimap/password</span>
+</span></span></code></pre></div><p>Create the credentials file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/.config/offlineimap
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;your_actual_password&#34;</span> &gt; ~/.config/offlineimap/password
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.config/offlineimap/password
+</span></span></code></pre></div><p>For OAuth2 or app-specific passwords, use the same approach — offlineimap accepts any credential string in the password file.</p>
+<h2 id="running-your-first-backup">Running your first backup</h2>
+<p>Start the sync:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">offlineimap
+</span></span></code></pre></div><p>For a one-time run without interactive prompts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">offlineimap -o -u Quiet
+</span></span></code></pre></div><p>Monitor with verbose IMAP debugging:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">offlineimap -d IMAP
+</span></span></code></pre></div><p>Watch progress in another terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch -n <span class="m">5</span> <span class="s1">&#39;find ~/Mail/backup -type f | wc -l&#39;</span>
+</span></span></code></pre></div><h2 id="handling-large-accounts">Handling large accounts</h2>
+<p>For accounts with 100k+ messages, optimize sync performance:</p>
+<p>Add to <code>[Repository Remote]</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">maxage</span> <span class="o">=</span> <span class="s">90</span>
+</span></span><span class="line"><span class="cl"><span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+</span></span><span class="line"><span class="cl"><span class="na">keepalive</span> <span class="o">=</span> <span class="s">120</span>
+</span></span></code></pre></div><p><code>maxage = 90</code> syncs only messages from the last 90 days initially. Remove this line in subsequent runs to fetch remaining older messages.</p>
+<p>Run overnight in a persistent session:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nohup offlineimap -u Quiet &gt; ~/offlineimap.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+</span></span></code></pre></div><p>Or use tmux:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tmux new-session -d -s mailsync <span class="s1">&#39;offlineimap&#39;</span>
+</span></span></code></pre></div><h2 id="working-with-backed-up-emails">Working with backed-up emails</h2>
+<p>Emails are stored in Maildir format (each message as a separate file). Browse with mutt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mutt -f ~/Mail/backup/INBOX
+</span></span></code></pre></div><p>Or use neomutt, Thunderbird, or Evolution with your backup directory as a local account.</p>
+<p>Convert to mbox format for archival:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find ~/Mail/backup -type d -mindepth <span class="m">1</span> -exec bash -c <span class="s1">&#39;cat &#34;$0&#34;/cur/* 2&gt;/dev/null &gt; &#34;${0}.mbox&#34;&#39;</span> <span class="o">{}</span> <span class="se">\;</span>
+</span></span></code></pre></div><h2 id="archiving-for-long-term-storage">Archiving for long-term storage</h2>
+<p>After successful sync, compress the backup:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar --lz4 -cf mail-backup-<span class="k">$(</span>date +%Y%m%d<span class="k">)</span>.tar.lz4 ~/Mail/backup
+</span></span></code></pre></div><p>Or with gzip:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar --gzip -cf mail-backup-<span class="k">$(</span>date +%Y%m%d<span class="k">)</span>.tar.gz ~/Mail/backup
+</span></span></code></pre></div><p>Verify archive integrity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -tf mail-backup-*.tar.lz4 <span class="p">|</span> head -20
+</span></span></code></pre></div><h2 id="incremental-backups-with-cron">Incremental backups with cron</h2>
+<p>Set up daily syncs to capture new messages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">0</span> <span class="m">2</span> * * * /usr/bin/offlineimap -u Quiet 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> logger -t offlineimap
+</span></span></code></pre></div><p>This runs at 2 AM daily, logs output to syslog. Subsequent runs only download new or changed messages, making incremental backups fast.</p>
+<p>For monitoring:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -t offlineimap -n <span class="m">20</span>
+</span></span></code></pre></div><h2 id="alternative-using-mbsync-for-faster-large-backups">Alternative: Using mbsync for faster large backups</h2>
+<p>If offlineimap is too slow for your account, try mbsync:</p>
+<p>Install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install isync  <span class="c1"># or &#39;dnf install isync&#39;</span>
+</span></span></code></pre></div><p>Create <code>~/.mbsyncrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">IMAPAccount example</span>
+</span></span><span class="line"><span class="cl"><span class="na">Host imap.example.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">User your.email@example.com</span>
+</span></span><span class="line"><span class="cl"><span class="na">PassCmd &#34;pass email/example&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">SSLType IMAPS</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">IMAPStore remote</span>
+</span></span><span class="line"><span class="cl"><span class="na">Account example</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">MaildirStore local</span>
+</span></span><span class="line"><span class="cl"><span class="na">Path ~/Mail/backup/</span>
+</span></span><span class="line"><span class="cl"><span class="na">Inbox ~/Mail/backup/INBOX</span>
+</span></span><span class="line"><span class="cl"><span class="na">SubFolders Verbatim</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">Channel example</span>
+</span></span><span class="line"><span class="cl"><span class="na">Far :remote:</span>
+</span></span><span class="line"><span class="cl"><span class="na">Near :local:</span>
+</span></span><span class="line"><span class="cl"><span class="na">Patterns *</span>
+</span></span><span class="line"><span class="cl"><span class="na">Create Near</span>
+</span></span><span class="line"><span class="cl"><span class="na">Sync Pull</span>
+</span></span><span class="line"><span class="cl"><span class="na">Remove Near</span>
+</span></span><span class="line"><span class="cl"><span class="na">Expunge Near</span>
+</span></span><span class="line"><span class="cl"><span class="na">SyncState *</span>
+</span></span></code></pre></div><p>Run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mbsync -a
+</span></span></code></pre></div><p>mbsync is often 3-5x faster than offlineimap for initial large syncs.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Sync hangs:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Repository Remote]</span>
+</span></span><span class="line"><span class="cl"><span class="na">timeout</span> <span class="o">=</span> <span class="s">60</span>
+</span></span><span class="line"><span class="cl"><span class="na">keepalive</span> <span class="o">=</span> <span class="s">120</span>
+</span></span></code></pre></div><p><strong>SSL certificate errors:</strong></p>
+<p>Verify the correct CA bundle path for your system:</p>
+<ul>
+<li>Fedora/RHEL: <code>/etc/pki/tls/certs/ca-bundle.crt</code></li>
+<li>Debian/Ubuntu: <code>/etc/ssl/certs/ca-certificates.crt</code></li>
+<li>Arch: <code>/etc/ca-certificates/extracted/tls-ca-bundle.pem</code></li>
+</ul>
+<p>Or fetch the server’s certificate directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openssl s_client -connect imap.example.com:993 -showcerts &lt; /dev/null 2&gt;/dev/null <span class="p">|</span> grep -A <span class="m">20</span> <span class="s1">&#39;BEGIN CERTIFICATE&#39;</span> &gt; server.crt
+</span></span></code></pre></div><p>Then reference it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">sslcacertfile</span> <span class="o">=</span> <span class="s">/path/to/server.crt</span>
+</span></span></code></pre></div><p><strong>Folder mapping issues:</strong></p>
+<p>Manually map folders if automatic detection fails:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Repository Remote]</span>
+</span></span><span class="line"><span class="cl"><span class="na">nametrans</span> <span class="o">=</span> <span class="s">lambda foldername: foldername.replace(&#39;[Gmail]/&#39;, &#39;backup-gmail-&#39;).replace(&#39;All Mail&#39;, &#39;archive&#39;)</span>
+</span></span></code></pre></div><p><strong>Connection timeouts on flaky networks:</strong></p>
+<p>Use <code>autoresume = yes</code> to resume incomplete syncs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[general]</span>
+</span></span><span class="line"><span class="cl"><span class="na">autoresume</span> <span class="o">=</span> <span class="s">yes</span>
+</span></span></code></pre></div><p>Check process logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail -f ~/.offlineimap/logs/IMAP.Remote
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

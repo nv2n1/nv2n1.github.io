@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fstrcasecmp(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fstrcasecmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fstrcasecmp(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>fstrcasecmp - fuzzy comparison of two strings ignoring case</p>
+<h2>SYNOPSIS</h2>
+<p>#include &lt;fstrcmp.h&gt;</p>
+<p>#define FSTRCMP_IDENTICAL
+#define FSTRCMP_THRESHOLD
+#define FSTRCMP_ERROR</p>
+<p>double fstrcasecmp(const char *string1, const char *string2);</p>
+<h2>DESCRIPTION</h2>
+<p>The fstrcmp() function compares the two strings, string1 and string2, ignoring case.</p>
+<h2>RETURN VALUE</h2>
+<p>The fstrcasecmp function returns a floating point value between 0.0 and FSTRCMP_IDENTICAL. A value of 0.0 means the strings are utterly un-alike. A value of FSTRCMP_IDENTICAL means the strings are identical. A value of more than FSTRCMP_THRESHOLD (it lies between 0.0 and FSTRCMP_IDENTICAL) would be considered &quot;similar&quot; by most people.</p>
+<p>A value of FSTRCMP_ERROR (always negative) indicates a <a HREF="/docs/linux/man/3-malloc/">malloc</a>(3) failure.</p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt><a HREF="/docs/linux/man/3-fmemcmp/">fmemcmp</a>(3)
+</dt><dd> fuzzy comparison of two memory areas
+</dd><dt><a HREF="/docs/linux/man/3-fstrcasecmpi/">fstrcasecmpi</a>(3)
+</dt><dd> fuzzy comparison of two strings ignoring case
+</dd><dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
+</dt><dd> fuzzy comparison of two strings
+</dd><dt><a HREF="/docs/linux/man/3-strcasecmp/">strcasecmp</a>(3)
+</dt><dd> compare two strings ignoring case</dd></dl>
+<h2>COPYRIGHT</h2>
+<p>fstrcmp version 0.7
+Copyright (C) 2009 Peter Miller
+Peter Miller &lt;pmiller [at] opensource.org.au&gt;</p>
+<p>The comparison code is derived from the fuzzy comparison functions in GNU Gettext 0.17. The GNU Gettext comparison functions were, in turn, derived from GNU Diff 2.7.</p>
+<p>Copyright (C) 1988-2009 Free Software Foundation</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

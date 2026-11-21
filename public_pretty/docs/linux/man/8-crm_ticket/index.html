@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crm_ticket(8) · Linux Manual Pages</title>
+<meta name="description" content="Pacemaker – Part of the Pacemaker cluster resource manager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-crm_ticket/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>crm_ticket(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Pacemaker &#8211; Part of the Pacemaker cluster resource manager</p>
+<h2>Synopsis</h2>
+<p><code>crm_ticket</code> <i>(query|command) </i>[<i>options</i>]</p>
+<h2>Description</h2>
+<p>crm_ticket &#8211; Perform tasks related to cluster tickets. Allows ticket attributes to be queried, modified and deleted.</p>
+<h2>Options</h2>
+<dl>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd>This text</dd>
+<dt>-$, <code>&#8211;version</code></dt>
+<dd>Version information</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output</dd>
+<dt><code>-Q</code>, <code>&#8211;quiet</code></dt>
+<dd>Print only the value on stdout</dd>
+<dt><code>-t</code>, <code>&#8211;ticket</code>=<i>value</i></dt>
+<dd>Ticket ID</dd></dl>
+<h3>Queries:</h3>
+<dl>
+<dt><code>-l</code>, <code>&#8211;info</code></dt>
+<dd>Display the information of ticket(s)</dd>
+<dt><code>-L</code>, <code>&#8211;details</code></dt>
+<dd>Display the details of ticket(s)</dd>
+<dt><code>-w</code>, <code>&#8211;raw</code></dt>
+<dd>Display the IDs of ticket(s)</dd>
+<dt><code>-q</code>, <code>&#8211;query-xml</code></dt>
+<dd>Query the XML of ticket(s)</dd>
+<dt><code>-c</code>, <code>&#8211;constraints</code></dt>
+<dd>Display the rsc_ticket constraints that apply to ticket(s)</dd></dl>
+<h3>Commands:</h3>
+<dl>
+<dt><code>-g</code>, <code>&#8211;grant</code></dt>
+<dd>Grant a ticket to this cluster site</dd>
+<dt><code>-r</code>, <code>&#8211;revoke</code></dt>
+<dd>Revoke a ticket from this cluster site</dd>
+<dt><code>-s</code>, <code>&#8211;standby</code></dt>
+<dd>Tell this cluster site this ticket is standby</dd>
+<dt><code>-a</code>, <code>&#8211;activate</code></dt>
+<dd>Tell this cluster site this ticket is active</dd></dl>
+<h3>Advanced Commands:</h3>
+<dl>
+<dt><code>-G</code>, <code>&#8211;get-attr</code>=<i>value</i></dt>
+<dd>Display the named attribute for a ticket</dd>
+<dt><code>-S</code>, <code>&#8211;set-attr</code>=<i>value</i></dt>
+<dd>Set the named attribtue for a ticket</dd>
+<dt><code>-D</code>, <code>&#8211;delete-attr</code>=<i>value</i></dt>
+<dd>Delete the named attribute for a ticket</dd>
+<dt><code>-C</code>, <code>&#8211;cleanup</code></dt>
+<dd>Delete all state of a ticket at this cluster site</dd></dl>
+<h3>Additional Options:</h3>
+<dl>
+<dt><code>-v</code>, <code>&#8211;attr-value</code>=<i>value</i></dt>
+<dd>Attribute value to use with <code>-S</code></dd>
+<dt><code>-d</code>, <code>&#8211;default</code>=<i>value</i></dt>
+<dd>(Advanced) The default attribute value to display if none is found. For use with <code>-G</code></dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>(Advanced) Force the action to be performed</dd>
+<dt><code>-n</code>, <code>&#8211;set-name</code>=<i>value</i></dt>
+<dd>(Advanced) ID of the instance_attributes object to change</dd>
+<dt><code>-i</code>, <code>&#8211;nvpair</code>=<i>value</i></dt>
+<dd>(Advanced) ID of the nvpair object to change/delete</dd></dl>
+<h2>Examples</h2>
+<p>Display the info of tickets:</p>
+<dl>
+<dd># crm_ticket &#8211;info</dd></dl>
+<p> Display the detailed info of tickets:</p>
+<dl>
+<dd># crm_ticket &#8211;details</dd></dl>
+<p> Display the XML of &#8216;ticketA&#8217;:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;query-xml</dd></dl>
+<p> Display the rsc_ticket constraints that apply to &#8216;ticketA&#8217;:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;constraints</dd></dl>
+<p> Grant &#8216;ticketA&#8217; to this cluster site:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;grant</dd></dl>
+<p> Revoke &#8216;ticketA&#8217; from this cluster site:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;revoke</dd></dl>
+<p> Make &#8216;ticketA&#8217; standby: </p>
+<p> The cluster site will treat a granted &#8216;ticketA&#8217; as &#8216;standby&#8217;. The dependent resources will be stopped or demoted gracefully without triggering loss-policies</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;standby</dd></dl>
+<p> Activate &#8216;ticketA&#8217; from being standby:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;activate</dd></dl>
+<p> Get the value of the &#8216;granted&#8217; attribute for &#8216;ticketA&#8217;:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;get-attr granted</dd></dl>
+<p> Set the value of the &#8216;standby&#8217; attribute for &#8216;ticketA&#8217;:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;set-attr standby &#8211;attr-value true</dd></dl>
+<p> Delete the &#8216;granted&#8217; attribute for &#8216;ticketA&#8217;:</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;delete-attr granted</dd></dl>
+<p> Erase the operation history of &#8216;ticketA&#8217; at this cluster site: </p>
+<p> The cluster site will &#8216;forget&#8217; the existing ticket state.</p>
+<dl>
+<dd># crm_ticket &#8211;ticket ticketA &#8211;cleanup</dd></dl>
+<h2>Author</h2>
+<p>Written by Andrew Beekhof</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to pacemaker [at] oss.clusterlabs.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

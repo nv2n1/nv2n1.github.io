@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clientlib(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-clientlib/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>clientlib(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>clientlib - NNTP clientlib part of InterNetNews library</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+extern FILE *ser_rd_fp;
+extern FILE *ser_wr_fp;
+extern char ser_line[];
+char *
+getserverbyfile(file)
+char *file;
+int server_init(host)
+char *host;
+int handle_server_response(response, host)
+int reponse;
+char *host;
+void
+    put_server(text) char *text;
+int get_server(buff, buffsize)
+char *buff;
+int buffsize;
+void close_server()
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>The routines described in this manual page are part of the InterNetNews library, <i><a HREF="/docs/linux/man/3-libinn/">libinn</a></i>(3). They are replacements for the ``clientlib&rsquo;&rsquo; part of the NNTP distribution, and are intended to be used in building programs like <i>rrn</i>.</p>
+<p><i>Getserverbyfile</i> calls <i>GetConfigValue</i> to get the name of the local NNTP server. It returns a pointer to static space. The <i>file</i> parameter is ignored.</p>
+<p><i>Server_init</i> opens a connect to the NNTP server at the specified <i>host</i>. It returns the server&rsquo;s response code or -1 on error. If a connection was made, then <i>ser_rd_fp</i> and <i>ser_wr_fp</i> can be used to read from and write to the server, respectively, and <i>ser_line</i> will contain the server&rsquo;s response. <i>Ser_line</i> can also be used in other routines.</p>
+<p><i>Handle_server_response</i> decodes the <i>response</i>, which comes from the server on <i>host.</i> If the client is authorized, it returns 0. A client that is only allowed to read is authorized, but <i>handle_server_response</i> will print a message on the standard output. If the client is not authorized to talk to the server, then a message is printed and the routine returns -1.</p>
+<p><i>Put_server</i> sends the text in <i>buff</i> to the server, adding the necessary NNTP line terminators, and flushing the I/O buffer.</p>
+<p><i>Get_server</i> reads a line of text from the server into <i>buff</i>, reading at most <i>buffsize</i> characters. Any trailing \r\n terminators are stripped off. <i>Get_server</i> returns -1 on error.</p>
+<p><i>Close_server</i> sends a ``quit&rsquo;&rsquo; command to the server and closes the connection.</p>
+<h2>HISTORY</h2>
+<p>Written by Rich $alz &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. This is revision 42, dated 1997-08-04.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/3-libinn/">libinn</a>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

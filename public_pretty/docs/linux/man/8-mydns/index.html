@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mydns(8) · Linux Manual Pages</title>
+<meta name="description" content="mydns – SQL-based Internet name daemon.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mydns/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mydns(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mydns &#8211; SQL-based Internet name daemon.</p>
+<h2>Synopsis</h2>
+<p><code>mydns</code> [<code>-b</code>, <code>&#8211;background</code>] [<code>-c</code>, <code>&#8211;conf=</code><i>filename</i>] [<code>-d</code>, <code>&#8211;debug</code>] [<code>-D</code>, <code>&#8211;database=</code><i>dbname</i>] [<code>-h</code>, <code>&#8211;host=</code><i>hostname</i>] [<code>-p</code>, <code>&#8211;password[=</code><i>password</i>]] [<code>-u</code>, <code>&#8211;user=</code><i>username</i>] [<code>-v</code>, <code>&#8211;verbose</code>] [<code>&#8211;create-tables</code>] [<code>&#8211;dump-config</code>] [<code>&#8211;debug-&lt;module&gt;</code>[=<i>&lt;debug_level&gt;</i>]] [<code>&#8211;help</code>] [<code>&#8211;version</code>]</p>
+<h2>Description</h2>
+<p><code>mydns</code> is a SQL-based DNS server.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-b</code>, <code>&#8211;background</code></dt>
+<dd>Run in the background, as a daemon.</dd>
+<dt><code>-c</code>, <code>&#8211;conf</code>=<i>filename</i></dt>
+<dd>Read configuration from <i>filename</i> instead of the default (<code>/etc/mydns.conf</code>). Consult <code>mydns.conf</code>(5) for information about configuring <code>mydns</code>.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Output huge amounts of diagnostic text while running. This option is only available if MyDNS was configured with the <code>&#8211;enable-debug</code> option.</dd>
+<dt><code>-D</code>, <code>&#8211;database</code>=<i>dbname</i></dt>
+<dd>Use the database called <i>dbname</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;host</code>=<i>hostname</i></dt>
+<dd>Connect to database server at <i>hostname</i>.</dd>
+<dt><code>-p</code>, <code>&#8211;pass</code>=<i>password</i></dt>
+<dd>Supply <i>password</i> when connecting to the database server. If the <i>password</i> argument is omitted, it will be prompted on the tty.</dd>
+<dt><code>-u</code>, <code>&#8211;user</code>=<i>username</i></dt>
+<dd>Use <i>username</i> when connecting to the database server.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Enable verbose output while running.</dd>
+<dt><code>&#8211;create-tables</code></dt>
+<dd>Write CREATE TABLE statements suitable for creating the tables used by <code>mydns</code> to the standard output and exit.</dd>
+<dt><code>&#8211;dump-config</code></dt>
+<dd>Read the current configuration (if any). Dump all possible configuration options to the standard output, with current values filled in. For options not presently configured, the internal defaults will be used. Output is in <code>mydns.conf</code> format, which is handy for creating a <code>mydns.conf</code> template.</dd>
+<dt><code>&#8211;debug-&lt;module&gt;</code>[=<i>&lt;debug-level&gt;</i></dt>
+<dd>Switch on debug for a particular module and set the debug level if given.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Display program help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output version number and exit.</dd></dl>
+<h2>Files</h2>
+<p><i>/etc/mydns.conf</i></p>
+<dl>
+<dd>The default location of the configuration file. (See <code>mydns.conf</code>(5))</dd></dl>
+<h2>Author</h2>
+<p>Don Moore &lt;bboy [at] bboy.net&gt; Howard Wilkinson &lt;howard [at] cohtech.com&gt;</p>
+<h2>Homepage</h2>
+<p><a rel="nofollow" href="http://mydns.bboy.net">http://mydns.bboy.net</a></p>
+<h2>See Also</h2>
+<p><code>mydns.conf</code>(5), <code><a href="/docs/linux/man/8-mydnscheck/">mydnscheck</a></code>(8), <code><a href="/docs/linux/man/8-mydnsexport/">mydnsexport</a></code>(8), <code><a href="/docs/linux/man/8-mydnsimport/">mydnsimport</a></code>(8) This man page is a quick reference. For detailed documentation, see the MyDNS user&#8217;s manual, available from <a rel="nofollow" href="http://mydns.bboy.net.">http://mydns.bboy.net.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

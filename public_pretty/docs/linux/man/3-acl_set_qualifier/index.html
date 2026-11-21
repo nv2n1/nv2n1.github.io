@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>acl_set_qualifier(3) · Linux Manual Pages</title>
+<meta name="description" content="acl_set_qualifier – set the qualifier of an ACL entry">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-acl_set_qualifier/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>acl_set_qualifier(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>acl_set_qualifier</code> &#8211; set the qualifier of an ACL entry </p>
+<h2>LIBRARY</h2>
+<p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
+<p> In sys/types.h In sys/acl.h Ft int Fn acl_set_qualifier acl_entry_t entry_d const void *qualifier_p</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn acl_set_qualifier function sets the qualifier of the ACL entry indicated by the argument <i>entry_d</i> to the value referred to by the argument <i>qualifier_p</i> If the value of the tag type in the ACL entry referred to by <i>entry_d</i> is ACL_USER, then the value referred to by <i>qualifier_p</i> shall be of type <i>uid_t</i> If the value of the tag type in the ACL entry referred to by <i>entry_d</i> is ACL_GROUP, then the value referred to by <i>qualifier_p</i> shall be of type <i>gid_t</i> If the value of the tag type in the ACL entry referred to by <i>entry_d</i> is a tag type for which a qualifier is not supported, Fn acl_set_qualifier returns an error. </p>
+<p> Any ACL entry descriptors that refer to the entry referred to by <i>entry_d</i> continue to refer to that entry. This function may cause memory to be allocated. The caller should free any releasable memory, when the ACL is no longer required, by calling Fn acl_free with a pointer to the ACL as argument.</p>
+<h2>RETURN VALUE</h2>
+<p> Rv -std acl_set_qualifier</p>
+<h2>ERRORS</h2>
+<p> If any of the following conditions occur, the Fn acl_set_qualifier function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
+<dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>entry_d</i> is not a valid descriptor for an ACL entry. </dd>
+<p> The value of the tag type in the ACL entry referenced by the argument <i>entry_d</i> is neither ACL_USER nor ACL_GROUP. </p>
+<p> The value pointed to by the argument <i>qualifier_p</i> is not valid.</p>
+<dt><code>Bq </code>Er ENOMEM</dt>
+<dd> The Fn acl_set_qualifier function is unable to allocate the memory required for the ACL qualifier.</dd></dl>
+<h2>STANDARDS</h2>
+<p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
+<h2>SEE ALSO</h2>
+<p> acl_create_entry3, acl_free3, acl_get_permset3, acl_get_qualifier3, acl_get_tag_type3, acl_set_entry3, acl_set_permset3, acl_set_tag_type3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
+<h2>AUTHOR</h2>
+<p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

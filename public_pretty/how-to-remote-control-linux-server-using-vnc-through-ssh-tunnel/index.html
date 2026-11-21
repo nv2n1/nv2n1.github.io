@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Securing Linux VNC Access with SSH Tunneling - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-remote-control-linux-server-using-vnc-through-ssh-tunnel/">
+  <meta name="description" content="Accessing a remote desktop environment on a Linux server securely requires proper tunneling. While SSH X11 forwarding works for single applications, VNC …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Securing Linux VNC Access with SSH Tunneling">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-remote-control-linux-server-using-vnc-through-ssh-tunnel/">
+  <meta property="og:description" content="Accessing a remote desktop environment on a Linux server securely requires proper tunneling. While SSH X11 forwarding works for single applications, VNC …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Securing Linux VNC Access with SSH Tunneling</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:51Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Accessing a remote desktop environment on a Linux server securely requires proper tunneling. While SSH X11 forwarding works for single applications, VNC provides a full graphical desktop session. By combining VNC with an SSH tunnel, you encrypt all traffic and can work around firewall restrictions that only allow port 22.</p>
+<h2 id="why-vnc-over-ssh">Why VNC Over SSH?</h2>
+<p>VNC (Virtual Network Computing) sends unencrypted traffic by default, making it unsuitable for untrusted networks. Tunneling through SSH solves this:</p>
+<ul>
+<li>All VNC traffic is encrypted within the SSH connection</li>
+<li>Works when only SSH port (22) is open on the server</li>
+<li>Maintains persistent desktop sessions across disconnects</li>
+<li>Supports multiple simultaneous displays on one server</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>On the remote server, install a VNC server. Distributions vary in packaging:</p>
+<p><strong>Ubuntu/Debian:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install tigervnc-server
+</span></span></code></pre></div><p><strong>RHEL/CentOS/Fedora:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install tigervnc-server
+</span></span></code></pre></div><p><strong>Arch:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S tigervnc
+</span></span></code></pre></div><p>TigerVNC is the modern standard, offering better performance and security than older options. It replaces the deprecated TightVNC.</p>
+<p>On your client machine, install a VNC viewer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Ubuntu/Debian</span>
+</span></span><span class="line"><span class="cl">sudo apt install tigervnc-viewer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># macOS (via Homebrew)</span>
+</span></span><span class="line"><span class="cl">brew install tigervnc-viewer
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or use platform-independent options like RealVNC Viewer</span>
+</span></span></code></pre></div><h2 id="setting-up-the-ssh-tunnel-and-vnc-server">Setting Up the SSH Tunnel and VNC Server</h2>
+<h3 id="step-1-create-ssh-tunnel-with-port-forwarding">Step 1: Create SSH Tunnel with Port Forwarding</h3>
+<p>The SSH tunnel forwards a local port to the remote VNC server. Here’s the command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -L 5901:localhost:5901 username@remote-server.com
+</span></span></code></pre></div><p>Breaking this down:</p>
+<ul>
+<li><code>-L 5901:localhost:5901</code> creates a local tunnel</li>
+<li>Port 5901 on your client forwards to port 5901 on the remote server</li>
+<li>Traffic passes through SSH, encrypted end-to-end</li>
+</ul>
+<p>Keep this terminal open while using VNC. For background operation, add the <code>-N</code> flag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -L 5901:localhost:5901 -N username@remote-server.com
+</span></span></code></pre></div><p>To create multiple displays, forward additional ports:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -L 5901:localhost:5901 -L 5902:localhost:5902 -N username@remote-server.com
+</span></span></code></pre></div><h3 id="step-2-start-vnc-server-on-remote-machine">Step 2: Start VNC Server on Remote Machine</h3>
+<p>SSH to the remote server separately (or in another terminal if not using <code>-N</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh username@remote-server.com
+</span></span></code></pre></div><p>Set a VNC password if you haven’t already:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncpasswd
+</span></span></code></pre></div><p>Start the VNC server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncserver
+</span></span></code></pre></div><p>Output will show:</p>
+<pre><code>New 'remote-server:1 (username)' desktop is remote-server:1
+
+Starting applications specified in /home/username/.vnc/xstartup
+Log file is /home/username/.vnc/remote-server:1.log
+</code></pre>
+<p>Each display gets a port: display 1 uses port 5901, display 2 uses 5902, and so on (port = 5900 + display number).</p>
+<p>To specify display number and resolution explicitly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncserver :1 -geometry 1920x1080 -depth <span class="m">24</span>
+</span></span></code></pre></div><h3 id="step-3-connect-with-vnc-viewer">Step 3: Connect with VNC Viewer</h3>
+<p>From your client machine, connect to the forwarded port:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncviewer localhost:5901
+</span></span></code></pre></div><p>When prompted, enter the VNC password you set earlier. Your remote desktop now appears locally.</p>
+<h2 id="configuration-best-practices">Configuration Best Practices</h2>
+<h3 id="custom-window-manager">Custom Window Manager</h3>
+<p>The default FVWM is minimal. Configure <code>~/.vnc/xstartup</code> for a better environment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nb">unset</span> SESSION_MANAGER
+</span></span><span class="line"><span class="cl"><span class="nb">unset</span> DBUS_SESSION_BUS_ADDRESS
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> startxfce4 <span class="p">&amp;</span>
+</span></span></code></pre></div><p>Make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ~/.vnc/xstartup
+</span></span></code></pre></div><p>Then kill and restart the VNC server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncserver -kill :1
+</span></span><span class="line"><span class="cl">vncserver :1
+</span></span></code></pre></div><h3 id="persistent-vnc-sessions">Persistent VNC Sessions</h3>
+<p>For VNC to start on reboot, use systemd:</p>
+<p>Create <code>/etc/systemd/system/vncserver@.service</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description</span><span class="o">=</span><span class="s">Remote desktop service (VNC)</span>
+</span></span><span class="line"><span class="cl"><span class="na">After</span><span class="o">=</span><span class="s">syslog.target network-online.target remote-fs.target nss-lookup.target</span>
+</span></span><span class="line"><span class="cl"><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+</span></span><span class="line"><span class="cl"><span class="na">User</span><span class="o">=</span><span class="s">%i</span>
+</span></span><span class="line"><span class="cl"><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">%h</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">ExecStartPre</span><span class="o">=</span><span class="s">-/usr/bin/vncserver -kill :%i &gt; /dev/null 2&gt;&amp;1</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/vncserver -autokill -SecurityTypes VncAuth -PasswordFile %h/.vnc/passwd :%i</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStop</span><span class="o">=</span><span class="s">/usr/bin/vncserver -kill :%i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></span></code></pre></div><p>Enable and start:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> vncserver@1
+</span></span><span class="line"><span class="cl">sudo systemctl start vncserver@1
+</span></span></code></pre></div><h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li><strong>SSH keys:</strong> Use SSH key authentication instead of passwords for better security</li>
+<li><strong>Firewall:</strong> Never expose VNC ports directly; always use SSH tunneling</li>
+<li><strong>VNC password:</strong> Set a strong password with <code>vncpasswd</code></li>
+<li><strong>Display permissions:</strong> VNC displays inherit user permissions; don’t run as root unless necessary</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Connection refused:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Verify SSH tunnel is active</span>
+</span></span><span class="line"><span class="cl">ss -tlnp <span class="p">|</span> grep <span class="m">5901</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check VNC server is running on remote</span>
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> grep vnc
+</span></span></code></pre></div><p><strong>Slow performance:</strong></p>
+<ul>
+<li>Reduce color depth: <code>vncserver -depth 8</code></li>
+<li>Lower resolution: <code>-geometry 1280x720</code></li>
+<li>Compress with SSH: <code>ssh -C</code> flag</li>
+</ul>
+<p><strong>Port already in use:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Find which process owns the port</span>
+</span></span><span class="line"><span class="cl">lsof -i :5901
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use different display number</span>
+</span></span><span class="line"><span class="cl">vncserver :2  <span class="c1"># creates port 5902</span>
+</span></span></code></pre></div><h2 id="cleanup">Cleanup</h2>
+<p>When finished, disconnect the VNC viewer, then stop the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vncserver -kill :1
+</span></span></code></pre></div><p>Substitute the correct display number if using a different one. The SSH tunnel closes when you exit the shell or terminate the <code>-N</code> process.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

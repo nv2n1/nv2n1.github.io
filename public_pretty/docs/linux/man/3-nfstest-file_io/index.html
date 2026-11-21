@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nfstest-file_io(3) · Linux Manual Pages</title>
+<meta name="description" content="nfstest.file_io – File I/O module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-nfstest-file_io/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>nfstest-file_io(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>nfstest.file_io &#8211; File I/O module</p>
+<h2>Description</h2>
+<p>Provides an interface to create and manipulate files of different types. The arguments allow running for a specified period of time as well as running multiple processes. Each process modifies a single file at a time and the file name space is different for each process so there are no collisions between two different processes modifying the same file. </p>
+<p> File types:<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Regular file<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Hard link<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Symbolic link </p>
+<p> File operations:<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Open&nbsp;<wbr>(create or re-open)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Open downgrade<br />
+&nbsp;<wbr>This is done by opening the file for read and write, then the file is<br />
+&nbsp;<wbr>opened again as read only and finally closing the read and write file<br />
+&nbsp;<wbr>descriptor<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Read&nbsp;<wbr>(sequential or random access)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Write&nbsp;<wbr>(sequential or random access)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Remove<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Rename<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Truncate&nbsp;<wbr>(path or file descriptor)<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Readdir<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Lock<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Unlock<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; Tlock</p>
+<h2>Classes</h2>
+<h3>class FileIO(baseobj.BaseObj)</h3>
+<pre>FileIO object
+Usage:
+ from nfstest.file_io import FileIO
+ # Instantiate FileIO object given top level directory
+ x = FileIO(datadir=&quot;/tmp/data&quot;)
+ # Run workload creating the top level directory if necessary
+ x.run()
+<code>Methods defined here:</code>
+---------------------
+<code>__del__(self)</code>
+Destructor
+<code>__init__(self, **kwargs)</code>
+Constructor
+Initialize object's private data
+<dl><dl><dt><code>datadir:</code>
+</dt><dd>Top level directory where files will be created,
+it will be created if it does not exist
+</dd><dt><code>seed:</code>
+</dt><dd>Seed to initialized the random number generator
+[default: automatically generated]
+</dd><dt><code>nprocs:</code>
+</dt><dd>Number of processes to use [default: 1]
+</dd><dt><code>runtime:</code>
+</dt><dd>Run time [default: 0 (indefinitely)]
+</dd><dt><code>verbose:</code>
+</dt><dd>Verbose level: none|info|debug|dbg1-7|all [default: 'none']
+</dd><dt><code>exiterr:</code>
+</dt><dd>Exit on first error [default: False]
+</dd><dt><code>read:</code>
+</dt><dd>Read file percentage [default: 40]
+</dd><dt><code>write:</code>
+</dt><dd>Write file percentage [default: 40]
+</dd><dt><code>rdwr:</code>
+</dt><dd>Read/write file percentage [default: 20]
+</dd><dt><code>randio:</code>
+</dt><dd>Random file access percentage [default: 50]
+</dd><dt><code>iodelay:</code>
+</dt><dd>Seconds to delay I/O operations [default: 0.0]
+</dd><dt><code>direct:</code>
+</dt><dd>Use direct I/O [default: False]
+</dd><dt><code>rdwronly:</code>
+</dt><dd>Use read and write only, no rename, remove, etc. [default: False]
+</dd><dt><code>create:</code>
+</dt><dd>Create file percentage [default: 5]
+</dd><dt><code>odgrade:</code>
+</dt><dd>Open downgrade percentage [default: 10]
+</dd><dt><code>osync:</code>
+</dt><dd>Open file with O_SYNC [default: 20]
+</dd><dt><code>fsync:</code>
+</dt><dd>Percentage of fsync after write [default: 5]
+</dd><dt><code>rename:</code>
+</dt><dd>Rename file percentage [default: 5]
+</dd><dt><code>remove:</code>
+</dt><dd>Remove file percentage [default: 5]
+</dd><dt><code>trunc:</code>
+</dt><dd>Truncate file percentage [default: 5]
+</dd><dt><code>ftrunc:</code>
+</dt><dd>Truncate opened file percentage [default: 5]
+</dd><dt><code>link:</code>
+</dt><dd>Create hard link percentage [default: 2]
+</dd><dt><code>slink:</code>
+</dt><dd>Create symbolic link percentage [default: 1]
+</dd><dt><code>readdir:</code>
+</dt><dd>List contents of directory percentage [default: 1]
+</dd><dt><code>lock:</code>
+</dt><dd>Lock file percentage [default: 20]
+</dd><dt><code>unlock:</code>
+</dt><dd>Unlock file percentage [default: 80]
+</dd><dt><code>tlock:</code>
+</dt><dd>Lock test percentage [default: 50]
+</dd><dt><code>lockfull:</code>
+</dt><dd>Lock full file percentage [default: 50]
+</dd><dt><code>minfiles:</code>
+</dt><dd>Mininum number of files to create before any file operation
+is executed [default: 10]
+</dd><dt><code>fsizeavg:</code>
+</dt><dd>File size average [default: 1m]
+</dd><dt><code>fsizedev:</code>
+</dt><dd>File size standard deviation [default: 256k]
+</dd><dt><code>rsize:</code>
+</dt><dd>Read block size [default: 64k]
+</dd><dt><code>rsizedev:</code>
+</dt><dd>Read block size standard deviation [default: 8k]
+</dd><dt><code>wsize:</code>
+</dt><dd>Write block size [default: 64k]
+</dd><dt><code>wsizedev:</code>
+</dt><dd>Write block size standard deviation [default: 8k]
+</dd><dt><code>sizemult:</code>
+</dt><dd>Size multiplier [default: 1]
+</dd><dt><code>createlog:</code>
+</dt><dd>Create log file [default: False]
+</dd><dt><code>createlogs:</code>
+</dt><dd>Create a log file for each process [default: False]
+</dd><dt><code>logdir:</code>
+</dt><dd>Log directory [default: '/tmp']
+</dd></dl></dl>
+<code>run(self)</code>
+Main function where all processes are started
+<code>run_process(self, tid=0)</code>
+Main loop for each process</pre>
+<h3>class FileObj(baseobj.BaseObj)</h3>
+<pre># File object</pre>
+<h3>class TermSignal(exceptions.Exception)</h3>
+<pre>Exception to be raised on SIGTERM signal</pre>
+<h2>Functions</h2>
+<h3>stop_handler(signum, frame)</h3>
+<p>Signal handler to catch SIGTERM and allow for gracefull termination of subprocesses</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3),</code> <code><a href="/docs/linux/man/3-formatstr/">formatstr</a>(3)</code> </p>
+<h2>Bugs</h2>
+<p>No known bugs.</p>
+<h2>Author</h2>
+<p>Jorge Mora (mora [at] netapp.com)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

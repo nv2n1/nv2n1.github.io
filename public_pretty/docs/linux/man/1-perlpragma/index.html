@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlpragma(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlpragma/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlpragma(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>perlpragma - how to write a user pragma</p>
+<h2>DESCRIPTION</h2>
+<p>A pragma is a module which influences some aspect of the compile time or run time behaviour of Perl, such as <tt>&quot;strict&quot;</tt> or <tt>&quot;warnings&quot;</tt>. With Perl 5.10 you are no longer limited to the built in pragmata; you can now create user pragmata that modify the behaviour of user functions within a lexical scope.</p>
+<h2>A basic example</h2>
+<p>For example, say you need to create a class implementing overloaded mathematical operators, and would like to provide your own pragma that functions much like <tt>&quot;use integer;&quot;</tt> You&rsquo;d like this code</p>
+ <pre><code>
+use MyMaths;
+my $l = MyMaths-&gt;new (1.2);
+my $r = MyMaths-&gt;new (3.4);
+print "A: ", $l + $r, "\n";
+use myint;
+print "B: ", $l + $r, "\n";
+{
+    no myint;
+    print "C: ", $l + $r, "\n";
+}
+print "D: ", $l + $r, "\n";
+no myint;
+print "E: ", $l + $r, "\n";
+</code></pre> 
+<p>to give the output</p>
+ <pre>
+    A: 4.6
+    B: 4
+    C: 4.6
+    D: 4
+    E: 4.6
+</pre> 
+<p><i>i.e.</i>, where <tt>&quot;use myint;&quot;</tt> is in effect, addition operations are forced to integer, whereas by default they are not, with the default behaviour being restored via <tt>&quot;no myint;&quot;</tt></p>
+<p>The minimal implementation of the package <tt>&quot;MyMaths&quot;</tt> would be something like this:</p>
+<p>package MyMaths;
+use warnings;
+use strict;
+use myint();
+use overload &lsquo;+&rsquo; = &gt; sub
+{
+my($l, $r) = @<em>;
+#Pass 1 to check up one call level from here
+if (myint::in_effect(1)) {
+int($$l) + int($$r);
+} else {
+$$l + $$r;
+}
+};
+sub new
+{
+my($class, $value) = @</em>;
+bless $value, $class;
+}
+1;</p>
+<p>Note how we load the user pragma <tt>&quot;myint&quot;</tt> with an empty list <tt>&quot;()&quot;</tt> to prevent its <tt>&quot;import&quot;</tt> being called.</p>
+<p>The interaction with the Perl compilation happens inside package <tt>&quot;myint&quot;</tt>:</p>
+<p>package myint;
+use strict;
+use warnings;
+sub import
+{
+$ ^ H { &ldquo;myint/in_effect&rdquo; } = 1;
+}
+sub unimport
+{
+$ ^ H { &ldquo;myint/in_effect&rdquo; } = 0;
+}
+sub in_effect
+{
+my $level = shift // 0;
+my $hinthash = (caller($level))[10];
+return $hinthash-&gt;{&ldquo;myint/in_effect&rdquo;};
+}
+1;</p>
+<p>As pragmata are implemented as modules, like any other module, <tt>&quot;use myint;&quot;</tt> becomes</p>
+<p>BEGIN
+{
+require myint;
+myint-&gt;import();
+}</p>
+<p>and <tt>&quot;no myint;&quot;</tt> is</p>
+ <pre><code>
+BEGIN
+{
+    require myint;
+    myint-&gt;unimport();
+}
+</code></pre> 
+<p>Hence the <tt>&quot;import&quot;</tt> and <tt>&quot;unimport&quot;</tt> routines are called at <b>compile time</b> for the user&rsquo;s code.</p>
+<p>User pragmata store their state by writing to the magical hash <tt>&quot;%^H&quot;</tt>, hence these two routines manipulate it. The state information in <tt>&quot;%^H&quot;</tt> is stored in the optree, and can be retrieved read-only at runtime with <tt>&quot;caller()&quot;</tt>, at index 10 of the list of returned results. In the example pragma, retrieval is encapsulated into the routine <tt>&quot;in_effect()&quot;</tt>, which takes as parameter the number of call frames to go up to find the value of the pragma in the user&rsquo;s script. This uses <tt>&quot;caller()&quot;</tt> to determine the value of <tt>$^H{&quot;myint/in_effect&quot;}</tt> when each line of the user&rsquo;s script was called, and therefore provide the correct semantics in the subroutine implementing the overloaded addition.</p>
+<h2>Key naming</h2>
+<p>There is only a single <tt>&quot;%^H&quot;</tt>, but arbitrarily many modules that want to use its scoping semantics. To avoid stepping on each other&rsquo;s toes, they need to be sure to use different keys in the hash. It is therefore conventional for a module to use only keys that begin with the module&rsquo;s name (the name of its main package) and a ``/&rsquo;&rsquo; character. After this module-identifying prefix, the rest of the key is entirely up to the module: it may include any characters whatsoever. For example, a module <tt>&quot;Foo::Bar&quot;</tt> should use keys such as <tt>&quot;Foo::Bar/baz&quot;</tt> and <tt>&quot;Foo::Bar/$%/_!&quot;</tt>. Modules following this convention all play nicely with each other.</p>
+<p>The Perl core uses a handful of keys in <tt>&quot;%^H&quot;</tt> which do not follow this convention, because they predate it. Keys that follow the convention won&rsquo;t conflict with the core&rsquo;s historical keys.</p>
+<h2>Implementation details</h2>
+<p>The optree is shared between threads. This means there is a possibility that the optree will outlive the particular thread (and therefore the interpreter instance) that created it, so true Perl scalars cannot be stored in the optree. Instead a compact form is used, which can only store values that are integers (signed and unsigned), strings or <tt>&quot;undef&quot;</tt> - references and floating point values are stringified. If you need to store multiple values or complex structures, you should serialise them, for example with <tt>&quot;pack&quot;</tt>. The deletion of a hash key from <tt>&quot;%^H&quot;</tt> is recorded, and as ever can be distinguished from the existence of a key with value <tt>&quot;undef&quot;</tt> with <tt>&quot;exists&quot;</tt>.</p>
+<p><b>Don&rsquo;t</b> attempt to store references to data structures as integers which are retrieved via <tt>&quot;caller&quot;</tt> and converted back, as this will not be threadsafe. Accesses would be to the structure without locking (which is not safe for Perl&rsquo;s scalars), and either the structure has to leak, or it has to be freed when its creating thread terminates, which may be before the optree referencing it is deleted, if other threads outlive it.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

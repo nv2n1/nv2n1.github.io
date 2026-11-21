@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_bcaststaterecv(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::BcastStateRecv –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_bcaststaterecv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_bcaststaterecv(3)</h1>
+
+
+
+
+
+<p>sc::BcastStateRecv &#8211; </p>
+<p> <code>BcastStateRecv</code> does the receive part of a broadcast of an object to all nodes.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;mstate.h&gt;</code></pre>
+<p> Inherits <code>sc::MsgStateRecv</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>BcastStateRecv (const Ref&lt; MessageGrp &gt; &amp;, int source=0)
+Create the BcastStateRecv.
+void source (int s)
+Set the source node.
+Protected Member Functions
+void next_buffer ()
+Specializations must implement next_buffer().
+Protected Attributes
+int source_</code></pre>
+<h2>Detailed Description</h2>
+<p><code>BcastStateRecv</code> does the receive part of a broadcast of an object to all nodes. </p>
+<p> Only one node uses a <code>BcastStateSend</code> and the rest must use a <code>BcastStateRecv</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>asn1_get_length_ber(3) · Linux Manual Pages</title>
+<meta name="description" content="asn1_get_length_ber – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-asn1_get_length_ber/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>asn1_get_length_ber(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> asn1_get_length_ber &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;libtasn1.h&gt;</code> </p>
+<p> <code>long asn1_get_length_ber(const unsigned char * </code><i>ber</i><code>, int </code><i>ber_len</i><code>, int * </code><i>len</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>const unsigned char * ber</dt>
+<dd> BER data to decode.</dd>
+<dt>int ber_len</dt>
+<dd> Length of BER data to decode.</dd>
+<dt>int * len</dt>
+<dd> Output variable containing the length of the BER length field.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Extract a length field from BER data. The difference to <code>asn1_get_length_der()</code> is that this function will return a length even if the value has indefinite encoding.</p>
+<h2>RETURNS</h2>
+<p> Return the decoded length value, or negative value when the value was too big.</p>
+<h2>SINCE</h2>
+<p> 2.0</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
+<dl>
+<dt>
+</dt><dd> <code>info libtasn1</code></dd></dl>
+<p> should give you access to the complete manual. As an alternative you may obtain the manual from:</p>
+<dl>
+<dt>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

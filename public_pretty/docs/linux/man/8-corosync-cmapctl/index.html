@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>corosync-cmapctl(8) · Linux Manual Pages</title>
+<meta name="description" content="corosync-cmapctl: – A tool for accessing the object database.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-corosync-cmapctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>corosync-cmapctl(8)</h1>
+
+
+
+
+
+<p>corosync-cmapctl: &#8211; A tool for accessing the object database.</p>
+<h2>Description</h2>
+<p>usage: corosync-cmapctl [-b] [-dghsTtp] [params&#8230;]</p>
+<dl>
+<dt> <code>-b</code> show binary values</dt></dl>
+<h3>Set key:</h3>
+<dl>
+<dd>
+</dd><dd>corosync-cmapctl <code>-s</code> key_name type value</dd>
+<dd>where type is one of ([i|u][8|16|32|64] | flt | dbl | str | bin) for bin, value is file name (or &#8211; for stdin)</dd></dl>
+<h3>Load settings from a file:</h3>
+<dl>
+<dd>corosync-cmapctl <code>-p</code> filename</dd>
+<dd>the format of the file is: [^[^]]&lt;key_name&gt;[ &lt;type&gt; &lt;value&gt;]</dd>
+<dd>Keys prefixed with single caret (&#8216;^&#8217;) are deleted (see <code>-d</code>).</dd>
+<dd>Keys (actually prefixes) prefixed with double caret (&#8216;^^&#8217;) are deleted by prefix (see <code>-D</code>).</dd>
+<dd>&lt;type&gt; and &lt;value&gt; are optional (not checked) in above cases.</dd>
+<dd>Other keys are set (see <code>-s</code>) so both &lt;type&gt; and &lt;value&gt; are required.</dd></dl>
+<h3>Delete key:</h3>
+<dl>
+<dd>corosync-cmapctl <code>-d</code> key_name&#8230;</dd></dl>
+<h3>Delete multiple keys with prefix:</h3>
+<dl>
+<dd>corosync-cmapctl <code>-D</code> key_prefix&#8230;</dd></dl>
+<h3>Get key:</h3>
+<dl>
+<dd>corosync-cmapctl [-b] <code>-g</code> key_name&#8230;</dd></dl>
+<h3>Display all keys:</h3>
+<dl>
+<dd>corosync-cmapctl [-b]</dd></dl>
+<h3>Display keys with prefix key_name:</h3>
+<dl>
+<dd>corosync-cmapctl [-b] key_name&#8230;</dd></dl>
+<h3>Track changes on keys with key_name:</h3>
+<dl>
+<dd>corosync-cmapctl [-b] <code>-t</code> key_name</dd></dl>
+<h3>Track changes on keys with key prefix:</h3>
+<dl>
+<dd>corosync-cmapctl [-b] <code>-T</code> key_prefix </dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-cmap_overview/">cmap_overview</a></code>(8), <code><a href="/docs/linux/man/8-cmap_keys/">cmap_keys</a></code>(8) </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

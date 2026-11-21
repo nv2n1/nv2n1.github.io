@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack-Based Algorithm for the Skyline Problem - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/a-stonewall-solution-in-c/">
+  <meta name="description" content="The StoneWall problem is a classic algorithmic challenge that tests your ability to recognize when a stack data structure enables a greedy O(N) solution.
+The …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Stack-Based Algorithm for the Skyline Problem">
+  <meta property="og:url" content="https://www.systutorials.com/a-stonewall-solution-in-c/">
+  <meta property="og:description" content="The StoneWall problem is a classic algorithmic challenge that tests your ability to recognize when a stack data structure enables a greedy O(N) solution.
+The …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Stack-Based Algorithm for the Skyline Problem</h1>
+        <time class="post-date" datetime="2020-02-28T11:47:02Z">February 28, 2020</time> <span class="post-author">&middot; <a href="/author/davidyang/">David Yang</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The StoneWall problem is a classic algorithmic challenge that tests your ability to recognize when a stack data structure enables a greedy O(N) solution.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>Given an array of wall heights, determine the minimum number of distinct stone blocks needed to construct that height profile. Each stone block can be placed multiple times at different positions, but a block placed at position i cannot extend above the target height at that position.</p>
+<p>For example, with heights <code>[8, 8, 5, 7, 9, 8, 7, 6, 5]</code>, you need to find the minimum count of reusable stones that can build this exact profile.</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>This isn’t just interview trivia—understanding the stack-based approach teaches you how to recognize LIFO patterns in real problems. Similar logic applies to problems like removing duplicate letters, simplifying paths, and validating parentheses.</p>
+<h2 id="the-key-insight">The Key Insight</h2>
+<p>As you move left to right through the heights, you only need to track which heights could potentially be reused later. When you encounter a height lower than your current maximum, all taller walls become blocked—they can’t extend further and will never be reused.</p>
+<p>This LIFO (Last In, First Out) pattern is exactly what a stack solves.</p>
+<h2 id="the-solution">The Solution</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">solution</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">H</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">stones</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">heights</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">h</span> <span class="p">:</span> <span class="n">H</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Remove all walls taller than current height
+</span></span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">heights</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">h</span> <span class="o">&lt;</span> <span class="n">heights</span><span class="p">.</span><span class="n">top</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">heights</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Add new stone if needed
+</span></span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">heights</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">h</span> <span class="o">&gt;</span> <span class="n">heights</span><span class="p">.</span><span class="n">top</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">heights</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">h</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="o">++</span><span class="n">stones</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">stones</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="how-it-works">How It Works</h2>
+<p>For each wall height <code>h</code> in the input:</p>
+<ol>
+<li>
+<p><strong>Pop taller heights</strong>: Remove all heights from the stack that are taller than <code>h</code>. These represent blocked walls that can’t be reused.</p>
+</li>
+<li>
+<p><strong>Check what’s left on the stack</strong>:</p>
+<ul>
+<li>Stack is empty: This is a new height we haven’t seen before. Push it and increment the stone count.</li>
+<li><code>h</code> equals the top: This height already exists on the stack with a clear path to reuse it. Don’t push, don’t increment.</li>
+<li><code>h</code> is greater than the top: This is a new height above anything currently available. Push it and increment the stone count.</li>
+</ul>
+</li>
+</ol>
+<h2 id="why-its-optimal">Why It’s Optimal</h2>
+<p>The stack maintains a strict increasing order. This invariant ensures:</p>
+<ul>
+<li>We never count the same height twice (skip when <code>h == heights.top()</code>)</li>
+<li>We only keep heights that could appear again and require separate blocks</li>
+<li>Popping happens for valid reasons (a lower height blocks taller ones)</li>
+<li>Each height is pushed and popped exactly once, guaranteeing O(N) time</li>
+</ul>
+<h2 id="complexity-analysis">Complexity Analysis</h2>
+<p><strong>Time: O(N)</strong> — Each element is pushed exactly once and popped exactly once across all iterations. Despite the nested loop, the total work is linear.</p>
+<p><strong>Space: O(N)</strong> — Worst case when heights are strictly increasing, the stack holds all N elements. Typically much smaller.</p>
+<h2 id="worked-example">Worked Example</h2>
+<p>Input: <code>[8, 8, 5, 7, 9, 8, 7, 6, 5]</code></p>
+<table>
+	<thead>
+			<tr>
+					<th>Height</th>
+					<th>Action</th>
+					<th>Stack</th>
+					<th>Stones</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>8</td>
+					<td>Push (empty)</td>
+					<td>[8]</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td>h equals top, skip</td>
+					<td>[8]</td>
+					<td>1</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>Pop 8, push 5</td>
+					<td>[5]</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td>7 &gt; 5, push</td>
+					<td>[5, 7]</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>9</td>
+					<td>9 &gt; 7, push</td>
+					<td>[5, 7, 9]</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>8</td>
+					<td>Pop 9, 8 &gt; 7, push</td>
+					<td>[5, 7, 8]</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>7</td>
+					<td>Pop 8, h equals top, skip</td>
+					<td>[5, 7]</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td>Pop 7, push 6</td>
+					<td>[5, 6]</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>Pop 6, h equals top, skip</td>
+					<td>[5]</td>
+					<td>6</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>Result: 6 stones</strong></p>
+<h2 id="edge-cases">Edge Cases</h2>
+<p><strong>Empty input</strong>: Returns 0.</p>
+<p><strong>All same height</strong>: Returns 1 (one stone covers the entire wall).</p>
+<p><strong>Strictly increasing</strong>: Returns N (each new height requires a distinct block).</p>
+<p><strong>Strictly decreasing</strong>: Returns N (each position needs its own stone as the stack empties).</p>
+<p><strong>Repeated consecutive heights</strong>: Handled efficiently—we skip the push when <code>h == heights.top()</code>, avoiding duplicate counting.</p>
+<h2 id="production-considerations">Production Considerations</h2>
+<p>For real code, add:</p>
+<ul>
+<li><strong>Input validation</strong>: Check for negative heights or values exceeding your integer type’s range.</li>
+<li><strong>Type safety</strong>: Use <code>long long</code> if heights can exceed 2^31-1.</li>
+<li><strong>Empty vectors</strong>: Explicitly handle before calling the function.</li>
+<li><strong>Comments</strong>: The algorithm is elegant but non-obvious; document the stack invariant.</li>
+</ul>
+<h2 id="related-problems">Related Problems</h2>
+<p>Once you master this, you can apply the same stack-based greedy approach to:</p>
+<ul>
+<li>Removing duplicate letters</li>
+<li>Simplifying file paths</li>
+<li>Trapping rain water (variant with additional logic)</li>
+<li>Daily temperatures</li>
+</ul>
+<p>The pattern: <em>use a stack when you need to undo recent decisions based on new information</em>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

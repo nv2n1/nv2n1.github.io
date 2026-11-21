@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>condor_rmdir(1) · Linux Manual Pages</title>
+<meta name="description" content="condor_rmdir Windows-only no-fail deletion of directories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-condor_rmdir/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>condor_rmdir(1)</h1>
+
+
+
+
+
+<h2>Name</h2>
+<p> <i>condor_rmdir</i> Windows-only no-fail deletion of directories </p>
+<h2>Synopsis</h2>
+<p> <i>condor_rmdir</i> [ <code>/HELP | /?</code> ] </p>
+<p> <i>condor_rmdir</i> <i>@filename</i> </p>
+<p> <i>condor_rmdir</i> [ <code>/VERBOSE</code> ] [ <code>/DIAGNOSTIC</code> ] [ <code>/PATH:&lt;path&gt;</code> ] [ <code>/S</code> ] [ <code>/C</code> ] [ <code>/Q</code> ] [ <code>/NODEL</code> ] <i>directory</i> </p>
+<h2>Description</h2>
+<p> <i>condor_rmdir</i> can delete a specified <i>directory</i> , and will not fail if the directory contains files that have ACLs that deny the SYSTEM process delete access, unlike the built-in Windows <i>rmdir</i> command. </p>
+<p> The directory to be removed together with other command line arguments may be specified within a file named <i>filename</i> , prefixing this argument with an @ character. </p>
+<p> The <i>condor_rmdir.exe</i> executable is is intended to be used by HTCondor with the <code>/S</code> <code>/C</code> options, which cause it to recurse into subdirectories and continue on errors. </p>
+<h2>Options</h2>
+<p> <code>/HELP</code></p>
+<dl>
+<dt>
+</dt><dd> Print usage information.</dd>
+</dl>
+<p> <code>/?</code></p>
+<dl>
+<dt>
+</dt><dd> Print usage information.</dd>
+</dl>
+<p> <code>/VERBOSE</code></p>
+<dl>
+<dt>
+</dt><dd> Print detailed output.</dd>
+</dl>
+<p> <code>/DIAGNOSTIC</code></p>
+<dl>
+<dt>
+</dt><dd> Print out the internal flow of control information.</dd>
+</dl>
+<p> <code>/PATH:&lt;path&gt;</code></p>
+<dl>
+<dt>
+</dt><dd> Remove the directory given by <code>&lt;path&gt;</code> .</dd>
+</dl>
+<p> <code>/S</code></p>
+<dl>
+<dt>
+</dt><dd> Include subdirectories in those removed.</dd>
+</dl>
+<p> <code>/C</code></p>
+<dl>
+<dt>
+</dt><dd> Continue even if access is denied.</dd>
+</dl>
+<p> <code>/Q</code></p>
+<dl>
+<dt>
+</dt><dd> Print error output only.</dd>
+</dl>
+<p> <code>/NODEL</code></p>
+<dl>
+<dt>
+</dt><dd> Do not remove directories. ACLs may still be changed.</dd>
+</dl>
+<h2>Exit Status</h2>
+<p> <i>condor_rmdir</i> will exit with a status value of 0 (zero) upon success, and it will exit with the standard HRESULT error code upon failure. </p>
+<h2>Author</h2>
+<p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
+<h2>Copyright</h2>
+<p> Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

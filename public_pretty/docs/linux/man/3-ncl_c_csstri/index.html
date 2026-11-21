@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_c_csstri(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_c_csstri/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_c_csstri(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>c_csstri - calculates a Delaunay triangulation for data on a sphere</p>
+<h2>Function Prototype</h2><pre> int *c_csstri(int, float [], float [], int *, int *);</pre><h2>Synopsis</h2><pre> int *c_csstri(n, rlat, rlon, nt, ier);</pre><h2>Description</h2><dl COMPACT><dt>n
+</dt><dd>The number of input data points, n &gt; 2.
+</dd><dt>rlat
+</dt><dd>An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
+</dd><dt>rlon
+</dt><dd>An array containing the longitudes of the input data, expressed in degrees.
+</dd><dt>nt
+</dt><dd>*nt is the number of triangles in the triangulation, unless *ier is non-zero, in which case *nt = 0. Where nb is the number of boundary points on the convex hull of the data, if nb is greater than 3, then *nt = 2n-nb-2, otherwise *nt = 2n-4. The input data are considered to be bounded if they all lie in one hemisphere.
+</dd><dt>ier
+</dt><dd>An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the error list in cssgrid_errors for details.</dd></dl><h2>Usage</h2>c_csstri is called to find a Delaunay triangulation of data randomly positioned on the surface of a sphere.
+<h2>Return Value</h2>c_csstri returns a pointer to a linear array that contains a sequence of integer triples. The elements of a triple are indices of vertices of a triangle. Each index references an original data point as it occurs in sequence in the input data set (numbering starts at 0). For example, if the triple &lt;5,0,2&gt; were in the list of triples, then (rlat[5],rlon[5]), (rlat[0],rlon[0]), and (rlat[2],rlon[2]) would be vertices of a triangle in the Delaunay triangulation.
+<h2>Access</h2>To use c_csstri, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>css_overview, c_cssgrid, cssgrid_errors 
+<p>Complete documentation for Cssgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/cssgrid/csshome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zlaset-f(3) · Linux Manual Pages</title>
+<meta name="description" content="zlaset.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zlaset-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zlaset-f(3)</h1>
+
+
+
+
+
+<p>zlaset.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>zlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br />
+ <i></i><code>ZLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine zlaset (characterUPLO, integerM, integerN, complex*16ALPHA, complex*16BETA, complex*16, dimension( lda, * )A, integerLDA)</h3>
+<p><code>ZLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> ZLASET initializes a 2-D array A to BETA on the diagonal and
+ ALPHA on the offdiagonals.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>UPLO</i> </dd>
+<pre> UPLO is CHARACTER*1
+ Specifies the part of the matrix A to be set.
+ = 'U': Upper triangular part is set. The lower triangle
+ is unchanged.
+ = 'L': Lower triangular part is set. The upper triangle
+ is unchanged.
+ Otherwise: All of the matrix A is set.</pre>
+<p><i>M</i> </p>
+<pre> M is INTEGER
+ On entry, M specifies the number of rows of A.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ On entry, N specifies the number of columns of A.</pre>
+<p><i>ALPHA</i> </p>
+<pre> ALPHA is COMPLEX*16
+ All the offdiagonal array elements are set to ALPHA.</pre>
+<p><i>BETA</i> </p>
+<pre> BETA is COMPLEX*16
+ All the diagonal array elements are set to BETA.</pre>
+<p><i>A</i> </p>
+<pre> A is COMPLEX*16 array, dimension (LDA,N)
+ On entry, the m by n matrix A.
+ On exit, A(i,j) = ALPHA, 1 &lt;= i &lt;= m, 1 &lt;= j &lt;= n, i.ne.j;
+ A(i,i) = BETA , 1 &lt;= i &lt;= min(m,n)</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,M).</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> Definition at line 107 of file zlaset.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

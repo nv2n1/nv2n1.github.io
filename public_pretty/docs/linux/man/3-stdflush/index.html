@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdflush(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdflush/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdflush(3)</h1>
+
+
+
+
+
+<p>std::flush - std::flush</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;ostream&gt;
+template&lt; class CharT, class Traits &gt;
+std::basic_ostream&lt;CharT, Traits&gt;&amp; flush( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );</code></pre> 
+<p>Flushes the output sequence os as if by calling os.flush().
+This is an output-only I/O manipulator, it may be called with an expression such as out &lt;&lt; std::flush for any out of type std::basic_ostream.</p>
+<h2>Notes</h2>
+<p>This manipulator may be used to produce an incomplete line of output immediately, e.g. when displaying output from a long-running process, logging activity of multiple threads or logging activity of a program that may crash unexpectedly. An explicit flush of std::cout is also necessary before a call to std::system, if the spawned process performs any screen I/O (a common example is std::system(&quot;pause&quot;) on Windows). In most other usual interactive I/O scenarios, std::endl is redundant when used with std::cout because any input from std::cin, output to std::cerr, or program termination forces a call to std::cout.flush().
+When a complete line of output needs to be flushed, the std::endl manipulator may be used.
+When every output operation needs to be flushed, the std::unitbuf manipulator may be used.</p>
+<h2>Parameters</h2>
+<p>os - reference to output stream</p>
+<h2>Return value</h2>
+<p>os (reference to the stream after manipulation)</p>
+<h2>Example</h2>
+<p>Without std::flush, the output would be the same, but may not appear in real time.
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+template &lt;typename Diff&gt;
+void log_progress(Diff d)
+{
+std::cout &lt;&lt; &quot;..(&quot;
+&lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(d).count()
+&lt;&lt; &quot; ms)..&quot; &lt;&lt; std::flush;
+}
+int main()
+{
+volatile int sink = 0;
+auto t1 = std::chrono::high_resolution_clock::now();
+for (int j = 0; j &lt; 5; ++j) {
+for (int n = 0; n &lt; 10000; ++n)
+for (int m = 0; m &lt; 20000; ++m)
+sink += m * n; // do some work
+auto now = std::chrono::high_resolution_clock::now();
+log_progress(now - t1);
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> ..(450 ms)&hellip;.(901 ms)&hellip;.(1350 ms)&hellip;.(1800 ms)&hellip;.(2250 ms)..</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> controls whether output is flushed after each operation
+unitbuf <i>(function)</i>
+nounitbuf
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> outputs &lsquo;\n&rsquo; and flushes the output stream
+endl <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> synchronizes with the underlying storage device
+flush <i>(public member function of std::basic_ostream&lt;CharT,Traits&gt;)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>date_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Dividend – Predetermined cash flow.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-date_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>date_(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> QuantLib::Dividend &#8211; Predetermined cash flow. </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;ql/cashflows/dividend.hpp&gt; </p>
+<p> Inherits <code>QuantLib::CashFlow</code>. </p>
+<p> Inherited by <code>FixedDividend</code>, and <code>FractionalDividend</code>. </p>
+<h3>Public Member Functions</h3>
+<p> <code>Dividend</code> (const <code>Date</code> &amp;date) </p>
+<p> virtual Real <code>amount</code> (Real underlying) const =0 </p>
+<p> <code>Event interface</code> </p>
+<p> <code>Date</code> <code>date</code> () const </p>
+<p> <code>CashFlow interface</code> </p>
+<p> virtual Real <code>amount</code> () const =0<br />
+ <i>returns the amount of the cash flow </i> </p>
+<p> <code>Visitability</code> </p>
+<p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) </p>
+<h3>Protected Attributes</h3>
+<p> <code>Date</code> <code>date_</code> </p>
+<h2>Detailed Description</h2>
+<p> Predetermined cash flow. </p>
+<p> This cash flow pays a predetermined amount at a given date.</p>
+<h2>Member Function Documentation</h2>
+<h3><code>Date</code> date () const [virtual]</h3>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> This is inheriited from the event class</dd></dl>
+<p> Implements <code>CashFlow</code>.</p>
+<h3>virtual Real amount () const [pure virtual]</h3>
+<p> returns the amount of the cash flow </p>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
+<p> Implements <code>CashFlow</code>. </p>
+<p> Implemented in <code>FixedDividend</code>, and <code>FractionalDividend</code>. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

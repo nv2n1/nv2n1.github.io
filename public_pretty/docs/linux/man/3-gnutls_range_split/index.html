@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_range_split(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_range_split – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_range_split/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_range_split(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_range_split &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
+<p> <code>int gnutls_range_split(gnutls_session_t </code><i>session</i><code>, const gnutls_range_st * </code><i>orig</i><code>, gnutls_range_st * </code><i>next</i><code>, gnutls_range_st * </code><i>remainder</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure</dd>
+<dt>const gnutls_range_st * orig</dt>
+<dd> is the original range provided by the user</dd>
+<dt>gnutls_range_st * next</dt>
+<dd> is the returned range that can be conveyed in a TLS record</dd>
+<dt>gnutls_range_st * remainder</dt>
+<dd> is the returned remaining range</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function should be used when it is required to hide the length of very long data that cannot be directly provided to <code>gnutls_record_send_range()</code>. In that case this function should be called with the desired length hiding range in <i>orig</i> . The returned <i>next</i> value should then be used in the next call to <code>gnutls_record_send_range()</code> with the partial data. That process should be repeated until <i>remainder</i> is (0,0).</p>
+<h2>RETURNS</h2>
+<p> 0 in case splitting succeeds, non zero in case of error. Note that <i>orig</i> is not changed, while the values of <i>next</i> and <i>remainder</i> are modified to store the resulting values.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

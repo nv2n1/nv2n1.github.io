@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>odfuserfield(1) · Linux Manual Pages</title>
+<meta name="description" content="odfuserfield – List or change the user-field declarations in an ODF file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-odfuserfield/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>odfuserfield(1)</h1>
+
+
+
+
+
+<p>odfuserfield &#8211; List or change the user-field declarations in an ODF file</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>odfuserfield</code> [-l] [-L] [-x&nbsp;<wbr><i>field</i>&#8230;] [-X&nbsp;<wbr><i>field</i>&#8230;] [-s&nbsp;<wbr><i>field:value</i>&#8230;] [-o&nbsp;<wbr><i>path</i>] <i>path</i></dt></dl>
+<h2>Description</h2>
+<p> <code>Odfuserfield</code></p>
+<dd>is a program that will list or change the user variable declarations in an OpenDocument file. There are two kinds of variables in OpenDocument. Simple variables can take different values at different positions, throughout a document. User variables have the same value throughout a document. Due to the latter&#8217;s global nature it is safe to change them with an external application. </dd>
+<p> Use <code>odfuserfield</code> to fill out form letters before printing or giving to the user. </p>
+<p> &#8220;Path&#8221; is assumed to be an OpenDocument file of text, spreadsheet or presentation type.</p>
+<h2>Options</h2>
+<p> -l</p>
+<dl>
+<dt>
+</dt><dd> List (extract) all known user-fields.</dd></dl>
+<p> -L</p>
+<dl>
+<dt>
+</dt><dd> List (extract) all known user-fields with type and value.</dd></dl>
+<p> -x <i>field</i></p>
+<dl>
+<dt>
+</dt><dd> Extract the contents of this field from the file.</dd></dl>
+<p> -X <i>field</i></p>
+<dl>
+<dt>
+</dt><dd> Same as -x, but also preserves/includes the field name and type.</dd></dl>
+<p> -s <i>field:value</i></p>
+<dl>
+<dt>
+</dt><dd> Set the value of an existing user field. The field type will be the same.</dd></dl>
+<p> -o <i>path</i></p>
+<dl>
+<dt>
+</dt><dd> Filename to write modified ODT file to. If no <code>-o</code> option is provided, the ODT file will be written to stdout.</dd></dl>
+<h2>Example</h2>
+<dl>
+<dt>
+</dt><dd> <font SIZE="-1"> </font></dd>
+<pre>
+odfuserfield -L odf-file
+</pre>
+<p> <font SIZE="+1"></dl>
+<p> </font></p>
+<h2>See Also</h2>
+<p> <code><a href="/docs/linux/man/1-formail/">formail</a></code>(1), <code><a href="/docs/linux/man/1-id3tag/">id3tag</a></code>(1)</p>
+<h2>Todo</h2>
+<p> Implement formulas. See OpenDocument v1.0 specification section 6.3.5. This requires a different syntax for -s arguments.</p>
+<h2>Authors</h2>
+<p> <code>S&oslash;ren Roug</code></p>
+<dl>
+<dt>
+</dt><dd> Original author</dd></dl>
+<p> <code>Michael Howitz</code><br />
+ gocept gmbh &amp; co. kg</p>
+<dl>
+<dt>
+</dt><dd> Refactoring</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

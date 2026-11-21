@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemfile_statusfile_status(3) · Linux Manual Pages</title>
+<meta name="description" content="std::filesystem::file_status::file_status – std::filesystem::file_status::file_status">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemfile_statusfile_status/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemfile_statusfile_status(3)</h1>
+
+
+
+
+
+<p>std::filesystem::file_status::file_status &#8211; std::filesystem::file_status::file_status</p>
+<h2>Synopsis</h2>
+<pre><code>file_status() noexcept
+    : file_status(std::filesystem::file_type::none){}(1)(since C++ 17)
+          file_status(const file_status &amp;) noexcept = default;
+(2)(since C++ 17)
+    file_status(file_status &amp;&amp;) noexcept = default;
+(3)(since C++ 17)
+    explicit file_status(
+        std::filesystem::file_type type, (4)(since C++ 17)
+                                             std::filesystem::perms permissions = std::filesystem::perms::unknown) noexcept;</code></pre>
+<p>Constructs a new file_status object.<br />
+1) Default constructor that calls <code>(4)</code> with std::filesystem::file_type::none.<br />
+2-3) Copy and move constructors are defaulted.<br />
+4) Initializes the file status object with type as type and permissions as permissions. </p>
+<h2>Parameters</h2>
+<p>type &#8211; type of the file status<br />
+permissions &#8211; permissions of the file status</p>
+<h2>Example</h2>
+<p>&nbsp;This section is incomplete<br />
+&nbsp;Reason: no example </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

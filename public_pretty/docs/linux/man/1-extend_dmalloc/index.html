@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>extend_dmalloc(1) · Linux Manual Pages</title>
+<meta name="description" content="extend_dmalloc – Analyze return-addresses from dmalloc logfiles.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-extend_dmalloc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>extend_dmalloc(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> extend_dmalloc &#8211; Analyze return-addresses from dmalloc logfiles. </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>extend_dmalloc</code> [<i>dmalloc-log</i><code>binary</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>extend_dmalloc</code></p>
+<dd>will run <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) to get information on the return-addresses from a <code>dmalloc</code>(1) logfile. Specifically it will examine any ra= lines and try to get the corresponding line numbers </dd>
+<p> The argument <code>binary</code> must be the binary that generated the log dmalloc-log. </p>
+<p> This utility is part of the KDE Software Development Kit.</p>
+<h2>NOTES</h2>
+<p> You may wish to direct the output from <code>extend_dmalloc</code> to a file, since otherwise <code>gdb</code> seems to prompt for a return as if you are at the end of a page.</p>
+<h2>AUTHOR</h2>
+<p> <code>Ben Burton</code> &lt;bab [at] debian.org&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

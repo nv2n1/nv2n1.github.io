@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wpg2svgbatch-pl(1) · Linux Manual Pages</title>
+<meta name="description" content="wpg2svgbatch.pl – batch convert WordPerfect Graphics files into SVG">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-wpg2svgbatch-pl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>wpg2svgbatch-pl(1)</h1>
+
+
+
+
+
+<p>wpg2svgbatch.pl &#8211; batch convert WordPerfect Graphics files into SVG</p>
+<h2>Description</h2>
+<dl COMPACT>
+<dd>Usage: wpg2svgbatch.pl [-hruv] [-d dir] [-o dir]</dd>
+<dd>wpg2svgbatch.pl uses wpg2svg to convert batches of WordPerfect word processor files (WPG) to the Scalable Vector Graphics (SVG) format. The SVG files are generated anew and do not replace the original wpg files.</dd>
+<dd>Running wpg2svgbatch.pl more than once on the same directory will cause the existing SVG file to be replaced with a new one.</dd>
+<dt> <code>-d</code> &lt;dir&gt;</dt>
+<dd>
+</dd><dd>begins the conversion process in directory &quot;dir&quot; instead of the current directory. Use this switch separately from the other switches, (<code>-vr</code> <code>-d</code> <i>/home/robin</i>) or at the end of a switch string (<code>-rvd</code> <i>/home/robin</i>).</dd>
+<dt><code>-h</code></dt>
+<dd>displays this help text.</dd>
+<dt> <code>-o</code> &lt;dir&gt;</dt>
+<dd>
+</dd><dd>causes all the generated SVG files to be deposited in this single specified output directory. When not used, the generated SVG files are deposited in the same directory in which the original WPG file was found. Use this switch separately from the other switches, (<code>-vr</code> <code>-o</code> <i>/home/robin</i>)</dd>
+<dt><code>-r</code></dt>
+<dd>converts files in either the current directory or the directory specified by the <code>-d</code> switch (see below) and all the wpg files in all the subdirectories.</dd>
+<dt><code>-u</code></dt>
+<dd>replaces spaces with underscores in the target filename(s).</dd>
+<dt><code>-v</code></dt>
+<dd>Displays statistics and the progress of the conversion.</dd></dl>
+<p> running under Perl version 5.16.3.</p>
+<dl COMPACT>
+<dd>[Now continuing due to backward compatibility and excessive paranoia.</dd>
+<dd>See &#8216;perldoc Getopt::Std&#8217; about $Getopt::Std::STANDARD_HELP_VERSION.] </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

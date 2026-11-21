@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdropsiteregister(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDropSiteRegister — A Drag and Drop function that identifies a drop site and assigns resources that specify its behavior">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdropsiteregister/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdropsiteregister(3)</h1>
+
+
+
+
+
+<p><code>XmDropSiteRegister</code> &#8212; A Drag and Drop function that identifies a drop site and assigns resources that specify its behavior</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/DragDrop.h&gt;
+<code>void XmDropSiteRegister</code>(
+<code>Widget widget</code>,
+<code>ArgList arglist</code>,
+<code>Cardinal argcount</code>);</pre>
+<h2>Description</h2>
+<p><code>XmDropSiteRegister</code> identifies the specified widget or gadget as a drop site and sets resource values that define the drop site&#8217;s behavior. The routine assigns default values to any resources that are not specified in the argument list. The toolkit generates a warning message if a drop site is registered with <code>XmNdropSiteActivity</code> set to <code>XmDROP_SITE_ACTIVE</code> and the <code>XmNdropProc</code> resource is NULL. </p>
+<p> If the drop site is a descendant of a widget that is registered as a drop site, the <code>XmNdropSiteType</code> resource of the ancestor drop site must be specified as <code>XmDROP_SITE_COMPOSITE</code>. The ancestor must be registered before the descendant. The drop site is stacked above all other sibling drop sites already registered.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget to be registered.</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list.</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dd></dl>
+<p> For a complete definition of DropSite and its associated resources, see <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdisplay/">XmDisplay</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteendupdate/">XmDropSiteEndUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsitestartupdate/">XmDropSiteStartUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteupdate/">XmDropSiteUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteunregister/">XmDropSiteUnregister</a></code>(3), and <code><a href="/docs/linux/man/3-xmscreen/">XmScreen</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

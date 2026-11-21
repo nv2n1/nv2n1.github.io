@@ -1,8 +1,6 @@
 # never commit the DB dump or build output
 ericzma_wp2.mysql
 *.mysql
-_site*/
-.jekyll-cache/
-man-site/.hugo_build.lock
-man-site/resources/
-man-site/data/
+/public/
+/resources/
+/data/man-page-length.json

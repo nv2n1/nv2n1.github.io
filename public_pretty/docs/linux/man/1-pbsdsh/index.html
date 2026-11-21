@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbsdsh(1) · Linux Manual Pages</title>
+<meta name="description" content="pbsdsh – distribute task to nodes under pbs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pbsdsh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pbsdsh(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pbsdsh &#8211; distribute task to nodes under pbs </p>
+<h2>SYNOPSIS</h2>
+<p> pbsdsh [-c copies] [-o] [-s] [-u] [-v] program [args]<br />
+ pbsdsh [-n node] [-o] [-s] [-u] [-v] program [args]<br />
+ pbsdsh [-h nodename] [-o] [-v] program [args]</p>
+<h2>DESCRIPTION</h2>
+<p> Executes (spawns) a normal Unix program on one or more nodes under control of the Portable Batch System, PBS. Pbsdsh uses the Task Manager API, see tm_spawn(3), to distribute the program on the allocated nodes. </p>
+<p> When run without the -c or the -n option, pbsdsh will spawn the program on all nodes allocated to the PBS job. The spawns take place concurrently &#8211; all execute at (about) the same time. </p>
+<p> Users will find the <code>PBS_TASKNUM</code> , <code>PBS_NODENUM</code> , and the <code>PBS_VNODENUM</code> environmental variables useful. They contain the TM task id, the node identifier, and the cpu (virtual node) identifier.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-c copies</dt>
+<dd> The program is spawned on the first <i> nodes allocated. This option is mutual exclusive with -n.</dd>
+<dt>-n node</dt>
+<dd> The program is spawned on one node which is the node allocted. This option is mutual exclusive with -c.</dd>
+<dt>-h hostname</dt>
+<dd> The program is spawned on the node specified.</dd>
+<dt>-o</dt>
+<dd> Capture stdout of the spawned program. Normally stdout goes to the job&#8217;s output.</dd>
+<dt>-s</dt>
+<dd> If this option is given, the program is run in turn on each node, one after the other.</dd>
+<dt>-u</dt>
+<dd> The program is run once on each node (unique). This ignores the number of allocated processers on a given node.</dd>
+<dt>-v</dt>
+<dd> Verbose output about error conditions and task exit status is produced.</dd></dl>
+<p> </i></p>
+<h2>OPERANDS</h2>
+<p> The first operand, <i> is the program to execute. </p>
+<p> Additional operands, are passed as arguments to the program. </i></p>
+<h2>STANDARD ERROR</h2>
+<p> The pbsdsh command will write a diagnostic message to standard error for each error occurrence.</p>
+<h2>EXIT STATUS</h2>
+<p> Upon successful processing of all the operands presented to the command, the exit status will be a value of zero. </p>
+<p> If the pbsdsh command fails to process any operand, or fails to contact the MOM daemon on the localhost the command exits with a value greater than zero.</p>
+<h2>SEE ALSO</h2>
+<p> qsub(1B), tm_spawn(3B) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

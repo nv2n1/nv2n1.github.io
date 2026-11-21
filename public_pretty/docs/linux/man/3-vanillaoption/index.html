@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vanillaoption(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::VanillaOption – Vanilla option (no discrete dividends, no barriers) on a single asset.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vanillaoption/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vanillaoption(3)</h1>
+
+
+
+
+
+<p>QuantLib::VanillaOption &#8211; Vanilla option (no discrete dividends, no barriers) on a single asset. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/instruments/vanillaoption.hpp&gt; </p>
+<p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
+<p> Inherited by <code>EuropeanOption</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>VanillaOption</code> (const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;) </p>
+<p> <code>Volatility</code> <code>impliedVolatility</code> (<code>Real</code> price, const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp;process, <code>Real</code> accuracy=1.0e-4, Size maxEvaluations=100, Volatility minVol=1.0e-7, Volatility maxVol=4.0) const </p>
+<h2>Detailed Description</h2>
+<p>Vanilla option (no discrete dividends, no barriers) on a single asset. </p>
+<p> <code>Examples: </code> </p>
+<p> <code>EquityOption.cpp</code>.</p>
+<h2>Member Function Documentation</h2>
+<h3><code>Volatility</code> impliedVolatility (<code>Real</code> price, const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp; process, <code>Real</code> accuracy = 1.0e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</h3>
+<p><code>Warning</code></p>
+<dl COMPACT>
+<dd>currently, this method returns the Black-Scholes implied volatility using analytic formulas for European options and a finite-difference method for American and Bermudan options. It will give unconsistent results if the pricing was performed with any other methods (such as jump-diffusion models.)</dd></dl>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>options with a gamma that changes sign (e.g., binary options) have values that are <code>not</code> monotonic in the volatility. In these cases, the calculation can fail and the result (if any) is almost meaningless. Another possible source of failure is to have a target value that is not attainable with any volatility, e.g., a target value lower than the intrinsic value in the case of American options.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

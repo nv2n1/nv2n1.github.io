@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bitmapbitorder(3) · Linux Manual Pages</title>
+<meta name="description" content="ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeight, DisplayHeightMM, DisplayWidth, DisplayWidthMM, XListPixmapFormats, XPixmapFormatValues – image format functions and macros">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bitmapbitorder/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bitmapbitorder(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ImageByteOrder, BitmapBitOrder, BitmapPad, BitmapUnit, DisplayHeight, DisplayHeightMM, DisplayWidth, DisplayWidthMM, XListPixmapFormats, XPixmapFormatValues &#8211; image format functions and macros </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>XPixmapFormatValues *XListPixmapFormats(Display *<i>display</i>, int *<i>count_return</i>);</dd>
+<dd>int ImageByteOrder(Display *<i>display</i>);</dd>
+<dd>int BitmapBitOrder(Display *<i>display</i>);</dd>
+<dd>int BitmapPad(Display *<i>display</i>);</dd>
+<dd>int BitmapUnit(Display *<i>display</i>);</dd>
+<dd>int DisplayHeight(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayHeightMM(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayWidth(Display *<i>display</i>, int <i>screen_number</i>);</dd>
+<dd>int DisplayWidthMM(Display *<i>display</i>, int <i>screen_number</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>count_return</i></dt>
+<dd>Returns the number of pixmap formats that are supported by the display.</dd>
+<dt><i>screen_number</i></dt>
+<dd>Specifies the appropriate screen number on the host server.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XListPixmapFormats</code> function returns an array of <code>XPixmapFormatValues</code> structures that describe the types of Z format images supported by the specified display. If insufficient memory is available, <code>XListPixmapFormats</code> returns NULL. To free the allocated storage for the <code>XPixmapFormatValues</code> structures, use <code>XFree</code>. </p>
+<p> The <code>ImageByteOrder</code> macro specifies the required byte order for images for each scanline unit in XY format (bitmap) or for each pixel value in Z format. </p>
+<p> The <code>BitmapBitOrder</code> macro returns <code>LSBFirst</code> or <code>MSBFirst</code> to indicate whether the leftmost bit in the bitmap as displayed on the screen is the least or most significant bit in the unit. </p>
+<p> The <code>BitmapPad</code> macro returns the number of bits that each scanline must be padded. </p>
+<p> The <code>BitmapUnit</code> macro returns the size of a bitmap&#8217;s scanline unit in bits. </p>
+<p> The <code>DisplayHeight</code> macro returns the height of the specified screen in pixels. </p>
+<p> The <code>DisplayHeightMM</code> macro returns the height of the specified screen in millimeters. </p>
+<p> The <code>DisplayWidth</code> macro returns the width of the screen in pixels. </p>
+<p> The <code>DisplayWidthMM</code> macro returns the width of the specified screen in millimeters.</p>
+<h2>Structures</h2>
+<p>The <code>XPixmapFormatValues</code> structure provides an interface to the pixmap format information that is returned at the time of a connection setup. It contains: typedef struct {<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int depth;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int bits_per_pixel;<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int scanline_pad; } XPixmapFormatValues;</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-allplanes/">AllPlanes</a>(3), <a href="/docs/linux/man/3-blackpixelofscreen/">BlackPixelOfScreen</a>(3), IsCursorKey(3), <a href="/docs/linux/man/3-xfree/">XFree</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

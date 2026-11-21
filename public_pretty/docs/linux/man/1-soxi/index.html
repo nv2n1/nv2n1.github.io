@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soxi(1) · Linux Manual Pages</title>
+<meta name="description" content="SoXI – Sound eXchange Information, display sound file metadata">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-soxi/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>soxi(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> SoXI &#8211; Sound eXchange Information, display sound file metadata</p>
+<h2>SYNOPSIS</h2>
+<p> <code>soxi</code> [<code>-V</code>[<i>level</i>]] [<code>-T</code>] [<code>-t</code>|<code>-r</code>|<code>-c</code>|<code>-s</code>|<code>-d</code>|<code>-D</code>|<code>-b</code>|<code>-B</code>|<code>-e</code>|<code>-a</code>] <i>infile1</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Displays information from the header of a given audio file or files. Supported audio file types are listed and described in <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7). Note however, that <code>soxi</code> is intended for use only with audio files with a self-describing header. </p>
+<p> By default, as much information as is available is shown. An option may be given to select just a single piece of information (perhaps for use in a script or batch-file).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-V</code></dt>
+<dd> Set verbosity. See <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1) for details.</dd>
+<dt><code>-T</code></dt>
+<dd> Used with multiple files; changes the behaviour of <code>-s</code>, <code>-d</code> and <code>-D</code> to display the total across all given files. Note that when used with <code>-s</code> with files with different sampling rates, this is of questionable value.</dd>
+<dt><code>-t</code></dt>
+<dd> Show detected file-type.</dd>
+<dt><code>-r</code></dt>
+<dd> Show sample-rate.</dd>
+<dt><code>-c</code></dt>
+<dd> Show number of channels.</dd>
+<dt><code>-s</code></dt>
+<dd> Show number of samples (0 if unavailable).</dd>
+<dt><code>-d</code></dt>
+<dd> Show duration in hours, minutes and seconds (0 if unavailable). Equivalent to number of samples divided by the sample-rate.</dd>
+<dt><code>-D</code></dt>
+<dd> Show duration in seconds (0 if unavailable).</dd>
+<dt><code>-b</code></dt>
+<dd> Show number of bits per sample.</dd>
+<dt><code>-B</code></dt>
+<dd> Show the bitrate averaged over the whole file (0 if unavailable).</dd>
+<dt><code>-e</code></dt>
+<dd> Show the name of the audio encoding.</dd>
+<dt><code>-a</code></dt>
+<dd> Show file comments (annotations) if available.</dd></dl>
+<h2>BUGS</h2>
+<p> Please report any bugs found in this version of SoX to the mailing list (sox-users [at] lists.sourceforge.net).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7), <code><a href="/docs/linux/man/3-libsox/">libsox</a></code>(3) </p>
+<p> The SoX web site at <a rel="nofollow" href="http://sox.sourceforge.net">http://sox.sourceforge.net</a></p>
+<h2>LICENSE</h2>
+<p> Copyright 2008-2013 by Chris Bagwell and SoX Contributors. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<h2>AUTHORS</h2>
+<p> Chris Bagwell (cbagwell [at] users.sourceforge.net). Other authors and contributors are listed in the ChangeLog file that is distributed with the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

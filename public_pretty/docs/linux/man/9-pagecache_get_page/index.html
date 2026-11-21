@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pagecache_get_page(9) · Linux Manual Pages</title>
+<meta name="description" content="pagecache_get_page – find and get a page reference">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-pagecache_get_page/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>pagecache_get_page(9)</h1>
+
+
+
+
+
+<p>pagecache_get_page &#8211; find and get a page reference</p>
+<h2>Synopsis</h2>
+<pre><code>struct page *pagecache_get_page(struct address_space *mapping, pgoff_t offset, int fgp_flags, gfp_t gfp_mask);</code></pre>
+<h2>Arguments</h2>
+<p><i>mapping</i></p>
+<dl>
+<dd>
+</dd><dd>the address_space to search</dd></dl>
+<p> <i>offset</i></p>
+<dl>
+<dd>the page index</dd></dl>
+<p> <i>fgp_flags</i></p>
+<dl>
+<dd>PCG flags</dd></dl>
+<p> <i>gfp_mask</i></p>
+<dl>
+<dd>gfp mask to use for the page cache data page allocation</dd></dl>
+<h2>Description</h2>
+<p>Looks up the page cache slot at <i>mapping</i> &amp; <i>offset</i>. </p>
+<p> PCG flags modify how the page is returned. </p>
+<p> FGP_ACCESSED: the page will be marked accessed FGP_LOCK: Page is return locked FGP_CREAT: If page is not present then a new page is allocated using <i>gfp_mask</i> and added to the page cache and the VM&#8217;s LRU list. The page is returned locked and with an increased refcount. Otherwise, <code>NULL</code> is returned. </p>
+<p> If FGP_LOCK or FGP_CREAT are specified then the function may sleep even if the GFP flags specified for FGP_CREAT are atomic. </p>
+<p> If there is a page cache page, it is returned with an increased refcount.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perl5242delta(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perl5242delta/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perl5242delta(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>perl5242delta - what is new for perl v5.24.2</p>
+<h2>DESCRIPTION</h2>
+<p>This document describes differences between the 5.24.1 release and the 5.24.2 release.</p>
+<p>If you are upgrading from an earlier release such as 5.24.0, first read perl5241delta, which describes differences between 5.24.0 and 5.24.1.</p>
+<h2>Security</h2>
+<h3>Improved handling of '.' in @INC in base.pm</h3>
+<p>The handling of (the removal of) <tt>&rsquo;.&rsquo;</tt> in <tt>@INC</tt> in base has been improved. This resolves some problematic behaviour in the approach taken in Perl 5.24.1, which is probably best described in the following two threads on the Perl 5 Porters mailing list: &lt;<a rel="nofollow" HREF="http://www.nntp.perl.org/group/perl.perl5.porters/2016/08/msg238991.html"><a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/08/msg238991.html">http://www.nntp.perl.org/group/perl.perl5.porters/2016/08/msg238991.html</a></a>&gt;, &lt;<a rel="nofollow" HREF="http://www.nntp.perl.org/group/perl.perl5.porters/2016/10/msg240297.html"><a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/10/msg240297.html">http://www.nntp.perl.org/group/perl.perl5.porters/2016/10/msg240297.html</a></a>&gt;.</p>
+<h3>Escaped colons and relative paths in <font SIZE="-1">PATH</font></h3>
+<p>On Unix systems, Perl treats any relative paths in the <font SIZE="-1">PATH</font> environment variable as tainted when starting a new process. Previously, it was allowing a backslash to escape a colon (unlike the <font SIZE="-1">OS</font>), consequently allowing relative paths to be considered safe if the <font SIZE="-1">PATH</font> was set to something like <tt>&quot;/:.&quot;</tt>. The check has been fixed to treat <tt>&quot;.&quot;</tt> as tainted in that example.</p>
+<h2>Modules and Pragmata</h2>
+<h3>Updated Modules and Pragmata</h3>
+<dl>
+<dt>&bull;
+</dt><dd> base has been upgraded from version 2.23 to 2.23_01.
+</dd><dt>&bull;
+</dt><dd> Module::CoreList has been upgraded from version 5.20170114_24 to 5.20170715_24.</dd></dl>
+<h2>Selected Bug Fixes</h2>
+<dl>
+<dt>&bull;
+</dt><dd> Fixed a crash with <tt>&quot;s///l&quot;</tt> where it thought it was dealing with <font SIZE="-1">UTF-8</font> when it wasn't. [perl #129038] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=129038">https://rt.perl.org/Ticket/Display.html?id=129038</a>&gt;</dd></dl>
+<h2>Acknowledgements</h2>
+<p>Perl 5.24.2 represents approximately 6 months of development since Perl 5.24.1 and contains approximately 2,500 lines of changes across 53 files from 18 authors.</p>
+<p>Excluding auto-generated files, documentation and release tools, there were approximately 960 lines of changes to 17 .pm, .t, .c and .h files.</p>
+<p>Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.24.2:</p>
+<p>Aaron Crane, Abigail, Aristotle Pagaltzis, Chris &lsquo;BinGOs&rsquo; Williams, Dan Collins, David Mitchell, Eric Herman, Father Chrysostomos, James E Keenan, Karl Williamson, Lukas Mai, Renee Baecker, Ricardo Signes, Sawyer X, Stevan Little, Steve Hay, Tony Cook, Yves Orton.</p>
+<p>The list above is almost certainly incomplete as it is automatically generated from version control history. In particular, it does not include the names of the (very much appreciated) contributors who reported issues to the Perl bug tracker.</p>
+<p>Many of the changes included in this version originated in the <font SIZE="-1">CPAN</font> modules included in Perl&rsquo;s core. We&rsquo;re grateful to the entire <font SIZE="-1">CPAN</font> community for helping Perl to flourish.</p>
+<p>For a more complete list of all of Perl&rsquo;s historical contributors, please see the <i></i><font SIZE="-1"><i>AUTHORS</i></font><i></i> file in the Perl source distribution.</p>
+<h2>Reporting Bugs</h2>
+<p>If you find what you think is a bug, you might check the articles recently posted to the comp.lang.perl.misc newsgroup and the perl bug database at &lt;<a rel="nofollow" HREF="https://rt.perl.org/"><a href="https://rt.perl.org/">https://rt.perl.org/</a></a>&gt; . There may also be information at &lt;<a rel="nofollow" HREF="http://www.perl.org/"><a href="http://www.perl.org/">http://www.perl.org/</a></a>&gt; , the Perl Home Page.</p>
+<p>If you believe you have an unreported bug, please run the perlbug program included with your release. Be sure to trim your bug down to a tiny but sufficient test case. Your bug report, along with the output of <tt>&quot;perl -V&quot;</tt>, will be sent off to perlbug [at] perl.org to be analysed by the Perl porting team.</p>
+<p>If the bug you are reporting has security implications which make it inappropriate to send to a publicly archived mailing list, then see ``<font SIZE="-1">SECURITY VULNERABILITY CONTACT INFORMATION&rsquo;&rsquo;</font> in perlsec for details of how to report the issue.</p>
+<h2>SEE ALSO</h2>
+<p>The <i>Changes</i> file for an explanation of how to view exhaustive details on what changed.</p>
+<p>The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl.</p>
+<p>The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff.</p>
+<p>The <i>Artistic</i> and <i>Copying</i> files for copyright information.</p>
+<h2>Index</h2>
+<dt><a HREF="#lbAG">Modules and Pragmata</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAI">Selected Bug Fixes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAJ">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">SEE ALSO</a>
+</dt><dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

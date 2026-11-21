@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tc-route(8) · Linux Manual Pages</title>
+<meta name="description" content="route – route traffic control filter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tc-route/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tc-route(8)</h1>
+
+
+
+
+
+<p>route &#8211; route traffic control filter</p>
+<h2>Synopsis</h2>
+<p><code>tc</code> <code>filter</code> &#8230; <code>route</code> [ <code>from</code> <i>REALM</i> | <code>fromif</code> <i>TAG</i> ] [ <code>to</code> <i>REALM</i> ] [ <code>classid</code> <i>CLASSID</i> ] [ <code>action</code> <i>ACTION_SPEC</i> ]</p>
+<h2>Description</h2>
+<p>Match packets based on routing table entries. This filter centers around the possibility to assign a <code>realm</code> to routing table entries. For any packet to be classified by this filter, a routing table lookup is performed and the returned <code>realm</code> is used to decide on whether the packet is a match or not.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>action</code><i> ACTION_SPEC</i></dt>
+<dd>Apply an action from the generic actions framework on matching packets.</dd>
+<dt><code>classid</code><i> CLASSID</i></dt>
+<dd>Push matching packets into the class identified by <i>CLASSID</i>.</dd>
+<dt><code>from</code><i> REALM</i></dt>
+<dd><code>fromif</code><i> TAG</i> Perform source route lookups. <i>TAG</i> is the name of an interface which must be present on the system at the time of <code>tc</code> invocation.</dd>
+<dt><code>to</code><i> REALM</i></dt>
+<dd>Match if normal (i.e., destination) routing returns the given <i>REALM</i>.</dd></dl>
+<h2>Examples</h2>
+<p>Consider the subnet 192.168.2.0/24 being attached to eth0: </p>
+<dl>
+<dd>ip route add 192.168.2.0/24 dev eth0 realm 2</dd></dl>
+<p> The following <code>route</code> filter will then match packets from that subnet: </p>
+<dl>
+<dd>tc filter add &#8230; route from 2 classid 1:2</dd></dl>
+<p> and pass packets on to class 1:2.</p>
+<h2>Notes</h2>
+<p>Due to implementation details, <code>realm</code> values must be in a range from 0 to 255, inclusive. Alternatively, a verbose name defined in /etc/iproute2/rt_realms may be given instead.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8), <code><a href="/docs/linux/man/8-ip-route/">ip-route</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

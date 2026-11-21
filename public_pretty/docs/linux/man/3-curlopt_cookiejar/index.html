@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_cookiejar(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_COOKIEJAR – file name to store cookies to">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_cookiejar/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_cookiejar(3)</h1>
+
+
+
+
+
+<p>CURLOPT_COOKIEJAR &#8211; file name to store cookies to</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_COOKIEJAR, char *filename);</p>
+<h2>Description</h2>
+<p>Pass a <i>filename</i> as char *, zero terminated. This will make libcurl write all internally known cookies to the specified file when <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> is called. If no cookies are known, no file will be created. Specify &quot;-&quot; as filename to instead have the cookies written to stdout. Using this option also enables cookies for this session, so if you for example follow a location it will make matching cookies get sent accordingly. </p>
+<p> Note that libcurl doesn&#8217;t read any cookies from the cookie jar. If you want to read cookies from a file, use <i><a href="/docs/linux/man/3-curlopt_cookiefile/">CURLOPT_COOKIEFILE</a>(3)</i>. </p>
+<p> If the cookie jar file can&#8217;t be created or written to (when the <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> is called), libcurl will not and cannot report an error for this. Using <i><a href="/docs/linux/man/3-curlopt_verbose/">CURLOPT_VERBOSE</a>(3)</i> or <i><a href="/docs/linux/man/3-curlopt_debugfunction/">CURLOPT_DEBUGFUNCTION</a>(3)</i> will get a warning to display, but that is the only visible feedback you get about this possibly lethal situation.</p>
+<h2>Default</h2>
+<p>NULL</p>
+<h2>Protocols</h2>
+<p>HTTP</p>
+<h2>Example</h2>
+<p>TODO</p>
+<h2>Availability</h2>
+<p>Along with HTTP</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK if HTTP is supported, CURLE_UNKNOWN_OPTION if not, or CURLE_OUT_OF_MEMORY if there was insufficient heap space.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_cookiefile/">CURLOPT_COOKIEFILE</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_cookie/">CURLOPT_COOKIE</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_cookielist/">CURLOPT_COOKIELIST</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

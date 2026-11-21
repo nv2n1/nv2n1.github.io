@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dlaset-f(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dlaset-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dlaset-f(3)</h1>
+
+
+
+
+
+<p>dlaset.f -</p>
+<h2>Synopsis</h2><h3>Functions/Subroutines</h3>subroutine <b>dlaset</b> (UPLO, M, N, ALPHA, BETA, A, LDA) 
+ <i></i><b>DLASET</b> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.
+<h2>Function/Subroutine Documentation</h2><h3>subroutine dlaset (characterUPLO, integerM, integerN, double precisionALPHA, double precisionBETA, double precision, dimension( lda, * )A, integerLDA)</h3><b>DLASET</b> initializes the off-diagonal elements and the diagonal elements of a matrix to given values. 
+<p><b>Purpose: </b></p>
+<dl COMPACT><dd><pre> DLASET initializes an m-by-n matrix A to BETA on the diagonal and
+ ALPHA on the offdiagonals.</pre>&nbsp;<wbr></dd></dl>
+<p><b>Parameters:</b></p>
+<dl COMPACT><dd><i>UPLO</i> 
+ <pre> UPLO is CHARACTER*1
+ Specifies the part of the matrix A to be set.
+ = 'U': Upper triangular part is set; the strictly lower
+ triangular part of A is not changed.
+ = 'L': Lower triangular part is set; the strictly upper
+ triangular part of A is not changed.
+ Otherwise: All of the matrix A is set.</pre><i>M</i> 
+ <pre> M is INTEGER
+ The number of rows of the matrix A. M &gt;= 0.</pre><i>N</i> 
+ <pre> N is INTEGER
+ The number of columns of the matrix A. N &gt;= 0.</pre><i>ALPHA</i> 
+ <pre> ALPHA is DOUBLE PRECISION
+ The constant to which the offdiagonal elements are to be set.</pre><i>BETA</i> 
+ <pre> BETA is DOUBLE PRECISION
+ The constant to which the diagonal elements are to be set.</pre><i>A</i> 
+ <pre> A is DOUBLE PRECISION array, dimension (LDA,N)
+ On exit, the leading m-by-n submatrix of A is set as follows:
+ if UPLO = 'U', A(i,j) = ALPHA, 1&lt;=i&lt;=j-1, 1&lt;=j&lt;=n,
+ if UPLO = 'L', A(i,j) = ALPHA, j+1&lt;=i&lt;=m, 1&lt;=j&lt;=n,
+ otherwise, A(i,j) = ALPHA, 1&lt;=i&lt;=m, 1&lt;=j&lt;=n, i.ne.j,
+ and, for all UPLO, A(i,i) = BETA, 1&lt;=i&lt;=min(m,n).</pre><i>LDA</i> 
+ <pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1,M).</pre>&nbsp;<wbr></dd></dl>
+<p><b>Author:</b></p>
+<dl COMPACT><dd>Univ. of Tennessee 
+ Univ. of California Berkeley 
+ Univ. of Colorado Denver 
+ NAG Ltd.</dd></dl>
+<p><b>Date:</b></p>
+<dl COMPACT><dd>September 2012</dd></dl>
+<p>Definition at line 111 of file dlaset.f.</p>
+<h2>Author</h2>Generated automatically by Doxygen for LAPACK from the source code.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

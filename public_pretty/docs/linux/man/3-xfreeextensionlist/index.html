@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xfreeextensionlist(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xfreeextensionlist/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xfreeextensionlist(3)</h1>
+
+
+
+
+
+<p>XQueryExtension, XListExtensions, XFreeExtensionList - list available extensions</p>
+<h2>Syntax</h2><dl COMPACT><dd>Bool XQueryExtension(<i>display, name</i>, <i>major_opcode_return</i>, <i>first_event_return</i>, <i>first_error_return</i>)
+</dd><dd>char **XListExtensions(<i>display</i>, <i>nextensions_return</i>)
+</dd><dd>XFreeExtensionList(<i>list</i>)</dd></dl><h2>Arguments</h2><dl COMPACT><dt><i>display</i>
+</dt><dd>Specifies the connection to the X server.
+</dd><dt><i>name</i>
+</dt><dd>Specifies the extension name.
+</dd><dt><i>major_opcode_return</i>
+</dt><dd>Returns the major opcode.
+</dd><dt><i>first_event_return</i>
+</dt><dd>Returns the first event code, if any.
+</dd><dt><i>first_error_return</i>
+</dt><dd>Returns the first error code, if any.
+</dd><dt><i>nextensions_return</i>
+</dt><dd>Returns the number of extensions listed.
+</dd><dt><i>list</i>
+</dt><dd>Specifies the list of extension names.</dd></dl><h2>Description</h2>The <i>XQueryExtension</i> function determines if the named extension is present. If the extension is not present, <i>XQueryExtension</i> returns <i>False</i>; otherwise, it returns <i>True</i>. If the extension is present, <i>XQueryExtension</i> returns the major opcode for the extension to major_opcode_return; otherwise, it returns zero. Any minor opcode and the request formats are specific to the extension. If the extension involves additional event types, <i>XQueryExtension</i> returns the base event type code to first_event_return; otherwise, it returns zero. The format of the events is specific to the extension. If the extension involves additional error codes, <i>XQueryExtension</i> returns the base error code to first_error_return; otherwise, it returns zero. The format of additional data in the errors is specific to the extension. If the extension name is not in the Host Portable Character Encoding the result is implementation-dependent. Uppercase and lowercase matter; the strings ``thing'', ``Thing'', and ``thinG'' are all considered different names. 
+<p>The <i>XListExtensions</i> function returns a list of all extensions supported by the server. If the data returned by the server is in the Latin Portable Character Encoding, then the returned strings are in the Host Portable Character Encoding. Otherwise, the result is implementation-dependent.</p>
+<p>The <i>XFreeExtensionList</i> function frees the memory allocated by <i>XListExtensions</i>.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

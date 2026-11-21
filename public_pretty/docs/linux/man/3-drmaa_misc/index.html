@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>drmaa_misc(3) · Linux Manual Pages</title>
+<meta name="description" content="drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system – Miscellaneous DRMAA functions.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-drmaa_misc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>drmaa_misc(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system &#8211; Miscellaneous DRMAA functions.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include drmaa.h</code> </p>
+<pre><code>
+const char *drmaa_strerror(
+int&amp;nbsp;drmaa_errno
+</code></pre>
+<p> <code>);</code> </p>
+<p>int drmaa_get_contact(<br />
+char *contact,<br />
+size_t&amp;nbsp;contact_len,<br />
+char *error_diagnosis,<br />
+size_t&amp;nbsp;error_diag_len<br />
+ <code>);</code> </p>
+<p>int drmaa_version(<br />
+unsigned int *major,<br />
+unsigned int *minor,<br />
+char *error_diagnosis,<br />
+size_t&amp;nbsp;error_diag_len<br />
+ <code>);</code> </p>
+<p>int drmaa_get_DRM_system(<br />
+char *drm_system,<br />
+size_t&amp;nbsp;drm_system_len,<br />
+char *error_diagnosis,<br />
+size_t&amp;nbsp;error_diag_len<br />
+ <code>);</code> </p>
+<pre><code>
+int drmaa_get_DRMAA_implementation(
+char *drm_impl,
+size_t&amp;nbsp;drm_impl_len,
+char *error_diagnosis,
+size_t&amp;nbsp;error_diag_len
+</code></pre>
+<p> <code>);</code> </p>
+<h2>DESCRIPTION</h2>
+<p> The drmaa_strerror() function returns a message text associated with the DRMAA error number, <i>drmaa_errno</i>. For invalid DRMAA error codes `NULL&#8217; is returned.</p>
+<h3>drmaa_get_contact()</h3>
+<p> The drmaa_get_contact() returns an opaque string containing contact information related to the current DRMAA session to be used with the function. The opaque string contains the information required by drmaa_init() to reconnect to the current session instead of creating a new session. function. </p>
+<p> The drmaa_get_contact() function returns the same value before and after is called. </p>
+<h3>drmaa_version()</h3>
+<p> The drmaa_version() function returns into the integers pointed to by <i>major</i> and <i>minor</i>, the major and minor version numbers of the DRMAA library. For a DRMAA 1.0 compliant implementation `1&#8242; and `0&#8242; will be returned in <i>major</i> and <i>minor</i>, respectively. </p>
+<h3>drmaa_get_DRM_system()</h3>
+<p> The drmaa_get_DRM_system() function returns into <i>drm_system</i> up to <i>drm_system_len</i> characters of a string containing xxQS_NAMExx product and version information. </p>
+<p> The drmaa_get_DRM_system() function returns the same value before and after is called. </p>
+<h3>drmaa_get_DRMAA_implementation()</h3>
+<p> The drmaa_get_DRMAA_implementation() function returns into <i>drm_system</i> up to <i>drm_system_len</i> characters of a string containing the xxQS_NAMExx DRMAA implementation version information. In the current implementation, the drmaa_get_DRMAA_implementation() function returns the same result as the drmaa_get_DRM_system() function. </p>
+<p> The drmaa_get_DRMAA_implementation() function returns the same value before and after is called. </p>
+<h2>ENVIRONMENTAL VARIABLES</h2>
+<dl>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell to be used. To address a xxQS_NAMExx cell xxQS_NAMExx uses (in the order of precedence): </dd>
+<dl>
+<dl>
+<dt>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
+<p> The name of the default cell, i.e. <code>default</code>. </p>
+</dl>
+</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry instead to define that port.</dd></dl>
+<h2>RETURN VALUES</h2>
+<p> Upon successful completion, drmaa_get_contact(), drmaa_version(), and drmaa_get_DRM_system() return DRMAA_ERRNO_SUCCESS. Other values indicate an error. Up to <i>error_diag_len</i> characters of error related diagnosis information is then provided in the buffer <i>error_diagnosis</i>. </p>
+<h2>ERRORS</h2>
+<p> The drmaa_get_contact(), drmaa_version(), drmaa_get_DRM_system(), and drmaa_get_DRMAA_implementation() can fail with:</p>
+<dl>
+<dt><code>DRMAA_ERRNO_INTERNAL_ERROR</code></dt>
+<dd> Unexpected or internal DRMAA error, like system call failure, etc.</dd>
+<dt><code>DRMAA_ERRNO_DRM_COMMUNICATION_FAILURE</code></dt>
+<dd> Could not contact DRM system for this request.</dd>
+<dt><code>DRMAA_ERRNO_AUTH_FAILURE</code></dt>
+<dd> The specified request is not processed successfully due to authorization failure.</dd>
+<dt><code>DRMAA_ERRNO_INVALID_ARGUMENT</code></dt>
+<dd> The input value for an argument is invalid.</dd>
+<dt><code>DRMAA_ERRNO_NO_MEMORY</code></dt>
+<dd> Failed allocating memory.</dd></dl>
+<p> The drmaa_get_contact() and drmaa_get_DRM_system() can fail with:</p>
+<dl>
+<dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
+<dd> Failed because there is no active session.</dd></dl>
+<h2>SEE ALSO</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

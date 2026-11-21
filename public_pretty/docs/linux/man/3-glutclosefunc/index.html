@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutclosefunc(3) · Linux Manual Pages</title>
+<meta name="description" content="glutCloseFunc – Window destruction callback.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutclosefunc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutclosefunc(3)</h1>
+
+
+
+
+
+<p><code>glutCloseFunc</code> &#8211; Window destruction callback.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; windowcallback</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutCloseFunc void( *callback )( void )</p>
+<h2>Parameters</h2>
+<p>Bf Em<br />
+&nbsp;<wbr>callback Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client window destruction hook.</p>
+<h2>Description</h2>
+<p>When a window is destroyed by user-action in traditional GLUT, the application terminates. In freeglut and OpenGLUT, the application can choose to persist and treat the window close event as a normal event. This callback is how that event is transmitted to the application. </p>
+<p> This callback is bound to the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>. </p>
+<h2>Caveats</h2>
+<p>This function is Bf Em<br />
+&nbsp;<wbr>exactly Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>the same as glutWMCloseFunc(), which has been deprecated. This function should be used instead. </p>
+<h2>Todo</h2>
+<p>There needs to be some work to rationalize the behavior when a window is closed. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutdestroywindow/">glutDestroyWindow</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

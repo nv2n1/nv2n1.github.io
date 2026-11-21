@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vidir(1) · Linux Manual Pages</title>
+<meta name="description" content="vidir – edit directories and filenames">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vidir/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vidir(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> vidir &#8211; edit directories and filenames </p>
+<h2>SYNOPSIS</h2>
+<p> <code>vidir</code> [<code>&#8211;verbose</code>] [<i>directory</i>|<i>file</i>|<code>&#8211;</code>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>vidir</code> allows editing of directories and filenames in a text editor. If no <i>directory</i> is specified, the filenames of the current directory are edited. </p>
+<p> When editing a directory, each item in the directory will appear on its own numbered line. These numbers are how vidir keeps track of what items are changed. Delete lines to remove files from the directory, or edit filenames to rename files. You can also switch pairs of numbers to swap filenames. </p>
+<p> Filenames to be edited may be given any combination of <i>directory</i>s (which will be expanded to the non-recursive list of all files within <i>directory</i>), <i>file</i>s, or <i>&#8211;</i>. If the latter is specified, <code>vidir</code> reads a list of filenames from stdin and displays those for editing.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-v, &#8211;verbose</dt>
+<dd> Verbosely display the actions taken by the program.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>vidir</dt>
+<dd>
+</dd><dt>vidir *.jpeg</dt>
+<dd> Typical uses.</dd>
+<dt>find | vidir &#8211;</dt>
+<dd> Edit subdirectory contents too. To delete subdirectories, delete all their contents and the subdirectory itself in the editor.</dd>
+<dt>find -type f | vidir &#8211;</dt>
+<dd> Edit all files under the current directory and subdirectories.</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><font SIZE="-1">EDITOR</font></dt>
+<dd> Editor to use.</dd>
+<dt><font SIZE="-1">VISUAL</font></dt>
+<dd> Also supported to determine what editor to use.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
+<p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

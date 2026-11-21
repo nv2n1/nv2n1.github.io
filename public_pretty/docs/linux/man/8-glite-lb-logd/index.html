@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glite-lb-logd(8) · Linux Manual Pages</title>
+<meta name="description" content="glite-lb-logd – local logger daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-glite-lb-logd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>glite-lb-logd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>glite-lb-logd &#8211; local logger daemon</p>
+<h2>Synopsis</h2>
+<p><code>glite-lb-logd</code> [<i>options</i>] </p>
+<h2>Description</h2>
+<p><code>glite-lb-logd </code> accepts the L&amp;B events from their sources (via the producer L&amp;B API). It is responsible for fast acceptance of the events and their reliable storage in local files. Under normal conditions, the events are forwared to the <code>glite-lb-interlogd</code> immediately. The file storage allows the interlogger crash recovery. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code><i> FILE</i>, &#8211;cert <i>FILE</i></dt>
+<dd>Get certificate from <i>FILE</i>. This option overrides the $X509_USER_CERT environment variable. </dd>
+<dt><code>-C</code><i> DIR</i>, &#8211;CAdir <i>DIR</i></dt>
+<dd>Look for trusted CA&#8217;s certificates in <i>DIR</i>. This option overrides the $X509_CERT_DIR environment variable. </dd>
+<dt><code>-d</code>, &#8211;debug</dt>
+<dd>Don&#8217;t run as daemon. Additional diagnostics are not enabled, they can be configured through log4c instead. </dd>
+<dt><code>-p</code><i> NUM</i>, &#8211;port <i>NUM</i></dt>
+<dd>Listen on the port <i>NUM</i>. </dd>
+<dt><code>-f</code><i> PREFIX</i>, &#8211;file-prefix <i>PREFIX</i></dt>
+<dd><i>PREFIX </i> is a path prefix of the event files. </dd>
+<p> For each job (jobid) a specific file is created that stores all events associated with this job. The job filename is constructed by stripping the protocol+server prefix from the jobid and appending the rest to this <i>PREFIX. </i> </p>
+<p> <i>PREFIX </i> defaults to /var/spool/glite/lb-locallogger/dglogd.log. </p>
+<p> The value has to be same as used in the cooperating glite-lb-logd. </p>
+<dt><code>-k</code><i> FILE</i>, &#8211;key <i>FILE</i></dt>
+<dd>Get private key from <i>FILE</i>. This option overrides the $X509_USER_KEY environment variable. </dd>
+<dt><code>-s</code><i> PATH</i>, &#8211;socket <i>PATH</i></dt>
+<dd>Send the messages to interlogger through the UNIX socket <i>PATH</i>. </dd>
+<p> The value has to be same as used in the cooperating glite-lb-interlogd. </p>
+<dt><code>-i</code><i> FILE</i>, &#8211;pidfile <i>FILE</i></dt>
+<dd>Store pid into <i>FILE</i>. Defaults to /var/run/glite/glite-lb-logd.pid. </dd>
+<dt><code>-V</code>, &#8211;version</dt>
+<dd>Print version and exit. </dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd>Print help and exit. </dd>
+<dt><code>&#8211;noAuth</code></dt>
+<dd>Don&#8217;t require valid X509 credentials to run the daemon. Used for debugging only. </dd>
+<dt><code>&#8211;noIPC</code></dt>
+<dd>Don&#8217;t send messages to interlogger. </dd>
+<dt><code>&#8211;noParse</code></dt>
+<dd>Don&#8217;t parse messages for correctness. Dangerous, for debugging only! Don&#8217;t use at all. </dd>
+</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/tmp/interlogger.sock</i></dt>
+<dd>Default name of local socket. </dd>
+<dt><i>/var/spool/glite/lb-locallogger/dglogd.log*</i></dt>
+<dd>Default location of the event storage files.</dd>
+<dt>No configuration files needed.</dt>
+<dd></dd></dl>
+<h2>Environment</h2>
+<dl>
+<dt><code>X509_USER_KEY</code></dt>
+<dd>If $X509_USER_KEY is set, it is used to locate private key file. </dd>
+<dt><code>X509_USER_CERT</code></dt>
+<dd>If $X509_USER_CERT is set, it is used to locate certificate file. </dd>
+<dt><code>X509_CERT_DIR</code></dt>
+<dd>If $X509_CERT_DIR is set, it is used to locate the trusted CA&#8217;s certificates and ca-signing-policy files. </dd>
+<dt><code>X509_USER_PROXY</code></dt>
+<dd>If $X509USER_PROXY is set, it is used to locate proxy certificate file. </dd>
+</dl>
+<h2>Signals</h2>
+<dl>
+<dt><code>USR1</code></dt>
+<dd>Increase verbosity of the program. </dd>
+<dt><code>USR2</code></dt>
+<dd>Decrease verbosity of the program. </dd>
+</dl>
+<h2>Bugs</h2>
+<p>Please report all bugs to CESNET gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i> </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a></code>(8), <a href="/docs/linux/man/8-glite-lb-interlogd/">glite-lb-interlogd</a>(8), <a href="/docs/linux/man/1-glite-lb-logevent/">glite-lb-logevent</a>(1), </p>
+<h2>Author</h2>
+<p>EU EGEE, JRA1.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

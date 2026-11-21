@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalrangesdanglingstdexperimentalrangessafe_iterator_t(3) · Linux Manual Pages</title>
+<meta name="description" content="std::experimental::ranges::dangling,std::experimental::ranges::safe_iterator_t – std::experimental::ranges::dangling,std::experimental::ranges::safe_iterator_t">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalrangesdanglingstdexperimentalrangessafe_iterator_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalrangesdanglingstdexperimentalrangessafe_iterator_t(3)</h1>
+
+
+
+
+
+<p>std::experimental::ranges::dangling,std::experimental::ranges::safe_iterator_t &#8211; std::experimental::ranges::dangling,std::experimental::ranges::safe_iterator_t</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
+    template &lt;CopyConstructible T&gt;
+    class dangling
+{
+  public:
+    dangling() requires DefaultConstructible&lt;T&gt;();
+    (ranges TS)
+        dangling(T t);
+    T get_unsafe() const;
+};
+template &lt;Range R&gt;
+using safe_iterator_t = std::conditional_t &lt; std::is_lvalue_reference&lt;R&gt;::value,
+      (ranges TS)
+          ranges::iterator_t&lt;R&gt;,
+      ranges::dangling&lt;ranges::iterator_t&lt;R&gt;&gt;;</code></pre>
+<p>The class template dangling is a simple wrapper around an object to indicate that the wrapped object may be dangling, that is, it refers to another object whose lifetime may have ended.<br />
+The alias template safe_iterator_t returns the iterator type of R, wrapped in dangling if the range was an rvalue range (as indicated by R not being an lvalue reference type).<br />
+They are used by range algorithms that accept rvalue ranges and return iterators into them. </p>
+<h2>Member functions</h2>
+<p>&nbsp;std::experimental::ranges::dangling::dangling </p>
+<p>dangling() requires DefaultConstructible&lt;T&gt;(); <code>(1)</code><br />
+dangling(T t); <code>(2)</code> </p>
+<p>1) Default constructor. Value-initializes the wrapped object.<br />
+2) Initializes the wrapped object with t. Note that this constructor defines an implicit conversion from T to dangling&lt;T&gt;. </p>
+<p>&nbsp;std::experimental::ranges::dangling::get_unsafe </p>
+<p>T get_unsafe() const; </p>
+<p>Returns a copy of the wrapped object.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

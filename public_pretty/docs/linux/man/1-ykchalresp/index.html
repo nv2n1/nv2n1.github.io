@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ykchalresp(1) · Linux Manual Pages</title>
+<meta name="description" content="ykchalresp – Perform challenge-response operation with YubiKey">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ykchalresp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ykchalresp(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> ykchalresp &#8211; Perform challenge-response operation with YubiKey</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ykchalresp</code> [<i>-1</i> | <i>-2</i>] [<i>-H</i>] [<i>-Y</i>] [<i>-N</i>] [<i>-x</i>] [<i>-v</i>] [<i>-6</i>] [<i>-8</i>] [<i>-t</i>] [<i>-V</i>] [<i>-h</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Send a challenge to a YubiKey, and read the response. The YubiKey can be configured with two different C/R modes &#8212; the standard one is a 160 bits HMAC-SHA1, and the other is a YubiKey OTP mimicing mode, meaning two subsequent calls with the same challenge will result in different responses.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-1</code></dt>
+<dd> send the challenge to slot 1. This is the default.</dd>
+<dt><code>-2</code></dt>
+<dd> send the challenge to slot 2.</dd>
+<dt><code>-H</code></dt>
+<dd> send a 64 byte HMAC challenge. This is the default.</dd>
+<dt><code>-Y</code></dt>
+<dd> send a 6 byte Yubico OTP challenge.</dd>
+<dt><code>-N</code></dt>
+<dd> non-blocking mode &#8212; abort if the YubiKey is configured to require a key press before sending the response.</dd>
+<dt><code>-x</code></dt>
+<dd> challenge is hex encoded.</dd>
+<dt><code>-v</code></dt>
+<dd> enable verbose mode.</dd>
+<dt><code>-6</code></dt>
+<dd> output the response in OATH format, 6 digits.</dd>
+<dt><code>-8</code></dt>
+<dd> output the response in OATH format, 8 digits.</dd>
+<dt><code>-t</code></dt>
+<dd> use current time as challenge instead of reading challenge from command line (as in default TOTP mode, seconds since 1970-01-01 00:00:00 / 30 encoded as an 8 byte challenge).</dd>
+<dt><code>-V</code></dt>
+<dd> print tool version and exit. </dd>
+</dl>
+<h2>EXAMPLE</h2>
+<p> The YubiKey challenge-response operation can be demonstrated using the <code>NIST PUB 198 A.2</code> test vector. </p>
+<p> First, program a YubiKey with the test vector :</p>
+<dl>
+<dt>
+<pre>
+$ <code>ykpersonalize -2 -ochal-resp -ochal-hmac -ohmac-lt64 -a 303132333435363738393a3b3c3d3e3f40414243</code>
+ ...
+</dt><dd>Commit? (y/n) [n]: y
+$
+</pre>
+</dd><dt>
+</dt><dd>Now, send the NIST test challenge to the YubiKey and verify the result matches the expected :</dd>
+<dt>
+<pre>
+$ <code>ykchalresp -2 'Sample #2'</code>
+</dt><dd>0922d3405faa3d194f82a45830737d5cc6c75d24
+$
+</pre>
+</dd></dl>
+<h2>BUGS</h2>
+<p> Report ykchalresp bugs in the issue tracker &lt;URL: <a rel="nofollow" href="https://github.com/Yubico/yubikey-personalization/issues">https://github.com/Yubico/yubikey-personalization/issues</a> &gt;</p>
+<h2>SEE ALSO</h2>
+<p> The ykpersonalize home page &lt;URL: <a rel="nofollow" href="https://developers.yubico.com/yubikey-personalization/">https://developers.yubico.com/yubikey-personalization/</a> &gt; </p>
+<p> YubiKeys can be obtained from Yubico &lt;URL: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> &gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

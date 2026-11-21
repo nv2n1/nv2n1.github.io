@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kgrantpty(7) · Linux Manual Pages</title>
+<meta name="description" content="kgrantpty – konsole uses this to securely open a slave pty">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-kgrantpty/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>kgrantpty(7)</h1>
+
+
+
+
+
+<p>kgrantpty &#8211; konsole uses this to securely open a slave pty</p>
+<h2>Synopsis</h2>
+<pre><code>kgrantpty</code> [<code>OPTION</code>] [<code>FILE</code>]</pre>
+<h2>Description</h2>
+<p><code>kgrantpty</code> is only intended to be used internally by konsole to open a slave pty securely. It performs a setuid chmod and chown on the slave pty device. Eavesdropping is prevented with the usage of a file handle as an argument. KPty automatically calls this tool, and it is not intended to be called from the command line.</p>
+<h2>Options</h2>
+<dl>
+<dd><code>&#8211;grant</code> grant secure setuid root chmod and chown to the file descriptor</dd>
+<dd><code>&#8211;revoke</code> revoke the secure setuid root chmod and chown from the file descriptor</dd></dl>
+<h2>Security</h2>
+<p><code>kgrantpty</code> must be used as setuid root.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-ttyname/">ttyname</a></code>(3), <code><a href="/docs/linux/man/3-forkpty/">forkpty</a></code>(3), <code><a href="/docs/linux/man/4-tty/">tty</a></code>(4), <code><a href="/docs/linux/man/7-pty/">pty</a></code>(7)</p>
+<h2>Author</h2>
+<p>Manpage written by Rodrigo Rubira Branco &lt;rrbranco [at] br.ibm.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_hash_alg_common(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_hash_alg_common – define properties of message digest">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_hash_alg_common/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_hash_alg_common(9)</h1>
+
+
+
+
+
+<p>struct_hash_alg_common &#8211; define properties of message digest</p>
+<h2>Synopsis</h2>
+<pre><code>struct hash_alg_common {
+    unsigned int digestsize;
+    unsigned int statesize;
+    struct crypto_alg base;
+};</code></pre>
+<h2>Members</h2>
+<p>digestsize</p>
+<dl>
+<dd>Size of the result of the transformation. A buffer of this size must be available to the <i>final</i> and <i>finup</i> calls, so they can store the resulting hash into it. For various predefined sizes, search include/crypto/ using git grep _DIGEST_SIZE include/crypto.</dd></dl>
+<p> statesize</p>
+<dl>
+<dd>Size of the block for partial state of the transformation. A buffer of this size must be passed to the <i>export</i> function as it will save the partial state of the transformation into it. On the other side, the <i>import</i> function will load the state from a buffer of this size as well.</dd></dl>
+<p> base</p>
+<dl>
+<dd>Start of data structure of cipher algorithm. The common data structure of crypto_alg contains information common to all ciphers. The hash_alg_common data structure now adds the hash-specific information.</dd></dl>
+<h2>Authors</h2>
+<p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

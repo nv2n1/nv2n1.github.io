@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_int1ecca(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::Int1eCCA –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_int1ecca/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_int1ecca(3)</h1>
+
+
+
+
+
+<p>sc::Int1eCCA &#8211; </p>
+<p> <code>Int1eCCA</code> adapts CCA integrals components for use within SC.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;int1e.h&gt;</code></pre>
+<p> Inherits <code>sc::RefCount</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>Int1eCCA</code> (<code>Integral</code> *integral, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b1, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;b2, int order, IntegralEvaluatorFactory, std::string, bool) </p>
+<p> double * <code>buffer</code> () </p>
+<p> void <code>overlap</code> (int ish, int jsh) </p>
+<p> void <code>overlap_1der</code> (int ish, int jsh, Chemistry_QC_GaussianBasis_DerivCenters &amp;dc) </p>
+<p> void <code>kinetic</code> (int ish, int jsh) </p>
+<p> void <code>kinetic_1der</code> (int ish, int jsh, Chemistry_QC_GaussianBasis_DerivCenters &amp;dc) </p>
+<p> void <code>nuclear</code> (int ish, int jsh) </p>
+<p> void <code>nuclear_1der</code> (int ish, int jsh, Chemistry_QC_GaussianBasis_DerivCenters &amp;dc) </p>
+<p> void <code>hcore</code> (int ish, int jsh) </p>
+<p> void <code>hcore_1der</code> (int ish, int jsh, Chemistry_QC_GaussianBasis_DerivCenters &amp;dc)</p>
+<h3>Protected Attributes</h3>
+<p><code>Integral</code> * <code>integral_</code></p>
+<h2>Detailed Description</h2>
+<p><code>Int1eCCA</code> adapts CCA integrals components for use within SC. </p>
+<p> It is used by <code>OneBodyIntCCA</code> and <code>OneBodyDerivIntCCA</code> to implement the <code>IntegralCCA</code> class.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

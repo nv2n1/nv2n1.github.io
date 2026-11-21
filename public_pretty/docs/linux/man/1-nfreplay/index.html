@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nfreplay(1) · Linux Manual Pages</title>
+<meta name="description" content="nfreplay – netflow replay program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nfreplay/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nfreplay(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> nfreplay &#8211; netflow replay program</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>nfreplay [options] [filter]</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>nfreplay</code></p>
+<dd>is the netflow replay program of the nfdump tool set. It reads data from files stored by nfcapd and sents the netflow data to a host or a multicat group. The filter syntax is equivalent to nfdump. If a filter is supplied, only the matching flows are sent. See the <a href="/docs/linux/man/1-nfdump/">nfdump</a>(1) man page for a detailed description of the filter syntax. All records are sent as netflow version 5. </dd>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-H </code><i>remotehost</i></dt>
+<dd> Send all flows to this remote host. Accepts a symbolic name or a IPv4/IPv6 IP address. Defaults to IPv4 localhost 127.0.0.1.</dd>
+<dt><code>-j </code><i>mcastgroup</i></dt>
+<dd> Join this multicast group and send all flows to this group host. Accepts a symbolic name or multicast IPv4/IPv6 IP address.</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd> Send all flows to this port on the remote side. Default is 9995.</dd>
+<dt><code>-4</code></dt>
+<dd> Forces nfreplay to send flows to a IPv4 address only. Can be used together with -i if the remote host has an IPv4 and IPv6 address record.</dd>
+<dt><code>-6</code></dt>
+<dd> Forces nfreplay to send flows to a IPv6 address only. Can be used together with -i if the remote host has an IPv4 and IPv6 address record.</dd>
+<dt><code>-v </code><i>num</i></dt>
+<dd> Send flows as netflow version <i>num</i>. <code>5</code> and <code>9</code> are supported. The default is sending the flows as netflow version 5. In version 5 mode, IPv6 flows, are skipped and 64bit counters are truncated to 32bit.</dd>
+<dt><code>-d </code><i>usec</i></dt>
+<dd> Delay each record by <i>usec</i> mirco seconds, to avoid overrun on the remote side. Default is 10.</dd>
+<dt><code>-b </code><i>buffersize</i></dt>
+<dd> Set send buffer size in bytes. Useful for large data to transfer. Default is system dependent.</dd>
+<dt><code>-r </code><i>inputfile</i></dt>
+<dd> Read input data from <i>inputfile</i>. Default is read from stdin.</dd>
+<dt><code>-t </code><i>timewin</i></dt>
+<dd> Send only flows, which fall in the time window <i>timewin</i>, where <i>timewin</i> is YYYY/MM/dd.hh:mm:ss[-YYYY/MM/dd.hh:mm:ss]. Any parts of the time spec may be omitted e.g YYYY/MM/dd expands to YYYY/MM/dd.00:00:00-YYYY/MM/dd.23:59:59 and sends all flow from a given day.</dd>
+<dt><code>-c </code><i>num</i></dt>
+<dd> Limit number of records to send to the first <i>num</i> flows.</dd>
+<dt><code>-V</code></dt>
+<dd> Print nfreplay version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd> Print help text on stdout with all options and exit.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p> Returns</p>
+<dl>
+<dt>
+</dt><dd>
+<p> 0 No error. </p>
+<p> 255 Initialization failed. </p>
+<p> 254 Error in filter syntax. </p>
+<p> 250 Internal error.</dd></dl>
+<h2>NOTES</h2>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1), <a href="/docs/linux/man/1-nfdump/">nfdump</a>(1), <a href="/docs/linux/man/1-nfprofile/">nfprofile</a>(1)</p>
+<h2>BUGS</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

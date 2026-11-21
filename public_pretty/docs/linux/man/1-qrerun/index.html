@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qrerun(1) · Linux Manual Pages</title>
+<meta name="description" content="qrerun – rerun a pbs batch job">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-qrerun/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>qrerun(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> qrerun &#8211; rerun a pbs batch job </p>
+<h2>SYNOPSIS</h2>
+<p> qrerun [-f] job_identifier &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>qrerun</code> command directs that the specified jobs are to be rerun if possible. </p>
+<p> To rerun a job is to terminate the session leader of the job and return the job to the queued state in the execution queue in which the job currently resides. </p>
+<p> If a job is marked as not rerunable then the rerun request will fail for that job. If the mini-server running the job is down, or the rejects the request, the <i>Rerun Job</i> batch request will return a failure unless -f is used. </p>
+<p> Using -f violates IEEE Batch Processing Services Std and should be handled with great care. It should only be used under exceptional circumstances. Best practice is to fix the problem mini-server host and letting qrerun run normally. The previous nodes may need manual cleaning. See the <i> option on the </i><code>qsub </code> and <code>qalter</code> commands.</p>
+<h2>OPERANDS</h2>
+<p> The qrerun command accepts one or more <i> operands of the form:<br />
+ </i><code><br />
+ </code></p>
+<h2>STANDARD ERROR</h2>
+<p> The qrerun command will write a diagnostic message to standard error for each error occurrence.</p>
+<h2>EXIT STATUS</h2>
+<p> Upon successful processing of all the operands presented to the qrerun command, the exit status will be a value of zero. </p>
+<p> If the qrerun command fails to process any operand, the command exits with a value greater than zero.</p>
+<h2>SEE ALSO</h2>
+<p> qsub(1B), qalter(1B), pbs_alterjob(3B), pbs_rerunjob(3B) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

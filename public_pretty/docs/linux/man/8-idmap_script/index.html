@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>idmap_script(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-idmap_script/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>idmap_script(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>idmap_script - Samba&rsquo;s idmap_script Backend for Winbind</p>
+<h2>Description</h2>
+<p>The idmap_script plugin is a substitute for the idmap_tdb2 backend used by winbindd for storing SID/uid/gid mapping tables in clustered environments with Samba and CTDB. It is a read only backend that uses a script to perform mapping.</p>
+<p>It was developed out of the idmap_tdb2 back end and does not store SID/uid/gid mappings in a TDB, since the winbind_cache tdb will store the mappings once they are provided.</p>
+<h2>Idmap Options</h2>
+<p>range = low - high</p>
+<dl><dd>Defines the available matching uid and gid range for which the backend is authoritative.</dd></dl>
+<p>script</p>
+<dl><dd>This option can be used to configure an external program for performing id mappings.</dd></dl>
+<h2>Idmap Script</h2>
+<p>The tdb2 idmap backend supports an external program for performing id mappings through the smb.conf option <i>idmap config * : script</i> or its deprecated legacy form <i>idmap : script</i>.</p>
+<p>The mappings obtained by the script are then stored in the idmap tdb2 database instead of mappings created by the incrementing id counters. It is therefore important that the script covers the complete range of SIDs that can be passed in for SID to Unix ID mapping, since otherwise SIDs unmapped by the script might get mapped to IDs that had previously been mapped by the script.</p>
+<p>The script should accept the following command line options.</p>
+<dl><dd><pre> SIDTOID S-1-xxxx
+ IDTOSID UID xxxx
+ IDTOSID GID xxxx
+ IDTOSID XID xxxx</pre></dd></dl>
+<p>And it should return one of the following responses as a single line of text.</p>
+<dl><dd><pre> UID:yyyy
+ GID:yyyy
+ XID:yyyy
+ SID:ssss
+ ERR:yyyy</pre></dd></dl>
+<p>XID indicates that the ID returned should be both a UID and a GID. That is, it requests an ID_TYPE_BOTH, but it is ultimately up to the script whether or not it can honor that request. It can choose to return a UID or a GID mapping only.</p>
+<h2>Examples</h2>
+<p>This example shows how script is used as a the default idmap backend using an external program via the script parameter:</p>
+<dl><dd><pre> [global]
+ idmap config * : backend = script
+ idmap config * : range = 1000000-2000000
+ idmap config * : script = /usr/local/samba/bin/idmap_script.sh</pre></dd></dl>
+<p>This shows a simple script to partially perform the task:</p>
+<dl><dd><pre> #!/bin/sh
+ #
+ # Uncomment this if you want some logging
+ #echo $@ &gt;&gt; /tmp/idmap.sh.log
+ if [ &quot;$1&quot; == &quot;SIDTOID&quot; ]
+ then
+ # Note. The number returned has to be within the range defined
+ #echo &quot;Sending UID:1000005&quot; &gt;&gt; /tmp/idmap.sh.log
+ echo &quot;UID:1000005&quot;
+ exit 0
+ else
+ #echo &quot;Sending ERR: No idea what to do&quot; &gt;&gt; /tmp/idmap.sh.log
+ echo &quot;ERR: No idea what to do&quot;
+ exit 1
+ fi</pre></dd></dl>
+<p>Clearly, this script is not enough, as it should probably use wbinfo to determine if an incoming SID is a user or group SID and then look up the mapping in a table or use some other mechanism for mapping SIDs to UIDs and etc.</p>
+<p>Please be aware that the script is called with the _NO_WINBINDD environment variable set to 1. This prevents recursive calls into winbind from the script both via explicit calls to wbinfo and via implicit calls via nss_winbind. For example a call to ls -l could trigger such an infinite recursion.</p>
+<p>It is safe to call wbinfo -n and wbinfo -s from within an idmap script. To do so, the script must unset the _NO_WINBINDD environment variable right before the call to wbinfo and set it to 1 again right after wbinfo has returned to protect against the recursion.</p>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

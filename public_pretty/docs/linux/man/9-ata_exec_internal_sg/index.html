@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ata_exec_internal_sg(9) · Linux Manual Pages</title>
+<meta name="description" content="ata_exec_internal_sg – execute libata internal command">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ata_exec_internal_sg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ata_exec_internal_sg(9)</h1>
+
+
+
+
+
+<p>ata_exec_internal_sg &#8211; execute libata internal command</p>
+<h2>Synopsis</h2>
+<pre><code>unsigned ata_exec_internal_sg(struct ata_device *dev, struct ata_taskfile *tf, const u8 *cdb, int dma_dir, struct scatterlist *sgl, unsigned int n_elem, unsigned long timeout);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>Device to which the command is sent</dd></dl>
+<p> <i>tf</i></p>
+<dl>
+<dd>Taskfile registers for the command and the result</dd></dl>
+<p> <i>cdb</i></p>
+<dl>
+<dd>CDB for packet command</dd></dl>
+<p> <i>dma_dir</i></p>
+<dl>
+<dd>Data transfer direction of the command</dd></dl>
+<p> <i>sgl</i></p>
+<dl>
+<dd>sg list for the data buffer of the command</dd></dl>
+<p> <i>n_elem</i></p>
+<dl>
+<dd>Number of sg entries</dd></dl>
+<p> <i>timeout</i></p>
+<dl>
+<dd>Timeout in msecs (0 for default)</dd></dl>
+<h2>Description</h2>
+<p>Executes libata internal command with timeout. <i>tf</i> contains command on entry and result on return. Timeout and error conditions are reported via return value. No recovery action is taken after a command times out. It&#8217;s caller&#8217;s duty to clean up after timeout. </p>
+<p> LOCKING: None. Should be called with kernel context, might sleep.</p>
+<h2>Return</h2>
+<p>Zero on success, AC_ERR_* mask on failure</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

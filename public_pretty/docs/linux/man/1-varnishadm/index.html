@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>varnishadm(1) · Linux Manual Pages</title>
+<meta name="description" content="varnishadm – Control a running Varnish instance">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-varnishadm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>varnishadm(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> varnishadm &#8211; Control a running Varnish instance</p>
+<h2>SYNOPSIS</h2>
+<p> varnishadm [-t timeout] [-S secret_file] [-T address:port] [-n name] [command [&#8230;]]</p>
+<h2>DESCRIPTION</h2>
+<p> The varnishadm utility establishes a CLI connection to varnishd either using -n <i>name</i> or using the -T and -S arguments. If -n <i>name</i> is given the location of the secret file and the address:port is looked up in shared memory. If neither is given varnishadm will look for an instance without a given name. </p>
+<p> If a command is given, the command and arguments are sent over the CLI connection and the result returned on stdout. </p>
+<p> If no command argument is given varnishadm will pass commands and replies between the CLI socket and stdin/stdout.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-t</code><i>&nbsp;<wbr>timeout</i></dt>
+<dd> Wait no longer than this many seconds for an operation to finish.</dd>
+<dt><code>-S</code><i>&nbsp;<wbr>secret_file</i></dt>
+<dd> Specify the authentication secret file. This should be the same -S argument as was given to varnishd. Only processes which can read the contents of this file, will be able to authenticate the CLI connection.</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>name</i></dt>
+<dd> Connect to the instance of varnishd with this name.</dd>
+<dt><code>-T address:port</code></dt>
+<dd> Connect to the management interface at the specified address and port. </dd>
+<p> The syntax and operation of the actual CLI interface is described in the <a href="/docs/linux/man/7-varnish-cli/">varnish-cli</a>(7) manual page. Parameteres are described in <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) manual page. </p>
+<p> Additionally, a summary of commands can be obtained by issuing the <i>help</i> command, and a summary of parameters can be obtained by issuing the <i>param.show</i> command.</dl>
+<h2>EXIT STATUS</h2>
+<p> If a command is given, the exit status of the varnishadm utility is zero if the command succeeded, and non-zero otherwise.</p>
+<h2>EXAMPLES</h2>
+<p> Some ways you can use varnishadm: </p>
+<pre>
+varnishadm -T localhost:999 -S /var/db/secret vcl.use foo
+echo vcl.use foo | varnishadm -T localhost:999 -S /var/db/secret
+echo vcl.use foo | ssh vhost varnishadm -T localhost:999 -S /var/db/secret
+</pre>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1)</dd></dl>
+<h2>HISTORY</h2>
+<p> The varnishadm utility and this manual page were written by Cecilie Fritzvold. Converted to reStructuredText and updated in 2010 by Per Buer.</p>
+<h2>COPYRIGHT</h2>
+<p> This document is licensed under the same licence as Varnish itself. See LICENCE for details.</p>
+<dl>
+<dt>&bull;</dt>
+<dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

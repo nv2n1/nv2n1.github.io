@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libtalloc_tutorial(3) · Linux Manual Pages</title>
+<meta name="description" content="libtalloc_tutorial – The Tutorial">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libtalloc_tutorial/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libtalloc_tutorial(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> libtalloc_tutorial &#8211; The Tutorial</p>
+<h2>Introduction</h2>
+<p> Talloc is a hierarchical, reference counted memory pool system with destructors. It is built atop the C standard library and it defines a set of utility functions that altogether simplifies allocation and deallocation of data, especially for complex structures that contain many dynamically allocated elements such as strings and arrays. </p>
+<p> The main goals of this library are: removing the needs for creating a cleanup function for every complex structure, providing a logical organization of allocated memory blocks and reducing the likelihood of creating memory leaks in long-running applications. All of this is achieved by allocating memory in a hierarchical structure of talloc contexts such that deallocating one context recursively frees all of its descendants as well.</p>
+<h2>Main features</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> An open source project</dd>
+<dt>&bull;</dt>
+<dd> A hierarchical memory model</dd>
+<dt>&bull;</dt>
+<dd> Natural projection of data structures into the memory space</dd>
+<dt>&bull;</dt>
+<dd> Simplifies memory management of large data structures</dd>
+<dt>&bull;</dt>
+<dd> Automatic execution of a destructor before the memory is freed</dd>
+<dt>&bull;</dt>
+<dd> Simulates a dynamic type system</dd>
+<dt>&bull;</dt>
+<dd> Implements a transparent memory pool</dd></dl>
+<h2>Table of contents:</h2>
+<p> <code>Chapter 1: Talloc context</code> </p>
+<p> <code>Chapter 2: Stealing a context</code> </p>
+<p> <code>Chapter 3: Dynamic type system</code> </p>
+<p> <code>Chapter 4: Using destructors</code> </p>
+<p> <code>Chapter 5: Memory pools</code> </p>
+<p> <code>Chapter 6: Debugging</code> </p>
+<p> <code>Chapter 7: Best practises</code> </p>
+<p> <code>Chapter 8: Using threads with talloc</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

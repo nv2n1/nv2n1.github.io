@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>arbitron(8) · Linux Manual Pages</title>
+<meta name="description" content="arbitron – arbitron mailboxes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-arbitron/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>arbitron(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>&nbsp;<wbr>*</p>
+<h2>Name</h2>
+<p>arbitron &#8211; arbitron mailboxes</p>
+<h2>Synopsis</h2>
+<p><code>arbitron</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-o</code> ] [ <code>-u</code> ] [ <code>-l</code> ] [ <code>-p</code> <i>months</i> ] </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-d</code> <i>days</i> | <code>-D</code> <i>mmddyyyy</i>[<code>:</code><i>mmddyyyy</i>] ] <i>mailbox</i>&#8230;</p>
+<h2>Description</h2>
+<p><i>Arbitron</i> collects and reports readership statistics for mailboxes on the server. It also optionally prunes the mailboxes of \Seen state for dormant users. </p>
+<p> <i>Arbitron</i> produces one line of output per mailbox, reporting the mailbox name followed by a space, followed by the number of readers (and if -u is specified, followed by a colon and a comma-separated list of the readers userids), and if -o is not specified, another space and the number of subscribers (and if -u is specified, followed by a colon and a comma-separated list of the subscribers userids). <code>IMPORTANT: This format is subject to change in future versions.</code> </p>
+<p> Each &quot;reader&quot; is a distinct authentication identity which has &quot;s&quot; rights to the mailbox and which has SELECTed the mailbox within either the past <i>days</i> days or the specified date range. Users are not counted as reading their own personal mailboxes. Personal mailboxes are not reported unless there is at least one reader other than the mailboxes owner. </p>
+<p> <i>Arbitron</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-o</code></dt>
+<dd>&quot;old way&quot; &#8212; do not report subscribers.</dd>
+<dt><code>-u</code></dt>
+<dd>Report userids in addition to the count(s).</dd>
+<dt><code>-l</code></dt>
+<dd>Enable long reporting (comma delimited table consisting of mbox, userid, r/s, start time, end time).</dd>
+<dt><code>-d </code><i>days</i></dt>
+<dd>Count as a reader an authentication identity which has SELECTed the mailbox within <i>days</i> days. Default is 30.</dd>
+<dt><code>-D</code> <i>mmddyyyy</i>[<code>:</code><i>mmddyyyy</i>]</dt>
+<dd>Count as a reader an authentication identity which has SELECTed the mailbox within the given date range. The start date and optional end date are specified as 2-digit month of the year, 2-digit day of the month, and 4-digit year. If the end date is not specified, then the current system time is used as the end time.</dd>
+<dt><code>-p </code><i>months</i></dt>
+<dd>Prune \Seen state for users who have not SELECTed the mailbox within <i>months</i> months. Default is infinity.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_bit(9) · Linux Manual Pages</title>
+<meta name="description" content="set_bit – Atomically set a bit in memory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-set_bit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>set_bit(9)</h1>
+
+
+
+
+
+<p>set_bit &#8211; Atomically set a bit in memory</p>
+<h2>Synopsis</h2>
+<pre><code>void set_bit(long nr, volatile unsigned long *addr);</code></pre>
+<h2>Arguments</h2>
+<p><i>nr</i></p>
+<dl>
+<dd>
+</dd><dd>the bit to set</dd></dl>
+<p> <i>addr</i></p>
+<dl>
+<dd>the address to start counting from</dd></dl>
+<h2>Description</h2>
+<p>This function is atomic and may not be reordered. See <code>__set_bit</code> if you do not require the atomic guarantees.</p>
+<h2>Note</h2>
+<p>there are no guarantees that this function will not be reordered on non x86 architectures, so if you are writing portable code, make sure not to rely on its reordering guarantees. </p>
+<p> Note that <i>nr</i> may be almost arbitrarily large; this function is not restricted to acting on a single-word quantity.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

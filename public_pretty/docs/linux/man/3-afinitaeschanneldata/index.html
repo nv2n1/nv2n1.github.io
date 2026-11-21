@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afinitaeschanneldata(3) · Linux Manual Pages</title>
+<meta name="description" content="afInitAESChannelDataTo, afInitAESChannelData – initialize AES non-audio data in an audio file setup">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-afinitaeschanneldata/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>afinitaeschanneldata(3)</h1>
+
+
+
+
+
+<p>afInitAESChannelDataTo, afInitAESChannelData &#8211; initialize AES non-audio data in an audio file setup </p>
+<h2>Synopsis</h2>
+<pre>#include &lt;audiofile.h&gt;</pre>
+<pre>void afInitAESChannelDataTo(AFfilesetup setup, int track, int willHaveData);
+void afInitAESChannelData(AFfilesetup setup, int track);</pre>
+<h2>Parameters</h2>
+<p>setup is a valid file setup returned by <code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3). </p>
+<p> track specifies a track within the audio file setup. track is always AF_DEFAULT_TRACK for all currently supported file formats. </p>
+<p> willHaveData is a boolean-valued integer indicating whether AES non-audio data will be present.</p>
+<h2>Description</h2>
+<p>Given an AFfilesetup structure created with <code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3) and a track identified by track (AF_DEFAULT_TRACK for all currently supported file formats), afInitAESChannelDataTo initializes the track to contain or not contain AES non-audio data. afInitAESChannelData behaves similarly but always initializes the track to contain AES non-audio data. </p>
+<p> Currently only AIFF and AIFF-C file formats can store AES non-audio data; this data is ignored in all other file formats.</p>
+<h2>Errors</h2>
+<p>afInitAESChannelDataTo and afInitAESChannelData can produce the following errors: </p>
+<p> AF_BAD_FILESETUP</p>
+<dl COMPACT>
+<dd>setup represents an invalid file setup.</dd></dl>
+<p> AF_BAD_TRACKID</p>
+<dl COMPACT>
+<dd>track represents an invalid track identifier.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3)</p>
+<h2>Author</h2>
+<p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

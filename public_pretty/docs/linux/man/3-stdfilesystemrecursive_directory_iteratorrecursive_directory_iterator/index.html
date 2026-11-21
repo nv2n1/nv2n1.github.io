@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemrecursive_directory_iteratorrecursive_directory_iterator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::filesystem::recursive_directory_iterator::recursive_directory_iterator – std::filesystem::recursive_directory_iterator::recursive_directory_iterator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemrecursive_directory_iteratorrecursive_directory_iterator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemrecursive_directory_iteratorrecursive_directory_iterator(3)</h1>
+
+
+
+
+
+<p>std::filesystem::recursive_directory_iterator::recursive_directory_iterator &#8211; std::filesystem::recursive_directory_iterator::recursive_directory_iterator</p>
+<h2>Synopsis</h2>
+<p>recursive_directory_iterator() noexcept; <code>(1)</code> <i>(since C++17)</i><br />
+recursive_directory_iterator( const recursive_directory_iterator&amp; rhs ); <code>(2)</code> <i>(since C++17)</i><br />
+recursive_directory_iterator( recursive_directory_iterator&amp;&amp; rhs ) noexcept; <code>(3)</code> <i>(since C++17)</i><br />
+explicit recursive_directory_iterator( const std::filesystem::path&amp; p ); <code>(4)</code> <i>(since C++17)</i><br />
+recursive_directory_iterator(<br />
+const std::filesystem::path&amp; p, <code>(4)</code> <i>(since C++17)</i><br />
+std::filesystem::directory_options options );<br />
+recursive_directory_iterator(<br />
+const std::filesystem::path&amp; p, <code>(5)</code> <i>(since C++17)</i><br />
+std::filesystem::directory_options options,<br />
+std::error_code&amp; ec );<br />
+recursive_directory_iterator( const std::filesystem::path&amp; p, std::error_code&amp; ec ); <code>(6)</code> <i>(since C++17)</i><br />
+Contructs new recursive directory iterator.<br />
+1) Default constructor. Constructs an end iterator.<br />
+2) Copy constructor.<br />
+3) Move constructor.<br />
+4-6) Constructs a iterator that refers to the first entry in the directory that p resolves to.<br />
+&nbsp;This section is incomplete<br />
+&nbsp;Reason: errors </p>
+<h2>Parameters</h2>
+<p>&nbsp;This section is incomplete</p>
+<h2>Exceptions</h2>
+<p>The overload that does not take a std::error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first path argument and the OS error code as the error code argument. The overload taking a std::error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. Any overload not marked noexcept may throw std::bad_alloc if memory allocation fails.</p>
+<h2>Notes</h2>
+<p>Recursive directory iterators do not follow directory symlinks by default. To enable this behavior, specify directory_options::follow_directory_symlink among the options option set.<br />
+Defect reports<br />
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br />
+DR Applied to Behavior as published Correct behavior<br />
+LWG_3013 C++17 error_code overload marked noexcept but can allocate memory noexcept removed </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nrsdrv(8) · Linux Manual Pages</title>
+<meta name="description" content="nrsdrv – KISS to NET/ROM serial converter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nrsdrv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nrsdrv(8)</h1>
+
+
+
+
+
+<p>nrsdrv &#8211; KISS to NET/ROM serial converter</p>
+<h2>Synopsis</h2>
+<p><code>nrsdrv [-f] [-l] [-s speed] [-v] kissdev nrsdev</code></p>
+<h2>Description</h2>
+<p><code>Nrsdrv</code> is a program designed to convert from the KISS protocol to the NET/ROM serial protocol used by real NET/ROM&#8217;s and TheNet&#8217;s. The protocols are fairly similar, although the NET/ROM serial protocol does include a one byte checksum which KISS does not. </p>
+<p> Typically <code>nrsdrv</code> will be attached to one end of a pseudo-tty of which the other end has been attached to a KISS capable program. The NET/ROM device will probably be a real serial port attached to a TNC or a Hexipus. The full specification of the NET/ROM serial protocol can be found in the original Software 2000 documentation that accompanied NET/ROMs.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-f</code></dt>
+<dd>Flow control enabled for use with a Hexipus, the default is disabled. See the file hexipus.txt in the source distribution for wiring details. </dd>
+<dt><code>-l</code></dt>
+<dd>Log messages to the system log, the default is not to.</dd>
+<dt><code>-s speed</code></dt>
+<dd>Sets the speed of both interfaces. If no value is specified then no speed will be set.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
+<h2>Bugs</h2>
+<p>None known.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4).</p>
+<h2>Author</h2>
+<p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

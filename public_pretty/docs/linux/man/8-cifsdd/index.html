@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cifsdd(8) · Linux Manual Pages</title>
+<meta name="description" content="cifsdd – convert and copy a file over SMB">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-cifsdd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>cifsdd(8)</h1>
+
+
+
+
+
+<p>cifsdd &#8211; convert and copy a file over SMB</p>
+<h2>Synopsis</h2>
+<dl>
+<dd>cifsdd [OPERAND]&#8230; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></dd>
+<dd>cifsdd OPTION</dd></dl>
+<h2>Description</h2>
+<p>This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
+<p> Copy a file, converting and formatting according to the operands. </p>
+<p> bs=BYTES</p>
+<dl>
+<dd>read and write up to BYTES bytes at a time (default: 4096)</dd></dl>
+<p> ibs=BYTES</p>
+<dl>
+<dd>read up to BYTES bytes at a time (default: 4096)</dd></dl>
+<p> obs=BYTES</p>
+<dl>
+<dd>write BYTES bytes at a time (default: 4096)</dd></dl>
+<p> if=FILE</p>
+<dl>
+<dd>read from FILE instead of stdin</dd></dl>
+<p> of=FILE</p>
+<dl>
+<dd>write to FILE instead of stdout</dd></dl>
+<p> count=N</p>
+<dl>
+<dd>copy only N input blocks</dd></dl>
+<p> seek=N</p>
+<dl>
+<dd>skip N obs-sized blocks at start of output</dd></dl>
+<p> skip=N</p>
+<dl>
+<dd>skip N ibs-sized blocks at start of input</dd></dl>
+<p> direct</p>
+<dl>
+<dd>use direct I/O for data</dd></dl>
+<p> sync</p>
+<dl>
+<dd>use synchronous writes</dd></dl>
+<p> oplock</p>
+<dl>
+<dd>take oplocks on the input and output files</dd></dl>
+<h2>Author</h2>
+<p>The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
+<p> The cifsdd manpage was written by Andreas Schneider.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xactivatescreensaver(3) · Linux Manual Pages</title>
+<meta name="description" content="XSetScreenSaver, XForceScreenSaver, XActivateScreenSaver, XResetScreenSaver, XGetScreenSaver – manipulate the screen saver">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xactivatescreensaver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xactivatescreensaver(3)</h1>
+
+
+
+
+
+<p>XSetScreenSaver, XForceScreenSaver, XActivateScreenSaver, XResetScreenSaver, XGetScreenSaver &#8211; manipulate the screen saver </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XSetScreenSaver(Display *<i>display</i>, int <i>timeout</i>, int <i>interval</i>, int <i>prefer_blanking</i>, int <i>allow_exposures</i>);</dd>
+<dd>int XForceScreenSaver(Display *<i>display</i>, int <i>mode</i>);</dd>
+<dd>int XActivateScreenSaver(Display *<i>display</i>);</dd>
+<dd>int XResetScreenSaver(Display *<i>display</i>);</dd>
+<dd>int XGetScreenSaver(Display *<i>display</i>, int *<i>timeout_return</i>, int *<i>interval_return</i>, int *<i>prefer_blanking_return</i>, int *<i>allow_exposures_return</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>allow_exposures</i></dt>
+<dd>Specifies the screen save control values. You can pass <code>DontAllowExposures</code>, <code>AllowExposures</code>, or <code>DefaultExposures</code>.</dd>
+<dt><i>allow_exposures_return</i></dt>
+<dd>Returns the current screen save control value <code>AllowExposures</code>, or <code>DefaultExposures</code>).</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>interval</i></dt>
+<dd>Specifies the interval, in seconds, between screen saver alterations.</dd>
+<dt><i>interval_return</i></dt>
+<dd>Returns the interval between screen saver invocations.</dd>
+<dt><i>mode</i></dt>
+<dd>Specifies the mode that is to be applied. You can pass <code>ScreenSaverActive</code> or <code>ScreenSaverReset</code>.</dd>
+<dt><i>prefer_blanking</i></dt>
+<dd>Specifies how to enable screen blanking. You can pass <code>DontPreferBlanking</code>, <code>PreferBlanking</code>, or <code>DefaultBlanking</code>.</dd>
+<dt><i>prefer_blanking_return</i></dt>
+<dd>Returns the current screen blanking preference <code>PreferBlanking</code>, or <code>DefaultBlanking</code>).</dd>
+<dt><i>timeout</i></dt>
+<dd>Specifies the timeout, in seconds, until the screen saver turns on.</dd>
+<dt><i>timeout_return</i></dt>
+<dd>Returns the timeout, in seconds, until the screen saver turns on.</dd></dl>
+<h2>Description</h2>
+<p>Timeout and interval are specified in seconds. A timeout of 0 disables the screen saver (but an activated screen saver is not deactivated), and a timeout of -1 restores the default. Other negative values generate a <code>BadValue</code> error. If the timeout value is nonzero, <code>XSetScreenSaver</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

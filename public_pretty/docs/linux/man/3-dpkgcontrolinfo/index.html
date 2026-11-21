@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgcontrolinfo(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgcontrolinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgcontrolinfo(3)</h1>
+
+
+
+
+
+<p>Dpkg::Control::Info - parse files like debian/control</p>
+<h2>Description</h2>It provides an object to access data of files that follow the same syntax as <i>debian/control</i>.
+<h2>Functions</h2><dl COMPACT><dt>$c = Dpkg::Control::Info-&gt;new($file)
+</dt><dd>Create a new Dpkg::Control::Info object for <tt>$file</tt>. If <tt>$file</tt> is omitted, it loads <i>debian/control</i>. If file is ``-'', it parses the standard input.
+</dd><dt>$c-&gt;<i>reset()</i>
+</dt><dd>Resets what got read.
+</dd><dt>$c-&gt;load($file)
+</dt><dd>Load the content of <tt>$file</tt>. Exits in case of errors. If file is ``-'', it loads from the standard input.
+</dd><dt>$c-&gt;parse($fh, $description)
+</dt><dd>Parse a control file from the given filehandle. Exits in case of errors. <tt>$description</tt> is used to describe the filehandle, ideally it's a filename or a description of where the data comes from. It's used in error messages.
+</dd><dt>$c-&gt;[0]
+</dt><dd></dd><dt>$c-&gt;<i>get_source()</i>
+</dt><dd>Returns a Dpkg::Control object containing the fields concerning the source package.
+</dd><dt>$c-&gt;get_pkg_by_idx($idx)
+</dt><dd>Returns a Dpkg::Control object containing the fields concerning the binary package numbered <tt>$idx</tt> (starting at 1).
+</dd><dt>$c-&gt;get_pkg_by_name($name)
+</dt><dd>Returns a Dpkg::Control object containing the fields concerning the binary package named <tt>$name</tt>.
+</dd><dt>$c-&gt;<i>get_packages()</i>
+</dt><dd>Returns a list containing the Dpkg::Control objects for all binary packages.
+</dd><dt>$c-&gt;output($filehandle)
+</dt><dd>Dump the content into a filehandle.
+</dd><dt>&quot;$c&quot;
+</dt><dd>Return a string representation of the content.
+</dd><dt>@{$c}
+</dt><dd>Return a list of Dpkg::Control objects, the first one is corresponding to source information and the following ones are the binary packages information.</dd></dl><h2>Changes</h2><h3>Version 1.00</h3>Mark the module as public.
+<h2>Author</h2>Raphaël Hertzog &lt;hertzog [at] debian.org&gt;.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libnutclient(3) · Linux Manual Pages</title>
+<meta name="description" content="libnutclient – Network UPS Tools high-level client access library">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libnutclient/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libnutclient(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> libnutclient &#8211; Network UPS Tools high-level client access library </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;nutclient.h&gt;
+</code></pre>
+<pre>
+Refer to this file for more information.
+</pre>
+<h2>DESCRIPTION</h2>
+<p> The Network UPS Tools (NUT) <code>nutclient</code> library provides a number of useful functions for programs to use when communicating with <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8). It provides high-level representation of NUT data through client connection, devices, variables and commands. Unlike <code><a href="/docs/linux/man/3-upsclient/">upsclient</a></code>(3), all low-level protocol details are hidden. </p>
+<p> State is maintained across calls in an opaque structure called NUTCLIENT_t. Callers are expected to create one per client connection. These will be provided to most of the <code>nutclient</code> functions. The format of this structure is subject to change, and client programs must not reference elements within it directly. </p>
+<p> NUTCLIENT_t represents the common connection information. Derived versions exist for each connection type (NUTCLIENT_TCP_t for TCP connection; actually the unique connection type, NUTCLIENT_TCP_t can be passed as NUTCLIENT_t parameter). </p>
+<p> See the nutclient.h header for more information.</p>
+<h2>ERROR HANDLING</h2>
+<p> There is currently no specific mechanism around error handling.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libnutclient_devices/">libnutclient_devices</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_commands/">libnutclient_commands</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_misc/">libnutclient_misc</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_tcp/">libnutclient_tcp</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_variables/">libnutclient_variables</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

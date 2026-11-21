@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>umad_class_str(3) · Linux Manual Pages</title>
+<meta name="description" content="umad_*_str – class of functions to return string representations of enums">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-umad_class_str/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>umad_class_str(3)</h1>
+
+
+
+
+
+<p>umad_*_str &#8211; class of functions to return string representations of enums </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;infiniband/umad_str.h&gt;
+const char * umad_class_str(uint8_t mgmt_class)
+const char * umad_method_str(uint8_t mgmt_class, uint8_t method)
+const char * umad_attribute_str(uint8_t mgmt_class, be16_t attr_id)
+const char * umad_common_mad_status_str(be16_t status)
+const char * umad_sa_mad_status_str(be16_t status)</code></pre>
+<h2>Description</h2>
+<p><code>const char * umad_class_str(uint8_t mgmt_class)</code> Return string value of management class enum <code>const char * umad_method_str(uint8_t mgmt_class, uint8_t method)</code> Return string value of the method for the mgmt_class specified <code>const char * umad_attribute_str(uint8_t mgmt_class, be16_t attr_id)</code> Return string value of attribute specified in attr_id based on mgmt_class specified. <code>const char * umad_common_mad_status_str(be16_t status)</code> Return string value for common MAD status values <code>const char * umad_sa_mad_status_str(be16_t status)</code> Return string value for SA MAD status values <code>NOTE:</code> Not all classes are supported. </p>
+<h2>Return Value</h2>
+<p>Returns a string representations of the fields specified. </p>
+<h2>Author</h2>
+<dl>
+<dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

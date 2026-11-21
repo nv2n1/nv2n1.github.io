@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migrating from firewalld to iptables on CentOS 7 and Fedora - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-enable-iptables-on-centos-7-fedora-20/">
+  <meta name="description" content="If you need direct control over your firewall rules, you can disable firewalld and use iptables instead. This guide covers the setup process and best practices …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Migrating from firewalld to iptables on CentOS 7 and Fedora">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-enable-iptables-on-centos-7-fedora-20/">
+  <meta property="og:description" content="If you need direct control over your firewall rules, you can disable firewalld and use iptables instead. This guide covers the setup process and best practices …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/databases-storage/">Databases &amp; Storage</a>
+        </nav>
+        
+        <h1>Migrating from firewalld to iptables on CentOS 7 and Fedora</h1>
+        <time class="post-date" datetime="2018-03-24T08:21:31Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>If you need direct control over your firewall rules, you can disable firewalld and use iptables instead. This guide covers the setup process and best practices for maintaining persistent rules.</p>
+<h2 id="stop-and-disable-firewalld">Stop and disable firewalld</h2>
+<p>If firewalld is currently running, stop it and prevent it from starting on boot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop firewalld
+</span></span><span class="line"><span class="cl">sudo systemctl disable firewalld
+</span></span></code></pre></div><p>Both firewalld and iptables-services manage the kernel’s netfilter subsystem, so running them simultaneously causes conflicts. You must choose one or the other.</p>
+<h2 id="install-iptables-services">Install iptables-services</h2>
+<p>Install the package that provides systemd unit files and infrastructure for managing iptables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo yum install iptables-services
+</span></span></code></pre></div><p>This installs init scripts for both <code>iptables</code> and <code>ip6tables</code> services.</p>
+<h2 id="initialize-rule-files">Initialize rule files</h2>
+<p>Create empty rule files before starting the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo touch /etc/sysconfig/iptables
+</span></span><span class="line"><span class="cl">sudo touch /etc/sysconfig/ip6tables
+</span></span></code></pre></div><p>These files persist your firewall rules across reboots. Without them, the service may fail to start or rules won’t be saved properly.</p>
+<h2 id="start-and-enable-the-services">Start and enable the services</h2>
+<p>Start both IPv4 and IPv6 firewall services:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start iptables
+</span></span><span class="line"><span class="cl">sudo systemctl start ip6tables
+</span></span></code></pre></div><p>Enable them to start automatically on boot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> iptables
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> ip6tables
+</span></span></code></pre></div><p>Verify both services are running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status iptables
+</span></span><span class="line"><span class="cl">sudo systemctl status ip6tables
+</span></span></code></pre></div><h2 id="view-current-rules">View current rules</h2>
+<p>List all rules with numeric output and verbose details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -L -n -v
+</span></span><span class="line"><span class="cl">sudo ip6tables -L -n -v
+</span></span></code></pre></div><p>Add <code>-t</code> to view specific tables (e.g., <code>sudo iptables -L -n -v -t nat</code> for NAT rules).</p>
+<h2 id="add-firewall-rules">Add firewall rules</h2>
+<p>Use standard iptables commands to add rules. For example, allow SSH and established connections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -A INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span class="line"><span class="cl">sudo iptables -A INPUT -j DROP
+</span></span></code></pre></div><p>Do the same for IPv6:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ip6tables -A INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">sudo ip6tables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span class="line"><span class="cl">sudo ip6tables -A INPUT -j DROP
+</span></span></code></pre></div><h2 id="save-rules-persistently">Save rules persistently</h2>
+<p>After adding rules, save them to the configuration files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables-save &gt; /etc/sysconfig/iptables
+</span></span><span class="line"><span class="cl">sudo ip6tables-save &gt; /etc/sysconfig/ip6tables
+</span></span></code></pre></div><p>These rules will automatically load when the service starts.</p>
+<h2 id="common-rule-examples">Common rule examples</h2>
+<p><strong>Allow specific ports:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -A INPUT -p tcp --dport <span class="m">80</span> -j ACCEPT
+</span></span><span class="line"><span class="cl">sudo iptables -A INPUT -p tcp --dport <span class="m">443</span> -j ACCEPT
+</span></span></code></pre></div><p><strong>Allow traffic from a specific IP:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -A INPUT -s 192.168.1.100 -j ACCEPT
+</span></span></code></pre></div><p><strong>Allow loopback traffic:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -A INPUT -i lo -j ACCEPT
+</span></span></code></pre></div><p><strong>Delete a rule:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -D INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+</span></span></code></pre></div><p><strong>Flush all rules:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iptables -F
+</span></span><span class="line"><span class="cl">sudo iptables -X
+</span></span></code></pre></div><p>Remember to save again after any changes.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If the iptables service fails to start, check systemd logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u iptables -n <span class="m">20</span>
+</span></span></code></pre></div><p>Common issues include:</p>
+<ul>
+<li><strong>Invalid rule syntax</strong> in <code>/etc/sysconfig/iptables</code> — verify with <code>sudo iptables-restore &lt; /etc/sysconfig/iptables</code></li>
+<li><strong>Permission problems</strong> — ensure root can read the rule files: <code>sudo chmod 600 /etc/sysconfig/iptables*</code></li>
+<li><strong>Service conflicts</strong> — confirm firewalld is disabled: <code>sudo systemctl is-active firewalld</code> should return <code>inactive</code></li>
+</ul>
+<h2 id="important-notes-for-modern-systems">Important notes for modern systems</h2>
+<p>On CentOS 8+ and Fedora 30+, nftables replaced iptables as the default firewall tool. However, iptables still works through legacy wrapper binaries. If you’re on these systems and want native nftables instead, refer to nftables documentation. For older workloads requiring iptables, the compatibility layer continues to function.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

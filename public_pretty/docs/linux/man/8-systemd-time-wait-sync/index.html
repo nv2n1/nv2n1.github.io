@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-time-wait-sync(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-time-wait-sync.service, systemd-time-wait-sync – Wait until kernel time is synchronized">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-time-wait-sync/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-time-wait-sync(8)</h1>
+
+
+
+
+
+<p>systemd-time-wait-sync.service, systemd-time-wait-sync &#8211; Wait until kernel time is synchronized</p>
+<h2>Synopsis</h2>
+<p>systemd-time-wait-sync.service </p>
+<p> /lib/systemd/systemd-time-wait-sync</p>
+<h2>Description</h2>
+<p>systemd-time-wait-sync is a system service that delays the start of units that are ordered after time-sync.target (see <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7) for details) until the system time has been synchronized with an accurate remote reference time source by systemd-timesyncd.service. </p>
+<p> systemd-timesyncd.service notifies systemd-time-wait-sync about successful synchronization. systemd-time-wait-sync also tries to detect when the kernel marks the system clock as synchronized, but this detection is not reliable and is intended only as a fallback for compatibility with alternative NTP services that can be used to synchronize time (e.g., ntpd, chronyd).</p>
+<h2>Files</h2>
+<p>/run/systemd/timesync/synchronized</p>
+<dl>
+<dd>The presence of this file indicates to this service that the system clock has been synchronized.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/8-systemd-timesyncd-service/">systemd-timesyncd.service</a></code>(8), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

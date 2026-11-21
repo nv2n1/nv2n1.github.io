@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_loadfile(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_LoadFile, Tcl_FindSymbol – platform-independent dynamic library loading">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_loadfile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_loadfile(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tcl_LoadFile, Tcl_FindSymbol &#8211; platform-independent dynamic library loading </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+int
+<code>Tcl_LoadFile</code>(<i>interp, pathPtr, symbols, flags, procPtrs, loadHandlePtr</i>)
+void *
+<code>Tcl_FindSymbol</code>(<i>interp, loadHandle, symbol</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for reporting error messages.</dd>
+<dd>Tcl_Obj <i>*pathPtr</i> (in) The name of the file to load. If it is a single name, the library search path of the current environment will be used to resolve it.</dd>
+<dd>const char *const <i>symbols[]</i> (in) Array of names of symbols to be resolved during the load of the library, or NULL if no symbols are to be resolved. If an array is given, the last entry in the array must be NULL.</dd>
+<dd>int <i>flags</i> (in) The value should normally be 0, but <i>TCL_LOAD_GLOBAL</i> or <i>TCL_LOAD_LAZY</i> or a combination of those two is allowed as well.</dd>
+<dd>void <i>*procPtrs</i> (out) Points to an array that will hold the addresses of the functions described in the <i>symbols</i> argument. Should be NULL if no symbols are to be resolved.</dd>
+<dd>Tcl_LoadHandle <i>*loadHandlePtr</i> (out) Points to a variable that will hold the handle to the abstract token describing the library that has been loaded.</dd>
+<dd>Tcl_LoadHandle <i>loadHandle</i> (in) Abstract token describing the library to look up a symbol in.</dd>
+<dd>const char <i>*symbol</i> (in) The name of the symbol to look up.
+</dd></dl>
+<h2>Description</h2>
+<p><code>Tcl_LoadFile</code> loads a file from the filesystem (including potentially any virtual filesystem that has been installed) and provides a handle to it that may be used in further operations. The <i>symbols</i> array, if non-NULL, supplies a set of names of symbols (typically functions) that must be resolved from the library and which will be stored in the array indicated by <i>procPtrs</i>. If any of the symbols is not resolved, the loading of the file will fail with an error message left in the interpreter (if that is non-NULL). The result of <code>Tcl_LoadFile</code> is a standard Tcl error code. The library may be unloaded with <code>Tcl_FSUnloadFile</code>. </p>
+<p> <code>Tcl_FindSymbol</code> locates a symbol in a loaded library and returns it. If the symbol cannot be found, it returns NULL and sets an error message in the given <i>interp</i> (if that is non-NULL). Note that it is unsafe to use this operation on a handle that has been passed to <code>Tcl_FSUnloadFile</code>.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-tcl_fsloadfile/">Tcl_FSLoadFile</a>(3), <a href="/docs/linux/man/3-tcl_fsunloadfile/">Tcl_FSUnloadFile</a>(3), load(n), unload(n)</p>
+<h2>Keywords</h2>
+<p>binary code, loading, shared library</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

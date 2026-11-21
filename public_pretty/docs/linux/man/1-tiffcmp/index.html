@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tiffcmp(1) · Linux Manual Pages</title>
+<meta name="description" content="tiffcmp – compare two TIFF files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tiffcmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tiffcmp(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> tiffcmp &#8211; compare two <font SIZE="-1">TIFF</font> files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tiffcmp</code> [ <i>options</i> ] <i>file1.tif file2.tif</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>Tiffcmp</i> compares the tags and data in two files created according to the Tagged Image File Format, Revision 6.0. The schemes used for compressing data in each file are immaterial when data are compared-data are compared on a scanline-by-scanline basis after decompression. Most directory tags are checked; notable exceptions are: <i>GrayResponseCurve</i>, <i>ColorResponseCurve</i>, and <i>ColorMap</i> tags. Data will not be compared if any of the <i>BitsPerSample</i>, <i>SamplesPerPixel</i>, or <i>ImageWidth</i> values are not equal. By default, <i>tiffcmp</i> will terminate if it encounters any difference.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-l</code></dt>
+<dd> List each byte of image data that differs between the files.</dd>
+<dt><code>-z</code><i> number</i></dt>
+<dd> List specified number of image data bytes that differs between the files.</dd>
+<dt><code>-t</code></dt>
+<dd> Ignore any differences in directory tags.</dd></dl>
+<h2>BUGS</h2>
+<p> Tags that are not recognized by the library are not compared; they may also generate spurious diagnostics. </p>
+<p> The image data of tiled files is not compared, since the <i>TIFFReadScanline()</i> function is used. An error will be reported for tiled files. </p>
+<p> The pixel and/or sample number reported in differences may be off in some exotic cases.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pal2rgb/">pal2rgb</a></code>(1), <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code><a href="/docs/linux/man/1-tiffmedian/">tiffmedian</a></code>(1), <code>libtiff</code>(3TIFF) </p>
+<p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

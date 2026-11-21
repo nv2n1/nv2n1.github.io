@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vendors(5) · Linux Manual Pages</title>
+<meta name="description" content="vendors.list – Security key configuration for APT">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-vendors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>vendors(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vendors.list &#8211; Security key configuration for APT </p>
+<h2>Description</h2>
+<p>The package vendor list contains a list of all vendors from whom you wish to<br />
+&nbsp;<wbr>authenticate&nbsp;<wbr>&nbsp;<wbr>downloaded&nbsp;<wbr>&nbsp;<wbr>packages.&nbsp;<wbr>&nbsp;<wbr>For each vendor listed, it must contain the corresponding PGP key fingerprint, so that APT can perform signature verification of the release file and subsequent checking of the checksums of each downloaded package. To have authentication enabled, you must add the vendor identification string (see below) enclosed in square braces to the <i><a href="/docs/linux/man/5-sources-list/">sources.list</a></i>(5) line for all sites that mirror the repository provided by that vendor. The format of this file is similar to the one used by <i><a href="/docs/linux/man/5-apt-conf/">apt.conf</a></i>(5). It consists of an arbitrary number of blocks of vendors, where each block starts with a string telling the <code>key_type</code> and the <code>vendor_id</code>. Some vendors may have multiple blocks that define different security policies for their distributions. Debian for instance uses a different signing methodology for stable and unstable releases. <code>key_type</code> is the type of the check required. Currently, there is only one type available which is <i>simple-key</i>. <code>vendor_id</code> is the vendor identification string. It is an arbitrary string you must supply to uniquely identify a vendor that&#8217;s listed in this file. Example:</p>
+<dl>
+<dd>
+<pre>simple-key &quot;joe&quot;
+{
+ Fingerprint &quot;0987AB4378FSD872343298787ACC&quot;;
+ Name &quot;Joe Shmoe &lt;joe [at] shmoe.com&gt;&quot;;
+} </pre>
+<h2>The Simple-Key Type</h2>
+<p>This type of verification is used when the vendor has a single secured key that must be used to sign the Release file. The following items should be present </p>
+</dd><dl>
+<dt><code>Fingerprint</code></dt>
+<dd>The PGP fingerprint for the key. The fingerprint should be expressed in the standard notion with or without spaces. The <code>&#8211;fingerprint</code> option for <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) will show the fingerprint for the selected keys(s). </dd>
+<dt><code>Name</code></dt>
+<dd>A string containing a description of the owner of the key or vendor. You may put the vendor name and email. The string must be entirely within double-quotes (<code>&quot;</code>). </dd>
+</dl>
+<h2>Files</h2>
+<p><i>/etc/apt/vendors.list</i></p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/5-sources-list/">sources.list</a></i>(5) </p>
+<h2>Bugs</h2>
+<p>Reporting bugs in APT-RPM is best done in the APT-RPM mailinglist at <a rel="nofollow" href="http://apt-rpm.org/mailinglist.shtml.">http://apt-rpm.org/mailinglist.shtml.</a> </p>
+<h2>Author</h2>
+<p>Maintainer and contributor information can be found in the credits page <a rel="nofollow" href="http://apt-rpm.org/about.shtml">http://apt-rpm.org/about.shtml</a> of APT-RPM.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

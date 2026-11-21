@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>case(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-case/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>case(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>case - conditionally execute a block of commands</p>
+<h3>Synopsis</h3>
+<p>switch VALUE; [case [WILDCARD&hellip;]; [COMMANDS&hellip;]; &hellip;] end</p>
+<h3>Description</h3>
+<p>The switch statement is used to perform one of several blocks of commands depending on whether a specified value equals one of several wildcarded values. The case statement is used together with the switch statement in order to determine which block should be performed.</p>
+<p>Each case command is given one or more parameter. The first case command with a parameter that matches the string specified in the switch command will be evaluated. case parameters may contain wildcards. These need to be escaped or quoted in order to avoid regular wildcard expansion using filenames.</p>
+<p>Note that fish does not fall through on case statements. Though the syntax may look a bit like C switch statements, it behaves more like the case statements of traditional shells.</p>
+<p>Also note that command substitutions in a case statement will be evaluated even if it&rsquo;s body is not taken. This may seem counterintuitive at first, but it is unavoidable, since it would be impossible to know if a case command will evaluate to true before all forms of parameter expansion have been performed for the case command.</p>
+<h3>Example</h3>
+<p>If the variable $animal contains the name of an animal, the following code would attempt to classify it:</p>
+ <pre><code>
+switch
+$animal case cat
+    echo evil case wolf dog human moose dolphin whale
+        echo mammal case duck goose albatross
+            echo bird case shark trout stingray
+                echo fish case '*' echo I have no idea what a $animal is
+                    end
+</code></pre> 
+<p>If the above code was run with $animal set to whale, the output would be mammal.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

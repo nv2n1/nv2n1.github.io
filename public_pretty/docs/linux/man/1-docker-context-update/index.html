@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker-context-update(1) · Linux Manual Pages</title>
+<meta name="description" content="docker-context-update – Update a context">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-docker-context-update/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>docker-context-update(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> docker-context-update &#8211; Update a context </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker context update [OPTIONS] CONTEXT</code> </p>
+<h2>DESCRIPTION</h2>
+<p> Update a context </p>
+<p> Docker endpoint config: </p>
+<p> NAME DESCRIPTION from Copy named context&#8217;s Docker endpoint configuration host Docker endpoint on which to connect ca Trust certs signed only by this CA cert Path to TLS certificate file key Path to TLS key file skip-tls-verify Skip TLS certificate validation </p>
+<p> Kubernetes endpoint config: </p>
+<p> NAME DESCRIPTION from Copy named context&#8217;s Kubernetes endpoint configuration config-file Path to a Kubernetes config file context-override Overrides the context set in the kubernetes config file namespace-override Overrides the namespace set in the kubernetes config file </p>
+<p> Example: </p>
+<p> $ docker context update my-context &#8211;description &quot;some description&quot; &#8211;docker &quot;host=<a href="tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file">tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file</a>&quot; </p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;default-stack-orchestrator</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Default orchestrator for stack operations to use with this context (swarm|kubernetes|all)</p>
+<p> <code>&#8211;description</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Description of the context</p>
+<p> <code>&#8211;docker</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>set the docker endpoint</p>
+<p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for update</p>
+<p> <code>&#8211;kubernetes</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>set the kubernetes endpoint</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-docker-context/">docker-context</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

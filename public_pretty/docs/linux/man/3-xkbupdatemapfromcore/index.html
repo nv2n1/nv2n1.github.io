@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbupdatemapfromcore(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbUpdateMapFromCore – Update a local Xkb keyboard map to reflect the mapping expressed by a core format mapping">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbupdatemapfromcore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbupdatemapfromcore(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XkbUpdateMapFromCore &#8211; Update a local Xkb keyboard map to reflect the mapping expressed by a core format mapping </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbUpdateMapFromCore</code> <code>(XkbDescPtr </code><i>xkb</i><code>,</code> <code>KeyCode </code><i>first_key</i><code>,</code> <code>int </code><i>num_keys</i><code>,</code> <code>int </code><i>map_width</i><code>,</code> <code>KeySym *</code><i>core_keysyms</i><code>,</code> <code>XkbChangesPtr </code><i>changes</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; xkb</i></dt>
+<dd>
+</dd><dd>keyboard description to update</dd>
+<dt><i>&#8211; first_key</i></dt>
+<dd>keycode of first key description to update</dd>
+<dt><i>&#8211; num_keys</i></dt>
+<dd>number of key descriptions to update</dd>
+<dt><i>&#8211; map_width</i></dt>
+<dd>width of core protocol keymap</dd>
+<dt><i>&#8211; core_keysyms</i></dt>
+<dd>symbols in core protocol keymap</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>backfilled with changes made to Xkb</dd></dl>
+<h2>Description</h2>
+<p>Xkb provides several functions that make it easier to apply the compatibility map to configure a client-side Xkb keyboard mapping, given a core protocol representation of part or all of a keyboard mapping. Obtain a core protocol representation of a keyboard mapping from an actual server (by using <i>XGetKeyboardMapping, </i> for example), a data file, or some other source. </p>
+<p> <i>XkbUpdateMapFromCore </i> interprets input argument information representing a keyboard map in core format to update the Xkb keyboard description passed in <i>xkb. </i> Only a portion of the Xkb map is updated &#8211; the portion corresponding to keys with keycodes in the range <i>first_key </i> through <i>first_key + num_keys &#8211; 1. </i> If <i>XkbUpdateMapFromCore </i> is being called in response to a MappingNotify event, <i>first_key </i> and <i>num_keys </i> are reported in the MappingNotify event. <i>core_keysyms </i> contains the keysyms corresponding to the keycode range being updated, in core keyboard description order. <i>map_width </i> is the number of keysyms per key in <i>core_keysyms. </i> Thus, the first <i>map_width </i> entries in <i>core_keysyms </i> are for the key with keycode <i>first_key, </i> the next <i>map_width </i> entries are for key <i>first_key + 1, </i> and so on. </p>
+<p> In addition to modifying the Xkb keyboard mapping in <i>xkb, XkbUpdateMapFromCore </i> backfills the changes structure whose address is passed in <i>changes </i> to indicate the modifications that were made. You may then use <i>changes </i> in subsequent calls such as <i>XkbSetMap, </i> to propagate the local modifications to a server.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbsetmap/">XkbSetMap</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

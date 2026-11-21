@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mate-doc-common(1) · Linux Manual Pages</title>
+<meta name="description" content="mate-doc-common – include the standard user documentation build files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mate-doc-common/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mate-doc-common(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>mate-doc-common </code>&#8211; include the standard user documentation build files</p>
+<h2>SYNOPSIS</h2>
+<pre>
+<code>mate-doc-common</code>
+</pre>
+<h2>DESCRIPTION</h2>
+<p> This script is used by mate-autogen to include the standard user documentation build files in a MATE package. </p>
+<p> To automatically include the standard user documentation build files (omf.make and xmldocs.make) in you package, set USE_COMMON_DOC_BUILD=yes in autogen.sh before calling the macros/autogen.sh script. </p>
+<p> When porting applications across to use this feature, ensure that all of the references to xmldocs.make are to $(top_srcdir)/xmldocs.make in the appropriate Makefile.am files. Some modules assume that xmldocs.make is in another directory (like docs/ or something).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display the help of the script.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the script version.</dd>
+<dt><code>&#8211;copy</code></dt>
+<dd> Copy files instead of make symlinks.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mate-autogen/">mate-autogen</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Perberos &lt;perberos [at] gmail.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

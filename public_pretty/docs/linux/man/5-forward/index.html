@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>forward(5) · Linux Manual Pages</title>
+<meta name="description" content="forward – email forwarding information file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-forward/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>forward(5)</h1>
+
+
+
+
+
+<p><code>forward</code> &#8211; email forwarding information file</p>
+<h2>Description</h2>
+<p>Users may put a <code>.forward</code> file in their home directory. If this file exists, <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) forwards email to the destinations specified therein. </p>
+<p> A <code>.forward</code> file contains a list of expansion values, as described in <code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5). Each expansion value should be on a line by itself. However, the <code>.forward</code> mechanism differs from the aliases mechanism in that it disallows file inclusion (:include:) and it performs expansion under the user ID of the <code>.forward</code> file owner. </p>
+<p> Permissions on the <code>.forward</code> file are very strict and expansion is rejected if the file is group or world-writable; if the home directory is group writeable; or if the file is not owned by the user. </p>
+<p> Users should avoid editing directly the <code>.forward</code> file to prevent delivery failures from occurring if a message arrives while the file is not fully written. The best option is to use a temporary file and use the <code><a href="/docs/linux/man/1-mv/">mv</a></code>(1) command to atomically overwrite the former <code>.forward</code>. Alternatively, setting the <code>sticky</code>(8) bit on the home directory will cause the <code>.forward</code> lookup to return a temporary failure, causing mails to be deferred.</p>
+<h2>Files</h2>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>~/.forward</code></dt>
+<dd>Email forwarding information.</dd></dl>
+</dl>
+<h2>Examples</h2>
+<p>The following file forwards mail to &#8220;user [at] example.com&#8221;, and pipes the same mail to &#8220;examplemda&#8221;.</p>
+<dl>
+<dd>
+<pre># empty lines are ignored
+user [at] example.com # anything after # is ignored
+&quot;|/path/to/examplemda&quot;
+</dd></dl></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-aliases/">aliases</a></code>(5), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

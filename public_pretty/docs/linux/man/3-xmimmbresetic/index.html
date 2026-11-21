@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmimmbresetic(3) · Linux Manual Pages</title>
+<meta name="description" content="XmImMbResetIC — An input manager function that resets the input context for a widget">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmimmbresetic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmimmbresetic(3)</h1>
+
+
+
+
+
+<p><code>XmImMbResetIC</code> &#8212; An input manager function that resets the input context for a widget</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/XmIm.h&gt;
+<code>void XmImMbResetIC</code>(
+<code>Widget widget</code>,
+<code>char **mb</code>);</pre>
+<h2>Description</h2>
+<p><code>XmImMbResetIC</code> gets the XIC of the widget and resets it. It puts a pointer to a string containing the current preedit string to <i>mb</i>. The caller should free the returned string after use by calling <code>Xfree</code>.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget.</dd>
+<dt><i>mb</i></dt>
+<dd>Contains a pointer to the preedit string upon return.</dd></dl>
+<h2>Return Value</h2>
+<p>None</p>
+<h2>See Also</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

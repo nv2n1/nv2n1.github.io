@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdenable_shared_from_thisoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdenable_shared_from_thisoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdenable_shared_from_thisoperator(3)</h1>
+
+
+
+
+
+<p>std::enable_shared_from_this&lt;T&gt;::operator= - std::enable_shared_from_this&lt;T&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>enable_shared_from_this&lt;T&gt; &amp;operator=(const enable_shared_from_this&lt;T&gt; &amp;obj) noexcept;
+(since C++ 11)</code></pre> 
+<p>Does nothing; returns *this.</p>
+<h2>Parameters</h2>
+<p>obj - an enable_shared_from_this to assign to *this</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Notes</h2>
+<p>The private std::weak_ptr&lt;T&gt; member is not affected by this assignment operator.</p>
+<h2>Example</h2>
+<p>Note: enable_shared_from_this::operator= is defined as protected in order to prevent accidental slicing but allow derived classes to have default assignment operators.
+// Run this code <pre><code>#include &lt;memory&gt;
+#include &lt;iostream&gt;
+class SharedInt : public std::enable_shared_from_this&lt;SharedInt&gt;
+{
+public:
+explicit SharedInt(int n)
+: mNumber(n)
+{
+}
+SharedInt(const SharedInt &amp;) = default;
+SharedInt(SharedInt &amp;&amp;) = default;
+~SharedInt() = default;
+// Both assignment operators use enable_shared_from_this::operator=
+SharedInt &amp;operator=(const SharedInt &amp;) = default;
+SharedInt &amp;operator=(SharedInt &amp;&amp;) = default;
+int number() const
+{
+return mNumber;
+}
+private:
+int mNumber;
+};
+int main()
+{
+std::shared_ptr&lt;SharedInt&gt; a = std::make_shared&lt;SharedInt&gt;(2);
+std::shared_ptr&lt;SharedInt&gt; b = std::make_shared&lt;SharedInt&gt;(4);
+*a = *b;
+std::cout &lt;&lt; a-&gt;number() &lt;&lt; std::endl;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 4</p>
+<h2>See also</h2>
+<p>shared_ptr smart pointer with shared object ownership semantics
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

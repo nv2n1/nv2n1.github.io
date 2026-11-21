@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handling Linux Signals in C - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/">
+  <meta name="description" content="When a process receives a signal from kill or pkill, it needs a signal handler to intercept and respond to it. Without one, most signals terminate the process …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Handling Linux Signals in C">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-catch-the-kill-signals-sent-by-kill-in-c-on-linux/">
+  <meta property="og:description" content="When a process receives a signal from kill or pkill, it needs a signal handler to intercept and respond to it. Without one, most signals terminate the process …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Handling Linux Signals in C</h1>
+        <time class="post-date" datetime="2018-03-24T11:40:55Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When a process receives a signal from <code>kill</code> or <code>pkill</code>, it needs a signal handler to intercept and respond to it. Without one, most signals terminate the process immediately. This guide covers setting up robust signal handlers for production daemons.</p>
+<h2 id="understanding-signals">Understanding Signals</h2>
+<p>The <code>kill</code> command sends signals to processes. By default, it sends SIGTERM (signal 15), requesting graceful termination. Common signals include:</p>
+<ul>
+<li><strong>SIGTERM (15)</strong>: Termination signal — processes should clean up and exit</li>
+<li><strong>SIGKILL (9)</strong>: Kill signal — cannot be caught or ignored; terminates immediately</li>
+<li><strong>SIGHUP (1)</strong>: Hangup signal — traditionally signals configuration reload</li>
+<li><strong>SIGUSR1 (10) and SIGUSR2 (12)</strong>: User-defined signals for custom handling</li>
+<li><strong>SIGPIPE (13)</strong>: Broken pipe — common in network daemons</li>
+</ul>
+<p>Send specific signals with <code>kill -SIGNAL pid</code> or <code>pkill -SIGNAL progname</code>.</p>
+<h2 id="basic-signal-handler-with-sigaction">Basic Signal Handler with sigaction()</h2>
+<p>Use <code>sigaction()</code> instead of the older <code>signal()</code> function — it’s more reliable and portable for long-running processes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;signal.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">shutdown_requested</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">sig</span> <span class="o">==</span> <span class="n">SIGTERM</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;SIGTERM received, initiating graceful shutdown</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">shutdown_requested</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">sig</span> <span class="o">==</span> <span class="n">SIGUSR1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;SIGUSR1 received, reloading configuration</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">sigaction</span> <span class="n">sa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sa</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sa</span><span class="p">.</span><span class="n">sa_handler</span> <span class="o">=</span> <span class="n">signal_handler</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sigemptyset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sa</span><span class="p">.</span><span class="n">sa_mask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sa</span><span class="p">.</span><span class="n">sa_flags</span> <span class="o">=</span> <span class="n">SA_RESTART</span><span class="p">;</span>  <span class="c1">// Restart interrupted system calls
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGTERM</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGUSR1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Daemon running with PID %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">getpid</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">shutdown_requested</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Working...</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Cleaning up and exiting</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Compile and test:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -o daemon daemon.c
+</span></span><span class="line"><span class="cl">./daemon <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -SIGTERM <span class="k">$(</span>pgrep daemon<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">pkill -SIGTERM daemon
+</span></span></code></pre></div><h2 id="why-sigaction-over-signal">Why sigaction() Over signal()</h2>
+<p>The older <code>signal()</code> function has platform-specific behavior and unreliable semantics. <code>sigaction()</code> provides explicit control:</p>
+<ul>
+<li><strong>sa_handler</strong>: Function to call when signal arrives</li>
+<li><strong>sa_mask</strong>: Additional signals to block during handler execution</li>
+<li><strong>sa_flags</strong>: Behavior flags like <code>SA_RESTART</code> to automatically restart interrupted system calls</li>
+</ul>
+<p>The <code>SA_RESTART</code> flag is critical — it prevents <code>read()</code>, <code>write()</code>, <code>select()</code>, and other blocking calls from failing with <code>EINTR</code> when interrupted by signals.</p>
+<h2 id="handling-multiple-signals-safely">Handling Multiple Signals Safely</h2>
+<p>For complex applications, use <code>sigprocmask()</code> to block signals during critical sections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">sigset_t</span> <span class="n">set</span><span class="p">,</span> <span class="n">oldset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sigemptyset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">set</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sigaddset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">set</span><span class="p">,</span> <span class="n">SIGTERM</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sigaddset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">set</span><span class="p">,</span> <span class="n">SIGUSR1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Block signals during critical section
+</span></span></span><span class="line"><span class="cl"><span class="nf">sigprocmask</span><span class="p">(</span><span class="n">SIG_BLOCK</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">set</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">oldset</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ... critical code that modifies shared state ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Restore previous mask
+</span></span></span><span class="line"><span class="cl"><span class="nf">sigprocmask</span><span class="p">(</span><span class="n">SIG_SETMASK</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">oldset</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span></code></pre></div><p>This prevents signal handlers from interrupting operations on shared data structures.</p>
+<h2 id="signal-safety-requirements">Signal Safety Requirements</h2>
+<p>Signal handlers execute asynchronously and have strict constraints:</p>
+<ul>
+<li>Keep handlers short and simple</li>
+<li>Only call async-safe functions (see <code>man 7 signal-safety</code> for the full list)</li>
+<li>Safe functions include: <code>write()</code>, <code>open()</code>, <code>close()</code>, <code>signal()</code>, <code>sigaction()</code></li>
+<li><strong>Unsafe functions</strong>: <code>printf()</code>, <code>malloc()</code>, <code>pthread_mutex_lock()</code>, most library functions</li>
+</ul>
+<p>Use <code>volatile sig_atomic_t</code> for variables modified in signal handlers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">signal_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">signal_count</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// Safe: sig_atomic_t
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="preventing-crashes-on-broken-pipes">Preventing Crashes on Broken Pipes</h2>
+<p>Network daemons often crash when clients disconnect unexpectedly. Ignore SIGPIPE:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">signal</span><span class="p">(</span><span class="n">SIGPIPE</span><span class="p">,</span> <span class="n">SIG_IGN</span><span class="p">);</span>
+</span></span></code></pre></div><p>Alternatively, use <code>MSG_NOSIGNAL</code> with <code>send()</code> on individual socket operations.</p>
+<h2 id="sigkill-cannot-be-caught">SIGKILL Cannot Be Caught</h2>
+<p>SIGKILL (9) is special — it cannot be caught, blocked, or ignored. The kernel terminates the process immediately. If graceful shutdown fails, SIGKILL is the last resort:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">kill</span> -SIGTERM pid      <span class="c1"># Request graceful shutdown</span>
+</span></span><span class="line"><span class="cl">sleep <span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -SIGKILL pid      <span class="c1"># Force termination if needed</span>
+</span></span></code></pre></div><h2 id="systemd-integration">systemd Integration</h2>
+<p>Modern systemd-managed daemons must handle SIGTERM within the timeout period (default 90 seconds). systemd sends SIGTERM, waits, then sends SIGKILL if necessary. Ensure your daemon:</p>
+<ol>
+<li>Registers SIGTERM handler</li>
+<li>Stops accepting new work</li>
+<li>Completes in-flight operations</li>
+<li>Exits cleanly</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGTERM</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>  <span class="c1">// Always required for systemd services
+</span></span></span><span class="line"><span class="cl"><span class="nf">signal</span><span class="p">(</span><span class="n">SIGPIPE</span><span class="p">,</span> <span class="n">SIG_IGN</span><span class="p">);</span>        <span class="c1">// Prevent network-related crashes
+</span></span></span></code></pre></div><h2 id="complete-daemon-example">Complete Daemon Example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;signal.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;syslog.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">shutdown_requested</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">reload_requested</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="nl">SIGTERM</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="nl">SIGINT</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">shutdown_requested</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="nl">SIGHUP</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">reload_requested</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">reload_config</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;Reloading configuration</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reload_requested</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">sigaction</span> <span class="n">sa</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sa</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sa</span><span class="p">.</span><span class="n">sa_handler</span> <span class="o">=</span> <span class="n">signal_handler</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sigemptyset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sa</span><span class="p">.</span><span class="n">sa_mask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sa</span><span class="p">.</span><span class="n">sa_flags</span> <span class="o">=</span> <span class="n">SA_RESTART</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGTERM</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">sigaction</span><span class="p">(</span><span class="n">SIGHUP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sa</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">signal</span><span class="p">(</span><span class="n">SIGPIPE</span><span class="p">,</span> <span class="n">SIG_IGN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Daemon running with PID %d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="nf">getpid</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">shutdown_requested</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">reload_requested</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">reload_config</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Working...</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Shutting down gracefully</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Test configuration reload without restarting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./daemon <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -SIGHUP <span class="k">$(</span>pgrep daemon<span class="k">)</span>  <span class="c1"># Trigger reload</span>
+</span></span></code></pre></div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Use <code>sigaction()</code> for all signal handling — never <code>signal()</code></li>
+<li>Keep <code>sa_flags = SA_RESTART</code> to avoid <code>EINTR</code> errors</li>
+<li>Use <code>volatile sig_atomic_t</code> for shared state</li>
+<li>Keep handlers minimal; only set flags and exit</li>
+<li>Ignore SIGPIPE in network daemons</li>
+<li>SIGKILL cannot be caught — only SIGTERM matters for graceful shutdown</li>
+<li>systemd expects clean SIGTERM handling within 90 seconds</li>
+</ul>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

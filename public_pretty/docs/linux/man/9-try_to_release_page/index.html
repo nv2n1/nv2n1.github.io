@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>try_to_release_page(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-try_to_release_page/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>try_to_release_page(9)</h1>
+
+
+
+
+
+<p>try_to_release_page - release old fs-specific metadata on a page</p>
+<h2>Synopsis</h2>
+<pre><code>int try_to_release_page(struct page *page, gfp_t gfp_mask);</code></pre>
+<h2>Arguments</h2>
+<p><i>page</i></p>
+<dl><dd></dd><dd>the page which the kernel is trying to free</dd></dl>
+<p><i>gfp_mask</i></p>
+<dl><dd>memory allocation flags (and I/O mode)</dd></dl>
+<h2>Description</h2>
+<p>The address_space is to try to release any data against the page (presumably at page-&gt;private). If the release was successful, return `1&rsquo;. Otherwise return zero.</p>
+<p>This may also be called if PG_fscache is set on a page, indicating that the page is known to the local caching routines.</p>
+<p>The <i>gfp_mask</i> argument specifies whether I/O may be performed to release this page (__GFP_IO), and whether the call may block (__GFP_RECLAIM &amp; __GFP_FS).</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

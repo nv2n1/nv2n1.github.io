@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>certmaster-sync(1) · Linux Manual Pages</title>
+<meta name="description" content="certmaster-sync — synchronize client certificates with Func.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-certmaster-sync/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>certmaster-sync(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> certmaster-sync &#8212; synchronize client certificates with Func. </p>
+<h2>SYNOPSIS</h2>
+<p> certmaster-sync [-f|&#8211;force]</p>
+<h2>DESCRIPTION</h2>
+<p> certmaster-sync synchronizes client certificates amongst certmaster clients via Func. It is assumed that the hosts who have requested certificates are reachable via Func for synchronization operations. </p>
+<p> certmaster-sync by default is called as a post-sign and post-clean trigger. In order to enable synchronization you must set <code>sync_certs</code> to <code>True</code>, see <font SIZE="-1"><code>CONFIGURATION</code></font><font SIZE="-1"><code>VALUES</code></font> below. </p>
+<p> The synchronization occurs by querying remote Func methods in <code>certmastermod</code> on the minion hosts. This will gather information, copy any new certificates, and remove any certificates that have been cleaned.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-f, &#8211;force</dt>
+<dd> Override the configuration value for <code>sync_certs</code> in <i>/etc/certmaster/certmaster.conf</i></dd></dl>
+<h2>CONFIGURATION VALUES</h2>
+<dl>
+<dt>sync_certs</dt>
+<dd> <code>sync_certs</code> determines whether or not the script will actually synchronize or if it will exit with no operation. You can use -f|&#8211;force to override this configuration value. (Default: False)</dd></dl>
+<h2>ADDITONAL RESOURCES</h2>
+<p> See <a rel="nofollow" href="https://fedorahosted.org/certmaster.">https://fedorahosted.org/certmaster.</a> It&#8217;s a Wiki. See also <a rel="nofollow" href="https://fedorahosted.org/func">https://fedorahosted.org/func</a></p>
+<h2>AUTHOR</h2>
+<p> John Eckersberg &lt;jeckersb [at] redhat.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimizing SSH and SCP Performance on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-improve-ssh-scp-performance-on-linux/">
+  <meta name="description" content="SSH is fast enough for most tasks, but when you’re transferring large files, running multiple commands, or managing hundreds of servers, every millisecond …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Optimizing SSH and SCP Performance on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-improve-ssh-scp-performance-on-linux/">
+  <meta property="og:description" content="SSH is fast enough for most tasks, but when you’re transferring large files, running multiple commands, or managing hundreds of servers, every millisecond …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Optimizing SSH and SCP Performance on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T08:22:31Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>SSH is fast enough for most tasks, but when you’re transferring large files, running multiple commands, or managing hundreds of servers, every millisecond counts. Here’s how to squeeze real performance gains from SSH and SCP on Linux.</p>
+<h2 id="choose-the-right-cipher">Choose the Right Cipher</h2>
+<p>Cipher selection has the biggest impact on throughput. Modern CPUs have AES-NI hardware acceleration, making AES-based ciphers both secure and fast. Avoid older, slower algorithms like 3DES or arcfour.</p>
+<p>Check available ciphers with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -Q cipher localhost
+</span></span></code></pre></div><p>Benchmark actual throughput between two hosts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Host A (receiver)</span>
+</span></span><span class="line"><span class="cl">iperf3 -s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Host B (sender) - test specific cipher</span>
+</span></span><span class="line"><span class="cl">ssh -c aes128-ctr user@hostA iperf3 -c hostA -t <span class="m">10</span>
+</span></span></code></pre></div><p>Recommended ciphers in order of speed:</p>
+<ul>
+<li><strong>aes128-ctr</strong> — fastest, hardware-accelerated, ideal for most cases</li>
+<li><strong>aes256-ctr</strong> — still fast with AES-NI, better security margin</li>
+<li><strong><a href="mailto:chacha20-poly1305@openssh.com">chacha20-poly1305@openssh.com</a></strong> — excellent for systems without AES-NI, competitive with AES on modern CPUs</li>
+</ul>
+<p>Configure in <code>~/.ssh/config</code>:</p>
+<pre><code>Host *
+    Ciphers aes128-ctr,aes256-ctr,chacha20-poly1305@openssh.com
+</code></pre>
+<h2 id="optimize-key-exchange-and-authentication">Optimize Key Exchange and Authentication</h2>
+<p>Key exchange happens at connection start and adds latency. Use modern algorithms:</p>
+<pre><code>Host *
+    KexAlgorithms curve25519-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256
+    HostKeyAlgorithms ssh-ed25519,ecdsa-sha2-nistp256
+    PubkeyAcceptedAlgorithms ssh-ed25519,ecdsa-sha2-nistp256
+</code></pre>
+<p>Use ed25519 keys instead of RSA for faster operations and smaller key material:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N <span class="s2">&#34;&#34;</span>
+</span></span></code></pre></div><p>If you have older RSA keys, consider migrating to ed25519. Ed25519 is faster to verify and has been the OpenSSH default for new keys since 8.6 (2021).</p>
+<h2 id="enable-connection-multiplexing">Enable Connection Multiplexing</h2>
+<p>Multiplexing reuses a single TCP connection for multiple SSH sessions, eliminating reconnection overhead. This is especially valuable when running many commands or frequent scp transfers:</p>
+<pre><code>Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%h-%p-%r
+    ControlPersist 600
+</code></pre>
+<p>Create the socket directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/.ssh/sockets
+</span></span><span class="line"><span class="cl">chmod <span class="m">700</span> ~/.ssh/sockets
+</span></span></code></pre></div><p>Now running <code>ssh user@host</code> multiple times uses the same connection. Check active connections:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -O check user@host
+</span></span></code></pre></div><p>Close multiplexed connections when done:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -O <span class="nb">exit</span> user@host
+</span></span></code></pre></div><p>This can reduce latency from ~100ms per connection to ~5ms on subsequent sessions.</p>
+<h2 id="compression-when-to-use-it">Compression: When to Use It</h2>
+<p>SSH compression (<code>Compression yes</code>) reduces bandwidth but increases CPU usage. Only enable it for slow or high-latency links (satellite, intercontinental):</p>
+<pre><code>Host slow-remote
+    Compression yes
+    CompressionLevel 6
+</code></pre>
+<p>For LAN transfers or modern broadband connections, compression typically hurts performance. Modern compression algorithms like zstandard (if your OpenSSH supports it) are more efficient than the legacy deflate, but avoid compression for local networks.</p>
+<h2 id="replace-scp-with-faster-alternatives">Replace SCP with Faster Alternatives</h2>
+<p>SCP is single-threaded and outdated. Use rsync over SSH for large transfers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --delete -e <span class="s2">&#34;ssh -c aes128-ctr&#34;</span> user@host:/remote /local
+</span></span></code></pre></div><p>For resuming interrupted transfers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --partial --progress -e ssh user@host:/remote/large.file /local
+</span></span></code></pre></div><p>For parallel transfers of many files, use native SFTP batch mode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sftp -b batch.txt user@host
+</span></span></code></pre></div><p>Or use modern alternatives like <strong>rclone</strong> or <strong>restic</strong> for large-scale data transfer with built-in parallelism and better error handling.</p>
+<h2 id="increase-ssh-buffers">Increase SSH Buffers</h2>
+<p>Larger buffers allow SSH to handle network bursts without blocking:</p>
+<pre><code>Host *
+    SendBuffer 262144
+    ReceiveBuffer 262144
+</code></pre>
+<p>These are client-side settings. On the server side, edit <code>/etc/ssh/sshd_config</code>:</p>
+<pre><code>SendBuffer 262144
+ReceiveBuffer 262144
+</code></pre>
+<p>Reload with <code>sudo systemctl reload sshd</code>.</p>
+<h2 id="tune-tcp-window-scaling">Tune TCP Window Scaling</h2>
+<p>At the OS level, enable TCP window scaling and increase buffer sizes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo sysctl -w net.ipv4.tcp_window_scaling<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">sudo sysctl -w net.core.rmem_max<span class="o">=</span><span class="m">134217728</span>
+</span></span><span class="line"><span class="cl">sudo sysctl -w net.core.wmem_max<span class="o">=</span><span class="m">134217728</span>
+</span></span><span class="line"><span class="cl">sudo sysctl -w net.ipv4.tcp_rmem<span class="o">=</span><span class="s2">&#34;4096 87380 134217728&#34;</span>
+</span></span><span class="line"><span class="cl">sudo sysctl -w net.ipv4.tcp_wmem<span class="o">=</span><span class="s2">&#34;4096 65536 134217728&#34;</span>
+</span></span></code></pre></div><p>Persist these changes in <code>/etc/sysctl.d/99-ssh-tuning.conf</code>:</p>
+<pre><code>net.ipv4.tcp_window_scaling=1
+net.core.rmem_max=134217728
+net.core.wmem_max=134217728
+net.ipv4.tcp_rmem=4096 87380 134217728
+net.ipv4.tcp_wmem=4096 65536 134217728
+</code></pre>
+<p>Apply with <code>sudo sysctl -p /etc/sysctl.d/99-ssh-tuning.conf</code>.</p>
+<h2 id="verify-and-debug-configuration">Verify and Debug Configuration</h2>
+<p>View which algorithms are actually in use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -G user@host <span class="p">|</span> grep -E <span class="s2">&#34;cipher|kexalgorithm|hostkey&#34;</span>
+</span></span></code></pre></div><p>Enable verbose output to see negotiation details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -vv user@host
+</span></span></code></pre></div><p>This shows which algorithms were selected from your preference list, helpful for diagnosing compatibility issues.</p>
+<h2 id="complete-optimized-config">Complete Optimized Config</h2>
+<p>Here’s a production-ready <code>~/.ssh/config</code> combining all tuning:</p>
+<pre><code>Host *
+    # Fast algorithms
+    Ciphers aes128-ctr,aes256-ctr,chacha20-poly1305@openssh.com
+    KexAlgorithms curve25519-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256
+    HostKeyAlgorithms ssh-ed25519,ecdsa-sha2-nistp256
+    PubkeyAcceptedAlgorithms ssh-ed25519,ecdsa-sha2-nistp256
+
+    # Connection reuse
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%h-%p-%r
+    ControlPersist 600
+
+    # Buffers
+    SendBuffer 262144
+    ReceiveBuffer 262144
+</code></pre>
+<h2 id="expected-results">Expected Results</h2>
+<p>With these changes, expect 20–40% faster file transfers and noticeably lower latency for interactive sessions. Connection multiplexing alone provides dramatic improvements when running multiple commands.</p>
+<p>Test changes on non-production hosts first. Some legacy servers may not support newer key exchange algorithms or ciphers; your client will fall back to secondary options in your list.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

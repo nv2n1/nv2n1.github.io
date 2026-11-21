@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gsm(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gsm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gsm(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>gsm_create, gsm_destroy, gsm_encode, gsm_decode &mdash; GSM 06.10 lossy sound compression</p>
+<h2>SYNOPSIS</h2>
+<p>#include &quot;gsm.h&quot;</p>
+<p>gsm gsm_create();</p>
+<p>void gsm_encode(handle, src, dst)
+gsm handle;
+gsm_signal src[160];
+gsm_frame dst;</p>
+<p>int gsm_decode(handle, src, dst)
+gsm handle;
+gsm_frame src;
+gsm_signal dst[160];</p>
+<p>void gsm_destroy(handle)
+gsm handle;</p>
+<h2>DESCRIPTION</h2>
+<p>Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding.</p>
+<p>gsm_create() initializes a gsm pass and returns a &lsquo;gsm&rsquo; object which can be used as a handle in subsequent calls to gsm_decode(), gsm_encode() or gsm_destroy().</p>
+<p>gsm_encode() encodes an array of 160 13-bit samples (given as gsm_signal&rsquo;s, signed integral values of at least 16 bits) into a gsm_frame of 33 bytes. (gsm_frame is a type defined as an array of 33 gsm_bytes in gsm.h.)</p>
+<p>gsm_decode() decodes a gsm_frame into an array of 160 13-bit samples (given as gsm_signals), which sound rather like what you handed to gsm_encode() on the other side of the wire.</p>
+<p>gsm_destroy() finishes a gsm pass and frees all storage associated with it.</p>
+<h3>Sample format</h3>
+<p>The following scaling is assumed for input to the algorithm:</p>
+ <pre>
+   0  1                             11 12
+   S..v..v..v..v..v..v..v..v..v..v..v..v..*..*..*
+<br>
+Only the top 13 bits are used as a signed input value.
+The output of gsm_decode() has the three lower bits set to zero.
+</pre>
+<h2>RETURN VALUE</h2>
+<p>gsm_create() returns an opaque handle object of type gsm, or 0 on error. gsm_decode() returns -1 if the passed frame is invalid, else 0.</p>
+<h2>EXAMPLE</h2>
+ <pre><code>
+#include "gsm.h"
+gsm handle;
+gsm_frame buf;
+gsm_signal sample[160];
+int cc, soundfd;
+play()
+{ /* read compressed data from standard input, write to soundfd */
+    if (!(handle = gsm_create()))
+        error... while (cc = read(0, (char *)buf, sizeof buf))
+        {
+            if (cc != sizeof buf)
+                error... if (gsm_decode(handle, buf, sample) &lt; 0) error... if (write(soundfd, sample, sizeof sample) != sizeof sample)
+                    error...
+        }
+    gsm_destroy(handle);
+}
+record()
+{ /* read from soundfd, write compressed to standard output */
+    if (!(handle = gsm_create()))
+        error... while (cc = read(soundfd, sample, sizeof sample))
+        {
+            if (cc != sizeof sample)
+                error... gsm_encode(handle, sample, buf);
+            if (write(1, (char *)buf, sizeof buf) != sizeof sample)
+                error...
+        }
+    gsm_destroy(handle);
+}
+</code></pre>
+<h2>BUGS</h2>
+<p>Please direct bug reports to jutta [at] cs.tu-berlin.de and cabo [at] cs.tu-berlin.de.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/1-toast/">toast</a>(1), <a HREF="/docs/linux/man/3-gsm_print/">gsm_print</a>(3), <a HREF="/docs/linux/man/3-gsm_explode/">gsm_explode</a>(3), <a HREF="/docs/linux/man/3-gsm_option/">gsm_option</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

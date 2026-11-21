@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chat(8) · Linux Manual Pages</title>
+<meta name="description" content="chat – Automated conversational script with a modem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-chat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>chat(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>chat &#8211; Automated conversational script with a modem</p>
+<h2>Synopsis</h2>
+<p><code>chat</code> [ <i>options</i> ] <i>script</i></p>
+<h2>Description</h2>
+<p>The <i>chat</i> program defines a conversational exchange between the computer and the modem. Its primary purpose is to establish the connection between the Point-to-Point Protocol Daemon (<i>pppd</i>) and the remote&#8217;s <i>pppd</i> process.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-f </code><i>&lt;chat file&gt;</i></dt>
+<dd>Read the chat script from the chat <i>file</i>. The use of this option is mutually exclusive with the chat script parameters. The user must have read access to the file. Multiple lines are permitted in the file. Space or horizontal tab characters should be used to separate the strings.</dd>
+<dt><code>-t </code><i>&lt;timeout&gt;</i></dt>
+<dd>Set the timeout for the expected string to be received. If the string is not received within the time limit then the reply string is not sent. An alternate reply may be sent or the script will fail if there is no alternate reply string. A failed script will cause the <i>chat</i> program to terminate with a non-zero error code. You can also use the TIMEOUT string in order to specify the timeout.</dd>
+<dt><code>-r </code><i>&lt;report file&gt;</i></dt>
+<dd>Set the file for output of the report strings. If you use the keyword <i>REPORT</i>, the resulting strings are written to this file. If this option is not used and you still use <i>REPORT</i> keywords, the <i>stderr</i> file is used for the report strings.</dd>
+<dt><code>-e</code></dt>
+<dd>Start with the echo option turned on. Echoing may also be turned on or off at specific points in the chat script by using the <i>ECHO</i> keyword. When echoing is enabled, all output from the modem is echoed to <i>stderr</i>.</dd>
+<dt><code>-E</code></dt>
+<dd>Enables environment variable substitution within chat scripts using the standard <i>$xxx</i> syntax.</dd>
+<dt><code>-v</code></dt>
+<dd>Request that the <i>chat</i> script be executed in a verbose mode. The <i>chat</i> program will then log the execution state of the chat script as well as all text received from the modem and the output strings sent to the modem. The default is to log through the SYSLOG; the logging method may be altered with the -S and -s flags.</dd>
+<dt><code>-V</code></dt>
+<dd>Request that the <i>chat</i> script be executed in a stderr verbose mode. The <i>chat</i> program will then log all text received from the modem and the output strings sent to the modem to the stderr device. This device is usually the local console at the station running the chat or pppd program.</dd>
+<dt><code>-s</code></dt>
+<dd>Use stderr. All log messages from &#8216;-v&#8217; and all error messages will be sent to stderr.</dd>
+<dt><code>-S</code></dt>
+<dd>Do not use the SYSLOG. By default, error messages are sent to the SYSLOG. The use of -S will prevent both log messages from &#8216;-v&#8217; and error messages from being sent to the SYSLOG.</dd>
+<dt><code>-T </code><i>&lt;phone number&gt;</i></dt>
+<dd>Pass in an arbitrary string, usually a phone number, that will be substituted for the \T substitution metacharacter in a send string.</dd>
+<dt><code>-U </code><i>&lt;phone number 2&gt;</i></dt>
+<dd>Pass in a second string, usually a phone number, that will be substituted for the 
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

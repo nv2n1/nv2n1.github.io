@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdreverse_copy(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdreverse_copy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdreverse_copy(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::reverse_copy - std::reverse_copy</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class BidirIt, class OutputIt&gt;
+    (until C++ 20)
+        OutputIt reverse_copy(BidirIt first, BidirIt last, OutputIt d_first);
+template &lt;class BidirIt, class OutputIt&gt;
+(1)(since C++ 20)
+    constexpr OutputIt reverse_copy(BidirIt first, BidirIt last, OutputIt d_first);
+template &lt;class ExecutionPolicy, class BidirIt, class ForwardIt&gt;
+(2)(since C++ 17)
+    ForwardIt reverse_copy(ExecutionPolicy &amp;&amp;policy, BidirIt first, BidirIt last, ForwardIt d_first);
+1) Copies the elements from the range [first, last) to another range beginning at d_first in such a way that the elements in the new range are in reverse order.
+Behaves as if by executing the assignment *(d_first + (last - first) - 1 - i) = *(first + i) once for each non-negative i &lt; (last - first)
+If the source and destination ranges (that is, [first, last) and [d_first, d_first+(last-first)) respectively) overlap, the behavior is undefined.
+2) Same as (1), but executed according to policy. This overload does not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true
+</code></pre>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to copy
+d_first - the beginning of the destination range</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="bidirit-must-meet-the-requirements-of-legacybidirectionaliterator">BidirIt must meet the requirements of LegacyBidirectionalIterator.</h2>
+<h2 id="outputit-must-meet-the-requirements-of-legacyoutputiterator">OutputIt must meet the requirements of LegacyOutputIterator.</h2>
+<p>ForwardIt must meet the requirements of LegacyForwardIterator.</p>
+<h2>Return value</h2>
+<p>Output iterator to the element past the last element copied.</p>
+<h2>Exceptions</h2>
+<p>The overload with a template parameter named ExecutionPolicy reports errors as follows:</p>
+<ul>
+<li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li>
+<li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li>
+</ul>
+<h2>Possible implementation</h2>
+<p>See also the implementations in libstdc++ and libc++.</p>
+<p> <wbr> template&lt;class BidirIt, class OutputIt&gt;
+ <wbr> OutputIt reverse_copy(BidirIt first, BidirIt last, OutputIt d_first)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> while (first != last) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> *(d_first++) = *(&ndash;last);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return d_first;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+int main()
+{
+std::vector&lt;int&gt; v({1, 2, 3});
+for (const auto &amp;value : v) {
+std::cout &lt;&lt; value &lt;&lt; &quot; &quot;;
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+std::vector&lt;int&gt; destination(3);
+std::reverse_copy(std::begin(v), std::end(v), std::begin(destination));
+for (const auto &amp;value : destination) {
+std::cout &lt;&lt; value &lt;&lt; &quot; &quot;;
+}
+std::cout &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1 2 3
+ <wbr> 3 2 1</p>
+<h2>Complexity</h2>
+<p>Linear in the distance between first and last</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> reverses the order of elements in a range
+reverse <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

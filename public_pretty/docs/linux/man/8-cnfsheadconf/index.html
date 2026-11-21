@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cnfsheadconf(8) · Linux Manual Pages</title>
+<meta name="description" content="cnfsheadconf – Read and write CNFS headers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-cnfsheadconf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>cnfsheadconf(8)</h1>
+
+
+
+
+
+<p>cnfsheadconf &#8211; Read and write CNFS headers</p>
+<h2>Synopsis</h2>
+<p><code>cnfsheadconf</code> [<code>-hw</code>] [<code>-c</code> <i>class</i>]</p>
+<h2>Description</h2>
+<p><i>cnfsheadconf</i> reads <i>pathetc</i>/cycbuff.conf and <i>pathetc</i>/storage.conf to determine which <font SIZE="-1">CNFS</font> buffers are available. It then reads all of them or the specified cyclic buffer via the <code>-c</code> flag, and modifies the header as directed by the interactive user if <code>-w</code> is used.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code> <i>class</i></dt>
+<dd>Print the status of the specified class. It also modifies it in case <code>-w</code> is used.</dd>
+<dt><code>-h</code></dt>
+<dd>Print usage information and exit.</dd>
+<dt><code>-w</code></dt>
+<dd>Prompt for modifications to make to cycbuff header.</dd></dl>
+<h2>History</h2>
+<p>Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p> <tt>$Id:</tt> cnfsheadconf.pod 8547 2009-07-03 22:02:42Z iulius $</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/5-cycbuff-conf/">cycbuff.conf</a></i>(5), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

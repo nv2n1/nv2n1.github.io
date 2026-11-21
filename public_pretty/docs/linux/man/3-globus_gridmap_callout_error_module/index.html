@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gridmap_callout_error_module(3) · Linux Manual Pages</title>
+<meta name="description" content="Activation –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gridmap_callout_error_module/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gridmap_callout_error_module(3)</h1>
+
+
+
+
+
+<p>Activation &#8211; </p>
+<h3>Macros</h3>
+<p>#define <code>GLOBUS_GRIDMAP_CALLOUT_ERROR_MODULE</code> </p>
+<h2>Detailed Description</h2>
+<p>The Globus Gridmap Callout Error API uses standard Globus module activation and deactivation. Before any Globus Gridmap Callout Error API functions are called, the following function must be called: </p>
+<pre>* globus_module_activate(GLOBUS_GRIDMAP_CALLOUT_ERROR_MODULE)
+* </pre>
+<p>This function returns GLOBUS_SUCCESS if the Globus Gridmap Callout Error API was successfully initialized, and you are therefore allowed to subsequently call Globus Gridmap Callout Error API functions. Otherwise, an error code is returned, and Globus GSI Credential functions should not be subsequently called. This function may be called multiple times. </p>
+<p> To deactivate Globus Gridmap Callout Error API, the following function must be called: </p>
+<pre>* globus_module_deactivate(GLOBUS_GRIDMAP_CALLOUT_ERROR_MODULE)
+* </pre>
+<p>This function should be called once for each time Globus Gridmap Callout Error API was activated.</p>
+<h2>Macro Definition Documentation</h2>
+<h3>#define GLOBUS_GRIDMAP_CALLOUT_ERROR_MODULE</h3>
+<p>Module descriptor</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_gridmap_callout_error from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

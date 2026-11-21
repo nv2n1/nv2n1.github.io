@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bprintf(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-bprintf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>bprintf(9)</h1>
+
+
+
+
+
+<p>bprintf - Parse a format string and place args&rsquo; binary value in a buffer</p>
+<h2>Synopsis</h2>
+<pre><code>int bprintf(u32 *bin_buf, size_t size, const char *fmt, ...);</code></pre>
+<h2>Arguments</h2>
+<p><i>bin_buf</i></p>
+<dl><dd></dd><dd>The buffer to place args' binary value</dd></dl>
+<p><i>size</i></p>
+<dl><dd>The size of the buffer(by words(32bits), not characters)</dd></dl>
+<p><i>fmt</i></p>
+<dl><dd>The format string to use</dd></dl>
+<p><i>&hellip;</i></p>
+<dl><dd>Arguments for the format string</dd></dl>
+<h2>Description</h2>
+<p>The function returns the number of words(u32) written into <i>bin_buf</i>.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>img_stat(1) · Linux Manual Pages</title>
+<meta name="description" content="img_stat – Display details of an image file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-img_stat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>img_stat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> img_stat &#8211; Display details of an image file </p>
+<h2>SYNOPSIS</h2>
+<p> <code>img_stat [-i imgtype] [-b dev_sector_size] [-tvV] </code> <i>image [images] </i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>img_stat</code> displays the details associated with an image file. The output of this command is image format specific. At a minimum, the size will be given and the byte range of each file will be given for split image formats. </p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>-i imgtype</dt>
+<dd> Identify the type of image file, such as raw. Use &#8216;-i list&#8217; to list the supported types. If not given, autodetection methods are used.</dd>
+<dt>-b dev_sector_size</dt>
+<dd> The size, in bytes, of the underlying device sectors. If not given, the value in the image format is used (if it exists) or 512-bytes is assumed.</dd>
+<dt>-t</dt>
+<dd> Print the image type only.</dd>
+<dt>-v</dt>
+<dd> Verbose output of debugging statements to stderr</dd>
+<dt>-V</dt>
+<dd> Display version</dd>
+<dt>image [images]</dt>
+<dd> The disk or partition image to read, whose format is given with &#8216;-i&#8217;. Multiple image file names can be given if the image is split into multiple segments. If only one image file is given, and its name is the first in a sequence (e.g., as indicated by ending in &#8216;.001&#8217;), subsequent image segments will be included automatically. </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
+<p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

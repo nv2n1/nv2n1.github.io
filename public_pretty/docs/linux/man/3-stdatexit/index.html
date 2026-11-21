@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdatexit(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdatexit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdatexit(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::atexit - std::atexit</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdlib&gt;
+    int atexit(/*c-atexit-handler*/ *func);
+(until C++ 11)
+    int atexit(/*atexit-handler*/ *func);
+int atexit(/*c-atexit-handler*/ *func) noexcept;
+(1)(since C++ 11)
+    int atexit(/*atexit-handler*/ *func) noexcept;
+extern &quot;C++&quot; using /*atexit-handler*/ = void(); // exposition-only     (2)
+extern &quot;C&quot; using /*c-atexit-handler*/ = void(); // exposition-only</code></pre> 
+<p>Registers the function pointed to by func to be called on normal program termination (via std::exit() or returning from the main_function)
+The functions will be called during the destruction of the static objects, in reverse order: if A was registered before B, then the call to B is made before the call to A. Same applies to the ordering between static object constructors and the calls to atexit: see std::exit <i>(until C++11)</i>
+The functions may be called concurrently with the destruction of the objects with static storage duration and with each other, maintaining the guarantee that if registration of A was sequenced-before the registration of B, then the call to B is sequenced-before the call to A, same applies to the sequencing between static object constructors and calls to atexit: see std::exit <i>(since C++11)</i>
+The same function may be registered more than once.
+If a function exits via an exception, std::terminate is called.
+atexit is thread-safe: calling the function from several threads does not induce a data race.
+The implementation is guaranteed to support the registration of at least 32 functions. The exact limit is implementation-defined.</p>
+<h2>Parameters</h2>
+<p>func - pointer to a function to be called on normal program termination</p>
+<h2>Return value</h2>
+<p>0 if the registration succeeds, nonzero value otherwise.</p>
+<h2>Notes</h2>
+<p>The two overloads are distinct because the types of the parameter func are distinct (language_linkage is part of its type)</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+void atexit_handler_1()
+{
+std::cout &lt;&lt; &quot;at exit #1\n&quot;;
+}
+void atexit_handler_2()
+{
+std::cout &lt;&lt; &quot;at exit #2\n&quot;;
+}
+int main()
+{
+const int result_1 = std::atexit(atexit_handler_1);
+const int result_2 = std::atexit(atexit_handler_2);
+if ((result_1 != 0) or (result_2 != 0)) {
+std::cerr &lt;&lt; &quot;Registration failed\n&quot;;
+return EXIT_FAILURE;
+}
+std::cout &lt;&lt; &quot;returning from main\n&quot;;
+return EXIT_SUCCESS;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> returning from main
+ <wbr> at exit #2
+ <wbr> at exit #1</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> causes abnormal program termination (without cleaning up)
+abort <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> causes normal program termination with cleaning up
+exit <i>(function)</i>
+quick_exit causes quick program termination without completely cleaning up
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+at_quick_exit registers a function to be called on quick_exit invocation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

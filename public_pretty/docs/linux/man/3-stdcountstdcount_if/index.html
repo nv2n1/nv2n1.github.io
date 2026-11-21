@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcountstdcount_if(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcountstdcount_if/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcountstdcount_if(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::count,std::count_if - std::count,std::count_if</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;algorithm&gt;
+    template &lt;class InputIt, class T&gt;
+    typename iterator_traits&lt;InputIt&gt;::difference_type(until C++ 20)
+        count(InputIt first, InputIt last, const T &amp;value);
+template &lt;class InputIt, class T&gt;
+constexpr typename iterator_traits&lt;InputIt&gt;::difference_type(since C++ 20)
+    count(InputIt first, InputIt last, const T &amp;value);
+template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
+typename iterator_traits&lt;ForwardIt&gt;::difference_type(2)(since C++ 17)
+    count(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);
+(1)
+    template &lt;class InputIt, class UnaryPredicate&gt;
+    typename iterator_traits&lt;InputIt&gt;::difference_type(until C++ 20)
+        count_if(InputIt first, InputIt last, UnaryPredicate p);
+template &lt;class InputIt, class UnaryPredicate&gt;
+constexpr typename iterator_traits&lt;InputIt&gt;::difference_type(3)(since C++ 20)
+    count_if(InputIt first, InputIt last, UnaryPredicate p);
+template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
+typename iterator_traits&lt;ForwardIt&gt;::difference_type(4)(since C++ 17)
+    count_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, UnaryPredicate p);</code></pre> 
+<p>Returns the number of elements in the range [first, last) satisfying specific criteria.</p>
+<ol>
+<li>counts the elements that are equal to value.</li>
+<li>counts elements for which predicate p returns true.
+2,4) Same as (1,3), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true</li>
+</ol>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to examine
+value - the value to search for
+policy - the execution policy to use. See execution_policy for details.
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> unary predicate which returns true for the required elements.
+p - The expression p(v) must be convertible to bool for every argument v of type (possibly const) VT, where VT is the value type of InputIt, regardless of value_category, and must not modify v. Thus, a parameter type of VT&amp;is not allowed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> , nor is VT unless for VT a move is equivalent to a copy
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i>.</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="inputit-must-meet-the-requirements-of-legacyinputiterator">InputIt must meet the requirements of LegacyInputIterator.</h2>
+<p>ForwardIt must meet the requirements of LegacyForwardIterator.</p>
+<h2>Return value</h2>
+<p>number of elements satisfying the condition.</p>
+<h2>Complexity</h2>
+<p>exactly last - first comparisons / applications of the predicate</p>
+<h2>Exceptions</h2>
+<p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p>
+<ul>
+<li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li>
+<li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li>
+</ul>
+<h2>Notes</h2>
+<p>For the number of elements in the range [first, last) without any additional criteria, see std::distance.</p>
+<h2>Possible implementation</h2>
+<h2>First version</h2>
+<p> <wbr> template&lt;class InputIt, class T&gt;
+ <wbr> typename iterator_traits&lt;InputIt&gt;::difference_type
+ <wbr> <wbr> <wbr> <wbr> <wbr> count(InputIt first, InputIt last, const T&amp; value)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typename iterator_traits&lt;InputIt&gt;::difference_type ret = 0;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (*first == value) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ret++;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return ret;
+ <wbr> }</p>
+<h2>Second version</h2>
+<p> <wbr> template&lt;class InputIt, class UnaryPredicate&gt;
+ <wbr> typename iterator_traits&lt;InputIt&gt;::difference_type
+ <wbr> <wbr> <wbr> <wbr> <wbr> count_if(InputIt first, InputIt last, UnaryPredicate p)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> typename iterator_traits&lt;InputIt&gt;::difference_type ret = 0;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (; first != last; ++first) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if (p(*first)) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> ret++;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return ret;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+int main()
+{
+std::vector&lt;int&gt; v{1, 2, 3, 4, 4, 3, 7, 8, 9, 10};
+// determine how many integers in a std::vector match a target value.
+int target1 = 3;
+int target2 = 5;
+int num_items1 = std::count(v.begin(), v.end(), target1);
+int num_items2 = std::count(v.begin(), v.end(), target2);
+std::cout &lt;&lt; &quot;number: &quot; &lt;&lt; target1 &lt;&lt; &quot; count: &quot; &lt;&lt; num_items1 &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;number: &quot; &lt;&lt; target2 &lt;&lt; &quot; count: &quot; &lt;&lt; num_items2 &lt;&lt; &lsquo;\n&rsquo;;
+// use a lambda expression to count elements divisible by 3.
+int num_items3 = std::count_if(v.begin(), v.end(), [](int i) { return i % 3 == 0; });
+std::cout &lt;&lt; &quot;number divisible by three: &quot; &lt;&lt; num_items3 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> number: 3 count: 2
+ <wbr> number: 5 count: 0
+ <wbr> number divisible by three: 3</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the distance between two iterators
+distance <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

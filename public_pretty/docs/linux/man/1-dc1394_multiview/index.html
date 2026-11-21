@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dc1394_multiview(1) · Linux Manual Pages</title>
+<meta name="description" content="dc1394_multiview – display format0 camera video">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dc1394_multiview/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dc1394_multiview(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> dc1394_multiview &#8211; display format0 camera video</p>
+<h2>SYNOPSIS</h2>
+<p> <code>dc1394_multiview [</code><i>&#8211;fps=[1,3,15,30]</i>] [<i>&#8211;res=[0,1,2]</i>] [<i>&#8211;device=/dev/video1394/x</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> View format0-only camera video from one or more cameras.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;fps</code></dt>
+<dd> frames per second. default is 7. The 30 fps setting is incompatible with the 640&#215;480 RGB8 resolution setting.</dd>
+<dt><code>&#8211;res</code></dt>
+<dd> resolution. 0 is 320&#215;240 (default), 1 = 640&#215;480 YUV4:1:1, 2 = 640&#215;480 RGB8</dd>
+<dt><code>&#8211;device</code></dt>
+<dd> specifies video1394 device to use (optional). default is /dev/video1394/&lt;port#&gt;</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> print help message</dd></dl>
+<h2>KEYBOARD CONTROLS</h2>
+<dl>
+<dt><code>q</code></dt>
+<dd> quit</dd>
+<dt><code>&lt; or ,</code></dt>
+<dd> scale -50%</dd>
+<dt><code>&gt; or .</code></dt>
+<dd> scale +50%</dd>
+<dt><code>0</code></dt>
+<dd> pause</dd>
+<dt><code>1</code></dt>
+<dd> set framerate to 1.875 fps</dd>
+<dt><code>2</code></dt>
+<dd> set framerate to 3.75 fps</dd>
+<dt><code>3</code></dt>
+<dd> set framerate to 7.5 fps</dd>
+<dt><code>4</code></dt>
+<dd> set framerate to 15 fps</dd>
+<dt><code>5</code></dt>
+<dd> set framerate to 30 fps</dd></dl>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Peter De Schrijver &lt;p2 [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others) and added to upstream by Peter Antoniac &lt;theseinfeld [at] users.sf.net&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

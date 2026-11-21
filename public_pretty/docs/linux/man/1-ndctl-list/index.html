@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ndctl-list(1) · Linux Manual Pages</title>
+<meta name="description" content="ndctl-list – dump the platform nvdimm device topology and attributes in json">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ndctl-list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ndctl-list(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ndctl-list &#8211; dump the platform nvdimm device topology and attributes in json </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<i>ndctl list</i> [&lt;options&gt;]
+</pre>
+<p> Walk all the nvdimm buses in the system and list all attached devices along with some of their major attributes. </p>
+<p> Options can be specified to limit the output to devices of a certain class. Where the classes are buses, dimms, regions, and namespaces. By default, <i>ndctl list</i> with no options is equivalent to: </p>
+<pre>
+ndctl list --namespaces --bus=all --region=all
+</pre>
+<h2>EXAMPLE</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+# ndctl list --buses --namespaces
+</pre>
+</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+{
+    "provider" : "nfit_test.1",
+    "dev" : "ndbus2",
+    "namespaces" : [
+        {
+            "dev" : "namespace9.0",
+            "mode" : "raw",
+            "size" : 33554432,
+            "blockdev" : "pmem9"
+        }
+    ]
+} {
+    "provider" : "nfit_test.0",
+    "dev" : "ndbus1"
+} {
+    "provider" : "e820",
+                 "dev" : "ndbus0",
+                         "namespaces" : [
+                             {
+                                 "dev" : "namespace0.0",
+                                 "mode" : "memory",
+                                 "size" : 8589934592,
+                                 "blockdev" : "pmem0"
+                             }
+                         ]
+}
+</code></pre>
+</dd></dl>
+<h2>OPTIONS</h2>
+<p> -r, &#8211;region=</p>
+<dl>
+<dt>
+</dt><dd> A <i>regionX</i> device name, or a region id number. The keyword <i>all</i> can be specified to carry out the operation on every region in the system, optionally filtered by bus id (see &#8211;bus= option).</dd></dl>
+<p> -b, &#8211;bus=</p>
+<dl>
+<dt>
+</dt><dd> Enforce that the operation only be carried on devices that are attached to the given bus. Where <i>bus</i> can be a provider name or a bus id number.</dd></dl>
+<p> -d, &#8211;dimm=</p>
+<dl>
+<dt>
+</dt><dd> An <i>nmemX</i> device name, or dimm id number. Filter listing by devices that reference the given dimm. For example to see all namespaces comprised of storage capacity on nmem0:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+# ndctl list --dimm=nmem0 --namespaces
+</pre>
+</dd></dl>
+<p> -n, &#8211;namespace=</p>
+<dl>
+<dt>
+</dt><dd> An <i>namespaceX.Y</i> device name, or namespace region plus id tuple <i>X.Y</i>. Limit the namespace list to the single identified device if present.</dd></dl>
+<p> -t, &#8211;type=</p>
+<dl>
+<dt>
+</dt><dd> Filter listing by region type (<i>pmem</i> or <i>blk</i>)</dd></dl>
+<p> -B, &#8211;buses</p>
+<dl>
+<dt>
+</dt><dd> Include bus info in the listing</dd></dl>
+<p> -D, &#8211;dimms</p>
+<dl>
+<dt>
+</dt><dd> Include dimm info in the listing</dd></dl>
+<p> -H, &#8211;health</p>
+<dl>
+<dt>
+</dt><dd> Include dimm health info in the listing. For example:</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+{
+    "dev" : "nmem0",
+            "health":
+    {
+        "health_state" : "non-critical",
+                         "temperature_celsius" : 23,
+                         "spares_percentage" : 75,
+                         "alarm_temperature" : true,
+                                               "alarm_spares" : true,
+                                                                "temperature_threshold" : 40,
+                                                                "spares_threshold" : 5,
+                                                                "life_used_percentage" : 5,
+                                                                "shutdown_state" : "clean"
+    }
+}
+</code></pre>
+</dd></dl>
+<p> -R, &#8211;regions</p>
+<dl>
+<dt>
+</dt><dd> Include region info in the listing</dd></dl>
+<p> -N, &#8211;namespaces</p>
+<dl>
+<dt>
+</dt><dd> Include namespace info in the listing. Namespace info is listed by default if no other options are specified to the command.</dd></dl>
+<p> -i, &#8211;idle</p>
+<dl>
+<dt>
+</dt><dd> Include idle (not enabled) devices in the listing</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

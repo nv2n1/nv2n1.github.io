@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamsharpmap(1) · Linux Manual Pages</title>
+<meta name="description" content="pamsharpmap – create map of sharpness in a PNM/PAM image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamsharpmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamsharpmap(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pamsharpmap &#8211; create map of sharpness in a PNM/PAM image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamsharpmap</code> [<i>imagefile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamsharpmap</code> reads a Netpbm image (PNM or PAM) and produces an image that shows how sharp it is at each location. </p>
+<p> Sharpness is a measure of how suddenly (in space) colors change in the image. <code>pamsharpmap</code> computes the sharpness of each component color (R, G, B) separately and produces a pixel whose intensity of each component color is directly proportional to the sharpness of that component color at the same location in the input image. Thus, at a point where the image is very sharp in its red and green components, but dull in its blue component, you will see a yellow pixel in the output. </p>
+<p> <code>pamsharpmap</code> computes sharpness at a point simply as the average difference in intensity between the pixel at that point and the 8 pixels surrounding it. </p>
+<p> At the edges of the image, where there are not 8 pixels surrounding a pixel, <code>pamsharpmap</code> assumes the image is extended with a black border. </p>
+<p> <code>pamsharpmap</code> assumes that the image is a PNM or PNM equivalent PAM. If it isn&#8217;t, the results are not necessarily meaningful. </p>
+<p> The output image is the same dimensions, depth, and tuple type as the input, and has maxval 255. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pammasksharpen/">pammasksharpen</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamsharpmap</code> was added to Netpbm in Release 10.21 (March 2004). Bryan Henderson derived it from the program <code>pnmsharp</code> by B.W. van Schooten and distributed as part of the Photopnmtools package. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cjdns-online(1) · Linux Manual Pages</title>
+<meta name="description" content="cjdns-online — check whether cjdns tunnel devices are available">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cjdns-online/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cjdns-online(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>cjdns-online</code> &#8212; check whether cjdns tunnel devices are available</p>
+<h2>SYNOPSIS</h2>
+<p> <code>cjdns-online</code> [&lt;options&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> Cjdns-online waits for cjdns to make its tunnel device available so that services that listen on the cjdns IP can start. If you have configured services to listen on the cjdns IP, then you can use:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+systemctl enable cjdns-wait-online
+</pre>
+</dd></dl>
+<p> to wait until this IP is available before starting network services. This will increase your boot time somewhat, but is needed to launch thttpd at boot, for example.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br />
+ time to wait in seconds, default 30</dd>
+<dt>&bull;</dt>
+<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+ Exit immediately if cjdns is not online</dd>
+<dt>&bull;</dt>
+<dd> <code>-q</code>, <code>&#8211;quiet</code>: Don&#8217;t print anything</dd>
+<dt>&bull;</dt>
+<dd> <code>-s</code>, <code>&#8211;wait-for-startup</code>: Wait for full startup instead of just tun dev. This is not implemented.</dd>
+</dl>
+<h2 class="name">NAME</h2>
+<p> <code>cjdns-online</code> &#8212; check whether cjdns tunnel devices are available </p>
+<h2>SYNOPSIS</h2>
+<p> <code>cjdns-online</code> [&lt;options&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> Cjdns-online waits for cjdns to make its tunnel device available so that services that listen on the cjdns IP can start. If you have configured services to listen on the cjdns IP, then you can use:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+systemctl enable cjdns-wait-online
+</pre>
+</dd></dl>
+<p> to wait until this IP is available before starting network services. This will increase your boot time somewhat, but is needed to launch thttpd at boot, for example.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>-t</code>, <code>&#8211;timeout</code> &lt;timeout_value&gt;:<tt>&nbsp;<wbr></tt><br />
+ time to wait in seconds, default 30</dd>
+<dt>&bull;</dt>
+<dd> <code>-x</code>, <code>&#8211;exit</code>:<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><br />
+ Exit immediately if cjdns is not online</dd>
+<dt>&bull;</dt>
+<dd> <code>-q</code>, <code>&#8211;quiet</code>: Don&#8217;t print anything</dd>
+<dt>&bull;</dt>
+<dd> <code>-s</code>, <code>&#8211;wait-for-startup</code>: Wait for full startup instead of just tun dev. This is not implemented.</dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

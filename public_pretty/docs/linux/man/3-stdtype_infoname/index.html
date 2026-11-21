@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtype_infoname(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtype_infoname/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtype_infoname(3)</h1>
+
+
+
+
+
+<p>std::type_info::name - std::type_info::name</p>
+<h2>Synopsis</h2>
+<pre><code>const char *name() const;</code></pre> 
+<p>Returns an implementation defined null-terminated character string containing the name of the type. No guarantees are given; in particular, the returned string can be identical for several types and change between invocations of the same program.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>null-terminated character string containing the name of the type.</p>
+<h2>Notes</h2>
+<p>The lifetime of the array pointed to by the returned pointer is not specified, but in practice it persist as long as the RTTI data structure for the given type exists, which has application lifetime unless loaded from a dynamic library (that can be unloaded).
+Some implementations (such as MSVC, IBM, Oracle) produce a human-readable type name. Others, most notably gcc and clang, return the mangled name. The mangled name can be converted to human-readable form using implementation-specific API such as abi::__cxa_demangle directly or through boost::core::demangle. It can also be piped through the commandline utility c++filt -t.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;typeinfo&gt;
+struct Base {
+virtual ~Base() = default;
+};
+struct Derived : Base {
+};
+int main()
+{
+Base b1;
+Derived d1;
+const Base *pb = &amp;b1;
+std::cout &lt;&lt; typeid(*pb).name() &lt;&lt; &lsquo;\n&rsquo;;
+pb = &amp;d1;
+std::cout &lt;&lt; typeid(*pb).name() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> 4Base
+ <wbr> 7Derived</p>
+<h2>See also</h2>
+<p>hash_code returns a value which is identical for the same types
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runscript(1) · Linux Manual Pages</title>
+<meta name="description" content="runscript – script interpreter for minicom">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-runscript/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>runscript(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> runscript &#8211; script interpreter for minicom</p>
+<h2>SYNOPSIS</h2>
+<p> <code>runscript</code> scriptname [logfile [homedir]]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>runscript</code> is a simple script interpreter that can be called from within the minicom communications program to automate tasks like logging in to a Unix system or your favorite BBS.</p>
+<h2>INVOCATION</h2>
+<p> The program expects a script name and optionally a filename and the user&#8217;s home directory as arguments, and it expects that it&#8217;s input and output are connected to the &quot;remote end&quot;, the system you are connecting to. All messages from <code>runscript</code> meant for the local screen are directed to the <code>stderr</code> output. All this is automatically taken care of if you run it from <code>minicom</code>. The logfile and home directory parameters are only used to tell the log command the name of the logfile and where to write it. If the homedir is omitted, runscript uses the directory found in the $HOME environment variable. If also the logfile name is omitted, the log commands are ignored.</p>
+<h2>KEYWORDS</h2>
+<dl>
+<dt>Runscript recognizes the following commands:</dt>
+<dd>
+</dd><dl>
+<dt>
+</dt><dd>
+<pre>
+expect   send     goto     gosub    return   !
+exit     print    set      inc      dec      if
+timeout  verbose  sleep    break    call     log
+</pre>
+</dd></dl>
+</dl>
+<h2>OVERVIEW OF KEYWORDS</h2>
+<dl>
+<dt><code>send &lt;string&gt;</code></dt>
+<dd> &lt;string&gt; is sent to the modem. It is followed by a &#8216;
+&#8217;. &lt;string&gt; can be:<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; regular text, e.g.&nbsp;<wbr>&#8216;send hello&#8217;<br />
+&nbsp;<wbr>&nbsp;<wbr>&#8211; text enclosed in quotes, e.g.&nbsp;<wbr>&#8216;send&nbsp;<wbr>&quot;hello world&quot;&#8217;</dd>
+<dt>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Within&nbsp;<wbr>&lt;string&gt;&nbsp;<wbr>the following sequences are recognized:</dt>
+<dd>
+&nbsp;<wbr>
+ &#8211; newline<br />
+&nbsp;<wbr>
+ &#8211; carriage return<br />
+&nbsp;<wbr> &#8211; bell<br />
+&nbsp;<wbr> &#8211; backspace<br />
+&nbsp;<wbr>
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

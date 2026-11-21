@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>logconv-pl(1) · Linux Manual Pages</title>
+<meta name="description" content="logconv.pl – analyzes Directory Server access log files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-logconv-pl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>logconv-pl(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>logconv.pl &#8211; analyzes Directory Server access log files </p>
+<h2>Synopsis</h2>
+<p><code>logconv.pl </code> [<i>-h</i>] [<i>-d &lt;rootDN&gt;</i>] [<i>-s &lt;size limit&gt;</i>] [<i>-v</i>] [<i>-V</i>] [<i>-S &lt;start time&gt;</i>] [<i>-E &lt;end time&gt;</i>] [<i>-T &lt;min etime&gt;</i>] [<i>-efcibaltnxgjuU</i>] [<i> access log &#8230; &#8230; </i>] </p>
+<h2>Description</h2>
+<p>Analyzes Directory Server access log files for specific information defined on the command line</p>
+<h2>Options</h2>
+<p>A summary of options is included below:</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>help/usage</dd>
+<dt><code>-d, &#8211;rootDN</code> &lt;Directory Managers DN&gt;</dt>
+<dd>DEFAULT -&gt; cn=directory manager</dd>
+<dt><code>-D, &#8211;data</code> &lt;Location for temporary data files&gt;</dt>
+<dd>DEFAULT -&gt; /tmp<br />
+ TIP -&gt; If there is not enough RAM, a RAM disk can be used instead: </dd>
+<p>&nbsp;<wbr>mkdir&nbsp;<wbr>/dev/shm/logconv, and use this directory for the&nbsp;<wbr>&quot;-D&quot;&nbsp;<wbr>value.</p>
+<dt><code>-s, &#8211;sizeLimit</code> &lt;Number of results to return per category&gt;</dt>
+<dd>DEFAULT -&gt; 20</dd>
+<dt><code>-X, &#8211;excludeIP</code> &lt;IP address to exclude from connection stats&gt;</dt>
+<dd>E.g. Load balancers</dd>
+<dt><code>-v, &#8211;version</code> show version of tool</dt>
+<dd>Print version of the tool</dd>
+<dt><code>-S, &#8211;startTime</code> &lt;time to begin analyzing logfile from&gt;</dt>
+<dd>Time to begin analyzing logfile from E.g. [28/Mar/2002:13:14:22 <code>-0800]</code></dd>
+<dt><code>-E, &#8211;endTime</code> &lt;time to stop analyzing logfile&gt;</dt>
+<dd>Time to stop analyzing logfile from E.g. [28/Mar/2002:13:24:62 <code>-0800]</code></dd>
+<dt><code>-T, &#8211;minEtime</code> &lt;minimum etime to report unindexed searches&gt;</dt>
+<dd>The minimum etime that is required to record and report on an unindexed search. Default is zero.</dd>
+<dt><code>-M, &#8211;reportFileMins</code> &lt;CSV output file&gt;</dt>
+<dd>This option creates a CSV report for spreadsheets.</dd>
+<dt><code>-m, &#8211;reportFileSecs</code> &lt;CSV output file&gt;</dt>
+<dd>This option creates a CSV report for spreadsheets.</dd>
+<dt><code>-B, &#8211;bind</code> &lt;ALL | ANONYMOUS | Bind DN&gt;</dt>
+<dd>This generates a report based on either ALL bind dn&#8217;s, anonymous binds, or a specific DN.</dd>
+<dt><code>-V, &#8211;verbose</code> &lt;enable verbose output &#8211; includes all stats listed below except U&gt;</dt>
+<dd>Verbose output</dd>
+<dt><code>-[efcibaltnxgjuU]</code></dt>
+<dd><code>e</code> Error Code stats<br />
+ <code>f</code> Failed Login Stats<br />
+ <code>c</code> Connection Code Stats<br />
+ <code>i</code> Client Stats<br />
+ <code>b</code> Bind Stats<br />
+ <code>a</code> Search Base Stats<br />
+ <code>l</code> Search Filter Stats<br />
+ <code>t</code> Etime Stats<br />
+ <code>n</code> Nentries Stats<br />
+ <code>x</code> Extended Operations<br />
+ <code>r</code> Most Requested Attribute Stats<br />
+ <code>g</code> Abandoned Operation Stats<br />
+ <code>j</code> Recommendations<br />
+ <code>u</code> Unindexed Search Stats (very detailed)<br />
+ <code>y</code> Connection Latency Stats<br />
+ <code>p</code> Open Connection ID Stats<br />
+ <code>U</code> Unindexed Search Summary</dd></dl>
+<h2>Usage</h2>
+<p>Examples:</p>
+<dl>
+<dd>logconv.pl <code>-s</code> 10 <code>-V</code> access</dd>
+<dd>logconv.pl <code>-d</code> &quot;cn=directory manager&quot; /export/server4/slapd-host/logs/access*</dd>
+<dd>logconv.pl <code>-s</code> 50 <code>-ibgju</code> access*</dd>
+<dd>logconv.pl <code>-S</code> &quot;[28/Mar/2002:13:14:22 <code>-0800]</code>&quot; <code>-E</code> &quot;[28/Mar/2002:13:50:05 <code>-0800]</code>&quot; <code>-e</code> access
+</dd></dl>
+<h2>Author</h2>
+<p>logconv.pl was written by the 389 Project.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to <a rel="nofollow" href="https://fedorahosted.org/389/newticket.">https://fedorahosted.org/389/newticket.</a></p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2001 Sun Microsystems, Inc. Used by permission.<br />
+ Copyright &#169; 2008 Red Hat, Inc.<br />
+ This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
+ This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

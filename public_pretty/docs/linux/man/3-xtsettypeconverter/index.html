@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtsettypeconverter(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAppSetTypeConverter, XtSetTypeConverter – register resource converter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtsettypeconverter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtsettypeconverter(3)</h1>
+
+
+
+
+
+<p>XtAppSetTypeConverter, XtSetTypeConverter &#8211; register resource converter </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>void XtAppSetTypeConverter(XtAppContext <i>app_context</i>, const char *<i>from_type</i>, const char * <i>to_type</i>, XtTypeConverter <i>converter</i>, XtConvertArgList <i>convert_args</i>, Cardinal <i>num_args</i>, XtCacheType <i>cache_type</i>, XtDestructor <i>destructor</i>);</dd>
+<dd>void XtSetTypeConverter(const char *<i>from_type</i>, const char *<i>to_type</i>, XtTypeConverter <i>converter</i>, XtConvertArgList <i>convert_args</i>, Cardinal <i>num_args</i>, XtCacheType <i>cache_type</i>, XtDestructor <i>destructor</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>converter</i></dt>
+<dd>Specifies the type converter procedure.</dd>
+<dt><i>convert_args</i></dt>
+<dd>Specifies how to compute the additional arguments to the converter or NULL.</dd>
+<dt><i>from_type</i></dt>
+<dd>Specifies the source type.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of additional arguments to the converter or zero.</dd>
+<dt><i>to_type</i></dt>
+<dd>Specifies the destination type.</dd>
+<dt><i>cache_type</i></dt>
+<dd>Specifies whether or not resources produced by this converter are sharable or display-specific and when they should be freed.</dd>
+<dt><i>destructor</i></dt>
+<dd>Specifies a destroy procedure for resources produced by this conversion, or NULL if no additional action is required to deallocate resources produced by the converter.</dd></dl>
+<h2>Description</h2>
+<p><code>XtSetTypeConverter</code> registers the specified type converter and destructor in all application contexts created by the calling process, including any future application contexts that may be created. <code>XtAppSetTypeConverter</code> registers the specified type converter in the single application context specified. If the same <i>from_type</i> and <i>to_type</i> are specified in multiple calls to either function, the most recent overrides the previous ones.</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

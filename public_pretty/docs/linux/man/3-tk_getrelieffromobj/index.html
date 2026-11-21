@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_getrelieffromobj(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_GetReliefFromObj, Tk_GetRelief, Tk_NameOfRelief – translate between strings and relief values">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_getrelieffromobj/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_getrelieffromobj(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tk_GetReliefFromObj, Tk_GetRelief, Tk_NameOfRelief &#8211; translate between strings and relief values </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+int
+<code>Tk_GetReliefFromObj(</code><i>interp, objPtr, reliefPtr</i><code>)</code>
+int
+<code>Tk_GetRelief(</code><i>interp, name, reliefPtr</i><code>)</code>
+const char *
+<code>Tk_NameOfRelief(</code><i>relief</i><code>)</code></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) String value contains name of relief, one of &#8220;flat&#8221;, &#8220;groove&#8221;, &#8220;raised&#8221;, &#8220;ridge&#8221;, &#8220;solid&#8221;, or &#8220;sunken&#8221;; the internal rep will be modified to cache corresponding relief value.</dd>
+<dd>char <i>*string</i> (in) Same as <i>objPtr</i> except description of relief is passed as a string.</dd>
+<dd>int <i>*reliefPtr</i> (out) Pointer to location in which to store relief value corresponding to <i>objPtr</i> or <i>name</i>.</dd>
+<dd>const char<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><i>*name</i><br />
+ Name of the relief.</dd>
+<dd>int <i>relief</i> (in) Relief value (one of <code>TK_RELIEF_FLAT</code>, <code>TK_RELIEF_RAISED</code>, <code>TK_RELIEF_SUNKEN</code>, <code>TK_RELIEF_GROOVE</code>, <code>TK_RELIEF_SOLID</code>, or <code>TK_RELIEF_RIDGE</code>).
+</dd></dl>
+<h2>Description</h2>
+<p><code>Tk_GetReliefFromObj</code> places in <i>*reliefPtr</i> the relief value corresponding to the value of <i>objPtr</i>. This value will be one of <code>TK_RELIEF_FLAT</code>, <code>TK_RELIEF_RAISED</code>, <code>TK_RELIEF_SUNKEN</code>, <code>TK_RELIEF_GROOVE</code>, <code>TK_RELIEF_SOLID</code>, or <code>TK_RELIEF_RIDGE</code>. Under normal circumstances the return value is <code>TCL_OK</code> and <i>interp</i> is unused. If <i>objPtr</i> does not contain one of the valid relief names or an abbreviation of one of them, then <code>TCL_ERROR</code> is returned, <i>*reliefPtr</i> is unmodified, and an error message is stored in <i>interp</i>&#8216;s result if <i>interp</i> is not NULL. <code>Tk_GetReliefFromObj</code> caches information about the return value in <i>objPtr</i>, which speeds up future calls to <code>Tk_GetReliefFromObj</code> with the same <i>objPtr</i>. </p>
+<p> <code>Tk_GetRelief</code> is identical to <code>Tk_GetReliefFromObj</code> except that the description of the relief is specified with a string instead of an object. This prevents <code>Tk_GetRelief</code> from caching the return value, so <code>Tk_GetRelief</code> is less efficient than <code>Tk_GetReliefFromObj</code>. </p>
+<p> <code>Tk_NameOfRelief</code> is the logical inverse of <code>Tk_GetRelief</code>. Given a relief value it returns the corresponding string (<code>flat</code>, <code>raised</code>, <code>sunken</code>, <code>groove</code>, <code>solid</code>, or <code>ridge</code>). If <i>relief</i> is not a legal relief value, then &#8220;unknown relief&#8221; is returned.</p>
+<h2>Keywords</h2>
+<p>name, relief, string</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nutop(8) · Linux Manual Pages</title>
+<meta name="description" content="nutop – display top NUFW Users">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nutop/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nutop(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>nutop &#8211; display top NUFW Users</p>
+<h2>Synopsis</h2>
+<p><code>nutop</code> [ <code>-help</code> ] [ <code>-c </code><i>config file</i> ] [ <code>-delay </code><i>refresh delay (seconds)</i> ] [ <code>-line </code><i>number of lines to display</i> ] [ <code>-databasetype </code><i> mysql/pgsql</i> ] [ <code>-host </code><i>db host</i> ] [ <code>-user </code><i>db username</i> ] [ <code>-pass </code><i>db password</i> ] [ <code>-databasename </code><i>db database name</i> ] [ <code>-tablename </code><i>db table</i> ] [ <code>-port </code><i>db port</i> ] </p>
+<h2>Description</h2>
+<p>This manual page documents the <code>nutop</code> command. </p>
+<p> Nutop is to be used by administrators willing to view users activity on a NuFW server, in real time. The display is designed to look a lot like the well known top command, as far as general layout is concerned. </p>
+<p> The default configuration file (containing SQL connections parameters) is located at /etc/nufw/nutop.conf. If decided to customize it to their needs, care should be taken about file permissions on that file, as it might let any user of the system access to the NuFW connection tracking database. </p>
+<p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>
+<h2>Options</h2>
+<dl>
+<dt><code>-help </code></dt>
+<dd>Issues usage details and exits.</dd>
+<dt><code>-c </code><i>config file</i></dt>
+<dd>Specifies config file to read SQL parameters from. Default is /etc/nufw/nutop.conf</dd>
+<dt><code>-delay </code><i>number</i></dt>
+<dd>Specifies a rate to refresh display. This parameter is interpeted as a number of seconds. Default is 2s.</dd>
+<dt><code>-line </code><i>number</i></dt>
+<dd>Number of lines to display. Default : 20</dd>
+<dt><code>-databasetype </code><i>mysql/pgsql</i></dt>
+<dd>Type of database to connect to. Default is mysql. This setting also sets the default port setting.</dd>
+<dt><code>-host </code><i>hostname/IP</i></dt>
+<dd>IP address or FQDN of database we connect to. Default value : 127.0.0.1</dd>
+<dt><code>-user </code><i>username</i></dt>
+<dd>Database username to connect as. Default is &quot;nutop&quot;</dd>
+<dt><code>-pass </code><i>password</i></dt>
+<dd>Password to use to connect to database.</dd>
+<dt><code>-databasename </code><i>name of database</i></dt>
+<dd>Name of database we connect to. Default is &quot;nulog&quot;</dd>
+<dt><code>-tablename </code><i>name of table</i></dt>
+<dd>Name of SQL table to use for queries. Default is &quot;ulog&quot;</dd>
+<dt><code>-port </code><i>TCP port</i></dt>
+<dd>TCP numeric port to use for database connection. Default is 3306 if databasetype is mysql, 5432 if pgsql.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-nuauth/">nuauth</a>(8), <a href="/docs/linux/man/8-nufw/">nufw</a>(8)</p>
+<h2>Author</h2>
+<p>Nufw was designed and coded by Eric Leblond, aka Regit (&lt;eric [at] inl.fr&gt;) , and Vincent Deffontaines, aka gryzor (&lt;vincent [at] inl.fr&gt;). Original idea in 2001, while working on NSM Ldap support. </p>
+<p> This manual page was written by Vincent Deffontaines </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 2 as published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

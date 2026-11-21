@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cimag(3) · Linux Manual Pages</title>
+<meta name="description" content="cimag, cimagf, cimagl – get imaginary part of a complex number">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cimag/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cimag(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cimag, cimagf, cimagl &#8211; get imaginary part of a complex number </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;complex.h&gt;</code> </p>
+<p> <code>double cimag(double complex </code><i>z</i><code>);</code><br />
+ <code>float cimagf(float complex </code><i>z</i><code>);</code><br />
+ <code>long double cimagl(long double complex </code><i>z</i><code>);</code> </p>
+<p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
+<p> These functions return the imaginary part of the complex number <i>z</i>. </p>
+<p> One has: </p>
+<pre>
+    z = creal(z) + I * cimag(z)
+</pre>
+<h2>VERSIONS</h2>
+<p> These functions first appeared in glibc in version 2.1.</p>
+<h2>ATTRIBUTES</h2>
+<p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>cimag</code>(), <code>cimagf</code>(), <code>cimagl</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>CONFORMING TO</h2>
+<p> C99, POSIX.1-2001, POSIX.1-2008.</p>
+<h2>NOTES</h2>
+<p> gcc also supports __imag__. That is a GNU extension.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-cabs/">cabs</a></code>(3), <code><a href="/docs/linux/man/3-creal/">creal</a></code>(3), <code><a href="/docs/linux/man/7-complex/">complex</a></code>(7)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

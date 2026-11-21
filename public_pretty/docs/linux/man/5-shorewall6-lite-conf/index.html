@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shorewall6-lite-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="shorewall6-lite.conf – Shorewall6 Lite global configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-shorewall6-lite-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>shorewall6-lite-conf(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>shorewall6-lite.conf &#8211; Shorewall6 Lite global configuration file</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>/etc/shorewall6-lite/shorewall6-lite.conf</code></dt></dl>
+<h2>Description</h2>
+<dd>This file sets options that apply to Shorewall6 Lite as a whole. </dd>
+<p> The file consists of Shell comments (lines beginning with &#8216;#&#8217;), blank lines and assignment statements (<i>variable</i>=<i>value</i>). Each variable&#8217;s setting is preceded by comments that describe the variable and it&#8217;s effect. </p>
+<p> Any option not specified in this file gets its value from the shorewall6.conf file used during compilation of /var/lib/shorewall6-lite/firewall. Those settings may be found in the file /var/lib/shorewall6-lite/firewall.conf.</p>
+<h2>Options</h2>
+<p>The following options may be set in shorewall6.conf. </p>
+<p> <code>IP6TABLES=</code>[<i>pathname</i>]</p>
+<dl>
+<dd>This parameter names the ip6tables executable to be used by Shorewall6. If not specified or if specified as a null value, then the ip6tables executable located using the PATH option is used.</dd></dl>
+<p> <code>LOGFILE=</code>[<i>pathname</i>]</p>
+<dl>
+<dd>This parameter tells the /sbin/shorewall6 program where to look for Shorewall6 messages when processing the <code>dump</code>, <code>logwatch</code>, <code>show log</code>, and <code>hits</code> commands. If not assigned or if assigned an empty value, /var/log/messages is assumed.</dd></dl>
+<p> <code>LOGFORMAT=</code>[<code>&quot;</code><i>formattemplate</i><code>&quot;</code>]</p>
+<dl>
+<dd>The value of this variable generate the &#8211;log-prefix setting for Shorewall6 logging rules. It contains a &#8220;printf&#8221; formatting template which accepts three arguments (the chain name, logging rule number (optional) and the disposition). To use LOGFORMAT with fireparse, set it as: </dd>
+<dl>
+<dd>
+<pre> LOGFORMAT=&quot;fp=%s:%d a=%s &quot;</pre>
+</dd></dl>
+<p> If the LOGFORMAT value contains the substring &#8220;%d&#8221; then the logging rule number is calculated and formatted in that position; if that substring is not included then the rule number is not included. If not supplied or supplied as empty (LOGFORMAT=&quot;&quot;) then &#8220;Shorewall6:%s:%s:&#8221; is assumed.</dl>
+<p> <code>PATH</code><code>=</code><i>pathname</i><code>[</code><code>:</code><i>pathname</i><code>]&#8230;</code></p>
+<dl>
+<dd>Determines the order in which Shorewall6 searches directories for executable files.</dd></dl>
+<p> <code>RESTOREFILE=</code>[<i>filename</i>]</p>
+<dl>
+<dd>Specifies the simple name of a file in /var/lib/shorewall6 to be used as the default restore script in the <code>shorewall6 save</code>, <code>shorewall6 restore</code>, <code>shorewall6 forget </code>and <code>shorewall6 -f start</code> commands.</dd></dl>
+<p> <code>SHOREWALL_SHELL=</code>[<i>pathname</i>]</p>
+<dl>
+<dd>This option is used to specify the shell program to be used to interpret the compiled script. If not specified or specified as a null value, /bin/sh is assumed. Using a light-weight shell such as ash or dash can significantly improve performance.</dd></dl>
+<p> <code>SUBSYSLOCK=</code>[<i>pathname</i>]</p>
+<dl>
+<dd>This parameter should be set to the name of a file that the firewall should create if it starts successfully and remove when it stops. Creating and removing this file allows Shorewall6 to work with your distribution&#8217;s initscripts. For RedHat, this should be set to /var/lock/subsys/shorewall6. For Debian, the value is /var/state/shorewall6 and in LEAF it is /var/run/shorewall.</dd></dl>
+<p> <code>VERBOSITY=</code>[<i>number</i>]</p>
+<dl>
+<dd>Shorewall6 has traditionally been very noisy (produced lots of output). You may set the default level of verbosity using the VERBOSITY OPTION. </dd>
+<p> Values are:</p>
+<dl>
+<dd>0 &#8211; Silent. You may make it more verbose using the -v<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>option</dd></dl>
+<dl>
+<dd>1 &#8211; Major progress messages displayed</dd></dl>
+<dl>
+<dd>2 &#8211; All progress messages displayed (old default<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>behavior)</dd></dl>
+<p> If not specified, then 2 is assumed.</dl>
+<h2>Files</h2>
+<p>/etc/shorewall6-lite/shorewall6.conf</p>
+<h2>See Also</h2>
+<p>m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/Documentation_Index.html">http://www.shorewall.net/Documentation_Index.html</a></code>m[] <a href="/docs/linux/man/8-shorewall6-lite/">shorewall6-lite</a>(8), <a href="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a href="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a href="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a href="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), shorewall6-ipsec(5), <a href="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a href="/docs/linux/man/5-shorewall6-masq/">shorewall6-masq</a>(5), <a href="/docs/linux/man/5-shorewall6-nat/">shorewall6-nat</a>(5), <a href="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5), <a href="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a href="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a href="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), shorewall6-proxyarp(5), shorewall6-route_rules(5), shorewall6-routestopped(5), <a href="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a href="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), shorewall6-tcrules(5), shorewall6-tos(5), <a href="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5) </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

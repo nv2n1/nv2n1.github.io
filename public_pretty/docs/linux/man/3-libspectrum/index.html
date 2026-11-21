@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libspectrum(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libspectrum/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libspectrum(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>libspectrum - Sinclair ZX Spectrum support library</p>
+<h2>DESCRIPTION</h2>
+<p><i>libspectrum</i> is a library for reading and writing some of the file formats used by emulators of the Sinclair ZX Spectrum. It also contains routines providing information about the various Spectrum clones which were available.</p>
+<p>The file formats currently supported by <i>libspectrum</i> are:</p>
+<dl>
+<dt>*
+</dt><dd> Snapshots: .z80, .szx, .sna (all read/write), .zxs, .sp., .snp and +D snapshots (read only).
+</dd><dt>*
+</dt><dd> Tape images: .tzx, .tap, .spc, .sta, .ltp (read/write) and Warajevo .tap, Z80Em and CSW version 1 (read only).
+</dd><dt>*
+</dt><dd> Input recordings: .rzx (read/write).
+</dd><dt>*
+</dt><dd> Disk images: .dsk (both plain and extended), .fdi, .sad, .scl, .td0, .trd and .udi (identification only).
+</dd><dt>*
+</dt><dd> Timex cartridges: .dck (read only).
+</dd><dt>*
+</dt><dd> IDE hard disk images: .hdf (read/write).
+</dd><dt>*
+</dt><dd> Microdrive cartridge images: .mdr (read/write).</dd></dl>
+<p>Additionally, any files compressed with <i><a HREF="/docs/linux/man/3-bzip2/">bzip2</a></i>(3) or <i><a HREF="/docs/linux/man/3-gzip/">gzip</a></i>(3) can be read and will be transparently decompressed.</p>
+<p>Full documentation for <i>libspectrum</i> is provided in `<i>libspectrum.txt</i>'.</p>
+<h2>SEE ALSO</h2>
+<p><i><a HREF="/docs/linux/man/3-bzip2/">bzip2</a></i>(3), <i><a HREF="/docs/linux/man/1-fuse/">fuse</a></i>(1), <i><a HREF="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a HREF="/docs/linux/man/3-gzip/">gzip</a></i>(3)</p>
+<p>The comp.sys.sinclair Spectrum FAQ, at
+<i><a rel="nofollow" HREF="http://www.worldofspectrum.org/faq/index.html"><a href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></a></i>.</p>
+<h2>AUTHOR</h2>
+<p>Philip Kendall (philip-fuse [at] shadowmagic.org.uk)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

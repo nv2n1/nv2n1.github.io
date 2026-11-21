@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hx509_revoke_add_crl(3) · Linux Manual Pages</title>
+<meta name="description" content="hx509 revokation checking functions –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hx509_revoke_add_crl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hx509_revoke_add_crl(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> hx509 revokation checking functions &#8211; </p>
+<h3>Functions</h3>
+<p> int <code>hx509_ocsp_request</code> (hx509_context, hx509_certs, hx509_certs, hx509_cert, const AlgorithmIdentifier *, heim_octet_string *, heim_octet_string *) </p>
+<p> int <code>hx509_revoke_add_crl</code> (hx509_context, hx509_revoke_ctx, const char *) </p>
+<p> int <code>hx509_revoke_add_ocsp</code> (hx509_context, hx509_revoke_ctx, const char *) </p>
+<p> void <code>hx509_revoke_free</code> (hx509_revoke_ctx *) </p>
+<p> int <code>hx509_revoke_init</code> (hx509_context, hx509_revoke_ctx *) </p>
+<p> int <code>hx509_revoke_ocsp_print</code> (hx509_context, const char *, FILE *) </p>
+<p> int <code>hx509_revoke_verify</code> (hx509_context, hx509_revoke_ctx, hx509_certs, time_t, hx509_cert, hx509_cert) </p>
+<h2>Detailed Description</h2>
+<p> See the <code>Revocation methods</code> for description and examples.</p>
+<h2>Function Documentation</h2>
+<h3>int hx509_ocsp_request (hx509_contextcontext, hx509_certsreqcerts, hx509_certspool, hx509_certsigner, const AlgorithmIdentifier *digest, heim_octet_string *request, heim_octet_string *nonce)</h3>
+<p> Create an OCSP request for a set of certificates. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> a hx509 context<br />
+ <i>reqcerts</i> list of certificates to request ocsp data for<br />
+ <i>pool</i> certificate pool to use when signing<br />
+ <i>signer</i> certificate to use to sign the request<br />
+ <i>digest</i> the signing algorithm in the request, if NULL use the default signature algorithm,<br />
+ <i>request</i> the encoded request, free with free_heim_octet_string().<br />
+ <i>nonce</i> nonce in the request, free with free_heim_octet_string().</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_revoke_add_crl (hx509_contextcontext, hx509_revoke_ctxctx, const char *path)</h3>
+<p> Add a CRL file to the revokation context. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> hx509 context<br />
+ <i>ctx</i> hx509 revokation context<br />
+ <i>path</i> path to file that is going to be added to the context.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_revoke_add_ocsp (hx509_contextcontext, hx509_revoke_ctxctx, const char *path)</h3>
+<p> Add a OCSP file to the revokation context. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> hx509 context<br />
+ <i>ctx</i> hx509 revokation context<br />
+ <i>path</i> path to file that is going to be added to the context.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>void hx509_revoke_free (hx509_revoke_ctx *ctx)</h3>
+<p> Free a hx509 revokation context. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>ctx</i> context to be freed</dd></dl>
+<h3>int hx509_revoke_init (hx509_contextcontext, hx509_revoke_ctx *ctx)</h3>
+<p> Allocate a revokation context. Free with <code>hx509_revoke_free()</code>. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>ctx</i> returns a newly allocated revokation context.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_revoke_ocsp_print (hx509_contextcontext, const char *path, FILE *out)</h3>
+<p> Print the OCSP reply stored in a file. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> a hx509 context<br />
+ <i>path</i> path to a file with a OCSP reply<br />
+ <i>out</i> the out FILE descriptor to print the reply on</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_revoke_verify (hx509_contextcontext, hx509_revoke_ctxctx, hx509_certscerts, time_tnow, hx509_certcert, hx509_certparent_cert)</h3>
+<p> Check that a certificate is not expired according to a revokation context. Also need the parent certificte to the check OCSP parent identifier. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> hx509 context<br />
+ <i>ctx</i> hx509 revokation context<br />
+ <i>certs</i><br />
+ <i>now</i><br />
+ <i>cert</i><br />
+ <i>parent_cert</i></dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xrd(1) · Linux Manual Pages</title>
+<meta name="description" content="xrd – xrootd file and directory meta-data utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-xrd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>xrd(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> xrd &#8211; xrootd file and directory meta-data utility</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+xrd[host][options][command] options : [-DSpname stringval][-DIpname numberval][options]
+                                                          [-Oopaqueinfo][-h]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>This tool is DEPRECATED. Please use xrdfs instead.</code> </p>
+<p> The <code>xrd</code> utility executes meta-data oriented operations (e.g., ls, mv, rm, etc.) on one or more xrootd servers. Usage synopsis can be displayed by typing &quot;<code>xrd -h</code>&quot;. Command help is available by invoking <code>xrd</code> with no command line options or parameters and then typing &quot;help&quot; in response to the input prompt.</p>
+<h2>OPTIONS</h2>
+<p> <code>-DS</code><i>pname stringval</i></p>
+<dl>
+<dt>
+</dt><dd> set the internal parameter <i>pname</i> with the string value <i>stringval</i>. </dd>
+</dl>
+<p> <code>-DI</code><i>pname numberval</i></p>
+<dl>
+<dt>
+</dt><dd> set the internal parameter <i>pname</i> with the numeric value <i>numberval</i>. </dd>
+</dl>
+<p> <code>-O</code><i>opaqueinfo</i></p>
+<dl>
+<dt>
+</dt><dd> add opaque information <i>opaqueinfo</i> to any path. </dd>
+</dl>
+<p> <code>-h</code> display usage information.</p>
+<h2>NOTES</h2>
+<p> See XrdClientConst.hh for a list of parameters. Documentation for all components associated with <code>xrd</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>
+<h2>DIAGNOSTICS</h2>
+<p> Errors yield an error message and a non-zero exit status.</p>
+<h2>LICENSE</h2>
+<p> License terms can be displayed by typing &quot;<code>xrootd -H</code>&quot;.</p>
+<h2>SUPPORT LEVEL</h2>
+<p> The <code>xrd</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
+ </center> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

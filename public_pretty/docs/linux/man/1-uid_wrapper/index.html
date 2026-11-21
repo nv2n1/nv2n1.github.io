@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uid_wrapper(1) · Linux Manual Pages</title>
+<meta name="description" content="uid_wrapper – A wrapper to fake privilege separation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-uid_wrapper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>uid_wrapper(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> uid_wrapper &#8211; A wrapper to fake privilege separation </p>
+<h2>SYNOPSIS</h2>
+<p> LD_PRELOAD=libuid_wrapper.so UID_WRAPPER=1 UID_WRAPPER_ROOT=1 <code>./myapplication</code></p>
+<h2>DESCRIPTION</h2>
+<dl>
+<dt>
+</dt><dd> &bull; Allows uid switching as a normal user.</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Start any application making it believe it is running as root.</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; Support for user/group changing in the local thread using the syscalls (like glibc).</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; More precisely this library intercepts seteuid and related calls, and simulates them in a manner similar to the nss_wrapper and socket_wrapper libraries.</dd></dl>
+<p> Some projects like a file server need privilege separation to be able to switch to the connection user and do file operations. uid_wrapper convincingly lies to the application letting it believe it is operating as root and even switching between UIDs and GIDs as needed.</p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> <code>UID_WRAPPER</code></p>
+<dl>
+<dt>
+</dt><dd> If you load the uid_wrapper and enable it with setting UID_WRAPPER=1 all setuid and setgid will work, even as a normal user.</dd></dl>
+<p> <code>UID_WRAPPER_ROOT</code></p>
+<dl>
+<dt>
+</dt><dd> It is possible to start your application as fake root with setting UID_WRAPPER_ROOT=1.</dd></dl>
+<p> <code>UID_WRAPPER_DEBUGLEVEL</code></p>
+<dl>
+<dt>
+</dt><dd> If you need to see what is going on in uid_wrapper itself or try to find a bug, you can enable logging support in uid_wrapper if you built it with debug symbols. </dd>
+<dl>
+<dt>
+</dt><dd> &bull; 0 = ERROR</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; 1 = WARNING</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; 2 = DEBUG</dd></dl>
+<dl>
+<dt>
+</dt><dd> &bull; 3 = TRACE</dd></dl>
+</dl>
+<p> <code>UID_WRAPPER_MYUID</code></p>
+<dl>
+<dt>
+</dt><dd> This environment variable can be used to tell uid_wrapper to let geteuid() return the real (instead of the faked) UID of the user who started the process with uid_wrapper.</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+uid_t uid;
+setenv("UID_WRAPPER_MYUID", "1", 1);
+uid = geteuid();
+unsetenv("UID_WRAPPER_MYUID");
+</code></pre>
+</dd></dl>
+<h2>EXAMPLE</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ LD_PRELOAD=libuid_wrapper.so UID_WRAPPER=1 UID_WRAPPER_ROOT=1 id
+uid=0(root) gid=0(root) 0(root)
+</pre>
+</dd></dl>
+<h2>WORKAROUNDS</h2>
+<p> If you need to write code that behaves differently depending on whether uid_wrapper is enabled or not, for example in cases where you have to file permissions, you can predefine the uid_wrapper_enabled() function in your project as follows: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+bool uid_wrapper_enabled(void)
+{
+    return false;
+}
+</code></pre>
+</dd></dl>
+<p> Since uid_wrapper overloads this function if enabled, you can use it in your code to detect uid_wrapper. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

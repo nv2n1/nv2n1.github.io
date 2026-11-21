@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>euare-assumerole(1) · Linux Manual Pages</title>
+<meta name="description" content="euare-assumerole – Assume an IAM role">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-euare-assumerole/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>euare-assumerole(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> euare-assumerole &#8211; Assume an IAM role</p>
+<h2>SYNOPSIS</h2>
+<p> euare-assumerole [-d SECONDS] [&#8211;session-name PATH] [-c | <code>-s]</code></p>
+<dl>
+<dt>[&#8211;policy-content POLICY_CONTENT | <code>&#8211;policy-document</code> FILE]</dt>
+<dd> [&#8211;external-id STR] [&#8211;mfa-serial MFA] [&#8211;mfa-code CODE] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Assume an IAM role</p>
+<h2>DESCRIPTION</h2>
+<p> The euare-assumerole utility obtains credentials for an IAM role and outputs them in the form of shellcode that sets environment variables that allow euca2ools commands to use them. Use it inside an eval command to make this process seamless:</p>
+<h2>DESCRIPTION</h2>
+<p> $ eval `euare-assumerole myrole`</p>
+<h2>DESCRIPTION</h2>
+<p> To stop using the role, use <a href="/docs/linux/man/1-euare-releaserole/">euare-releaserole</a>(1).</p>
+<h3>positional arguments:</h3>
+<dl>
+<dt>ROLE</dt>
+<dd> the role to assume</dd></dl>
+<h3>optional arguments:</h3>
+<dl>
+<dt><code>-d</code> SECONDS, <code>&#8211;duration</code> SECONDS</dt>
+<dd> number of seconds the credentials should be valid for (900-3600) (default: 900)</dd>
+<dt><code>&#8211;session-name</code> PATH</dt>
+<dd> role session identifier to include in the assumed role user ID (default: automatic)</dd>
+<dt><code>-c</code></dt>
+<dd> generate C-shell commands on stdout (default if SHELL looks like a csh-style shell</dd>
+<dt><code>-s</code></dt>
+<dd> generate Bourne shell commands on stdout (default if SHELL does not look like a csh-style shell</dd>
+<dt><code>&#8211;policy-content</code> POLICY_CONTENT</dt>
+<dd> an IAM policy further restricting what the credentials will be allowed to do. This cannot grant additional permissions.</dd>
+<dt><code>&#8211;policy-document</code> FILE</dt>
+<dd> file containing an IAM policy further restricting what the credentials will be allowed to do. This cannot grant additional permissions.</dd>
+<dt><code>&#8211;external-id</code> STR</dt>
+<dd> external ID to use for comparison with policies</dd>
+<dt><code>&#8211;mfa-serial</code> MFA</dt>
+<dd> MFA token serial number</dd>
+<dt><code>&#8211;mfa-code</code> CODE</dt>
+<dd> MFA token code</dd>
+<dt><code>-U</code> URL, <code>&#8211;url</code> URL</dt>
+<dd> token service endpoint URL</dd>
+<dt><code>&#8211;region</code> USER [at] REGION</dt>
+<dd> region and/or user names to search when looking up config file data</dd>
+<dt> <code>-I</code> KEY_ID, <code>&#8211;access-key-id</code> KEY_ID</dt>
+<dt> <code>-S</code> KEY, <code>&#8211;secret-key</code> KEY</dt>
+<dt> <code>&#8211;security-token</code> TOKEN</dt>
+<dt><code>&#8211;debug</code></dt>
+<dd>
+</dd><dd>show debugging output</dd>
+<dt><code>&#8211;debugger</code></dt>
+<dd> launch interactive debugger on error</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show the program&#8217;s version and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

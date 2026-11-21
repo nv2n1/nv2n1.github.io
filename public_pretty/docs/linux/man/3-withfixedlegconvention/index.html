@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>withfixedlegconvention(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-withfixedlegconvention/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>withfixedlegconvention(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::MakeVanillaSwap - helper class</p>
+<h2>Synopsis</h2>
+<pre><code>MakeVanillaSwap (const Period &amp;swapTenor, const boost::shared_ptr&lt; IborIndex &gt; &amp;iborIndex, Rate fixedRate=Null&lt; Rate &gt;(), const Period &amp;forwardStart=0 *Days)
+operator VanillaSwap () const
+operator boost::shared_ptr&lt; VanillaSwap &gt; () const
+MakeVanillaSwap &amp; receiveFixed (bool flag=true)
+MakeVanillaSwap &amp; withType (VanillaSwap::Type type)
+MakeVanillaSwap &amp; withNominal (Real n)
+MakeVanillaSwap &amp; withEffectiveDate (const Date &amp;)
+MakeVanillaSwap &amp; withTerminationDate (const Date &amp;)
+MakeVanillaSwap &amp; withRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFixedLegTenor (const Period &amp;t)
+MakeVanillaSwap &amp; withFixedLegCalendar (const Calendar &amp;cal)
+MakeVanillaSwap &amp; withFixedLegConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFixedLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFixedLegRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFixedLegEndOfMonth (bool flag=true)
+MakeVanillaSwap &amp; withFixedLegFirstDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFixedLegNextToLastDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFixedLegDayCount (const DayCounter &amp;dc)
+MakeVanillaSwap &amp; withFloatingLegTenor (const Period &amp;t)
+MakeVanillaSwap &amp; withFloatingLegCalendar (const Calendar &amp;cal)
+MakeVanillaSwap &amp; withFloatingLegConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFloatingLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFloatingLegRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFloatingLegEndOfMonth (bool flag=true)
+MakeVanillaSwap &amp; withFloatingLegFirstDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFloatingLegNextToLastDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFloatingLegDayCount (const DayCounter &amp;dc)
+MakeVanillaSwap &amp; withFloatingLegSpread (Spread sp)
+MakeVanillaSwap &amp; withDiscountingTermStructure (const Handle&lt; YieldTermStructure &gt; &amp;discountingTermStructure)</code></pre>
+<h3>Public Member Functions</h3>
+<pre><code>MakeVanillaSwap (const Period &amp;swapTenor, const boost::shared_ptr&lt; IborIndex &gt; &amp;iborIndex, Rate fixedRate=Null&lt; Rate &gt;(), const Period &amp;forwardStart=0 *Days)
+operator VanillaSwap () const
+operator boost::shared_ptr&lt; VanillaSwap &gt; () const
+MakeVanillaSwap &amp; receiveFixed (bool flag=true)
+MakeVanillaSwap &amp; withType (VanillaSwap::Type type)
+MakeVanillaSwap &amp; withNominal (Real n)
+MakeVanillaSwap &amp; withEffectiveDate (const Date &amp;)
+MakeVanillaSwap &amp; withTerminationDate (const Date &amp;)
+MakeVanillaSwap &amp; withRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFixedLegTenor (const Period &amp;t)
+MakeVanillaSwap &amp; withFixedLegCalendar (const Calendar &amp;cal)
+MakeVanillaSwap &amp; withFixedLegConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFixedLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFixedLegRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFixedLegEndOfMonth (bool flag=true)
+MakeVanillaSwap &amp; withFixedLegFirstDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFixedLegNextToLastDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFixedLegDayCount (const DayCounter &amp;dc)
+MakeVanillaSwap &amp; withFloatingLegTenor (const Period &amp;t)
+MakeVanillaSwap &amp; withFloatingLegCalendar (const Calendar &amp;cal)
+MakeVanillaSwap &amp; withFloatingLegConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFloatingLegTerminationDateConvention (BusinessDayConvention bdc)
+MakeVanillaSwap &amp; withFloatingLegRule (DateGeneration::Rule r)
+MakeVanillaSwap &amp; withFloatingLegEndOfMonth (bool flag=true)
+MakeVanillaSwap &amp; withFloatingLegFirstDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFloatingLegNextToLastDate (const Date &amp;d)
+MakeVanillaSwap &amp; withFloatingLegDayCount (const DayCounter &amp;dc)
+MakeVanillaSwap &amp; withFloatingLegSpread (Spread sp)
+MakeVanillaSwap &amp; withDiscountingTermStructure (const Handle&lt; YieldTermStructure &gt; &amp;discountingTermStructure)</code></pre>
+<h2>Detailed Description</h2>
+<p>helper class</p>
+<p>This class provides a more comfortable way to instantiate standard market swap.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>metalink_resource_t(3) · Linux Manual Pages</title>
+<meta name="description" content="metalink_resource_t – The structure that holds an URL of a resource and its metadata.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-metalink_resource_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>metalink_resource_t(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> metalink_resource_t &#8211; The structure that holds an URL of a resource and its metadata. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>metalink_resource_t</code> is a structure that holds an URL of a resource and its metadata. </p>
+<h2>STRUCTURE MEMBERS</h2>
+<p> char *url;<br />
+ char *type;<br />
+ char *location;<br />
+ int preference;<br />
+ int maxconnections; </p>
+<h3>url</h3>
+<p> Null terminated string of URL. </p>
+<h3>type</h3>
+<p> Null terminated string of protocol of URL, like &quot;http&quot;, &quot;ftp&quot;. </p>
+<h3>location</h3>
+<p> Null terminated string of country code, like &quot;JP&quot;, where the server in URL resides. </p>
+<h3>preference</h3>
+<p> Preference of this resource. The higher value has bigger preference. </p>
+<h3>maxconnections</h3>
+<p> Max connections that a client can establish to this resource simultaneously. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

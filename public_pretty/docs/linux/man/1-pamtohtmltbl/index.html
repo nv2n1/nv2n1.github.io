@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamtohtmltbl(1) · Linux Manual Pages</title>
+<meta name="description" content="pamtohtmltbl – convert pnm/pam visual image to an HTML table">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamtohtmltbl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamtohtmltbl(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pamtohtmltbl &#8211; convert pnm/pam visual image to an HTML table</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamtohtmltbl</code> [<code>-transparent=</code><i>color</i>] [<code>-verbose</code>] [<i>file</i>] </p>
+<p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamtohtmltbl</code> converts a visual image to an HTML table with one cell per pixel. The cell is empty, but its background color is that of the pixel. </p>
+<p> <i>file</i> is a PBM, PGM, PPM, or PAM file. If PAM, it must be a standard visual image of tuple type RGB, GRAYSCALE, or BLACKANDWHITE, or something equivalent with extra higher numbered channels, but <code>pamtohtmltbl</code> doesn&#8217;t check the tuple type; it just assumes. </p>
+<p> Note that the more normal way to include a visual image in an HTML document is with a &lt;IMG&gt; tag. </p>
+<p> Not all web browsers render tables as <code>pamtohtmltbl</code> expects, and therefore show a grossly distorted image. Internet Explorer 7 on Windows and Opera 9.02 on Windows have been seen to work; Firefox 2.0.0.16 on the same Windows system has been seen not to. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-transparent=</code><i>color</i></dt>
+<dd> This option indicates that pixels of the specified color are to be transparent in the HTML table. The table cell for a pixel of this color will have no background color specified. </dd>
+<p> Specify the color (<i>color</i>) as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>
+<dt><code>-verbose</code></dt>
+<dd> This option causes <code>pamtohtmltbl</code> to display messages about the conversion process.<br />
+&nbsp;<wbr>&nbsp;<wbr></dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>pnm</code>(1) </p>
+<p> <code>pam</code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamtohtmltbl</code> was new in Netpbm 10.15 (April 2003). </p>
+<h2>AUTHORS</h2>
+<p> Alexander B. Ivanov (SSH) wrote a program he called <code>pnm2html</code>. Bryan Henderson adapted it to use the Netpbm libraries and handle PAM images and follow Netpbm conventions, and named it <code>pamtohtmltbl</code>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

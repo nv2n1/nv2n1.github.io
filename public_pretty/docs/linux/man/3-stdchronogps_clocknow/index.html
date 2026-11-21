@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronogps_clocknow(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronogps_clocknow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronogps_clocknow(3)</h1>
+
+
+
+
+
+<p>std::chrono::gps_clock::now - std::chrono::gps_clock::now</p>
+<h2>Synopsis</h2>
+<pre><code>static std::chrono::time_point&lt;std::chrono::gps_clock&gt; now();  (since C++20)</code></pre> 
+<p>Returns a time point representing the current point in time. The result is calculated as if by std::chrono::gps_clock::from_utc(std::chrono::utc_clock::now()). Implementations may use a more accurate value of GPS time.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>A time point representing the current time.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;numeric&gt;
+#include &lt;chrono&gt;
+volatile int sink;
+int main()
+{
+for (auto size = 1ull; size &lt; 1000000000ull; size *= 100) {
+// record start time
+auto start = std::chrono::gps_clock::now();
+// do some work
+std::vector&lt;int&gt; v(size, 42);
+sink = std::accumulate(v.begin(), v.end(), 0u); // make sure it&rsquo;s a side effect
+// record end time
+auto end = std::chrono::gps_clock::now();
+std::chrono::duration&lt;double&gt; diff = end - start;
+std::cout &lt;&lt; &quot;Time to fill and iterate a vector of &quot;
+&lt;&lt; size &lt;&lt; &quot; ints : &quot; &lt;&lt; diff.count() &lt;&lt; &quot; s\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> Time to fill and iterate a vector of 1 ints : 2.43e-07 s
+ <wbr> Time to fill and iterate a vector of 100 ints : 4.1e-07 s
+ <wbr> Time to fill and iterate a vector of 10000 ints : 2.519e-05 s
+ <wbr> Time to fill and iterate a vector of 1000000 ints : 0.00207669 s
+ <wbr> Time to fill and iterate a vector of 100000000 ints : 0.423087 s</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

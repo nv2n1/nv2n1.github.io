@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtextgetsubstringwcs(3) · Linux Manual Pages</title>
+<meta name="description" content="XmTextGetSubstringWcs — A Text function that retrieves a portion of a wide character internal text buffer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtextgetsubstringwcs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtextgetsubstringwcs(3)</h1>
+
+
+
+
+
+<p><code>XmTextGetSubstringWcs</code> &#8212; A Text function that retrieves a portion of a wide character internal text buffer</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Text.h&gt;
+<code>int XmTextGetSubstringWcs</code>(
+<code>Widget widget</code>,
+<code>XmTextPosition start</code>,
+<code>int num_chars</code>,
+<code>int buffer_size</code>,
+<code>wchar_t *buffer</code>);</pre>
+<h2>Description</h2>
+<p><code>XmTextGetSubstringWcs</code> retrieves a copy of a portion of the internal text buffer of a Text widget that is stored in a wide character format. The function copies a specified number of characters from a given start position in the internal text buffer into a buffer provided by the application. A NULL terminator is placed at the end of the copied data.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID.</dd>
+<dt><i>start</i></dt>
+<dd>Specifies the beginning character position from which the data will be retrieved. This is an integer number of characters from the beginning of the text buffer. The first character position is 0 (zero).</dd>
+<dt><i>num_chars</i></dt>
+<dd>Specifies the number of <code>wchar_t</code> characters to be copied into the provided buffer.</dd>
+<dt><i>buffer_size</i></dt>
+<dd>Specifies the size of the supplied buffer as a number of <code>wchar_t</code> storage locations. The minimum size is <i>num_chars</i> + 1.</dd>
+<dt><i>buffer</i></dt>
+<dd>Specifies the wide character buffer into which the internal text buffer will be copied.</dd></dl>
+<p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
+<h2>Return</h2>
+<dl COMPACT>
+<dt><code>XmCOPY_SUCCEEDED</code></dt>
+<dd>The function was successful.</dd>
+<dt><code>XmCOPY_FAILED</code></dt>
+<dd>The function failed because it was unable to copy the specified number of characters into the buffer provided. The buffer size may be insufficient. The contents of <i>buffer</i> are undefined.</dd>
+<dt><code>XmCOPY_TRUNCATED</code></dt>
+<dd>The requested number of characters extended beyond the internal buffer. The function copied characters between <i>start</i> and the end of the widget&#8217;s buffer and terminated the string with a NULL terminator; fewer than <i>num_chars</i> characters were copied.</dd></dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3) and <code><a href="/docs/linux/man/3-xmtextgetsubstring/">XmTextGetSubstring</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

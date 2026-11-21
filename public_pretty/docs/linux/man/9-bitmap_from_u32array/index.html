@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bitmap_from_u32array(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-bitmap_from_u32array/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>bitmap_from_u32array(9)</h1>
+
+
+
+
+
+<p>bitmap_from_u32array - copy the contents of a u32 array of bits to bitmap</p>
+<h2>Synopsis</h2>
+<pre><code>unsigned int bitmap_from_u32array(unsigned long *bitmap, unsigned int nbits, const u32 *buf, unsigned int nwords);</code></pre>
+<h2>Arguments</h2>
+<p><i>bitmap</i></p>
+<dl><dd></dd><dd>array of unsigned longs, the destination bitmap, non NULL</dd></dl>
+<p><i>nbits</i></p>
+<dl><dd>number of bits in <i>bitmap</i></dd></dl>
+<p><i>buf</i></p>
+<dl><dd>array of u32 (in host byte order), the source bitmap, non NULL</dd></dl>
+<p><i>nwords</i></p>
+<dl><dd>number of u32 words in <i>buf</i></dd></dl>
+<h2>Description</h2>
+<p>copy min(nbits, 32*nwords) bits from <i>buf</i> to <i>bitmap</i>, remaining bits between nword and nbits in <i>bitmap</i> (if any) are cleared. In last word of <i>bitmap</i>, the bits beyond nbits (if any) are kept unchanged.</p>
+<p>Return the number of bits effectively copied.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

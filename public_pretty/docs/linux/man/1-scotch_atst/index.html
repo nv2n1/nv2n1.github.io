@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scotch_atst(1) · Linux Manual Pages</title>
+<meta name="description" content="atst – test the consistency of target architectures">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scotch_atst/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scotch_atst(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>atst </code>&#8211; test the consistency of target architectures</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+atst[options][afile][lfile]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>atst</code> program checks the consistency of a Scotch decomposition-defined target architecture and, in case of success, outputs some statistics regarding the number of target vertices and the length of paths linking them. Target architectures define the topology of the target graphs used by static mapping programs <code>gmap</code>(1) and <code>dgmap</code>(1). </p>
+<p> The resulting statistics are stored in file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>
+<p> When the proper libraries have been included at compile time, <code>atst</code> can directly handle compressed files, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.tgt.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> Test the consistency of architecture arch.tgt: </p>
+<pre>
+    $ atst arch.tgt
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>amk_grf</code>(1), <code>amk_ccc</code>(1), <code>amk_fft2</code>(1), <code>amk_hy</code>(1), <code>amk_m2</code>(1), <code>amk_p2</code>(1), <code>gmap</code>(1), <code>dgmap</code>(1). </p>
+<p> Scotch user&#8217;s manual.</p>
+<h2>AUTHOR</h2>
+<p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

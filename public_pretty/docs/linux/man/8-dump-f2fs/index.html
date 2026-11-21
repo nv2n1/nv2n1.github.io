@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dump-f2fs(8) · Linux Manual Pages</title>
+<meta name="description" content="dump.f2fs – retrieve directory and file entries from an F2FS-formated image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dump-f2fs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dump-f2fs(8)</h1>
+
+
+
+
+
+<p>dump.f2fs &#8211; retrieve directory and file entries from an F2FS-formated image</p>
+<h2>Synopsis</h2>
+<p><code>dump.f2fs</code> [ <code>-i</code> <i>inode number</i> ] [ <code>-s</code> <i>SIT range</i> ] [ <code>-a</code> <i>SSA range</i> ] [ <code>-b</code> <i>block address</i> ] [ <code>-d</code> <i>debugging-level</i> ] <i>device</i></p>
+<h2>Description</h2>
+<p><code>dump.f2fs</code> is used to retrieve f2fs metadata (usually in a disk partition). <i>device</i> is the special file corresponding to the device (e.g. <i>/dev/sdXX</i>). </p>
+<p> Currently, it can retrieve 1) a file given its inode number, 2) SIT entries into a file, 3) SSA entries into a file, 4) reverse information from the given block address. </p>
+<p> The exit code returned by <code>dump.f2fs</code> is 0 on success and -1 on failure.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i</code><i> inode number</i></dt>
+<dd>Specify an inode number to dump out.</dd>
+<dt><code>-s</code><i> SIT range</i></dt>
+<dd>Specify a range presented by segment numbers to dump SIT entries.</dd>
+<dt><code>-a</code><i> SSA range</i></dt>
+<dd>Specify a range presented by segment numbers to dump SSA entries.</dd>
+<dt><code>-b</code><i> block address</i></dt>
+<dd>Specify a block address to retrieve its metadata information.</dd>
+<dt><code>-d</code><i> debug-level</i></dt>
+<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</dd>
+<dt></dt></dl>
+<h2>Author</h2>
+<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;.</dd>
+<h2>Availability</h2>
+<p><code>dump.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
+<h2>See Also</h2>
+<p><code>mkfs.f2fs(8),</code> <code><a href="/docs/linux/man/8-fsck-f2fs/">fsck.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-defrag-f2fs/">defrag.f2fs</a>(8),</code> <code>resize.f2fs(8),</code> <code>sload.f2fs(8).</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

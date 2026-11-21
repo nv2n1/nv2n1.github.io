@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gset_marker_colr_ind(3) · Linux Manual Pages</title>
+<meta name="description" content="gset_marker_colr_ind – (Set polymarker color index) – sets the polymarker color index.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gset_marker_colr_ind/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gset_marker_colr_ind(3)</h1>
+
+
+
+
+
+<p>gset_marker_colr_ind &#8211; (Set polymarker color index) &#8211; sets the polymarker color index.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;ncarg/gks.h&gt; </p>
+<p> void gset_marker_colr_ind(Gint marker_colr_ind);</p>
+<h2>Description</h2>
+<dl COMPACT>
+<dt>marker_colr_ind</dt>
+<dd>(Input) &#8211; A color index.</dd></dl>
+<h2>Usage</h2>
+<p>All polymarkers drawn with calls to the GPM output primitive will be drawn with the color associated with index marker_colr_ind until gset_marker_colr_ind is called again and a new index is assigned. </p>
+<p> For all GKS output primitives, color is assigned using a color index. The color indices run from 0 to 255, where 0 is the background color index and 1 is the foreground color index. Color values are associated with indices by calls to the GKS routine gset_colr_rep. If a color index is used that has no user-assigned color value set in a gset_colr_rep call, then a device-dependent color value will be assigned to that index.</p>
+<h2>Access</h2>
+<p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
+<h2>See Also</h2>
+<p>Online: <code>gpolymarker(3NCARG),</code> <code>gset_marker_type(3NCARG),</code> <code>gset_marker_size(3NCARG),</code> <code>gset_colr_rep(3NCARG),</code> <code>ginq_marker_type(3NCARG),</code> <code>ginq_marker_size(3NCARG),</code> <code>ginq_marker_colr_ind(3NCARG),</code> <code>point(3NCARG),</code> <code>points(3NCARG),</code> <code>gks(3NCARG),</code> <code>ncarg_gks_cbind(3NCARG)</code> </p>
+<p> Hardcopy: User&#8217;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 1987-2009<br />
+ University Corporation for Atmospheric Research<br />
+ The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

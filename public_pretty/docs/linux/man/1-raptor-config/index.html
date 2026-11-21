@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>raptor-config(1) · Linux Manual Pages</title>
+<meta name="description" content="raptor-config – script to get information about the installed version of Raptor">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-raptor-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>raptor-config(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> raptor-config &#8211; script to get information about the installed version of Raptor </p>
+<h2>SYNOPSIS</h2>
+<p> <code>raptor-config</code> [&#8211;cflags] [&#8211;options] [&#8211;help] [&#8211;libs] [&#8211;libtool-libs] [&#8211;private-libs] [&#8211;prefix<i>[=DIR]</i>] [&#8211;version-decimal] [&#8211;version]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>raptor-config</i> is a tool that is used to determine the compile and linker flags that should be used to compile and link programs that use the Raptor RDF parser library.</p>
+<h2>OPTIONS</h2>
+<p> <i>raptor-config</i> accepts the following options:</p>
+<dl>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Print the compiler flags that are necessary to compile a raptor program.</dd>
+<dt><code>&#8211;options</code></dt>
+<dd> Print raptor compiled options such as parsers and serializers available, the XML parser used (if any) and the WWW retrieval library used (if any).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a help message summarising usage.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Print the linker flags that are necessary to link a raptor program. This excludes linker arguments used to build the raptor shared library.</dd>
+<dt><code>&#8211;libtool-libs</code></dt>
+<dd> Print the path to the libtool file for raptor.</dd>
+<dt><code>&#8211;private-libs</code></dt>
+<dd> Print the linker flags that are necessary to build the raptor shared library. This option is not usually needed because the raptor shared library has already been dynamically linked against these flags.</dd>
+<dt><code>&#8211;prefix=PREFIX</code></dt>
+<dd> If specified, use PREFIX instead of the installation prefix that raptor was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the currently installed version of raptor on the standard output.</dd>
+<dt><code>&#8211;version-decimal</code></dt>
+<dd> Print the currently installed version of raptor as a decimal integer.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libraptor/">libraptor</a>(3)</code></p>
+<h2>AUTHOR</h2>
+<p> Dave Beckett &#8211; <a rel="nofollow" href="http://www.dajobe.org/">http://www.dajobe.org/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

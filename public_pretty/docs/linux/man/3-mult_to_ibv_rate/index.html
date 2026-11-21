@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mult_to_ibv_rate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mult_to_ibv_rate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mult_to_ibv_rate(3)</h1>
+
+
+
+
+
+<p>ibv_rate_to_mult - convert IB rate enumeration to multiplier of 2.5 Gbit/sec</p>
+<p>mult_to_ibv_rate - convert multiplier of 2.5 Gbit/sec to an IB rate enumeration</p>
+<h2>Synopsis</h2><dl COMPACT><dd><pre>#include &lt;infiniband/verbs.h&gt;
+int ibv_rate_to_mult(enum ibv_rate rate);
+enum ibv_rate mult_to_ibv_rate(int mult);</pre></dd></dl><h2>Description</h2>ibv_rate_to_mult() converts the IB transmission rate enumeration rate to a multiple of 2.5 Gbit/sec (the base rate). For example, if rate is IBV_RATE_5_GBPS, the value 2 will be returned (5 Gbit/sec = 2 * 2.5 Gbit/sec). 
+<p>mult_to_ibv_rate() converts the multiplier value (of 2.5 Gbit/sec) mult to an IB transmission rate enumeration. For example, if mult is 2, the rate enumeration IBV_RATE_5_GBPS will be returned.</p>
+<h2>Return Value</h2>ibv_rate_to_mult() returns the multiplier of the base rate 2.5 Gbit/sec. 
+<p>mult_to_ibv_rate() returns the enumeration representing the IB transmission rate.</p>
+<h2>See Also</h2>ibv_query_port(3)
+<h2>Author</h2>Dotan Barak &lt;dotanba [at] gmail.com&gt;
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

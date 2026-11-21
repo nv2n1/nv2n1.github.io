@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fi_provider(7) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-fi_provider/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>fi_provider(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>fi_provider - Fabric Interface Providers</p>
+<h2>Overview</h2>
+<p>Conceptually, a fabric provider may be viewed as a local hardware NIC driver, though a provider is not limited by this definition. The first component of libfabric is a general purpose framework that is capable of handling different types of fabric hardware. All fabric hardware devices and their software drivers are required to support this framework. Devices and the drivers that plug into the libfabric framework are referred to as fabric providers, or simply providers.</p>
+<p>This distribution of libfabric contains the following providers (although more may be available via run-time plug-ins):</p>
+<h3>Core providers</h3>
+<p>GNI : A provider for the Aries interconnect in Cray XC(TM) systems utilizing the user-space Generic Networking Interface. See fi_gni(7) for more information.</p>
+<p>PSM : High-speed InfiniBand networking from Intel. See <a HREF="/docs/linux/man/7-fi_psm/">fi_psm</a>(7) for more information.</p>
+<p>Sockets : A general purpose provider that can be used on any network that supports TCP/UDP sockets. This provider is not intended to provide performance improvements over regular TCP/UDP sockets, but rather to allow developers to write, test, and debug application code even on platforms that do not have high-speed networking. See <a HREF="/docs/linux/man/7-fi_sockets/">fi_sockets</a>(7) for more information.</p>
+<p>usNIC : Ultra low latency Ethernet networking over Cisco userspace VIC adapters. See fi_usnic(7) for more information.</p>
+<p>Verbs : This provider uses the Linux Verbs API for network transport. Application performance is, obviously expected to be similar to that of the native Linux Verbs API. Analogous to the Sockets provider, the Verbs provider is intended to enable developers to write, test, and debug application code on platforms that only have Linux Verbs-based networking. See <a HREF="/docs/linux/man/7-fi_verbs/">fi_verbs</a>(7) for more information.</p>
+<p>Blue Gene/Q : See fi_bgq(7) for more information.</p>
+<h3>Utility providers</h3>
+<p>RxM : The RxM provider (ofi_rxm) is an utility provider that supports RDM endpoints emulated over MSG endpoints of a core provider. See fi_rxm(7) for more information.</p>
+<h2>Core Versus Utility Providers</h2>
+<p>Core providers implement the libfabric interfaces directly over low-level hardware and software interfaces. They are designed to support a specific class of hardware, and may be limited to supporting a single NIC. Core providers often only support libfabric features and interfaces that map efficiently to their underlying hardware.</p>
+<p>Utility providers are distinct from core providers in that they are not associated with specific classes of devices. They instead work with core providers to expand their features, and interact with core providers through libfabric interfaces internally. Utility providers are often used to support a specific endpoint type over a simpler endpoint type. For example, the RXD provider implements reliability over unreliable datagram endpoints. The utility providers will not layer over the sockets provider unless it is explicitly requested.</p>
+<p>Utility providers show up as a component in the core provider&rsquo;s component list. See fi_fabric(3). Utility providers are enabled automatically for core providers that do not support the feature set requested by an application.</p>
+<h2>Provider Requirements</h2>
+<p>Libfabric provides a general framework for supporting multiple types of fabric objects and their related interfaces. Fabric providers have a large amount of flexibility in selecting which components they are able and willing to support, based on specific hardware constraints. Provider developers should refer to docs/provider for information on functionaliy supplied by the framework to assist in provider implementation. To assist in the development of applications, libfabric specifies the following requirements that must be met by any fabric provider, if requested by an application.</p>
+<p>Note that the instantiation of a specific fabric object is subject to application configuration parameters and need not meet these requirements.</p>
+<dl><dt>&bull;
+</dt><dd>A fabric provider must support at least one endpoint type.
+</dd><dt>&bull;
+</dt><dd>All endpoints must support the message queue data transfer interface (fi_ops_msg).
+</dd><dt>&bull;
+</dt><dd>An endpoint that advertises support for a specific endpoint capability must support the corresponding data transfer interface.
+</dd><dt>&bull;
+</dt><dd>FI_ATOMIC - fi_ops_atomic
+</dd><dt>&bull;
+</dt><dd>FI_RMA - fi_ops_rma
+</dd><dt>&bull;
+</dt><dd>FI_TAGGED - fi_ops_tagged
+</dd><dt>&bull;
+</dt><dd>Endpoints must support all transmit and receive operations for any data transfer interface that they support.
+</dd><dt>&bull;
+</dt><dd>Exception: If an operation is only usable for an operation that the provider does not support, and support for that operation is conveyed using some other mechanism, the operation may return
+</dd><dl><dd></dd><dl><dt>&bull;
+</dt><dd>FI_ENOSYS. For example, if the provider does not support injected data, it can set the attribute inject_size = 0, and fail all fi_inject operations.</dd></dl></dl><dt>&bull;
+</dt><dd>The framework supplies wrappers around the 'msg' operations that can be used. For example, the framework implements the sendv() msg operation by calling sendmsg(). Providers may reference the general operation, and supply on the sendmsg() implementation.
+</dd><dt>&bull;
+</dt><dd>Providers must set all operations to an implementation. Function pointers may not be left NULL or uninitialized. The framework supplies empty functions that return -FI_ENOSYS which can be used for this purpose.
+</dd><dt>&bull;
+</dt><dd>Endpoints must support the CM interface as follows:
+</dd><dt>&bull;
+</dt><dd>FI_EP_MSG endpoints must support all CM operations.
+</dd><dt>&bull;
+</dt><dd>FI_EP_DGRAM endpoints must support CM getname and setname.
+</dd><dt>&bull;
+</dt><dd>FI_EP_RDM endpoints must support CM getname and setname.
+</dd><dt>&bull;
+</dt><dd>Providers that support connectionless endpoints must support all AV operations (fi_ops_av).
+</dd><dt>&bull;
+</dt><dd>Providers that support memory registration, must support all MR operations (fi_ops_mr).
+</dd><dt>&bull;
+</dt><dd>Providers should support both completion queues and counters.
+</dd><dt>&bull;
+</dt><dd>If FI_RMA_EVENT is not supported, counter support is limited to local events only.
+</dd><dt>&bull;
+</dt><dd>Completion queues must support the FI_CQ_FORMAT_CONTEXT and FI_CQ_FORMAT_MSG.
+</dd><dt>&bull;
+</dt><dd>Providers that support FI_REMOTE_CQ_DATA shall support FI_CQ_FORMAT_DATA.
+</dd><dt>&bull;
+</dt><dd>Providers that support FI_TAGGED shall support FI_CQ_FORMAT_TAGGED.
+</dd><dt>&bull;
+</dt><dd>A provider is expected to be forward compatible, and must be able to be compiled against expanded fi_xxx_ops structures that define new functions added after the provider was written. Any unknown functions must be set to NULL.
+</dd><dt>&bull;
+</dt><dd>Providers shall document in their man page which features they support, and any missing requirements.</dd></dl>
+<p>Future versions of libfabric will automatically enable a more complete set of features for providers that focus their implementation on a narrow subset of libfabric capabilities.</p>
+<h2>Logging Interface</h2>
+<p>Logging is performed using the FI_ERR, FI_LOG, and FI_DEBUG macros.</p>
+<h3>Definitions</h3>
+<dl><dd><pre>#define FI_ERR(prov_name, subsystem, ...)
+#define FI_LOG(prov_name, prov, level, subsystem, ...)
+#define FI_DEBUG(prov_name, subsystem, ...)</pre></dd></dl>
+<h3>Arguments</h3>
+<p>prov_name : String representing the provider name.</p>
+<p>prov : Provider context structure.</p>
+<p>level : Log level associated with log statement.</p>
+<p>subsystem : Subsystem being logged from.</p>
+<h3>Description</h3>
+<p>FI_ERR : Always logged.</p>
+<p>FI_LOG : Logged if the intended provider, log level, and subsystem parameters match the user supplied values.</p>
+<p>FI_DEBUG : Logged if configured with the &ndash;enable-debug flag.</p>
+<h2>See Also</h2>
+<p>fi_gni(7), <a HREF="/docs/linux/man/7-fi_psm/">fi_psm</a>(7), <a HREF="/docs/linux/man/7-fi_sockets/">fi_sockets</a>(7), fi_usnic(7), <a HREF="/docs/linux/man/7-fi_verbs/">fi_verbs</a>(7), fi_bgq(7),</p>
+<h2>Authors</h2>
+<p>OpenFabrics.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

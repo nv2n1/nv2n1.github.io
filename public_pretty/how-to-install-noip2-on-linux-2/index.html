@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing noip2 on Linux: A Setup Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-noip2-on-linux-2/">
+  <meta name="description" content="No-IP provides dynamic DNS service for systems that don’t have static IP addresses. The noip2 client daemon monitors your system’s IP and automatically updates …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing noip2 on Linux: A Setup Guide">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-noip2-on-linux-2/">
+  <meta property="og:description" content="No-IP provides dynamic DNS service for systems that don’t have static IP addresses. The noip2 client daemon monitors your system’s IP and automatically updates …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Installing noip2 on Linux: A Setup Guide</h1>
+        <time class="post-date" datetime="2018-03-24T08:04:25Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>No-IP provides dynamic DNS service for systems that don’t have static IP addresses. The <code>noip2</code> client daemon monitors your system’s IP and automatically updates your No-IP domain when changes occur. Here’s how to set it up properly.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You’ll need:</p>
+<ul>
+<li>A No-IP account with at least one hostname configured</li>
+<li>Root or sudo access</li>
+<li>A Linux system with <code>systemd</code> or init.d support</li>
+<li>Basic familiarity with the command line</li>
+</ul>
+<h2 id="download-and-compile-noip2">Download and Compile noip2</h2>
+<p>Start by downloading the latest source from No-IP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /tmp
+</span></span><span class="line"><span class="cl">wget https://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+</span></span><span class="line"><span class="cl">tar xzf noip-duc-linux.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> noip-2.1.9-1
+</span></span></code></pre></div><p>Check the No-IP website for the latest version number, as the version may differ. Compile the source:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><p>The installer will prompt you for your No-IP credentials and configuration options. Keep track of the installation path—it typically installs to <code>/usr/local/bin/noip2</code>.</p>
+<h2 id="configuration">Configuration</h2>
+<p>After installation, configure noip2 with your account details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo /usr/local/bin/noip2 -c /etc/noip2.conf
+</span></span></code></pre></div><p>This interactive setup will ask for:</p>
+<ul>
+<li>Your No-IP username</li>
+<li>Your password</li>
+<li>Which hostnames to update</li>
+<li>Update interval (default is 30 minutes)</li>
+<li>Whether to run in the foreground or background</li>
+</ul>
+<h2 id="running-as-a-systemd-service">Running as a Systemd Service</h2>
+<p>Modern Linux distributions use <code>systemd</code>. Create a service file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/systemd/system/noip2.service
+</span></span></code></pre></div><p>Add the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description</span><span class="o">=</span><span class="s">No-IP Dynamic DNS Update Client</span>
+</span></span><span class="line"><span class="cl"><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/noip2</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStop</span><span class="o">=</span><span class="s">/usr/local/bin/noip2 -k</span>
+</span></span><span class="line"><span class="cl"><span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+</span></span><span class="line"><span class="cl"><span class="na">RestartSec</span><span class="o">=</span><span class="s">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</span></span></code></pre></div><p>Enable and start the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> noip2
+</span></span><span class="line"><span class="cl">sudo systemctl start noip2
+</span></span></code></pre></div><p>Verify it’s running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status noip2
+</span></span></code></pre></div><h2 id="running-as-a-traditional-service-initd">Running as a Traditional Service (init.d)</h2>
+<p>For systems without <code>systemd</code>, create an init script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/init.d/noip2
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="c1">### BEGIN INIT INFO</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Provides:          noip2</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Start:    $network</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Required-Stop:     $network</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Start:     2 3 4 5</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Default-Stop:      0 1 6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Description:       No-IP Dynamic DNS Update Client</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### END INIT INFO</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">DAEMON</span><span class="o">=</span>/usr/local/bin/noip2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">    start<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Starting noip2...&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$DAEMON</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    stop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Stopping noip2...&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$DAEMON</span> -k
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    restart<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Restarting noip2...&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$DAEMON</span> -k
+</span></span><span class="line"><span class="cl">        sleep <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$DAEMON</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> {start|stop|restart}&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl"><span class="k">esac</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="m">0</span>
+</span></span></code></pre></div><p>Make it executable and enable it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod +x /etc/init.d/noip2
+</span></span><span class="line"><span class="cl">sudo update-rc.d noip2 defaults
+</span></span><span class="line"><span class="cl">sudo service noip2 start
+</span></span></code></pre></div><h2 id="cron-based-approach-alternative">Cron-Based Approach (Alternative)</h2>
+<p>If you prefer not to run a daemon, use cron to periodically restart noip2. Add this to root’s crontab:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo crontab -e
+</span></span></code></pre></div><p>Add the line:</p>
+<pre><code>0 */5 * * * /usr/local/bin/noip2 -k &amp;&amp; sleep 2 &amp;&amp; /usr/local/bin/noip2
+</code></pre>
+<p>This restarts noip2 every 5 minutes. The <code>-k</code> flag kills the existing process, then the daemon restarts. This approach is less elegant than a service but works reliably on older systems.</p>
+<h2 id="monitoring-and-verification">Monitoring and Verification</h2>
+<p>Check if noip2 is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ps aux <span class="p">|</span> grep noip2
+</span></span></code></pre></div><p>View the update history:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo tail -f /var/log/noip2.log
+</span></span></code></pre></div><p>On some systems, logs may be in <code>/var/run/noip2.log</code> or viewed via journalctl:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u noip2 -f
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Service won’t start</strong>: Verify the configuration file exists and has correct permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ls -la /etc/noip2.conf
+</span></span></code></pre></div><p><strong>Authentication failures</strong>: Confirm your No-IP username and password in the configuration. Regenerate the config:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo /usr/local/bin/noip2 -c /etc/noip2.conf
+</span></span></code></pre></div><p><strong>IP not updating</strong>: Check your No-IP account for login anomalies. Some ISPs block port 8245. Test connectivity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I https://updates.noip.com/
+</span></span></code></pre></div><p><strong>Log file permissions</strong>: Ensure noip2 can write to its log location. Check ownership and permissions if you encounter permission denied errors.</p>
+<h2 id="additional-options">Additional Options</h2>
+<p>Review all available flags:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/usr/local/bin/noip2 -h
+</span></span></code></pre></div><p>Common options:</p>
+<ul>
+<li><code>-c</code>: Specify configuration file path</li>
+<li><code>-k</code>: Kill running daemon</li>
+<li><code>-d</code>: Run in foreground (useful for debugging)</li>
+<li><code>-n</code>: Run once without exiting</li>
+<li><code>-i</code>: Specify IP address manually</li>
+</ul>
+<p>Using the systemd service approach is recommended for most modern distributions, as it integrates better with system logging and restart policies.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

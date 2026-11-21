@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsqrtstdvalarray(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsqrtstdvalarray/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsqrtstdvalarray(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::sqrt(std::valarray) - std::sqrt(std::valarray)</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;valarray&gt;
+    template &lt;class T&gt;
+    valarray&lt;T&gt; sqrt(const valarray&lt;T&gt; &amp;va);</code></pre> 
+<p>For each element in va computes the square root of the value of the element.</p>
+<h2>Parameters</h2>
+<p>va - value array to apply the operation to</p>
+<h2>Return value</h2>
+<p>Value array containing square roots of the values in va.</p>
+<h2>Notes</h2>
+<p>Unqualified function (sqrt) is used to perform the computation. If such function is not available, std::sqrt is used due to argument dependent lookup.</p>
+<p>The function can be implemented with the return type different from std::valarray. In this case, the replacement type has the following properties:</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> * All const member functions of std::valarray are provided.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::valarray, std::slice_array, std::gslice_array, std::mask_array and std::indirect_array can be constructed from the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting an argument of type const std::valarray&amp;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> except begin() and end()
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(since C++11)</i> should also accept the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * All functions accepting two arguments of type const std::valarray&amp; should accept every combination of const std::valarray&amp; and the replacement type.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * The return type does not add more than two levels of template nesting over the most deeply-nested argument type.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt;class T&gt;
+ <wbr> valarray&lt;T&gt; sqrt(const valarray&lt;T&gt;&amp; va)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> valarray&lt;T&gt; other = va;
+ <wbr> <wbr> <wbr> <wbr> <wbr> for (T &amp;i : other) {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> i = sqrt(i);
+ <wbr> <wbr> <wbr> <wbr> <wbr> }
+ <wbr> <wbr> <wbr> <wbr> <wbr> return other;
+ <wbr> }</p>
+<h2>Example</h2>
+<p>Finds real roots of multiple quadratic equations.
+// Run this code <pre><code>#include &lt;valarray&gt;
+#include &lt;iostream&gt;
+int main()
+{
+std::valarray&lt;double&gt; a(1, 8);
+std::valarray&lt;double&gt; b{1, 2, 3, 4, 5, 6, 7, 8};
+std::valarray&lt;double&gt; c = -b;
+// literals must also be of type T (double in this case)
+std::valarray&lt;double&gt; d = std::sqrt((b * b - 4.0 * a * c));
+std::valarray&lt;double&gt; x1 = (-b - d) / (2.0 * a);
+std::valarray&lt;double&gt; x2 = (-b + d) / (2.0 * a);
+std::cout &lt;&lt; &quot;quadratic equation    root 1,  root 2&quot;
+&lt;&lt; &quot;\n&quot;;
+for (size_t i = 0; i &lt; a.size(); ++i) {
+std::cout &lt;&lt; a[i] &lt;&lt; &quot;x\u00B2 + &quot; &lt;&lt; b[i] &lt;&lt; &quot;x + &quot; &lt;&lt; c[i] &lt;&lt; &quot; = 0   &quot;;
+std::cout &lt;&lt; x1[i] &lt;&lt; &quot;, &quot; &lt;&lt; x2[i] &lt;&lt; &quot;\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> quadratic equation root 1, root 2
+ <wbr> 1x² + 1x + -1 = 0 -1.61803, 0.618034
+ <wbr> 1x² + 2x + -2 = 0 -2.73205, 0.732051
+ <wbr> 1x² + 3x + -3 = 0 -3.79129, 0.791288
+ <wbr> 1x² + 4x + -4 = 0 -4.82843, 0.828427
+ <wbr> 1x² + 5x + -5 = 0 -5.8541, 0.854102
+ <wbr> 1x² + 6x + -6 = 0 -6.87298, 0.872983
+ <wbr> 1x² + 7x + -7 = 0 -7.88748, 0.887482
+ <wbr> 1x² + 8x + -8 = 0 -8.89898, 0.898979</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies the function std::pow to two valarrays or a valarray and a value
+pow(std::valarray) <i>(function template)</i>
+sqrt
+sqrtf computes square root (
+sqrtl √
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> x)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> complex square root in the range of the right half-plane
+sqrt(std::complex) <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

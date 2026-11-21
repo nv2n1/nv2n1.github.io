@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>play_fli(3) · Linux Manual Pages</title>
+<meta name="description" content="play_fli – Plays a FLI or FLC animation from disk. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-play_fli/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>play_fli(3)</h1>
+
+
+
+
+
+<p>play_fli &#8211; Plays a FLI or FLC animation from disk. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+int play_fli(const char *filename, BITMAP *bmp, int loop, int (*callback)());</code></pre>
+<h2>Description</h2>
+<p>Plays an Autodesk Animator FLI or FLC animation file on the specified BITMAP, reading the data from disk as it is required. If `loop&#8217; is not zero, the player will cycle when it reaches the end of the file, otherwise it will play through the animation once and then return. Read the beginning of chapter &quot;FLIC routines&quot; for a description of the callback parameter. Example: </p>
+<pre><code>/* Let users skip looped animations. */
+int check_escape_key(void)
+{
+    if (key[KEY_ESC])
+        return 1;
+    else
+        return 0;
+}
+... int ret = play_fli(&quot;animlogo.fli&quot;, screen, 1,
+                       check_escape_key);
+if (ret == FLI_ERROR)
+    abort_on_error(&quot;Error playing intro!&quot;);</code></pre>
+<h2>Return Value</h2>
+<p>The FLI player returns FLI_OK if it reached the end of the file, FLI_ERROR if something went wrong, and the value returned by the callback function if that was what stopped it. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-play_memory_fli/">play_memory_fli</a></code>(3), <code>install_timer</code>(3), <code><a href="/docs/linux/man/3-fli_frame/">fli_frame</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

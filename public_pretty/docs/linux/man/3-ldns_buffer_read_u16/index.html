@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ldns_buffer_read_u16(3) · Linux Manual Pages</title>
+<meta name="description" content="ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldns_buffer_write_string_at, ldns_buffer_write_string, ldns_buffer_write_u8_at, ldns_buffer_write_u8, ldns_buffer_write_u16_at, ldns_b...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ldns_buffer_read_u16/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ldns_buffer_read_u16(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldns_buffer_write_string_at, ldns_buffer_write_string, ldns_buffer_write_u8_at, ldns_buffer_write_u8, ldns_buffer_write_u16_at, ldns_buffer_write_u16, ldns_buffer_read_at, ldns_buffer_read, ldns_buffer_read_u8_at, ldns_buffer_read_u8, ldns_buffer_read_u16_at, ldns_buffer_read_u16, ldns_buffer_read_u32_at, ldns_buffer_read_u32 </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;stdint.h&gt;<br />
+ #include &lt;stdbool.h&gt; </p>
+<p> #include &lt;ldns/ldns.h&gt; </p>
+<p> void ldns_buffer_write_at(ldns_buffer *buffer, size_t at, const void *data, size_t count); </p>
+<p> void ldns_buffer_write_at(ldns_buffer *buffer, size_t at, const void *data, size_t count); </p>
+<p> void ldns_buffer_write(ldns_buffer *buffer, const void *data, size_t count); </p>
+<p> void ldns_buffer_write_string_at(ldns_buffer *buffer, size_t at, const char *str); </p>
+<p> void ldns_buffer_write_string(ldns_buffer *buffer, const char *str); </p>
+<p> void ldns_buffer_write_u8_at(ldns_buffer *buffer, size_t at, uint8_t data); </p>
+<p> void ldns_buffer_write_u8(ldns_buffer *buffer, uint8_t data); </p>
+<p> void ldns_buffer_write_u16_at(ldns_buffer *buffer, size_t at, uint16_t data); </p>
+<p> void ldns_buffer_write_u16(ldns_buffer *buffer, uint16_t data); </p>
+<p> void ldns_buffer_read_at(ldns_buffer *buffer, size_t at, void *data, size_t count); </p>
+<p> void ldns_buffer_read(ldns_buffer *buffer, void *data, size_t count); </p>
+<p> uint8_t ldns_buffer_read_u8_at(ldns_buffer *buffer, size_t at); </p>
+<p> uint8_t ldns_buffer_read_u8(ldns_buffer *buffer); </p>
+<p> uint16_t ldns_buffer_read_u16_at(ldns_buffer *buffer, size_t at); </p>
+<p> uint16_t ldns_buffer_read_u16(ldns_buffer *buffer); </p>
+<p> uint32_t ldns_buffer_read_u32_at(ldns_buffer *buffer, size_t at); </p>
+<p> uint32_t ldns_buffer_read_u32(ldns_buffer *buffer); </p>
+<h2>DESCRIPTION</h2>
+<dl>
+<dt> <i>ldns_buffer_write_at</i>()</dt>
+<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_at</i>()</dt>
+<dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write</i>()</dt>
+<dd>writes count bytes of data to the current position of the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the data to write .br <code>count</code>: the lenght of the data to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_string_at</i>()</dt>
+<dd>copies the given (null-delimited) string to the specified position at the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>str</code>: the string to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_string</i>()</dt>
+<dd>copies the given (null-delimited) string to the current position at the buffer .br <code>buffer</code>: the buffer .br <code>str</code>: the string to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_u8_at</i>()</dt>
+<dd>writes the given byte of data at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 8 bits to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_u8</i>()</dt>
+<dd>writes the given byte of data at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 8 bits to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_u16_at</i>()</dt>
+<dd>writes the given 2 byte integer at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br <code>data</code>: the 16 bits to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_write_u16</i>()</dt>
+<dd>writes the given 2 byte integer at the current position in the buffer .br <code>buffer</code>: the buffer .br <code>data</code>: the 16 bits to write</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_at</i>()</dt>
+<dd>copies count bytes of data at the given position to the given data-array .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer to start .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read</i>()</dt>
+<dd>copies count bytes of data at the current position to the given data-array .br <code>buffer</code>: the buffer .br <code>data</code>: buffer to copy to .br <code>count</code>: the length of the data to copy</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u8_at</i>()</dt>
+<dd>returns the byte value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: the position in the buffer .br Returns 1 byte integer</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u8</i>()</dt>
+<dd>returns the byte value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 1 byte integer</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u16_at</i>()</dt>
+<dd>returns the 2-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 2 byte integer</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u16</i>()</dt>
+<dd>returns the 2-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 2 byte integer</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u32_at</i>()</dt>
+<dd>returns the 4-byte integer value at the given position in the buffer .br <code>buffer</code>: the buffer .br <code>at</code>: position in the buffer .br Returns 4 byte integer</dd></dl>
+<dl>
+<dt> <i>ldns_buffer_read_u32</i>()</dt>
+<dd>returns the 4-byte integer value at the current position in the buffer .br <code>buffer</code>: the buffer .br Returns 4 byte integer</dd></dl>
+<h2>AUTHOR</h2>
+<p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<h2>REPORTING BUGS</h2>
+<p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2004 &#8211; 2006 NLnet Labs. </p>
+<p> Licensed under the BSD License. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<h2>SEE ALSO</h2>
+<p> <i>ldns_buffer</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
+<h2>REMARKS</h2>
+<p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

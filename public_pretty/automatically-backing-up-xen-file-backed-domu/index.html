@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automating Backups of Xen File-backed VMs - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/automatically-backing-up-xen-file-backed-domu/">
+  <meta name="description" content="Xen remains in production use (AWS EC2, Citrix Hypervisor), though KVM has become the standard Linux hypervisor. This guide covers automating backups for …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automating Backups of Xen File-backed VMs">
+  <meta property="og:url" content="https://www.systutorials.com/automatically-backing-up-xen-file-backed-domu/">
+  <meta property="og:description" content="Xen remains in production use (AWS EC2, Citrix Hypervisor), though KVM has become the standard Linux hypervisor. This guide covers automating backups for …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Automating Backups of Xen File-backed VMs</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:55Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Xen remains in production use (AWS EC2, Citrix Hypervisor), though KVM has become the standard Linux hypervisor. This guide covers automating backups for file-backed Xen virtual machines. The approach adapts to other hypervisors like KVM with minimal modification.</p>
+<h2 id="architecture-and-prerequisites">Architecture and Prerequisites</h2>
+<p>The backup system assumes:</p>
+<ul>
+<li>Virtual machines stored in <code>/lhome/xen/</code> with individual directories per VM (e.g., <code>/lhome/xen/vm-10/</code>)</li>
+<li>Raw disk image files follow naming convention <code>vmdisk0</code></li>
+<li>Configuration files available for VM recreation</li>
+<li>Two backup destinations: local secondary storage and remote backup host</li>
+<li>SSH passwordless authentication already configured between hosts</li>
+</ul>
+<p>Compression ratios typically range from 20GB uncompressed to 3-4GB compressed, making network and storage overhead manageable.</p>
+<h2 id="backup-process-overview">Backup Process Overview</h2>
+<ol>
+<li><strong>VM snapshot</strong>: Check running VMs → shutdown → copy disk image → restart</li>
+<li><strong>Local compression</strong>: Compress copied images on local secondary storage</li>
+<li><strong>Remote transfer</strong>: SCP compressed archives to backup host</li>
+</ol>
+<p>For scheduling via cron weekly with backups every other week, the marker file approach handles alternating execution. For manual invocation, remove the marker file logic.</p>
+<h2 id="implementation">Implementation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Backup script for file-backed Xen DomU</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Runs via cron; adjust paths and VM list for your environment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">mark_file</span><span class="o">=</span><span class="s2">&#34;/tmp/xen-bak-marker&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">log_file</span><span class="o">=</span><span class="s2">&#34;/lhome/xen/bak.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">err_log_file</span><span class="o">=</span><span class="s2">&#34;/lhome/xen/bak_err.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">xen_dir</span><span class="o">=</span><span class="s2">&#34;/lhome/xen&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">local_bak_dir</span><span class="o">=</span><span class="s2">&#34;/lhome/xen-bak-tmp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">bak_remote</span><span class="o">=</span><span class="s2">&#34;xenbak@backup_host1:/lhome/xenbak&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">vm_list</span><span class="o">=</span><span class="s2">&#34;10.10.10.111 10.10.10.112&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Rotate logs</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> mv <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">.old&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> mv <span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">.old&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> 1&gt;<span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> 2&gt;<span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Skip if already ran this week (alternating schedule)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -e <span class="s2">&#34;</span><span class="nv">$mark_file</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    rm -f <span class="s2">&#34;</span><span class="nv">$mark_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    touch <span class="s2">&#34;</span><span class="nv">$mark_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;=== Backup started at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> ===&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Identify running VMs</span>
+</span></span><span class="line"><span class="cl"><span class="nv">running_vms</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> vm_id in <span class="nv">$vm_list</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> xl list 2&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&#34;^vm-</span><span class="nv">$vm_id</span><span class="s2"> &#34;</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;VM vm-</span><span class="nv">$vm_id</span><span class="s2"> is running&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">running_vms</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$running_vms</span><span class="s2"> </span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;VM vm-</span><span class="nv">$vm_id</span><span class="s2"> is not running, skipping&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$running_vms</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;No running VMs found, exiting&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Backup targets: </span><span class="nv">$running_vms</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Backup each VM</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> vm_id in <span class="nv">$running_vms</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;--- Processing vm-</span><span class="nv">$vm_id</span><span class="s2"> at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> ---&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Shutdown VM</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Shutting down vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    xl shutdown vm-<span class="nv">$vm_id</span>
+</span></span><span class="line"><span class="cl">    sleep <span class="m">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Verify shutdown</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> xl list 2&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&#34;^vm-</span><span class="nv">$vm_id</span><span class="s2"> &#34;</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;ERROR: vm-</span><span class="nv">$vm_id</span><span class="s2"> did not shutdown, forcing&#34;</span>
+</span></span><span class="line"><span class="cl">        xl destroy vm-<span class="nv">$vm_id</span>
+</span></span><span class="line"><span class="cl">        sleep <span class="m">10</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Copy disk image and config</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Copying disk image for vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vmdisk0&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;ERROR: Disk image not found at </span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vmdisk0&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    cp <span class="s2">&#34;</span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vmdisk0&#34;</span> <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vmdisk0-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;ERROR: Failed to copy disk image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vm.cfg&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        cp <span class="s2">&#34;</span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vm.cfg&#34;</span> <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vm.cfg-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Restart VM</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Restarting vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    xl create <span class="s2">&#34;</span><span class="nv">$xen_dir</span><span class="s2">/vm-</span><span class="nv">$vm_id</span><span class="s2">/vm.cfg&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    sleep <span class="m">15</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> ! xl list 2&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&#34;^vm-</span><span class="nv">$vm_id</span><span class="s2"> &#34;</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;WARNING: vm-</span><span class="nv">$vm_id</span><span class="s2"> did not restart correctly&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Compress local backups</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;--- Compressing backups at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> ---&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> vm_id in <span class="nv">$running_vms</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Compressing vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    tar --remove-files -czf <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vmdisk0-</span><span class="nv">$vm_id</span><span class="s2">.tar.gz&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        -C <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">&#34;</span> <span class="s2">&#34;vmdisk0-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span> 2&gt;/dev/null
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vm.cfg-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        tar -czf <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vm.cfg-</span><span class="nv">$vm_id</span><span class="s2">.tar.gz&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        -C <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">&#34;</span> <span class="s2">&#34;vm.cfg-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        rm -f <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vm.cfg-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Transfer to remote</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;--- Transferring to remote at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> ---&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> vm_id in <span class="nv">$running_vms</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Copying vm-</span><span class="nv">$vm_id</span><span class="s2"> to </span><span class="nv">$bak_remote</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> scp <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vmdisk0-</span><span class="nv">$vm_id</span><span class="s2">.tar.gz&#34;</span> <span class="s2">&#34;</span><span class="nv">$bak_remote</span><span class="s2">/&#34;</span> 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        rm -f <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">/vmdisk0-</span><span class="nv">$vm_id</span><span class="s2">.tar.gz&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Successfully backed up vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;ERROR: Failed to transfer vm-</span><span class="nv">$vm_id</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;=== Backup completed at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2"> ===&#34;</span>
+</span></span><span class="line"><span class="cl">scp <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$bak_remote</span><span class="s2">/bak-latest.log&#34;</span>
+</span></span></code></pre></div><h2 id="key-changes-and-considerations">Key Changes and Considerations</h2>
+<p><strong>Xen toolstack</strong>: Replace deprecated <code>xm</code> commands with <code>xl</code>. The <code>xm</code> toolstack hasn’t been maintained since Xen 4.2; <code>xl</code> is the current standard.</p>
+<p><strong>Error handling</strong>: Add explicit checks after shutdown and restart operations. Force destroy if graceful shutdown fails to prevent stale locks.</p>
+<p><strong>Config handling</strong>: Backup VM configuration files separately, enabling full restoration if needed.</p>
+<p><strong>SSH key setup</strong>: Passwordless authentication requires proper SSH key deployment:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t ed25519 -N <span class="s2">&#34;&#34;</span> -f ~/.ssh/xen_backup
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy public key to backup host</span>
+</span></span><span class="line"><span class="cl">ssh-copy-id -i ~/.ssh/xen_backup.pub xenbak@backup_host1
+</span></span><span class="line"><span class="cl"><span class="c1"># Configure SSH to use specific key for backup operations</span>
+</span></span></code></pre></div><p><strong>Remote verification</strong>: Periodically test restore procedures. A backup is only valid if you’ve verified recovery.</p>
+<p><strong>Snapshots and LVM</strong>: For Xen on LVM, consider LVM snapshots to reduce VM downtime:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvcreate -L10G -s -n vm_snapshot /dev/vg0/vm_disk
+</span></span><span class="line"><span class="cl"><span class="c1"># Mount and backup snapshot instead</span>
+</span></span></code></pre></div><p><strong>Retention policy</strong>: Implement cleanup of old backups on both local and remote systems to manage storage costs.</p>
+<p><strong>Monitoring</strong>: Log backup duration and sizes. Alert on failures:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">backup_size</span><span class="o">=</span><span class="k">$(</span>du -sh <span class="s2">&#34;</span><span class="nv">$local_bak_dir</span><span class="s2">&#34;</span> <span class="p">|</span> cut -f1<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Backup size: </span><span class="nv">$backup_size</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;</span><span class="nv">$log_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">grep -i error <span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> mail -s <span class="s2">&#34;Backup errors&#34;</span> admin@example.com &lt; <span class="s2">&#34;</span><span class="nv">$err_log_file</span><span class="s2">&#34;</span>
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

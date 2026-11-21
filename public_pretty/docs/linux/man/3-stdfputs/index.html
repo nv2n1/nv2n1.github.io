@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfputs(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfputs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfputs(3)</h1>
+
+
+
+
+
+<p>std::fputs - std::fputs</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdio&gt;
+    int fputs(const char *str, std::FILE *stream);</code></pre> 
+<p>Writes every character from the null-terminated string str to the output stream stream, as if by repeatedly executing std::fputc.
+The terminating null character from str is not written.</p>
+<h2>Parameters</h2>
+<p>str - null-terminated character string to be written
+stream - output stream</p>
+<h2>Return value</h2>
+<p>On success, returns a non-negative value
+On failure, returns EOF and sets the error indicator (see std::ferror) on stream.</p>
+<h2>Notes</h2>
+<p>The related function std::puts appends a newline character to the output, while std::fputs writes the string unmodified.
+Different implementations return different non-negative numbers: some return the last character written, some return the number of characters written (or INT_MAX if the string was longer than that), some simply return a non-negative constant such as zero.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstdio&gt;
+int main(void)
+{
+int rc = std::fputs(&quot;Hello World&quot;, stdout);
+if (rc == EOF)
+std::perror(&quot;fputs()&quot;); // POSIX requires that errno is set
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Hello World</p>
+<h2>See also</h2>
+<p>printf
+fprintf
+sprintf
+snprintf prints formatted output to stdout, a file stream or a buffer
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function)</i>
+<i>(C++11)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes a character string to stdout
+puts <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes a wide string to a file stream
+fputws <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> gets a character string from a file stream
+fgets <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

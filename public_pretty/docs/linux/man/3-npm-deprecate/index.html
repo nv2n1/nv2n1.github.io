@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-deprecate(3) · Linux Manual Pages</title>
+<meta name="description" content="npm-deprecate — Deprecate a version of a package">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-npm-deprecate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>npm-deprecate(3)</h1>
+
+
+
+
+
+<p><code>npm-deprecate</code> &#8212; Deprecate a version of a package</p>
+<h2>Synopsis</h2>
+<pre>npm.commands.deprecate(args, callback)</pre>
+<h2>Description</h2>
+<p>This command will update the npm registry entry for a package, providing a deprecation warning to all who attempt to install it. </p>
+<p> The &#8216;args&#8217; parameter must have exactly two elements:</p>
+<dl>
+<dt>&bull;</dt>
+<dd><code>package[@version]</code></dd>
+<dd>The <code>version</code> portion is optional, and may be either a range, or a specific version, or a tag.</dd>
+<dt>&bull;</dt>
+<dd><code>message</code></dd>
+<dd>The warning message that will be printed whenever a user attempts to install the package.</dd>
+<dd></dd></dl>
+<p> Note that you must be the package owner to deprecate something. See the <code>owner</code> and <code>adduser</code> help topics. </p>
+<p> To un-deprecate a package, specify an empty string (<code>&quot;&quot;</code>) for the <code>message</code> argument.</p>
+<h2>See Also</h2>
+<dl>
+<dt>&bull;</dt>
+<dd>npm apihelp publish</dd>
+<dt>&bull;</dt>
+<dd>npm apihelp unpublish</dd>
+<dt>&bull;</dt>
+<dd>npm help registry</dd>
+<dd>
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

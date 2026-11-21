@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xresqueryclientpixmapbytes(3) · Linux Manual Pages</title>
+<meta name="description" content="XRes – X-Resource extension client library">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xresqueryclientpixmapbytes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xresqueryclientpixmapbytes(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XRes &#8211; X-Resource extension client library</p>
+<h2>Synopsis</h2>
+<p><code>#include &lt;X11/extensions/XRes.h&gt;</code> </p>
+<pre>typedef struct {
+ XID resource_base;
+ XID resource_mask;
+} XResClient;
+typedef struct {
+ Atom resource_type;
+ unsigned int count;
+} XResType;</pre>
+<dl COMPACT>
+<dd>Bool XResQueryExtension(Display *<i>dpy</i>, int *<i>event_base_return</i>, int *<i>error_base_return</i>);</dd>
+<dd>Status XResQueryVersion(Display *<i>dpy</i>, int *<i>major_version_return</i>, int *<i>minor_version_return</i>);</dd>
+<dd>Status XResQueryClients(Display *<i>dpy</i>, int *<i>num_clients</i>, XResClient **<i>clients</i>);</dd>
+<dd>Status XResQueryClientResources(Display *<i>dpy</i>, XID <i>xid</i>, int *<i>num_types</i>, XResType **<i>types</i>);</dd>
+<dd>Status XResQueryClientPixmapBytes(Display *<i>dpy</i>, XID <i>xid</i>, unsigned long *<i>bytes</i>);</dd></dl>
+<h2>Description</h2>
+<p><code>X-Resource</code> is an extension that allows a client to query the X server about its usage of various resources. It should not be confused with the X resource database access functions. </p>
+<p> <code>XResQueryExtension</code> returns <code>True</code> if the <i>XRes</i> extension is available on the given display. A client must call <code>XResQueryExtension</code> before calling any other XRes function in order to negotiate a compatible protocol version; otherwise the client will get undefined behavior (XRes may or may not work). </p>
+<p> <code>XResQueryVersion</code> returns <code>True</code> if the request succeeded; the values of the major and minor protocol versions supported by the server are returned in <i>major_version_return</i> and <i>minor_version_return .</i> </p>
+<p> <code>XResQueryClients</code> fills a list of clients of the given display. For each client it returns in the <i>XResClient</i> structure a mask and a base value of the resources used by these clients. Returns <code>True</code> on success or <code>False</code> on failure. </p>
+<p> <code>XResQueryClientResources</code> fills a list of XResType structures, indicating for each resource type allocated by the client its name (as an Atom) and the number of resources of this type allocated. Returns <code>True</code> on success or <code>False</code> on failure. </p>
+<p> <code>XResQueryClientPixmapBytes</code> gives, for resources of type <i>PIXMAP</i> the total number of bytes allocated in the X server by the given client. Returns <code>True</code> on success or <code>False</code> on failure.</p>
+<h2>Errors</h2>
+<p><code>XResQueryClientResources</code> and <code>XResQueryClientPixmapBytes</code> will return <i>BadValue</i> if passed an illegal client identifier.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/7-x/">X</a>(7)</p>
+<h2>Author</h2>
+<p>Mark Vojkovich, originally for The XFree86 Project Inc.</p>
+<h2>Stability</h2>
+<p>This API is considered as experimental. The XRes library major revision may be incremented whenever incompatible changes are done to the API without notice. Use with care.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

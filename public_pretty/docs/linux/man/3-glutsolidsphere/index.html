@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutsolidsphere(3) · Linux Manual Pages</title>
+<meta name="description" content="glutSolidSphere – Draw a solid sphere centered at the origin.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutsolidsphere/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutsolidsphere(3)</h1>
+
+
+
+
+
+<p><code>glutSolidSphere</code> &#8211; Draw a solid sphere centered at the origin.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; geometry</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutSolidSphere GLdouble radius GLint slices GLint stacks</p>
+<h2>Parameters</h2>
+<p>Bf Em<br />
+&nbsp;<wbr>radius Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Sphere radius. </p>
+<p> Bf Em<br />
+&nbsp;<wbr>slices Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The number of divisions around the z axis.&nbsp;<wbr>(latitudal) </p>
+<p> Bf Em<br />
+&nbsp;<wbr>stacks Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The number of divisions along the z axis.&nbsp;<wbr>(longitudal)</p>
+<h2>Description</h2>
+<p>The glutSolidSphere() function draws a shaded sphere centered at the origin. The surface is created from quadrangles (except for triangles as degenerate quads at the poles) in a longitude/latitude pattern. The equatorial great circle lies in the xy-plane and is centered on the origin. </p>
+<h2>Caveats</h2>
+<p>The number of polygons representing the spherical surface is proportional to (slices*stacks). </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutwiresphere/">glutWireSphere</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

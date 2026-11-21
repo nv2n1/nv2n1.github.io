@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtrackinglocate(3) · Linux Manual Pages</title>
+<meta name="description" content="XmTrackingLocate — A Toolkit function that provides a modal interaction">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtrackinglocate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtrackinglocate(3)</h1>
+
+
+
+
+
+<p><code>XmTrackingLocate</code> &#8212; A Toolkit function that provides a modal interaction</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>Widget XmTrackingLocate</code>(
+<code>Widget widget</code>,
+<code>Cursor cursor</code>,
+<code>Boolean confine_to</code>);</pre>
+<h2>Description</h2>
+<p><code>XmTrackingLocate</code> provides a modal interface for selection of a component. It is intended to support context help. This function is implemented as <code>XmTrackingEvent</code>. </p>
+<p> <code>NOTE:</code> This function is obsolete and exists for compatibility with previous releases. It has been replaced by <code>XmTrackingEvent</code>.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the widget ID of a widget to use as the basis of the modal interaction. That is, the widget within which the interaction must occur, usually a top-level shell.</dd>
+<dt><i>cursor</i></dt>
+<dd>Specifies the cursor to be used for the pointer during the interaction. This is a standard X cursor name.</dd>
+<dt><i>confine_to</i></dt>
+<dd>Specifies whether or not the cursor should be confined to <i>widget</i></dd></dl>
+<h2>Return</h2>
+<p>Returns the widget or gadget that contains the pointer when <code>BSelect</code> is released or a key is released. If no widget or gadget contains the pointer, the function returns NULL.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtrackingevent/">XmTrackingEvent</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

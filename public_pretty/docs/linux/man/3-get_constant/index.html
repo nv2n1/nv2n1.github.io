@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_constant(3) · Linux Manual Pages</title>
+<meta name="description" content="get_constant — retrieve a scalar constant from a dirfile database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-get_constant/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>get_constant(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> get_constant &#8212; retrieve a scalar constant from a dirfile database</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
+<dl>
+<dt> <code>int get_constant(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_type_t </code><i>return_type</i><code>, void *</code><i>data_out</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>get_constant</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> for the <code>CONST</code> scalar <i>field_code</i>, which may contain a representation suffix. The constant is converted to the data type specified by <i>return_type</i>, and stored in the user-supplied buffer <i>data_out</i>. </dd>
+<p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). The argument <i>data_out</i> must point to a valid memory location of sufficient size to hold a value of the return type specified. </p>
+<p> The <i>return_type</i> argument should be one of the following symbols, which indicates the desired return type of the data:</p>
+<dl>
+<dl>
+<dt><i>GD_UINT8</i></dt>
+<dd> unsigned 8-bit integer</dd>
+<dt><i>GD_INT8</i></dt>
+<dd> signed (two&#8217;s complement) 8-bit integer</dd>
+<dt><i>GD_UINT16</i></dt>
+<dd> unsigned 16-bit integer</dd>
+<dt><i>GD_INT16</i></dt>
+<dd> signed (two&#8217;s complement) 16-bit integer</dd>
+<dt><i>GD_UINT32</i></dt>
+<dd> unsigned 32-bit integer</dd>
+<dt><i>GD_INT32</i></dt>
+<dd> signed (two&#8217;s complement) 32-bit integer</dd>
+<dt><i>GD_UINT64</i></dt>
+<dd> unsigned 64-bit integer</dd>
+<dt><i>GD_INT64</i></dt>
+<dd> signed (two&#8217;s complement) 64-bit integer</dd>
+<dt><i>GD_FLOAT32</i></dt>
+<dd> IEEE-754 standard 32-bit single precision floating point number</dd>
+<dt><i>GD_FLOAT64</i></dt>
+<dd> IEEE-754 standard 64-bit double precision floating point number</dd>
+<dt><i>GD_COMPLEX64</i></dt>
+<dd> C99-conformant 64-bit single precision complex number</dd>
+<dt><i>GD_COMPLEX128</i></dt>
+<dd> C99-conformant 128-bit double precision complex number</dd>
+<dt><i>GD_NULL</i></dt>
+<dd> the null type: the database is queried as usual, but no data is returned. In this case, <i>data_out</i> is ignored and may be NULL.</dd></dl>
+</dl>
+<p> The return type of the constant need not be the same as the type of the data stored in the database. Type conversion will be performed as necessary to return the requested type. If the <i>field_code</i> does not indicate a representation, but conversion from a complex value to a purely real one is required, only the real portion of the requested vector will be returned.</p>
+<h2>RETURN VALUE</h2>
+<p> On success, <code>get_constant</code>() returns zero. On error, it returns -1 and sets the dirfile error to a non-zero value. Possible error values are:</p>
+<dl>
+<dt><code>GD_E_BAD_CODE</code></dt>
+<dd> The field specified by <i>field_code</i> was not found in the database.</dd>
+<dt><code>GD_E_BAD_DIRFILE</code></dt>
+<dd> An invalid <i>dirfile</i> was supplied.</dd>
+<dt><code>GD_E_BAD_FIELD_TYPE</code></dt>
+<dd> The supplied <i>field_code</i> referred to a field of a type other than <code>CONST</code>. The caller should use <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), or <code><a href="/docs/linux/man/3-get_string/">get_string</a></code>(3) instead.</dd>
+<dt><code>GD_E_BAD_REPR</code></dt>
+<dd> The representation suffix specified in <i>field</i>code<i>,</i> or in one of the field codes it uses for input, was invalid.</dd>
+<dt><code>GD_E_BAD_TYPE</code></dt>
+<dd> An invalid <i>return_type</i> was specified.</dd>
+<dt><code>GD_E_INTERNAL_ERROR</code></dt>
+<dd> An internal error occurred in the library while trying to perform the task. This indicates a bug in the library. Please report the incident to the maintainer. The dirfile error may be retrieved by calling <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3). A descriptive error string for the last error encountered may be obtained from a call to <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_constants/">get_constants</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/3-put_constant/">put_constant</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

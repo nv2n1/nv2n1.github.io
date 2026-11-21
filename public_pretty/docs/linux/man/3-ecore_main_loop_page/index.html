@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_main_loop_page(3) · Linux Manual Pages</title>
+<meta name="description" content="Ecore_Main_Loop_Page – The Ecore Main Loop">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_main_loop_page/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_main_loop_page(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Ecore_Main_Loop_Page &#8211; The Ecore Main Loop </p>
+<h2>What is Ecore?</h2>
+<p>Ecore is a clean and tiny event loop library with many modules to do lots of convenient things for a programmer, to save time and effort. </p>
+<p> It&#8217;s small and lean, designed to work on embedded systems all the way to large and powerful multi-cpu workstations. It serialises all system signals, events etc. into a single event queue, that is easily processed without needing to worry about concurrency. A properly written, event-driven program using this kind of programming doesn&#8217;t need threads, nor has to worry about concurrency. It turns a program into a state machine, and makes it very robust and easy to follow. </p>
+<p> Ecore gives you other handy primitives, such as timers to tick over for you and call specified functions at particular times so the programmer can use this to do things, like animate, or time out on connections or tasks that take too long etc. </p>
+<p> Idle handlers are provided too, as well as calls on entering an idle state (often a very good time to update the state of the program). All events that enter the system are passed to specific callback functions that the program sets up to handle those events. Handling them is simple and other Ecore modules produce more events on the queue, coming from other sources such as file descriptors etc. </p>
+<p> Ecore also lets you have functions called when file descriptors become active for reading or writing, allowing for streamlined, non-blocking IO. </p>
+<p> Here is an exmaple of a simple program and its basic event loop flow: </p>
+<h2>How does Ecore work?</h2>
+<p>Ecore is very easy to learn and use. All the function calls are designed to be easy to remember, explicit in describing what they do, and heavily name-spaced. Ecore programs can start and be very simple. </p>
+<p> For example: </p>
+<pre>#include &lt;<a href="file:/usr/include/Ecore.h">Ecore.h</a>&gt;
+int main(int argc, const char **argv)
+{
+ ecore_init();
+ ecore_app_args_set(argc, argv);
+ ecore_main_loop_begin();
+ ecore_shutdown();
+ return 0;
+}</pre>
+<p>This program is very simple and does&#8217;t check for errors, but it does start up and begin a main loop waiting for events or timers to tick off. This program doesn&#8217;t set up any, but now we can expand on this simple program a little more by adding some event handlers and timers. </p>
+<pre>#include &lt;<a href="file:/usr/include/Ecore.h">Ecore.h</a>&gt;
+Ecore_Timer *timer1 = NULL;
+Ecore_Event_Handler *handler1 = NULL;
+double start_time = 0.0;
+int timer_func(void *data)
+{
+ printf('Tick timer. Sec: %3.2f, ecore_time_get() - start_time);
+ return 1;
+}
+int exit_func(void *data, int ev_type, void *ev)
+{
+ Ecore_Event_Signal_Exit *e;
+ e = (Ecore_Event_Signal_Exit *)ev;
+ if (e-&gt;interrupt) printf('Exit: interrupt);
+ else if (e-&gt;quit) printf('Exit: quit);
+ else if (e-&gt;terminate) printf('Exit: terminate);
+ ecore_main_loop_quit();
+ return 1;
+}
+int main(int argc, const char **argv)
+{
+ ecore_init();
+ ecore_app_args_set(argc, argv); 
+ start_time = ecore_time_get();
+ handler1 = ecore_event_handler_add(ECORE_EVENT_SIGNAL_EXIT, exit_func, NULL);
+ timer1 = ecore_timer_add(0.5, timer_func, NULL); 
+ ecore_main_loop_begin();
+ ecore_shutdown();
+ return 0;
+}</pre>
+<p>In the previous example, we initialize our application and get the time at which our program has started so we can calculate an offset. We set up a timer to tick off in 0.5 seconds, and since it returns 1, will keep ticking off every 0.5 seconds until it returns 0, or is deleted by hand. An event handler is set up to call a function &#8211; exit_func(), whenever an event of type ECORE_EVENT_SIGNAL_EXIT is received (CTRL-C on the command line will cause such an event to happen). If this event occurs it tells you what kind of exit signal was received, and asks the main loop to quit when it is finished by calling <code>ecore_main_loop_quit()</code>. </p>
+<p> The handles returned by <code>ecore_timer_add()</code> and <code>ecore_event_handler_add()</code> are only stored here as an example. If you don&#8217;t need to address the timer or event handler again you don&#8217;t need to store the result, so just call the function, and don&#8217;t assign the result to any variable. </p>
+<p> This program looks slightly more complex than needed to do these simple things, but in principle, programs don&#8217;t get any more complex. You add more event handlers, for more events, will have more timers and such, BUT it all follows the same principles as shown in this example.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

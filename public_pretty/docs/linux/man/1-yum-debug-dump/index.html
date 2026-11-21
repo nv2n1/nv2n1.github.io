@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yum-debug-dump(1) · Linux Manual Pages</title>
+<meta name="description" content="yum-debug-dump – write system RPM configuration to a debug-dump file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-yum-debug-dump/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>yum-debug-dump(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> yum-debug-dump &#8211; write system RPM configuration to a debug-dump file</p>
+<h2>SYNOPSIS</h2>
+<p> <code>yum-debug-dump</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>yum-debug-dump</code> is a program which creates a gzipped file containing a lot of information useful to developers trying to debug a problem. </p>
+<p> By default it will output a file to the current working directory named yum_debug_dump-&lt;hostname&gt;-&lt;time&gt;.txt.gz. This file contains no private information but does contain a complete list of all packages you have installed, all packages available in any repository, important configuration and system information. You can view this file using the &#8216;zless&#8217; command. </p>
+<p> You can use the coresponding program <code>yum-debug-restore</code> to act on this file and restore a set of packages (much like dump/restore). </p>
+<h2>FILES</h2>
+<p> As yum-debug-dump uses YUM libraries for retrieving all the information, it relies on YUM configuration for its default values like which repositories to use. Consult YUM documentation for details: </p>
+<pre>
+/etc/yum.conf
+/etc/yum/repos.d/
+/var/cache/yum/
+</pre>
+<h2>SEE ALSO</h2>
+<pre>
+<i>yum-debug-restore (1)</i>
+<i>yum.conf (5)</i>
+<a rel="nofollow" href="http://yum.baseurl.org/">http://yum.baseurl.org/</a>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+See the Authors file included with this program.
+</pre>
+<h2>BUGS</h2>
+<p> There are of course no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suppress “Entering/Leaving Directory” Messages in Recursive Make - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-suppress-entering-leaving-messages-when-invoking-make-recursively/">
+  <meta name="description" content="When running make recursively with $(MAKE) or make -C, you’ll see verbose messages like “Entering directory” and “Leaving directory” for each subdirectory. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Suppress “Entering/Leaving Directory” Messages in Recursive Make">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-suppress-entering-leaving-messages-when-invoking-make-recursively/">
+  <meta property="og:description" content="When running make recursively with $(MAKE) or make -C, you’ll see verbose messages like “Entering directory” and “Leaving directory” for each subdirectory. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/algorithms-data-structures/">Algorithms &amp; Data Structures</a>
+        </nav>
+        
+        <h1>Suppress “Entering/Leaving Directory” Messages in Recursive Make</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:04Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When running <code>make</code> recursively with <code>$(MAKE)</code> or <code>make -C</code>, you’ll see verbose messages like “Entering directory” and “Leaving directory” for each subdirectory. These messages clutter the build output and make it harder to spot actual errors.</p>
+<h2 id="the-quick-fix">The Quick Fix</h2>
+<p>Pass <code>--no-print-directory</code> to make:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">make --no-print-directory
+</code></pre><p>Or set it in your Makefile:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">.MAKEFLAGS: --no-print-directory
+</code></pre><h2 id="suppressing-via-makeflags-environment-variable">Suppressing via MAKEFLAGS Environment Variable</h2>
+<p>Set the flag globally for all make invocations:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">export MAKEFLAGS=&#34;--no-print-directory&#34;
+make
+</code></pre><p>Add to your <code>~/.bashrc</code> for permanent effect:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">export MAKEFLAGS=&#34;--no-print-directory&#34;
+</code></pre><h2 id="how-the-messages-are-generated">How the Messages Are Generated</h2>
+<p>GNU Make prints these messages automatically when it changes directories during recursive builds. The messages look like:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">make[1]: Entering directory &#39;/home/user/project/src&#39;
+make[2]: Entering directory &#39;/home/user/project/src/lib&#39;
+cc -c file.c -o file.o
+make[2]: Leaving directory &#39;/home/user/project/src/lib&#39;
+make[1]: Leaving directory &#39;/home/user/project/src&#39;
+</code></pre><p>Each level of recursion adds a bracketed number (<code>make[1]</code>, <code>make[2]</code>, etc.) indicating the depth.</p>
+<h2 id="using-print-directory-selectively">Using –print-directory Selectively</h2>
+<p>If you want directory messages for some sub-makes but not others, use <code>--print-directory</code> to re-enable them:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># In top-level Makefile
+.MAKEFLAGS: --no-print-directory
+
+# In a specific sub-Makefile where you want messages
+.MAKEFLAGS: --print-directory
+</code></pre><h2 id="clean-build-output">Clean Build Output</h2>
+<p>For truly clean build output, combine <code>--no-print-directory</code> with other flags:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Suppress directory messages, run in parallel, show only errors
+make --no-print-directory -j$(nproc) --quiet
+</code></pre><p>Or create a wrapper script:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">#!/bin/bash
+# build.sh - clean build output
+make --no-print-directory &#34;$@&#34; 2&gt;&amp;1 | grep -v &#34;^make\[&#34; | grep -v &#34;Entering\|Leaving&#34;
+</code></pre><h2 id="alternative-use-recursive-make-sparingly">Alternative: Use Recursive Make Sparingly</h2>
+<p>The “Recursive Make Considered Harmful” paper by Peter Miller argues that recursive make builds are slower and more error-prone than non-recursive builds. Consider restructuring your project to use a single top-level Makefile:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Single Makefile for the entire project
+SUBDIRS = src lib tests
+
+.PHONY: all $(SUBDIRS)
+
+all: $(SUBDIRS)
+
+src:
+    $(MAKE) -C src
+
+lib:
+    $(MAKE) -C lib
+
+tests: src lib
+    $(MAKE) -C tests
+</code></pre><p>Or use modern build systems like <code>CMake</code>, <code>Meson</code>, or <code>Ninja</code> that handle subdirectory builds cleanly without verbose directory change messages.</p>
+<h2 id="other-useful-make-flags">Other Useful Make Flags</h2>
+<ul>
+<li><code>-j N</code> — Run N parallel jobs (use <code>-j$(nproc)</code> for all cores)</li>
+<li><code>-B</code> — Unconditionally rebuild all targets</li>
+<li><code>-n</code> — Dry run (show commands without executing)</li>
+<li><code>-k</code> — Continue building after errors (for finding all errors at once)</li>
+<li><code>--warn-undefined-variables</code> — Warn when using undefined variables</li>
+<li><code>--debug=v</code> — Show why make decides to rebuild each target</li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><code>make --no-print-directory</code> — Suppress entering/leaving messages</li>
+<li><code>MAKEFLAGS=--no-print-directory</code> — Environment variable approach</li>
+<li><code>.MAKEFLAGS: --no-print-directory</code> — Makefile directive</li>
+</ul>
+<h2 id="make-parallel-builds">Make Parallel Builds</h2>
+<p>When running parallel builds with <code>-j</code>, the entering/leaving directory messages become especially noisy since multiple sub-makes run concurrently. Always suppress them in parallel mode:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">make -j$(nproc) --no-print-directory
+</code></pre><h2 id="build-log-filtering">Build Log Filtering</h2>
+<p>If you can’t modify the Makefile or command line, filter the output after the fact:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Remove entering/leaving messages from build log
+make 2&gt;&amp;1 | grep -v &#34;Entering directory\|Leaving directory&#34; | tee build.log
+
+# Show only warnings and errors
+make 2&gt;&amp;1 | grep -E &#34;warning:|error:|Error&#34; | tee errors.log
+
+# Colorize errors in real time
+make 2&gt;&amp;1 | grep --color=auto -E &#34;^|error:|Error&#34;
+</code></pre><h2 id="make-and-cmake-integration">Make and CMake Integration</h2>
+<p>If your project uses CMake as the meta-build system, CMake generates Makefiles that use recursive make. Suppress directory messages in the CMake build:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
+make --no-print-directory -j$(nproc)
+</code></pre><p>Or set the flag in your CMakeLists.txt:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_MAKE_PROGRAM &#34;make --no-print-directory&#34;)
+</code></pre>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gsi_proxy(3) · Linux Manual Pages</title>
+<meta name="description" content="Globus GSI Proxy API –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gsi_proxy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gsi_proxy(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Globus GSI Proxy API &#8211; </p>
+<h3>Modules</h3>
+<p> <code>Activation</code> </p>
+<p> <code>Handle Management</code><br />
+ <i>Create/Destroy/Modify a GSI Proxy Handle. </i><br />
+ <code>Handle Attributes</code> </p>
+<p> <code>Proxy Operations</code><br />
+ <i>Initiate a proxy operation. </i><br />
+ <code>Proxy Constants</code> </p>
+<h2>Detailed Description</h2>
+<p> The globus_gsi_proxy library is motivated by the desire to provide a abstraction layer for the proxy creation and delegation process. For background on this process please refer to the proxy certificate profile draft. </p>
+<p> Any program that uses Globus GSI Proxy functions must include &#8216;globus_gsi_proxy.h&#8217;. </p>
+<p> We envision the API being used in the following manner: </p>
+<p> Delegator Delegatee set desired cert info extension in the handle by using the handle set functions. <code>globus_gsi_proxy_create_req()</code> <code>globus_gsi_proxy_inquire_req()</code> modify cert info extension by using <code>handle set/get/clear functions.</code> <code>globus_gsi_proxy_sign_req()</code> <code>globus_gsi_proxy_assemble_cred()</code> The API documentation is divided into the following sections</p>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>Activation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Handle Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Handle Attributes</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Proxy Operations</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Proxy Constants</code></dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

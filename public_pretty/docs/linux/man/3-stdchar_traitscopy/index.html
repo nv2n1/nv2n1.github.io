@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchar_traitscopy(3) · Linux Manual Pages</title>
+<meta name="description" content="std::char_traits&lt;CharT&gt;::copy – std::char_traits&lt;CharT&gt;::copy">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchar_traitscopy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchar_traitscopy(3)</h1>
+
+
+
+
+
+<p>std::char_traits&lt;CharT&gt;::copy &#8211; std::char_traits&lt;CharT&gt;::copy</p>
+<h2>Synopsis</h2>
+<pre><code>static char_type *copy(char_type *dest, const char_type *src, std::size_t count);
+(until C++ 20)
+    static constexpr char_type *copy(char_type *dest, const char_type *src, std::size_t count);
+(since C++ 20)</code></pre>
+<p>Copies count character from character string pointed to by src to character string pointed to by dest.<br />
+Formally, for each i in [0, count), performs assign(src[i], dest[i]).<br />
+The behavior is undefined if copied character ranges overlap, i.e. src is in [dest, dest + count). </p>
+<h2>Parameters</h2>
+<p>dest &#8211; pointer to a character string to copy to<br />
+src &#8211; pointer to a character string to copy from<br />
+count &#8211; the number of characters to copy</p>
+<h2>Return value</h2>
+<p>dest </p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Complexity</h2>
+<p>Linear.</p>
+<h2>See also</h2>
+<p>assign assigns a character<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member function)</i><br />
+<code>[static]</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

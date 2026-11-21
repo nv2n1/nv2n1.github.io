@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rcopy(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rcopy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rcopy(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>rcopy - simple file copy over RDMA.</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+rcopy source server[:destination][-p port] rcopy[-p port]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>Uses sockets over RDMA interface to copy a source file to the specified destination.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>ource
+</dt><dd> The name and path of the source file to copy.
+</dd><dt>erver
+</dt><dd> The name or address of the destination server.
+</dd><dt>:destination
+</dt><dd> An optional destination filename and path. If not given, the destination filename will match that of the source.
+</dd><dt>-p server_port
+</dt><dd> The server's port number.
+</dd><dt></dt></dl>
+<h2>NOTES</h2>
+<dd> Basic usage is to start rcopy on a server system, then run rcopy sourcefile servername. The server application will continue to run after copying the file, but is currently single-threaded. 
+<p>Because this test maps RDMA resources to userspace, users must ensure that they have available system resources and permissions. See the libibverbs README file for additional details.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

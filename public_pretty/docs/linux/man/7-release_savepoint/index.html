@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>release_savepoint(7) · Linux Manual Pages</title>
+<meta name="description" content="RELEASE SAVEPOINT – destroy a previously defined savepoint">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-release_savepoint/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>release_savepoint(7)</h1>
+
+
+
+
+
+<p>RELEASE SAVEPOINT &#8211; destroy a previously defined savepoint </p>
+<h2>Synopsis</h2>
+<pre>RELEASE [ SAVEPOINT ] <i>savepoint_name</i></pre>
+<h2>Description</h2>
+<p><code>RELEASE SAVEPOINT</code> destroys a savepoint previously defined in the current transaction. </p>
+<p> Destroying a savepoint makes it unavailable as a rollback point, but it has no other user visible behavior. It does not undo the effects of commands executed after the savepoint was established. (To do that, see ROLLBACK TO SAVEPOINT [<code><a href="/docs/linux/man/7-rollback_to_savepoint/">rollback_to_savepoint</a></code>(7)].) Destroying a savepoint when it is no longer needed allows the system to reclaim some resources earlier than transaction end. </p>
+<p> <code>RELEASE SAVEPOINT</code> also destroys all savepoints that were established after the named savepoint was established.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>savepoint_name</i></dt>
+<dd>The name of the savepoint to destroy.</dd></dl>
+<h2>Notes</h2>
+<p>Specifying a savepoint name that was not previously defined is an error. </p>
+<p> It is not possible to release a savepoint when the transaction is in an aborted state. </p>
+<p> If multiple savepoints have the same name, only the one that was most recently defined is released.</p>
+<h2>Examples</h2>
+<p>To establish and later destroy a savepoint: </p>
+<pre>BEGIN;
+ INSERT INTO table1 VALUES (3);
+ SAVEPOINT my_savepoint;
+ INSERT INTO table1 VALUES (4);
+ RELEASE SAVEPOINT my_savepoint;
+COMMIT;</pre>
+<p>The above transaction will insert both 3 and 4.</p>
+<h2>Compatibility</h2>
+<p>This command conforms to the SQL standard. The standard specifies that the key word SAVEPOINT is mandatory, but PostgreSQL allows it to be omitted.</p>
+<h2>See Also</h2>
+<p>BEGIN [<code><a href="/docs/linux/man/7-begin/">begin</a></code>(7)], COMMIT [<code><a href="/docs/linux/man/7-commit/">commit</a></code>(7)], ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)], ROLLBACK TO SAVEPOINT [<code><a href="/docs/linux/man/7-rollback_to_savepoint/">rollback_to_savepoint</a></code>(7)], SAVEPOINT [<code><a href="/docs/linux/man/7-savepoint/">savepoint</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

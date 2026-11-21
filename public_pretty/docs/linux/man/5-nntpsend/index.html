@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nntpsend(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-nntpsend/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>nntpsend(5)</h1>
+
+
+
+
+
+<p>nntpsend.ctl - list of sites to feed via nntpsend</p>
+<h2>Description</h2>
+<p>The file <i>&lt;pathetc in inn.conf&gt;/nntpsend.ctl</i> specifies the default list of sites to be fed by <i><a HREF="/docs/linux/man/8-nntpsend/">nntpsend</a></i>(8).</p>
+<p>Comments begin with a number sign (``#&rsquo;&rsquo;) and continue through the end of the line. Blank lines and comments are ignored. All other lines should consist of four fields separated by a colon.</p>
+<p>The first field is the name of the site as specified in the <i>newsfeeds</i> file.</p>
+<p>The second field should be the hostname or IP address of the remote site.</p>
+<p>The third field, if non-empty, specifies the default head truncation size of site&rsquo;s batchfile. If this field is empty, no truncation is performed. This field may be of the form <code>maxsize-truncsize'', in which case it is passed to &lt;i&gt;shrinkfile&lt;/i&gt; as </code>-m maxsize -s truncsize&rsquo;&rsquo;; otherwise it is of the form <code>truncsize'', in which case it is passed as </code>-s truncsize&rsquo;'.</p>
+<p>The fourth field specifies some default flags passed to <i><a HREF="/docs/linux/man/8-innxmit/">innxmit</a></i>(8). The flag <code>-a'' is always given to &lt;i&gt;innxmit&lt;/i&gt; and need not appear here. If no </code>-t timeout&rsquo;&rsquo; flag is given in this field or on the <i>nntpsend</i> command line, ``-t 180&rsquo;&rsquo; will be given to <i>innxmit</i>.</p>
+<h2>History</h2>
+<p>Written by Landon Curt Noll &lt;chongo [at] toad.com&gt; for InterNetNews. This is revision 5909, dated 2002-12-03.</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-innxmit/">innxmit</a>(8), <a HREF="/docs/linux/man/5-newsfeeds/">newsfeeds</a>(5), <a HREF="/docs/linux/man/8-nntpsend/">nntpsend</a>(8), trunc(1).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

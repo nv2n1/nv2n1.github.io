@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nethogs(8) · Linux Manual Pages</title>
+<meta name="description" content="nethogs – Net top tool grouping bandwidth per process">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nethogs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nethogs(8)</h1>
+
+
+
+
+
+<p>nethogs &#8211; Net top tool grouping bandwidth per process</p>
+<h2>Synopsis</h2>
+<p><code> nethogs</code> [<code>-h</code>] [<code>-V</code>] [<code>-d</code>] [<code>-v</code>] [<code>-t</code>] [<code>-c</code>] [<code>-p</code>] [<code>-s</code>] [device(s)]</p>
+<h2>Description</h2>
+<p>NetHogs is a small &#8216;net top&#8217; tool. Instead of breaking the traffic down per protocol or per subnet, like most such tools do, it groups bandwidth by process &#8211; and does not rely on a special kernel module to be loaded. So if there&#8217;s suddenly a lot of network traffic, you can fire up NetHogs and immediately see which PID is causing this, and if it&#8217;s some kind of spinning process, kill it.</p>
+<h3>Options</h3>
+<dl>
+<dt><code>-h</code></dt>
+<dd>display available commands usage.</dd>
+<dt><code>-V</code></dt>
+<dd>prints Version info.</dd>
+<dt><code>-d</code></dt>
+<dd>delay for refresh rate.</dd>
+<dt><code>-v</code></dt>
+<dd>select view mode</dd>
+<dt><code>-p</code></dt>
+<dd>sniff in promiscious mode (not recommended).</dd>
+<dt><code>-t</code></dt>
+<dd>tracemode.</dd>
+<dt><code>-c</code></dt>
+<dd>limit number of refreshes</dd>
+<dt><code>-s</code></dt>
+<dd>sort by traffic sent</dd></dl>
+<p> <i>device(s)</i> to monitor. By default eth0 is being used. </p>
+<h2>Interactive Control</h2>
+<dl>
+<dt>m</dt>
+<dd>cycle between display modes (kb/s, kb, b, mb)</dd>
+<dt>r</dt>
+<dd>sort by &#8216;received&#8217;</dd>
+<dt>s</dt>
+<dd>sort by &#8216;sent&#8217;</dd>
+<dt>q</dt>
+<dd>quit</dd></dl>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-netstat/">netstat</a>(8) tcpdump(1) pcap(3)</i></p>
+<h2>Author</h2>
+<pre>Written by Arnout Engelen &lt;arnouten [at] bzzt.net&gt;.</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

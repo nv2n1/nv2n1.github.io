@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curl_share_cleanup(3) · Linux Manual Pages</title>
+<meta name="description" content="curl_share_cleanup – Clean up a shared object">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curl_share_cleanup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curl_share_cleanup(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> curl_share_cleanup &#8211; Clean up a shared object</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;curl/curl.h&gt;</code> </p>
+<p> <code>CURLSHcode curl_share_cleanup(CURLSH *</code><i>share_handle</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
+<p> This function deletes a shared object. The share handle cannot be used anymore when this function has been called. </p>
+<h2>RETURN VALUE</h2>
+<p> CURLSHE_OK (zero) means that the option was set properly, non-zero means an error occurred as <i>&lt;curl/curl.h&gt;</i> defines. See the <i>libcurl-errors.3</i> man page for the full list with descriptions. If an error occurs, then the share object will not be deleted.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-curl_share_init/">curl_share_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

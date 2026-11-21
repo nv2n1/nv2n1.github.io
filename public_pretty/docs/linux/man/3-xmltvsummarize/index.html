@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmltvsummarize(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmltvsummarize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmltvsummarize(3)</h1>
+
+
+
+
+
+<p>XMLTV::Summarize - Perl extension to summarize XMLTV data</p>
+<h2>Synopsis</h2><pre> # First get some data from the XMLTV module, eg:
+ use XMLTV;
+ my $data = XMLTV::parsefile('tv_sorted.xml');
+ my ($encoding, $credits, $ch, $progs) = @$data;
+ # Now turn the sorted programmes into a printable summary.
+ use XMLTV::Summarize qw(summarize);
+ foreach (summarize($ch, $progs)) {
+ if (not ref) {
+ print &quot;\nDay: $_\n\n&quot;;
+ }
+ else {
+ my ($start, $stop, $title, $sub_title, $channel) = @$_;
+ print &quot;programme starts at $start, &quot;;
+ print &quot;stops at $stop, &quot; if defined $stop;
+ print &quot;has title $title &quot;;
+ print &quot;and episode title $sub_title&quot; if defined $sub_title;
+ print &quot;, on channel $channel.\n&quot;;
+ }
+ }</pre><h2>Description</h2>This module processes programme and channel data from the <font SIZE="-1">XMLTV</font> module to help produce a human-readable summary or <font SIZE="-1">TV</font> guide. It takes care of choosing the correct language (based on the <font SIZE="-1">LANG</font> environment variable) and of looking up the name of channels from their id. 
+<p>There is one public routine, <tt>&quot;summarize()&quot;</tt>. This takes (references to) a channels hash and a programmes list, the same format as those returned by the <font SIZE="-1">XMLTV</font> module. It returns a list of &lsquo;summary&rsquo; elements where each element is a list of five items: start time, stop time, title, &lsquo;sub-title&rsquo;, and channel name. The stop time and sub-title may be undef.</p>
+<p>The times are formatted as hh:mm, with a timezone appended when the timezone changes in the middle of listings. For the titles and channel name, the shortest string that is in an acceptable language is chosen.</p>
+<p>The list of acceptable languages normally contains just one element, taken from <font SIZE="-1">LANG,</font> but you can set it manually as <tt>@XMLTV::Summarize::PREF_LANGS</tt> if wished.</p>
+<h2>Author</h2>Ed Avis, ed [at] membled.com
+<h2>See Also</h2><font SIZE="-1"><i>XMLTV</i></font><i></i>(1).
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

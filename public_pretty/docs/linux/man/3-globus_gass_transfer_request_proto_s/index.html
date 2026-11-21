@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gass_transfer_request_proto_s(3) · Linux Manual Pages</title>
+<meta name="description" content="globus_gass_transfer_request_proto_s –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gass_transfer_request_proto_s/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gass_transfer_request_proto_s(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> globus_gass_transfer_request_proto_s &#8211; </p>
+<p> Protocol module request handling structure.</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;globus_gass_transfer_proto.h&gt;</p>
+<h3>Data Fields</h3>
+<p> <code>globus_gass_transfer_proto_send_t</code> <code>send_buffer</code> </p>
+<p> <code>globus_gass_transfer_proto_receive_t</code> <code>recv_buffer</code> </p>
+<p> <code>globus_gass_transfer_proto_func_t</code> <code>fail</code> </p>
+<p> <code>globus_gass_transfer_proto_func_t</code> <code>deny</code> </p>
+<p> <code>globus_gass_transfer_proto_func_t</code> <code>refer</code> </p>
+<p> <code>globus_gass_transfer_proto_func_t</code> <code>authorize</code> </p>
+<p> <code>globus_gass_transfer_proto_func_t</code> <code>destroy</code> </p>
+<h2>Detailed Description</h2>
+<p> Protocol module request handling structure. </p>
+<p> This structure is created by a GASS transfer protocol module to handle a particular request. It is created in response to a <code>listener&#8217;s accept method</code> or a <code>protocol module&#8217;s new_request method</code>. </p>
+<p> Memory management of this structure is the responsibility of the protocol module. The destroy method will be called when the GASS Transfer library is finished dealing with it. </p>
+<p> A protocol module may create a extension to this structure to contain protocol-specific information, as long as the first fields of the structure match this type. </p>
+<p> <code>See Also:</code></p>
+<dl>
+<dt>
+</dt><dd> <code>globus_gass_transfer_proto_request_ready()</code></dd></dl>
+<h2>Field Documentation</h2>
+<h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::authorize</h3>
+<p> Authorize a request.</p>
+<h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::deny</h3>
+<p> Deny a request.</p>
+<h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::destroy</h3>
+<p> Destroy a request.</p>
+<h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::fail</h3>
+<p> Fail a request. </p>
+<p> This function is called when the application calls globus_gass_transfer_fail() on a request.</p>
+<h3><code>globus_gass_transfer_proto_receive_t</code> globus_gass_transfer_request_proto_s::recv_buffer</h3>
+<p> Receive bytes. </p>
+<p> <code>See Also:</code></p>
+<dl>
+<dt>
+</dt><dd> globus_gass_transfer_proto_recv_t</dd></dl>
+<h3><code>globus_gass_transfer_proto_func_t</code> globus_gass_transfer_request_proto_s::refer</h3>
+<p> Refer a request.</p>
+<h3><code>globus_gass_transfer_proto_send_t</code> globus_gass_transfer_request_proto_s::send_buffer</h3>
+<p> Send bytes. </p>
+<p> <code>See Also:</code></p>
+<dl>
+<dt>
+</dt><dd> <code>globus_gass_transfer_proto_send_t</code></dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAN">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

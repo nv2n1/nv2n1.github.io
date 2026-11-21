@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_uid(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_GetUid, Tk_Uid – convert from string to unique identifier">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_uid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_uid(3)</h1>
+
+
+
+
+
+<p>Tk_GetUid, Tk_Uid &#8211; convert from string to unique identifier </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+Tk_Uid
+<code>Tk_GetUid</code>(<i>string</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>char <i>*string</i> (in) String for which the corresponding unique identifier is desired. </dd>
+</dl>
+<h2>Description</h2>
+<p><code>Tk_GetUid</code> returns the unique identifier corresponding to <i>string</i>. Unique identifiers are similar to atoms in Lisp, and are used in Tk to speed up comparisons and searches. A unique identifier (type Tk_Uid) is a string pointer and may be used anywhere that a variable of type &#8220;char *&#8221; could be used. However, there is guaranteed to be exactly one unique identifier for any given string value. If <code>Tk_GetUid</code> is called twice, once with string <i>a</i> and once with string <i>b</i>, and if <i>a</i> and <i>b</i> have the same string value (strcmp(a, b) == 0), then <code>Tk_GetUid</code> will return exactly the same Tk_Uid value for each call (Tk_GetUid(a) == Tk_GetUid(b)). This means that variables of type Tk_Uid may be compared directly (x == y) without having to call <code>strcmp</code>. In addition, the return value from <code>Tk_GetUid</code> will have the same string value as its argument (strcmp(Tk_GetUid(a), a) == 0). </p>
+<h2>Keywords</h2>
+<p>atom, unique identifier</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

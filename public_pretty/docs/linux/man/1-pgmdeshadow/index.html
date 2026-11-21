@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pgmdeshadow(1) · Linux Manual Pages</title>
+<meta name="description" content="pgmdeshadow – Deshadow a PGM image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pgmdeshadow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pgmdeshadow(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pgmdeshadow &#8211; Deshadow a PGM image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pgmdeshadow</code> </p>
+<p> [<i>pnmfile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pgmdeshadow</code> removes gray shadows from an image. This is useful for an image containing text, such as a scanned book pages, where a shadow typically appears near the book crease or near one side of the image. <code>pgmdeshadow</code> recognizes a gray shadow as an area of smoothly changing color, starting from the outer edges of the image. The program uses a simple image reconstruction algorithm to determine the local shadow gray level, then divides each pixel&#8217;s gray level by the local shadow gray level. </p>
+<p> The algorithm is the &#8216;fast hybrid grayscale reruction&#8217; algorithm from Luc Vincent, &quot;Morphological Grayscale Reruction in Image Analysis: Applications and Efficient Algorithms. </p>
+<h2>OPTIONS</h2>
+<p> None. </p>
+<h2>REFERENCES</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> Luc Vincent, &#8216;Morphological Grayscale Reruction in Image Analysis: Applications and Efficient Algorithms,&#8217; IEEE Transactions on Image Processing, vol. 2, no. 2, April 1993, pp. 176-201. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ppmshadow/">ppmshadow</a></code>(1) , <code>pgm</code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pgmdeshadow</code> was added to Netpbm in Version 10.35 (August 2006). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

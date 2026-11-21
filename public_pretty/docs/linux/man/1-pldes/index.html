@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pldes(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pldes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pldes(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>pl, pldes, plser, plmerge, plparse, pl2link<tt> <wbr> <wbr> <wbr> <wbr></tt>- property list tools</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+pldes filename(s)
+plget key[morekeys] plser filename(s)
+    plmerge[destination - file][input - file(s)] plparse filename(s)
+pl2link input - file[destination - file] pl - input[input - file] - output[destination - file]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>Property lists in GNUstep are hierarchical lists of values or attribute-value pairs. Programmatically they are represented by instances of the NSString, NSData, NSArray, or NSDictionary (most common) class (which may contain other instances of such classes). These instances can be serialized as binary objects to form a persistent representation. In addition, there are two alternative human-readable representations. The first, utilized in NeXTstep and OpenStep, utilizes a text format with equals signs expressing attribute-value bindings and set braces expressing hierarchical organization. The second, often (uninformatively) referred to as &quot;plist&quot; format, is in XML and is used by Mac OS X. The tools described here are utilities for manipulating the various persistent property list representations as files.</p>
+<dl>
+<dt><b>pldes</b> <i>filename(s)</i>
+</dt><dd> Converts a binary serialised property list (class instance) to a text representation.
+</dd><dt><b>plget</b> <i>key</i>
+</dt><dd> Reads a text representation of a dictionary in property list format as standard input, extracts the string value held in that dictionary with the specified key, and writes the result to standard output. Multiple keys may be used to extract values from nested dictionaries.
+</dd><dt><b>plser</b> <i>filename(s)</i>
+</dt><dd> Converts a text representation of a property list to a binary serialized representation.
+</dd><dt><b>plmerge</b> [ <i>destination-file</i> ] [ <i>input-file(s)</i> ]
+</dt><dd> Merges text property lists into a single property list
+</dd><dt><b>plparse</b> <i>filename(s)</i>
+</dt><dd> Checks that each file contains a valid text representation of a property list.
+</dd><dt><b>pl2link</b> <i>input-file</i> [ <i>destination-file</i> ]
+</dt><dd> Produces a desktop link file for KDE and Gnome for the given text representation of a property list.
+</dd><dt><b>pl</b> <i>-input</i> [ <i>input-file</i> ]
+</dt><dd> Takes the serialized plist represented by input-file and outputs it to standard output.
+</dd><dt><b>pl</b> <i>-output</i> [ <i>destination-file</i> ]
+</dt><dd> Takes a plist from standard input and serializes it into destination-file.</dd></dl>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/1-defaults/">defaults</a>(1)</p>
+<h2>HISTORY</h2>
+<p>Written 1999-2000.</p>
+<p>This manual page first appeared in gnustep-base 1.9.2 (March 2004).</p>
+<h2>AUTHORS</h2>
+<p><b>pldes, plget, plparse, plser</b> were written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt;.</p>
+<p><b>plmerge</b> was written by Jonathan Gapen &lt;jagapen [at] whitewater.chem.wisc.edu&gt;.</p>
+<p><b>pl2link</b> was written by Fred Kiefer &lt;FredKiefer [at] gmx.de&gt;.</p>
+<p><b>pl</b> was written by Gregory Casamento &lt;greg_casamento [at] yahoo.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

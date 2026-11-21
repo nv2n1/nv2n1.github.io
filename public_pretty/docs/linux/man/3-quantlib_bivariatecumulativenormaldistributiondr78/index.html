@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_bivariatecumulativenormaldistributiondr78(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BivariateCumulativeNormalDistributionDr78 – Cumulative bivariate normal distribution function.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_bivariatecumulativenormaldistributiondr78/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_bivariatecumulativenormaldistributiondr78(3)</h1>
+
+
+
+
+
+<p>QuantLib::BivariateCumulativeNormalDistributionDr78 &#8211; Cumulative bivariate normal distribution function. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/distributions/bivariatenormaldistribution.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>BivariateCumulativeNormalDistributionDr78</code> (Real rho) </p>
+<p> Real <code>operator()</code> (Real a, Real b) const </p>
+<h2>Detailed Description</h2>
+<p>Cumulative bivariate normal distribution function. </p>
+<p> Drezner (1978) algorithm, six decimal places accuracy. </p>
+<p> For this implementation see &#8216;Option pricing formulas&#8217;, E.G. Haug, McGraw-Hill 1998 </p>
+<p> <code>Possible enhancements</code></p>
+<dl COMPACT>
+<dd>check accuracy of this algorithm and compare with: 1) Drezner, Z, (1978), Computation of the bivariate normal integral, Mathematics of Computation 32, pp. 277-279. 2) Drezner, Z. and Wesolowsky, G. O. (1990) `On the Computation of the Bivariate Normal Integral&#8217;, Journal of Statistical Computation and Simulation 35, pp. 101-107. 3) Drezner, Z (1992) Computation of the Multivariate Normal Integral, ACM Transactions on Mathematics Software 18, pp. 450-460. 4) Drezner, Z (1994) Computation of the Trivariate Normal Integral, Mathematics of Computation 62, pp. 289-294. 5) Genz, A. (1992) `Numerical Computation of the Multivariate Normal Probabilities&#8217;, J. Comput. Graph. Stat. 1, pp. 141-150.</dd></dl>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned value is tested by checking it against known good results.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

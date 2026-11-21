@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tspi_tpm_dirwrite(3) · Linux Manual Pages</title>
+<meta name="description" content="Tspi_TPM_DirWrite – write to a Data Integrity Register">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tspi_tpm_dirwrite/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tspi_tpm_dirwrite(3)</h1>
+
+
+
+
+
+<p>TCG Software Stack Developer&#8217;s Reference<br />
+ </center></p>
+<h2>Name</h2>
+<p>Tspi_TPM_DirWrite &#8211; write to a Data Integrity Register </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tss/platform.h&gt;</code>
+<code>#include &lt;tss/tcpa_defines.h&gt;</code>
+<code>#include &lt;tss/tcpa_typedef.h&gt;</code>
+<code>#include &lt;tss/tcpa_struct.h&gt;</code>
+<code>#include &lt;tss/tss_typedef.h&gt;</code>
+<code>#include &lt;tss/tss_structs.h&gt;</code>
+<code>#include &lt;tss/tspi.h&gt;</code>
+<code>TSS_RESULT Tspi_TPM_DirWrite(TSS_HTPM </code><i>hTPM</i><code>, UINT32 </code><i>ulDirIndex</i><code>,</code>
+<code> UINT32 </code><i>ulDirDataLength</i><code>, BYTE* </code><i>rgbDirData</i><code>);</code></pre>
+<h2>Description</h2>
+<p><code>Tspi_TPM_DirWrite</code> writes a data integrity register. You need to know the DIR index and data you wish to write to the DIR prior to using this command. </p>
+<h2>Parameters</h2>
+<h3>hTPM</h3>
+<p>The <i>hTPM</i> parameter is used to specify the handle of the TPM object.</p>
+<h3>ulDirIndex</h3>
+<p>The <i>ulDirIndex</i> parameter is the index of the DIR to write. To query the TPM for the number of DIR registers it supports, use <code><a href="/docs/linux/man/3-tspi_tpm_getcapability/">Tspi_TPM_GetCapability</a></code>(3).</p>
+<h3>ulDirDataLength</h3>
+<p>The <i>ulDirDataLength</i> parameter is the length in bytes of the <i>rgbDirData</i> parameter.</p>
+<h3>rgbDirData</h3>
+<p>The <i>rgbDirData</i> parameter is a pointer to memory containing the data to be written to the DIR. </p>
+<h2>Return Codes</h2>
+<p><code>Tspi_TPM_DirWrite</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
+<dl COMPACT>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd><i>hTPM</i> is not a valid handle. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
+<dt><font SIZE="-1">TSS_E_BAD_PARAMETER</font></dt>
+<dd>One or more parameters is bad. </dd>
+</dl>
+<h2>Conforming To</h2>
+<p><code>Tspi_TPM_DirWrite</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-tspi_tpm_getcapability/">Tspi_TPM_GetCapability</a></code>(3), <code><a href="/docs/linux/man/3-tspi_tpm_dirread/">Tspi_TPM_DirRead</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

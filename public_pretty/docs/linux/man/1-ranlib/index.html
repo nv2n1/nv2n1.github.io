@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ranlib(1) · Linux Manual Pages</title>
+<meta name="description" content="ranlib – generate an index to an archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ranlib/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ranlib(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ranlib &#8211; generate an index to an archive </p>
+<h2>SYNOPSIS</h2>
+<p> ranlib [<code>&#8211;plugin</code> <i>name</i>] [<code>-DhHvVt</code>] <i>archive</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>ranlib</code> generates an index to the contents of an archive and stores it in the archive. The index lists each symbol defined by a member of an archive that is a relocatable object file. </p>
+<p> You may use <code>nm -s</code> or <code>nm &#8211;print-armap</code> to list this index. </p>
+<p> An archive with such an index speeds up linking to the library and allows routines in the library to call each other without regard to their placement in the archive. </p>
+<p> The <font SIZE="-1">GNU</font> <code>ranlib</code> program is another form of <font SIZE="-1">GNU</font> <code>ar</code>; running <code>ranlib</code> is completely equivalent to executing <code>ar -s</code>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>
+</dd><dt><code>-H</code></dt>
+<dd>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Show usage information for <code>ranlib</code>.</dd>
+<dt><code>-v</code></dt>
+<dd>
+</dd><dt><code>-V</code></dt>
+<dd>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Show the version number of <code>ranlib</code>.</dd>
+<dt><code>-D</code></dt>
+<dd> Operate in <i>deterministic</i> mode. The symbol map archive member&#8217;s header will show zero for the <font SIZE="-1">UID, GID,</font> and timestamp. When this option is used, multiple runs will produce identical output files. </dd>
+<p> If <i>binutils</i> was configured with <code>&#8211;enable-deterministic-archives</code>, then this mode is on by default. It can be disabled with the <code>-U</code> option, described below.</p>
+<dt><code>-t</code></dt>
+<dd> Update the timestamp of the symbol map of an archive.</dd>
+<dt><code>-U</code></dt>
+<dd> Do <i>not</i> operate in <i>deterministic</i> mode. This is the inverse of the <code>-D</code> option, above: the archive index will get actual <font SIZE="-1">UID, GID,</font> timestamp, and file mode values. </dd>
+<p> If <i>binutils</i> was configured <i>without</i> <code>&#8211;enable-deterministic-archives</code>, then this mode is on by default.</p>
+<dt><code>@</code><i>file</i></dt>
+<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
+<p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ar/">ar</a></code>(1), <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), and the Info entries for <i>binutils</i>.</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

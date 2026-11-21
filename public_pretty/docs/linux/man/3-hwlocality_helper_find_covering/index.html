@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hwlocality_helper_find_covering(3) · Linux Manual Pages</title>
+<meta name="description" content="hwlocality_helper_find_covering – Finding Objects covering at least CPU set">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hwlocality_helper_find_covering/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hwlocality_helper_find_covering(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> hwlocality_helper_find_covering &#8211; Finding Objects covering at least CPU set </p>
+<h3>Functions</h3>
+<p> static <code>hwloc_obj_t</code> <code>hwloc_get_child_covering_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_t</code> parent) </p>
+<p> static <code>hwloc_obj_t</code> <code>hwloc_get_obj_covering_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set) </p>
+<p> static <code>hwloc_obj_t</code> <code>hwloc_get_next_obj_covering_cpuset_by_depth</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, unsigned depth, <code>hwloc_obj_t</code> prev) </p>
+<p> static <code>hwloc_obj_t</code> <code>hwloc_get_next_obj_covering_cpuset_by_type</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_type_t</code> type, <code>hwloc_obj_t</code> prev) </p>
+<h2>Detailed Description</h2>
+<h2>Function Documentation</h2>
+<h3>static <code>hwloc_obj_t</code> hwloc_get_child_covering_cpuset (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_t</code> parent) [inline], [static]</h3>
+<p> Get the child covering at least CPU set set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> NULL if no child matches or if set is empty.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> This function cannot work if parent does not have a CPU set.</dd></dl>
+<h3>static <code>hwloc_obj_t</code> hwloc_get_next_obj_covering_cpuset_by_depth (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, unsigned depth, <code>hwloc_obj_t</code> prev) [inline], [static]</h3>
+<p> Iterate through same-depth objects covering at least CPU set set. If object prev is NULL, return the first object at depth depth covering at least part of CPU set set. The next invokation should pass the previous return value in prev so as to obtain the next object covering at least another part of set. </p>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> This function cannot work if objects at the given depth do not have CPU sets or if the topology is made of different machines.</dd></dl>
+<h3>static <code>hwloc_obj_t</code> hwloc_get_next_obj_covering_cpuset_by_type (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_type_t</code> type, <code>hwloc_obj_t</code> prev) [inline], [static]</h3>
+<p> Iterate through same-type objects covering at least CPU set set. If object prev is NULL, return the first object of type type covering at least part of CPU set set. The next invokation should pass the previous return value in prev so as to obtain the next object of type type covering at least another part of set. </p>
+<p> If there are no or multiple depths for type type, NULL is returned. The caller may fallback to <code>hwloc_get_next_obj_covering_cpuset_by_depth()</code> for each depth. </p>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> This function cannot work if objects of the given type do not have CPU sets or if the topology is made of different machines.</dd></dl>
+<h3>static <code>hwloc_obj_t</code> hwloc_get_obj_covering_cpuset (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set) [inline], [static]</h3>
+<p> Get the lowest object covering at least CPU set set. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> NULL if no object matches or if set is empty.</dd></dl>
+<p> <code>Note:</code></p>
+<dl>
+<dt>
+</dt><dd> This function cannot work if the root object does not have a CPU set, e.g. if the topology is made of different machines.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

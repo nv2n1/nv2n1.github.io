@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>update-language-dat(8) · Linux Manual Pages</title>
+<meta name="description" content="update-language – generate hyphenation configuration for TeX engines">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-update-language-dat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>update-language-dat(8)</h1>
+
+
+
+
+
+<p>update-language &#8211; generate hyphenation configuration for TeX engines</p>
+<h2>Synopsis</h2>
+<p><code>update-language(-dat,-def,-lua)</code> [<i>,OPTIONS /</i>&#8230;]</p>
+<h2>Description</h2>
+<p>Generate hyphenation configuration files language.dat, .def, .dat.lua </p>
+<p> When called as update-language, all three configurations files are generated. Otherwise only the selected one.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c</code>, <code>&#8211;conf-file</code>=<i>,FILE/</i></dt>
+<dd>file giving additional hyphen specifications</dd>
+<dt> <code>-o</code>, <code>&#8211;output-file</code>=<i>,FILE/</i> file to write the output to</dt>
+<dt><code>-d</code>, <code>&#8211;output-dir</code>=<i>,DIR/</i></dt>
+<dd>
+</dd><dd>directory where files are written</dd>
+<dt><code>&#8211;checks</code></dt>
+<dd>perform sanity checks on the generated config file</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>don&#8217;t write anything to the standard output during normal operation</dd>
+<dt><code>-h</code>, -?, <code>&#8211;help</code></dt>
+<dd>display this help message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
+<h2>Files</h2>
+<p>The default output directory is</p>
+<dl>
+<dd><i>,/var/lib/texmf/tex/generic/config/</i></dd></dl>
+<p> The default output files are</p>
+<dl>
+<dt>for update-language-dat</dt>
+<dd>language.dat</dd>
+<dt>for update-language-def</dt>
+<dd>language.def</dd>
+<dt>for update-language-lua</dt>
+<dd>language.dat.lua</dd></dl>
+<p> If <code>-o</code>/&#8211;output-file is given, it overrides all defaults.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

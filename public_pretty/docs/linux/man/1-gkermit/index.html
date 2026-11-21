@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gkermit(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gkermit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gkermit(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>gkermit - G-Kermit (GNU Kermit) 1.00 file transfer software.</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+gkermit[options] - s file(s)
+Send files
+        gkermit[options] -
+    g file(s)
+Get files
+        gkermit[options] -
+    r Receive files
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>G-Kermit is a UNIX program for transferring files using the Kermit protocol. G-Kermit is a product of Kermit Project at Columbia University. It is free software under the GNU Public License. See the COPYING file for details.</p>
+<h3>INVOKING G-KERMIT</h3>
+<p>The G-Kermit binary is called &quot;gkermit&quot;. It should be stored someplace in your UNIX PATH; normally it is available as /usr/local/bin/gkermit. To run G-Kermit, just type &quot;gkermit&quot; followed by command-line options that tell it what to do. If no options are given, it prints a usage message listing the available options.</p>
+<p>If an option takes an argument, the argument is required; if an option does not take an argument, no argument may be given (exception: -d). The action options are -r, -s, and -g. Only one action option may be given. If no action options are given, G-Kermit does nothing (except possibly to print its usage message or create a debug.log file). Here are some examples (&quot;$ &quot; is the shell prompt):
+$ gkermit - s hello.c &lt; &ndash;Send the hello.c file
+$ gkermit -
+s hello.*
+&lt; &ndash;Send all hello.*files
+$ gkermit -
+r &lt;
+&ndash;Wait to receive files
+$ gkermit -
+g hello.c &lt;
+&ndash;Get hello.c file
+$ gkermit -
+g hello.* &lt;
+&ndash;Get all hello.*files
+Options that do not take arguments can be &quot;bundled&quot; with other options. An option that takes an argument must always be followed by a space and then its argument(s). Examples: <pre>
+$ gkermit -is hello.o  &lt;&ndash; Send hello.o in binary mode
+$ gkermit -dr          &lt;&ndash; Receive with debugging
+</pre></p>
+<h3>COMMAND-LINE OPTIONS</h3>
+ <pre><code>
+  -r      RECEIVE.  Wait for incoming files.
+  -s fn   SEND.  Send file(s)
+  specified by fn.- g fn GET.Get specified file(s) from server.
+  -a fn   AS-NAME.  Alternative name for file.
+  -i      IMAGE.  Binary-mode transfer (default).
+  -T      TEXT. Text-mode transfer.
+  -P      PATH (filename)
+  conversion disabled.- w WRITEOVER when filenames collide.- K KEEP incompletely received files.- p x PARITY.x = e, o, m, s, n;
+  default = n(one).- e n PACKET LENGTH.n = 40 - 9000;
+  default = 4000. - b n TIMEOUT.Per - packet timeout, seconds.- x XON / XOFF.Set Xon / Xoff in the tty driver.--x Unset Xon / Xoff in the tty driver.- S STREAMING disabled.- X EXTERNAL.G - Kermit is an external protocol.- q QUIET.Suppress messages.- d DEBUG.Write debugging info to./ debug.log.- d fn DEBUG.Write debugging info to given file.- h HELP.Display brief usage message.
+</code></pre> 
+<p>You may supply options to G-Kermit on the command line or through the GKERMIT environment variable, which can contain any valid gkermit command-line options. These are processed before the actual command-line options and so can be overridden by them. Example for bash or ksh, which you can put in your profile if you want to always keep incomplete files, suppress streaming, suppress messages, and use Space parity: <pre>
+export GKERMIT=&quot;-K -S -q -p s&quot;
+</pre></p>
+<h3>MECHANICS OF FILE TRANSFER</h3>
+<p>To transfer files with G-Kermit you must be connected through a terminal emulator to the UNIX system where G-Kermit is running, meaning you are online to UNIX and have access to the shell prompt (or to a menu that has an option to invoke G-Kermit). The connection can be serial (direct or dialed) or network (Telnet, Rlogin, X.25, etc).</p>
+<p>When you tell G-Kermit to SEND a file (or files), e.g. with: <pre>
+$ gkermit -Ts oofa.txt
+</pre> it pauses for a second and then sends its first packet. What happens next depends on the capabilities of your terminal emulator:</p>
+<p>•<tt> <wbr> <wbr></tt>If your emulator supports Kermit &quot;autodownloads&quot; then it receives the
+file automatically and puts you back in the terminal screen when done.</p>
+<p>•<tt> <wbr> <wbr></tt>Otherwise, you&rsquo;ll need to take whatever action is required by your
+emulator to get its attention: a mouse action, a keystroke like Alt-x, or a character sequence like Ctrl-\ or Ctrl-] followed by the letter &quot;c&quot; (this is called &quot;escaping back&quot;) and then tell it to receive the file. When the transfer is complete, you must instruct your emulator to go back to its terminal screen.</p>
+<p>During file transfer, most terminal emulators put up some kind of running display of the file transfer progress.</p>
+<p>When you tell G-Kermit to RECEIVE (with &quot;gkermit -r&quot;), this requires you to escape back to your terminal emulator and instruct it to send the desired file(s).</p>
+<p>If your terminal emulator supports Kermit autodownloads AND Kermit server mode, then you can use GET (&quot;gkermit -g files&hellip;&quot;) rather than RECEIVE (&quot;gkermit -r&quot;), and the rest happens automatically, as when G-Kermit is sending.</p>
+<h3>INTERRUPTING FILE TRANSFER</h3>
+<p>G-Kermit supports file and group interruption. The method for interrupting a transfer depends on your terminal emulator. For example, while the file-transfer display is active, you might type the letter &lsquo;x&rsquo; to cancel the current file and go on to the next one (if any), and the letter &lsquo;z&rsquo; to cancel the group. Or there might be buttons you can click with your mouse.</p>
+<p>When G-Kermit is in packet mode and your terminal emulator is in its terminal screen, you can also type three (3) Ctrl-C characters in a row to make G-Kermit exit and restore the normal terminal modes.</p>
+<h3>TEXT AND BINARY TRANSFER MODE</h3>
+<p>When sending files in binary mode, G-Kermit sends every byte exactly as it is stored on the disk. This mode is appropriate for program binaries, graphics files, tar archives, compressed files, etc, and is G-Kermit&rsquo;s default file transfer mode when sending. When receiving files in binary mode, G-Kermit simply copies each byte to disk. (Obviously the bytes are encoded for transmission, but the encoding and decoding procedures give a replica of the original file after transfer.)</p>
+<p>When sending files in text mode, G-Kermit converts the record format to the common one that is defined for the Kermit protocol, namely lines terminated by carriage return and linefeed (CRLF); the receiver converts the CRLFs to whatever line-end or record-format convention is used on its platform. When receiving files in text mode, G-Kermit simply strips carriage returns, leaving only a linefeed at the end of each line, which is the UNIX convention.</p>
+<p>When receiving files, the sender&rsquo;s transfer mode (text or binary) predominates if the sender gives this information to G-Kermit in a Kermit File Attribute packet, which of course depends on whether your terminal emulator&rsquo;s Kermit protocol has this feature. Otherwise, if you gave a -i or -T option on the gkermit command line, the corresponding mode is used; otherwise the default mode (binary) is used.</p>
+<p>Furthermore, when either sending or receiving, G-Kermit and your terminal emulator&rsquo;s Kermit can inform each other of their OS type (UNIX in G-Kermit&rsquo;s case). If your emulator supports this capability, which is called &quot;automatic peer recognition&quot;, and it tells G-Kermit that its platform is also UNIX, G-Kermit and the emulator&rsquo;s Kermit automatically switch into binary mode, since no record-format conversion is necessary in this case. Automatic peer recognition is disabled automatically if you include the -i (image) or -T (text) option.</p>
+<p>When sending, G-Kermit sends all files in the same mode, text or binary. There is no automatic per-file mode switching. When receiving, however, per-file switching occurs automatically based on the incoming Attribute packets, if any (explained below), that accompany each file.</p>
+<h3>PATHNAMES</h3>
+<p>When SENDING a file, G-Kermit obtains the filenames from the command line. It depends on the shell to expand metacharacters (wildcards and tilde).</p>
+<p>G-Kermit uses the full pathname given to find and open the file, but then strips the pathname before sending the name to the receiver. For example: <pre>
+$ gkermit -s /etc/hosts
+</pre> results in the receiver getting a file called &quot;HOSTS&quot; or &quot;hosts&quot; (the directory part, &quot;/etc/&quot;, is stripped).</p>
+<p>However, if a pathname is included in the -a option, the directory part is not stripped: <pre>
+$ gkermit -s /etc/hosts -a /tmp/hosts
+</pre> This example sends the /etc/hosts file but tells the receiver that its name is &quot;/tmp/hosts&quot;. What the receiver does with the pathname is, of course, up to the receiver, which might have various options for dealing with incoming pathnames.</p>
+<p>When RECEIVING a file, G-Kermit does NOT strip the pathname. If the incoming filename includes a path, G-Kermit tries to store the file in the specified place. If the path does not exist, the transfer fails. The incoming pathname can, of course, be overridden with the -a option.</p>
+<h3>FILENAME CONVERSION</h3>
+<p>When sending a file, G-Kermit normally converts outbound filenames to common form: uppercase, no more than one period, and no funny characters. So, for example, gkermit.tar.gz would be sent as GKERMIT_TAR.GZ.</p>
+<p>When receiving a file, if the name is all uppercase, G-Kermit converts it to all lowercase. If the name contains any lowercase letters, G-Kermit leaves the name alone.</p>
+<p>If the automatic peer recognition feature is available in the terminal emulator, and G-Kermit recognizes the emulator&rsquo;s platform as UNIX, G-Kermit automatically disables filename conversion and sends and accepts filenames literally.</p>
+<p>You can force literal filenames by including the -P option on the command line.</p>
+<h3>FILENAME COLLISIONS</h3>
+<p>When G-Kermit receives a file whose name is the same as that of an existing file, G-Kermit &quot;backs up&quot; the existing file by adding a unique suffix to its name. The suffix is &quot;.<del>n</del>&quot;, where n is a number. This kind of backup suffix is compatible with GNU EMACS and various other popular applications.</p>
+<p>To defeat the backup feature and have incoming files overwrite existing files of the same name, include the -w (writeover) option on the command line.</p>
+<h2>RETURN VALUES</h2>
+<p>G-Kermit resturns an exit status code of 0 if all actions succeeded and 1 if any actions failed.</p>
+<h2>IMPLEMENTATION NOTES</h2>
+<p>G-Kermit is designed to be small, portable, and stable, and is intended for use only on the &quot;far end&quot; of a connection; it does not make connections itself, although it can be used as an external protocol by other programs that do make connections. To keep it small and stable, it does not include sliding windows, a command or scripting language or character-set translation. To keep it portable and stable, it avoids use of system services that are not standardized across all UNIX varieties and therefore, in particular, does not support file timestamps, internal wildcard expansion, and other features that are not implemented consistently (or at all) across all UNIXes.</p>
+<h2>ENVIRONMENT</h2>
+<p>A GKERMIT environment variable may be defined (for example in your shell profile) to include G-Kermit command-line options; these are processed by G-Kermit before any options that are specified on the command line, and therefore are overriden by command-line options.</p>
+<h2>DIAGNOSTICS</h2>
+<p>If an error occurs during file transfer G-Kermit sends an error packet to your terminal emulator to cancel the transfer; an appropriate error message should be displayed on your screen.</p>
+<h2>ERRORS</h2>
+<p>File transfers can fail for a number of reasons:</p>
+<p>•<tt> <wbr> <wbr></tt>Lack of read access to a source file.</p>
+<p>•<tt> <wbr> <wbr></tt>Lack of write access to a target directory.</p>
+<p>•<tt> <wbr> <wbr></tt>Lack of adequate flow control.</p>
+<p>•<tt> <wbr> <wbr></tt>Use of streaming on an unreliable connection.</p>
+<p>•<tt> <wbr> <wbr></tt>Excessive unprefixing of control characters.</p>
+<p>•<tt> <wbr> <wbr></tt>Sending bare 8-bit data on a 7-bit connection.</p>
+<p>•<tt> <wbr> <wbr></tt>Packets too long for receiver&rsquo;s buffers.</p>
+<p>•<tt> <wbr> <wbr></tt>Timeout interval too short for connection.</p>
+<p>and many others; these are covered in the references.</p>
+<h2>REFERENCES</h2>
+<p>The Kermit protocol is specified in &quot;Kermit, A File Transfer Protocol&quot; by Frank da Cruz, Digital Press (1987). A correctness proof of the Kermit protocol appears in &quot;Specification and Validation Methods&quot;, edited by Egon Boerger, Oxford University Press (1995). &quot;Using C-Kermit&quot; by Frank da Cruz and Christine M. Gianone, Digital Press (1997, or later edition) explains many of the terms and techniques referenced here in case you are not familiar with them, and also includes tutorials on data communications, extensive troubleshooting and performance tips, etc. Various other books on Kermit are available from Digital Press. Online resources include: <pre>
+Web:   <a rel="nofollow" HREF="http://www.columbia.edu/kermit/"><a href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a></a>
+FTP:   <a HREF="ftp://kermit.columbia.edu/kermit/g/"><a href="ftp://kermit.columbia.edu/kermit/g/">ftp://kermit.columbia.edu/kermit/g/</a></a>
+News:  comp.protocols.kermit.misc
+Email: kermit-support [at] columbia.edu
+</pre></p>
+<p>Also see the README file distributed with G-Kermit for further detail. It can also be found at <a HREF="ftp://kermit.columbia.edu/kermit/g/README."><a href="ftp://kermit.columbia.edu/kermit/g/README">ftp://kermit.columbia.edu/kermit/g/README</a>.</a></p>
+<h2>BUGS</h2>
+<p>The speed of a file transfer depends not only on the speed of the two computers involved and the characteristics of the connection, but also on the capabilities and configuration of the two Kermit programs. Kermit is a fast and reliable protocol, but not all implementations of it are necessarily fast or reliable.</p>
+<p>Nonstreaming transfers on a TCP/IP connection might be inordinately slow if one or both of the TCP/IP stacks uses the Nagle or Delayed ACK tricks. Streaming is used automatically if the other Kermit supports it.</p>
+<p>When receiving files in text mode, G-Kermit strips all carriage returns, even if they aren&rsquo;t followed by linefeed.</p>
+<p>A backups files are not guaranteed to have the highest number in their backup suffix.</p>
+<h2>AUTHOR</h2>
+<p>Frank da Cruz, the Kermit Project, Columbia University, New York City, December 1999.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

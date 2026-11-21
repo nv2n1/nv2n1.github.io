@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gss_assist_acquire_cred_ext(3) · Linux Manual Pages</title>
+<meta name="description" content="Credential Management –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gss_assist_acquire_cred_ext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gss_assist_acquire_cred_ext(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Credential Management &#8211; </p>
+<p> Acquire Credential.</p>
+<h3>Functions</h3>
+<p> OM_uint32 <code>globus_gss_assist_acquire_cred</code> (OM_uint32 *minor_status, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle) </p>
+<p> OM_uint32 <code>globus_gss_assist_acquire_cred_ext</code> (OM_uint32 *minor_status, char *desired_name_char, OM_uint32 time_req, const gss_OID_set desired_mechs, gss_cred_usage_t cred_usage, gss_cred_id_t *output_cred_handle, gss_OID_set *actual_mechs, OM_uint32 *time_rec) </p>
+<h2>Detailed Description</h2>
+<p> Acquire Credential. </p>
+<p> The functions in this section are used to acquire security credentials.</p>
+<h2>Function Documentation</h2>
+<h3>OM_uint32 globus_gss_assist_acquire_cred (OM_uint32 *minor_status, gss_cred_usage_tcred_usage, gss_cred_id_t *output_cred_handle)</h3>
+<p> Called once at the start of the process, to obtain the credentials the process is running under. The </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>minor_status</i> pointer for return code<br />
+ <i>cred_usage</i> GSS_C_INITIATE, GSS_C_ACCEPT, or GSS_C_BOTH<br />
+ <i>output_cred_handle</i> Pointer to the returned handle. This needs to be passed to many gss routines.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> GSS_S_COMPLETE on success Other GSSAPI return codes</dd></dl>
+<h3>OM_uint32 globus_gss_assist_acquire_cred_ext (OM_uint32 *minor_status, char *desired_name_char, OM_uint32time_req, const gss_OID_setdesired_mechs, gss_cred_usage_tcred_usage, gss_cred_id_t *output_cred_handle, gss_OID_set *actual_mechs, OM_uint32 *time_rec)</h3>
+<p> Called once at the start of the process, to obtain the credentials the process is running under. All the parameters of the gss_acquire_cred(), except the desired_name is a string of the form: [type:]name. This will be imported with the type. </p>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> GSS_S_COMPLETE on success Other GSSPI return codes</dd></dl>
+<p> <code>See Also:</code></p>
+<dl>
+<dt>
+</dt><dd> globus_gss_acquire_cred</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

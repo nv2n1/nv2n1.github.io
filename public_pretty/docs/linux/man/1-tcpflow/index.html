@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcpflow(1) · Linux Manual Pages</title>
+<meta name="description" content="tcpflow – TCP flow recorder">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tcpflow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tcpflow(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> tcpflow &#8211; TCP flow recorder</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tcpflow</code> [<code>-aBcCDhpsvVZ</code>] [<code>-b</code><i>&nbsp;<wbr>max_bytes</i>] [<code>-d</code><i>&nbsp;<wbr>debug_level</i>] [<code>-[eE]</code><i>&nbsp;<wbr>scanner</i>] [<code>-f</code><i>&nbsp;<wbr>max_fds</i>] [<code>-F[ctTXMkmg]</code>] [<code>-i</code><i>&nbsp;<wbr>iface</i>] [<code>-L</code><i>&nbsp;<wbr>semlock</i>] [<code>-m</code><i>&nbsp;<wbr>min_bytes</i>] [<code>-o</code><i>&nbsp;<wbr>outdir</i>] [<code>-r</code><i>&nbsp;<wbr>file1.pcap</i>] [<code>-R</code><i>&nbsp;<wbr>file0.pcap</i>] [<code>-S</code><i>name=value</i>] [<code>-T[filename template]</code>] [<code>-w</code><i>file</i>] [<code>-x scanner</code>] [<code>-X</code><i>&nbsp;<wbr>file.xml</i>] [<code>expression</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>tcpflow</code> is a program that captures data transmitted as part of TCP connections (flows), and stores the data in a way that is convenient for protocol analysis or debugging. Rather than showing packet-by-packet information, tcpflow reconstructs the actual data streams and stores each flow in a separate file for later analysis. tcpflow understands TCP sequence numbers and will correctly reconstruct data streams regardless of retransmissions or out-of-order delivery. tcpflow provides control over filenames for automatic binning of connections by protocol, IP adress or connection number, and has a sophisticated plug-in system for decompressing compressed HTTP connections, undoing MIME encoding, or calling user-provided programs for post-processing. </p>
+<p> By default tcpflow stores all captured data in files that have names of the form: </p>
+<pre>
+<code>192.168.101.102.02345-010.011.012.013.45103</code>
+</pre>
+<p> ,&#8230;where the contents of the above file would be data transmitted from host 192.168.101.102 port 2345, to host 10.11.12.13 port 45103. </p>
+<p> If you want to simply process a few hundred thousand packets and see what you have, try this: </p>
+<pre>
+<code>tcpflow -a -o outdir -Fk -r packets.pcap</code>
+</pre>
+<p> This will cause tcpflow to perform (-a) all processing, store the output in a directory called <code>outdir,</code> bin the output in directories of 1000 connections each, and read its input from the file <code>packets.pcap</code>. More sophisticiated processing is possible, of course.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Enable all processing. Same as <code>-e all.</code></dd>
+<dt><code>-B</code></dt>
+<dd> Force binary output even when printing to console with <code>-C </code> or <code>-c.</code></dd>
+<dt><code>-b </code><i>max_bytes</i></dt>
+<dd> Specifies the maximum size of a captured flow. Any bytes beyond <i>max_bytes</i> from the first byte captured will be discarded. The default is to store an unlimited number of bytes per flow. <code>Note:</code> previous versions of <code>tcpflow</code> could only store a maximum of 4GiB per flow, but version 1.4 and above can really store an unlimited amount of bytes. Good thing that modern disks are so big, eh?</dd>
+<dt><code>-c</code></dt>
+<dd> Console print. Print the contents of packets to stdout as they are received, without storing any captured data to files (implies</dd>
+<dt><code>-C</code></dt>
+<dd> Console print without the packet source and destination details being printed. Print the contents of packets to stdout as they are received, without storing any captured data to files (implies <code>-e</code> When outputting to the console each flow will be output in different colors (blue for client to server flows, red for server to client flows, green for undecided flows). <code>-s</code> ).</dd>
+<dt><code>-D</code></dt>
+<dd> Console output should be in hex.</dd>
+<dt><code>-d</code></dt>
+<dd> Debug level. Set the level of debugging messages printed to stderr to <i>debug_level</i>. Higher numbers produce more messages. <code>-d 0</code> causes completely silent operation. <code>-d 1</code> , the default, produces minimal status messages. <code>-d 10</code> produces verbose output equivalent to <code>-v .</code> Numbers higher than 10 can produce a large amount of debugging information useful only to developers.</dd>
+<dt><code>-E name</code></dt>
+<dd> Disable all scanners and then enable scanner <code>name</code></dd>
+<dt><code>-e name</code></dt>
+<dd> Enable scanner <code>name.</code></dd>
+<dt><code>-e all</code></dt>
+<dd> Enables all scanners. Same as <code>-a</code></dd>
+<dt><code>-e http</code></dt>
+<dd> Perform HTTP post-processing (&quot;After&quot; processing). If the output file is </dd>
+<pre>
+<code>208.111.153.175.00080-192.168.001.064.37314,</code>
+</pre>
+<p> Then the post-processing will create the files: </p>
+<pre>
+<code>208.111.153.175.00080-192.168.001.064.37314-HTTP</code>
+<code>208.111.153.175.00080-192.168.001.064.37314-HTTPBODY</code>
+</pre>
+<p> If the HTTPBODY was compressed with GZIP, you may get a third file as well: </p>
+<pre>
+<code>208.111.153.175.00080-192.168.001.064.37314-HTTPBODY-GZIP</code>
+</pre>
+<p> Additional information about these streams, such as their MD5 hash value, is also written to the DFXML file</p>
+<dt><code>-F[format]</code></dt>
+<dd> Specifies format for output filenames. Format specifiers: <code>c</code> appends the connection counter to ALL filenames. <code>t</code> prepends each filename with a Unix timestamp. <code>T</code> prepends each filename with an ISO-8601 timestamp. <code>X</code> Do not output any files (other than the <code>report.xml </code> report files).</dd>
+<dt><code>-FM</code></dt>
+<dd> Include MD5 of each flow in the DFXML output.</dd>
+<dt><code>-FX</code></dt>
+<dd> Suppresses file output entirely (DFXML file is still produced).</dd>
+<dt><code>-Fk</code></dt>
+<dd> bin output in 1K directories</dd>
+<dt><code>-Fm</code></dt>
+<dd> bin output in 1M directories (2 levels)</dd>
+<dt><code>-Fg</code></dt>
+<dd> bin output in 1G directories (3 levels) <code>-T[format]</code> Specifies an arbitrary template for filenames. <code>%A</code> expands to source IP address. <code>%a</code> expands to source IP port. <code>%B</code> expands to destination IP address. <code>%a</code> expands to destination IP port. <code>%T</code> expands to timestamp in ISO8601 format. <code>%t</code> expands to timestamp in Unix time_t format. <code>%V</code> expands to &quot;&#8211;&quot; if a VLAN is present. <code>%v</code> expands to the VLAN number if a VLAN is present. <code>%C</code> expands to &quot;c&quot; if the connection count&gt;0. <code>%c</code> expands to the connection count if the connection count&gt;0. <code>%#</code> always expands to the connection count. <code>%%</code> prints a &quot;%&quot;.</dd>
+<dt><code>-f</code><i>max_fds</i></dt>
+<dd> Max file descriptors used. Limit the number of file descriptors used by tcpflow to <i>max_fds</i>. Higher numbers use more system resources, but usually perform better. If the underlying operating system supports the <code>setrlimit()</code> system call, the OS will be asked to enforce the requested limit. The default is for tcpflow to use the maximum number of file descriptors allowed by the OS. The <code>-v</code> option will report how many file descriptors tcpflow is using.</dd>
+<dt><code>-h</code></dt>
+<dd> Help. Print usage information and exit.</dd>
+<dt><code>-hh</code></dt>
+<dd> More help. Print more usage information and exit.</dd>
+<dt><code>-i </code><i>iface</i></dt>
+<dd> Interface name. Capture packets from the network interface named <i>iface</i>. If no interface is specified with <code>-i</code> , a reasonable default will be used by libpcap automatically.</dd>
+<dt><code>-L </code><i>semlock_name</i></dt>
+<dd> Specifies that <i>semlock_name</i> should be used as a Unix semaphore to prevent two different copies of tcpflow running in two different processes but outputing to the same standard output from printing on top of each other. This is an application of Unix named semaphores; bet you have never seen one before.</dd>
+<dt><code>-l</code></dt>
+<dd> Treat the following arguments as filenames with an assumed <code>-r</code> command before each one. This allows you to read a lot of files at once with shell globbing. For example, to process all of the pcap files in the current directory, use this: </dd>
+<pre>
+<code>tcpflow -o out -a -l *.pcap</code>
+</pre>
+<dt><code>-J</code></dt>
+<dd> Output flow information to console in multiple colors. <code>NOTE: This option was changed from tcpflow 1.3.</code></dd>
+<dt><code>-m </code><i>min_size</i></dt>
+<dd> Forces a new connection output file when there is a skip in the TCP session of <i>min_size</i> bytes or more.</dd>
+<dt><code>-o </code><i>outdir</i></dt>
+<dd> Specifies the output directory where the transcript files will be written.</dd>
+<dt><code>-P</code></dt>
+<dd> No purge. Normally tcpflow removes connections from the hash table after the connection is closed with a FIN. This conserves memory but takes additional CPU time. Selecting this option causes the std::tr1:unordered_map to grow without bounds, as tcpflow did prior to version 1.1. That makes tcpflow run faster if there are less than 10 million connections, but can lead to out-of-memory errors.</dd>
+<dt><code>-p</code></dt>
+<dd> No promiscuous mode. Normally, tcpflow attempts to put the network interface into promiscuous mode before capturing packets. The <code>-p</code> option tells tcpflow <i>not</i> to put the interface into promiscuous mode. Note that it might already be in promiscuous mode for some other reason.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode &#8212; don&#8217;t print warnings. Currently the only warning that <code>tcpflow</code> prints is a warning when more than 10,000 files are created that the user should have provided the <code>-Fk</code>, <code>-Fm</code>, or <code>-Fg</code> options. We might have other warnings in the future.</dd>
+<dt><code>-r</code></dt>
+<dd> Read from file. Read packets from <i>file</i>, which was created using the <code>-w</code> option of <i>tcpdump</i>(1). This option may be repeated any number of times. Standard input is used if <i>file</i> is &quot;-&quot;. Note that for this option to be useful, tcpdump&#8217;s <code>-s</code> option should be used to set the snaplen to the MTU of the interface (e.g., 1500) while capturing packets.</dd>
+<dt><code>-R</code></dt>
+<dd> Read from a file, but only to complete TCP flows. This option is used when <i>tcpflow</i> is used to process a series of files that are captured over time. For each time period <i>n,</i> file <i>filen.pcap</i> should be processed with <code>R -r </code><i>filen.pcap</i>, while <i>file(n-1).pcap</i> should be processed with <i>R -R file(n-1).pcap.</i></dd>
+<dt><code>-S</code><i>name</i><code>=</code><i>value</i></dt>
+<dd> Sets a <i>name</i> parameter to be equal to <i>value</i> for a plug-in. Use <code>-hh</code> to find out all of the settable parameters.</dd>
+<dt><code>-s</code></dt>
+<dd> Strip non-printables. Convert all non-printable characters to the &quot;.&quot; character before printing packets to the console or storing them to a file.</dd>
+<dt><code>-V</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose operation. Verbosely describe tcpflow&#8217;s operation. Equivalent to <code> -d 10</code>.</dd>
+<dt><code>-w </code><i>filename.pcap</i></dt>
+<dd> Write packets that were not processed to <i>filename.pcap</i>. Typically this will be UDP packets.</dd>
+<dt><code>-X </code><i>filename.xml</i></dt>
+<dd> Write a DFXML report file to <i>filename.xml</i>. The file contains a record of every tcp connection, how the tcpflow program was compiled, and the computer on which tcpflow was run.</dd>
+<dt><code>-Z</code></dt>
+<dd> Don&#8217;t decompress gzip-compressed streams.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To record all packets arriving at or departing from <i>sundown</i> and extract all of the HTTP attachments:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>tcpflow -e scan_http -o outdir host sundown</code>
+</pre>
+</dd></dl>
+<p> To record traffic between <i>helios</i> and either <i>hot</i> or <i>ace</i> and bin the results into 1000 files per directory and calculate the MD5 of each flow:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<code>tcpflow -X report.xml -e scan_md5 -o outdir -Fk host helios and \( hot or ace \)</code>
+</pre>
+</dd></dl>
+<h2>BUGS</h2>
+<p> Please send bug reports to simsong [at] acm.org. </p>
+<p> tcpflow currently does not understand IP fragments. Flows containing IP fragments will not be recorded correctly.</p>
+<h2>AUTHORS</h2>
+<p> Originally by Jeremy Elson &lt;jelson [at] circlemud.org&gt;. Substantially modified and maintained by Simson L. Garfinkel &lt;simsong [at] acm.org&gt;. Network visualization code by Michael Shick &lt;mike [at] shick.in&gt; </p>
+<p> The current version of this software is available at</p>
+<dl>
+<dt>
+</dt><dd> <i><a rel="nofollow" href="http://www.digitalcorpora.org/downloads/tcpflow/">http://www.digitalcorpora.org/downloads/tcpflow/</a></i> </dd>
+</dl>
+<p> An announcement mailing list for this program is at:</p>
+<dl>
+<dt>
+</dt><dd> <i><a rel="nofollow" href="http://groups.google.com/group/tcpflow-users">http://groups.google.com/group/tcpflow-users</a></i></dd></dl>
+<h2>SEE ALSO</h2>
+<p> tcpdump(1), nit(4P), bpf(4), pcap(3), <a href="/docs/linux/man/5-pcap-savefile/">pcap-savefile</a>(5), <a href="/docs/linux/man/7-pcap-filter/">pcap-filter</a>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

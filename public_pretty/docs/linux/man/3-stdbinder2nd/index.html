@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbinder2nd(3) · Linux Manual Pages</title>
+<meta name="description" content="std::binder2nd&lt; _Operation &gt; –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbinder2nd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbinder2nd(3)</h1>
+
+
+
+
+
+<p>std::binder2nd&lt; _Operation &gt; &#8211;</p>
+<h2>Synopsis</h2>
+<p> Inherits <code>std::unary_function&lt; _Operation::first_argument_type, _Operation::result_type &gt;</code>.</p>
+<h3>Public Types</h3>
+<p>typedef<br />
+ _Operation::first_argument_type <code>argument_type</code>&quot; </p>
+<p> typedef _Operation::result_type <code>result_type</code></p>
+<h3>Public Member Functions</h3>
+<p><code>binder2nd</code> (const _Operation &amp;__x, const typename _Operation::second_argument_type &amp;__y) </p>
+<p> _Operation::result_type <code>operator()</code> (const typename _Operation::first_argument_type &amp;__x) const </p>
+<p> _Operation::result_type <code>operator()</code> (typename _Operation::first_argument_type &amp;__x) const</p>
+<h3>Protected Attributes</h3>
+<p>_Operation <code>op</code> </p>
+<p> _Operation::second_argument_type <code>value</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;typename _Operation&gt;class std::binder2nd&lt; _Operation &gt;</h3>
+<p>One of the <code>binder functors</code>. </p>
+<p> Definition at line 139 of file binders.h.</p>
+<h2>Member Typedef Documentation</h2>
+<h3>typedef _Operation::first_argument_type <code>std::unary_function</code>&lt; _Operation::first_argument_type , _Operation::result_type &gt;::<code>argument_type</code> [inherited]</h3>
+<p>argument_type is the type of the argument </p>
+<p> Definition at line 104 of file stl_function.h.</p>
+<h3>typedef _Operation::result_type <code>std::unary_function</code>&lt; _Operation::first_argument_type , _Operation::result_type &gt;::<code>result_type</code> [inherited]</h3>
+<p>result_type is the return type </p>
+<p> Definition at line 107 of file stl_function.h.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for libstdc++ from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

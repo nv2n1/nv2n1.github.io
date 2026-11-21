@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vptranspose(3) · Linux Manual Pages</title>
+<meta name="description" content="vpTranspose – transpose a volume">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vptranspose/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vptranspose(3)</h1>
+
+
+
+
+
+<p>vpTranspose &#8211; transpose a volume</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;volpack.h&gt;
+</code></pre>
+<p> vpResult</p>
+<dl>
+<dt> <code>vpTranspose(</code><i>vpc, axis</i><code>)</code></dt>
+<dd>
+</dd><dd>vpContext *<i>vpc;</i></dd>
+<dd>int <i>axis;</i></dd></dl>
+<h2>Arguments</h2>
+<dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>axis</i></dt>
+<dd>Axis which should have the smallest stride after transposing (VP_X_AXIS, VP_Y_AXIS or VP_Z_AXIS).</dd></dl>
+<h2>Description</h2>
+<p><code>vpTranspose</code> is used to transpose the 3D voxel array to optimize the memory stride for a particular principal viewing axis. The intended way to use this function is to set the viewing transformation, call <code>vpGeti</code> with the VP_VIEW_AXIS argument to find the corresponding viewing axis, and then call <code>vpTranspose</code> with that axis. Transposing the data changes the arrangement of the data stored in the 3D voxel array. The voxel stride state variables are updated to reflect this change, so the viewing transformation does not need to be changed after transposing. If the volume is already transposed for the requested axis then it returns immediately without modifying the voxel array. </p>
+<p> This function is useful only for rendering large 3D voxel arrays. This function has no affect on the preclassified volume data.</p>
+<h2>State Variables</h2>
+<p>Relevant variables may be retrieved with the following state variable codes (see <a href="/docs/linux/man/3-vpgeti/">vpGeti</a>(3)): VP_VIEW_AXIS, VP_VOXEL_XSTRIDE, VP_VOXEL_YSTRIDE, VP_VOXEL_ZSTRIDE.</p>
+<h2>Errors</h2>
+<p>The normal return value is VP_OK. The following error return values are possible:</p>
+<dl>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>axis</i> argument is invalid.</dd>
+<dt>VPERROR_BAD_VOLUME</dt>
+<dd>The 3D voxel array is missing or invalid.</dd>
+<dt>VPERROR_BAD_VOXEL</dt>
+<dd>The voxel fields are incorrectly specified.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

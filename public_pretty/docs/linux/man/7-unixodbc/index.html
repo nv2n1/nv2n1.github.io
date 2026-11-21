@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unixodbc(7) · Linux Manual Pages</title>
+<meta name="description" content="unixODBC – An ODBC implementation for Unix">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-unixodbc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>unixodbc(7)</h1>
+
+
+
+
+
+<p>unixODBC &#8211; An ODBC implementation for Unix</p>
+<h2>Description</h2>
+<p>ODBC is an open specification for providing application developers with a predictable API with which to access Data Sources. Data Sources include SQL Servers and any Data Source with an ODBC Driver. The unixODBC Project goals are to develop and promote unixODBC to be the definitive standard for ODBC on non MS Windows platforms. </p>
+<h2>Environment Variables</h2>
+<dl>
+<dt><code>ODBCSYSINI</dt>
+<dd>Overloads path to unixODBC configuration files. By default equals to &#8216;/etc&#8217;. </dd>
+<dt>ODBCINSTINI</dt>
+<dd>Overloads the name of the drivers configuration file. It is relative to ODBCSYSINI</code> and by default set to &#8216;odbcinst.ini&#8217;. </dd>
+<dt><code>ODBCINSTUI</dt>
+<dd>Overloads the library name for UI. The final name that is searched for is evaluated as &quot;lib$ODBCINSTUI&quot;. By default it is set to &#8216;odbcinstQ4&#8217;, so the resulting library name is &#8216;libodbcinstQ4&#8217;. </dd>
+<dt>ODBCSEARCH</dt>
+<dd>Overloads the configuration mode and determines where to look for configuration files. Must be set to one of ODBC_SYSTEM_DSN, ODBC_USER_DSN or ODBC_BOTH_DSN (the last one is the default value). </dd>
+<dt>ODBCINI</dt>
+<dd>Overloads the path to user configuration file. By default it is set to &quot;~/.odbc.ini&quot;. </dd>
+</dl>
+<p> </code></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-isql/">isql</a></code>(1), <code><a href="/docs/linux/man/1-odbcinst/">odbcinst</a></code>(1), <code><a href="/docs/linux/man/5-odbc-ini/">odbc.ini</a></code>(5), <code><a href="/docs/linux/man/5-odbcinst-ini/">odbcinst.ini</a></code>(5) </p>
+<h2>Authors</h2>
+<p>The authors of unixODBC are Peter Harvey &lt;<i>pharvey [at] codebydesign.com</i>&gt; and Nick Gorham &lt;<i>nick [at] unixodbc.org</i>&gt;. For the full list of contributors see the AUTHORS file.</p>
+<h2>Copyright</h2>
+<p>unixODBC is licensed under the GNU Lesser General Public License. For details about the license, see the COPYING file.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

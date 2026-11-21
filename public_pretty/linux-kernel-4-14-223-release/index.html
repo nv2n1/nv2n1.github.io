@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Kernel 4.14.223 Released - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/linux-kernel-4-14-223-release/">
+  <meta name="description" content="Linux kernel 4.14.223 is a stable release in the long-term support (LTS) 4.14 series. This patch version includes 176 changes and bug fixes across 277,921 lines …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Linux Kernel 4.14.223 Released">
+  <meta property="og:url" content="https://www.systutorials.com/linux-kernel-4-14-223-release/">
+  <meta property="og:description" content="Linux kernel 4.14.223 is a stable release in the long-term support (LTS) 4.14 series. This patch version includes 176 changes and bug fixes across 277,921 lines …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel-release-notes/">Kernel History: Release Notes</a>
+        </nav>
+        
+        <h1>Linux Kernel 4.14.223 Released</h1>
+        <time class="post-date" datetime="2021-03-07T07:04:37Z">March 7, 2021</time> <span class="post-author">&middot; <a href="/author/tony/">Tony</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Linux kernel 4.14.223 is a stable release in the long-term support (LTS) 4.14 series. This patch version includes 176 changes and bug fixes across 277,921 lines of code modifications compared to the base 4.14 release.</p>
+<h2 id="where-to-get-the-code">Where to Get the Code</h2>
+<p>The source code is available from the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git" rel="nofollow noopener" target="_blank">linux-stable tree</a> with the <code>linux-4.14.223</code> tag. You can download the release tarball or the patch directly from <a href="https://www.kernel.org/releases.html" rel="nofollow noopener" target="_blank">kernel.org</a>.</p>
+<p>To apply the patch to your 4.14 kernel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> linux-4.14.y
+</span></span><span class="line"><span class="cl">patch -p1 &lt; patch-4.14.223.gz
+</span></span></code></pre></div><h2 id="major-changes-and-fixes">Major Changes and Fixes</h2>
+<h3 id="device-mapper-and-storage">Device Mapper and Storage</h3>
+<ul>
+<li><strong>dm era</strong>: Fixed multiple memory leaks, bitset handling, and crash recovery in the era target</li>
+<li><strong>dm era</strong>: Corrected metadata resizing to only occur during preresume, preventing premature operations</li>
+<li><strong>btrfs</strong>: Fixed extent buffer and reloc root leaks; improved error handling in copy operations</li>
+<li><strong>ext4</strong>: Resolved potential htree index checksum corruption</li>
+</ul>
+<h3 id="networking-and-ip-stack">Networking and IP Stack</h3>
+<ul>
+<li><strong>ICMP</strong>: Introduced <code>icmp_ndo_send()</code> helper for proper source address handling in network device context, used across multiple drivers (sunvnet, gtp)</li>
+<li><strong>IPv6</strong>: Fixed compilation warnings in non-IPv6 builds and optimized icmpv6_send() to avoid indirect calls</li>
+<li><strong>mlx4_core</strong>: Added missing cleanup call in mailbox handling</li>
+<li><strong>i40e</strong>: Fixed flow control settings overwriting during driver load; corrected IPv6 extension header processing</li>
+<li><strong>mvneta</strong>: Removed per-CPU queue mapping for Armada 3700 to fix performance issues</li>
+<li><strong>amd-xgbe</strong>: Reset link handling when connection fails; added PHY rx data path reset on mailbox timeout</li>
+<li><strong>bnxt_en</strong>: Corrected TX disable and carrier off ordering</li>
+</ul>
+<h3 id="file-systems">File Systems</h3>
+<ul>
+<li><strong>gfs2</strong>: Fixed glock unlock handling when lvb is present</li>
+<li><strong>ocfs2</strong>: Fixed use-after-free on error paths</li>
+<li><strong>isofs</strong>: Improved buffer head release on error conditions</li>
+<li><strong>jffs2</strong>: Fixed use-after-free in summary write operations</li>
+<li><strong>jfs</strong>: Prevented potential integer overflow on bit shifts</li>
+</ul>
+<h3 id="memory-management">Memory Management</h3>
+<ul>
+<li><strong>hugetlb</strong>: Fixed race condition between page freeing and dissolution; resolved potential double-free in error paths</li>
+<li><strong>mm/rmap</strong>: Fixed potential pte_unmap issue on unmapped pages</li>
+</ul>
+<h3 id="usb-and-hid">USB and HID</h3>
+<ul>
+<li><strong>dwc3</strong>: Fixed DEPCFG.bInterval_m1 and dep-&gt;interval configuration for gadget mode</li>
+<li><strong>musb</strong>: Fixed runtime PM race condition in queue_resume_work</li>
+<li><strong>dwc2</strong>: Corrected xfer length handling; abort transactions on unknown errors</li>
+<li><strong>renesas_usbhs</strong>: Cleared pipe running flag in packet pop</li>
+<li><strong>wacom HID</strong>: Fixed touch_max value override attempts</li>
+<li><strong>option serial</strong>: Updated device interface mapping for ZTE P685M</li>
+</ul>
+<h3 id="security-and-crypto">Security and Crypto</h3>
+<ul>
+<li><strong>seccomp</strong>: Added missing return statement in non-void function</li>
+<li><strong>crypto/bcm</strong>: Renamed conflicting device_private struct to bcm_device_private</li>
+<li><strong>crypto/sun4i-ss</strong>: Fixed BigEndian cipher handling and improved sg length checking</li>
+<li><strong>KEYS/trusted</strong>: Fixed migratable key handling</li>
+<li><strong>tpm_tis</strong>: Corrected locality acquisition check</li>
+</ul>
+<h3 id="interrupt-and-exceptions">Interrupt and Exceptions</h3>
+<ul>
+<li><strong>sparc32</strong>: Fixed user-triggerable oops in clear_user()</li>
+<li><strong>arm64/uprobe</strong>: Returned EOPNOTSUPP for AARCH32 instruction probing attempts</li>
+<li><strong>printk</strong>: Fixed deadlock when kernel panic occurs</li>
+<li><strong>gpio/pcf857x</strong>: Fixed missing first interrupt handling</li>
+</ul>
+<h3 id="platform-and-architecture">Platform and Architecture</h3>
+<ul>
+<li><strong>x86/reboot</strong>: Force all CPUs to exit VMX root if VMX is supported</li>
+<li><strong>powerpc/8xx</strong>: Fixed software emulation interrupt handling</li>
+<li><strong>powerpc/47x</strong>: Disabled 256k page size due to compatibility issues</li>
+<li><strong>ARM/ARMv7</strong>: Fixed decompressor SCTLR.nTLSMD handling</li>
+<li><strong>ARM/tegra</strong>: Added power-domain for Tegra210 HDA</li>
+</ul>
+<h3 id="input-devices">Input Devices</h3>
+<ul>
+<li><strong>i8042</strong>: Added ASUS Zenbook Flip to noselftest list</li>
+<li><strong>xpad</strong>: Added support for PowerA Enhanced Wired Controller for Xbox Series X|S</li>
+<li><strong>joydev</strong>: Prevented read overflow in ioctl handler</li>
+<li><strong>raydium_ts_i2c</strong>: Fixed zero-length packet sending</li>
+</ul>
+<h3 id="watchdog-and-rtc">Watchdog and RTC</h3>
+<ul>
+<li><strong>watchdog/mei_wdt</strong>: Request stop on unregister to prevent hangs</li>
+<li><strong>rtc/s5m</strong>: Selected required REGMAP_I2C dependency</li>
+</ul>
+<h3 id="resource-management-and-error-handling">Resource Management and Error Handling</h3>
+<p>Numerous fixes throughout the kernel for resource leaks, use-after-free conditions, and proper error path cleanup in drivers across:</p>
+<ul>
+<li>Bluetooth subsystem (HCI device reference handling)</li>
+<li>USB gadget framework (audio request cleanup)</li>
+<li>ALSA audio (codec probe error handling)</li>
+<li>Media drivers (vsp1, tm6000, cx25821, qm1d1c0042)</li>
+<li>EEPROM drivers (module alias and autoprobe)</li>
+<li>DMA engines (hsu, fsldma resource leaks)</li>
+<li>Various architecture-specific code</li>
+</ul>
+<h3 id="security-and-capability-handling">Security and Capability Handling</h3>
+<ul>
+<li><strong>capabilities</strong>: Prevented writing ambiguous v3 file capabilities</li>
+<li><strong>ima</strong>: Fixed measurement buffer leaks on error and kexec syscall</li>
+</ul>
+<h2 id="stable-branch-information">Stable Branch Information</h2>
+<p>4.14.223 is part of the 4.14 LTS series, which receives backported security and critical stability fixes. For production systems, verify your kernel configuration matches your workload requirements before updating. Test updates in staging environments first, particularly for storage, networking, and security-sensitive subsystems affected by these changes.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

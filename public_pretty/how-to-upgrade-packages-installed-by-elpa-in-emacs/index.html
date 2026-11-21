@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrading ELPA Packages in Emacs - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-upgrade-packages-installed-by-elpa-in-emacs/">
+  <meta name="description" content="ELPA (Emacs Lisp Package Archive) packages receive regular updates. Keeping your packages current ensures you have the latest features and bug fixes. Here’s how …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Upgrading ELPA Packages in Emacs">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-upgrade-packages-installed-by-elpa-in-emacs/">
+  <meta property="og:description" content="ELPA (Emacs Lisp Package Archive) packages receive regular updates. Keeping your packages current ensures you have the latest features and bug fixes. Here’s how …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Upgrading ELPA Packages in Emacs</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:52Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>ELPA (Emacs Lisp Package Archive) packages receive regular updates. Keeping your packages current ensures you have the latest features and bug fixes. Here’s how to upgrade ELPA packages in Emacs.</p>
+<h2 id="interactive-upgrade-recommended">Interactive Upgrade (Recommended)</h2>
+<p>Use Emacs’s built-in package manager:</p>
+<ol>
+<li>Open the package list: <code>M-x list-packages</code></li>
+<li>Press <strong>U</strong> to mark all upgradable packages</li>
+<li>Press <strong>x</strong> to execute the upgrades</li>
+<li>Restart Emacs to load the updated packages</li>
+</ol>
+<p>In the package list buffer:</p>
+<ul>
+<li><strong>i</strong> — mark for install</li>
+<li><strong>d</strong> — mark for delete</li>
+<li><strong>U</strong> — mark all upgradable packages</li>
+<li><strong>x</strong> — execute marked actions</li>
+<li><strong>g</strong> — refresh the package list</li>
+<li><strong>h</strong> — show help</li>
+</ul>
+<h2 id="upgrade-from-elisp">Upgrade from Elisp</h2>
+<p>For programmatic upgrades (useful in your init file or scripts):</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; Upgrade all packages automatically
+(defun upgrade-all-packages ()
+  &#34;Upgrade all installed packages.&#34;
+  (interactive)
+  (package-refresh-contents)
+  (dolist (package package-alist)
+    (let ((name (car package)))
+      (when (package-installed-p name)
+        (package-update name)))))
+
+;; Call it
+(upgrade-all-packages)
+</code></pre><h2 id="using-use-package-for-management">Using use-package for Management</h2>
+<p>If you use <code>use-package</code> (recommended for modern Emacs configurations), packages are auto-updated when you run <code>package-refresh-contents</code> and then <code>package-install</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; In your init.el
+(use-package magit
+  :ensure t    ;; Auto-install if missing
+  :pin melpa)  ;; Use MELPA for updates
+
+(use-package company
+  :ensure t
+  :pin melpa-stable)  ;; Use stable channel
+</code></pre><p>To update all use-package managed packages:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">M-x package-refresh-contents RET
+M-x package-install-selected-packages RET
+</code></pre><h2 id="auto-upgrade-with-auto-package-update">Auto-upgrade with auto-package-update</h2>
+<p>The <code>auto-package-update</code> package automates the upgrade process:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">(use-package auto-package-update
+  :ensure t
+  :config
+  (setq auto-package-update-delete-old-versions t
+        auto-package-update-hide-results t
+        auto-package-update-interval 7)  ;; Check weekly
+  (auto-package-update-maybe))
+</code></pre><p>This checks for updates every 7 days and automatically upgrades packages when Emacs starts.</p>
+<h2 id="package-archives-configuration">Package Archives Configuration</h2>
+<p>Ensure you have the right package archives configured for the widest selection:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&#34;melpa&#34; . &#34;https://melpa.org/packages/&#34;) t)
+(add-to-list &#39;package-archives &#39;(&#34;melpa-stable&#34; . &#34;https://stable.melpa.org/packages/&#34;) t)
+(add-to-list &#39;package-archives &#39;(&#34;org&#34; . &#34;https://orgmode.org/elpa/&#34;) t)
+(package-initialize)
+</code></pre><h2 id="handling-upgrade-problems">Handling Upgrade Problems</h2>
+<p><strong>Package dependency conflicts:</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; Delete and reinstall the problematic package
+M-x package-delete RET problem-package RET
+M-x package-install RET problem-package RET
+</code></pre><p><strong>Broken package database:</strong></p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; Delete the package directory cache
+rm -rf ~/.emacs.d/elpa/
+rm -rf ~/.emacs.d/elpa/archives/
+
+;; Restart Emacs and reinstall
+M-x package-refresh-contents
+M-x package-install-selected-packages
+</code></pre><p><strong>Version mismatch after upgrade:</strong></p>
+<p>Sometimes byte-compiled files from the old version cause issues. Force recompilation:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">M-: (byte-recompile-directory package-user-dir nil t)
+</code></pre><h2 id="using-straightel-for-reproducible-installs">Using straight.el for Reproducible Installs</h2>
+<p>For more control over package versions, <code>straight.el</code> uses git directly instead of ELPA tarballs:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">(use-package straight
+  :ensure t
+  :config
+  (setq straight-use-package-by-default t))
+
+;; Packages are pinned to git commits
+;; Lockfile at ~/.emacs.d/straight/versions/default.el
+</code></pre><p>This gives you reproducible builds — every machine gets the exact same package versions from the lockfile.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<ul>
+<li><code>M-x list-packages</code> → <strong>U</strong> → <strong>x</strong> — Interactive upgrade</li>
+<li><code>package-refresh-contents</code> — Update package list</li>
+<li><code>package-install-selected-packages</code> — Install/update selected packages</li>
+<li><code>auto-package-update</code> — Automatic weekly upgrades</li>
+<li><code>straight.el</code> — Reproducible git-based package management</li>
+</ul>
+<h2 id="cleaning-up-old-package-versions">Cleaning Up Old Package Versions</h2>
+<p>Over time, old package versions accumulate and consume disk space:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; Check package directory size
+M-: (directory-files package-user-dir)
+
+;; Delete old versions automatically
+(setq package-archive-upload-base nil)
+(setq delete-old-versions t)
+</code></pre><p>Or manually remove old versions:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; List all package directories with sizes
+M-: (let ((dir package-user-dir))
+      (dolist (f (directory-files dir))
+        (when (file-directory-p (expand-file-name f dir))
+          (message &#34;%s %s&#34; f (nth 7 (file-attributes (expand-file-name f dir)))))))
+</code></pre><p>For a clean start, remove the entire package directory and reinstall:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">rm -rf ~/.emacs.d/elpa/
+</code></pre><p>Then restart Emacs and run <code>M-x package-install-selected-packages</code> to reinstall everything from your configuration.</p>
+<h2 id="monitoring-package-health">Monitoring Package Health</h2>
+<p>Check for package issues with these commands:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">;; List packages with problems
+M-x package-list-packages
+;; Look for status &#34;dependency&#34;, &#34;unsigned&#34;, or &#34;incompatible&#34;
+
+;; Check for orphaned packages (installed but not in use-package)
+M-: (seq-difference package-activated-packages
+      (mapcar #&#39;car use-package-alist))
+</code></pre><p>Regularly reviewing your package list helps keep your Emacs configuration lean and fast-loading.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

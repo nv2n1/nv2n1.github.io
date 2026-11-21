@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ods-hsmspeed(1) · Linux Manual Pages</title>
+<meta name="description" content="ods-hsmspeed – OpenDNSSEC HSM speed tester">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ods-hsmspeed/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ods-hsmspeed(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>ods-hsmspeed</code> &#8211; OpenDNSSEC HSM speed tester</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ods-hsmspeed</code> [<code>-c</code> <i>config</i>] <code>-r</code> <i>repository</i> [<code>-i</code> <i>iterations</i>] [<code>-s</code> <i>keysize</i>] [<code>-t</code> <i>threads</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The ods-hsmspeed utility is part of OpenDNSSEC and can be used to test the performance of the configured HSMs. </p>
+<p> The components of OpenDNSSEC do not talk directly to the HSMs, but uses an internal library called libhsm. It then talks to the HSMs using PKCS#11. The libhsm simplifies the process of creating keys and signatures for the other components of OpenDNSSEC. </p>
+<p> ods-hsmspeed will measure the speed by using the libhsm. The result that you get is somewhat lower than what the manufactures promises, because the libhsm creates some overhead to the pure PKCS#11 environment.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code> <i>config</i></dt>
+<dd> Path to an OpenDNSSEC configuration file. </dd>
+<p> (defaults to /etc/opendnssec/conf.xml)</p>
+<dt><code>-i</code> <i>iterations</i></dt>
+<dd> Specify the number of <i>iterations</i> for signing an RRset. A higher number of iterations will increase the performance. </dd>
+<p> (defaults to 1 iteration)</p>
+<dt><code>-r</code> <i>repository</i></dt>
+<dd> The speed test will be performed on this <i>repository</i>.</dd>
+<dt><code>-s</code> <i>keysize</i></dt>
+<dd> A temporary RSA key with the given <i>keysize</i> will be used for signing. </dd>
+<p> (defaults to 1024 bit)</p>
+<dt><code>-t</code> <i>threads</i></dt>
+<dd> The number of <i>threads</i> to use. Most HSMs will be utilized better with multiple threads. </dd>
+<p> (defaults to 1 thread)</dl>
+<h2>SEE ALSO</h2>
+<p> ods-auditor(1), <a href="/docs/linux/man/8-ods-control/">ods-control</a>(8), <a href="/docs/linux/man/8-ods-enforcerd/">ods-enforcerd</a>(8), <a href="/docs/linux/man/1-ods-hsmutil/">ods-hsmutil</a>(1), <a href="/docs/linux/man/1-ods-kaspcheck/">ods-kaspcheck</a>(1), <a href="/docs/linux/man/1-ods-ksmutil/">ods-ksmutil</a>(1), <a href="/docs/linux/man/8-ods-signer/">ods-signer</a>(8), <a href="/docs/linux/man/8-ods-signerd/">ods-signerd</a>(8), <a href="/docs/linux/man/5-ods-timing/">ods-timing</a>(5), <a href="/docs/linux/man/7-opendnssec/">opendnssec</a>(7), <code><a rel="nofollow" href="http://www.opendnssec.org/">http://www.opendnssec.org/</a></code></p>
+<h2>AUTHORS</h2>
+<p> <code>ods-hsmspeed</code> was written by Jakob Schlyter and Nominet as part of the OpenDNSSEC project. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

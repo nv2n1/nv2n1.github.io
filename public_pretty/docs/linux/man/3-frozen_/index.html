@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>frozen_(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-frozen_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>frozen_(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>QuantLib::LazyObject - Framework for calculation on demand and result caching.</p>
+<h2>SYNOPSIS</h2>
+<p>#include &lt;ql/patterns/lazyobject.hpp&gt;</p>
+<p>Inherits <b>QuantLib::Observable</b>, and <b>QuantLib::Observer</b>.</p>
+<p>Inherited by <b>AbcdAtmVolCurve</b>, <b>CapFloorTermVolCurve</b>, <b>CapFloorTermVolSurface</b>, <b>CmsMarket</b>, <b>EurodollarFuturesImpliedStdDevQuote</b>, FdmBlackScholesSolver [private], FdmHestonSolver [private], <b>FittedBondDiscountCurve</b>, <b>FlatForward</b>, <b>ForwardSwapQuote</b>, <b>ImpliedStdDevQuote</b>, <b>Instrument</b>, InterpolatedSmileSection&lt; Interpolator &gt;, <b>OneFactorCopula</b>, <b>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</b>, <b>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</b>, <b>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</b>, <b>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</b>, SabrInterpolatedSmileSection, <b>StrippedOptionletAdapter</b>, <b>StrippedOptionletBase</b>, and SwaptionVolatilityDiscrete.</p>
+<h3>Public Member Functions</h3>
+<p><b>Observer interface</b></p>
+<p>void <b>update</b> ()</p>
+<h3>Protected Attributes</h3>
+<p>bool <b>calculated_</b></p>
+<p>bool <b>frozen_</b></p>
+<h3>Calculations</h3>
+<p>These methods do not modify the structure of the object and are therefore declared as const. Data members which will be calculated on demand need to be declared as mutable.
+void <b>recalculate</b> ()</p>
+<p>void <b>freeze</b> ()</p>
+<p>void <b>unfreeze</b> ()</p>
+<p>virtual void <b>calculate</b> () const</p>
+<p>virtual void <b>performCalculations</b> () const =0</p>
+<h2>Detailed Description</h2>
+<p>Framework for calculation on demand and result caching.</p>
+<h2>Member Function Documentation</h2>
+<h3>void update () [virtual]</h3>
+<p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes.</p>
+<p>Implements <b>Observer</b>.</p>
+<p>Reimplemented in <b>AbcdAtmVolCurve</b>, <b>ForwardSwapQuote</b>, <b>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</b>, <b>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</b>, <b>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</b>, <b>CapFloorTermVolCurve</b>, <b>CapFloorTermVolSurface</b>, <b>StrippedOptionletAdapter</b>, <b>CmsMarket</b>, <b>FittedBondDiscountCurve</b>, <b>FlatForward</b>, and <b>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</b>.</p>
+<h3>void recalculate ()</h3>
+<p>This method force the recalculation of any results which would otherwise be cached. It is not declared as const since it needs to call the non-const <i></i><b>notifyObservers</b> method.</p>
+<p><b>Note:</b></p>
+<dl>
+<dt>
+</dt><dd> Explicit invocation of this method is <b>not</b> necessary if the object registered itself as observer with the structures on which such results depend. It is strongly advised to follow this policy when possible.</dd></dl>
+<h3>void freeze ()</h3>
+<p>This method constrains the object to return the presently cached results on successive invocations, even if arguments upon which they depend should change.</p>
+<h3>void unfreeze ()</h3>
+<p>This method reverts the effect of the <i></i><b>freeze</b> method, thus re-enabling recalculations.</p>
+<h3>void calculate () const [protected, virtual]</h3>
+<p>This method performs all needed calculations by calling the <i></i><b>performCalculations</b> method.</p>
+<p><b>Warning</b></p>
+<dl>
+<dt>
+</dt><dd> Objects cache the results of the previous calculation. Such results will be returned upon later invocations of <i></i><b>calculate</b>. When the results depend on arguments which could change between invocations, the lazy object must register itself as observer of such objects for the calculations to be performed again when they change.</dd></dl>
+<p><b>Warning</b></p>
+<dl>
+<dt>
+</dt><dd> Should this method be redefined in derived classes, <b>LazyObject::calculate()</b> should be called in the overriding method.</dd></dl>
+<p>Reimplemented in <b>Instrument</b>.</p>
+<h3>virtual void performCalculations () const [protected, pure virtual]</h3>
+<p>This method must implement any calculations which must be (re)done in order to calculate the desired results.</p>
+<p>Implemented in <b>EnergyBasisSwap</b>, <b>EnergyFuture</b>, <b>EnergyVanillaSwap</b>, <b>AbcdAtmVolCurve</b>, <b>Instrument</b>, <b>ConvertibleBond</b>, <b>CompositeInstrument</b>, <b>FixedRateBondForward</b>, <b>Forward</b>, <b>Stock</b>, <b>YearOnYearInflationSwap</b>, <b>ZeroCouponInflationSwap</b>, <b>EurodollarFuturesImpliedStdDevQuote</b>, <b>ForwardSwapQuote</b>, <b>ImpliedStdDevQuote</b>, <b>CapFloorTermVolCurve</b>, <b>CapFloorTermVolSurface</b>, <b>OptionletStripper1</b>, <b>OptionletStripper2</b>, <b>StrippedOptionletAdapter</b>, <b>SwaptionVolatilityMatrix</b>, and <b>FlatForward</b>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

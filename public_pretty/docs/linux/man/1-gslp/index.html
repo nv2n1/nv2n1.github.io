@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gslp(1) · Linux Manual Pages</title>
+<meta name="description" content="gslp – Format and print text using ghostscript gsbj – Format and print text for BubbleJet printer using ghostscript gsdj – Format and print text for DeskJet printer using ghostscript gsdj500 – Form...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gslp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gslp(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gslp &#8211; Format and print text using ghostscript<br />
+ gsbj &#8211; Format and print text for BubbleJet printer using ghostscript<br />
+ gsdj &#8211; Format and print text for DeskJet printer using ghostscript<br />
+ gsdj500 &#8211; Format and print text for DeskJet 500 BubbleJet using ghostscript<br />
+ gslj &#8211; Format and print text for LaserJet printer using ghostscript </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gslp -12BclqRr -b&lt;header&gt; -f&lt;font&gt; -F&lt;hfont&gt; -L&lt;lines&gt; -p&lt;outfile&gt; -T&lt;n&gt; &#8211;add-to-space&nbsp;&lt;units&gt; &#8211;add-to-width&nbsp;&lt;units&gt; &#8211;columns&nbsp;&lt;n&gt; &#8211;detect &#8211;first-page&nbsp;&lt;n&gt; &#8211;kern&nbsp;&lt;file.afm&gt; &#8211;last-page&nbsp;&lt;n&gt; &#8211;(heading|footing)-(left|center|right)&nbsp;&lt;string&gt; &#8211;margin-(top|bottom|left|right)&nbsp;&lt;inches&gt; &#8211;no-eject-(file|formfeed) &#8211;spacing&nbsp;&lt;n&gt; [gs options] [files]<br />
+ gsbj</code> [options] [files]<br />
+ <code>gsdj</code> [options] [files]<br />
+ <code>gsdj500</code> [options] [files]<br />
+ <code>gslj</code> [options] [files]</p>
+<h2>DESCRIPTION</h2>
+<p> This utility provides functionality approximately equivalent to the Unix <code><a href="/docs/linux/man/1-enscript/">enscript</a></code>(1) program. It prints plain text files using a single font. It currently handles tabs and formfeeds, but not backspaces. It will line-wrap when using fixed-pitch fonts. It will also do kerning and width adjustment. </p>
+<p> The default device (-sDEVICE=) and resolution (-r) are as follows: </p>
+<pre>
+      gslp      epson      180
+      gsbj      bj10e      180
+      gsdj      deskjet    300
+      gsdj500   djet500    300
+      gslj      laserjet   300
+</pre>
+<p> By default the current date is formatted as the center header.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>Standard switches implemented:</dt>
+<dd> -12BclqRr -b&lt;header&gt; -f&lt;font&gt; -F&lt;hfont&gt; -L&lt;lines&gt; -p&lt;outfile&gt;</dd>
+<dt>Sun switches implemented:</dt>
+<dd> -T&lt;n&gt;<tt>&nbsp;<wbr>&nbsp;</tt>set tab width</dd>
+<dt>Switches ignored:</dt>
+<dd> -GghKkmow -# -C -d -J -n -P -S -s -t -v</dd>
+<dt>Switches added:</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>&#8211;add-to-space &lt;units&gt;</dt>
+<dd> add the given number of 1/72&quot; units to the width of each space (may be negative)</dd>
+<dt>&#8211;add-to-width &lt;units&gt;</dt>
+<dd> add the given number of 1/72&quot; units to the width of each character (may be negative)</dd>
+<dt>&#8211;columns &lt;n&gt;</dt>
+<dd> print in &lt;n&gt; columns</dd>
+<dt>&#8211;detect</dt>
+<dd> treat the file as PostScript if it starts with %!</dd>
+<dt>&#8211;first-page &lt;n&gt;</dt>
+<dd> start printing at page &lt;n&gt;</dd>
+<dt>&#8211;kern &lt;file.afm&gt;</dt>
+<dd> kern using information from the given .AFM file</dd>
+<dt>&#8211;last-page &lt;n&gt;</dt>
+<dd> stop printing after page &lt;n&gt;</dd>
+<dt>&#8211;(heading|footing)-(left|center|right) &lt;string&gt;</dt>
+<dd> set the heading/footing fields; use -B first to clear</dd>
+<dt>&#8211;margin-(top|bottom|left|right) &lt;inches&gt;</dt>
+<dd> set a margin</dd>
+<dt>&#8211;no-eject-(file|formfeed)</dt>
+<dd> end-of-file/FF only starts a new column, not a new sheet</dd>
+<dt>&#8211;spacing &lt;n&gt;</dt>
+<dd> use double (n=2), triple (n=3), etc. spacing</dd></dl>
+</dl>
+<p> Also, the string %# in a heading or footing is replaced with the page #.</dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gs/">gs</a>(1)</p>
+<h2>VERSION</h2>
+<p> This document was last revised for Ghostscript version 9.55.0.</p>
+<h2>AUTHOR</h2>
+<p> Artifex Software, Inc. are the primary maintainers of Ghostscript. This manpage by George Ferguson. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

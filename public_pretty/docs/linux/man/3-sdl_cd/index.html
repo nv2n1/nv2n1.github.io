@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_cd(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_CD – CDROM Drive Information">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_cd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_cd(3)</h1>
+
+
+
+
+
+<p>SDL_CD &#8211; CDROM Drive Information</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ int id;
+ CDstatus status;
+ int numtracks;
+ int cur_track;
+ int cur_frame;
+ SDL_CDtrack track[SDL_MAX_TRACKS+1];
+} SDL_CD;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>id</code></dt>
+<dd>Private drive identifier</dd>
+<dt><code>status</code></dt>
+<dd>Drive <i>status</i></dd>
+<dt><code>numtracks</code></dt>
+<dd>Number of tracks on the CD</dd>
+<dt><code>cur_track</code></dt>
+<dd>Current track</dd>
+<dt><code>cur_frame</code></dt>
+<dd>Current frame offset within the track</dd>
+<dt><code>track</code>[SDL_MAX_TRACKS+1]</dt>
+<dd>Array of track descriptions. (see <i></i><code>SDL_CDtrack</code>)</dd></dl>
+<h2>Description</h2>
+<p>An <code>SDL_CD</code> structure is returned by <i></i><code>SDL_CDOpen</code>. It represents an opened CDROM device and stores information on the layout of the tracks on the disc. </p>
+<p> A frame is the base data unit of a CD. <code>CD_FPS</code> frames is equal to 1 second of music. SDL provides two macros for converting between time and frames: <code>FRAMES_TO_MSF(f, M,S,F)</code> and <code>MSF_TO_FRAMES</code>.</p>
+<h2>Examples</h2>
+<pre><tt>int min, sec, frame;
+int frame_offset;
+FRAMES_TO_MSF(cdrom-&gt;cur_frame, &amp;min, &amp;sec, &amp;frame);
+printf(&quot;Current Position: %d minutes, %d seconds, %d frames
+&quot;, min, sec, frame);
+frame_offset=MSF_TO_FRAMES(min, sec, frame);</tt></pre>
+<h2>See Also</h2>
+<p><i></i><code>SDL_CDOpen</code>, <i></i><code>SDL_CDtrack</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

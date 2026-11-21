@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-strip-merge(1) · Linux Manual Pages</title>
+<meta name="description" content="git-strip-merge – A git-merge wrapper that deletes files on a &#34;foreign&#34; branch before merging">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-strip-merge/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-strip-merge(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-strip-merge &#8211; A git-merge wrapper that deletes files on a &quot;foreign&quot; branch before merging </p>
+<h2>SYNOPSIS</h2>
+<p> <code>git-strip-merge</code> [<i>git-merge options</i>] [<code>-M</code> <i>&lt;commitmsg&gt;</i>] <i>&lt;branch&gt;</i> <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> git-merge that deletes files on &quot;foreign&quot; &lt;branch&gt; before merging. </p>
+<p> Useful for ignoring a folder in &lt;branch&gt; before merging it with current branch. Works by deleting FILE(S) in a detached commit based on &lt;branch&gt;, and then performing the merge of this new commit in the current branch. Note that &lt;branch&gt; is not changed by this procedure. Also note that &lt;branch&gt; may actually be any reference, like a tag, or a remote branch, or even a commit SHA. </p>
+<p> For more information, see &lt;<a rel="nofollow" href="http://stackoverflow.com/questions/3111515">http://stackoverflow.com/questions/3111515</a>&gt;</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code>,<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> show help message and exit</dd>
+<dt><code>-v</code>,<code>&nbsp;<wbr>&#8211;verbose</code></dt>
+<dd> do not use -q to supress normal output of internal steps from git checkout, rm, commit. By default, only git merge output is shown. Errors, however, are never supressed.</dd>
+<dt><code>-M&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;msgcommit</code>=&lt;message&gt;</dt>
+<dd> message for the removal commit in &lt;branch&gt;. Not to be confused with the message of the merge commit, which is set by -m. Default message is: &quot;remove files from &#8216;&lt;branch&gt;&#8217; before merge&quot;.</dd>
+<dt><code>-m&nbsp;<wbr></code>&lt;message&gt;,<code>&nbsp;<wbr>&#8211;message</code>=&lt;message&gt;</dt>
+<dd> message for the merge commit. Since we are not merging &lt;branch&gt; directly, but rather a detached commit based on it, we forge a message similar to git&#8217;s default for a branch merge. Otherwise git would use in message the full and ugly SHA1 of our commit. Default message is: &quot;Merge stripped branch &#8216;&lt;branch&gt;&#8217;&quot;.</dd></dl>
+<p> For both commit messages, the token &quot;&lt;branch&gt;&quot; is replaced for the actual &lt;branch&gt; name. </p>
+<p> Additional options are passed unchecked to git merge. </p>
+<p> All options must precede &lt;branch&gt; and FILE(s), except -h and &#8211;help that may appear anywhere on the command line.</p>
+<h2>EXAMPLE</h2>
+<pre>
+git-strip-merge design &quot;photoshop/*&quot;
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code><a rel="nofollow" href="https://github.com/MestreLion/git-tools">https://github.com/MestreLion/git-tools</a></code></p>
+<h2>AUTHOR</h2>
+<p> Rodrigo Silva (MestreLion) linux [at] rodrigosilva.com </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

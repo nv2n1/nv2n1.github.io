@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kfifo_dma_in_prepare(9) · Linux Manual Pages</title>
+<meta name="description" content="kfifo_dma_in_prepare – setup a scatterlist for DMA input">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-kfifo_dma_in_prepare/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>kfifo_dma_in_prepare(9)</h1>
+
+
+
+
+
+<p>kfifo_dma_in_prepare &#8211; setup a scatterlist for DMA input</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>kfifo_dma_in_prepare(</code><i>fifo</i><code>, </code><i>sgl</i><code>, </code><i>nents</i><code>, </code><i>len</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<p><i>fifo</i></p>
+<dl>
+<dd>
+</dd><dd>address of the fifo to be used</dd></dl>
+<p> <i>sgl</i></p>
+<dl>
+<dd>pointer to the scatterlist array</dd></dl>
+<p> <i>nents</i></p>
+<dl>
+<dd>number of entries in the scatterlist array</dd></dl>
+<p> <i>len</i></p>
+<dl>
+<dd>number of elements to transfer</dd></dl>
+<h2>Description</h2>
+<p>This macro fills a scatterlist for DMA input. It returns the number entries in the scatterlist array. </p>
+<p> Note that with only one concurrent reader and one concurrent writer, you don&#8217;t need extra locking to use these macros.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

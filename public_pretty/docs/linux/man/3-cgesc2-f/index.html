@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cgesc2-f(3) · Linux Manual Pages</title>
+<meta name="description" content="cgesc2.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cgesc2-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cgesc2-f(3)</h1>
+
+
+
+
+
+<p>cgesc2.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>cgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br />
+ <i></i><code>CGESC2</code> solves a system of linear equations using the LU factorization with complete pivoting computed by sgetc2.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine cgesc2 (integerN, complex, dimension( lda, * )A, integerLDA, complex, dimension( * )RHS, integer, dimension( * )IPIV, integer, dimension( * )JPIV, realSCALE)</h3>
+<p><code>CGESC2</code> solves a system of linear equations using the LU factorization with complete pivoting computed by sgetc2. </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> CGESC2 solves a system of linear equations
+ A * X = scale* RHS
+ with a general N-by-N matrix A using the LU factorization with
+ complete pivoting computed by CGETC2.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>N</i> </dd>
+<pre> N is INTEGER
+ The number of columns of the matrix A.</pre>
+<p><i>A</i> </p>
+<pre> A is COMPLEX array, dimension (LDA, N)
+ On entry, the LU part of the factorization of the n-by-n
+ matrix A computed by CGETC2: A = P * L * U * Q</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(1, N).</pre>
+<p><i>RHS</i> </p>
+<pre> RHS is COMPLEX array, dimension N.
+ On entry, the right hand side vector b.
+ On exit, the solution vector X.</pre>
+<p><i>IPIV</i> </p>
+<pre> IPIV is INTEGER array, dimension (N).
+ The pivot indices; for 1 &lt;= i &lt;= N, row i of the
+ matrix has been interchanged with row IPIV(i).</pre>
+<p><i>JPIV</i> </p>
+<pre> JPIV is INTEGER array, dimension (N).
+ The pivot indices; for 1 &lt;= j &lt;= N, column j of the
+ matrix has been interchanged with column JPIV(j).</pre>
+<p><i>SCALE</i> </p>
+<pre> SCALE is REAL
+ On exit, SCALE contains the scale factor. SCALE is chosen
+ 0 &lt;= SCALE &lt;= 1 to prevent owerflow in the solution.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>September 2012</dd></dl>
+<p> <code>Contributors: </code></p>
+<dl COMPACT>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
+<p> Definition at line 116 of file cgesc2.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

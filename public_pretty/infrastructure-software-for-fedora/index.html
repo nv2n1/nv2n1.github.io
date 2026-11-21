@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Tools and Infrastructure for Fedora Development - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/infrastructure-software-for-fedora/">
+  <meta name="description" content="Fedora is a cutting-edge distribution sponsored by Red Hat that serves as a testing ground for technologies eventually stabilized in RHEL. This guide covers …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Essential Tools and Infrastructure for Fedora Development">
+  <meta property="og:url" content="https://www.systutorials.com/infrastructure-software-for-fedora/">
+  <meta property="og:description" content="Fedora is a cutting-edge distribution sponsored by Red Hat that serves as a testing ground for technologies eventually stabilized in RHEL. This guide covers …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Essential Tools and Infrastructure for Fedora Development</h1>
+        <time class="post-date" datetime="2014-02-27T08:37:44Z">February 27, 2014</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Fedora is a cutting-edge distribution sponsored by Red Hat that serves as a testing ground for technologies eventually stabilized in RHEL. This guide covers essential infrastructure, system administration, and desktop tools for modern Fedora systems, with practical installation and usage examples.</p>
+<h2 id="desktop-environment-setup">Desktop Environment Setup</h2>
+<h3 id="gnome-configuration">GNOME Configuration</h3>
+<p>Modern GNOME desktops (GNOME 40+) use dconf for configuration, with the GNOME Settings application handling most user-facing options. GNOME Tweaks provides access to advanced settings not exposed in the main settings panel.</p>
+<p>Install GNOME Tweaks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install gnome-tweaks
+</span></span><span class="line"><span class="cl">gnome-tweaks
+</span></span></code></pre></div><p>Common customizations via dconf include window manager button layouts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dconf write /org/gnome/desktop/wm/preferences/button-layout <span class="s2">&#34;appmenu:minimize,maximize,close&#34;</span>
+</span></span></code></pre></div><p>For a graphical dconf browser, install dconf-editor:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install dconf-editor
+</span></span></code></pre></div><p>Query existing settings without opening the GUI:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dconf <span class="nb">read</span> /org/gnome/desktop/wm/preferences/button-layout
+</span></span><span class="line"><span class="cl">dconf list /org/gnome/desktop/
+</span></span></code></pre></div><h3 id="mate-desktop-configuration">MATE Desktop Configuration</h3>
+<p>If running MATE (common on Fedora spins), use mate-tweak for customization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install mate-tweak
+</span></span><span class="line"><span class="cl">mate-tweak
+</span></span></code></pre></div><h2 id="screenshot-and-screen-capture-tools">Screenshot and Screen Capture Tools</h2>
+<h3 id="gnome-screenshot">GNOME Screenshot</h3>
+<p>GNOME’s built-in screenshot tool handles standard use cases efficiently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Full screen screenshot</span>
+</span></span><span class="line"><span class="cl">gnome-screenshot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Area selection (interactive)</span>
+</span></span><span class="line"><span class="cl">gnome-screenshot -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Screenshot with 5-second delay</span>
+</span></span><span class="line"><span class="cl">gnome-screenshot -d <span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save to specific file</span>
+</span></span><span class="line"><span class="cl">gnome-screenshot -f ~/Pictures/screenshot.png
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Copy to clipboard instead of saving</span>
+</span></span><span class="line"><span class="cl">gnome-screenshot -c
+</span></span></code></pre></div><h3 id="flameshot-recommended-for-advanced-features">Flameshot (Recommended for Advanced Features)</h3>
+<p>Flameshot provides superior screenshot annotation, editing, and sharing capabilities:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install flameshot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Launch GUI mode</span>
+</span></span><span class="line"><span class="cl">flameshot gui
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fullscreen mode</span>
+</span></span><span class="line"><span class="cl">flameshot full
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Interactive area selection</span>
+</span></span><span class="line"><span class="cl">flameshot region
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Screenshot with 2-second delay</span>
+</span></span><span class="line"><span class="cl">flameshot gui --delay <span class="m">2000</span>
+</span></span></code></pre></div><p>Configure Flameshot to launch with a keyboard shortcut by adding to your desktop environment’s keyboard settings, or via command line on GNOME:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.settings-daemon.plugins.media-keys custom-keybindings <span class="s2">&#34;[&#39;/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/&#39;]&#34;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/ name <span class="s1">&#39;Flameshot&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/ <span class="nb">command</span> <span class="s1">&#39;flameshot gui&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/ binding <span class="s1">&#39;Print&#39;</span>
+</span></span></code></pre></div><h3 id="wayland-considerations">Wayland Considerations</h3>
+<p>GNOME on Wayland (the default in recent Fedora releases) works with modern screenshot tools. If you encounter issues with area selection under X11, Flameshot is a reliable alternative. For remote X11 forwarding scenarios, ensure your forwarding supports the necessary protocols.</p>
+<h2 id="package-management">Package Management</h2>
+<p>Use dnf for all package operations on current Fedora:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Synchronize package cache and upgrade all packages</span>
+</span></span><span class="line"><span class="cl">sudo dnf upgrade
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install a package (or multiple: dnf install pkg1 pkg2 pkg3)</span>
+</span></span><span class="line"><span class="cl">sudo dnf install package-name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Search for packages by name or description</span>
+</span></span><span class="line"><span class="cl">dnf search keyword
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Show detailed package information</span>
+</span></span><span class="line"><span class="cl">dnf info package-name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List installed packages with filtering</span>
+</span></span><span class="line"><span class="cl">dnf list installed <span class="p">|</span> grep pattern
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove a package and dependencies</span>
+</span></span><span class="line"><span class="cl">sudo dnf remove package-name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check for available updates without installing</span>
+</span></span><span class="line"><span class="cl">dnf check-update
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Clean package cache to free disk space</span>
+</span></span><span class="line"><span class="cl">sudo dnf clean all
+</span></span></code></pre></div><p>Enable third-party repositories when needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Example: RPM Fusion (for multimedia and other packages)</span>
+</span></span><span class="line"><span class="cl">sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-<span class="k">$(</span>rpm -E %fedora<span class="k">)</span>.noarch.rpm
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify installed repositories</span>
+</span></span><span class="line"><span class="cl">dnf repolist
+</span></span></code></pre></div><h2 id="essential-system-administration-tools">Essential System Administration Tools</h2>
+<h3 id="system-monitoring-and-information">System Monitoring and Information</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install system monitor GUI</span>
+</span></span><span class="line"><span class="cl">sudo dnf install gnome-system-monitor
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Command-line alternatives</span>
+</span></span><span class="line"><span class="cl">sudo dnf install htop          <span class="c1"># Interactive process monitor</span>
+</span></span><span class="line"><span class="cl">sudo dnf install bottom        <span class="c1"># Modern system resource viewer</span>
+</span></span><span class="line"><span class="cl">sudo dnf install nvtop         <span class="c1"># GPU monitoring</span>
+</span></span></code></pre></div><h3 id="terminal-and-file-management">Terminal and File Management</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Enhanced terminal emulator</span>
+</span></span><span class="line"><span class="cl">sudo dnf install gnome-terminal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># File manager with admin features</span>
+</span></span><span class="line"><span class="cl">sudo dnf install nautilus-admin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lightweight alternative file managers</span>
+</span></span><span class="line"><span class="cl">sudo dnf install pcmanfm-qt     <span class="c1"># Qt-based file manager</span>
+</span></span><span class="line"><span class="cl">sudo dnf install thunar         <span class="c1"># Xfce file manager (lightweight)</span>
+</span></span></code></pre></div><h3 id="system-and-power-management">System and Power Management</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Power profiles management</span>
+</span></span><span class="line"><span class="cl">sudo dnf install power-profiles-daemon
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Query current power profile</span>
+</span></span><span class="line"><span class="cl">powerprofilesctl get
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch to performance mode</span>
+</span></span><span class="line"><span class="cl">sudo powerprofilesctl <span class="nb">set</span> performance
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch back to balanced</span>
+</span></span><span class="line"><span class="cl">sudo powerprofilesctl <span class="nb">set</span> balanced
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># System information and diagnostics</span>
+</span></span><span class="line"><span class="cl">sudo dnf install inxi          <span class="c1"># Hardware inventory tool</span>
+</span></span></code></pre></div><h2 id="verify-your-system">Verify Your System</h2>
+<p>Check your Fedora version and installed packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Fedora version</span>
+</span></span><span class="line"><span class="cl">cat /etc/fedora-release
+</span></span><span class="line"><span class="cl">hostnamectl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># DNF version</span>
+</span></span><span class="line"><span class="cl">dnf --version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List all installed packages with version info</span>
+</span></span><span class="line"><span class="cl">dnf list installed
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Find packages matching a pattern</span>
+</span></span><span class="line"><span class="cl">dnf list <span class="s2">&#34;gnome*&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check disk usage by package</span>
+</span></span><span class="line"><span class="cl">dnf repoquery --querytags <span class="p">|</span> grep size
+</span></span></code></pre></div><h2 id="common-infrastructure-tasks">Common Infrastructure Tasks</h2>
+<h3 id="enable-ssh">Enable SSH</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install openssh-server openssh-clients
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Enable and start SSH</span>
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sshd
+</span></span><span class="line"><span class="cl">sudo systemctl start sshd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check service status</span>
+</span></span><span class="line"><span class="cl">systemctl status sshd
+</span></span></code></pre></div><h3 id="install-development-tools">Install Development Tools</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install build essentials</span>
+</span></span><span class="line"><span class="cl">sudo dnf groupinstall <span class="s2">&#34;Development Tools&#34;</span>
+</span></span><span class="line"><span class="cl">sudo dnf groupinstall <span class="s2">&#34;C Development Tools and Libraries&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install additional development utilities</span>
+</span></span><span class="line"><span class="cl">sudo dnf install git cmake ninja-build
+</span></span></code></pre></div><h3 id="configure-firewall">Configure Firewall</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check firewall status</span>
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --state
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List active zones and services</span>
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --list-all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Open SSH port (if not already open)</span>
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --permanent --add-service<span class="o">=</span>ssh
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
+</span></span></code></pre></div><p>For current Fedora documentation and release notes, refer to the <a href="https://docs.fedoraproject.org" rel="nofollow noopener" target="_blank">official Fedora documentation</a>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

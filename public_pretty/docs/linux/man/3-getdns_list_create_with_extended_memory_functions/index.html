@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getdns_list_create_with_extended_memory_functions(3) · Linux Manual Pages</title>
+<meta name="description" content="getdns_list, getdns_list_create, getdns_list_create_with_extended_memory_functions, getdns_list_create_with_memory_functions, getdns_list_destroy — getdns list create and destroy routines">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-getdns_list_create_with_extended_memory_functions/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>getdns_list_create_with_extended_memory_functions(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>getdns_list, </code> <code>getdns_list_create, </code> <code>getdns_list_create_with_extended_memory_functions, </code> <code>getdns_list_create_with_memory_functions, </code> <code>getdns_list_destroy </code> &#8212; getdns list create and destroy routines</p>
+<h2>LIBRARY</h2>
+<p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;getdns.h&gt; </p>
+<p> getdns_list *<br />
+ <code>getdns_list_create</code> () </p>
+<p> getdns_list *<br />
+ <code>getdns_list_create_with_extended_memory_functions</code></p>
+<dl>
+<dt>
+</dt><dd> (void *userarg,<br />
+ void *(*malloc)(void *userarg, size_t sz),<br />
+ void *(*realloc)(void *userarg, void *buf, size_t sz),<br />
+ void (*free)(void *userarg, void *buf)</dd></dl>
+<p> getdns_list *<br />
+ <code>getdns_list_create_with_memory_functions</code></p>
+<dl>
+<dt>
+</dt><dd> (void *userarg,<br />
+ void *(*malloc)(size_t sz),<br />
+ void *(*realloc)(void *buf, size_t sz),<br />
+ void (*free)(void *buf)</dd></dl>
+<p> void<br />
+ <code>getdns_list_destroy</code> (getdns_list *this_dict) </p>
+<h2>DESCRIPTION</h2>
+<p> The getdns_list type is used to manage heterogeneous indexed lists name/value pairs in which the data types of the values include</p>
+<dl>
+<dt>
+</dt><dd>
+ getdns_bindata<br />
+ getdns_dict<br />
+ getdns_list<br />
+ uint32_t</dd></dl>
+<p> The destroy function performs a &quot;deep&quot; destroy, freeing storage for all of the members of the list before destroying the list. There are a number of helper functions that provide access to the list object, see their respective man pages. </p>
+<p> <i>userarg</i> pass this argument to the user specified memory management functions for operations on lists created using extended memory functions </p>
+<p> <i>this_list</i> the list to destroy </p>
+<h2>RETURN VALUES</h2>
+<p> Upon successful completion the getdns_list_create function returns a valid (empty) list structure that should be freed via a call to getdns_list_destroy. If a parameter in invalid or in the event of some error getdns_list_create returns NULL. </p>
+<h2>EXAMPLES</h2>
+<p> TBD </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict/">getdns_dict</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list_get/">getdns_list_get</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list_set/">getdns_list_set</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

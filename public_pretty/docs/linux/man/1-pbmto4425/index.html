@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbmto4425(1) · Linux Manual Pages</title>
+<meta name="description" content="pbmto4425 – Display PBM images on an AT&amp;T 4425 terminal">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pbmto4425/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pbmto4425(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pbmto4425 &#8211; Display PBM images on an AT&amp;T 4425 terminal</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pbmto4425</code> [<i>pbmfile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pbmto4425</code> displays PBM format images on an AT&amp;T 4425 ASCII terminal using that terminal&#8217;s mosaic graphics character set. The program should also work with other VT100-like terminals with mosaic graphics character sets such as the C. Itoh CIT-101, but it has not yet been tested on terminals other than the 4425. </p>
+<p>&nbsp;<wbr><code>Pbmto4425</code>&nbsp;<wbr>puts the terminal into 132 column mode to achieve the maximum resolution of the terminal. In this mode the terminal has a resolution of 264 columns by 69 rows. The pixels have an aspect ratio of 1:2.6, therefore an image should be processed before being displayed in a manner such as this: </p>
+<pre>
+<code>% pamscale -xscale 2.6 </code><i>pamfile</i> <code>\
+    | pamscale -xysize 264 69 \
+    | ppmtopgm \
+    | pamditherbw \
+    | pbmto4425</code>
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtoterm/">ppmtoterm</a></code>(1) , <code>pbm</code>(1) </p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1993 by Robert Perlberg </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

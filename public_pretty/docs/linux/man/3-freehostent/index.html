@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>freehostent(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-freehostent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>freehostent(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>getipnodebyname, getipnodebyaddr, freehostent - get network hostnames and addresses</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+#include &lt;netdb.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/types.h&gt;
+struct hostent *getipnodebyname(const char *name, int af,
+                                int flags, int *error_num);
+struct hostent *getipnodebyaddr(const void *addr, size_t len,
+                                int af, int *error_num);
+void freehostent(struct hostent *ip);
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>These functions are deprecated (and unavailable in glibc). Use <b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3) and <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3) instead.</p>
+<p>The <b>getipnodebyname</b>() and <b>getipnodebyaddr</b>() functions return the names and addresses of a network host. These functions return a pointer to the following structure:</p>
+<p>struct hostent {
+ <wbr> <wbr> <wbr> char <wbr> *h_name;
+ <wbr> <wbr> <wbr> char **h_aliases;
+ <wbr> <wbr> <wbr> int <wbr> <wbr> <wbr> h_addrtype;
+ <wbr> <wbr> <wbr> int <wbr> <wbr> <wbr> h_length;
+ <wbr> <wbr> <wbr> char **h_addr_list; };</p>
+<p>These functions replace the <b><a HREF="/docs/linux/man/3-gethostbyname/">gethostbyname</a></b>(3) and <b><a HREF="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a></b>(3) functions, which could access only the IPv4 network address family. The <b>getipnodebyname</b>() and <b>getipnodebyaddr</b>() functions can access multiple network address families.</p>
+<p>Unlike the <b>gethostby</b> functions, these functions return pointers to dynamically allocated memory. The <b>freehostent</b>() function is used to release the dynamically allocated memory after the caller no longer needs the <i>hostent</i> structure.</p>
+<h3>getipnodebyname() arguments</h3>
+<p>The <b>getipnodebyname</b>() function looks up network addresses for the host specified by the <i>name</i> argument. The <i>af</i> argument specifies one of the following values:</p>
+<dl>
+<dt><b>AF_INET</b>
+</dt><dd> The <i>name</i> argument points to a dotted-quad IPv4 address or a name of an IPv4 network host.
+</dd><dt><b>AF_INET6</b>
+</dt><dd> The <i>name</i> argument points to a hexadecimal IPv6 address or a name of an IPv6 network host.</dd></dl>
+<p>The <i>flags</i> argument specifies additional options. More than one option can be specified by bitwise OR-ing them together. <i>flags</i> should be set to 0 if no options are desired.</p>
+<dl>
+<dt><b>AI_V4MAPPED</b>
+</dt><dd> This flag is used with <b>AF_INET6</b> to request a query for IPv4 addresses instead of IPv6 addresses; the IPv4 addresses will be mapped to IPv6 addresses.
+</dd><dt><b>AI_ALL</b>
+</dt><dd> This flag is used with <b>AI_V4MAPPED</b> to request a query for both IPv4 and IPv6 addresses. Any IPv4 address found will be mapped to an IPv6 address.
+</dd><dt><b>AI_ADDRCONFIG</b>
+</dt><dd> This flag is used with <b>AF_INET6</b> to further request that queries for IPv6 addresses should not be made unless the system has at least one IPv6 address assigned to a network interface, and that queries for IPv4 addresses should not be made unless the system has at least one IPv4 address assigned to a network interface. This flag may be used by itself or with the <b>AI_V4MAPPED</b> flag.
+</dd><dt><b>AI_DEFAULT</b>
+</dt><dd> This flag is equivalent to <b>(AI_ADDRCONFIG | AI_V4MAPPED)</b>.</dd></dl>
+<h3>getipnodebyaddr() arguments</h3>
+<p>The <b>getipnodebyaddr</b>() function looks up the name of the host whose network address is specified by the <i>addr</i> argument. The <i>af</i> argument specifies one of the following values:</p>
+<dl>
+<dt><b>AF_INET</b>
+</dt><dd> The <i>addr</i> argument points to a <i>struct in_addr</i> and <i>len</i> must be set to <i>sizeof(struct in_addr)</i>.
+</dd><dt><b>AF_INET6</b>
+</dt><dd> The <i>addr</i> argument points to a <i>struct in6_addr</i> and <i>len</i> must be set to <i>sizeof(struct in6_addr)</i>.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p>NULL is returned if an error occurred, and <i>error_num</i> will contain an error code from the following list:</p>
+<dl>
+<dt><b>HOST_NOT_FOUND</b>
+</dt><dd> The hostname or network address was not found.
+</dd><dt><b>NO_ADDRESS</b>
+</dt><dd> The domain name server recognized the network address or name, but no answer was returned. This can happen if the network host has only IPv4 addresses and a request has been made for IPv6 information only, or vice versa.
+</dd><dt><b>NO_RECOVERY</b>
+</dt><dd> The domain name server returned a permanent failure response.
+</dd><dt><b>TRY_AGAIN</b>
+</dt><dd> The domain name server returned a temporary failure response. You might have better luck next time.</dd></dl>
+<p>A successful query returns a pointer to a <i>hostent</i> structure that contains the following fields:</p>
+<dl>
+<dt><i>h_name</i>
+</dt><dd> This is the official name of this network host.
+</dd><dt><i>h_aliases</i>
+</dt><dd> This is an array of pointers to unofficial aliases for the same host. The array is terminated by a null pointer.
+</dd><dt><i>h_addrtype</i>
+</dt><dd> This is a copy of the <i>af</i> argument to <b>getipnodebyname</b>() or <b>getipnodebyaddr</b>(). <i>h_addrtype</i> will always be <b>AF_INET</b> if the <i>af</i> argument was <b>AF_INET</b>. <i>h_addrtype</i> will always be <b>AF_INET6</b> if the <i>af</i> argument was <b>AF_INET6</b>.
+</dd><dt><i>h_length</i>
+</dt><dd> This field will be set to <i>sizeof(struct in_addr)</i> if <i>h_addrtype</i> is <b>AF_INET</b>, and to <i>sizeof(struct in6_addr)</i> if <i>h_addrtype</i> is <b>AF_INET6</b>.
+</dd><dt><i>h_addr_list</i>
+</dt><dd> This is an array of one or more pointers to network address structures for the network host. The array is terminated by a null pointer.</dd></dl>
+<h2>CONFORMING TO</h2>
+<p>RFC 2553.</p>
+<h2>NOTES</h2>
+<p>These functions were present in glibc 2.1.91-95, but were removed again. Several UNIX-like systems support them, but all call them deprecated.</p>
+<h2>SEE ALSO</h2>
+<p><b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3), <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3), <b>inet_ntop</b>(3), <b>inet_pton</b>(3)</p>
+<h2>COLOPHON</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" HREF="https://www.kernel.org/doc/man-pages/."><a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

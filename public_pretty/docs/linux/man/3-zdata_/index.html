@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zdata_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Interpolation2D::templateImpl – basic template implementation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zdata_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zdata_(3)</h1>
+
+
+
+
+
+<p>QuantLib::Interpolation2D::templateImpl &#8211; basic template implementation </p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;ql/math/interpolations/interpolation2d.hpp&gt;</code></pre>
+<p> Inherits <code>QuantLib::Interpolation2D::Impl</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>templateImpl</code> (const I1 &amp;xBegin, const I1 &amp;xEnd, const I2 &amp;yBegin, const I2 &amp;yEnd, const M &amp;zData) </p>
+<p> Real <code>xMin</code> () const </p>
+<p> Real <code>xMax</code> () const </p>
+<p> std::vector&lt; Real &gt; <code>xValues</code> () const </p>
+<p> Real <code>yMin</code> () const </p>
+<p> Real <code>yMax</code> () const </p>
+<p> std::vector&lt; Real &gt; <code>yValues</code> () const </p>
+<p> const <code>Matrix</code> &amp; <code>zData</code> () const </p>
+<p> bool <code>isInRange</code> (Real x, Real y) const</p>
+<h3>Protected Member Functions</h3>
+<p>Size <code>locateX</code> (Real x) const </p>
+<p> Size <code>locateY</code> (Real y) const</p>
+<h3>Protected Attributes</h3>
+<p>I1 <code>xBegin_</code> </p>
+<p> I1 <code>xEnd_</code> </p>
+<p> I2 <code>yBegin_</code> </p>
+<p> I2 <code>yEnd_</code> </p>
+<p> const M &amp; <code>zData_</code></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class I1, class I2, class M&gt; class QuantLib::Interpolation2D::templateImpl&lt; I1, I2, M &gt;</h3>
+<p>basic template implementation</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

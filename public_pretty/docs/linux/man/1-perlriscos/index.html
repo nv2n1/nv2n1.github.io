@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlriscos(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlriscos/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlriscos(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>perlriscos - Perl version 5 for RISC OS</p>
+<h2>DESCRIPTION</h2>
+<p>This document gives instructions for building Perl for <font SIZE="-1">RISC OS.</font> It is complicated by the need to cross compile. There is a binary version of perl available from &lt;<a rel="nofollow" HREF="http://www.cp15.org/perl/"><a href="http://www.cp15.org/perl/">http://www.cp15.org/perl/</a></a>&gt; which you may wish to use instead of trying to compile it yourself.</p>
+<h2>BUILD</h2>
+<p>You need an installed and working gccsdk cross compiler &lt;<a rel="nofollow" HREF="http://gccsdk.riscos.info/"><a href="http://gccsdk.riscos.info/">http://gccsdk.riscos.info/</a></a>&gt; and <font SIZE="-1">REXEN</font> &lt;<a rel="nofollow" HREF="http://www.cp15.org/programming/"><a href="http://www.cp15.org/programming/">http://www.cp15.org/programming/</a></a>&gt;</p>
+<p>Firstly, copy the source and build a native copy of perl for your host system. Then, in the source to be cross compiled:</p>
+<dl>
+<dt>1.
+</dt><dd> <pre>
+    $ ./Configure
+</pre>
+</dd><dt>2.
+</dt><dd> Select the riscos hint file. The default answers for the rest of the questions are usually sufficient. 
+ Note that, if you wish to run Configure non-interactively (see the <font SIZE="-1">INSTALL</font> document for details), to have it select the correct hint file, you'll need to provide the argument -Dhintfile=riscos on the Configure command-line.
+</dd><dt>3.
+</dt><dd> <pre>
+    $ make miniperl
+</pre>
+</dd><dt>4.
+</dt><dd> This should build miniperl and then fail when it tries to run it.
+</dd><dt>5.
+</dt><dd> Copy the miniperl executable from the native build done earlier to replace the cross compiled miniperl.
+</dd><dt>6.
+</dt><dd> <pre>
+    $ make
+</pre>
+</dd><dt>7.
+</dt><dd> This will use miniperl to complete the rest of the build.</dd></dl>
+<h2>AUTHOR</h2>
+<p>Alex Waugh &lt;alex [at] alexwaugh.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

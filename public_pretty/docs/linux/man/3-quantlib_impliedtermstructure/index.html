@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_impliedtermstructure(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::ImpliedTermStructure – Implied term structure at a given date in the future.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_impliedtermstructure/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_impliedtermstructure(3)</h1>
+
+
+
+
+
+<p>QuantLib::ImpliedTermStructure &#8211; Implied term structure at a given date in the future. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/termstructures/yield/impliedtermstructure.hpp&gt; </p>
+<p> Inherits <code>QuantLib::YieldTermStructure</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>ImpliedTermStructure</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;, const <code>Date</code> &amp;referenceDate) </p>
+<p> <code>YieldTermStructure interface</code> </p>
+<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
+ <i>the day counter used for date/time conversion </i><br />
+ <code>Calendar</code> <code>calendar</code> () const<br />
+ <i>the calendar used for reference and/or option date calculation </i><br />
+ <code>Natural</code> <code>settlementDays</code> () const<br />
+ <i>the settlementDays used for reference date calculation </i><br />
+ <code>Date</code> <code>maxDate</code> () const<br />
+ <i>the latest date for which the curve can return values </i></p>
+<h3>Protected Member Functions</h3>
+<p><code>DiscountFactor</code> <code>discountImpl</code> (Time) const<br />
+ <i>returns the discount factor as seen from the evaluation date </i></p>
+<h2>Detailed Description</h2>
+<p>Implied term structure at a given date in the future. </p>
+<p> The given date will be the implied reference date. </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dd></dl>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd>
+<dt>*</dt>
+<dd>observability against changes in the underlying term structure is checked.</dd></dl>
+</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

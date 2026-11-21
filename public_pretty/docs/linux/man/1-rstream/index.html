@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rstream(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rstream/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rstream(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>rstream - streaming over RDMA ping-pong test.</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+rstream[-s server_address][-b bind_address][-f address_format]
+       [-B buffer_size][-I iterations][-C transfer_count]
+       [-S transfer_size][-p server_port][-T test_option]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>Uses the streaming over RDMA protocol (rsocket) to connect and exchange data between a client and server application.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-s server_address
+</dt><dd> The network name or IP address of the server system listening for connections. The used name or address must route over an RDMA device. This option must be specified by the client.
+</dd><dt>-b bind_address
+</dt><dd> The local network address to bind to.
+</dd><dt>-f address_format
+</dt><dd> Supported address formats are ip, ipv6, gid, or name.
+</dd><dt>-B buffer_size
+</dt><dd> Indicates the size of the send and receive network buffers.
+</dd><dt>-I iterations
+</dt><dd> The number of times that the specified number of messages will be exchanged between the client and server. (default 1000)
+</dd><dt>-C transfer_count
+</dt><dd> The number of messages to transfer from the client to the server and back again on each iteration. (default 1)
+</dd><dt>-S transfer_size
+</dt><dd> The size of each send transfer, in bytes. (default 1000) If 'all' is specified, rstream will run a series of tests of various sizes.
+</dd><dt>-p server_port
+</dt><dd> The server's port number.
+</dd><dt>-T test_option
+</dt><dd> Specifies test parameters. Available options are:</dd></dl>
+<p>s | socket - uses standard socket calls to transfer data</p>
+<p>a | async - uses asynchronous operation (e.g. select / poll)</p>
+<p>b | blocking - uses blocking calls</p>
+<p>f | fork - fork server processing (forces -T s option)</p>
+<p>n | nonblocking - uses non-blocking calls</p>
+<p>r | resolve - use rdma cm to resolve address</p>
+<p>v | verify - verifies data transfers</p>
+<h2>NOTES</h2>
+<p>Basic usage is to start rstream on a server system, then run rstream -s server_name on a client system. By default, rstream will run a series of latency and bandwidth performance tests. Specifying a different iterations, transfer_count, or transfer_size will run a user customized test using default values where none have been specified.</p>
+<p>Because this test maps RDMA resources to userspace, users must ensure that they have available system resources and permissions. See the libibverbs README file for additional details.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

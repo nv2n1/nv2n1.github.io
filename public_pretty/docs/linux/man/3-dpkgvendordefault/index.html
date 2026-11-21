@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgvendordefault(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgvendordefault/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgvendordefault(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Dpkg::Vendor::Default - default vendor object</p>
+<h2>Description</h2>A vendor object is used to provide vendor specific behaviour in various places. This is the default object used in case there's none for the current vendor or in case the vendor could not be identified (see Dpkg::Vendor documentation). 
+<p>It provides some hooks that are called by various dpkg-* tools. If you need a new hook, please file a bug against dpkg-dev and explain your need. Note that the hook <font SIZE="-1">API</font> has no guaranty to be stable over an extended period. If you run an important distribution that makes use of vendor hooks, you&rsquo;d better submit them for integration so that we avoid breaking your code.</p>
+<h2>Functions</h2><dl COMPACT><dt>$vendor_obj = Dpkg::Vendor::Default-&gt;<i>new()</i>
+</dt><dd>Creates the default vendor object. Can be inherited by all vendor objects if they don't need any specific initialization at object creation time.
+</dd><dt>$vendor_obj-&gt;run_hook($id, @params)
+</dt><dd>Run the corresponding hook. The parameters are hook-specific. The supported hooks are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>before-source-build ($srcpkg)
+</dt><dd>The first parameter is a Dpkg::Source::Package object. The hook is called just before the execution of <tt>$srcpkg</tt>-&gt;<i>build()</i>.
+</dd><dt>keyrings ()
+</dt><dd>The hook is called when dpkg-source is checking a signature on a source package. It takes no parameters, but returns a (possibly empty) list of vendor-specific keyrings.
+</dd><dt>register-custom-fields ()
+</dt><dd>The hook is called in Dpkg::Control::Fields to register custom fields. You should return a list of arrays. Each array is an operation to perform. The first item is the name of the operation and corresponds to a field_* function provided by Dpkg::Control::Fields. The remaining fields are the parameters that are passed unchanged to the corresponding function. 
+ Known operations are ``register'', ``insert_after'' and ``insert_before''.
+</dd><dt>post-process-changelog-entry ($fields)
+</dt><dd>The hook is called in Dpkg::Changelog to post-process a Dpkg::Changelog::Entry after it has been created and filled with the appropriate values.
+</dd><dt>update-buildflags ($flags)
+</dt><dd>The hook is called in Dpkg::BuildFlags to allow the vendor to override the default values set for the various build flags. <tt>$flags</tt> is a Dpkg::BuildFlags object.</dd></dl></dl><dl COMPACT><dd></dd></dl></dl><h2>Changes</h2><h3>Version 0.xx</h3>This is a private module.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlsymbian(1) · Linux Manual Pages</title>
+<meta name="description" content="perlsymbian – Perl version 5 on Symbian OS">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlsymbian/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlsymbian(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> perlsymbian &#8211; Perl version 5 on Symbian OS </p>
+<h2>DESCRIPTION</h2>
+<p> This document describes various features of the Symbian operating system that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs. </p>
+<p> <font SIZE="-1"><code>NOTE:</code></font><code> this port (as of 0.4.1) does not compile into a Symbian </code><font SIZE="-1"><code>OS GUI</code></font><code> application, but instead it results in a Symbian </code><font SIZE="-1"><code>DLL.</code></font> The <font SIZE="-1">DLL</font> includes a C<font SIZE="-2">++</font> class called CPerlBase, which one can then (derive from and) use to embed Perl into applications, see <i>symbian/README</i>. </p>
+<p> The base port of Perl to Symbian only implements the basic POSIX-like functionality; it does not implement any further Symbian or Series 60, Series 80, or <font SIZE="-1">UIQ</font> bindings for Perl. </p>
+<p> It is also possible to generate Symbian executables for &#8220;miniperl&#8221; and &#8220;perl&#8221;, but since there is no standard command line interface for Symbian (nor full keyboards in the devices), these are useful mainly as demonstrations.</p>
+<h3>Compiling Perl on Symbian</h3>
+<p> (0) You need to have the appropriate Symbian <font SIZE="-1">SDK</font> installed. </p>
+<p> These instructions have been tested under various Nokia Series 60 Symbian SDKs (1.2 to 2.6, 2.8 should also work, 1.2 compiles but does not work), Series 80 2.0, and Nokia 7710 (Series 90) <font SIZE="-1">SDK.</font> You can get the SDKs from Forum Nokia (&lt;<a rel="nofollow" href="http://www.forum.nokia.com/">http://www.forum.nokia.com/</a>&gt;). A very rough port (&#8220;it compiles&#8221;) to <font SIZE="-1">UIQ 2.1</font> has also been made. </p>
+<p> A prerequisite for any of the SDKs is to install ActivePerl from ActiveState, &lt;<a rel="nofollow" href="http://www.activestate.com/Products/ActivePerl/">http://www.activestate.com/Products/ActivePerl/</a>&gt; </p>
+<p> Having the <font SIZE="-1">SDK</font> installed also means that you need to have either the Metrowerks CodeWarrior installed (2.8 and 3.0 were used in testing) or the Microsoft Visual C<font SIZE="-2">++</font> 6.0 installed (<font SIZE="-1">SP3</font> minimum, <font SIZE="-1">SP5</font> recommended). </p>
+<p> Note that for example the Series 60 2.0 <font SIZE="-1">VC SDK</font> installation talks about ActivePerl build 518, which does no more (as of mid-2005) exist at the ActiveState website. The ActivePerl 5.8.4 build 810 was used successfully for compiling Perl on Symbian. The 5.6.x ActivePerls do not work. </p>
+<p> Other SDKs or compilers like Visual.NET, command-line-only Visual.NET, Borland, GnuPoc, or sdk2unix have not been tried. </p>
+<p> These instructions almost certainly won&#8217;t work with older Symbian releases or other SDKs. Patches to get this port running in other releases, SDKs, compilers, platforms, or devices are naturally welcome. </p>
+<p> (1) Get a Perl source code distribution (for example the file perl-5.9.2.tar.gz is fine) from &lt;<a rel="nofollow" href="http://www.cpan.org/src/">http://www.cpan.org/src/</a>&gt; and unpack it in your the C:/Symbian directory of your Windows system. </p>
+<p> (2) Change to the perl source directory. </p>
+<pre>
+    cd c:\Symbian\perl-5.x.x
+</pre>
+<p> (3) Run the following script using the perl coming with the <font SIZE="-1">SDK</font> </p>
+<pre>
+    perl symbian\config.pl
+</code></pre>
+<p> You must use the cmd.exe, the Cygwin shell will not work. The <font SIZE="-1">PATH</font> must include the <font SIZE="-1">SDK</font> tools, including a Perl, which should be the case under cmd.exe. If you do not have that, see the end of symbian\sdk.pl for notes of how your environment should be set up for Symbian compiles. </p>
+<p> (4) Build the project, either by </p>
+<pre><code>     make all
+</code></pre>
+<p> in cmd.exe or by using either the Metrowerks CodeWarrior or the Visual C<font SIZE="-2">++</font> 6.0, or the Visual Studio 8 (the Visual C<font SIZE="-2">++</font> 2005 Express Edition works fine). </p>
+<p> If you use the <font SIZE="-1">VC IDE,</font> you will have to run <i>symbian\config.pl</i> first using the cmd.exe, and then run &#8216;make win.mf vc6.mf&#8217; to generate the <font SIZE="-1">VC6</font> makefiles and workspaces. ``make vc6&#8217;&#8216; will compile for the <font SIZE="-1">VC6,</font> and ``make cw&#8217;&#8216; for the CodeWarrior. </p>
+<p> The following <font SIZE="-1">SDK</font> and compiler configurations and Nokia phones were tested at some point in time (+ = compiled and PerlApp run, &#8211; = not), both for Perl 5.8.x and 5.9.x: </p>
+<pre><code>     SDK | VC | CW |
+     --------+----+----+---
+     S60 1.2 | + | + | 3650 (*)
+     S60 2.0 | + | + | 6600
+     S60 2.1 | - | + | 6670
+     S60 2.6 | + | + | 6630
+     S60 2.8 | + | + | (not tested in a device)
+     S80 2.6 | - | + | 9300
+     S90 1.1 | + | - | 7710
+     UIQ 2.1 | - | + | (not tested in a device)
+ (*) Compiles but does not work, unfortunately, a problem with Symbian.
+</code></pre>
+<p> If you are using the &#8216;make&#8217; directly, it is the <font SIZE="-1">GNU</font> make from the SDKs, and it will invoke the right make commands for the Windows emulator build and the Arm target builds (&#8216;thumb&#8217; by default) as necessary. </p>
+<p> The build scripts assume the &#8216;absolute style&#8217; <font SIZE="-1">SDK</font> installs under C:, the &#8216;subst style&#8217; will not work. </p>
+<p> If using the <font SIZE="-1">VC IDE,</font> to build use for example the File-&gt;Open Workspace-&gt; C:\Symbian\8.0a\S60_2nd_FP2\epoc32\build\symbian\perl\perl\wins\perl.dsw The emulator binaries will appear in the same directory. </p>
+<p> If using the <font SIZE="-1">VC IDE,</font> you will a lot of warnings in the beginning of the build because a lot of headers mentioned by the source cannot be found, but this is not serious since those headers are not used. </p>
+<p> The Metrowerks will give a lot of warnings about unused variables and empty declarations, you can ignore those. </p>
+<p> When the Windows and Arm DLLs are built do not be scared by a very long messages whizzing by: it is the ``export freeze&#8217;&#8216; phase where the whole (rather large) <font SIZE="-1">API</font> of Perl is listed. </p>
+<p> Once the build is completed you need to create the <font SIZE="-1">DLL SIS</font> file by </p>
+<pre><code>     make perldll.sis
+</code></pre>
+<p> which will create the file perlXYZ.sis (the <font SIZE="-1">XYZ</font> being the Perl version) which you can then install into your Symbian device: an easy way to do this is to send them via Bluetooth or infrared and just open the messages. </p>
+<p> Since the total size of all Perl <font SIZE="-1">SIS</font> files once installed is over 2 <font SIZE="-1">MB,</font> it is recommended to do the installation into a memory card (drive E:) instead of the C: drive. </p>
+<p> The size of the perlXYZ.SIS is about 370 kB but once it is in the device it is about one 750 kB (according to the application manager). </p>
+<p> The perlXYZ.sis includes only the Perl <font SIZE="-1">DLL:</font> to create an additional <font SIZE="-1">SIS</font> file which includes some of the standard (pure) Perl libraries, issue the command </p>
+<pre><code>     make perllib.sis
+</code></pre>
+<p> Some of the standard Perl libraries are included, but not all: see ``<font SIZE="-1">HISTORY&#8217;&#8216;</font> or <i>symbian\install.cfg</i> for more details (250 kB -&gt; 700 kB). </p>
+<p> Some of the standard Perl <font SIZE="-1">XS</font> extensions (see ``<font SIZE="-1">HISTORY&#8217;&#8216;</font> are also available: </p>
+<pre><code>     make perlext.sis
+</code></pre>
+<p> which will create perlXYZext.sis (290 kB -&gt; 770 kB). </p>
+<p> To compile the demonstration application PerlApp you need first to install the Perl headers under the <font SIZE="-1">SDK.</font> </p>
+<p> To install the Perl headers and the class CPerlBase documentation so that you no more need the Perl sources around to compile Perl applications using the <font SIZE="-1">SDK:</font> </p>
+<pre><code>     make sdkinstall
+</code></pre>
+<p> The destination directory is C:\Symbian\perl\X.Y.Z. For more details, see <i>symbian\PerlBase.pod</i>. </p>
+<p> Once the headers have been installed, you can create a <font SIZE="-1">SIS</font> for the PerlApp: </p>
+<pre><code>     make perlapp.sis
+</code></pre>
+<p> The perlapp.sis (11 kB -&gt; 16 kB) will be built in the symbian subdirectory, but a copy will also be made to the main directory. </p>
+<p> If you want to package the Perl DLLs (one for <font SIZE="-1">WINS,</font> one for <font SIZE="-1">ARMI</font>), the headers, and the documentation: </p>
+<pre><code>     make perlsdk.zip
+</code></pre>
+<p> which will create perlXYZsdk.zip that can be used in another Windows system with the <font SIZE="-1">SDK,</font> without having to compile Perl in that system. </p>
+<p> If you want to package the PerlApp sources: </p>
+<pre><code>     make perlapp.zip
+</code></pre>
+<p> If you want to package the perl.exe and miniperl.exe, you can use the perlexe.sis and miniperlexe.sis make targets. You also probably want the perllib.sis for the libraries and maybe even the perlapp.sis for the recognizer. </p>
+<p> The make target &#8216;allsis&#8217; combines all the above <font SIZE="-1">SIS</font> targets. </p>
+<p> To clean up after compilation you can use either of </p>
+<pre><code>     make clean
+     make distclean
+</code></pre>
+<p> depending on how clean you want to be.  </p>
+<h3>Compilation problems</h3>
+<p> If you see right after ``make&#8217;&#8216; this </p>
+<pre><code>    cat makefile.sh &gt;makefile
+    'cat' is not recognized as an internal or external command,
+    operable program or batch file.
+</code></pre>
+<p> it means you need to (re)run the <i>symbian\config.pl</i>. </p>
+<p> If you get the error </p>
+<pre><code>        'perl' is not recognized as an internal or external command,
+        operable program or batch file.
+</code></pre>
+<p> you may need to reinstall the ActivePerl. </p>
+<p> If you see this </p>
+<pre><code>    ren makedef.pl nomakedef.pl
+    The system cannot find the file specified.
+    C:\Symbian\...\make.exe: [rename_makedef] Error 1 (ignored)
+</code></pre>
+<p> please ignore it since it is nothing serious (the build process of renames the Perl makedef.pl as nomakedef.pl to avoid confusing it with a makedef.pl of the <font SIZE="-1">SDK</font>).  </p>
+<h3>PerlApp</h3>
+<p> The PerlApp application demonstrates how to embed Perl interpreters to a Symbian application. The ``Time&#8217;&#8216; menu item runs the following Perl code: <code>&quot;print &quot;Running in &quot;, $^O, &quot;\n&quot;, scalar localtime&quot;</code>, the ``Oneliner&#8217;&#8216; allows one to type in Perl code, and the ``Run&#8217;&#8216; opens a file chooser for selecting a Perl file to run. </p>
+<p> The PerlApp also is started when the ``Perl recognizer&#8217;&#8216; (also included and installed) detects a Perl file being activated through the <font SIZE="-1">GUI,</font> and offers either to install it under \Perl (if the Perl file is in the inbox of the messaging application) or to run it (if the Perl file is under \Perl).  </p>
+<h3>sisify.pl</h3>
+<p> In the symbian subdirectory there is <i>sisify.pl</i> utility which can be used to package Perl scripts and/or Perl library directories into <font SIZE="-1">SIS</font> files, which can be installed to the device. To run the sisify.pl utility, you will need to have the &#8216;makesis&#8217; and &#8216;uidcrc&#8217; utilities already installed. If you don&#8217;t have the Win32 SDKs, you may try for example &lt;<a rel="nofollow" href="http://gnupoc.sourceforge.net/">http://gnupoc.sourceforge.net/</a>&gt; or &lt;<a rel="nofollow" href="http://symbianos.org/~andreh/">http://symbianos.org/~andreh/</a>&gt;.  </p>
+<h3>Using Perl in Symbian</h3>
+<p> First of all note that you have full access to the Symbian device when using Perl: you can do a lot of damage to your device (like removing system files) unless you are careful. Please do take backups before doing anything. </p>
+<p> The Perl port has been done for the most part using the Symbian standard POSIX-ish <font SIZE="-1">STDLIB</font> library. It is a reasonably complete library, but certain corners of such emulation libraries that tend to be left unimplemented on non-UNIX platforms have been left unimplemented also this time: <code>fork()</code>, <code>signals()</code>, user/group ids, <code>select()</code> working for sockets, non-blocking sockets, and so forth. See the file <i>symbian/config.sh</i> and look for &#8216;undef&#8217; to find the unsupported APIs (or from Perl use Config). </p>
+<p> The filesystem of Symbian devices uses DOSish syntax, ``drives&#8217;&#8216; separated from paths by a colon, and backslashes for the path. The exact assignment of the drives probably varies between platforms, but for example in Series 60 you might see C: as the (flash) main memory, D: as the <font SIZE="-1">RAM</font> drive, E: as the memory card (<font SIZE="-1">MMC</font>), Z: as the <font SIZE="-1">ROM.</font> In Series 80 D: is the memory card. As far the devices go the <font SIZE="-1">NUL:</font> is the bit bucket, the COMx: are the serial lines, IRCOMx: are the <font SIZE="-1">IR</font> ports, <font SIZE="-1">TMP:</font> might be C:\System\Temp. Remember to double those backslashes in doublequoted strings. </p>
+<p> The Perl <font SIZE="-1">DLL</font> is installed in \System\Libs\. The Perl libraries and extension DLLs are installed in \System\Libs\Perl\X.Y.Z\. The PerlApp is installed in \System\Apps\, and the <font SIZE="-1">SIS</font> also installs a couple of demo scripts in \Perl\ (C:\Mydocs\Perl\ on Nokia 7710). </p>
+<p> Note that the Symbian filesystem is very picky: it strongly prefers the \ instead of the /. </p>
+<p> When doing <font SIZE="-1">XS /</font> Symbian C<font SIZE="-2">++</font> programming include first the Symbian headers, then any standard C/POSIX headers, then Perl headers, and finally any application headers. </p>
+<p> <code>New()</code> and <code>Copy()</code> are unfortunately used by both Symbian and Perl code so you&#8217;ll have to play cpp games if you need them. PerlBase.h undefines the Perl definitions and redefines them as <code>PerlNew()</code> and <code>PerlCopy()</code>.  </p>
+<h2>TO DO</h2>
+<p> Lots. See <i>symbian/TODO</i>.  </p>
+<h2>WARNING</h2>
+<p> As of Perl Symbian port version 0.4.1 any part of Perl&#8217;s standard regression test suite has not been run on a real Symbian device using the ported Perl, so innumerable bugs may lie in wait. Therefore there is absolutely no warranty.  </p>
+<h2>NOTE</h2>
+<p> When creating and extending application programming interfaces (APIs) for Symbian or Series 60 or Series 80 or Series 90 it is suggested that trademarks, registered trademarks, or trade names are not used in the <font SIZE="-1">API</font> names. Instead, developers should consider basing the <font SIZE="-1">API</font> naming in the existing (C<font SIZE="-2">++</font>, or maybe Java) public component and <font SIZE="-1">API</font> naming, modified as appropriate by the rules of the programming language the new APIs are for. </p>
+<p> Nokia is a registered trademark of Nokia Corporation. Nokia&#8217;s product names are trademarks or registered trademarks of Nokia. Other product and company names mentioned herein may be trademarks or trade names of their respective owners.  </p>
+<h2>AUTHOR</h2>
+<p> Jarkko Hietaniemi  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2004-2005 Nokia. All rights reserved. </p>
+<p> Copyright (c) 2006-2007 Jarkko Hietaniemi.  </p>
+<h2>LICENSE</h2>
+<p> The Symbian port is licensed under the same terms as Perl itself.  </p>
+<h2>HISTORY</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> 0.1.0: April 2005 </p>
+<p> (This will show as ``0.01&#8217;&#8216; in the Symbian Installer.) </p>
+<pre><code> - The console window is a very simple console indeed: one can
+   get the newline with &quot;000&quot; and the &quot;C&quot; button is a backspace.
+   Do not expect a terminal capable of vt100 or ANSI sequences.
+   The console is also &quot;ASCII&quot;, you cannot input e.g. any accented
+   letters. Because of obvious physical constraints the console is
+   also very small: (in Nokia 6600) 22 columns, 17 rows.
+ - The following libraries are available:
+   AnyDBM_File AutoLoader base Carp Config Cwd constant
+   DynaLoader Exporter File::Spec integer lib strict Symbol
+   vars warnings XSLoader
+ - The following extensions are available:
+   attributes Compress::Zlib Cwd Data::Dumper Devel::Peek
+   Digest::MD5 DynaLoader Fcntl File::Glob Filter::Util::Call
+   IO List::Util MIME::Base64
+   PerlIO::scalar PerlIO::via SDBM_File Socket Storable Time::HiRes
+ - The following extensions are missing for various technical
+   reasons:
+   B ByteLoader Devel::DProf Devel::PPPort Encode GDBM_File
+   IPC::SysV NDBM_File Opcode PerlIO::encoding POSIX
+   re Safe Sys::Hostname Sys::Syslog
+   threads threads::shared Unicode::Normalize
+ - Using MakeMaker or the Module::* to build and install modules
+   is not supported.
+ - Building XS other than the ones in the core is not supported.
+</code></pre>
+<p> Since this is 0.something release, any future releases are almost guaranteed to be binary incompatible. As a sign of this the Symbian symbol exports are kept unfrozen and the .def files fully rebuilt every time. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> 0.2.0: October 2005 </p>
+<pre><code>  - Perl 5.9.3 (patch level 25741)
+  - Compress::Zlib and IO::Zlib supported
+  - sisify.pl added
+</code></pre>
+<p> We maintain the binary incompatibility. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> 0.3.0: October 2005 </p>
+<pre><code>  - Perl 5.9.3 (patch level 25911)
+  - Series 80 2.0 and UIQ 2.1 support
+</code></pre>
+<p> We maintain the binary incompatibility. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> 0.4.0: November 2005 </p>
+<pre><code>  - Perl 5.9.3 (patch level 26052)
+  - adding a sample Symbian extension
+</code></pre>
+<p> We maintain the binary incompatibility. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> 0.4.1: December 2006 </p>
+<pre><code>  - Perl 5.9.5-to-be (patch level 30002)
+  - added extensions: Compress/Raw/Zlib, Digest/SHA,
+    Hash/Util, Math/BigInt/FastCalc, Text/Soundex, Time/Piece
+  - port to S90 1.1 by alexander smishlajev
+</code></pre>
+<p> We maintain the binary incompatibility. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> 0.4.2: March 2007 </p>
+<pre><code>  - catchup with Perl 5.9.5-to-be (patch level 30812)
+  - tested to build with Microsoft Visual C++ 2005 Express Edition
+    (which uses Microsoft Visual C 8, instead of the old VC6),
+    SDK used for testing S60_2nd_FP3 aka 8.1a
+</code></pre>
+<p> We maintain the binary incompatibility. </p>
+ </dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

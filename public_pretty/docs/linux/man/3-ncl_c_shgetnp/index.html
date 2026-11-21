@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_c_shgetnp(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_c_shgetnp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_c_shgetnp(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>c_shgetnp - find the nearest points to a specified point in 3-space</p>
+<h2>Function Prototype</h2><pre>int c_shgetnp(float, float, float, int, float *, float *, float *,
+ int, int *);</pre><h2>Synopsis</h2><pre>int c_shgetnp (px, py, pz, n, x[], y[], z[], iflag, ier );</pre><h2>Description</h2><dl COMPACT><dt>px
+</dt><dd>(float) The X coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>py
+</dt><dd>(float) The Y coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>pz
+</dt><dd>(float) The Z coordinate value for a point P whose nearest neighbor is to be found.
+</dd><dt>n
+</dt><dd>(int) The number of input data points, n &gt; 1.
+</dd><dt>x
+</dt><dd>(float) An array of length n containing the X coordinate values for the input data points.
+</dd><dt>y
+</dt><dd>(float) An array of length n containing the Y coordinate values for the input data points.
+</dd><dt>z
+</dt><dd>(float) An array of length n containing the Z coordinate values for the input data points.
+</dd><dt>iflag
+</dt><dd>(int) A flag that equals 0 if this is the first call to this subroutine for the given dataset and equals 1 otherwise.
+</dd><dt>ier
+</dt><dd>(pointer to int) An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then look at the man page for shgrid_errors for details.</dd></dl><h2>Usage</h2>c_shgetnp is called to find the nearest point to a specified point in 3-space. Successive calls to c_shgetnp will determine the point nearest the specified point exclusive of the points found in previous calls, i.e. successive calls can be used to find the N nearest points for any N between one and the maximum number of points in the input dataset. 
+<p>c_shgetnp returns an integer, say np, such that (x[np],y[np],z[np]) is the nearest input data point to P. np = -1 if *ier is not zero. On successive calls to this function after the first (that is when iflag=1) you can find the Mth closest point to (px,py,pz) with the Mth call.</p>
+<h2>Access</h2>To use c_shgetnp, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>shgetnp, c_shgrid, c_shseti, c_shgeti, shgrid_params. 
+<p>Complete documentation for Sh is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/shgrid/shhome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/shgrid/shhome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/shgrid/shhome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

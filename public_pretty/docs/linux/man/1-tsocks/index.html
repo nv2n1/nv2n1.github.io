@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tsocks(1) · Linux Manual Pages</title>
+<meta name="description" content="tsocks – Shell wrapper to simplify the use of the">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tsocks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tsocks(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>tsocks</code> &#8211; Shell wrapper to simplify the use of the </p>
+<p><a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) library to transparently allow an application to use a SOCKS proxy</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tsocks</code> [application&nbsp;<wbr>[application&#8217;s arguments]]<br />
+ or <code>tsocks</code> [on|off]<br />
+ or <code>tsocks</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>tsocks</code> is a wrapper between the tsocks library and the application what you would like to run socksified.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>[application&nbsp;<wbr>[application&#8217;s arguments]]</dt>
+<dd> run the application as specified with the environment (LD_PRELOAD) set such that <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) will transparently proxy SOCKS connections in that program</dd>
+<dt>[on|off]</dt>
+<dd> this option adds or removes <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) from the LD_PRELOAD environment variable. When <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) is in this variable all executed applications are automatically socksified. If you want to use this function, you HAVE to source the shell script from yours, like this: &quot;source /usr/bin/tsocks&quot; or &quot;. /usr/bin/tsocks&quot;<br />
+ Example:<br />
+ &quot;. tsocks on&quot; &#8212; add the tsocks lib to LD_PRELOAD<br />
+ &quot;. tsocks off&quot; &#8212; remove the tsocks lib from LD_PRELOAD</dd>
+<dt>[show|sh]</dt>
+<dd> show the current value of the LD_PRELOAD variable</dd>
+<dt>&lt;without any argument&gt;</dt>
+<dd> create a new shell with LD_PRELOAD including <a href="/docs/linux/man/8-tsocks/">tsocks</a>(8).</dd></dl>
+<p> </code></p>
+<h2>AUTHOR</h2>
+<p> This script was created by Tamas SZERB &lt;toma [at] rulez.org&gt; for the debian package of tsocks. It (along with this manual page) have since been adapted into the main tsocks project and modified. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

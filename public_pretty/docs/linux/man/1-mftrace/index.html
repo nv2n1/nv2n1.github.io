@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mftrace(1) · Linux Manual Pages</title>
+<meta name="description" content="mftrace – convert METAFONT format fonts into Type1 outline fonts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mftrace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mftrace(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> mftrace &#8211; convert METAFONT format fonts into Type1 outline fonts </p>
+<h2>SYNOPSIS</h2>
+<p> <code>mftrace</code> [<i>options</i>]<i> fontname</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>mftrace</code> is a program that can convert a METAFONT font into a Type1 font. It is simply called with the name of the font (without a `.mf&#8217; suffix) and produces a Type1 font file called either <i>fontname</i>.pfa or <i>fontname</i>.pfb depending on the command line options. With the help of <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1) it can produce other font formats too. </p>
+<p> For tracing the bitmap, <code>mftrace</code> either uses <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1) or <code><a href="/docs/linux/man/1-autotrace/">autotrace</a></code>(1) (the former preferred) if available; this can be overridden with the <code>&#8211;autotrace</code> and <code>&#8211;potrace</code> command line options.</p>
+<h2>OPTIONS</h2>
+<p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;).</p>
+<dl>
+<dt><code>-k</code>, <code>&#8211;keep</code></dt>
+<dd> Keep all output in directory `mftrace.dir&#8217;.</dd>
+<dt><code>&#8211;magnification=</code><i>MAG</i></dt>
+<dd> The magnification to use for the PFA file. The default is 1000. The larger the magnification, the more precise the PFA file will be. However, if the magnification is too large METAFONT can crash with overflow errors.</dd>
+<dt>
+</dt><dd> Sadly, many MF fonts contain resolution checks</dd>
+<dl>
+<dl>
+<dt>
+</dt><dd> if dots_per_inch * design_size &gt; 1500:</dd></dl>
+</dl>
+<dt>
+</dt><dd> This check is susceptible to overflow errors. Such code should be reported as a bug, and changed to</dd>
+<dl>
+<dl>
+<dt>
+</dt><dd> if dots_per_inch &gt; (1500 / design_size):</dd></dl>
+</dl>
+<dt><code>&#8211;formats=</code><i>FMT1</i><code>,</code><i>FMT2</i><code>,</code><i>&#8230;</i></dt>
+<dd> Specify which formats to generate (default is pfa). Choices are: `afm&#8217;, `pfa&#8217;, `pfb&#8217;, `ttf&#8217;, `svg&#8217;. Note that <code>fontforge</code> (formerly called <code>pfaedit</code>) must be installed to generate any format except `pfa&#8217; or `pfb&#8217;. For generating `afm&#8217; you need either <code>fontforge</code> or <code>ghostscript</code>.</dd>
+<dt><code>&#8211;simplify</code></dt>
+<dd> This passes the created Type1 font to <code>fontforge</code> (formerly called <code>pfaedit</code>) to simplify and autohint it.</dd>
+<dt><code>&#8211;gffile=</code><i>FILE</i></dt>
+<dd> Use generic font file <i>FILE</i> instead of running Metafont. (GF is the default output format of Metafont.)</dd>
+<dt><code>-I</code> <i>DIR</i>, <code>&#8211;include=</code><i>DIR</i></dt>
+<dd> Add <i>DIR</i> to the current path for searching files.</dd>
+<dt><code>&#8211;glyphs=</code><i>LIST</i></dt>
+<dd> Process only these glyphs. <i>LIST</i> is a comma separated list of decimal numbers or ranges, for example `1-10,50,55,90-100&#8242;.</dd>
+<dt><code>&#8211;tfmfile=</code><i>FILE</i></dt>
+<dd> Use <i>FILE</i> for the TFM file. (The default is to use <i>fontname</i>.tfm).</dd>
+<dt><code>-e</code> <i>ENC</i>, <code>&#8211;encoding=</code><i>ENC</i></dt>
+<dd> Use encoding file <i>ENC</i>. Encoding files used by <code>mftrace</code> are basically in the GhostScript/dvips format, but you may use a special <code>.notavail</code> glyph name in order to tell mftrace not to process a specific glyph. If this option is not specified, <code>mftrace</code> tries to determine the encoding file automatically, from the encoding specified in the TFM file, the default being `tex256.enc&#8217;.</dd>
+<dt><code>&#8211;keep-trying</code></dt>
+<dd> Try to continue if external programs called by mftrace fail. If METAFONT crashes with overflow errors, but nevertheless outputs a GF file, try to process its output as is (useful for some buggy fonts, see above). If <code>potrace</code> or <code>autotrace</code> fail to trace a specific character, first try it with a less smoothed curve, and if that fails, skip the character. By default, <code>mftrace</code> leaves a file `trace-bug-<i>font</i>&#8211;<i>char</i>.pbm&#8217; and stops the process with a request to file a bugreport.</dd>
+<dt><code>&#8211;dos-kpath</code></dt>
+<dd> Try to use MikTeX&#8217;s version of <code>kpsewhich</code>.</dd>
+<dt><code>&#8211;potrace</code></dt>
+<dd> Use <code>potrace</code> for tracing bitmaps. The default is to use <code>potrace</code> if it is found, otherwise to use <code>autotrace</code>.</dd>
+<dt><code>&#8211;autotrace</code></dt>
+<dd> Use <code>autotrace</code> for tracing bitmaps.</dd>
+<dt><code>&#8211;no-afm</code></dt>
+<dd> Don&#8217;t read the AFM file to find font information.</dd>
+<dt><code>&#8211;noround</code></dt>
+<dd> Do not round coordinates of control points to integer values (use with <code>&#8211;grid</code>). Disabled by default.</dd>
+<dt><code>&#8211;grid=</code><i>GRID</i></dt>
+<dd> Set reciprocal grid size in em units multiplied by ratio magnification/1000. For example, `<code>&#8211;grid 10 &#8211;magnification 1000</code>&#8216; rounds coordinates of control points to 1/10th of the em unit. Useful simultaneously with the <code>&#8211;noround</code> option. Default <i>GRID</i> value is~1, i.e., round to integer. This option is only used with <code>potrace</code>.</dd>
+<dt><code>-D,&#8211;define=</code><i>SYMBOL=VALUE</i></dt>
+<dd> Set the font info <i>SYMBOL</i> to the given <i>VALUE</i>. For example, <code>-DFamilyName=Foo</code> sets the font family name to <i>Foo</i>. <code>mftrace</code> tries to fill in sensible default values for the `FontName&#8217;, `FamilyName&#8217;, `FullName&#8217; and `Weight&#8217; fields.</dd>
+<dt><code>-V, &#8211;verbose</code></dt>
+<dd> Be verbose.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program.</dd>
+<dt><code>-w, &#8211;warranty</code></dt>
+<dd> Show warranty and copyright.</dd></dl>
+<h2>COPYRIGHT</h2>
+<p> You may redistribute copies of mftrace under the terms of the GNU General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is NO WARRANTY, to the extent permitted by law.<br />
+ This manual page is copyright &#169; 2005,2006,2007 Julian Gilbey and is distributed under the GNU General Public License too.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-autotrace/">autotrace</a></code>(1), <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1), <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1).</p>
+<h2>AUTHOR</h2>
+<p> <code>mftrace</code> was written by Han-Wen Nienhuys &lt;hanwen [at] xs4all.nl&gt;. This manual page was originally written by Julian Gilbey &lt;jdg [at] debian.org&gt; and has been revised by Werner Lemberg &lt;wl [at] gnu.org&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

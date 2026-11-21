@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dh_installudev(1) · Linux Manual Pages</title>
+<meta name="description" content="dh_installudev – install udev rules files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dh_installudev/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dh_installudev(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dh_installudev &#8211; install udev rules files </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dh_installudev</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;name=</code><i>name</i>] [<code>&#8211;priority=</code><i>priority</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>dh_installudev</code> is a debhelper program that is responsible for installing <code>udev</code> rules files.</p>
+<h2>FILES</h2>
+<dl>
+<dt>debian/<i>package</i>.udev</dt>
+<dd> Installed into <i>lib/udev/rules.d/</i> in the package build directory.</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> When this parameter is used, <code>dh_installudev</code> looks for and installs files named debian/<i>package</i>.<i>name</i>.udev instead of the usual debian/<i>package</i>.udev.</dd>
+<dt><code>&#8211;priority=</code><i>priority</i></dt>
+<dd> Sets the priority the file. Default is 60.</dd></dl>
+<h2>NOTES</h2>
+<p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command. Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
+<p> This program is a part of debhelper.</p>
+<h2>AUTHOR</h2>
+<p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pagesize(1) · Linux Manual Pages</title>
+<meta name="description" content="pagesize – Print supported system page sizes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pagesize/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pagesize(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pagesize &#8211; Print supported system page sizes </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pagesize [options]</code></p>
+<h2>DESCRIPTION</h2>
+<p> The pagesize utility prints the page sizes of a page of memory in bytes, as returned by getpagesizes(3). This is useful when creating portable shell scripts, configuring huge page pools with hugeadm or launching applications to use huge pages with hugectl. </p>
+<p> If no parameters are specified, <code>pagesize</code> prints the system base page size as returned by <code>getpagesize()</code>. The following parameters affect what other pagesizes are displayed. </p>
+<dl>
+<dt><code>&#8211;huge-only, -H</code></dt>
+<dd>
+<p> Display all huge pages supported by the system as returned by <code>gethugepagesizes()</code>. </p>
+</dd><dt><code>&#8211;all, -a</code></dt>
+<dd>
+<p> Display all page sizes supported by the system. </p>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1),</i> <i><a href="/docs/linux/man/2-getpagesize/">getpagesize</a>(2),</i> <i>getpagesizes(3),</i> <i>gethugepagesizes(3),</i> <i>hugectl(7),</i> <i>hugeadm(7),</i> <i><a href="/docs/linux/man/7-libhugetlbfs/">libhugetlbfs</a>(7)</i> </p>
+<h2>AUTHORS</h2>
+<p> libhugetlbfs was written by various people on the libhugetlbfs-devel mailing list. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

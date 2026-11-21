@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devlink-dpipe(8) · Linux Manual Pages</title>
+<meta name="description" content="devlink-dpipe – devlink dataplane pipeline visualization">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-devlink-dpipe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>devlink-dpipe(8)</h1>
+
+
+
+
+
+<p>devlink-dpipe &#8211; devlink dataplane pipeline visualization</p>
+<h2>Synopsis</h2>
+<pre><code>devlink
+[ OPTIONS ]
+dpipe
+{ table | header }
+{ COMMAND |
+    help }
+OPTIONS := {
+    -V[ersion] }</code></pre>
+<p> <code>devlink dpipe table show </code><i>DEV</i> [ <code>name</code> <i>TABLE_NAME</i> ]<br />
+ <code>devlink dpipe table set </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br />
+ <code>devlink dpipe table dump </code><i>DEV</i> <code>name</code><i> TABLE_NAME </i><br />
+ <code>devlink dpipe header show </code><i>DEV</i><br />
+ <code>devlink dpipe help</code> </p>
+<h2>Description</h2>
+<h3>devlink dpipe table show &#8211; display devlink dpipe table attributes</h3>
+<dl>
+<dt><code>name</code><i> TABLE_NAME</i></dt>
+<dd>Specifies the table to operate on.</dd></dl>
+<h3>devlink dpipe table set &#8211; set devlink dpipe table attributes</h3>
+<dl>
+<dt><code>name</code><i> TABLE_NAME</i></dt>
+<dd>Specifies the table to operate on.</dd></dl>
+<h3>devlink dpipe table dump &#8211; dump devlink dpipe table entries</h3>
+<dl>
+<dt><code>name</code><i> TABLE_NAME</i></dt>
+<dd>Specifies the table to operate on.</dd></dl>
+<h3>devlink dpipe header show &#8211; display devlink dpipe header attributes</h3>
+<dl>
+<dt><code>name</code><i> TABLE_NAME</i></dt>
+<dd>Specifies the table to operate on. </dd>
+<h2>Examples</h2>
+<p>devlink dpipe table show pci/0000:01:00.0</p>
+<dl>
+<dd>Shows all dpipe tables on specified devlink device.</dd></dl>
+<p> devlink dpipe table show pci/0000:01:00.0 name mlxsw_erif</p>
+<dl>
+<dd>Shows mlxsw_erif dpipe table on specified devlink device.</dd></dl>
+<p> devlink dpipe table set pci/0000:01:00.0 name mlxsw_erif counters_enabled true</p>
+<dl>
+<dd>Turns on the counters on mlxsw_erif table.</dd></dl>
+<p> devlink dpipe table dump pci/0000:01:00.0 name mlxsw_erif</p>
+<dl>
+<dd>Dumps content of mlxsw_erif table.</dd></dl>
+<p> devlink dpipe header show pci/0000:01:00.0</p>
+<dl>
+<dd>Shows all dpipe headers on specified devlink device.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-devlink/">devlink</a></code>(8), <code><a href="/docs/linux/man/8-devlink-dev/">devlink-dev</a></code>(8), <code><a href="/docs/linux/man/8-devlink-monitor/">devlink-monitor</a></code>(8), </p>
+<h2>Author</h2>
+<p>Jiri Pirko &lt;jiri [at] mellanox.com&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmredisplaywidget(3) · Linux Manual Pages</title>
+<meta name="description" content="XmRedisplayWidget — Synchronously activates the expose method of a widget to draw its content">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmredisplaywidget/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmredisplaywidget(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>XmRedisplayWidget</code> &#8212; Synchronously activates the <code>expose</code> method of a widget to draw its content</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>voidXmRedisplayWidget</code>(
+<code>Widgetwidget</code>);</pre>
+<h2>Description</h2>
+<p>This function is a convenience routine that hides the details of the Xt internals to the application programmer by calling the <code>expose</code> method of the given widget with a well formed <code>Expose</code> event and <code>Region</code> corresponding to the total area of the widget. If the widget doesn&#8217;t have an <code>Expose</code> method, the function does nothing. </p>
+<p> This is primarily used in the context of X Printing if the programming model chosen by the application is <i>synchronous</i>; that is, it doesn&#8217;t rely of X Print events for the driving of page layout but wants to completely control the sequence of rendering requests. </p>
+<p> <code>XmRedisplayWidget</code> doesn&#8217;t clear the widget window prior to calling the <code>expose</code> method, since this is handled by calls to <code>XpStartPage</code> .</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>The widget to redisplay.</dd></dl>
+<h2>Return Value</h2>
+<p>None.</p>
+<h2>Errors/Warnings</h2>
+<p>Not applicable</p>
+<h2>Examples</h2>
+<p>In the following, a simple application wants to print the content of a multi-page text widget (similar to <code>dtpad</code>). </p>
+<pre><tt>PrintOKCallback(print_dialog...)
+/*-------------*/
+{
+ pshell = XmPrintSetup (print_dialog, pbs-&gt;print_screen,
+ &quot;Print&quot;, NULL, 0);
+ XpStartJob(XtDisplay(pshell), XPSpool);
+ /**** here I realize the shell, get its size, create my widget
+ hierarchy: a bulletin board, and then a text widget,
+ that I stuff with the video text widget buffer */
+ /* get the total number of pages to print */
+ XtVaGetValues(ptext, XmNrows, &amp;prows,
+ XmNtotalLines, n_lines, NULL);
+ n_pages = n_lines / prows;
+ /***** now print the pages in a loop */
+ for (cur_page=0; cur_page != n_pages; cur_page++) {
+ XpStartPage(XtDisplay(pshell), XtWindow(pshell), False);
+ XmRedisplayWidget(ptext); /* do the drawing */
+ XpEndPage(XtDisplay(pshell));
+ XmTextScroll(ptext, prows); /* get ready for next page */
+ }
+ /***** I'm done */
+ XpEndJob(XtDisplay(pshell));
+}</tt></pre>
+<p>Of course, one could change the above code to include it in a <code>fork()</code> branch so that the main program is not blocked while printing is going on. Another way to achieve a &quot;print-in-the-background&quot; effect is to use an Xt workproc. Using the same sample application, that gives us: </p>
+<pre><tt>Boolean
+PrintOnePageWP(XtPointer npages) /* workproc */
+/*-------------*/
+{
+ static int cur_page = 0;
+ cur_page++;
+ XpStartPage(XtDisplay(pshell), XtWindow(pshell), False);
+ XmRedisplayWidget(ptext); /* do the drawing */
+ XpEndPage(XtDisplay(pshell));
+ XmTextScroll(ptext, prows); /* get ready for next page */
+ if (cur_page == n_pages) { /***** I'm done */
+ XpEndJob(XtDisplay(pshell));
+ XtDestroyWidget(pshell);
+ XtCloseDisplay(XtDisplay(pshell));
+ }
+ return (cur_page == n_pages);
+}
+PrintOKCallback(...)
+/*-------------*/
+{
+ pshell = XmPrintSetup (widget, pbs-&gt;print_screen,
+ &quot;Print&quot;, NULL, 0);
+ XpStartJob(XtDisplay(pshell), XPSpool);
+ /**** here I get the size of the shell, create my widget
+ hierarchy: a bulletin board, and then a text widget,
+ that I stuff with the video text widget buffer */
+ /* get the total number of pages to print */
+ /* ... same code as above example */
+ /***** print the pages in the background */
+ XtAppAddWorkProc(app_context, PrintOnePageWP, n_pages);
+}</tt></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xmprintsetup/">XmPrintSetup</a></code>(3), <code><a href="/docs/linux/man/3-xmprintshell/">XmPrintShell</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

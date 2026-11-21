@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dillo(1) · Linux Manual Pages</title>
+<meta name="description" content="dillo – web browser">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dillo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dillo(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> dillo &#8211; web browser</p>
+<h2>SYNOPSIS</h2>
+<p> <code>dillo</code> [<i>OPTION</i>]&#8230; [<code>&#8212;</code>] [<i>URL</i>|<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> Dillo is a lightweight graphical web browser that aims to be secure. It handles HTTP internally, and FILE, FTP, and DATA URIs are handled through a plugin system (dpi). In addition, <i>INSECURE</i> HTTPS support can be enabled. Both FTP and Dillo&#8217;s download manager use the <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) downloader. </p>
+<p> Dillo displays HTML, text, PNG, JPEG, and GIF files. It handles cookies, HTTP authentication (basic and digest), proxying (basic), and some CSS. </p>
+<p> Framesets are displayed as links to frames, and there is currently no support for javascript or video. </p>
+<p> In order to use the hyphenation feature, pattern files from CTAN need to be installed to <i>/usr/lib/dillo/hyphenation/</i>. This can be done with the script <i>dillo-install-hyphenation</i>. Call it with ISO-639-1 language codes as arguments, or without arguments to get more help.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f</code>, <code>&#8211;fullwindow</code></dt>
+<dd> Start in full window mode: hide address bar, navigation buttons, menu, and status bar.</dd>
+<dt><code>-g</code>, <code>-geometry </code><i>GEO</i></dt>
+<dd> Set initial window position where <i>GEO</i> is <i>W</i><code>x</code><i>H</i>[{<code>+-</code>}<i>X</i>{<code>+-</code>}<i>Y</i>].</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display this help text and exit.</dd>
+<dt><code>-l</code>, <code>&#8211;local</code></dt>
+<dd> Don&#8217;t load images or stylesheets, or follow redirections, for these FILEs or URLs. This is intended for use with HTML email.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version info and exit.</dd>
+<dt><code>-x</code>, <code>&#8211;xid </code><i>XID</i></dt>
+<dd> Open first Dillo window in an existing window whose window ID is <i>XID</i>.</dd></dl>
+<h2>EXIT STATUS</h2>
+<dl>
+<dt><code>0</code></dt>
+<dd> No error.</dd>
+<dt><code>1</code></dt>
+<dd> Internal error.</dd>
+<dt><code>2</code></dt>
+<dd> Error in command line arguments.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>HOME </code>(or <code>HOMEDRIVE </code>and <code>HOMEPATH </code>on Cygwin)</dt>
+<dd> User&#8217;s home directory.</dd>
+<dt><code>http_proxy</code></dt>
+<dd> URL of proxy to send HTTP traffic through.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><i>dpid</i></dt>
+<dd> Dillo plugin daemon</dd>
+<dt><i>dpidc</i></dt>
+<dd> Control program for dpid.</dd>
+<dt><i>~/.dillo/bm.txt</i></dt>
+<dd> User bookmarks</dd>
+<dt><i>~/.dillo/certs/</i></dt>
+<dd> Saved certificates for HTTPS.</dd>
+<dt><i>~/.dillo/cookies.txt</i></dt>
+<dd> Stored cookies</dd>
+<dt><i>~/.dillo/cookiesrc</i></dt>
+<dd> Cookie settings</dd>
+<dt><i>~/.dillo/dillorc</i></dt>
+<dd> Configuration file.</dd>
+<dt><i>~/.dillo/domainrc</i></dt>
+<dd> Rules for cross-domain requests.</dd>
+<dt><i>~/.dillo/dpid_comm_keys</i></dt>
+<dd> Keys used in dpi daemon communication.</dd>
+<dt><i>~/.dillo/dpidrc</i></dt>
+<dd> Contains name of directory containing dpis, and associates dpi files with protocols.</dd>
+<dt><i>~/.dillo/keysrc</i></dt>
+<dd> Keybindings.</dd>
+<dt><i>~/.dillo/style.css</i></dt>
+<dd> User style sheet.</dd>
+<dt><i>/usr/lib/dillo/hyphenation/</i></dt>
+<dd> Hyphenation pattern files.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
+<p> Dillo website: <code><a rel="nofollow" href="http://www.dillo.org">http://www.dillo.org</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

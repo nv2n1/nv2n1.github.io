@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nss-myhostname(8) · Linux Manual Pages</title>
+<meta name="description" content="nss-myhostname, libnss_myhostname.so.2 – Provide hostname resolution for the locally configured system hostname.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nss-myhostname/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nss-myhostname(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>nss-myhostname, libnss_myhostname.so.2 &#8211; Provide hostname resolution for the locally configured system hostname.</p>
+<h2>Synopsis</h2>
+<p>libnss_myhostname.so.2</p>
+<h2>Description</h2>
+<p><code>nss-myhostname</code> is a plug-in module for the GNU Name Service Switch (NSS) functionality of the GNU C Library (<code>glibc</code>), primarily providing hostname resolution for the locally configured system hostname as returned by <code><a href="/docs/linux/man/2-gethostname/">gethostname</a></code>(2). The precise hostnames resolved by this module are: </p>
+<dl>
+<dd>&bull; The local, configured hostname is resolved to all locally configured IP addresses ordered by their scope, or &#8212; if none are configured &#8212; the IPv4 address 127.0.0.2 (which is on the local loopback) and the IPv6 address ::1 (which is the local host).</dd></dl>
+<dl>
+<dd>&bull; The hostnames &quot;localhost&quot; and &quot;localhost.localdomain&quot; (as well as any hostname ending in &quot;.localhost&quot; or &quot;.localhost.localdomain&quot;) are resolved to the IP addresses 127.0.0.1 and ::1.</dd></dl>
+<dl>
+<dd>&bull; The hostname &quot;_gateway&quot; is resolved to all current default routing gateway addresses, ordered by their metric. This assigns a stable hostname to the current gateway, useful for referencing it independently of the current network configuration state.</dd></dl>
+<p> Various software relies on an always-resolvable local hostname. When using dynamic hostnames, this is traditionally achieved by patching /etc/hosts at the same time as changing the hostname. This is problematic since it requires a writable /etc file system and is fragile because the file might be edited by the administrator at the same time. With <code>nss-myhostname</code> enabled, changing /etc/hosts is unnecessary, and on many systems, the file becomes entirely optional. </p>
+<p> To activate the NSS modules, add &quot;myhostname&quot; to the line starting with &quot;hosts:&quot; in /etc/nsswitch.conf. </p>
+<p> It is recommended to place &quot;myhostname&quot; last in the nsswitch.conf&#8217; &quot;hosts:&quot; line to make sure that this mapping is only used as fallback, and that any DNS or /etc/hosts based mapping takes precedence.</p>
+<h2>Example</h2>
+<p>Here is an example /etc/nsswitch.conf file that enables <code>nss-myhostname</code> correctly: </p>
+<pre><code>passwd:         compat mymachines systemd
+group:          compat mymachines systemd
+shadow:         compat
+hosts:          files mymachines resolve [!UNAVAIL=return] dns myhostname
+networks:       files
+protocols:      db files
+services:       db files
+ethers:         db files
+rpc:            db files
+netgroup:       nis</code></pre>
+<p> To test, use <code>glibc</code>&#8216;s <code>getent</code> tool:</p>
+<dl>
+<dd>
+<pre>$ getent ahosts `hostname`
+::1 STREAM omega
+::1 DGRAM
+::1 RAW
+127.0.0.2 STREAM
+127.0.0.2 DGRAM
+127.0.0.2 RAW</pre>
+</dd></dl>
+<p> In this case, the local hostname is <i>omega</i>.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-nss-systemd/">nss-systemd</a></code>(8), <code>nss-resolve</code>(8), <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8), <code><a href="/docs/linux/man/5-nsswitch-conf/">nsswitch.conf</a></code>(5), <code><a href="/docs/linux/man/1-getent/">getent</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

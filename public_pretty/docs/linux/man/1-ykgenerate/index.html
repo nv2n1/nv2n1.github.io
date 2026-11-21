@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ykgenerate(1) · Linux Manual Pages</title>
+<meta name="description" content="ykgenerate – construct and encrypt an OTP from given data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ykgenerate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ykgenerate(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ykgenerate &#8211; construct and encrypt an OTP from given data </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ykgenerate</code> <i>AESKEY</i> <i>YK_INTERNALNAME</i> <i>YK_COUNTER</i> <i>YK_LOW</i> <i>YK_HIGH</i> <i>YK_USE</i></p>
+<h2>DESCRIPTION</h2>
+<p> Generate OTPs by encrypting given values under the given encryption key.</p>
+<h2>OPTIONS</h2>
+<p> <code>AESKEY</code></p>
+<dl>
+<dt>
+</dt><dd> The 16-character AES-128 key to use in hex.</dd></dl>
+<p> <code>YK_INTERNALNAME</code></p>
+<dl>
+<dt>
+</dt><dd> Hex encoded internal identity (48 bit).</dd></dl>
+<p> <code>YK_COUNTER</code></p>
+<dl>
+<dt>
+</dt><dd> Hex encoded counter (16 bit).</dd></dl>
+<p> <code>YK_LOW</code></p>
+<dl>
+<dt>
+</dt><dd> Hex encoded timestamp low (16 bit).</dd></dl>
+<p> <code>YK_HIGH</code></p>
+<dl>
+<dt>
+</dt><dd> Hex encoded timestamp high (8bit).</dd></dl>
+<p> <code>YK_USE</code></p>
+<dl>
+<dt>
+</dt><dd> Hex encoded use (8 bit).</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Typical usage of the tool is as follows. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+ykgenerate ecde18dbe76fbd0c33330f1c354871db 8792ebfe26cc 0013 c0a8 00 10
+</pre>
+</dd></dl>
+<p> Use <a href="/docs/linux/man/1-ykparse/">ykparse</a>(1) to decode the resulting OTP.</p>
+<h2>SEE ALSO</h2>
+<p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building and Installing a Linux Kernel from Source - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/compile-install-linux-kernel-source-code-existing-linux-os/">
+  <meta name="description" content="Grab a release from kernel.org. Recent stable versions (6.x and later) are recommended for production systems:
+wget …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Building and Installing a Linux Kernel from Source">
+  <meta property="og:url" content="https://www.systutorials.com/compile-install-linux-kernel-source-code-existing-linux-os/">
+  <meta property="og:description" content="Grab a release from kernel.org. Recent stable versions (6.x and later) are recommended for production systems:
+wget …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>Building and Installing a Linux Kernel from Source</h1>
+        <time class="post-date" datetime="2017-03-18T11:32:13Z">March 18, 2017</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Grab a release from <a href="https://www.kernel.org" rel="nofollow noopener" target="_blank">kernel.org</a>. Recent stable versions (6.x and later) are recommended for production systems:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.gz
+</span></span><span class="line"><span class="cl">tar xf linux-6.12.tar.gz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> linux-6.12/
+</span></span></code></pre></div><p>If <code>wget</code> isn’t available, use <code>curl</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -O https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.gz
+</span></span></code></pre></div><h3 id="verify-the-tarball">Verify the tarball</h3>
+<p>Always verify the kernel’s integrity using checksums and signatures published on kernel.org. This is essential for production systems:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.gz.asc
+</span></span><span class="line"><span class="cl">gpg --verify linux-6.12.tar.gz.asc linux-6.12.tar.gz
+</span></span></code></pre></div><p>You should see output like <code>gpg: Good signature from &quot;Linux Kernel Release Signing Key&quot;</code>. If GPG isn’t configured with kernel.org’s public key, import it first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpg --keyserver keyserver.ubuntu.com --recv-keys 647F28654894E3BD457199BE38DBBDC86092693E
+</span></span></code></pre></div><h2 id="install-build-dependencies">Install build dependencies</h2>
+<p>Required packages vary by distribution. On RHEL/CentOS/Rocky/Fedora:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install gcc make ncurses-devel openssl-devel elfutils-devel <span class="se">\
+</span></span></span><span class="line"><span class="cl">  flex bison pahole
+</span></span></code></pre></div><p>On Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install build-essential ncurses-dev libssl-dev libelf-dev <span class="se">\
+</span></span></span><span class="line"><span class="cl">  flex bison dwarves
+</span></span></code></pre></div><p>The <code>elfutils-devel</code>/<code>libelf-dev</code> packages handle BTF (BPF Type Format) support, now standard in modern kernels. The <code>pahole</code>/<code>dwarves</code> packages are required for BTF generation during the build. <code>flex</code> and <code>bison</code> are needed for kernel configuration parsing.</p>
+<p>Verify your GCC version matches what your distribution uses for its kernel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc --version
+</span></span></code></pre></div><p>For development work or building external kernel modules, also install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS/Rocky</span>
+</span></span><span class="line"><span class="cl">sudo dnf install kernel-devel
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span>
+</span></span></code></pre></div><h2 id="prepare-a-kernel-configuration">Prepare a kernel configuration</h2>
+<p>Compiling a kernel from scratch requires extensive knowledge of hardware and subsystems. Instead, reuse your existing kernel’s configuration as a starting point:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /boot/config-*
+</span></span><span class="line"><span class="cl">cp /boot/config-<span class="k">$(</span>uname -r<span class="k">)</span> .config
+</span></span></code></pre></div><p>Update the configuration for your target kernel version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make oldconfig
+</span></span></code></pre></div><p>This processes your old config against new kernel options, prompting you only for settings that didn’t exist in your previous version. For non-interactive use (accepts defaults for new options):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make olddefconfig
+</span></span></code></pre></div><h3 id="interactive-configuration">Interactive configuration</h3>
+<p>If you need to customize options, use a configuration tool. The modern ncurses interface is recommended:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make nconfig
+</span></span></code></pre></div><p>This provides search functionality (press <code>/</code>), which is much faster than navigating through <code>menuconfig</code> on large configurations. You can toggle options with Space (Y for built-in, M for module, N to disable).</p>
+<p>Alternative interfaces:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make menuconfig    <span class="c1"># classic ncurses interface</span>
+</span></span><span class="line"><span class="cl">make xconfig       <span class="c1"># Qt-based GUI (requires X11)</span>
+</span></span></code></pre></div><p>Both will validate settings and warn about incompatibilities:</p>
+<pre><code>.config:444:warning: symbol value 'm' invalid for MICROCODE
+.config:618:warning: symbol value 'm' invalid for CPU_FREQ_STAT
+</code></pre>
+<p>These warnings are usually harmless—the build process will automatically disable invalid options.</p>
+<p>To review your current configuration without editing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="s2">&#34;^CONFIG&#34;</span> .config <span class="p">|</span> head -30
+</span></span></code></pre></div><h2 id="build-and-install">Build and install</h2>
+<p>Compile using all available CPU cores to significantly reduce build time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make -j <span class="k">$(</span>nproc<span class="k">)</span>
+</span></span></code></pre></div><p>This spawns one job per CPU core. On a 16-core system, this is dramatically faster than single-threaded compilation.</p>
+<p>Install the modules and kernel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo make modules_install
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><p>To combine these steps with error handling:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make -j <span class="k">$(</span>nproc<span class="k">)</span> <span class="o">&amp;&amp;</span> sudo make modules_install <span class="o">&amp;&amp;</span> sudo make install
+</span></span></code></pre></div><p>This runs sequentially and fails fast if any step breaks. Successful completion shows:</p>
+<pre><code>INSTALL /lib/firmware/...
+DEPMOD  6.12.0
+sh ./arch/x86/boot/install.sh 6.12.0 arch/x86/boot/bzImage
+        System.map &quot;/boot&quot;
+</code></pre>
+<p>The <code>make install</code> step updates your bootloader automatically on most distributions.</p>
+<h3 id="verify-the-bootloader-entry">Verify the bootloader entry</h3>
+<p><strong>For GRUB 2 (RHEL/CentOS/Rocky):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -A3 <span class="s2">&#34;6.12.0&#34;</span> /boot/grub2/grub.cfg
+</span></span><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span></code></pre></div><p><strong>For GRUB 2 (Debian/Ubuntu):</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -A3 <span class="s2">&#34;6.12.0&#34;</span> /boot/grub/grub.cfg
+</span></span><span class="line"><span class="cl">sudo update-grub
+</span></span></code></pre></div><p><strong>For systemd-boot</strong> (common on newer installations):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /boot/loader/entries/
+</span></span><span class="line"><span class="cl">cat /boot/loader/loader.conf
+</span></span></code></pre></div><p>Check if an entry exists for your new kernel version in <code>/boot/loader/entries/</code>.</p>
+<h2 id="boot-the-new-kernel">Boot the new kernel</h2>
+<p>Reboot your system:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div><p>During startup, select the new kernel from the GRUB menu, or set it as default:</p>
+<p><strong>RHEL/CentOS/Rocky:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo grub2-set-default <span class="s2">&#34;Rocky Linux (6.12.0) 9&#34;</span>
+</span></span><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span></code></pre></div><p><strong>Debian/Ubuntu:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo update-grub
+</span></span></code></pre></div><p><strong>systemd-boot:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo bootctl set-default linux-6.12.0
+</span></span></code></pre></div><p>After rebooting, verify the running kernel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uname -r
+</span></span><span class="line"><span class="cl">uname -a
+</span></span></code></pre></div><p>Check that modules loaded correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dmesg <span class="p">|</span> grep -i <span class="s2">&#34;modules&#34;</span>
+</span></span><span class="line"><span class="cl">lsmod <span class="p">|</span> head -10
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="build-fails-with-missing-headers">Build fails with missing headers</h3>
+<p>Ensure build tools are installed. RHEL systems may need <code>kernel-devel</code> for in-tree module builds. If you skipped distro-provided kernel headers, some drivers won’t compile. Reinstall dependencies if needed.</p>
+<h3 id="compilation-fails-partway-through">Compilation fails partway through</h3>
+<p>Common causes include missing dependencies or insufficient disk space. A full kernel build can consume 15–20GB in <code>/usr/src</code>. Check available space:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">du -sh linux-6.12/
+</span></span><span class="line"><span class="cl">df -h /
+</span></span></code></pre></div><p>If disk space is low, clean previous builds:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">make distclean
+</span></span></code></pre></div><p>Then restart the build.</p>
+<h3 id="module-signature-issues">Module signature issues</h3>
+<p>Newer kernels enforce module signing by default. If external module builds fail with signature errors, either disable signing in <code>.config</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/CONFIG_MODULE_SIG=y/CONFIG_MODULE_SIG=n/&#39;</span> .config
+</span></span><span class="line"><span class="cl">make clean
+</span></span><span class="line"><span class="cl">make -j <span class="k">$(</span>nproc<span class="k">)</span>
+</span></span></code></pre></div><p>Then rebuild. For custom kernels, module signing often causes friction—disabling it is usually the practical choice unless you have specific security requirements (like Secure Boot).</p>
+<h3 id="grub-doesnt-find-the-new-kernel">GRUB doesn’t find the new kernel</h3>
+<p>Manually regenerate the bootloader configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># RHEL/CentOS</span>
+</span></span><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo update-grub
+</span></span></code></pre></div><h3 id="compilation-takes-too-long">Compilation takes too long</h3>
+<p>Use <code>make -j $(nproc)</code> to parallelize across all cores. A typical kernel takes 10–30 minutes on modern hardware depending on configuration. To speed things up further, disable unnecessary drivers in <code>nconfig</code>:</p>
+<ul>
+<li>Disable unused hardware support (SCSI, storage controllers you don’t use)</li>
+<li>Remove unneeded filesystems</li>
+<li>Disable network protocols not in use</li>
+</ul>
+<p>Each of these can shave several minutes off the build.</p>
+<h3 id="reverting-to-the-old-kernel">Reverting to the old kernel</h3>
+<p>If the new kernel doesn’t work, reboot and select your previous kernel from GRUB. Once you’ve confirmed the old kernel works, remove the broken one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm /boot/vmlinuz-6.12.0 /boot/initramfs-6.12.0.img /boot/System.map-6.12.0
+</span></span><span class="line"><span class="cl">sudo update-grub  <span class="c1"># or grub2-mkconfig on RHEL/CentOS</span>
+</span></span></code></pre></div><p>The kernel modules remain in <code>/lib/modules/6.12.0/</code> until you manually delete them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm -rf /lib/modules/6.12.0/
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

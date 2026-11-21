@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bombardment(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bombardment/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bombardment(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>bombardment - Run siege with an ever-increasing number of users</p>
+<h3><font SIZE="-1">SYNOPSIS</font></h3>
+<p>bombardment [urlfile] [clients] [increment] [trials] [delay] bombardment urls.txt 5 10 20 1</p>
+<h2>DESCRIPTION</h2>
+<p>bombardment is part of the <tt>siege</tt> distribution. It calls <tt>siege</tt> with an initial number of clients. When that run finishes, it immediately calls siege again with that number of clients plus the increment. It does this the number of times specified in the fourth argument.</p>
+<h2>OPTIONS</h2>
+<p>urlfile
+ <wbr>The name of the file containing one or more URLs for siege to test.</p>
+<p>clients
+ <wbr>The initial number of clients to be used on the first run.</p>
+<p>increment
+ <wbr>The number of clients to add to each ensuing run.</p>
+<p>trials
+ <wbr>The number of times to run siege.</p>
+<p>delay
+ <wbr>The is the amount of time, in seconds, that each client will wait
+ <wbr>between requests. <wbr> <wbr>The <wbr><tt>siege</tt> <wbr>default is overridden by bombardment</p>
+<h2>SEE ALSO</h2>
+<p><i><a HREF="/docs/linux/man/1-siege/">siege</a></i>(1), <i><a HREF="/docs/linux/man/1-siege2csv/">siege2csv</a></i>(1)</p>
+<h2>AUTHOR</h2>
+<p>Written by Peter Hutnick, et al.</p>
+<h2>Index</h2>
+<dt><a HREF="#lbAD">DESCRIPTION</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAE">OPTIONS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAF">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAG">AUTHOR</a>
+</dt><dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

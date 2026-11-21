@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ecore_x_shape_group(3) · Linux Manual Pages</title>
+<meta name="description" content="X Shape extension – Functions that use the shape extension of the X server to change shape of given windows.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ecore_x_shape_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ecore_x_shape_group(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>X Shape extension &#8211; Functions that use the shape extension of the X server to change shape of given windows. </p>
+<h3>Functions</h3>
+<p>EAPI void <code>ecore_x_window_shape_mask_set</code> (Ecore_X_Window dest_win, Ecore_X_Pixmap source_mask)<br />
+ <i>Sets the shape of the given window to the given pixmap. </i><br />
+ EAPI void <code>ecore_x_window_shape_rectangle_set</code> (Ecore_X_Window dest_win, int x, int y, int width, int height)<br />
+ <i>Sets the shape of the given window to a rectangle. </i><br />
+ EAPI void <code>ecore_x_window_shape_rectangles_get_prefetch</code> (Ecore_X_Window window)<br />
+ <i>Sends the ShapeGetRectangles request. </i><br />
+ EAPI void <code>ecore_x_window_shape_rectangles_get_fetch</code> (void)<br />
+ <i>Gets the reply of the ShapeGetRectangles request sent by </i><code>ecore_x_window_shape_rectangles_get_prefetch()</code>.<br />
+ EAPI Ecore_X_Rectangle * <code>ecore_x_window_shape_rectangles_get</code> (Ecore_X_Window window __UNUSED__, int *num_ret)<br />
+ <i>To document. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that use the shape extension of the X server to change shape of given windows.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI void ecore_x_window_shape_mask_set (Ecore_X_Window dest_win, Ecore_X_Pixmap source_mask)</h3>
+<p>Sets the shape of the given window to the given pixmap. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>dest_win</i> The given window.<br />
+ <i>source_mask</i> A 2-bit depth pixmap that provides the new shape of the window.</dd></dl>
+<p> Sets the shape of the window dest_win to the pixmap source_mask.</p>
+<h3>EAPI void ecore_x_window_shape_rectangle_set (Ecore_X_Window dest_win, int x, int y, int width, int height)</h3>
+<p>Sets the shape of the given window to a rectangle. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>dest_win</i> The given window.<br />
+ <i>x</i> The X coordinate of the top left corner of the rectangle.<br />
+ <i>y</i> The Y coordinate of the top left corner of the rectangle.<br />
+ <i>width</i> The width of the rectangle.<br />
+ <i>height</i> The height of the rectangle.</dd></dl>
+<p> Sets the shape of the window dest_win to a rectangle defined by x, y, width and height.</p>
+<h3>EAPI Ecore_X_Rectangle* ecore_x_window_shape_rectangles_get (Ecore_X_Window window __UNUSED__, int * num_ret)</h3>
+<p>To document. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>window</i> Unused.<br />
+ <i>num_ret</i> To document.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>To document.</dd></dl>
+<p> To use this function, you must call before, and in order, <code>ecore_x_window_shape_rectangles_get_prefetch()</code>, which sends the ShapeGetRectangles request, then <code>ecore_x_window_shape_rectangles_get_fetch()</code>, which gets the reply.</p>
+<h3>EAPI void ecore_x_window_shape_rectangles_get_prefetch (Ecore_X_Window window)</h3>
+<p>Sends the ShapeGetRectangles request. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>window</i> Requested window.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Ecore from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nitrate(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nitrate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nitrate(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p>nitrate - Command line interpreter for the Nitrate Python API</p>
+<h2>SYNOPSIS</h2>
+<p>nitrate</p>
+<h2>DESCRIPTION</h2>
+<p>python-nitrate provides a high-level Python interface to the Nitrate test case management system. The package also provides standalone script &rsquo;nitrate&rsquo; which allows easy experimenting with the interface directly from the Python interpreter by importing all available objects and enabling the readline support.</p>
+<p>In short, after setting your configuration you can easily manipulate all Nitrate objects from the command line, for example:</p>
+ <pre>
+$ nitrate
+&gt;&gt;&gt; for case in TestRun(123):
+...     print case
+</pre>
+<h2>CONFIGURATION</h2>
+<p>To be able to contact the Nitrate server a minimal user config file ~/.nitrate has to be provided in the user home directory:</p>
+ <pre>
+[nitrate]
+url = <a rel="nofollow" HREF="https://nitrate.server/xmlrpc/">https://nitrate.server/xmlrpc/</a>
+</pre>
+<h2>SEE ALSO</h2>
+<p>python-nitrate nitrate-notes</p>
+<h2>AUTHOR</h2>
+<p>Petr Šplíchal &lt;<i>psplicha [at] redhat.com</i>&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

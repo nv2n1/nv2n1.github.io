@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hh(1) · Linux Manual Pages</title>
+<meta name="description" content="hh – easily view, navigate, sort and use your command history with shell history suggest box.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-hh/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>hh(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>hh</code> &#8211; easily view, navigate, sort and use your command history with shell history suggest box.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>hh [option] [arg1] [arg2]&#8230; </code></p>
+<dl>
+<dt>
+</dt><dd> <code>hstr [option] [arg1] [arg2]&#8230;</code></dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>hh</code> uses shell history to provide suggest box like functionality for commands used in the past. By default it parses .bash-history file that is filtered as you type a command substring. Commands are not just filtered, but also ordered by a ranking algorithm that considers number of occurences, length and timestamp. Favorite and frequently used commands can be bookmarked. In addition <code>hh</code> allows removal of commands from history &#8211; for instance with a typo or with a sensitive content.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show help</dd>
+<dt><code>-n &#8211;non-interactive</code></dt>
+<dd> Print filtered history on standard output and exit</dd>
+<dt><code>-f &#8211;favorites</code></dt>
+<dd> Show favorites view immediately</dd>
+<dt><code>-s &#8211;show-configuration</code></dt>
+<dd> Show configuration that can be added to ~/.bashrc</dd>
+<dt><code>-b &#8211;show-blacklist</code></dt>
+<dd> Show blacklist of commands to be filtered out before history processing</dd>
+<dt><code>-V &#8211;version</code></dt>
+<dd> Show version information</dd></dl>
+<h2>KEYS</h2>
+<dl>
+<dt><code>pattern</code></dt>
+<dd> Type to filter shell history.</dd>
+<dt><code>Ctrl-e</code></dt>
+<dd> Toggle regular expression and substring search.</dd>
+<dt><code>Ctrl-t</code></dt>
+<dd> Toggle case sensitive search.</dd>
+<dt><code>Ctrl-/</code>, <code>Ctrl-7</code></dt>
+<dd> Rotate view of history as provided by Bash, ranked history ordered by the number of occurences/length/timestamp and favorites.</dd>
+<dt><code>Ctrl-f</code></dt>
+<dd> Add currently selected command to favorites.</dd>
+<dt><code>Ctrl-l</code></dt>
+<dd> Make search pattern lowercase or uppercase.</dd>
+<dt><code>Ctrl-r</code>, <code>UP</code> arrow, <code>DOWN</code> arrow, <code>Ctrl-n</code>, <code>Ctrl-p</code></dt>
+<dd> Navigate in the history list.</dd>
+<dt><code>TAB</code>, <code>RIGHT</code> arrow</dt>
+<dd> Choose currently selected item for completion and let user to edit it on the command prompt.</dd>
+<dt><code>LEFT</code> arrow</dt>
+<dd> Choose currently selected item for completion and let user to edit it in editor (fix command).</dd>
+<dt><code>ENTER</code></dt>
+<dd> Choose currently selected item for completion and execute it.</dd>
+<dt><code>DEL</code></dt>
+<dd> Remove currently selected item from the shell history.</dd>
+<dt><code>BACSKSPACE</code>, <code>Ctrl-h</code></dt>
+<dd> Delete last pattern character.</dd>
+<dt><code>Ctrl-u</code>, <code>Ctrl-w</code></dt>
+<dd> Delete pattern and search again.</dd>
+<dt><code>Ctrl-x</code></dt>
+<dd> Write changes to shell history and exit.</dd>
+<dt><code>Ctrl-g</code></dt>
+<dd> Exit with empty prompt.</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> <code>hh</code> defines the following environment variables:</p>
+<dl>
+<dt><code>HH_CONFIG</code></dt>
+<dd> Configuration options: </dd>
+<p> <i>hicolor</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Get more colors with this option&nbsp;<wbr>(default is monochromatic). </p>
+<p> <i>monochromatic</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Ensure black and white view. </p>
+<p> <i>regexp</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Filter command history using regular expressions&nbsp;<wbr>(substring match is default)&nbsp;<wbr> </p>
+<p> <i>substring</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Filter command history using substring. </p>
+<p> <i>keywords</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Filter command history using keywords &#8211; item matches if contains all keywords in pattern in any order. </p>
+<p> <i>casesensitive</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Make history filtering case sensitive&nbsp;<wbr>(it&#8217;s case insensitive by default).&nbsp;<wbr> </p>
+<p> <i>rawhistory</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Show normal history as a default view&nbsp;<wbr>(metric-based view is shown otherwise).&nbsp;<wbr> </p>
+<p> <i>favorites</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Show favorites as a default view&nbsp;<wbr>(metric-based view is shown otherwise). </p>
+<p> <i>blacklist</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Load list of commands to skip when processing history from&nbsp;<wbr>~/.hh_blacklist&nbsp;<wbr>(built-in blacklist used otherwise). </p>
+<p> <i>bigkeysskip</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Skip big history entries i.e. very long lines&nbsp;<wbr>(default). </p>
+<p> <i>bigkeysfloor</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Use different sorting slot for big keys when building metrics-based view&nbsp;<wbr>(big keys are skipped by default). </p>
+<p> <i>bigkeysexit</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Exit&nbsp;<wbr>(fail)&nbsp;<wbr>on presence of a big key in history&nbsp;<wbr>(big keys are skipped by default). </p>
+<p> <i>warning</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Show warning. </p>
+<p> <i>debug</i><br />
+&nbsp;<wbr>&nbsp;<wbr>Show debug information. </p>
+<p> Example:<br />
+&nbsp;<wbr>&nbsp;<wbr><code>export HH_CONFIG=hicolor,regexp,rawhistory</code> </p>
+<dt><code>HH_PROMPT</code></dt>
+<dd> Change prompt string which is <code>user [at] host$</code> by default. </dd>
+<p> Example:<br />
+&nbsp;<wbr>&nbsp;<wbr><code>export HH_PROMPT=&quot;$&nbsp;<wbr>&quot;</code> </p>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt><code>~/.hh_favorites</code></dt>
+<dd>
+&nbsp;<wbr>Bookmarked favorite commands.</dd>
+<dt><code>~/.hh_blacklist</code></dt>
+<dd>
+&nbsp;<wbr>Command blacklist. </dd>
+</dl>
+<h2>BASH CONFIGURATION</h2>
+<p> Optionally add the following lines to ~/.bashrc: </p>
+<pre><code>
+export HH_CONFIG = hicolor #get more colors
+                       shopt -
+                   s histappend #append new history items to.bash_history export HISTCONTROL = ignorespace #leading space hides commands from history export HISTFILESIZE = 10000 #increase history file size(default is 500) export HISTSIZE = $
+{
+    HISTFILESIZE
+}
+#increase history size(default is 500) export PROMPT_COMMAND = "history -a; history -n; ${PROMPT_COMMAND}"
+#if this is interactive shell, then bind hh to Ctrl - r(for Vi mode check doc)
+    if[[$ - = ~ .*i.*]];
+then bind '"\C-r": "\C-a hh \C-j"';
+fi
+</code></pre>
+<p> The prompt command ensures synchronization of the history between BASH memory and history file.</p>
+<h2>ZSH CONFIGURATION</h2>
+<p> Optionally add the following lines to ~/.zshrc: </p>
+<pre>
+export HISTFILE=~/.zsh_history   # ensure history file visibility
+export HH_CONFIG=hicolor         # get more colors
+bindkey -s &quot;\C-r&quot; &quot;qhh
+&quot;      # bind hh to Ctrl-r (for Vi mode check doc)
+</pre>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>hh git</code></dt>
+<dd>
+&nbsp;<wbr>Start&nbsp;<wbr>`hh`&nbsp;<wbr>and show only history items containing&nbsp;<wbr>&#8216;git&#8217;.</dd>
+<dt><code>hh &#8211;non-interactive git</code></dt>
+<dd>
+&nbsp;<wbr>Print history items containing&nbsp;<wbr>&#8216;git&#8217;&nbsp;<wbr>to standard output and exit.</dd>
+<dt><code>hh &#8211;show-configuration &gt;&gt; ~/.bashrc</code></dt>
+<dd>
+&nbsp;<wbr>Append default&nbsp;<wbr><code>hh</code>&nbsp;<wbr>configuration to your Bash profile.</dd>
+<dt><code>hh &#8211;show-blacklist</code></dt>
+<dd>
+&nbsp;<wbr>Show blacklist configured for history processing.</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by Martin Dvorak &lt;martin.dvorak [at] mindforger.com&gt;</p>
+<h2>BUGS</h2>
+<p> Report bugs to <a rel="nofollow" href="https://github.com/dvorka/hstr/issues">https://github.com/dvorka/hstr/issues</a></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-history/">history</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code><a href="/docs/linux/man/1-zsh/">zsh</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

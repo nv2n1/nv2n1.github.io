@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ntp_gettime(3) · Linux Manual Pages</title>
+<meta name="description" content="ntp_gettime, ntp_gettimex – get time parameters (NTP daemon interface)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ntp_gettime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ntp_gettime(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ntp_gettime, ntp_gettimex &#8211; get time parameters (NTP daemon interface)</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;sys/timex.h&gt;
+int ntp_gettime(struct ntptimeval *ntv);
+int ntp_gettimex(struct ntptimeval *ntv);</code></pre>
+<h2>Description</h2>
+<p>Both of these APIs return information to the caller via the <i>ntv</i> argument, a structure of the following type: struct ntptimeval {<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct timeval time;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Current time&nbsp;*/<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long maxerror;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Maximum error&nbsp;*/<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long esterror;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Estimated error&nbsp;*/<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;long tai;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;TAI offset&nbsp;*/ </p>
+<pre><code>/* Further padding bytes allowing for future expansion */
+}
+;</code></pre>
+<p> The fields of this structure are as follows:</p>
+<dl>
+<dt><i>time</i></dt>
+<dd>The current time, expressed as a <i>timeval</i> structure:</dd>
+<dd>struct timeval {<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds since the Epoch&nbsp;*/<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;suseconds_t tv_usec;&nbsp;<wbr>&nbsp;/*&nbsp;Microseconds&nbsp;*/ };</dd>
+<dt><i>maxerror</i></dt>
+<dd>Maximum error, in microseconds. This value can be initialized by <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3), and is increased periodically (on Linux: each second), but is clamped to an upper limit (the kernel constant <code>NTP_PHASE_MAX</code>, with a value of 16,000).</dd>
+<dt><i>esterror</i></dt>
+<dd>Estimated error, in microseconds. This value can be set via <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3) to contain an estimate of the difference between the system clock and the true time. This value is not used inside the kernel.</dd>
+<dt><i>tai</i></dt>
+<dd>TAI (Atomic International Time) offset.</dd></dl>
+<p> <code>ntp_gettime</code>() returns an <i>ntptimeval</i> structure in which the <i>time</i>, <i>maxerror</i>, and <i>esterror</i> fields are filled in. <code>ntp_gettimex</code>() performs the same task as <code>ntp_gettime</code>(), but also returns information in the <i>tai</i> field.</p>
+<h2>Return Value</h2>
+<p>The return values for <code>ntp_gettime</code>() and <code>ntp_gettimex</code>() are as for <code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2). Given a correct pointer argument, these functions always succeed.</p>
+<h2>Versions</h2>
+<p>The <code>ntp_gettime</code>() function is available since glibc 2.1. The <code>ntp_gettimex</code>() function is available since glibc 2.12.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>ntp_gettime</code>(), <code>ntp_gettimex</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Conforming To</h2>
+<p><code>ntp_gettime</code>() is described in the NTP Kernel Application Program Interface. <code>ntp_gettimex</code>() is a GNU extension.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/2-adjtimex/">adjtimex</a></code>(2), <code><a href="/docs/linux/man/3-ntp_adjtime/">ntp_adjtime</a></code>(3), <code><a href="/docs/linux/man/7-time/">time</a></code>(7) </p>
+<p> NTP &quot;Kernel Application Program Interface&quot;</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

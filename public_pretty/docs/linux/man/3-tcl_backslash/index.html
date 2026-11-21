@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_backslash(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_Backslash – parse a backslash sequence">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_backslash/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_backslash(3)</h1>
+
+
+
+
+
+<p>Tcl_Backslash &#8211; parse a backslash sequence </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+char
+<code>Tcl_Backslash</code>(<i>src, countPtr</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>char <i>*src</i> (in) Pointer to a string starting with a backslash.</dd>
+<dd>int <i>*countPtr</i> (out) If <i>countPtr</i> is not NULL, <i>*countPtr</i> gets filled in with number of characters in the backslash sequence, including the backslash character. </dd>
+</dl>
+<h2>Description</h2>
+<p>The use of <code>Tcl_Backslash</code> is deprecated in favor of <code>Tcl_UtfBackslash</code>. </p>
+<p> This is a utility procedure provided for backwards compatibility with non-internationalized Tcl extensions. It parses a backslash sequence and returns the low byte of the Unicode character corresponding to the sequence. <code>Tcl_Backslash</code> modifies <i>*countPtr</i> to contain the number of characters in the backslash sequence. </p>
+<p> See the Tcl manual entry for information on the valid backslash sequences. All of the sequences described in the Tcl manual entry are supported by <code>Tcl_Backslash</code>.</p>
+<h2>See Also</h2>
+<p>Tcl(n), <a href="/docs/linux/man/3-tcl_utfbackslash/">Tcl_UtfBackslash</a>(3) </p>
+<h2>Keywords</h2>
+<p>backslash, parse</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

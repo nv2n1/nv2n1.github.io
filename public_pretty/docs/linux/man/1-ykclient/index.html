@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ykclient(1) · Linux Manual Pages</title>
+<meta name="description" content="ykclient – YubiCloud One-Time-Password Validation Client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ykclient/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ykclient(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ykclient &#8211; YubiCloud One-Time-Password Validation Client</p>
+<h2>SYNOPSIS</h2>
+<p> <code>ykclient</code> [<i>OPTION</i>]&#8230; <i>CLIENTID YUBIKEYOTP</i></p>
+<h2>DESCRIPTION</h2>
+<p> Validate the YUBIKEYOTP one-time-password against the YubiCloud using CLIENTID as the client identifier. </p>
+<p> Mandatory arguments to long options are mandatory for short options too.</p>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Display this help screen</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Print debugging information</dd>
+<dt><code>&#8211;url</code> URL</dt>
+<dd> Validation service URL, for example, &quot;<a rel="nofollow" href="http://api.yubico.com/wsapi/verify">http://api.yubico.com/wsapi/verify</a>&quot;</dd>
+<dt><code>&#8211;ca</code> CADIR</dt>
+<dd> Path to directory containing Certificate Authoritity, e.g., &quot;/usr/local/etc/CERTS&quot;</dd>
+<dt><code>&#8211;cai</code> CAFILE</dt>
+<dd> Path to a file holding one or more certificated to verify the peer with</dd>
+<dt><code>&#8211;apikey</code> Key</dt>
+<dd> API key for HMAC validation of request/response</dd>
+<dt><code>&#8211;proxy</code> ip:port</dt>
+<dd> Connect to validation service through a proxy, e.g., &quot;socks5h://user:pass [at] 127.0.0.1:1080&quot;</dd></dl>
+<p> Exit status is 0 on success, 1 if there is a hard failure, 2 if the OTP was replayed, 3 for other soft OTP-related failures.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs at &lt;<a rel="nofollow" href="https://github.com/Yubico/yubico-c-client">https://github.com/Yubico/yubico-c-client</a>&gt;. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

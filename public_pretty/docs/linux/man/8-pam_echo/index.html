@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_echo(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_echo – PAM module for printing text messages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_echo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_echo(8)</h1>
+
+
+
+
+
+<p>pam_echo &#8211; PAM module for printing text messages</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>pam_echo.so</code> [file=<i>/path/message</i>]</dt></dl>
+<h2>Description</h2>
+<dd>The <i>pam_echo</i> PAM module is for printing text messages to inform user about special things. Sequences starting with the <i>%</i> character are interpreted in the following way: </dd>
+<p> <i>%H</i></p>
+<dl>
+<dd>The name of the remote host (PAM_RHOST).</dd></dl>
+<p> <i>%h</i></p>
+<dl>
+<dd>The name of the local host.</dd></dl>
+<p> <i>%s</i></p>
+<dl>
+<dd>The service name (PAM_SERVICE).</dd></dl>
+<p> <i>%t</i></p>
+<dl>
+<dd>The name of the controlling terminal (PAM_TTY).</dd></dl>
+<p> <i>%U</i></p>
+<dl>
+<dd>The remote user name (PAM_RUSER).</dd></dl>
+<p> <i>%u</i></p>
+<dl>
+<dd>The local user name (PAM_USER).</dd></dl>
+<p> All other sequences beginning with <i>%</i> expands to the characters following the <i>%</i> character.</p>
+<h2>Options</h2>
+<p><code>file=</code><i>/path/message</i></p>
+<dl>
+<dd>The content of the file /path/message will be printed with the PAM conversion function as PAM_TEXT_INFO.</dd></dl>
+<h2>Module Types Provided</h2>
+<p>All module types (<code>auth</code>, <code>account</code>, <code>password</code> and <code>session</code>) are provided.</p>
+<h2>Return Values</h2>
+<p>PAM_BUF_ERR</p>
+<dl>
+<dd>Memory buffer error.</dd></dl>
+<p> PAM_SUCCESS</p>
+<dl>
+<dd>Message was successful printed.</dd></dl>
+<p> PAM_IGNORE</p>
+<dl>
+<dd>PAM_SILENT flag was given or message file does not exist, no message printed.</dd></dl>
+<h2>Examples</h2>
+<p>For an example of the use of this module, we show how it may be used to print information about good passwords:</p>
+<dl>
+<dd>
+<pre>password optional pam_echo.so file=/usr/share/doc/good-password.txt
+password required pam_unix.so</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><code>pam.conf</code>(8), <code><a href="/docs/linux/man/5-pam-d/">pam.d</a></code>(5), <code><a href="/docs/linux/man/7-pam/">pam</a></code>(7)</p>
+<h2>Author</h2>
+<p>Thorsten Kukuk &lt;kukuk [at] thkukuk.de&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

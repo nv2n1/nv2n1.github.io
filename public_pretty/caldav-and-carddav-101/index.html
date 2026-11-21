@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalDAV and CardDAV: A Developer’s Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/caldav-and-carddav-101/">
+  <meta name="description" content="CalDAV and CardDAV are open, internet-based standards for syncing calendar and contact data across different devices and services. They’re built on WebDAV and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CalDAV and CardDAV: A Developer’s Guide">
+  <meta property="og:url" content="https://www.systutorials.com/caldav-and-carddav-101/">
+  <meta property="og:description" content="CalDAV and CardDAV are open, internet-based standards for syncing calendar and contact data across different devices and services. They’re built on WebDAV and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/distributed-systems-academy/">Distributed Systems Academy</a>
+           &rsaquo; <a href="/advanced-systems-path/">Advanced Systems &amp; Architecture Path</a>
+          &rsaquo; <a href="/category/engineering-lessons/">Engineering Lessons</a>
+        </nav>
+        
+        <h1>CalDAV and CardDAV: A Developer’s Guide</h1>
+        <time class="post-date" datetime="2023-09-16T06:44:11Z">September 16, 2023</time> <span class="post-author">&middot; <a href="/author/ethan-ainsworth/">Ethan Ainsworth</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>CalDAV and CardDAV are open, internet-based standards for syncing calendar and contact data across different devices and services. They’re built on WebDAV and the iCalendar/vCard formats, making them vendor-agnostic and suitable for both personal deployments and enterprise environments.</p>
+<h2 id="what-caldav-does">What CalDAV Does</h2>
+<p>CalDAV handles calendar synchronization—events, tasks, reminders, and availability data. Add an event on your phone, and it propagates to your laptop, desktop, and any other connected client within seconds. CalDAV supports recurring events, timezone handling, free/busy information, and attendee management, making it suitable for everything from personal scheduling to shared team calendars.</p>
+<h2 id="what-carddav-does">What CardDAV Does</h2>
+<p>CardDAV synchronizes contacts and address books. Update a phone number once on your primary device, and that change syncs to all clients. CardDAV stores contact data in vCard format, supporting complex fields like multiple phone numbers, addresses, organizations, photos, and custom properties.</p>
+<h2 id="why-run-your-own-caldavcarddav-server">Why Run Your Own CalDAV/CardDAV Server</h2>
+<p><strong>Privacy and data control</strong>: Unlike Google Calendar or Apple iCloud, hosting your own server keeps personal data on hardware you control. No algorithmic analysis, no data mining, no surprise policy changes.</p>
+<p><strong>Interoperability across ecosystems</strong>: CalDAV and CardDAV work natively on iOS, Android, Windows, macOS, and Linux. You’re not locked into a single vendor’s client ecosystem. Desktop applications like GNOME Evolution, Thunderbird, and KDE Kontact all support these protocols.</p>
+<p><strong>Enterprise and team use</strong>: Organizations need calendars and contacts that don’t depend on a third-party SaaS. CalDAV/CardDAV makes sense for internal deployments where you control the server and network.</p>
+<h2 id="common-server-options">Common Server Options</h2>
+<p><strong>Nextcloud</strong> remains the most popular choice for self-hosted CalDAV/CardDAV. It’s a full collaboration platform with web UI, mobile apps, and extensive third-party integrations.</p>
+<p><strong>Radicale</strong> is lightweight—a single Python application that requires minimal resources. Good for small deployments or systems with tight constraints.</p>
+<p><strong>Baïkal</strong> is a lightweight alternative with a simpler codebase than Nextcloud but more features than Radicale.</p>
+<p><strong>Zimbra</strong> and <strong>EGroupware</strong> are enterprise-grade, supporting CalDAV/CardDAV alongside email and other groupware features.</p>
+<h2 id="basic-caldavcarddav-urls">Basic CalDAV/CardDAV URLs</h2>
+<p>Once your server is running, clients connect via simple URLs:</p>
+<ul>
+<li>CalDAV calendar: <code>https://your-domain.com/remote.php/dav/calendars/username/calendar-name/</code></li>
+<li>CardDAV addressbook: <code>https://your-domain.com/remote.php/dav/addressbooks/username/contacts/</code></li>
+</ul>
+<p>These URLs are standardized across most servers. iOS and Android apps auto-discover them using DNS SRV records if configured properly.</p>
+<h2 id="client-setup-examples">Client Setup Examples</h2>
+<p><strong>Desktop clients</strong> (GNOME Evolution, Thunderbird):
+Enter the server URL and credentials. The client queries the <code>.well-known/caldav</code> and <code>.well-known/carddav</code> endpoints for auto-discovery.</p>
+<p><strong>Mobile apps</strong> (iOS Calendar/Contacts apps, Android’s built-in apps, or third-party options like Davx⁵):
+Use the calendar/contact settings, add account, select “CalDAV” or “CardDAV,” enter server URL and credentials.</p>
+<p><strong>Syncing from Google Calendar or iCloud</strong>:
+Import your existing calendars as <code>.ics</code> files into your server, or use tools like <code>vdirsyncer</code> to bridge your existing accounts with your CalDAV server.</p>
+<h2 id="important-considerations">Important Considerations</h2>
+<p><strong>SSL/TLS is mandatory</strong>: CalDAV/CardDAV transmit authentication credentials. Always use HTTPS with a valid certificate (Let’s Encrypt works fine). HTTP without encryption is a security liability.</p>
+<p><strong>Timezone handling</strong>: CalDAV supports multiple timezones in a single calendar. Ensure your server and clients handle VTIMEZONE blocks correctly, especially for recurring events across DST boundaries.</p>
+<p><strong>Scalability</strong>: Self-hosted servers work well for individuals and small teams (under 50 users). Larger deployments should consider load balancing, replication, and database optimization.</p>
+<p><strong>Backup strategy</strong>: Your calendar and contact data becomes critical. Automate regular backups, maintain offsite copies, and test restore procedures.</p>
+<p>CalDAV and CardDAV aren’t new—they’ve been around for nearly two decades—but they’re increasingly relevant as organizations prioritize privacy and interoperability over convenience.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>http_driver_instance(3) · Linux Manual Pages</title>
+<meta name="description" content="Opening/Closing –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-http_driver_instance/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>http_driver_instance(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Opening/Closing &#8211; </p>
+<p> An XIO handle with the http driver can be created with either <code>globus_xio_handle_create()</code> or <code>globus_xio_server_register_accept()</code>. An XIO handle with the http driver can be created with either <code>globus_xio_handle_create()</code> or <code>globus_xio_server_register_accept()</code>. </p>
+<p> If the handle is created with <code>globus_xio_server_register_accept()</code>, then an HTTP service handle will be created when <code>globus_xio_register_open()</code> is called. The XIO application must call one of the functions in the <code>globus_xio_read()</code> family to receive the HTTP request metadata. This metadata will be returned in the data descriptor associated with that first read: the application should use the GLOBUS_XIO_HTTP_GET_REQUEST descriptor cntl to extract this metadata. </p>
+<p> If the handle is created with <code>globus_xio_handle_create()</code>, then an HTTP client handle will be created when <code>globus_xio_register_open()</code> is called. HTTP request headers, version and method may be chosen by setting attributes. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus xio from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

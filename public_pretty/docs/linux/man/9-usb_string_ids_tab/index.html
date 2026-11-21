@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_string_ids_tab(9) · Linux Manual Pages</title>
+<meta name="description" content="usb_string_ids_tab – allocate unused string IDs in batch">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_string_ids_tab/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_string_ids_tab(9)</h1>
+
+
+
+
+
+<p>usb_string_ids_tab &#8211; allocate unused string IDs in batch</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_string_ids_tab(struct usb_composite_dev *cdev, struct usb_string *str);</code></pre>
+<h2>Arguments</h2>
+<p><i>cdev</i></p>
+<dl>
+<dd>
+</dd><dd>the device whose string descriptor IDs are being allocated</dd></dl>
+<p> <i>str</i></p>
+<dl>
+<dd>an array of usb_string objects to assign numbers to</dd></dl>
+<h2>Context</h2>
+<p>single threaded during gadget setup</p>
+<h2>Description</h2>
+<p><i>usb_string_ids</i>() is called from <code>bind</code> callbacks to allocate string IDs. Drivers for functions, configurations, or gadgets will then copy IDs from the string table to the appropriate descriptors and string table for other languages. </p>
+<p> All string identifier should be allocated using this, <i>usb_string_id</i>() or <i>usb_string_ids_n</i>() routine, to ensure that for example different functions don&#8217;t wrongly assign different meanings to the same identifier.</p>
+<h2>Author</h2>
+<p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

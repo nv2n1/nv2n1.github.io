@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spawn(8) · Linux Manual Pages</title>
+<meta name="description" content="spawn – Postfix external command spawner">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-spawn/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>spawn(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>spawn &#8211; Postfix external command spawner</p>
+<h2>Synopsis</h2>
+<pre><code>spawn</code> [generic Postfix daemon options] command_attributes...</pre>
+<h2>Description</h2>
+<p>The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon provides the Postfix equivalent of <code>inetd</code>. It listens on a port as specified in the Postfix <code>master.cf</code> file and spawns an external command whenever a connection is established. The connection can be made over local IPC (such as UNIX-domain sockets) or over non-local IPC (such as TCP sockets). The command&#8217;s standard input, output and error streams are connected directly to the communication endpoint. </p>
+<p> This daemon expects to be run from the <code><a href="/docs/linux/man/8-master/">master</a></code>(8) process manager.</p>
+<h2>Command Attribute Syntax</h2>
+<p>The external command attributes are given in the <code>master.cf</code> file at the end of a service definition. The syntax is as follows:</p>
+<dl>
+<dt><code>user</code>=<i>username</i> (required)</dt>
+<dd>
+</dd><dt><code>user</code>=<i>username</i>:<i>groupname</i></dt>
+<dd>The external command is executed with the rights of the specified <i>username</i>. The software refuses to execute commands with root privileges, or with the privileges of the mail system owner. If <i>groupname</i> is specified, the corresponding group ID is used instead of the group ID of <i>username</i>.</dd>
+<dt><code>argv</code>=<i>command</i>&#8230; (required)</dt>
+<dd>The command to be executed. This must be specified as the last command attribute. The command is executed directly, i.e. without interpretation of shell meta characters by a shell command interpreter.</dd></dl>
+<h2>Bugs</h2>
+<p>In order to enforce standard Postfix process resource controls, the <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon runs only one external command at a time. As such, it presents a noticeable overhead by wasting precious process resources. The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon is expected to be replaced by a more structural solution.</p>
+<h2>Diagnostics</h2>
+<p>The <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon reports abnormal child exits. Problems are logged to <code>syslogd</code>(8).</p>
+<h2>Security</h2>
+<p>This program needs root privilege in order to execute external commands as the specified user. It is therefore security sensitive. However the <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) daemon does not talk to the external command and thus is not vulnerable to data-driven attacks.</p>
+<h2>Configuration Parameters</h2>
+<p>Changes to <code>main.cf</code> are picked up automatically as <code><a href="/docs/linux/man/8-spawn/">spawn</a></code>(8) processes run for only a limited amount of time. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
+<p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples. </p>
+<p> In the text below, <i>transport</i> is the first field of the entry in the <code>master.cf</code> file.</p>
+<h2>Resource And Rate Control</h2>
+<dl>
+<dt><i>transport</i><code>_time_limit ($command_time_limit)</code></dt>
+<dd>The amount of time the command is allowed to run before it is terminated. </dd>
+<p> Postfix 2.4 and later support a suffix that specifies the time unit: s (seconds), m (minutes), h (hours), d (days), w (weeks). The default time unit is seconds.</dl>
+<h2>Miscellaneous</h2>
+<dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>export_environment (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The list of environment variables that a Postfix process will export to non-Postfix processes.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>mail_owner (postfix)</code></dt>
+<dd>The UNIX system account that owns the Postfix queue and most Postfix daemon processes.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
+<h2>See Also</h2>
+<pre><a href="//www.systutorials.com/docs/linux/man/5-postconf/">postconf</a>(5), configuration parameters
+<a href="//www.systutorials.com/docs/linux/man/8-master/">master</a>(8), process manager
+syslogd(8), system logging</pre>
+<h2>License</h2>
+<p>The Secure Mailer license must be distributed with this software.</p>
+<h2>Author(S)</h2>
+<pre>Wietse Venema
+IBM T.J. Watson Research
+P.O. Box 704
+Yorktown Heights, NY 10598, USA</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

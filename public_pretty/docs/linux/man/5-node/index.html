@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>node(5) · Linux Manual Pages</title>
+<meta name="description" content="node.perms – LinuxNode permissions file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-node/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>node(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>node.perms &#8211; LinuxNode permissions file.</p>
+<h2>Description</h2>
+<p><code>Node.perms</code> file is read at program startup with the knowledge of users username (call), connection type (AX.25, NET/ROM, ROSE, TCP/IP), peers IP address (for TCP/IP) and port name (for AX.25). The first entry matching this information is taken and user is asked for password and given permissions according to it. </p>
+<p> The lines within <code>node.perms</code> must either be a comment line, which starts with a # in the first column, or a permission entry in the following format, each field being delimited by white space: </p>
+<dl>
+<dd>username type portname password permissions</dd></dl>
+<p> The field descriptions are: </p>
+<dl>
+<dt><code>username</code></dt>
+<dd>This is matched against users username (call) without SSID. An asterisk (*) matches any username.</dd>
+<dt><code>type</code></dt>
+<dd>This is matched against the type of the connection to user. Possible values for this field are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>*</code></dt>
+<dd>matches any type of connection.</dd>
+<dt><code>ax25</code></dt>
+<dd>matches users coming in with AX.25.</dd>
+<dt><code>netrom</code></dt>
+<dd>matches users coming in with NET/ROM.</dd>
+<dt><code>rose</code></dt>
+<dd>matches users coming in with ROSE.</dd>
+<dt><code>local</code></dt>
+<dd>matches TCP/IP connections where users host is in &quot;local&quot; network as defined in node.conf(5).</dd>
+<dt><code>ampr</code></dt>
+<dd>matches TCP/IP connections where users host is in amprnet (44.0.0.0/8).</dd>
+<dt><code>inet</code></dt>
+<dd>matches TCP/IP connections where users host is neither in &quot;local&quot; network nor in amprnet.</dd>
+<dt><code>host</code></dt>
+<dd>matches users starting LinuxNode from shell.</dd></dl>
+</dl>
+<dt><code>portname</code></dt>
+<dd>If user is coming in with AX.25 this field is matched against the local port name the user is coming in via. An asterisk (*) matches any port name.</dd>
+<dt><code>password</code></dt>
+<dd>If the previous tree fields match and this field is not a single asterisk (*) the user is asked for a password. The password is then matched against this field.</dd>
+<dt><code>permissions</code></dt>
+<dd>This field represents a a bitmask of operations the user is permitted to do. It is a sum of the values listed here:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>1</code></dt>
+<dd>permits logging in even if no other permissions are given.</dd>
+<dt><code>2</code></dt>
+<dd>permits outgoing AX.25 connects.</dd>
+<dt><code>4</code></dt>
+<dd>permits outgoing NET/ROM connects.</dd>
+<dt><code>8</code></dt>
+<dd>permits telneting to hosts in the &quot;local&quot; network as defined in node.conf(5).</dd>
+<dt><code>16</code></dt>
+<dd>permits telneting to hosts in amprnet.</dd>
+<dt><code>32</code></dt>
+<dd>permits telneting to hosts neither in the &quot;local&quot; network nor in amprnet.</dd>
+<dt><code>64</code></dt>
+<dd>permits using hidden ports in outgoing AX.25 connections. (See HiddenPorts command in node.conf(5).)</dd>
+<dt><code>128</code></dt>
+<dd>permits outgoing ROSE connects.</dd>
+<dt><code>256</code></dt>
+<dd>The no-escape flag. Disables the escape mechanism for this user.</dd></dl>
+</dl>
+</dl>
+<h2>Files</h2>
+<p>/etc/ax25/node.perms</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-node/">node</a></code>(8), <code>node.conf</code>(5), <code><a href="/docs/linux/man/5-axports/">axports</a></code>(5), <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

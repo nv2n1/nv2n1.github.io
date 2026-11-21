@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing VirtualBox VMs from the Linux Command Line - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-list-and-start-virtualbox-vms-in-command-line-in-linux/">
+  <meta name="description" content="View all virtual machines registered with VirtualBox:
+vboxmanage list vms Output example:
+&quot;ubuntu-server&quot; {a1b2c3d4-e5f6-7890-abcd-ef1234567890} …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing VirtualBox VMs from the Linux Command Line">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-list-and-start-virtualbox-vms-in-command-line-in-linux/">
+  <meta property="og:description" content="View all virtual machines registered with VirtualBox:
+vboxmanage list vms Output example:
+&quot;ubuntu-server&quot; {a1b2c3d4-e5f6-7890-abcd-ef1234567890} …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Managing VirtualBox VMs from the Linux Command Line</h1>
+        <time class="post-date" datetime="2020-02-29T12:47:30Z">February 29, 2020</time> <span class="post-author">&middot; <a href="/author/davidyang/">David Yang</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>View all virtual machines registered with VirtualBox:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage list vms
+</span></span></code></pre></div><p>Output example:</p>
+<pre><code>&quot;ubuntu-server&quot; {a1b2c3d4-e5f6-7890-abcd-ef1234567890}
+&quot;debian-test&quot; {b2c3d4e5-f6a7-8901-bcde-f12345678901}
+&quot;centos-prod&quot; {d6c938d8-0bec-57f0-9fd3-8e395ba3d218}
+</code></pre>
+<p>Each VM appears with its name and UUID. The UUID uniquely identifies the VM in VirtualBox’s database.</p>
+<h2 id="list-running-vms-only">List running VMs only</h2>
+<p>See only active virtual machines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage list runningvms
+</span></span></code></pre></div><p>This is useful when you have many VMs and need to check what’s currently executing.</p>
+<h2 id="start-a-vm">Start a VM</h2>
+<p>Start a VM by name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage startvm ubuntu-server --type headless
+</span></span></code></pre></div><p>Or use the UUID:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage startvm a1b2c3d4-e5f6-7890-abcd-ef1234567890 --type headless
+</span></span></code></pre></div><p>Use <code>--type headless</code> for server environments. For display-capable systems with the VirtualBox GUI:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage startvm ubuntu-server --type gui
+</span></span></code></pre></div><p>The command returns after launch is initiated, but the guest OS may take additional time to fully boot.</p>
+<h2 id="stop-a-vm-gracefully">Stop a VM gracefully</h2>
+<p>Send an ACPI shutdown signal to the guest OS:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage controlvm ubuntu-server acpipowerbutton
+</span></span></code></pre></div><p>This allows the guest to perform clean shutdown procedures. Allow reasonable time for the guest to power down before issuing another command.</p>
+<h2 id="force-power-off-a-vm">Force power off a VM</h2>
+<p>If a VM is hung or unresponsive to graceful shutdown:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage controlvm ubuntu-server poweroff
+</span></span></code></pre></div><p>This immediately terminates the VM without warning—use only when necessary to avoid data corruption.</p>
+<h2 id="pause-and-resume-a-vm">Pause and resume a VM</h2>
+<p>Temporarily suspend a running VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage controlvm ubuntu-server pause
+</span></span></code></pre></div><p>Resume it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage controlvm ubuntu-server resume
+</span></span></code></pre></div><p>This preserves VM state without powering it off, useful for temporary resource freeing.</p>
+<h2 id="get-detailed-vm-information">Get detailed VM information</h2>
+<p>View comprehensive details about a specific VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage showvminfo ubuntu-server
+</span></span></code></pre></div><p>Output includes CPU count, memory allocation, network configuration, storage devices, and current state. Useful for troubleshooting or verifying VM settings.</p>
+<p>Filter for specific information:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage showvminfo ubuntu-server <span class="p">|</span> grep -E <span class="s2">&#34;State:|Memory:|CPUs:&#34;</span>
+</span></span></code></pre></div><h2 id="check-vm-state-programmatically">Check VM state programmatically</h2>
+<p>Get machine-readable output for scripts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage showvminfo ubuntu-server --machinereadable <span class="p">|</span> grep <span class="s2">&#34;VMState=&#34;</span>
+</span></span></code></pre></div><p>Output:</p>
+<pre><code>VMState=&quot;running&quot;
+</code></pre>
+<p>This is more reliable than parsing text output and essential for automation.</p>
+<h2 id="list-all-vms-with-their-state">List all VMs with their state</h2>
+<p>Display all VMs and their current state:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage list vms <span class="p">|</span> <span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;{}&#39;</span> <span class="nb">read</span> -r name uuid<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">state</span><span class="o">=</span><span class="k">$(</span>vboxmanage showvminfo --machinereadable <span class="s2">&#34;</span><span class="nv">$name</span><span class="s2">&#34;</span> 2&gt;/dev/null <span class="p">|</span> grep <span class="s2">&#34;^VMState=&#34;</span> <span class="p">|</span> cut -d<span class="s1">&#39;=&#39;</span> -f2 <span class="p">|</span> tr -d <span class="s1">&#39;&#34;&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">printf</span> <span class="s2">&#34;%-30s %s\n&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">name</span><span class="p">//</span><span class="se">\&#34;</span><span class="p">/</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">state</span><span class="k">:-</span><span class="nv">unknown</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>This produces a clean formatted list without complex parsing.</p>
+<h2 id="start-multiple-vms-with-delay">Start multiple VMs with delay</h2>
+<p>Start several VMs sequentially with spacing between launches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> vm in ubuntu-server debian-test centos-prod<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  vboxmanage startvm <span class="s2">&#34;</span><span class="nv">$vm</span><span class="s2">&#34;</span> --type headless
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Started: </span><span class="nv">$vm</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    sleep <span class="m">5</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Failed to start: </span><span class="nv">$vm</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><p>The delay prevents resource contention during boot sequences.</p>
+<h2 id="shut-down-all-running-vms-gracefully">Shut down all running VMs gracefully</h2>
+<p>Gracefully shut down every active VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage list runningvms <span class="p">|</span> awk -F<span class="s1">&#39;{&#39;</span> <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> vm<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Shutting down: </span><span class="nv">$vm</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  vboxmanage controlvm <span class="s2">&#34;</span><span class="nv">$vm</span><span class="s2">&#34;</span> acpipowerbutton
+</span></span><span class="line"><span class="cl">  sleep <span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><h2 id="wait-for-all-vms-to-power-down">Wait for all VMs to power down</h2>
+<p>Use a timeout to ensure all VMs shut down within a time limit:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timeout <span class="m">120</span> bash -c <span class="s1">&#39;while vboxmanage list runningvms | grep -q .; do sleep 1; done&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;All VMs stopped&#34;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&#34;Timeout waiting for VMs&#34;</span>
+</span></span></code></pre></div><p>This waits up to 120 seconds, checking status every second.</p>
+<h2 id="automation-with-error-handling">Automation with error handling</h2>
+<p>For cron jobs or automated deployment, always use <code>--type headless</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">if</span> vboxmanage startvm myvm --type headless<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;VM started successfully&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Failed to start VM&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>For reliable unattended shutdown, combine graceful and force methods:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vboxmanage controlvm myvm acpipowerbutton
+</span></span><span class="line"><span class="cl">sleep <span class="m">30</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> vboxmanage list runningvms <span class="p">|</span> grep -q myvm<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;VM did not shut down gracefully, forcing power off&#34;</span>
+</span></span><span class="line"><span class="cl">  vboxmanage controlvm myvm poweroff
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><h2 id="permissions-and-access-control">Permissions and access control</h2>
+<p>VBoxManage requires adequate permissions. Add your user to the vboxusers group:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo usermod -aG vboxusers <span class="nv">$USER</span>
+</span></span></code></pre></div><p>Log out and back in for changes to take effect. Verify membership:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">groups <span class="p">|</span> grep vboxusers
+</span></span></code></pre></div><p>For unattended automation outside interactive sessions, use a systemd user service instead of cron. This provides better session management and environment handling:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/.config/systemd/user
+</span></span><span class="line"><span class="cl"><span class="c1"># Create service file with appropriate VM startup commands</span>
+</span></span><span class="line"><span class="cl">systemctl --user daemon-reload
+</span></span><span class="line"><span class="cl">systemctl --user <span class="nb">enable</span> vm-startup.service
+</span></span></code></pre></div><h2 id="common-issues-and-solutions">Common issues and solutions</h2>
+<p><strong>UUID vs name</strong>: Both work interchangeably, but names with special characters require quoting.</p>
+<p><strong>Headless mode in cron</strong>: Forgetting <code>--type headless</code> in automated contexts causes startup failure when no display is available. Always specify it explicitly.</p>
+<p><strong>ACPI support</strong>: Older guest operating systems may not respond to ACPI shutdown signals. Verify support with <code>vboxmanage showvminfo &lt;name&gt; | grep -i acpi</code>.</p>
+<p><strong>State transition delays</strong>: VMs take time to change states. Check actual state with <code>showvminfo</code> before issuing conflicting commands in scripts rather than relying on timing assumptions.</p>
+<p><strong>Name parsing in scripts</strong>: Use <code>awk</code> or <code>while read</code> with proper field separators to avoid issues with spaces in VM names. The UUID approach is safer for automation.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

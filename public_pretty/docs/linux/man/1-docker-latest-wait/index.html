@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker-latest-wait(1) · Linux Manual Pages</title>
+<meta name="description" content="docker-wait – Block until a container stops, then print its exit code.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-docker-latest-wait/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>docker-latest-wait(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> docker-wait &#8211; Block until a container stops, then print its exit code. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>docker wait</code> [<code>&#8211;help</code>] CONTAINER [CONTAINER&#8230;] </p>
+<h2>DESCRIPTION</h2>
+<p> Block until a container stops, then print its exit code. </p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;help</code><br />
+&nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ docker run -d fedora sleep 99
+079b83f558a2bc52ecad6b2a5de13622d584e6bb1aea058c11b36511e85e7622
+$ docker wait 079b83f558a2bc
+0
+</pre>
+</dd></dl>
+<h2>HISTORY</h2>
+<p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

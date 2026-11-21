@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalstatic_pointer_caststdexperimentaldynamic_pointer_cast(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalstatic_pointer_caststdexperimentaldynamic_pointer_cast/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalstatic_pointer_caststdexperimentaldynamic_pointer_cast(3)</h1>
+
+
+
+
+
+<p>std::experimental::static_pointer_cast,std::experimental::dynamic_pointer_cast, - std::experimental::static_pointer_cast,std::experimental::dynamic_pointer_cast,</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class T, class U&gt;
+(library fundamentals
+     std::experimental::shared_ptr&lt;T&gt;
+         static_pointer_cast((1)TS)
+             const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
+template &lt;class T, class U&gt;
+(library fundamentals
+     std::experimental::shared_ptr&lt;T&gt;
+         dynamic_pointer_cast((2)TS)
+             const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
+template &lt;class T, class U&gt;
+(library fundamentals
+     std::experimental::shared_ptr&lt;T&gt;
+         const_pointer_cast(const(3) TS)
+             std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;
+template &lt;class T, class U&gt;
+(library fundamentals
+     std::experimental::shared_ptr&lt;T&gt;
+         reinterpret_pointer_cast((4)TS)
+             const std::experimental::shared_ptr&lt;U&gt; &amp;r) noexcept;</code></pre> 
+<p>Creates a new instance of std::experimental::shared_ptr whose stored pointer is
+obtained from r&rsquo;s stored pointer using a cast expression. If r is empty, so is the
+new shared_ptr <wbr>(but its stored pointer is not necessarily null).
+Otherwise, the new shared_ptr will share ownership with r, except that it is empty
+if the dynamic_cast performed by dynamic_pointer_cast returns a null pointer.
+Let Y be typename std::experimental::shared_ptr&lt;T&gt;::element_type, then the resulting
+std::experimental::shared_ptr&rsquo;s stored pointer will be obtained by calling <wbr>(in
+respective order):
+1) <wbr>static_cast&lt;Y*&gt;(r.get()).
+2) <wbr>dynamic_cast&lt;Y*&gt;(r.get()) <wbr>(If the result of the dynamic_cast is a null pointer
+value, the returned shared_ptr will be empty).
+3) <wbr>const_cast&lt;Y*&gt;(r.get()).
+4) <wbr>reinterpret_cast&lt;Y*&gt;(r.get()).
+The behavior of these functions is undefined unless the corresponding cast from U*
+to T* <wbr>is well formed:
+1) <wbr>The behavior is undefined unless static_cast&lt;T*&gt;((U*)nullptr) <wbr>is well formed.
+2) <wbr>The behavior is undefined unless dynamic_cast&lt;T*&gt;((U*)nullptr) <wbr>is well formed.
+3) <wbr>The behavior is undefined unless const_cast&lt;T*&gt;((U*)nullptr) <wbr>is well formed.
+4) <wbr>The behavior is undefined unless reinterpret_cast&lt;T*&gt;((U*)nullptr) <wbr>is well
+formed.</p>
+<h2>Parameters</h2>
+<p>r - The pointer to convert</p>
+<h2>Example</h2>
+<p> <wbr>This section is incomplete
+ <wbr>Reason: no example</p>
+<h2>See also</h2>
+<p>constructor <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>constructs new shared_ptr
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr><i>(public member function)</i>
+static_pointer_cast
+dynamic_pointer_cast <wbr> <wbr> <wbr> <wbr> <wbr>applies static_cast, dynamic_cast, const_cast, or
+const_pointer_cast <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>reinterpret_cast to the stored pointer
+reinterpret_pointer_cast <wbr><i>(function template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>show(7) · Linux Manual Pages</title>
+<meta name="description" content="SHOW – show the value of a run-time parameter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-show/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>show(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>SHOW &#8211; show the value of a run-time parameter </p>
+<h2>Synopsis</h2>
+<pre>SHOW <i>name</i>
+SHOW ALL</pre>
+<h2>Description</h2>
+<p><code>SHOW</code> will display the current setting of run-time parameters. These variables can be set using the <code>SET</code> statement, by editing the <i>postgresql.conf</i> configuration file, through the <code>PGOPTIONS</code> environmental variable (when using <code>libpq</code> or a <code>libpq</code>-based application), or through command-line flags when starting the <code>postgres</code> server. See in the documentation for details.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>name</i></dt>
+<dd>The name of a run-time parameter. Available parameters are documented in in the documentation and on the SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] reference page. In addition, there are a few parameters that can be shown but not set:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>SERVER_VERSION</code></dt>
+<dd>Shows the server&#8217;s version number.</dd>
+<dt><code>SERVER_ENCODING</code></dt>
+<dd>Shows the server-side character set encoding. At present, this parameter can be shown but not set, because the encoding is determined at database creation time.</dd>
+<dt><code>LC_COLLATE</code></dt>
+<dd>Shows the database&#8217;s locale setting for collation (text ordering). At present, this parameter can be shown but not set, because the setting is determined at database creation time.</dd>
+<dt><code>LC_CTYPE</code></dt>
+<dd>Shows the database&#8217;s locale setting for character classification. At present, this parameter can be shown but not set, because the setting is determined at database creation time.</dd>
+<dt><code>IS_SUPERUSER</code></dt>
+<dd>True if the current role has superuser privileges.</dd></dl>
+</dl>
+</dl>
+<dl>
+<dt><code>ALL</code></dt>
+<dd>Show the values of all configuration parameters, with descriptions.</dd></dl>
+<h2>Notes</h2>
+<p>The function <code>current_setting</code> produces equivalent output; see in the documentation. Also, the <code>pg_settings</code> system view produces the same information.</p>
+<h2>Examples</h2>
+<p>Show the current setting of the parameter DateStyle: </p>
+<pre>SHOW DateStyle;
+ DateStyle
+-----------
+ ISO, MDY
+(1 row)</pre>
+<p>Show the current setting of the parameter geqo: </p>
+<pre>SHOW geqo;
+ geqo
+------
+ on
+(1 row)</pre>
+<p>Show all settings: </p>
+<pre>SHOW ALL;
+ name | setting | description 
+--------------------------------+--------------------------------+----------------------------------------------------------------------------------------------
+ add_missing_from | off | Automatically adds missing table references to FROM clauses.
+ allow_system_table_mods | off | Allows modifications of the structure of system tables.
+ .
+ .
+ .
+ work_mem | 1024 | Sets the maximum memory to be used for query workspaces.
+ zero_damaged_pages | off | Continues processing past damaged page headers.
+(146 rows)</pre>
+<h2>Compatibility</h2>
+<p>The <code>SHOW</code> command is a PostgreSQL extension.</p>
+<h2>See Also</h2>
+<p>SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)], RESET [<code><a href="/docs/linux/man/7-reset/">reset</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

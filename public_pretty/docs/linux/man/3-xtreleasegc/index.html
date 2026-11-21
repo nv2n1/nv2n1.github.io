@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtreleasegc(3) · Linux Manual Pages</title>
+<meta name="description" content="XtGetGC, XtReleaseGC – obtain and destroy a sharable GC">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtreleasegc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtreleasegc(3)</h1>
+
+
+
+
+
+<p>XtGetGC, XtReleaseGC &#8211; obtain and destroy a sharable GC </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>GC XtGetGC(Widget <i>w</i>, XtGCMask <i>value_mask</i>, XGCValues *<i>values</i>);</dd>
+<dd>void XtReleaseGC(Widget <i>w</i>, GC <i>gc</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC to be deallocated.</dd>
+<dt><i>values</i></dt>
+<dd>Specifies the actual values for this GC.</dd>
+<dt><i>value_mask</i></dt>
+<dd>Specifies which fields of the values are specified.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the widget.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtGetGC</code> function returns a sharable, read-only GC. The parameters to this function are the same as those for <code>XCreateGC</code> except that a widget is passed instead of a display. <code>XtGetGC</code> shares only GCs in which all values in the GC returned by <code>XCreateGC</code> are the same. In particular, it does not use the value_mask provided to determine which fields of the GC a widget considers relevant. The value_mask is used only to tell the server which fields should be filled in with widget data and which it should fill in with default values. For further information about value_mask and values, see <code>XCreateGC</code> in the <i>Xlib &#8211; C Language X Interface</i>. </p>
+<p> The <code>XtReleaseGC</code> function deallocate the specified shared GC.</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

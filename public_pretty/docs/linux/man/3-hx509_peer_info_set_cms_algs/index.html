@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hx509_peer_info_set_cms_algs(3) · Linux Manual Pages</title>
+<meta name="description" content="hx509 certificate selecting functions –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hx509_peer_info_set_cms_algs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hx509_peer_info_set_cms_algs(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> hx509 certificate selecting functions &#8211; </p>
+<h3>Functions</h3>
+<p> int <code>hx509_peer_info_add_cms_alg</code> (hx509_context, hx509_peer_info, const AlgorithmIdentifier *) </p>
+<p> int <code>hx509_peer_info_alloc</code> (hx509_context, hx509_peer_info *) </p>
+<p> void <code>hx509_peer_info_free</code> (hx509_peer_info) </p>
+<p> int <code>hx509_peer_info_set_cert</code> (hx509_peer_info, hx509_cert) </p>
+<p> int <code>hx509_peer_info_set_cms_algs</code> (hx509_context, hx509_peer_info, const AlgorithmIdentifier *, size_t) </p>
+<h2>Detailed Description</h2>
+<h2>Function Documentation</h2>
+<h3>int hx509_peer_info_add_cms_alg (hx509_contextcontext, hx509_peer_infopeer, const AlgorithmIdentifier *val)</h3>
+<p> Add an additional algorithm that the peer supports. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>peer</i> the peer to set the new algorithms for<br />
+ <i>val</i> an AlgorithmsIdentier to add</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_peer_info_alloc (hx509_contextcontext, hx509_peer_info *peer)</h3>
+<p> Allocate a new peer info structure an init it to default values. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>peer</i> return an allocated peer, free with <code>hx509_peer_info_free()</code>.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>void hx509_peer_info_free (hx509_peer_infopeer)</h3>
+<p> Free a peer info structure. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>peer</i> peer info to be freed.</dd></dl>
+<h3>int hx509_peer_info_set_cert (hx509_peer_infopeer, hx509_certcert)</h3>
+<p> Set the certificate that remote peer is using. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>peer</i> peer info to update<br />
+ <i>cert</i> cerificate of the remote peer.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h3>int hx509_peer_info_set_cms_algs (hx509_contextcontext, hx509_peer_infopeer, const AlgorithmIdentifier *val, size_tlen)</h3>
+<p> Set the algorithms that the peer supports. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>context</i> A hx509 context.<br />
+ <i>peer</i> the peer to set the new algorithms for<br />
+ <i>val</i> array of supported AlgorithmsIdentiers<br />
+ <i>len</i> length of array val.</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dt>
+</dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

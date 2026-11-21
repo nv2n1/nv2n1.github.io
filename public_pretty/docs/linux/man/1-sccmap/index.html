@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sccmap(1) · Linux Manual Pages</title>
+<meta name="description" content="sccmap – extract strongly connected components of directed graphs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sccmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sccmap(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> sccmap &#8211; extract strongly connected components of directed graphs </p>
+<h2>SYNOPSIS</h2>
+<p> <code>sccmap</code> [<code>-dsv</code>] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>sccmap</i> decomposes digraphs into strongly connected components and an auxiliary map of the relationship between components. In this map, each component is collapsed into a node. The resulting graphs are printed to standard out. The number of nodes, edges and strongly connected components are printed to standard error. <code>sccmap</code> is a way of partitioning large graphs into more manageable pieces.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Preserve degenerate components of only one node.</dd>
+<dt><code>-s</code></dt>
+<dd> Do not print the resulting graphs. Only the statistics are important.</dd>
+<dt><code>-S</code></dt>
+<dd> Just print the resulting graphs. No statistics are printed.</dd>
+<dt><code>-o</code><i>output</i></dt>
+<dd> Prints output to the file <i>output</i>. If not given, <code>sccmap</code> uses stdout.</dd>
+<dt><code>-v</code></dt>
+<dd> Generate additional statistics. In particular, <code>sccmap</code> prints the number of nodes, edges, connected components, and strongly connected components, followed by the fraction of nodes in a non-trivial strongly connected components, the maximum degree of the graph, and fraction of non-tree edges in the graph.</dd></dl>
+<h2>OPERANDS</h2>
+<p> The following operand is supported:</p>
+<dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
+<h2>DIAGNOSTICS</h2>
+<p> <code>sccmap</code> emits a warning if it encounters an undirected graph, and ignores it.</p>
+<h2>AUTHORS</h2>
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
+ Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-acyclic/">acyclic</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), <a href="/docs/linux/man/1-tred/">tred</a>(1), libgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

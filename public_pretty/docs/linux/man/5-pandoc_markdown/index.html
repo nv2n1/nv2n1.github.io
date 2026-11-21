@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pandoc_markdown(5) · Linux Manual Pages</title>
+<meta name="description" content="pandoc_markdown – markdown syntax for pandoc(1)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-pandoc_markdown/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>pandoc_markdown(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pandoc_markdown &#8211; markdown syntax for <a href="/docs/linux/man/1-pandoc/">pandoc</a>(1)</p>
+<h2>Description</h2>
+<p>Pandoc understands an extended and slightly revised version of John Gruber&#8217;s markdown syntax. This document explains the syntax, noting differences from standard markdown. Except where noted, these differences can be suppressed by using the markdown_strict format instead of markdown. An extensions can be enabled by adding +EXTENSION to the format name and disabled by adding -EXTENSION. For example, markdown_strict+footnotes is strict markdown with footnotes enabled, while markdown-footnotes-pipe_tables is pandoc&#8217;s markdown without footnotes or pipe tables.</p>
+<h2>Philosophy</h2>
+<p>Markdown is designed to be easy to write, and, even more importantly, easy to read:</p>
+<dl>
+<dd>A Markdown-formatted document should be publishable as-is, as plain text, without looking like it&#8217;s been marked up with tags or formatting instructions. &#8212; John Gruber</dd></dl>
+<p> This principle has guided pandoc&#8217;s decisions in finding syntax for tables, footnotes, and other extensions. </p>
+<p> There is, however, one respect in which pandoc&#8217;s aims are different from the original aims of markdown. Whereas markdown was originally designed with HTML generation in mind, pandoc is designed for multiple output formats. Thus, while pandoc allows the embedding of raw HTML, it discourages it, and provides other, non-HTMLish ways of representing important document elements like definition lists, tables, mathematics, and footnotes.</p>
+<h2>Paragraphs</h2>
+<p>A paragraph is one or more lines of text followed by one or more blank line. Newlines are treated as spaces, so you can reflow your paragraphs as you like. If you need a hard line break, put two or more spaces at the end of a line. </p>
+<p> Extension: escaped_line_breaks </p>
+<p> A backslash followed by a newline is also a hard line break. Note: in multiline and grid table cells, this is the only way to create a hard line break, since trailing spaces in the cells are ignored.</p>
+<h2>Headers</h2>
+<p>There are two kinds of headers, Setext and atx.</p>
+<h3>Setext-style headers</h3>
+<p>A setext-style header is a line of text &quot;underlined&quot; with a row of = signs (for a level one header) or &#8211; signs (for a level two header):</p>
+<dl>
+<dd>
+<pre>A level-one header
+==================
+A level-two header
+------------------</pre>
+</dd></dl>
+<p> The header text can contain inline formatting, such as emphasis (see Inline formatting, below).</p>
+<h3>Atx-style headers</h3>
+<p>An Atx-style header consists of one to six # signs and a line of text, optionally followed by any number of # signs. The number of # signs at the beginning of the line is the header level:</p>
+<dl>
+<dd>
+<pre>##&nbsp;<wbr>A level-two header
+###&nbsp;<wbr>A level-three header&nbsp;<wbr>###</pre>
+</dd></dl>
+<p> As with setext-style headers, the header text can contain formatting:</p>
+<dl>
+<dd>
+<pre>#&nbsp;<wbr>A level-one header with a&nbsp;<wbr>[link](/url)&nbsp;<wbr>and&nbsp;<wbr>*emphasis*</pre>
+</dd></dl>
+<p> Extension: blank_before_header </p>
+<p> Standard markdown syntax does not require a blank line before a header. Pandoc does require this (except, of course, at the beginning of the document). The reason for the requirement is that it is all too easy for a # to end up at the beginning of a line by accident (perhaps through line wrapping). Consider, for example:</p>
+<dl>
+<dd>
+<pre>I like several of their flavors of ice cream:
+#22, for example, and&nbsp;<wbr>#5.</pre>
+</dd></dl>
+<h3>Header identifiers in HTML, LaTeX, and ConTeXt</h3>
+<p>Extension: header_attributes </p>
+<p> Headers can be assigned attributes using this syntax at the end of the line containing the header text:</p>
+<dl>
+<dd>
+<pre>{#identifier .class .class key=value key=value}</pre>
+</dd></dl>
+<p> Although this syntax allows assignment of classes and key/value attributes, only identifiers currently have any affect in the writers (and only in some writers: HTML, LaTeX, ConTeXt, Textile, AsciiDoc). Thus, for example, the following headers will all be assigned the identifier foo:</p>
+<dl>
+<dd>
+<pre>#&nbsp;<wbr>My header&nbsp;<wbr>{#foo}
+##&nbsp;<wbr>My header&nbsp;<wbr>##&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{#foo}
+My other header&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{#foo}
+---------------</pre>
+</dd></dl>
+<p> (This syntax is compatible with PHP Markdown Extra.) </p>
+<p> Headers with the class unnumbered will not be numbered, even if &#8211;number-sections is specified. A single hyphen (-) in an attribute context is equivalent to .unnumbered, and preferable in non-English documents. So,</p>
+<dl>
+<dd>
+<pre>#&nbsp;<wbr>My header&nbsp;<wbr>{-}</pre>
+</dd></dl>
+<p> is just the same as</p>
+<dl>
+<dd>
+<pre>#&nbsp;<wbr>My header&nbsp;<wbr>{.unnumbered}</pre>
+</dd></dl>
+<p> Extension: auto_identifiers </p>
+<p> A header without an explicitly specified identifier will be automatically assigned a unique identifier based on the header text. To derive the identifier from the header text,</p>
+<dl>
+<dt>&bull;</dt>
+<dd>Remove all formatting, links, etc.</dd>
+<dt>&bull;</dt>
+<dd>Remove all footnotes.</dd>
+<dt>&bull;</dt>
+<dd>Remove all punctuation, except underscores, hyphens, and periods.</dd>
+<dt>&bull;</dt>
+<dd>Replace all spaces and newlines with hyphens.</dd>
+<dt>&bull;</dt>
+<dd>Convert all alphabetic characters to lowercase.</dd>
+<dt>&bull;</dt>
+<dd>Remove everything up to the first letter (identifiers may not begin with a number or punctuation mark).</dd>
+<dt>&bull;</dt>
+<dd>If nothing is left after this, use the identifier section.</dd></dl>
+<p> Thus, for example, </p>
+<table>
+<tr VALIGN=top>
+<td> Header </td>
+<td> Identifier
+</td>
+</tr>
+<tr VALIGN=top>
+<td COLSPAN=2>
+<hr>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> Header identifiers in HTML </td>
+<td> header-identifiers-in-html
+</td>
+</tr>
+<tr VALIGN=top>
+<td> Dogs?&#8211;in my house? </td>
+<td> dogs&#8211;in-my-house
+</td>
+</tr>
+<tr VALIGN=top>
+<td> HTML, S5, or RTF? </td>
+<td> html-s5-or-rtf
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 3. Applications </td>
+<td> applications
+</td>
+</tr>
+<tr VALIGN=top>
+<td> 33 </td>
+<td> section
+</td>
+</tr>
+</table>
+<p> These rules should, in most cases, allow one to determine the identifier from the header text. The exception is when several headers have the same text; in this case, the first will get an identifier as described above; the second will get the same identifier with -1 appended; the third with -2; and so on. </p>
+<p> These identifiers are used to provide link targets in the table of contents generated by the &#8211;toc|&#8211;table-of-contents option. They also make it easy to provide links from one section of a document to another. A link to this section, for example, might look like this:</p>
+<dl>
+<dd>
+<pre>See the section on
+[header identifiers](#header-identifiers-in-html-latex-and-context).</pre>
+</dd></dl>
+<p> Note, however, that this method of providing links to sections works only in HTML, LaTeX, and ConTeXt formats. </p>
+<p> If the &#8211;section-divs option is specified, then each section will be wrapped in a div (or a section, if &#8211;html5 was specified), and the identifier will be attached to the enclosing &lt;div&gt; (or &lt;section&gt;) tag rather than the header itself. This allows entire sections to be manipulated using javascript or treated differently in CSS. </p>
+<p> Extension: implicit_header_references </p>
+<p> Pandoc behaves as if reference links have been defined for each header. So, instead of</p>
+<dl>
+<dd>
+<pre>[header identifiers](#header-identifiers-in-html)</pre>
+</dd></dl>
+<p> you can simply write</p>
+<dl>
+<dd>
+<pre>[header identifiers]</pre>
+</dd></dl>
+<p> or</p>
+<dl>
+<dd>
+<pre>[header identifiers][]</pre>
+</dd></dl>
+<p> or</p>
+<dl>
+<dd>
+<pre>[the section on header identifiers][header identifiers]</pre>
+</dd></dl>
+<p> If there are multiple headers with identical text, the corresponding reference will link to the first one only, and you will need to use explicit links to link to the others, as described above. </p>
+<p> Unlike regular reference links, these references are case-sensitive. </p>
+<p> Note: if you have defined an explicit identifier for a header, then implicit references to it will not work.</p>
+<h2>Block Quotations</h2>
+<p>Markdown uses email conventions for quoting blocks of text. A block quotation is one or more paragraphs or other block elements (such as lists or headers), with each line preceded by a &gt; character and a space. (The &gt; need not start at the left margin, but it should not be indented more than three spaces.)</p>
+<dl>
+<dd>
+<pre>&gt;&nbsp;<wbr>This is a block quote. This
+&gt;&nbsp;<wbr>paragraph has two lines.
+&gt;
+&gt;&nbsp;<wbr>1. This is a list inside a block quote.
+&gt;&nbsp;<wbr>2. Second item.</pre>
+</dd></dl>
+<p> A &quot;lazy&quot; form, which requires the &gt; character only on the first line of each block, is also allowed:</p>
+<dl>
+<dd>
+<pre>&gt;&nbsp;<wbr>This is a block quote. This
+paragraph has two lines.
+&gt;&nbsp;<wbr>1. This is a list inside a block quote.
+2. Second item.</pre>
+</dd></dl>
+<p> Among the block elements that can be contained in a block quote are other block quotes. That is, block quotes can be nested:</p>
+<dl>
+<dd>
+<pre>&gt;&nbsp;<wbr>This is a block quote.
+&gt;
+&gt;&nbsp;<wbr>&gt;&nbsp;<wbr>A block quote within a block quote.</pre>
+</dd></dl>
+<p> Extension: blank_before_blockquote </p>
+<p> Standard markdown syntax does not require a blank line before a block quote. Pandoc does require this (except, of course, at the beginning of the document). The reason for the requirement is that it is all too easy for a &gt; to end up at the beginning of a line by accident (perhaps through line wrapping). So, unless the markdown_strict format is used, the following does not produce a nested block quote in pandoc:</p>
+<dl>
+<dd>
+<pre>&gt;&nbsp;<wbr>This is a block quote.
+&gt;&gt;&nbsp;<wbr>Nested.</pre>
+</dd></dl>
+<h2>Verbatim (Code) Blocks</h2>
+<h3>Indented code blocks</h3>
+<p>A block of text indented four spaces (or one tab) is treated as verbatim text: that is, special characters do not trigger special formatting, and all spaces and line breaks are preserved. For example,</p>
+<dl>
+<dd>
+<pre>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>if&nbsp;<wbr>(a&nbsp;<wbr>&gt;&nbsp;<wbr>3)&nbsp;<wbr>{
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>moveShip(5&nbsp;<wbr>*&nbsp;<wbr>gravity, DOWN);
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>}</pre>
+</dd></dl>
+<p> The initial (four space or one tab) indentation is not considered part of the verbatim text, and is removed in the output. </p>
+<p> Note: blank lines in the verbatim text need not begin with four spaces.</p>
+<h3>Fenced code blocks</h3>
+<p>Extension: fenced_code_blocks </p>
+<p> In addition to standard indented code blocks, Pandoc supports fenced code blocks. These begin with a row of three or more tildes (~) or backticks (`) and end with a row of tildes or backticks that must be at least as long as the starting row. Everything between these lines is treated as code. No indentation is necessary:</p>
+<dl>
+<dd>
+<pre>~~~~~~~
+if&nbsp;<wbr>(a&nbsp;<wbr>&gt;&nbsp;<wbr>3)&nbsp;<wbr>{
+&nbsp;<wbr>&nbsp;<wbr>moveShip(5&nbsp;<wbr>*&nbsp;<wbr>gravity, DOWN);
+}
+~~~~~~~</pre>
+</dd></dl>
+<p> Like regular code blocks, fenced code blocks must be separated from surrounding text by blank lines. </p>
+<p> If the code itself contains a row of tildes or backticks, just use a longer row of tildes or backticks at the start and end:</p>
+<dl>
+<dd>
+<pre>~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+code including tildes
+~~~~~~~~~~
+~~~~~~~~~~~~~~~~</pre>
+</dd></dl>
+<p> Optionally, you may attach attributes to the code block using this syntax:</p>
+<dl>
+<dd>
+<pre>~~~~&nbsp;<wbr>{#mycode .haskell .numberLines startFrom=&quot;100&quot;}
+qsort&nbsp;<wbr>[]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>[]
+qsort&nbsp;<wbr>(x:xs)&nbsp;<wbr>=&nbsp;<wbr>qsort&nbsp;<wbr>(filter&nbsp;<wbr>(&lt;&nbsp;<wbr>x)&nbsp;<wbr>xs)&nbsp;<wbr>++&nbsp;<wbr>[x]&nbsp;<wbr>++
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>qsort&nbsp;<wbr>(filter&nbsp;<wbr>(&gt;=&nbsp;<wbr>x)&nbsp;<wbr>xs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</pre>
+</dd></dl>
+<p> Here mycode is an identifier, haskell and numberLines are classes, and startFrom is an attribute with value 100. Some output formats can use this information to do syntax highlighting. Currently, the only output formats that uses this information are HTML and LaTeX. If highlighting is supported for your output format and language, then the code block above will appear highlighted, with numbered lines. (To see which languages are supported, do pandoc &#8211;version.) Otherwise, the code block above will appear as follows:</p>
+<dl>
+<dd>
+<pre>&lt;pre id=&quot;mycode&quot;&nbsp;<wbr>class=&quot;haskell numberLines&quot;&nbsp;<wbr>startFrom=&quot;100&quot;&gt;
+&nbsp;<wbr>&nbsp;<wbr>&lt;code&gt;
+&nbsp;<wbr>&nbsp;<wbr>...
+&nbsp;<wbr>&nbsp;<wbr>&lt;/code&gt;
+&lt;/pre&gt;</pre>
+</dd></dl>
+<p> A shortcut form can also be used for specifying the language of the code block:</p>
+<dl>
+<dd>
+<pre>```haskell
+qsort&nbsp;<wbr>[]&nbsp;<wbr>=&nbsp;<wbr>[]
+```</pre>
+</dd></dl>
+<p> This is equivalent to:</p>
+<dl>
+<dd>
+<pre>```&nbsp;<wbr>{.haskell}
+qsort&nbsp;<wbr>[]&nbsp;<wbr>=&nbsp;<wbr>[]
+```</pre>
+</dd></dl>
+<p> To prevent all highlighting, use the &#8211;no-highlight flag. To set the highlighting style, use &#8211;highlight-style.</p>
+<h2>Line Blocks</h2>
+<p>Extension: line_blocks </p>
+<p> A line block is a sequence of lines beginning with a vertical bar (|) followed by a space. The division into lines will be preserved in the output, as will any leading spaces; otherwise, the lines will be formatted as markdown. This is useful for verse and addresses:</p>
+<dl>
+<dd>
+<pre>| The limerick packs laughs anatomical
+| In space that is quite economical.
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>But the good ones I've seen
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>So seldom are clean
+| And the clean ones so seldom are comical
+| 200 Main St.
+| Berkeley, CA 94718</pre>
+</dd></dl>
+<p> The lines can be hard-wrapped if needed, but the continuation line must begin with a space.</p>
+<dl>
+<dd>
+<pre>| The Right Honorable Most Venerable and Righteous Samuel L.
+&nbsp;<wbr>&nbsp;<wbr>Constable, Jr.
+| 200 Main St.
+| Berkeley, CA 94718</pre>
+</dd></dl>
+<p> This syntax is borrowed from reStructuredText.</p>
+<h2>Lists</h2>
+<h3>Bullet lists</h3>
+<p>A bullet list is a list of bulleted list items. A bulleted list item begins with a bullet (*, +, or -). Here is a simple example:</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>one
+*&nbsp;<wbr>two
+*&nbsp;<wbr>three</pre>
+</dd></dl>
+<p> This will produce a &quot;compact&quot; list. If you want a &quot;loose&quot; list, in which each item is formatted as a paragraph, put spaces between the items:</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>one
+*&nbsp;<wbr>two
+*&nbsp;<wbr>three</pre>
+</dd></dl>
+<p> The bullets need not be flush with the left margin; they may be indented one, two, or three spaces. The bullet must be followed by whitespace. </p>
+<p> List items look best if subsequent lines are flush with the first line (after the bullet):</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>here is my first
+&nbsp;<wbr>&nbsp;<wbr>list item.
+*&nbsp;<wbr>and my second.</pre>
+</dd></dl>
+<p> But markdown also allows a &quot;lazy&quot; format:</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>here is my first
+list item.
+*&nbsp;<wbr>and my second.</pre>
+</dd></dl>
+<h3>The four-space rule</h3>
+<p>A list item may contain multiple paragraphs and other block-level content. However, subsequent paragraphs must be preceded by a blank line and indented four spaces or a tab. The list will look better if the first paragraph is aligned with the rest:</p>
+<dl>
+<dd>
+<pre>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>First paragraph.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Continued.
+&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Second paragraph. With a code block, which must be indented
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>eight spaces:
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>code&nbsp;<wbr>}</pre>
+</dd></dl>
+<p> List items may include other lists. In this case the preceding blank line is optional. The nested list must be indented four spaces or one tab:</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>fruits
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>apples
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>- macintosh
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>- red delicious
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>pears
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>peaches
+*&nbsp;<wbr>vegetables
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>broccoli
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>+&nbsp;<wbr>chard</pre>
+</dd></dl>
+<p> As noted above, markdown allows you to write list items &quot;lazily,&quot; instead of indenting continuation lines. However, if there are multiple paragraphs or other blocks in a list item, the first line of each must be indented.</p>
+<dl>
+<dd>
+<pre>+&nbsp;<wbr>A lazy, lazy, list
+item.
++&nbsp;<wbr>Another one;&nbsp;<wbr>this looks
+bad but is legal.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Second paragraph of second
+list item.</pre>
+</dd></dl>
+<p> Note: Although the four-space rule for continuation paragraphs comes from the official markdown syntax guide, the reference implementation, Markdown.pl, does not follow it. So pandoc will give different results than Markdown.pl when authors have indented continuation paragraphs fewer than four spaces. </p>
+<p> The markdown syntax guide is not explicit whether the four-space rule applies to all block-level content in a list item; it only mentions paragraphs and code blocks. But it implies that the rule applies to all block-level content (including nested lists), and pandoc interprets it that way.</p>
+<h3>Ordered lists</h3>
+<p>Ordered lists work just like bulleted lists, except that the items begin with enumerators rather than bullets. </p>
+<p> In standard markdown, enumerators are decimal numbers followed by a period and a space. The numbers themselves are ignored, so there is no difference between this list:</p>
+<dl>
+<dd>
+<pre>1.&nbsp;<wbr>&nbsp;<wbr>one
+2.&nbsp;<wbr>&nbsp;<wbr>two
+3.&nbsp;<wbr>&nbsp;<wbr>three</pre>
+</dd></dl>
+<p> and this one:</p>
+<dl>
+<dd>
+<pre>5.&nbsp;<wbr>&nbsp;<wbr>one
+7.&nbsp;<wbr>&nbsp;<wbr>two
+1.&nbsp;<wbr>&nbsp;<wbr>three</pre>
+</dd></dl>
+<p> Extension: fancy_lists </p>
+<p> Unlike standard markdown, Pandoc allows ordered list items to be marked with uppercase and lowercase letters and roman numerals, in addition to arabic numerals. List markers may be enclosed in parentheses or followed by a single right-parentheses or period. They must be separated from the text that follows by at least one space, and, if the list marker is a capital letter with a period, by at least two spaces.[1] </p>
+<p> The fancy_lists extension also allows &#8216;#&#8217; to be used as an ordered list marker in place of a numeral:</p>
+<dl>
+<dd>
+<pre>#. one
+#. two</pre>
+</dd></dl>
+<p> Extension: startnum </p>
+<p> Pandoc also pays attention to the type of list marker used, and to the starting number, and both of these are preserved where possible in the output format. Thus, the following yields a list with numbers followed by a single parenthesis, starting with 9, and a sublist with lowercase roman numerals:</p>
+<dl>
+<dd>
+<pre>&nbsp;<wbr>9)&nbsp;<wbr>&nbsp;<wbr>Ninth
+10)&nbsp;<wbr>&nbsp;<wbr>Tenth
+11)&nbsp;<wbr>&nbsp;<wbr>Eleventh
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>i. subone
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ii. subtwo
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>iii. subthree</pre>
+</dd></dl>
+<p> Pandoc will start a new list each time a different type of list marker is used. So, the following will create three lists:</p>
+<dl>
+<dd>
+<pre>(2)&nbsp;<wbr>Two
+(5)&nbsp;<wbr>Three
+1.&nbsp;<wbr>&nbsp;<wbr>Four
+*&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Five</pre>
+</dd></dl>
+<p> If default list markers are desired, use #.:</p>
+<dl>
+<dd>
+<pre>#.&nbsp;<wbr>&nbsp;<wbr>one
+#.&nbsp;<wbr>&nbsp;<wbr>two
+#.&nbsp;<wbr>&nbsp;<wbr>three</pre>
+</dd></dl>
+<h3>Definition lists</h3>
+<p>Extension: definition_lists </p>
+<p> Pandoc supports definition lists, using a syntax inspired by PHP Markdown Extra and reStructuredText:[2]</p>
+<dl>
+<dd>
+<pre>Term 1
+:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Definition 1
+Term 2 with&nbsp;<wbr>*inline markup*
+:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Definition 2
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>some code, part of Definition 2&nbsp;<wbr>}
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Third paragraph of definition 2.</pre>
+</dd></dl>
+<p> Each term must fit on one line, which may optionally be followed by a blank line, and must be followed by one or more definitions. A definition begins with a colon or tilde, which may be indented one or two spaces. The body of the definition (including the first line, aside from the colon or tilde) should be indented four spaces. A term may have multiple definitions, and each definition may consist of one or more block elements (paragraph, code block, list, etc.), each indented four spaces or one tab stop. </p>
+<p> If you leave space after the definition (as in the example above), the blocks of the definitions will be considered paragraphs. In some output formats, this will mean greater spacing between term/definition pairs. For a compact definition list, do not leave space between the definition and the next term:</p>
+<dl>
+<dd>
+<pre>Term 1
+&nbsp;<wbr>&nbsp;<wbr>~&nbsp;<wbr>Definition 1
+Term 2
+&nbsp;<wbr>&nbsp;<wbr>~&nbsp;<wbr>Definition 2a
+&nbsp;<wbr>&nbsp;<wbr>~&nbsp;<wbr>Definition 2b</pre>
+</dd></dl>
+<h3>Numbered example lists</h3>
+<p>Extension: example_lists </p>
+<p> The special list marker @ can be used for sequentially numbered examples. The first list item with a @ marker will be numbered &#8216;1&#8217;, the next &#8216;2&#8217;, and so on, throughout the document. The numbered examples need not occur in a single list; each new list using @ will take up where the last stopped. So, for example:</p>
+<dl>
+<dd>
+<pre>(@)&nbsp;<wbr>&nbsp;<wbr>My first example will be numbered&nbsp;<wbr>(1).
+(@)&nbsp;<wbr>&nbsp;<wbr>My second example will be numbered&nbsp;<wbr>(2).
+Explanation of examples.
+(@)&nbsp;<wbr>&nbsp;<wbr>My third example will be numbered&nbsp;<wbr>(3).</pre>
+</dd></dl>
+<p> Numbered examples can be labeled and referred to elsewhere in the document:</p>
+<dl>
+<dd>
+<pre>(@good)&nbsp;<wbr>&nbsp;<wbr>This is a good example.
+As&nbsp;<wbr>(@good)&nbsp;<wbr>illustrates, ...</pre>
+</dd></dl>
+<p> The label can be any string of alphanumeric characters, underscores, or hyphens.</p>
+<h3>Compact and loose lists</h3>
+<p>Pandoc behaves differently from Markdown.pl on some &quot;edge cases&quot; involving lists. Consider this source:</p>
+<dl>
+<dd>
+<pre>+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>First
++&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Second:
+	-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Fee
+	-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Fie
+	-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Foe
++&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Third</pre>
+</dd></dl>
+<p> Pandoc transforms this into a &quot;compact list&quot; (with no &lt;p&gt; tags around &quot;First&quot;, &quot;Second&quot;, or &quot;Third&quot;), while markdown puts &lt;p&gt; tags around &quot;Second&quot; and &quot;Third&quot; (but not &quot;First&quot;), because of the blank space around &quot;Third&quot;. Pandoc follows a simple rule: if the text is followed by a blank line, it is treated as a paragraph. Since &quot;Second&quot; is followed by a list, and not a blank line, it isn&#8217;t treated as a paragraph. The fact that the list is followed by a blank line is irrelevant. (Note: Pandoc works this way even when the markdown_strict format is specified. This behavior is consistent with the official markdown syntax description, even though it is different from that of Markdown.pl.)</p>
+<h3>Ending a list</h3>
+<p>What if you want to put an indented code block after a list?</p>
+<dl>
+<dd>
+<pre>-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>item one
+-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>item two
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>my code block&nbsp;<wbr>}</pre>
+</dd></dl>
+<p> Trouble! Here pandoc (like other markdown implementations) will treat {&nbsp;<wbr>my code block&nbsp;<wbr>} as the second paragraph of item two, and not as a code block. </p>
+<p> To &quot;cut off&quot; the list after item two, you can insert some non-indented content, like an HTML comment, which won&#8217;t produce visible output in any format:</p>
+<dl>
+<dd>
+<pre>-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>item one
+-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>item two
+&lt;!-- end of list --&gt;
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>my code block&nbsp;<wbr>}</pre>
+</dd></dl>
+<p> You can use the same trick if you want two consecutive lists instead of one big list:</p>
+<dl>
+<dd>
+<pre>1.&nbsp;<wbr>&nbsp;<wbr>one
+2.&nbsp;<wbr>&nbsp;<wbr>two
+3.&nbsp;<wbr>&nbsp;<wbr>three
+&lt;!-- --&gt;
+1.&nbsp;<wbr>&nbsp;<wbr>uno
+2.&nbsp;<wbr>&nbsp;<wbr>dos
+3.&nbsp;<wbr>&nbsp;<wbr>tres</pre>
+</dd></dl>
+<h2>Horizontal Rules</h2>
+<p>A line containing a row of three or more *, -, or _ characters (optionally separated by spaces) produces a horizontal rule:</p>
+<dl>
+<dd>
+<pre>*&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>&nbsp;<wbr>*
+---------------</pre>
+</dd></dl>
+<h2>Tables</h2>
+<p>Four kinds of tables may be used. The first three kinds presuppose the use of a fixed-width font, such as Courier. The fourth kind can be used with proportionally spaced fonts, as it does not require lining up columns.</p>
+<h3>Simple tables</h3>
+<p>Extension: simple_tables, table_captions </p>
+<p> Simple tables look like this:</p>
+<dl>
+<dd>
+<pre>&nbsp;<wbr>&nbsp;<wbr>Right&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Left&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Center&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Default
+-------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>------ ----------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-------
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1
+Table:&nbsp;<wbr>&nbsp;<wbr>Demonstration of simple table syntax.</pre>
+</dd></dl>
+<p> The headers and table rows must each fit on one line. Column alignments are determined by the position of the header text relative to the dashed line below it:[3]</p>
+<dl>
+<dt>&bull;</dt>
+<dd>If the dashed line is flush with the header text on the right side but extends beyond it on the left, the column is right-aligned.</dd>
+<dt>&bull;</dt>
+<dd>If the dashed line is flush with the header text on the left side but extends beyond it on the right, the column is left-aligned.</dd>
+<dt>&bull;</dt>
+<dd>If the dashed line extends beyond the header text on both sides, the column is centered.</dd>
+<dt>&bull;</dt>
+<dd>If the dashed line is flush with the header text on both sides, the default alignment is used (in most cases, this will be left).</dd></dl>
+<p> The table must end with a blank line, or a line of dashes followed by a blank line. A caption may optionally be provided (as illustrated in the example above). A caption is a paragraph beginning with the string Table: (or just :), which will be stripped off. It may appear either before or after the table. </p>
+<p> The column headers may be omitted, provided a dashed line is used to end the table. For example:</p>
+<dl>
+<dd>
+<pre>-------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>------ ----------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-------
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1
+-------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>------ ----------&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>-------</pre>
+</dd></dl>
+<p> When headers are omitted, column alignments are determined on the basis of the first line of the table body. So, in the tables above, the columns would be right, left, center, and right aligned, respectively.</p>
+<h3>Multiline tables</h3>
+<p>Extension: multiline_tables, table_captions </p>
+<p> Multiline tables allow headers and table rows to span multiple lines of text (but cells that span multiple columns or rows of the table are not supported). Here is an example:</p>
+<dl>
+<dd>
+<pre>-------------------------------------------------------------
+&nbsp;<wbr>Centered&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Default&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Right Left
+&nbsp;<wbr>&nbsp;<wbr>Header&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Aligned&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Aligned Aligned
+----------- ------- --------------- -------------------------
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>First&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>row&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12.0 Example of a row that
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>spans multiple lines.
+&nbsp;<wbr>&nbsp;<wbr>Second&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>row&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5.0 Here's another one. Note
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the blank line between
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rows.
+-------------------------------------------------------------
+Table: Here's the caption. It, too, may span
+multiple lines.</pre>
+</dd></dl>
+<p> These work like simple tables, but with the following differences:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>They must begin with a row of dashes, before the header text (unless the headers are omitted).</dd>
+<dt>&bull;</dt>
+<dd>They must end with a row of dashes, then a blank line.</dd>
+<dt>&bull;</dt>
+<dd>The rows must be separated by blank lines.</dd></dl>
+<p> In multiline tables, the table parser pays attention to the widths of the columns, and the writers try to reproduce these relative widths in the output. So, if you find that one of the columns is too narrow in the output, try widening it in the markdown source. </p>
+<p> Headers may be omitted in multiline tables as well as simple tables:</p>
+<dl>
+<dd>
+<pre>----------- ------- --------------- -------------------------
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>First&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>row&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12.0 Example of a row that
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>spans multiple lines.
+&nbsp;<wbr>&nbsp;<wbr>Second&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>row&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>5.0 Here's another one. Note
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>the blank line between
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rows.
+----------- ------- --------------- -------------------------
+: Here's a multiline table without headers.</pre>
+</dd></dl>
+<p> It is possible for a multiline table to have just one row, but the row should be followed by a blank line (and then the row of dashes that ends the table), or the table may be interpreted as a simple table.</p>
+<h3>Grid tables</h3>
+<p>Extension: grid_tables, table_captions </p>
+<p> Grid tables look like this:</p>
+<dl>
+<dd>
+<pre>: Sample grid table.
++---------------+---------------+--------------------+
+| Fruit&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Price&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| Advantages&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|
++===============+===============+====================+
+| Bananas&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>$1.34&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| - built-in wrapper |
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| - bright color&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|
++---------------+---------------+--------------------+
+| Oranges&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>$2.10&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| - cures scurvy&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>| - tasty&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|
++---------------+---------------+--------------------+</pre>
+</dd></dl>
+<p> The row of =s separates the header from the table body, and can be omitted for a headerless table. The cells of grid tables may contain arbitrary block elements (multiple paragraphs, code blocks, lists, etc.). Alignments are not supported, nor are cells that span multiple columns or rows. Grid tables can be created easily using Emacs table mode.</p>
+<h3>Pipe tables</h3>
+<p>Extension: pipe_tables, table_captions </p>
+<p> Pipe tables look like this:</p>
+<dl>
+<dd>
+<pre>| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>12&nbsp;<wbr>&nbsp;<wbr>|
+|&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>123 |&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123&nbsp;<wbr>&nbsp;<wbr>|
+|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1 |&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>|
+&nbsp;<wbr>&nbsp;<wbr>: Demonstration of simple table syntax.</pre>
+</dd></dl>
+<p> The syntax is the same as in PHP markdown extra. The beginning and ending pipe characters are optional, but pipes are required between all columns. The colons indicate column alignment as shown. The header can be omitted, but the horizontal line must still be included, as it defines column alignments. </p>
+<p> Since the pipes indicate column boundaries, columns need not be vertically aligned, as they are in the above example. So, this is a perfectly legal (though ugly) pipe table:</p>
+<dl>
+<dd>
+<pre>fruit| price
+-----|-----:
+apple|2.05
+pear|1.37
+orange|3.09</pre>
+</dd></dl>
+<p> The cells of pipe tables cannot contain block elements like paragraphs and lists, and cannot span multiple lines. </p>
+<p> Note: Pandoc also recognizes pipe tables of the following form, as can produced by Emacs&#8217; orgtbl-mode:</p>
+<dl>
+<dd>
+<pre>| One | Two&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>|
+|-----+-------|
+| my&nbsp;<wbr>&nbsp;<wbr>| table |
+| is&nbsp;<wbr>&nbsp;<wbr>| nice&nbsp;<wbr>&nbsp;<wbr>|</pre>
+</dd></dl>
+<p> The difference is that + is used instead of |. Other orgtbl features are not supported. In particular, to get non-default column alignment, you&#8217;ll need to add colons as above.</p>
+<h2>Title Block</h2>
+<p>Extension: pandoc_title_block </p>
+<p> If the file begins with a title block</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>title
+%&nbsp;<wbr>author(s)&nbsp;<wbr>(separated by semicolons)
+%&nbsp;<wbr>date</pre>
+</dd></dl>
+<p> it will be parsed as bibliographic information, not regular text. (It will be used, for example, in the title of standalone LaTeX or HTML output.) The block may contain just a title, a title and an author, or all three elements. If you want to include an author but no title, or a title and a date but no author, you need a blank line:</p>
+<dl>
+<dd>
+<pre>%
+%&nbsp;<wbr>Author
+%&nbsp;<wbr>My title
+%
+%&nbsp;<wbr>June 15, 2006</pre>
+</dd></dl>
+<p> The title may occupy multiple lines, but continuation lines must begin with leading space, thus:</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>My title
+&nbsp;<wbr>&nbsp;<wbr>on multiple lines</pre>
+</dd></dl>
+<p> If a document has multiple authors, the authors may be put on separate lines with leading space, or separated by semicolons, or both. So, all of the following are equivalent:</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>Author One
+&nbsp;<wbr>&nbsp;<wbr>Author Two
+%&nbsp;<wbr>Author One;&nbsp;<wbr>Author Two
+%&nbsp;<wbr>Author One;
+&nbsp;<wbr>&nbsp;<wbr>Author Two</pre>
+</dd></dl>
+<p> The date must fit on one line. </p>
+<p> All three metadata fields may contain standard inline formatting (italics, links, footnotes, etc.). </p>
+<p> Title blocks will always be parsed, but they will affect the output only when the &#8211;standalone (-s) option is chosen. In HTML output, titles will appear twice: once in the document head &#8212; this is the title that will appear at the top of the window in a browser &#8212; and once at the beginning of the document body. The title in the document head can have an optional prefix attached (&#8211;title-prefix or -T option). The title in the body appears as an H1 element with class &quot;title&quot;, so it can be suppressed or reformatted with CSS. If a title prefix is specified with -T and no title block appears in the document, the title prefix will be used by itself as the HTML title. </p>
+<p> The man page writer extracts a title, man page section number, and other header and footer information from the title line. The title is assumed to be the first word on the title line, which may optionally end with a (single-digit) section number in parentheses. (There should be no space between the title and the parentheses.) Anything after this is assumed to be additional footer and header text. A single pipe character (|) should be used to separate the footer text from the header text. Thus,</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>PANDOC(1)</pre>
+</dd></dl>
+<p> will yield a man page with the title PANDOC and section 1.</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>PANDOC(1)&nbsp;<wbr>Pandoc User Manuals</pre>
+</dd></dl>
+<p> will also have &quot;Pandoc User Manuals&quot; in the footer.</p>
+<dl>
+<dd>
+<pre>%&nbsp;<wbr>PANDOC(1)&nbsp;<wbr>Pandoc User Manuals | Version 4.0</pre>
+</dd></dl>
+<p> will also have &quot;Version 4.0&quot; in the header.</p>
+<h2>Yaml Metadata Block</h2>
+<p>Extension: yaml_metadata_block </p>
+<p> A YAML metadata block is a valid YAML object, delimited by a line of three hyphens (&#8212;) at the top and a line of three hyphens (&#8212;) or three dots (&#8230;) at the bottom. A YAML metadata block may occur anywhere in the document, but if it is not at the beginning, it must be preceded by a blank line. </p>
+<p> Metadata will be taken from the fields of the YAML object and added to any existing document metadata. Metadata can contain lists and objects (nested arbitrarily), but all string scalars will be interpreted as markdown. Fields with names ending in an underscore will be ignored by pandoc. (They may be given a role by external processors.) </p>
+<p> A document may contain multiple metadata blocks. The metadata fields will be combined through a left-biased union: if two metadata blocks attempt to set the same field, the value from the first block will be taken. </p>
+<p> Note that YAML escaping rules must be followed. Thus, for example, if a title contains a colon, it must be quoted. The pipe character (|) can be used to begin an indented block that will be interpreted literally, without need for escaping. This form is necessary when the field contains blank lines:</p>
+<dl>
+<dd>
+<pre>---
+title:&nbsp;<wbr>&nbsp;<wbr>'This is the title: it contains a colon'
+author:
+- name: Author One
+&nbsp;<wbr>&nbsp;<wbr>affiliation: University of Somewhere
+- name: Author Two
+&nbsp;<wbr>&nbsp;<wbr>affiliation: University of Nowhere
+tags:&nbsp;<wbr>[nothing, nothingness]
+abstract: |
+&nbsp;<wbr>&nbsp;<wbr>This is the abstract.
+&nbsp;<wbr>&nbsp;<wbr>It consists of two paragraphs.
+...</pre>
+</dd></dl>
+<p> Template variables will be set automatically from the metadata. Thus, for example, in writing HTML, the variable abstract will be set to the HTML equivalent of the markdown in the abstract field:</p>
+<dl>
+<dd>
+<pre>&lt;p&gt;This is the abstract.&lt;/p&gt;
+&lt;p&gt;It consists of two paragraphs.&lt;/p&gt;</pre>
+</dd></dl>
+<p> Note: The author variable in the default templates expects a simple list or string. To use the structured authors in the example, you would need a custom template. For example:</p>
+<dl>
+<dd>
+<pre>$for(author)$
+$if(author.name)$
+$author.name$$if(author.affiliation)$&nbsp;<wbr>($author.affiliation$)$endif$
+$else$
+$author$
+$endif$
+$endfor$</pre>
+</dd></dl>
+<h2>Backslash Escapes</h2>
+<p>Extension: all_symbols_escapable </p>
+<p> Except inside a code block or inline code, any punctuation or space character preceded by a backslash will be treated literally, even if it would normally indicate formatting. Thus, for example, if one writes</p>
+<dl>
+<dd>
+<pre>*\*hello\**</pre>
+</dd></dl>
+<p> one will get</p>
+<dl>
+<dd>
+<pre>&lt;em&gt;*hello*&lt;/em&gt;</pre>
+</dd></dl>
+<p> instead of</p>
+<dl>
+<dd>
+<pre>&lt;strong&gt;hello&lt;/strong&gt;</pre>
+</dd></dl>
+<p> This rule is easier to remember than standard markdown&#8217;s rule, which allows only the following characters to be backslash-escaped:</p>
+<dl>
+<dd>
+<pre>\`*_{}[]()&gt;#+-.!</pre>
+</dd></dl>
+<p> (However, if the markdown_strict format is used, the standard markdown rule will be used.) </p>
+<p> A backslash-escaped space is parsed as a nonbreaking space. It will appear in TeX output as ~ and in HTML and XML as \&amp;#160; or \&amp;nbsp;. </p>
+<p> A backslash-escaped newline (i.e. a backslash occurring at the end of a line) is parsed as a hard line break. It will appear in TeX output as \ and in HTML as &lt;br&nbsp;<wbr>/&gt;. This is a nice alternative to markdown&#8217;s &quot;invisible&quot; way of indicating hard line breaks using two trailing spaces on a line. </p>
+<p> Backslash escapes do not work in verbatim contexts.</p>
+<h2>Smart Punctuation</h2>
+<p>Extension </p>
+<p> If the &#8211;smart option is specified, pandoc will produce typographically correct output, converting straight quotes to curly quotes, &#8212; to em-dashes, &#8212; to en-dashes, and &#8230; to ellipses. Nonbreaking spaces are inserted after certain abbreviations, such as &quot;Mr.&quot; </p>
+<p> Note: if your LaTeX template uses the csquotes package, pandoc will detect automatically this and use nquote{&#8230;} for quoted text.</p>
+<h2>Inline Formatting</h2>
+<h3>Emphasis</h3>
+<p>To emphasize some text, surround it with *s or _, like this:</p>
+<dl>
+<dd>
+<pre>This text is&nbsp;<wbr>_emphasized with underscores_, and this
+is&nbsp;<wbr>*emphasized with asterisks*.</pre>
+</dd></dl>
+<p> Double * or _ produces strong emphasis:</p>
+<dl>
+<dd>
+<pre>This is&nbsp;<wbr>**strong emphasis**&nbsp;<wbr>and&nbsp;<wbr>__with underscores__.</pre>
+</dd></dl>
+<p> A * or _ character surrounded by spaces, or backslash-escaped, will not trigger emphasis:</p>
+<dl>
+<dd>
+<pre>This is&nbsp;<wbr>*&nbsp;<wbr>not emphasized&nbsp;<wbr>*, and&nbsp;<wbr>\*neither is this\*.</pre>
+</dd></dl>
+<p> Extension: intraword_underscores </p>
+<p> Because _ is sometimes used inside words and identifiers, pandoc does not interpret a _ surrounded by alphanumeric characters as an emphasis marker. If you want to emphasize just part of a word, use *:</p>
+<dl>
+<dd>
+<pre>feas*ible*, not feas*able*.</pre>
+</dd></dl>
+<h3>Strikeout</h3>
+<p>Extension: strikeout </p>
+<p> To strikeout a section of text with a horizontal line, begin and end it with ~~. Thus, for example,</p>
+<dl>
+<dd>
+<pre>This&nbsp;<wbr>~~is deleted text.~~</pre>
+</dd></dl>
+<h3>Superscripts and subscripts</h3>
+<p>Extension: superscript, subscript </p>
+<p> Superscripts may be written by surrounding the superscripted text by ^ characters; subscripts may be written by surrounding the subscripted text by ~ characters. Thus, for example,</p>
+<dl>
+<dd>
+<pre>H~2~O is a liquid.&nbsp;<wbr>&nbsp;<wbr>2^10^&nbsp;<wbr>is 1024.</pre>
+</dd></dl>
+<p> If the superscripted or subscripted text contains spaces, these spaces must be escaped with backslashes. (This is to prevent accidental superscripting and subscripting through the ordinary use of ~ and ^.) Thus, if you want the letter P with &#8216;a cat&#8217; in subscripts, use P~a\&nbsp;<wbr>cat~, not P~a cat~.</p>
+<h3>Verbatim</h3>
+<p>To make a short span of text verbatim, put it inside backticks:</p>
+<dl>
+<dd>
+<pre>What is the difference between&nbsp;<wbr>`&gt;&gt;=`&nbsp;<wbr>and&nbsp;<wbr>`&gt;&gt;`?</pre>
+</dd></dl>
+<p> If the verbatim text includes a backtick, use double backticks:</p>
+<dl>
+<dd>
+<pre>Here is a literal backtick&nbsp;<wbr>``&nbsp;<wbr>`&nbsp;<wbr>``.</pre>
+</dd></dl>
+<p> (The spaces after the opening backticks and before the closing backticks will be ignored.) </p>
+<p> The general rule is that a verbatim span starts with a string of consecutive backticks (optionally followed by a space) and ends with a string of the same number of backticks (optionally preceded by a space). </p>
+<p> Note that backslash-escapes (and other markdown constructs) do not work in verbatim contexts:</p>
+<dl>
+<dd>
+<pre>This is a backslash followed by an asterisk:&nbsp;<wbr>`\*`.</pre>
+</dd></dl>
+<p> Extension: inline_code_attributes </p>
+<p> Attributes can be attached to verbatim text, just as with fenced code blocks:</p>
+<dl>
+<dd>
+<pre>`&lt;$&gt;`{.haskell}</pre>
+</dd></dl>
+<h2>Math</h2>
+<p>Extension: tex_math_dollars </p>
+<p> Anything between two $ characters will be treated as TeX math. The opening $ must have a character immediately to its right, while the closing $ must have a character immediately to its left. Thus, $20,000 and&nbsp;<wbr>$30,000 won&#8217;t parse as math. If for some reason you need to enclose text in literal $ characters, backslash-escape them and they won&#8217;t be treated as math delimiters. </p>
+<p> TeX math will be printed in all output formats. How it is rendered depends on the output format:</p>
+<dl>
+<dt><code>Markdown, LaTeX, Org-Mode, ConTeXt</code></dt>
+<dd>It will appear verbatim between $ characters.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>reStructuredText</code></dt>
+<dd>It will be rendered using an interpreted text role :math:, as described here.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>AsciiDoc</code></dt>
+<dd>It will be rendered as latexmath:[&#8230;].</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>Texinfo</code></dt>
+<dd>It will be rendered inside a @math command.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>groff man</code></dt>
+<dd>It will be rendered verbatim without $&#8217;s.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>MediaWiki</code></dt>
+<dd>It will be rendered inside &lt;math&gt; tags.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>Textile</code></dt>
+<dd>It will be rendered inside &lt;span class=&quot;math&quot;&gt; tags.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>RTF, OpenDocument, ODT</code></dt>
+<dd>It will be rendered, if possible, using unicode characters, and will otherwise appear verbatim.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>Docbook</code></dt>
+<dd>If the &#8211;mathml flag is used, it will be rendered using mathml in an inlineequation or informalequation tag. Otherwise it will be rendered, if possible, using unicode characters.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>Docx</code></dt>
+<dd>It will be rendered using OMML math markup.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>FictionBook2</code></dt>
+<dd>If the &#8211;webtex option is used, formulas are rendered as images using Google Charts or other compatible web service, downloaded and embedded in the e-book. Otherwise, they will appear verbatim.</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>HTML, Slidy, DZSlides, S5, EPUB</code></dt>
+<dd>The way math is rendered in HTML will depend on the command-line options selected:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>1.</dt>
+<dd>The default is to render TeX math as far as possible using unicode characters, as with RTF, DocBook, and OpenDocument output. Formulas are put inside a span with class=&quot;math&quot;, so that they may be styled differently from the surrounding text if needed.</dd>
+<dt>2.</dt>
+<dd>If the &#8211;latexmathml option is used, TeX math will be displayed between $ or $$ characters and put in &lt;span&gt; tags with class LaTeX. The LaTeXMathML script will be used to render it as formulas. (This trick does not work in all browsers, but it works in Firefox. In browsers that do not support LaTeXMathML, TeX math will appear verbatim between $ characters.)</dd>
+<dt>3.</dt>
+<dd>If the &#8211;jsmath option is used, TeX math will be put inside &lt;span&gt; tags (for inline math) or &lt;div&gt; tags (for display math) with class math. The jsMath script will be used to render it.</dd>
+<dt>4.</dt>
+<dd>If the &#8211;mimetex option is used, the mimeTeX CGI script will be called to generate images for each TeX formula. This should work in all browsers. The &#8211;mimetex option takes an optional URL as argument. If no URL is specified, it will be assumed that the mimeTeX CGI script is at /cgi-bin/mimetex.cgi.</dd>
+<dt>5.</dt>
+<dd>If the &#8211;gladtex option is used, TeX formulas will be enclosed in &lt;eq&gt; tags in the HTML output. The resulting htex file may then be processed by gladTeX, which will produce image files for each formula and an html file with links to these images. So, the procedure is:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>
+<pre>pandoc -s --gladtex myfile.txt -o myfile.htex
+gladtex -d myfile-images myfile.htex
+#&nbsp;<wbr>produces myfile.html and images in myfile-images</pre>
+</dd></dl>
+</dl>
+<dt>6.</dt>
+<dd>If the &#8211;webtex option is used, TeX formulas will be converted to &lt;img&gt; tags that link to an external script that converts formulas to images. The formula will be URL-encoded and concatenated with the URL provided. If no URL is specified, the Google Chart API will be used (<a rel="nofollow" href="http://chart.apis.google.com/chart?cht=tx">http://chart.apis.google.com/chart?cht=tx</a>&amp;chl=).</dd>
+<dt>7.</dt>
+<dd>If the &#8211;mathjax option is used, TeX math will be displayed between \(&#8230;\) (for inline math) or \[&#8230;\] (for display math) and put in &lt;span&gt; tags with class math. The MathJax script will be used to render it as formulas.</dd></dl>
+</dl>
+</dl>
+<h2>Raw Html</h2>
+<p>Extension: raw_html </p>
+<p> Markdown allows you to insert raw HTML (or DocBook) anywhere in a document (except verbatim contexts, where &lt;, &gt;, and &amp; are interpreted literally). (Technically this is not an extension, since standard markdown allows it, but it has been made an extension so that it can be disabled if desired.) </p>
+<p> The raw HTML is passed through unchanged in HTML, S5, Slidy, Slideous, DZSlides, EPUB, Markdown, and Textile output, and suppressed in other formats. </p>
+<p> Extension: markdown_in_html_blocks </p>
+<p> Standard markdown allows you to include HTML &quot;blocks&quot;: blocks of HTML between balanced tags that are separated from the surrounding text with blank lines, and start and end at the left margin. Within these blocks, everything is interpreted as HTML, not markdown; so (for example), * does not signify emphasis. </p>
+<p> Pandoc behaves this way when the markdown_strict format is used; but by default, pandoc interprets material between HTML block tags as markdown. Thus, for example, Pandoc will turn</p>
+<dl>
+<dd>
+<pre>&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;*one*&lt;/td&gt;
+		&lt;td&gt;[a link](<a rel="nofollow" href="http://google.com)">http://google.com)</a>&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+</dd></dl>
+<p> into</p>
+<dl>
+<dd>
+<pre>&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;em&gt;one&lt;/em&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;a href=&quot;<a rel="nofollow" href="http://google.com">http://google.com</a>&quot;&gt;a link&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</pre>
+</dd></dl>
+<p> whereas Markdown.pl will preserve it as is. </p>
+<p> There is one exception to this rule: text between &lt;script&gt; and &lt;style&gt; tags is not interpreted as markdown. </p>
+<p> This departure from standard markdown should make it easier to mix markdown with HTML block elements. For example, one can surround a block of markdown text with &lt;div&gt; tags without preventing it from being interpreted as markdown.</p>
+<h2>Raw Tex</h2>
+<p>Extension: raw_tex </p>
+<p> In addition to raw HTML, pandoc allows raw LaTeX, TeX, and ConTeXt to be included in a document. Inline TeX commands will be preserved and passed unchanged to the LaTeX and ConTeXt writers. Thus, for example, you can use LaTeX to include BibTeX citations:</p>
+<dl>
+<dd>
+<pre>This result was proved in&nbsp;<wbr>&nbsp;<wbr>\cite{jones.1967}.
+</code></pre>
+</dl>
+<p> Note that in LaTeX environments, like </p>
+<dl>
+<dd> <pre><code>\begin{tabular}{|l|l|}\hline
+Age&nbsp;<wbr>&amp;&nbsp;<wbr>Frequency&nbsp;<wbr>\\&nbsp;<wbr>\hline
+18--25&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>15&nbsp;<wbr>\\
+26--35&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>33&nbsp;<wbr>\\
+36--45&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>22&nbsp;<wbr>\\&nbsp;<wbr>\hline
+\end{tabular}
+</code></pre>
+ </dd></dl>
+<p> the material between the begin and end tags will be interpreted as raw LaTeX, not as markdown. </p>
+<p> Inline LaTeX is ignored in output formats other than Markdown, LaTeX, and ConTeXt.  </p>
+<h2>LATEX MACROS</h2>
+<p> Extension: latex_macros </p>
+<p> For output formats other than LaTeX, pandoc will parse LaTeX \newcommand and \renewcommand definitions and apply the resulting macros to all LaTeX math. So, for example, the following will work in all output formats, not just LaTeX: </p>
+<dl>
+<dd> <pre><code>\newcommand{\tuple}[1]{\langle&nbsp;<wbr>#1&nbsp;<wbr>\rangle}
+$\tuple{a, b, c}$
+</code></pre>
+ </dd></dl>
+<p> In LaTeX output, the \newcommand definition will simply be passed unchanged to the output.  </p>
+<h2>LINKS</h2>
+<p> Markdown allows links to be specified in several ways.  </p>
+<h3>Automatic links</h3>
+<p> If you enclose a URL or email address in pointy brackets, it will become a link: </p>
+<dl>
+<dd> <pre><code>&lt;http://google.com&gt;
+&lt;sam [at] green.eggs.ham&gt;
+</code></pre>
+ </dd></dl>
+<h3>Inline links</h3>
+<p> An inline link consists of the link text in square brackets, followed by the URL in parentheses. (Optionally, the URL can be followed by a link title, in quotes.) </p>
+<dl>
+<dd> <pre><code>This is an&nbsp;<wbr>[inline link](/url), and here's&nbsp;<wbr>[one with
+a title](http://fsf.org&nbsp;<wbr>&quot;click here for a good time!&quot;).
+</code></pre>
+ </dd></dl>
+<p> There can be no space between the bracketed part and the parenthesized part. The link text can contain formatting (such as emphasis), but the title cannot.  </p>
+<h3>Reference links</h3>
+<p> An explicit reference link has two parts, the link itself and the link definition, which may occur elsewhere in the document (either before or after the link). </p>
+<p> The link consists of link text in square brackets, followed by a label in square brackets. (There can be space between the two.) The link definition consists of the bracketed label, followed by a colon and a space, followed by the URL, and optionally (after a space) a link title either in quotes or in parentheses. </p>
+<p> Here are some examples: </p>
+<dl>
+<dd> <pre><code>[my label 1]:&nbsp;<wbr>/foo/bar.html&nbsp;<wbr>&nbsp;<wbr>&quot;My title, optional&quot;
+[my label 2]:&nbsp;<wbr>/foo
+[my label 3]:&nbsp;<wbr>http://fsf.org&nbsp;<wbr>(The free software foundation)
+[my label 4]:&nbsp;<wbr>/bar#special&nbsp;<wbr>&nbsp;<wbr>'A title in single quotes'
+</code></pre>
+ </dd></dl>
+<p> The URL may optionally be surrounded by angle brackets: </p>
+<dl>
+<dd> <pre><code>[my label 5]:&nbsp;<wbr>&lt;http://foo.bar.baz&gt;
+</code></pre>
+ </dd></dl>
+<p> The title may go on the next line: </p>
+<dl>
+<dd> <pre><code>[my label 3]:&nbsp;<wbr>http://fsf.org&nbsp;<wbr>&nbsp;<wbr>&quot;The free software foundation&quot;
+</code></pre>
+ </dd></dl>
+<p> Note that link labels are not case sensitive. So, this will work: </p>
+<dl>
+<dd> <pre><code>Here is&nbsp;<wbr>[my link][FOO]
+[Foo]:&nbsp;<wbr>/bar/baz
+</code></pre>
+ </dd></dl>
+<p> In an implicit reference link, the second pair of brackets is empty, or omitted entirely: </p>
+<dl>
+<dd> <pre><code>See&nbsp;<wbr>[my website][], or&nbsp;<wbr>[my website].
+[my website]:&nbsp;<wbr>http://foo.bar.baz
+</code></pre>
+ </dd></dl>
+<p> Note: In Markdown.pl and most other markdown implementations, reference link definitions cannot occur in nested constructions such as list items or block quotes. Pandoc lifts this arbitrary seeming restriction. So the following is fine in pandoc, though not in most other implementations: </p>
+<dl>
+<dd> <pre><code>&gt;&nbsp;<wbr>My block&nbsp;<wbr>[quote].
+&gt;
+&gt;&nbsp;<wbr>[quote]:&nbsp;<wbr>/foo
+</code></pre>
+ </dd></dl>
+<h3>Internal links</h3>
+<p> To link to another section of the same document, use the automatically generated identifier (see Header identifiers in HTML, LaTeX, and ConTeXt, below). For example: </p>
+<dl>
+<dd> <pre><code>See the&nbsp;<wbr>[Introduction](#introduction).
+</code></pre>
+ </dd></dl>
+<p> or </p>
+<dl>
+<dd> <pre><code>See the&nbsp;<wbr>[Introduction].
+[Introduction]:&nbsp;<wbr>#introduction
+</code></pre>
+ </dd></dl>
+<p> Internal links are currently supported for HTML formats (including HTML slide shows and EPUB), LaTeX, and ConTeXt.  </p>
+<h2>IMAGES</h2>
+<p> A link immediately preceded by a ! will be treated as an image. The link text will be used as the image&#8217;s alt text: </p>
+<dl>
+<dd> <pre><code>![la lune](lalune.jpg&nbsp;<wbr>&quot;Voyage to the moon&quot;)
+![movie reel]
+[movie reel]: movie.gif
+</code></pre>
+ </dd></dl>
+<h3>Pictures with captions</h3>
+<p> Extension: implicit_figures </p>
+<p> An image occurring by itself in a paragraph will be rendered as a figure with a caption.[4] (In LaTeX, a figure environment will be used; in HTML, the image will be placed in a div with class figure, together with a caption in a p with class caption.) The image&#8217;s alt text will be used as the caption. </p>
+<dl>
+<dd> <pre><code>![This is the caption](/url/of/image.png)
+</code></pre>
+ </dd></dl>
+<p> If you just want a regular inline image, just make sure it is not the only thing in the paragraph. One way to do this is to insert a nonbreaking space after the image: </p>
+<dl>
+<dd> <pre><code>![This image won't be a figure](/url/of/image.png)\
+</code></pre>
+ </dd></dl>
+<h2>FOOTNOTES</h2>
+<p> Extension: footnotes </p>
+<p> Pandoc&#8217;s markdown allows footnotes, using the following syntax: </p>
+<dl>
+<dd> <pre><code>Here is a footnote reference,[^1]&nbsp;<wbr>and another.[^longnote]
+[^1]: Here is the footnote.
+[^longnote]: Here's one with multiple blocks.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>some.code&nbsp;<wbr>}
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The whole paragraph can be indented, or just the first
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>line.&nbsp;<wbr>&nbsp;<wbr>In this way, multi-paragraph footnotes work like
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>multi-paragraph list items.
+This paragraph won't be part of the note, because it
+isn't indented.
+</code></pre>
+ </dd></dl>
+<p> The identifiers in footnote references may not contain spaces, tabs, or newlines. These identifiers are used only to correlate the footnote reference with the note itself; in the output, footnotes will be numbered sequentially. </p>
+<p> The footnotes themselves need not be placed at the end of the document. They may appear anywhere except inside other block elements (lists, block quotes, tables, etc.). </p>
+<p> Extension: inline_notes </p>
+<p> Inline footnotes are also allowed (though, unlike regular notes, they cannot contain multiple paragraphs). The syntax is as follows: </p>
+<dl>
+<dd> <pre><code>Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
+</code></pre>
+ </dd></dl>
+<p> Inline and regular footnotes may be mixed freely.  </p>
+<h2>CITATIONS</h2>
+<p> Extension: citations </p>
+<p> Using an external filter, pandoc-citeproc, pandoc can automatically generate citations and a bibliography in a number of styles. Basic usage is </p>
+<dl>
+<dd> <pre><code>pandoc --filter pandoc-citeproc myinput.txt
+</code></pre>
+ </dd></dl>
+<p> In order to use this feature, you will need to specify a bibliography file using the bibliography metadata field in a YAML metadata section. The bibliography may have any of these formats: </p>
+<table>
+<tr VALIGN=top>
+<td> Format </td>
+<td> File extension 
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td> MODS </td>
+<td> .mods 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> BibLaTeX </td>
+<td> .bib 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> BibTeX </td>
+<td> .bibtex 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> RIS </td>
+<td> .ris 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> EndNote </td>
+<td> .enl 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> EndNote XML </td>
+<td> .xml 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> ISI </td>
+<td> .wos 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> MEDLINE </td>
+<td> .medline 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> Copac </td>
+<td> .copac 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> JSON citeproc </td>
+<td> .json 
+</td>
+</tr>
+</table>
+<p> Note that .bib can generally be used with both BibTeX and BibLaTeX files, but you can use .bibtex to force BibTeX. </p>
+<p> Alternatively you can use a references field in the document&#8217;s YAML metadata. This should include an array of YAML-encoded references, for example: </p>
+<dl>
+<dd> <pre><code>---
+references:
+- id: fenner2012a
+&nbsp;<wbr>&nbsp;<wbr>title: One-click science marketing
+&nbsp;<wbr>&nbsp;<wbr>author:
+&nbsp;<wbr>&nbsp;<wbr>- family: Fenner
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>given: Martin
+&nbsp;<wbr>&nbsp;<wbr>container-title: Nature Materials
+&nbsp;<wbr>&nbsp;<wbr>volume: 11
+&nbsp;<wbr>&nbsp;<wbr>URL:&nbsp;<wbr>'http://dx.doi.org/10.1038/nmat3283'&nbsp;<wbr>&nbsp;<wbr>DOI: 10.1038/nmat3283
+&nbsp;<wbr>&nbsp;<wbr>issue: 4
+&nbsp;<wbr>&nbsp;<wbr>publisher: Nature Publishing Group
+&nbsp;<wbr>&nbsp;<wbr>page: 261-263
+&nbsp;<wbr>&nbsp;<wbr>type: article-journal
+&nbsp;<wbr>&nbsp;<wbr>issued:
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>year: 2012
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>month: 3
+...
+</code></pre>
+ </dd></dl>
+<p> (The program mods2yaml, which comes with pandoc-citeproc, can help produce these from a MODS reference collection.) </p>
+<p> By default, pandoc-citeproc will use a Chicago author-date format for citations and references. To use another style, you will need to specify a CSL 1.0 style file in the csl metadata field. A primer on creating and modifying CSL styles can be found at <a rel="nofollow" href="http://citationstyles.org/downloads/primer.html.">http://citationstyles.org/downloads/primer.html.</a> A repository of CSL styles can be found at <a rel="nofollow" href="https://github.com/citation-style-language/styles.">https://github.com/citation-style-language/styles.</a> See also <a rel="nofollow" href="http://zotero.org/styles">http://zotero.org/styles</a> for easy browsing. </p>
+<p> Citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of &#8216;@&#8216; + the citation identifier from the database, and may optionally have a prefix, a locator, and a suffix. Here are some examples: </p>
+<dl>
+<dd> <pre><code>Blah blah&nbsp;<wbr>[see&nbsp;<wbr>@doe99, pp. 33-35;&nbsp;<wbr>also&nbsp;<wbr>@smith04, ch. 1].
+Blah blah&nbsp;<wbr>[@doe99, pp. 33-35, 38-39 and&nbsp;<wbr>*passim*].
+Blah blah&nbsp;<wbr>[@smith04;&nbsp;<wbr>@doe99].
+</code></pre>
+ </dd></dl>
+<p> A minus sign (-) before the @ will suppress mention of the author in the citation. This can be useful when the author is already mentioned in the text: </p>
+<dl>
+<dd> <pre><code>Smith says blah&nbsp;<wbr>[-@smith04].
+</code></pre>
+ </dd></dl>
+<p> You can also write an in-text citation, as follows: </p>
+<dl>
+<dd> <pre><code>@smith04 says blah.
+@smith04&nbsp;<wbr>[p. 33]&nbsp;<wbr>says blah.
+</code></pre>
+ </dd></dl>
+<p> If the style calls for a list of works cited, it will be placed at the end of the document. Normally, you will want to end your document with an appropriate header: </p>
+<dl>
+<dd> <pre><code>last paragraph...
+#&nbsp;<wbr>References
+</code></pre>
+ </dd></dl>
+<p> The bibliography will be inserted after this header.  </p>
+<h2>NON-PANDOC EXTENSIONS</h2>
+<p> The following markdown syntax extensions are not enabled by default in pandoc, but may be enabled by adding +EXTENSION to the format name, where EXTENSION is the name of the extension. Thus, for example, markdown+hard_line_breaks is markdown with hard line breaks. </p>
+<p> Extension: lists_without_preceding_blankline </p>
+<p> Allow a list to occur right after a paragraph, with no intervening blank space. </p>
+<p> Extension: hard_line_breaks </p>
+<p> Causes all newlines within a paragraph to be interpreted as hard line breaks instead of spaces. </p>
+<p> Extension: ignore_line_breaks </p>
+<p> Causes newlines within a paragraph to be ignored, rather than being treated as spaces or as hard line breaks. This option is intended for use with East Asian languages where spaces are not used between words, but text is divided into lines for readability. </p>
+<p> Extension: tex_math_single_backslash </p>
+<p> Causes anything between \( and \) to be interpreted as inline TeX math, and anything between \[ and \] to be interpreted as display TeX math. Note: a drawback of this extension is that it precludes escaping ( and [. </p>
+<p> Extension: tex_math_double_backslash </p>
+<p> Causes anything between \\( and \\) to be interpreted as inline TeX math, and anything between \\[ and \\] to be interpreted as display TeX math. </p>
+<p> Extension: markdown_attribute </p>
+<p> By default, pandoc interprets material inside block-level tags as markdown. This extension changes the behavior so that markdown is only parsed inside block-level tags if the tags have the attribute markdown=1. </p>
+<p> Extension: mmd_title_block </p>
+<p> Enables a MultiMarkdown style title block at the top of the document, for example: </p>
+<dl>
+<dd> <pre><code>Title:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>My title
+Author:&nbsp;<wbr>&nbsp;<wbr>John Doe
+Date:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>September 1, 2008
+Comment: This is a sample mmd title block, with
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a field spanning multiple lines.
+</code></pre>
+ </dd></dl>
+<p> See the MultiMarkdown documentation for details. If pandoc_title_block or yaml_metadata_block is enabled, it will take precedence over mmd_title_block. </p>
+<p> Extension: abbreviations </p>
+<p> Parses PHP Markdown Extra abbreviation keys, like </p>
+<dl>
+<dd> <pre><code>*[HTML]: Hyper Text Markup Language
+</code></pre>
+ </dd></dl>
+<p> Note that the pandoc document model does not support abbreviations, so if this extension is enabled, abbreviation keys are simply skipped (as opposed to being parsed as paragraphs). </p>
+<p> Extension: autolink_bare_uris </p>
+<p> Makes all absolute URIs into links, even when not surrounded by pointy braces &lt;...&gt;. </p>
+<p> Extension: ascii_identifiers </p>
+<p> Causes the identifiers produced by auto_identifiers to be pure ASCII. Accents are stripped off of accented latin letters, and non-latin letters are omitted. </p>
+<p> Extension: link_attributes </p>
+<p> Parses multimarkdown style key-value attributes on link and image references. Note that pandoc&#8217;s internal document model provides nowhere to put these, so they are presently just ignored. </p>
+<p> Extension: mmd_header_identifiers </p>
+<p> Parses multimarkdown style header identifiers (in square brackets, after the header but before any trailing #s in an ATX header).  </p>
+<h2>MARKDOWN VARIANTS</h2>
+<p> In addition to pandoc&#8217;s extended markdown, the following markdown variants are supported: </p>
+<dl>
+<dt>markdown_phpextra (PHP Markdown Extra) </dt>
+<dd> <p> footnotes, pipe_tables, raw_html, markdown_attribute, fenced_code_blocks, definition_lists, intraword_underscores, header_attributes, abbreviations. </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_github (Github-flavored Markdown) </dt>
+<dd> <p> pipe_tables, raw_html, tex_math_single_backslash, fenced_code_blocks, fenced_code_attributes, auto_identifiers, ascii_identifiers, backtick_code_blocks, autolink_bare_uris, intraword_underscores, strikeout, hard_line_breaks </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_mmd (MultiMarkdown) </dt>
+<dd> <p> pipe_tables raw_html, markdown_attribute, link_attributes, raw_tex, tex_math_double_backslash, intraword_underscores, mmd_title_block, footnotes, definition_lists, all_symbols_escapable, implicit_header_references, auto_identifiers, mmd_header_identifiers </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_strict (Markdown.pl) </dt>
+<dd> <p> raw_html </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+</dl>
+<h2>EXTENSIONS WITH FORMATS OTHER THAN MARKDOWN</h2>
+<p> Some of the extensions discussed above can be used with formats other than markdown: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> auto_identifiers can be used with latex, rst, mediawiki, and textile input (and is used by default). </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> tex_math_dollars, tex_math_single_backslash, and tex_math_double_backslash can be used with html input. (This is handy for reading web pages formatted using MathJax, for example.) </p>
+ </dd></dl>
+<h2>NOTES</h2>
+<h3>[1]</h3>
+<p> The point of this rule is to ensure that normal paragraphs starting with people&#8217;s initials, like </p>
+<dl>
+<dd> <pre><code>B. Russell was an English philosopher.
+</code></pre>
+ </dd></dl>
+<p> do not get treated as list items. </p>
+<p> This rule will not prevent </p>
+<dl>
+<dd> <pre><code>(C)&nbsp;<wbr>2007 Joe Smith
+</code></pre>
+ </dd></dl>
+<p> from being interpreted as a list item. In this case, a backslash escape can be used: </p>
+<dl>
+<dd> <pre><code>(C\)&nbsp;<wbr>2007 Joe Smith
+</code></pre>
+ </dd></dl>
+<h3>[2]</h3>
+<p> I have also been influenced by the suggestions of David Wheeler.  </p>
+<h3>[3]</h3>
+<p> This scheme is due to Michel Fortin, who proposed it on the Markdown discussion list.  </p>
+<h3>[4]</h3>
+<p> This feature is not yet implemented for RTF, OpenDocument, or ODT. In those formats, you&#8217;ll just get an image in a paragraph by itself, with no caption.  </p>
+<h2>SEE ALSO</h2>
+<p> pandoc (1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

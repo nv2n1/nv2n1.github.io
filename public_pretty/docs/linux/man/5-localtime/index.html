@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>localtime(5) · Linux Manual Pages</title>
+<meta name="description" content="localtime – Local timezone configuration file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-localtime/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>localtime(5)</h1>
+
+
+
+
+
+<p>localtime &#8211; Local timezone configuration file</p>
+<h2>Synopsis</h2>
+<p>/etc/localtime -&gt; ../usr/share/zoneinfo/&#8230;</p>
+<h2>Description</h2>
+<p>The /etc/localtime file configures the system-wide timezone of the local system that is used by applications for presentation to the user. It should be an absolute or relative symbolic link pointing to /usr/share/zoneinfo/, followed by a timezone identifier such as &quot;Europe/Berlin&quot; or &quot;Etc/UTC&quot;. The resulting link should lead to the corresponding binary <code><a href="/docs/linux/man/5-tzfile/">tzfile</a></code>(5) timezone data for the configured timezone. </p>
+<p> Because the timezone identifier is extracted from the symlink target name of /etc/localtime, this file may not be a normal file or hardlink. </p>
+<p> If /etc/localtime is missing, the default &quot;UTC&quot; timezone is used. </p>
+<p> The timezone may be overridden for individual programs by using the <i>$TZ</i> environment variable. See <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7). </p>
+<p> You may use <code><a href="/docs/linux/man/1-timedatectl/">timedatectl</a></code>(1) to change the settings of this file from the command line during runtime. Use <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) to initialize the time zone on mounted (but not booted) system images.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/3-tzset/">tzset</a></code>(3), <code><a href="/docs/linux/man/3-localtime/">localtime</a></code>(3), <code><a href="/docs/linux/man/1-timedatectl/">timedatectl</a></code>(1), <code><a href="/docs/linux/man/8-systemd-timedated-service/">systemd-timedated.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

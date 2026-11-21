@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern C&#43;&#43; References: Best Practices and Guidelines - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/c-reference-and-styles/">
+  <meta name="description" content="cppreference.com is the authoritative resource for C&#43;&#43; language and standard library documentation. It covers all C&#43;&#43; standards from C&#43;&#43;98 through C&#43;&#43;26 with …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Modern C&#43;&#43; References: Best Practices and Guidelines">
+  <meta property="og:url" content="https://www.systutorials.com/c-reference-and-styles/">
+  <meta property="og:description" content="cppreference.com is the authoritative resource for C&#43;&#43; language and standard library documentation. It covers all C&#43;&#43; standards from C&#43;&#43;98 through C&#43;&#43;26 with …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Modern C&#43;&#43; References: Best Practices and Guidelines</h1>
+        <time class="post-date" datetime="2013-07-12T19:06:24Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p><strong>cppreference.com</strong> is the authoritative resource for C++ language and standard library documentation. It covers all C++ standards from C++98 through C++26 with clear examples and cross-references. Bookmark it as your primary reference.</p>
+<p>The official C++ standard drafts are available through the C++ standards committee. While final standards require purchase, draft versions and proposals are freely available—useful for understanding language features and library behavior at a deeper level.</p>
+<p>Key cppreference sections you’ll reference constantly:</p>
+<ul>
+<li>Containers (vector, map, unordered_map, deque, flat_map, etc.)</li>
+<li>Algorithms and iterators, including ranges (C++20+)</li>
+<li>Memory management (smart pointers, allocators)</li>
+<li>Concurrency primitives (threads, mutexes, condition variables, semaphores)</li>
+<li>Type traits and metaprogramming utilities</li>
+<li>Formatting and string handling</li>
+</ul>
+<p>Keep documentation locally accessible. Network latency during debugging sessions adds up. Download an offline copy if your environment has limited connectivity—cppreference offers offline builds.</p>
+<h2 id="style-guidelines">Style Guidelines</h2>
+<p>Style consistency matters more than which specific rules you follow, but community standards have emerged.</p>
+<h3 id="google-c-style-guide">Google C++ Style Guide</h3>
+<ul>
+<li>No exceptions for new code</li>
+<li>Naming conventions: <code>ClassName</code>, <code>methodName</code>, <code>member_variable_</code></li>
+<li>Comprehensive coverage of modern C++ practices</li>
+<li>Widely adopted in large codebases</li>
+</ul>
+<h3 id="llvm-coding-standards">LLVM Coding Standards</h3>
+<ul>
+<li>Emphasis on readable, maintainable code</li>
+<li>Clear guidance on C++17 and later features</li>
+<li>Strong stance on const-correctness and RAII</li>
+</ul>
+<h3 id="c-core-guidelines">C++ Core Guidelines</h3>
+<ul>
+<li>Maintained by Bjarne Stroustrup and the C++ standards committee</li>
+<li>Modern, principles-based approach</li>
+<li>Covers safety and correctness, not just style</li>
+<li>Supported by tools like clang-tidy with specific rule sets</li>
+</ul>
+<h3 id="your-teams-guide">Your Team’s Guide</h3>
+<p>Document decisions on:</p>
+<ul>
+<li>Naming conventions</li>
+<li>Spacing and indentation</li>
+<li>const usage</li>
+<li>Error handling strategy</li>
+<li>Minimum C++ version requirement</li>
+</ul>
+<p>Enforce via linters (<code>clang-tidy</code>, <code>cppcheck</code>) and formatters (<code>clang-format</code>). Store in your repository and reference in the README.</p>
+<h2 id="automated-enforcement">Automated Enforcement</h2>
+<p>Manual code reviews catch style violations slowly and inconsistently. Use tooling to enforce standards automatically.</p>
+<h3 id="code-formatting">Code Formatting</h3>
+<p>Format code to project standard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">clang-format -i yourfile.cpp
+</span></span></code></pre></div><p>Create a <code>.clang-format</code> file in your project root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">clang-format --dump-config &gt; .clang-format
+</span></span><span class="line"><span class="cl"><span class="c1"># Edit to match your preferences and commit to version control</span>
+</span></span></code></pre></div><p>Example <code>.clang-format</code> configuration for modern C++:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">BasedOnStyle</span><span class="p">:</span><span class="w"> </span><span class="l">LLVM</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">IndentWidth</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">ColumnLimit</span><span class="p">:</span><span class="w"> </span><span class="m">100</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">AlignTrailingComments</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">AllowShortFunctionsOnASingleLine</span><span class="p">:</span><span class="w"> </span><span class="l">InlineOnly</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">BreakBeforeBraces</span><span class="p">:</span><span class="w"> </span><span class="l">Allman</span><span class="w">
+</span></span></span></code></pre></div><h3 id="linting-and-static-analysis">Linting and Static Analysis</h3>
+<p>Check against common issues and style violations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">clang-tidy yourfile.cpp -- -I/path/to/includes
+</span></span></code></pre></div><p>Run deeper static analysis:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cppcheck --enable<span class="o">=</span>all src/
+</span></span></code></pre></div><h3 id="cmake-integration">CMake Integration</h3>
+<p>Integrate formatting and linting into your build:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="c"># Format code before building
+</span></span></span><span class="line"><span class="cl"><span class="nb">add_custom_target</span><span class="p">(</span><span class="s">format</span>
+</span></span><span class="line"><span class="cl">  <span class="s">COMMAND</span> <span class="s">clang-format</span> <span class="s">-i</span> <span class="o">${</span><span class="nv">CMAKE_SOURCE_DIR</span><span class="o">}</span><span class="s">/src/*.cpp</span>
+</span></span><span class="line"><span class="cl">  <span class="s">COMMAND</span> <span class="s">clang-format</span> <span class="s">-i</span> <span class="o">${</span><span class="nv">CMAKE_SOURCE_DIR</span><span class="o">}</span><span class="s">/include/*.hpp</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="nb">add_dependencies</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="s">format</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Enable clang-tidy checks during compilation
+</span></span></span><span class="line"><span class="cl"><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_CLANG_TIDY</span> 
+</span></span><span class="line"><span class="cl">  <span class="s">clang-tidy</span> 
+</span></span><span class="line"><span class="cl">  <span class="s">-checks=readability-*,modernize-*,performance-*</span>
+</span></span><span class="line"><span class="cl">  <span class="s">-header-filter=.*</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Optional: fail on compiler warnings
+</span></span></span><span class="line"><span class="cl"><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS</span> <span class="s2">&#34;${CMAKE_CXX_FLAGS} -Werror -Wall -Wextra -Wpedantic&#34;</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><h3 id="cicd-pipeline-checks">CI/CD Pipeline Checks</h3>
+<p>Fail the build on style violations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">clang-format --dry-run --Werror src/*.cpp include/*.hpp
+</span></span><span class="line"><span class="cl">clang-tidy src/*.cpp -- -I./include
+</span></span><span class="line"><span class="cl">cppcheck --error-exitcode<span class="o">=</span><span class="m">1</span> --enable<span class="o">=</span>all src/
+</span></span></code></pre></div><p>Integrate into your CI pipeline (GitHub Actions, GitLab CI, Jenkins, etc.) so violations are caught before merge.</p>
+<h2 id="key-style-principles">Key Style Principles</h2>
+<h3 id="const-correctness">const-Correctness</h3>
+<p>Apply const liberally to methods and parameters. It documents intent, enables compiler optimizations, and catches mutations early:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">name_</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">update</span><span class="p">(</span><span class="k">const</span> <span class="n">User</span><span class="o">&amp;</span> <span class="n">user</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="raii">RAII</h3>
+<p>Resources (memory, files, locks) are tied to object lifetime. This avoids leaks and makes code exception-safe by default. Use smart pointers instead of manual <code>new</code>/<code>delete</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">File</span><span class="o">&gt;</span> <span class="n">file</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">File</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&#34;data.txt&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="o">&gt;</span> <span class="n">workers</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Automatic cleanup when scope exits
+</span></span></span></code></pre></div><h3 id="naming-clarity">Naming Clarity</h3>
+<p>Avoid single-letter variables outside loops. <code>user_count</code> beats <code>n</code>. Use names that reveal intent:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// Good
+</span></span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">batch_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">active_connections</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Avoid
+</span></span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bs</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="error-handling">Error Handling</h3>
+<p>Pick a strategy and stick to it across the project:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// Optional approach (lightweight, no error detail)
+</span></span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="n">findUser</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Expected approach (C++23 or backport, includes error info)
+</span></span></span><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">expected</span><span class="o">&lt;</span><span class="n">Data</span><span class="p">,</span> <span class="n">Error</span><span class="o">&gt;</span> <span class="n">parse</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span> <span class="n">input</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Exception approach (explicit error handling)
+</span></span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">processData</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">invalid_argument</span><span class="o">&amp;</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">log_error</span><span class="p">(</span><span class="s">&#34;Invalid input: {}&#34;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">what</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Mixing approaches creates bugs. Choose one, document it, and enforce it.</p>
+<h3 id="modern-c-features">Modern C++ Features</h3>
+<p>Use C++17 or C++20 features in new code. Avoid C++98 patterns. If your codebase supports an older standard, document this decision and the rationale.</p>
+<p>Structured bindings (C++17):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">]</span> <span class="o">=</span> <span class="n">getUserData</span><span class="p">();</span>
+</span></span></code></pre></div><p>Ranges (C++20):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">auto</span> <span class="n">adults</span> <span class="o">=</span> <span class="n">users</span> 
+</span></span><span class="line"><span class="cl">  <span class="o">|</span> <span class="n">std</span><span class="o">::</span><span class="n">views</span><span class="o">::</span><span class="n">filter</span><span class="p">([](</span><span class="k">const</span> <span class="n">User</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">u</span><span class="p">.</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="o">|</span> <span class="n">std</span><span class="o">::</span><span class="n">views</span><span class="o">::</span><span class="n">transform</span><span class="p">([](</span><span class="k">const</span> <span class="n">User</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">u</span><span class="p">.</span><span class="n">name</span><span class="p">;</span> <span class="p">});</span>
+</span></span></code></pre></div><p>std::optional (C++17):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="k">auto</span> <span class="n">user</span> <span class="o">=</span> <span class="n">findUser</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="setup-in-your-project">Setup in Your Project</h2>
+<p>Link your chosen guide and configuration files in the project README. New contributors should know what’s expected before submitting pull requests. Automated tooling means style issues are caught before review, leaving human reviewers to focus on logic and correctness.</p>
+<p>Example README section:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gu">## Code Style
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This project follows the [<span class="nt">C++ Core Guidelines</span>](<span class="na">https://github.com/isocpp/CppCoreGuidelines</span>) 
+</span></span><span class="line"><span class="cl">with our team&#39;s [<span class="nt">style configuration</span>](<span class="na">.clang-format</span>).
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Before submitting a PR:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> Run <span class="sb">`cmake --build . --target format`</span> to format code
+</span></span><span class="line"><span class="cl"><span class="k">-</span> Run <span class="sb">`cmake --build .`</span> to check linting during build
+</span></span><span class="line"><span class="cl"><span class="k">-</span> Ensure CI passes on your branch
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracting Substrings at Word Boundaries in PHP - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-a-substring-at-words-boundaries-in-php/">
+  <meta name="description" content="When truncating strings, you often need to avoid cutting off in the middle of a word. The naive substr() approach will break words, so you need logic to …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Extracting Substrings at Word Boundaries in PHP">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-a-substring-at-words-boundaries-in-php/">
+  <meta property="og:description" content="When truncating strings, you often need to avoid cutting off in the middle of a word. The naive substr() approach will break words, so you need logic to …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Extracting Substrings at Word Boundaries in PHP</h1>
+        <time class="post-date" datetime="2018-03-24T11:53:54Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When truncating strings, you often need to avoid cutting off in the middle of a word. The naive <code>substr()</code> approach will break words, so you need logic to backtrack to the previous word boundary.</p>
+<h2 id="the-problem">The problem</h2>
+<p>Given a string like <code>&quot;ab cc dde ffg ff&quot;</code>, if you want a substring of maximum 7 characters starting at position 0, a simple <code>substr($a, 0, 7)</code> produces <code>&quot;ab cc d&quot;</code> — cutting the word <code>dde</code> in half. You need to stop at the last complete word instead: <code>&quot;ab cc&quot;</code>.</p>
+<h2 id="solution">Solution</h2>
+<p>The approach is straightforward: extract up to your desired length, then backtrack character by character until you hit a word boundary (end of a word). A word boundary occurs when the current character is not a space AND either it’s the string’s last character OR the next character is a space.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">is_word_end</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$len</span> <span class="o">=</span> <span class="nx">strlen</span><span class="p">(</span><span class="nv">$str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Position beyond string or at a space
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$pos</span> <span class="o">&gt;=</span> <span class="nv">$len</span> <span class="o">||</span> <span class="nv">$str</span><span class="p">[</span><span class="nv">$pos</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Not at end of string AND next char isn&#39;t a space
+</span></span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$pos</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nv">$len</span> <span class="o">&amp;&amp;</span> <span class="nv">$str</span><span class="p">[</span><span class="nv">$pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">word_substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$len</span> <span class="o">=</span> <span class="nv">$max_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Backtrack until we find a word boundary
+</span></span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nv">$len</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">is_word_end</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$len</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nv">$len</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$len</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The <code>is_word_end()</code> function checks if a character at position <code>$pos</code> is a valid word ending. The <code>word_substr()</code> function finds the longest substring up to <code>$max_len</code> that ends on a word boundary.</p>
+<h2 id="testing">Testing</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$a</span> <span class="o">=</span> <span class="s2">&#34;ab cc dde ffg ff&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$len</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$len</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="o">++</span><span class="nv">$len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="nv">$len</span> <span class="o">.</span> <span class="s2">&#34;: &#34;</span> <span class="o">.</span> <span class="nx">word_substr</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$len</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Output:</p>
+<pre><code>1: 
+2: ab
+3: ab
+4: ab
+5: ab cc
+6: ab cc
+7: ab cc
+8: ab cc
+9: ab cc dde
+10: ab cc dde
+11: ab cc dde
+12: ab cc dde
+13: ab cc dde ffg
+14: ab cc dde ffg
+15: ab cc dde ffg
+16: ab cc dde ffg ff
+17: ab cc dde ffg ff
+18: ab cc dde ffg ff
+19: ab cc dde ffg ff
+</code></pre>
+<p>Note that lengths 1-4 return empty strings since no complete word fits in that space.</p>
+<h2 id="real-world-considerations">Real-world considerations</h2>
+<p><strong>Multiple spaces or punctuation:</strong> The implementation above assumes single spaces as delimiters. For production code handling HTML or rich text, consider using <code>preg_split()</code> or <code>explode()</code> instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">word_substr_robust</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Split on whitespace, preserving word separators
+</span></span></span><span class="line"><span class="cl">  <span class="nv">$words</span> <span class="o">=</span> <span class="nx">preg_split</span><span class="p">(</span><span class="s1">&#39;/(\s+)/&#39;</span><span class="p">,</span> <span class="nv">$str</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">PREG_SPLIT_DELIM_CAPTURE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">$result</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$words</span> <span class="k">as</span> <span class="nv">$chunk</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="o">+</span> <span class="nx">strlen</span><span class="p">(</span><span class="nv">$chunk</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$result</span> <span class="o">.=</span> <span class="nv">$chunk</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Trim trailing whitespace
+</span></span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">rtrim</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This approach handles multiple consecutive spaces and works better with natural word splitting.</p>
+<p><strong>Performance:</strong> For very long strings, avoid character-by-character backtracking. Use <code>strrpos()</code> to find the last space within your boundary:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">word_substr_fast</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">strlen</span><span class="p">(</span><span class="nv">$str</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$str</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nv">$substr</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$last_space</span> <span class="o">=</span> <span class="nx">strrpos</span><span class="p">(</span><span class="nv">$substr</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nv">$last_space</span> <span class="o">!==</span> <span class="k">false</span> <span class="o">?</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$last_space</span><span class="p">)</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This performs a single reverse search for the last space instead of looping through characters.</p>
+<p><strong>Handling edge cases:</strong> If the first word exceeds your limit, both implementations return an empty string. You may want to return the first word regardless:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">word_substr_allow_first</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$result</span> <span class="o">=</span> <span class="nx">word_substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nv">$max_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$first_space</span> <span class="o">=</span> <span class="nx">strpos</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$first_space</span> <span class="o">!==</span> <span class="k">false</span> <span class="o">?</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$first_space</span><span class="p">)</span> <span class="o">:</span> <span class="nv">$str</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nv">$result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

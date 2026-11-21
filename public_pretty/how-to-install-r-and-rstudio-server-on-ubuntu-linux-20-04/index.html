@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up R and RStudio Server on Ubuntu - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-install-r-and-rstudio-server-on-ubuntu-linux-20-04/">
+  <meta name="description" content="R is a language and environment for statistical computing and graphics. It’s free software under the GPL license and provides extensive statistical and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Up R and RStudio Server on Ubuntu">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-install-r-and-rstudio-server-on-ubuntu-linux-20-04/">
+  <meta property="og:description" content="R is a language and environment for statistical computing and graphics. It’s free software under the GPL license and provides extensive statistical and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Setting Up R and RStudio Server on Ubuntu</h1>
+        <time class="post-date" datetime="2020-10-03T10:33:28Z">October 3, 2020</time> <span class="post-author">&middot; <a href="/author/davidyang/">David Yang</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>R is a language and environment for statistical computing and graphics. It’s free software under the GPL license and provides extensive statistical and graphical capabilities through numerous contributed packages.</p>
+<p>The R environment package is available in Ubuntu’s standard repositories. Install it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install r-base
+</span></span></code></pre></div><p>This installs <code>r-base</code> along with recommended packages and build tools. The installation may take several minutes and will pull in dependencies like BLAS, LAPACK, and development libraries.</p>
+<p>Once installed, verify the installation by starting the R REPL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">R
+</span></span></code></pre></div><p>You should see output like:</p>
+<pre><code>R version 4.3.x (202x-xx-xx) -- &quot;[Release Name]&quot;
+Copyright (C) 202x The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+...
+Type 'q()' to quit R.
+
+&gt;
+</code></pre>
+<p>Exit the REPL by typing <code>q()</code> at the prompt.</p>
+<h2 id="install-rstudio-server-on-ubuntu">Install RStudio Server on Ubuntu</h2>
+<p>RStudio Server is a browser-based IDE for R that runs on a remote server and is accessed through any web browser. This makes it ideal for shared computing environments or cloud deployments.</p>
+<p>First, check the <a href="https://posit.co/download/rstudio-server/" rel="nofollow noopener" target="_blank">RStudio downloads page</a> to get the correct URL for your Ubuntu version. Then download and install the package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-latest-amd64.deb
+</span></span><span class="line"><span class="cl">sudo apt install ./rstudio-server-latest-amd64.deb
+</span></span></code></pre></div><p>The installation script will automatically create the <code>rstudio-server</code> system user and start the service. RStudio Server listens on port 8787 by default.</p>
+<p>Verify that the service is running:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl status rstudio-server
+</span></span></code></pre></div><p>If the service isn’t running, start it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start rstudio-server
+</span></span></code></pre></div><h2 id="access-rstudio-server">Access RStudio Server</h2>
+<p>Open a web browser and navigate to:</p>
+<pre><code>http://&lt;server-ip-or-domain&gt;:8787
+</code></pre>
+<p>For local access, use <code>http://localhost:8787</code>.</p>
+<p>Log in with any valid Ubuntu system user account. The username and password must correspond to a real user on the system.</p>
+<p>Once logged in, you’ll have access to the RStudio IDE with a console, script editor, package manager, and file browser.</p>
+<h2 id="useful-rstudio-server-management-commands">Useful RStudio Server Management Commands</h2>
+<p>Stop the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop rstudio-server
+</span></span></code></pre></div><p>Restart the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart rstudio-server
+</span></span></code></pre></div><p>View the service log:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u rstudio-server -n <span class="m">50</span>
+</span></span></code></pre></div><p>Check RStudio Server version:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rstudio-server version
+</span></span></code></pre></div><h2 id="configure-rstudio-server">Configure RStudio Server</h2>
+<p>RStudio Server configuration is stored in <code>/etc/rstudio/rserver.conf</code>. Common configurations include changing the default port:</p>
+<pre><code>www-port=8787
+www-address=0.0.0.0
+</code></pre>
+<p>After editing the config file, restart the service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart rstudio-server
+</span></span></code></pre></div><h2 id="firewall-configuration">Firewall Configuration</h2>
+<p>If your system uses a firewall (UFW on Ubuntu), allow access to port 8787:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow 8787/tcp
+</span></span></code></pre></div><p>For cloud deployments (AWS, Azure, GCP), ensure the security group or network ACL permits inbound traffic on port 8787.</p>
+<h2 id="install-r-packages-in-rstudio-server">Install R Packages in RStudio Server</h2>
+<p>From the RStudio console, install packages using <code>install.packages()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;ggplot2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;dplyr&#34;</span><span class="p">,</span> <span class="s">&#34;tidyr&#34;</span><span class="p">,</span> <span class="s">&#34;ggplot2&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><p>Load packages with <code>library()</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="performance-considerations">Performance Considerations</h2>
+<p>For production deployments, consider:</p>
+<ul>
+<li>Running RStudio Server behind a reverse proxy (nginx or Apache) for SSL/TLS termination</li>
+<li>Configuring resource limits in <code>rserver.conf</code> to prevent runaway processes from consuming system resources</li>
+<li>Using authentication providers like PAM or LDAP for larger organizations</li>
+<li>Running multiple sessions with appropriate memory and process limits</li>
+<li>Monitoring disk space, especially in <code>/home</code> where user libraries are installed</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If users cannot log in, check that their system account exists:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">id username
+</span></span></code></pre></div><p>If RStudio Server won’t start, check the log:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail /var/log/rstudio/rstudio-server.log
+</span></span></code></pre></div><p>For permission issues with package installation, ensure users have write access to their home directory and the R library path.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

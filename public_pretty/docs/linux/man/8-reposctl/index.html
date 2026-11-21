@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reposctl(8) · Linux Manual Pages</title>
+<meta name="description" content="reposctl – control utility for reposd">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-reposctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>reposctl(8)</h1>
+
+
+
+
+
+<p>reposctl &#8211; control utility for reposd</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>reposctl</code></dt></dl>
+<h2>Description</h2>
+<p><code>reposctl</code></p>
+<dd>is a simple shell program for controling the <code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8) metric repository daemon. It provides the ability to manipulate the state of the daemon as well as online loading and unloading of metric repository plugins.</dd>
+<h2>Commands</h2>
+<p><code>h</code></p>
+<dl>
+<dd>print help message</dd></dl>
+<p> <code>s</code></p>
+<dl>
+<dd>print status of daemon</dd></dl>
+<p> <code>i</code></p>
+<dl>
+<dd>initialize repository service</dd></dl>
+<p> <code>t</code></p>
+<dl>
+<dd>terminate repository service</dd></dl>
+<p> <code>l</code> <i>pluginlib</i></p>
+<dl>
+<dd>load plugin library</dd></dl>
+<p> <code>u</code> <i>pluginlib</i></p>
+<dl>
+<dd>unload plugin library</dd></dl>
+<p> <code>v</code> <i>pluginlib</i></p>
+<dl>
+<dd>view/list metrics supported by plugin library</dd></dl>
+<p> <code>q</code></p>
+<dl>
+<dd>quit/exit control utility</dd></dl>
+<p> <code>g</code> <i>id</i></p>
+<dl>
+<dd>retrieve values for given metric id</dd></dl>
+<p> <code>f</code> <i>id</i> <i>num</i></p>
+<dl>
+<dd>retrieve filtered (top-n, sorted) values for given metric id</dd></dl>
+<p> <code>r</code> <i>id</i></p>
+<dl>
+<dd>list system and type of resource for given metrid id</dd></dl>
+<p> <code>G</code></p>
+<dl>
+<dd>list current global metric filter</dd></dl>
+<p> <code>F</code> <i>num</i></p>
+<dl>
+<dd>set the global metric filter</dd></dl>
+<p> <code>k</code></p>
+<dl>
+<dd>kill gathering daemon</dd></dl>
+<p> <code>d</code></p>
+<dl>
+<dd>start gathering daemon</dd></dl>
+<h2>Files</h2>
+<p><i>/etc/reposd.conf</i></p>
+<dl>
+<dd>This file contains the daemon configuration settings. See <code><a href="/docs/linux/man/5-reposd-conf/">reposd.conf</a></code>(5) for more information.</dd></dl>
+<h2>Bugs</h2>
+<p>The SBLIM project maintains a mailing list to which you should direct all questions regarding sfcb, sfcc, wbemcli, the metric data gatherer, or any of the SBLIM providers. To subscribe to this list visit:</p>
+<dl>
+<dd>
+<pre><a rel="nofollow" href="https://lists.sourceforge.net/lists/listinfo/sblim-issues">https://lists.sourceforge.net/lists/listinfo/sblim-issues</a></pre>
+</dd></dl>
+<p> Please report bugs you discover to the bug tracker. The SBLIM project bug tracking page can be found at:</p>
+<dl>
+<dd>
+<pre><a rel="nofollow" href="https://sourceforge.net/tracker/?group_id=128809">https://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784</pre>
+</dd></dl>
+<h2>Authors</h2>
+<p>Please refer to the AUTHORS file distributed with sblim-gather.</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2003-2012 IBM Corp.</p>
+<h2>License</h2>
+<p><code>reposctl</code> is distributed under the terms of the Eclipse Public License (&quot;Agreement&quot;). Any use, reproduction or distribution of this program constitutes recipeients acceptance of the agreement. </p>
+<p> You can obtain a current copy of the Eclipse Public License from <a rel="nofollow" href="http://www.opensource.org/licenses/eclipse-1.0.php">http://www.opensource.org/licenses/eclipse-1.0.php</a></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8), <code><a href="/docs/linux/man/5-reposd-conf/">reposd.conf</a></code>(5), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

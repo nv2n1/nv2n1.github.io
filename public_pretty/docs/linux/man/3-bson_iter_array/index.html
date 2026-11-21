@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_iter_array(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_iter_array() – The bson_iter_array() function shall retrieve the raw buffer of a sub-array from iter. iter MUST be on an element that is of type BSON_TYPE_ARRAY. This can be verified with bson...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_iter_array/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_iter_array(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_iter_array() &#8211; The bson_iter_array() function shall retrieve the raw buffer of a sub-array from iter. iter MUST be on an element that is of type BSON_TYPE_ARRAY. This can be verified with bson_iter_type() or the BSON_ITER_HOLDS_ARRAY() macro.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+void bson_iter_array(const bson_iter_t *iter,
+                     uint32_t *array_len,
+                     const uint8_t **array);
+</code></pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
+<dl>
+<dt><code>array_len</code></dt>
+<dd> A location for the buffer length.</dd></dl>
+<dl>
+<dt><code>array</code></dt>
+<dd> A location for the immutable buffer.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> The <code><a href="/docs/linux/man/3-bson_iter_array/">bson_iter_array</a>(3)</code> function shall retrieve the raw buffer of a sub-array from <code>iter</code> \&amp;. <code>iter</code> </p>
+<p> <code>MUST</code> be on an element that is of type BSON_TYPE_ARRAY. This can be verified with <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> or the <code>BSON_ITER_HOLDS_ARRAY(3)</code> macro. </p>
+<h2>COLOPHON</h2>
+<p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

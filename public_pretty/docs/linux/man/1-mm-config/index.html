@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mm-config(1) · Linux Manual Pages</title>
+<meta name="description" content="mm-config – OSSP mm library configuration/build utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mm-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mm-config(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>mm-config</code> &#8211; OSSP mm library configuration/build utility</p>
+<h2>VERSION</h2>
+<p> <font SIZE="-1">OSSP</font> mm <font SIZE="-1">1.4.1 (10-Aug-2006)</font></p>
+<h2>SYNOPSIS</h2>
+<p> <code>mm-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>mm-config</code> program is a little helper utility for easy configuring and building applications based on the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. It can be used to query the C compiler and linker flags which are required to correctly compile and link the application against the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library.</p>
+<h2>OPTIONS</h2>
+<p> <code>mm-config</code> accepts the following options:</p>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints the short usage information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Prints the version number and date of the installed <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library.</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> Prints the C compiler flags which are needed to compile the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3)-based application. The output is usually added to the <tt>&quot;CFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;ldflags</code></dt>
+<dd> Prints the linker flags (<tt>&quot;-L&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LDFLAGS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> Prints the library flags (<tt>&quot;-l&quot;</tt>) which are needed to link the application with the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. The output is usually added to the <tt>&quot;LIBS&quot;</tt> variable of the applications <tt>&quot;Makefile&quot;</tt>.</dd></dl>
+<h2>EXAMPLE</h2>
+<pre>
+ CC=cc
+ CFLAGS=-O `mm-config --cflags`
+ LDFLAGS=`mm-config --ldflags`
+ LIBS=-lm `mm-config --libs`
+</pre>
+<pre>
+ all: foo
+ foo: foo.o
+     $(CC) $(LDFLAGS) -o foo foo.o $(LIBS)
+ foo.o: foo.c
+     $(CC) $(CFLAGS) -c foo.c
+</pre>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3).</p>
+<h2>AUTHOR</h2>
+<pre>
+ Ralf S. Engelschall
+ rse [at] engelschall.com
+ <a rel="nofollow" href="http://www.engelschall.com">www.engelschall.com</a>
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

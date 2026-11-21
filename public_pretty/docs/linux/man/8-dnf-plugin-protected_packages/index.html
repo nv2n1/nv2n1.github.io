@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnf-plugin-protected_packages(8) · Linux Manual Pages</title>
+<meta name="description" content="dnf.plugin.protected_packages – DNF protected_packages Plugin">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dnf-plugin-protected_packages/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dnf-plugin-protected_packages(8)</h1>
+
+
+
+
+
+<p>dnf.plugin.protected_packages &#8211; DNF protected_packages Plugin</p>
+<h2>Description</h2>
+<p>Prevents any DNF operation that would result in a removal of one of the protected packages from the system. These are typically packages essential for proper system boot and basic operation.</p>
+<h2>Configuration</h2>
+<p>Deciding whether a package is protected is based on the package name. The set of packages names considered protected is loaded from configuration files under: </p>
+<pre>/etc/dnf/protected.d
+/etc/yum/protected.d</pre>
+<p>Every line in all <code>*.conf</code> files there is taken as a protected package name. Moreover, the currently booted kernel package is always protected. </p>
+<p> Complete disabling of the protected packages feature is done by disabling the plugin: </p>
+<pre>dnf --disableplugin=protected_packages erase dnf</pre>
+<h2>Author</h2>
+<p>See AUTHORS in your Core DNF Plugins distribution</p>
+<h2>Copyright</h2>
+<p>2014, Red Hat, Licensed under GPLv2+</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

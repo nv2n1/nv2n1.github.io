@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dconf(1) · Linux Manual Pages</title>
+<meta name="description" content="dconf – Simple tool for manipulating a dconf database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dconf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dconf(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> dconf &#8211; Simple tool for manipulating a dconf database </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>dconf</code> read [-d] <i>KEY</i></dt>
+<dt> <code>dconf</code> list <i>DIR</i></dt>
+<dt> <code>dconf</code> write <i>KEY</i> <i>VALUE</i></dt>
+<dt> <code>dconf</code> reset [-f] <i>PATH</i></dt>
+<dt> <code>dconf</code> compile <i>OUTPUT</i> <i>KEYFILEDIR</i></dt>
+<dt> <code>dconf</code> update [<i>DBDIR</i>]</dt>
+<dt> <code>dconf</code> watch <i>PATH</i></dt>
+<dt> <code>dconf</code> dump <i>DIR</i></dt>
+<dt> <code>dconf</code> load [-f] <i>DIR</i></dt>
+<dt> <code>dconf</code> help [<i>COMMAND</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>dconf</code> program can perform various operations on a dconf database, such as reading or writing individual values or entire directories. This tool operates on dconf directly, without using gsettings schema information. Therefore, it cannot perform type and consistency checks on values. The <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1) utility is an alternative if such checks are needed. </dd>
+<p> The <i>DIR</i> arguments must be directory paths (starting and ending with &#8216;/&#8217;), the <i>KEY</i> arguments must be key paths (starting, but not ending with &#8216;/&#8217;) and the <i>PATH</i> arguments can be either directory or key paths. </p>
+<p> The <i>OUTPUT</i> argument must the location to write a (binary) dconf database to and the <i>KEYFILEDIR</i> argument must be a .d directory containing keyfiles. </p>
+<p> <i>VALUE</i> arguments must be in GVariant format, so e.g. a string must include explicit quotes: &quot;&#8217;foo&#8217;&quot;. This format is also used when printing out values. </p>
+<p> Note that dconf needs a D-Bus session bus connection to write changes to the dconf database.</p>
+<h2>COMMANDS</h2>
+<p> <code>read</code></p>
+<dl>
+<dt>
+</dt><dd> Read the value of a key.</dd></dl>
+<p> <code>list</code></p>
+<dl>
+<dt>
+</dt><dd> List the sub-keys and sub-directories of a directory.</dd></dl>
+<p> <code>write</code></p>
+<dl>
+<dt>
+</dt><dd> Write a new value to a key.</dd></dl>
+<p> <code>reset</code></p>
+<dl>
+<dt>
+</dt><dd> Reset a key or an entire directory. For directories, <code>-f</code> must be specified.</dd></dl>
+<p> <code>compile</code></p>
+<dl>
+<dt>
+</dt><dd> Compile a binary database from keyfiles. </dd>
+<p> The result is always in little-endian byte order, so it can be safely installed in &#8216;share&#8217;. If it is used on a big endian machine, dconf will automatically byteswap the contents on read.</dl>
+<p> <code>update</code></p>
+<dl>
+<dt>
+</dt><dd> Update the system dconf databases.</dd></dl>
+<p> <code>watch</code></p>
+<dl>
+<dt>
+</dt><dd> Watch a key or directory for changes.</dd></dl>
+<p> <code>dump</code></p>
+<dl>
+<dt>
+</dt><dd> Dump an entire subpath to stdout. The output is in a keyfile-like format, with values in GVariant syntax.</dd></dl>
+<p> <code>load</code></p>
+<dl>
+<dt>
+</dt><dd> Populate a subpath from stdin. The expected format is the same as produced by <code>dump</code>. Attempting to change non-writable keys cancels the load command. To ignore changes to non-writable keys instead, use <code>-f</code>.</dd></dl>
+<p> <code>help</code></p>
+<dl>
+<dt>
+</dt><dd> Display help and exit. If <i>COMMAND</i> is given, display help for this command.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> <code>DCONF_PROFILE</code></p>
+<dl>
+<dt>
+</dt><dd> This environment variable determines which dconf profile to use. See <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7), <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1), <code><a href="/docs/linux/man/1-dconf-editor/">dconf-editor</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pwhich(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pwhich/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pwhich(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>pwhich - Perl-only `which'</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+  $ pwhich perl
+  $ pwhich -a perl          # print all matches
+  $ pwhich perl perldoc ... # look for multiple programs
+  $ pwhich -a perl perldoc ...
+</pre>
+<h2>DESCRIPTION</h2>
+<p><code>pwhich' is a command-line utility program for finding paths to other programs based on the user's &lt;tt&gt;&amp;quot;PATH&amp;quot;&lt;/tt&gt;. It is similar to the usualy Unix tool </code>which&rsquo;, and tries to emulate its functionality, but is written purely in Perl (uses the module <tt>&quot;File::Which&quot;</tt>), so is portable.</p>
+<h3>Calling syntax</h3>
+ <pre><code>
+$ pwhich[-a][-v] programname[programname...]
+</code></pre>
+<h3>Options</h3>
+<dl>
+<dt>-a
+</dt><dd> The option <i>-a</i> will make <tt>&quot;pwhich&quot;</tt> print all matches found in the <tt>&quot;PATH&quot;</tt> variable instead of just the first one. Each match is printed on a separate line.
+</dd><dt>-v
+</dt><dd> Prints version (of <tt>&quot;File::Which&quot;</tt>) and copyright notice and exits.</dd></dl>
+<h2>SUPPORT</h2>
+<p>Bugs should be reported via the <font SIZE="-1">CPAN</font> bug tracker at</p>
+<p>&lt;<a rel="nofollow" HREF="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-Which"><a href="http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-Which">http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-Which</a></a>&gt;</p>
+<p>For other issues, contact the maintainer.</p>
+<h2>AUTHOR</h2>
+<p>Adam Kennedy &lt;adamk [at] cpan.org&gt;</p>
+<p>Per Einar Ellefsen &lt;pereinar [at] cpan.org&gt;</p>
+<p>Originated in <i>modperl-2.0/lib/Apache/Build.pm</i>. Changed for use in DocSet (for the mod_perl site) and Win32-awareness by me, with slight modifications by Stas Bekman, then extracted to create <tt>&quot;File::Which&quot;</tt>.</p>
+<p>Version 0.04 had some significant platform-related changes, taken from the Perl Power Tools <tt>`which&rsquo;</tt> implementation by Abigail with enhancements from Peter Prymmer. See &lt;<a rel="nofollow" HREF="http://www.perl.com/language/ppt/src/which/index.html"><a href="http://www.perl.com/language/ppt/src/which/index.html">http://www.perl.com/language/ppt/src/which/index.html</a></a>&gt; for more information.</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright 2002 Per Einar Ellefsen.</p>
+<p>Some parts copyright 2009 Adam Kennedy.</p>
+<p>This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+<h2>SEE ALSO</h2>
+<p>perl, File::Which, <i><a HREF="/docs/linux/man/1-which/">which</a></i>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

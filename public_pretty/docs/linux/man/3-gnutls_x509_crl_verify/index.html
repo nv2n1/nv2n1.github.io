@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_x509_crl_verify(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_x509_crl_verify – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_x509_crl_verify/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_x509_crl_verify(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_x509_crl_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
+<p> <code>int gnutls_x509_crl_verify(gnutls_x509_crl_t </code><i>crl</i><code>, const gnutls_x509_crt_t * </code><i>trusted_cas</i><code>, int </code><i>tcas_size</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_x509_crl_t crl</dt>
+<dd> is the crl to be verified</dd>
+<dt>const gnutls_x509_crt_t * trusted_cas</dt>
+<dd> is a certificate list that is considered to be trusted one</dd>
+<dt>int tcas_size</dt>
+<dd> holds the number of CA certificates in CA_list</dd>
+<dt>unsigned int flags</dt>
+<dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd>
+<dt>unsigned int * verify</dt>
+<dd> will hold the crl verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will try to verify the given crl and return its verification status. See <code>gnutls_x509_crt_list_verify()</code> for a detailed description of return values. Note that since GnuTLS 3.1.4 this function includes the time checks. </p>
+<p> Note that value in <i>verify</i> is set only when the return value of this function is success (i.e, failure to trust a CRL a certificate does not imply a negative return value).</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bcomps(1) · Linux Manual Pages</title>
+<meta name="description" content="bcomps – biconnected components filter for graphs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bcomps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bcomps(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> bcomps &#8211; biconnected components filter for graphs </p>
+<h2>SYNOPSIS</h2>
+<p> <code>bcomps</code> [ <code>-stvx?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>bcomps</code> decomposes graphs into their biconnected components, printing the components to standard output.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-s</code></dt>
+<dd> No output graph is printed. Implies the <code>-v </code> flag.</dd>
+<dt><code>-t</code></dt>
+<dd> Print the underlying block-cutvertex tree.</dd>
+<dt><code>-x</code></dt>
+<dd> Each biconnected component is printed as a separate root graph.</dd>
+<dt><code>-v</code></dt>
+<dd> Prints number of blocks and cutvertices.</dd>
+<dt><code>-o</code><i> outfile</i></dt>
+<dd> If specified, each root graph will be written to a different file with the names derived from <i>outfile</i>. In particular, if both <code>-o</code> and <code>-x</code> flags are used, then each block is written to a different file. If <i>outfile</i> does not have a suffix, the nth block of the ith graph is written to <i>outfile_n_i</i>. However, the 0th block of the 0th graph is written to <i>outfile</i>. </dd>
+<p> If <i>outfile</i> has a suffix, i.e., has the form <i>base.sfx</i>, then the files will have the same name as above, except appended with <i>.sfx</i>. </p>
+<p> The block-cutvertex tree of ith graph is written to <i>outfile_n_T</i>, with an appended suffix if specified.</dl>
+<p> By default, each input graph is printed, with each block given as a subgraph whose name is a concatenation of the name of the input graph, the string &quot;_bcc_&quot; and the number of the block.</p>
+<h2>OPERANDS</h2>
+<p> The following operand is supported:</p>
+<dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
+<h2>RETURN CODES</h2>
+<p> <code>bcomps</code> returns <code>0</code> if all the input graphs are biconnected; and non-zero if any graph has multiple blocks, or any error occurred.</p>
+<h2>BUGS</h2>
+<p> It is possible, though unlikely, that the names used for connected components and their subgraphs may conflict with existing subgraph names.</p>
+<h2>AUTHORS</h2>
+<p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-acyclic/">acyclic</a>(1), <a href="/docs/linux/man/1-sccmap/">sccmap</a>(1), <a href="/docs/linux/man/1-tred/">tred</a>(1), libgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbitsetset(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbitsetset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbitsetset(3)</h1>
+
+
+
+
+
+<p>std::bitset&lt;N&gt;::set - std::bitset&lt;N&gt;::set</p>
+<h2>Synopsis</h2>
+<pre><code>bitset&lt;N&gt;&amp; set();                                             (until C++11)
+bitset&lt;N&gt;&amp; set() noexcept;                            (1)     (since C++11)
+bitset&lt;N&gt;&amp; set( std::size_t pos, bool value = true );     (2)</code></pre> 
+<p>Sets all bits to true or to specified value.</p>
+<ol>
+<li>Sets all bits to true.</li>
+<li>Sets the bit at position pos to the value value.</li>
+</ol>
+<h2>Parameters</h2>
+<p>pos - the position of the bit to set (least significant to most significant)
+value - the value to set the bit to</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Exceptions</h2>
+<ol start="2">
+<li>Throws std::out_of_range if pos does not correspond to a valid position within the bitset.</li>
+</ol>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;bitset&gt;
+int main()
+{
+std::bitset&lt;8&gt; b;
+for (size_t i = 1; i &lt; b.size(); i += 2) {
+b.set(i);
+}
+std::cout &lt;&lt; b &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 10101010</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> sets bits to false
+reset <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> toggles the values of bits
+flip <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

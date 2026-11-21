@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>whisper-create(1) · Linux Manual Pages</title>
+<meta name="description" content="whisper-create – create a whisper database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-whisper-create/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>whisper-create(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> whisper-create &#8211; create a whisper database</p>
+<h2>SYNOPSYS</h2>
+<pre>
+whisper-create path secondsPerPoint:pointsToStore [secondsPerPoint:pointsToStore]*
+</pre>
+<h2>DESCRIPTION</h2>
+<p> This command creates a new whisper fixed-size database. For each database you specify one or more pairs of numbers describing how data points should be archived in this database. The first part of the pair is the precision, the second part of the pair is how many data points should be stored. You cannot configure two archives with the same precision inside a single database. Higher precision archives must evenly divide all lower precision archives&#8217; precision. </p>
+<p> The options are described below.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;overwrite</code></dt>
+<dd> Overwrite an existing database.</dd>
+<dt><code>&#8211;xFilesFactor</code></dt>
+<dd> The fraction of data points in a propagation interval that must have known values for a propagation to occur.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the embedded help.</dd></dl>
+<h2>AUTHOR</h2>
+<p> <code>whisper</code> is a fixed size database, created by Chris Davis. </p>
+<p> This manual page was written by Elliot Murphy &lt;elliot [at] ubuntu.com&gt;, for the Debian project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

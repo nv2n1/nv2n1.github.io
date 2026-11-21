@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xsetclosedownmode(3) · Linux Manual Pages</title>
+<meta name="description" content="XSetCloseDownMode, XKillClient – control clients">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xsetclosedownmode/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xsetclosedownmode(3)</h1>
+
+
+
+
+
+<p>XSetCloseDownMode, XKillClient &#8211; control clients </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XSetCloseDownMode(Display *<i>display</i>, int <i>close_mode</i>);</dd>
+<dd>int XKillClient(Display *<i>display</i>, XID <i>resource</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>close_mode</i></dt>
+<dd>Specifies the client close-down mode. You can pass <code>DestroyAll</code>, <code>RetainPermanent</code>, or <code>RetainTemporary</code>.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>resource</i></dt>
+<dd>Specifies any resource associated with the client that you want to destroy or <code>AllTemporary</code>.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XSetCloseDownMode</code> defines what will happen to the client&#8217;s resources at connection close. A connection starts in <code>DestroyAll</code> mode. For information on what happens to the client&#8217;s resources when the close_mode argument is <code>RetainPermanent</code> or <code>RetainTemporary</code>, see section 2.6. </p>
+<p> <code>XSetCloseDownMode</code> can generate a <code>BadValue</code> error. </p>
+<p> The <code>XKillClient</code> function forces a close down of the client that created the resource if a valid resource is specified. If the client has already terminated in either <code>RetainPermanent</code> or <code>RetainTemporary</code> mode, all of the client&#8217;s resources are destroyed. If <code>AllTemporary</code> is specified, the resources of all clients that have terminated in <code>RetainTemporary</code> are destroyed (see section 2.5). This permits implementation of window manager facilities that aid debugging. A client can set its close-down mode to <code>RetainTemporary</code>. If the client then crashes, its windows would not be destroyed. The programmer can then inspect the application&#8217;s window tree and use the window manager to destroy the zombie windows. </p>
+<p> <code>XKillClient</code> can generate a <code>BadValue</code> error.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
+<h2>See Also</h2>
+<p><i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

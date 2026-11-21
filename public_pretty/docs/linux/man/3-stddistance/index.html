@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stddistance(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stddistance/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stddistance(3)</h1>
+
+
+
+
+
+<p>std::distance - std::distance</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iterator&gt;
+template&lt; class InputIt &gt;
+typename std::iterator_traits&lt;InputIt&gt;::difference_type             (until C++17)
+distance( InputIt first, InputIt last );
+template&lt; class InputIt &gt;
+constexpr typename std::iterator_traits&lt;InputIt&gt;::difference_type   (since C++17)
+distance( InputIt first, InputIt last );</code></pre> 
+<p>Returns the number of hops from first to last.
+The behavior is undefined if last is not reachable from first by (possibly repeatedly) incrementing first. <i>(until C++11)</i>
+If InputIt is not LegacyRandomAccessIterator, the behavior is undefined if last is not reachable from first by (possibly repeatedly) incrementing first. If InputIt is LegacyRandomAccessIterator, the behavior is undefined if last is not reachable from first and first is not reachable from last. <i>(since C++11)</i>
+first - iterator pointing to the first element
+last - iterator pointing to the end of the range</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>InputIt must meet the requirements of LegacyInputIterator. The operation is more efficient if InputIt additionally meets the requirements of LegacyRandomAccessIterator</p>
+<h2>Return value</h2>
+<p>The number of increments needed to go from first to last.
+The value may be negative if random-access iterators are used and first is reachable from last
+<i>(since C++11)</i></p>
+<h2>Complexity</h2>
+<p>Linear.
+However, if InputIt additionally meets the requirements of LegacyRandomAccessIterator, complexity is constant.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;vector&gt;
+int main()
+{
+std::vector&lt;int&gt; v{3, 1, 4};
+std::cout &lt;&lt; &quot;distance(first, last) = &quot;
+&lt;&lt; std::distance(v.begin(), v.end()) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;distance(last, first) = &quot;
+&lt;&lt; std::distance(v.end(), v.begin()) &lt;&lt; &lsquo;\n&rsquo;;
+// the behavior is undefined (until C++11)
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> distance(first, last) = 3
+ <wbr> distance(last, first) = -3</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> advances an iterator by given distance
+advance <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> returns the number of elements satisfying specific criteria
+count <i>(function template)</i>
+count_if</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gsisftp(1) · Linux Manual Pages</title>
+<meta name="description" content="sftp – secure file transfer program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gsisftp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gsisftp(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>sftp</code> &#8211; secure file transfer program</p>
+<h2>SYNOPSIS</h2>
+<p> <code>sftp</code> -words [-<code>1246aCfpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>host</i><br />
+<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>file &#8230;</i> ] ]<br />
+<code>sftp</code> [<i>user </i><code>@ </code><i>host </i>[: <i>dir </i>[<i>file &#8230;</i> ] ] ]<br />
+<code>sftp</code> &#8211;<code>b </code><i>batchfile</i> [<i>user </i><code>@ </code><i>host</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>sftp</code> is an interactive file transfer program, similar to <a href="/docs/linux/man/1-ftp/">ftp</a>(1), which performs all operations over an encrypted <a href="/docs/linux/man/1-ssh/">ssh</a>(1) transport. It may also use many features of ssh, such as public key authentication and compression. <code>sftp</code> connects and logs into the specified <i>host</i> then enters an interactive command mode. </p>
+<p> The second usage format will retrieve files automatically if a non-interactive authentication method is used; otherwise it will do so after successful interactive authentication. </p>
+<p> The third usage format allows <code>sftp</code> to start in a remote directory. </p>
+<p> The final usage format allows for automated sessions using the &#8211;<code>b</code> option. In such cases, it is necessary to configure non-interactive authentication to obviate the need to enter a password at connection time (see <a href="/docs/linux/man/8-sshd/">sshd</a>(8) and ssh-keygen1 for details). </p>
+<p> Since some usage formats use colon characters to delimit host names from path names, IPv6 addresses must be enclosed in square brackets to avoid ambiguity. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-1</code></dt>
+<dd> Specify the use of protocol version 1.</dd>
+<dt><code>-2</code></dt>
+<dd> Specify the use of protocol version 2.</dd>
+<dt><code>-4</code></dt>
+<dd> Forces <code>sftp</code> to use IPv4 addresses only.</dd>
+<dt><code>-6</code></dt>
+<dd> Forces <code>sftp</code> to use IPv6 addresses only.</dd>
+<dt><code>-a</code></dt>
+<dd> Attempt to continue interrupted downloads rather than overwriting existing partial or complete copies of files. If the remote file contents differ from the partial local copy then the resultant file is likely to be corrupt.</dd>
+<dt><code>-B </code><i>buffer_size</i></dt>
+<dd> Specify the size of the buffer that <code>sftp</code> uses when transferring files. Larger buffers require fewer round trips at the cost of higher memory consumption. The default is 32768 bytes.</dd>
+<dt><code>-b </code><i>batchfile</i></dt>
+<dd> Batch mode reads a series of commands from an input <i>batchfile</i> instead of <i>stdin</i> Since it lacks user interaction it should be used in conjunction with non-interactive authentication. A <i>batchfile</i> of `-&#8216; may be used to indicate standard input. <code>sftp</code> will abort if any of the following commands fail: <code>get , put , reget , rename , ln</code> <code>rm , mkdir , chdir , ls</code> <code>lchdir , chmod , chown</code> <code>chgrp , lpwd , df , symlink</code> and <code>lmkdir</code> Termination on error can be suppressed on a command by command basis by prefixing the command with a `-&#8216; character (for example, <code>-rm /tmp/blah* )</code></dd>
+<dt><code>-C</code></dt>
+<dd> Enables compression (via ssh&#8217;s &#8211;<code>C</code> flag).</dd>
+<dt><code>-c </code><i>cipher</i></dt>
+<dd> Selects the cipher to use for encrypting the data transfers. This option is directly passed to <a href="/docs/linux/man/1-ssh/">ssh</a>(1).</dd>
+<dt><code>-D </code><i>sftp_server_path</i></dt>
+<dd> Connect directly to a local sftp server (rather than via <a href="/docs/linux/man/1-ssh/">ssh</a>(1)). This option may be useful in debugging the client and server.</dd>
+<dt><code>-F </code><i>ssh_config</i></dt>
+<dd> Specifies an alternative per-user configuration file for <a href="/docs/linux/man/1-ssh/">ssh</a>(1). This option is directly passed to <a href="/docs/linux/man/1-ssh/">ssh</a>(1).</dd>
+<dt><code>-f</code></dt>
+<dd> Requests that files be flushed to disk immediately after transfer. When uploading files, this feature is only enabled if the server implements the &quot;fsync [at] openssh.com&quot; extension.</dd>
+<dt><code>-i </code><i>identity_file</i></dt>
+<dd> Selects the file from which the identity (private key) for public key authentication is read. This option is directly passed to <a href="/docs/linux/man/1-ssh/">ssh</a>(1).</dd>
+<dt><code>-l </code><i>limit</i></dt>
+<dd> Limits the used bandwidth, specified in Kbit/s.</dd>
+<dt><code>-o </code><i>ssh_option</i></dt>
+<dd> Can be used to pass options to <code>ssh</code> in the format used in ssh_config5. This is useful for specifying options for which there is no separate <code>sftp</code> command-line flag. For example, to specify an alternate port use: <code>sftp -oPort=24</code> For full details of the options listed below, and their possible values, see ssh_config5. </dd>
+<dl>
+<dt><code>AddressFamily</code></dt>
+<dd>
+</dd><dt><code>BatchMode</code></dt>
+<dd>
+</dd><dt><code>BindAddress</code></dt>
+<dd>
+</dd><dt><code>CanonicalDomains</code></dt>
+<dd>
+</dd><dt><code>CanonicalizeFallbackLocal</code></dt>
+<dd>
+</dd><dt><code>CanonicalizeHostname</code></dt>
+<dd>
+</dd><dt><code>CanonicalizeMaxDots</code></dt>
+<dd>
+</dd><dt><code>CanonicalizePermittedCNAMEs </code></dt>
+<dt><code>ChallengeResponseAuthentication</code></dt>
+<dd>
+</dd><dd>
+</dd><dt><code>CheckHostIP</code></dt>
+<dd>
+</dd><dt><code>Cipher</code></dt>
+<dd>
+</dd><dt><code>Ciphers</code></dt>
+<dd>
+</dd><dt><code>Compression</code></dt>
+<dd>
+</dd><dt><code>CompressionLevel</code></dt>
+<dd>
+</dd><dt><code>ConnectionAttempts</code></dt>
+<dd>
+</dd><dt><code>ConnectTimeout</code></dt>
+<dd>
+</dd><dt><code>ControlMaster</code></dt>
+<dd>
+</dd><dt><code>ControlPath</code></dt>
+<dd>
+</dd><dt><code>ControlPersist</code></dt>
+<dd>
+</dd><dt><code>GlobalKnownHostsFile</code></dt>
+<dd>
+</dd><dt><code>GSSAPIAuthentication</code></dt>
+<dd>
+</dd><dt><code>GSSAPIDelegateCredentials</code></dt>
+<dd>
+</dd><dt><code>HashKnownHosts</code></dt>
+<dd>
+</dd><dt><code>Host</code></dt>
+<dd>
+</dd><dt><code>HostbasedAuthentication</code></dt>
+<dd>
+</dd><dt><code>HostKeyAlgorithms</code></dt>
+<dd>
+</dd><dt><code>HostKeyAlias</code></dt>
+<dd>
+</dd><dt><code>HostName</code></dt>
+<dd>
+</dd><dt><code>IdentityFile</code></dt>
+<dd>
+</dd><dt><code>IdentitiesOnly</code></dt>
+<dd>
+</dd><dt><code>IPQoS</code></dt>
+<dd>
+</dd><dt><code>KbdInteractiveAuthentication</code></dt>
+<dd>
+</dd><dt><code>KbdInteractiveDevices</code></dt>
+<dd>
+</dd><dt><code>KexAlgorithms</code></dt>
+<dd>
+</dd><dt><code>LogLevel</code></dt>
+<dd>
+</dd><dt><code>MACs </code></dt>
+<dt><code>NoHostAuthenticationForLocalhost</code></dt>
+<dd>
+</dd><dd>
+</dd><dt><code>NumberOfPasswordPrompts</code></dt>
+<dd>
+</dd><dt><code>PasswordAuthentication</code></dt>
+<dd>
+</dd><dt><code>PKCS11Provider</code></dt>
+<dd>
+</dd><dt><code>Port</code></dt>
+<dd>
+</dd><dt><code>PreferredAuthentications</code></dt>
+<dd>
+</dd><dt><code>Protocol</code></dt>
+<dd>
+</dd><dt><code>ProxyCommand</code></dt>
+<dd>
+</dd><dt><code>PubkeyAuthentication</code></dt>
+<dd>
+</dd><dt><code>RekeyLimit</code></dt>
+<dd>
+</dd><dt><code>RhostsRSAAuthentication</code></dt>
+<dd>
+</dd><dt><code>RSAAuthentication</code></dt>
+<dd>
+</dd><dt><code>SendEnv</code></dt>
+<dd>
+</dd><dt><code>ServerAliveInterval</code></dt>
+<dd>
+</dd><dt><code>ServerAliveCountMax</code></dt>
+<dd>
+</dd><dt><code>StrictHostKeyChecking</code></dt>
+<dd>
+</dd><dt><code>TCPKeepAlive</code></dt>
+<dd>
+</dd><dt><code>UsePrivilegedPort</code></dt>
+<dd>
+</dd><dt><code>User</code></dt>
+<dd>
+</dd><dt><code>UserKnownHostsFile</code></dt>
+<dd>
+</dd><dt><code>VerifyHostKeyDNS</code></dt>
+<dd></dd></dl>
+<dt><code>-P </code><i>port</i></dt>
+<dd> Specifies the port to connect to on the remote host.</dd>
+<dt><code>-p</code></dt>
+<dd> Preserves modification times, access times, and modes from the original files transferred.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode: disables the progress meter as well as warning and diagnostic messages from <a href="/docs/linux/man/1-ssh/">ssh</a>(1).</dd>
+<dt><code>-R </code><i>num_requests</i></dt>
+<dd> Specify how many requests may be outstanding at any one time. Increasing this may slightly improve file transfer speed but will increase memory usage. The default is 64 outstanding requests.</dd>
+<dt><code>-r</code></dt>
+<dd> Recursively copy entire directories when uploading and downloading. Note that <code>sftp</code> does not follow symbolic links encountered in the tree traversal.</dd>
+<dt><code>-S </code><i>program</i></dt>
+<dd> Name of the <i>program</i> to use for the encrypted connection. The program must understand <a href="/docs/linux/man/1-ssh/">ssh</a>(1) options.</dd>
+<dt><code>-s </code><i>subsystem | sftp_server</i></dt>
+<dd> Specifies the SSH2 subsystem or the path for an sftp server on the remote host. A path is useful for using <code>sftp</code> over protocol version 1, or when the remote <a href="/docs/linux/man/8-sshd/">sshd</a>(8) does not have an sftp subsystem configured.</dd>
+<dt><code>-v</code></dt>
+<dd> Raise logging level. This option is also passed to ssh.</dd></dl>
+<h2>INTERACTIVE COMMANDS</h2>
+<p> Once in interactive mode, <code>sftp</code> understands a set of commands similar to those of <a href="/docs/linux/man/1-ftp/">ftp</a>(1). Commands are case insensitive. Pathnames that contain spaces must be enclosed in quotes. Any special characters contained within pathnames that are recognized by <a href="/docs/linux/man/3-glob/">glob</a>(3) must be escaped with backslashes (`\&#8217; )</p>
+<dl>
+<dt><code>bye</code></dt>
+<dd> Quit <code>sftp</code></dd>
+<dt><code>cd </code><i>path</i></dt>
+<dd> Change remote directory to <i>path</i></dd>
+<dt><code>chgrp </code><i>grp path</i></dt>
+<dd> Change group of file <i>path</i> to <i>grp</i> <i>path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files. <i>grp</i> must be a numeric GID.</dd>
+<dt><code>chmod </code><i>mode path</i></dt>
+<dd> Change permissions of file <i>path</i> to <i>mode</i> <i>path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files.</dd>
+<dt><code>chown </code><i>own path</i></dt>
+<dd> Change owner of file <i>path</i> to <i>own</i> <i>path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files. <i>own</i> must be a numeric UID.</dd>
+<dt><code> df</code> [-<code>hi</code> ] [<i>path</i> ]</dt>
+<dd>
+</dd><dd>Display usage information for the filesystem holding the current directory (or <i>path</i> if specified). If the &#8211;<code>h</code> flag is specified, the capacity information will be displayed using &quot;human-readable&quot; suffixes. The &#8211;<code>i</code> flag requests display of inode information in addition to capacity information. This command is only supported on servers that implement the &#8220;statvfs [at] openssh.com&#8221; extension.</dd>
+<dt><code>exit</code></dt>
+<dd> Quit <code>sftp</code></dd>
+<dt><code> get</code> [-<code>afPpr</code> ] <i>remote-path</i> [<i>local-path</i> ]</dt>
+<dd>
+</dd><dd>Retrieve the <i>remote-path</i> and store it on the local machine. If the local path name is not specified, it is given the same name it has on the remote machine. <i>remote-path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files. If it does and <i>local-path</i> is specified, then <i>local-path</i> must specify a directory. </dd>
+<p> If the &#8211;<code>a</code> flag is specified, then attempt to resume partial transfers of existing files. Note that resumption assumes that any partial copy of the local file matches the remote copy. If the remote file contents differ from the partial local copy then the resultant file is likely to be corrupt. </p>
+<p> If the &#8211;<code>f</code> flag is specified, then <a href="/docs/linux/man/2-fsync/">fsync</a>(2) will be called after the file transfer has completed to flush the file to disk. </p>
+<p> If either the &#8211;<code>P</code> or &#8211;<code>p</code> flag is specified, then full file permissions and access times are copied too. </p>
+<p> If the &#8211;<code>r</code> flag is specified then directories will be copied recursively. Note that <code>sftp</code> does not follow symbolic links when performing recursive transfers.</p>
+<dt><code>help</code></dt>
+<dd> Display help text.</dd>
+<dt><code>lcd </code><i>path</i></dt>
+<dd> Change local directory to <i>path</i></dd>
+<dt><code>lls </code>[<i>ls-options </i>[<i>path</i> ] ]</dt>
+<dd> Display local directory listing of either <i>path</i> or current directory if <i>path</i> is not specified. <i>ls-options</i> may contain any flags supported by the local system&#8217;s <a href="/docs/linux/man/1-ls/">ls</a>(1) command. <i>path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files.</dd>
+<dt><code>lmkdir </code><i>path</i></dt>
+<dd> Create local directory specified by <i>path</i></dd>
+<dt><code> ln</code> [-<code>s</code> ] <i>oldpath</i> <i>newpath</i></dt>
+<dd>
+</dd><dd>Create a link from <i>oldpath</i> to <i>newpath</i> If the &#8211;<code>s</code> flag is specified the created link is a symbolic link, otherwise it is a hard link.</dd>
+<dt><code>lpwd</code></dt>
+<dd> Print local working directory.</dd>
+<dt><code> ls</code> [-<code>1afhlnrSt </code>[<i>path</i> ] ]</dt>
+<dd>
+</dd><dd>Display a remote directory listing of either <i>path</i> or the current directory if <i>path</i> is not specified. <i>path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files. </dd>
+<p> The following flags are recognized and alter the behaviour of <code>ls</code> accordingly:</p>
+<dl>
+<dt><code>-1</code></dt>
+<dd> Produce single columnar output.</dd>
+<dt><code>-a</code></dt>
+<dd> List files beginning with a dot (`.&#8217; )</dd>
+<dt><code>-f</code></dt>
+<dd> Do not sort the listing. The default sort order is lexicographical.</dd>
+<dt><code>-h</code></dt>
+<dd> When used with a long format option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, and Exabyte in order to reduce the number of digits to four or fewer using powers of 2 for sizes (K=1024, M=1048576, etc.).</dd>
+<dt><code>-l</code></dt>
+<dd> Display additional details including permissions and ownership information.</dd>
+<dt><code>-n</code></dt>
+<dd> Produce a long listing with user and group information presented numerically.</dd>
+<dt><code>-r</code></dt>
+<dd> Reverse the sort order of the listing.</dd>
+<dt><code>-S</code></dt>
+<dd> Sort the listing by file size.</dd>
+<dt><code>-t</code></dt>
+<dd> Sort the listing by last modification time.</dd></dl>
+<dt><code>lumask </code><i>umask</i></dt>
+<dd> Set local umask to <i>umask</i></dd>
+<dt><code>mkdir </code><i>path</i></dt>
+<dd> Create remote directory specified by <i>path</i></dd>
+<dt><code>progress</code></dt>
+<dd> Toggle display of progress meter.</dd>
+<dt><code> put</code> [-<code>fPpr</code> ] <i>local-path</i> [<i>remote-path</i> ]</dt>
+<dd>
+</dd><dd>Upload <i>local-path</i> and store it on the remote machine. If the remote path name is not specified, it is given the same name it has on the local machine. <i>local-path</i> may contain <a href="/docs/linux/man/3-glob/">glob</a>(3) characters and may match multiple files. If it does and <i>remote-path</i> is specified, then <i>remote-path</i> must specify a directory. </dd>
+<p> If the &#8211;<code>f</code> flag is specified, then a request will be sent to the server to call <a href="/docs/linux/man/2-fsync/">fsync</a>(2) after the file has been transferred. Note that this is only supported by servers that implement the &quot;fsync [at] openssh.com&quot; extension. </p>
+<p> If either the &#8211;<code>P</code> or &#8211;<code>p</code> flag is specified, then full file permissions and access times are copied too. </p>
+<p> If the &#8211;<code>r</code> flag is specified then directories will be copied recursively. Note that <code>sftp</code> does not follow symbolic links when performing recursive transfers.</p>
+<dt><code>pwd</code></dt>
+<dd> Display remote working directory.</dd>
+<dt><code>quit</code></dt>
+<dd> Quit <code>sftp</code></dd>
+<dt><code> reget</code> [-<code>Ppr</code> ] <i>remote-path</i> [<i>local-path</i> ]</dt>
+<dd>
+</dd><dd>Resume download of <i>remote-path</i> Equivalent to <code>get</code> with the &#8211;<code>a</code> flag set.</dd>
+<dt><code>rename </code><i>oldpath newpath</i></dt>
+<dd> Rename remote file from <i>oldpath</i> to <i>newpath</i></dd>
+<dt><code>rm </code><i>path</i></dt>
+<dd> Delete remote file specified by <i>path</i></dd>
+<dt><code>rmdir </code><i>path</i></dt>
+<dd> Remove remote directory specified by <i>path</i></dd>
+<dt><code>symlink </code><i>oldpath newpath</i></dt>
+<dd> Create a symbolic link from <i>oldpath</i> to <i>newpath</i></dd>
+<dt><code>version</code></dt>
+<dd> Display the <code>sftp</code> protocol version.</dd>
+<dt><code>! </code><i>command</i></dt>
+<dd> Execute <i>command</i> in local shell.</dd>
+<dt><code>!</code></dt>
+<dd> Escape to local shell.</dd>
+<dt><code>?</code></dt>
+<dd> Synonym for help.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-ftp/">ftp</a>(1), <a href="/docs/linux/man/1-ls/">ls</a>(1), <a href="/docs/linux/man/1-scp/">scp</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-add1, ssh-keygen1, <a href="/docs/linux/man/3-glob/">glob</a>(3), ssh_config5, sftp-server8, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
+<dl>
+<dt>
+</dt><dd> T. Ylonen S. Lehtinen <i>&quot;SSH File Transfer Protocol&quot;</i> draft-ietf-secsh-filexfer-00.txt January 2001 work in progress material</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

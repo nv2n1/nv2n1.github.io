@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pthread_setattr_default_np(3) · Linux Manual Pages</title>
+<meta name="description" content="pthread_getattr_default_np, pthread_setattr_default_np, – get or set default thread-creation attributes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pthread_setattr_default_np/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pthread_setattr_default_np(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pthread_getattr_default_np, pthread_setattr_default_np, &#8211; get or set default thread-creation attributes</p>
+<h2>Synopsis</h2>
+<pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
+#include &lt;pthread.h&gt;
+int pthread_getattr_default_np(pthread_attr_t *attr);
+int pthread_setattr_default_np(pthread_attr_t *attr);
+Compile and link with - pthread.</code></pre>
+<h2>Description</h2>
+<p>The <code>pthread_setattr_default_np</code>() function sets the default attributes used for creation of a new thread&#8212;that is, the attributes that are used when <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) is called with a second argument that is NULL. The default attributes are set using the attributes supplied in <i>*attr</i>, a previously initialized thread attributes object. Note the following details about the supplied attributes object:</p>
+<dl>
+<dt>*</dt>
+<dd>The attribute settings in the object must be valid.</dd>
+<dt>*</dt>
+<dd>The <i>stack address</i> attribute must not be set in the object.</dd>
+<dt>*</dt>
+<dd>Setting the <i>stack size</i> attribute to zero means leave the default stack size unchanged.</dd></dl>
+<p> The <code>pthread_getattr_default_np</code>() function initializes the thread attributes object referred to by <i>attr</i> so that it contains the default attributes used for thread creation.</p>
+<h2>Errors</h2>
+<dl>
+<dt><code>EINVAL</code></dt>
+<dd>(<code>pthread_setattr_default_np</code>()) One of the attribute settings in <i>attr</i> is invalid, or the stack address attribute is set in <i>attr</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>(<code>pthread_setattr_default_np</code>()) Insufficient memory.</dd></dl>
+<h2>Versions</h2>
+<p>These functions are available in glibc since version 2.18.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>pthread_getattr_default_np</code>(), <code>pthread_setattr_default_np</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Conforming To</h2>
+<p>These functions are nonstandard GNU extensions; hence the suffix &quot;_np&quot; (nonportable) in their names.</p>
+<h2>Examples</h2>
+<p>The program below uses <code>pthread_getattr_default_np</code>() to fetch the default thread-creation attributes and then displays various settings from the returned thread attributes object. When running the program, we see the following output: </p>
+<pre><code>$ ./a.out
+Stack size:          8388608
+Guard size:          4096
+Scheduling policy:   SCHED_OTHER
+Scheduling priority: 0
+Detach state:        JOINABLE
+Inherit scheduler:   INHERIT
+Program source
+#define _GNU_SOURCE
+#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;errno.h&gt;
+#define errExitEN(en, msg) \
+do { errno = en; perror(msg); \
+    exit(EXIT_FAILURE); } while (0)
+static void
+display_pthread_attr(pthread_attr_t *attr)
+{
+    int s;
+    size_t stacksize;
+    size_t guardsize;
+    int policy;
+    struct sched_param schedparam;
+    int detachstate;
+    int inheritsched;
+    s = pthread_attr_getstacksize(attr, &amp;stacksize);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getstacksize&quot;);
+    printf(&quot;Stack size:          %zd
+&quot;, stacksize);
+    s = pthread_attr_getguardsize(attr, &amp;guardsize);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getguardsize&quot;);
+    printf(&quot;Guard size:          %zd
+&quot;, guardsize);
+    s = pthread_attr_getschedpolicy(attr, &amp;policy);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getschedpolicy&quot;);
+    printf(&quot;Scheduling policy:   %s
+&quot;,
+    (policy == SCHED_FIFO) ? &quot;SCHED_FIFO&quot; :
+    (policy == SCHED_RR) ? &quot;SCHED_RR&quot; :
+    (policy == SCHED_OTHER) ? &quot;SCHED_OTHER&quot; : &quot;[unknown]&quot;);
+    s = pthread_attr_getschedparam(attr, &amp;schedparam);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getschedparam&quot;);
+    printf(&quot;Scheduling priority: %d
+&quot;, schedparam.sched_priority);
+    s = pthread_attr_getdetachstate(attr, &amp;detachstate);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getdetachstate&quot;);
+    printf(&quot;Detach state:        %s
+&quot;,
+    (detachstate == PTHREAD_CREATE_DETACHED) ? &quot;DETACHED&quot; :
+    (detachstate == PTHREAD_CREATE_JOINABLE) ? &quot;JOINABLE&quot; :
+    &quot;???&quot;);
+    s = pthread_attr_getinheritsched(attr, &amp;inheritsched);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_attr_getinheritsched&quot;);
+    printf(&quot;Inherit scheduler:   %s
+&quot;,
+    (inheritsched == PTHREAD_INHERIT_SCHED) ? &quot;INHERIT&quot; :
+    (inheritsched == PTHREAD_EXPLICIT_SCHED) ? &quot;EXPLICIT&quot; :
+    &quot;???&quot;);
+}
+int
+main(int argc, char *argv[])
+{
+    int s;
+    pthread_attr_t attr;
+    s = pthread_getattr_default_np(&amp;attr);
+    if (s != 0)
+    errExitEN(s, &quot;pthread_getattr_default_np&quot;);
+    display_pthread_attr(&amp;attr);
+    exit(EXIT_SUCCESS);
+}</code></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pthread_attr_getaffinity_np/">pthread_attr_getaffinity_np</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getdetachstate/">pthread_attr_getdetachstate</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getguardsize/">pthread_attr_getguardsize</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getinheritsched/">pthread_attr_getinheritsched</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getschedparam/">pthread_attr_getschedparam</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getschedpolicy/">pthread_attr_getschedpolicy</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getscope/">pthread_attr_getscope</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getstack/">pthread_attr_getstack</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getstackaddr/">pthread_attr_getstackaddr</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_getstacksize/">pthread_attr_getstacksize</a></code>(3), <code><a href="/docs/linux/man/3-pthread_attr_init/">pthread_attr_init</a></code>(3), <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

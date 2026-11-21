@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>relay_late_setup_files(9) · Linux Manual Pages</title>
+<meta name="description" content="relay_late_setup_files – triggers file creation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-relay_late_setup_files/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>relay_late_setup_files(9)</h1>
+
+
+
+
+
+<p>relay_late_setup_files &#8211; triggers file creation</p>
+<h2>Synopsis</h2>
+<pre><code>int relay_late_setup_files(struct rchan *chan, const char *base_filename, struct dentry *parent);</code></pre>
+<h2>Arguments</h2>
+<p><i>chan</i></p>
+<dl>
+<dd>
+</dd><dd>channel to operate on</dd></dl>
+<p> <i>base_filename</i></p>
+<dl>
+<dd>base name of files to create</dd></dl>
+<p> <i>parent</i></p>
+<dl>
+<dd>dentry of parent directory, <code>NULL</code> for root directory</dd></dl>
+<h2>Description</h2>
+<p>Returns 0 if successful, non-zero otherwise. </p>
+<p> Use to setup files for a previously buffer-only channel created by <code>relay_open</code> with a NULL parent dentry. </p>
+<p> For example, this is useful for perfomring early tracing in kernel, before VFS is up and then exposing the early results once the dentry is available.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ip6tables-save(8) · Linux Manual Pages</title>
+<meta name="description" content="iptables-save — dump iptables rules">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ip6tables-save/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ip6tables-save(8)</h1>
+
+
+
+
+
+<p>iptables-save &#8212; dump iptables rules </p>
+<p> ip6tables-save &#8212; dump iptables rules</p>
+<h2>Synopsis</h2>
+<p><code>iptables-save</code> [<code>-M</code> <i>modprobe</i>] [<code>-c</code>] [<code>-t</code> <i>table</i>] [<code>-f</code> <i>filename</i>] </p>
+<p> <code>ip6tables-save</code> [<code>-M</code> <i>modprobe</i>] [<code>-c</code>] [<code>-t</code> <i>table</i>] [<code>-f</code> <i>filename</i>]</p>
+<h2>Description</h2>
+<p><code>iptables-save</code> and <code>ip6tables-save</code> are used to dump the contents of IP or IPv6 Table in easily parseable format either to STDOUT or to a specified file.</p>
+<dl>
+<dt><code>-M</code>, <code>&#8211;modprobe</code> <i>modprobe_program</i></dt>
+<dd>Specify the path to the modprobe program. By default, iptables-save will inspect /proc/sys/kernel/modprobe to determine the executable&#8217;s path.</dd>
+<dt><code>-f</code>, <code>&#8211;file</code> <i>filename</i></dt>
+<dd>Specify a filename to log the output to. If not specified, iptables-save will log to STDOUT.</dd>
+<dt><code>-c</code>, <code>&#8211;counters</code></dt>
+<dd>include the current values of all packet and byte counters in the output</dd>
+<dt><code>-t</code>, <code>&#8211;table</code> <i>tablename</i></dt>
+<dd>restrict output to only one table. If the kernel is configured with automatic module loading, an attempt will be made to load the appropriate module for that table if it is not already there.<br />
+ If not specified, output includes all available tables.</dd></dl>
+<h2>Bugs</h2>
+<p>None known as of iptables-1.2.1 release</p>
+<h2>Authors</h2>
+<p>Harald Welte &lt;laforge [at] gnumonks.org&gt;<br />
+ Rusty Russell &lt;rusty [at] rustcorp.com.au&gt;<br />
+ Andras Kis-Szabo &lt;kisza [at] sch.bme.hu&gt; contributed ip6tables-save.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-iptables-apply/">iptables-apply</a></code>(8),<code><a href="/docs/linux/man/8-iptables-restore/">iptables-restore</a></code>(8), <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8) The iptables-HOWTO, which details more iptables usage, the NAT-HOWTO, which details NAT, and the netfilter-hacking-HOWTO which details the internals. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

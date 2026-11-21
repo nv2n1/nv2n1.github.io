@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>makedbz(8) · Linux Manual Pages</title>
+<meta name="description" content="makedbz – Rebuild dbz files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-makedbz/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>makedbz(8)</h1>
+
+
+
+
+
+<p>makedbz &#8211; Rebuild dbz files</p>
+<h2>Synopsis</h2>
+<p><code>makedbz</code> [<code>-io</code>] [<code>-f</code> <i>filename</i>] [<code>-s</code> <i>size</i>]</p>
+<h2>Description</h2>
+<p><code>makedbz</code> rebuilds <i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3) database. The default name of the text file is <i>pathdb</i>/history; to specify a different name, use the <code>-f</code> flag.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-f</code> <i>filename</i></dt>
+<dd>If the <code>-f</code> flag is used, then the database files are named <tt>&quot;</tt>filename<tt>.dir&quot;</tt>, <tt>&quot;</tt>filename<tt>.index&quot;</tt>, and <tt>&quot;</tt>filename<tt>.hash&quot;</tt>. If the <code>-f</code> flag is not used, then a temporary link to the name <tt>&quot;history.n&quot;</tt> is made and the database files are written as <tt>&quot;history.n.index&quot;</tt> , <tt>&quot;history.n.hash&quot;</tt> and <tt>&quot;history.n.dir&quot;</tt>.</dd>
+<dt><code>-i</code></dt>
+<dd>To ignore the old database, use the <code>-i</code> flag. Using the <code>-o</code> or <code>-s</code> flags implies the <code>-i</code> flag.</dd>
+<dt><code>-o</code></dt>
+<dd>If the <code>-o</code> flag is used, then the link is not made and any existing history files are overwritten. If the old database exists, <code>makedbz</code> will use it to determine the size of the new database.</dd>
+<dt><code>-s</code> <i>size</i></dt>
+<dd><code>makedbz</code> will also ignore any old database if the <code>-s</code> flag is used to specify the approximate number of entries in the new database. Accurately specifying the size is an optimization that will create a more efficient database. Size is measured in key-value pairs (i.e. lines). (The size should be the estimated eventual size of the file, typically the size of the old file.) </dd>
+<p> For more information, see the discussion of <code>dbzfresh</code> and <code>dbzsize</code> in <i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3).</dl>
+<h2>History</h2>
+<p>Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
+<p> <tt>$Id:</tt> makedbz.pod 8584 2009-08-20 21:54:07Z iulius $</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/3-dbz/">dbz</a></i>(3), <i><a href="/docs/linux/man/5-history/">history</a></i>(5). </p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_mousebuttonevent(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_MouseButtonEvent – Mouse button event structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_mousebuttonevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_mousebuttonevent(3)</h1>
+
+
+
+
+
+<p>SDL_MouseButtonEvent &#8211; Mouse button event structure</p>
+<h2>Structure Definition</h2>
+<pre><tt>typedef struct{
+ Uint8 type;
+ Uint8 button;
+ Uint8 state;
+ Uint16 x, y;
+} SDL_MouseButtonEvent;</tt></pre>
+<h2>Structure Data</h2>
+<dl COMPACT>
+<dt><code>type</code></dt>
+<dd><code>SDL_MOUSEBUTTONDOWN</code> or <code>SDL_MOUSEBUTTONUP</code></dd>
+<dt><code>button</code></dt>
+<dd>The mouse button index (SDL_BUTTON_LEFT, SDL_BUTTON_MIDDLE, SDL_BUTTON_RIGHT)</dd>
+<dt><code>state</code></dt>
+<dd><code>SDL_PRESSED</code> or <code>SDL_RELEASED</code></dd>
+<dt><code>x</code>, <code>y</code></dt>
+<dd>The X/Y coordinates of the mouse at press/release time</dd></dl>
+<h2>Description</h2>
+<p><code>SDL_MouseButtonEvent</code> is a member of the <i></i><code>SDL_Event</code> union and is used when an event of type <code>SDL_MOUSEBUTTONDOWN</code> or <code>SDL_MOUSEBUTTONUP</code> is reported. </p>
+<p> When a mouse button press or release is detected then number of the button pressed (from 1 to 255, with 1 usually being the left button and 2 the right) is placed into <code>button</code>, the position of the mouse when this event occured is stored in the <code>x</code> and the <code>y</code> fields. Like <i></i><code>SDL_KeyboardEvent</code>, information on whether the event was a press or a release event is stored in both the <code>type</code> and <code>state</code> fields, but this should be obvious.</p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_Event</code>, <i></i><code>SDL_MouseMotionEvent</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

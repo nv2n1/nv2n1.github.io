@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pgmabel(1) · Linux Manual Pages</title>
+<meta name="description" content="pgmabel – create cross section using Abel Integration for Deconvolution">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pgmabel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pgmabel(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pgmabel &#8211; create cross section using Abel Integration for Deconvolution</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pgmabel</code> [<code>-help</code>] [<code>-axis</code> <i>axis</i>] [<code>-factor</code> <i>factor</i>] [<code>-pixsize</code> <i>pixsize</i>] [<code>-left</code> | <code>-right</code>] [<code>-verbose</code>] [<i>filespec</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pgmabel</code> reads as input a PGM image, which it assumes to be an image of a rotational symmetric transparent object. The image must have a vertical symmetry axis. <code>pgmabel</code> produces as output an image of a cross-section of the image. </p>
+<p> <code>pgmabel</code> does the calculation by performing the Abel Integration for Deconvolution of an axial-symmetrical image by solving the system of linear equations. </p>
+<p> After integration, <code>pgmabel</code> weights all gray-values of one side by the surface area of the calculated ring in square pixels divided by 4*<i>factor</i> multiplied by the size of one pixel (<i>pixsize</i>). With the <code>-verbose</code> option, <code>pgmabel</code> prints the weighting factors. </p>
+<p> Where the calculation generates a negative result, the output is black. </p>
+<p> The computation is unstable against periodic structures with size 2 in the vertical direction. </p>
+<h2>OPTIONS</h2>
+<p> You can abbreviate any option to its shortest unique prefix. </p>
+<dl>
+<dt><code>-help</code></dt>
+<dd> Prints a help message. </dd>
+<dt><code>-axis</code> <i>axis</i></dt>
+<dd> Position of the axis of symmetry in the image in pixels from the left edge of the image. Default is the center of the image. </dd>
+<dt><code>-factor</code> <i>factor</i></dt>
+<dd> User defined factor for enhancement of the output. Use a <i>factor</i> less than 1 for decreasing gary values. Default is 1.0. </dd>
+<dt><code>-pixsize</code> <i>pixsize</i></dt>
+<dd> The size of a pixel for getting scale invariant. Default is 0.1. </dd>
+<dt><code>-left</code></dt>
+<dd> Calculate only the left side of the image. You cannot specify both <code>left</code> and <code>right</code>. </dd>
+<dt><code>-right</code></dt>
+<dd> Analogous to <code>-left</code>. </dd>
+<dt><code>-verbose</code></dt>
+<dd> print information about the calculation. </dd>
+</dl>
+<h2>EXAMPLE</h2>
+<p> Rotate a PGM image to get an image with a vertical axis of symmetry, then calculate the cross section: </p>
+<pre>
+    pnmrotate 90 file.pgm | pgmabel -axis 140 &gt;cross_section.pgm
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1) , <code>pgm</code>(1) , </p>
+<h2>HISTORY</h2>
+<p> This program was added to Netpbm in Release 10.3 (June 2002). </p>
+<h2>AUTHOR</h2>
+<p> Volker Schmidt (lefti [at] voyager.boerde.de) </p>
+<p> Copyright (C) 1997-2002 German Aerospace research establishment </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

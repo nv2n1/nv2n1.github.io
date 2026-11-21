@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>futex_requeue(9) · Linux Manual Pages</title>
+<meta name="description" content="futex_requeue – Requeue waiters from uaddr1 to uaddr2">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-futex_requeue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>futex_requeue(9)</h1>
+
+
+
+
+
+<p>futex_requeue &#8211; Requeue waiters from uaddr1 to uaddr2</p>
+<h2>Synopsis</h2>
+<pre><code>int futex_requeue(u32 __user *uaddr1, unsigned int flags, u32 __user *uaddr2, int nr_wake, int nr_requeue, u32 *cmpval, int requeue_pi);</code></pre>
+<h2>Arguments</h2>
+<p><i>uaddr1</i></p>
+<dl>
+<dd>
+</dd><dd>source futex user address</dd></dl>
+<p> <i>flags</i></p>
+<dl>
+<dd>futex flags (FLAGS_SHARED, etc.)</dd></dl>
+<p> <i>uaddr2</i></p>
+<dl>
+<dd>target futex user address</dd></dl>
+<p> <i>nr_wake</i></p>
+<dl>
+<dd>number of waiters to wake (must be 1 for requeue_pi)</dd></dl>
+<p> <i>nr_requeue</i></p>
+<dl>
+<dd>number of waiters to requeue (0-INT_MAX)</dd></dl>
+<p> <i>cmpval</i></p>
+<dl>
+<dd><i>uaddr1</i> expected value (or <code>NULL</code>)</dd></dl>
+<p> <i>requeue_pi</i></p>
+<dl>
+<dd>if we are attempting to requeue from a non-pi futex to a pi futex (pi to pi requeue is not supported)</dd></dl>
+<h2>Description</h2>
+<p>Requeue waiters on uaddr1 to uaddr2. In the requeue_pi case, try to acquire uaddr2 atomically on behalf of the top waiter.</p>
+<h2>Return</h2>
+<p>&gt;=0 &#8211; on success, the number of tasks requeued or woken; &lt;0 &#8211; on error</p>
+<h2>Author</h2>
+<p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

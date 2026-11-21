@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintiantagoverride(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lintiantagoverride/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lintiantagoverride(3)</h1>
+
+
+
+
+
+<p>Lintian::Tag::Override &ndash; Representation of a Lintian Override</p>
+<h2>Synopsis</h2><pre> use Lintian::Tag::Override;
+ my $data = {
+ 'comments' =&gt; ['some', 'multi-line', 'comments']
+ };
+ my $override = Lintian::Tag::Override-&gt;new('unused-override', $data);
+ my $comments = $override-&gt;comments;
+ if ($override-&gt;overrides(&quot;some extra&quot;) ) {
+ # do something
+ }</pre><h2>Description</h2>Represents a Lintian Override.
+<h2>Methods</h2><dl COMPACT><dt>Lintian::Tag::Override-&gt;new($tag, $data)
+</dt><dd>Creates a new override for <tt>$tag</tt>. <tt>$data</tt> should be a hashref with the following fields.
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>arch
+</dt><dd>Architectures this override applies too (not really used).
+</dd><dt>comments
+</dt><dd>A list of comments (each item is a separate line)
+</dd><dt>extra
+</dt><dd>The extra part of the override. If it contains a ``*'' is will considered a pattern.</dd></dl></dl><dl COMPACT><dd></dd></dl><dt>$override-&gt;tag
+</dt><dd>Returns the name of the tag.
+</dd><dt>$override-&gt;arch
+</dt><dd>Returns the architecture this tag applies to.
+</dd><dt>$override-&gt;comments
+</dt><dd>Returns a list of lines that makes up the comments for this override. 
+<p>Do not modify the contents of this list.</p>
+</dd><dt>$override-&gt;extra
+</dt><dd>Returns the extra of this tag (or the empty string, if there is no extra).
+</dd><dt>$override-&gt;is_pattern
+</dt><dd>Returns a truth value if the extra is a pattern.
+</dd><dt>$override-&gt;overrides($extra)
+</dt><dd>Returns a truth value if this override applies to this extra.</dd></dl><h2>Author</h2>Originally written by Niels Thykier &lt;niels [at] thykier.net&gt; for Lintian.
+<h2>See Also</h2><i><a HREF="/docs/linux/man/1-lintian/">lintian</a></i>(1) 
+<p>Lintian::Tags</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

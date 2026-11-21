@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtransfersendrequest(3) · Linux Manual Pages</title>
+<meta name="description" content="XmTransferSendRequest — A toolkit function that transfers a MULTIPLE request">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtransfersendrequest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtransfersendrequest(3)</h1>
+
+
+
+
+
+<p><code>XmTransferSendRequest</code> &#8212; A toolkit function that transfers a MULTIPLE request</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Transfer.h&gt;
+<code>void XmTransferSendRequest</code>(
+<code>XtPointer transfer_id</code>,
+<code>Time time</code>);</pre>
+<h2>Description</h2>
+<p><code>XmTransferSendRequest</code> marks the end of a MULTIPLE request started by <code>XmTransferStartRequest</code>.</p>
+<dl COMPACT>
+<dt><code>transfer_id</code></dt>
+<dd>Specifies a unique indentifier for the data transfer operation.</dd>
+<dt><i>time</i></dt>
+<dd>Specifies the time of the <code>XEvent</code> that triggered the data transfer. You should typically set this field to <code>XtLastTimestampProcessed</code>.</dd></dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtransfersetparameters/">XmTransferSetParameters</a></code>(3), <code><a href="/docs/linux/man/3-xmtransferstartrequest/">XmTransferStartRequest</a></code>(3), and <code><a href="/docs/linux/man/3-xmtransfervalue/">XmTransferValue</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

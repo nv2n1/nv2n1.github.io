@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ovs-parse-backtrace(8) · Linux Manual Pages</title>
+<meta name="description" content="ovs-parse-backtrace – parses ovs-appctl backtrace output">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ovs-parse-backtrace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ovs-parse-backtrace(8)</h1>
+
+
+
+
+
+<p>ovs-parse-backtrace &#8211; parses ovs-appctl backtrace output</p>
+<h2>Synopsis</h2>
+<p><code>ovs-appctl backtrace</code> | <code>ovs-parse-backtrace</code> [<i>binary</i>] </p>
+<p> <code>ovs-parse-backtrace</code> [<i>binary</i>] &lt; <i>backtrace</i></p>
+<h2>Description</h2>
+<p>In some configurations, many Open vSwitch daemons can produce a series of backtraces using the <code>ovs-appctl backtrace</code> command. Users can analyze these backtraces to figure out what the given Open vSwitch daemon may be spending most of its time doing. <code>ovs-parse-backtrace</code> makes this output easier to interpret. </p>
+<p> The <code>ovs-appctl backtrace</code> output must be supplied on standard input. The binary that produced the output should be supplied as the sole non-option argument. For best results, the binary should have debug symbols.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Prints a usage message and exits.</dd></dl>
+<p> <code>&#8211;version</code> Prints the version and exits.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

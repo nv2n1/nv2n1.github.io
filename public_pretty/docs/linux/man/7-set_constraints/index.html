@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_constraints(7) · Linux Manual Pages</title>
+<meta name="description" content="SET CONSTRAINTS – set constraint checking modes for the current transaction">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-set_constraints/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>set_constraints(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>SET CONSTRAINTS &#8211; set constraint checking modes for the current transaction </p>
+<h2>Synopsis</h2>
+<pre>SET CONSTRAINTS { ALL | <i>name</i> [, ...] } { DEFERRED | IMMEDIATE }</pre>
+<h2>Description</h2>
+<p><code>SET CONSTRAINTS</code> sets the behavior of constraint checking within the current transaction. IMMEDIATE constraints are checked at the end of each statement. DEFERRED constraints are not checked until transaction commit. Each constraint has its own IMMEDIATE or DEFERRED mode. </p>
+<p> Upon creation, a constraint is given one of three characteristics: DEFERRABLE INITIALLY DEFERRED, DEFERRABLE INITIALLY IMMEDIATE, or NOT DEFERRABLE. The third class is always IMMEDIATE and is not affected by the <code>SET CONSTRAINTS</code> command. The first two classes start every transaction in the indicated mode, but their behavior can be changed within a transaction by <code>SET CONSTRAINTS</code>. </p>
+<p> <code>SET CONSTRAINTS</code> with a list of constraint names changes the mode of just those constraints (which must all be deferrable). The current schema search path is used to find the first matching name if no schema name is specified. <code>SET CONSTRAINTS ALL</code> changes the mode of all deferrable constraints. </p>
+<p> When <code>SET CONSTRAINTS</code> changes the mode of a constraint from DEFERRED to IMMEDIATE, the new mode takes effect retroactively: any outstanding data modifications that would have been checked at the end of the transaction are instead checked during the execution of the <code>SET CONSTRAINTS</code> command. If any such constraint is violated, the <code>SET CONSTRAINTS</code> fails (and does not change the constraint mode). Thus, <code>SET CONSTRAINTS</code> can be used to force checking of constraints to occur at a specific point in a transaction. </p>
+<p> Currently, only foreign key constraints are affected by this setting. Check and unique constraints are always effectively not deferrable. Triggers that are declared as &#8220;constraint triggers&#8221; are also affected.</p>
+<h2>Notes</h2>
+<p>This command only alters the behavior of constraints within the current transaction. Thus, if you execute this command outside of a transaction block (<code>BEGIN</code>/<code>COMMIT</code> pair), it will not appear to have any effect.</p>
+<h2>Compatibility</h2>
+<p>This command complies with the behavior defined in the SQL standard, except for the limitation that, in PostgreSQL, it only applies to foreign-key constraints.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlfreebsd(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlfreebsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlfreebsd(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>perlfreebsd - Perl version 5 on FreeBSD systems</p>
+<h2>DESCRIPTION</h2>
+<p>This document describes various features of FreeBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.</p>
+<h3>FreeBSD core dumps from readdir_r with ithreads</h3>
+<p>When perl is configured to use ithreads, it will use re-entrant library calls in preference to non-re-entrant versions. There is a bug in FreeBSD&rsquo;s <tt>&quot;readdir_r&quot;</tt> function in versions 4.5 and earlier that can cause a <font SIZE="-1">SEGV</font> when reading large directories. A patch for FreeBSD libc is available (see &lt;<a rel="nofollow" HREF="http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631"><a href="http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631">http://www.freebsd.org/cgi/query-pr.cgi?pr=misc/30631</a></a>&gt; ) which has been integrated into FreeBSD 4.6.</p>
+<h3>$^X doesn't always contain a full path in FreeBSD</h3>
+<p>perl sets <tt>$^X</tt> where possible to a full path by asking the operating system. On FreeBSD the full path of the perl interpreter is found by using <tt>&quot;sysctl&quot;</tt> with <tt>&quot;KERN_PROC_PATHNAME&quot;</tt> if that is supported, else by reading the symlink <i>/proc/curproc/file</i>. FreeBSD 7 and earlier has a bug where either approach sometimes returns an incorrect value (see &lt;<a rel="nofollow" HREF="http://www.freebsd.org/cgi/query-pr.cgi?pr=35703"><a href="http://www.freebsd.org/cgi/query-pr.cgi?pr=35703">http://www.freebsd.org/cgi/query-pr.cgi?pr=35703</a></a>&gt; ). In these cases perl will fall back to the old behaviour of using C&rsquo;s <tt>&quot;argv[0]&quot;</tt> value for <tt>$^X</tt>.</p>
+<h2>AUTHOR</h2>
+<p>Nicholas Clark &lt;nick [at] ccl4.org&gt;, collating wisdom supplied by Slaven Rezic and Tim Bunce.</p>
+<p>Please report any errors, updates, or suggestions to &lt;mailto:perlbug [at] perl.org&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

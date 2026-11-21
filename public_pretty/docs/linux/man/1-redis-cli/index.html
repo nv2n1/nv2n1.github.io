@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>redis-cli(1) · Linux Manual Pages</title>
+<meta name="description" content="redis-cli – Redis client">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-redis-cli/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>redis-cli(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> redis-cli &#8211; Redis client </p>
+<h2>SYNOPSIS</h2>
+<p> <code>redis-cli</code> [ options ] [cmd [arg [arg &#8230;]]] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
+<p> The <code>redis-cli</code> command is a command line client to redis-server. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h </code><i>hostname</i></dt>
+<dd> Server hostname (default: 127.0.0.1).</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd> Server port (default: 6379).</dd>
+<dt><code>-s </code><i>socket</i></dt>
+<dd> Server socket (overrides hostname and port).</dd>
+<dt><code>-a </code><i>password</i></dt>
+<dd> Password to use when connecting to the server.</dd>
+<dt><code>-r </code><i>repeat</i></dt>
+<dd> Execute specified command N times.</dd>
+<dt><code>-i </code><i>interval</i></dt>
+<dd> When -r is used, waits <i>interval</i> seconds per command. It is possible to specify sub-second times like -i 0.1.</dd>
+<dt><code>-n </code><i>db</i></dt>
+<dd> Database number.</dd>
+<dt><code>-x</code></dt>
+<dd> Read last argument from STDIN.</dd>
+<dt><code>-d </code><i>delimiter</i></dt>
+<dd> Multi-bulk delimiter in for raw formatting (default: .</dd>
+<dt><code>-c</code></dt>
+<dd> Enable cluster mode (follow -ASK and -MOVED redirections).</dd>
+<dt><code>&#8211;raw</code></dt>
+<dd> Use raw formatting for replies (default when STDOUT is not a tty).</dd>
+<dt><code>&#8211;no-raw</code></dt>
+<dd> Force formatted output even when STDOUT is not a tty.</dd>
+<dt><code>&#8211;csv</code></dt>
+<dd> Output in CSV format.</dd>
+<dt><code>&#8211;stat</code></dt>
+<dd> Print rolling stats about server: mem, clients, &#8230;</dd>
+<dt><code>&#8211;latency</code></dt>
+<dd> Enter a special mode continuously sampling latency.</dd>
+<dt><code>&#8211;latency-history</code></dt>
+<dd> Like &#8211;latency but tracking latency changes over time. Default time interval is 15 sec. Change it using -i.</dd>
+<dt><code>&#8211;latency-dist</code></dt>
+<dd> Shows latency as a spectrum, requires xterm 256 colors. Default time interval is 1 sec. Change it using -i.</dd>
+<dt><code>&#8211;lru-test</code></dt>
+<dd> Simulate a cache workload with an 80-20 distribution.</dd>
+<dt><code>&#8211;slave</code></dt>
+<dd> Simulate a slave showing commands received from the master.</dd>
+<dt><code>&#8211;rdb </code><i>filename</i></dt>
+<dd> Transfer an RDB dump from remote server to local file.</dd>
+<dt><code>&#8211;pipe</code></dt>
+<dd> Transfer raw Redis protocol from stdin to server.</dd>
+<dt><code>&#8211;pipe-timeout </code><i>n</i></dt>
+<dd> In &#8211;pipe mode, abort with error if after sending all data. no reply is received within <i>n</i> seconds. Default timeout: 30. Use 0 to wait forever.</dd>
+<dt><code>&#8211;bigkeys</code></dt>
+<dd> Sample Redis keys looking for big keys.</dd>
+<dt><code>&#8211;scan</code></dt>
+<dd> List all keys using the SCAN command.</dd>
+<dt><code>&#8211;pattern </code><i>pat</i></dt>
+<dd> Useful with &#8211;scan to specify a SCAN pattern.</dd>
+<dt><code>&#8211;intrinsic-latency </code><i>sec</i></dt>
+<dd> Run a test to measure intrinsic system latency. The test will run for the specified amount of seconds.</dd>
+<dt><code>&#8211;eval </code><i>file</i></dt>
+<dd> Send an EVAL command using the Lua script at <i>file</i>.</dd>
+<dt><code>&#8211;ldb</code></dt>
+<dd> Used with &#8211;eval enable the Redis Lua debugger.</dd>
+<dt><code>&#8211;ldb-sync-mode</code></dt>
+<dd> Like &#8211;ldb but uses the synchronous Lua debugger, in this mode the server is blocked and script changes are are not rolled back from the server memory.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Output this help and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version and exit. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>cat /etc/passwd | redis-cli -x set mypasswd</dt>
+<dd>
+</dd><dt>redis-cli get mypasswd</dt>
+<dd>
+</dd><dt>redis-cli -r 100 lpush mylist x</dt>
+<dd>
+</dd><dt>redis-cli -r 100 -i 1 info | grep used_memory_human:</dt>
+<dd>
+</dd><dt>redis-cli &#8211;eval myscript.lua key1 key2 , arg1 arg2 arg3</dt>
+<dd>
+</dd><dt>redis-cli &#8211;scan &#8211;pattern &#8216;*:12345*&#8217;</dt>
+<dd>
+</dd></dl>
+<h2>BUGS</h2>
+<p> See: <code><a rel="nofollow" href="http://redis.io/support">http://redis.io/support</a></code> and <code><a rel="nofollow" href="https://github.com/antirez/redis/issues">https://github.com/antirez/redis/issues</a></code> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2006-2016 Salvatore Sanfilippo </p>
+<p> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+<dl>
+<dt>*</dt>
+<dd> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</dd>
+<dt>*</dt>
+<dd> Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</dd>
+<dt>*</dt>
+<dd> Neither the name of Redis nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</dd></dl>
+<p> THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

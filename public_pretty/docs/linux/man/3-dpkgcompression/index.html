@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpkgcompression(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpkgcompression/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpkgcompression(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Dpkg::Compression - simple database of available compression methods</p>
+<h2>Description</h2>This modules provides a few public funcions and a public regex to interact with the set of supported compression methods.
+<h2>Functions</h2><dl COMPACT><dt>my @list = <i>compression_get_list()</i>
+</dt><dd>Returns a list of supported compression methods (sorted alphabetically).
+</dd><dt>compression_is_supported($comp)
+</dt><dd>Returns a boolean indicating whether the give compression method is known and supported.
+</dd><dt>compression_get_property($comp, $property)
+</dt><dd>Returns the requested property of the compression method. Returns undef if either the property or the compression method doesn't exist. Valid properties currently include ``file_ext'' for the file extension, ``default_level'' for the default compression level, ``comp_prog'' for the name of the compression program and ``decomp_prog'' for the name of the decompression program.
+</dd><dt>compression_guess_from_filename($filename)
+</dt><dd>Returns the compression method that is likely used on the indicated filename based on its file extension.
+</dd><dt>my $regex = <i>compression_get_file_extension_regex()</i>
+</dt><dd>Returns a regex that matches a file extension of a file compressed with one of the supported compression methods.
+</dd><dt>my $comp = <i>compression_get_default()</i>
+</dt><dd>Return the default compression method. It's ``gzip'' unless <tt>&quot;compression_set_default&quot;</tt> has been used to change it.
+</dd><dt>compression_set_default($comp)
+</dt><dd>Change the default compression method. Errors out if the given compression method is not supported.
+</dd><dt>my $level = <i>compression_get_default_level()</i>
+</dt><dd>Return the default compression level used when compressing data. It's ``9'' for ``gzip'' and ``bzip2'', ``6'' for ``xz'' and ``lzma'', unless <tt>&quot;compression_set_default_level&quot;</tt> has been used to change it.
+</dd><dt>compression_set_default_level($level)
+</dt><dd>Change the default compression level. Passing undef as the level will reset it to the compressor specific default, otherwise errors out if the level is not valid (see <tt>&quot;compression_is_valid_level&quot;</tt>).
+</dd><dt>compression_is_valid_level($level)
+</dt><dd>Returns a boolean indicating whether <tt>$level</tt> is a valid compression level (it must be either a number between 1 and 9 or ``fast'' or ``best'')</dd></dl><h2>Changes</h2><h3>Version 1.02</h3>New function: <i>compression_get_file_extension_regex()</i> 
+<p>Deprecated variables: <tt>$default_compression</tt>, <tt>$default_compression_level</tt> and <tt>$compression_re_file_ext</tt></p>
+<h3>Version 1.01</h3>Default compression level is not global any more, it is per compressor type.
+<h3>Version 1.00</h3>Mark the module as public.
+<h2>Author</h2>Raphaël Hertzog &lt;hertzog [at] debian.org&gt;.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

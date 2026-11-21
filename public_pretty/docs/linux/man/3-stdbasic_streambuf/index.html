@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbasic_streambuf(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbasic_streambuf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbasic_streambuf(3)</h1>
+
+
+
+
+
+<p>std::basic_streambuf&lt;CharT,Traits&gt;::~basic_streambuf - std::basic_streambuf&lt;CharT,Traits&gt;::~basic_streambuf</p>
+<h2>Synopsis</h2>
+<pre><code>virtual ~basic_streambuf();</code></pre> 
+<p>This destruction is empty: the members of this basic_streambuf (the pointers and the locale) are destructed in accordance with the usual object destruction sequence after this destructor returns. However, since it is declared public virtual, it allows the objects that are derived from std::basic_streambuf to be deleted through a pointer to base class.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+int main()
+{
+std::filebuf *fbp = new std::filebuf;
+fbp-&gt;open(&quot;test.txt&quot;, std::ios_base::out);
+fbp-&gt;sputn(&quot;Hello\n&quot;, 6);
+std::streambuf *sbp = fbp;
+delete sbp; // the file is closed, output flushed and written
+std::ifstream f(&quot;test.txt&quot;);
+std::cout &lt;&lt; f.rdbuf(); // proof
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Hello</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a basic_streambuf object
+constructor <i>(protected member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

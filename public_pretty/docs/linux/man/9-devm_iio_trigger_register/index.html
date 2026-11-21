@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devm_iio_trigger_register(9) · Linux Manual Pages</title>
+<meta name="description" content="devm_iio_trigger_register – Resource-managed iio_trigger_register">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-devm_iio_trigger_register/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>devm_iio_trigger_register(9)</h1>
+
+
+
+
+
+<p>devm_iio_trigger_register &#8211; Resource-managed <code>iio_trigger_register</code></p>
+<h2>Synopsis</h2>
+<pre><code>int devm_iio_trigger_register(struct device *dev, struct iio_trigger *trig_info);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>device this trigger was allocated for</dd></dl>
+<p> <i>trig_info</i></p>
+<dl>
+<dd>trigger to register</dd></dl>
+<h2>Description</h2>
+<p>Managed <code>iio_trigger_register</code>. The IIO trigger registered with this function is automatically unregistered on driver detach. This function calls <code>iio_trigger_register</code> internally. Refer to that function for more information. </p>
+<p> If an iio_trigger registered with this function needs to be unregistered separately, <code>devm_iio_trigger_unregister</code> must be used.</p>
+<h2>Return</h2>
+<p>0 on success, negative error number on failure.</p>
+<h2>Author</h2>
+<p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

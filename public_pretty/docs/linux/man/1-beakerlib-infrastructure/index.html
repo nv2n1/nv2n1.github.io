@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beakerlib-infrastructure(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-beakerlib-infrastructure/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>beakerlib-infrastructure(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>BeakerLib - infrastructure - mounting, backup and service helpers</p>
+<h2>DESCRIPTION</h2>
+<p>BeakerLib functions providing checking and mounting <font SIZE="-1">NFS</font> shares, backing up and restoring files and controlling running services.</p>
+<h2>FUNCTIONS</h2>
+<h3>Mounting</h3>
+<p><i>rlMount</i></p>
+<p>Create mount point (if neccessary) and mount a <font SIZE="-1">NFS</font> share.</p>
+ <pre>
+    rlMount [-o MOUNT_OPTS] server share mountpoint
+</pre>
+<dl>
+<dt>server
+</dt><dd> <font SIZE="-1">NFS</font> server hostname.
+</dd><dt>share
+</dt><dd> Shared directory name.
+</dd><dt>mountpoint
+</dt><dd> Local mount point.
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options.</dd></dl>
+<p>Returns 0 if mounting the share was successful.</p>
+<p><i>rlCheckMount</i></p>
+<p>Check either if a directory is a mountpoint, if it is a mountpoint to a specific server, or if it is a mountpoint to a specific export on a specific server and if it uses specific mount options.</p>
+ <pre><code>
+rlCheckMount[-o MOUNT_OPTS] mountpoint
+    rlCheckMount[-o MOUNT_OPTS] server mountpoint
+        rlCheckMount[-o MOUNT_OPTS] server share mountpoint
+</code></pre>
+<dl>
+<dt>mountpoint
+</dt><dd> Local mount point.
+</dd><dt>server
+</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dd><dt>share
+</dt><dd> Shared directory name
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options to check (comma separated list)</dd></dl>
+<p>With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint</p>
+<p>If the -o option is provided, returns 0 if the mountpoint uses all the given options, 2 otherwise.</p>
+<p><i>rlAssertMount</i></p>
+<p>Assertion making sure that given directory is a mount point, if it is a mountpoint to a specific server, or if it is a mountpoint to a specific export on a specific server and if it uses specific mount options.</p>
+<p>rlAssertMount[-o MOUNT_OPTS] mountpoint
+rlAssertMount[-o MOUNT_OPTS] server mountpoint
+rlAssertMount[-o MOUNT_OPTS] server share mountpoint</p>
+<dl>
+<dt>mountpoint
+</dt><dd> Local mount point.
+</dd><dt>server
+</dt><dd> <font SIZE="-1">NFS</font> server hostname
+</dd><dt>share
+</dt><dd> Shared directory name
+</dd><dt><font SIZE="-1">MOUNT_OPTS</font>
+</dt><dd> Mount options to check (comma separated list)</dd></dl>
+<p>With one parameter, returns 0 when specified directory exists and is a mountpoint. With two parameters, returns 0 when specific directory exists, is a mountpoint and an export from specific server is mounted there. With three parameters, returns 0 if a specific shared directory is mounted on a given server on a given mountpoint. Asserts <font SIZE="-1">PASS</font> when the condition is true.</p>
+<p>If the -o option is provided, asserts <font SIZE="-1">PASS</font> if the above conditions are met and the mountpoint uses all the given options.</p>
+<p><i>rlHash, rlUnhash</i></p>
+<p>Hashes/Unhashes given string.</p>
+<p>rlHash[&ndash;decode][&ndash;algorithm HASH_ALG]&ndash; stdin | STRING rlUnhash[&ndash;algorithm HASH_ALG]&ndash; stdin | STRING</p>
+<dl>
+<dt>--decode
+</dt><dd> Unhash given string.
+</dd><dt>--algorithm
+</dt><dd> Use given hash algorithm. Currently supported algorithms: 
+&nbsp;<wbr>&nbsp;<wbr>base64 
+&nbsp;<wbr>&nbsp;<wbr>base64_&nbsp;<wbr>- this is standard base64 where&nbsp;<wbr>'='&nbsp;<wbr>is replaced by&nbsp;<wbr>'_' 
+&nbsp;<wbr>&nbsp;<wbr>hex 
+ Defaults to hex. Default algorithm can be override using global variable rlHashAlgorithm.
+</dd><dt>--stdin
+</dt><dd> Get the string from stdin.
+</dd><dt><font SIZE="-1">STRING</font>
+</dt><dd> String to be hashed/unhashed.</dd></dl>
+<p>Returns 0 if success.</p>
+<p>Example with &ndash;clean:</p>
+ <pre>
+    hash=rlHash &quot;text&quot;
+</pre>
+<h3>Backup and Restore</h3>
+<p><i>rlFileBackup</i></p>
+<p>Create a backup of files or directories (recursive). Can be used multiple times to add more files to backup. Backing up an already backed up file overwrites the original backup.</p>
+ <pre><code>
+rlFileBackup[--clean][--namespace name][--missing - ok | --no - missing - ok] file[file...]
+</code></pre> 
+<p>You can use <tt>&quot;rlRun&quot;</tt> for asserting the result but keep in mind meaning of exit codes, especialy exit code 8, if using without &ndash;clean option.</p>
+<dl>
+<dt>--clean
+</dt><dd> If this option is provided (have to be first option of the command), then file/dir backuped using this command (provided in next options) will be (recursively) removed before we will restore it. This option implies --missing-ok, this can be overridden by --no-missing-ok.
+</dd><dt>--namespace name
+</dt><dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.
+</dd><dt>--missing-ok
+</dt><dd> Do not raise an error in case of missing file to backup.
+</dd><dt>--no-missing-ok
+</dt><dd> Do raise an error in case of missing file to backup. This is useful with --clean. This behaviour can be globally set by global variable BEAKERLIB_FILEBACKUP_MISSING_OK=false.
+</dd><dt>file
+</dt><dd> Files and/or directories to be backed up.</dd></dl>
+<p>Returns 0 if the backup was successful. Returns 1 if parsing of parameters was not successful. Returns 2 if no files specification was provided. Returns 3 if <font SIZE="-1">BEAKERLIB_DIR</font> variable is not set, e.g. rlJournalStart was not executed. Returns 4 if creating of main backup destination directories was not successful. Returns 5 if creating of file specific backup destination directories was not successful. Returns 6 if the copy of backed up files was not successful. Returns 7 if attributes of backedup files were not successfuly copied. Returns 8 if backed up files does not exist. This can be suppressed based on other options.</p>
+<p>Example with &ndash;clean:</p>
+ <pre>
+    touch cleandir/aaa
+    rlRun &quot;rlFileBackup --clean cleandir/&quot;
+    touch cleandir/bbb
+    ls cleandir/
+    aaa   bbb
+    rlRun &quot;rlFileRestore&quot;
+    ls cleandir/
+    aaa
+</pre> 
+<p><i>rlFileRestore</i></p>
+<p>Restore backed up files to their original location. <tt>&quot;rlFileRestore&quot;</tt> does not remove new files appearing after backup has been made. If you don&rsquo;t want to leave anything behind just remove the whole original tree before running <tt>&quot;rlFileRestore&quot;</tt>, or see <tt>&quot;&ndash;clean&quot;</tt> option of <tt>&quot;rlFileBackup&quot;</tt>.</p>
+ <pre>
+    rlFileRestore [--namespace name]
+</pre> 
+<p>You can use <tt>&quot;rlRun&quot;</tt> for asserting the result.</p>
+<dl>
+<dt>--namespace name
+</dt><dd> Specifies the namespace to use. Namespaces can be used to separate backups and their restoration.</dd></dl>
+<p>Returns 0 if backup dir is found and files are restored successfully.</p>
+<p>Return code bits meaning <font SIZE="-1">XXXXX
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr></font> <wbr>|||||
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>||||_ <wbr>error parsing parameters
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>|||_<em> <wbr>could not find backup directory
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>||_<strong> <wbr>files cleanup failed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>|_</strong></em> <wbr>files restore failed
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>_____ <wbr>no files were restored nor cleaned</p>
+<h3>Services</h3>
+<p>Following routines implement comfortable way how to start/stop system services with the possibility to restore them to their original state after testing.</p>
+<p><i>rlServiceStart</i></p>
+<p>Make sure the given <tt>&quot;service&quot;</tt> is running with fresh configuration. (Start it if it is stopped and restart if it is already running.) In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>.</p>
+ <pre>
+    rlServiceStart service [service...]
+</pre>
+<dl>
+<dt>service
+</dt><dd> Name of the service(s) to start.</dd></dl>
+<p>Returns number of services which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlServiceStop</i></p>
+<p>Make sure the given <tt>&quot;service&quot;</tt> is stopped. Stop it if it is running and do nothing when it is already stopped. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>.</p>
+ <pre>
+    rlServiceStop service [service...]
+</pre>
+<dl>
+<dt>service
+</dt><dd> Name of the service(s) to stop.</dd></dl>
+<p>Returns number of services which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlServiceRestore</i></p>
+<p>Restore given <tt>&quot;service&quot;</tt> into its original state (before the first <tt>&quot;rlServiceStart&quot;</tt> or <tt>&quot;rlServiceStop&quot;</tt> was called).</p>
+ <pre>
+    rlServiceRestore [service...]
+</pre>
+<dl>
+<dt>service
+</dt><dd> Name of the service(s) to restore to original state. All services will be restored in reverse order if no service name is given.</dd></dl>
+<p>Returns number of services which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlServiceEnable</i></p>
+<p>Enables selected services if needed, or does nothing if already enabled. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>.</p>
+ <pre>
+    rlServiceEnable service [service...]
+</pre>
+<dl>
+<dt>service
+</dt><dd> Name of the service(s) to enable.</dd></dl>
+<p>Returns number of services which failed enablement; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlServiceDisable</i></p>
+<p>Disables selected services if needed, or does nothing if already disabled. In addition, when called for the first time, the current state is saved so that the <tt>&quot;service&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlServiceRestore&quot;</tt>.</p>
+ <pre>
+    rlServiceDisable service [service...]
+</pre>
+<dl>
+<dt>service
+</dt><dd> Name of the service(s) to disable.</dd></dl>
+<p>Returns number of services which failed disablement; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<h3>Sockets</h3>
+<p>Following routines implement comfortable way how to start/stop system sockets with the possibility to restore them to their original state after testing.</p>
+<p><i>rlSocketStart</i></p>
+<p>Make sure the given <tt>&quot;socket&quot;</tt> is running. (Start it if stopped, leave it if already running.) In addition, when called for the first time, the current state is saved so that the <tt>&quot;socket&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlSocketRestore&quot;</tt>.</p>
+ <pre>
+    rlSocketStart socket [socket...]
+</pre>
+<dl>
+<dt>socket
+</dt><dd> Name of the socket(s) to start.</dd></dl>
+<p>Returns number of sockets which failed to start/restart; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlSocketStop</i></p>
+<p>Make sure the given <tt>&quot;socket&quot;</tt> is stopped. Stop it if it is running and do nothing when it is already stopped. In addition, when called for the first time, the current state is saved so that the <tt>&quot;socket&quot;</tt> can be restored to its original state when testing is finished, see <tt>&quot;rlSocketRestore&quot;</tt>.</p>
+ <pre>
+    rlSocketStop socket [socket...]
+</pre>
+<dl>
+<dt>socket
+</dt><dd> Name of the socket(s) to stop.</dd></dl>
+<p>Returns number of sockets which failed to become stopped; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<p><i>rlSocketRestore</i></p>
+<p>Restore given <tt>&quot;socket&quot;</tt> into its original state (before the first <tt>&quot;rlSocketStart&quot;</tt> or <tt>&quot;rlSocketStop&quot;</tt> was called).</p>
+<p>Warning !!! Xinetd process [even though it might have been used] is <font SIZE="-1">NOT</font> restored. It is recommended to call rlServiceRestore xinetd as well.</p>
+ <pre>
+    rlSocketRestore socket [socket...]
+</pre>
+<dl>
+<dt>socket
+</dt><dd> Name of the socket(s) to restore to original state.</dd></dl>
+<p>Returns number of sockets which failed to get back to their original state; thus zero is returned when everything is <font SIZE="-1">OK.</font></p>
+<h3>Cleanup management</h3>
+<p>Cleanup management works with a so-called cleanup buffer, which is a temporary representation of what should be run at cleanup time, and a final cleanup script (executable), which is generated from this buffer and wraps it using BeakerLib essentials (journal initialization, cleanup phase, &hellip;). The cleanup script must always be updated on an atomic basis (filesystem-wise) to allow an asynchronous execution by a third party (ie. test watcher).</p>
+<p>The test watcher usage is mandatory for the cleanup management system to work properly as it is the test watcher that executes the actual cleanup script. Limited, catastrophe-avoiding mechanism is in place even when the test is not run in test watcher, but that should be seen as a backup and such situation is to be avoided whenever possible.</p>
+<p>The cleanup script shares all environment (variables, exported or not, and functions) with the test itself - the cleanup append/prepend functions <code>sample'' or </code>snapshot&rsquo;&rsquo; the environment at the time of their call, <font SIZE="-1">IOW</font> any changes to the test environment are synchronized to the cleanup script only upon calling append/prepend. When the append/prepend functions are called within a function which has local variables, these will appear as global in the cleanup.</p>
+<p>While the cleanup script receives <tt>$PWD</tt> from the test, its working dir is set to the initial test execution dir even if <tt>$PWD</tt> contains something else. It is impossible to use relative paths inside cleanup reliably - certain parts of the cleanup might have been added under different current directories (CWDs). Therefore always use absolute paths in append/prepend cleanup or make sure you never &lsquo;cd&rsquo; elsewhere (ie. to a TmpDir).</p>
+<p><i>rlCleanupAppend</i></p>
+<p>Appends a string to the cleanup buffer and recreates the cleanup script.</p>
+ <pre>
+    rlCleanupAppend string
+</pre> 
+<p>Returns 0 if the operation was successful, 1 otherwise.</p>
+<p><i>rlCleanupPrepend</i></p>
+<p>Prepends a string to the cleanup buffer and recreates the cleanup script.</p>
+ <pre>
+    rlCleanupPrepend string
+</pre> 
+<p>Returns 0 if the operation was successful, 1 otherwise.</p>
+<h2>AUTHORS</h2>
+<dl>
+<dt>&bull;
+</dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;
+</dd><dt>&bull;
+</dt><dd> Karel Srot &lt;ksrot [at] redhat.com&gt; 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

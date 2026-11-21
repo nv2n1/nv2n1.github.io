@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdresetiosflags(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdresetiosflags/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdresetiosflags(3)</h1>
+
+
+
+
+
+<p>std::resetiosflags - std::resetiosflags</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iomanip&gt;
+/*unspecified*/ resetiosflags( std::ios_base::fmtflags mask );</code></pre> 
+<p>When used in an expression out &lt;&lt; resetiosflags(mask) or in &gt;&gt; resetiosflags(mask), clears all format flags of the stream out or in as specified by the mask.</p>
+<h2>Parameters</h2>
+<p>mask - bitmask of the flags to clear</p>
+<h2>Return value</h2>
+<p>Returns an object of unspecified type such that if str is the name of a stream of type std::basic_ostream&lt;CharT, Traits&gt; or std::basic_istream&lt;CharT, Traits&gt;, then the expression str &lt;&lt; resetiosflags(mask) or str &gt;&gt; resetiosflags(mask) behaves as if the following code was executed :</p>
+<pre><code>str.setf(std::ios_base::fmtflags(0), mask);
+</code></pre>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;sstream&gt;
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+int main()
+{
+std::istringstream in(&quot;10 010 10 010 10 010&quot;);
+int n1, n2;
+in &gt;&gt; std::oct &gt;&gt; n1 &gt;&gt; n2;
+std::cout &lt;&lt; &quot;Parsing &amp;quot;10 010&amp;quot; with std::oct gives:  &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &lsquo;\n&rsquo;;
+in &gt;&gt; std::dec &gt;&gt; n1 &gt;&gt; n2;
+std::cout &lt;&lt; &quot;Parsing &amp;quot;10 010&amp;quot; with std::dec gives:  &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &lsquo;\n&rsquo;;
+in &gt;&gt; std::resetiosflags(std::ios_base::basefield) &gt;&gt; n1 &gt;&gt; n2;
+std::cout &lt;&lt; &quot;Parsing &amp;quot;10 010&amp;quot; with autodetect gives: &quot; &lt;&lt; n1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; n2 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Parsing &quot;10 010&quot; with std::oct gives: 8 8
+ <wbr> Parsing &quot;10 010&quot; with std::dec gives: 10 10
+ <wbr> Parsing &quot;10 010&quot; with autodetect gives: 10 8</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets specific format flag
+setf <i>(public member function of std::ios_base)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the specified ios_base flags
+setiosflags <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

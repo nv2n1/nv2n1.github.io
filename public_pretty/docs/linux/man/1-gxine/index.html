@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gxine(1) · Linux Manual Pages</title>
+<meta name="description" content="gxine – a GTK/GNOME frontend to the xine video player">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gxine/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gxine(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> gxine &#8211; a GTK/GNOME frontend to the xine video player </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gxine</code> [<i>options</i>] [<i>files or MRLs</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>gxine</code> plays MPEG system (audio and video) streams, MPEG elementary streams (e.g. .mp3, .mpa or .mpv files), MPEG transport streams, AVI files, ASF files, Quicktime files, (S)VCDs and DVDs &#8211; anything which xine-lib can handle. </p>
+<p> Typical usage looks like</p>
+<dl>
+<dt>
+</dt><dd> <code>gxine some.mpg</code><br />
+ <code>gxine -f dvd://</code><br />
+ <code>gxine <a href="dvd://home/user/dvd/my.iso">dvd://home/user/dvd/my.iso</a></code></dd></dl>
+<p> Some directories and file names are not treated as ordinary files. They are:</p>
+<dl>
+<dt><code>DVD</code></dt>
+<dd> A directory containing a DVD filesystem structure; or a UDF filesystem image, identified by file name (&#8220;*.iso&#8221;).</dd>
+<dt><code>VCD</code></dt>
+<dd> A cue file, identified by file name.</dd></dl>
+<p> You can override this by using <code>file://full/path/to/file</code>. </p>
+<h2>OPTIONS</h2>
+<p> <code>-A</code><i>&nbsp;<wbr>audio_driver</i><br />
+ <code>&#8211;audio</code><i>&nbsp;<wbr>audio_driver</i></p>
+<dl>
+<dt>
+</dt><dd> Select which libxine audio driver to use. This setting is not permanent, but it does prevent selection of other drivers via the preferences window.</dd></dl>
+<p> <code>-V</code><i>&nbsp;<wbr>video_driver</i><br />
+ <code>&#8211;video</code><i>&nbsp;<wbr>video_driver</i></p>
+<dl>
+<dt>
+</dt><dd> Select which libxine video driver to use. This setting is not permanent, but it does prevent selection of other drivers via the preferences window.</dd></dl>
+<p> <code>-S</code><br />
+ <code>&#8211;no-splash</code></p>
+<dl>
+<dt>
+</dt><dd> Don&#8217;t show the splash window during startup.</dd></dl>
+<p> <code>-a</code><br />
+ <code>&#8211;add</code></p>
+<dl>
+<dt>
+</dt><dd> Don&#8217;t clear the playlist before adding any MRLs; start playing the first new MRL.</dd></dl>
+<p> <code>-e</code><br />
+ <code>&#8211;enqueue</code></p>
+<dl>
+<dt>
+</dt><dd> Don&#8217;t clear the playlist before adding any MRLs; don&#8217;t start playing the first new MRL.</dd></dl>
+<p> <code>-f</code><br />
+ <code>&#8211;full-screen</code></p>
+<dl>
+<dt>
+</dt><dd> Start in full-screen mode.</dd></dl>
+<p> <code>-c</code><i>&nbsp;<wbr>Javascript</i><br />
+ <code>&#8211;command</code><i>&nbsp;<wbr>Javascript</i></p>
+<dl>
+<dt>
+</dt><dd> Javascript command(s) to be executed immediately after starting up.</dd></dl>
+<p> <code>-C</code><i>&nbsp;<wbr>KEY=VALUE</i><br />
+ <code>&#8211;configure</code><i>&nbsp;<wbr>KEY=VALUE</i></p>
+<dl>
+<dt>
+</dt><dd> Set configuration item KEY to VALUE, e.g. &#8220;-c gui.window_size=100%&#8221;.</dd></dl>
+<p> <code>-v</code><br />
+ <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Verbose mode: output information about plugins, the video stream, commands executed etc. Repeat for more verbosity.</dd></dl>
+<h2>FEATURES</h2>
+<p> There are a couple of features which aren&#8217;t immediately obvious: in full-screen mode, you can right-click to get access to the menus, or middle-click to show or hide the player controls. </p>
+<h2>SEE ALSO</h2>
+<p> <i><a rel="nofollow" href="http://www.xine-project.org/,">http://www.xine-project.org/,</a></i> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code>kaffeine</code>(1).<br />
+ <code><a href="/docs/linux/man/5-xine/">xine</a></code>(5) for MRL syntax documentation (libxine &gt;= 1.0.2). </p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Darren Salt &lt;linux [at] youmustbejoking.demon.co.uk&gt;. It is based on an older version written by Philipp Matthias Hahn &lt;pmhahn [at] titan.lahn.de&gt; for Debian. </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2006 The xine project </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

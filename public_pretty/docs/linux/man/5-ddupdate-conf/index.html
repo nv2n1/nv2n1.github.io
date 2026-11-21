@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ddupdate-conf(5) · Linux Manual Pages</title>
+<meta name="description" content="ddupdate.conf – ddupdate configuration file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-ddupdate-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>ddupdate-conf(5)</h1>
+
+
+
+
+
+<p><code>ddupdate.conf</code> &#8211; ddupdate configuration file.</p>
+<h2>Synopsis</h2>
+<p>The <code>ddupdate.conf</code> file holds default values for all <code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code> options. Since <code>ddupdate</code> normally is invoked without command line parameters, this file then represents the used option values. </p>
+<h2>File Format</h2>
+<p>The file is formatted according to the rules use by the python3 configparser module. Basically, this is a leading <i>[update]</i> line followed by by <i> key = value</i> lines. The key represents the command line option, and <i>value</i> the value of said option. </p>
+<p> The actual options available are documented in <code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code>.</p>
+<h2>See Also</h2>
+<dl>
+<dt><code><a href="/docs/linux/man/8-ddupdate/">ddupdate</a>(8)</code></dt>
+<dd>
+</dd><dt><code><a rel="nofollow" href="https://github.com/leamas/ddupdate">https://github.com/leamas/ddupdate</a></code></dt>
+<dd>Project homesite and README</dd>
+<dt><code><a rel="nofollow" href="https://docs.python.org/3/library/configparser.html">https://docs.python.org/3/library/configparser.html</a></code></dt>
+<dd>More info on file format. </dd>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

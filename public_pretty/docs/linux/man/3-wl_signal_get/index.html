@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wl_signal_get(3) · Linux Manual Pages</title>
+<meta name="description" content="wl_signal –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-wl_signal_get/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>wl_signal_get(3)</h1>
+
+
+
+
+
+<p>wl_signal &#8211; </p>
+<p> A source of a type of observable event.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;wayland-server.h&gt;
+Public Member Functions
+static void wl_signal_init (struct wl_signal *signal)
+static void wl_signal_add (struct wl_signal *signal, struct wl_listener *listener)
+static struct wl_listener * wl_signal_get (struct wl_signal *signal, wl_notify_func_t notify)
+static void wl_signal_emit (struct wl_signal *signal, void *data)
+Public Attributes
+struct wl_list listener_list</code></pre>
+<h2>Detailed Description</h2>
+<p>A source of a type of observable event. </p>
+<p> Signals are recognized points where significant events can be observed. Compositors as well as the server can provide signals. Observers are <code>wl_listener</code>&#8216;s that are added through <code>wl_signal_add</code>. Signals are emitted using <code>wl_signal_emit</code>, which will invoke all listeners until that listener is removed by #wl_list_remove (or whenever the signal is destroyed). </p>
+<p> <code>See Also:</code></p>
+<dl>
+<dd><code>wl_listener</code> for more information on using <code>wl_signal</code></dd></dl>
+<h2>Member Function Documentation</h2>
+<h3>static void wl_signal_add (struct <code>wl_signal</code> *signal, struct <code>wl_listener</code> *listener) [inline]</h3>
+<p>Add the specified listener to this signal. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>signal</i> The signal that will emit events to the listener<br />
+ <i>listener</i> The listener to add</dd></dl>
+<h3>static void wl_signal_emit (struct <code>wl_signal</code> *signal, void *data) [inline]</h3>
+<p>Emits this signal, notifying all registered listeners. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>signal</i> The signal object that will emit the signal<br />
+ <i>data</i> The data that will be emitted with the signal</dd></dl>
+<h3>static struct <code>wl_listener</code> * wl_signal_get (struct <code>wl_signal</code> *signal, wl_notify_func_tnotify)</h3>
+<p>Gets the listener struct for the specified callback. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>signal</i> The signal that contains the specified listener<br />
+ <i>notify</i> The listener that is the target of this search</dd></dl>
+<p> <code>Returns:</code></p>
+<dl>
+<dd>the list item that corresponds to the specified listener, or NULL if none was found</dd></dl>
+<h3>static void wl_signal_init (struct <code>wl_signal</code> *signal) [inline]</h3>
+<p>Initialize a new <code>wl_signal</code> for use. </p>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>signal</i> The signal that will be initialized</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Wayland from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

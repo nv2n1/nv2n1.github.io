@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gsettings-data-convert(1) · Linux Manual Pages</title>
+<meta name="description" content="gsettings-data-convert – GConf to GSettings data migration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gsettings-data-convert/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gsettings-data-convert(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gsettings-data-convert &#8211; GConf to GSettings data migration </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>gsettings-data-convert</code> [option&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>gsettings-data-convert</code></p>
+<dd>reads values out of the users GConf database and stores them in GSettings. </dd>
+<p> The information about the mapping from GConf keys to GSettings keys is taken from files in /usr/share/GConf/gsettings. Each file in that directory is read as a key file, with sections for each GSettings schema that is being converted. The entries in each section map GSettings keys to paths in the GConf database. Currently, <code>gsettings-data-convert</code> supports all basic GConf types as well as lists of strings and lists of integers. </p>
+<p> A simple example might look like this: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+[org.gnome.fonts]
+antialiasing = /desktop/gnome/font_rendering/antialiasing
+dpi = /desktop/gnome/font_rendering/dpi
+hinting = /desktop/gnome/font_rendering/hinting
+rgba_order = /desktop/gnome/font_rendering/rgba_order
+</pre>
+</dd></dl>
+<p> If the GSettings schema does not have a fixed path, you must specify the path in the group name, separated by a colon character: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+[org.gnome.fonts:/desktop/gnome/font-rendering/]
+</pre>
+</dd></dl>
+<p> <code>gsettings-data-convert</code> keeps a list of the key files it has already converted, so it is safe to run it repeatedly to handle newly appeared key files. The expected use of this utility is to make each application install a key file for the GConf keys that it wants to be migrated, and run <code>gsettings-data-convert</code> every time a user logs in.</p>
+<h3>Options</h3>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print help and exit</dd></dl>
+<p> <code>&#8211;dry-run</code></p>
+<dl>
+<dt>
+</dt><dd> Do not make any changes, just report what would be done</dd></dl>
+<p> <code>&#8211;verbose</code></p>
+<dl>
+<dt>
+</dt><dd> Show verbose messages</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gsettings-schema-convert/">gsettings-schema-convert</a></code>(1) is a related command that helps with the conversion of schemas from GConf to GSettings. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

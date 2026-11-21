@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>load_ibk(3) · Linux Manual Pages</title>
+<meta name="description" content="load_ibk – Reads in a .IBK patch definition file for the Adlib driver. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-load_ibk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>load_ibk(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> load_ibk &#8211; Reads in a .IBK patch definition file for the Adlib driver. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>int load_ibk(char *filename, int drums);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Reads in a .IBK patch definition file for use by the Adlib driver. If drums is set, it will load it as a percussion patch set, otherwise it will use it as a replacement set of General MIDI instruments. You may call this before or after initialising the sound code, or can simply set the ibk_file and ibk_drum_file variables in the configuration file to have the data loaded automatically. Note that this function has no effect on any drivers other than the Adlib one!</p>
+<h2>RETURN VALUE</h2>
+<p> Returns non-zero on error. </p>
+<h2>SEE ALSO</h2>
+<p> <code>install_sound</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

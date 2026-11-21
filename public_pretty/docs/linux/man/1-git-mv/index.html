@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-mv(1) · Linux Manual Pages</title>
+<meta name="description" content="git-mv – Move or rename a file, a directory, or a symlink">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-mv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-mv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> git-mv &#8211; Move or rename a file, a directory, or a symlink </p>
+<h2>SYNOPSIS</h2>
+<pre>
+<i>git mv</i> &lt;options&gt;... &lt;args&gt;...
+</pre>
+<h2>DESCRIPTION</h2>
+<p> Move or rename a file, directory or symlink. </p>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+git mv[-v][-f][-n][-k]&lt;source&gt;&lt;destination&gt;
+    git mv[-v][-f][-n][-k]&lt;source&gt;...&lt;destination directory&gt;
+</code></pre>
+</dd></dl>
+<p> In the first form, it renames &lt;source&gt;, which must exist and be either a file, symlink or directory, to &lt;destination&gt;. In the second form, the last argument has to be an existing directory; the given sources will be moved into this directory. </p>
+<p> The index is updated after successful completion, but the change must still be committed.</p>
+<h2>OPTIONS</h2>
+<p> -f, &#8211;force</p>
+<dl>
+<dt>
+</dt><dd> Force renaming or moving of a file even if the target exists</dd></dl>
+<p> -k</p>
+<dl>
+<dt>
+</dt><dd> Skip move or rename actions which would lead to an error condition. An error happens when a source is neither existing nor controlled by Git, or when it would overwrite an existing file unless <code>-f</code> is given.</dd></dl>
+<p> -n, &#8211;dry-run</p>
+<dl>
+<dt>
+</dt><dd> Do nothing; only show what would happen</dd></dl>
+<p> -v, &#8211;verbose</p>
+<dl>
+<dt>
+</dt><dd> Report the names of files as they are moved.</dd></dl>
+<h2>SUBMODULES</h2>
+<p> Moving a submodule using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will update the gitfile and core.worktree setting to make the submodule work in the new location. It also will attempt to update the submodule.&lt;name&gt;.path setting in the <code><a href="/docs/linux/man/5-gitmodules/">gitmodules</a></code>(5) file and stage that file (unless -n is used).</p>
+<h2>BUGS</h2>
+<p> Each time a superproject update moves a populated submodule (e.g. when switching between commits before and after the move) a stale submodule checkout will remain in the old location and an empty directory will appear in the new location. To populate the submodule again in the new location the user will have to run &quot;git submodule update&quot; afterwards. Removing the old directory is only safe when it uses a gitfile, as otherwise the history of the submodule will be deleted too. Both steps will be obsolete when recursive submodule update has been implemented.</p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

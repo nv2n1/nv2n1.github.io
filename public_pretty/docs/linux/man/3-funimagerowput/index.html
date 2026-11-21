@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>funimagerowput(3) · Linux Manual Pages</title>
+<meta name="description" content="FunImageRowPut – put row(s) of an image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-funimagerowput/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>funimagerowput(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>FunImageRowPut &#8211; put row(s) of an image</code></p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;funtools.h&gt;
+</code></pre>
+<p>void *FunImageRowPut(Fun fun, void *buf, int rstart, int rstop,<br />
+                     int dim1, int dim2, int bitpix, char *plist)</p>
+<h2>DESCRIPTION</h2>
+<p> The FunImageRowPut() routine writes one or more image rows to the specified <font SIZE="-1">FITS</font> image file. The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to the row data buffer, while the third and fourth arguments specify the starting and ending rows to write. Valid rows values range from 1 to dim2, i.e., row is one-valued. </p>
+<p> The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument data type of the image and can have the following FITS-standard values:</p>
+<dl>
+<dt>*</dt>
+<dd> 8 unsigned char</dd>
+<dt>*</dt>
+<dd> 16 short</dd>
+<dt>*</dt>
+<dd> 32 int</dd>
+<dt>*</dt>
+<dd> -32 float</dd>
+<dt>*</dt>
+<dd> -64 double</dd></dl>
+<p> For example: </p>
+<pre><code>
+double *drow;
+Fun fun, fun2;
+... open files...
+    /* get section dimensions */
+    FunInfoGet(fun, FUN_SECT_DIM1, &amp;dim1, FUN_SECT_DIM2, &amp;dim2, 0);
+/* allocate one line's worth */
+drow = malloc(dim1 * sizeof(double));
+/* retrieve and process each input row (starting at 1) */
+for (i = 1; i &lt;= dim2; i++) {
+    if (!FunImageRowGet(fun, drow, i, i, "bitpix=-64"))
+        gerror(stderr, "can't FunImageRowGet: %d %s
+", i, iname);
+    ... process drow... if (!FunImageRowPut(fun2, drow, i, i, 64, NULL))
+        gerror(stderr, "can't FunImageRowPut: %d %s
+", i, oname);
+}
+...
+</code></pre>
+<p> The data are assumed to be in the native machine format and will automatically be swapped to big-endian <font SIZE="-1">FITS</font> format if necessary. This behavior can be over-ridden with the <code>convert=[true|false]</code> keyword in the <code>plist</code> param list string. </p>
+<p> When you are finished writing the image, you should call <i>FunFlush()</i> to write out the <font SIZE="-1">FITS</font> image padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the <font SIZE="-1">FITS</font> file.</p>
+<h2>SEE ALSO</h2>
+<p> See funtools(n) for a list of Funtools help pages </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>radeontop(1) · Linux Manual Pages</title>
+<meta name="description" content="radeontop – tool to show GPU utilization">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-radeontop/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>radeontop(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> radeontop &#8211; tool to show GPU utilization </p>
+<h2>SYNOPSIS</h2>
+<p> <code>radeontop [-chv] [-b </code><i>bus</i><code>] [-d </code><i>file</i><code>] [-l </code><i>limit</i><code>] [-t </code><i>ticks</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
+<p> RadeonTop shows the utilization of your GPU, both in general and by blocks. </p>
+<p> Supported cards are R600 and up.</p>
+<h2>OPTIONS</h2>
+<p> <code>-b, &#8211;bus </code><i>bus</i></p>
+<dl>
+<dt>
+</dt><dd> If you have multiple cards, use this parameter to select a specific one. For lspci output <i>01:00.0 VGA compatible controller</i>, bus would be <i>1</i>.</dd></dl>
+<p> <code>-c, &#8211;color</code></p>
+<dl>
+<dt>
+</dt><dd> Enables colorized output.</dd></dl>
+<p> <code>-d, &#8211;dump </code><i>file</i></p>
+<dl>
+<dt>
+</dt><dd> Instead of displaying the data, dump it to <i>file</i>. Use <i>&#8211;</i> for stdout. The file is appended to, so it&#8217;s safe to specify the same filename for consecutive runs. </dd>
+<p> Use <i>SIGTERM</i> or <i>SIGINT</i> for graceful termination.</dl>
+<p> <code>-h, &#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Displays help.</dd></dl>
+<p> <code>-l, &#8211;limit </code><i>limit</i></p>
+<dl>
+<dt>
+</dt><dd> Quit after dumping <i>limit</i> lines. Only valid in dump mode. Default is to dump until terminated; use <i>SIGTERM</i> or <i>SIGINT</i> for graceful termination.</dd></dl>
+<p> <code>-m, &#8211;mem</code></p>
+<dl>
+<dt>
+</dt><dd> Forces the use of the /dev/mem path, in case autodetection fails. Useful for the proprietary driver.</dd></dl>
+<p> <code>-t, &#8211;ticks </code><i>ticks</i></p>
+<dl>
+<dt>
+</dt><dd> How many times per second to sample the data. The default is 120. Higher numbers mean more accurate output and more overhead.</dd></dl>
+<p> <code>-v, &#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Displays the program version.</dd></dl>
+<h2>INTERACTIVE COMMANDS</h2>
+<p> <code>C, c</code></p>
+<dl>
+<dt>
+</dt><dd> Toggle colorized output.</dd></dl>
+<p> <code>Q, q</code></p>
+<dl>
+<dt>
+</dt><dd> Quit.</dd></dl>
+<h2>RESOURCES</h2>
+<p> See <a rel="nofollow" href="http://github.com/clbr/radeontop">http://github.com/clbr/radeontop</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

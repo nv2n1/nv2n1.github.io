@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>puppet-describe(8) · Linux Manual Pages</title>
+<meta name="description" content="puppet-describe – Display help about resource types">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-puppet-describe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>puppet-describe(8)</h1>
+
+
+
+
+
+<p><code>puppet-describe</code> &#8211; Display help about resource types</p>
+<h2>Synopsis</h2>
+<p>Prints help about Puppet resource types, providers, and metaparameters.</p>
+<h2>Usage</h2>
+<p>puppet describe [-h|&#8211;help] [-s|&#8211;short] [-p|&#8211;providers] [-l|&#8211;list] [-m|&#8211;meta]</p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd>Print this help text</dd>
+<dt>&#8211;providers</dt>
+<dd>Describe providers in detail for each type</dd>
+<dt>&#8211;list</dt>
+<dd>List all types</dd>
+<dt>&#8211;meta</dt>
+<dd>List all metaparameters</dd>
+<dt>&#8211;short</dt>
+<dd>List only parameters without detail</dd></dl>
+<h2>Example</h2>
+<pre>$ puppet describe --list
+$ puppet describe file --providers
+$ puppet describe user -s -m</pre>
+<h2>Author</h2>
+<p>David Lutterkort</p>
+<h2>Copyright</h2>
+<p>Copyright (c) 2011 Puppet Labs, LLC Licensed under the Apache 2.0 License</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

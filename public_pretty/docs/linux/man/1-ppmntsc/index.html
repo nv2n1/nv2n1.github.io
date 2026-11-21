@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ppmntsc(1) · Linux Manual Pages</title>
+<meta name="description" content="ppmntsc – make a portable pixmap look like taken from an American TV">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ppmntsc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ppmntsc(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ppmntsc &#8211; make a portable pixmap look like taken from an American TV </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ppmntsc</code> [ <code>&#8211;pal</code> ] [ <code>&#8211;legalonly</code> ] [ <code>&#8211;illegalonly</code> ] [ <code>&#8211;correctedonly</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <i>infile</i> ] </p>
+<p> Minimum unique abbreviations of options are acceptable. </p>
+<h2>DESCRIPTION</h2>
+<p> This program makes colors legal in the NTSC (or PAL) color systems. Often, images generated on the computer are made for use in movies which ultimately end up on video tape. However, the range of colors (as specified by their RGB values) on a computer does not match the range of colors that can be represented using the NTSC (or PAL) systems. If an image with &quot;illegal&quot; colors is sent directly to an NTSC (or PAL) video system for recording, the &quot;illegal&quot; colors will be clipped. This may result in an undesirable looking picture. </p>
+<p> This utility tests each pixel in an image to see if it falls within the legal NTSC (or PAL) range. If not, it raises or lowers the pixel&#8217;s saturation in the output so that it does fall within legal limits. Pixels that are already OK just go unmodified into the output. </p>
+<p> Input is from the file named <i>input</i>. If <i>input </i> is <code>&#8211;</code>, input is from Standard Input. If you don&#8217;t specify <i>input</i>, input is from Standard Input. </p>
+<p> Output is always to Standard Output. </p>
+<p> This program handles multi-image PPM input, producing multi-image PPM output. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;pal</code></dt>
+<dd> Use the PAL transform instead of the default NTSC.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print a grand total of the number of illegal pixels.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Produce a humongous listing of illegal colors and their legal counterparts. NOTE: This option may produce a great deal of output.</dd>
+<dt><code>&#8211;legalonly</code></dt>
+<dd> Output only pixels that are already legal. Output black in place of pixels that are not.</dd>
+<dt><code>&#8211;illegalonly</code></dt>
+<dd> Output only pixels that are illegal (and output them uncorrected). Output black in place of pixels that are already legal.</dd>
+<dt><code>&#8211;correctedonly</code></dt>
+<dd> Output only pixels that are corrected versions of illegal pixels. Output black in place of pixels that are already legal. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code>ppmdepth</code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Wes Barris, Minnesota Supercomputer Center, Inc., Bryan Henderson </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

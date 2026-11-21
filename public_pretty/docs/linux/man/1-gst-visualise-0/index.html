@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gst-visualise-0(1) · Linux Manual Pages</title>
+<meta name="description" content="gst-visualise – Run a GStreamer pipeline to display an audio visualisation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gst-visualise-0/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gst-visualise-0(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gst-visualise &#8211; Run a GStreamer pipeline to display an audio visualisation </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gst-visualise</code> <i>[visualiser]</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>gst-visualise</i> is a tool that is used to run a basic <i>GStreamer</i> pipeline, to display a graphical visualisation of an audio stream. </p>
+<p> By default, the audio stream is read from ESD (the Enlightened Sound Daemon), but this can be changed by setting the AUDIOSRC parameter in ~/.gst. For example, you might set &quot;AUDIOSRC=osssrc&quot; to display a visualisation of the sound input to your soundcard. </p>
+<p> You can select a visualiser by providing a parameter naming the visualiser. For example: </p>
+<p>&nbsp;<wbr>gst-visualise synaesthesia </p>
+<p> will use the synaesthesia plugin. If no visualiser is named, the VISUALIZER property in ~/.gst will be used. If this is not specified either, the goom visualiser will be used. </p>
+<p> The videosink to use to display the visualisation will be read from the VIDEOSINK parameter in ~/.gst, defaulting to sdlvideosink. </p>
+<h2>SEE ALSO</h2>
+<p> <code>gst-launch-ext</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1),</p>
+<h2>AUTHOR</h2>
+<p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.net/">http://gstreamer.net/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

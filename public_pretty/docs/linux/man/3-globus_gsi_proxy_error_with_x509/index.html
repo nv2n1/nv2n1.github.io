@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_gsi_proxy_error_with_x509(3) · Linux Manual Pages</title>
+<meta name="description" content="Proxy Constants –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_gsi_proxy_error_with_x509/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_gsi_proxy_error_with_x509(3)</h1>
+
+
+
+
+
+<p>Proxy Constants &#8211; </p>
+<h3>Enumerations</h3>
+<p>enum <code>globus_gsi_proxy_error_t</code> { <code>GLOBUS_GSI_PROXY_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE</code> = 1, <code>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE_ATTRS</code> = 2, <code>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO</code> = 3, <code>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYPOLICY</code> = 4, <code>GLOBUS_GSI_PROXY_ERROR_WITH_PATHLENGTH</code> = 5, <code>GLOBUS_GSI_PROXY_ERROR_WITH_X509_REQ</code> = 6, <code>GLOBUS_GSI_PROXY_ERROR_WITH_X509</code> = 7, <code>GLOBUS_GSI_PROXY_ERROR_WITH_X509_EXTENSIONS</code> = 8, <code>GLOBUS_GSI_PROXY_ERROR_WITH_PRIVATE_KEY</code> = 9, <code>GLOBUS_GSI_PROXY_ERROR_WITH_BIO</code> = 10, <code>GLOBUS_GSI_PROXY_ERROR_WITH_CREDENTIAL</code> = 11, <code>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE</code> = 12, <code>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE_ATTRS</code> = 13, <code>GLOBUS_GSI_PROXY_ERROR_ERRNO</code> = 14, <code>GLOBUS_GSI_PROXY_ERROR_SETTING_HANDLE_TYPE</code> = 15, <code>GLOBUS_GSI_PROXY_INVALID_PARAMETER</code> = 16, <code>GLOBUS_GSI_PROXY_ERROR_SIGNING</code> = 17, <code>GLOBUS_GSI_PROXY_ERROR_LAST</code> = 18 } </p>
+<h2>Detailed Description</h2>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>globus_gsi_proxy_error_t</code></h3>
+<p>Proxy Error codes </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SUCCESS </i></dt>
+<dd>Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE </i></dt>
+<dd>Invalid proxy handle state</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_HANDLE_ATTRS </i></dt>
+<dd>Invalid proxy handle attributes state</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYCERTINFO </i></dt>
+<dd>Error with ASN.1 proxycertinfo structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PROXYPOLICY </i></dt>
+<dd>Error with ASN.1 proxypolicy structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PATHLENGTH </i></dt>
+<dd>Error with proxy path length</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_REQ </i></dt>
+<dd>Error with the X.509 request structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509 </i></dt>
+<dd>Error with X.509 structure</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_X509_EXTENSIONS </i></dt>
+<dd>Error with X.509 extensions</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_PRIVATE_KEY </i></dt>
+<dd>Error with private key</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_BIO </i></dt>
+<dd>Error with OpenSSL&#8217;s BIO handle</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CREDENTIAL </i></dt>
+<dd>Error with credential</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE </i></dt>
+<dd>Error with credential handle</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_WITH_CRED_HANDLE_ATTRS </i></dt>
+<dd>Error with credential handle attributes</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_ERRNO </i></dt>
+<dd>System error</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SETTING_HANDLE_TYPE </i></dt>
+<dd>Unable to set proxy type</dd>
+<dt><i>GLOBUS_GSI_PROXY_INVALID_PARAMETER </i></dt>
+<dd>Invalid function parameter</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_SIGNING </i></dt>
+<dd>A error occurred while signing the proxy certificate</dd>
+<dt><i>GLOBUS_GSI_PROXY_ERROR_LAST </i></dt>
+<dd>Last marker &#8211; never used</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for globus_gsi_proxy_core from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

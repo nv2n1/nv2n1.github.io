@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nqs2pbs(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nqs2pbs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nqs2pbs(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>nqs2pbs - convert NQS job scripts to PBS</p>
+<h2>SYNOPSIS</h2>
+<p>nqs2pbs nqs_script [pbs_script]</p>
+<h2>DESCRIPTION</h2>
+<p>This utility converts a existing NQS job script to work with PBS and NQS. The existing script is copied and PBS directives, <i>#PBS ,</i> are inserted prior to each NQS directive <i>#QSUB </i> or <i>#@$ ,</i> in the original script.</p>
+<p>Certain NQS date specification and options are not supported by PBS. A warning message will be displayed indicating the problem and the line of the script on which it occurred.</p>
+<p>If any unrecognizable NQS directives are encountered, an error message is displayed. The new PBS script will be deleted if any errors occur.</p>
+<h2>OPERANDS</h2>
+<dl>
+<dt>nqs_script
+</dt><dd> Specifies the file name of the NQS script to convert. This file is not changed.
+</dd><dt>pbs_script
+</dt><dd> If specified, it is the name of the new PBS script. If not specified, the new file name is <i>nqs_script.new .</i></dd></dl>
+<h2>NOTES</h2>
+<p>Converting NQS date specifications to the PBS form may result in a warning message and an incompleted converted date. PBS does not support date specifications of &quot;today&quot;, &quot;tomorrow&quot;, or the name of the days of the week such as &quot;Monday&quot;. If any of these are encountered in a script, the PBS specification will contain only the time portion of the NQS specification, i.e. #PBS -a hhmm[.ss]. It is suggested that you specify the execution time on the qsub command line rather than in the script.</p>
+<p>Note that PBS will interpret a time specification without a date in the following way:</p>
+<dl>
+<dt>-
+</dt><dd> If the time specified has not yet been reached, the job will become eligible to run at that time today.
+</dd><dt>-
+</dt><dd> If the specified time has already passed when the job is submitted, the job will become eligible to run at that time tomorrow.</dd></dl>
+<p>PBS does not support time zone identifiers. All times are taken as local time.</p>
+<h2>SEE ALSO</h2>
+<p>qsub(1B)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

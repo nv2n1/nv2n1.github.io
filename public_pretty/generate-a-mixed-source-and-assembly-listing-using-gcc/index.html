@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generating Mixed C and Assembly Listings with GCC and objdump - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/generate-a-mixed-source-and-assembly-listing-using-gcc/">
+  <meta name="description" content="When debugging and optimizing C/C&#43;&#43; programs, you need to see how the compiler translates your source code into assembly. A mixed source and assembly listing …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Generating Mixed C and Assembly Listings with GCC and objdump">
+  <meta property="og:url" content="https://www.systutorials.com/generate-a-mixed-source-and-assembly-listing-using-gcc/">
+  <meta property="og:description" content="When debugging and optimizing C/C&#43;&#43; programs, you need to see how the compiler translates your source code into assembly. A mixed source and assembly listing …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Generating Mixed C and Assembly Listings with GCC and objdump</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:44Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When debugging and optimizing C/C++ programs, you need to see how the compiler translates your source code into assembly. A mixed source and assembly listing lets you trace exactly what machine instructions correspond to each line of your source.</p>
+<h2 id="using-objdump-recommended-modern-approach">Using objdump (Recommended Modern Approach)</h2>
+<p>The most straightforward method is to compile with debugging symbols and use <code>objdump</code> to generate mixed listings without recompilation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g source.c -o binary
+</span></span><span class="line"><span class="cl">objdump -S binary &gt; listing.txt
+</span></span></code></pre></div><p>The <code>-S</code> flag intermixes source code (from <code>-g</code> symbols) with disassembly. For C++ projects, demangle symbols with <code>-C</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -SC binary &gt; listing.txt
+</span></span></code></pre></div><p>To use Intel syntax instead of AT&amp;T (GCC’s default):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -S -M intel binary &gt; listing.txt
+</span></span></code></pre></div><p>This approach is cleaner than older methods because it separates compilation from listing generation, making it easier to work with existing binaries and avoiding the complexity of passing assembler flags.</p>
+<h2 id="using-gccs-assembler-flags-alternative">Using GCC’s Assembler Flags (Alternative)</h2>
+<p>If you need to generate listings during compilation, use the <code>-Wa,-adhln</code> flags:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -Wa,-adhln -g source.c -o binary &gt; listing.s
+</span></span></code></pre></div><p>The assembler flags control output:</p>
+<ul>
+<li><code>a</code>: Enable listings</li>
+<li><code>d</code>: Omit debugging directives (reduces noise)</li>
+<li><code>h</code>: Include high-level source code</li>
+<li><code>l</code>: Include assembly instructions</li>
+<li><code>n</code>: Omit forms processing (no pagination)</li>
+</ul>
+<p>The listing goes to stdout; redirect it to a file while the binary is produced at the <code>-o</code> location.</p>
+<h2 id="single-file-example">Single-File Example</h2>
+<p>For a simple program:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello world!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Compile and generate listing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g helloworld.c -o helloworld
+</span></span><span class="line"><span class="cl">objdump -S helloworld &gt; helloworld.txt
+</span></span></code></pre></div><p>The resulting file contains interleaved source and assembly:</p>
+<pre><code>    4:helloworld.c  ****   printf(&quot;Hello world!\n&quot;);
+       0000000000001139 &lt;main&gt;:
+    1139:   55                      push   %rbp
+    113a:   48 89 e5                mov    %rsp,%rbp
+    113d:   bf f4 11 00 00          mov    $0x11f4,%edi
+    1142:   e8 e9 fe ff ff          call   1030 &lt;puts@plt&gt;
+</code></pre>
+<p>The left columns show the instruction address in hex (1139, 113a), machine bytecode, and mnemonics. Each source line is mapped back to its corresponding instructions.</p>
+<h2 id="multi-file-projects">Multi-File Projects</h2>
+<p>For projects with multiple source files, compile all together:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g fun1.c main.c -o binary
+</span></span><span class="line"><span class="cl">objdump -S binary &gt; combined.txt
+</span></span></code></pre></div><p>Given these files:</p>
+<p><strong>fun1.c:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">fun1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello world!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>main.c:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">fun1</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">fun1</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The combined listing shows each function’s prologue and epilogue (stack frame setup/teardown) aligned with their source lines, making it easy to understand calling conventions and register allocation decisions.</p>
+<h2 id="comparing-optimization-levels">Comparing Optimization Levels</h2>
+<p>Assembly output changes dramatically with optimization flags. Generate listings at different levels to understand compiler behavior:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g -O0 source.c -o binary_O0
+</span></span><span class="line"><span class="cl">objdump -S binary_O0 &gt; opt0.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gcc -g -O2 source.c -o binary_O2
+</span></span><span class="line"><span class="cl">objdump -S binary_O2 &gt; opt2.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gcc -g -O3 source.c -o binary_O3
+</span></span><span class="line"><span class="cl">objdump -S binary_O3 &gt; opt3.txt
+</span></span></code></pre></div><p>At <code>-O0</code>, you’ll see obvious one-to-one source-to-instruction mapping. At <code>-O2</code> and <code>-O3</code>, the compiler reorders instructions, eliminates dead code, inlines functions, and restructures loops—sometimes making single source lines compile to dozens of instructions or disappear entirely.</p>
+<h2 id="filtering-large-outputs">Filtering Large Outputs</h2>
+<p>For large projects, listings can reach thousands of lines. Extract specific functions with grep:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -S binary <span class="p">|</span> grep -A <span class="m">50</span> <span class="s2">&#34;&lt;main&gt;:&#34;</span>
+</span></span></code></pre></div><p>Or use awk to print lines around a specific function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -S binary <span class="p">|</span> awk <span class="s1">&#39;/^[0-9a-f]* &lt;/ &amp;&amp; !/my_function&gt;/ &amp;&amp; f {exit} /&lt;my_function&gt;:/ {f=1} f&#39;</span> <span class="p">|</span> head -n <span class="m">50</span>
+</span></span></code></pre></div><p>To extract and save a function’s assembly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -S binary <span class="p">|</span> awk <span class="s1">&#39;/^[0-9a-f]* &lt;/ &amp;&amp; !/target_function&gt;/ &amp;&amp; f {exit} /&lt;target_function&gt;:/ {f=1} f&#39;</span> &gt; <span class="k">function</span>.asm
+</span></span></code></pre></div><h2 id="understanding-the-output-format">Understanding the Output Format</h2>
+<p>Each non-empty line contains:</p>
+<ul>
+<li><strong>Instruction address</strong>: Hexadecimal memory address (1139, 113a)</li>
+<li><strong>Machine code</strong>: Raw bytes the processor executes</li>
+<li><strong>Mnemonic</strong>: Human-readable instruction name (mov, call, push)</li>
+<li><strong>Operands</strong>: Registers, memory addresses, or immediate values</li>
+<li><strong>Source line</strong>: (if available) The corresponding source code line</li>
+</ul>
+<p>CFI directives (<code>.cfi_*</code>) encode call frame information for stack unwinding. These aren’t executable code but are used by debuggers (GDB, LLDB) and exception handling mechanisms (libunwind) to traverse the stack correctly during debugging or unwinding exceptions.</p>
+<h2 id="architecture-considerations">Architecture Considerations</h2>
+<p>Assembly output is architecture-specific. The examples above use x86-64 with AT&amp;T syntax (GCC’s default). On other architectures, instruction names and register conventions differ:</p>
+<ul>
+<li><strong>ARM</strong>: <code>ldr</code>, <code>str</code>, <code>bl</code> instead of <code>movl</code>, <code>call</code></li>
+<li><strong>ARM64 (AArch64)</strong>: <code>ldr</code>, <code>str</code>, <code>bl</code> with 64-bit registers</li>
+<li><strong>RISC-V</strong>: <code>addi</code>, <code>sw</code>, <code>jal</code> with different register naming</li>
+<li><strong>PowerPC</strong>: Different register conventions and instruction formats</li>
+</ul>
+<p>Check your target architecture’s instruction set documentation for specific details. Force Intel syntax with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">objdump -S -M intel binary &gt; listing.txt
+</span></span></code></pre></div><h2 id="using-gdb-for-interactive-analysis">Using gdb for Interactive Analysis</h2>
+<p>For more control, use GDB directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./binary
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> disassemble main
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> disassemble /m main
+</span></span></code></pre></div><p>The <code>/m</code> flag shows mixed source and assembly interactively. Set breakpoints at specific addresses and step through assembly while viewing source:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> <span class="nb">break</span> *0x1139
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> run
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> stepi
+</span></span></code></pre></div><h2 id="practical-debugging-workflow">Practical Debugging Workflow</h2>
+<p>Combine mixed listings with a debugger for efficient analysis:</p>
+<ol>
+<li>Compile with <code>-g</code> and your desired optimization level (<code>-O0</code> for clarity, <code>-O2</code> for realistic behavior)</li>
+<li>Generate the listing with <code>objdump -S binary &gt; listing.txt</code></li>
+<li>Search for the function of interest in the listing</li>
+<li>Cross-reference addresses with GDB breakpoints</li>
+<li>Step through assembly while viewing the source-instruction correlation</li>
+<li>Compare behavior at different optimization levels to spot compiler-related issues</li>
+</ol>
+<p>Mixed source-assembly listings are invaluable for understanding compiler behavior, optimizing hot code paths, debugging low-level issues, and reverse-engineering binaries where source isn’t available.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

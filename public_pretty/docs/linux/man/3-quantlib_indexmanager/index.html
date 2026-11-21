@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_indexmanager(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::IndexManager – global repository for past index fixings">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_indexmanager/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_indexmanager(3)</h1>
+
+
+
+
+
+<p>QuantLib::IndexManager &#8211; global repository for past index fixings </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/indexes/indexmanager.hpp&gt; </p>
+<p> Inherits <code>Singleton&lt; IndexManager &gt;</code>. </p>
+<h3>Public Member Functions</h3>
+<p>bool <code>hasHistory</code> (const std::string &amp;name) const<br />
+ <i>returns whether historical fixings were stored for the index </i><br />
+ const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp; <code>getHistory</code> (const std::string &amp;name) const<br />
+ <i>returns the (possibly empty) history of the index fixings </i><br />
+ void <code>setHistory</code> (const std::string &amp;name, const <code>TimeSeries</code>&lt; <code>Real</code> &gt; &amp;)<br />
+ <i>stores the historical fixings of the index </i><br />
+ boost::shared_ptr&lt; <code>Observable</code> &gt; <code>notifier</code> (const std::string &amp;name) const<br />
+ <i>observer notifying of changes in the index fixings </i><br />
+ std::vector&lt; std::string &gt; <code>histories</code> () const<br />
+ <i>returns all names of the indexes for which fixings were stored </i><br />
+ void <code>clearHistory</code> (const std::string &amp;name)<br />
+ <i>clears the historical fixings of the index </i><br />
+ void <code>clearHistories</code> ()<br />
+ <i>clears all stored fixings </i></p>
+<h3>Friends</h3>
+<p>class <code>Singleton&lt; IndexManager &gt;</code> </p>
+<h2>Detailed Description</h2>
+<p>global repository for past index fixings </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>index names are case insensitive</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

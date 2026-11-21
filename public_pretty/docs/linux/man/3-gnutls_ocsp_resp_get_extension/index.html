@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_ocsp_resp_get_extension(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_ocsp_resp_get_extension – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_ocsp_resp_get_extension/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_ocsp_resp_get_extension(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_ocsp_resp_get_extension &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
+<p> <code>int gnutls_ocsp_resp_get_extension(gnutls_ocsp_resp_t </code><i>resp</i><code>, unsigned </code><i>indx</i><code>, gnutls_datum_t * </code><i>oid</i><code>, unsigned int * </code><i>critical</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_ocsp_resp_t resp</dt>
+<dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd>
+<dt>unsigned indx</dt>
+<dd> Specifies which extension OID to get. Use (0) to get the first one.</dd>
+<dt>gnutls_datum_t * oid</dt>
+<dd> will hold newly allocated buffer with OID of extension, may be NULL</dd>
+<dt>unsigned int * critical</dt>
+<dd> output variable with critical flag, may be NULL.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> will hold newly allocated buffer with extension data, may be NULL</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will return all information about the requested extension in the OCSP response. The information returned is the OID, the critical flag, and the data itself. The extension OID will be stored as a string. Any of <i>oid</i> , <i>critical</i> , and <i>data</i> may be NULL which means that the caller is not interested in getting that information back. </p>
+<p> The caller needs to deallocate memory by calling <code>gnutls_free()</code> on<br />
+&nbsp;<wbr><i>oid</i>&nbsp;<wbr>-&gt;data and&nbsp;<wbr>&nbsp;<wbr><i>data</i>&nbsp;<wbr>-&gt;data.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. If you have reached the last extension available <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

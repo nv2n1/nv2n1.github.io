@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selinux_file_context_cmp(3) · Linux Manual Pages</title>
+<meta name="description" content="selinux_file_context_cmp – Compare two SELinux security contexts excluding the ‘user’ component">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-selinux_file_context_cmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>selinux_file_context_cmp(3)</h1>
+
+
+
+
+
+<p>selinux_file_context_cmp &#8211; Compare two SELinux security contexts excluding the &#8216;user&#8217; component</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;selinux/selinux.h&gt;
+int selinux_file_context_cmp(const char *a,
+                             const char *b);</code></pre>
+<h2>Description</h2>
+<p><code>selinux_file_context_cmp</code>() compares two context strings excluding the user component with <code><a href="/docs/linux/man/3-strcmp/">strcmp</a></code>(3) as shown in the <code>EXAMPLE</code> section. </p>
+<p> This is useful as for most object contexts, the user component is not relevant.</p>
+<h2>Return Value</h2>
+<p>The return values follow the <code><a href="/docs/linux/man/3-strcmp/">strcmp</a></code>(3) function, where:</p>
+<dl>
+<dd>0 if they are equal.</dd></dl>
+<dl>
+<dd>1 if <i>a</i> is greater than <i>b</i></dd></dl>
+<dl>
+<dd>-1 if <i>a</i> is less than <i>b</i></dd></dl>
+<h2>Errors</h2>
+<p>None.</p>
+<h2>Notes</h2>
+<p>The contexts being compared do not specifically need to be file contexts.</p>
+<h2>Example</h2>
+<p>If context <i>a</i> is:</p>
+<dl>
+<dd>user_u:user_r:user_t:s0</dd></dl>
+<p> and context <i>b</i> is:</p>
+<dl>
+<dd>root:user_r:user_t:s0</dd></dl>
+<p> then the actual strings compared are:</p>
+<dl>
+<dd>:user_r:user_t:s0 and :user_r:user_t:s0</dd></dl>
+<p> Therefore they will match and <code>selinux_file_context_cmp</code>() will return zero.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

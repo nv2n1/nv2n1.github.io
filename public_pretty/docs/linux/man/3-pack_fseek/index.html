@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pack_fseek(3) · Linux Manual Pages</title>
+<meta name="description" content="pack_fseek – Seeks inside a stream. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pack_fseek/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pack_fseek(3)</h1>
+
+
+
+
+
+<p>pack_fseek &#8211; Seeks inside a stream. Allegro game programming library.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;allegro.h&gt;
+int pack_fseek(PACKFILE *f, int offset);</code></pre>
+<h2>Description</h2>
+<p>Moves the position indicator of the stream `f&#8217;. Unlike the standard fseek() function, this only supports forward movements relative to the current position and in read-only streams, so don&#8217;t use negative offsets. Note that seeking is very slow when reading compressed files, and so should be avoided unless you are sure that the file is not compressed. Example: </p>
+<pre><code>input_file = pack_fopen(&quot;data.bin&quot;, &quot;r&quot;);
+if (!input_file)
+    abort_on_error(&quot;Couldn't open binary data!&quot;);
+/* Skip some useless header before reading data. */
+pack_fseek(input_file, 32);</code></pre>
+<h2>Return Value</h2>
+<p>Returns zero on success or a negative number on error, storing the error code in `errno&#8217;. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pack_fopen/">pack_fopen</a></code>(3), <code><a href="/docs/linux/man/3-pack_fopen_chunk/">pack_fopen_chunk</a></code>(3), <code><a href="/docs/linux/man/3-expackf/">expackf</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

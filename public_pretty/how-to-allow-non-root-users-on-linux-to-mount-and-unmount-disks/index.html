@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allowing Non-Root Users to Mount Disks on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-allow-non-root-users-on-linux-to-mount-and-unmount-disks/">
+  <meta name="description" content="On a Linux system, you often need to let regular users mount and unmount specific devices without requiring sudo or the root password. This is common for …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Allowing Non-Root Users to Mount Disks on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-allow-non-root-users-on-linux-to-mount-and-unmount-disks/">
+  <meta property="og:description" content="On a Linux system, you often need to let regular users mount and unmount specific devices without requiring sudo or the root password. This is common for …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>Allowing Non-Root Users to Mount Disks on Linux</h1>
+        <time class="post-date" datetime="2018-03-24T11:45:47Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>On a Linux system, you often need to let regular users mount and unmount specific devices without requiring sudo or the root password. This is common for external drives, USB devices, or secondary internal disks. There are several approaches, each with different security and usability tradeoffs.</p>
+<h2 id="using-etcfstab-with-the-user-option">Using /etc/fstab with the <code>user</code> Option</h2>
+<p>The simplest approach is to add entries to <code>/etc/fstab</code> with the <code>user</code> option. This allows any user to mount and unmount the filesystem.</p>
+<p>First, identify your device and its UUID:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk -o NAME,UUID,FSTYPE,MOUNTPOINTS
+</span></span></code></pre></div><p>Open <code>/etc/fstab</code> as root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/fstab
+</span></span></code></pre></div><p>Add an entry like this:</p>
+<pre><code>UUID=1234-5678 /mnt/external ext4 defaults,user,nofail 0 2
+</code></pre>
+<p>Key options:</p>
+<ul>
+<li><code>user</code> — allows non-root users to mount/unmount</li>
+<li><code>users</code> — allows any user to mount, but only the user who mounted it can unmount it</li>
+<li><code>nouser</code> — default; only root can mount</li>
+<li><code>nofail</code> — system boots normally if device is missing</li>
+<li><code>noauto</code> — device won’t mount automatically at boot</li>
+</ul>
+<p>After editing, test it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /mnt/external
+</span></span><span class="line"><span class="cl">umount /mnt/external
+</span></span></code></pre></div><h2 id="using-sudo-with-nopasswd">Using sudo with NOPASSWD</h2>
+<p>For tighter control, grant specific users permission to mount specific devices via <code>sudo</code> without a password prompt.</p>
+<p>Edit the sudoers file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo visudo
+</span></span></code></pre></div><p>Add a line like this:</p>
+<pre><code>alice ALL=(ALL) NOPASSWD: /usr/bin/mount /dev/sde1, /usr/bin/umount /dev/sde1
+</code></pre>
+<p>This allows user <code>alice</code> to run only those specific mount and umount commands without a password. Users can then run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount /dev/sde1 /mnt/external
+</span></span><span class="line"><span class="cl">sudo umount /mnt/external
+</span></span></code></pre></div><h2 id="using-polkit-modern-desktop-systems">Using Polkit (Modern Desktop Systems)</h2>
+<p>On systems with Polkit (common on desktop Linux), users in the <code>wheel</code> or <code>sudo</code> group automatically get permission to mount certain removable devices without a password.</p>
+<p>Check your Polkit configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -la /etc/polkit-1/rules.d/
+</span></span><span class="line"><span class="cl">ls -la /usr/share/polkit-1/rules.d/
+</span></span></code></pre></div><p>Create a custom rule if needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/polkit-1/rules.d/50-mount.rules
+</span></span></code></pre></div><p>Example rule allowing mounting removable media:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">polkit</span><span class="p">.</span><span class="nx">addRule</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="nx">subject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">((</span><span class="nx">action</span><span class="p">.</span><span class="nx">id</span> <span class="o">==</span> <span class="s2">&#34;org.freedesktop.udisks2.filesystem-mount&#34;</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">action</span><span class="p">.</span><span class="nx">id</span> <span class="o">==</span> <span class="s2">&#34;org.freedesktop.udisks2.filesystem-unmount&#34;</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">subject</span><span class="p">.</span><span class="nx">isInGroup</span><span class="p">(</span><span class="s2">&#34;storage&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">polkit</span><span class="p">.</span><span class="nx">Result</span><span class="p">.</span><span class="nx">YES</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Then add your user to the <code>storage</code> group:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo usermod -aG storage username
+</span></span></code></pre></div><p>The user needs to log out and back in for group changes to take effect.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<p><strong><code>/etc/fstab</code> with <code>user</code> option</strong>: Convenient but less restrictive. Any user can mount and unmount the device. Use for trusted systems or devices you don’t mind users accessing.</p>
+<p><strong><code>sudo</code> NOPASSWD</strong>: More granular control. You can specify exactly which users and which devices. However, passwordless sudo should be used carefully and only for commands with limited scope.</p>
+<p><strong>Polkit</strong>: Best for desktop systems where you want automatic mounting of USB drives without prompts. Integrates with your graphical file manager and login session.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If mounting fails with “permission denied,” check the mount point permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -ld /mnt/external
+</span></span></code></pre></div><p>Ensure the user owns the directory or that it has appropriate group or world permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown alice:alice /mnt/external
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">755</span> /mnt/external
+</span></span></code></pre></div><p>If you’re using <code>/etc/fstab</code>, reload the table:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount -a
+</span></span></code></pre></div><p>For Polkit rules not taking effect, check logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo journalctl -u polkit -f
+</span></span></code></pre></div><p>Choose the method that matches your security requirements and system design. For servers, use sudo NOPASSWD. For desktops, Polkit provides the best user experience. For simple setups, <code>/etc/fstab</code> is usually sufficient.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

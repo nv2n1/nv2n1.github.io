@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizing MediaWiki’s Sidebar: A Configuration Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-change-mediawikis-sidebar/">
+  <meta name="description" content="MediaWiki’s sidebar is managed through the MediaWiki:Sidebar special page, a simple text-based system that controls navigation for your entire wiki. Changes …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Customizing MediaWiki’s Sidebar: A Configuration Guide">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-change-mediawikis-sidebar/">
+  <meta property="og:description" content="MediaWiki’s sidebar is managed through the MediaWiki:Sidebar special page, a simple text-based system that controls navigation for your entire wiki. Changes …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>Customizing MediaWiki’s Sidebar: A Configuration Guide</h1>
+        <time class="post-date" datetime="2013-07-16T01:32:09Z">July 16, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>MediaWiki’s sidebar is managed through the <code>MediaWiki:Sidebar</code> special page, a simple text-based system that controls navigation for your entire wiki. Changes take effect immediately across all pages.</p>
+<h2 id="accessing-the-sidebar-configuration">Accessing the Sidebar Configuration</h2>
+<p>Navigate to the sidebar editor using one of these methods:</p>
+<p><strong>Direct URL</strong> (replace example.com with your domain):</p>
+<ul>
+<li>With pretty URLs: <code>https://example.com/w/MediaWiki:Sidebar</code></li>
+<li>Without pretty URLs: <code>https://example.com/w/index.php?title=MediaWiki:Sidebar&amp;action=edit</code></li>
+</ul>
+<p><strong>Via the wiki interface</strong>:</p>
+<ol>
+<li>Go to Special:AllPages</li>
+<li>Select the MediaWiki namespace</li>
+<li>Search for “Sidebar”</li>
+</ol>
+<p>Or access Special:SpecialPages and look for “Sidebar” under the MediaWiki namespace section.</p>
+<h2 id="sidebar-syntax">Sidebar Syntax</h2>
+<p>The sidebar uses asterisk-based markup to define its structure:</p>
+<ul>
+<li>Single asterisk (<code>*</code>) — creates a collapsible section header</li>
+<li>Double asterisks (<code>**</code>) — creates menu items within that section</li>
+</ul>
+<h3 id="default-sidebar-structure">Default Sidebar Structure</h3>
+<pre><code>* navigation
+** mainpage|mainpage-description
+** recentchanges-url|recentchanges
+** randompage-url|randompage
+** currentevents-url|currentevents
+** portal-url|portal
+** helppage|help
+* SEARCH
+* TOOLBOX
+* LANGUAGES
+</code></pre>
+<p>The keywords <code>SEARCH</code>, <code>TOOLBOX</code>, and <code>LANGUAGES</code> are special directives that render built-in MediaWiki components. They must be capitalized and appear on their own line.</p>
+<h2 id="link-format-and-message-keys">Link Format and Message Keys</h2>
+<p>Links follow the pattern <code>target|display-text</code>:</p>
+<ul>
+<li><code>target</code> — the destination (wiki page, special page, or full URL)</li>
+<li><code>display-text</code> — what users see (can be a message key or plain text)</li>
+</ul>
+<p><strong>Message keys</strong> (lowercase, with hyphens) are automatically translated to the user’s language:</p>
+<pre><code>** mainpage|mainpage-description
+** recentchanges-url|recentchanges
+** randompage-url|randompage
+** currentevents-url|currentevents
+** portal-url|portal
+** helppage|help
+</code></pre>
+<p><strong>Plain text labels</strong> work for any target and don’t require translation:</p>
+<pre><code>** Special:RecentChanges|Recent Changes
+** Special:Random|Random Article
+** https://example.com/docs|Documentation
+** Help:Contents|Getting Started
+</code></pre>
+<p><strong>Mixed usage</strong>:</p>
+<pre><code>* Navigation
+** mainpage|mainpage-description
+** Special:RecentChanges|Recent Changes
+** https://github.com/yourproject|GitHub Repository
+** Help:Contents|help
+</code></pre>
+<h2 id="practical-sidebar-examples">Practical Sidebar Examples</h2>
+<h3 id="adding-a-custom-documentation-section">Adding a Custom Documentation Section</h3>
+<pre><code>* Documentation
+** Help:Contents|Getting Started
+** Help:Editing|How to Edit
+** Help:Formatting|Text Formatting
+** Help:Templates|Using Templates
+** Special:Upload|Upload Files
+</code></pre>
+<h3 id="adding-external-links">Adding External Links</h3>
+<pre><code>* Community
+** https://forum.example.com|Discussion Forum
+** https://github.com/yourproject|GitHub Repository
+** https://discord.gg/yourserver|Discord Server
+** https://example.com/roadmap|Project Roadmap
+</code></pre>
+<h3 id="removing-unwanted-sections">Removing Unwanted Sections</h3>
+<p>Delete lines you don’t need. For example, if your wiki is single-language, remove the LANGUAGES section:</p>
+<pre><code>* navigation
+** mainpage|mainpage-description
+** recentchanges-url|recentchanges
+** randompage-url|randompage
+* SEARCH
+* TOOLBOX
+</code></pre>
+<p>Similarly, remove <code>SEARCH</code> or <code>TOOLBOX</code> if your users don’t need them.</p>
+<h2 id="making-and-testing-changes">Making and Testing Changes</h2>
+<ol>
+<li>Click “Edit” on the <code>MediaWiki:Sidebar</code> page</li>
+<li>Modify the sidebar content</li>
+<li>Click “Publish changes”</li>
+</ol>
+<p>Changes take effect immediately for all users, though users may need to clear their browser cache or do a hard refresh (Ctrl+F5 or Cmd+Shift+R) to see updates.</p>
+<p><strong>Test carefully in a non-production wiki first</strong>, especially if you’re removing sections or reorganizing major navigation elements.</p>
+<h2 id="permissions-and-protection">Permissions and Protection</h2>
+<p>Only users with edit permissions on the MediaWiki namespace can modify the sidebar. By default, this requires administrator status.</p>
+<h3 id="restricting-further">Restricting Further</h3>
+<ol>
+<li>Go to <code>MediaWiki:Sidebar</code></li>
+<li>Click the “Protect” tab</li>
+<li>Set restrictions to “Sysops only” to prevent changes by less privileged admins</li>
+</ol>
+<h3 id="allowing-trusted-non-admins">Allowing Trusted Non-Admins</h3>
+<p>Grant sidebar editing permission via Special:UserRights by adding users to a custom group with the <code>edit</code> permission on the MediaWiki namespace. This requires configuration in <code>LocalSettings.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$wgGroupPermissions</span><span class="p">[</span><span class="s1">&#39;sidebar-editors&#39;</span><span class="p">][</span><span class="s1">&#39;edit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$wgGroupPermissions</span><span class="p">[</span><span class="s1">&#39;sidebar-editors&#39;</span><span class="p">][</span><span class="s1">&#39;editinterface&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="finding-available-message-keys">Finding Available Message Keys</h2>
+<p>MediaWiki has hundreds of built-in message keys. View available keys at Special:AllMessages and filter by “sidebar” to find sidebar-specific translations.</p>
+<p>Common keys include:</p>
+<ul>
+<li><code>mainpage|mainpage-description</code></li>
+<li><code>recentchanges|recentchanges</code></li>
+<li><code>randompage-url|randompage</code></li>
+<li><code>portal-url|portal</code></li>
+<li><code>help|helppage</code></li>
+</ul>
+<h2 id="advanced-customization-with-extensions">Advanced Customization with Extensions</h2>
+<p>For complex sidebars beyond static links, consider these approaches:</p>
+<p><strong>Extension:DynamicPageList</strong> — Populate sidebar links from category or namespace queries:</p>
+<pre><code>* Recent Articles
+&lt;DPL&gt;
+namespace = 0
+count = 5
+orderby = modification date
+order = descending
+format = ,** %PAGE%|%TITLE%,
+&lt;/DPL&gt;
+</code></pre>
+<p><strong>Conditional sections</strong> — Some extensions like Extension:SidebarDynamicFunctions allow logic-based sections, though this adds complexity and isn’t necessary for most wikis.</p>
+<p><strong>CSS and JavaScript</strong> — Edit <code>MediaWiki:Sidebar.css</code> and <code>MediaWiki:Common.js</code> to style or add JavaScript behavior to sidebar elements without installing extensions.</p>
+<p>For the vast majority of installations, the raw <code>MediaWiki:Sidebar</code> text format handles all typical requirements cleanly and without additional dependencies.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gauche-config(1) · Linux Manual Pages</title>
+<meta name="description" content="gauche-config – retrieve configuration parameters of Gauche">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gauche-config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gauche-config(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> gauche-config &#8211; retrieve configuration parameters of Gauche </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gauche-config</code> <i>option</i> </p>
+<h2>DESCRIPTION</h2>
+<p> <i>Gauche-config </i> displays various parameters specified at the configuration time of the Gauche Scheme implementation. It can be used in Makefile and other configuration scripts that uses Gauche. </p>
+<h2>OPTIONS</h2>
+<h3>General parameters</h3>
+<dl>
+<dt><code>-V</code></dt>
+<dd> Gauche version.</dd>
+<dt><code>&#8211;reconfigure</code></dt>
+<dd> Prints the command line used to configure the current Gauche installation. </dd>
+</dl>
+<h3>Parameters to compile an application using Gauche</h3>
+<dl>
+<dt><code>-I, -L, -l</code></dt>
+<dd> List of &quot;-I&quot; options (include directories), &quot;-L&quot; options (library directories), and &quot;-l&quot; options (libraries) for the compiler which are required to compile applications that links Gauche library.</dd>
+<dt><code>&#8211;cc</code></dt>
+<dd> Name of the compiler used to compile the current installation.</dd>
+<dt><code>&#8211;ac</code></dt>
+<dd> Directory name that contains Gauche specific autoconf macro.</dd>
+<dt><code>&#8211;arch</code></dt>
+<dd> The architecture signature, which is used in the pathname of architecture-dependent files, e.g. &quot;i686-pc-linux-gnu&quot;. </dd>
+</dl>
+<h3>Parameters to install files</h3>
+<dl>
+<dt><code>&#8211;syslibdir, &#8211;sitelibdir</code></dt>
+<dd> Directories where system/site scheme files go.</dd>
+<dt><code>&#8211;sysarchdir, &#8211;sitearchdir</code></dt>
+<dd> Directories where architecture-dependent system/site files go.</dd>
+<dt><code>&#8211;sysincdir, &#8211;siteincdir</code></dt>
+<dd> Directories where system/site header files of extensions go.</dd>
+<dt><code>&#8211;mandir, &#8211;infodir</code></dt>
+<dd> Directories where gauche manpage and info docs are installed. </dd>
+</dl>
+<h2>Parameters to compile Gauche extention</h2>
+<dl>
+<dt><code>&#8211;so-suffix</code></dt>
+<dd> Object file suffix of the gauche extension.</dd>
+<dt><code>&#8211;so-cflags</code></dt>
+<dd> Flags required to compile shared object.</dd>
+<dt><code>&#8211;so-ldflags</code></dt>
+<dd> Flags required to link a gauche extension.</dd>
+<dt><code>&#8211;so-libs</code></dt>
+<dd> Libraries to be linked with a gauche extension.</dd>
+<dt><code>&#8211;dylib-suffix</code></dt>
+<dd> Dynamic/shared library file suffix of the system.</dd>
+<dt><code>&#8211;dylib-ldflags</code></dt>
+<dd> Flags required to link dynamic/shared library file.</dd>
+<dt><code>&#8211;libgauche-so</code></dt>
+<dd> The name of shared library of libgauche. </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> Shiro Kawai (shiro @ acm . org) </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gosh/">gosh</a>(1) </p>
+<p> Gauche Scheme interpreter:<br />
+ <a rel="nofollow" href="http://practical-scheme.net/gauche/">http://practical-scheme.net/gauche/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

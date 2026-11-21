@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalobserver_ptrobserver_ptr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalobserver_ptrobserver_ptr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalobserver_ptrobserver_ptr(3)</h1>
+
+
+
+
+
+<p>std::experimental::observer_ptr&lt;W&gt;::observer_ptr - std::experimental::observer_ptr&lt;W&gt;::observer_ptr</p>
+<h2>Synopsis</h2>
+<pre><code>constexpr observer_ptr() noexcept;
+(1)(library fundamentals TS v2)
+    constexpr observer_ptr(nullptr_t) noexcept;
+explicit observer_ptr(element_type *p) noexcept;
+(2)(library fundamentals TS v2)
+    template &lt;class W2&gt;
+    (3)(library fundamentals TS v2)
+        observer_ptr(observer_ptr&lt;W2&gt; other) noexcept;
+observer_ptr(const observer_ptr &amp;other) = default;
+(4)(library fundamentals TS v2)(implicitly declared)
+    observer_ptr(observer_ptr &amp;&amp;other) = default;
+(5)(library fundamentals TS v2)(implicitly declared)</code></pre> 
+<ol>
+<li>Constructs an observer_ptr that has no corresponding watched object.</li>
+<li>Constructs an observer_ptr that watches p.</li>
+<li>Constructs an observer_ptr that watches other.get(). This constructor does not participate in overload resolution unless W2* is convertible to element_type*.
+4-5) Implicitly declared copy and move constructors. Constructs an observer_ptr that watches other.get().</li>
+</ol>
+<h2>Parameters</h2>
+<p>p - a pointer to an object to watch
+other - another observer_ptr to copy from</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

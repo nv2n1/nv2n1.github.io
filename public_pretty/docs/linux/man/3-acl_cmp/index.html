@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>acl_cmp(3) · Linux Manual Pages</title>
+<meta name="description" content="acl_cmp – compare two ACLs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-acl_cmp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>acl_cmp(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>acl_cmp</code> &#8211; compare two ACLs </p>
+<h2>LIBRARY</h2>
+<p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
+<p> In sys/types.h In acl/libacl.h Ft int Fn acl_cmp acl_t acl1 acl_t acl2</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn acl_cmp function compares the ACLs pointed to by the arguments <i>acl1</i> and <i>acl2</i> for equality. The two ACLs are considered equal if for each entry in <i>acl1</i> there is an entry in <i>acl2</i> with matching tag type, qualifier, and permissions, and vice versa.</p>
+<h2>RETURN VALUE</h2>
+<p> If successful, the Fn acl_cmp function returns <code>0</code> if the two ACLs <i>acl1</i> and <i>acl2</i> are equal, and <code>1</code> if they differ. Otherwise, the value <code>-1</code> is returned and the global variable <i>errno</i> is set to indicate the error.</p>
+<h2>ERRORS</h2>
+<p> If any of the following conditions occur, the Fn acl_cmp function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
+<dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl1</i> is not a valid pointer to an ACL. </dd>
+<p> The argument <i>acl2</i> is not a valid pointer to an ACL.</dl>
+<h2>STANDARDS</h2>
+<p> This is a non-portable, Linux specific extension to the ACL manipulation functions defined in IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned).</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
+<h2>AUTHOR</h2>
+<p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

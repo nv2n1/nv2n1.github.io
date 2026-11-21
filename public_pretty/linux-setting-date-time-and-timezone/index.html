@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Date, Time, and Timezone in Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/linux-setting-date-time-and-timezone/">
+  <meta name="description" content="Understanding and managing system time is crucial for logging, cron jobs, SSL certificates, and system synchronization. Here’s how to handle it properly on …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Date, Time, and Timezone in Linux">
+  <meta property="og:url" content="https://www.systutorials.com/linux-setting-date-time-and-timezone/">
+  <meta property="og:description" content="Understanding and managing system time is crucial for logging, cron jobs, SSL certificates, and system synchronization. Here’s how to handle it properly on …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Setting Date, Time, and Timezone in Linux</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:10Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Understanding and managing system time is crucial for logging, cron jobs, SSL certificates, and system synchronization. Here’s how to handle it properly on modern Linux systems.</p>
+<h2 id="unix-time-posix-time">Unix Time (POSIX Time)</h2>
+<p>Unix time represents seconds elapsed since 00:00:00 UTC on January 1, 1970, excluding leap seconds. Get the current Unix timestamp:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date +%s
+</span></span><span class="line"><span class="cl"><span class="m">1735689600</span>
+</span></span></code></pre></div><p>This is useful for scripting, log analysis, and API interactions.</p>
+<h2 id="setting-date-and-time">Setting Date and Time</h2>
+<p>On modern systems, <strong>use <code>timedatectl</code> from systemd</strong> instead of the <code>date</code> command for permanent changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ timedatectl
+</span></span><span class="line"><span class="cl">               Local time: Wed 2025-01-01 14:30:45 UTC
+</span></span><span class="line"><span class="cl">           Universal time: Wed 2025-01-01 14:30:45 UTC
+</span></span><span class="line"><span class="cl">                 RTC time: Wed 2025-01-01 14:30:45
+</span></span><span class="line"><span class="cl">                Time zone: UTC <span class="o">(</span>UTC, +0000<span class="o">)</span>
+</span></span></code></pre></div><p>Set the date and time using timedatectl:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo timedatectl set-time <span class="s1">&#39;2025-06-22 11:28:00&#39;</span>
+</span></span></code></pre></div><p>If your system still lacks systemd (unlikely in 2026, but possible in containers), use the <code>date</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># date -s &#34;22 JUN 2025 11:28:00&#34;</span>
+</span></span></code></pre></div><p>Or with the <code>mmddhhmmyyyy.ss</code> format (month, day, hour, minute, year, second):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># date 062211282025.00</span>
+</span></span></code></pre></div><h2 id="setting-timezone">Setting Timezone</h2>
+<p><strong>Use <code>timedatectl</code> to manage timezones:</strong></p>
+<p>List available timezones:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ timedatectl list-timezones
+</span></span><span class="line"><span class="cl">Africa/Abidjan
+</span></span><span class="line"><span class="cl">Africa/Accra
+</span></span><span class="line"><span class="cl">Africa/Addis_Ababa
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Asia/Hong_Kong
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>Set your timezone:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo timedatectl set-timezone Asia/Hong_Kong
+</span></span></code></pre></div><p>Verify the change:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ timedatectl
+</span></span><span class="line"><span class="cl">               Local time: Wed 2025-01-01 22:30:45 HKT
+</span></span><span class="line"><span class="cl">           Universal time: Wed 2025-01-01 14:30:45 UTC
+</span></span><span class="line"><span class="cl">                 RTC time: Wed 2025-01-01 14:30:45
+</span></span><span class="line"><span class="cl">                Time zone: Asia/Hong_Kong <span class="o">(</span>HKT, +0800<span class="o">)</span>
+</span></span></code></pre></div><h3 id="manual-method-legacy-systems">Manual Method (Legacy Systems)</h3>
+<p>If <code>timedatectl</code> isn’t available, manually manage <code>/etc/localtime</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo ln -sf /usr/share/zoneinfo/Asia/Hong_Kong /etc/localtime
+</span></span><span class="line"><span class="cl">$ date
+</span></span></code></pre></div><p>The <code>/usr/share/zoneinfo</code> directory contains timezone data organized by region and city. Always verify your change with <code>date</code> or <code>timedatectl</code>.</p>
+<h2 id="hardware-clock-synchronization">Hardware Clock Synchronization</h2>
+<p>The hardware clock (RTC) should be synchronized with system time, especially on machines that shut down frequently:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo timedatectl set-local-rtc <span class="nb">false</span>  <span class="c1"># Use UTC in hardware clock (recommended)</span>
+</span></span><span class="line"><span class="cl">$ sudo hwclock --systohc                <span class="c1"># Sync hardware clock to system time</span>
+</span></span></code></pre></div><p>Check hardware clock status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo hwclock --show
+</span></span></code></pre></div><h2 id="ntp-and-time-synchronization">NTP and Time Synchronization</h2>
+<p>Keep your system time accurate by running an NTP daemon. Most modern distros use <code>systemd-timesyncd</code> by default:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ timedatectl
+</span></span><span class="line"><span class="cl">               ...
+</span></span><span class="line"><span class="cl">       System clock synchronized: yes
+</span></span><span class="line"><span class="cl">systemd-timesyncd.service active: yes
+</span></span><span class="line"><span class="cl">                 RTC in <span class="nb">local</span> TZ: no
+</span></span></code></pre></div><p>Check the NTP server being used:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ timedatectl show-timesync
+</span></span></code></pre></div><p>For stricter requirements (databases, clusters), use full NTP servers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install ntp          <span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">$ sudo dnf install ntp          <span class="c1"># RHEL/Fedora/CentOS</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ sudo systemctl <span class="nb">enable</span> --now ntpd
+</span></span><span class="line"><span class="cl">$ ntpq -p                       <span class="c1"># Check NTP peers</span>
+</span></span></code></pre></div><p>Or use Chrony (more accurate, faster sync):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt install chrony
+</span></span><span class="line"><span class="cl">$ sudo systemctl <span class="nb">enable</span> --now chronyd
+</span></span><span class="line"><span class="cl">$ chronyc tracking
+</span></span></code></pre></div><h2 id="practical-examples">Practical Examples</h2>
+<p><strong>Set timezone for a Docker container</strong> (without changing the host):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker run -e <span class="nv">TZ</span><span class="o">=</span>Asia/Hong_Kong ubuntu date
+</span></span></code></pre></div><p><strong>Convert Unix timestamp to human-readable format:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ date -d @1735689600
+</span></span><span class="line"><span class="cl">Wed Jan  <span class="m">1</span> 14:30:00 UTC <span class="m">2025</span>
+</span></span></code></pre></div><p><strong>Check time difference between systems:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh user@remote-host date +%s
+</span></span></code></pre></div><p><strong>Schedule a task with timezone awareness</strong> (crontab uses system timezone):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+</span></span><span class="line"><span class="cl"><span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+</span></span><span class="line"><span class="cl"><span class="m">0</span> <span class="m">9</span> * * * /home/user/backup.sh  <span class="c1"># Runs at 9 AM in system timezone</span>
+</span></span></code></pre></div><p>Ensure consistency across servers by keeping all machines synchronized to NTP and using UTC internally for applications, converting to local timezone only at the presentation layer.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

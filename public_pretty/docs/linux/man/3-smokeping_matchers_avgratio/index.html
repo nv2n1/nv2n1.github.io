@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smokeping_matchers_avgratio(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-smokeping_matchers_avgratio/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>smokeping_matchers_avgratio(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Smokeping::matchers::Avgratio - detect changes in average median latency</p>
+<h2>Overview</h2>The Avgratio matcher establishes a historic average median latency over several measurement rounds. It compares this average, against a second average latency value again build over several rounds of measurement.
+<h2>Description</h2>Call the matcher with the following sequence: 
+ <pre> type = matcher
+ pattern = Avgratio(historic=&gt;a,current=&gt;b,comparator=&gt;o,percentage=&gt;p)</pre><dl COMPACT><dt>historic
+</dt><dd>The number of median values to use for building the 'historic' average.
+</dd><dt>current
+</dt><dd>The number of median values to use for building the 'current' average.
+</dd><dt>comparator
+</dt><dd>Which comparison operator should be used to compare current/historic with percentage.
+</dd><dt>percentage
+</dt><dd>Right hand side of the comparison.</dd></dl>
+ <pre> old &lt;--- historic ---&gt;&lt;--- current ---&gt; now</pre><h2>Example</h2>Take build the average median latency over 10 samples, use this to divide the current average latency built over 2 samples and check if it is bigger than 150%. 
+ <pre> Avgratio(historic=&gt;10,current=&gt;2,comparator=&gt;'&gt;',percentage=&gt;150);
+ avg(current)/avg(historic) &gt; 150/100</pre>This means the matcher will activate when the current latency average is more than 1.5 times the historic latency average established over the last 10 rounds of measurement.
+<h2>Copyright</h2>Copyright (c) 2004 by <font SIZE="-1">OETIKER+PARTNER AG.</font> All rights reserved.
+<h2>Sponsorship</h2>The development of this matcher has been sponsored by Virtela Communications, &lt;<a rel="nofollow" HREF="http://www.virtela.net/">http://www.virtela.net/</a>&gt;.
+<h2>License</h2>This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. 
+<p>This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details.</p>
+<p>You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
+<h2>Author</h2>Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

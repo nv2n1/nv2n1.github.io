@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_setrecursionlimit(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_SetRecursionLimit – set maximum allowable nesting depth in interpreter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_setrecursionlimit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_setrecursionlimit(3)</h1>
+
+
+
+
+
+<p>Tcl_SetRecursionLimit &#8211; set maximum allowable nesting depth in interpreter </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+int
+<code>Tcl_SetRecursionLimit</code>(<i>interp, depth</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter whose recursion limit is to be set. Must be greater than zero.</dd>
+<dd>int <i>depth</i> (in) New limit for nested calls to <code>Tcl_Eval</code> for <i>interp</i>. </dd>
+</dl>
+<h2>Description</h2>
+<p>At any given time Tcl enforces a limit on the number of recursive calls that may be active for <code>Tcl_Eval</code> and related procedures such as <code>Tcl_GlobalEval</code>. Any call to <code>Tcl_Eval</code> that exceeds this depth is aborted with an error. By default the recursion limit is 1000. </p>
+<p> <code>Tcl_SetRecursionLimit</code> may be used to change the maximum allowable nesting depth for an interpreter. The <i>depth</i> argument specifies a new limit for <i>interp</i>, and <code>Tcl_SetRecursionLimit</code> returns the old limit. To read out the old limit without modifying it, invoke <code>Tcl_SetRecursionLimit</code> with <i>depth</i> equal to 0. </p>
+<p> The <code>Tcl_SetRecursionLimit</code> only sets the size of the Tcl call stack: it cannot by itself prevent stack overflows on the C stack being used by the application. If your machine has a limit on the size of the C stack, you may get stack overflows before reaching the limit set by <code>Tcl_SetRecursionLimit</code>. If this happens, see if there is a mechanism in your system for increasing the maximum size of the C stack. </p>
+<h2>Keywords</h2>
+<p>nesting depth, recursion</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

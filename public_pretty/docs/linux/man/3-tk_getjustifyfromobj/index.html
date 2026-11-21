@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_getjustifyfromobj(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_GetJustifyFromObj, Tk_GetJustify, Tk_NameOfJustify – translate between strings and justification styles">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_getjustifyfromobj/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_getjustifyfromobj(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tk_GetJustifyFromObj, Tk_GetJustify, Tk_NameOfJustify &#8211; translate between strings and justification styles </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+int
+<code>Tk_GetJustifyFromObj(</code><i>interp, objPtr, justifyPtr</i><code>)</code>
+int
+<code>Tk_GetJustify(</code><i>interp, string, justifyPtr</i><code>)</code>
+const char *
+<code>Tk_NameOfJustify(</code><i>justify</i><code>)</code></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter to use for error reporting, or NULL.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) String value contains name of justification style, one of &#8220;left&#8221;, &#8220;right&#8221;, or &#8220;center&#8221;. The internal rep will be modified to cache corresponding justify value.</dd>
+<dd>const char <i>*string</i> (in) Same as <i>objPtr</i> except description of justification style is passed as a string.</dd>
+<dd>int <i>*justifyPtr</i> (out) Pointer to location in which to store justify value corresponding to <i>objPtr</i> or <i>string</i>.</dd>
+<dd>Tk_Justify <i>justify</i> (in) Justification style (one of the values listed below).
+</dd></dl>
+<h2>Description</h2>
+<p><code>Tk_GetJustifyFromObj</code> places in <i>*justifyPtr</i> the justify value corresponding to <i>objPtr</i>&#8216;s value. This value will be one of the following:</p>
+<dl COMPACT>
+<dt><code>TK_JUSTIFY_LEFT</code></dt>
+<dd>Means that the text on each line should start at the left edge of the line; as a result, the right edges of lines may be ragged.</dd>
+<dt><code>TK_JUSTIFY_RIGHT</code></dt>
+<dd>Means that the text on each line should end at the right edge of the line; as a result, the left edges of lines may be ragged.</dd>
+<dt><code>TK_JUSTIFY_CENTER</code></dt>
+<dd>Means that the text on each line should be centered; as a result, both the left and right edges of lines may be ragged.</dd></dl>
+<p> Under normal circumstances the return value is <code>TCL_OK</code> and <i>interp</i> is unused. If <i>objPtr</i> does not contain a valid justification style or an abbreviation of one of these names, <code>TCL_ERROR</code> is returned, <i>*justifyPtr</i> is unmodified, and an error message is stored in <i>interp</i>&#8216;s result if <i>interp</i> is not NULL. <code>Tk_GetJustifyFromObj</code> caches information about the return value in <i>objPtr</i>, which speeds up future calls to <code>Tk_GetJustifyFromObj</code> with the same <i>objPtr</i>. </p>
+<p> <code>Tk_GetJustify</code> is identical to <code>Tk_GetJustifyFromObj</code> except that the description of the justification is specified with a string instead of an object. This prevents <code>Tk_GetJustify</code> from caching the return value, so <code>Tk_GetJustify</code> is less efficient than <code>Tk_GetJustifyFromObj</code>. </p>
+<p> <code>Tk_NameOfJustify</code> is the logical inverse of <code>Tk_GetJustify</code>. Given a justify value it returns a statically-allocated string corresponding to <i>justify</i>. If <i>justify</i> is not a legal justify value, then &#8220;unknown justification style&#8221; is returned. </p>
+<h2>Keywords</h2>
+<p>center, fill, justification, string</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

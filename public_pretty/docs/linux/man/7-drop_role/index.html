@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>drop_role(7) · Linux Manual Pages</title>
+<meta name="description" content="DROP ROLE – remove a database role">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-drop_role/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>drop_role(7)</h1>
+
+
+
+
+
+<p>DROP ROLE &#8211; remove a database role </p>
+<h2>Synopsis</h2>
+<pre>DROP ROLE [ IF EXISTS ] <i>name</i> [, ...]</pre>
+<h2>Description</h2>
+<p><code>DROP ROLE</code> removes the specified role(s). To drop a superuser role, you must be a superuser yourself; to drop non-superuser roles, you must have CREATEROLE privilege. </p>
+<p> A role cannot be removed if it is still referenced in any database of the cluster; an error will be raised if so. Before dropping the role, you must drop all the objects it owns (or reassign their ownership) and revoke any privileges the role has been granted. The REASSIGN OWNED [<code><a href="/docs/linux/man/7-reassign_owned/">reassign_owned</a></code>(7)] and DROP OWNED [<code><a href="/docs/linux/man/7-drop_owned/">drop_owned</a></code>(7)] commands can be useful for this purpose. </p>
+<p> However, it is not necessary to remove role memberships involving the role; <code>DROP ROLE</code> automatically revokes any memberships of the target role in other roles, and of other roles in the target role. The other roles are not dropped nor otherwise affected.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the role does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the role to remove.</dd></dl>
+<h2>Notes</h2>
+<p>PostgreSQL includes a program dropuser [<code><a href="/docs/linux/man/1-dropuser/">dropuser</a></code>(1)] that has the same functionality as this command (in fact, it calls this command) but can be run from the command shell.</p>
+<h2>Examples</h2>
+<p>To drop a role: </p>
+<pre>DROP ROLE jonathan;</pre>
+<h2>Compatibility</h2>
+<p>The SQL standard defines <code>DROP ROLE</code>, but it allows only one role to be dropped at a time, and it specifies different privilege requirements than PostgreSQL uses.</p>
+<h2>See Also</h2>
+<p>CREATE ROLE [<code><a href="/docs/linux/man/7-create_role/">create_role</a></code>(7)], ALTER ROLE [<code><a href="/docs/linux/man/7-alter_role/">alter_role</a></code>(7)], SET ROLE [<code><a href="/docs/linux/man/7-set_role/">set_role</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

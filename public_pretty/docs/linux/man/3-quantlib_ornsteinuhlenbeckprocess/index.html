@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_ornsteinuhlenbeckprocess(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::OrnsteinUhlenbeckProcess – Ornstein-Uhlenbeck process class.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_ornsteinuhlenbeckprocess/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_ornsteinuhlenbeckprocess(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::OrnsteinUhlenbeckProcess &#8211; Ornstein-Uhlenbeck process class. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt; </p>
+<p> Inherits <code>QuantLib::StochasticProcess1D</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>OrnsteinUhlenbeckProcess</code> (Real speed, <code>Volatility</code> vol, Real x0=0.0, Real level=0.0) </p>
+<p> <code>StochasticProcess interface</code> </p>
+<p> Real <code>x0</code> () const<br />
+ <i>returns the initial value of the state variable </i><br />
+ Real <code>speed</code> () const </p>
+<p> Real <code>volatility</code> () const </p>
+<p> Real <code>level</code> () const </p>
+<p> Real <code>drift</code> (Time t, Real x) const<br />
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
+ Real <code>diffusion</code> (Time t, Real x) const<br />
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i><br />
+ Real <code>expectation</code> (Time t0, Real x0, Time dt) const </p>
+<p> Real <code>stdDeviation</code> (Time t0, Real x0, Time dt) const </p>
+<p> Real <code>variance</code> (Time t0, Real x0, Time dt) const </p>
+<h2>Detailed Description</h2>
+<p>Ornstein-Uhlenbeck process class. </p>
+<p> This class describes the Ornstein-Uhlenbeck process governed by [ dx = a (r &#8211; x_t) dt + igma dW_t. ]</p>
+<h2>Member Function Documentation</h2>
+<h3>Real expectation (Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>returns the expectation $ E(x_{t_0 + Delta t} | x_{t_0} = x_0) $ of the process after a time interval $ Delta t $ according to the given discretization. This method can be overridden in derived classes which want to hard-code a particular discretization. </p>
+<p> Reimplemented from <code>StochasticProcess1D</code>.</p>
+<h3>Real stdDeviation (Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>returns the standard deviation $ S(x_{t_0 + Delta t} | x_{t_0} = x_0) $ of the process after a time interval $ Delta t $ according to the given discretization. This method can be overridden in derived classes which want to hard-code a particular discretization. </p>
+<p> Reimplemented from <code>StochasticProcess1D</code>.</p>
+<h3>Real variance (Time t0, Real x0, Time dt) const [virtual]</h3>
+<p>returns the variance $ V(x_{t_0 + Delta t} | x_{t_0} = x_0) $ of the process after a time interval $ Delta t $ according to the given discretization. This method can be overridden in derived classes which want to hard-code a particular discretization. </p>
+<p> Reimplemented from <code>StochasticProcess1D</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sg_prevent(8) · Linux Manual Pages</title>
+<meta name="description" content="sg_prevent – send SCSI PREVENT ALLOW MEDIUM REMOVAL command">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sg_prevent/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sg_prevent(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>sg_prevent &#8211; send SCSI PREVENT ALLOW MEDIUM REMOVAL command</p>
+<h2>Synopsis</h2>
+<p><code>sg_prevent</code> [<i>&#8211;allow</i>] [<i>&#8211;help</i>] [<i>&#8211;prevent=PC</i>] [<i>&#8211;verbose</i>] [<i>&#8211;version</i>] <i>DEVICE</i></p>
+<h2>Description</h2>
+<p>Sends a SCSI PREVENT ALLOW MEDIUM REMOVAL command to <i>DEVICE</i>. The default action of this utility is to prevent the removing or ejecting of the medium from a drive. This is done by ignoring the SCSI START STOP UNIT command (see sg_start) and ignoring the eject button on the drive when the user presses it. Drives that hold removable disks, tape cartridges or cd/dvd media typically implement this command. The definition of the &quot;prevent&quot; codes for this command differ between disks and tapes (covered by SBC-3 and SSC-3) and cd/dvd drives (covered by MMC-5). The &quot;prevent codes&quot; described here are from MMC-5.</p>
+<h2>Options</h2>
+<p>Arguments to long options are mandatory for short options as well.</p>
+<dl>
+<dt><code>-a</code>, <code>&#8211;allow</code></dt>
+<dd>allow medium removal. This is equivalent to setting to &#8216;&#8211;prevent=2&#8217;. Cannot be used with <i>&#8211;prevent=PC</i> option (i.e. either use no options (hence prevent removal), this option or <i>&#8211;prevent=PC</i>).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>output the usage message then exit.</dd>
+<dt><code>-p</code>, <code>&#8211;prevent</code>=<i>PC</i></dt>
+<dd>where <i>PC</i> is a prevent code value. Defined values are: 0 allows removal, 1 prevents removal (default), 2 allows persistent removal while 3 prevents persistent removal. &quot;Persistent&quot; in this context means that the initiator (port) that successfully uses code 3 blocks other initiators (ports) from allowing removal. A &quot;persistent prevent&quot; state can be cleared by the owner allowing persistent removal (code 2) or a power cycle (or anything that resets the device (LU)) or some special commands (e.g. various service actions of Persistent Reserve Out, see SPC-3).</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>increase the level of verbosity, (i.e. debug output).</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>print the version string and then exit.</dd></dl>
+<h2>Exit Status</h2>
+<p>The exit status of sg_prevent is 0 when it is successful. Otherwise see the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page.</p>
+<h2>Authors</h2>
+<p>Written by Douglas Gilbert.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;dgilbert at interlog dot com&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2004-2012 Douglas Gilbert<br />
+ This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>See Also</h2>
+<p><code>sg_start(sg3_utils), sg_persist(sg3_utils)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

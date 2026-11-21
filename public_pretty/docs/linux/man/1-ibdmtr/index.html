@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ibdmtr(1) · Linux Manual Pages</title>
+<meta name="description" content="ibdmtr – Fabric Trace Route">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ibdmtr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ibdmtr(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>ibdmtr</code> &#8211; Fabric Trace Route</p>
+<h2>SYNOPSYS</h2>
+<p> ibdmtr [-v][-h] {-c &lt;cbaling file&gt;|-t &lt;topo file&gt;} -s &lt;sm node name&gt;<br />
+&nbsp;<wbr>&nbsp;<wbr>-p&nbsp;<wbr>&lt;sm port num&gt;&nbsp;<wbr>-d&nbsp;<wbr>&lt;comma-sep-dr-path&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> This utility parses a cabling list or topology file describing the systems connections that make a fabric. Then it start following the direct route provided and print out the systems and nodes on the route.</p>
+<h2>ARGUMENTS Required arguments description.</h2>
+<dl>
+<dt>-t|&#8211;topology &lt;file&gt;</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>Topology file describing the network. See man ibdm-topology-file.</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-c|&#8211;cables &lt;file&gt;</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>Cabling list file. Following the line format:</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
+<p> &lt;Sys1Type&gt; &lt;Sys1Name&gt; &lt;Port1Name&gt; &lt;Sys2Type&gt; &lt;Sys2Name&gt; &lt;Port2Name&gt;</dd></dl>
+<dt>-s|&#8211;sm-node &lt;name&gt;</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>The name of the <font SIZE="-1">SM</font> node (not system). E.g. <font SIZE="-1">OSM/U1</font>.</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-p|&#8211;port-num &lt;num&gt;</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>The number of the <font SIZE="-1">SM</font> node port the <font SIZE="-1">SM</font> is attached to</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-d|&#8211;dr-path &lt;comm-sep-dr-path&gt;</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>A list of ports to go out through</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+</dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-v|&#8211;verbose</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>verbsoe mode</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-h|&#8211;help</dt>
+<dd>
+</dd><dl>
+<dl>
+<dt>provide this help message</dt>
+<dd></dd></dl>
+</dl>
+<dl>
+</dl>
+</dl>
+<h2>AUTHOR</h2>
+<p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

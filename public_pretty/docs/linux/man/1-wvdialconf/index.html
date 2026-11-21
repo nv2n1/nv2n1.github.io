@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wvdialconf(1) · Linux Manual Pages</title>
+<meta name="description" content="wvdialconf – build a configuration file for">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-wvdialconf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>wvdialconf(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> wvdialconf &#8211; build a configuration file for <code></p>
+<p><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1)</p>
+<h2>SYNOPSIS</h2>
+<p> <code>wvdialconf</code> <i>/etc/wvdial.conf</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>wvdialconf</code> detects your modem, its maximum baud rate, and a good initialization string and generates or updates the <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1) configuration file based on this information. </p>
+<p> <code>wvdialconf</code> is completely non-interactive. You still need to edit <i>/etc/wvdial.conf</i> to specify the phone number, login name, and password of your internet account in order for <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1) to work. </p>
+<p> It is safe to run <code>wvdialconf</code> if a configuration file already exists. In that case, only the <i>Modem</i>, <i>Baud</i>, <i>Init</i>, and <i>Init2</i> options are changed in the <i>[Dialer Defaults]</i> section, and only if autodetection is successful.</p>
+<h2>BUGS</h2>
+<p> We&#8217;re willing to entertain the possibility. Let us know if you have any problems by sending an e-mail to <code>&lt;wvdial-list [at] lists.nit.ca&gt;</code>. </p>
+<h2>DIAGNOSTICS</h2>
+<p> An exit status of 0 means that a modem was detected and the configuration file was updated successfully. </p>
+<p> Any other value means that something went wrong and the configuration file was unchanged.</p>
+<h2>AUTHORS</h2>
+<p> Dave Coombs and Avery Pennarun for Net Integration Technologies.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1), <code><a href="/docs/linux/man/5-wvdial-conf/">wvdial.conf</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

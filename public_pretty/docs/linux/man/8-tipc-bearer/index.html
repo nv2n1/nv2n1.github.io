@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tipc-bearer(8) · Linux Manual Pages</title>
+<meta name="description" content="tipc-bearer – show or modify TIPC bearers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tipc-bearer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tipc-bearer(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>tipc-bearer &#8211; show or modify TIPC bearers</p>
+<h2>Synopsis</h2>
+<p><code>tipc bearer add media udp name</code> <i>NAME </i><code>remoteip </code><i>REMOTEIP</i> </p>
+<pre><code>tipc bearer enable
+[ domain
+DOMAIN ]
+[ priority
+PRIORITY ]
+media
+{ { eth | ib } device
+    DEVICE }
+|
+{ udp
+    name
+    NAME
+    localip
+    LOCALIP
+    [ localport
+    LOCALPORT ]
+    [ remoteip
+    REMOTEIP ]
+    [ remoteport
+    REMOTEPORT ] }
+tipc bearer disable media
+{ { eth | ib } device
+    DEVICE }
+|
+{ udp
+    name
+    NAME }
+tipc bearer set
+{ priority
+    PRIORITY
+    | tolerance
+    TOLERANCE
+    | window
+    WINDOW
+} media
+{ { eth | ib } device
+    DEVICE }
+|
+{ udp
+    name
+    NAME }
+tipc bearer get
+[ priority | tolerance | window ] media
+{ { eth | ib } device
+    DEVICE }
+|
+{ udp
+    name
+    NAME
+    [ localip | localport | remoteip | remoteport ] }</code></pre>
+<p> <code>tipc bearer list</code> </p>
+<h2>Options</h2>
+<p>Options (flags) that can be passed anywhere in the command chain.</p>
+<dl>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Show help about last valid command. For example <code>tipc bearer &#8211;help</code> will show bearer help and <code>tipc &#8211;help</code> will show general help. The position of the option in the string is irrelevant.</dd></dl>
+<h2>Description</h2>
+<h3>Bearer identification</h3>
+<dl>
+<dt><code>media </code><i>MEDIA</i></dt>
+<dd>Specifies the TIPC media type for a particular bearer to operate on. Different media types have different ways of identifying a unique bearer. For example, <code>ib </code>and <code>eth</code> identify a bearer with a <i>DEVICE</i> while <code>udp</code> identify a bearer with a <i>LOCALIP </i>and a <i>NAME</i> <code>ib</code> &#8211; Infiniband <code>eth</code> &#8211; Ethernet <code>udp</code> &#8211; User Datagram Protocol (UDP)</dd>
+<dt><code>name </code><i>NAME</i></dt>
+<dd>Logical bearer identifier valid for bearers on <code>udp</code> media.</dd>
+<dt><code>device </code><i>DEVICE</i></dt>
+<dd>Physical bearer device valid for bearers on <code>eth</code> and <code>ib</code> media.</dd></dl>
+<h3>Bearer properties</h3>
+<dl>
+<dt><code>domain</code></dt>
+<dd>The addressing domain (region) in which a bearer will establish links and accept link establish requests.</dd>
+<dt><code>priority</code></dt>
+<dd>Default link priority inherited by all links subsequently established over a bearer. A single bearer can only host one link to a particular node. This means the default link priority for a bearer typically affects which bearer to use when communicating with a particular node in an multi bearer setup. For more info about link priority see <code><a href="/docs/linux/man/8-tipc-link/">tipc-link</a></code>(8)</dd>
+<dt><code>tolerance</code></dt>
+<dd>Default link tolerance inherited by all links subsequently established over a bearer. For more info about link tolerance see <code><a href="/docs/linux/man/8-tipc-link/">tipc-link</a></code>(8)</dd>
+<dt><code>window</code></dt>
+<dd>Default link window inherited by all links subsequently established over a bearer. For more info about the link window size see <code><a href="/docs/linux/man/8-tipc-link/">tipc-link</a></code>(8)</dd></dl>
+<h3>UDP bearer options</h3>
+<dl>
+<dt><code>localip </code><i>LOCALIP</i></dt>
+<dd>Specify a local IP v4/v6 address for a <code>udp</code> bearer.</dd>
+<dt><code>localport </code><i>LOCALPORT</i></dt>
+<dd>Specify the local port for a <code>udp</code> bearer. The default port 6118 is used if no port is specified.</dd>
+<dt><code>remoteip </code><i>REMOTEIP</i></dt>
+<dd>Specify a remote IP for a <code>udp</code> bearer. If no remote IP is specified a <code>udp</code> bearer runs in multicast mode and tries to auto-discover its neighbours. The multicast IP address is generated based on the TIPC network ID. If a remote IP is specified the <code>udp</code> bearer runs in point-to-point mode. Multiple <code>remoteip</code> addresses can be added via the <code>bearer add</code> command. Adding one or more unicast <code>remoteip</code> addresses to an existing <code>udp</code> bearer puts the bearer in replicast mode where IP multicast is emulated by sending multiple unicast messages to each configured <code>remoteip.</code> When a peer sees a TIPC discovery message from an unknown peer the peer address is automatically added to the <code>remoteip</code> (replicast) list, thus only one side of a link needs to be manually configured. A <code>remoteip</code> address cannot be added to a multicast bearer.</dd>
+<dt><code>remoteport </code><i>REMOTEPORT</i></dt>
+<dd>Specify the remote port for a <code>udp</code> bearer. The default port 6118 is used if no port is specified. </dd>
+<h2>Exit Status</h2>
+<p>Exit status is 0 if command was successful or a positive integer upon failure.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tipc/">tipc</a></code>(8), <code><a href="/docs/linux/man/8-tipc-link/">tipc-link</a></code>(8), <code><a href="/docs/linux/man/8-tipc-media/">tipc-media</a></code>(8), <code><a href="/docs/linux/man/8-tipc-nametable/">tipc-nametable</a></code>(8), <code><a href="/docs/linux/man/8-tipc-node/">tipc-node</a></code>(8), <code><a href="/docs/linux/man/8-tipc-peer/">tipc-peer</a></code>(8), <code><a href="/docs/linux/man/8-tipc-socket/">tipc-socket</a></code>(8)</p>
+<h2>Reporting Bugs</h2>
+<p>Report any bugs to the Network Developers mailing list <code>&lt;netdev [at] vger.kernel.org&gt;</code> where the development and maintenance is primarily done. You do not have to be subscribed to the list to send a message there.</p>
+<h2>Author</h2>
+<p>Richard Alpe &lt;richard.alpe [at] ericsson.com&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

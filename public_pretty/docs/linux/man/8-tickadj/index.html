@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tickadj(8) · Linux Manual Pages</title>
+<meta name="description" content="tickadj – set time-related kernel variables">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tickadj/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tickadj(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>tickadj &#8211; set time-related kernel variables</p>
+<h2>&nbsp;<wbr></h2>
+<h2>Synopsis</h2>
+<p><code>tickadj [ </code><i>tick</i><code> ]</code> <code>tickadj [ -Aqs ] [ -a </code><i>tickadj</i><code> ] [ -t </code><i>tick</i><code> ]</code> </p>
+<h2>Description</h2>
+<p>The <code>tickadj</code> program reads, and optionally modifies, several timekeeping-related variables in older kernels that do not have support for precision ttimekeeping, including HP-UX, SunOS, Ultrix, SGI and probably others. Those machines provide means to patch the kernel <code>/dev/kmem</code>46 Newer machines with kernel time support, including Solaris, Tru64, FreeBSD and Linux, should NOT use the program, even if it appears to work, as it will destabilize the kernel time support. Use the <code>ntptime</code> program instead. The particular variables that can be changed with <code>tickadj</code> include <code>tick</code>, which is the number of microseconds added to the system time for a clock interrupt, <code>tickadj</code>, which sets the slew rate and resolution used by the <code>adjtime</code> system call, and <code>dosynctodr</code>, which indicates to the kernels on some machines whether they should internally adjust the system clock to keep it in line with time-of-day clock or not. On Linux, only the <code>tick</code> variable is supported and the only allowed argument is the tick value. By default, with no arguments, <code>tickadj</code> reads the variables of interest in the kernel and displays them. At the same time, it determines an &quot;optimal&quot; value for the value of the <code>tickadj</code> variable if the intent is to run the <code>ntpd</code> Network Time Protocol (NTP) daemon, and prints this as well. Since the operation of <code>tickadj</code> when reading the kernel mimics the operation of similar parts of the <code>ntpd</code> program fairly closely, this can be useful when debugging problems with <code>ntpd</code>46 Note that <code>tickadj</code> should be run with some caution when being used for the first time on different types of machines. The operations which <code>tickadj</code> tries to perform are not guaranteed to work on all Unix machines and may in rare cases cause the kernel to crash. </p>
+<h2>Command Line Options</h2>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>-a </code><i>tickadj</i></dt>
+<dd>Set the kernel variable <code>tickadj</code> to the value <i></i><code>tickadj</code><i></i>specified.</dd>
+<dt><code>-A</code></dt>
+<dd>Set the kernel variable <code>tickadj</code> to an internally computed &quot;optimal&quot; value.</dd>
+<dt><code>-t </code><i>tick</i></dt>
+<dd>Set the kernel variable <code>tick</code> to the value <i></i><code>tick</code><i></i> specified.</dd>
+<dt><code>-s</code></dt>
+<dd>Set the kernel variable <code>dosynctodr</code> to zero, which disables the hardware time-of-year clock, a prerequisite for running the <code>ntpd</code> daemon under SunOS 4.x.</dd>
+<dt><code>-q</code></dt>
+<dd>Normally, <code>tickadj</code> is quite verbose about what it is doing. The <code>-q</code> flag tells it to shut up about everything except errors.</dd></dl>
+</dl>
+<h2>Files</h2>
+<p><code>/vmunix /unix /dev/kmem</code></p>
+<h2>Bugs</h2>
+<p>Fiddling with kernel variables at run time as a part of ordinary operations is a hideous practice which is only necessary to make up for deficiencies in the implementation of <code>adjtime</code> in many kernels and/or brokenness of the system clock in some vendors&#8217; kernels. It would be much better if the kernels were fixed and the <code>tickadj</code> program went away.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-ntpd/">ntpd</a>(8) The official HTML documentation. This file was automatically generated from HTML source. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

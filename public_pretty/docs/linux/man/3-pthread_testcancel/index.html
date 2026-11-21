@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pthread_testcancel(3) · Linux Manual Pages</title>
+<meta name="description" content="pthread_testcancel – request delivery of any pending cancellation request">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pthread_testcancel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pthread_testcancel(3)</h1>
+
+
+
+
+
+<p>pthread_testcancel &#8211; request delivery of any pending cancellation request</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pthread.h&gt;
+void pthread_testcancel(void);
+Compile and link with - pthread.</code></pre>
+<h2>Description</h2>
+<p>Calling <code>pthread_testcancel</code>() creates a cancellation point within the calling thread, so that a thread that is otherwise executing code that contains no cancellation points will respond to a cancellation request. </p>
+<p> If cancelability is disabled (using <code><a href="/docs/linux/man/3-pthread_setcancelstate/">pthread_setcancelstate</a></code>(3)), or no cancellation request is pending, then a call to <code>pthread_testcancel</code>() has no effect.</p>
+<h2>Return Value</h2>
+<p>This function does not return a value. If the calling thread is canceled as a consequence of a call to this function, then the function does not return.</p>
+<h2>Errors</h2>
+<p>This function always succeeds.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>pthread_testcancel</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Conforming To</h2>
+<p>POSIX.1-2001, POSIX.1-2008.</p>
+<h2>Examples</h2>
+<p>See <code><a href="/docs/linux/man/3-pthread_cleanup_push/">pthread_cleanup_push</a></code>(3).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pthread_cancel/">pthread_cancel</a></code>(3), <code><a href="/docs/linux/man/3-pthread_cleanup_push/">pthread_cleanup_push</a></code>(3), <code><a href="/docs/linux/man/3-pthread_setcancelstate/">pthread_setcancelstate</a></code>(3), <code><a href="/docs/linux/man/7-pthreads/">pthreads</a></code>(7)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

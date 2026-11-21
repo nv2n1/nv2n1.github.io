@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_keyset(3) · Linux Manual Pages</title>
+<meta name="description" content="page_keyset – Certificate store operations Type of certificates store:">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-page_keyset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>page_keyset(3)</h1>
+
+
+
+
+
+<p>page_keyset &#8211; Certificate store operations Type of certificates store:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>MEMORY In memory based format. Doesnt support storing.</dd>
+<dt>&bull;</dt>
+<dd>FILE FILE supports raw DER certicates and PEM certicates. When PEM is used the file can contain may certificates and match private keys. Support storing the certificates. DER format only supports on certificate and no private key.</dd>
+<dt>&bull;</dt>
+<dd>PEM-FILE Same as FILE, defaulting to PEM encoded certificates.</dd>
+<dt>&bull;</dt>
+<dd>PEM-FILE Same as FILE, defaulting to DER encoded certificates.</dd>
+<dt>&bull;</dt>
+<dd>PKCS11</dd>
+<dt>&bull;</dt>
+<dd>PKCS12</dd>
+<dt>&bull;</dt>
+<dd>DIR</dd>
+<dt>&bull;</dt>
+<dd>KEYCHAIN Apple Mac OS X KeyChain backed keychain object.</dd></dl>
+<p> See the library functions here: <code>hx509 certificate store functions</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

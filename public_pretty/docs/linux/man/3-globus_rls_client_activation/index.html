@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_rls_client_activation(3) · Linux Manual Pages</title>
+<meta name="description" content="Activation –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_rls_client_activation/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_rls_client_activation(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Activation &#8211; </p>
+<p> This module must be activated before any functions in this API may be used.</p>
+<h3>Defines</h3>
+<p> #define <code>GLOBUS_RLS_CLIENT_MODULE</code> (&amp;<code>globus_rls_client_module</code>) </p>
+<h3>Variables</h3>
+<p> globus_module_descriptor_t <code>globus_rls_client_module</code> </p>
+<h2>Detailed Description</h2>
+<p> This module must be activated before any functions in this API may be used. </p>
+<p> This module depends on other Globus modules GLOBUS_COMMON_MODULE and GLOBUS_IO_MODULE, which should be activated first: </p>
+<pre><code>
+globus_module_activate(GLOBUS_COMMON_MODULE);
+globus_module_activate(GLOBUS_IO_MODULE);
+globus_module_activate(GLOBUS_RLS_CLIENT_MODULE);
+</code></pre>
+<p>&nbsp;<wbr>When finished modules should be deactivated in reverse order.&nbsp;<wbr></p>
+<h2>Define Documentation</h2>
+<h3>#define GLOBUS_RLS_CLIENT_MODULE (&amp;<code>globus_rls_client_module</code>)</h3>
+<p> RLS Module Name.</p>
+<h2>Variable Documentation</h2>
+<h3>globus_module_descriptor_t <code>globus_rls_client_module</code></h3>
+<p> RLS module.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus rls client from the source code. </p>
+<h2>Index</h2>
+<dt><a href="#lbAH">Variable Documentation</a></dt>
+<dd>
+</dd><dt><a href="#lbAJ">Author</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

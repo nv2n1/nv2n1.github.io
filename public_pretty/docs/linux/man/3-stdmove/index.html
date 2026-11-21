@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdmove(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdmove/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdmove(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::move - std::move</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;utility&gt;
+template&lt; class T &gt;                                                          (since C++11)
+typename std::remove_reference&lt;T&gt;::type&amp;&amp; move( T&amp;&amp; t ) noexcept;            (until C++14)
+template&lt; class T &gt;                                                          (since C++14)
+constexpr typename std::remove_reference&lt;T&gt;::type&amp;&amp; move( T&amp;&amp; t ) noexcept;</code></pre> 
+<p>std::move is used to indicate that an object t may be &quot;moved from&quot;, i.e. allowing the efficient transfer of resources from t to another object.
+In particular, std::move produces an xvalue_expression that identifies its argument t. It is exactly equivalent to a static_cast to an rvalue reference type.</p>
+<h2>Parameters</h2>
+<p>t - the object to be moved</p>
+<h2>Return value</h2>
+<p>static_cast&lt;typename std::remove_reference&lt;T&gt;::type&amp;&amp;&gt;(t)</p>
+<h2>Notes</h2>
+<p>The functions that accept rvalue reference parameters (including move_constructors, move_assignment_operators, and regular member functions such as std::vector::push_back) are selected, by overload_resolution, when called with rvalue arguments (either prvalues such as a temporary objects or xvalues such as the one produced by std::move). If the argument identifies a resource-owning object, these overloads have the option, but aren&rsquo;t required, to move any resources held by the argument. For example, a move constructor of a linked list might copy the pointer to the head of the list and store nullptr in the argument instead of allocating and copying individual nodes.
+Names of rvalue_reference variables are lvalues and have to be converted to xvalues to be bound to the function overloads that accept rvalue reference parameters, which is why move_constructors and move_assignment_operators typically use std::move: // Simple move constructor</p>
+<p>A(A &amp;&amp;arg)
+: member(std::move(arg.member)) // the expression &quot;arg.member&quot; is lvalue</p>
+<p>{
+}</p>
+<p>// Simple move assignment operator</p>
+<p>A &amp;operator=(A &amp;&amp;other)
+{
+member = std::move(other.member);
+return *this;
+}
+One exception is when the type of the function parameter is rvalue reference to type template parameter (&quot;forwarding reference&quot; or &quot;universal reference&quot;), in which case std::forward is used instead.
+Unless otherwise specified, all standard library objects that have been moved from are placed in a valid but unspecified state. That is, only the functions without preconditions, such as the assignment operator, can be safely used on the object after it was moved from: std::vector&lt;std::string&gt; v;</p>
+<p>std::string str = &quot;example&quot;;</p>
+<p>v.push_back(std::move(str)); // str is now valid but unspecified</p>
+<p>str.back(); // undefined behavior if size() == 0: back() has a precondition !empty()</p>
+<p>str.clear(); // OK, clear() has no preconditions
+Also, the standard library functions called with xvalue arguments may assume the argument is the only reference to the object; if it was constructed from an lvalue with std::move, no aliasing checks are made. In particular, this means that standard library move assignment operators do not have to perform self-assignment checks: std::vector&lt;int&gt; v = {2, 3, 3};</p>
+<p>v = std::move(v); // the value of v is unspecified</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;utility&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+int main()
+{
+std::string str = &quot;Hello&quot;;
+std::vector&lt;std::string&gt; v;
+// uses the push_back(const T&amp;) overload, which means
+// we&rsquo;ll incur the cost of copying str
+v.push_back(str);
+std::cout &lt;&lt; &quot;After copy, str is &amp;quot;&quot; &lt;&lt; str &lt;&lt; &quot;&amp;quot;\n&quot;;
+// uses the rvalue reference push_back(T&amp;&amp;) overload,
+// which means no strings will be copied; instead, the contents
+// of str will be moved into the vector.  This is less
+// expensive, but also means str might now be empty.
+v.push_back(std::move(str));
+std::cout &lt;&lt; &quot;After move, str is &amp;quot;&quot; &lt;&lt; str &lt;&lt; &quot;&amp;quot;\n&quot;;
+std::cout &lt;&lt; &quot;The contents of the vector are &amp;quot;&quot; &lt;&lt; v[0]
+&lt;&lt; &quot;&amp;quot;, &amp;quot;&quot; &lt;&lt; v[1] &lt;&lt; &quot;&amp;quot;\n&quot;;
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> After copy, str is &quot;Hello&quot;
+ <wbr> After move, str is &quot;&quot;
+ <wbr> The contents of the vector are &quot;Hello&quot;, &quot;Hello&quot;</p>
+<h2>See also</h2>
+<p>forward forwards a function argument
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+move_if_noexcept obtains an rvalue reference if the move constructor does not throw
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i>
+move moves a range of elements to a new location
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

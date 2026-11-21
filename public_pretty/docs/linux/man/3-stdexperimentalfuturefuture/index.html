@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalfuturefuture(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalfuturefuture/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalfuturefuture(3)</h1>
+
+
+
+
+
+<p>std::experimental::future&lt;T&gt;::future - std::experimental::future&lt;T&gt;::future</p>
+<h2>Synopsis</h2>
+<pre><code>future() noexcept;
+(1)
+    future(std::experimental::future&lt;T&gt; &amp;&amp;f) noexcept;
+(2)
+    future(const std::experimental::future&lt;T&gt; &amp;) = delete;
+(3)
+    future(std::experimental::future&lt;std::experimental::future&lt;T&gt;&gt; &amp;&amp;other) noexcept;
+(4)</code></pre> 
+<ol>
+<li>Default constructor. Constructs an empty future object that does not refer to a shared state.</li>
+<li>Constructs a future object, transferring the shared state held by f, if any. After construction, f.valid() is false.</li>
+<li>Copy constructor is deleted. future cannot be copied.</li>
+<li>Unwrapping constructor. Constructs a future object from the shared state referred to by other, if any. If other.valid() == false prior to this call, the constructed future object is empty. Otherwise, the resulting future object becomes ready when one of the following happens:</li>
+</ol>
+<ul>
+<li>other and other.get() are both ready. The value or exception from other.get() is stored in the shared state associated with the resulting future object.</li>
+<li>other is ready, but other.get() is invalid. An exception of type std::future_error with an error condition of std::future_errc::broken_promise is stored in the shared state associated with the resulting future object.
+After this constructor returns, valid() is equal to the value of other.valid() prior to this call, and other.valid() == false.</li>
+</ul>
+<h2>Parameters</h2>
+<p>f - another future object to initialize with
+other - A std::experimental::future object to unwrap</p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example
+Defect reports
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.
+DR Applied to Behavior as published Correct behavior
+LWG_2697 Concurrency TS behavior of unwrapping constructor is unclear with an invalid future constructs an empty future</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the future object
+constructor <i>(public member function of std::future&lt;T&gt;)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

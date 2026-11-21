@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selabel_lookup_best_match(3) · Linux Manual Pages</title>
+<meta name="description" content="selabel_lookup_best_match – obtain a best match SELinux security context – Only supported on file backend.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-selabel_lookup_best_match/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>selabel_lookup_best_match(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>selabel_lookup_best_match &#8211; obtain a best match SELinux security context &#8211; Only supported on file backend.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;selinux/selinux.h&gt;
+#include &lt;selinux/label.h&gt;
+int selabel_lookup_best_match(struct selabel_handle *hnd,
+                              char **context,
+                              const char *key,
+                              const char **links,
+                              int type);
+int selabel_lookup_best_match_raw(struct selabel_handle *hnd,
+                                  char **context,
+                                  const char *key,
+                                  const char **links,
+                                  int type);</code></pre>
+<h2>Description</h2>
+<p><code>selabel_lookup_best_match</code>() performs a best match lookup operation on the handle <i>hnd</i>, returning the result in the memory pointed to by <i>context</i>, which must be freed by the caller using <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3). The <i>key</i> parameter is a file path to check for best match using zero or more <i>link</i> (aliases) parameters. The order of precedence for best match is:</p>
+<dl>
+<dd>
+</dd><dl>
+<dt>1.</dt>
+<dd>An exact match for the real path (<i>key</i>) or</dd>
+<dt>2.</dt>
+<dd>An exact match for any of the <i>link</i>s (aliases), or</dd>
+<dt>3.</dt>
+<dd>The longest fixed prefix match.</dd></dl>
+</dl>
+<p> The <i>type</i> parameter is an optional file <i>mode</i> argument that should be set to the mode bits of the file, as determined by <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2). <i>mode</i> may be zero, however full matching may not occur. </p>
+<p> <code>selabel_lookup_best_match_raw</code>() behaves identically to <code>selabel_lookup_best_match</code>() but does not perform context translation.</p>
+<h2>Return Value</h2>
+<p>On success, zero is returned. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
+<h2>Errors</h2>
+<dl>
+<dt><code>ENOENT</code></dt>
+<dd>No context corresponding to the input <i>key</i> and <i>type</i> was found.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>The <i>key</i> and/or <i>type</i> inputs are invalid, or the context being returned failed validation.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>An attempt to allocate memory failed. </dd>
+<h2>Notes</h2>
+<p>Example usage &#8211; When a service creates a device node, it may also create one or more symlinks to the device node. These symlinks may be the only stable name for the device, e.g. if the partition is dynamically assigned. The file label backend supports this by looking up the &quot;best match&quot; for a device node based on its real path (<i>key</i>) and any <i>link</i>s to it (aliases). The order of precedence for best match is described above. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3), <code><a href="/docs/linux/man/3-selabel_stats/">selabel_stats</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2), <code><a href="/docs/linux/man/5-selabel_file/">selabel_file</a></code>(5) </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

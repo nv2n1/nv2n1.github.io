@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pdfopt(1) · Linux Manual Pages</title>
+<meta name="description" content="pdfopt – Ghostscript PDF Optimizer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pdfopt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pdfopt(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pdfopt &#8211; Ghostscript PDF Optimizer</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pdfopt</code> [ <i>options</i> ] <i>input.pdf output.pdf</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>pdfopt</code> uses <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to convert the Adobe <code>Portable Document Format</code> (PDF) file &quot;input.pdf&quot; to a so-called optimized form in &quot;output.pdf&quot;. Optimization puts the elements of the file into a more linear order and adds &quot;hint&quot; pointers, allowing Adobe&#8217;s Acrobat(TM) products to display individual pages of the file more quickly when accessing the file through a network. </p>
+<p> Note: input.pdf and output.pdf must not be the same. If they are, the file will probably be destroyed. <code>pdfopt</code> currently does not check for this.</p>
+<h2>FILES</h2>
+<p> Run &quot;<code>gs -h</code>&quot; to find the location of Ghostscript documentation on your system, from which you can get more details.</p>
+<h2>SEE ALSO</h2>
+<p> &quot;Linearized PDF&quot; in Adobe&#8217;s PDF reference manual, <a rel="nofollow" href="http://partners.adobe.com/asn/developer/acrosdk/DOCS/pdfspec.pdf">http://partners.adobe.com/asn/developer/acrosdk/DOCS/pdfspec.pdf</a></p>
+<h2>VERSION</h2>
+<p> This document was last revised for Ghostscript version 9.06.</p>
+<h2>AUTHOR</h2>
+<p> Artifex Software, Inc. are the primary maintainers of Ghostscript. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

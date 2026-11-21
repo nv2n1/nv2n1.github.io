@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>relevancerates(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-relevancerates/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>relevancerates(3)</h1>
+
+
+
+
+
+<p>QuantLib::EvolutionDescription - Market-model evolution description.</p>
+<h2>Synopsis</h2>
+<pre><code>EvolutionDescription (const std::vector&lt; Time &gt; &amp;rateTimes, const std::vector&lt; Time &gt; &amp;evolutionTimes=std::vector&lt; Time &gt;(), const std::vector&lt; std::pair&lt; Size, Size &gt; &gt; &amp;relevanceRates=std::vector&lt; range &gt;())
+const std::vector&lt; Time &gt; &amp; rateTimes () const
+const std::vector&lt; Time &gt; &amp; rateTaus () const
+const std::vector&lt; Time &gt; &amp; evolutionTimes () const
+const std::vector&lt; Size &gt; &amp; firstAliveRate () const
+const std::vector&lt; std::pair&lt; Size, Size &gt; &gt; &amp; relevanceRates () const
+Size numberOfRates () const
+Size numberOfSteps () const</code></pre>
+<h3>Public Member Functions</h3>
+<pre><code>EvolutionDescription (const std::vector&lt; Time &gt; &amp;rateTimes, const std::vector&lt; Time &gt; &amp;evolutionTimes=std::vector&lt; Time &gt;(), const std::vector&lt; std::pair&lt; Size, Size &gt; &gt; &amp;relevanceRates=std::vector&lt; range &gt;())
+const std::vector&lt; Time &gt; &amp; rateTimes () const
+const std::vector&lt; Time &gt; &amp; rateTaus () const
+const std::vector&lt; Time &gt; &amp; evolutionTimes () const
+const std::vector&lt; Size &gt; &amp; firstAliveRate () const
+const std::vector&lt; std::pair&lt; Size, Size &gt; &gt; &amp; relevanceRates () const
+Size numberOfRates () const
+Size numberOfSteps () const</code></pre>
+<h2>Detailed Description</h2>
+<p>Market-model evolution description.</p>
+<p>This class stores:</p>
+<dl><dt>1.
+</dt><dd>evolutionTimes = the times defining the rates that are to be evolved,
+</dd><dt>2.
+</dt><dd>rateTimes = the times at which the rates need to be known,
+</dd><dt>3.
+</dt><dd>relevanceRates = which rates need to be known at each time.</dd></dl>
+<p>This class is really just a tuple of evolution and rate times;</p>
+<dl><dt>*
+</dt><dd>there will be n+1 rate times expressing payment and reset times of forward rates.
+</dd><dt>*
+</dt><dd>there will be any number of evolution times.
+</dd><dt>*
+</dt><dd>we also store which part of the rates are relevant for pricing via relevance rates. The important part for the i-th step will then range from relevanceRates[i].first to relevanceRates[i].second. Default values for relevance rates will be 0 and n.
+</dd><dt>*
+</dt><dd>example for n = 5:</dd></dl>
+ <pre> |-----|-----|-----|-----|-----| (size = 6)
+ t0 t1 t2 t3 t4 t5 rateTimes
+ f0 f1 f2 f3 f4 forwardRates
+ d0 d1 d2 d3 d4 d5 discountBonds
+ d0/d0 d1/d0 d2/d0 d3/d0 d4/d0 d5/d0 discountRatios
+ sr0 sr1 sr2 sr3 sr4 coterminalSwaps</pre>&nbsp;<wbr>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

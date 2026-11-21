@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclude a Package from a Specific Repository in Yum - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-exclude-a-package-from-a-specific-repository-only-in-yum/">
+  <meta name="description" content="When managing packages on RHEL, CentOS, AlmaLinux, or Fedora, you sometimes need to prevent a package from being installed or updated from a particular …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Exclude a Package from a Specific Repository in Yum">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-exclude-a-package-from-a-specific-repository-only-in-yum/">
+  <meta property="og:description" content="When managing packages on RHEL, CentOS, AlmaLinux, or Fedora, you sometimes need to prevent a package from being installed or updated from a particular …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/testing-devops/">Testing &amp; DevOps</a>
+        </nav>
+        
+        <h1>Exclude a Package from a Specific Repository in Yum</h1>
+        <time class="post-date" datetime="2018-03-29T08:47:37Z">March 29, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When managing packages on RHEL, CentOS, AlmaLinux, or Fedora, you sometimes need to prevent a package from being installed or updated from a particular repository. This is useful when multiple repos provide the same package and you want to control which version gets pulled in.</p>
+<h2 id="repository-specific-exclusions-with-dnf">Repository-specific exclusions with DNF</h2>
+<p>Modern systems use DNF (which supersedes yum in Fedora 22+ and RHEL 8+). The core approach is similar across versions, but DNF offers better granularity.</p>
+<h3 id="command-line-exclusion">Command-line exclusion</h3>
+<p>To exclude a package from a specific repo during installation or update:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf install my-package --exclude<span class="o">=</span>my-package
+</span></span></code></pre></div><p>However, this excludes from <em>all</em> repos. To exclude only from a specific repository, use the <code>excludepkgs</code> directive in that repo’s configuration:</p>
+<h3 id="repository-level-exclusions">Repository-level exclusions</h3>
+<p>Edit the repository config file directly. For example, to exclude a package from EPEL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/yum.repos.d/epel.repo</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>epel<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Extra Packages <span class="k">for</span> Enterprise Linux
+</span></span><span class="line"><span class="cl"><span class="nv">baseurl</span><span class="o">=</span>https://download.fedoraproject.org/pub/epel/<span class="nv">$releasever</span>/Everything/<span class="nv">$basearch</span>/
+</span></span><span class="line"><span class="cl"><span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gpgcheck</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">excludepkgs</span><span class="o">=</span>nginx*
+</span></span></code></pre></div><p>This prevents any package matching <code>nginx*</code> from being installed or updated from EPEL, while still allowing it from other enabled repos.</p>
+<h3 id="global-exclusions-in-dnfconf">Global exclusions in dnf.conf</h3>
+<p>For system-wide exclusions in the main configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/dnf/dnf.conf</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>main<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">exclude</span><span class="o">=</span>kernel-* php-*
+</span></span></code></pre></div><p>Separate multiple packages with spaces. Use wildcards (<code>*</code>) to match package patterns. This applies globally unless overridden at the repository level.</p>
+<h2 id="checking-which-repository-provides-a-package">Checking which repository provides a package</h2>
+<p>Before excluding, verify which repos provide a package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf repoquery --available nginx
+</span></span></code></pre></div><p>Output shows the repo and version:</p>
+<pre><code>nginx-1.24.0-1.fc40.x86_64    @fedora
+nginx-1.25.2-1.el9.x86_64     @epel
+</code></pre>
+<h2 id="using-module-streams-for-version-selection">Using module streams for version selection</h2>
+<p>RHEL 8+ and Fedora systems often provide multiple versions via AppStreams (module streams). Instead of excluding packages, switch between versions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List available streams</span>
+</span></span><span class="line"><span class="cl">dnf module list nodejs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch to a specific stream</span>
+</span></span><span class="line"><span class="cl">dnf module <span class="nb">enable</span> nodejs:18
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install from the enabled stream</span>
+</span></span><span class="line"><span class="cl">dnf install nodejs
+</span></span></code></pre></div><p>This approach is cleaner than exclusions for packages with multiple maintained versions (Node.js, PostgreSQL, etc.).</p>
+<h2 id="excluding-with-constraints">Excluding with constraints</h2>
+<p>For finer control, use DNF’s <code>--best</code> flag combined with version pinning:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install latest but exclude beta versions</span>
+</span></span><span class="line"><span class="cl">dnf install <span class="s1">&#39;my-package &gt;= 2.0&#39;</span> --exclude<span class="o">=</span><span class="s1">&#39;my-package-*beta*&#39;</span>
+</span></span></code></pre></div><h2 id="persistent-repo-specific-exclusions">Persistent repo-specific exclusions</h2>
+<p>Create or modify repo files in <code>/etc/yum.repos.d/</code> or <code>/etc/dnf/repos.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/yum.repos.d/local-custom.repo</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>local-custom<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">name</span><span class="o">=</span>Local Custom Repository
+</span></span><span class="line"><span class="cl"><span class="nv">baseurl</span><span class="o">=</span>file:///opt/local/repo
+</span></span><span class="line"><span class="cl"><span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">priority</span><span class="o">=</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="nv">excludepkgs</span><span class="o">=</span>conflicting-app* old-lib*
+</span></span></code></pre></div><p>The <code>priority</code> setting (1-99, lower is higher priority) also influences which repo’s package gets selected when multiple repos provide the same package.</p>
+<h2 id="verifying-exclusions">Verifying exclusions</h2>
+<p>Check what’s actually excluded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf config-manager --dump-variable<span class="o">=</span>excludepkgs
+</span></span></code></pre></div><p>Or check a specific repo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf config-manager --dump-variable<span class="o">=</span>excludepkgs --repo<span class="o">=</span>epel
+</span></span></code></pre></div><h2 id="temporary-overrides">Temporary overrides</h2>
+<p>To temporarily bypass exclusions for a single operation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dnf install my-package --setopt<span class="o">=</span><span class="nv">exclude</span><span class="o">=</span>
+</span></span></code></pre></div><p>This clears all exclusions for that command only.</p>
+<h2 id="important-notes">Important notes</h2>
+<ul>
+<li>Repository-level exclusions take precedence over global settings</li>
+<li>Wildcards use shell globbing (not regex): <code>nginx*</code>, <code>php-*</code>, <code>kernel-*</code></li>
+<li>Exclusions apply to both install and update operations</li>
+<li>If you exclude a package that’s required as a dependency, DNF will fail — use module streams or dependency resolution instead</li>
+<li>Check <code>/var/log/dnf.log</code> to see which packages were skipped due to exclusions</li>
+</ul>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Exclude a Package from a Specific Repository in Yum with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Exclude a Package from a Specific Repository in Yum. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

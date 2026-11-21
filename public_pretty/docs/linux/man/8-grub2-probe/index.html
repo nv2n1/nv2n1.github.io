@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grub2-probe(8) · Linux Manual Pages</title>
+<meta name="description" content="grub-probe — Probe device information for a given path.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-grub2-probe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>grub2-probe(8)</h1>
+
+
+
+
+
+<p><code>grub-probe</code> &#8212; Probe device information for a given path. </p>
+<h2>Synopsis</h2>
+<p><code>grub-probe</code> ce [-m | &#8211;device-map=<i>FILE</i>]</p>
+<dl>
+<dd>[-t | &#8211;target=(fs|fs_uuid|fs_label|drive|device|partmap|</dd></dl>
+<dl>
+<dd>abstraction|cryptodisk_uuid|</dd></dl>
+<dl>
+<dd>msdos_parttype)]</dd></dl>
+<dl>
+<dd>[-v | &#8211;verbose] (PATH|DEVICE) </dd>
+<h2>Description</h2>
+<p><code>grub-probe</code> probes a path or device for filesystem and related information. </p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;device</dt>
+<dd>Final option represents a <i>DEVICE</i>, rather than a filesystem <i>PATH</i>.</dd>
+<dt>&#8211;device-map=<i>FILE</i></dt>
+<dd>Use <i>FILE</i> as the device map. The default value is <i>/boot/grub/device.map</i>. </dd>
+<dt>&#8211;target=(fs|fs_uuid|fs_label|drive|device|partmap|msdos_parttype)</dt>
+<dd>Select among various output definitions. The default is <i>fs</i>.</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>fs</i></dt>
+<dd>filesystem module </dd>
+<dt><i>fs_uuid</i></dt>
+<dd>filesystem UUID </dd>
+<dt><i>fs_label</i></dt>
+<dd>filesystem label </dd>
+<dt><i>drive</i></dt>
+<dd>GRUB drive name </dd>
+<dt><i>device</i></dt>
+<dd>System device </dd>
+<dt><i>partmap</i></dt>
+<dd>partition map module </dd>
+<dt><i>abstraction</i></dt>
+<dd>abstraction module </dd>
+<dt><i>cryptodisk_uuid</i></dt>
+<dd>cryptographic container </dd>
+<dt><i>msdos_partmap</i></dt>
+<dd>MS-DOS partition map</dd></dl>
+</dl>
+<dt>&#8211;verbose</dt>
+<dd>Print verbose output. </dd>
+<dt>(<i>PATH</i>|<i>DEVICE</i>)</dt>
+<dd>If &#8211;device is passed, a block <i>DEVICE</i>. Otherwise, the <i>PATH</i> of a file on the filesystem. </dd>
+</dl>
+<h2>See Also</h2>
+<p><code>info grub</code> </p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

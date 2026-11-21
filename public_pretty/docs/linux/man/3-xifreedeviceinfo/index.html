@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xifreedeviceinfo(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xifreedeviceinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xifreedeviceinfo(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XIQueryDevice, XIFreeDeviceInfo - get information about devices.</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput2.h&gt;</pre><pre>XIDeviceInfo* XIQueryDevice( Display *display,
+ int deviceid,
+ int *ndevices_return);</pre><pre>XIFreeDeviceInfo( XIDeviceInfo *info);</pre><pre>deviceid
+ Specifies the device to query or XIAllDevices or
+ XIAllMasterDevices.</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>ndevices_return
+ Returns the number of devices returned.</pre><pre>info
+ A list of device XIDeviceInfo structs to be freed.</pre><h2>Description</h2><dl COMPACT><dd><pre>The XIQueryDevice returns information about one or more input
+devices. If the deviceid specifies a device, ndevices_return is
+1 and the returned information describes only the requested
+device. If deviceid is XIAllDevices or XIAllMasterDevices,
+ndevices_return is the number of devices or master devices,
+respectively, and the returned information represents all
+devices or all master devices, respectively.</pre></dd></dl><dl COMPACT><dd><pre>To free the XIDeviceInfo array returned by XIQueryDevice, use
+XIFreeDeviceInfo.</pre></dd></dl><dl COMPACT><dd><pre>For each input device requested, the XIQueryDevice returns an
+XIDeviceInfo structure. Each structure contains information
+about the capabilities of one input device available to the
+server.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int deviceid;
+ char *name;
+ int use;
+ int attachment;
+ Bool enabled;
+ int num_classes;
+ XIAnyClassInfo **classes;
+} XIDeviceInfo;</pre></dd></dl><dl COMPACT><dd><pre>The deviceid is the numeric unique id of the device. A deviceid
+is unique for the life-time of a device but a server may re-use
+the id once a device has been removed.</pre></dd></dl><dl COMPACT><dd><pre>The name points to a null-terminated string specifying the
+identifier of the device.</pre></dd></dl><dl COMPACT><dd><pre>The use and attachment fields specify the type of the device
+and the current attachment or pairing.
+- If use is XIMasterPointer, the device is a master pointer and
+ attachment specifies the deviceid of the paired master
+ keyboard.
+- If use is XIMasterKeyboard, the device is a master keyboard,
+ and the attachment field specifies the paired master pointer.
+- If use is XISlavePointer, the device is a slave device and
+ currently attached to the master pointer specified in
+ attachement.
+- If use is XISlaveKeyboard, the device is a slave device an
+ currently attached to the master keyboard specified in
+ attachment.
+- If use is XIFloatingSlave, the device is a slave device
+ currently not attached to any master device. The value of the
+ attachment field for floating slave devices is undefined.</pre></dd></dl><dl COMPACT><dd><pre>The enabled field specifies if the device is currently enabled
+and can send events. Disabled devices will not send events.</pre></dd></dl><dl COMPACT><dd><pre>The num_classes field specifies the number of input classes
+pointed to by classes. The first two fields of all input
+classes are identical.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+} XIAnyClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>The type field specifies the type of the input class.
+Currently, the following types are defined:
+ XIKeyClass, XIButtonClass, XIValuatorClass, XIScrollClass,
+ XITouchClass</pre></dd></dl><dl COMPACT><dd><pre>In the future, additional types may be added. Clients are
+required to ignore unknown input classes.</pre></dd></dl><dl COMPACT><dd><pre>The sourceid is the deviceid this class originated from. For
+master devices, the sourceid is typically the id of the slave
+device currently sending events. For slave devices, the
+sourceid is typically the device's id.</pre></dd></dl><dl COMPACT><dd><pre>A device may have zero or one XIButtonClass, denoting the
+device's capability to send button events.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
+ int mask_len;
+ unsigned char *mask;
+} XIButtonState;</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+ int num_buttons;
+ Atom *labels;
+ XIButtonState state;
+} XIButtonClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>The num_buttons field specifies the number of buttons available
+on this device. A device that has an XIButtonClass must have at
+least one button.</pre></dd></dl><dl COMPACT><dd><pre>labels is a list of num_buttons Atoms specifying the button
+labels for this device. If the label is not None, then the
+label specifies the type of button in physical device order
+(i.e. as the buttons are numbered on the physical input
+device).</pre></dd></dl><dl COMPACT><dd><pre>The state is the current button state as seen by clients (i.e.
+after button mapping is applied). The mask_len field specifies
+the length of mask in bytes. For each button on the device, the
+respective bit in mask is set if the button is currently
+logically down.</pre></dd></dl><dl COMPACT><dd><pre>A device may have zero or one XIKeyClass, denoting the device's
+capability to send key events.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+ int num_keycodes;
+ int *keycodes;
+} XIKeyClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>The num_keycodes field specifies the number of keycodes
+available on this device. A device that has an XIKeyClass must
+have at least one keycode.</pre></dd></dl><dl COMPACT><dd><pre>keycodes is a list of num_keycodes keycodes the device may
+send.</pre></dd></dl><dl COMPACT><dd><pre>A device may have zero or more XIValuatorClass, denoting the
+device's capability to send coordinates.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+ int number;
+ Atom label;
+ double min;
+ double max;
+ double value;
+ int resolution;
+ int mode;
+} XIValuatorClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>The number field specifies the number of the axis on the
+physical device.</pre></dd></dl><dl COMPACT><dd><pre>If the label field is not None, the value of label is an Atom
+describing the axis.</pre></dd></dl><dl COMPACT><dd><pre>min and max are the minimum and maximum values allowed on this
+axis. If both are zero, no minumum or maximum values are set on
+this device. value is the current value of this axis.</pre></dd></dl><dl COMPACT><dd><pre>The resolution field specifies the resolution of the device in
+units/m.</pre></dd></dl><dl COMPACT><dd><pre>The mode specifies the mode of this axis. If the mode is
+XIModeAbsolute this axis sends absolute coordinates. If the
+mode is XIModeRelative, this device sends relative coordinates.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+ int number;
+ int scroll_type;
+ double increment;
+ int flags;
+} XIScrollClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>This class describes scrolling capability on a valuator. For
+each XIScrollClassInfo, an XIValuatorClassInfo with the same
+number is present on the device.</pre></dd></dl><dl COMPACT><dd><pre>The number field specifies the valuator number on the physical
+device that this scroll information applies to. See the
+respective XIValuatorClassInfo for detailed information on this
+valuator.</pre></dd></dl><dl COMPACT><dd><pre>The scroll_type field specifies the type of scrolling, either
+XIScrollTypeVertical or XIScrollTypeHorizontal.</pre></dd></dl><dl COMPACT><dd><pre>The increment specifies the value change considered one unit of
+scrolling down.</pre></dd></dl><dl COMPACT><dd><pre>The flags field specifies flags that apply to this scrolling
+information:</pre></dd></dl><dl COMPACT><dd><pre>If XIScrollFlagNoEmulation is set, the server will not
+emulate legacy button events for valuator changes on this
+valuator.</pre></dd></dl><dl COMPACT><dd><pre>If XIScrollFlagPreferred is set, this axis is the
+preferred axis for this scroll type and will be used for
+the emulation of XI_Motion events when the driver submits
+legacy scroll button events.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct
+{
+ int type;
+ int sourceid;
+ int mode;
+ int num_touches;
+} XITouchClassInfo;</pre></dd></dl><dl COMPACT><dd><pre>A device may have zero or one XITouchClassInfo, denoting
+multi-touch capability on the device. A device with a XITouchClassInfo
+may send TouchBegin, TouchUpdate, TouchEnd and TouchOwnership events.</pre></dd></dl><dl COMPACT><dd><pre>The mode field is either XIDirectTouch for direct-input touch devices
+such as touchscreens or XIDependentTouch for indirect input devices such
+as touchpads. For XIDirectTouch devices, touch events are sent to window
+at the position the touch occured. For XIDependentTouch devices, touch
+events are sent to the window at the position of the device's sprite.</pre></dd></dl><dl COMPACT><dd><pre>The num_touches field defines the maximum number of simultaneous touches
+the device supports. A num_touches of 0 means the maximum number of
+simultaneous touches is undefined or unspecified. This field should be
+used as a guide only, devices will lie about their capabilities.</pre></dd></dl><dl COMPACT><dd><pre>A device with an XITouchClassInfo may still send pointer events. The
+valuators must be defined with the respective XIValuatorClass
+classes. A valuator may send both pointer and touch-events.</pre></dd></dl><dl COMPACT><dd><pre>XIQueryDevice can generate a BadDevice error.</pre></dd></dl><dl COMPACT><dd><pre>XIFreeDeviceInfo frees the information returned by
+XIQueryDevice.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+ An invalid device was specified. The device does not
+ exist or is not a pointer device.</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

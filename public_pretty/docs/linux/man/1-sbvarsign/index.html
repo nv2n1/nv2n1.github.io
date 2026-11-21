@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sbvarsign(1) · Linux Manual Pages</title>
+<meta name="description" content="sbvarsign – UEFI authenticated variable signing tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sbvarsign/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sbvarsign(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> sbvarsign &#8211; UEFI authenticated variable signing tool </p>
+<h2>SYNOPSIS</h2>
+<p> <code>sbvarsign</code> [<i>,options/</i>] <i>,&#8211;key &lt;keyfile&gt; &#8211;cert &lt;certfile&gt; &lt;var-name&gt; &lt;var-data-file&gt;/</i></p>
+<h2>DESCRIPTION</h2>
+<p> Sign a blob of data for use in SetVariable().</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;engine</code> &lt;eng&gt;</dt>
+<dd> use the specified engine to load the key</dd>
+<dt><code>&#8211;key</code> &lt;keyfile&gt;</dt>
+<dd> signing key (PEM-encoded RSA private key)</dd>
+<dt><code>&#8211;cert</code> &lt;certfile&gt;</dt>
+<dd> certificate (x509 certificate)</dd>
+<dt><code>&#8211;include-attrs</code></dt>
+<dd> include attrs at beginning of output file</dd>
+<dt><code>&#8211;guid</code> &lt;GUID&gt;</dt>
+<dd> EFI GUID for the variable. If omitted, EFI_IMAGE_SECURITY_DATABASE or EFI_GLOBAL_VARIABLE (depending on &lt;var-name&gt;) will be used.</dd>
+<dt><code>&#8211;attr</code> &lt;attrs&gt;</dt>
+<dd> variable attributes. One or more of: NON_VOLATILE BOOTSERVICE_ACCESS RUNTIME_ACCESS TIME_BASED_AUTHENTICATED_WRITE_ACCESS APPEND_WRITE</dd>
+<dt>Separate multiple attrs with a comma,</dt>
+<dd> default is all attributes, TIME_BASED_AUTH&#8230; is always included.</dd>
+<dt><code>&#8211;output</code> &lt;file&gt;</dt>
+<dd> write signed data to &lt;file&gt; (default &lt;var-data-file&gt;.signed) </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

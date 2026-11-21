@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smokeping_probes_nfsping(3) · Linux Manual Pages</title>
+<meta name="description" content="Smokeping::probes::NFSping – NFSping Probe for SmokePing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-smokeping_probes_nfsping/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>smokeping_probes_nfsping(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Smokeping::probes::NFSping &#8211; NFSping Probe for SmokePing </p>
+<h2>Synopsis</h2>
+<pre> *** Probes ***
+ +NFSping
+ binary = /usr/local/bin/nfsping # mandatory
+ blazemode = true
+ hostinterval = 1.5
+ mininterval = 0.001
+ offset = 50%
+ pings = 20
+ step = 300
+ timeout = 1.5
+ # [...]
+ *** Targets ***
+ probe = NFSping # if this should be the default probe
+ # [...]
+ + mytarget
+ # probe = NFSping # if the default probe is something else
+ host = my.host</pre>
+<h2>Description</h2>
+<p>Integrates NFSping as a probe into smokeping. The variable <code>binary</code> must point to your copy of the NFSping program. </p>
+<p> NFSping can be downloaded from: </p>
+<p> &lt;<a rel="nofollow" href="https://github.com/mprovost/NFSping">https://github.com/mprovost/NFSping</a>&gt; </p>
+<p> In <code>blazemode</code>, NFSping sends one more ping than requested, and discards the first <font SIZE="-1">RTT</font> value returned as it&#8217;s likely to be an outlier.</p>
+<h2>Variables</h2>
+<p>Supported probe-specific variables:</p>
+<dl COMPACT>
+<dt>binary</dt>
+<dd>The location of your nfsping binary. </dd>
+<p> Example value: /usr/local/bin/nfsping </p>
+<p> This setting is mandatory.</p>
+<dt>blazemode</dt>
+<dd>Send an extra ping and then discard the first answer since the first is bound to be an outlier. </dd>
+<p> Example value: true</p>
+<dt>hostinterval</dt>
+<dd>The nfsping &#8220;-p&#8221; parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. This parameter sets the time that nfsping waits between successive packets to an individual target. </dd>
+<p> Example value: 1.5</p>
+<dt>mininterval</dt>
+<dd>The nfsping &#8220;-i&#8221; parameter, but in (probably fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. This is the interval between pings to successive targets. </dd>
+<p> Example value: 0.001 </p>
+<p> Default value: 0.01</p>
+<dt>offset</dt>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<p> Example value: 50%</p>
+<dt>pings</dt>
+<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
+<p> Example value: 20</p>
+<dt>step</dt>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<p> Example value: 300</p>
+<dt>timeout</dt>
+<dd>The nfsping &#8220;-t&#8221; parameter, but in (possibly fractional) seconds rather than milliseconds, for consistency with other Smokeping probes. </dd>
+<p> Example value: 1.5</dl>
+<h2>Authors</h2>
+<p>Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; Matt Provost &lt;mprovost [at] termcap.net&gt;</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

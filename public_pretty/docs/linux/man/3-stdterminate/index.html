@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdterminate(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdterminate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdterminate(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::terminate - std::terminate</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;exception&gt;
+void terminate(); <i>(until C++11)</i>
+[[noreturn]] void terminate() noexcept; <i>(since C++11)</i>
+std::terminate() is called by the C++ runtime when exception handling fails for any of the following reasons:</p>
+<ol>
+<li>an exception_is_thrown and not caught (it is implementation-defined whether any stack unwinding is done in this case)</li>
+<li>a function directly invoked by the exception handling mechanism while handling an exception that has not yet been caught exits via an exception (e.g. a destructor of some local object, or a copy constructor constructing a catch-clause parameter)</li>
+<li>the constructor or the destructor of a static or thread-local object throws an exception</li>
+<li>a function registered with std::atexit or std::at_quick_exit throws an exception</li>
+<li>a noexcept_specification is violated (it is implementation-defined whether any stack unwinding is done in this case)</li>
+<li>a dynamic_exception_specification is violated and the default handler for std::unexpected is executed <i>(until C++17)</i></li>
+<li>a non-default handler for std::unexpected throws an exception that violates the previously violated dynamic exception specification, if the specification does not include std::bad_exception</li>
+<li>std::nested_exception::rethrow_nested is called for an object that isn&rsquo;t holding a captured exception</li>
+<li>an exception is thrown from the initial function of std::thread</li>
+<li>a joinable std::thread is destroyed or assigned to</li>
+<li>a function invoked by a parallel_algorithm exits via an uncaught exception and the execution_policy specifies termination. <i>(since C++17)</i>
+std::terminate() may also be called directly from the program.
+In any case, std::terminate calls the currently installed std::terminate_handler. The default std::terminate_handler calls std::abort.
+If a destructor reset the terminate handler during stack unwinding and the unwinding later led to terminate being called, the handler that was installed at the end of the throw expression is the one that will be called. (note: it was ambiguous whether re-throwing applied the new handlers) <i>(until C++11)</i>
+If a destructor reset the terminate handler during stack unwinding, it is unspecified which handler is called if the unwinding later led to terminate being called. <i>(since C++11)</i></li>
+</ol>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p><i>(none)</i>
+Defect reports
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.
+DR Applied to Behavior as published Correct behavior
+LWG_2111 C++11 effect of calling set_terminate during stack unwinding differs from C++98 and breaks some ABIs made unspecified</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> the type of the function called by std::terminate
+terminate_handler <i>(typedef)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

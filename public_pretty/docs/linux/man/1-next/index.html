@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>next(1) · Linux Manual Pages</title>
+<meta name="description" content="next – show the next message">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-next/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>next(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> next &#8211; show the next message </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>next </code> [<i>+folder</i>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>
+<dd>or <i>showmimeproc</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>Next</code> performs a <code>show</code> on the next message in the specified (or current) folder. Like <code>show</code>, it passes any switches on to the program <i>showproc</i> or <i>showmimeproc</i>, which is called to list the message. This command is almost exactly equivalent to &#8220;<code>show</code> <code>next</code>&#8221;. Consult the manual entry for <i><a href="/docs/linux/man/1-show/">show</a></i>(1) for all the details.</p>
+<h2>FILES</h2>
+<pre>
+^$HOME/.mh_profile~^The user profile
+</pre>
+<h2>PROFILE COMPONENTS</h2>
+<pre>
+^Path:~^To determine the user's nmh directory
+^Current-Folder:~^To find the default current folder
+^showproc:~^Program to show non-MIME messages
+^showmimeproc:~^Program to show MIME messages
+</pre>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-prev/">prev</a></i>(1), <i><a href="/docs/linux/man/1-show/">show</a></i>(1)</p>
+<h2>DEFAULTS</h2>
+<pre>
+`<code>+folder</code>' defaults to the current folder
+`<code>-checkmime</code>'
+`<code>-header</code>'
+</pre>
+<h2>CONTEXT</h2>
+<p> If a folder is specified, it will become the current folder. The message that is shown (i.e., the next message in sequence) will become the current message.</p>
+<h2>BUGS</h2>
+<p> <code>next</code> is really a link to the <code>show</code> program. As a result, if you make a link to <code>next</code> and that link is not called <code>next</code>, your link will act like <code>show</code> instead. To circumvent this, add a profile-entry for the link to your <code>nmh</code> profile and add the argument <i>next</i> to the entry. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

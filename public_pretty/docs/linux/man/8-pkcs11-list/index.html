@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pkcs11-list(8) · Linux Manual Pages</title>
+<meta name="description" content="pkcs11-list – list PKCS#11 objects">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pkcs11-list/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pkcs11-list(8)</h1>
+
+
+
+
+
+<p>pkcs11-list &#8211; list PKCS#11 objects</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>pkcs11-list</code> [<code>-P</code>] [<code>-m&nbsp;<wbr></code><i>module</i>] [<code>-s&nbsp;<wbr></code><i>slot</i>] [-i&nbsp;<wbr><i>ID</i>] [-l&nbsp;<wbr><i>label</i>] [<code>-p&nbsp;<wbr></code><i>PIN</i>]</dt></dl>
+<h2>Description</h2>
+<p><code>pkcs11-list</code></p>
+<dd>lists the PKCS#11 objects with <code>ID</code> or <code>label</code> or by default all objects.</dd>
+<h2>Arguments</h2>
+<p>-P</p>
+<dl>
+<dd>List only the public objects. (Note that on some PKCS#11 devices, all objects are private.)</dd></dl>
+<p> -m <i>module</i></p>
+<dl>
+<dd>Specify the PKCS#11 provider module. This must be the full path to a shared library object implementing the PKCS#11 API for the device.</dd></dl>
+<p> -s <i>slot</i></p>
+<dl>
+<dd>Open the session with the given PKCS#11 slot. The default is slot 0.</dd></dl>
+<p> -i <i>ID</i></p>
+<dl>
+<dd>List only key objects with the given object ID.</dd></dl>
+<p> -l <i>label</i></p>
+<dl>
+<dd>List only key objects with the given label.</dd></dl>
+<p> -p <i>PIN</i></p>
+<dl>
+<dd>Specify the PIN for the device. If no PIN is provided on the command line, <code>pkcs11-list</code> will prompt for it.</dd></dl>
+<h2>See Also</h2>
+<p><code>pkcs11-keygen</code>(3), <code>pkcs11-destroy</code>(3)</p>
+<h2>Author</h2>
+<p>Internet Systems Consortium</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

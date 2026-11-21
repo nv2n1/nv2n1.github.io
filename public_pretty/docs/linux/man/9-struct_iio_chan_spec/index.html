@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_iio_chan_spec(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_iio_chan_spec – specification of a single channel">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_iio_chan_spec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_iio_chan_spec(9)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>struct_iio_chan_spec &#8211; specification of a single channel</p>
+<h2>Synopsis</h2>
+<pre><code>struct iio_chan_spec {
+    enum iio_chan_type type;
+    int channel;
+    int channel2;
+    unsigned long address;
+    int scan_index;
+    struct scan_type;
+    long info_mask_separate;
+    long info_mask_shared_by_type;
+    long info_mask_shared_by_dir;
+    long info_mask_shared_by_all;
+    const struct iio_event_spec *event_spec;
+    unsigned int num_event_specs;
+    const struct iio_chan_spec_ext_info *ext_info;
+    const char *extend_name;
+    const char *datasheet_name;
+    unsigned modified : 1;
+    unsigned indexed : 1;
+    unsigned output : 1;
+    unsigned differential : 1;
+};</code></pre>
+<h2>Members</h2>
+<p>type</p>
+<dl>
+<dd>What type of measurement is the channel making.</dd></dl>
+<p> channel</p>
+<dl>
+<dd>What number do we wish to assign the channel.</dd></dl>
+<p> channel2</p>
+<dl>
+<dd>If there is a second number for a differential channel then this is it. If modified is set then the value here specifies the modifier.</dd></dl>
+<p> address</p>
+<dl>
+<dd>Driver specific identifier.</dd></dl>
+<p> scan_index</p>
+<dl>
+<dd>Monotonic index to give ordering in scans when read from a buffer.</dd></dl>
+<p> scan_type</p>
+<dl>
+<dd>sign: &#8216;s&#8217; or &#8216;u&#8217; to specify signed or unsigned realbits: Number of valid bits of data storagebits: Realbits + padding shift: Shift right by this before masking out realbits. repeat: Number of times real/storage bits repeats. When the repeat element is more than 1, then the type element in sysfs will show a repeat value. Otherwise, the number of repetitions is omitted. endianness: little or big endian</dd></dl>
+<p> info_mask_separate</p>
+<dl>
+<dd>What information is to be exported that is specific to this channel.</dd></dl>
+<p> info_mask_shared_by_type</p>
+<dl>
+<dd>What information is to be exported that is shared by all channels of the same type.</dd></dl>
+<p> info_mask_shared_by_dir</p>
+<dl>
+<dd>What information is to be exported that is shared by all channels of the same direction.</dd></dl>
+<p> info_mask_shared_by_all</p>
+<dl>
+<dd>What information is to be exported that is shared by all channels.</dd></dl>
+<p> event_spec</p>
+<dl>
+<dd>Array of events which should be registered for this channel.</dd></dl>
+<p> num_event_specs</p>
+<dl>
+<dd>Size of the event_spec array.</dd></dl>
+<p> ext_info</p>
+<dl>
+<dd>Array of extended info attributes for this channel. The array is NULL terminated, the last element should have its name field set to NULL.</dd></dl>
+<p> extend_name</p>
+<dl>
+<dd>Allows labeling of channel attributes with an informative name. Note this has no effect codes etc, unlike modifiers.</dd></dl>
+<p> datasheet_name</p>
+<dl>
+<dd>A name used in in-kernel mapping of channels. It should correspond to the first name that the channel is referred to by in the datasheet (e.g. IND), or the nearest possible compound name (e.g. IND-INC).</dd></dl>
+<p> modified</p>
+<dl>
+<dd>Does a modifier apply to this channel. What these are depends on the channel type. Modifier is set in channel2. Examples are IIO_MOD_X for axial sensors about the &#8216;x&#8217; axis.</dd></dl>
+<p> indexed</p>
+<dl>
+<dd>Specify the channel has a numerical index. If not, the channel index number will be suppressed for sysfs attributes but not for event codes.</dd></dl>
+<p> output</p>
+<dl>
+<dd>Channel is output.</dd></dl>
+<p> differential</p>
+<dl>
+<dd>Channel is differential.</dd></dl>
+<h2>Author</h2>
+<p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

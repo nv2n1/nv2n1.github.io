@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aliases-opensmtpd(5) · Linux Manual Pages</title>
+<meta name="description" content="aliases – aliases file for smtpd">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-aliases-opensmtpd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>aliases-opensmtpd(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>aliases</code> &#8211; aliases file for smtpd</p>
+<h2>Description</h2>
+<p>This manual page describes the format of the <code>aliases</code> file, as used by <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8). An alias in its simplest form is used to assign an arbitrary name to an email address, or a group of email addresses. This provides a convenient way to send mail. For example an alias could refer to all users of a group: email to that alias would be sent to all members of the group. Much more complex aliases can be defined however: an alias can refer to other aliases, be used to send mail to a file instead of another person, or to execute various commands. </p>
+<p> Within the file, Ql # is a comment delimiter; anything placed after it is discarded. The file consists of key/value mappings of the form: -filled -offset indent key: value1, value2, value3, &#8230; </p>
+<p> <i>key</i> is always folded to lowercase before alias lookups to ensure that there can be no ambiguity. The key is expanded to the corresponding values, which consist of one or more of the following:</p>
+<dl>
+<dd>
+</dd><dl>
+<dt><i>user</i></dt>
+<dd>A user on the host machine. The user must have a valid entry in the <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5) database file.</dd>
+<dt><i>/path/to/file</i></dt>
+<dd>Append messages to <i>file</i>, specified by its absolute pathname.</dd>
+<dt>| <i>command</i></dt>
+<dd>Pipe the message to <i>command</i> on its standard input. The command is run under the privileges of the daemon&#8217;s unprivileged account.</dd>
+<dt>: <i>include</i>: <i>/path/to/file</i></dt>
+<dd>Include any definitions in <i>file</i> as alias entries. The format of the file is identical to this one.</dd>
+<dt><i>user-part [at] domain-part</i></dt>
+<dd>An email address in RFC 5322 format (see <code><a href="/docs/linux/man/7-mailaddr/">mailaddr</a></code>(7)). If an address extension is appended to the user-part, it is first compared for an exact match. It is then stripped so that an address such as user+ext [at] example.com will only use the part that precedes Sq + as a <i>key.</i></dd>
+<dt><i>error</i>: <i>code</i> <i>message</i></dt>
+<dd>A status code and message to return. The code must be 3 digits, starting 4XX (TempFail) or 5XX (PermFail). The message must be present and can be freely chosen.</dd>
+<dt><i>maildir</i>: <i>/path</i></dt>
+<dd>Deliver messages to Maildir at the <i>path</i>.</dd></dl>
+</dl>
+<h2>Files</h2>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>/etc/opensmtpd/aliases</code></dt>
+<dd>Default <code>aliases</code> file.</dd></dl>
+</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-smtpd-conf/">smtpd.conf</a></code>(5), <code><a href="/docs/linux/man/8-makemap/">makemap</a></code>(8), <code><a href="/docs/linux/man/8-newaliases/">newaliases</a></code>(8), <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8)</p>
+<h2>History</h2>
+<p>The <code>aliases</code> file format appeared in Bx 4.0.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

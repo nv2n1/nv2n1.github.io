@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gshadow(5) · Linux Manual Pages</title>
+<meta name="description" content="gshadow – shadowed group file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-gshadow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>gshadow(5)</h1>
+
+
+
+
+
+<p>gshadow &#8211; shadowed group file</p>
+<h2>Description</h2>
+<p>/etc/gshadow contains the shadowed information for group accounts. </p>
+<p> This file must not be readable by regular users if password security is to be maintained. </p>
+<p> Each line of this file contains the following colon-separated fields: </p>
+<p> <code>group name</code></p>
+<dl>
+<dd>It must be a valid group name, which exist on the system.</dd></dl>
+<p> <code>encrypted password</code></p>
+<dl>
+<dd>Refer to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) for details on how this string is interpreted. </dd>
+<p> If the password field contains some string that is not a valid result of <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), for instance ! or *, users will not be able to use a unix password to access the group (but group members do not need the password). </p>
+<p> The password is used when a user who is not a member of the group wants to gain the permissions of this group (see <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1)). </p>
+<p> This field may be empty, in which case only the group members can gain the group permissions. </p>
+<p> A password field which starts with an exclamation mark means that the password is locked. The remaining characters on the line represent the password field before the password was locked. </p>
+<p> This password supersedes any password specified in /etc/group.</dl>
+<p> <code>administrators</code></p>
+<dl>
+<dd>It must be a comma-separated list of user names. </dd>
+<p> Administrators can change the password or the members of the group. </p>
+<p> Administrators also have the same permissions as the members (see below).</dl>
+<p> <code>members</code></p>
+<dl>
+<dd>It must be a comma-separated list of user names. </dd>
+<p> Members can access the group without being prompted for a password. </p>
+<p> You should use the same list of users as in /etc/group.</dl>
+<h2>Files</h2>
+<p>/etc/group</p>
+<dl>
+<dd>Group account information.</dd></dl>
+<p> /etc/gshadow</p>
+<dl>
+<dd>Secure group account information.</dd></dl>
+<h2>See Also</h2>
+<p><code>gpasswd</code>(5), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/8-grpck/">grpck</a></code>(8), <code><a href="/docs/linux/man/8-grpconv/">grpconv</a></code>(8), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>console-handlers(5) · Linux Manual Pages</title>
+<meta name="description" content="console.handlers – file specifying handlers of console lock and unlock events">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-console-handlers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>console-handlers(5)</h1>
+
+
+
+
+
+<p>console.handlers &#8211; file specifying handlers of console lock and unlock events</p>
+<h2>Description</h2>
+<p>/etc/security/console.handlers determines which programs will be run when an user obtains the console lock at login time, and when the user loses it on log out. It is read by the pam_console module. The format is: <code>handler-filename</code> <code>lock</code><i>|</i><code>unlock</code> <i>[</i><code>flag &#8230;</code><i>]</i> Where <code>handler-filename</code> is a name of the executable to be run, <code>lock</code> or <code>unlock</code> specifies on which event it should be run, and flags specify how should pam_console call it. Additionally there should be a line which specifies glob patterns of console devices. The format of this line is: <code>console-name</code> <code>consoledevs</code> <code>regex</code> <i>[</i><code>regex &#8230;</code><i>]</i> Where <code>console-name</code> is a name of the console class &#8211; currently ignored &#8211; and regexes are regular expression patterns which specify the name of the tty device. Only the first such line is consulted. </p>
+<h2>Flags</h2>
+<dl>
+<dt>logfail</dt>
+<dd>The pam_console module should log error to the system log if the return value of the handler is not zero or if the handler can not be executed.</dd>
+<dt>wait</dt>
+<dd>The pam_console should wait for the handler to exit before continuing.</dd>
+<dt>setuid</dt>
+<dd>The handler should be executed with uid/gid of the user which obtained the console lock.</dd>
+<dt>tty</dt>
+<dd>The handler will get a tty name as obtained from PAM as a parameter.</dd>
+<dt>user</dt>
+<dd>The handler will get an user name as obtained from PAM as a parameter.</dd></dl>
+<p> Anything else will be added directly as a parameter to the handler executable.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pam_console/">pam_console</a></code>(8)</p>
+<h2>Author</h2>
+<p>Tomas Mraz &lt;tmraz [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

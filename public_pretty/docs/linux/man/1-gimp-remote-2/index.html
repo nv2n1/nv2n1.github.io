@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gimp-remote-2(1) · Linux Manual Pages</title>
+<meta name="description" content="gimp-remote – tells a running GIMP to open a (local or remote) image file.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gimp-remote-2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gimp-remote-2(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gimp-remote &#8211; tells a running GIMP to open a (local or remote) image file. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>gimp-remote</code> [-h] [&#8211;help] [-v] [&#8211;version] [&#8211;display <i>display</i>] [-e] [&#8211;existing] [-q] [&#8211;query] [-s] [&#8211;no-splash] [-p] [&#8211;print-xid] <i>filename</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
+<p> <i>gimp-remote</i> is a small utility that tells a running GIMP to open one or more (local or remote) image files. It does so by searching for a GIMP toolbox on the active display. If it can find a GIMP toolbox, a synthetic drop event is created which makes GIMP think the files would have been dropped onto the toolbox. More than one filename or URL can be specified on the commandline. </p>
+<p> If no GIMP window is found, <i>gimp-remote</i> will start a new GIMP instance and ask it to load the specified images. If no filename or URL is given, <i>gimp-remote</i> will start a new GIMP. This behaviour can be altered using the command-line options described below. </p>
+<p> If you are using GIMP on Linux or another platform with the D-Bus message bus system, chances are good that this functionality is already built into the main GIMP executable and that you will not need to use <i>gimp-remote</i>. </p>
+<h2>OPTIONS</h2>
+<p> <i>gimp-remote</i> accepts the following options:</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a list of all commandline options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Output the version info.</dd>
+<dt><code>&#8211;display </code><i>display</i></dt>
+<dd> Use the designated X display.</dd>
+<dt><code>-e, &#8211;existing</code></dt>
+<dd> If no running GIMP instance is found, don&#8217;t start a new one but exit.</dd>
+<dt><code>-q, &#8211;query</code></dt>
+<dd> Check if GIMP is running and exit. A status code of 0 indicates that a GIMP toolbox window has been found on this display.</dd>
+<dt><code>-p, &#8211;print-xid</code></dt>
+<dd> Like -q, but print the X Window ID of the toolbox window if GIMP is already running. If no such window exists nothing is printed.</dd>
+<dt><code>-s, &#8211;no-splash</code></dt>
+<dd> When starting GIMP, do not show the splash screen. </dd>
+</dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>gimp-remote&nbsp;<wbr><a rel="nofollow" href="http://www.gimp.org/images/wilber_the_gimp.png">http://www.gimp.org/images/wilber_the_gimp.png</a></code></dt>
+<dd> Loads the image from the GIMP website into a running GIMP or starts a new one.</dd>
+<dt><code>gimp-remote wilber.xcf wilma.xcf</code></dt>
+<dd> Loads the local files wilber.xcf and wilma.xcf into a running GIMP or starts a new one. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number. </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> Sven Neumann and Simon Budig. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code>gimptool</code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

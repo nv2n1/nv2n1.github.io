@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpointer_to_unary_function(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpointer_to_unary_function/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpointer_to_unary_function(3)</h1>
+
+
+
+
+
+<p>std::pointer_to_unary_function - std::pointer_to_unary_function</p>
+<h2>Synopsis</h2>
+<pre><code>template&lt;
+class Arg,                                                                    (deprecated in C++11)
+class Result                                                                  (removed in C++17)
+&gt; class pointer_to_unary_function : public std::unary_function&lt;Arg, Result&gt;;</code></pre> 
+<p>std::pointer_to_unary_function is a function object that acts as a wrapper around a unary function.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a new pointer_to_unary_function object with the supplied function
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> calls the stored function
+operator() <i>(public member function)</i></p>
+<p> std::pointer_to_unary_function::pointer_to_unary_function</p>
+<p>explicit pointer_to_unary_function( Result (*f)(Arg) );</p>
+<p>Constructs a pointer_to_unary_function function object with the stored function f.</p>
+<h2>Parameters</h2>
+<p>f - pointer to a function to store</p>
+<p> std::pointer_to_unary_function::operator()</p>
+<p>Result operator()( Arg x ) const;</p>
+<p>Calls the stored function.</p>
+<h2>Parameters</h2>
+<p>x - argument to pass to the function</p>
+<h2>Return value</h2>
+<p>The value returned by the called function.</p>
+<h2>See also</h2>
+<p>pointer_to_binary_function adaptor-compatible wrapper for a pointer to binary function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++11)
+(removed in C++17)
+ptr_fun creates an adaptor-compatible function object wrapper from a pointer to function
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(deprecated in C++11)
+(removed in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

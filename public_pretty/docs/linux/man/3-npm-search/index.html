@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-search(3) · Linux Manual Pages</title>
+<meta name="description" content="npm-search — Search for packages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-npm-search/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>npm-search(3)</h1>
+
+
+
+
+
+<p><code>npm-search</code> &#8212; Search for packages</p>
+<h2>Synopsis</h2>
+<pre>npm.commands.search(searchTerms, [silent,] [staleness,] callback)</pre>
+<h2>Description</h2>
+<p>Search the registry for packages matching the search terms. The available parameters are:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>searchTerms: Array of search terms. These terms are case-insensitive.</dd>
+<dt>&bull;</dt>
+<dd>silent: If true, npm will not log anything to the console.</dd>
+<dt>&bull;</dt>
+<dd>staleness: This is the threshold for stale packages. &quot;Fresh&quot; packages are not refreshed from the registry. This value is measured in seconds.</dd>
+<dt>&bull;</dt>
+<dd>callback: Returns an object where each key is the name of a package, and the value is information about that package along with a &#8216;words&#8217; property, which is a space-delimited string of all of the interesting words in that package. The only properties included are those that are searched, which generally include:</dd>
+<dt>&bull;</dt>
+<dd>name</dd>
+<dt>&bull;</dt>
+<dd>description</dd>
+<dt>&bull;</dt>
+<dd>maintainers</dd>
+<dt>&bull;</dt>
+<dd>url</dd>
+<dt>&bull;</dt>
+<dd>keywords</dd>
+<dd> A search on the registry excludes any result that does not match all of the search terms. It also removes any items from the results that contain an excluded term (the &quot;searchexclude&quot; config). The search is case insensitive and doesn&#8217;t try to read your mind (it doesn&#8217;t do any verb tense matching or the like). </dd>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

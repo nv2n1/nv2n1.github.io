@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lcp_mlehash(8) · Linux Manual Pages</title>
+<meta name="description" content="lcp_mlehash – generate a SHA-1 hash of a TXT MLE binary file suitable for use in a TXT launch control policy">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-lcp_mlehash/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>lcp_mlehash(8)</h1>
+
+
+
+
+
+<p>lcp_mlehash &#8211; generate a SHA-1 hash of a TXT MLE binary file suitable for use in a TXT launch control policy</p>
+<h2>Synopsis</h2>
+<p><code>lcp_mlehash</code> [<code>-v</code>] [<code>-c</code> <i>cmdline</i>] [<code>-h</code>] <i>mle-file</i></p>
+<h2>Description</h2>
+<p><code>lcp_mlehash</code> is used to generate a SHA-1 hash of the portion of an executable file that contains the Intel® TXT measured launched environment (MLE). In the MLE binary file, the portion of the file to be used as the MLE is specified in the MLE header structure. If verbose mode is not used, the output is suitable for use as the mle-file to the <code>lcp_crtpol</code> and <code>lcp_crtpolelt</code> commands.</p>
+<h2>Options</h2>
+<dl>
+<dt><i>mle-file</i></dt>
+<dd>File name of the MLE binary. If it is a gzip file then it will be un-ziped before hashing.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose mode, display progress indications.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>cmdline</i></dt>
+<dd>Specify quote-delimited command line. It is important to specify the command line that is used when launching the MLE or the hash will not match what is calculated by SINIT.</dd>
+<dt><code>-h</code></dt>
+<dd>Print out the help message.</dd></dl>
+<h2>Examples</h2>
+<p><code>lcp_mlehash -c </code><i>&quot;logging=memory,serial,vga&quot; /boot/tboot.gz </i><code>&gt; </code><i>mle-hash </i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-lcp_readpol/">lcp_readpol</a></code>(8), <code><a href="/docs/linux/man/8-lcp_writepol/">lcp_writepol</a></code>(8), <code><a href="/docs/linux/man/8-lcp_crtpol/">lcp_crtpol</a></code>(8), <code><a href="/docs/linux/man/8-lcp_crtpolelt/">lcp_crtpolelt</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

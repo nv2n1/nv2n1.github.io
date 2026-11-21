@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pamsharpness(1) · Linux Manual Pages</title>
+<meta name="description" content="pamsharpness – measure the sharpness of a PNM/PAM image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pamsharpness/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pamsharpness(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pamsharpness &#8211; measure the sharpness of a PNM/PAM image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pamsharpness</code> [<i>imagefile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
+<p> <code>pamsharpness</code> reads a Netpbm image (PNM or PAM) and prints a number that tells how sharp it is. </p>
+<p> Sharpness is a measure of how suddenly (in space) colors change in the image. <code>pamsharpness</code> computes the sharpness of the image as the average difference in intensity between each pixel and its 8 surrounding pixels, in each of the color components (R, G, B). </p>
+<p> <code>pamsharpness</code> does not include the edges of the image, where there are not 8 pixels surrounding a pixel, in its computation. </p>
+<p> <code>pamsharpness</code> assumes that the image is a PNM or PNM equivalent PAM. If it isn&#8217;t, the results are not necessarily meaningful. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pamsharpmap/">pamsharpmap</a></code>(1) , <code><a href="/docs/linux/man/1-pammasksharpen/">pammasksharpen</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
+<h2>HISTORY</h2>
+<p> <code>pamsharpness</code> was added to Netpbm in Release 10.21 (March 2004). Bryan Henderson derived it from the program <code>pnmsharp</code> by B.W. van Schooten and distributed as part of the Photopnmtools package. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

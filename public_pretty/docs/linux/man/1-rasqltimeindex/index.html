@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rasqltimeindex(1) · Linux Manual Pages</title>
+<meta name="description" content="rasqltimeindex – read argus(8) data from mysql database.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rasqltimeindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rasqltimeindex(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>rasqltimeindex</code> &#8211; read <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from mysql database.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rasqltimeindex -r argus.data.file -w <a href="mysql://user@host/db">mysql://user@host/db</a></code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>Rasqltimeindex</code> index <code>argus</code> data files by time. </p>
+<p> The principal function of rasqltimeindex is to provide fast access to indexed argus data files based on time. </p>
+<p> Rasqltimeindex, like all ra based clients, supports a number of <code>ra options</code> <code><a href="/docs/linux/man/1-rasqltimeindex/">rasqltimeindex</a>(1)</code> specific options are: </p>
+<h2>RASQLTIMEINDEX SPECIFIC OPTIONS</h2>
+<dl>
+<dt><code>-w &lt;<a href="mysql://[user[:pass]@]host[:port]/db">mysql://[user[:pass]@]host[:port]/db</a>&gt;</code></dt>
+<dd> Specify the mysql database to use in maintaining the &#8216;Seconds&#8217;, &#8216;Probe&#8217;, and &#8216;Filename&#8217; database index tables. </dd>
+</dl>
+<h2>INVOCATION</h2>
+<p> This invocation reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from the <i>file</i> argus.file and creates an index of every second in the file in the <i>db</i> database, using the <i>user</i> database account. </p>
+<pre>
+   <code>rasqltimeindex</code> -r argus.file -w <a href="mysql://user@localhost/db">mysql://user@localhost/db</a>
+</pre>
+<p> To take advantage of the speedup provided by the time indexing, use <code>rasql</code> to read the mysql database, with a time filter. This example will read from the database that contains the &#8216;Seconds&#8217;, &#8216;Probe&#8217;, and &#8216;Filename&#8217; database index tables, and search for all flow records from 00:00:00 &#8211; 00:00:25, 20 days ago. </p>
+<pre>
+   <code>rasql</code> -r <a href="mysql://user@localhost/db">mysql://user@localhost/db</a> -t -20d+25s
+</pre>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2000-2016 QoSient. All rights reserved. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ra/">ra</a>(1),</code> <code><a href="/docs/linux/man/1-rasql/">rasql</a>(1),</code> <code><a href="/docs/linux/man/5-rarc/">rarc</a>(5),</code> <code><a href="/docs/linux/man/8-argus/">argus</a>(8),</code> </p>
+<h2>AUTHORS</h2>
+<pre>
+Carter Bullard (carter [at] qosient.com).
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usb_make_path(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-usb_make_path/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>usb_make_path(9)</h1>
+
+
+
+
+
+<p>usb_make_path - returns stable device path in the usb tree</p>
+<h2>Synopsis</h2>
+<pre><code>int usb_make_path(struct usb_device *dev, char *buf, size_t size);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl><dd></dd><dd>the device whose path is being constructed</dd></dl>
+<p><i>buf</i></p>
+<dl><dd>where to put the string</dd></dl>
+<p><i>size</i></p>
+<dl><dd>how big is "buf"?</dd></dl>
+<h2>Return</h2>
+<p>Length of the string (&gt; 0) or negative if size was too small.</p>
+<h2>Note</h2>
+<p>This identifier is intended to be &ldquo;stable&rdquo;, reflecting physical paths in hardware such as physical bus addresses for host controllers or ports on USB hubs. That makes it stay the same until systems are physically reconfigured, by re-cabling a tree of USB devices or by moving USB host controllers. Adding and removing devices, including virtual root hubs in host controller driver modules, does not change these path identifiers; neither does rebooting or re-enumerating. These are more useful identifiers than changeable (&ldquo;unstable&rdquo;) ones like bus numbers or device addresses.</p>
+<p>With a partial exception for devices connected to USB 2.0 root hubs, these identifiers are also predictable. So long as the device tree isn&rsquo;t changed, plugging any USB device into a given hub port always gives it the same path. Because of the use of &ldquo;companion&rdquo; controllers, devices connected to ports on USB 2.0 root hubs (EHCI host controllers) will get one path ID if they are high speed, and a different one if they are full or low speed.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

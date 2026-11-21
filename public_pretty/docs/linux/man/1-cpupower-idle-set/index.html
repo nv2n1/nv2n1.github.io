@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cpupower-idle-set(1) · Linux Manual Pages</title>
+<meta name="description" content="cpupower idle-set – Utility to set cpu idle state specific kernel options">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cpupower-idle-set/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cpupower-idle-set(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> cpupower idle-set &#8211; Utility to set cpu idle state specific kernel options</p>
+<h2>SYNTAX</h2>
+<p> cpupower [ -c cpulist ] idle-info [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> The cpupower idle-set subcommand allows to set cpu idle, also called cpu sleep state, specific options offered by the kernel. One example is disabling sleep states. This can be handy for power vs performance tuning.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-d</code> <code>&#8211;disable</code> &lt;STATE_NO&gt;</dt>
+<dd> Disable a specific processor sleep state.</dd>
+<dt><code>-e</code> <code>&#8211;enable</code> &lt;STATE_NO&gt;</dt>
+<dd> Enable a specific processor sleep state.</dd>
+<dt><code>-D</code> <code>&#8211;disable-by-latency</code> &lt;LATENCY&gt;</dt>
+<dd> Disable all idle states with a equal or higher latency than &lt;LATENCY&gt;. </dd>
+<p> Enable all idle states with a latency lower than &lt;LATENCY&gt;.</p>
+<dt><code>-E</code> <code>&#8211;enable-all</code></dt>
+<dd> Enable all idle states if not enabled already. </dd>
+</dl>
+<h2>REMARKS</h2>
+<p> Cpuidle Governors Policy on Disabling Sleep States </p>
+<dl>
+<dt>
+</dt><dd> Depending on the used cpuidle governor, implementing the kernel policy how to choose sleep states, subsequent sleep states on this core, might get disabled as well. </dd>
+<p> There are two cpuidle governors ladder and menu. While the ladder governor is always available, if CONFIG_CPU_IDLE is selected, the menu governor additionally requires CONFIG_NO_HZ. </p>
+<p> The behavior and the effect of the disable variable depends on the implementation of a particular governor. In the ladder governor, for example, it is not coherent, i.e. if one is disabling a light state, then all deeper states are disabled as well. Likewise, if one enables a deep state but a lighter state still is disabled, then this has no effect.</dl>
+<p> Disabling the Lightest Sleep State may not have any Affect </p>
+<dl>
+<dt>
+</dt><dd> If criteria are not met to enter deeper sleep states and the lightest sleep state is chosen when idle, the kernel may still enter this sleep state, irrespective of whether it is disabled or not. This is also reflected in the usage count of the disabled sleep state when using the cpupower idle-info command.</dd></dl>
+<p> Selecting specific CPU Cores </p>
+<dl>
+<dt>
+</dt><dd> By default processor sleep states of all CPU cores are set. Please refer to the <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1) manpage in the &#8211;cpu option section how to disable C-states of specific cores.</dd></dl>
+<h2>FILES</h2>
+<pre>
+<i>/sys/devices/system/cpu/cpu*/cpuidle/state*</i>
+<i>/sys/devices/system/cpu/cpuidle/*</i>
+</pre>
+<h2>AUTHORS</h2>
+<pre>
+Thomas Renninger &lt;trenn [at] suse.de&gt;
+</pre>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1), <a href="/docs/linux/man/1-cpupower-monitor/">cpupower-monitor</a>(1), <a href="/docs/linux/man/1-cpupower-info/">cpupower-info</a>(1), <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1), <a href="/docs/linux/man/1-cpupower-idle-info/">cpupower-idle-info</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

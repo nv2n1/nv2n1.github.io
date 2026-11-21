@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imon(8) · Linux Manual Pages</title>
+<meta name="description" content="imon – watch ISDN activities">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-imon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>imon(8)</h1>
+
+
+
+
+
+<p>imon &#8211; watch ISDN activities</p>
+<h2>Synopsis</h2>
+<p><code>imon [ -q] [-p </code><i>phonebook</i><code>]</code></p>
+<h2>Description</h2>
+<p><i>imon</i> is a ncurses based utility for watching ISDN activity. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-q </code></dt>
+<dd>If this option is given, the facility of terminatig the program by pressing &#8216;Q&#8217; is disabled and the signals SIGHUP and SIGINT are caught. This option is intended for starting imon from within an rc script with redirecting input/output to some otherwise unused virtual console at boot time.</dd></dl>
+<dl>
+<dt><code>-p</code><i> phonebook</i></dt>
+<dd>is used to supply imon with a <i>phonebook</i> file. The format of a <i>phonebook</i> file is very simple: Every line has two elements separated by a <code>TAB</code>. The first element is a phone number which can contain wildcards. The second element is a descriptive string. For each active connection, this string is shown instead the phone number. Pressing &#8216;S&#8217; toggles between display of strings and phone numbers. Pressing &#8216;R&#8217; rereads the phonebook file in case of changes during program execution.</dd></dl>
+<h2>Author</h2>
+<p>Fritz Elfert &lt;fritz [at] isdn4linux.de&gt;</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/4-ttyi/">ttyI</a></i>(4), <i><a href="/docs/linux/man/8-isdnctrl/">isdnctrl</a></i>(8), <i><a href="/docs/linux/man/4-isdninfo/">isdninfo</a></i>(4). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

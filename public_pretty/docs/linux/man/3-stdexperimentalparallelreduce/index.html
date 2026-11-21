@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalparallelreduce(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalparallelreduce/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalparallelreduce(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::experimental::parallel::reduce - std::experimental::parallel::reduce</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/numeric&gt;
+template&lt;class InputIt&gt;
+typename std::iterator_traits&lt;InputIt&gt;::value_type reduce(               (1) (parallelism TS)
+InputIt first, InputIt last);
+template&lt;class ExecutionPolicy, class InputIterator&gt;
+typename std::iterator_traits&lt;InputIt&gt;::value_type reduce(               (2) (parallelism TS)
+ExecutionPolicy&amp;&amp; policy, InputIt first, InputIt last);
+template&lt;class InputIt, class T&gt;                                         (3) (parallelism TS)
+T reduce(InputIt first, InputIt last, T init);
+template&lt;class ExecutionPolicy, class InputIt, class T&gt;                  (4) (parallelism TS)
+T reduce(ExecutionPolicy&amp;&amp; policy, InputIt first, InputIt last, T init);
+template&lt;class InputIt, class T, class BinaryOp&gt;                         (5) (parallelism TS)
+T reduce(InputIt first, InputIt last, T init, BinaryOp binary_op);
+template&lt;class ExecutionPolicy, class InputIt, class T, class BinaryOp&gt;
+T reduce(ExecutionPolicy&amp;&amp; policy,                                       (6) (parallelism TS)
+InputIt first, InputIt last, T init, BinaryOp binary_op);</code></pre> 
+<ol>
+<li>same as reduce(first, last, typename std::iterator_traits&lt;InputIt&gt;::value_type{})</li>
+<li>same as reduce(first, last, init, std::plus&lt;&gt;())</li>
+<li>Reduces the range [first; last), possibly permuted and aggregated in unspecified manner, along with the initial value init over binary_op.
+2,4,6) Same as (1,3,5), but executed according to policy
+The behavior is non-deterministic if binary_op is not associative or not commutative.
+The behavior is undefined if binary_op modifies any element or invalidates any iterator in [first; last).</li>
+</ol>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to apply the algorithm to
+init - the initial value of the generalized sum
+policy - the execution_policy
+binary_op - binary FunctionObject that will be applied in unspecified order to the result of dereferencing the input iterators, the results of other binary_op and init.</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<p>InputIt must meet the requirements of LegacyInputIterator.</p>
+<h2>Return value</h2>
+<p>Generalized sum of init and *first, *(first+1), &hellip; *(last-1) over binary_op,
+where generalized sum GSUM(op, a
+1, &hellip;, a
+N) is defined as follows: * if N=1, a</p>
+<p>1</p>
+<ul>
+<li>if N &gt; 1, op(GSUM(op, b</li>
+</ul>
+<p>1, &hellip;, b</p>
+<p>K), GSUM(op, b</p>
+<p>M, &hellip;, b</p>
+<p>N)) where</p>
+<ul>
+<li>b
+1, &hellip;, b
+N may be any permutation of a1, &hellip;, aN and</li>
+<li>1 &lt; K+1 = M ≤ N</li>
+</ul>
+<p>in other words, the elements of the range may be grouped and rearranged in arbitrary order</p>
+<h2>Complexity</h2>
+<p>O(last - first) applications of binary_op.</p>
+<h2>Exceptions</h2>
+<ul>
+<li>If execution of a function invoked as part of the algorithm throws an exception,</li>
+</ul>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> * if policy is parallel_vector_execution_policy, std::terminate is called
+ <wbr> <wbr> <wbr> <wbr> <wbr> * if policy is sequential_execution_policy or parallel_execution_policy, the algorithm exits with an exception_list containing all uncaught exceptions. If there was only one uncaught exception, the algorithm may rethrow it without wrapping in exception_list. It is unspecified how much work the algorithm will perform before returning after the first exception was encountered.
+ <wbr> <wbr> <wbr> <wbr> <wbr> * if policy is some other type, the behavior is implementation-defined</p>
+<ul>
+<li>If the algorithm fails to allocate memory (either for itself or to construct an exception_list when handling a user exception), std::bad_alloc is thrown.</li>
+</ul>
+<h2>Notes</h2>
+<p>If the range is empty, init is returned, unmodified</p>
+<ul>
+<li>If policy is an instance of sequential_execution_policy, all operations are performed in the calling thread.</li>
+<li>If policy is an instance of parallel_execution_policy, operations may be performed in unspecified number of threads, indeterminately sequenced with each other</li>
+<li>If policy is an instance of parallel_vector_execution_policy, execution may be both parallelized and vectorized: function body boundaries are not respected and user code may be overlapped and combined in arbitrary manner (in particular, this implies that a user-provided Callable must not acquire a mutex to access a shared resource)</li>
+</ul>
+<h2>Example</h2>
+<p>reduce is the out-of-order version of std::accumulate:
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;vector&gt;
+#include &lt;numeric&gt;
+#include &lt;experimental/execution_policy&gt;
+#include &lt;experimental/numeric&gt;
+int main()
+{
+std::vector&lt;double&gt; v(10'000'007, 0.5);
+{
+auto t1 = std::chrono::high_resolution_clock::now();
+double result = std::accumulate(v.begin(), v.end(), 0.0);
+auto t2 = std::chrono::high_resolution_clock::now();
+std::chrono::duration&lt;double, std::milli&gt; ms = t2 - t1;
+std::cout &lt;&lt; std::fixed &lt;&lt; &quot;std::accumulate result &quot; &lt;&lt; result
+&lt;&lt; &quot; took &quot; &lt;&lt; ms.count() &lt;&lt; &quot; ms\n&quot;;
+}
+{
+auto t1 = std::chrono::high_resolution_clock::now();
+double result = std::experimental::parallel::reduce(
+std::experimental::parallel::par,
+v.begin(), v.end());
+auto t2 = std::chrono::high_resolution_clock::now();
+std::chrono::duration&lt;double, std::milli&gt; ms = t2 - t1;
+std::cout &lt;&lt; &quot;parallel::reduce result &quot;
+&lt;&lt; result &lt;&lt; &quot; took &quot; &lt;&lt; ms.count() &lt;&lt; &quot; ms\n&quot;;
+}
+}
+</code></pre></p>
+<h2>Possible output:</h2>
+<p> <wbr> std::accumulate result 5000003.50000 took 12.7365 ms
+ <wbr> parallel::reduce result 5000003.50000 took 5.06423 ms</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sums up a range of elements
+accumulate <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies a function to a range of elements
+transform <i>(function template)</i>
+transform_reduce applies a functor, then reduces out of order
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+(parallelism TS)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>script-email(8) · Linux Manual Pages</title>
+<meta name="description" content="script-email – Amanda script to send email notifications">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-script-email/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>script-email(8)</h1>
+
+
+
+
+
+<p>script-email &#8211; Amanda script to send email notifications</p>
+<h2>Description</h2>
+<p>script-email is an Amanda script implementing the Script API. It should not be run by users directly. It sends a notification email to the addresses specified in the MAILTO property.</p>
+<h2>Properties</h2>
+<p>This section lists the properties that control script-email&#8217;s functionality. See <code><a href="/docs/linux/man/7-amanda-scripts/">amanda-scripts</a></code>(7) for information on the Script API, script configuration. </p>
+<p> MAILTO</p>
+<dl>
+<dd>List of email addresses that will receive an email on command execution. It is a multi-valued property: </dd>
+<pre> property &quot;MAILTO&quot; &quot;amanda [at] domain.com&quot; &quot;sysadmin [at] domain.com&quot; &quot;amandauser [at] domain.com&quot;</pre>
+</dl>
+<h2>Example</h2>
+<p>In this example, script-email is scheduled to be run before the DLE, on the server. The unqualified email address <i>amanda</i> will be passed to the email system unchanged. The script is then attached to a dumptype, which can then be specified for any DLEs which require notification. </p>
+<pre> define script-tool pre-email {
+ comment &quot;email me before this DLE is backed up&quot;
+ plugin &quot;script-email&quot;
+ execute-on pre-dle-backup
+ execute-where server
+ property &quot;mailto&quot; &quot;amanda&quot;
+ }
+ define dumptype user-tar-email {
+ user-tar
+ script &quot;pre-email&quot;
+ }</pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5), <code><a href="/docs/linux/man/5-amanda-client-conf/">amanda-client.conf</a></code>(5), <code><a href="/docs/linux/man/7-amanda-scripts/">amanda-scripts</a></code>(7) </p>
+<p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
+<h2>Authors</h2>
+<p><code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
+<dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
+<p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
+<dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runc-create(8) · Linux Manual Pages</title>
+<meta name="description" content="runc-create – create a container">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-runc-create/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>runc-create(8)</h1>
+
+
+
+
+
+<p><code>runc-create</code> &#8211; create a container </p>
+<h2>Synopsis</h2>
+<p><code>runc create</code> [<i>option</i> &#8230;] <i>container-id</i> </p>
+<h2>Description</h2>
+<p>The <code>create</code> command creates an instance of a container from a bundle. The bundle is a directory with a specification file named <i>config.json</i>, and a root filesystem. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;bundle</code>|<code>-b</code> <i>path</i></dt>
+<dd>Path to the root of the bundle directory. Default is current directory. </dd>
+<dt><code>&#8211;console-socket</code> <i>path</i></dt>
+<dd>Path to an <code>AF_UNIX</code> socket which will receive a file descriptor referencing the master end of the console&#8217;s pseudoterminal. See docs/terminals &lt;<a rel="nofollow" href="https://github.com/opencontainers/runc/blob/master/docs/terminals.md">https://github.com/opencontainers/runc/blob/master/docs/terminals.md</a>&gt;. </dd>
+<dt><code>&#8211;pid-file</code> <i>path</i></dt>
+<dd>Specify the file to write the initial container process&#8217; PID to. </dd>
+<dt><code>&#8211;no-pivot</code></dt>
+<dd>Do not use pivot root to jail process inside rootfs. This should not be used except in exceptional circumstances, and may be unsafe from the security standpoint. </dd>
+<dt><code>&#8211;no-new-keyring</code></dt>
+<dd>Do not create a new session keyring for the container. This will cause the container to inherit the calling processes session key. </dd>
+<dt><code>&#8211;preserve-fds</code> <i>N</i></dt>
+<dd>Pass <i>N</i> additional file descriptors to the container (<code>stdio</code> + <code>$LISTEN_FDS</code> + <i>N</i> in total). Default is <code>0</code>. </dd>
+</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-runc-spec/">runc-spec</a></code>(8), <code><a href="/docs/linux/man/8-runc-start/">runc-start</a></code>(8), <code><a href="/docs/linux/man/8-runc/">runc</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

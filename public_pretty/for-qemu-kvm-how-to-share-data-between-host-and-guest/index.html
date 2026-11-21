@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharing Data Between QEMU/KVM Host and Guest - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/for-qemu-kvm-how-to-share-data-between-host-and-guest/">
+  <meta name="description" content="When running virtual machines with QEMU/KVM, you’ll frequently need to transfer files or share directories between the host and guest systems. Several methods …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sharing Data Between QEMU/KVM Host and Guest">
+  <meta property="og:url" content="https://www.systutorials.com/for-qemu-kvm-how-to-share-data-between-host-and-guest/">
+  <meta property="og:description" content="When running virtual machines with QEMU/KVM, you’ll frequently need to transfer files or share directories between the host and guest systems. Several methods …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Sharing Data Between QEMU/KVM Host and Guest</h1>
+        <time class="post-date" datetime="2018-03-24T11:54:03Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When running virtual machines with QEMU/KVM, you’ll frequently need to transfer files or share directories between the host and guest systems. Several methods work well depending on your use case and performance requirements.</p>
+<h2 id="9p-virtio-filesystem">9p (Virtio) Filesystem</h2>
+<p>The 9p protocol is the most straightforward approach for sharing directories. It’s lightweight and doesn’t require additional guest agents.</p>
+<p><strong>Host setup:</strong></p>
+<p>Add this to your QEMU command line:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-fsdev local,security_model<span class="o">=</span>passthrough,id<span class="o">=</span>fsdev0,path<span class="o">=</span>/path/on/host <span class="se">\
+</span></span></span><span class="line"><span class="cl">-device virtio-9p-pci,fsdev<span class="o">=</span>fsdev0,mount_tag<span class="o">=</span>hostshare
+</span></span></code></pre></div><p><strong>Guest setup:</strong></p>
+<p>Mount the shared directory inside the VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /mnt/host
+</span></span><span class="line"><span class="cl">sudo mount -t 9p -o <span class="nv">trans</span><span class="o">=</span>virtio hostshare /mnt/host
+</span></span></code></pre></div><p>To make this persistent, add to guest <code>/etc/fstab</code>:</p>
+<pre><code>hostshare /mnt/host 9p trans=virtio,nofail 0 0
+</code></pre>
+<p>The <code>security_model=passthrough</code> preserves file permissions exactly as they exist on the host. If you need to run QEMU as an unprivileged user, use <code>security_model=mapped-xattr</code> instead, though this adds overhead.</p>
+<h2 id="virtio-fs-recommended-for-performance">VIRTIO-FS (Recommended for Performance)</h2>
+<p>For better performance and proper permission handling, use virtiofs. This approach uses a separate daemon and is now the preferred method for shared filesystems.</p>
+<p><strong>Host setup with libvirt:</strong></p>
+<p>Define the filesystem in your XML domain:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;filesystem</span> <span class="na">type=</span><span class="s">&#34;mount&#34;</span> <span class="na">accessmode=</span><span class="s">&#34;passthrough&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;driver</span> <span class="na">type=</span><span class="s">&#34;virtiofs&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;source</span> <span class="na">dir=</span><span class="s">&#34;/path/on/host&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;target</span> <span class="na">dir=</span><span class="s">&#34;hostshare&#34;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/filesystem&gt;</span>
+</span></span></code></pre></div><p><strong>Host setup with raw QEMU:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-object memory-backend-memfd,id<span class="o">=</span>mem,size<span class="o">=</span>2G <span class="se">\
+</span></span></span><span class="line"><span class="cl">-numa node,memdev<span class="o">=</span>mem <span class="se">\
+</span></span></span><span class="line"><span class="cl">-chardev socket,id<span class="o">=</span>char0,path<span class="o">=</span>/tmp/vhost-fs.sock <span class="se">\
+</span></span></span><span class="line"><span class="cl">-device vhost-user-fs-pci,chardev<span class="o">=</span>char0,tag<span class="o">=</span>hostshare <span class="se">\
+</span></span></span><span class="line"><span class="cl">-object memory-backend-file,id<span class="o">=</span>mem,size<span class="o">=</span>2G,mem-path<span class="o">=</span>/dev/shm,share<span class="o">=</span>on
+</span></span></code></pre></div><p>Then launch virtiofsd on the host (part of qemu package on most distributions):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virtiofsd --socket-path<span class="o">=</span>/tmp/vhost-fs.sock --shared-dir<span class="o">=</span>/path/on/host
+</span></span></code></pre></div><p><strong>Guest mount:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /mnt/host
+</span></span><span class="line"><span class="cl">sudo mount -t virtiofs hostshare /mnt/host
+</span></span></code></pre></div><p>Virtiofs requires a 5.4+ kernel on the guest and offers better I/O performance with proper caching.</p>
+<h2 id="network-based-sharing">Network-Based Sharing</h2>
+<p>For scenarios where filesystem sharing isn’t practical, use standard network protocols.</p>
+<p><strong>NFS:</strong></p>
+<p>On the host:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo exportfs -o rw,fsid<span class="o">=</span>0,insecure,no_subtree_check,async 192.168.122.1:/path/on/host
+</span></span></code></pre></div><p>Mount in guest:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mount -t nfs 192.168.122.1:/path/on/host /mnt/host
+</span></span></code></pre></div><p><strong>SSHFS:</strong></p>
+<p>Mount via SSH from the guest:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sshfs user@host.ip:/path/on/host /mnt/host
+</span></span></code></pre></div><p>This works well for one-off transfers but has higher latency than filesystem-level sharing.</p>
+<h2 id="direct-file-transfer">Direct File Transfer</h2>
+<p>For simple one-time transfers, use <code>virsh</code> or standard tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh domfile-get guest-name /path/in/guest /path/on/host
+</span></span><span class="line"><span class="cl">virsh domfile-put host-file /path/in/guest
+</span></span></code></pre></div><p>Or through SSH if the guest has network access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user@guest-ip:/path/in/guest /path/on/host
+</span></span></code></pre></div><h2 id="spice-usb-redirection">Spice USB Redirection</h2>
+<p>For interactive use, Spice allows USB device passthrough and clipboard sharing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-spice <span class="nv">port</span><span class="o">=</span>5900,disable-ticketing<span class="o">=</span>on <span class="se">\
+</span></span></span><span class="line"><span class="cl">-device virtio-serial-pci <span class="se">\
+</span></span></span><span class="line"><span class="cl">-chardev spicevmc,id<span class="o">=</span>spicechannel0,name<span class="o">=</span>vdagent <span class="se">\
+</span></span></span><span class="line"><span class="cl">-device virtserialport,chardev<span class="o">=</span>spicechannel0,name<span class="o">=</span>com.redhat.spice.0
+</span></span></code></pre></div><p>Connect with <code>remote-viewer</code> or <code>virt-viewer</code> to use clipboard sharing and USB redirection.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li><strong>9p passthrough mode</strong> runs with host user permissions; isolate sensitive data or use mapped mode</li>
+<li><strong>Virtiofs</strong> with <code>--allow-direct-io</code> adds complexity but improves performance for large files</li>
+<li><strong>NFS</strong> requires firewall rules; use <code>nfsstat</code> to debug mount issues</li>
+<li>Always verify file permissions after mounting shared directories</li>
+<li>For production VMs, consider containerized workloads (Docker, Podman) running inside the guest instead of shared mounts</li>
+</ul>
+<h2 id="debugging-shared-filesystem-issues">Debugging Shared Filesystem Issues</h2>
+<p>Check guest kernel messages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i 9p
+</span></span><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i virtio
+</span></span></code></pre></div><p>Verify host-side file access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -la /path/on/host
+</span></span><span class="line"><span class="cl">getfacl /path/on/host
+</span></span></code></pre></div><p>For virtiofs daemon issues:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ps aux <span class="p">|</span> grep virtiofsd
+</span></span><span class="line"><span class="cl">journalctl -u virtiofs.service
+</span></span></code></pre></div><p>Choose 9p for simplicity, virtiofs for performance, and network methods when you need isolation or firewall traversal.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Sharing Data Between QEMU/KVM Host and Guest with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Sharing Data Between QEMU/KVM Host and Guest. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

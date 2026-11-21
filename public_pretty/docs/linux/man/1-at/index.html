@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>at(1) · Linux Manual Pages</title>
+<meta name="description" content="at, batch, atq, atrm – queue, examine or delete jobs for later execution">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-at/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>at(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> at, batch, atq, atrm &#8211; queue, examine or delete jobs for later execution</p>
+<h2>SYNOPSIS</h2>
+<p> <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMlv</code>] <i>timespec</i>&#8230;<br />
+ <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMkv</code>] [<code>-t</code> <i>time</i>]<br />
+ <code>at -c</code> <i>job</i> [<i>job&#8230;</i>]<br />
+ <code>atq</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>]<br />
+ <code>at</code> [<code>-rd</code>] <i>job</i> [<i>job&#8230;</i>]<br />
+ <code>atrm</code> [<code>-V</code>] <i>job</i> [<i>job&#8230;</i>]<br />
+ <code>batch</code><br />
+ <code>at -b</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>at</code> and <code>batch</code> read commands from standard input or a specified file which are to be executed at a later time, using <code>/bin/sh</code>.</p>
+<dl>
+<dt><code>at</code></dt>
+<dd> executes commands at a specified time.</dd>
+<dt><code>atq</code></dt>
+<dd> lists the user&#8217;s pending jobs, unless the user is the superuser; in that case, everybody&#8217;s jobs are listed. The format of the output lines (one for each job) is: Job number, date, hour, queue, and username.</dd>
+<dt><code>atrm</code></dt>
+<dd> deletes jobs, identified by their job number.</dd>
+<dt><code>batch</code></dt>
+<dd> executes commands when system load levels permit; in other words, when the load average drops below 0.8, or the value specified in the invocation of <code>atd</code>.</dd></dl>
+<p> <code>At</code> allows fairly complex time specifications, extending the POSIX.2 standard. It accepts times of the form <code>HH:MM</code> to run a job at a specific time of day. (If that time is already past, the next day is assumed.) You may also specify <code>midnight,</code> <code>noon,</code> or <code>teatime</code> (4pm) and you can have a time-of-day suffixed with <code>AM</code> or <code>PM</code> for running in the morning or the evening. You can also say what day the job will be run, by giving a date in the form <code>month-name</code> <code>day</code> with an optional <code>year,</code> or giving a date of the form <i>MMDD</i>[<i>CC</i>]<i>YY</i>, <i>MM</i>/<i>DD</i>/[<i>CC</i>]<i>YY</i>, <i>DD</i>.<i>MM</i>.[<i>CC</i>]<i>YY</i> or [<i>CC</i>]<i>YY</i>&#8211;<i>MM</i>&#8211;<i>DD</i>. The specification of a date <i>must</i> follow the specification of the time of day. You can also give times like <code>now</code> <code>+</code> <i>count</i> <i>time-units,</i> where the time-units can be <code>minutes,</code> <code>hours,</code> <code>days,</code> or <code>weeks</code> and you can tell <code>at</code> to run the job today by suffixing the time with <code>today</code> and to run the job tomorrow by suffixing the time with <code>tomorrow.</code> </p>
+<p> For example, to run a job at 4pm three days from now, you would do <code>at 4pm + 3 days,</code> to run a job at 10:00am on July 31, you would do <code>at 10am Jul 31</code> and to run a job at 1am tomorrow, you would do <code>at 1am tomorrow.</code> </p>
+<p> The definition of the time specification can be found in <i>/usr/share/doc/at-3.1.13/timespec</i>. </p>
+<p> For both <code>at</code> and <code>batch</code>, commands are read from standard input or the file specified with the <code>-f</code> option and executed. The working directory, the environment (except for the variables <code>BASH_VERSINFO</code>, <code>DISPLAY</code>, <code>EUID</code>, <code>GROUPS</code>, <code>SHELLOPTS</code>, <code>TERM</code>, <code>UID</code>, and <code>_</code>) and the umask are retained from the time of invocation. </p>
+<p> As <code>at</code> is currently implemented as a setuid program, other environment variables (e.g. <code>LD_LIBRARY_PATH</code> or <code>LD_PRELOAD</code>) are also not exported. This may change in the future. As a workaround, set these variables explicitly in your job. </p>
+<p> An <code>at </code>&#8211; or <code>batch &#8211;</code> command invoked from a <code><a href="/docs/linux/man/1-su/">su</a>(1)</code> shell will retain the current userid. The user will be mailed standard error and standard output from his commands, if any. Mail will be sent using the command <code>/usr/sbin/sendmail</code>. If <code>at</code> is executed from a <code><a href="/docs/linux/man/1-su/">su</a>(1)</code> shell, the owner of the login shell will receive the mail. </p>
+<p> The superuser may use these commands in any case. For other users, permission to use at is determined by the files <i>/etc/at.allow</i> and <i>/etc/at.deny</i>. See <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5) for details.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-V</code></dt>
+<dd> prints the version number to standard error and exit successfully.</dd>
+<dt><code>-q</code><i> queue</i></dt>
+<dd> uses the specified queue. A queue designation consists of a single letter; valid queue designations range from <code>a</code> to <code>z</code> and <code>A</code> to <code>Z</code>. The <code>a</code> queue is the default for <code>at</code> and the <code>b</code> queue for <code>batch</code>. Queues with higher letters run with increased niceness. The special queue &quot;=&quot; is reserved for jobs which are currently running. </dd>
+<p> If a job is submitted to a queue designated with an uppercase letter, the job is treated as if it were submitted to batch at the time of the job. Once the time is reached, the batch processing rules with respect to load average apply. If <code>atq</code> is given a specific queue, it will only show jobs pending in that queue.</p>
+<dt><code>-m</code></dt>
+<dd> Send mail to the user when the job has completed even if there was no output.</dd>
+<dt><code>-M</code></dt>
+<dd> Never send mail to the user.</dd>
+<dt><code>-f</code><i> file</i></dt>
+<dd> Reads the job from <i>file</i> rather than standard input.</dd>
+<dt><code>-t</code><i> time</i></dt>
+<dd> run the job at <i>time</i>, given in the format [[CC]YY]MMDDhhmm[.ss]</dd>
+<dt><code>-l</code></dt>
+<dd> Is an alias for <code>atq.</code></dd>
+<dt><code>-r</code></dt>
+<dd> Is an alias for <code>atrm.</code></dd>
+<dt><code>-d</code></dt>
+<dd> Is an alias for <code>atrm.</code></dd>
+<dt><code>-b</code></dt>
+<dd> is an alias for <code>batch</code>.</dd>
+<dt><code>-v</code></dt>
+<dd> Shows the time the job will be executed before reading the job. </dd>
+<p> Times displayed will be in the format &quot;Thu Feb 20 14:50:00 1997&quot;.</p>
+<dt><code>-c</code></dt>
+<dd> cats the jobs listed on the command line to standard output.</dd></dl>
+<h2>FILES</h2>
+<p> <i>/var/spool/at</i><br />
+ <i>/var/spool/at/spool</i><br />
+ <i>/proc/loadavg</i><br />
+ <i>/var/run/utmp</i><br />
+ <i>/etc/at.allow</i><br />
+ <i>/etc/at.deny</i></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-at-allow/">at.allow</a></code>(5), <code>at.deny</code>(5), <code><a href="/docs/linux/man/8-atd/">atd</a></code>(8), <code>cron</code>(1), <code><a href="/docs/linux/man/1-nice/">nice</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2).</p>
+<h2>BUGS</h2>
+<p> The correct operation of <code>batch</code> for Linux depends on the presence of a <i>proc</i>&#8211; type directory mounted on <i>/proc</i>. </p>
+<p> If the file <i>/var/run/utmp</i> is not available or corrupted, or if the user is not logged on at the time <code>at</code> is invoked, the mail is sent to the userid found in the environment variable <code>LOGNAME</code>. If that is undefined or empty, the current userid is assumed. </p>
+<p> <code>At</code> and <code>batch</code> as presently implemented are not suitable when users are competing for resources. If this is the case for your site, you might want to consider another batch system, such as <code>nqs</code>.</p>
+<h2>AUTHOR</h2>
+<p> At was mostly written by Thomas Koenig, ig25 [at] rz.uni-karlsruhe.de. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

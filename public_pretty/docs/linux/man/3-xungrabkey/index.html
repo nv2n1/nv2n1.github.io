@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xungrabkey(3) · Linux Manual Pages</title>
+<meta name="description" content="XGrabKey, XUngrabKey – grab keyboard keys">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xungrabkey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xungrabkey(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XGrabKey, XUngrabKey &#8211; grab keyboard keys </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XGrabKey(Display *<i>display</i>, int <i>keycode</i>, unsigned int <i>modifiers</i>, Window <i>grab_window</i>, Bool <i>owner_events</i>, int <i>pointer_mode</i>, int <i>keyboard_mode</i>);</dd>
+<dd>int XUngrabKey(Display *<i>display</i>, int <i>keycode</i>, unsigned int <i>modifiers</i>, Window <i>grab_window</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>grab_window</i></dt>
+<dd>Specifies the grab window.</dd>
+<dt><i>keyboard_mode</i></dt>
+<dd>Specifies further processing of keyboard events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</dd>
+<dt><i>keycode</i></dt>
+<dd>Specifies the KeyCode or <code>AnyKey</code>.</dd>
+<dt><i>modifiers</i></dt>
+<dd>Specifies the set of keymasks or <code>AnyModifier</code>. The mask is the bitwise inclusive OR of the valid keymask bits.</dd>
+<dt><i>owner_events</i></dt>
+<dd>Specifies a Boolean value that indicates whether the keyboard events are to be reported as usual.</dd>
+<dt><i>pointer_mode</i></dt>
+<dd>Specifies further processing of pointer events. You can pass <code>GrabModeSync</code> or <code>GrabModeAsync</code>.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XGrabKey</code> function establishes a passive grab on the keyboard. In the future, the keyboard is actively grabbed (as for <code>XGrabKeyboard</code>), the last-keyboard-grab time is set to the time at which the key was pressed (as transmitted in the <code>KeyPress</code> event), and the <code>KeyPress</code> event is reported if all of the following conditions are true:</p>
+<dl COMPACT>
+<dt>&bull;</dt>
+<dd>The keyboard is not grabbed and the specified key (which can itself be a modifier key) is logically pressed when the specified modifier keys are logically down, and no other modifier keys are logically down.</dd>
+<dt>&bull;</dt>
+<dd>Either the grab_window is an ancestor of (or is) the focus window, or the grab_window is a descendant of the focus window and contains the pointer.</dd>
+<dt>&bull;</dt>
+<dd>A passive grab on the same key combination does not exist on any ancestor of grab_window.</dd></dl>
+<p> The interpretation of the remaining arguments is as for <code>XGrabKeyboard</code>. The active grab is terminated automatically when the logical state of the keyboard has the specified key released (independent of the logical state of the modifier keys), at which point a <code>KeyRelease</code> event is reported to the grabbing window. </p>
+<p> Note that the logical state of a device (as seen by client applications) may lag the physical state if device event processing is frozen. </p>
+<p> A modifiers argument of <code>AnyModifier</code> is equivalent to issuing the request for all possible modifier combinations (including the combination of no modifiers). It is not required that all modifiers specified have currently assigned KeyCodes. A keycode argument of <code>AnyKey</code> is equivalent to issuing the request for all possible KeyCodes. Otherwise, the specified keycode must be in the range specified by min_keycode and max_keycode in the connection setup, or a <code>BadValue</code> error results. </p>
+<p> If some other client has issued a <code>XGrabKey</code> with the same key combination on the same window, a <code>BadAccess</code> error results. When using <code>AnyModifier</code> or <code>AnyKey</code>, the request fails completely, and a <code>BadAccess</code> error results (no grabs are established) if there is a conflicting grab for any combination. </p>
+<p> <code>XGrabKey</code> can generate <code>BadAccess</code>, <code>BadValue</code>, and <code>BadWindow</code> errors. </p>
+<p> The <code>XUngrabKey</code> function releases the key combination on the specified window if it was grabbed by this client. It has no effect on an active grab. A modifiers of <code>AnyModifier</code> is equivalent to issuing the request for all possible modifier combinations (including the combination of no modifiers). A keycode argument of <code>AnyKey</code> is equivalent to issuing the request for all possible key codes. </p>
+<p> <code>XUngrabKey</code> can generate <code>BadValue</code> and <code>BadWindow</code> error.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadAccess</code></dt>
+<dd>A client attempted to grab a key/button combination already grabbed by another client.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xallowevents/">XAllowEvents</a>(3), <a href="/docs/linux/man/3-xgrabbutton/">XGrabButton</a>(3), <a href="/docs/linux/man/3-xgrabkeyboard/">XGrabKeyboard</a>(3), <a href="/docs/linux/man/3-xgrabpointer/">XGrabPointer</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

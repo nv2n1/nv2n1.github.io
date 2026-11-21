@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qlandkartegt(1) · Linux Manual Pages</title>
+<meta name="description" content="QLandkarteGT – GPS mapping (GeoTiff and vector) and GPSr management">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-qlandkartegt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>qlandkartegt(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> QLandkarteGT &#8211; GPS mapping (GeoTiff and vector) and GPSr management</p>
+<h2>SYNOPSIS</h2>
+<p> <code>qlandkartegt</code> [ <code>-d</code> | <code>&#8211;debug</code> ] [ <code>-h</code> | <code>&#8211;help</code> ] <code>-m</code><i>&nbsp;<wbr>FD</i> | <code>&#8211;monitor=</code><i>FD</i> ] [ <code>-n</code> | <code>&#8211;no-splash</code> ] [ <i>files</i>&#8230; ]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>QLandkarteGT</i> is a versatile tool for GPS maps in GeoTiff format as well as Garmin&#8217;s img vector map format. <i>QLandkarteGT</i> is the successor of <i>QLandkarte</i>. Among various improvements (e.g. 2D/3D map rendering and reduced resource demands) the major difference is its device-independent architecture, which is not limited to Garmin devices anymore. </p>
+<p> Additionally, <i>QLandkarteGT</i> serves as a frontend to the GDAL tools, to make georeferencing of scanned maps feasible for users. In contrast to similar tools (e.g. QGis) its straightforward interface is especially suited for non-scientific users.</p>
+<h2>OPTIONS</h2>
+<p> <i>QLandkarteGT</i> currently understands the following options. Note that long options must be specified in full (by now).</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd>
+</dd><dt><code>&#8211;debug</code></dt>
+<dd> Enable additional debugging messages to standard output.</dd>
+<dt><code>-h</code></dt>
+<dd>
+</dd><dt><code>&#8211;help</code></dt>
+<dd> Print a short option summary, and exit.</dd>
+<dt><code>-m</code><i>&nbsp;<wbr>FD</i></dt>
+<dd>
+</dd><dt><code>&#8211;monitor=</code><i>FD</i></dt>
+<dd> Monitor the file descriptor <i>FD</i> for activity. If any new data arrives on the descriptor, a single byte is read from it, all currently active data are discarded, and the geo data files that have been specified at the end of the command-line when starting <i>QLandkarteGT</i> are read and evaluated again.</dd>
+<dt><code>-n</code></dt>
+<dd>
+</dd><dt><code>&#8211;no-splash</code></dt>
+<dd> Do not display the splash screen on startup.</dd></dl>
+<p> All remaining positional arguments are considered names of geo data files to be read and evaluated upon startup.</p>
+<h2>SEE ALSO</h2>
+<p> <i>QLandkarteGT</i> Homepage: <code><a rel="nofollow" href="http://www.qlandkarte.org">http://www.qlandkarte.org</a></code></p>
+<h2>AUTHOR</h2>
+<p> <i>QLandkarteGT</i> was written and is currently maintained by Oliver Eichler <code>&lt;oliver.eichler [at] gmx.de&gt;</code>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

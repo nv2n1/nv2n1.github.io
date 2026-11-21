@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>appletviewer-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug(1) · Linux Manual Pages</title>
+<meta name="description" content="appletviewer – Runs applets outside of a web browser.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-appletviewer-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>appletviewer-java-1-8-0-openjdk-1-8-0-121-0-b13-el7_3-x86_64-debug(1)</h1>
+
+
+
+
+
+<p>appletviewer &#8211; Runs applets outside of a web browser.</p>
+<h2>Synopsis</h2>
+<pre><code>appletviewer</code> [<i>options</i>] <i>url</i>...</pre>
+<dl>
+<dt><i>options</i></dt>
+<dd>The command-line options separated by spaces. See Options.</dd>
+<dt><i>url</i></dt>
+<dd>The location of the documents or resources to be displayed. You can specify multiple URLs separated by spaces.</dd></dl>
+<h2>Description</h2>
+<p>The <code>appletviewer</code> command connects to the documents or resources designated by <i>urls</i> and displays each applet referenced by the documents in its own window. If the documents referred to by urls do not reference any applets with the <code>OBJECT</code>, <code>EMBED</code>, or <code>APPLET</code> tag, then the <code>appletviewer</code> command does nothing. For details about the HTML tags that the <code>appletviewer</code> command supports, see AppletViewer Tags at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/tools/appletviewertags.html">http://docs.oracle.com/javase/8/docs/technotes/tools/appletviewertags.html</a> </p>
+<p> The <code>appletviewer</code> command requires encoded URLs according to the escaping mechanism defined in RFC2396. Only encoded URLs are supported. However, file names must be unencoded, as specified in RFC2396. </p>
+<p> <i>Note:</i> The <code>appletviewer</code> command is intended for development purposes only. For more information, see About Sample/Test Applications and Code at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/samples/aboutCodeSamples.html">http://docs.oracle.com/javase/8/docs/technotes/samples/aboutCodeSamples.html</a></p>
+<h2>Options</h2>
+<dl>
+<dt>-debug</dt>
+<dd>Starts the Applet Viewer in the Java debugger with the <code>jdb</code> command to debug the applets in the document.</dd>
+<dt>-encoding <i>encoding-name</i></dt>
+<dd>Specifies the input HTML file encoding name.</dd>
+<dt>-J<i>javaoption</i></dt>
+<dd>Passes the string <code>javaoption</code> as a single argument to the Java interpreter, which runs the Applet Viewer. The argument should not contain spaces. Multiple argument words must all begin with the prefix <code>-J</code>. This is useful for adjusting the compiler&#8217;s execution environment or memory usage.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>funit-exec(8) · Linux Manual Pages</title>
+<meta name="description" content="funit-exec – on CNTRL-C exec the specified program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-funit-exec/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>funit-exec(8)</h1>
+
+
+
+
+
+<p>funit-exec &#8211; on CNTRL-C exec the specified program</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>funit-exec</code> [<i>OPTION</i>] {<i>program</i>} [<i>arg</i>&#8230;]</dt></dl>
+<h2>Description</h2>
+<dd>Wait for a SIGINT (cntrl-c) signal and then exec <i>program</i> passing it <i>args</i>. </dd>
+<p> Sending a SIGUSR1 signal will cause a random non-main thread to make the exec call. </p>
+<p> <code>-m </code><i>pid</i></p>
+<dl>
+<dd>The <i>pid</i> of the master process that should be sent a signal once this program is running (default 0).</dd></dl>
+<p> <code>-s </code><i>signal</i></p>
+<dl>
+<dd>The <i>signal</i> to send to the master process once this program is running (default 0).</dd></dl>
+<p> <code>-t </code><i>timeout</i></p>
+<dl>
+<dd>Exit after <i>timeout</i> seconds.</dd></dl>
+<p> <code>-c </code><i>count</i></p>
+<dl>
+<dd>Create <i>count</i> threads.</dd></dl>
+<p> <code>-e </code><i>executable</i></p>
+<dl>
+<dd>The <i>executable</i> to exec (default is the <i>program</i>).</dd></dl>
+<p> <code>-b</code></p>
+<dl>
+<dd>Brand the exec with the thread that initiated it by setting argv[0] to the string TID:PID.</dd></dl>
+<p> <i>program</i> <i>arg</i>&#8230;</p>
+<dl>
+<dd>The program and arguments to pass to the exec call.</dd></dl>
+<p> This program is used by <code>funit</code>, as part of frysk&#8217;s JUnit testsuite.</p>
+<h2>Example</h2>
+<p>Create a 32-bit process that, on cntrl-c (SIGINT), will exec the 64-bit <code>funit-exit</code> program. </p>
+<dl>
+<dd>
+<pre>/usr/lib/frysk/funit-exec \
+ /usr/lib64/frysk/funit-exec /bin/echo done</pre>
+</dd></dl>
+<p> Create a process, with one additional thread, signals the shell with SIGUSR1 once it is running, and then execs <code>/bin/echo</code> but with argument zero set to &quot;arg0&quot;. </p>
+<dl>
+<dd>
+<pre>/usr/lib/frysk/funit-exec -c 1 -s 1 -p $$ \
+ -e /bin/echo arg0 arg1</pre>
+</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/7-frysk/">frysk</a>(7) <a href="/docs/linux/man/8-funit/">funit</a>(8)</p>
+<h2>Bugs</h2>
+<p>Report bugs to m[blue]<code>http:/sources.redhat.com/frysk</code>m[] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>import_interpolation(1) · Linux Manual Pages</title>
+<meta name="description" content="libpinyin – Library to deal with pinyin">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-import_interpolation/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>import_interpolation(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> libpinyin &#8211; Library to deal with pinyin</p>
+<h2>DESCRIPTION</h2>
+<p> The libpinyin project aims to provide the algorithms core for intelligent sentence-based Chinese pinyin input methods. </p>
+<h2>TOOLS</h2>
+<p> gen_binary_files &#8211; generate initially binary pinyin libraries import_interpolation &#8211; import libpinyin textual format model data gen_unigram &#8211; increase the unigram frequency for all phrases </p>
+<h2>USAGE</h2>
+<dl>
+<dt>
+</dt><dd>gen_binary_files &#8211;table-dir &lt;DIRNAME&gt;</dd>
+<dl>
+<dl>
+<dt> <code>&#8211;table-dir</code></dt>
+<dd>Read textual format files from the &lt;DIRNAME&gt; directory.</dd></dl>
+</dl>
+<dt>
+</dt><dd>import_interpolation &lt; &lt;MODELFILE&gt;</dd>
+<dt>
+</dt><dd>gen_unigram </dd>
+</dl>
+<h2>EXAMPLE</h2>
+<p> Download the model.text.tar.gz, and extracts all files into a folder, then run the commands below to generate the binary model data. </p>
+<dl>
+<dt>
+</dt><dd> rm gb_char.bin gbk_char.bin phrase_index.bin pinyin_index.bin bigram.db </dd>
+<p> gen_binary_files &#8211;table-dir ../data </p>
+<p> import_interpolation &lt; ../data/interpolation.text </p>
+<p> gen_unigram</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

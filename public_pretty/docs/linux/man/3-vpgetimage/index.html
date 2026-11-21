@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vpgetimage(3) · Linux Manual Pages</title>
+<meta name="description" content="vpGetImage – get a field of the intermediate image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vpgetimage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vpgetimage(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vpGetImage &#8211; get a field of the intermediate image</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;volpack.h&gt;
+</code></pre>
+<p> vpResult</p>
+<dl>
+<dt> <code>vpGetImage(</code><i>vpc, image, width, height, scan_bytes,</dt>
+<dd>pixel_type, image_type</i><code>)</code></dd>
+<dd>vpContext *<i>vpc;</i></dd>
+<dd>void *<i>image;</i></dd>
+<dd>int <i>width, height;</i></dd>
+<dd>int <i>scan_bytes;</i></dd>
+<dd>int <i>pixel_type, image_type;</i></dd></dl>
+<h2>Arguments</h2>
+<dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd>
+<dt><i>image</i></dt>
+<dd>2D array for storing result image.</dd>
+<dt><i>width</i></dt>
+<dd>Width of array in pixels.</dd>
+<dt><i>height</i></dt>
+<dd>Height of array in pixels.</dd>
+<dt><i>scan_bytes</i></dt>
+<dd>Number of bytes per scanline in array.</dd>
+<dt><i>pixel_type</i></dt>
+<dd>Code indicating the format of each pixel in the array.</dd>
+<dt><i>image_type</i></dt>
+<dd>Code indicating the source of the image data (VP_IMAGE_BUFFER or VP_SHADOW_BUFFER).</dd></dl>
+<h2>Description</h2>
+<p>This is a debugging function. It is used to retrieve the contents of one of the temporary rendering buffers used during rendering, namely the intermediate image or the shadow buffer. Rendering consists of two stages: the volume is resampled and composited into the intermediate image to produce a distorted volume rendering, and then the intermediate image is warped into the final image. If shadows are enabled then the shadow buffer is used during the first stage to incrementally compute which voxels are illuminated by the light source. This function returns images produced during the first stage, before the final warp. </p>
+<p> This function may be called after a call to one of the rendering routines (see <a href="/docs/linux/man/3-vprenderrawvolume/">vpRenderRawVolume</a>(3)). If the <i>image_type</i> argument is VP_IMAGE_BUFFER then data will be copied from the intermediate image. The <i>pixel_type</i> argument specifies what information to copy and the format for storing the data in the output array. The possible values for <i>pixel_type</i> are the same as for the <i>pixel_type</i> argument to <code>vpSetImage.</code> For instance, use VP_LUMINANCE to extract the grayscale intensity (assuming the current shader produces grayscale pixels). </p>
+<p> If the <i>image_type</i> argument is VP_SHADOW_BUFFER then data will be copied from the shadow buffer. The only valid option for <i>pixel_type</i> is VP_ALPHA, since no color information is stored in the shadow buffer. </p>
+<p> See <code>vpSetImage</code> for details on the pixel formats, the layout of the output array, and the remaining arguments. </p>
+<p> To find the required size for the result array, use <code>vpGeti</code> with the VP_INTERMEDIATE_WIDTH and VP_INTERMEDIATE_HEIGHT options (when <i>image_type</i> is VP_IMAGE_BUFFER) or the VP_SHADOW_WIDTH and VP_SHADOW_HEIGHT options (when <i>image_type</i> is VP_SHADOW_BUFFER).</p>
+<h2>Errors</h2>
+<p>The normal return value is VP_OK. The following error return values are possible:</p>
+<dl>
+<dt>VPERROR_BAD_SIZE</dt>
+<dd>The destination array size is incorrect or there is no intermediate image.</dd>
+<dt>VPERROR_BAD_OPTION</dt>
+<dd>The <i>field</i> argument is invalid.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vprenderrawvolume/">vpRenderRawVolume</a>(3), <a href="/docs/linux/man/3-vpgeti/">vpGeti</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

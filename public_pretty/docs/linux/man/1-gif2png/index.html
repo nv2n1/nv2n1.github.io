@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gif2png(1) · Linux Manual Pages</title>
+<meta name="description" content="gif2png – convert GIFs to PNGs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gif2png/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gif2png(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> gif2png &#8211; convert GIFs to PNGs</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+gif2png[-bdfghinprsvwO][file.[gif]...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>gif2png</code> program converts files in the obsolescent and patent-encumbered Graphic Interchange Format (GIF) to Portable Network Graphics (PNG) format, an open W3C standard. </p>
+<p> Normally <code>gif2png</code> converts each file named on the command line, leaving the original in place. If a name does not have a .gif extension, the unmodified name will be tried first, followed by the name with .gif appended. For each file named `foo.gif&#8217;, a foo.png will be created. </p>
+<p> When a multi-image GIF file named foo.gif is converted, gif2png creates multiple PNG files, each containing one frame; their names will be foo.png, foo.p01, foo.p02 etc. </p>
+<p> If no source files are specified and stdin is a terminal, <code>gif2png</code> lists a usage summary and version information, then exits. </p>
+<p> If no source files are specified, and stdin is a device or pipe, stdin is converted to noname.png. (The program can&#8217;t be a normal stdin-to-stdout filter because of the possibility that the input GIF might have multiple images). </p>
+<p> However, if filter mode is forced (with -f) stdin will be converted to stdout, with <code>gif2png</code> returning an error code if the GIF is multi-image. </p>
+<p> The program will preserve the information contained in a GIF file as closely as possible, including GIF comment and application-data extension blocks. All graphics data (pixels, RGB color tables) will be converted without loss of information. Transparency is also preserved. There is one exception; GIF plain-text extensions are skipped. </p>
+<p> The program automatically converts interlaced GIFs to interlaced PNGs. It detects images in which all colors are gray (equal R, G, and B values) and converts such images to PNG grayscale. Other images are converted to use the PNG palette type. Duplicate color entries are silently preserved. Unused color-table entries cause an error message. </p>
+<p> The action of the program can be modified with the following command-line switches: </p>
+<dl>
+<dt><code>-b</code> {#}RRGGBB</dt>
+<dd> Background. Replace transparent pixels with given RGB value, six hexadecimal digits interpreted as two hexits each of red, green, and blue value. The value may optionally be led with a #, HTML-style. </dd>
+<dt><code>-d </code></dt>
+<dd> Delete source GIF files after successful conversion. </dd>
+<dt><code>-f </code></dt>
+<dd> Filter mode. Convert GIF on stdin to PNG on stdout, return error if the GIF is multi-image. </dd>
+<dt><code>-g </code></dt>
+<dd> Write gamma=1/2.2 and sRGB chunks in the PNG. </dd>
+<dt><code>-h </code></dt>
+<dd> Generate PNG color-frequency histogram chunks into converted color files. </dd>
+<dt><code>-i </code></dt>
+<dd> Force conversion to interlaced PNG files. </dd>
+<dt><code>-n </code></dt>
+<dd> Force conversion to non-interlaced PNG files. </dd>
+<dt><code>-p </code></dt>
+<dd> Display progress of PNG writing. </dd>
+<dt><code>-r </code></dt>
+<dd> Try to recover data from corrupted GIF files. </dd>
+<dt><code>-s </code></dt>
+<dd> Do not translate the GIF Software chunk to a PNG annotation. </dd>
+<dt><code>-t </code></dt>
+<dd> Change behavior of web-probe (-w) mode to accept GIFs with transparency. </dd>
+<dt><code>-v </code></dt>
+<dd> Verbose mode; show summary line, -vv enables conversion-statistics and debugging messages. </dd>
+<dt><code>-w </code></dt>
+<dd> Web-probe switch; list GIFs that do not have multiple images or transparency to stdout. GIFs that fail this filter cause error messages to stderr. </dd>
+<dt><code>-O </code></dt>
+<dd> Optimize; remove unused color-table entries. Normally these trigger an error message and disable <code>-d</code> (but conversion is completed anyway). Also, use zlib compression level 9 (best compression) instead of the default level. The recovery algorithm enabled by <code>-r</code> is as follows: Unused color table entries will not trigger an error message as they normally do, but will still be preserved unless <code>-O</code> is also on, in which case they will be discarded. Missing color tables will be patched with a default that puts black at index 0, white at index 1, and supplies red, green, blue, yellow, purple and cyan as the remaining color values. Missing image pixels will be set to 0. Unrecognized or corrupted extensions will be discarded. </dd>
+</dl>
+<h2>PROBLEMS</h2>
+<p> Naively converting all your GIFs at one go with <code>gif2png</code> is not likely to give you the results you want. The problem is not with PNG itself or with gif2png, but with the poor-to-nonexistent support for PNG transparency and animation in most browsers. </p>
+<p> The web-probe switch is intended to be used with scripts for converting web sites. All PNGs generated from the pathnames it returns will be properly rendered in Netscape Navigator 4.04+, Internet Explorer versions 4.0b1+, and all other current web browsers. Note: in future releases of gif2png, the meaning of this switch may change to reflect the capabilities of prevalent browsers. </p>
+<h2>PATENT ISSUES</h2>
+<p> The GIF format is encumbered by a Unisys patent (see &lt;<a rel="nofollow" href="http://www.delphion.com/details?">http://www.delphion.com/details?</a>&amp;pn10=US04464650&gt;) for the Lempel-Ziv-Welch compression algorithm. Use of any GIF image generator not licensed by Unisys can make you liable to lawsuit. Unisys apparently refuses to issue licenses for use of LZW in open-source programs, and in 1999 stated that its policy is to require a $5000 fee from websites that carry GIF images made by unlicensed software &#8212; even nonprofit websites created and displayed with free software. See &lt;<a href="http://corp2.unisys.com/LeadStory/lzw-license.html">http://corp2.unisys.com/LeadStory/lzw-license.html</a>&gt; for details. </p>
+<p> The patent probably does not cover LZW decompressors such as the one gif2png uses; legal opinions are divided on this, there has been no court test, and Unisys refuses to commit itself. It is possible that you may be liable if you distribute <code>gif2png</code> in a commercial program, or distribute <code>gif2png</code> on a for-profit basis. </p>
+<p> For a history of the GIF patent controversy, see &lt;<a rel="nofollow" href="http://lpf.ai.mit.edu/Patents/Gif/Gif.html">http://lpf.ai.mit.edu/Patents/Gif/Gif.html</a>&gt;. To avoid legal problems, it would be a good idea to convert all GIFs on your websites and elsewhere to PNGs without delay. See &lt;<a href="http://burnallgifs.org/">http://burnallgifs.org/</a>&gt; for discussion. </p>
+<h2>STANDARDS AND SPECIFICATIONS</h2>
+<p> Copies of the GIF89 specification are widely available on the Web; search for &quot;GRAPHICS INTERCHANGE FORMAT&quot;. The Graphics Interchange Format(c) is the Copyright property of CompuServe Incorporated. GIF(sm) is a Service Mark property of CompuServe Incorporated. </p>
+<p> The PNG home site at &lt;<a rel="nofollow" href="http://www.libpng.org/pub/png/">http://www.libpng.org/pub/png/</a>&gt; has very complete information on the PNG standard, PNG libraries, and PNG tools. </p>
+<h2>SEE ALSO</h2>
+<p> web2png(1) </p>
+<h2>AUTHORS</h2>
+<p> Code by Alexander Lehmann &lt;alex [at] hal.rhein-main.de&gt;, 1995. Auto-interlace conversion and tRNS optimization by Greg Roelofs &lt;newt [at] pobox.com&gt;, 1999. Man page, -O, -w, and production packaging by Eric S. Raymond &lt;esr [at] thyrsus.com&gt;, 1999. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

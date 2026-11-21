@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-cli(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-abrt-cli/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>abrt-cli(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>abrt-cli - List, remove, print, analyze, report problems</p>
+<h2>SYNOPSIS</h2>
+<p><i>abrt-cli</i> [&ndash;authenticate] COMMAND [COMMAND OPTIONS]</p>
+<p><i>abrt-cli</i> list [-vn] [&ndash;detailed] [&ndash;since NUM] [&ndash;until NUM] [DIR]&hellip;</p>
+<p><i>abrt-cli</i> remove [-v] DIR&hellip;</p>
+<p><i>abrt-cli</i> report [-v] [&ndash;delete] DIR&hellip;</p>
+<p><i>abrt-cli</i> info [-v] [&ndash;detailed] [-s SIZE] DIR&hellip;</p>
+<p><i>abrt-cli</i> status [-vb] [&ndash;since NUM]</p>
+<p><i>abrt-cli</i> process [-v] [&ndash;since NUM] DIR&hellip;</p>
+<h2>GLOBAL OPTIONS</h2>
+<p>-a,&ndash;authenticate</p>
+<dl>
+<dt>
+</dt><dd> Enable PolicyKit authentication to be able to work with the system problems</dd></dl>
+<h2>COMMAND OPTIONS</h2>
+<p>-v,&ndash;verbose</p>
+<dl>
+<dt>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
+<p>-b, &ndash;bare</p>
+<dl>
+<dt>
+</dt><dd> Print only the problem count without any message</dd></dl>
+<p>&ndash;detailed</p>
+<dl>
+<dt>
+</dt><dd> Show detailed report</dd></dl>
+<p>&ndash;delete</p>
+<dl>
+<dt>
+</dt><dd> Remove PROBLEM_DIR after reporting</dd></dl>
+<p>-n,&ndash;not-reported</p>
+<dl>
+<dt>
+</dt><dd> List only not-reported problems</dd></dl>
+<p>&ndash;size SIZE</p>
+<dl>
+<dt>
+</dt><dd> Text larger than SIZE bytes will be shown abridged</dd></dl>
+<p>&ndash;since NUM</p>
+<dl>
+<dt>
+</dt><dd> Selects only problems detected after timestamp</dd></dl>
+<p>&ndash;until NUM</p>
+<dl>
+<dt>
+</dt><dd> Selects only the problems older than specified timestamp</dd></dl>
+<h2>AUTHORS</h2>
+<dl>
+<dt>
+</dt><dd> &bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

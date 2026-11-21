@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_srtp_get_keys(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_srtp_get_keys – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_srtp_get_keys/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_srtp_get_keys(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_srtp_get_keys &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
+<p> <code>int gnutls_srtp_get_keys(gnutls_session_t </code><i>session</i><code>, void * </code><i>key_material</i><code>, unsigned int </code><i>key_material_size</i><code>, gnutls_datum_t * </code><i>client_key</i><code>, gnutls_datum_t * </code><i>client_salt</i><code>, gnutls_datum_t * </code><i>server_key</i><code>, gnutls_datum_t * </code><i>server_salt</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>void * key_material</dt>
+<dd> Space to hold the generated key material</dd>
+<dt>unsigned int key_material_size</dt>
+<dd> The maximum size of the key material</dd>
+<dt>gnutls_datum_t * client_key</dt>
+<dd> The master client write key, pointing inside the key material</dd>
+<dt>gnutls_datum_t * client_salt</dt>
+<dd> The master client write salt, pointing inside the key material</dd>
+<dt>gnutls_datum_t * server_key</dt>
+<dd> The master server write key, pointing inside the key material</dd>
+<dt>gnutls_datum_t * server_salt</dt>
+<dd> The master server write salt, pointing inside the key material</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This is a helper function to generate the keying material for SRTP. It requires the space of the key material to be pre-allocated (should be at least 2x the maximum key size and salt size). The <i>client_key</i> , <i>client_salt</i> , <i>server_key</i> and <i>server_salt</i> are convenience datums that point inside the key material. They may be <code>NULL</code>.</p>
+<h2>RETURNS</h2>
+<p> On success the size of the key material is returned, otherwise, <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if the buffer given is not sufficient, or a negative error code. </p>
+<p> Since 3.1.4</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

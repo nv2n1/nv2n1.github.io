@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>file_select_ex(3) · Linux Manual Pages</title>
+<meta name="description" content="file_select_ex – Displays the Allegro file selector with a caption.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-file_select_ex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>file_select_ex(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> file_select_ex &#8211; Displays the Allegro file selector with a caption.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>int file_select_ex(const char *message, char *path, const char *ext,</code> <code>int size, int w, int h);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Displays the Allegro file selector, with the message as caption. The path parameter contains the initial filename to display (this can be used to set the starting directory, or to provide a default filename for a save-as operation). The user selection is returned by altering the path buffer, whose maximum capacity in bytes is specified by the size parameter. Note that it should have room for at least 80 characters (not bytes), so you should reserve 6x that amount, just to be sure. The list of files is filtered according to the file extensions in the ext parameter. Passing NULL includes all files; &quot;PCX;BMP&quot; includes only files with one of the fields in the extension list can begin with a slash, followed by a set of attribute characters. Any attribute written on its own, or with a &#8216;+&#8217; before it, indicates to include only files which have that attribute set. Any attribute with a &#8216;-&#8216; before it indicates to leave out any files with that attribute. The flag characters are &#8216;r&#8217; (read-only), example, an extension string of &quot;PCX;BMP;/+r-h&quot; will display only PCX or BMP files that are read-only and not hidden. The directories are not affected in the same way as the other files by the extension string: the extensions are never taken into account for them and the other attributes are taken into account only when &#8216;d&#8217; is mentioned in the string; in other words, all directories are included when &#8216;d&#8217; is not mentioned in the string. The file selector is stretched to the width and height specified in the w and h parameters, and to the size of the standard Allegro font. If either the width or height argument is set to zero, it is stretched to the corresponding screen dimension. This function returns zero if it was closed with the Cancel button or non-zero if it was OK&#8217;d. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

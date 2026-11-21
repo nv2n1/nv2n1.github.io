@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fadvise(2) · Linux Manual Pages</title>
+<meta name="description" content="fadvise64,fadvise64_64 – Give advice about file access">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-fadvise/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>fadvise(2)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> fadvise64,fadvise64_64 &#8211; Give advice about file access</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd>long&nbsp;<wbr><code>fadvise64_64</code> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>);</dd>
+<dt>
+</dt><dd>long&nbsp;<wbr><code>sys_fadvise64</code>&nbsp;<wbr> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>); </dd>
+</dl>
+<h2>DESCRIPTION</h2>
+<p> Allows an application to to tell the kernel how it expects to use a file handle, so that the kernel can choose appropriate read-ahead and caching techniques for access to the corresponding file. This is similar to the POSIX version of the <code>madvise</code> system call, but for file access instead of memory access. The sys_fadvise64() function is obsolete and corresponds to a broken glibc API, sys_fadvise64_64() is the fixed version. The following are the values for the <i>advice</i> parameter: </p>
+<dl>
+<dt>FADV_NORMAL</dt>
+<dd> No special treatment. </dd>
+<dt>FADV_RANDOM</dt>
+<dd> Expect page references in random order. </dd>
+<dt>FADV_SEQUENTIAL</dt>
+<dd> Expect page references in sequential order. </dd>
+<dt>FADV_WILLNEED</dt>
+<dd> Expect access in the near future. </dd>
+<dt>FADV_DONTNEED</dt>
+<dd> Do not expect access in the near future. Subsequent access of pages in this range will succeed, but will result either in reloading of the memory contents from the underlying mapped file or zero-fill-in-demand pages for mappings without an underlying file. </dd>
+<dt>FADV_NOREUSE</dt>
+<dd> Access data only once. </dd>
+</dl>
+<h2>ERRORS</h2>
+<dl>
+<dt>-EBADF</dt>
+<dd> An invalid file descriptor was specified. to modify the modules. </dd>
+<dt>-EINVAL</dt>
+<dd> An invalid <i>f_mapping</i> of <i>file</i>, <i>len</i> value smaller than 0 or <i>advice</i> value unknown. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-madvise/">madvise</a>(2)</code> </p>
+<h2>AUTHOR</h2>
+<p> Niki Rahimi </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

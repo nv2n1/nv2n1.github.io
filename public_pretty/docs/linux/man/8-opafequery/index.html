@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opafequery(8) · Linux Manual Pages</title>
+<meta name="description" content="opafequery">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opafequery/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opafequery(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>opafequery </p>
+<p> <code>(All)</code> Used for testing or debugging performance administration (PA) operations to the Fabric Executive (FE). This tool performs custom PA client/server queries. The output formats and arguments are very similar to opapaquery.</p>
+<h2>Syntax</h2>
+<p>opafequery [-v] [-a <i>ipAddr</i>| -h <i>hostName</i>] [-E] [-T paramsfile] -o <i>type</i>[SA options | PA options]</p>
+<h2>General Options</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd>Produce this help text. </dd>
+<dt>-v / &#8211;verbose</dt>
+<dd>Verbose output.</dd>
+<dt>-a / &#8211;ipAddr <i>ipAddr</i></dt>
+<dd>IP address of node running the FE.</dd>
+<dt>-h / &#8211;hostName <i>hostName</i></dt>
+<dd>Host name of node running the FE.</dd>
+<dt>-o / &#8211;output <i>output</i></dt>
+<dd>Output type. See <i>SA Output Types</i> and <i>PA Output Types</i> for details.</dd>
+<dt>-E / &#8211;feEsm <i>ESMName</i></dt>
+<dd>ESM FE name.</dd>
+<dt>-T / &#8211;sslParmsFile <i>filename</i></dt>
+<dd>SSL/TLS parameters XML file. Default = /etc/sysconfig/opa/opaff.xml</dd></dl>
+<h2>SA Specific Options</h2>
+<dl>
+<dt>-I / &#8211;IB</dt>
+<dd>Issues query in legacy InfiniBand* format.</dd>
+<dt>-l / &#8211;lid <i>lid</i></dt>
+<dd>Queries a specific LID.</dd>
+<dt>-k / &#8211;pkey <i>pkey</i></dt>
+<dd>Queries a specific pkey.</dd>
+<dt>-i / &#8211;vfindex <i>vfindex</i></dt>
+<dd>Queries a specific vfindex.</dd>
+<dt>-S / &#8211;serviceId <i>serviceId</i></dt>
+<dd>Queries a specific service ID.</dd>
+<dt>-L / &#8211;SL <i>SL</i></dt>
+<dd>Queries by service level.</dd>
+<dt>-t / &#8211;type <i>type</i></dt>
+<dd>Queries by node type.</dd>
+<dt>-s / &#8211;sysguid <i>guid</i></dt>
+<dd>Queries by system image GUID.</dd>
+<dt>-n / &#8211;nodeguid <i>guid</i></dt>
+<dd>Queries by node GUID.</dd>
+<dt>-p / &#8211;portguid <i>guid</i></dt>
+<dd>Queries by port GUID.</dd>
+<dt>-u / &#8211;portgid <i>gid</i></dt>
+<dd>Queries by port GID.</dd>
+<dt>-m / &#8211;mcgid <i>gid</i></dt>
+<dd>Queries by multicast GID.</dd>
+<dt>-d / &#8211;desc <i>name</i></dt>
+<dd>Queries by node name/description.</dd>
+<dt>-P / &#8211;guidpair <i>&#8216;guid guid&#8217;</i></dt>
+<dd>Queries by a pair of port GUIDs.</dd>
+<dt>-G / &#8211;gidpair <i>&#8216;gid gid&#8217;</i></dt>
+<dd>Queries by a pair of GIDs.</dd>
+<dt>-B / &#8211;guidlist <i>&#8216;sguid &#8230;;dguid &#8230;&#8217;</i></dt>
+<dd>Queries by a list of port GUIDs.</dd>
+<dt>-A / &#8211;gidlist <i>&#8216;sgid &#8230;;dgid &#8230;&#8217;</i></dt>
+<dd>Queries by a list of GIDs.</dd>
+<dt>-x / &#8211;sourcegid <i>gid</i></dt>
+<dd>Specifies a source GID for certain queries.</dd></dl>
+<h2>PA Specific Options</h2>
+<dl>
+<dt>-g / &#8211;groupName <i>groupName</i></dt>
+<dd>Group name for groupInfo query.</dd>
+<dt>-l / &#8211;lid <i>lid</i></dt>
+<dd>LID of node for portCounters query.</dd>
+<dt>-N / &#8211;portNumber</dt>
+<dd>Port number for portCounters query.</dd>
+<dt>-f / &#8211;delta</dt>
+<dd>Delta flag for portCounters query. Values include: 0 or 1.</dd>
+<dt>-U / &#8211;userCntrs</dt>
+<dd>User-controlled counters flag for portCounters query.</dd>
+<dt>-e / &#8211;select</dt>
+<dd>32-bit select flag for clearing port counters select bits. 0 is least significant (rightmost).Bit descriptions are listed below in the order &quot;mask &#8211; bit &#8211; location&quot;: </dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>0x80000000 &#8211; 31 &#8211; Transmit Data </dd>
+<dt>&bull;</dt>
+<dd>0x40000000 &#8211; 30 &#8211; Receive Data </dd>
+<dt>&bull;</dt>
+<dd>0x20000000 &#8211; 29 &#8211; Transmit Packets </dd>
+<dt>&bull;</dt>
+<dd>0x10000000 &#8211; 28 &#8211; Receive Packets </dd>
+<dt>&bull;</dt>
+<dd>0x08000000 &#8211; 27 &#8211; Multicast Transmit Packets </dd>
+<dt>&bull;</dt>
+<dd>0x04000000 &#8211; 26 &#8211; Multicast Receive Packets </dd>
+<dt>&bull;</dt>
+<dd>0x02000000 &#8211; 25 &#8211; Transmit Wait </dd>
+<dt>&bull;</dt>
+<dd>0x01000000 &#8211; 24 &#8211; Congestion Discards </dd>
+<dt>&bull;</dt>
+<dd>0x00800000 &#8211; 23 &#8211; Receive FECN </dd>
+<dt>&bull;</dt>
+<dd>0x00400000 &#8211; 22 &#8211; Receive BECN </dd>
+<dt>&bull;</dt>
+<dd>0x00200000 &#8211; 21 &#8211; Transmit Time Cong. </dd>
+<dt>&bull;</dt>
+<dd>0x00100000 &#8211; 20 &#8211; Transmit Time Wasted BW </dd>
+<dt>&bull;</dt>
+<dd>0x00080000 &#8211; 19 &#8211; Transmit Time Wait Data </dd>
+<dt>&bull;</dt>
+<dd>0x00040000 &#8211; 18 &#8211; Receive Bubble </dd>
+<dt>&bull;</dt>
+<dd>0x00020000 &#8211; 17 &#8211; Mark FECN </dd>
+<dt>&bull;</dt>
+<dd>0x00010000 &#8211; 16 &#8211; Receive Constraint Errors </dd>
+<dt>&bull;</dt>
+<dd>0x00008000 &#8211; 15 &#8211; Receive Switch Relay </dd>
+<dt>&bull;</dt>
+<dd>0x00004000 &#8211; 14 &#8211; Transmit Discards </dd>
+<dt>&bull;</dt>
+<dd>0x00002000 &#8211; 13 &#8211; Transmit Constraint Errors </dd>
+<dt>&bull;</dt>
+<dd>0x00001000 &#8211; 12 &#8211; Receive Remote Phys. Errors </dd>
+<dt>&bull;</dt>
+<dd>0x00000800 &#8211; 11 &#8211; Local Link Integrity </dd>
+<dt>&bull;</dt>
+<dd>0x00000400 &#8211; 10 &#8211; Receive Errors </dd>
+<dt>&bull;</dt>
+<dd>0x00000200 &#8211; 9 &#8211; Exc. Buffer Overrun </dd>
+<dt>&bull;</dt>
+<dd>0x00000100 &#8211; 8 &#8211; FM Configuration Errors </dd>
+<dt>&bull;</dt>
+<dd>0x00000080 &#8211; 7 &#8211; Link Error Recovery </dd>
+<dt>&bull;</dt>
+<dd>0x00000040 &#8211; 6 &#8211; Link Error Downed </dd>
+<dt>&bull;</dt>
+<dd>0x00000020 &#8211; 5 &#8211; Uncorrectable Errors </dd>
+</dl>
+</dl>
+<dt>-c / &#8211;focus <i>focus</i></dt>
+<dd>Focus select value for getting focus ports. Values include:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dd>utilhigh Sorted by utilization &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>pktrate Sorted by packet rate &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>utillow Sorted by utilization &#8211; lowest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>integrity Sorted by integrity errors &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>congestion Sorted by congestion errors &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>smacongesion Sorted by SMA congestion errors &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>bubbles Sorted by bubble errors &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>security Sorted by security errors &#8211; highest first.</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dd>routing Sorted by routing errors &#8211; highest first.</dd></dl>
+</dl>
+<dt>-w / &#8211;start</dt>
+<dd>Start of window for focus ports &#8211; should always be 0.</dd>
+<dt>-r / &#8211;range <i>range</i></dt>
+<dd>Size of window for focus ports list.</dd>
+<dt>-b / &#8211;imgNum</dt>
+<dd>64-bit image number. May be used with groupInfo, groupConfig, portCounters (delta) outputs.</dd>
+<dt>-O / &#8211;imgOff</dt>
+<dd>Image offset. May be used with groupInfo, groupConfig, portCounters (delta) outputs.</dd>
+<dt>-F / &#8211;moveImgNum</dt>
+<dd>64-bit image number. Used with moveFreeze output to move a freeze image.</dd>
+<dt>-M / &#8211;moveImgOff <i>ImgOff</i></dt>
+<dd>Image offset. May be used with moveFreeze output to move a freeze image.</dd>
+<dt>-V / &#8211;vfName</dt>
+<dd>VF name for vfInfo query.</dd></dl>
+<h2>SA Output Types</h2>
+<p>Output types include:</p>
+<dl>
+<dt>saclassPortInfo</dt>
+<dd>Class port info.</dd>
+<dt>systemguid</dt>
+<dd>List of system image GUIDs.</dd>
+<dt>nodeguid</dt>
+<dd>List of node GUIDs.</dd>
+<dt>portguid</dt>
+<dd>List of port GUIDs.</dd>
+<dt>lid</dt>
+<dd>List of LIDs.</dd>
+<dt>desc</dt>
+<dd>List of node descriptions/names.</dd>
+<dt>path</dt>
+<dd>List of path records.</dd>
+<dt>node</dt>
+<dd>List of node records.</dd>
+<dt>portinfo</dt>
+<dd>List of port info records.</dd>
+<dt>sminfo</dt>
+<dd>List of SM info records.</dd>
+<dt>swinfo</dt>
+<dd>List of switch info records.</dd>
+<dt>link</dt>
+<dd>List of link records.</dd>
+<dt>scsc</dt>
+<dd>List of SC to SC mapping table records.</dd>
+<dt>slsc</dt>
+<dd>List of SL to SC mapping table records.</dd>
+<dt>scsl</dt>
+<dd>List of SC to SL mapping table records.</dd>
+<dt>scvlt</dt>
+<dd>List of SC to VLt table records.</dd>
+<dt>scvlnt</dt>
+<dd>List of SC to VLnt table records.</dd>
+<dt>vlarb</dt>
+<dd>List of VL arbitration table records.</dd>
+<dt>pkey</dt>
+<dd>List of PKey table records.</dd>
+<dt>service</dt>
+<dd>List of service records.</dd>
+<dt>mcmember</dt>
+<dd>List of multicast member records.</dd>
+<dt>inform</dt>
+<dd>List of inform info records.</dd>
+<dt>linfdb</dt>
+<dd>List of switch linear forwarding database (FDB) records.</dd>
+<dt>mcfdb</dt>
+<dd>List of switch multicast FDB records.</dd>
+<dt>trace</dt>
+<dd>List of trace records.</dd>
+<dt>vfinfo</dt>
+<dd>List of vFabrics.</dd>
+<dt>vfinfocsv</dt>
+<dd>List of vFabrics in CSV format.</dd>
+<dt>vfinfocsv2</dt>
+<dd>List of vFabrics in CSV format with enums.</dd>
+<dt>fabricinfo</dt>
+<dd>Summary of fabric devices.</dd>
+<dt>quarantine</dt>
+<dd>List of quarantined nodes.</dd>
+<dt>conginfo</dt>
+<dd>List of Congestion Info Records.</dd>
+<dt>swcongset</dt>
+<dd>List of Switch Congestion Settings.</dd>
+<dt>hficongset</dt>
+<dd>List of HFI Congestion Settings.</dd>
+<dt>hficongcon</dt>
+<dd>List of HFI Congestion Control Settings.</dd>
+<dt>bfrctrl</dt>
+<dd>List of buffer control tables.</dd>
+<dt>cableinfo</dt>
+<dd>List of Cable Info records.</dd>
+<dt>portgroup</dt>
+<dd>List of AR Port Group records.</dd>
+<dt>portgroupfdb</dt>
+<dd>List of AR Port Group FWD records.</dd></dl>
+<h2>PA Output Types</h2>
+<dl>
+<dt>paclassPortInfo</dt>
+<dd>Class port info.</dd>
+<dt>groupList</dt>
+<dd>List of PA groups.</dd>
+<dt>groupInfo</dt>
+<dd>Summary statistics of a PA group. Requires -g option for <i>groupName</i>.</dd>
+<dt>groupConfig</dt>
+<dd>Configuration of a PA group. Requires -g option for <i>groupName</i>.</dd>
+<dt>portCounters</dt>
+<dd>Port counters of fabric port. Requires -l <i>lid</i> and -N <i>port</i> options. Optionally, use the -f <i>delta</i> option.</dd>
+<dt>clrPortCounters</dt>
+<dd>Clears port counters of fabric port. Requires -l <i>lid</i>, -N <i>port</i>, and -e <i>select</i> options.</dd>
+<dt>clrAllPortCounters</dt>
+<dd>Clears all port counters in fabric.</dd>
+<dt>pmConfig</dt>
+<dd>Retrieves PM configuration information.</dd>
+<dt>freezeImage</dt>
+<dd>Creates freeze frame for image ID. Requires -b <i>imgNum</i>.</dd>
+<dt>releaseImage</dt>
+<dd>Releases freeze frame for image ID. Requires -b <i>imgNum</i>.</dd>
+<dt>renewImage</dt>
+<dd>Renews lease for freeze frame for image ID. Requires -b#8217#160; <i>imgNum</i>.</dd>
+<dt>moveFreeze</dt>
+<dd>Moves freeze frame from image ID to new image ID. Requires -b#8217#160; <i>imgNum</i> and -F <i>moveImgNum</i>.</dd>
+<dt>focusPorts</dt>
+<dd>Gets sorted list of ports using utilization or error values (from group buckets).</dd>
+<dt>imageInfo</dt>
+<dd>Gets information about a PA image (timestamps and other details). Requires -b <i>imgNum</i>.</dd>
+<dt>vfList</dt>
+<dd>List of virtual fabrics.</dd>
+<dt>vfInfo</dt>
+<dd>Summary statistics of a virtual fabric. Requires -V <i>vfName</i> option.</dd>
+<dt>vfConfig</dt>
+<dd>Configuration of a virtual fabric. Requires -V <i>vfName</i> option.</dd>
+<dt>vfPortCounters</dt>
+<dd>Port counters of fabric port. Requires -V <i>vfName</i>, -l <i>lid</i>, and -N <i>port</i> options. Optionally, use the -f <i>delta</i> option.</dd>
+<dt>vfFocusPorts</dt>
+<dd>Gets sorted list of virtual fabric ports usingutilization or error values (from VF buckets). Requires -V <i>vfName</i> option.</dd>
+<dt>clrVfPortCounters</dt>
+<dd>Clears VF port counters of fabric port. Requires -l <i>lid</i>, -N <i>port</i>, -e <i>select</i>, and -V <i>vfName</i> options.</dd></dl>
+<h2>Examples</h2>
+<p>opafequery -o saclassPortInfo<br />
+ opafequery -h stewie -o paclassPortInfo<br />
+ opafequery -a 172.21.2.155 -o saclassPortInfo<br />
+ opafequery -o groupList<br />
+ opafequery -o groupInfo -g All<br />
+ opafequery -o groupConfig -g All<br />
+ opafequery -h stewie -o groupInfo -g All<br />
+ opafequery -a 172.21.2.155 -o groupInfo -g All<br />
+ opafequery -o portCounters -l 1 -N 1 -d 1<br />
+ opafequery -o portCounters -l 1 -N 1 -d 1 -e 0x20000000d02 -O 1<br />
+ opafequery -o pmConfig<br />
+ opafequery -o freezeImage 0x20000000d02<br />
+ opafequery -o releaseImage -b 0xd01<br />
+ opafequery -o renewImage -b 0xd01<br />
+ opafequery -o moveFreeze -b 0xd01 -m 0x20000000d02 -M -2<br />
+ opafequery -o focusPorts -g All -f 0x00030001 -w 0 -r 20<br />
+ opafequery -o imageInfo -b 0x20000000d02 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

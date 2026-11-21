@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hpropd(8) · Linux Manual Pages</title>
+<meta name="description" content="hpropd – receive a propagated database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-hpropd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>hpropd(8)</h1>
+
+
+
+
+
+<p><code>hpropd</code> &#8211; receive a propagated database</p>
+<h2>Synopsis</h2>
+<p>-words [-<code>d </code><i>file | </i> &#8211;<code>-database= </code><i>file</i> ] [-<code>n | &#8211;stdin</code> ] [-<code>-print</code> ] [-<code>i | &#8211;no-inetd</code> ] [-<code>k </code><i>keytab | </i> &#8211;<code>-keytab= </code><i>keytab</i> ] [-<code>4 | &#8211;v4dump</code> ]</p>
+<h2>Description</h2>
+<p>receives a database sent by <code>hprop</code> and writes it as a local database. By default, expects to be started from <code>inetd</code> if stdin is a socket and expects to receive the dumped database over stdin otherwise. If the database is sent over the network, it is authenticated and encrypted. Only connections authenticated with the principal <code>kadmin / hprop</code> are accepted. Options supported:</p>
+<dl>
+<dt><code>-d </code><i>file , &#8211;</i><code>-database= </code><i>file</i></dt>
+<dd>database</dd>
+<dt><code>-n , &#8211;stdin</code></dt>
+<dd>read from stdin</dd>
+<dt><code>&#8211;print</code></dt>
+<dd>print dump to stdout</dd>
+<dt><code>-i , &#8211;no-inetd</code></dt>
+<dd>not started from inetd</dd>
+<dt><code>-k </code><i>keytab , &#8211;</i><code>-keytab= </code><i>keytab</i></dt>
+<dd>keytab to use for authentication</dd>
+<dt><code>-4 , &#8211;v4dump</code></dt>
+<dd>create v4 type DB</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-hprop/">hprop</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

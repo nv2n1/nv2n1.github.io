@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmfreeresult(3) · Linux Manual Pages</title>
+<meta name="description" content="pmFreeResult – release storage allocated for performance metrics values">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pmfreeresult/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pmfreeresult(3)</h1>
+
+
+
+
+
+<p><code>pmFreeResult</code> &#8211; release storage allocated for performance metrics values</p>
+<h2>C Synopsis</h2>
+<p><code> #include &lt;pcp/pmapi.h&gt; </p>
+<p> void pmFreeResult(pmResult *</code><i>result</i>); </p>
+<p> cc &#8230; -lpcp</p>
+<h2>Description</h2>
+<p>The variable sized results returned by <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3) are allocated below the Performance Metrics Application Programming Interface (PMAPI) using a combination of dynamic (i.e. <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)) and specialized allocation strategies. </p>
+<p> Applications should call <code>pmFreeResult</code> to release the storage previously allocated for <i>result</i> by <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3), when the application no longer requires access to the <i>pmResult</i> structure. </p>
+<p> Under <code>no</code> circumstances should an application use <i>free(result)</i> to release storage previously allocated for a <i>pmResult</i> by <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3).</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code><a href="/docs/linux/man/3-pmfetch/">pmFetch</a></code>(3). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

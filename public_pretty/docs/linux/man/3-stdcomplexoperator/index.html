@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcomplexoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcomplexoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcomplexoperator(3)</h1>
+
+
+
+
+
+<p>std::complex&lt;T&gt;::operator= - std::complex&lt;T&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>primary template complex&lt;T&gt;
+    complex &amp;operator=(const T &amp;x);
+(until C++ 20)
+    constexpr complex &amp;
+    operator=(const T &amp;x);
+(since C++ 20)
+    specialization complex&lt;float&gt;
+    complex &amp;operator=(float x);
+(until C++ 20)
+    constexpr complex &amp;
+    operator=(float x);
+(since C++ 20)
+    specialization complex&lt;double&gt;
+    complex &amp;operator=(double x);
+(until C++ 20)
+    constexpr complex &amp;
+    operator=(double x);
+(since C++ 20)
+    specialization complex&lt;long double&gt;(1)
+        complex &amp;
+        operator=(long double x);
+(until C++ 20)
+    constexpr complex &amp;
+    operator=(long double x);
+(1)(since C++ 20)
+    all specializations(1)
+        complex &amp;
+        operator=(const complex &amp;cx);
+(until C++ 20)
+    constexpr complex &amp;
+    operator=(const complex &amp;cx);
+(1)(since C++ 20)
+    template &lt;class X&gt;
+    (2)(until C++ 20)
+        complex &amp;
+        operator=(const std::complex&lt;X&gt; &amp;cx);
+(3)
+    template &lt;class X&gt;
+    (since C++ 20)
+        constexpr complex &amp;
+        operator=(const std::complex&lt;X&gt; &amp;cx);</code></pre> 
+<p>Assigns new values to the contents.</p>
+<ol>
+<li>Assigns x to the real part of the complex number. Imaginary part is set to zero.
+2,3) Assigns cx.real() and cx.imag() to the real and the imaginary parts of the complex number respectively.</li>
+</ol>
+<h2>Parameters</h2>
+<p>x - value to assign
+cx - complex value to assign</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a complex number
+constructor <i>(public member function)</i>
+operator&quot;&quot;if
+operator&quot;&quot;i A std::complex literal representing pure imaginary number
+operator&quot;&quot;il <i>(function)</i>
+<i>(C++14)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

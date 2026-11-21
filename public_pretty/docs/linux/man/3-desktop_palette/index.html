@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>desktop_palette(3) · Linux Manual Pages</title>
+<meta name="description" content="desktop_palette – The palette used by the Atari ST low resolution desktop. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-desktop_palette/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>desktop_palette(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> desktop_palette &#8211; The palette used by the Atari ST low resolution desktop. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>extern PALETTE desktop_palette;</code></p>
+<h2>DESCRIPTION</h2>
+<p> The palette used by the Atari ST low resolution desktop. I&#8217;m not quite sure why this is still here, except that the grabber and test programs use it. It is probably the only Atari legacy code left in Allegro, and it would be a shame to remove it :-) </p>
+<p> The contents of this palette are 16 colors repeated 16 times. Color entry zero is equal to color entry 16, which is equal to color entry 24, etc. </p>
+<pre>
+   Index      Color       RGB values
+     0     White          63  63  63
+     1     Red            63   0   0
+     2     Green           0  63   0
+     3     Yellow         63  63   0
+     4     Blue            0   0  63
+     5     Pink           63   0  63
+     6     Cyan            0  63  63
+     7     Grey           16  16  16
+     8     Light grey     31  31  31
+     9     Light red      63  31  31
+    10     Light green    31  63  31
+    11     Light yellow   63  63  31
+    12     Light blue     31  31  63
+    13     Light pink     63  31  63
+    14     Light cyan     31  63  63
+    15     Black           0   0   0
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-default_palette/">default_palette</a></code>(3), <code>black_palette</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

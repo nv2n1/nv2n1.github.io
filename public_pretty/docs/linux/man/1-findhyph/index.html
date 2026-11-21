@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>findhyph(1) · Linux Manual Pages</title>
+<meta name="description" content="findhyph – find words hyphenated by TeX in a document">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-findhyph/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>findhyph(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> findhyph – find words hyphenated by TeX in a document </p>
+<h2>INSTALLATION</h2>
+<p> Copy <code>findhyph</code> or <code>findhyph.bat</code> (depending on <font SIZE="-1">OS</font> used) to a directory included in system <font SIZE="-1">PATH.</font> Perl interpreter is required to be in <tt>&quot;/usr/bin/&quot;</tt> for Unix-like systems or in <font SIZE="-1">PATH</font> when using <code>findhyph.bat</code>.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>findhyph [options]</code> <i>foo.log</i></p>
+<h2>DESCRIPTION</h2>
+<p> To use this program:</p>
+<dl>
+<dt>1)</dt>
+<dd> set <tt>&quot;	racingparagraphs=1&quot;</tt> in a TeX document <i>foo.tex</i> and run:</dd>
+<dt>2)</dt>
+<dd> <code>tex</code> <i>foo.tex</i></dd>
+<dt>3)</dt>
+<dd> <code>findhyph [options]</code> <i>foo.log</i></dd></dl>
+<p> If you are setting <tt>&quot;\looseness=&lt;N&gt;&quot;</tt> to optimize paragraphs, you need to pass that information to the file <i>foo.log</i> in a form <tt>&quot;@looseness=&lt;N&gt;&quot;</tt> (on a separate line). You can use a macro like <tt>&quot;\def\setlooseness#1{\looseness=#1 \immediate\write-1{@looseness=#1}}&quot;</tt> for this purpose. If the paragraph contains material in display math mode, you need to use the macro in all split parts of the paragraph.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd> display hyphenated words in context</dd>
+<dt><code>-f</code></dt>
+<dd> display font selectors and other strings starting with a backslash character</dd>
+<dt><code>-v</code></dt>
+<dd> display program version</dd>
+<dt><code>-p</code></dt>
+<dd> generate file containing information about one-letter prepositions and conjunctions left at the end of line</dd>
+<dt><code>-l=STRING</code></dt>
+<dd> use prepositions/conjunctions listed in <font SIZE="-1">STRING</font> instead of default list of prepositions and conjunctions <tt>&quot;kKsSvVzZoOuUiIA&quot;</tt> used for Slovak and Czech language</dd></dl>
+<h2>OUTPUT FILES</h2>
+<dl>
+<dt><i>foo.hyph</i></dt>
+<dd> List of hyphenated words. All punctuation characters, parentheses and other character immediately preceding or following displayed words are included in this list. TeX constructs which are too difficult to display (<tt>&quot;\hbox{}&quot;</tt>, <tt>&quot;\mark{}&quot;</tt> etc.) are shown as <tt>&quot;[]&quot;</tt>. Math mode is indicated by <tt>&quot;$&quot;</tt> sign. </dd>
+<p> Page numbers in square brackets refer to <font SIZE="-1">LOG</font> file and may occasionally differ from the typeset document. The reason is that TeX may need to break more paragraphs than it would eventually fit on the page in order to find a page break. </p>
+<p> Words hyphenated in footnotes are listed before the words hyphenated in the paragraph in which the footnote is referenced.</p>
+<dt><i>foo.prep</i></dt>
+<dd> List of prepositions if option <code>-p</code> is used.</dd></dl>
+<h2>HISTORY</h2>
+<p> 1.0 (2001-04-08)</p>
+<dl>
+<dt>&bull;</dt>
+<dd> public release</dd></dl>
+<p> 2.0 (2009-08-10)</p>
+<dl>
+<dt>&bull;</dt>
+<dd> fixes in line breaks detection algorithm; support for the third pass of line breaking algorithm in TeX (positive <tt>&quot;mergencystretch&quot;</tt>); support for discretionary breaks in the first pass</dd>
+<dt>&bull;</dt>
+<dd> page number detection improved (recognized negative page numbers, compound page numbers when <tt>&quot;
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lbzexe(1) · Linux Manual Pages</title>
+<meta name="description" content="lbzexe – compress executable files in place">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lbzexe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lbzexe(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> lbzexe &#8211; compress executable files in place</p>
+<h2>SYNOPSIS</h2>
+<p> <code>lbzexe</code> <i>name &#8230;</i></p>
+<h2>DESCRIPTION</h2>
+<p> The <i>lbzexe</i> utility allows you to compress executables in place and have them automatically uncompress and execute when you run them (at a penalty in performance). For example if you execute &#8220;lbzexe /usr/bin/gdb&#8221; it will create the following two files: </p>
+<pre>
+<br>
+    -rwxr-xr-x  1 root root 1026675 Jun  7 13:53 /usr/bin/gdb
+    -rwxr-xr-x  1 root root 2304524 May 30 13:02 /usr/bin/gdb~
+</pre>
+<p> /usr/bin/gdb~ is the original file and /usr/bin/gdb is the self-uncompressing executable file. You can remove /usr/bin/gdb~ once you are sure that /usr/bin/gdb works properly. </p>
+<p> This utility is most useful on systems with very small disks.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-d</code></dt>
+<dd> Decompress the given executables instead of compressing them.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1), <a href="/docs/linux/man/1-lbzcmp/">lbzcmp</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1)</p>
+<h2>CAVEATS</h2>
+<p> The compressed executable is a shell script. This may create some security holes. In particular, the compressed executable relies on the PATH environment variable to find <i>lbzip2</i> and some standard utilities (<i>basename</i>, <i>chmod</i>, <i>ln</i>, <i>mkdir</i>, <i>mktemp</i>, <i>rm</i>, <i>sleep</i>, and <i>tail</i>).</p>
+<h2>BUGS</h2>
+<p> <i>lbzexe</i> attempts to retain the original file attributes on the compressed executable, but you may have to fix them manually in some cases, using <i>chmod</i> or <i>chown</i>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

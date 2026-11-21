@@ -1,0 +1,28 @@
+{{ define "pageTitle" }}{{ $term := .Data.Term }}{{ $topic := index .Site.Data.topics.categories $term }}{{ if $topic }}{{ $topic.title }}{{ else }}{{ index .Site.Data.authors $term | default $term }}{{ end }}{{ end }}
+{{ define "main" }}
+{{ $term := .Data.Term }}
+{{ $topic := index .Site.Data.topics.categories $term }}
+{{ if $topic }}
+<h1 id="{{ $term }}">{{ $topic.title }}</h1>
+
+{{ $academy := "" }}
+{{ with $topic.path }}
+  {{ with index $.Site.Data.topics.paths . }}{{ $academy = index $.Site.Data.topics.academies .academy }}{{ end }}
+{{ else }}
+  {{ with $topic.academy }}{{ $academy = index $.Site.Data.topics.academies . }}{{ end }}
+{{ end }}
+{{ with $academy }}<p>Part of <a href="{{ .url }}">{{ .title }}</a>.</p>
+{{ end }}
+<p>{{ len .Pages }} posts.</p>
+{{ else }}
+{{ $name := index .Site.Data.authors $term | default $term }}
+<h2 id="{{ $name | urlize }}">“{{ $name }}”</h2>
+
+<p>{{ len .Pages }} posts.</p>
+{{ end }}
+<ul class="posts">
+{{ range .Pages.ByDate.Reverse }}
+  <li><time>{{ .Date | time.Format "Jan 2, 2006" }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>
+{{ end }}

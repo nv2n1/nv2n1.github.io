@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cppw(8) · Linux Manual Pages</title>
+<meta name="description" content="cppw, cpgr – copy with locking the given file to the password or group file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-cppw/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>cppw(8)</h1>
+
+
+
+
+
+<p>cppw, cpgr &#8211; copy with locking the given file to the password or group file</p>
+<h2>Synopsis</h2>
+<p><code>cppw</code> [<code>-h</code>] [<code>-s</code>] password_file<br />
+ <code>cpgr</code> [<code>-h</code>] [<code>-s</code>] group_file </p>
+<h2>Description</h2>
+<p><code>cppw</code> and <code>cpgr</code> will copy, with locking, the given file to <i>/etc/passwd</i> and <i>/etc/group</i>, respectively. With the <code>-s</code> flag, they will copy the shadow versions of those files, <i>/etc/shadow</i> and <i>/etc/gshadow</i>, respectively. </p>
+<p> With the <code>-h</code> flag, the commands display a short help message and exit silently.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-vipw/">vipw</a></code>(8), <code><a href="/docs/linux/man/8-vigr/">vigr</a></code>(8), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/5-gshadow/">gshadow</a></code>(5)</p>
+<h2>Author</h2>
+<p><code>cppw</code> and <code>cpgr</code> were written by Stephen Frost, based on <code>vipw</code> and <code>vigr</code> written by Guy Maor.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

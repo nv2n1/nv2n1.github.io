@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>voikkogc(1) · Linux Manual Pages</title>
+<meta name="description" content="voikkogc – test program for Voikko grammar checker">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-voikkogc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>voikkogc(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> voikkogc &#8211; test program for Voikko grammar checker</p>
+<h2>SYNOPSIS</h2>
+<p> <code>voikkogc</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>voikkogc</code> is a test program for grammar checking functionality in libvoikko, library of Finnish language tools. It reads sentences or paragraphs from stdin (one per line) and print the results to stdout. The results are structures containing information about grammar errors found in the input paragraph.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;tokenize</code></dt>
+<dd> Instead of looking for grammar errors, split input into tokens. The tokens are prefixed by type: &quot;W&quot; is a word, &quot;P&quot; is punctuation, &quot;S&quot; is whitespace, &quot;U&quot; is unknown and &quot;E&quot; is a prefix for error messages.</dd>
+<dt><code>&#8211;split-sentences</code></dt>
+<dd> Instead of looking for grammar errors, split input into sentences. The sentences are prefixed by type: &quot;B&quot; means that end of sentence is a probably correct, &quot;P&quot; means that end of sentence is a possibly correct (but probably this and the next identified sentence should be joined) and &quot;E&quot; means that sentence ends at the end of input.</dd>
+<dt><code>-n</code></dt>
+<dd> Prefix all grammar checker messages with line number of input data.</dd>
+<dt><code>accept_titles=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>accept_unfinished_paragraphs=</code><i>n</i></dt>
+<dd>
+</dd><dt><code>accept_bulleted_lists=</code><i>n</i></dt>
+<dd>
+ Set the value of the specified boolean option.</dd>
+<dt><code>explanation_language=</code><i>langcode</i></dt>
+<dd> Print human readable error explanation in the specified language.</dd></dl>
+<h2>BUGS</h2>
+<p> Human readable error explanations are printed in UTF-8 regardless of current locale settings.</p>
+<h2>SEE ALSO</h2>
+<p> <code>voikkospell</code> for common options of different Voikko test tools.</p>
+<h2>AUTHOR</h2>
+<p> voikkogc and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

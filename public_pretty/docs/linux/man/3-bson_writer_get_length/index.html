@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_writer_get_length(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_writer_get_length() – Fetches the current length of the content written by the buffer (including the initial offset). This includes a partly written document currently being written.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_writer_get_length/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_writer_get_length(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_writer_get_length() &#8211; Fetches the current length of the content written by the buffer (including the initial offset). This includes a partly written document currently being written.</p>
+<h2>SYNOPSIS</h2>
+<pre>
+size_t
+bson_writer_get_length (bson_writer_t *writer);
+</pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>writer</code></dt>
+<dd> A <code>bson_writer_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Fetches the current length of the content written by the buffer (including the initial offset). This includes a partly written document currently being written. </p>
+<p> This is useful if you want to check to see if you&#8217;ve passed a given memory boundry that cannot be sent in a packet. See <code><a href="/docs/linux/man/3-bson_writer_rollback/">bson_writer_rollback</a>(3)</code> to abort the current document being written. </p>
+<h2>RETURNS</h2>
+<p> The length of the underlying buffer. </p>
+<h2>COLOPHON</h2>
+<p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

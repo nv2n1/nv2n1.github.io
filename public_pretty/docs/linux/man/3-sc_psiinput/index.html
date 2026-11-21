@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_psiinput(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::PsiInput –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_psiinput/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_psiinput(3)</h1>
+
+
+
+
+
+<p>sc::PsiInput &#8211; </p>
+<p> <code>PsiInput</code> is a Psi input file.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;psiinput.h&gt;</code></pre>
+<p> Inherits <code>sc::RefCount</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>PsiInput</code> (const string &amp;name) </p>
+<p> void <code>open</code> () </p>
+<p> void <code>close</code> () </p>
+<p> void <code>print</code> (std::ostream &amp;) </p>
+<p> void <code>begin_section</code> (const char *s) </p>
+<p> void <code>end_section</code> () </p>
+<p> void <code>write_indent</code> () </p>
+<p> void <code>incindent</code> (int) </p>
+<p> void <code>decindent</code> (int) </p>
+<p> void <code>write_comment</code> (const char *) </p>
+<p> void <code>write_keyword</code> (const char *, const char *) </p>
+<p> void <code>write_keyword</code> (const char *, int) </p>
+<p> void <code>write_keyword</code> (const char *, double) </p>
+<p> void <code>write_keyword_array</code> (const char *, int, int *) </p>
+<p> void <code>write_keyword_array</code> (const char *, int, double *) </p>
+<p> void <code>write_string</code> (const char *) </p>
+<p> void <code>write_key_wq</code> (const char *, const char *) </p>
+<p> void <code>write_basis</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br />
+ <i>Construct the &#8216;basis&#8217; keyword for input. </i><br />
+ void <code>write_basis_sets</code> (const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;)<br />
+ <i>Write basis sets explicitly. </i><br />
+ void <code>write_geom</code> (const <code>Ref</code>&lt; <code>Molecule</code> &gt; &amp;) </p>
+<p> void <code>write_defaults</code> (const <code>Ref</code>&lt; <code>PsiExEnv</code> &gt; &amp;, const char *dertype)</p>
+<h2>Detailed Description</h2>
+<p><code>PsiInput</code> is a Psi input file.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

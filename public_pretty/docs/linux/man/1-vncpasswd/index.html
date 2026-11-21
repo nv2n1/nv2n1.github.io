@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vncpasswd(1) · Linux Manual Pages</title>
+<meta name="description" content="vncpasswd – change the VNC password">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vncpasswd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vncpasswd(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> vncpasswd &#8211; change the VNC password</p>
+<h2>SYNOPSIS</h2>
+<p> <code>vncpasswd</code> [<i>passwd-file</i>]<br />
+ <code>vncpasswd</code> -f</p>
+<h2>DESCRIPTION</h2>
+<p> <code>vncpasswd</code> allows you to set the password used to access VNC desktops. Its default behavior is to prompt for a VNC password and then store an obfuscated version of this password to <i>passwd-file</i> (or to $HOME/.vnc/passwd if no password file is specified.) The <code>vncserver</code> script runs <code>vncpasswd</code> the first time you start a VNC desktop, and it invokes <code>Xvnc</code> with the appropriate <code>-rfbauth</code> option. <code>vncviewer</code> can also be given a password file to use via the <code>-passwd</code> option. </p>
+<p> The password must be at least six characters long (unless the <code>-f</code> command-line option is used&#8211; see below), and only the first eight characters are significant. Note that the stored password is <code>not</code> encrypted securely &#8211; anyone who has access to this file can trivially find out the plain-text password, so <code>vncpasswd</code> always sets appropriate permissions (read and write only by the owner.) However, when accessing a VNC desktop, a challenge-response mechanism is used over the wire making it hard for anyone to crack the password simply by snooping on the network. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f</code></dt>
+<dd> Filter mode. Read a plain-text password from stdin and write an encrypted version to stdout. Note that in filter mode, short or even empty passwords will be silently accepted. </dd>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt>$HOME/.vnc/passwd</dt>
+<dd> Default location of the VNC password file. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1) <code><a href="/docs/linux/man/1-vncconfig/">vncconfig</a></code>(1),<br />
+ <a rel="nofollow" href="http://www.tigervnc.org">http://www.tigervnc.org</a> </p>
+<h2>AUTHORS</h2>
+<p> Tristan Richardson, RealVNC Ltd., Antoine Martin, D. R. Commander and others. </p>
+<p> VNC was originally developed by the RealVNC team while at Olivetti Research Ltd / AT&amp;T Laboratories Cambridge. TightVNC additions were implemented by Constantin Kaplinsky. Many other people have since participated in development, testing and support. This manual is part of the TigerVNC software suite. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

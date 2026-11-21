@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gshhstograss(1) · Linux Manual Pages</title>
+<meta name="description" content="gshhs2grass – Extracting GSHHS and WDBII data in GRASS-compatible ASCII format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gshhstograss/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gshhstograss(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gshhs2grass &#8211; Extracting GSHHS and WDBII data in GRASS-compatible ASCII format</p>
+<h2>SYNOPSIS</h2>
+<p> <code>gshhs2grass</code> <code>-i</code> gshhs_[f|h|i|l|c].b [ <code>-x</code><i>minx</i> ] [<code>-X</code><i>maxx</i> ] [ <code>-y</code><i>miny</i> ] [ <code>-Y</code><i>maxy</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>gshhs2grass</code> reads the binary coastline (GSHHS) and and translates it into an ASCII format suitable for import into GRASS. It automatically handles byte-swabbing between different architectures.</p>
+<dl>
+<dt><i>gshhs_[f|h|i|l|c].b</i></dt>
+<dd> One of the GSHHS binary data file as distributed with the GSHHS data supplement. Any of the 5 standard resolutions (full, high, intermediate, low, crude) can be used. The resulting files are called dig_[ascii|att|cats].gshhs_[f|h|i|l|c].</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-x</code></dt>
+<dd> Specify a minimum (west) longitude.</dd>
+<dt><code>-X</code></dt>
+<dd> Specify a maximum (east) longitude.</dd>
+<dt><code>-y</code></dt>
+<dd> Specify a minimum (south) latitude.</dd>
+<dt><code>-Y</code></dt>
+<dd> Specify a maximum (north) latitude.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> To convert the full GSHHS data set , try </p>
+<p> <code>gshhs2grass</code> <i>gshhs_f.b</i></p>
+<h2>BUGS</h2>
+<p> Not updated to handle the WDBII line data (borders or rivers).</p>
+<h2>AUTHOR</h2>
+<p> Original version by Simon Cox (simon [at] ned.dem.csiro.au) with some maintenance by Paul Wessel (pwessel [at] hawaii.edu).</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-gshhs/">gshhs</a></i>(1) <i><a href="/docs/linux/man/1-gshhs_dp/">gshhs_dp</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

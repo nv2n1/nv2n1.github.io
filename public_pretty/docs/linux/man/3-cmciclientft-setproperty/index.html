@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cmciclientft-setproperty(3) · Linux Manual Pages</title>
+<meta name="description" content="CMCIClientFT.setProperty() – Set a named property value of an instance">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cmciclientft-setproperty/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cmciclientft-setproperty(3)</h1>
+
+
+
+
+
+<p>CMCIClientFT.setProperty() &#8211; Set a named property value of an instance</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;cmci.h&gt;</code>
+<code>CMPIStatus</code>
+<code>CMCIClientFT.setProperty</code><i>(CMCIClient*</i><code>cl,</code>
+<br>
+<code>CMPIObjectPath*</code><i>op,</i>
+<br>
+<code>const</code><i>char*</i><code>name,</code>
+<br>
+<code>CMPIValue*</code><i>value,</i>
+<br>
+<code>CMPIType</code><i>type);</i>
+<br></pre>
+<h2>Description</h2>
+<p>Set the named property value of an instance identified by reference <i>op</i>. </p>
+<p> Arguments are the client object pointer <i>cl</i>, an ObjectPath object pointer <i>op</i> with the namespace and classname to identify the instance, a pointer to a string with the property name to set in <i>name</i>, a pointer to the CMPIValue with the value to set in <i>value</i>, and <i>rc</i> which returns the operation status (suppressed when NULL). </p>
+<h2>Return Value</h2>
+<p>When successful the <code>CMCIClientFT.setProperty()</code> function returns a CMPIStatus object with a successful operation status code set. When unsuccessful it returns the CMPIStatus object with the error code and corresponding error string set.</p>
+<h2>Errors</h2>
+<h2>Examples</h2>
+<h2>Conforming To</h2>
+<h2>See Also</h2>
+<p>Common Manageability Programming Interface (CMPI) &#8211; OpenGroup,<br />
+ <a href="/docs/linux/man/3-cmciclient/">CMCIClient</a>(3), <a href="/docs/linux/man/3-cmpistatus/">CMPIStatus</a>(3), <a href="/docs/linux/man/3-cmpiobjectpath/">CMPIObjectPath</a>(3), <a href="/docs/linux/man/3-cmpivalue/">CMPIValue</a>(3), CMPIType(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

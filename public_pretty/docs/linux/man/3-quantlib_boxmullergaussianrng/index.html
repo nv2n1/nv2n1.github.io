@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_boxmullergaussianrng(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::BoxMullerGaussianRng – Gaussian random number generator.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_boxmullergaussianrng/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_boxmullergaussianrng(3)</h1>
+
+
+
+
+
+<p>QuantLib::BoxMullerGaussianRng &#8211; Gaussian random number generator. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/randomnumbers/boxmullergaussianrng.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>typedef <code>Sample</code>&lt; <code>Real</code> &gt; <code>sample_type</code> </p>
+<p> typedef RNG <code>urng_type</code> </p>
+<h3>Public Member Functions</h3>
+<p><code>BoxMullerGaussianRng</code> (const RNG &amp;uniformGenerator) </p>
+<p> <code>sample_type</code> <code>next</code> () const<br />
+ <i>returns a sample from a Gaussian distribution </i></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;class RNG&gt; class QuantLib::BoxMullerGaussianRng&lt; RNG &gt;</h3>
+<p>Gaussian random number generator. </p>
+<p> It uses the well-known Box-Muller transformation to return a normal distributed Gaussian deviate with average 0.0 and standard deviation of 1.0, from a uniform deviate in (0,1) supplied by RNG. </p>
+<p> Class RNG must implement the following interface: </p>
+<pre> RNG::sample_type RNG::next() const;</pre>
+<p>&nbsp;<wbr> </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

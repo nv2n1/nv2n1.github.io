@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystemdirectory_iteratordirectory_iterator(3) · Linux Manual Pages</title>
+<meta name="description" content="std::filesystem::directory_iterator::directory_iterator – std::filesystem::directory_iterator::directory_iterator">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystemdirectory_iteratordirectory_iterator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystemdirectory_iteratordirectory_iterator(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::filesystem::directory_iterator::directory_iterator &#8211; std::filesystem::directory_iterator::directory_iterator</p>
+<h2>Synopsis</h2>
+<pre><code>directory_iterator() noexcept;
+(1)(since C++ 17)
+    explicit directory_iterator(const std::filesystem::path &amp;p);
+(2)(since C++ 17)
+    directory_iterator(const std::filesystem::path &amp;p, (3)(since C++ 17)
+                                                           std::filesystem::directory_options options);
+directory_iterator(const std::filesystem::path &amp;p, std::error_code &amp;ec);
+(4)(since C++ 17)
+    directory_iterator(const std::filesystem::path &amp;p,
+                       std::filesystem::directory_options options, (5)(since C++ 17)
+                                                                       std::error_code &amp;ec);
+directory_iterator(const directory_iterator &amp;) = default;
+(6)(since C++ 17)
+    directory_iterator(directory_iterator &amp;&amp;) = default;
+(7)(since C++ 17)</code></pre>
+<p>Constructs a new directory iterator.<br />
+1) Constructs the end iterator.<br />
+2) Constructs a directory iterator that refers to the first directory entry of a directory identified by p. If p refers to an non-existing file or not a directory, throws std::filesystem::filesystem_error.<br />
+3) Same as <code>(2)</code>, but if std::filesystem::directory_options::skip_permission_denied is set in options and construction encounters a permissions denied error, constructs the end iterator and does not report an error.<br />
+4) Constructs a directory iterator that refers to the first directory entry of a directory identified by p. If p refers to an non-existing file or not a directory, returns the end iterator and sets ec.<br />
+5) Same as <code>(4)</code>, but if std::filesystem::directory_options::skip_permission_denied is set in options and construction encounters a permissions denied error, constructs the end iterator and does not report an error. </p>
+<h2>Parameters</h2>
+<p>&nbsp;This section is incomplete</p>
+<h2>Exceptions</h2>
+<p>2-5) The overload that does not take a std::error_code&amp; parameter throws filesystem_error on underlying OS API errors, constructed with p as the first path argument and the OS error code as the error code argument. The overload taking a std::error_code&amp; parameter sets it to the OS API error code if an OS API call fails, and executes ec.clear() if no errors occur. Any overload not marked noexcept may throw std::bad_alloc if memory allocation fails.</p>
+<h2>Notes</h2>
+<p>To iterate over the current directory, construct the iterator as directory_iterator(&quot;.&quot;) instead of directory_iterator(&quot;&quot;).<br />
+Defect reports<br />
+The following behavior-changing defect reports were applied retroactively to previously published C++ standards.<br />
+DR Applied to Behavior as published Correct behavior<br />
+LWG_3013 C++17 error_code overload marked noexcept but can allocate memory noexcept removed </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

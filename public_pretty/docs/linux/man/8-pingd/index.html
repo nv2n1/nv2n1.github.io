@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pingd(8) · Linux Manual Pages</title>
+<meta name="description" content="pingd – node up/down monitoring daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pingd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pingd(8)</h1>
+
+
+
+
+
+<p>pingd &#8211; node up/down monitoring daemon</p>
+<h2>Synopsis</h2>
+<p><code>pingd [OPTIONS]</code></p>
+<h2>Description</h2>
+<p>The <code>pingd</code> daemon regularly sends out ICMP pings to determine if nodes are still up or down. The <code>pingd</code> daemon can be configured using the pingd configuration file. Nodes which should be pinged may also be configured via loadable modules. See the <code><a href="/docs/linux/man/5-pingd-conf/">pingd.conf</a>(5)</code> manpage for additional information. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Output help</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Output version </dd>
+</dl>
+<h2>Clusterlist Modules</h2>
+<p>The <code>pingd </code> daemon nodes to ping can also be configured with a clusterlist module. The clusterlist module can obtain a list of all cluster nodes. There are several possible clusterlist formats that can be parsed. By default, the following clusterlist modules are searched for by <code>pingd</code> in the following order: </p>
+<p> genders &#8211; Uses a genders database and the genders library to determine all nodes in the cluster. See <a rel="nofollow" href="http://genders.sourceforge.net.">http://genders.sourceforge.net.</a> </p>
+<p> hostsfile &#8211; Uses a file that lists the hostname of every node in the cluster on a separate line. The default hostsfile is /etc/hostsfile. </p>
+<p> If none of the above are found, nodes must be configured via the pingd configuration file.</p>
+<h2>Files</h2>
+<p>/etc/pingd.conf </p>
+<p> /usr/lib64/pingd</p>
+<h2>Origin</h2>
+<p>Developed by Albert Chu &lt;chu11 [at] llnl.gov&gt; on LLNL&#8217;s Linux clusters.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/5-pingd-conf/">pingd.conf</a>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

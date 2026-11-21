@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_devx_ind_tbl_query(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_devx_ind_tbl_query/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_devx_ind_tbl_query(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>mlx5dv_devx_qp_modify - Modifies a verbs QP via DEVX</p>
+<p>mlx5dv_devx_qp_query - Queries a verbs QP via DEVX</p>
+<p>mlx5dv_devx_cq_modify - Modifies a verbs CQ via DEVX</p>
+<p>mlx5dv_devx_cq_query - Queries a verbs CQ via DEVX</p>
+<p>mlx5dv_devx_srq_modify - Modifies a verbs SRQ via DEVX</p>
+<p>mlx5dv_devx_srq_query - Queries a verbs SRQ via DEVX</p>
+<p>mlx5dv_devx_wq_modify - Modifies a verbs WQ via DEVX</p>
+<p>mlx5dv_devx_wq_query - Queries a verbs WQ via DEVX</p>
+<p>mlx5dv_devx_ind_tbl_modify - Modifies a verbs indirection table via DEVX</p>
+<p>mlx5dv_devx_ind_tbl_query - Queries a verbs indirection table via DEVX</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+int mlx5dv_devx_qp_modify(struct ibv_qp *qp, const void *in, size_t inlen,
+                          void *out, size_t outlen);
+int mlx5dv_devx_qp_query(struct ibv_qp *qp, const void *in, size_t inlen,
+                         void *out, size_t outlen);
+int mlx5dv_devx_cq_modify(struct ibv_cq *cq, const void *in, size_t inlen,
+                          void *out, size_t outlen);
+int mlx5dv_devx_cq_query(struct ibv_cq *cq, const void *in, size_t inlen,
+                         void *out, size_t outlen);
+int mlx5dv_devx_srq_modify(struct ibv_srq *srq, const void *in, size_t inlen,
+                           void *out, size_t outlen);
+int mlx5dv_devx_srq_query(struct ibv_srq *srq, const void *in, size_t inlen,
+                          void *out, size_t outlen);
+int mlx5dv_devx_wq_modify(struct ibv_wq *wq, const void *in, size_t inlen,
+                          void *out, size_t outlen);
+int mlx5dv_devx_wq_query(struct ibv_wq *wq, const void *in, size_t inlen,
+                         void *out, size_t outlen);
+int mlx5dv_devx_ind_tbl_modify(struct ibv_rwq_ind_table *ind_tbl,
+                               const void *in, size_t inlen,
+                               void *out, size_t outlen);
+int mlx5dv_devx_ind_tbl_query(struct ibv_rwq_ind_table *ind_tbl,
+                              const void *in, size_t inlen,
+                              void *out, size_t outlen);
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>Modify / query a verb object over the DEVX interface.</p>
+<p>The DEVX API enables direct access from the user space area to the mlx5 device driver by using the KABI mechanism. The main purpose is to make the user space driver as independent as possible from the kernel so that future device functionality and commands can be activated with minimal to none kernel changes.</p>
+<p>The above APIs enables modifying/querying a verb object via the DEVX interface. This enables interoperability between verbs and DEVX. As such an application can use the create method from verbs (e.g. ibv_create_qp) and modify and query the created object via DEVX (e.g. mlx5dv_devx_qp_modify).</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>qp/cq/wq/srq/ind_tbl
+</dt><dd> The ibv_xxx object to issue the action on.
+</dd><dt>in
+</dt><dd> A buffer which contains the command's input data provided in a device specification format.
+</dd><dt>inlen
+</dt><dd> The size of in buffer in bytes.
+</dd><dt>out
+</dt><dd> A buffer which contains the command's output data according to the device specification format.
+</dd><dt>outlen
+</dt><dd> The size of out buffer in bytes.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p>Upon success 0 is returned or the value of errno on a failure.</p>
+<h2>SEE ALSO</h2>
+<p>mlx5dv_open_device, mlx5dv_devx_obj_create</p>
+<p>#AUTHOR</p>
+<p>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

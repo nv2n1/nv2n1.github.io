@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmcreatepromptdialog(3) · Linux Manual Pages</title>
+<meta name="description" content="XmCreatePromptDialog — The SelectionBox PromptDialog convenience creation function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmcreatepromptdialog/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmcreatepromptdialog(3)</h1>
+
+
+
+
+
+<p><code>XmCreatePromptDialog</code> &#8212; The SelectionBox PromptDialog convenience creation function</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/SelectioB.h&gt;
+<code>Widget XmCreatePromptDialog</code>(
+<code>Widget parent</code>,
+<code>String name</code>,
+<code>ArgList arglist</code>,
+<code>Cardinal argcount</code>);</pre>
+<h2>Description</h2>
+<p><code>XmCreatePromptDialog</code> is a convenience creation function that creates a DialogShell and an unmanaged SelectionBox child of the DialogShell. A PromptDialog prompts the user for text input. It includes a message, a text input region, and three managed buttons. The default button labels are <code>OK</code>, <code>Cancel</code>, and <code>Help</code>. An additional button, with <code>Apply</code> as the default label, is created unmanaged; it may be explicitly managed if needed. One additional <code>WorkArea</code> child may be added to the SelectionBox after creation. </p>
+<p> <code>XmCreatePromptDialog</code> forces the value of the SelectionBox resource <code>XmNdialogType</code> to <code>XmDIALOG_PROMPT</code>. </p>
+<p> Use <code>XtManageChild</code> to pop up the PromptDialog (passing the SelectionBox as the widget parameter); use <code>XtUnmanageChild</code> to pop it down. </p>
+<p> <code>XmCreatePromptDialog</code> forces the value of the Shell resource <code>XmNallowShellResize</code> to True.</p>
+<dl COMPACT>
+<dt><i>parent</i></dt>
+<dd>Specifies the parent widget ID</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the created widget</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>)</dd></dl>
+<p> For a complete definition of SelectionBox and its associated resources, see <code><a href="/docs/linux/man/3-xmselectionbox/">XmSelectionBox</a></code>(3).</p>
+<h2>Return</h2>
+<p>Returns the SelectionBox widget ID.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmselectionbox/">XmSelectionBox</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

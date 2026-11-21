@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tc-tcindex(8) · Linux Manual Pages</title>
+<meta name="description" content="tcindex – traffic control index filter">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tc-tcindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tc-tcindex(8)</h1>
+
+
+
+
+
+<p>tcindex &#8211; traffic control index filter</p>
+<h2>Synopsis</h2>
+<p><code>tc</code> <code>filter</code> &#8230; <code>tcindex</code> [ <code>hash</code> <i>SIZE</i> ] [ <code>mask</code> <i>MASK</i> ] [ <code>shift</code> <i>SHIFT</i> ] [ <code>pass_on</code> | <code>fall_through</code> ] [ <code>classid</code> <i>CLASSID</i> ] [ <code>action</code> <code>ACTION_SPEC</code> ]</p>
+<h2>Description</h2>
+<p>This filter allows to match packets based on their <code>tcindex</code> field value, i.e. the combination of the DSCP and ECN fields as present in IPv4 and IPv6 headers.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>action</code><i> ACTION_SPEC</i></dt>
+<dd>Apply an action from the generic actions framework on matching packets.</dd>
+<dt><code>classid</code><i> CLASSID</i></dt>
+<dd>Push matching packets into the class identified by <i>CLASSID</i>.</dd>
+<dt><code>hash</code><i> SIZE</i></dt>
+<dd>Hash table size in entries to use. Defaults to 64.</dd>
+<dt><code>mask</code><i> MASK</i></dt>
+<dd>An optional bitmask to binary <code>AND</code> to the packet&#8217;s <code>tcindex</code> field before use.</dd>
+<dt><code>shift</code><i> SHIFT</i></dt>
+<dd>The number of bits to right-shift a packet&#8217;s <code>tcindex</code> value before use. If a <code>mask</code> has been set, masking is done before shifting.</dd>
+<dt><code>pass_on</code></dt>
+<dd>If this flag is set, failure to find a class for the resulting ID will make the filter fail and lead to the next filter being consulted.</dd>
+<dt><code>fall_through</code></dt>
+<dd>This is the opposite of <code>pass_on</code> and the default. The filter will classify the packet even if there is no class present for the resulting class ID. </dd>
+</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tc/">tc</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

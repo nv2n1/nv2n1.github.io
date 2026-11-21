@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>prover9-interpformat(1) · Linux Manual Pages</title>
+<meta name="description" content="interpformat – tool for transforming mace4(1) models">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-prover9-interpformat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>prover9-interpformat(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> interpformat &#8211; tool for transforming <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
+<h2>SYNOPSIS</h2>
+<p> <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; -f <i>input-file</i> &gt; <i>output-file</i><br />
+ <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; &lt; <i>input-file</i> &gt; <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
+<p> The models (structures) in <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) output files can be transformed in various ways with the program <code>interpformat</code>.</p>
+<h2>TRANSFORMATIONS</h2>
+<p> The transformations are listed here.</p>
+<dl>
+<dt><code>standard</code></dt>
+<dd> one line per operation</dd>
+<dt><code>standard2</code></dt>
+<dd> standard, with binary operations in a square (default)</dd>
+<dt><code>portable</code></dt>
+<dd> list of lists, suitable for parsing by Python, GAP, etc.</dd>
+<dt><code>tabular</code></dt>
+<dd> as nice tables</dd>
+<dt><code>raw</code></dt>
+<dd> similar to standard, but without punctuation</dd>
+<dt><code>cooked</code></dt>
+<dd> as terms, e.g., f(0,1)=2</dd>
+<dt><code>tex</code></dt>
+<dd> formatted for LaTeX</dd>
+<dt><code>xml</code></dt>
+<dd> XML</dd></dl>
+<h2>OPTIONS</h2>
+<p> A summary of options is included below.</p>
+<dl>
+<dt><code>output </code><i>&lt;operations&gt;</i></dt>
+<dd> Output only the listed <i>operations</i>.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1).<br />
+ Full documentation for <code>interpformat</code> is found in the <code>prover9</code> manual, available on Debian systems in the <i>prover9-doc</i> package at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>
+<h2>AUTHOR</h2>
+<p> <code>interpformat</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>
+<p> This manual page was written by Peter Collingbourne &lt;pcc03 [at] doc.ic.ac.uk&gt;, for the Debian project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

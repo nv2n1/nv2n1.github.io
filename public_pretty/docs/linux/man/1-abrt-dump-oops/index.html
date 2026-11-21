@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-dump-oops(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-abrt-dump-oops/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>abrt-dump-oops(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>abrt-dump-oops - Extract oops from FILE (or standard input)</p>
+<h2>SYNOPSIS</h2>
+<p><i>abrt-dump-oops</i> [-vusoxtm] [-d DIR]/[-D] [FILE]</p>
+<h2>DESCRIPTION</h2>
+<p>This tool creates problem directory from, updates problem directory with or prints oops extracted from FILE or standard input.</p>
+<h2>FILES</h2>
+<p>/etc/abrt/plugins/oops.conf</p>
+<dl>
+<dt>
+</dt><dd> Configuration file where user can disable detection of non-fatal MCEs</dd></dl>
+<h2>OPTIONS</h2>
+<p>-v, &ndash;verbose</p>
+<dl>
+<dt>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
+<p>-s</p>
+<dl>
+<dt>
+</dt><dd> Log to syslog</dd></dl>
+<p>-o</p>
+<dl>
+<dt>
+</dt><dd> Print found oopses on standard output</dd></dl>
+<p>-d DIR</p>
+<dl>
+<dt>
+</dt><dd> Create new problem directory in DIR for every oops found</dd></dl>
+<p>-D</p>
+<dl>
+<dt>
+</dt><dd> Same as -d DumpLocation, DumpLocation is specified in abrt.conf</dd></dl>
+<p>-u PROBLEM</p>
+<dl>
+<dt>
+</dt><dd> Save the extracted information in PROBLEM directory</dd></dl>
+<p>-x</p>
+<dl>
+<dt>
+</dt><dd> Make the problem directory world readable. Usable only with -d/-D</dd></dl>
+<p>-t</p>
+<dl>
+<dt>
+</dt><dd> Throttle problem directory creation to 1 per second</dd></dl>
+<p>-m</p>
+<dl>
+<dt>
+</dt><dd> Print search string(s) for <i>abrt-watch-log</i> to stdout and exit</dd></dl>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/1-abrt-watch-log/">abrt-watch-log</a>(1), <a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a>(5)</p>
+<h2>AUTHORS</h2>
+<dl>
+<dt>
+</dt><dd> &bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>psql(1) · Linux Manual Pages</title>
+<meta name="description" content="psql – PostgreSQL interactive terminal">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-psql/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>psql(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> psql &#8211; PostgreSQL interactive terminal </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>psql</code> [<i>option</i>&#8230;] [<i>dbname</i>&nbsp;<wbr>[<i>username</i>]]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>psql is a terminal-based front-end to PostgreSQL. It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.</dd>
+<h2>OPTIONS</h2>
+<p> <code>-a</code>, <code>&#8211;echo-all</code></p>
+<dl>
+<dt>
+</dt><dd> Print all nonempty input lines to standard output as they are read. (This does not apply to lines read interactively.) This is equivalent to setting the variable <i>ECHO</i> to all.</dd></dl>
+<p> <code>-A</code>, <code>&#8211;no-align</code></p>
+<dl>
+<dt>
+</dt><dd> Switches to unaligned output mode. (The default output mode is otherwise aligned.)</dd></dl>
+<p> <code>-c </code><i>command</i>, <code>&#8211;command=</code><i>command</i></p>
+<dl>
+<dt>
+</dt><dd> Specifies that psql is to execute one command string, <i>command</i>, and then exit. This is useful in shell scripts. Start-up files (psqlrc and ~/.psqlrc) are ignored with this option. </dd>
+<p> <i>command</i> must be either a command string that is completely parsable by the server (i.e., it contains no psql-specific features), or a single backslash command. Thus you cannot mix SQL and psql meta-commands with this option. To achieve that, you could pipe the string into psql, for example: echo &#8216;
+</p></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

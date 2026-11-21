@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>librsync(3) · Linux Manual Pages</title>
+<meta name="description" content="librsync – library for delta compression of streams">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-librsync/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>librsync(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> librsync &#8211; library for delta compression of streams </p>
+<h2>SYNOPSYS</h2>
+<p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdio.h&gt;</code> </p>
+<p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdlib.h&gt;</code> </p>
+<p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;librsync.h&gt;</code> </p>
+<p>&nbsp;<wbr>cc &#8230;&nbsp;<wbr><code>-lrsync</code> </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>librsync</code> library implements network delta-compression of streams and files. The algorithm is similar to that used in the <code><a href="/docs/linux/man/1-rsync/">rsync</a>(1)</code> and <code>xdelta(2)</code> programs, but specialized for transfer of arbitrary-length octet streams. Unlike most diff programs, <code>librsync</code> does not require access to both of the files on the same machine, but rather only a short &#8220;signature&#8221; of the old file and the complete contents of the new file. </p>
+<p> The canonical use of <code>librsync</code> is in the <code>rproxy(8)</code> reference implementation of the <i>rsync</i> proposed extension to HTTP. It may be useful to other programs which wish to do delta-compression in HTTP, or within their own protocol. There are HTTP-specific utility functions within <code>librsync</code>, but they need not be used. </p>
+<p> A number of tools such as <code><a href="/docs/linux/man/1-rdiff/">rdiff</a>(1)</code> provide command-line and scriptable access to rsync functions.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1) </p>
+<p> <i>rdiff and librsync Manual</i> </p>
+<p> <i><a rel="nofollow" href="http://rproxy.sourceforge.net/">http://rproxy.sourceforge.net/</a></i>. </p>
+<p> <i>draft-pool-rsync</i></p>
+<h2>BUGS</h2>
+<p> The rsync protocol is still evolving. There may be bugs in the implementation. The interface may change in the future, but it is becoming more stable. </p>
+<p> Many routines will panic in case of error rather than returning an error code to the caller. Patches to fix this are welcome, but at the current state of development aborting seems as useful as trusting to possibly-incomplete checking in the client.</p>
+<h2>AUTHOR</h2>
+<p> Martin Pool &lt;mbp [at] samba.org&gt;, with Andrew Tridgell &lt;tridge [at] samba.org&gt;. </p>
+<p> rdiff development has been supported by Linuxcare, Inc and VA Linux Systems. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

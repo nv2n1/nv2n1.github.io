@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brlapi_connectionsettings_t(3) · Linux Manual Pages</title>
+<meta name="description" content="brlapi_connectionSettings_t –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-brlapi_connectionsettings_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>brlapi_connectionsettings_t(3)</h1>
+
+
+
+
+
+<p>brlapi_connectionSettings_t &#8211; </p>
+<p> Settings structure for <i>BrlAPI</i> connection.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;brlapi.h&gt;</p>
+<h3>Data Fields</h3>
+<p>char * <code>auth</code> </p>
+<p> char * <code>host</code> </p>
+<h2>Detailed Description</h2>
+<p>This structure holds every parameter needed to connect to <i>BrlAPI:</i> which file the authorization key can be found in and which computer to connect to. </p>
+<p> <code>Examples:</code></p>
+<dl COMPACT>
+<dd>
+<pre>brlapi_connectionSettings_t settings;
+settings.auth='/etc/brlapi.key';
+settings.host='foo';</pre>
+</dd></dl>
+<p> <i>libbrlapi</i> will read authorization key from file /etc/brlapi.key and connect to the machine called &#8216;foo&#8217;, on the default TCP port. </p>
+<pre>settings.host='10.1.0.2';</pre>
+<p>lets directly enter an IP address instead of a machine name. </p>
+<pre>settings.host=':1';</pre>
+<p>lets <i>libbrlapi</i> connect to the local computer, on port BRLAPI_SOCKETPORTNUM+1 </p>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>brlapi_openConnection()</code></dd></dl>
+<h2>Field Documentation</h2>
+<h3>char* brlapi_connectionSettings_t::auth</h3>
+<p>For security reasons, <i>libbrlapi</i> has to get authorized to connect to the <i>BrlAPI</i> server. This can be done via a secret key, for instance. This is the path to the file which holds it; it will hence have to be readable by the application. </p>
+<p> Setting NULL defaults it to local installation setup or to the content of the BRLAPI_AUTH environment variable, if it exists.</p>
+<h3>char* brlapi_connectionSettings_t::host</h3>
+<p>This tells where the <i>BrlAPI</i> server resides: it might be listening on another computer, on any TCP port. It should look like &#8216;foo:1&#8217;, which means TCP port number BRLAPI_SOCKETPORTNUM+1 on computer called &#8216;foo&#8217;. </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>Please check that resolving this name works before complaining</dd></dl>
+<p> Settings NULL defaults it to localhost, using the local installation&#8217;s default TCP port, or to the content of the BRLAPI_HOST environment variable, if it exists. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for BrlAPI from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

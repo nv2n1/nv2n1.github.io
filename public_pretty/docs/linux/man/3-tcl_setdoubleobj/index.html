@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_setdoubleobj(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_NewDoubleObj, Tcl_SetDoubleObj, Tcl_GetDoubleFromObj – manipulate Tcl objects as floating-point values">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_setdoubleobj/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_setdoubleobj(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tcl_NewDoubleObj, Tcl_SetDoubleObj, Tcl_GetDoubleFromObj &#8211; manipulate Tcl objects as floating-point values </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+Tcl_Obj *
+<code>Tcl_NewDoubleObj</code>(<i>doubleValue</i>)
+<code>Tcl_SetDoubleObj</code>(<i>objPtr, doubleValue</i>)
+int
+<code>Tcl_GetDoubleFromObj</code>(<i>interp, objPtr, doublePtr</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>double <i>doubleValue</i> (in) A double-precision floating-point value used to initialize or set a Tcl object.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetDoubleObj</code>, this points to the object in which to store a double value. For <code>Tcl_GetDoubleFromObj</code>, this refers to the object from which to retrieve a double value.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) When non-NULL, an error message is left here when double value retrieval fails.</dd>
+<dd>double <i>*doublePtr</i> (out) Points to place to store the double value obtained from <i>objPtr</i>. </dd>
+</dl>
+<h2>Description</h2>
+<p>These procedures are used to create, modify, and read Tcl objects that hold double-precision floating-point values. </p>
+<p> <code>Tcl_NewDoubleObj</code> creates and returns a new Tcl object initialized to the double value <i>doubleValue</i>. The returned Tcl object is unshared. </p>
+<p> <code>Tcl_SetDoubleObj</code> sets the value of an existing Tcl object pointed to by <i>objPtr</i> to the double value <i>doubleValue</i>. The <i>objPtr</i> argument must point to an unshared Tcl object. Any attempt to set the value of a shared Tcl object violates Tcl&#8217;s copy-on-write policy. Any existing string representation or internal representation in the unshared Tcl object will be freed as a consequence of setting the new value. </p>
+<p> <code>Tcl_GetDoubleFromObj</code> attempts to retrieve a double value from the Tcl object <i>objPtr</i>. If the attempt succeeds, then <code>TCL_OK</code> is returned, and the double value is written to the storage pointed to by <i>doublePtr</i>. If the attempt fails, then <code>TCL_ERROR</code> is returned, and if <i>interp</i> is non-NULL, an error message is left in <i>interp</i>. The <code>Tcl_ObjType</code> of <i>objPtr</i> may be changed to make subsequent calls to <code>Tcl_GetDoubleFromObj</code> more efficient.</p>
+<h2>See Also</h2>
+<p>Tcl_NewObj, Tcl_DecrRefCount, Tcl_IncrRefCount, Tcl_GetObjResult</p>
+<h2>Keywords</h2>
+<p>double, double object, double type, internal representation, object, object type, string representation</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Emacs Server and Client for Faster Editing Sessions - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/making-emacs-startup-faster/">
+  <meta name="description" content="Emacs startup is slow. If you’re using it for quick edits alongside other tools, waiting 2-3 seconds every time becomes friction. Heavy mode configurations, …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Using Emacs Server and Client for Faster Editing Sessions">
+  <meta property="og:url" content="https://www.systutorials.com/making-emacs-startup-faster/">
+  <meta property="og:description" content="Emacs startup is slow. If you’re using it for quick edits alongside other tools, waiting 2-3 seconds every time becomes friction. Heavy mode configurations, …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Using Emacs Server and Client for Faster Editing Sessions</h1>
+        <time class="post-date" datetime="2014-03-31T02:59:40Z">March 31, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Emacs startup is slow. If you’re using it for quick edits alongside other tools, waiting 2-3 seconds every time becomes friction. Heavy mode configurations, lazy loading chains, and initialization hooks add up fast.</p>
+<p>The server/client architecture solves this: start an Emacs server once, then spawn lightweight clients that connect almost instantly. Your first edit waits for server startup. Every edit after that is &lt;100ms.</p>
+<h2 id="how-serverclient-architecture-works">How Server/Client Architecture Works</h2>
+<p>Emacs can run as a persistent daemon listening for client connections on a Unix socket (or TCP socket for remote access). The first client connection initializes the server—slow, but happens only once. Subsequent clients attach to the running server and inherit its state: loaded packages, buffers, customizations, everything.</p>
+<p>The <code>emacsclient</code> command includes a <code>-a</code> flag designed exactly for this. When you run <code>emacsclient -a &quot;&quot; file.txt</code>, it says: “Connect to the running server. If none exists, start <code>emacs --daemon</code> first, then connect.” This automation means you don’t manage the server lifecycle manually.</p>
+<h2 id="setting-up-the-client-wrapper">Setting Up the Client Wrapper</h2>
+<p>Create an executable script in your <code>$PATH</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">emacsclient -c -a <span class="s2">&#34;&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Save it as <code>~/bin/em</code> and make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ~/bin/em
+</span></span></code></pre></div><p>Verify <code>~/bin</code> is in your <code>$PATH</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$PATH</span> <span class="p">|</span> grep -q <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/bin&#34;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&#34;Add </span><span class="nv">$HOME</span><span class="s2">/bin to PATH&#34;</span>
+</span></span></code></pre></div><p>If missing, add this to <code>~/.bashrc</code> or <code>~/.zshrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Now <code>em file.txt</code> opens a new frame connected to your server.</p>
+<h2 id="understanding-the-flags">Understanding the Flags</h2>
+<p><strong><code>-c</code> (create frame)</strong>: Creates a new window frame. Without it, <code>emacsclient</code> tries to reuse an existing Emacs window—not what you want in terminal workflows. The <code>-c</code> flag ensures each invocation opens a fresh frame in your current terminal.</p>
+<p><strong><code>-a &quot;&quot;</code> (alternate editor)</strong>: If no server is running, use the empty string as the fallback command. Emacs interprets this specially: start <code>emacs --daemon</code> and retry the connection. Other values like <code>-a vim</code> would launch that editor instead.</p>
+<p><strong><code>&quot;$@&quot;</code></strong>: Pass all command-line arguments (file paths, options) to the opened frame.</p>
+<h2 id="optimizing-startup-time">Optimizing Startup Time</h2>
+<p>Even with server/client, your first invocation needs a reasonably fast init file.</p>
+<h3 id="use-early-initel-emacs-27">Use early-init.el (Emacs 27+)</h3>
+<p>Emacs 27 and later load <code>~/.emacs.d/early-init.el</code> before the graphical system initializes. Disable expensive UI features here:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="c1">;; ~/.emacs.d/early-init.el</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">package-enable-at-startup</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">frame-inhibit-implied-resize</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">push</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">menu-bar-lines</span> <span class="o">.</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">default-frame-alist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">push</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">tool-bar-lines</span> <span class="o">.</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">default-frame-alist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">push</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">vertical-scroll-bars</span><span class="p">)</span> <span class="nv">default-frame-alist</span><span class="p">)</span>
+</span></span></code></pre></div><p>This prevents loading the package system, menu bar, tool bar, and scroll bars before your main config runs.</p>
+<h3 id="lazy-load-heavy-packages">Lazy Load Heavy Packages</h3>
+<p>Don’t require packages at startup. Use <code>with-eval-after-load</code> to load them only when needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">with-eval-after-load</span> <span class="ss">&#39;python</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;lsp-mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;flycheck</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">with-eval-after-load</span> <span class="ss">&#39;rust-mode</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;rust-mode-hook</span> <span class="nf">#&#39;</span><span class="nv">lsp-deferred</span><span class="p">))</span>
+</span></span></code></pre></div><p>This defers loading <code>lsp-mode</code> until you open a Python or Rust file.</p>
+<h3 id="profile-your-init">Profile Your Init</h3>
+<p>If startup still feels sluggish, identify bottlenecks:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;benchmark-init</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">benchmark-init/activate</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; ... rest of your init ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; At the end:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-init-hook</span> <span class="nf">#&#39;</span><span class="nv">benchmark-init/show-durations</span><span class="p">)</span>
+</span></span></code></pre></div><p>Restart Emacs and check the benchmark results. Remove or defer packages that contribute &gt;100ms.</p>
+<p>Alternatively, use <code>emacs-startup-hook</code> to measure total time:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;emacs-startup-hook</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;Emacs loaded in %.2fs&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">float-time</span> <span class="p">(</span><span class="nf">time-subtract</span> <span class="p">(</span><span class="nf">current-time</span><span class="p">)</span> <span class="nv">before-init-time</span><span class="p">)))))</span>
+</span></span></code></pre></div><h2 id="managing-the-server">Managing the Server</h2>
+<h3 id="clean-shutdown">Clean Shutdown</h3>
+<p>Define a safe shutdown function in your init file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">server-shutdown</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Save buffers and shutdown the Emacs server&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">save-some-buffers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">kill-emacs</span><span class="p">))</span>
+</span></span></code></pre></div><p>Shut down cleanly with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">emacsclient -e <span class="s1">&#39;(server-shutdown)&#39;</span>
+</span></span></code></pre></div><p>This saves all modified buffers before killing the server—safer than <code>pkill emacs</code>.</p>
+<h3 id="shell-aliases">Shell Aliases</h3>
+<p>Add these to your shell config:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">e</span><span class="o">=</span><span class="s1">&#39;em&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ek</span><span class="o">=</span><span class="s1">&#39;emacsclient -e &#34;(server-shutdown)&#34;&#39;</span>
+</span></span></code></pre></div><p>Now <code>e myfile.py</code> opens a file and <code>ek</code> cleanly exits the server.</p>
+<h2 id="remote-editing-over-ssh">Remote Editing Over SSH</h2>
+<p>The server/client approach works seamlessly over SSH. When you SSH into a remote machine and run <code>em remotefile.txt</code>, it:</p>
+<ol>
+<li>Connects to that machine’s Emacs server (or starts one)</li>
+<li>Opens the file in a frame on your remote terminal</li>
+<li>Edits happen on the remote machine with all its packages and customizations</li>
+</ol>
+<p>Each machine maintains its own independent server, so you never have cross-session confusion.</p>
+<h2 id="real-world-performance">Real-World Performance</h2>
+<p>Your editing workflow becomes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">e myfile.py          <span class="c1"># First call: 2-3 seconds (server starts)</span>
+</span></span><span class="line"><span class="cl">e another.sh         <span class="c1"># &lt;100ms (connected to running server)</span>
+</span></span><span class="line"><span class="cl">e config.json        <span class="c1"># &lt;100ms</span>
+</span></span><span class="line"><span class="cl">ek                   <span class="c1"># Clean shutdown</span>
+</span></span></code></pre></div><p>For frequent small edits, this is transformative. Emacs goes from “heavy IDE with startup tax” to “snappy terminal editor that retains full power when you need it.”</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>“emacsclient: can’t find socket”</strong>: The server crashed or wasn’t started. Run <code>emacs --daemon</code> manually, or kill any stray <code>emacs</code> processes and try again.</p>
+<p><strong>“Address already in use”</strong>: The socket file exists but the server isn’t running. Remove <code>~/.emacs.d/server/server</code> and retry.</p>
+<p><strong>“Can’t connect from remote SSH”</strong>: By default, the socket is local-only. For remote connections, use <code>emacsclient -s /path/to/socket</code> or configure TCP access in your Emacs server (more complex; usually unnecessary).</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

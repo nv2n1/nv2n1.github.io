@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cabal-rpm(1) · Linux Manual Pages</title>
+<meta name="description" content="cblrpm – a RPM packaging tool for Haskell Cabal packages">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cabal-rpm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cabal-rpm(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> cblrpm &#8211; a RPM packaging tool for Haskell Cabal packages</p>
+<h2>SYNOPSIS</h2>
+<p> cblrpm [options] spec [path-or-pkg] cblrpm [options] local [path-or-pkg] cblrpm [options] srpm [path-or-pkg] cblrpm [options] prep [path-or-pkg] cblrpm [options] builddep [path-or-pkg] cblrpm [options] install [path-or-pkg] cblrpm [options] depends [path-or-pkg] cblrpm [options] requires [path-or-pkg] cblrpm [options] missingdeps [path-or-pkg] cblrpm [options] diff [path-or-pkg] cblrpm [options] update [path-or-pkg]</p>
+<h2>DESCRIPTION</h2>
+<p> cblrpm generates RPM packages and .spec files from Haskell Cabal package. </p>
+<p> If no path-or-pkg is specified, cblrpm looks for a .spec or Otherwise, it will look for path-or-pkg. If the argument is a directory then it will look there for a .spec or If the argument is a path to a .cabal file then it will use it. Otherwise if there is no &#8216;/&#8217; in the argument and it does not exist then cblrpm will try to unpack the package and use its .cabal file. cblrpm uses a temporary directory for unpackaging tarballs or packages. cblrpm then parses the .cabal file and uses it to generate a .spec file that can be built. </p>
+<p> If a .spec already exists, cblrpm outputs to .spec.cblrpm instead.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the help text.</dd>
+<dl>
+</dl>
+<dt><code>-b, &#8211;binary</code></dt>
+<dd> Force the base package name to be the Hackage package name.</dd>
+<dl>
+</dl>
+</dl>
+<p> -f FLAGS, &#8211;flags=FLAGS : Override one or more Cabal build configuration flags. </p>
+<p> &#8211;release=RELEASE : Override the release number in the .spec file. </p>
+<p> -v N, &#8211;verbose=N : Set verbosity to N. </p>
+<p> &#8211;version=VERSION : Override the version number in the .spec file.</p>
+<h2>EXAMPLES</h2>
+<p> Below CMD can be one of: spec, srpm, prep, local, install, diff, builddep, depends, requires, missingdeps, update </p>
+<p> Do CMD for the package in current directory:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+cblrpm CMD
+</pre>
+</dd></dl>
+<p> Do CMD for package (directory or package name):</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+cblrpm CMD&nbsp;<wbr>[package]
+</pre>
+</dd></dl>
+<p> Do CMD for package-version (directory or package name):</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+cblrpm CMD&nbsp;<wbr>[package-version]
+</pre>
+</dd></dl>
+<p> Do CMD on a .cabal file:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+cblrpm CMD path/to/some.cabal
+</pre>
+</dd></dl>
+<h2>HISTORY</h2>
+<p> Cabal-rpm was originally written by Bryan O&#8217;Sullivan in 2007-2008 and resurrected by Jens Petersen in 2012 to replace cabal2spec.</p>
+<h2>SEE ALSO</h2>
+<p> &lt;<a rel="nofollow" href="http://github.com/juhp/cabal-rpm/">http://github.com/juhp/cabal-rpm/</a>&gt;</p>
+<h2>AUTHORS</h2>
+<p> This manpage was written by Jens Petersen. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

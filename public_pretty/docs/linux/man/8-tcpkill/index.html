@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcpkill(8) · Linux Manual Pages</title>
+<meta name="description" content="tcpkill – kill TCP connections on a LAN">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tcpkill/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tcpkill(8)</h1>
+
+
+
+
+
+<p>tcpkill &#8211; kill TCP connections on a LAN</p>
+<h2>Synopsis</h2>
+<p><code>tcpkill</code> [<code>-i </code><i>interface</i>] [<code>-1</code>&#8230;<code>9</code>] <i>expression</i></p>
+<h2>Description</h2>
+<p><code>tcpkill</code> kills specified in-progress TCP connections (useful for libnids-based applications which require a full TCP 3-whs for TCB creation).</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Specify the interface to listen on.</dd>
+<dt><code>-1</code>&#8230;<code>9</code></dt>
+<dd>Specify the degree of brute force to use in killing a connection. Fast connections may require a higher number in order to land a RST in the moving receive window. Default is 3.</dd>
+<dt><i>expression</i></dt>
+<dd>Specify a <a href="/docs/linux/man/8-tcpdump/">tcpdump</a>(8) filter expression to select the connections to kill.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-dsniff/">dsniff</a>(8), <a href="/docs/linux/man/8-tcpnice/">tcpnice</a>(8)</p>
+<h2>Author</h2>
+<pre>Dug Song &lt;dugsong [at] monkey.org&gt;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

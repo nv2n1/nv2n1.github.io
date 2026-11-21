@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>load_datafile_object(3) · Linux Manual Pages</title>
+<meta name="description" content="load_datafile_object – Loads a specific object from a datafile. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-load_datafile_object/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>load_datafile_object(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> load_datafile_object &#8211; Loads a specific object from a datafile. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>DATAFILE *load_datafile_object(const char *filename, </code> <code>const char *objectname);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Loads a specific object from a datafile. This won&#8217;t work if you strip the object names from the file, and it will be very slow if you save the file with global compression. Example: </p>
+<pre><code>
+/* Load only the music from the datafile. */
+music_object = load_datafile_object("datafile.dat",
+                                    "MUSIC");
+/* Play it and wait a moment for it. */
+play_midi(music_object-&gt;dat);
+...
+    /* Destroy unneeded music. */
+    unload_datafile_object(music_object);
+</code></pre>
+<h2>RETURN VALUE</h2>
+<p> Returns a pointer to a single DATAFILE element whose `dat&#8217; member points to the object, or NULL if there was an error or there was no object with the requested name. Remember to free this DATAFILE later to avoid memory leaks, but use the correct unloading function! </p>
+<h2>SEE ALSO</h2>
+<p> <code>unload_datafile_object</code>(3), <code><a href="/docs/linux/man/3-load_datafile/">load_datafile</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3), <code><a href="/docs/linux/man/3-find_datafile_object/">find_datafile_object</a></code>(3), <code><a href="/docs/linux/man/3-register_datafile_object/">register_datafile_object</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

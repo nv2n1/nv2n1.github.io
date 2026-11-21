@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pppdump(8) · Linux Manual Pages</title>
+<meta name="description" content="pppdump – convert PPP record file to readable format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pppdump/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pppdump(8)</h1>
+
+
+
+
+
+<p>pppdump &#8211; convert PPP record file to readable format</p>
+<h2>Synopsis</h2>
+<p><code>pppdump</code> [ <code>-h</code> | <code>-p</code> [ <code>-d</code> ]] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m </code><i>mru</i> ] [ <i>file </i>&#8230; ]<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</p>
+<h2>Description</h2>
+<p>The <code>pppdump</code> utility converts the files written using the <i>record</i> option of <code>pppd</code> into a human-readable format. If one or more filenames are specified, <code>pppdump</code> will read each in turn; otherwise it will read its standard input. In each case the result is written to standard output. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Prints the bytes sent and received in hexadecimal. If neither this option nor the <code>-p</code> option is specified, the bytes are printed as the characters themselves, with non-printing and non-ASCII characters printed as escape sequences.</dd>
+<dt><code>-p</code></dt>
+<dd>Collects the bytes sent and received into PPP packets, interpreting the async HDLC framing and escape characters and checking the FCS (frame check sequence) of each packet. The packets are printed as hex values and as characters (non-printable characters are printed as `.&#8217;).</dd>
+<dt><code>-d</code></dt>
+<dd>With the <code>-p</code> option, this option causes <code>pppdump</code> to decompress packets which have been compressed with the BSD-Compress or Deflate methods.</dd>
+<dt><code>-r</code></dt>
+<dd>Reverses the direction indicators, so that `sent&#8217; is printed for bytes or packets received, and `rcvd&#8217; is printed for bytes or packets sent.</dd>
+<dt><code>-a</code></dt>
+<dd>Prints absolute times.</dd>
+<dt><code>-m </code><i>mru</i></dt>
+<dd>Use <i>mru</i> as the MRU (maximum receive unit) for both directions of the link when checking for over-length PPP packets (with the <code>-p</code> option).</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-pppd/">pppd</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

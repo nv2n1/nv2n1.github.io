@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_procfilegrp(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::ProcFileGrp –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_procfilegrp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_procfilegrp(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>sc::ProcFileGrp &#8211; </p>
+<p> The <code>ProcFileGrp</code> concrete class provides an implementation of <code>FileGrp</code> for a single processor.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;fileproc.h&gt;</code></pre>
+<p> Inherits <code>sc::FileGrp</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>ProcFileGrp</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;) </p>
+<p> <code>ProcFileGrp</code> * <code>clone</code> ()<br />
+ <i>Clones the given </i><code>FileGrp</code>. The new <code>FileGrp</code> may need to be initialized additionally.<br />
+ void <code>set_localsize</code> (size_t)<br />
+ <i>Set the size of locally held data. </i><br />
+ void * <code>localdata</code> () </p>
+<p> void * <code>obtain_readwrite</code> (<code>distsize_t</code> offset, int size)<br />
+ <i>Only one thread can have an unreleased obtain_readwrite at a time. </i><br />
+ void * <code>obtain_readonly</code> (<code>distsize_t</code> offset, int size)<br />
+ <i>This gives read access to the file location. No locking is done. </i><br />
+ void * <code>obtain_writeonly</code> (<code>distsize_t</code> offset, int size)<br />
+ <i>This gives write access to the data location. No locking is done. </i><br />
+ void <code>release_readonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
+ <i>This is called when read access is no longer needed. </i><br />
+ void <code>release_writeonly</code> (void *data, <code>distsize_t</code> offset, int size)<br />
+ <i>This is called when write access is no longer needed. </i><br />
+ void <code>release_readwrite</code> (void *data, <code>distsize_t</code> offset, int size)<br />
+ <i>This is called when read/write access is no longer needed. </i><br />
+ void <code>sync</code> ()<br />
+ <i>Synchronizes all the nodes. </i></p>
+<h2>Detailed Description</h2>
+<p>The <code>ProcFileGrp</code> concrete class provides an implementation of <code>FileGrp</code> for a single processor.</p>
+<h2>Member Function Documentation</h2>
+<h3>void* sc::ProcFileGrp::obtain_readwrite (<code>distsize_t</code> offset, int size) [virtual]</h3>
+<p>Only one thread can have an unreleased obtain_readwrite at a time. The actual file region locked can be larger than that requested. If the file region is already locked this will block. For this reason, data should be held as read/write for as short a time as possible. </p>
+<p> Implements <code>sc::FileGrp</code>.</p>
+<h3>void sc::ProcFileGrp::release_readwrite (void * data, <code>distsize_t</code> offset, int size) [virtual]</h3>
+<p>This is called when read/write access is no longer needed. The data will be unlocked. </p>
+<p> Implements <code>sc::FileGrp</code>.</p>
+<h3>void sc::ProcFileGrp::set_localsize (size_t) [virtual]</h3>
+<p>Set the size of locally held data. When data is accessed using a global offset counting starts at node 0 and proceeds up to node <code>n()</code> &#8211; 1. </p>
+<p> Implements <code>sc::FileGrp</code>.</p>
+<h3>void sc::ProcFileGrp::sync () [virtual]</h3>
+<p>Synchronizes all the nodes. Consider using this when the way you you access data changes. </p>
+<p> Implements <code>sc::FileGrp</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

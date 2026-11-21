@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>radzap(1) · Linux Manual Pages</title>
+<meta name="description" content="radzap – remove rogue entries from the active sessions database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-radzap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>radzap(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> radzap &#8211; remove rogue entries from the active sessions database</p>
+<h2>SYNOPSIS</h2>
+<p> <code>radzap</code> [<code>-d</code> <i>raddb_directory</i>] [<code>-h</code>] [<code>-N</code> <i>nas_ip_address</i>] [<code>-P</code> <i>nas_port</i>] [<code>-u</code> <i>user</i>] [<code>-U</code> <i>user</i>] [<code>-x</code>] <i>server[:port] secret</i></p>
+<h2>DESCRIPTION</h2>
+<p> The FreeRadius server can be configured to maintain an active session database in a file called <i>radutmp</i>. Commands like <code><a href="/docs/linux/man/1-radwho/">radwho</a></code>(1) use this database. Sometimes that database can get out of sync, and then it might contain rogue entries. <code>radzap</code> can clean up this database. </p>
+<p> As of FreeRADIUS 1.1.0, <code>radzap</code> is a simple shell-script wrapper around <code><a href="/docs/linux/man/1-radwho/">radwho</a></code>(1) and <code><a href="/docs/linux/man/1-radclient/">radclient</a></code>(1). </p>
+<p> The sessions are &quot;zapped&quot; by sending an Accounting-Request packet which contains the information necessary for the server to delete the session record. <code>radzap</code> sends a packet to the server, rather than writing to <i>radutmp</i> directly, because session records may also be maintained in SQL.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-d&nbsp;<wbr><i>raddb_directory</i></dt>
+<dd> The directory that contains the RADIUS configuration files. <code>radzap</code> reads <i>radiusd.conf</i> to determine the location of the <i>radutmp</i> file.</dd>
+<dt>-h</dt>
+<dd> Print usage help information.</dd>
+<dt>-N&nbsp;<wbr><i>nas_ip_address</i></dt>
+<dd> Zap the entries which match the given NAS IP address.</dd>
+<dt>-P&nbsp;<wbr><i>nas_port</i></dt>
+<dd> Zap the entries which match the given NAS port.</dd>
+<dt>-u&nbsp;<wbr><i>user</i></dt>
+<dd> Zap the entries which match the given username (case insensitive).</dd>
+<dt>-U&nbsp;<wbr><i>user</i></dt>
+<dd> Zap the entries which match the given username (case sensitive).</dd>
+<dt>-x</dt>
+<dd> Enable debugging output.</dd>
+<dt>server[:port]</dt>
+<dd> The hostname or IP address of the remote server. Optionally a UDP port can be specified. If no UDP port is specified, it is looked up in <i>/etc/services</i>. The service name looked for is <code>radacct</code> for accounting packets, and <code>radius</code> for all other requests. If a service is not found in <i>/etc/services</i>, 1813 and 1812 are used respectively.</dd>
+<dt>secret</dt>
+<dd> The shared secret for this client. It needs to be defined on the radius server side too, for the IP address you are sending the radius packets from.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-radwho/">radwho</a>(1), <a href="/docs/linux/man/1-radclient/">radclient</a>(1), <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5).</p>
+<h2>AUTHOR</h2>
+<p> Alan DeKok &lt;aland [at] ox.org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

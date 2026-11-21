@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>otfinfo(1) · Linux Manual Pages</title>
+<meta name="description" content="otfinfo – report information about OpenType fonts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-otfinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>otfinfo(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> otfinfo &#8211; report information about OpenType fonts </p>
+<h2>SYNOPSIS</h2>
+<p> <code>otfinfo</code> [<code>-sfzpvag</code>] [<i>FILE&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>Otfinfo</code> reports information about the named OpenType font <i>FILE</i>s (or standard input, if no <i>FILE</i>s are given). Results are printed to standard output. Each line is prefaced with the relevant <i>FILE</i> if more than one <i>FILE</i> was supplied.</p>
+<h2>OPTIONS</h2>
+<p> With long options, you need type only as many characters as will make the option unique.</p>
+<h3>Query options</h3>
+<dl>
+<dt><code>-s</code>, <code>&#8211;scripts</code></dt>
+<dd> Print supported scripts and language systems. The scripts are printed one per line, with human-readable descriptions; for example: </dd>
+<pre>
+  cyrl            Cyrillic
+  grek            Greek
+  latn            Latin
+  latn.TUR        Latin/Turkish
+</pre>
+<dt><code>-f</code>, <code>&#8211;features</code></dt>
+<dd> Print GSUB and GPOS features supported by the selected script (see the <code>&#8211;script</code> option below). The scripts are printed one per line, with human-readable descriptions; for example: </dd>
+<pre>
+  aalt    Access All Alternates
+  c2sc    Small Capitals From Capitals
+  case    Case-Sensitive Forms
+  cpsp    Capital Spacing
+  ...
+  zero    Slashed Zero
+</pre>
+<dt><code>-z</code>, <code>&#8211;optical-size</code></dt>
+<dd> Print optical size information. For example: </dd>
+<pre>
+  design size 11 pt, size range (8.4 pt, 13 pt], subfamily ID 11, subfamily name Semibold Italic
+</pre>
+<dt><code>-p</code>, <code>&#8211;postscript-name</code></dt>
+<dd> Print each font&#8217;s PostScript name. For example: </dd>
+<pre>
+  MinionPro-SemiboldItCapt
+</pre>
+<dt><code>-a</code>, <code>&#8211;family</code></dt>
+<dd> Print each font&#8217;s family name. For example: </dd>
+<pre>
+  Minion Pro
+</pre>
+<dt><code>-v</code>, <code>&#8211;font-version</code></dt>
+<dd> Print font version information, if available. For example: </dd>
+<pre>
+  OTF 1.013;PS 001.000;Core 1.0.27;makeotf.lib(1.11)
+</pre>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd> Print each font&#8217;s name, version, designer, vendor, copyright, and license information. For example: </dd>
+<pre><code>
+Family : Minion Pro
+             Subfamily : Regular
+                             Full name : Minion Pro
+                                             PostScript name : MinionPro -
+                                                               Regular
+                                                                   Version : OTF 1.011;
+PS 001.000;
+Core 1.0.27;
+makeotf.lib1 .3.1 Unique ID : 1.011;
+ADBE;
+MinionPro - Regular
+                Designer : Robert Slimbach
+                               Vendor URL : http : // www.adobe.com/type/
+                                                   Trademark : Minion is either a registered trademark or
+    a trademark of Adobe Systems Incorporated in the United States and / or other countries.Copyright : &amp;#169;
+2000 Adobe Systems Incorporated.All Rights Reserved.U.S.Patent Des.337, 604. Other patents pending.License URL : http: // www.adobe.com/type/legal.html
+</code></pre>
+<dt><code>-g</code>, <code>&#8211;glyphs</code></dt>
+<dd> Print the name of every glyph in each font, one per line. For example: </dd>
+<pre>
+  .notdef
+  space
+  exclam
+  ...
+  ncommaaccent.end
+  lje.alt
+</pre>
+<dt><code>-u</code>, <code>&#8211;unicode</code></dt>
+<dd> Print each Unicode code point supported by the font, followed by the glyph number representing that code point (and, if present, the name of the corresponding glyph). </dd>
+<dt><code>-t</code>, <code>&#8211;tables</code></dt>
+<dd> Print the size and name of every OpenType table in the font. For example: </dd>
+<pre>
+       52 BASE
+    87723 CFF
+     4940 DSIG
+    21366 GPOS
+  ...
+</pre>
+<dt><code>-T</code> <i>table</i>, <code>&#8211;dump-table=</code><i>table</i></dt>
+<dd> Print the contents of the font&#8217;s OpenType table <i>table</i>.</dd></dl>
+<h3>Miscellaneous options</h3>
+<dl>
+<dt><code>&#8211;script=</code><i>script</i>[.<i>lang</i>]</dt>
+<dd> Select the script system <i>script</i> and language system <i>lang</i> used to look up features by <code>&#8211;features</code>. Examples include &quot;latn&quot; (Latin script), &quot;grek&quot; (Greek script), and &quot;yi.YIC&quot; (Yi script with classic characters). If <i>lang</i> is not specified, otfinfo will use the default language system for that script. Defaults to &quot;latn&quot;. </dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Write progress messages to standard error. </dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not generate any error messages. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage information and exit. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and some short non-warranty information and exit.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i>OpenType Specification</i>, Version 1.4</p>
+<h2>AUTHOR</h2>
+<p> Eddie Kohler (ekohler [at] gmail.com) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

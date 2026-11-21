@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_search(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_search – Initiate a DNS query with domain search">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_search/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_search(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> ares_search &#8211; Initiate a DNS query with domain search</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+typedef void (*ares_callback)(void *arg, int status,
+void ares_search(ares_channel channel, const char *name,
+int dnsclass, int type, ares_callback callback,
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>ares_search</code> function initiates a series of single-question DNS queries on the name service channel identified by <i>channel</i>, using the channel&#8217;s search domains as well as a host alias file given by the HOSTALIAS environment variable. The parameter <i>name</i> gives the alias name or the base of the query name as a NUL-terminated C string of period-separated labels; if it ends with a period, the channel&#8217;s search domains will not be used. Periods and backslashes within a label must be escaped with a backslash. The parameters <i>dnsclass</i> and <i>type</i> give the class and type of the query using the values defined in <code>&lt;arpa/nameser.h&gt;</code>. When the query sequence is complete or has failed, the ares library will invoke <i>callback</i>. Completion or failure of the query sequence may happen immediately, or may happen during a later call to <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3) or <code><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a></code>(3). </p>
+<p> The callback argument <i>arg</i> is copied from the <code>ares_search</code> argument <i>arg</i>. The callback argument <i>status</i> indicates whether the query sequence ended with a successful query and, if not, how the query sequence failed. It may have any of the following values:</p>
+<dl>
+<dt><code>ARES_SUCCESS</code></dt>
+<dd> A query completed successfully.</dd>
+<dt><code>ARES_ENODATA</code></dt>
+<dd> No query completed successfully; when the query was tried without a search domain appended, a response was returned with no answers.</dd>
+<dt><code>ARES_EFORMERR</code></dt>
+<dd> A query completed but the server claimed that the query was malformatted.</dd>
+<dt><code>ARES_ESERVFAIL</code></dt>
+<dd> No query completed successfully; when the query was tried without a search domain appended, the server claimed to have experienced a failure. (This code can only occur if the <code>ARES_FLAG_NOCHECKRESP</code> flag was specified at channel initialization time; otherwise, such responses are ignored at the <code><a href="/docs/linux/man/3-ares_send/">ares_send</a></code>(3) level.)</dd>
+<dt><code>ARES_ENOTFOUND</code></dt>
+<dd> No query completed successfully; when the query was tried without a search domain appended, the server reported that the queried-for domain name was not found.</dd>
+<dt><code>ARES_ENOTIMP</code></dt>
+<dd> A query completed but the server does not implement the operation requested by the query. (This code can only occur if the <code>ARES_FLAG_NOCHECKRESP</code> flag was specified at channel initialization time; otherwise, such responses are ignored at the <code><a href="/docs/linux/man/3-ares_send/">ares_send</a></code>(3) level.)</dd>
+<dt><code>ARES_EREFUSED</code></dt>
+<dd> A query completed but the server refused the query. (This code can only occur returned if the <code>ARES_FLAG_NOCHECKRESP</code> flag was specified at channel initialization time; otherwise, such responses are ignored at the <code><a href="/docs/linux/man/3-ares_send/">ares_send</a></code>(3) level.)</dd>
+<dt><code>ARES_TIMEOUT</code></dt>
+<dd> No name servers responded to a query within the timeout period.</dd>
+<dt><code>ARES_ECONNREFUSED</code></dt>
+<dd> No name servers could be contacted.</dd>
+<dt><code>ARES_ENOMEM</code></dt>
+<dd> Memory was exhausted.</dd>
+<dt><code>ARES_ECANCELLED</code></dt>
+<dd> The query was cancelled.</dd>
+<dt><code>ARES_EDESTRUCTION</code></dt>
+<dd> The name service channel <i>channel</i> is being destroyed; the query will not be completed.</dd></dl>
+<p> The callback argument <i>timeouts</i> reports how many times a query timed out during the execution of the given request. </p>
+<p> If a query completed successfully, the callback argument <i>abuf</i> points to a result buffer of length <i>alen</i>. If the query did not complete successfully, <i>abuf</i> will usually be NULL and <i>alen</i> will usually be 0, but in some cases an unsuccessful query result may be placed in <i>abuf</i>.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3)</p>
+<h2>AUTHOR</h2>
+<p> Greg Hudson, MIT Information Systems<br />
+ Copyright 1998 by the Massachusetts Institute of Technology. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

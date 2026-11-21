@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress Performance Tuning: OPcache, Caching, and Asset Optimization - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/">
+  <meta name="description" content="WordPress performance depends on three complementary caching layers: PHP bytecode caching (OPcache), page caching (WP Super Cache), and asset optimization …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WordPress Performance Tuning: OPcache, Caching, and Asset Optimization">
+  <meta property="og:url" content="https://www.systutorials.com/speeding-up-wordpress-with-apc-object-cache-and-wp-super-cache/">
+  <meta property="og:description" content="WordPress performance depends on three complementary caching layers: PHP bytecode caching (OPcache), page caching (WP Super Cache), and asset optimization …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>WordPress Performance Tuning: OPcache, Caching, and Asset Optimization</h1>
+        <time class="post-date" datetime="2014-04-02T17:34:13Z">April 2, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>WordPress performance depends on three complementary caching layers: PHP bytecode caching (OPcache), page caching (WP Super Cache), and asset optimization (Autoptimize). Combined properly, they’ll cut your Time to First Byte in half and significantly improve Core Web Vitals.</p>
+<h2 id="enable-opcache-in-php">Enable OPcache in PHP</h2>
+<p>OPcache caches compiled PHP bytecode in shared memory, eliminating parse and compile overhead on every request. It’s bundled with PHP 7.0+ and is often enabled by default, but verify it’s active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">php -i <span class="p">|</span> grep -i opcache
+</span></span></code></pre></div><p>Or check via a quick PHP script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">extension_loaded</span><span class="p">(</span><span class="s1">&#39;Zend OPcache&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;OPcache is enabled</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;Version: &#34;</span> <span class="o">.</span> <span class="nx">phpversion</span><span class="p">(</span><span class="s1">&#39;Zend OPcache&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;OPcache is not enabled</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>If disabled, enable it by adding to your php.ini (typically <code>/etc/php/8.x/fpm/php.ini</code> for PHP-FPM or <code>/etc/php/8.x/cli/php.ini</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">zend_extension</span><span class="o">=</span><span class="s">opcache.so</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.enable</span><span class="o">=</span><span class="s">1</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.enable_cli</span><span class="o">=</span><span class="s">1</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.memory_consumption</span><span class="o">=</span><span class="s">256</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.interned_strings_buffer</span><span class="o">=</span><span class="s">16</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.max_accelerated_files</span><span class="o">=</span><span class="s">20000</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.max_wasted_percentage</span><span class="o">=</span><span class="s">5</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.validate_timestamps</span><span class="o">=</span><span class="s">1</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.revalidate_freq</span><span class="o">=</span><span class="s">2</span>
+</span></span><span class="line"><span class="cl"><span class="na">opcache.log_verbosity_level</span><span class="o">=</span><span class="s">1</span>
+</span></span></code></pre></div><p>Key settings:</p>
+<ul>
+<li><strong>memory_consumption</strong>: RAM allocated for bytecode cache. Start with 256 MB for WordPress; monitor with <code>opcache_get_status()</code> and increase if usage exceeds 90%.</li>
+<li><strong>max_accelerated_files</strong>: Maximum files to cache. Set to ~20% above your actual file count. Check with <code>find /path/to/wordpress -type f -name &quot;*.php&quot; | wc -l</code>.</li>
+<li><strong>validate_timestamps</strong>: Check if files changed on disk. Set to <code>1</code> for development, <code>0</code> for production (requires manual cache clear on deploys).</li>
+<li><strong>revalidate_freq</strong>: Seconds between timestamp checks. Use <code>2</code> for development, <code>60+</code> for production.</li>
+<li><strong>interned_strings_buffer</strong>: Intern duplicate strings. 16 MB is standard for WordPress.</li>
+</ul>
+<p>Restart PHP-FPM after changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart php-fpm
+</span></span></code></pre></div><p>Or for Apache with mod_php:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><p>Monitor OPcache stats in production:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$stats</span> <span class="o">=</span> <span class="nx">opcache_get_status</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Hit rate: &#34;</span> <span class="o">.</span> <span class="nx">round</span><span class="p">(</span><span class="nv">$stats</span><span class="p">[</span><span class="s1">&#39;opcache_statistics&#39;</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$stats</span><span class="p">[</span><span class="s1">&#39;opcache_statistics&#39;</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nv">$stats</span><span class="p">[</span><span class="s1">&#39;opcache_statistics&#39;</span><span class="p">][</span><span class="s1">&#39;misses&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34;%</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Memory used: &#34;</span> <span class="o">.</span> <span class="nx">round</span><span class="p">(</span><span class="nv">$stats</span><span class="p">[</span><span class="s1">&#39;memory_usage&#39;</span><span class="p">][</span><span class="s1">&#39;used_memory&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&#34; MB</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Files cached: &#34;</span> <span class="o">.</span> <span class="nv">$stats</span><span class="p">[</span><span class="s1">&#39;opcache_statistics&#39;</span><span class="p">][</span><span class="s1">&#39;num_cached_scripts&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Aim for 95%+ hit rate. Low hit rates indicate insufficient memory or frequent file changes.</p>
+<h2 id="install-and-configure-wp-super-cache">Install and Configure WP Super Cache</h2>
+<p>WP Super Cache stores static HTML versions of pages, bypassing PHP execution for repeat visitors.</p>
+<p>Go to <strong>Plugins → Add New</strong>, search for “WP Super Cache”, install, and activate. Then navigate to <strong>Settings → WP Super Cache</strong>.</p>
+<p>Enable caching with these configurations:</p>
+<ul>
+<li><strong>Cache logged-in users</strong>: Disable in production. Enable only for debugging specific user sessions.</li>
+<li><strong>Cache timeout</strong>: Default 3600 seconds (1 hour) works for most sites. Reduce to 600 seconds if content updates frequently; increase to 7200 if static.</li>
+<li><strong>Preload</strong>: Enable to automatically generate cached pages on schedule rather than wait for first user visit.</li>
+<li><strong>Mobile caching</strong>: Enable if serving different content to mobile users.</li>
+<li><strong>CDN support</strong>: Enable if using Cloudflare, AWS CloudFront, or similar. Configure URLs for static asset offloading.</li>
+</ul>
+<p>Advanced settings worth tuning:</p>
+<ul>
+<li><strong>Cache location</strong>: Store in <code>/wp-content/cache/</code> (default) or separate <code>tmpfs</code> mount for speed.</li>
+<li><strong>Garbage collection</strong>: Set to <code>3600</code> or higher to clean expired cache files periodically.</li>
+<li><strong>Cache footer</strong>: Enable to cache dynamic footers (useful for dated content).</li>
+</ul>
+<p>Test that caching works:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I https://yoursite.com/sample-post/
+</span></span><span class="line"><span class="cl"><span class="c1"># Look for Cache-Control or X-Cache-* headers indicating cached response</span>
+</span></span></code></pre></div><p>Add cache-busting on content updates by editing your theme’s <code>functions.php</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">flush_wp_super_cache_on_publish</span><span class="p">(</span><span class="nv">$post_id</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">function_exists</span><span class="p">(</span><span class="s1">&#39;wp_cache_post_change&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">wp_cache_post_change</span><span class="p">(</span><span class="nv">$post_id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;publish_post&#39;</span><span class="p">,</span> <span class="s1">&#39;flush_wp_super_cache_on_publish&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;publish_page&#39;</span><span class="p">,</span> <span class="s1">&#39;flush_wp_super_cache_on_publish&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="minify-and-optimize-assets-with-autoptimize">Minify and Optimize Assets with Autoptimize</h2>
+<p>Autoptimize minifies CSS, JavaScript, and HTML, reducing payload size and HTTP requests.</p>
+<p>Install from <strong>Plugins → Add New</strong>, activate, and configure under <strong>Settings → Autoptimize</strong>.</p>
+<p><strong>JavaScript optimization:</strong></p>
+<ul>
+<li>Enable “Optimize JavaScript code”</li>
+<li>Check “Defer JavaScript” to defer non-critical scripts (prevents render-blocking)</li>
+<li>Enable “Inline small JS” to embed tiny scripts directly in HTML</li>
+</ul>
+<p><strong>CSS optimization:</strong></p>
+<ul>
+<li>Enable “Optimize CSS code”</li>
+<li>Check “Inline and defer CSS” only if your critical CSS is &lt;10 KB</li>
+<li>Enable “Inline critical CSS” and configure which CSS should load immediately for above-the-fold content</li>
+<li>Skip “Generate data: URIs” unless you have &lt;5 KB images in CSS</li>
+</ul>
+<p><strong>HTML optimization:</strong></p>
+<ul>
+<li>Enable “Optimize HTML code” to remove comments and whitespace</li>
+<li>Disable “Keep HTML comments” in production (safe in development for debugging)</li>
+</ul>
+<p><strong>Image optimization:</strong>
+Autoptimize doesn’t handle images well—use a dedicated plugin:</p>
+<ul>
+<li><strong>ShortPixel</strong> (free tier: 100 images/month)</li>
+<li><strong>Imagify</strong> (free tier: up to 25 MB/month)</li>
+<li><strong>Smush</strong> (WordPress native integration)</li>
+</ul>
+<p>Or optimize via command line before uploading:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install ImageMagick first</span>
+</span></span><span class="line"><span class="cl">sudo apt install imagemagick
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bulk convert and compress</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> img in *.jpg<span class="p">;</span> <span class="k">do</span> convert <span class="s2">&#34;</span><span class="nv">$img</span><span class="s2">&#34;</span> -quality <span class="m">82</span> -strip <span class="s2">&#34;</span><span class="si">${</span><span class="nv">img</span><span class="p">%.jpg</span><span class="si">}</span><span class="s2">_compressed.jpg&#34;</span><span class="p">;</span> <span class="k">done</span>
+</span></span></code></pre></div><p><strong>Test thoroughly</strong> after enabling each option—some theme or plugin combinations break with aggressive minification:</p>
+<ol>
+<li>Clear all caches: Dashboard → WP Super Cache → Purge Cache</li>
+<li>Clear OPcache: Restart PHP-FPM</li>
+<li>Load a page and check browser Network tab for aggregated/minified assets</li>
+<li>Test form submissions, search, and dynamic content</li>
+<li>Check Console for JavaScript errors</li>
+</ol>
+<p>If issues arise, disable Autoptimize, clear cache, and re-enable one setting at a time to identify conflicts.</p>
+<h2 id="monitor-performance">Monitor Performance</h2>
+<p>Measure improvements with tools that report real user metrics:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Using curl with timing</span>
+</span></span><span class="line"><span class="cl">curl -w <span class="s2">&#34;@curl-format.txt&#34;</span> -o /dev/null -s https://yoursite.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Time to First Byte (TTFB)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># DNS Lookup</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Server Processing</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Content Transfer</span>
+</span></span></code></pre></div><p>Track in Google Search Console:</p>
+<ul>
+<li>Core Web Vitals → LCP (Largest Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift)</li>
+</ul>
+<p>Use Lighthouse (Chrome DevTools → Lighthouse) for detailed performance audits.</p>
+<h2 id="caching-layer-summary">Caching Layer Summary</h2>
+<p>These tools work in sequence:</p>
+<ol>
+<li><strong>OPcache</strong> compiles PHP once and caches bytecode (server-side, lowest latency)</li>
+<li><strong>WP Super Cache</strong> serves static HTML, bypassing PHP entirely for repeat visitors</li>
+<li><strong>Autoptimize</strong> minifies and defers assets, reducing payload and render-blocking resources</li>
+</ol>
+<p>Together, they reduce TTFB by 40-70%, Largest Contentful Paint by 30-50%, and bandwidth by 30-60% depending on theme complexity and plugin count.</p>
+<p>For additional gains, add a CDN (Cloudflare, AWS CloudFront) to cache static assets geographically closer to users, or layer Varnish as a reverse proxy cache in front of your web server for highly dynamic content.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

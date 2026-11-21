@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shinken-discovery(8) · Linux Manual Pages</title>
+<meta name="description" content="shinken-discovery – Shinken discovery command">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-shinken-discovery/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>shinken-discovery(8)</h1>
+
+
+
+
+
+<p>shinken-discovery &#8211; Shinken discovery command</p>
+<h2>Synopsis</h2>
+<p>shinken-discovery [-w] [-c CONFIGFILE] [-o OUTPUT_PATH] [-r RUNNER[,RUNNER,&#8230;]] [-mMACRO* [MACRO &#8230;]]</p>
+<h2>Description</h2>
+<p>Shinken discovery command </p>
+<p> There are two discovery modules included: * Standard network discovery which uses the nmap tool * VMware discovery which uses the check_esx3.pl script and a vcenter installation. </p>
+<p> It is best to do the whole discovery in one pass because one module can use data from the other.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8212; version</code></dt>
+<dd>Show the version and exit</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-c </code>CONFIGFILE, &#8211;cfg-input CONFIGGILE</dt>
+<dd>Discovery configuration file</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-o </code>OUTPUT_PATH, &#8211;dir-output OUTPUT_PATH</dt>
+<dd>Directory output for results</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-w, &#8211;overright</code></dt>
+<dd>Allow overwriting existing files (disabled by default)</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-r </code>RUNNERS</dt>
+<dd>Comma-separated list of discovery runner modules to use</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-m </code>MACROS</dt>
+<dd>List of macros to pass to discovery runner modules. Must be the last argument. Ex: NMAPTARGETS=192.168.0.0/24</dd>
+<dl>
+<dd></dd></dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Print detailed help screen.</dd>
+<dl>
+<dd></dd></dl>
+</dl>
+<h2>Authors</h2>
+<p>David Hannequin. Arthur Gautier. Michael Leinartas.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

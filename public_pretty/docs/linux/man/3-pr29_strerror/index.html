@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pr29_strerror(3) · Linux Manual Pages</title>
+<meta name="description" content="pr29_strerror – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pr29_strerror/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pr29_strerror(3)</h1>
+
+
+
+
+
+<p>pr29_strerror &#8211; API function</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pr29.h&gt;
+const char *pr29_strerror(Pr29_rc rc);</code></pre>
+<h2>Arguments</h2>
+<dl>
+<dt>Pr29_rc rc</dt>
+<dd>an <code>Pr29_rc</code> return code.</dd></dl>
+<h2>Description</h2>
+<p>Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
+<h2>Pr29_Success</h2>
+<p>Successful operation. This value is guaranteed to always be zero, the remaining ones are only guaranteed to hold non-zero values, for logical comparison purposes.</p>
+<h2>Pr29_Problem</h2>
+<p>A problem sequence was encountered.</p>
+<h2>Pr29_Stringprep_Error</h2>
+<p>The character set conversion failed (only for <code>pr29_8z()</code>).</p>
+<h2>Return Value</h2>
+<p>Returns a pointer to a statically allocated string containing a description of the error with the return code <i>rc</i>.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;bug-libidn [at] gnu.org&gt;. GNU Libidn home page: <a rel="nofollow" href="http://www.gnu.org/software/libidn/">http://www.gnu.org/software/libidn/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2002-2013 Simon Josefsson.<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>See Also</h2>
+<p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
+<dl>
+<dd><code>info libidn</code></dd></dl>
+<p> should give you access to the complete manual. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

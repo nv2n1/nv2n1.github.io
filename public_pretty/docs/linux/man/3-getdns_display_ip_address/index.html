@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getdns_display_ip_address(3) · Linux Manual Pages</title>
+<meta name="description" content="getdns_display_ip_address — convert an getdns ip address to string">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-getdns_display_ip_address/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>getdns_display_ip_address(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>getdns_display_ip_address</code> &#8212; convert an getdns ip address to string </p>
+<h2>LIBRARY</h2>
+<p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;getdns.h&gt; </p>
+<p> char *<br />
+ <code>getdns_display_ip_address</code> (const getdns_bindata *ipv4_or_ipv6_addr) </p>
+<h2>DESCRIPTION</h2>
+<p> This helper function returns a nicely formatted string representation of the IPv4 or IPv6 address. The length of the bindata is used to determine whether the address is IPv4 or IPv6. </p>
+<dl>
+<dt> <i>ipv4_or_ipv6_addr</i></dt>
+<dd>bindata of the address to print </dd>
+<dt></dt></dl>
+<h2>RETURN VALUES</h2>
+<dd>Returns a string representation of the IP address (allocated using the system allocator &#8211; malloc), the caller is responsible for freeing the storage using free(). </dd>
+<h2>EXAMPLES</h2>
+<p> TBD </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

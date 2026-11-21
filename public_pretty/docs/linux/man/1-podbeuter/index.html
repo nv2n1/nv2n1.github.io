@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>podbeuter(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-podbeuter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>podbeuter(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>podbeuter - a podcast download manage for text terminals</p>
+<h2>SYNOPSIS</h2>
+<p><i>podbeuter</i> [-C configfile] [-q queuefile] [-a] [-h]</p>
+<h2>DESCRIPTION</h2>
+<p><i>podbeuter</i> is a podcast manager for text terminals. It is a helper program to <i>newsbeuter</i> which queues podcast downloads into a file. These queued downloads can then be download with <i>newsbeuter</i>.</p>
+<h2>OPTIONS</h2>
+<p>-h</p>
+<dl>
+<dt>
+</dt><dd> Display help</dd></dl>
+<p>-C configfile</p>
+<dl>
+<dt>
+</dt><dd> Use an alternative configuration file</dd></dl>
+<p>-q queuefile</p>
+<dl>
+<dt>
+</dt><dd> Use an alternative queue file</dd></dl>
+<p>-a</p>
+<dl>
+<dt>
+</dt><dd> Start automatic download of all queued files on startup</dd></dl>
+<h2>PODCAST SUPPORT</h2>
+<p>A podcast is a media file distributed over the internet using syndication feeds such as RSS, for later playback on portable players or computers. Newsbeuter contains support for downloading and saving podcasts. This support differs a bit from other podcast aggregators or &quot;podcatchers&quot; in how it is done.</p>
+<p>Podcast content is transported in RSS feeds via special tags called &quot;enclosures&quot;. Newsbeuter recognizes these enclosures and stores the relevant information for every podcast item it finds in an RSS feed. Since version 2.0, it also recognizes and handles the Yahoo Media RSS extensions. What the user then can do is to add the podcast download URL to a download queue. Alternatively, newsbeuter can be configured to automatically do that. This queue is stored in the file $HOME/.newsbeuter/queue.</p>
+<p>The user can then use the download manager &quot;podbeuter&quot; to download these files to a directory on the local filesystem. Podbeuter comes with the newsbeuter package, and features a look and feel very close to the one of newsbeuter. It also shares the same configuration file.</p>
+<p>Podcasts that have been downloaded but haven&rsquo;t been played yet remain in the queue but are marked as downloaded. You can remove them by purging them from the queue with the <i>P</i> key. After you&rsquo;ve played a file and close podbeuter, it will be removed from the queue. The downloaded file remains on the filesystem.</p>
+<h2>CONFIGURATION COMMANDS</h2>
+<p><i>download-path</i> (parameters: &lt;path&gt;; default value: <i>~/</i>)</p>
+<dl>
+<dt>
+</dt><dd> Specifies the directory where podbeuter shall download the files to. Optionally, the placeholders &quot;%n&quot; (for the podcast feed's name) and &quot;%h&quot; (for the podcast feed's hostname) can be used to place downloads in a directory structure. (example: download-path &quot;~/Downloads/%h/%n&quot;)</dd></dl>
+<p><i>max-downloads</i> (parameters: &lt;number&gt;; default value: <i>1</i>)</p>
+<dl>
+<dt>
+</dt><dd> Specifies the maximum number of parallel downloads when automatic download is enabled. (example: max-downloads 3)</dd></dl>
+<p><i>player</i> (parameters: &lt;player command&gt;; default value: <i>&quot;&quot;</i>)</p>
+<dl>
+<dt>
+</dt><dd> Specifies the player that shall be used for playback of downloaded files. (example: player &quot;mp3blaster&quot;)</dd></dl>
+<h2>FILES</h2>
+<p><i>$HOME/.newsbeuter/config</i></p>
+<p><i>$HOME/.newsbeuter/queue</i></p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/1-newsbeuter/">newsbeuter</a>(1). The documentation that comes with newsbeuter is a good source about the general use and configuration of newsbeuter&rsquo;s podcast support.</p>
+<h2>AUTHORS</h2>
+<p>Andreas Krennmair &lt;ak [at] newsbeuter.org&gt;, for contributors see AUTHORS file.</p>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.
+</dt><dd> ak [at] newsbeuter.org
+</dd><dl>
+<dt>
+</dt><dd> mailto:ak [at] newsbeuter.org</dd></dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

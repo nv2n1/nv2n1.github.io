@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quotatab(5) · Linux Manual Pages</title>
+<meta name="description" content="quotatab – Descriptions of devices with disk quotas">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-quotatab/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>quotatab(5)</h1>
+
+
+
+
+
+<p>quotatab &#8211; Descriptions of devices with disk quotas</p>
+<h2>Synopsis</h2>
+<p><code>/etc/quotatab</code></p>
+<h2>Description</h2>
+<p>The <code>quotatab</code> file lists human descriptions of devices for the purpose of <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8) notifications. </p>
+<p> Each line consists of a device path name followed by a colon and a description. White space, apostrophe, and double quote characters surrounding the names and descriptions will be stripped. The description field can encode a new-line as a pipe character. </p>
+<p> Empty lines or lines starting with a hash sign or a semicolon are ignored.</p>
+<h2>Example</h2>
+<p># comment</p>
+<dl>
+<dd>/dev/sda2: Home directories.|This becomes second line.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><code>/etc/quotatab</code></dt>
+<dd>list of device descriptions</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

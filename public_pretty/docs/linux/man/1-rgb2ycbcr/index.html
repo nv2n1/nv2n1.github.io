@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rgb2ycbcr(1) · Linux Manual Pages</title>
+<meta name="description" content="rgb2ycbcr – convert non-YCbCr TIFF images to a YCbCr TIFF image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rgb2ycbcr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rgb2ycbcr(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> rgb2ycbcr &#8211; convert non-YCbCr <font SIZE="-1">TIFF</font> images to a YCbCr <font SIZE="-1">TIFF</font> image</p>
+<h2>SYNOPSIS</h2>
+<p> <code>rgb2ycbcr</code> [ <i>options</i> ] <i>src1.tif src2.tif &#8230; dst.tif</i></p>
+<h2>DESCRIPTION</h2>
+<p> <i>rgb2ycbcr</i> converts <font SIZE="-1">RGB</font> color, greyscale, or bi-level <font SIZE="-1">TIFF</font> images to YCbCr images by transforming and sampling pixel data. If multiple files are specified on the command line each source file is converted to a separate directory in the destination file. </p>
+<p> By default, chrominance samples are created by sampling 2 by 2 blocks of luminance values; this can be changed with the <code>-h</code> and <code>-v</code> options. Output data are compressed with the <font SIZE="-1">PackBits</font> compression scheme, by default; an alternate scheme can be selected with the <code>-c</code> option. By default, output data are compressed in strips with the number of rows in each strip selected so that the size of a strip is never more than 8 kilobytes; the <code>-r</code> option can be used to explicitly set the number of rows per strip.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-c</code></dt>
+<dd> Specify a compression scheme to use when writing image data: <code>-c none</code> for no compression, <code>-c packbits</code> for the PackBits compression algorithm (the default), <code>-c jpeg</code> for the JPEG compression algorithm, <code>-c zip</code> for the deflate compression algorithm, and <code>-c lzw</code> for Lempel-Ziv &amp; Welch.</dd>
+<dt><code>-h</code></dt>
+<dd> Set the horizontal sampling dimension to one of: 1, 2 (default), or 4.</dd>
+<dt><code>-r</code></dt>
+<dd> Write data with a specified number of rows per strip; by default the number of rows/strip is selected so that each strip is approximately 8 kilobytes.</dd>
+<dt><code>-v</code></dt>
+<dd> Set the vertical sampling dimension to one of: 1, 2 (default), or 4.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code>libtiff</code>(3) </p>
+<p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff">http://www.remotesensing.org/libtiff</a></code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

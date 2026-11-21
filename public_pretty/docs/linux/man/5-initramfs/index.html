@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>initramfs(5) · Linux Manual Pages</title>
+<meta name="description" content="initramfs.conf – configuration file for mkinitramfs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-initramfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>initramfs(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>initramfs.conf &#8211; configuration file for mkinitramfs</p>
+<h2>Description</h2>
+<p>The behaviour of <code>mkinitramfs</code> can be modified by its configuration file. Each line in the file can be a configuration variable, a blank line, or a comment. The value of an variable is assigned by an statement of the form: <i>name</i>=[<i>value</i>] Configuration options can be broken out into configuration snippets and placed in individual files in the /etc/mkinitramfs/conf.d directory. Files in this directory are always read <code>after</code> the main configuration file, so you can override the settings in the main config file without editing it directly. </p>
+<h2>General Variables</h2>
+<dl>
+<dt><code> MODULES</dt>
+<dd>Specifies the modules for the initramfs image. </dd>
+<p> Modules listed in </code><i>/etc/initramfs-tools/modules</i> and <i>/usr/share/initramfs-tools/modules.d/*</i> are always included in the initramfs, and are loaded early in the boot process. </p>
+<p> <i>list</i> doesn&#8217;t load any additional modules at boot time, other than those listed in the above files. </p>
+<p> <i>most</i> adds most file system, all ata, sata, scsi and usb drivers. </p>
+<p> <i>dep</i> tries to guess which modules are necessary for the running box and only adds those modules. </p>
+<p> <i>netboot</i> adds the base and network modules, but skips block devices. </p>
+<p> The default setting is <i>most</i>. </p>
+<dt><code> BUSYBOX</dt>
+<dd>Include busybox utilities for the boot scripts. If set to &#8216;n&#8217; mkinitramfs</code> will build an initramfs without busybox. Beware that many boot scripts need busybox utilities. </dd>
+<dt><code> COMPRESS</dt>
+<dd>Specifies the compression method used for the initramfs image. mkinitramfs</code> will default to gzip if the kernel lacks support (CONFIG_RD) or the corresponding userspace utility is not present. </dd>
+<dt><code> UMASK</dt>
+<dd>Set the umask value of the generated initramfs file. Useful to not disclose eventual keys. </dd>
+<dt> COMPCACHE_SIZE</dt>
+<dd>Amount of RAM to use for RAM-based compressed swap space. The default is not to use compcache. </dd>
+<p> An empty value &#8211; compcache isn&#8217;t used, or added to the initramfs at all. </p>
+<p> An integer and K (e.g. </code><i>65536 K</i>) &#8211; use a number of kilobytes. </p>
+<p> An integer and M (e.g. <i>256 M</i>) &#8211; use a number of megabytes. </p>
+<p> An integer and G (e.g. <i>1 G</i>) &#8211; use a number of gigabytes. </p>
+<p> An integer and % (e.g. <i>50 %</i>) &#8211; use a percentage of the amount of RAM. </p>
+<p> You can optionally install the <i>compcache</i> package to configure this setting via debconf and have userspace scripts to load and unload compcache. </p>
+</dl>
+<h2>Nfs Variables</h2>
+<dl>
+<dt><code> BOOT</dt>
+<dd>Allows one to use an nfs drive as the root of the drive. The default is to boot from </code><i>local</i> media (hard drive, USB stick). Set to <i>nfs</i> for an NFS root share. </dd>
+<dt><code> DEVICE</dt>
+<dd>Specifies the network interface, like eth0. </dd>
+<dt> ROOT</dt>
+<dd>Allows optional root bootarg hardcoding, when no root bootarg can be passed. A root bootarg overrides that special setting. </dd>
+<dt> NFSROOT</dt>
+<dd>Defaults to </code><i>auto</i> in order to pick up value from DHCP server. Otherwise you need to specify <i>HOST:MOUNT</i>. </dd>
+</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/initramfs-tools/initramfs.conf</i></dt>
+<dd></dd></dl>
+<h2>Author</h2>
+<p>The initramfs-tools are written by Maximilian Attems &lt;maks [at] debian.org&gt;, Jeff Bailey &lt;jbailey [at] raspberryginger.com&gt; and numerous others. Loosely based on mkinitrd.conf by Herbert Xu.</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-initramfs-tools/">initramfs-tools</a></i>(8), <i><a href="/docs/linux/man/8-mkinitramfs/">mkinitramfs</a></i>(8), <i><a href="/docs/linux/man/8-update-initramfs/">update-initramfs</a></i>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

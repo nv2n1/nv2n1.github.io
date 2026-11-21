@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dnf-automatic(8) · Linux Manual Pages</title>
+<meta name="description" content="dnf.automatic – DNF Automatic">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-dnf-automatic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>dnf-automatic(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dnf.automatic &#8211; DNF Automatic</p>
+<h2>Synopsis</h2>
+<p><code>dnf-automatic [&lt;config file&gt;]</code></p>
+<h2>Description</h2>
+<p>Alternative CLI to <code>dnf upgrade</code> with specific facilities to make it suitable to be executed automatically and regularly from systemd timers, cron jobs and similar. </p>
+<p> The operation of the tool is completely controlled by the configuration file and the command only accepts single optional argument pointing to it. If no configuration file is passed from the command line, <code>/etc/dnf/automatic.conf</code> is used. </p>
+<p> The tool synchronizes package metadata as needed and then checks for updates available for the given system and then either exits, downloads the packages or downloads and applies the packages. The outcome of the operation is then reported by a selected mechanism, for instance via the standard output, email or motd messages.</p>
+<h2>Configuration File Format</h2>
+<p>The configuration file is separated into topical sections.</p>
+<h3><code>[command]</code> section</h3>
+<p>Setting the mode of operation of the program.</p>
+<dl>
+<dt><code>apply_updates</code></dt>
+<dd>boolean, default: False </dd>
+<p> Whether packages comprising the available should be applied (i.e. installed via RPM). Implies <code>download_updates</code>.</p>
+<dt><code>download_updates</code></dt>
+<dd>boolean, default: False </dd>
+<p> Whether packages comprising the available should be downloaded.</p>
+<dt><code>upgrade_type</code></dt>
+<dd>either one of <code>default</code>, <code>security</code>, default: <code>default</code> </dd>
+<p> What kind of upgrades to look at. <code>default</code> signals looking for all available updates, <code>security</code> only those with an issued security advisory.</dl>
+<h3><code>[emitters]</code> section</h3>
+<p>Choosing how the results should be reported.</p>
+<dl>
+<dt><code>emit_via</code></dt>
+<dd>list, default: <code>email, stdio, motd</code> </dd>
+<p> List of emitters to report the results through. Available emitters are <code>stdio</code> to print the result to standard output, <code>email</code> to send the report via email and <code>motd</code> sends the result to <i>/etc/motd</i> file.</p>
+<dt><code>system_name</code></dt>
+<dd>string, default: hostname of the given system </dd>
+<p> How the system is called in the reports.</dl>
+<h3><code>[email]</code> section</h3>
+<p>The email emitter configuration.</p>
+<dl>
+<dt><code>email_from</code></dt>
+<dd>string, default: <code>root</code> </dd>
+<p> Message&#8217;s &quot;From:&quot; address.</p>
+<dt><code>email_to</code></dt>
+<dd>list, default: <code>root</code> </dd>
+<p> List of recipients of the message.</p>
+<dt><code>email_host</code></dt>
+<dd>string, default: <code>localhost</code> </dd>
+<p> Hostname of the SMTP server used to send the message.</dl>
+<h3><code>[base]</code> section</h3>
+<p>Can be used to override settings from DNF&#8217;s main configuration file. See <code>command_ref</code>.</p>
+<h2>Author</h2>
+<p>See AUTHORS in DNF source distribution.</p>
+<h2>Copyright</h2>
+<p>2012-2014, Red Hat, Licensed under GPLv2+</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Linux Applications Store Configuration and Data Files - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/evolution-save-data-configure-files-linux/">
+  <meta name="description" content="Evolution is a full-featured personal information management suite that handles email, contacts, calendars, and tasks. It includes enterprise features like …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Where Linux Applications Store Configuration and Data Files">
+  <meta property="og:url" content="https://www.systutorials.com/evolution-save-data-configure-files-linux/">
+  <meta property="og:description" content="Evolution is a full-featured personal information management suite that handles email, contacts, calendars, and tasks. It includes enterprise features like …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Where Linux Applications Store Configuration and Data Files</h1>
+        <time class="post-date" datetime="2017-12-31T06:57:03Z">December 31, 2017</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Evolution is a full-featured personal information management suite that handles email, contacts, calendars, and tasks. It includes enterprise features like native Microsoft Exchange support and integrates deeply with GNOME’s ecosystem. To troubleshoot issues, migrate data, back up configurations, or secure your setup, you need to know where Evolution stores everything.</p>
+<p>Evolution follows the XDG Base Directory Specification, which standardizes where applications store their files. This means its configuration and data are distributed across three main locations under your home directory.</p>
+<h2 id="password-storage-with-gnome-keyring">Password Storage with GNOME Keyring</h2>
+<p>Evolution doesn’t store passwords as plain text. Instead, it delegates password storage to GNOME Keyring, which encrypts credentials at rest. The keyring is unlocked automatically when you log in, so passwords remain inaccessible to other users or processes.</p>
+<p>If you need to view, edit, or delete stored passwords, use Seahorse (the GNOME Keyring GUI):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">seahorse
+</span></span></code></pre></div><p>From there, navigate to the Passwords section and search for Evolution-related entries. You can also delete compromised credentials directly from this interface.</p>
+<h2 id="configuration-files">Configuration Files</h2>
+<p>All Evolution configuration lives under <code>$HOME/.config/evolution/</code>. This is the primary location for all settings except cached data.</p>
+<h3 id="account-settings-and-sources">Account Settings and Sources</h3>
+<p>Account configurations—including IMAP, POP, Exchange, and CalDAV settings—are stored in:</p>
+<pre><code>$HOME/.config/evolution/sources/
+</code></pre>
+<p>Each account gets its own <code>.source</code> file in this directory. These are text-based configuration files that define connection parameters, authentication methods, and sync intervals. Editing these directly isn’t recommended; use the GUI instead. However, they’re valuable for backup or migration purposes.</p>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<p>Evolution’s keyboard shortcut mappings are stored in:</p>
+<pre><code>$HOME/.config/evolution/accels
+</code></pre>
+<p>This is a plain-text GtkAccelMap file. You can edit it manually to customize shortcuts, though the Evolution preferences GUI is usually more convenient. Each line maps an action to a key combination:</p>
+<pre><code>(gtk_accel_path &quot;&lt;Actions&gt;/mail-toolbar/mail-send&quot; &quot;&lt;Primary&gt;Return&quot;)
+(gtk_accel_path &quot;&lt;Actions&gt;/mail-message/mail-delete&quot; &quot;Delete&quot;)
+</code></pre>
+<p>To find the action name for a specific menu item, open the accels file and search for relevant keywords.</p>
+<h3 id="gsettings-and-dconf">GSettings and dconf</h3>
+<p>Some Evolution settings are stored in the GSettings database (backed by dconf files):</p>
+<pre><code>$HOME/.config/dconf/user
+</code></pre>
+<p>To browse and modify these settings graphically, install and use dconf-editor:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install dconf-editor  <span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo dnf install dconf-editor  <span class="c1"># Fedora/RHEL</span>
+</span></span></code></pre></div><p>Launch it and navigate to <code>/org/gnome/evolution/</code> to see available options. Command-line users can query settings with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings list-schemas <span class="p">|</span> grep evolution
+</span></span><span class="line"><span class="cl">gsettings get org.gnome.evolution.mail show-preview
+</span></span></code></pre></div><h2 id="data-files">Data Files</h2>
+<p>User data—emails, contacts, calendar events, and tasks—lives in:</p>
+<pre><code>$HOME/.local/share/evolution/
+</code></pre>
+<p>This directory structure typically includes:</p>
+<ul>
+<li><code>calendar/</code> — calendar events and task lists</li>
+<li><code>contacts/</code> — address book entries</li>
+<li><code>mail/</code> — email messages (for local accounts and IMAP caches)</li>
+<li><code>tasks/</code> — standalone tasks</li>
+</ul>
+<h3 id="understanding-mail-storage">Understanding Mail Storage</h3>
+<p>For local mail accounts, Evolution stores messages as individual files in the mail directory structure. For IMAP accounts, the actual messages remain on the server, but Evolution caches them locally.</p>
+<h3 id="cached-data">Cached Data</h3>
+<p>Disposable caches (which can be safely deleted) are stored in:</p>
+<pre><code>$HOME/.cache/evolution/
+</code></pre>
+<p>Common cached items include:</p>
+<ul>
+<li>IMAP folder summaries and message headers</li>
+<li>Calendar event thumbnails</li>
+<li>Contact photos</li>
+<li>Temporary downloaded attachments</li>
+</ul>
+<p>Clearing this directory will force Evolution to re-download and re-cache data on next sync, which can resolve corruption issues:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf <span class="nv">$HOME</span>/.cache/evolution/
+</span></span></code></pre></div><p>After clearing the cache, restart Evolution and let it rebuild the cache. This typically takes a few minutes for large mailboxes.</p>
+<h2 id="backing-up-and-restoring">Backing Up and Restoring</h2>
+<p>To back up your entire Evolution setup:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -czf evolution-backup.tar.gz <span class="se">\
+</span></span></span><span class="line"><span class="cl">  ~/.config/evolution/ <span class="se">\
+</span></span></span><span class="line"><span class="cl">  ~/.local/share/evolution/ <span class="se">\
+</span></span></span><span class="line"><span class="cl">  ~/.config/dconf/user
+</span></span></code></pre></div><p>To restore from backup:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -xzf evolution-backup.tar.gz -C ~/
+</span></span></code></pre></div><p>Always close Evolution before backing up or restoring.</p>
+<h2 id="migrating-between-systems">Migrating Between Systems</h2>
+<p>When moving Evolution to a new machine:</p>
+<ol>
+<li>Back up the three directories listed above</li>
+<li>Install Evolution on the new system</li>
+<li>Restore the backup</li>
+<li>Restart Evolution and let it re-synchronize with servers</li>
+</ol>
+<p>For sensitive data, verify that <code>~/.local/share/evolution/</code> lives on encrypted storage. If you’re concerned about email exposure, consider storing the mail directory on a separate encrypted partition or using full-disk encryption.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If Evolution behaves unexpectedly, clear the cache first before rebuilding the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -rf ~/.cache/evolution/
+</span></span></code></pre></div><p>For more aggressive troubleshooting, temporarily move the entire config directory and let Evolution regenerate defaults:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mv ~/.config/evolution ~/.config/evolution.bak
+</span></span></code></pre></div><p>Restart Evolution to create fresh configuration, then gradually restore settings from the backup.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

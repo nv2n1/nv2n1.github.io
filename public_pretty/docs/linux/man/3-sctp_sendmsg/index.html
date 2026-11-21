@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sctp_sendmsg(3) · Linux Manual Pages</title>
+<meta name="description" content="sctp_sendmsg – Send a message from a SCTP socket.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sctp_sendmsg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sctp_sendmsg(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>sctp_sendmsg &#8211; Send a message from a SCTP socket.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;netinet/sctp.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/types.h&gt;
+int sctp_sendmsg(int sd, const void *msg, size_t len,
+                 struct sockaddr *to, socklen_t tolen,
+                 uint32_t ppid, uint32_t flags,
+                 uint16_t stream_no, uint32_t timetolive,
+                 uint32_t context);</code></pre>
+<h2>Description</h2>
+<p><code>sctp_sendmsg</code> is a wrapper library function that can be used to send a message from a socket while using the advanced features of SCTP. <i>sd</i> is the socket descriptor from which the message pointed to by <i>msg</i> of length <i>len</i> is sent. <i>to</i> is the destination address of the message and <i>tolen</i> is the length of the destination address. <i>stream_no</i> identifies the stream number that the application wishes to send this message to. <i>flags</i> parameter is composed of a bitwise OR of the following values.</p>
+<dl>
+<dt><code>SCTP_UNORDERED</code></dt>
+<dd>This flags requests the un-ordered delivery of the message.</dd>
+<dt><code>SCTP_ADDR_OVER</code></dt>
+<dd>This flag, in the one-to-many style, requests the SCTP stack to override the primary destination address with address specified in <i>to.</i></dd>
+<dt><code>SCTP_ABORT</code></dt>
+<dd>Setting this flag causes the specified association to abort by sending an ABORT message to the peer(one-to-many style only). The ABORT chunk will contain an error cause &#8216;User Initiated Abort&#8217; with cause code 12. The cause specific information of this error cause is provided in <i>msg.</i></dd>
+<dt><code>SCTP_EOF</code></dt>
+<dd>Setting this flag invokes the SCTP graceful shutdown procedure on the specific association(one-to-many style only).</dd></dl>
+<p> <i>timetolive</i> specifies the time duration in milliseconds. The sending side will expire the message if the message has not been sent to the peer within this time period. A value of 0 indicates that no timeout should occur on this message. <i>ppid</i> is an opaque unsigned value that is passed to the remote end along with the message. <i>context</i> is a 32 bit opaque value that is passed back to the upper layer along with the undelivered message if an error occurs on the send of the message.</p>
+<h2>Return Value</h2>
+<p>On success, <code>sctp_sendmsg</code> returns the number of bytes sent or -1 if an error occurred.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-sctp/">sctp</a></code>(7) <code><a href="/docs/linux/man/3-sctp_bindx/">sctp_bindx</a></code>(3), <code><a href="/docs/linux/man/3-sctp_connectx/">sctp_connectx</a></code>(3), <code><a href="/docs/linux/man/3-sctp_send/">sctp_send</a></code>(3), <code><a href="/docs/linux/man/3-sctp_recvmsg/">sctp_recvmsg</a></code>(3), <code><a href="/docs/linux/man/3-sctp_peeloff/">sctp_peeloff</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getpaddrs/">sctp_getpaddrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_getladdrs/">sctp_getladdrs</a></code>(3), <code><a href="/docs/linux/man/3-sctp_opt_info/">sctp_opt_info</a></code>(3), </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

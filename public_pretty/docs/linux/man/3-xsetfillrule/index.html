@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xsetfillrule(3) · Linux Manual Pages</title>
+<meta name="description" content="XSetFillStyle, XSetFillRule – GC convenience routines">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xsetfillrule/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xsetfillrule(3)</h1>
+
+
+
+
+
+<p>XSetFillStyle, XSetFillRule &#8211; GC convenience routines </p>
+<h2>Syntax</h2>
+<dl COMPACT>
+<dd>int XSetFillStyle(Display *<i>display</i>, GC <i>gc</i>, int <i>fill_style</i>);</dd>
+<dd>int XSetFillRule(Display *<i>display</i>, GC <i>gc</i>, int <i>fill_rule</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>fill_rule</i></dt>
+<dd>Specifies the fill-rule you want to set for the specified GC. You can pass <code>EvenOddRule</code> or <code>WindingRule</code>.</dd>
+<dt><i>fill_style</i></dt>
+<dd>Specifies the fill-style you want to set for the specified GC. You can pass <code>FillSolid</code>, <code>FillTiled</code>, <code>FillStippled</code>, or <code>FillOpaqueStippled</code>.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XSetFillStyle</code> function sets the fill-style in the specified GC. </p>
+<p> <code>XSetFillStyle</code> can generate <code>BadAlloc</code>, <code>BadGC</code>, and <code>BadValue</code> errors. </p>
+<p> The <code>XSetFillRule</code> function sets the fill-rule in the specified GC. </p>
+<p> <code>XSetFillRule</code> can generate <code>BadAlloc</code>, <code>BadGC</code>, and <code>BadValue</code> errors.</p>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xquerybestsize/">XQueryBestSize</a>(3), <a href="/docs/linux/man/3-xsetarcmode/">XSetArcMode</a>(3), <a href="/docs/linux/man/3-xsetcliporigin/">XSetClipOrigin</a>(3), <a href="/docs/linux/man/3-xsetfont/">XSetFont</a>(3), <a href="/docs/linux/man/3-xsetlineattributes/">XSetLineAttributes</a>(3), <a href="/docs/linux/man/3-xsetstate/">XSetState</a>(3), <a href="/docs/linux/man/3-xsettile/">XSetTile</a>(3)<br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

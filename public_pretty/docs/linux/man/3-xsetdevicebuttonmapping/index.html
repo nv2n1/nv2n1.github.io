@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xsetdevicebuttonmapping(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xsetdevicebuttonmapping/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xsetdevicebuttonmapping(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XSetDeviceButtonMapping, XGetDeviceButtonMapping - query or change device button mappings</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput.h&gt;</pre><pre>int XSetDeviceButtonMapping( Display *display,
+ XDevice *device,
+ unsigned char map[],
+ int nmap);</pre><pre>int XGetDeviceButtonMapping( Display *display,
+ XDevice *device,
+ unsigned char map_return[],
+ int nmap);</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>device
+ Specifies the device whose button mapping is to be
+ queried or changed.</pre><pre>map
+ Specifies the mapping list.</pre><pre>map_return
+ Returns the mapping list.</pre><pre>nmap
+ Specifies the number of items in the mapping list.</pre><h2>Description</h2><dl COMPACT><dd><pre>The XSetDeviceButtonMapping request sets the mapping of the
+specified device. If it succeeds, the X server generates a
+DeviceMappingNotify event, and XSetDeviceButtonMapping returns
+MappingSuccess. Element map[i] defines the logical button
+number for the physical button i+1. The length of the list must
+be the same as XGetDeviceButtonMapping would return, or a
+BadValue error results. A zero element disables a button, and
+elements are not restricted in value by the number of physical
+buttons. However, no two elements can have the same nonzero
+value, or a BadValue error results. If any of the buttons to be
+altered are logically in the down state,
+XSetDeviceButtonMapping returns MappingBusy, and the mapping is
+not changed.</pre></dd></dl><dl COMPACT><dd><pre>XSetDeviceButtonMapping can generate BadDevice, BadMatch, and
+BadValue errors.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceButtonMapping request returns the current mapping
+of the specified device. Buttons are numbered starting from
+one.XGetDeviceButtonMapping returns the number of physical
+buttons actually on the device. The nominal mapping for a
+device is map[i]=i+1. The nmap argument specifies the length of
+the array where the device mapping is returned, and only the
+first nmap elements are returned in map_return.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceButtonMapping can generate BadDevice or BadMatch
+errors.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+ An invalid device was specified. The specified device
+ does not exist or has not been opened by this client via
+ XOpenInputDevice. This error may also occur if the
+ specified device is the X keyboard or X pointer device.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
+ This error may occur if an XGetDeviceButtonMapping or
+ XSetDeviceButtonMapping request was made specifying a
+ device that has no buttons.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
+ Some numeric value falls outside the range of values
+ accepted by the request. Unless a specific range is
+ specified for an argument, the full range defined by the
+ argument's type is accepted. Any argument defined as a
+ set of alternatives can generate this error.</pre></dd></dl><h2>See Also</h2><dl COMPACT><dd><pre>XChangeDeviceKeyboardControl(3), XChangeDeviceKeyMapping(3),
+XChangeDeviceModifierMapping(3)</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

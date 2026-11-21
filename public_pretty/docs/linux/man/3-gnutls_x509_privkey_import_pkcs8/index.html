@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_x509_privkey_import_pkcs8(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_x509_privkey_import_pkcs8 – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_x509_privkey_import_pkcs8/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_x509_privkey_import_pkcs8(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_x509_privkey_import_pkcs8 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
+<p> <code>int gnutls_x509_privkey_import_pkcs8(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> The structure to store the parsed key</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The DER or PEM encoded key.</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> One of DER or PEM</dd>
+<dt>const char * password</dt>
+<dd> the password to decrypt the key (if it is encrypted).</dd>
+<dt>unsigned int flags</dt>
+<dd> 0 if encrypted or GNUTLS_PKCS_PLAIN if not encrypted.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will convert the given DER or PEM encoded PKCS8 2.0 encrypted key to the native gnutls_x509_privkey_t format. The output will be stored in <i>key</i> . Both RSA and DSA keys can be imported, and flags can only be used to indicate an unencrypted key. </p>
+<p> The <i>password</i> can be either ASCII or UTF-8 in the default PBES2 encryption schemas, or ASCII for the PKCS12 schemas. </p>
+<p> If the Certificate is PEM encoded it should have a header of &quot;ENCRYPTED PRIVATE KEY&quot;, or &quot;PRIVATE KEY&quot;. You only need to specify the flags if the key is DER encoded, since in that case the encryption status cannot be auto-detected. </p>
+<p> If the <code>GNUTLS_PKCS_PLAIN</code> flag is specified and the supplied data are encrypted then <code>GNUTLS_E_DECRYPTION_FAILED</code> is returned.</p>
+<h2>RETURNS</h2>
+<p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />
+ Home page: <a rel="nofollow" href="http://www.gnutls.org">http://www.gnutls.org</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2001-2014 Free Software Foundation, Inc..<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
+<dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

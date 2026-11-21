@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfuturewait(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfuturewait/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfuturewait(3)</h1>
+
+
+
+
+
+<p>std::future&lt;T&gt;::wait - std::future&lt;T&gt;::wait</p>
+<h2>Synopsis</h2>
+<pre><code>void wait() const;
+(since C++ 11)</code></pre> 
+<p>Blocks until the result becomes available. valid() == true after the call.
+The behavior is undefined if valid()== false before the call to this function.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>The implementations are encouraged to detect the case when valid == false before the call and throw a std::future_error with an error condition of std::future_errc::no_state.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;future&gt;
+#include &lt;thread&gt;
+int fib(int n)
+{
+if (n &lt; 3)
+return 1;
+else
+return fib(n - 1) + fib(n - 2);
+}
+int main()
+{
+std::future&lt;int&gt; f1 = std::async(std::launch::async, <a href=""></a> {
+return fib(20);
+});
+std::future&lt;int&gt; f2 = std::async(std::launch::async, <a href=""></a> {
+return fib(25);
+});
+std::cout &lt;&lt; &quot;waiting&hellip;\n&quot;;
+f1.wait();
+f2.wait();
+std::cout &lt;&lt; &quot;f1: &quot; &lt;&lt; f1.get() &lt;&lt; &lsquo;\n&rsquo;;
+std::cout &lt;&lt; &quot;f2: &quot; &lt;&lt; f2.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> waiting&hellip;
+ <wbr> f1: 6765
+ <wbr> f2: 75025</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> waits for the result, returns if it is not available for the specified timeout duration
+wait_for <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> waits for the result, returns if it is not available until specified time point has been reached
+wait_until <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

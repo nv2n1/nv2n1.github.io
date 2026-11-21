@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_curvs2(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_curvs2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_curvs2(3)</h1>
+
+
+
+
+
+<p>CURVS2 - calculates an interpolated value for a smoothing spline under tension at a given point.</p>
+<h2>Synopsis</h2>FUNCTION CURVS2(T,N,PARAM,X,Y,XP,YP,SIGMA,XO,YO) 
+<p>This subroutine is a companion to CURV1S which must be called before calling this subroutine. CURV2S calculates an interpolated value for a smoothing spline under tension at a given point.</p>
+<h2>Description</h2><dl COMPACT><dt>T
+</dt><dd>(real, input) A real value to be mapped onto the interpolating curve. Values of T between zero and one interpolate the original data; any values of T outside this range result in extrapolation.
+</dd><dt>N
+</dt><dd>(integer, input) The number of points which were specified to determine the curve in CURVS1.
+</dd><dt>PARAM
+</dt><dd>(real, input) The arc lengths as computed by CURVS1.
+</dd><dt>X
+</dt><dd>(real, input) An array containing the X-coordinate values of the specified points.
+</dd><dt>Y
+</dt><dd>(real, input) An array containing the Y-coordinate values of the specified points.
+</dd><dt>XP
+</dt><dd>(real, input) An array of second derivative values as calculated by CURVS1.
+</dd><dt>YP
+</dt><dd>(real, input) An array of second derivative values as calculated by CURVS1.
+</dd><dt>SIGMA
+</dt><dd>(real, input) Tension factor. Values near zero result in a cubic spline; large values (e.g. 50) result in nearly a polygonal line. A typical value is 1.
+</dd><dt>XO
+</dt><dd>(real, output) The interpolated X value.
+</dd><dt>YO
+</dt><dd>(real, output) The interpolated Y value.</dd></dl><h2>Access</h2>To use CURV2, load the NCAR Graphics library ngmath.
+<h2>See Also</h2>curvs1, fitgrid_params. 
+<p>Complete documentation for Fitgrid is available at URL
+<a rel="nofollow" HREF="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html"><a href="http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html">http://ngwww.ucar.edu/ngdoc/ng/ngmath/fitgrid/fithome.html</a></a></p>
+<h2>Copyright</h2>Copyright (C) 2000 
+ University Corporation for Atmospheric Research 
+<p>The use of this Software is governed by a License Agreement.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

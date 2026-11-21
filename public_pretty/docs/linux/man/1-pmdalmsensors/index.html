@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmdalmsensors(1) · Linux Manual Pages</title>
+<meta name="description" content="pmdalmsensors – Linux hardware monitoring performance metrics domain agent (PMDA)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pmdalmsensors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pmdalmsensors(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>pmdalmsensors</code> &#8211; Linux hardware monitoring performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
+<p> <code>$PCP_PMDAS_DIR/lmsensors/pmdalmsensors</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pmdalmsensors</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of hardware using the lm-sensors on compatible motherboards. </p>
+<p> The <code>lmsensors</code> PMDA exports metrics that measure fan speeds, core temperatures and voltage levels. </p>
+<p> A brief description of the <code>pmdalmsensors</code> command line options follows:</p>
+<dl>
+<dt><code>-d</code></dt>
+<dd> It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the same PMDA on all hosts.</dd>
+<dt><code>-l</code></dt>
+<dd> Location of the log file. By default, a log file named <i>lmsensors.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdalmsensors</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd .</code> If the log file cannot be created or is not writable, output is written to the standard error instead.</dd>
+<dt><code>-U</code></dt>
+<dd> User account under which to run the agent. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dd></dl>
+<h2>INSTALLATION</h2>
+<p> If you want access to the names, help text and values for the lmsensors performance metrics, do the following as root: </p>
+<pre>
+# cd $PCP_PMDAS_DIR/lmsensors
+# ./Install
+</pre>
+<p> If you want to undo the installation, do the following as root: </p>
+<pre>
+# cd $PCP_PMDAS_DIR/lmsensors
+# ./Remove
+</pre>
+<p> <code>pmdalmsensors</code> is launched by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and should never be executed directly. The Install and Remove scripts notify <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when the agent is installed or removed.</p>
+<h2>FILES</h2>
+<dl>
+<dt><code>$PCP_PMCDCONF_PATH</code></dt>
+<dd> command line options used to launch <code>pmdalmsensors</code></dd>
+<dt><code>$PCP_PMDAS_DIR/lmsensors/help</code></dt>
+<dd> default help text file for the lmsensors metrics</dd>
+<dt><code>$PCP_PMDAS_DIR/lmsensors/Install</code></dt>
+<dd> installation script for the <code>pmdalmsensors</code> agent</dd>
+<dt><code>$PCP_PMDAS_DIR/lmsensors/Remove</code></dt>
+<dd> undo installation script for the <code>pmdalmsensors</code> agent</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/lmsensors.log</code></dt>
+<dd> default log file for error messages and other information from <code>pmdalmsensors</code></dd></dl>
+<h2>PCP ENVIRONMENT</h2>
+<p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

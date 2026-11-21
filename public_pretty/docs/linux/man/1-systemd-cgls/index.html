@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-cgls(1) · Linux Manual Pages</title>
+<meta name="description" content="systemd-cgls – Recursively show control group contents">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-systemd-cgls/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>systemd-cgls(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> systemd-cgls &#8211; Recursively show control group contents </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>systemd-cgls</code> [OPTIONS&#8230;] [CGROUP&#8230;]</dt>
+<dt> <code>systemd-cgls</code> [OPTIONS&#8230;] <code>&#8211;unit</code>|<code>&#8211;user-unit</code> [UNIT&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>systemd-cgls</code></p>
+<dd>recursively shows the contents of the selected Linux control group hierarchy in a tree. If arguments are specified, shows all member processes of the specified control groups plus all their subgroups and their members. The control groups may either be specified by their full file paths or are assumed in the systemd control group hierarchy. If no argument is specified and the current working directory is beneath the control group mount point /sys/fs/cgroup/, shows the contents of the control group the working directory refers to. Otherwise, the full systemd control group hierarchy is shown. </dd>
+<p> By default, empty control groups are not shown.</p>
+<h2>OPTIONS</h2>
+<p> The following options are understood: </p>
+<p> <code>&#8211;all</code></p>
+<dl>
+<dt>
+</dt><dd> Do not hide empty control groups in the output.</dd></dl>
+<p> <code>-l</code>, <code>&#8211;full</code></p>
+<dl>
+<dt>
+</dt><dd> Do not ellipsize process tree members.</dd></dl>
+<p> <code>-u</code>, <code>&#8211;unit</code></p>
+<dl>
+<dt>
+</dt><dd> Show cgroup subtrees for the specified units.</dd></dl>
+<p> <code>&#8211;user-unit</code></p>
+<dl>
+<dt>
+</dt><dd> Show cgroup subtrees for the specified user units.</dd></dl>
+<p> <code>-k</code></p>
+<dl>
+<dt>
+</dt><dd> Include kernel threads in output.</dd></dl>
+<p> <code>-M </code><i>MACHINE</i>, <code>&#8211;machine=</code><i>MACHINE</i></p>
+<dl>
+<dt>
+</dt><dd> Limit control groups shown to the part corresponding to the container <i>MACHINE</i>.</dd></dl>
+<p> <code>-h</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short help text and exit.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Print a short version string and exit.</dd></dl>
+<p> <code>&#8211;no-pager</code></p>
+<dl>
+<dt>
+</dt><dd> Do not pipe output into a pager.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> On success, 0 is returned, a non-zero failure code otherwise.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></code>(1), <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

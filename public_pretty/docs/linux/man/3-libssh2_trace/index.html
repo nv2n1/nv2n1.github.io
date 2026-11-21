@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libssh2_trace(3) · Linux Manual Pages</title>
+<meta name="description" content="libssh2_trace – enable debug info from inside libssh2">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libssh2_trace/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libssh2_trace(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> libssh2_trace &#8211; enable debug info from inside libssh2</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;libssh2.h&gt; </p>
+<p> void libssh2_trace(LIBSSH2_SESSION *session, int bitmask); </p>
+<h2>DESCRIPTION</h2>
+<p> This is a function present in the library that can be used to get debug info from within libssh2 when it is running. Helpful when trying to trace or debug behaviors. Note that this function has no effect unless libssh2 was built to support tracing! It is usually disabled in release builds. </p>
+<p> <code>bitmask</code> can be set to the logical OR of none, one or more of these:</p>
+<dl>
+<dl>
+<dt>LIBSSH2_TRACE_SOCKET</dt>
+<dd> Socket low-level debugging</dd>
+<dt>LIBSSH2_TRACE_TRANS</dt>
+<dd> Transport layer debugging</dd>
+<dt>LIBSSH2_TRACE_KEX</dt>
+<dd> Key exchange debugging</dd>
+<dt>LIBSSH2_TRACE_AUTH</dt>
+<dd> Authentication debugging</dd>
+<dt>LIBSSH2_TRACE_CONN</dt>
+<dd> Connection layer debugging</dd>
+<dt>LIBSSH2_TRACE_SCP</dt>
+<dd> SCP debugging</dd>
+<dt>LIBSSH2_TRACE_SFTP</dt>
+<dd> SFTP debugging</dd>
+<dt>LIBSSH2_TRACE_ERROR</dt>
+<dd> Error debugging</dd>
+<dt>LIBSSH2_TRACE_PUBLICKEY</dt>
+<dd> Public Key debugging</dd></dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

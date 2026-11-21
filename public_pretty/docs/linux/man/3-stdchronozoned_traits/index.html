@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronozoned_traits(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronozoned_traits/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronozoned_traits(3)</h1>
+
+
+
+
+
+<p>std::chrono::zoned_traits - std::chrono::zoned_traits</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;chrono&gt;
+    template &lt;class TimeZonePtr&gt;
+    (1)(since C++ 20)
+        struct zoned_traits {
+};
+template &lt;&gt;
+(2)(since C++ 20)
+    struct zoned_traits&lt;const std::chrono::time_zone *&gt;;</code></pre> 
+<p>The class zoned_traits provides a way to customize the behavior of the constructors of std::chrono::zoned_time with custom time zone pointer types. In particular, it allows such types to specify the default time zone to use and the mapping of a time zone&rsquo;s name to the corresponding time zone pointer. It is acceptable for custom time zone pointer types to not support either operation, in which case the corresponding constructors of zoned_time will not participate in overload resolution.
+The primary template is empty. A specialization is provided for const std::chrono::time_zone*, the default time zone pointer type.</p>
+<h2>Member functions</h2>
+<p> std::chrono::zoned_traits&lt;const std::chrono::time_zone*&gt;::default_zone</p>
+<p>static const std::chrono::time_zone* default_zone();</p>
+<p>Returns a time zone pointer for the default time zone (UTC).</p>
+<h2>Return value</h2>
+<p>std::chrono::locate_zone(&quot;UTC&quot;).
+ std::chrono::zoned_traits&lt;const std::chrono::time_zone*&gt;::locate_zone <pre><code>static const std::chrono::time_zone *locate_zone(std::string_view name);</code></pre>
+Returns the time zone pointer for the time zone designated by name.</p>
+<h2>Return value</h2>
+<p>std::chrono::locate_zone(name).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

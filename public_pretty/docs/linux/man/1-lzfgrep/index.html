@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lzfgrep(1) · Linux Manual Pages</title>
+<meta name="description" content="xzgrep – search compressed files for a regular expression">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lzfgrep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lzfgrep(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> xzgrep &#8211; search compressed files for a regular expression </p>
+<h2>SYNOPSIS</h2>
+<p> <code>xzgrep</code> [<i>grep_options</i>] [<code>-e</code>] <i>pattern</i> <i>file</i>&#8230;<br />
+ <code>xzegrep</code> &#8230;<br />
+ <code>xzfgrep</code> &#8230;<br />
+ <code>lzgrep</code> &#8230;<br />
+ <code>lzegrep</code> &#8230;<br />
+ <code>lzfgrep</code> &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>xzgrep</code> invokes <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1) on <i>files</i> which may be either uncompressed or compressed with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), or <code><a href="/docs/linux/man/1-zstd/">zstd</a></code>(1). All options specified are passed directly to <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1). </p>
+<p> If no <i>file</i> is specified, then standard input is decompressed if necessary and fed to <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1). When reading from standard input, <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), and <code><a href="/docs/linux/man/1-zstd/">zstd</a></code>(1) compressed files are not supported. </p>
+<p> If <code>xzgrep</code> is invoked as <code>xzegrep</code> or <code>xzfgrep</code> then <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1) or <code><a href="/docs/linux/man/1-fgrep/">fgrep</a></code>(1) is used instead of <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1). The same applies to names <code>lzgrep</code>, <code>lzegrep</code>, and <code>lzfgrep</code>, which are provided for backward compatibility with LZMA Utils. </p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>GREP</code></dt>
+<dd> If the <code>GREP</code> environment variable is set, <code>xzgrep</code> uses it instead of <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), or <code><a href="/docs/linux/man/1-fgrep/">fgrep</a></code>(1).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), <code><a href="/docs/linux/man/1-zstd/">zstd</a></code>(1), <code><a href="/docs/linux/man/1-zgrep/">zgrep</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

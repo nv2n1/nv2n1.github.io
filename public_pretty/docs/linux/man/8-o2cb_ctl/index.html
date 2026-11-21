@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>o2cb_ctl(8) · Linux Manual Pages</title>
+<meta name="description" content="o2cb_ctl – Control program for the O2CB cluster service.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-o2cb_ctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>o2cb_ctl(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>o2cb_ctl &#8211; Control program for the <i>O2CB</i> cluster service.</p>
+<h2>Synopsis</h2>
+<p><code>o2cb_ctl </code> <code>-C</code> <code>-n</code> <i>object</i> <code>-t</code> type [<code>-i</code>] [<code>-a</code> <i>attribute</i> ]<br />
+ <code>o2cb_ctl </code> <code>-D</code> <code>-n</code> <i>object</i> [<code>-u</code>]<br />
+ <code>o2cb_ctl </code> <code>-I</code> [<code>-o-z</code>] <code>-l</code> <i>manager</i>&gt; [<code>-n</code> <i>object</i>&gt;] [<code>-t</code> <i>type</i>] [<code>-a</code> <i>attribute</i>]<br />
+ <code>o2cb_ctl </code> <code>-H</code> [<code>-n</code> <i>object</i>] [<code>-t</code> <i>type</i>&gt;] [<code>-a</code> <i>attribute</i>&gt;]<br />
+ <code>o2cb_ctl </code> <code>-h</code><br />
+ <code>o2cb_ctl </code> <code>-V</code> </p>
+<h2>Description</h2>
+<p><code>o2cb_ctl</code> is the control program for the <i>O2CB</i> cluster service. Users are not advised to use this program directly but instead use the <i>O2CB</i> init service and/or <i>ocfs2console</i>. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-C</code></dt>
+<dd>Create an object in the OCFS2 Cluster Configuration. </dd>
+<dt><code>-D</code></dt>
+<dd>Delete an object from the existing OCFS2 Cluster Configuration. </dd>
+<dt><code>-I</code></dt>
+<dd>Print information about the OCFS2 Cluster Configuration. </dd>
+<dt><code>-H</code></dt>
+<dd>Change an object or objects in the existing OCFS2 Cluster Configuration. </dd>
+<dt><code>-h</code></dt>
+<dd>Displays help and exit. </dd>
+<dt><code>-V</code></dt>
+<dd>Print version and exit. </dd>
+</dl>
+<h2>Other Options</h2>
+<dl>
+<dt><code>-a</code> <i>&lt;attribute&gt;</i></dt>
+<dd>With <code>-C</code>, <i>&lt;attribute&gt;</i> is in format &quot;parameter=value&quot;, where the parameter is a valid parameter that can be set in the file <i>/etc/ocfs2/cluster.conf</i>. With <code>-I</code>, <i>&lt;attribute&gt;</i> may be &quot;parameter&quot;, indicating an attribute to be listed in the output, or it may be &quot;parameter==value&quot;, indicating that only objects matching &quot;parameter=value&quot; are to be displayed. </dd>
+<dt><code>-i</code></dt>
+<dd>Valid only with <code>-C</code>. When creating something (<i>node</i> or <i>cluster</i>), it will also install it in the live cluster. If the parameter is not specified, then only update the <i>/etc/ocfs2/cluster.conf</i>. </dd>
+<dt><code>-n</code> <i>object</i></dt>
+<dd><i>object</i> is usually the node name or cluster name. In the <i>/etc/ocfs2/cluster.conf</i> file, it would be the value of the name parameter for any of the sections (<i>cluster</i> or <i>node</i>). </dd>
+<dt><code>-o</code></dt>
+<dd>Valid only with <code>-I</code>. Using this parameter, if one asks o2cb_ctl to list all nodes, it will output it in a format suitable for shell parsing. </dd>
+<dt><code>-t</code> <i>type</i></dt>
+<dd><i>type</i> can be cluster, node or heartbeat. </dd>
+<dt><code>-u</code></dt>
+<dd>Valid only with <code>-D</code>. When deleting something (<i>node</i> or <i>cluster</i>), it will also remove it from the live cluster. If the parameter is not specified, then only update the <i>/etc/ocfs2/cluster.conf</i>. </dd>
+<dt><code>-z</code></dt>
+<dd>Valid only with <code>-I</code>. This is the default. If one asks o2cb_ctl to list all nodes, it will give a verbose listing. </dd>
+</dl>
+<h2>Examples</h2>
+<dl>
+<dd>Add node5 to an offline cluster: $ o2cb_ctl -C -n node5 -t node -a number=5<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a ip_address=192.168.0.5 -a ip_port=7777</dd>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a cluster=mycluster</p>
+<dt>Add node10 to an online cluster:</dt>
+<dd>$ o2cb_ctl -C -i -n node10 -t node -a number=10<br />
+ <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a ip_address=192.168.1.10 -a ip_port=7777</dd>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-a cluster=mycluster<br />
+ Note the -i argument.</p>
+<dt>Query the IP address of node5:</dt>
+<dd>$ o2cb_ctl -I -n node5 -a ip_address</dd>
+<dt>Change the IP address of node5:</dt>
+<dd>$ o2cb_ctl -H -n node5 -a ip_address=192.168.1.5 </dd>
+<h2>See Also</h2>
+<p><code>mkfs.ocfs2(8)</code> <code>fsck.ocfs2(8)</code> <code>tunefs.ocfs2(8)</code> <code>mounted.ocfs2(8)</code> <code><a href="/docs/linux/man/8-ocfs2console/">ocfs2console</a>(8)</code> <code><a href="/docs/linux/man/7-o2cb/">o2cb</a>(7)</code> </p>
+<h2>Authors</h2>
+<p>Oracle Corporation</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2004, 2009 Oracle. All rights reserved.</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

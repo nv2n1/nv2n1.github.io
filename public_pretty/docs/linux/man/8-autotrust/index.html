@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>autotrust(8) · Linux Manual Pages</title>
+<meta name="description" content="autotrust – automated updates of DNSSEC trust anchors.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-autotrust/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>autotrust(8)</h1>
+
+
+
+
+
+<p><code>autotrust</code> &#8211; automated updates of DNSSEC trust anchors.</p>
+<h2>Synopsis</h2>
+<p><code>autotrust</code> [<code>-c</code> <i>configfile</i>] [<code>-d</code>] [<code>-h</code>] [<code>-v</code> <i>verbosity</i>]</p>
+<h2>Description</h2>
+<p><code>autotrust</code> is a standalone application that automatically updates DNSSEC trust anchors. These can be used for DNSSEC aware resolvers like Unbound or BIND9. It is compliant with RFC 5011, with the exception of query intervals and retry times. In order to follow these time recommendations, autotrust should run as a daemon. It is to be called from the commandline once in a while, or from a cron job.</p>
+<h2>Options</h2>
+<p>All the configurations need to be set in the configuration file. For more information, see the autotrust.conf.sample. </p>
+<dl>
+<dt><code>-c</code><i> configfile</i></dt>
+<dd>Use this configfile.</dd>
+<dt><code>-d</code></dt>
+<dd>Run as daemon.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information and exit.</dd>
+<dt><code>-v</code><i> verbosity</i></dt>
+<dd>Specify a verbosity level. Setting it to zero will produce no output. Default verbosity level is 1. If verbosity is given in the configfile, the commandline value will be overrided.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt>/etc/autotrust/autotrust.conf</dt>
+<dd>default configuration file. /var/lib/autotrust/autotrust.state default file to store trust anchor state.</dd></dl>
+<h2>Diagnostics</h2>
+<p><code>autotrust</code> will log all notifications and problems to the specified logfile. If no logfile was specified, output is directed to stderr. If autotrust is not daemonized, it will perform a single active refresh and will return zero code if the refresh was successfull, 1 otherwise.</p>
+<h2>Authors</h2>
+<p><code>autotrust</code> was written by NLnet Labs.</p>
+<h2>Bugs</h2>
+<p>Bugreports can be send to autotrust-users [at] nlnetlabs.nl. See TODO for more information. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

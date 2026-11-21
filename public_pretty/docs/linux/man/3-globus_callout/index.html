@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_callout(3) · Linux Manual Pages</title>
+<meta name="description" content="Globus Callout API –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_callout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_callout(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Globus Callout API &#8211; </p>
+<h3>Modules</h3>
+<p> <code>Activation</code><br />
+ <i>Callback API Activation. </i><br />
+ <code>Callout Handle Operations</code><br />
+ <i>Manage a Globus Callout Handle structure. </i><br />
+ <code>Callout Configuration</code><br />
+ <i>Register callouts. </i><br />
+ <code>Callout Invocation</code><br />
+ <i>Invoke callouts. </i><br />
+ <code>Callout Constants</code><br />
+ <i>Constants. </i></p>
+<h2>Detailed Description</h2>
+<p> This API is intended to ease integration of configurable callouts into the Globus Toolkit and to provide a platform independent way of dealing with runtime loadable functions. It (hopefully) achieves this goal by providing the following functionality: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> It provides a function for reading callout configuration files. Files are assumed to have the following format:</dd>
+<dt> &bull;</dt>
+<dd> Anything after a # is assumed to be a comment</dd>
+<dt> &bull;</dt>
+<dd> Blanks lines are ignored</dd>
+<dt> &bull;</dt>
+<dd> Lines specifying callouts have the format</dd></dl>
+<pre>
+      abstract type           library         symbol
+</pre>
+<p>&nbsp;<wbr>where&nbsp;<wbr><i>abstract type</i>&nbsp;<wbr>denotes the type of callout, e.g. globus_gram_jobmanager_authz,&nbsp;<wbr><i>library</i>&nbsp;<wbr>denotes the library the callout can be found in and&nbsp;<wbr><i>symbol</i>&nbsp;<wbr>denotes the function name of the callout. </p>
+<dl>
+<dt>&bull;</dt>
+<dd> It provides a API function for registering callouts</dd>
+<dt>&bull;</dt>
+<dd> All callouts are assumed to have the function signature globus_result_t callout_func(va_list ap)</dd>
+<dt>&bull;</dt>
+<dd> It provides a function for calling a callout given an abstract type. If multiple callouts are defined for the same abstract type then all callouts for the abstract type will be called. Implementers should not rely on any correlation between the order of configuration and the order of invocation of callouts of the same abstract type.</dd></dl>
+<p> Any program that uses Globus Callout functions must include the <code>globus_callout.h</code> header </p>
+<p> Function Categories</p>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>Activation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Callout Handle Operations</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Callout Configuration</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Callout Invocation</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Callout Constants</code></dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_callout from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

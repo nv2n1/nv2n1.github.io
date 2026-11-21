@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmistraversable(3) · Linux Manual Pages</title>
+<meta name="description" content="XmIsTraversable — A function that identifies whether a widget can be traversed">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmistraversable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmistraversable(3)</h1>
+
+
+
+
+
+<p><code>XmIsTraversable</code> &#8212; A function that identifies whether a widget can be traversed</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>Boolean XmIsTraversable</code>(
+<code>Widget widget</code>);</pre>
+<h2>Description</h2>
+<p><code>XmIsTraversable</code> determines whether the specified widget is eligible to receive focus through keyboard traversal. In general, a widget is eligible to receive focus when all of the following conditions are true:</p>
+<dl COMPACT>
+<dt> &bull;</dt>
+<dd>The widget and its ancestors are not being destroyed, are sensitive, and have a value of True for <code>XmNtraversalOn</code>.</dd>
+<dt> &bull;</dt>
+<dd>The widget and its ancestors are realized, managed, and (except for gadgets) mapped. If an application unmaps a <i>widget</i> that has its <code>XmNmappedWhenManaged</code> resource set to True, the return value is undefined.</dd>
+<dt> &bull;</dt>
+<dd>Some part of the widget&#8217;s rectangular area is unobscured by the widget&#8217;s ancestors, or some part of the widget&#8217;s rectangular area is inside the work window (but possibly outside the clip window) of a ScrolledWindow whose <code>XmNscrollingPolicy</code> is <code>XmAUTOMATIC</code> and whose <code>XmNtraverseObscuredCallback</code> is not NULL.</dd></dl>
+<p> Some widgets may not be eligible to receive focus even if they meet all these conditions. For example, most managers cannot receive focus through keyboard traversal. Some widgets may be eligible to receive focus under particular conditions. For example, a DrawingArea is eligible to receive focus if it meets the conditions above and has no child whose <code>XmNtraversalOn</code> resource is True. </p>
+<p> Note that when all widgets in a shell hierarchy have been made untraversable, they are considered to have lost focus. When a widget in this hierarchy is made traversable again, it regains focus. </p>
+<p> <code>XmIsTraversable</code> may return unexpected results when <i>widget</i> or its ancestors are overlapped by their siblings.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget</dd></dl>
+<h2>Return</h2>
+<p>Returns True if the widget is eligible to receive focus through keyboard traversal; otherwise, returns False.</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmgetvisibility/">XmGetVisibility</a></code>(3) and <code><a href="/docs/linux/man/3-xmprocesstraversal/">XmProcessTraversal</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-rfkill-socket(8) · Linux Manual Pages</title>
+<meta name="description" content="systemd-rfkill.service, systemd-rfkill.socket, systemd-rfkill – Load and save the RF kill switch state at boot and change">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-systemd-rfkill-socket/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>systemd-rfkill-socket(8)</h1>
+
+
+
+
+
+<p>systemd-rfkill.service, systemd-rfkill.socket, systemd-rfkill &#8211; Load and save the RF kill switch state at boot and change</p>
+<h2>Synopsis</h2>
+<p>systemd-rfkill.service </p>
+<p> systemd-rfkill.socket </p>
+<p> /lib/systemd/systemd-rfkill</p>
+<h2>Description</h2>
+<p>systemd-rfkill.service is a service that restores the RF kill switch state at early boot and saves it on each change. On disk, the RF kill switch state is stored in /var/lib/systemd/rfkill/.</p>
+<h2>Kernel Command Line</h2>
+<p>systemd-rfkill understands the following kernel command line parameter: </p>
+<p> <i>systemd.restore_state=</i></p>
+<dl>
+<dd>Takes a boolean argument. Defaults to &quot;1&quot;. If &quot;0&quot;, does not restore the rfkill settings on boot. However, settings will still be stored on shutdown.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cernlib(1) · Linux Manual Pages</title>
+<meta name="description" content="cernlib – print CERN library dependencies">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cernlib/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cernlib(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> cernlib &#8211; print CERN library dependencies </p>
+<h2>SYNOPSIS</h2>
+<p> <code>cernlib</code> [<i>options</i>]<i> libraries</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>cernlib</code> is a tool to list the compiler and linker options necessary to compile a CERNLIB program that has the given library dependencies. It is generally used within a command substitution, as in the following example: </p>
+<p> gfortran -o myprogram myprogram.F `cernlib -G Motif pawlib` </p>
+<p> This version of cernlib has been completely rewritten from the original script provided by CERN. It now does recursive library dependency checking and removes duplicate entries. </p>
+<p> Note that by default, the cernlib script assumes that the CERN libraries are to be linked against statically; if the environment variables $CERN or $CERN_ROOT are specified, it looks for the libraries only in the &quot;lib&quot; subdirectory of those locations, not any &quot;shlib&quot; subdirectory. Furthermore, the script brackets the CERN libraries with linker instructions to link statically. This is done to preserve the original upstream behavior, in which all CERNLIB libraries exist only in static form. For instance, &quot;cernlib packlib&quot; outputs: </p>
+<p> -Wl,-static -lpacklib -lkernlib -Wl,-dy -lm -lnsl -lcrypt -ldl -lg2c </p>
+<p> If you want to link against ALL libraries (including CERNLIB) either statically or dynamically, call the cernlib script with its -safe flag to omit these bracketing linker flags. That is: if you want to link against all libraries (not just CERNLIB) statically, use the -static compiler flag and call cernlib with its -safe flag: </p>
+<p> gfortran -o myprogram myprogram.F -static `cernlib -safe -G Motif pawlib` </p>
+<p> and if you want to link against all libraries (including the CERN libraries) dynamically, use the same command without the -static compiler flag (the linker assumes dynamic linking by default): </p>
+<p> gfortran -o myprogram myprogram.F `cernlib -safe -G Motif pawlib`</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a </code><i>arch</i></dt>
+<dd> Specify a system architecture, e.g. Linux (default), AIX, HP-UX, etc.</dd>
+<dt><code>-dy</code></dt>
+<dd> Equivalent to -safe; for backwards compatibility.</dd>
+<dt><code>-G </code><i>driver</i></dt>
+<dd> Specify a graphics driver. The available options on Linux are X11 and Motif (the latter option will also work when the Lesstif library is present).</dd>
+<dt><code>-P, -s</code></dt>
+<dd> Ignored; for backwards compatibility.</dd>
+<dt><code>-safe</code></dt>
+<dd> Do not make any assumptions about whether the CERN libraries should be linked against dynamically or statically. (The default behavior, if this flag is not used, is to link them statically.)</dd>
+<dt><code>-u</code></dt>
+<dd> Do not include architecture-specific libraries in the output.</dd>
+<dt><code>-v </code><i>version</i></dt>
+<dd> Specify version of $CERN_LEVEL. This is meaningless unless you have installed an upstream version of CERNLIB (i.e. not packaged by Debian); see the file <i>/usr/share/doc/cernlib-base/README.Debian</i>.</dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show a summary of options.</dd>
+<dt><code>&#8212;</code></dt>
+<dd> Tell cernlib that this marks the end of cernlib-specific flags, and all following arguments are to be parsed as described in the <code>LIBRARIES</code> section below. If &#8212; is not given, the first word parsed as a library name will be the first word not starting with a hyphen &quot;-&quot; that is not an argument to a preceding cernlib flag.</dd></dl>
+<h2>LIBRARIES</h2>
+<p> The following library names are recognized by this version of the cernlib script. These names may be used exactly as shown here, or prefixed by &quot;-l&quot;.</p>
+<dl>
+<dt><code>Core CERN libraries</code></dt>
+<dd> mathlib, packlib, kernlib</dd>
+<dt><code>Graphics and PAW libraries</code></dt>
+<dd> graflib, pawlib</dd>
+<dt><code>Monte Carlo and GEANT libraries</code></dt>
+<dd> cojets, eurodec, geant321, herwig59, isajet758, pdflib804, photos202, phtools</dd>
+<dt><code>Additional Monte Carlo libraries</code></dt>
+<dd> (to obtain these, see /usr/share/doc/montecarlo-base/README.Debian)<br />
+ ariadne, ariadne-p5, fritiof, jetset, lepto, pythia5, pythia6</dd>
+<dt><code>Aliases</code></dt>
+<dd> The numerals at the end may be left off most of the library names above.</dd>
+<dt><code>Other library names</code></dt>
+<dd> Various other names are recognized for backwards compatibility, internal use, and non-Linux architectures. For the complete list, please see the cernlib script.</dd>
+<dt><code>Other</code></dt>
+<dd> Any names not recognized by cernlib that start with &quot;-l&quot; or with any character other than a hyphen (&quot;-&quot;) are output as -l${name#-l} (<i>i.e.</i>, are assumed to be a library). Names starting with a hyphen for which the second character is not &quot;l&quot; are assumed to be compiler flags, and are output at the beginning of the line before all other output.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i>/usr/share/doc/cernlib-base/README.Debian</i> describes some of the changes that have been made to the CERN libraries in order to comply with Debian policy and the Filesystem Hierarchy Standard. </p>
+<p> CERNLIB documentation for all related libraries and programs is available at the following URL: <i><a rel="nofollow" href="http://cern.ch/cernlib/">http://cern.ch/cernlib/</a></i></p>
+<h2>AUTHOR</h2>
+<p> This manual page and the version of the cernlib script that it describes were written by Kevin McCarty &lt;kmccarty [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). They are licensed under the GNU General Public License, version 2 or later (at your choice).</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) Kevin B. McCarty, 2002, 2003, 2004, 2005, 2006. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_peepevents(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_PeepEvents – Checks the event queue for messages and optionally returns them.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_peepevents/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_peepevents(3)</h1>
+
+
+
+
+
+<p>SDL_PeepEvents &#8211; Checks the event queue for messages and optionally returns them.</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> int SDL_PeepEvents</code>(<code>SDL_Event *events, int numevents, SDL_eventaction action, Uint32 mask</code>);</p>
+<h2>Description</h2>
+<p>Checks the event queue for messages and optionally returns them. </p>
+<p> If <code>action</code> is <code>SDL_ADDEVENT</code>, up to <code>numevents</code> events will be added to the back of the event queue. </p>
+<p> If <code>action</code> is <code>SDL_PEEKEVENT</code>, up to <code>numevents</code> events at the front of the event queue, matching <i></i><code>mask</code>, will be returned and will not be removed from the queue. </p>
+<p> If <code>action</code> is <code>SDL_GETEVENT</code>, up to <code>numevents</code> events at the front of the event queue, matching <i></i><code>mask</code>, will be returned and will be removed from the queue. </p>
+<p> This function is thread-safe.</p>
+<h2>Return Value</h2>
+<p>This function returns the number of events actually stored, or <code>-1</code> if there was an error.</p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_Event</code>, <i></i><code>SDL_PollEvent</code>, <i></i><code>SDL_PushEvent</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

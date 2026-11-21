@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>llseek(2) · Linux Manual Pages</title>
+<meta name="description" content="_llseek – reposition read/write file offset">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-llseek/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>llseek(2)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> _llseek &#8211; reposition read/write file offset </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+int _llseek(unsigned int fd, unsigned long offset_high,
+            unsigned long offset_low, loff_t *result,
+            unsigned int whence);
+</code></pre>
+<p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
+<p> Note: for information about the <code>llseek</code>(3) library function, see <code><a href="/docs/linux/man/3-lseek64/">lseek64</a></code>(3). </p>
+<p> The <code>_llseek</code>() system call repositions the offset of the open file description associated with the file descriptor <i>fd</i> to the value</p>
+<dl>
+<dt>
+</dt><dd> (offset_high &lt;&lt; 32) | offset_low</dd></dl>
+<p> This new offset is a byte offset relative to the beginning of the file, the current file offset, or the end of the file, depending on whether <i>whence</i> is <code>SEEK_SET</code>, <code>SEEK_CUR</code>, or <code>SEEK_END</code>, respectively. </p>
+<p> The new file offset is returned in the argument <i>result</i>. The type <i>loff_t</i> is a 64-bit signed type. </p>
+<p> This system call exists on various 32-bit platforms to support seeking to large file offsets.</p>
+<h2>RETURN VALUE</h2>
+<p> Upon successful completion, <code>_llseek</code>() returns 0. Otherwise, a value of -1 is returned and <i>errno</i> is set to indicate the error.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not an open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Problem with copying results to user space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>whence</i> is invalid.</dd></dl>
+<h2>CONFORMING TO</h2>
+<p> This function is Linux-specific, and should not be used in programs intended to be portable.</p>
+<h2>NOTES</h2>
+<p> Glibc does not provide a wrapper for this system call. To invoke it directly, use <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2). However, you probably want to use the <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) wrapper function instead.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2), <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/3-lseek64/">lseek64</a></code>(3)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

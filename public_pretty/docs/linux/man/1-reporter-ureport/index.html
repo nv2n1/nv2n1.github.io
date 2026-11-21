@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reporter-ureport(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-reporter-ureport/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>reporter-ureport(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>reporter-ureport - Reports ABRT problems in format of micro report</p>
+<h2>SYNOPSIS</h2>
+<p><i>reporter-ureport</i> [-v] [-c CONFFILE] [-u URL] [-k] [-A -a bthash -B -b bug-id -E -e email -l DATA -L FIELD -T TYPE -r RESULT_TYPE] [-d DIR]</p>
+<h2>DESCRIPTION</h2>
+<p>The tool reads problem directory DIR, assembles an micro report from the loaded problem data and sends the micro report to uReport server for updating statistics and fast analysis. The results of the analysis are stored in problem data in form of problems elements. <i>reporter-ureport</i> updates <i>reported_to</i></p>
+<h3>Configuration file</h3>
+<p>If not specified, CONFFILE defaults to /etc/libreport/plugins/ureport.conf. Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are:</p>
+<p><i>URL</i></p>
+<dl>
+<dt>
+</dt><dd> Base sever HTTP(S) address.</dd></dl>
+<p><i>SSLVerify</i></p>
+<dl>
+<dt>
+</dt><dd> Use no/false/off/0 to disable verification of server's SSL certificate. (default: yes)</dd></dl>
+<p><i>SSLClientAuth</i></p>
+<dl>
+<dt>
+</dt><dd> If this option is set, client-side SSL certificate is used to authenticate to the server so that it knows which machine it came from. Assigning any value to this option changes the default value of IncludeAuthData to yes. 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+Possible values are:
+</pre></dd></dl>
+<p><i>rhsm</i></p>
+<dl>
+<dt>
+</dt><dd> Uses the system V3 entitlement certificate that is used for Red Hat subscription management.</dd></dl>
+<p><i>puppet</i></p>
+<dl>
+<dt>
+</dt><dd> Uses the certificate that is used by the Puppet configuration management tool.</dd></dl>
+<p><i>&lt;cert_path&gt;:&lt;key_path&gt;</i></p>
+<dl>
+<dt>
+</dt><dd> Manually supply paths to certificate and the corresponding key in PEM format.</dd></dl>
+</dl>
+<p><i>HTTPAuth</i></p>
+<dl>
+<dt>
+</dt><dd> Use the configured values to as HTTP Basic Authentication credentials. Assigning any value to this option changes the default value of IncludeAuthData to yes.</dd></dl>
+<p>Possible values are</p>
+<dl>
+<dt>
+</dt><dd> 
+ <i>rhts-credentials</i>
+</dd><dl>
+<dt>
+</dt><dd> Uses Login= and Password= values from /etc/libreport/plugins/rhtsupport.conf.</dd></dl>
+<p><i>&lt;user_name&gt;:&lt;password&gt;</i></p>
+<dl>
+<dt>
+</dt><dd> Manually supply credentials.</dd></dl>
+</dl>
+<p><i>ContactEmail</i></p>
+<dl>
+<dt>
+</dt><dd> Email address attached to a bthash on the server.</dd></dl>
+<p><i>IncludeAuthData</i></p>
+<dl>
+<dt>
+</dt><dd> If this option is set to <i>yes</i>, uploaded uReport will contain <i>auth</i> object consisting from key value pairs made from CSV list stored in <i>AuthDataItems</i> option. Keys are file names and values are bites of these files. 
+</dd><dl>
+<dt>
+</dt><dd> <pre>
+The default value is no, unless you set SSLClientAuth to some value. In that
+case, the default value is yes.
+</pre></dd></dl>
+</dl>
+<p><i>AuthDataItems</i></p>
+<dl>
+<dt>
+</dt><dd> CSV list of files included in the <i>auth</i> uReport object.</dd></dl>
+<p>Parameters can be overridden via $uReport_PARAM environment variables.</p>
+<h2>OPTIONS</h2>
+<p>-c FILE</p>
+<dl>
+<dt>
+</dt><dd> Path to configuration file</dd></dl>
+<p>-a, &ndash;attach BTHASH</p>
+<dl>
+<dt>
+</dt><dd> bthash of uReport to attach (conflicts with -A)</dd></dl>
+<p>-A, &ndash;attach-rt</p>
+<dl>
+<dt>
+</dt><dd> Attach to a bthash from reported_to (conflicts with -a)</dd></dl>
+<p>-b, &ndash;bug-id NUM</p>
+<dl>
+<dt>
+</dt><dd> Attach RHBZ bug (requires -a)</dd></dl>
+<p>-B, &ndash;bug-id-rt</p>
+<dl>
+<dt>
+</dt><dd> Attach last RHBZ bug from reported_to (requires -a|-A, conflicts with -b)</dd></dl>
+<p>-e, &ndash;email EMAIL</p>
+<dl>
+<dt>
+</dt><dd> Contact e-mail address (requires -a|-A, conflicts with -E)</dd></dl>
+<p>-E, &ndash;email-env</p>
+<dl>
+<dt>
+</dt><dd> Contact e-mail address from environment (requires -a|-A, conflicts with -e)</dd></dl>
+<p>-d, &ndash;problem-dir DIR</p>
+<dl>
+<dt>
+</dt><dd> Path to problem directory.</dd></dl>
+<p>-k, &ndash;insecure</p>
+<dl>
+<dt>
+</dt><dd> Allow insecure connection to ureport server</dd></dl>
+<p>-t, &ndash;auth SOURCE</p>
+<dl>
+<dt>
+</dt><dd> Enables client authentication. See <i>SSLClientAuth</i> configuration file option for list of possible values.</dd></dl>
+<p>-h, &ndash;http-auth CREDENTIALS</p>
+<dl>
+<dt>
+</dt><dd> Enables client authentication via HTTP Authentication. See <i>HTTPAuth</i> configuration file option for list of possible values.</dd></dl>
+<p>-v</p>
+<dl>
+<dt>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
+<p>-u, &ndash;url URL</p>
+<dl>
+<dt>
+</dt><dd> Specify server URL</dd></dl>
+<p>-i AUTH_DATA_ITEMS</p>
+<dl>
+<dt>
+</dt><dd> List of dump dir files included in the <i>auth</i> uReport object.</dd></dl>
+<p>-l DATA</p>
+<dl>
+<dt>
+</dt><dd> Attach DATA (requires -T and -a|-A)</dd></dl>
+<p>-L REPORT_RESULT_FILED</p>
+<dl>
+<dt>
+</dt><dd> Attach the value of REPORT_RESULT_FILED member of the last report result indentified by REPORT_RESULT_TYPE passed with -r option (requires -r, -T and -a|-A).</dd></dl>
+<p>-T ATTACHMENT_TYPE</p>
+<dl>
+<dt>
+</dt><dd> Specifies the attachment type when attaching an arbitrary data to BTHASH (takes effect only with -l or -L)</dd></dl>
+<p>-r REPORT_RESULT_TYP</p>
+<dl>
+<dt>
+</dt><dd> Used to single out report results (<i>reported_to</i> file lines) when attaching an arbitrary data to BTHASH (takes effect only with -L)</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p>Environment variables take precedence over values provided in the configuration file.</p>
+<p><i>uReport_URL</i></p>
+<dl>
+<dt>
+</dt><dd> Base sever HTTP(S) address.</dd></dl>
+<p><i>uReport_SSLVerify</i></p>
+<dl>
+<dt>
+</dt><dd> Use yes/true/on/1 to verify server's SSL certificate. (default: yes)</dd></dl>
+<p><i>uReport_ContactEmail</i></p>
+<dl>
+<dt>
+</dt><dd> Email address attached to a bthash on the server.</dd></dl>
+<p><i>uReport_IncludeAuthData</i></p>
+<dl>
+<dt>
+</dt><dd> See IncludeAuthData configuration option for details.</dd></dl>
+<p><i>uReport_AuthDataItems</i></p>
+<dl>
+<dt>
+</dt><dd> See AuthDataItems configuration option for details.</dd></dl>
+<h2>FILES</h2>
+<p>/usr/share/libreport/conf.d/plugins/ureport.conf</p>
+<dl>
+<dt>
+</dt><dd> Readonly default configuration files.</dd></dl>
+<p>/etc/libreport/plugins/ureport.conf</p>
+<dl>
+<dt>
+</dt><dd> Configuration file.</dd></dl>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/5-ureport-conf/">ureport.conf</a>(5)</p>
+<h2>AUTHORS</h2>
+<dl>
+<dt>
+</dt><dd> &bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

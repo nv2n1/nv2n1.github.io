@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afclosefile(3) · Linux Manual Pages</title>
+<meta name="description" content="afCloseFile – close an open audio file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-afclosefile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>afclosefile(3)</h1>
+
+
+
+
+
+<p>afCloseFile &#8211; close an open audio file </p>
+<h2>Synopsis</h2>
+<pre>#include &lt;audiofile.h&gt;</pre>
+<pre>int afCloseFile(AFfilehandle file);</pre>
+<h2>Parameters</h2>
+<p>file is a valid file handle created by <code><a href="/docs/linux/man/3-afopenfile/">afOpenFile</a></code>(3).</p>
+<h2>Description</h2>
+<p>afCloseFile closes the audio file <i>file</i>, updating the file if it was opened for writing.</p>
+<h2>Return Value</h2>
+<p>afCloseFile returns 0 if the file was closed properly and -1 if an error occurred while closing the file.</p>
+<h2>Errors</h2>
+<p>afCloseFile can generate these possible errors: </p>
+<dl COMPACT>
+<dd>&bull; </dd>
+<p> AF_BAD_FILEHANDLE</dl>
+<dl COMPACT>
+<dd>&bull; </dd>
+<p> AF_BAD_LSEEK</dl>
+<dl COMPACT>
+<dd>&bull; </dd>
+<p> AF_BAD_WRITE</dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-afopenfile/">afOpenFile</a></code>(3)</p>
+<h2>Author</h2>
+<p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

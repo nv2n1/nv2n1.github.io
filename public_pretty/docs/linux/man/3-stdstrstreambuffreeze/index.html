@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdstrstreambuffreeze(3) · Linux Manual Pages</title>
+<meta name="description" content="std::strstreambuf::freeze – std::strstreambuf::freeze">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdstrstreambuffreeze/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdstrstreambuffreeze(3)</h1>
+
+
+
+
+
+<p>std::strstreambuf::freeze &#8211; std::strstreambuf::freeze</p>
+<h2>Synopsis</h2>
+<pre><code>void freeze(bool freezefl = true);</code></pre>
+<p>If the buffer uses dynamic allocation, sets the frozen status of the stream to freezefl.<br />
+While the stream is frozen, overflow() will not reallocate the buffer and the destructor will not deallocate the buffer (thereby causing a memory leak). </p>
+<h2>Parameters</h2>
+<p>freezefl &#8211; new value to set the freeze status to</p>
+<h2>Return value</h2>
+<p><i>(none)</i> </p>
+<h2>Notes</h2>
+<p>Every call to str() freezes the stream to preserve the validity of the pointer it returns. To allow the destructor to deallocate the buffer, freeze(false) needs to be called explicitly. </p>
+<h2>Example</h2>
+<p>In this example, initial allocation of the underlying array was for 16 bytes<br />
+ // Run this code </p>
+<pre><code>#include &lt;strstream&gt;
+#include &lt;iostream&gt;
+int main()
+{
+    {
+        std::strstream dyn;      // dynamically-allocated read/write buffer
+        dyn &lt;&lt; &quot;Test: &quot; &lt;&lt; 1.23; // note: no std::ends to demonstrate append behavior
+        std::cout &lt;&lt; &quot;dynamic buffer holds &quot; &lt;&lt; dyn.pcount() &lt;&lt; &quot; characters: '&quot;;
+        std::cout.write(dyn.str(), dyn.pcount()) &lt;&lt; &quot;'
+&quot;;
+        // the buffer is now frozen, further output will not make the buffer grow
+        dyn &lt;&lt; &quot;more output, hopefully enough to run out of the allocated space&quot; &lt;&lt; std::ends;
+        std::cout &lt;&lt; &quot;After more output, it holds &quot;
+                  &lt;&lt; dyn.pcount() &lt;&lt; &quot; characters: '&quot; &lt;&lt; dyn.str() &lt;&lt; &quot;'
+&quot;;
+        dyn.freeze(false); // unfreeze before destructor
+    }                      // memory freed by the destructor
+    {
+        char arr[20];
+        std::ostrstream st(arr, sizeof arr); // fixed-size buffer
+        st &lt;&lt; 1.23;                          // note: no std::ends to demonstrate append behavior
+        std::cout &lt;&lt; &quot;static buffer holds &quot;
+                  &lt;&lt; st.pcount() &lt;&lt; &quot; characters: '&quot;;
+        std::cout.write(st.str(), st.pcount());
+        std::cout &lt;&lt; &quot;'
+&quot;;
+        st &lt;&lt; &quot;more output, hopefully enough to run out of the allocated space&quot; &lt;&lt; std::ends;
+        std::cout &lt;&lt; &quot;static buffer holds &quot;
+                  &lt;&lt; st.pcount() &lt;&lt; &quot; characters: '&quot;;
+        std::cout.write(st.str(), st.pcount());
+        std::cout &lt;&lt; &quot;'
+&quot;;
+    } // nothing to deallocate, no need to unfreeze,
+}
+</code></pre>
+<h2>Output:</h2>
+<p>&nbsp;<wbr>&nbsp;dynamic buffer holds 10 characters: &#8216;Test: 1.23&#8217;<br />
+&nbsp;<wbr>&nbsp;After more output, it holds 16 characters: &#8216;Test: 1.23more o&#8217;<br />
+&nbsp;<wbr>&nbsp;static buffer holds 4 characters: &#8216;1.23&#8217;<br />
+&nbsp;<wbr>&nbsp;static buffer holds 20 characters: &#8216;1.23more output, hop&#8217;</p>
+<h2>See also</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;disables/enables automatic reallocation<br />
+freeze <i>(public member function of std::strstream)</i><br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;disables/enables automatic reallocation<br />
+freeze <i>(public member function of std::ostrstream)</i><br />
+destructor destructs a strstreambuf object, optionally deallocating the character array<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function)</i><br />
+<code>[virtual]</code><br />
+overflow appends a character to the output sequence, may reallocate or initially allocate the buffer if dynamic and not frozen<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function)</i><br />
+<code>[virtual]</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

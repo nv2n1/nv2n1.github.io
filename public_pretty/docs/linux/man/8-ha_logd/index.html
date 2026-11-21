@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ha_logd(8) · Linux Manual Pages</title>
+<meta name="description" content="ha_logd – Logging Daemon for High-Availability Linux">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ha_logd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ha_logd(8)</h1>
+
+
+
+
+
+<p>ha_logd &#8211; Logging Daemon for High-Availability Linux</p>
+<h2>Synopsis</h2>
+<p><code>ha_logd</code> [ -skdh ] [ -c configure file ]</p>
+<h2>Description</h2>
+<p><code>ha_logd</code> is a logging daemon for Linux-HA. It receives messages from a local domain socket <code>/var/lib/log_daemon</code>, writes them to appropriate files and syslog if enabled. The reason the logging daemon is written is that occationally Heartbeat suffers from disk I/O delays. By sending log messages to logging daemon, heatbeat can avoid disk I/O delays. </p>
+<h2>Options</h2>
+<dl>
+<dt>-s</dt>
+<dd>Show the status of ha_logd, running or stopped.</dd>
+<dt>-k</dt>
+<dd>Stop (kill) the daemon</dd>
+<dt>-d</dt>
+<dd>Make the logging daemon a daemon</dd>
+<dt>-h</dt>
+<dd>Show help message</dd>
+<dt>-c configure file</dt>
+<dd>Configure file for ha_logd. User can configure log file, debuf file, log facility, entity and useapphbd.<br />
+&nbsp;<wbr>For details, see sample configure file ha_logd.cf.</dd></dl>
+<h2>Files</h2>
+<p><i>/var/run/ha_logd.pid </i> Default PID file. </p>
+<p> <i>ha_logd.cf </i> Sample config file for ha_logd. This file is installed together with other Heartbeat documents.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-heartbeat/">heartbeat</a>(8) ha_logger(8) </p>
+<h2>Documentation</h2>
+<p>More information may be found at <a rel="nofollow" href="http://www.linux-ha.org.">http://www.linux-ha.org.</a></p>
+<h2>Authors</h2>
+<pre> Guochun Shi &lt;gshi [at] ncsa.uiuc.edu&gt;
+ Alan Robertson &lt;alanr [at] unix.sh&gt;
+ Lars Marowsky-Bree &lt;lmb [at] suse.de&gt; </pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

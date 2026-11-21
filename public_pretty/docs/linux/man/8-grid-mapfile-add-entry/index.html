@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grid-mapfile-add-entry(8) · Linux Manual Pages</title>
+<meta name="description" content="grid-mapfile-add-entry – Add an entry to a gridmap file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-grid-mapfile-add-entry/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>grid-mapfile-add-entry(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>grid-mapfile-add-entry &#8211; Add an entry to a gridmap file</p>
+<h2>Synopsis</h2>
+<p><code>grid-mapfile-add-entry</code> [ -h | -help | -usage | -version | -versions ] </p>
+<p> <code>grid-mapfile-add-entry</code> -dn <i>DISTINGUISHED-NAME</i> -ln <i>LOCAL-NAME</i>&#8230; [-d | -dryrun] [ -f <i>MAPFILE</i> | -mapfile <i>MAPFILE</i> ] [ -n ] [ -c ]</p>
+<h2>Description</h2>
+<p>The <code>grid-mapfile-add-entry</code> program adds a new mapping from an X.509 distinguished name to a local POSIX user name to a gridmap file. Gridmap files are used as a simple authorization method for services such as GRAM5 or GridFTP. </p>
+<p> The <code>grid-mapfile-add-entry</code> program verifies that the <i>LOCAL-NAME</i> is a valid user name on the system on which it was run, and that the mapping between <i>DISTINGUISHED-NAME</i> and <i>LOCAL-NAME</i> does not already exist in the gridmap file. </p>
+<p> By default, <code>grid-mapfile-add-entry</code> will modify the gridmap file named by the GRIDMAP environment variable if present, or the file /etc/grid-security/grid-mapfile if not. This can be changed by the use of the <i>-mapfile</i> or <i>-f</i> command-line options. </p>
+<p> If the gridmap file does not exist, <code>grid-mapfile-add-entry</code> will create it. If it already exists, <code>grid-mapfile-add-entry</code> will save the current contents of the file to a new file with the string .old appended to the file name. </p>
+<p> The full set of command-line options to <code>grid-mapfile-add-entry</code> are: </p>
+<p> <code>-help, -usage</code></p>
+<dl>
+<dd>Display the command-line options to <code>grid-mapfile-add-entry</code>.</dd></dl>
+<p> <code>-version, -versions</code></p>
+<dl>
+<dd>Display the version number of the <code>grid-mapfile-add-entry</code> command. The second form includes more details.</dd></dl>
+<p> <code>-dn </code><i>DISTINGUISHED-NAME</i></p>
+<dl>
+<dd>The X.509 distinguished name to add a mapping for. The name should be in OpenSSL&#8217;s oneline format.</dd></dl>
+<p> <code>-ln </code><i>LOCAL-NAME</i><code>&#8230;</code></p>
+<dl>
+<dd>The POSIX user name to map the distinguished name to. This name must be a valid username. Add multiple <i>LOCAL-NAME</i> strings after the <i>-ln</i> command-line option. If any of the local names are invalid, no changes will be made to the gridmap file.</dd></dl>
+<p> <code>-d, -dryrun</code></p>
+<dl>
+<dd>Verify local names and display diagnostics about what would be added to the gridmap file, but don&#8217;t actually modify the file.</dd></dl>
+<p> <code>-mapfile </code><i>MAPFILE</i><code>, -f </code><i>MAPFILE</i></p>
+<dl>
+<dd>Modify the gridmap file named by <i>MAPFILE</i> instead of the default.</dd></dl>
+<p> <code>-n</code></p>
+<dl>
+<dd>Don&#8217;t copy the original file to <i>MAPFILE</i>.old.</dd></dl>
+<p> <code>-c</code></p>
+<dl>
+<dd>Don&#8217;t check for changes to the gridmap during program execution.</dd></dl>
+<h2>Examples</h2>
+<p>Add a mapping between the current user&#8217;s certificate to the current user id to a gridmap file in $HOME/.gridmap: </p>
+<dl>
+<dd>
+<pre>% grid-mapfile-add-entry -f $HOME/.gridmap -dn &quot;`grid-cert-info -subject`&quot; -ln &quot;`id -un`&quot;
+Modifying /home/juser/.gridmap ...
+/home/juser/.gridmap does not exist... Attempting to create /home/juser/.gridmap
+New entry:
+&quot;/DC=org/DC=example/DC=grid/CN=Joe User&quot; juser
+(1) entry added</pre>
+</dd></dl>
+<p> Add a mapping between the a distinguished name and multiple local names: </p>
+<dl>
+<dd>
+<pre>% grid-mapfile-add-entry -dn &quot;/DC=org/DC=example/DC=grid/CN=Joe User&quot; juser&quot; local1 local2
+Modifying /home/juser/.gridmap ...
+/home/juser/.gridmap does not exist... Attempting to create /home/juser/.gridmap
+New entry:
+&quot;/DC=org/DC=example/DC=grid/CN=Joe User&quot; local1,local2
+(1) entry added</pre>
+</dd></dl>
+<h2>Environment</h2>
+<p>The following environment variables affect the execution of <code>grid-mapfile-add-entry</code>: </p>
+<p> GRIDMAP</p>
+<dl>
+<dd>Path to the default gridmap to modify</dd></dl>
+<h2>Files</h2>
+<p>The following files affect the execution of <code>grid-mapfile-add-entry</code>: </p>
+<p> /etc/grid-security/grid-mapfile</p>
+<dl>
+<dd>Path to the default gridmap to modify if GRIDMAP environment variable is not set.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-grid-mapfile-check-consistency/">grid-mapfile-check-consistency</a>(8), <a href="/docs/linux/man/8-grid-mapfile-delete-entry/">grid-mapfile-delete-entry</a>(8)</p>
+<h2>Author</h2>
+<p>Copyright &#169; 1999-2016 University of Chicago</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

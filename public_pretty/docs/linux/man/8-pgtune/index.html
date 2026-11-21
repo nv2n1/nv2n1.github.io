@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pgtune(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pgtune/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pgtune(8)</h1>
+
+
+
+
+
+<p>pgtune - PostgreSQL Config Tuner</p>
+<h2>Synopsis</h2>
+<pre>pgtune -i $PGDATA/postgresql.conf -o $PGDATA/postgresql.conf.pgtune</pre>
+<h2>Description</h2>
+<p>Pgtune takes the wimpy default postgresql.conf and expands the database server to be as powerful as the hardware it&rsquo;s being deployed on.</p>
+<p>pgtune works by taking an existing postgresql.conf file as an input, making changes to it based on the amount of RAM in your server and suggested workload, and output a new file.</p>
+<h2>Options</h2>
+<p>-i, &ndash;input-config</p>
+<dl><dd>Specifies the current postgresql.conf file.</dd></dl>
+<p>-o, &ndash;input-config</p>
+<dl><dd>Specifies the file name for the new postgresql.conf file.</dd></dl>
+<p>-M, &ndash;memory</p>
+<dl><dd>Use this parameter to specify total system memory. If not specified, pgtune will attempt to detect memory size.</dd></dl>
+<p>-T, &ndash;type</p>
+<dl><dd>Specifies database type. Valid options are: DW, OLTP, Web, Mixed, Desktop</dd></dl>
+<p>-c, &ndash;connections</p>
+<dl><dd>Specifies number of maximum connections expected. If not specified, it depends on database type.</dd></dl>
+<p>-D, &ndash;debug</p>
+<dl><dd>Enables debugging mode.</dd></dl>
+<p>-S, &ndash;settings</p>
+<dl><dd>Directory where settings data files are located at. Defaults to the directory where the script is being run from. The RPM package includes a patch to use the correct location these files were installed into.</dd></dl>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/1-postgres/">postgres</a>(1)</p>
+<h2>Authors</h2>
+<p>This man page is written by Miroslav Suchy for Fedora.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

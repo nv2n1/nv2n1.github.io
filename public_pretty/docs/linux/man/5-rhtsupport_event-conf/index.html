@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rhtsupport_event-conf(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rhtsupport_event-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rhtsupport_event-conf(5)</h1>
+
+
+
+
+
+<p>rhtsupport_event.conf - configuration file for libreport.</p>
+<h2>Description</h2>
+<p>This configuration file provides definitions for events which use <i>reporter-rhtsupport</i>.</p>
+<p>By default the file contains definition for single <i>report_RHTSupport</i> event applicable for all problem types.</p>
+<h3>report_RHTSupport event configuration file</h3>
+<p>The configuration for report_RHTSupport event is read from /etc/libreport/events/report_RHTSupport.conf file if exists.</p>
+<p>The configuration file contains values for options defined in /usr/share/libreport/events/report_RHTSupport.xml</p>
+<p>Configuration file lines should have <i>PARAM = VALUE</i> format. The parameters are:</p>
+<p><i>RHTSupport_URL</i></p>
+<dl><dd>Address of the Red Hat support portal</dd></dl>
+<p><i>RHTSupport_Login</i></p>
+<dl><dd>Red Hat customer user name</dd></dl>
+<p><i>RHTSupport_Password</i></p>
+<dl><dd>Red Hat customer user password</dd></dl>
+<p><i>RHTSupport_SSLVerify</i></p>
+<dl><dd>Use yes/true/on/1 to verify server's SSL certificate. (default: yes)</dd></dl>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/5-report_event-conf/">report_event.conf</a>(5), <a HREF="/docs/linux/man/1-reporter-rhtsupport/">reporter-rhtsupport</a>(1)</p>
+<h2>Author</h2>
+<dl><dd>&bull; ABRT team</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

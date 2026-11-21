@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pow10l(3) · Linux Manual Pages</title>
+<meta name="description" content="pow10, pow10f, pow10l – base-10 power functions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pow10l/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pow10l(3)</h1>
+
+
+
+
+
+<p>pow10, pow10f, pow10l &#8211; base-10 power functions</p>
+<h2>Synopsis</h2>
+<pre><code>#define _GNU_SOURCE         /* See feature_test_macros(7) */
+#include &lt;math.h&gt;
+double pow10(double x);
+float pow10f(float x);
+long double pow10l(long double x);</code></pre>
+<p> Link with <i>-lm</i>.</p>
+<h2>Description</h2>
+<p>These functions return the value of 10 raised to the power <i>x</i>. </p>
+<p> <code>Note well</code>: These functions perform exactly the same task as the functions described in <code><a href="/docs/linux/man/3-exp10/">exp10</a></code>(3), with the difference that the latter functions are now standardized in TS 18661-4:2015. Those latter functions should be used in preference to the functions described in this page.</p>
+<h2>Versions</h2>
+<p>These functions first appeared in glibc in version 2.1. Since glibc 2.27, the use of these functions in new programs is no longer supported.</p>
+<h2>Attributes</h2>
+<p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>pow10</code>(), <code>pow10f</code>(), <code>pow10l</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>Conforming To</h2>
+<p>This functions are nonstandard GNU extensions.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-exp10/">exp10</a></code>(3), <code><a href="/docs/linux/man/3-pow/">pow</a></code>(3)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

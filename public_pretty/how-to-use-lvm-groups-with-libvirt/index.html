@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing LVM Storage with libvirt - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-use-lvm-groups-with-libvirt/">
+  <meta name="description" content="By default, libvirt stores VM images as files in /var/lib/libvirt/images/. While functional, this approach limits flexibility. LVM (Logical Volume Management) …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing LVM Storage with libvirt">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-use-lvm-groups-with-libvirt/">
+  <meta property="og:description" content="By default, libvirt stores VM images as files in /var/lib/libvirt/images/. While functional, this approach limits flexibility. LVM (Logical Volume Management) …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Managing LVM Storage with libvirt</h1>
+        <time class="post-date" datetime="2018-03-24T08:19:46Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>By default, libvirt stores VM images as files in <code>/var/lib/libvirt/images/</code>. While functional, this approach limits flexibility. LVM (Logical Volume Management) provides better control over disk space, snapshots, and performance tuning. Using LVM volumes as libvirt storage pools lets you manage VM storage like block devices rather than files, giving you faster provisioning, atomic snapshots, and better resource allocation.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You’ll need:</p>
+<ul>
+<li>A working libvirt installation (<code>libvirtd</code> running)</li>
+<li>An existing LVM volume group with available space</li>
+<li><code>virsh</code> CLI tool</li>
+<li>Appropriate permissions (typically root or libvirt group membership)</li>
+</ul>
+<p>If you don’t have LVM set up yet, create a volume group first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create physical volume</span>
+</span></span><span class="line"><span class="cl">pvcreate /dev/sdb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create volume group</span>
+</span></span><span class="line"><span class="cl">vgcreate vg-libvirt /dev/sdb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify</span>
+</span></span><span class="line"><span class="cl">vgs
+</span></span></code></pre></div><h2 id="adding-an-lvm-volume-group-as-a-storage-pool">Adding an LVM Volume Group as a Storage Pool</h2>
+<p>The cleanest approach is to define the LVM volume group as a libvirt storage pool using XML.</p>
+<h3 id="via-virsh">Via virsh</h3>
+<p>Create a pool definition file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;pool</span> <span class="na">type=</span><span class="s">&#39;logical&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;name&gt;</span>vg-libvirt<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;target&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;path&gt;</span>/dev/vg-libvirt<span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/target&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/pool&gt;</span>
+</span></span></code></pre></div><p>Save this as <code>lvm-pool.xml</code>, then define it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh pool-define lvm-pool.xml
+</span></span><span class="line"><span class="cl">virsh pool-start vg-libvirt
+</span></span><span class="line"><span class="cl">virsh pool-autostart vg-libvirt
+</span></span></code></pre></div><p>Verify the pool is active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh pool-list --all
+</span></span><span class="line"><span class="cl">virsh pool-info vg-libvirt
+</span></span></code></pre></div><h3 id="via-virt-manager-gui">Via virt-manager GUI</h3>
+<p>If you prefer the GUI, open virt-manager and navigate to:</p>
+<ul>
+<li>File → Add Connection (if needed)</li>
+<li>Right-click the connection → Details → Storage</li>
+<li>Click the “+” button</li>
+<li>Select “Logical: LVM volume group”</li>
+<li>Choose your existing VG from the dropdown</li>
+<li>Confirm and the pool will be created</li>
+</ul>
+<h2 id="creating-vms-in-the-lvm-pool">Creating VMs in the LVM Pool</h2>
+<p>Once the pool is defined, you can create volumes within it and launch VMs using those volumes.</p>
+<p>Create a logical volume for a VM:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvcreate -L 20G -n vm-disk1 vg-libvirt
+</span></span></code></pre></div><p>Or let libvirt create the volume for you when defining a VM. In the VM XML, reference your pool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;disk</span> <span class="na">type=</span><span class="s">&#39;volume&#39;</span> <span class="na">device=</span><span class="s">&#39;disk&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;driver</span> <span class="na">name=</span><span class="s">&#39;qemu&#39;</span> <span class="na">type=</span><span class="s">&#39;raw&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;source</span> <span class="na">pool=</span><span class="s">&#39;vg-libvirt&#39;</span> <span class="na">volume=</span><span class="s">&#39;vm-disk1&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;target</span> <span class="na">dev=</span><span class="s">&#39;vda&#39;</span> <span class="na">bus=</span><span class="s">&#39;virtio&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/disk&gt;</span>
+</span></span></code></pre></div><p>List volumes in your pool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh vol-list vg-libvirt
+</span></span></code></pre></div><h2 id="snapshots-and-cloning">Snapshots and Cloning</h2>
+<p>LVM snapshots are significantly faster with the logical pool type than with file-based storage.</p>
+<p>Create a snapshot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvcreate -L 5G -s -n vm-disk1-snap /dev/vg-libvirt/vm-disk1
+</span></span></code></pre></div><p>Clone an existing volume:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh vol-clone vg-libvirt vm-disk1 vm-disk1-clone
+</span></span></code></pre></div><h2 id="monitoring-and-maintenance">Monitoring and Maintenance</h2>
+<p>Check pool and volume usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh pool-info vg-libvirt
+</span></span><span class="line"><span class="cl">virsh vol-info vg-libvirt vm-disk1
+</span></span></code></pre></div><p>Resize a logical volume if needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lvextend -L +10G /dev/vg-libvirt/vm-disk1
+</span></span></code></pre></div><p>Note: VM filesystems won’t automatically grow with the LV. You’ll need to extend partitions/filesystems inside the guest separately using standard tools like <code>growpart</code> or <code>parted</code>.</p>
+<p>Delete a volume:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh vol-delete --pool vg-libvirt vm-disk1
+</span></span></code></pre></div><h2 id="removing-the-storage-pool">Removing the Storage Pool</h2>
+<p>If you need to stop using the pool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">virsh pool-destroy vg-libvirt      <span class="c1"># Stop the pool</span>
+</span></span><span class="line"><span class="cl">virsh pool-undefine vg-libvirt     <span class="c1"># Remove the definition</span>
+</span></span></code></pre></div><p>This only removes the libvirt definition; your logical volumes remain intact on disk.</p>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<ul>
+<li>Use <code>type='raw'</code> for VM disks in LVM pools—it provides better performance than <code>qcow2</code></li>
+<li>Consider using <code>cache='directsync'</code> or <code>cache='none'</code> for the disk cache mode if you’re not using filesystem-level caching</li>
+<li>LVM snapshots consume space in your VG; monitor available space regularly with <code>vgs</code> and <code>lvs</code></li>
+</ul>
+<p>LVM storage pools integrate seamlessly with libvirt and offer a robust alternative to file-based VM storage, especially for production environments where snapshot and cloning performance matter.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

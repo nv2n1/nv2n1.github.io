@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipppstats(8) · Linux Manual Pages</title>
+<meta name="description" content="pppstats – print PPP statistics">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ipppstats/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ipppstats(8)</h1>
+
+
+
+
+
+<p>pppstats &#8211; print PPP statistics</p>
+<h2>Synopsis</h2>
+<p><code>pppstats</code> [ <code>-v</code> ] [ <code>-r</code> ] [ <code>-c</code> ] [ <code>-i</code> <i>&lt;secs&gt;</i> ] [ <i>&lt;unit#&gt;</i> ]<br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></p>
+<h2>Description</h2>
+<p><code>pppstats</code> prints PPP-related statistics. The <code>-v</code> flag causes <code>pppstats</code> to display additional statistics, such as the number of packets tossed (that is, which the VJ TCP header decompression code rejected). The <code>-r</code> flag causes <code>pppstats</code> to display the overall packet compression rate. The rate value is between 0 and 1, with 0 meaning that the data is incompressible. The <code>-c</code> flag is used to specify an alternate display mode that shows packet compression statistics: the number of packets and bytes uncompressed (that is, before compression or after decompression), compressed, and incompressible (packets which did not shrink on compression and were transmitted uncompressed), and the recent compression rate. This rate reflects the recent performance of the compression code rather than the overall rate achieved since compression was enabled. The <code>-i</code> flag is used to specify the interval between printouts. The default is 5 seconds. &lt;unit#&gt; specifies which interface to use for gathering statistics. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

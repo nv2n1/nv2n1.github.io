@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sil_dev_config(9) · Linux Manual Pages</title>
+<meta name="description" content="sil_dev_config – Apply device/host-specific errata fixups">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-sil_dev_config/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>sil_dev_config(9)</h1>
+
+
+
+
+
+<p>sil_dev_config &#8211; Apply device/host-specific errata fixups</p>
+<h2>Synopsis</h2>
+<pre><code>void sil_dev_config(struct ata_device *dev);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>Device to be examined</dd></dl>
+<h2>Description</h2>
+<p>After the IDENTIFY [PACKET] DEVICE step is complete, and a device is known to be present, this function is called. We apply two errata fixups which are specific to Silicon Image, a Seagate and a Maxtor fixup. </p>
+<p> For certain Seagate devices, we must limit the maximum sectors to under 8K. </p>
+<p> For certain Maxtor devices, we must not program the drive beyond udma5. </p>
+<p> Both fixups are unfairly pessimistic. As soon as I get more information on these errata, I will create a more exhaustive list, and apply the fixups to only the specific devices/hosts/firmwares that need it. </p>
+<p> 20040111 &#8211; Seagate drives affected by the Mod15Write bug are blacklisted The Maxtor quirk is in the blacklist, but I&#8217;m keeping the original pessimistic fix for the following reasons&#8230; &#8211; There seems to be less info on it, only one device gleaned off the Windows driver, maybe only one is affected. More info would be greatly appreciated. &#8211; But then again UDMA5 is hardly anything to complain about</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

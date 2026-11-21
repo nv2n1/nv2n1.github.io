@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>putprice_(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eurodollar-future implied standard deviation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-putprice_/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>putprice_(3)</h1>
+
+
+
+
+
+<p>QuantLib::EurodollarFuturesImpliedStdDevQuote &#8211; quote for the Eurodollar-future implied standard deviation </p>
+<h2>Synopsis</h2>
+<pre><code>void performCalculations () const
+Protected Attributes</code></pre>
+<p> Inherits <code>QuantLib::Quote</code>, and <code>QuantLib::LazyObject</code>.</p>
+<h3>Public Member Functions</h3>
+<p>void performCalculations () const</p>
+<p>Protected Attributes <code>Quote interface</code> </p>
+<p> <code>Real</code> <code>value</code> () const<br />
+ <i>returns the current value </i><br />
+ bool <code>isValid</code> () const<br />
+ <i>returns true if the </i><code>Quote</code> holds a valid value</p>
+<h3>Protected Member Functions</h3>
+<pre><code>void performCalculations () const
+Protected Attributes</code></pre>
+<p> <code>Real</code> <code>impliedStdev_</code> </p>
+<p> <code>Real</code> <code>strike_</code> </p>
+<p> <code>Real</code> <code>accuracy_</code> </p>
+<p> <code>Natural</code> <code>maxIter_</code> </p>
+<p> <code>Handle</code>&lt; <code>Quote</code> &gt; <code>forward_</code> </p>
+<p> <code>Handle</code>&lt; <code>Quote</code> &gt; <code>callPrice_</code> </p>
+<p> <code>Handle</code>&lt; <code>Quote</code> &gt; <code>putPrice_</code></p>
+<h2>Detailed Description</h2>
+<p>quote for the Eurodollar-future implied standard deviation</p>
+<h2>Member Function Documentation</h2>
+<h3>void performCalculations () const [protected, virtual]</h3>
+<p>This method must implement any calculations which must be (re)done in order to calculate the desired results. </p>
+<p> Implements <code>LazyObject</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

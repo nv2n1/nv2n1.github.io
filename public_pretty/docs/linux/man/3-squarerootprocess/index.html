@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>squarerootprocess(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::SquareRootProcess – Square-root process class.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-squarerootprocess/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>squarerootprocess(3)</h1>
+
+
+
+
+
+<p>QuantLib::SquareRootProcess &#8211; Square-root process class. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/processes/squarerootprocess.hpp&gt; </p>
+<p> Inherits <code>QuantLib::StochasticProcess1D</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>SquareRootProcess</code> (Real b, Real a, <code>Volatility</code> sigma, Real x0=0.0, const boost::shared_ptr&lt; <code>discretization</code> &gt; &amp;d=boost::shared_ptr&lt; <code>discretization</code> &gt;(new <code>EulerDiscretization</code>)) </p>
+<p> <code>StochasticProcess interface</code> </p>
+<p> Real <code>x0</code> () const<br />
+ <i>returns the initial value of the state variable </i><br />
+ Real <code>drift</code> (Time t, Real x) const<br />
+ <i>returns the drift part of the equation, i.e. $ mu(t, x_t) $ </i><br />
+ Real <code>diffusion</code> (Time t, Real x) const<br />
+ <i>returns the diffusion part of the equation, i.e. $ igma(t, x_t) $ </i></p>
+<h2>Detailed Description</h2>
+<p>Square-root process class. </p>
+<p> This class describes a square-root process governed by [ dx = a (b &#8211; x_t) dt + igma qrt{x_t} dW_t. ] </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

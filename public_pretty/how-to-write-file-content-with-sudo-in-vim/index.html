@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Save a File in Vim Without Restarting with sudo - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-write-file-content-with-sudo-in-vim/">
+  <meta name="description" content="You opened a system config file in Vim without sudo, made changes, and hit :w to save. Permission denied. Retyping everything isn’t happening.
+The Solution: :w …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Save a File in Vim Without Restarting with sudo">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-write-file-content-with-sudo-in-vim/">
+  <meta property="og:description" content="You opened a system config file in Vim without sudo, made changes, and hit :w to save. Permission denied. Retyping everything isn’t happening.
+The Solution: :w …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/web-development/">Web Development</a>
+        </nav>
+        
+        <h1>How to Save a File in Vim Without Restarting with sudo</h1>
+        <time class="post-date" datetime="2019-03-23T11:20:41Z">March 23, 2019</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>You opened a system config file in Vim without sudo, made changes, and hit <code>:w</code> to save. Permission denied. Retyping everything isn’t happening.</p>
+<h2 id="the-solution-w-sudo-tee-">The Solution: <code>:w !sudo tee %</code></h2>
+<p>From Vim’s normal mode, type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">w</span> <span class="p">!</span><span class="nx">sudo</span> <span class="nx">tee</span> %
+</span></span></code></pre></div><p>This pipes your buffer through <code>tee</code> running as root:</p>
+<ul>
+<li><code>:w</code> — write the current buffer</li>
+<li><code>!</code> — pipe to an external command</li>
+<li><code>sudo tee</code> — execute tee with root privileges</li>
+<li><code>%</code> — current filename</li>
+</ul>
+<p>Vim sends your buffer to <code>tee</code> via stdin, <code>tee</code> writes it to disk as root, and you’re done. You’ll be prompted for your sudo password if needed.</p>
+<h2 id="handling-the-reload-prompt">Handling the Reload Prompt</h2>
+<p>After the write succeeds, Vim detects that the file changed on disk:</p>
+<pre><code>WARNING: The file has been changed since reading it!!!
+Do you really want to write to it anyway? (y/n)
+</code></pre>
+<p>Press <code>y</code> to proceed. Then:</p>
+<pre><code>[O]k, (L)oad File, (I)gnore:
+</code></pre>
+<ul>
+<li><code>L</code> — reload the file from disk (recommended)</li>
+<li><code>I</code> — keep your buffer without reloading (use if you want to verify before reloading)</li>
+</ul>
+<p>Your undo history stays intact. You don’t lose your edits or have to reopen the file.</p>
+<h2 id="why-not-just-quit-and-reopen">Why Not Just Quit and Reopen?</h2>
+<p>Some people suggest <code>:q!</code>, then <code>sudo vim file</code>, then retypng everything. Don’t do that. Using <code>:w !sudo tee %</code> keeps your undo history, avoids reopening the file entirely, and handles the permission issue transparently.</p>
+<h2 id="practical-example">Practical Example</h2>
+<p>You’re editing <code>/etc/hosts</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim /etc/hosts
+</span></span></code></pre></div><p>You add a local hostname entry and try to save. Vim blocks you:</p>
+<pre><code>E45: 'readonly' option is set (add ! to override)
+</code></pre>
+<p>Instead of forcing a write with <code>:w!</code> (which still fails without privileges), use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">w</span> <span class="p">!</span><span class="nx">sudo</span> <span class="nx">tee</span> %
+</span></span></code></pre></div><p>Enter your sudo password at the prompt. Vim asks if you want to reload the file from disk. Press <code>L</code> to confirm the write succeeded.</p>
+<h2 id="preserving-file-permissions-and-ownership">Preserving File Permissions and Ownership</h2>
+<p>The <code>tee</code> command writes with your shell’s umask, which may not match the original file’s permissions. Check before you start:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l /etc/hosts
+</span></span></code></pre></div><p>After saving with <code>tee</code>, restore permissions if needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chmod <span class="m">644</span> /etc/hosts
+</span></span><span class="line"><span class="cl">sudo chown root:root /etc/hosts
+</span></span></code></pre></div><p>For repeated edits to the same file, it’s cleaner to just start with <code>sudo vim</code> from the beginning.</p>
+<h2 id="binary-files">Binary Files</h2>
+<p>The <code>:w !sudo tee %</code> method works for text files. For binary files, use <code>sudo vim</code> from the start, or write with <code>dd</code> instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">w</span> <span class="p">!</span><span class="nx">sudo</span> <span class="nx">dd</span> <span class="nx">of</span><span class="p">=</span>%
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>“sudo: no password available”</strong></p>
+<p>You need sudoers access and a terminal that can receive password prompts. SSH sessions sometimes don’t allocate a TTY. Use <code>ssh -t user@host</code> to force TTY allocation. Verify sudoers access with <code>sudo -v</code> before opening Vim.</p>
+<p><strong>Wrong permissions after saving</strong></p>
+<p><code>tee</code> creates files with default umask permissions. Check the result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -l /etc/hosts
+</span></span></code></pre></div><p>Use <code>sudo chmod</code> to fix if needed.</p>
+<p><strong>“E492: Not an editor command: w”</strong></p>
+<p>You’re in insert mode. Press <code>Escape</code> first, then type the command.</p>
+<p><strong>Binary file corruption</strong></p>
+<p>Use <code>sudo vim</code> from the start for binary files, not this method.</p>
+<h2 id="modern-alternatives">Modern Alternatives</h2>
+<p><strong>sudoedit</strong></p>
+<p>The standard tool designed for exactly this scenario:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudoedit /etc/hosts
+</span></span></code></pre></div><p>It handles permissions transparently and opens your <code>$EDITOR</code> automatically. The downside: it creates a temporary copy, which can cause issues with tools that monitor the original file.</p>
+<p><strong>Neovim with suda.vim</strong></p>
+<p>Neovim users often prefer the suda.vim plugin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">e</span> <span class="nx">suda</span>:<span class="sr">//</span>%
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">w</span>
+</span></span></code></pre></div><p>This handles the reload automatically and feels more native to the workflow.</p>
+<p><strong>eunuchs.vim</strong></p>
+<p>If you use the eunuchs.vim plugin:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">e</span> <span class="nx">sudo</span>:<span class="sr">/etc/</span><span class="nx">hosts</span>
+</span></span></code></pre></div><p>It transparently handles sudo writes without manual tee commands. For one-off edits, the built-in approach is faster.</p>
+<p><strong>Just start with sudo</strong></p>
+<p>For repeated edits to system files, the simplest approach is standard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /path/to/file
+</span></span></code></pre></div><p>This avoids the whole permission dance. It’s what sysadmins do when editing multiple config files in a session.</p>
+<h2 id="why-vim-for-system-administration">Why Vim for System Administration</h2>
+<p>Vim and Neovim remain essential for sysadmin work because they work everywhere SSH reaches, require no heavy dependencies, and integrate seamlessly with shell commands and scripting. The ability to pipe buffers to external commands (<code>:w !cmd</code>) and read command output (<code>:read !cmd</code>) enables workflows that graphical editors make difficult. Modern Neovim adds LSP support for infrastructure-as-code, competitive with VS Code, while staying lightweight over high-latency connections.</p>
+<p>The <code>:w !sudo tee %</code> trick is simple, but it exemplifies Vim’s design philosophy: composability, external command integration, and minimal overhead.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

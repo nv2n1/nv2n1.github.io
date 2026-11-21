@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usbguard-daemon-conf(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-usbguard-daemon-conf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>usbguard-daemon-conf(5)</h1>
+
+
+
+
+
+<p>usbguard-daemon.conf &ndash; USBGuard daemon configuration file</p>
+<h2>Description</h2>
+<p>The usbguard-daemon.conf file is loaded by the USBGuard daemon after it parses its command-line options and is used to configure runtime parameters of the daemon. The default search path is /etc/usbguard/usbguard-daemon.conf. It may be overridden using the -c command-line option, see <a HREF="/docs/linux/man/8-usbguard-daemon/">usbguard-daemon</a>(8) for further details.</p>
+<h2>Options</h2>
+<dl><dt>RuleFile=&lt;path&gt;
+</dt><dd>The USBGuard daemon will use this file to load the policy rule set from it and to write new rules received via the IPC interface.
+</dd><dl><dd></dd></dl><dt>IPCAllowedUsers=&lt;username&gt;&nbsp;<wbr>[&lt;username&gt;&nbsp;<wbr>...]
+</dt><dd>A space delimited list of usernames that the daemon will accept IPC connections from.
+</dd><dl><dd></dd></dl><dt>IPCAllowedGroups=&lt;groupname&gt;&nbsp;<wbr>[&lt;groupname&gt;&nbsp;<wbr>...]
+</dt><dd>A space delimited list of groupnames that the daemon will accept IPC connections from.
+</dd><dl><dd></dd></dl></dl>
+<h2>Security Considerations</h2>
+<p>The daemon provides the USBGuard public IPC interface. Depending on your distribution defaults, the access to this interface is limited to a certain group or a specific user only. Please set either the IPCAllowedUsers or IPCAllowedGroups options to limit access to the IPC interface. Do not leave the ACL unconfigured as that will expose the IPC interface to all local users and will allow them to manipulate the authorization state of USB devices and modify the USBGuard policy.</p>
+<h2>Bugs</h2>
+<p>If you find a bug in this software or if you&rsquo;d like to request a feature to be implemented, please file a ticket at &lt;<a rel="nofollow" HREF="https://github.com/dkopecek/usbguard/issues/new"><a href="https://github.com/dkopecek/usbguard/issues/new">https://github.com/dkopecek/usbguard/issues/new</a></a>&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright © 2015 Red Hat, Inc. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" HREF="http://gnu.org/licenses/gpl.html"><a href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a></a>&gt;. This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/8-usbguard-daemon/">usbguard-daemon</a>(8), <a HREF="/docs/linux/man/5-usbguard-rules-conf/">usbguard-rules.conf</a>(5)</p>
+<h2>Authors</h2>
+<p>Daniel Kopeček &lt;dkopecek [at] redhat.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

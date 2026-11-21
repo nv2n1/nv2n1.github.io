@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tv_grab_uk_bleb(1) · Linux Manual Pages</title>
+<meta name="description" content="tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from bleb.org">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tv_grab_uk_bleb/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tv_grab_uk_bleb(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tv_grab_uk_bleb &#8211; Grab TV listings for the United Kingdom, from bleb.org </p>
+<h2>SYNOPSIS</h2>
+<p> tv_grab_uk_bleb &#8211;help </p>
+<p> tv_grab_uk_bleb [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>
+<p> tv_grab_uk_bleb [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;quiet]<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;days N]&nbsp;<wbr>[&#8211;offset N]</p>
+<h2>DESCRIPTION</h2>
+<p> Output <font SIZE="-1">TV</font> and radio listings in <font SIZE="-1">XMLTV</font> format for many stations available in Britain. The data comes from the bleb.org web site.</p>
+<h2>USAGE</h2>
+<p> First you must run <code>tv_grab_uk_bleb &#8211;configure</code> to choose which stations you want to receive. Then running <code>tv_grab_uk_bleb</code> with no arguments will get about a week&lt;39&gt;s listings for the stations you chose. </p>
+<p> <code>&#8211;configure</code> Prompt for which stations to download and write the configuration file. </p>
+<p> <code>&#8211;gui </code><font SIZE="-1"><code>OPTION</code></font> Use this option to enable a graphical interface to be used. <font SIZE="-1">OPTION</font> may be &#8216;Tk&#8217;, or left blank for the best available choice. Additional allowed values of <font SIZE="-1">OPTION</font> are &#8216;Term&#8217; for normal terminal output (default) and &#8216;TermNoProgressBar&#8217; to disable the use of Term::ProgressBar. </p>
+<p> <code>&#8211;config-file </code><font SIZE="-1"><code>FILE</code></font> Set the name of the configuration file, the default is <code>~/.xmltv/tv_grab_uk_bleb.conf</code>. This is the file written by <code>&#8211;configure</code> and read when grabbing. </p>
+<p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> When grabbing, write output to <font SIZE="-1">FILE</font> rather than standard output. </p>
+<p> <code>&#8211;days N</code> When grabbing, grab N days rather than as many as possible. </p>
+<p> <code>&#8211;offset N</code> Start grabbing at today + N. N may be negative. </p>
+<p> <code>&#8211;quiet</code> Suppress the progress messages normally written to standard error. </p>
+<p> <code>&#8211;version</code> Show the version of the grabber. </p>
+<p> <code>&#8211;help</code> Print a help message and exit.</p>
+<h2>SEE ALSO</h2>
+<p> <i>xmltv</i>(5), &lt;<a rel="nofollow" href="http://www.bleb.org/">http://www.bleb.org/</a>&gt;</p>
+<h2>AUTHOR</h2>
+<p> Andy Balaam, axis3x3 [at] users.sourceforge.net </p>
+<p> Icon URLs collated by Lawrence, MagicLGH [at] aol.com </p>
+<p> Based on tv_grab_nl_wolf by Ed Avis </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

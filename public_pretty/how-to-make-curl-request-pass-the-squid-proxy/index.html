@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squid Proxy Blocking curl POST Requests With Expect: 100-continue - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-make-curl-request-pass-the-squid-proxy/">
+  <meta name="description" content="When sending POST requests through a Squid proxy with curl, you may encounter a proxy error that blocks the request, even though the same request works fine …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Squid Proxy Blocking curl POST Requests With Expect: 100-continue">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-make-curl-request-pass-the-squid-proxy/">
+  <meta property="og:description" content="When sending POST requests through a Squid proxy with curl, you may encounter a proxy error that blocks the request, even though the same request works fine …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>Squid Proxy Blocking curl POST Requests With Expect: 100-continue</h1>
+        <time class="post-date" datetime="2018-03-24T11:47:11Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When sending POST requests through a Squid proxy with curl, you may encounter a proxy error that blocks the request, even though the same request works fine with GET. The issue typically appears as:</p>
+<pre><code>ERROR
+The requested URL could not be retrieved
+</code></pre>
+<p>The root cause is the <code>Expect: 100-continue</code> header that curl automatically adds to POST requests with a body. Many Squid proxy configurations don’t support this header, causing the request to be rejected before it even reaches your destination server.</p>
+<h2 id="why-get-works-but-post-doesnt">Why GET works but POST doesn’t</h2>
+<p>When you switch from POST to GET:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># This fails (POST with body)</span>
+</span></span><span class="line"><span class="cl">curl http://example.com/send --data-urlencode <span class="s2">&#34;data=hello&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This works (GET with query string)</span>
+</span></span><span class="line"><span class="cl">curl -G http://example.com/send --data-urlencode <span class="s2">&#34;data=hello&#34;</span>
+</span></span></code></pre></div><p>The difference is that GET requests don’t include the <code>Expect: 100-continue</code> header. curl adds this header to POST requests with a body to ask the server “should I send this large request?” before transmitting it. Squid doesn’t handle this negotiation properly and blocks the request.</p>
+<h2 id="solution-remove-the-expect-header">Solution: Remove the Expect header</h2>
+<p>The simplest fix is to explicitly remove the <code>Expect</code> header from your curl command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://example.com/send -H <span class="s2">&#34;Expect:&#34;</span> --data-urlencode <span class="s2">&#34;data=hello&#34;</span>
+</span></span></code></pre></div><p>The empty <code>Expect:</code> header tells curl to remove that header entirely from the request.</p>
+<h2 id="using-curl-options-instead-of--h">Using curl options instead of -H</h2>
+<p>For better clarity, you can also use curl’s built-in option:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://example.com/send --data-urlencode <span class="s2">&#34;data=hello&#34;</span> -H <span class="s2">&#34;Expect:&#34;</span>
+</span></span></code></pre></div><p>Or if you want to handle multiple headers, keep them grouped:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl http://example.com/send <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --data-urlencode <span class="s2">&#34;data=hello&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Expect:&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;User-Agent: MyApp/1.0&#34;</span>
+</span></span></code></pre></div><h2 id="in-libcurl-c-code">In libcurl C code</h2>
+<p>If you’re using libcurl in your application:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">CURL</span> <span class="o">*</span><span class="n">curl</span> <span class="o">=</span> <span class="nf">curl_easy_init</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">curl_slist</span> <span class="o">*</span><span class="n">headers</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Remove the Expect header
+</span></span></span><span class="line"><span class="cl"><span class="n">headers</span> <span class="o">=</span> <span class="nf">curl_slist_append</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="s">&#34;Expect:&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="n">headers</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Set your POST data
+</span></span></span><span class="line"><span class="cl"><span class="nf">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="s">&#34;data=hello&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="s">&#34;http://example.com/send&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Perform the request
+</span></span></span><span class="line"><span class="cl"><span class="nf">curl_perform</span><span class="p">(</span><span class="n">curl</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Clean up
+</span></span></span><span class="line"><span class="cl"><span class="nf">curl_slist_free_all</span><span class="p">(</span><span class="n">headers</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nf">curl_easy_cleanup</span><span class="p">(</span><span class="n">curl</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="in-python-with-requests">In Python with requests</h2>
+<p>If you’re using the Python <code>requests</code> library, you can set headers similarly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;Expect&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;http://example.com/send&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;data&#34;</span><span class="p">:</span> <span class="s2">&#34;hello&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">proxies</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;http&#34;</span><span class="p">:</span> <span class="s2">&#34;http://proxy-server:3128&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>Or with urllib:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">urllib.request</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;http://example.com/send&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span><span class="o">=</span><span class="sa">b</span><span class="s2">&#34;data=hello&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;Expect&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">proxy_handler</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;http&#34;</span><span class="p">:</span> <span class="s2">&#34;http://proxy-server:3128&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">opener</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">proxy_handler</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="additional-squid-proxy-configuration-considerations">Additional Squid proxy configuration considerations</h2>
+<p>If you control the Squid proxy, you can also configure it to handle Expect headers properly. Add this to your <code>squid.conf</code>:</p>
+<pre><code># Allow 100-continue for proper handling
+ignore_expect_100 off
+</code></pre>
+<p>However, for most users on corporate networks, modifying proxy settings isn’t an option, so removing the header from your client is the practical solution.</p>
+<h2 id="when-to-use-this-workaround">When to use this workaround</h2>
+<p>This fix is necessary when:</p>
+<ul>
+<li>You’re behind a corporate or ISP Squid proxy</li>
+<li>POST requests are being blocked but GET requests work</li>
+<li>You see 407 Proxy Authentication Required or similar errors with POST</li>
+<li>You don’t have control over the proxy configuration</li>
+</ul>
+<p>The <code>Expect:</code> header removal has no negative side effects for most modern servers and is safe to apply universally to requests going through proxies.</p>
+<h2 id="2026-comprehensive-guide-best-practices">2026 Comprehensive Guide: Best Practices</h2>
+<p>This extended guide covers Squid Proxy Blocking curl POST Requests With Expect: 100-continue with advanced techniques and troubleshooting tips for 2026. Following modern best practices ensures reliable, maintainable, and secure systems.</p>
+<h2 id="advanced-implementation-strategies">Advanced Implementation Strategies</h2>
+<p>For complex deployments, consider these approaches: Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment. Always document your custom configurations and maintain separate development, staging, and production environments.</p>
+<h2 id="security-and-hardening">Security and Hardening</h2>
+<p>Security is foundational to all system administration. Implement layered defense: network segmentation, host-based firewalls, intrusion detection, and regular security audits. Use SSH key-based authentication instead of passwords. Encrypt sensitive data at rest and in transit. Follow the principle of least privilege for access controls.</p>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<ul>
+<li>Monitor resources continuously with tools like top, htop, iotop</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Use caching strategically: application caches, database query caching, CDN for static assets</li>
+<li>Optimize database queries with proper indexing and query analysis</li>
+<li>Implement connection pooling for network services</li>
+</ul>
+<h2 id="troubleshooting-methodology">Troubleshooting Methodology</h2>
+<p>Follow a systematic approach to debugging: reproduce the issue, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found. For intermittent issues, add monitoring and alerting. Use verbose modes and debug flags when needed.</p>
+<h2 id="related-tools-and-utilities">Related Tools and Utilities</h2>
+<p>These tools complement the techniques covered in this article:</p>
+<ul>
+<li>System monitoring: htop, vmstat, iostat, dstat for resource tracking</li>
+<li>Network analysis: tcpdump, wireshark, netstat, ss for connectivity debugging</li>
+<li>Log management: journalctl, tail, less for log analysis</li>
+<li>File operations: find, locate, fd, tree for efficient searching</li>
+<li>Package management: dnf, apt, rpm, zypper for package operations</li>
+</ul>
+<h2 id="integration-with-modern-workflows">Integration with Modern Workflows</h2>
+<p>Modern operations emphasize automation, observability, and version control. Use orchestration tools like Ansible, Terraform, or Kubernetes for infrastructure. Implement centralized logging and metrics. Maintain comprehensive documentation for all systems and processes.</p>
+<h2 id="quick-reference-summary">Quick Reference Summary</h2>
+<p>This comprehensive guide provides extended knowledge for Squid Proxy Blocking curl POST Requests With Expect: 100-continue. For specialized requirements, refer to official documentation. Practice in test environments before production deployment. Keep backups of critical configurations and data.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

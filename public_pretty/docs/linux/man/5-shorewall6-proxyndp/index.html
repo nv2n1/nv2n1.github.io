@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shorewall6-proxyndp(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-shorewall6-proxyndp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>shorewall6-proxyndp(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>proxyndp - Shorewall6 Proxy NDP file</p>
+<h2>Synopsis</h2>
+<dl><dt> <b>/etc/shorewall6/proxyndp</b></dt></dl>
+<h2>Description</h2>
+<dd>This file was added in Shorewall 4.4.16 and is used to define Proxy NDP. There is one entry in this file for each IPv6 address to be proxied. 
+<p>The columns in the file are as follows.</p>
+<p><b>ADDRESS</b> - <i>address</i></p>
+</dd><dl><dd>IPv6 Address.</dd></dl>
+<p><b>INTERFACE</b> - <i>interface</i> (Optional)</p>
+<dl><dd>Local interface where system with the ip address in ADDRESS is connected. Only required when the HAVEROUTE column is left empty or is set to <b>no</b> or <b>No</b>.</dd></dl>
+<p><b>EXTERNAL</b> - <i>interface</i></p>
+<dl><dd>External Interface to be used to access this system from the Internet.</dd></dl>
+<p><b>HAVEROUTE</b> - [<b>-</b>|<b>Yes</b>|<b>No</b>]</p>
+<dl><dd>If there is already a route from the firewall to the host whose address is given, enter <b>Yes</b> or <b>yes</b> in this column. Otherwise, enter <b>no</b> or <b>No</b> or leave the column empty and Shorewall will add the route for you. If Shorewall6 adds the route, its persistence depends on the value of the<b>PERSISTENT</b> column contains <b>Yes</b>; otherwise, <b>shorewall6 stop</b> or <b>shorewall clear6</b> will delete the route.</dd></dl>
+<p><b>PERSISTENT</b> - [<b>-</b>|<b>Yes</b>|<b>No</b>]</p>
+<dl><dd>If HAVEROUTE is <b>No</b> or <b>no</b>, then the value of this column determines if the route added by Shorewall persists after a <b>shorewall6 stop</b> or a <b>shorewall6 clear</b>. If this column contains <b>Yes</b> or <b>yes</b> then the route persists; If the column is empty or contains <b>No</b> or <b>no</b> then the route is deleted by <b>shorewall6 stop</b> or <b>shorewall6 clear</b>.</dd></dl>
+<h2>Example</h2>
+<p>Example 1:</p>
+<dl><dd>Host with IPv6 2001:470:b:227::44 is connected to interface eth1 and we want hosts attached via eth0 to be able to access it using that address. 
+</dd><dl><dd><pre> #ADDRESS INTERFACE EXTERNAL
+ 2001:470:b:227::44 eth1 eth0</pre></dd></dl></dl>
+<h2>Files</h2>
+<p>/etc/shorewall6/proxyndp</p>
+<h2>See Also</h2>
+<p>m[blue]<b><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs"><a href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></a></b>m[]<font SIZE="-2">[1]</font></p>
+<p><a HREF="/docs/linux/man/8-shorewall6/">shorewall6</a>(8), <a HREF="/docs/linux/man/5-shorewall6-accounting/">shorewall6-accounting</a>(5), <a HREF="/docs/linux/man/5-shorewall6-actions/">shorewall6-actions</a>(5), shorewall6-blacklist(5), <a HREF="/docs/linux/man/5-shorewall6-exclusion/">shorewall6-exclusion</a>(5), <a HREF="/docs/linux/man/5-shorewall6-hosts/">shorewall6-hosts</a>(5), <a HREF="/docs/linux/man/5-shorewall6-interfaces/">shorewall6-interfaces</a>(5), <a HREF="/docs/linux/man/5-shorewall6-maclist/">shorewall6-maclist</a>(5), <a HREF="/docs/linux/man/5-shorewall6-nesting/">shorewall6-nesting</a>(5), <a HREF="/docs/linux/man/5-shorewall6-netmap/">shorewall6-netmap</a>(5),<a HREF="/docs/linux/man/5-shorewall6-params/">shorewall6-params</a>(5), <a HREF="/docs/linux/man/5-shorewall6-policy/">shorewall6-policy</a>(5), <a HREF="/docs/linux/man/5-shorewall6-providers/">shorewall6-providers</a>(5), <a HREF="/docs/linux/man/5-shorewall6-rtrules/">shorewall6-rtrules</a>(5), shorewall6-routestopped(5), <a HREF="/docs/linux/man/5-shorewall6-rules/">shorewall6-rules</a>(5), <a HREF="/docs/linux/man/5-shorewall6-conf/">shorewall6.conf</a>(5), <a HREF="/docs/linux/man/5-shorewall6-secmarks/">shorewall6-secmarks</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcclasses/">shorewall6-tcclasses</a>(5), <a HREF="/docs/linux/man/5-shorewall6-tcdevices/">shorewall6-tcdevices</a>(5), <a HREF="/docs/linux/man/5-shorewall6-mangle/">shorewall6-mangle</a>(5), shorewall6-tos(5), <a HREF="/docs/linux/man/5-shorewall6-tunnels/">shorewall6-tunnels</a>(5), <a HREF="/docs/linux/man/5-shorewall6-zones/">shorewall6-zones</a>(5)</p>
+<h2>Notes</h2>
+<dl><dt> 1.
+</dt><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a>
+</dd><dl><dd><a rel="nofollow" HREF="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

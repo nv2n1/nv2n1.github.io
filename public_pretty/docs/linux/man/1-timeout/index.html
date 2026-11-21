@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>timeout(1) · Linux Manual Pages</title>
+<meta name="description" content="timeout – run a command with a time limit">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-timeout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>timeout(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> timeout &#8211; run a command with a time limit </p>
+<h2>SYNOPSIS</h2>
+<p> <code>timeout</code> [<i>,OPTION/</i>] <i>,DURATION COMMAND /</i>[<i>,ARG/</i>]&#8230;<br />
+ <code>timeout</code> [<i>,OPTION/</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Start COMMAND, and kill it if still running after DURATION. </p>
+<p> Mandatory arguments to long options are mandatory for short options too.</p>
+<dl>
+<dt> <code>&#8211;preserve-status</code></dt>
+<dd>exit with the same status as COMMAND, even when the</dd>
+<dt>
+</dt><dd> command times out</dd>
+<dt> <code>&#8211;foreground</code></dt>
+<dd>when not running timeout directly from a shell prompt,</dd>
+<dt>
+</dt><dd> allow COMMAND to read from the TTY and get TTY signals; in this mode, children of COMMAND will not be timed out</dd>
+<dt> <code>-k</code>, <code>&#8211;kill-after</code>=<i>,DURATION/</i></dt>
+<dd>also send a KILL signal if COMMAND is still running</dd>
+<dt>
+</dt><dd> this long after the initial signal was sent</dd>
+<dt> <code>-s</code>, <code>&#8211;signal</code>=<i>,SIGNAL/</i></dt>
+<dd>specify the signal to be sent on timeout;</dd>
+<dt>
+</dt><dd> SIGNAL may be a name like &#8216;HUP&#8217; or a number; see &#8216;kill <code>-l</code>&#8216; for a list of signals</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> diagnose to stderr any signal sent upon timeout</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
+<p> DURATION is a floating point number with an optional suffix: &#8216;s&#8217; for seconds (the default), &#8216;m&#8217; for minutes, &#8216;h&#8217; for hours or &#8216;d&#8217; for days. A duration of 0 disables the associated timeout. </p>
+<p> If the command times out, and <code>&#8211;preserve-status</code> is not set, then exit with status 124. Otherwise, exit with the status of COMMAND. If no signal is specified, send the TERM signal upon timeout. The TERM signal kills any process that does not block or catch that signal. It may be necessary to use the KILL (9) signal, since this signal cannot be caught, in which case the exit status is 128+9 rather than 124.</p>
+<h2>BUGS</h2>
+<p> Some platforms don&#8217;t currently support timeouts beyond the year 2038.</p>
+<h2>AUTHOR</h2>
+<p> Written by Padraig Brady.</p>
+<h2>REPORTING BUGS</h2>
+<p> GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-kill/">kill</a>(1) </p>
+<p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/timeout">https://www.gnu.org/software/coreutils/timeout</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) timeout invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

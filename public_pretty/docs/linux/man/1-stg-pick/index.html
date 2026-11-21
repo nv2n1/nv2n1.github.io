@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stg-pick(1) · Linux Manual Pages</title>
+<meta name="description" content="stg-pick – Import a patch from a different branch or a commit object">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-stg-pick/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>stg-pick(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> stg-pick &#8211; Import a patch from a different branch or a commit object </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+stg pick[options][--]([&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]) | &lt;commit&gt;
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Import one or more patches from a different branch or a commit object into the current series. By default, the name of the imported patch is used as the name of the current patch. It can be overridden with the <i>&#8211;name</i> option. A commit object can be reverted with the <i>&#8211;revert</i> option. The log and author information are those of the commit object.</p>
+<h2>OPTIONS</h2>
+<p> -n NAME, &#8211;name NAME</p>
+<dl>
+<dt>
+</dt><dd> Use NAME as the patch name.</dd></dl>
+<p> -B REF-BRANCH, &#8211;ref-branch REF-BRANCH</p>
+<dl>
+<dt>
+</dt><dd> Pick patches from BRANCH.</dd></dl>
+<p> -r, &#8211;revert</p>
+<dl>
+<dt>
+</dt><dd> Revert the given commit object.</dd></dl>
+<p> -p COMMITID, &#8211;parent COMMITID</p>
+<dl>
+<dt>
+</dt><dd> Use COMMITID as parent.</dd></dl>
+<p> -x, &#8211;expose</p>
+<dl>
+<dt>
+</dt><dd> Append the imported commit id to the patch log.</dd></dl>
+<p> &#8211;fold</p>
+<dl>
+<dt>
+</dt><dd> Fold the commit object into the current patch.</dd></dl>
+<p> &#8211;update</p>
+<dl>
+<dt>
+</dt><dd> Like fold but only update the current patch files.</dd></dl>
+<p> -f FILE, &#8211;file FILE</p>
+<dl>
+<dt>
+</dt><dd> Only fold the given file (can be used multiple times).</dd></dl>
+<p> &#8211;unapplied</p>
+<dl>
+<dt>
+</dt><dd> Keep the patch unapplied.</dd></dl>
+<h2>STGIT</h2>
+<p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

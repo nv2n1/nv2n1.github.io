@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>getschema(1) · Linux Manual Pages</title>
+<meta name="description" content="getSchema – Script to download DMTF CIM Schema for Small-Footprint CIM Broker (sfcb)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-getschema/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>getschema(1)</h1>
+
+
+
+
+
+<p>getSchema &#8211; Script to download DMTF CIM Schema for Small-Footprint CIM Broker (sfcb)</p>
+<h2>Synopsis</h2>
+<p><code>getSchema</code> [<code>-f</code>] <i>schemadir</i></p>
+<h2>Description</h2>
+<p>getSchema is a small script to automatically downlaod and install the latest CIM Schema from the DMTF website. The CIM Schema is required by the Small-Footprint CIM Broker (sfcb) to be able to install and register new classes. getSchema uses curl to fetch the CIM Schema tarball.</p>
+<h2>Options</h2>
+<p>Supported command line options are:</p>
+<dl>
+<dt><i>schemadir</i></dt>
+<dd>Path to download the CIM Schema tarball and extract all the CIM classes. Default is <i>/usr/share/sfcb</i></dd>
+<dt><code>-f</code></dt>
+<dd>Force option. Without this option you will be prompted if an existing schema is already found in the target <i>schemadir</i>. Setting this option will reinstall the new CIM Schema without prompting.</dd></dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/usr/share/sfcb/getSchema.sh</i></dt>
+<dd>The getSchema script.</dd>
+<dt><i>/usr/share/sfcb/CIM/CIM_Schema.mof</i></dt>
+<dd>CIM Schema</dd></dl>
+<h2>Prequisites</h2>
+<p>Requires curl</p>
+<h2>Author</h2>
+<p>Adrian Schuur &lt;schuur [at] de.ibm.com&gt;</p>
+<h2>Bugs</h2>
+<p>The SBLIM project maintains a mailing list to which you should direct all questions regarding sfcb, sfcc, wbemcli, or any of the SBLIM providers. To subscribe to this mailing list visit</p>
+<dl>
+<dd><a rel="nofollow" href="http://lists.sourceforge.net/lists/listinfo/sblim-issues">http://lists.sourceforge.net/lists/listinfo/sblim-issues</a></dd></dl>
+<p> The SBLIM Project Bug tracking page can be found at</p>
+<dl>
+<dd><a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=128809">http://sourceforge.net/tracker/?group_id=128809</a>&amp;atid=712784</dd></dl>
+<h2>Copyright</h2>
+<p>(C) Copyright IBM Corp. 2004, 2005</p>
+<h2>Availability</h2>
+<p>The Small-Footprint CIM Broker (sfcb) is a part of the SBLIM project. The most recent version is available on the web at</p>
+<dl>
+<dd><a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-sfcbd/">sfcbd</a></code>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

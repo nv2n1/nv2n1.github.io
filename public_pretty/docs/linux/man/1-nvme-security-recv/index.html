@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nvme-security-recv(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nvme-security-recv/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nvme-security-recv(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>nvme-security-recv - Security Recv command</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+nvme security - recv[&lt;device&gt;][--size = &lt;size&gt; | -x&lt;size&gt;]
+                    [--secp = &lt;security - protocol&gt; | -p&lt;security - protocol&gt;]
+                    [--spsp = &lt;protocol - specific&gt; | -s&lt;protocol - specific&gt;]
+                    [--nssf = &lt;nvme - specific&gt; | -N&lt;nvme - specific&gt;]
+                    [--tl = &lt;transfer - length&gt; | -t&lt;transfer - length&gt;]
+                    [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
+                    [-b | --raw - binary]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p>The Security Receive command transfers the status and data result of one or more Security Send commands that were previously submitted to the controller.</p>
+<p>The association between a Security Receive command and previous Security Send commands is dependent on the Security Protocol. The format of the data to be transferred is dependent on the Security Protocol. Refer to SPC-4 for Security Protocol details.</p>
+<p>Each Security Receive command returns the appropriate data corresponding to a Security Send command as defined by the rules of the Security Protocol. The Security Receive command data may not be retained if there is a loss of communication between the controller and host, or if a controller reset occurs.</p>
+<h2>OPTIONS</h2>
+<p>-n &lt;nsid&gt;, &ndash;namespace-id=&lt;nsid&gt;</p>
+<dl>
+<dt>
+</dt><dd> Target a specific namespace for this security command.</dd></dl>
+<p>-N &lt;nssf&gt;, &ndash;nssf=&lt;nssf&gt;</p>
+<dl>
+<dt>
+</dt><dd> NVMe Security Specific field. If using security protocol EAh assigned for NVMe use, the NVMe security specific field indicates which reply memory buffer target.</dd></dl>
+<p>-x &lt;size&gt;, &ndash;size=&lt;size&gt;</p>
+<dl>
+<dt>
+</dt><dd> Size of buffer to allocate. One success it will be printed to STDOUT.</dd></dl>
+<p>-p &lt;security-protocol&gt;, &ndash;secp=&lt;security-protocol&gt;</p>
+<dl>
+<dt>
+</dt><dd> Security Protocol: This field specifies the security protocol as defined in SPC-4. The controller shall fail the command with Invalid Parameter indicated if a reserved value of the Security Protocol is specified.</dd></dl>
+<p>-s &lt;security-protocol-specific&gt;, &ndash;spsp=&lt;security-protocol-specific&gt;</p>
+<dl>
+<dt>
+</dt><dd> SP Specific: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
+<p>-a &lt;allocation-length&gt;, &ndash;al=&lt;allocation-length&gt;</p>
+<dl>
+<dt>
+</dt><dd> Allocation Length: The value of this field is specific to the Security Protocol as defined in SPC-4.</dd></dl>
+<p>-b, &ndash;raw-binary</p>
+<dl>
+<dt>
+</dt><dd> Print the raw buffer to stdout. Defaults to print in hex.</dd></dl>
+<h2>EXAMPLES</h2>
+<p>No Examples</p>
+<h2>NVME</h2>
+<p>Part of the nvme-user suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

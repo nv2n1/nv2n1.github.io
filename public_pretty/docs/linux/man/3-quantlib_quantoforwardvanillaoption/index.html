@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_quantoforwardvanillaoption(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::QuantoForwardVanillaOption – Quanto version of a forward vanilla option.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_quantoforwardvanillaoption/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_quantoforwardvanillaoption(3)</h1>
+
+
+
+
+
+<p>QuantLib::QuantoForwardVanillaOption &#8211; Quanto version of a forward vanilla option. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/instruments/quantoforwardvanillaoption.hpp&gt; </p>
+<p> Inherits <code>QuantLib::ForwardVanillaOption</code>. </p>
+<h3>Public Types</h3>
+<p>typedef <code>ForwardVanillaOption::arguments</code> <code>arguments</code> </p>
+<p> typedef <code>QuantoOptionResults</code>&lt; <code>ForwardVanillaOption::results</code> &gt; <code>results</code> </p>
+<h3>Public Member Functions</h3>
+<p><code>QuantoForwardVanillaOption</code> (<code>Real</code> moneyness, const <code>Date</code> &amp;resetDate, const boost::shared_ptr&lt; <code>StrikedTypePayoff</code> &gt; &amp;, const boost::shared_ptr&lt; <code>Exercise</code> &gt; &amp;) </p>
+<p> void <code>fetchResults</code> (const PricingEngine::results *) const </p>
+<p> <code>greeks</code> </p>
+<p> <code>Real</code> <code>qvega</code> () const </p>
+<p> <code>Real</code> <code>qrho</code> () const </p>
+<p> <code>Real</code> <code>qlambda</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Quanto version of a forward vanilla option. </p>
+<h2>Member Function Documentation</h2>
+<h3>void fetchResults (const PricingEngine::results * r) const [virtual]</h3>
+<p>When a derived result structure is defined for an instrument, this method should be overridden to read from it. This is mandatory in case a pricing engine is used. </p>
+<p> Reimplemented from <code>ForwardVanillaOption</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

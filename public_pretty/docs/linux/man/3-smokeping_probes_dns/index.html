@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smokeping_probes_dns(3) · Linux Manual Pages</title>
+<meta name="description" content="Smokeping::probes::DNS – Name Service Probe for SmokePing">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-smokeping_probes_dns/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>smokeping_probes_dns(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Smokeping::probes::DNS &#8211; Name Service Probe for SmokePing </p>
+<h2>Synopsis</h2>
+<pre> *** Probes ***
+ +DNS
+ binary = /usr/bin/dig # mandatory
+ forks = 5
+ offset = 50%
+ step = 300
+ timeout = 15
+ # The following variables can be overridden in each target section
+ lookup = <a rel="nofollow" href="http://www.example.org">www.example.org</a>
+ pings = 5
+ server = ns1.someisp.net
+ # [...]
+ *** Targets ***
+ probe = DNS # if this should be the default probe
+ # [...]
+ + mytarget
+ # probe = DNS # if the default probe is something else
+ host = my.host
+ lookup = <a rel="nofollow" href="http://www.example.org">www.example.org</a>
+ pings = 5
+ server = ns1.someisp.net</pre>
+<h2>Description</h2>
+<p>Integrates dig as a probe into smokeping. The variable <code>binary</code> must point to your copy of the dig program. If it is not installed on your system yet, you should install bind-utils &gt;= 9.0.0. </p>
+<p> The Probe asks the given host n-times for it&#8217;s name. Where n is the amount specified in the config File.</p>
+<h2>Variables</h2>
+<p>Supported probe-specific variables:</p>
+<dl COMPACT>
+<dt>binary</dt>
+<dd>The location of your dig binary. </dd>
+<p> Example value: /usr/bin/dig </p>
+<p> This setting is mandatory.</p>
+<dt>forks</dt>
+<dd>Run this many concurrent processes at maximum </dd>
+<p> Example value: 5 </p>
+<p> Default value: 5</p>
+<dt>offset</dt>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<p> Example value: 50%</p>
+<dt>step</dt>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
+<p> Example value: 300</p>
+<dt>timeout</dt>
+<dd>How long a single &#8216;ping&#8217; takes at maximum </dd>
+<p> Example value: 15 </p>
+<p> Default value: 5</dl>
+<p> Supported target-specific variables:</p>
+<dl COMPACT>
+<dt>lookup</dt>
+<dd>Name of the host to look up in the dns. </dd>
+<p> Example value: <a rel="nofollow" href="http://www.example.org">www.example.org</a></p>
+<dt>pings</dt>
+<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
+<p> Example value: 5</p>
+<dt>server</dt>
+<dd>Name of the dns server to use. </dd>
+<p> Example value: ns1.someisp.net</dl>
+<h2>Authors</h2>
+<pre> Igor Petrovski &lt;pigor [at] myrealbox.com&gt;,
+ Carl Elkins &lt;carl [at] celkins.org.uk&gt;,
+ Andre Stolze &lt;stolze [at] uni-muenster.de&gt;,
+ Niko Tyni &lt;ntyni [at] iki.fi&gt;,
+ Chris Poetzel&lt;cpoetzel [at] anl.gov&gt;</pre>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

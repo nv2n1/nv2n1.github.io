@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grdvector(1) · Linux Manual Pages</title>
+<meta name="description" content="grdvector – Plot vector field from two component grids">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grdvector/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grdvector(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> grdvector &#8211; Plot vector field from two component grids</p>
+<h2>SYNOPSIS</h2>
+<p> <code>grdvector</code> <i>compx.nc</i> <i>compy.nc</i> <code>-J</code><i>parameters</i> [ ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>fill</i> ] [ [<code>x</code>]<i>dx</i>[/<i>dy</i>] ] [ ] [ ] [ ] [ ] [ <i>parameters</i> ] [ <i>region</i> ] [ [<code>i</code>|<code>l</code>]<i>scale</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
+<p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
+<p> <code>grdvector</code> reads two 2-D grid files which represents the <i>x</i>&#8211; and <i>y</i>-components of a vector field and produces a vector field plot by drawing vectors with orientation and length according to the information in the files. Alternatively, polar coordinate <i>r</i>, <i>theta</i> grids may be given instead.</p>
+<h2>REQUIRED ARGUMENTS</h2>
+<dl>
+<dt><i>compx.nc</i></dt>
+<dd> Contains the x-components of the vector field.</dd>
+<dt><i>compy.nc</i></dt>
+<dd> Contains the y-components of the vector field. (See GRID FILE FORMATS below.)</dd>
+<dt><code>-J</code><i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Select map projection.</dd></dl>
+<h2>OPTIONAL ARGUMENTS</h2>
+<dl>
+<dt><code>-A</code></dt>
+<dd> The grid files contain polar (r, theta) components instead of Cartesian (x, y) [Default is Cartesian components].</dd>
+<dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Set map boundary intervals.</dd>
+<dt><code>-C</code>[<i>cpt</i>]</dt>
+<dd> Use <i>cpt</i> to assign colors based on vector length. Alternatively, supply the name of a GMT color master CPT [rainbow] and let <code>grdvector</code> automatically determine a 16-level continuous CPT from the grid&#8217;s z-range. Yet another option is to specify -Ccolor1,color2[,color3,&#8230;] to build a linear continuous cpt from those colors automatically. In this case <i>color</i><code>n</code> can be a r/g/b triplet, a color name, or an HTML hexadecimal color (e.g. #aabbcc ).</dd>
+<dt><code>-G</code><i>fill</i></dt>
+<dd> Sets color or shade for vector interiors [Default is no fill].</dd>
+<dt><code>-I</code>[<code>x</code>]<i>dx</i>[/<i>dy</i>]</dt>
+<dd> Only plot vectors at nodes every <i>x_inc</i>, <i>y_inc</i> apart (must be multiples of original grid spacing). Append <code>m</code> for arc minutes or <code>s</code> for arc seconds. Alternatively, use <code>-Ix</code> to specify the multiples <i>multx</i>[/<i>multy</i>] directly [Default plots every node].</dd>
+<dt><code>-K</code> <i>(more &#8230;)</i></dt>
+<dd> Do not finalize the PostScript plot.</dd>
+<dt><code>-N</code></dt>
+<dd> Do NOT clip vectors at map boundaries [Default will clip].</dd>
+<dt><code>-O</code> <i>(more &#8230;)</i></dt>
+<dd> Append to existing PostScript plot.</dd>
+<dt><code>-P</code> <i>(more &#8230;)</i></dt>
+<dd> Select &quot;Portrait&quot; plot orientation.</dd>
+<dt><code>-Q</code><i>parameters</i></dt>
+<dd> Modify vector parameters. For vector heads, append vector head <i>size</i> [Default is 0, i.e., stick-plot]. See VECTOR ATTRIBUTES for specifying additional attributes.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. Specify a subset of the grid.</dd>
+<dt><code>-S</code>[<code>i</code>|<code>l</code>]<i>scale</i></dt>
+<dd> Sets scale for Cartesian vector length in data units per distance measurement unit [1]. Append <code>c</code>, <code>i</code>, or <code>p</code> to indicate the measurement unit (cm, inch,or point). Prepend <code>l</code> to indicate a fixed length for all vectors. For Geographic data, give scale in data units per km. Use <code>-Si</code> if it is simpler to give the reciprocal scale in measurement unit per data unit or km per data unit.</dd>
+<dt><code>-T</code></dt>
+<dd> Means the azimuths of Cartesian data sets should be adjusted according to the signs of the scales in the x- and y-directions [Leave alone]. This option can be used to convert vector azimuths in cases when a negative scale is used in one of both directions (e.g., positive down).</dd>
+<dt><code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] <i>(more &#8230;)</i></dt>
+<dd> Draw GMT time stamp logo on plot.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-W</code><i>pen</i></dt>
+<dd> Set pen attributes used for vector outlines [Default: width = default, color = black, style = solid]. </dd>
+<p> <code>-X</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>x-shift</i>[<code>u</code>]]</p>
+<dt><code>-Y</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] <i>(more &#8230;)</i></dt>
+<dd> Shift plot origin.</dd>
+<dt><code>-Z</code></dt>
+<dd> The theta grid provided contains azimuths rather than directions (requires <code>-A</code>).</dd>
+<dt><code>-c</code><i>copies</i> <i>(more &#8230;)</i></dt>
+<dd> Specify number of plot copies [Default is 1].</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-p</code>[<code>x</code>|<code>y</code>|<code>z</code>]<i>azim</i>/<i>elev</i>[/<i>zlevel</i>][<code>+w</code><i>lon0</i>/<i>lat0</i>[/<i>z0</i>]][<code>+v</code><i>x0</i>/<i>y0</i>] <i>(more &#8230;)</i></dt>
+<dd> Select perspective view.</dd>
+<dt><code>-t</code>[<i>transp</i>] <i>(more &#8230;)</i></dt>
+<dd> Set PDF transparency level in percent.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
+<h2>GRID FILE FORMATS</h2>
+<p> By default GMT writes out grid as single precision floats in a COARDS-complaint netCDF file format. However, GMT is able to produce grid files in many other commonly used grid file formats and also facilitates so called &quot;packing&quot; of grids, writing out floating point data as 1- or 2-byte integers. To specify the precision, scale and offset, the user should add the suffix <code>=</code><i>id</i>[<code>/</code><i>scale</i><code>/</code><i>offset</i>[<code>/</code><i>nan</i>]], where <i>id</i> is a two-letter identifier of the grid type and precision, and <i>scale</i> and <i>offset</i> are optional scale factor and offset to be applied to all grid values, and <i>nan</i> is the value used to indicate missing data. In case the two characters <i>id</i> is not provided, as in <code>=/</code><i>scale</i> than a <i>id</i><code>=</code><i>nf</i> is assumed. When reading grids, the format is generally automatically recognized. If not, the same suffix can be added to input grid file names. See <code>grdconvert</code> and Section <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information. </p>
+<p> When reading a netCDF file that contains multiple grids, GMT will read, by default, the first 2-dimensional grid that can find in that file. To coax GMT into reading another multi-dimensional variable in the grid file, append <code>?</code><i>varname</i> to the file name, where <i>varname</i> is the name of the variable. Note that you may need to escape the special meaning of <code>?</code> in your shell program by putting a backslash in front of it, or by placing the filename and suffix between quotes or double quotes. The <code>?</code><i>varname</i> suffix can also be used for output grids to specify a variable name different from the default: &quot;z&quot;. See <code>grdconvert</code> and Sections <i>modifiers-for-CF</i> and <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information, particularly on how to read splices of 3-, 4-, or 5-dimensional grids.</p>
+<h2>VECTOR ATTRIBUTES</h2>
+<p> Several modifiers may be appended to the vector-producing options to specify the placement of vector heads, their shapes, and the justification of the vector. Below, left and right refers to the side of the vector line when viewed from the start point to the end point of the segment: <code>+a</code><i>angle</i> sets the angle of the vector head apex [30]. </p>
+<p> <code>+b</code> places a vector head at the beginning of the vector path [none]. Optionally, append <code>t</code> for a terminal line, <code>c</code> for a circle, or <code>a</code> for arrow [Default]. Further append <code>l</code>|<code>r</code> to only draw the left or right side of this head [both sides]. </p>
+<p> <code>+e</code> places a vector head at the end of the vector path [none]. Optionally, append <code>t</code> for a terminal line, <code>c</code> for a circle, or <code>a</code> for arrow [Default]. Further append <code>l</code>|<code>r</code> to only draw the left or right side of this head [both sides]. </p>
+<p> <code>+g</code>-|<i>fill</i> turns off vector head fill (if -) or sets the vector head fill [Default fill is used, which may be no fill]. </p>
+<p> <code>+l</code> draws half-arrows, using only the left side of specified heads [both sides]. </p>
+<p> <code>+m</code> places a vector head at the mid-point the vector path [none]. Append <code>f</code> or <code>r</code> for forward or reverse direction of the vector [forward]. Optionally, append <code>t</code> for a terminal line, <code>c</code> for a circle, or <code>a</code> for arrow head [Default]. Further append <code>l</code>|<code>r</code> to only draw the left or right side of this head [both sides]. Cannot be combined with <code>+b</code> or <code>+e</code>. </p>
+<p> <code>+n</code><i>norm</i> scales down vector attributes (pen thickness, head size) with decreasing length, where vectors shorter than <i>norm</i> will have their attributes scaled by length/<i>norm</i> [arrow attributes remains invariant to length]. </p>
+<p> <code>+o</code><i>plon</i>/<i>plat</i> specifies the oblique pole for the great or small circles. Only needed for great circles if <code>+q</code> is given. </p>
+<p> <code>+p</code>[-][<i>pen</i>] sets the vector pen attributes. If <i>pen</i> has a leading &#8211; then the head outline is not drawn. [Default pen is used, and head outline is drawn] </p>
+<p> <code>+q</code> means the input <i>angle</i>, <i>length</i> data instead represent the <i>start</i> and <i>stop</i> opening angles of the arc segment relative to the given point. </p>
+<p> <code>+r</code> draws half-arrows, using only the right side of specified heads [both sides]. </p>
+<p> <code>t</code>[<code>b</code>|<code>e</code>]<i>trim</i> will shift the beginning or end point (or both) along the vector segment by the given <i>trim</i>; append suitable unit. If the modifiers <code>b</code>|<code>e</code> are not used then <i>trim</i> may be two values separated by a slash, which is used to specify different trims for the two ends. Positive trims will shorted the vector while negative trims will lengthen it [no trim]. </p>
+<p> In addition, all but circular vectors may take these modifiers: <code>+j</code><i>just</i> determines how the input <i>x</i>,<i>y</i> point relates to the vector. Choose from <code>b</code>eginning [default], <code>e</code>nd, or <code>c</code>enter. </p>
+<p> <code>+s</code> means the input <i>angle</i>, <i>length</i> is instead the <i>x</i>, <i>y</i> coordinates of the vector end point. </p>
+<p> Finally, Cartesian vectors may take these modifiers: <code>+z</code><i>scale</i>[<i>unit</i>] expects input <i>dx</i>,<i>dy</i> vector components and uses the <i>scale</i> to convert to polar coordinates with length in given unit.</p>
+<h2>EXAMPLES</h2>
+<p> To draw the vector field given by the files r.nc and theta.nc on a linear plot with scale 5 cm per data unit, using vector rather than stick plot, scale vector magnitudes so that 10 units equal 1 inch, and center vectors on the node locations, run </p>
+<pre>
+gmt grdvector r.nc theta.nc -Jx5c -A -Q0.1i+e+jc -S10i &gt; gradient.ps
+</pre>
+<p> To plot a geographic data sets given the files com_x.nc and comp_y.nc, using a scale of 200 km per data unit and only plot every 3rd node in either direction, try </p>
+<pre>
+gmt grdvector comp_x.nc comp_y.nc -Ix3 -JH0/20c -Q0.1i+e+jc -S200 &gt; globe.ps
+</pre>
+<h2>SEE ALSO</h2>
+<p> <code>gmt</code>, <code>gmtcolors</code>, <code>grdcontour</code>, <code>psxy</code></p>
+<h2>COPYRIGHT</h2>
+<p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

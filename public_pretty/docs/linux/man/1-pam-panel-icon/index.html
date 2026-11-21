@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam-panel-icon(1) · Linux Manual Pages</title>
+<meta name="description" content="pam-panel-icon – A notification area indicator of pam_timestamp status">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pam-panel-icon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pam-panel-icon(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> pam-panel-icon &#8211; A notification area indicator of pam_timestamp status</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pam-panel-icon</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>pam-panel-icon</code> should be automatically started when starting an X11 desktop environment. For example, in GNOME <code>gnome-session</code> should be configured to start <code>pam-panel-icon</code>. In a properly configured system it should never be necessary to start <code>pam-panel-icon</code> manually. </p>
+<p> <code>pam-panel-icon</code> uses <code><a href="/docs/linux/man/8-pam_timestamp_check/">pam_timestamp_check</a></code>(8) to watch the <code>pam_timestamp</code> timestamp status. If the <code>pam_timestamp</code> authorization is active, allowing an unprivileted user to temporarily authenticate as the <code>root</code> user without providing a password, an icon in the notification area of the panel is displayed. The icon allows dropping the authorization immediately. </p>
+<h2>EXIT STATUS</h2>
+<p> Ordinarily, <code>pam-panel-icon</code> keeps running until the X11 desktop session ends, and then returns 0. <code>pam-panel-icon</code> only returns with non-zero status on unexpected error. </p>
+<h2>FILES</h2>
+<dl>
+<dt><code>/sbin/pam_timestamp_check</code></dt>
+<dd> A hard-coded location of the <code>pam_timestamp_check</code> executable. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-pam_timestamp/">pam_timestamp</a></code>(8), <code><a href="/docs/linux/man/8-pam_timestamp_check/">pam_timestamp_check</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

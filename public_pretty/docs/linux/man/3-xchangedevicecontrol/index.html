@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xchangedevicecontrol(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xchangedevicecontrol/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xchangedevicecontrol(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>XGetDeviceControl, XChangeDeviceControl - query and change input device controls</p>
+<h2>Synopsis</h2><pre>#include &lt;X11/extensions/XInput.h&gt;</pre><pre>XDeviceControl *XGetDeviceControl( Display *display,
+ XDevice *device,
+ int *controlType);</pre><pre>int XChangeDeviceControl( Display *display,
+ XDevice *device,
+ int controlType,
+ XDeviceControl *control);</pre><pre>display
+ Specifies the connection to the X server.</pre><pre>device
+ Specifies the device whose control is to be interrogated
+ or modified.</pre><pre>controlType
+ Specifies the type of control to be interrogated or
+ changed.</pre><pre>control
+ Specifies the address of an XDeviceControl structure
+ that contains the new values for the Device.</pre><h2>Description</h2><dl COMPACT><dd><pre>These requests are provided to manipulate those input devices
+that support device control. A BadMatch error will be generated
+if the requested device does not support any device controls.</pre></dd></dl><dl COMPACT><dd><pre>Valid device control types that can be used with these requests
+include the following:</pre></dd></dl><dl COMPACT><dd><pre>DEVICE_RESOLUTION: Queries or changes the resolution of
+valuators on input devices.</pre></dd></dl><dl COMPACT><dd><pre>The XGetDeviceControl request returns a pointer to an
+XDeviceControl structure.</pre></dd></dl><dl COMPACT><dd><pre>XGetDeviceControl can generate a BadDevice or BadMatch error.</pre></dd></dl><dl COMPACT><dd><pre>The XChangeDeviceControl request modifies the values of one
+control on the specified device. The control is identified by
+the id field of the XDeviceControl structure that is passed
+with the request.</pre></dd></dl><dl COMPACT><dd><pre>XChangeDeviceControl can generate a BadDevice, BadMatch, or
+BadValue error.</pre></dd></dl><h2>Structures</h2><dl COMPACT><dd><pre>Each control is described by a structure specific to that control.
+These structures are defined in the file XInput.h.</pre></dd></dl><dl COMPACT><dd><pre>XDeviceControl is a generic structure that contains two fields
+that are at the beginning of each class of control:</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
+ XID class;
+ int length;
+} XDeviceControl;</pre></dd></dl><dl COMPACT><dd><pre>The XDeviceResolutionState structure defines the information
+that is returned for device resolution for devices with
+valuators.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
+ XID control;
+ int length;
+ int num_valuators;
+ int* resolutions;
+ int* min_resolutions;
+ int* max_resolutions;
+} XDeviceResolutionState;</pre></dd></dl><dl COMPACT><dd><pre>The XDeviceResolutionControl structure defines the attributes
+that can be controlled for keyboard Devices.</pre></dd></dl><dl COMPACT><dd><pre>typedef struct {
+ XID control;
+ int length;
+ int first_valuator;
+ int num_valuators;
+ int* resolutions;
+} XDeviceResolutionControl;</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadDevice
+ An invalid device was specified. The specified device
+ does not exist or has not been opened by this client via
+ XOpenInputDevice. This error may also occur if some
+ other client has caused the specified device to become
+ the X keyboard or X pointer device via the
+ XChangeKeyboardDevice or XChangePointerDevice requests.</pre></dd></dl><dl COMPACT><dd><pre>BadMatch
+ This error may occur if an XGetDeviceControl request was
+ made specifying a device that has no controls or an
+ XChangeDeviceControl request was made with an
+ XDeviceControl structure that contains an invalid Device
+ type. It may also occur if an invalid combination of
+ mask bits is specified ( DvKey but no DvAutoRepeatMode
+ for keyboard Devices), or if an invalid KeySym is
+ specified for a string Device.</pre></dd></dl><dl COMPACT><dd><pre>BadValue
+ Some numeric value falls outside the range of values
+ accepted by the XChangeDeviceControl request. Unless a
+ specific range is specified for an argument, the full
+ range defined by the argument's type is accepted. Any
+ argument defined as a set of alternatives can generate
+ this error.</pre></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

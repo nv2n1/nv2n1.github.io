@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>semanage-user(8) · Linux Manual Pages</title>
+<meta name="description" content="semanage-user – SELinux Policy Management SELinux User mapping tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-semanage-user/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>semanage-user(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>semanage-user &#8211; SELinux Policy Management SELinux User mapping tool</code></p>
+<h2>Synopsis</h2>
+<p><code>semanage user [-h] [-n] [-N] [-S STORE] [ &#8211;add ( -L LEVEL -R ROLES -r RANGE -s SEUSER selinux_name) | &#8211;delete selinux_name | &#8211;deleteall | &#8211;extract | &#8211;list [-C] | &#8211;modify ( -L LEVEL -R ROLES -r RANGE -s SEUSER selinux_name ) ]</code> </p>
+<h2>Description</h2>
+<p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage user controls the mapping between an SELinux User and the roles and MLS/MCS levels. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-n, &#8211;noheading</i></dt>
+<dd>Do not print heading when listing the specified object type</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload policy after commit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-C, &#8211;locallist</i></dt>
+<dd>List local customizations</dd>
+<dt><i>-a, &#8211;add</i></dt>
+<dd>Add a record of the specified object type</dd>
+<dt><i>-d, &#8211;delete</i></dt>
+<dd>Delete a record of the specified object type</dd>
+<dt><i>-m, &#8211;modify</i></dt>
+<dd>Modify a record of the specified object type</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List records of the specified object type</dd>
+<dt><i>-E, &#8211;extract</i></dt>
+<dd>Extract customizable commands, for use within a transaction</dd>
+<dt><i>-D, &#8211;deleteall</i></dt>
+<dd>Remove all local customizations</dd>
+<dt><i>-L LEVEL, &#8211;level LEVEL</i></dt>
+<dd>Default SELinux Level for SELinux user, s0 Default. (MLS/MCS Systems only)</dd>
+<dt><i>-r RANGE, &#8211;range RANGE</i></dt>
+<dd>MLS/MCS Security Range (MLS/MCS Systems only) SELinux Range for SELinux login mapping defaults to the SELinux user record range. SELinux Range for SELinux user defaults to s0.</dd>
+<dt><i>-R [ROLES], &#8211;roles [ROLES]</i></dt>
+<dd>SELinux Roles. You must enclose multiple roles within quotes, separate by spaces. Or specify -R multiple times. </dd>
+</dl>
+<h2>Example</h2>
+<pre>List SELinux users
+# semanage user -l
+Modify groups for staff_u user
+# semanage user -m -R &quot;system_r unconfined_r staff_r&quot; staff_u
+Add level for TopSecret Users
+# semanage user -a -R &quot;staff_r&quot; -rs0-TopSecret topsecret_u</pre>
+<h2>See Also</h2>
+<p><code>selinux (8),</code> <code>semanage (8)</code> <code>semanage-login (8)</code> </p>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

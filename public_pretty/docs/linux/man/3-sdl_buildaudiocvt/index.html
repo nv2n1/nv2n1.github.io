@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_buildaudiocvt(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_BuildAudioCVT – Initializes a SDL_AudioCVT structure for conversion">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_buildaudiocvt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_buildaudiocvt(3)</h1>
+
+
+
+
+
+<p>SDL_BuildAudioCVT &#8211; Initializes a SDL_AudioCVT structure for conversion</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> int SDL_BuildAudioCVT</code>(<code>SDL_AudioCVT *cvt, Uint16 src_format, Uint8 src_channels, int src_rate, Uint16 dst_format, Uint8 dst_channels, int dst_rate</code>);</p>
+<h2>Description</h2>
+<p>Before an <i></i><code>SDL_AudioCVT</code> structure can be used to convert audio data it must be initialized with source and destination information. </p>
+<p> <code>src_format</code> and <code>dst_format</code> are the source and destination format of the conversion. (For information on audio formats see <i></i><code> SDL_AudioSpec</code>). <code>src_channels</code> and <code>dst_channels</code> are the number of channels in the source and destination formats. Finally, <code>src_rate</code> and <code>dst_rate</code> are the frequency or samples-per-second of the source and destination formats. Once again, see <i></i><code>SDL_AudioSpec</code>.</p>
+<h2>Return Values</h2>
+<p>Returns <code>-1</code> if the filter could not be built or 1 if it could.</p>
+<h2>Examples</h2>
+<p>See <i></i><code>SDL_ConvertAudio</code>.</p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_ConvertAudio</code>, <i></i><code>SDL_AudioCVT</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

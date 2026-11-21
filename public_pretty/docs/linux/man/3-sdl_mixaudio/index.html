@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_mixaudio(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_MixAudio – Mix audio data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_mixaudio/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_mixaudio(3)</h1>
+
+
+
+
+
+<p>SDL_MixAudio &#8211; Mix audio data</p>
+<h2>Synopsis</h2>
+<p><code>#include &quot;SDL.h&quot; </p>
+<p> void SDL_MixAudio</code>(<code>Uint8 *dst, Uint8 *src, Uint32 len, int volume</code>);</p>
+<h2>Description</h2>
+<p>This function takes two audio buffers of <code>len</code> bytes each of the playing audio format and mixes them, performing addition, volume adjustment, and overflow clipping. The <code>volume</code> ranges from 0 to <code>SDL_MIX_MAXVOLUME</code> and should be set to the maximum value for full audio volume. Note this does not change hardware volume. This is provided for convenience &#8212; you can mix your own audio data. </p>
+<dl COMPACT>
+<dd><code>Note: </dd>
+<p> Do not use this function for mixing together more than two streams of sample data. The output from repeated application of this function may be distorted by clipping, because there is no accumulator with greater range than the input (not to mention this being an inefficient way of doing it). Use mixing functions from SDL_mixer, OpenAL, or write your own mixer instead.</dl>
+<p> </code></p>
+<h2>See Also</h2>
+<p><i></i><code>SDL_OpenAudio</code></p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

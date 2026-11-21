@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aead_request_set_crypt(9) · Linux Manual Pages</title>
+<meta name="description" content="aead_request_set_crypt – set data buffers">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-aead_request_set_crypt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>aead_request_set_crypt(9)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>aead_request_set_crypt &#8211; set data buffers</p>
+<h2>Synopsis</h2>
+<pre><code>void aead_request_set_crypt(struct aead_request *req, struct scatterlist *src, struct scatterlist *dst, unsigned int cryptlen, u8 *iv);</code></pre>
+<h2>Arguments</h2>
+<p><i>req</i></p>
+<dl>
+<dd>
+</dd><dd>request handle</dd></dl>
+<p> <i>src</i></p>
+<dl>
+<dd>source scatter / gather list</dd></dl>
+<p> <i>dst</i></p>
+<dl>
+<dd>destination scatter / gather list</dd></dl>
+<p> <i>cryptlen</i></p>
+<dl>
+<dd>number of bytes to process from <i>src</i></dd></dl>
+<p> <i>iv</i></p>
+<dl>
+<dd>IV for the cipher operation which must comply with the IV size defined by <code>crypto_aead_ivsize</code></dd></dl>
+<h2>Description</h2>
+<p>Setting the source data and destination data scatter / gather lists which hold the associated data concatenated with the plaintext or ciphertext. See below for the authentication tag. For encryption, the source is treated as the plaintext and the destination is the ciphertext. For a decryption operation, the use is reversed &#8211; the source is the ciphertext and the destination is the plaintext. For both src/dst the layout is associated data, plain/cipher text, authentication tag. The content of the AD in the destination buffer after processing will either be untouched, or it will contain a copy of the AD from the source buffer. In order to ensure that it always has a copy of the AD, the user must copy the AD over either before or after processing. Of course this is not relevant if the user is doing in-place processing where src == dst. </p>
+<pre><code>IMPORTANT NOTE AEAD requires an authentication tag(MAC). For decryption, the caller must concatenate the ciphertext followed by the authentication tag and provide the entire data stream to the decryption operation (i.e. the data length used for the initialization of the scatterlist and the data length for the decryption operation is identical). For encryption, however, the authentication tag is created while encrypting the data. The destination buffer must hold sufficient space for the ciphertext and the authentication tag while the encryption invocation must only point to the plaintext data size. The following code snippet illustrates the memory usage buffer = kmalloc(ptbuflen + (enc ? authsize : 0));
+sg_init_one(sg, buffer, ptbuflen + (enc ? authsize : 0));
+aead_request_set_crypt(req,
+                       sg,
+                       sg, ptbuflen, iv);</code></pre>
+<h2>Authors</h2>
+<p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

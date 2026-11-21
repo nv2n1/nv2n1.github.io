@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizing bbPress Forums with WordPress Hooks - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-filter-bbpress-content-in-wordpress/">
+  <meta name="description" content="bbPress is WordPress’s standard forum plugin. When you need to modify how forum topics, replies, or other content displays, you’ll use WordPress filter hooks to …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Customizing bbPress Forums with WordPress Hooks">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-filter-bbpress-content-in-wordpress/">
+  <meta property="og:description" content="bbPress is WordPress’s standard forum plugin. When you need to modify how forum topics, replies, or other content displays, you’ll use WordPress filter hooks to …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Customizing bbPress Forums with WordPress Hooks</h1>
+        <time class="post-date" datetime="2018-04-14T05:58:06Z">April 14, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>bbPress is WordPress’s standard forum plugin. When you need to modify how forum topics, replies, or other content displays, you’ll use WordPress filter hooks to intercept and transform the content before it reaches users.</p>
+<h2 id="common-bbpress-content-filters">Common bbPress Content Filters</h2>
+<h3 id="filtering-topic-content">Filtering Topic Content</h3>
+<p>The <code>bbp_get_topic_content</code> filter runs after topic content is retrieved from the database but before display:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_content&#39;</span><span class="p">,</span> <span class="s1">&#39;modify_topic_content&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">modify_topic_content</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Strip potentially harmful HTML tags
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$content</span> <span class="o">=</span> <span class="nx">wp_kses_post</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Always sanitize output with <code>wp_kses_post()</code> to prevent XSS vulnerabilities, especially when users can edit forum content. This function allows safe HTML tags while stripping dangerous ones.</p>
+<h3 id="filtering-reply-content">Filtering Reply Content</h3>
+<p>Apply the same approach to reply content:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_reply_content&#39;</span><span class="p">,</span> <span class="s1">&#39;modify_reply_content&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">modify_reply_content</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Example: auto-link user mentions
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$content</span> <span class="o">=</span> <span class="nx">preg_replace</span><span class="p">(</span><span class="s1">&#39;/@(\w+)/&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;a href=&#34;#user-$1&#34;&gt;@$1&lt;/a&gt;&#39;</span><span class="p">,</span> <span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="filtering-topic-titles">Filtering Topic Titles</h3>
+<p>Modify how topic titles appear in forum listings or single views:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_title&#39;</span><span class="p">,</span> <span class="s1">&#39;modify_topic_title&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">modify_topic_title</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Add prefix to pinned topics
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">bbp_is_topic_pinned</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$title</span> <span class="o">=</span> <span class="s1">&#39;[PINNED] &#39;</span> <span class="o">.</span> <span class="nv">$title</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$title</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="filtering-forum-names-and-descriptions">Filtering Forum Names and Descriptions</h3>
+<p>Format forum titles and descriptions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_forum_title&#39;</span><span class="p">,</span> <span class="s1">&#39;sanitize_forum_title&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">sanitize_forum_title</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">sanitize_text_field</span><span class="p">(</span><span class="nv">$title</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_forum_content&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_forum_description&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">filter_forum_description</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">wp_kses_post</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="conditional-filtering">Conditional Filtering</h2>
+<p>Apply different transformations based on user role, content type, or other context:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_reply_content&#39;</span><span class="p">,</span> <span class="s1">&#39;conditional_reply_filter&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">conditional_reply_filter</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Skip filtering for moderators
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">current_user_can</span><span class="p">(</span><span class="s1">&#39;moderate&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Apply word filter for regular users
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$blocked_words</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="s1">&#39;abuse&#39;</span><span class="p">,</span> <span class="s1">&#39;explicit&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$blocked_words</span> <span class="k">as</span> <span class="nv">$word</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$content</span> <span class="o">=</span> <span class="nx">str_ireplace</span><span class="p">(</span><span class="nv">$word</span><span class="p">,</span> <span class="s1">&#39;[removed]&#39;</span><span class="p">,</span> <span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Filter based on topic status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_content&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_closed_topic_content&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">filter_closed_topic_content</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$topic_id</span> <span class="o">=</span> <span class="nx">bbp_get_topic_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">bbp_is_topic_closed</span><span class="p">(</span><span class="nv">$topic_id</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$content</span> <span class="o">.=</span> <span class="s1">&#39;&lt;p class=&#34;topic-closed-notice&#34;&gt;This topic is closed and no longer accepts replies.&lt;/p&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="accessing-post-metadata">Accessing Post Metadata</h2>
+<p>Filters receive only the content string, but you can access additional metadata using bbPress functions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_content&#39;</span><span class="p">,</span> <span class="s1">&#39;enrich_topic_with_metadata&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">enrich_topic_with_metadata</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$topic_id</span> <span class="o">=</span> <span class="nx">bbp_get_topic_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$author_id</span> <span class="o">=</span> <span class="nx">bbp_get_topic_author_id</span><span class="p">(</span><span class="nv">$topic_id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$author_name</span> <span class="o">=</span> <span class="nx">get_the_author_meta</span><span class="p">(</span><span class="s1">&#39;display_name&#39;</span><span class="p">,</span> <span class="nv">$author_id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$reply_count</span> <span class="o">=</span> <span class="nx">bbp_get_topic_reply_count</span><span class="p">(</span><span class="nv">$topic_id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$metadata</span> <span class="o">=</span> <span class="nx">sprintf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;&lt;div class=&#34;topic-metadata&#34;&gt;By %s | %d replies&lt;/div&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">esc_html</span><span class="p">(</span><span class="nv">$author_name</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">intval</span><span class="p">(</span><span class="nv">$reply_count</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$metadata</span> <span class="o">.</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="block-editor-integration">Block Editor Integration</h2>
+<p>Modern bbPress implementations use Gutenberg blocks. PHP content filters still apply since blocks render server-side through these same hooks. For block-level control, use the <code>render_block</code> filter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;render_block&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_bbpress_blocks&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">filter_bbpress_blocks</span><span class="p">(</span><span class="nv">$content</span><span class="p">,</span> <span class="nv">$block</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">strpos</span><span class="p">(</span><span class="nv">$block</span><span class="p">[</span><span class="s1">&#39;blockName&#39;</span><span class="p">],</span> <span class="s1">&#39;bbpress&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Apply custom transformations to bbPress blocks
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$content</span> <span class="o">=</span> <span class="nx">wp_kses_post</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="performance-optimization">Performance Optimization</h2>
+<p>Filters execute on every pageload. For resource-intensive operations, use caching to avoid repeated processing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_content&#39;</span><span class="p">,</span> <span class="s1">&#39;cached_topic_filter&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">cached_topic_filter</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$topic_id</span> <span class="o">=</span> <span class="nx">bbp_get_topic_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$cache_key</span> <span class="o">=</span> <span class="s1">&#39;bbpress_topic_&#39;</span> <span class="o">.</span> <span class="nv">$topic_id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$cached</span> <span class="o">=</span> <span class="nx">get_transient</span><span class="p">(</span><span class="nv">$cache_key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$cached</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$filtered</span> <span class="o">=</span> <span class="nx">apply_custom_formatting</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">set_transient</span><span class="p">(</span><span class="nv">$cache_key</span><span class="p">,</span> <span class="nv">$filtered</span><span class="p">,</span> <span class="nx">HOUR_IN_SECONDS</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$filtered</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Clear the cache when content updates:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;bbp_new_reply&#39;</span><span class="p">,</span> <span class="s1">&#39;clear_forum_cache&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">add_action</span><span class="p">(</span><span class="s1">&#39;bbp_edit_reply&#39;</span><span class="p">,</span> <span class="s1">&#39;clear_forum_cache&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">clear_forum_cache</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$topic_id</span> <span class="o">=</span> <span class="nx">bbp_get_topic_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">delete_transient</span><span class="p">(</span><span class="s1">&#39;bbpress_topic_&#39;</span> <span class="o">.</span> <span class="nv">$topic_id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Avoid regex operations on large content blocks. Use <code>str_replace()</code> or native PHP string functions instead for better performance.</p>
+<h2 id="debugging-filters">Debugging Filters</h2>
+<p>Enable WordPress debugging to verify filters are executing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_topic_content&#39;</span><span class="p">,</span> <span class="s1">&#39;debug_topic_filter&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">debug_topic_filter</span><span class="p">(</span><span class="nv">$content</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">defined</span><span class="p">(</span><span class="s1">&#39;WP_DEBUG&#39;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">WP_DEBUG</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">error_log</span><span class="p">(</span><span class="s1">&#39;Topic filter executed. Content length: &#39;</span> <span class="o">.</span> <span class="nx">strlen</span><span class="p">(</span><span class="nv">$content</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Check <code>/wp-content/debug.log</code> (with <code>WP_DEBUG</code> and <code>WP_DEBUG_LOG</code> enabled in <code>wp-config.php</code>) to confirm execution without affecting output. For more granular debugging, use a debugger like Xdebug with your IDE.</p>
+<h2 id="priority-and-filter-order">Priority and Filter Order</h2>
+<p>Control when your filters run relative to other hooks using the priority parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Run early (priority 5) before other filters
+</span></span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_reply_content&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_links&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Run late (priority 20) after other modifications
+</span></span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;bbp_get_reply_content&#39;</span><span class="p">,</span> <span class="s1">&#39;add_final_markup&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</span></span></code></pre></div><p>Lower priority numbers execute first. The default is 10.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vpnormalindex(3) · Linux Manual Pages</title>
+<meta name="description" content="vpNormalIndex, vpNormal – encode/decode a surface normal vector">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-vpnormalindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>vpnormalindex(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>vpNormalIndex, vpNormal &#8211; encode/decode a surface normal vector</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;volpack.h&gt;
+int
+vpNormalIndex(nx, ny, nz)
+double nx, ny, nz;
+</code></pre>
+<p> vpResult</p>
+<dl>
+<dt> <code>vpNormal(</code><i>n, nx_ptr, ny_ptr, nz_ptr</i><code>)</code></dt>
+<dd>
+</dd><dd>int <i>n;</i></dd>
+<dd>double *<i>nx_ptr,</i> *<i>ny_ptr,</i> *<i>nz_ptr;</i></dd></dl>
+<h2>Arguments</h2>
+<dl>
+<dt><i>nx</i></dt>
+<dd>X component of surface normal vector.</dd>
+<dt><i>ny</i></dt>
+<dd>Y component of surface normal vector.</dd>
+<dt><i>nz</i></dt>
+<dd>Z component of surface normal vector.</dd>
+<dt><i>n</i></dt>
+<dd>Encoded surface normal vector.</dd>
+<dt><i>nx_ptr</i></dt>
+<dd>Pointer to storage for returning X component of surface normal vector.</dd>
+<dt><i>ny_ptr</i></dt>
+<dd>Pointer to storage for returning Y component of surface normal vector.</dd>
+<dt><i>nz_ptr</i></dt>
+<dd>Pointer to storage for returning Z component of surface normal vector.</dd></dl>
+<h2>Description</h2>
+<p>These two routines are used to convert surface normal vectors between encoded and unencoded forms. An unencoded vector is described by its three components (stored as double-precision floating point numbers) in an orthogonal coordinate system. An encoded vector is described by a single integer that is suitable for use as an index in a shading lookup table. VolPack&#8217;s built-in shading routines require the use of surface normal vectors encoded using <code>vpNormalIndex</code> (or one of the higher-level normal vector computation routines, <code>vpVolumeNormals</code> or <code>vpScanlineNormals</code>). User-defined shading routines or lookup tables are not required to use encoded normal vectors. </p>
+<p> <code>vpNormalIndex</code> computes an encoded vector from the components of an unencoded vector. The vector must be normalized (<i>nx*nx + ny*ny + nz*nz = 1</i>). The maximum possible value of an encoded normal is given by the constant VP_NORM_MAX. </p>
+<p> <code>vpNormal</code> computes the components of a vector from the encoded integer form. The encoded normal has less resolution than the unencoded form, so the vector computed by <code>vpNormal</code> may not be equal to the original vector passed to <code>vpNormalIndex</code>.</p>
+<h2>Errors</h2>
+<p><code>vpNormalIndex</code> always returns a valid encoded normal vector. </p>
+<p> <code>vpNormal</code> normally returns the value VP_OK. The following return value is possible:</p>
+<dl>
+<dt>VPERROR_BAD_VALUE</dt>
+<dd>The encoded normal vector is invalid.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpvolumenormals/">vpVolumeNormals</a>(3), <a href="/docs/linux/man/3-vpscanlinenormals/">vpScanlineNormals</a>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

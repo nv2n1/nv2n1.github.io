@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>papi_write(3) · Linux Manual Pages</title>
+<meta name="description" content="PAPI_write –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-papi_write/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>papi_write(3)</h1>
+
+
+
+
+
+<p>PAPI_write &#8211; </p>
+<p> Write counter values into counters.</p>
+<h2>Synopsis</h2>
+<h2>Detailed Description</h2>
+<p><code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>EventSet</i> an integer handle for a PAPI event set as created by <code>PAPI_create_eventset</code><br />
+ <i>*values</i> an array to hold the counter values of the counting events</dd></dl>
+<p> <code>Return values:</code></p>
+<dl COMPACT>
+<dd><i>PAPI_ENOEVST</i> The EventSet specified does not exist.<br />
+ <i>PAPI_ECMP</i> <code>PAPI_write()</code> is not implemented for this architecture.<br />
+ <i>PAPI_ESYS</i> The EventSet is currently counting events and the component could not change the values of the running counters.</dd></dl>
+<p> <code>PAPI_write()</code> writes the counter values provided in the array values into the event set EventSet. The virtual counters managed by the PAPI library will be set to the values provided. If the event set is running, an attempt will be made to write the values to the running counters. This operation is not permitted by all components and may result in a run-time error. </p>
+<p> <code>See Also:</code></p>
+<dl COMPACT>
+<dd><code>PAPI_read</code></dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for PAPI from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

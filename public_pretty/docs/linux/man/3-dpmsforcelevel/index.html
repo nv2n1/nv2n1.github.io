@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dpmsforcelevel(3) · Linux Manual Pages</title>
+<meta name="description" content="DPMSForceLevel – forces a DPMS capable display into the specified power level">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dpmsforcelevel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dpmsforcelevel(3)</h1>
+
+
+
+
+
+<p>DPMSForceLevel &#8211; forces a DPMS capable display into the specified power level </p>
+<h2>Synopsis</h2>
+<pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
+#include &lt;X11/extensions/dpms.h&gt;
+<dl COMPACT><dt><code>Status DPMSForceLevel</code> ( Display <i>*display</i>, CARD16 <i>level</i> );
+<br>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>
+</dd><dd>Specifies the connection to the X server</dd>
+<dt><i>level</i></dt>
+<dd>Specifies the level to force power to</dd></dl>
+<h2>Description</h2>
+<p>The <i>DPMSForceLevel</i> function forces a DPMS capable display into the specified power level. The <i>level</i> must be one of following four states: DPMSModeOn, DPMSModeStandby, DPMSModeSuspend, or DPMSModeOff. Values other than these will result in a BadValue error. If DPMS is disabled on the display, trying to set the power level on the display will result in a BadMatch protocol error.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>TRUE</dt>
+<dd>The <i>DPMSForceLevel</i> function always returns TRUE.</dd></dl>
+<h2>Errors</h2>
+<dl COMPACT>
+<dt>BadValue</dt>
+<dd>A level other than DPMSModeOn, DPMSModeStandby, DPMSModeSuspend, or DPMSModeOff was specified.</dd>
+<dt><font SIZE="-1">BadMatch</font></dt>
+<dd>DPMS is disabled on the specified display.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-dpmscapable/">DPMSCapable</a></code>(3), <code><a href="/docs/linux/man/3-dpmsinfo/">DPMSInfo</a></code>(3), <code><a href="/docs/linux/man/3-dpmsgettimeouts/">DPMSGetTimeouts</a></code>(3), <code><a href="/docs/linux/man/3-dpmssettimeouts/">DPMSSetTimeouts</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

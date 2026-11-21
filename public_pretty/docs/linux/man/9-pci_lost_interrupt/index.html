@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pci_lost_interrupt(9) · Linux Manual Pages</title>
+<meta name="description" content="pci_lost_interrupt – reports a lost PCI interrupt">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-pci_lost_interrupt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>pci_lost_interrupt(9)</h1>
+
+
+
+
+
+<p>pci_lost_interrupt &#8211; reports a lost PCI interrupt</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>enum pci_lost_interrupt_reason pci_lost_interrupt(struct pci_dev&nbsp;<wbr>*&nbsp;<wbr></code><i>pdev</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<p><i>pdev</i></p>
+<dl>
+<dd>
+</dd><dd>device whose interrupt is lost</dd></dl>
+<h2>Description</h2>
+<p>The primary function of this routine is to report a lost interrupt in a standard way which users can recognise (instead of blaming the driver).</p>
+<h2>Return</h2>
+<p>a suggestion for fixing it (although the driver is not required to act on this).</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

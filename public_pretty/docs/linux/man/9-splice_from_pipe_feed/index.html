@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>splice_from_pipe_feed(9) · Linux Manual Pages</title>
+<meta name="description" content="splice_from_pipe_feed – feed available data from a pipe to a file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-splice_from_pipe_feed/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>splice_from_pipe_feed(9)</h1>
+
+
+
+
+
+<p>splice_from_pipe_feed &#8211; feed available data from a pipe to a file</p>
+<h2>Synopsis</h2>
+<pre><code>int splice_from_pipe_feed(struct pipe_inode_info *pipe, struct splice_desc *sd, splice_actor *actor);</code></pre>
+<h2>Arguments</h2>
+<p><i>pipe</i></p>
+<dl>
+<dd>
+</dd><dd>pipe to splice from</dd></dl>
+<p> <i>sd</i></p>
+<dl>
+<dd>information to <i>actor</i></dd></dl>
+<p> <i>actor</i></p>
+<dl>
+<dd>handler that splices the data</dd></dl>
+<h2>Description</h2>
+<p>This function loops over the pipe and calls <i>actor</i> to do the actual moving of a single struct pipe_buffer to the desired destination. It returns when there&#8217;s no more buffers left in the pipe or if the requested number of bytes (<i>sd</i>-&gt;total_len) have been copied. It returns a positive number (one) if the pipe needs to be filled with more data, zero if the required number of bytes have been copied and -errno on error. </p>
+<p> This, together with splice_from_pipe_{begin,end,next}, may be used to implement the functionality of <code>__splice_from_pipe</code> when locking is required around copying the pipe buffers to the destination.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

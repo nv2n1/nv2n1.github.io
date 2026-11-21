@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_assignedkeyval(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::AssignedKeyVal –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_assignedkeyval/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_assignedkeyval(3)</h1>
+
+
+
+
+
+<p>sc::AssignedKeyVal &#8211; </p>
+<p> This class allows keyval associations to be set up by the program, rather than determined by an external file.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;keyval.h&gt;</code></pre>
+<p> Inherits <code>sc::KeyVal</code>.</p>
+<h3>Public Member Functions</h3>
+<p>void <code>clear</code> ()<br />
+ <i>Erase all of the stored assignments. </i> <code>Assignments.</code><br />
+ Each of this routines assigns key to val. </p>
+<pre><code>void assign (const char *key, const Ref&lt; KeyValValue &gt; &amp;val)
+void assign (const char *key, double val)
+void assignboolean (const char *key, int val)
+void assign (const char *key, float val)
+void assign (const char *key, char val)
+void assign (const char *key, int val)
+void assign (const char *key, const char *val)
+void assign (const char *key, const Ref&lt; DescribedClass &gt; &amp;val)
+Protected Member Functions</code></pre>
+<p> int <code>key_exists</code> (const char *)<br />
+ <i>Ultimately called by exists. </i><br />
+ <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br />
+ <i>Ultimately called by value. </i></p>
+<h2>Detailed Description</h2>
+<p>This class allows keyval associations to be set up by the program, rather than determined by an external file.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

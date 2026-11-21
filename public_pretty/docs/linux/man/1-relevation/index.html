@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>relevation(1) · Linux Manual Pages</title>
+<meta name="description" content="relevation — command-line searcher for Revelation files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-relevation/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>relevation(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> relevation &#8212; command-line searcher for <code>Revelation</code> files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>relevation</code> [<code>options</code>] [<i>search string</i> [<i>&#8230;</i>] ]</p>
+<h2>DESCRIPTION</h2>
+<p> Access and print or search passwords in a <code>Revelation</code> password file. </p>
+<p> Only read access is provided, to edit the files <code>Revelation</code> must be used. </p>
+<p> With a search string, only entries that match the search string in any of its fields will be printed. </p>
+<p> When no search string is provided the whole list of entries will be printed.</p>
+<h2>OPTIONS</h2>
+<p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-f </code><i>file.revelation</i>, <code>&#8211;file=</code><i>file.revelation</i></dt>
+<dd> File name of the <code>revelation</code> file (the file containing the list of stored credentials).</dd>
+<dt><code>-p </code><i>password</i>, <code>&#8211;password=</code><i>password</i></dt>
+<dd> Decryption password.</dd>
+<dt><code>-a</code>, <code>&#8211;ask</code>, <code>-0</code>, <code>&#8211;stdin</code></dt>
+<dd> Ask interactively for password.</dd>
+<dt>
+</dt><dd> When <code>-a</code> or <code>&#8211;ask</code> is used a prompt will be printed.</dd>
+<dt>
+</dt><dd> Use either one of this variants or <code>&#8211;password</code>.</dd>
+<dt><code>-t </code><i>type</i>, <code>&#8211;type=</code><i>type</i></dt>
+<dd> Print only entries of a certain type.</dd>
+<dt>
+</dt><dd> Known types: creditcard, cryptokey, database, door, email, folder, ftp, generic, phone, shell, website.</dd>
+<dt>
+</dt><dd> If preceded by a slash it will be negated, i.e. `-website&#8217; will select entries that are not of type website.</dd>
+<dt>
+</dt><dd> When searching for a string, folders are skipped (equivalent to `&#8211;type=-folder&#8217;).</dd>
+<dt><code>-i</code>, <code>&#8211;case-insensitive</code></dt>
+<dd> When searching for text, disregard case.</dd>
+<dt>
+</dt><dd> This is the default behaviour.</dd>
+<dt>
+</dt><dd> If the search string contains special/non-English characters this is likely to fail.</dd>
+<dt><code>-c</code>, <code>&#8211;case-sensitive</code></dt>
+<dd> When searching for text, obey case.</dd>
+<dt><code>-A</code>, <code>&#8211;and</code></dt>
+<dd> When multiple search terms are used, use an AND operator to combine them. All search terms will be combined in a single search, only entries that match every search term will be selected.</dd>
+<dt><code>-O</code>, <code>&#8211;or</code></dt>
+<dd> When multiple search terms are used, use an OR operator to combine them. A different search will be issued for each search term. This is the default and the original mode of operation.</dd>
+<dt><code>-s </code><i>search string</i>, <code>&#8211;search=</code><i>search string</i>, <i>search string</i></dt>
+<dd> Search the file for a pice of text. All fields will be searched. There&#8217;s no need to use the <code>-s</code> or <code>&#8211;search</code> option names, any unnamed argument will be considered a search term.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information for relevation.</dd></dl>
+<h2>CONFIGURATION FILE</h2>
+<p> A configuration file `.relevation.conf&#8217; located at the user&#8217;s home directory can be used to avoid having to provide the filename and/or password on each run. </p>
+<p> Example `~/.relevation.conf&#8217;: </p>
+<pre><code>
+&amp;nbsp;
+[relevation] &amp; nbsp;
+file = ~ / passwords.revelation &amp; nbsp;
+password = my secret password &amp; nbsp;
+mode = and
+</code></pre>
+<p> Both <code>file</code> and <code>password</code> are optional, so you can store the filename without storing the password. </p>
+<p> Please understand your password is stored in this file in clear text, modify the file permissions appropriately so that only your user can read it, otherwise your master password might be compromised and hence all your stored password will be too. </p>
+<p> <code>mode</code> is optional (&quot;<i>or</i>&quot; by default), only the values <i>and</i> and <i>or</i> are recognized, corresponding to the matching <code>&#8211;and</code> and <code>&#8211;or</code> options (any other value will be ignored).</p>
+<h2>SEE ALSO</h2>
+<p> revelation (1)</p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Toni Corvera &lt;outlyer [at] gmail.com&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of a BSD 2-clause license.<br />
+&nbsp;<wbr> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

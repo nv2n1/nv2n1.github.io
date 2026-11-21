@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>alter_schema(7) · Linux Manual Pages</title>
+<meta name="description" content="ALTER SCHEMA – change the definition of a schema">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-alter_schema/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>alter_schema(7)</h1>
+
+
+
+
+
+<p>ALTER SCHEMA &#8211; change the definition of a schema </p>
+<h2>Synopsis</h2>
+<pre>ALTER SCHEMA <i>name</i> RENAME TO <i>newname</i>
+ALTER SCHEMA <i>name</i> OWNER TO <i>newowner</i></pre>
+<h2>Description</h2>
+<p><code>ALTER SCHEMA</code> changes the definition of a schema. </p>
+<p> You must own the schema to use <code>ALTER SCHEMA</code>. To rename a schema you must also have the CREATE privilege for the database. To alter the owner, you must also be a direct or indirect member of the new owning role, and you must have the CREATE privilege for the database. (Note that superusers have all these privileges automatically.)</p>
+<h2>Parameters</h2>
+<dl>
+<dt><i>name</i></dt>
+<dd>The name of an existing schema.</dd>
+<dt><i>newname</i></dt>
+<dd>The new name of the schema. The new name cannot begin with pg_, as such names are reserved for system schemas.</dd>
+<dt><i>newowner</i></dt>
+<dd>The new owner of the schema.</dd></dl>
+<h2>Compatibility</h2>
+<p>There is no <code>ALTER SCHEMA</code> statement in the SQL standard.</p>
+<h2>See Also</h2>
+<p>CREATE SCHEMA [<code><a href="/docs/linux/man/7-create_schema/">create_schema</a></code>(7)], DROP SCHEMA [<code><a href="/docs/linux/man/7-drop_schema/">drop_schema</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

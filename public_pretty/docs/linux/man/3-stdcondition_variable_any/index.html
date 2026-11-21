@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdcondition_variable_any(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdcondition_variable_any/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdcondition_variable_any(3)</h1>
+
+
+
+
+
+<p>std::condition_variable_any - std::condition_variable_any</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;condition_variable&gt;
+class condition_variable_any; <i>(since C++11)</i>
+The condition_variable_any class is a generalization of std::condition_variable. Whereas std::condition_variable works only on std::unique_lock&lt;std::mutex&gt;, condition_variable_any can operate on any lock that meets the BasicLockable requirements.
+See std::condition_variable for the description of the semantics of condition variables.
+The class std::condition_variable_any is a StandardLayoutType. It is not CopyConstructible, MoveConstructible, CopyAssignable, or MoveAssignable.
+If the lock is std::unique_lock, std::condition_variable may provide better performance.</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs the object
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> destructs the object
+destructor <i>(public member function)</i></p>
+<p>operator= not copy-assignable
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(public member function)</i>
+[deleted]</p>
+<h2>Notification</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> notifies one waiting thread
+notify_one <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> notifies all waiting threads
+notify_all <i>(public member function)</i></p>
+<h2>Waiting</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up
+wait <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up or after the specified timeout duration
+wait_for <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> blocks the current thread until the condition variable is woken up or until specified time point has been reached
+wait_until <i>(public member function)</i></p>
+<h2>Notes</h2>
+<p>std::condition_variable_any can be used with std::shared_lock in order to wait on a std::shared_mutex in shared ownership mode.
+A possible use for std::condition_variable_any with custom Lockable types is to provide convenient interruptible waits: the custom lock operation would both lock the associated mutex as expected, and also perform the necessary setup to notify this condition variable when the interrupting signal is received.[1]</p>
+<h2>References</h2>
+<p> <wbr> 1. ↑ A. Williams (2012), &quot;C++ concurrency in action&quot; 9.2.4 Interrupting a wait on std::condition_variable_any</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

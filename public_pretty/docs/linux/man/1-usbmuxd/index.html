@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usbmuxd(1) · Linux Manual Pages</title>
+<meta name="description" content="usbmuxd – Expose a socket to multiplex connections from and to iOS devices.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-usbmuxd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>usbmuxd(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> usbmuxd &#8211; Expose a socket to multiplex connections from and to iOS devices. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>usbmuxd</code> [OPTIONS] </p>
+<h2>DESCRIPTION</h2>
+<p> usbmuxd stands for &quot;USB multiplexing daemon&quot;. This daemon is in charge of multiplexing connections over USB to an iOS device. To users, it means you can sync your music, contacts, photos, etc. over USB. To developers, it means you can connect to any listening localhost socket on the device. usbmuxd is not used for tethering data transfer which uses a dedicated USB interface as a virtual network device. Multiple connections to different TCP ports can happen in parallel. The higher-level layers are handled by libimobiledevice. </p>
+<p> When usbmuxd is running (normally started, or stopped as a result of &quot;udev&quot; auto-insertion messages or by systemd) it provides a socket interface in &quot;/var/run/usbmuxd&quot; that is designed to be compatible with the socket interface that is provided on Mac OS X. </p>
+<p> You should also create a &quot;usbmux&quot; user that has access to USB devices on your system. Alternatively, you can pass a different username using the -U argument. </p>
+<p> Due to iOS 7 the daemon now also manages pairing records with iOS devices and the host in &quot;/var/lib/lockdown&quot; (Linux) or &quot;/var/db/lockdown&quot; (Mac OS X). Ensure proper permissions are setup for the daemon to access the directory. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-U, &#8211;user USER</code></dt>
+<dd> Change to this user after startup (needs USB privileges).</dd>
+<dt><code>-f, &#8211;foreground</code></dt>
+<dd> Do not daemonize (implies one -v).</dd>
+<dt><code>-n, &#8211;disable-hotplug</code></dt>
+<dd> Disables automatic discovery of devices on hotplug. Starting another instance will trigger discovery instead.</dd>
+<dt><code>-z, &#8211;enable-exit</code></dt>
+<dd> Enable &quot;&#8211;exit&quot; request from other instances and exit automatically if no device is attached.</dd>
+<dt><code>-u, &#8211;udev</code></dt>
+<dd> Run in udev operation mode (implies -n and -z).</dd>
+<dt><code>-s, &#8211;systemd</code></dt>
+<dd> Run in systemd operation mode (implies -z and -f).</dd>
+<dt><code>-x, &#8211;exit</code></dt>
+<dd> Notify a running instance to exit if there are no devices connected (sends SIGUSR1 to running instance) and exit.</dd>
+<dt><code>-X, &#8211;force-exit</code></dt>
+<dd> Notify a running instance to exit even if there are still devices connected (always works) and exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> be verbose (use twice or more to increase verbose level).</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> print version information and exit.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> prints usage information. </dd>
+</dl>
+<h2>AUTHOR</h2>
+<p> The first usbmuxd daemon implementation was authored by Hector Martin. </p>
+<p> Now mainly developed by Nikias Bassen, Martin Szulecki and contributors (see AUTHORS file). </p>
+<h2>SEE ALSO</h2>
+<p> <a rel="nofollow" href="http://www.libimobiledevice.org">http://www.libimobiledevice.org</a> </p>
+<p> <a rel="nofollow" href="http://github.com/libimobiledevice/usbmuxd/">http://github.com/libimobiledevice/usbmuxd/</a> </p>
+<p> <a href="/docs/linux/man/1-idevice_id/">idevice_id</a>(1), <a href="/docs/linux/man/1-iproxy/">iproxy</a>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

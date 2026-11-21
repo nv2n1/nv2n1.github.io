@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmap(1) · Linux Manual Pages</title>
+<meta name="description" content="pmap – report memory map of a process">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pmap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pmap(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pmap &#8211; report memory map of a process </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pmap</code> [<i>options</i>] <i>pid</i> [&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>pmap</code> command reports the memory map of a process or processes.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-x</code>, <code>&#8211;extended</code></dt>
+<dd> Show the extended format.</dd>
+<dt><code>-d</code>, <code>&#8211;device</code></dt>
+<dd> Show the device format.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Do not display some header or footer lines.</dd>
+<dt><code>-A</code>, <code>&#8211;range</code> <i>low</i>,<i>high</i></dt>
+<dd> Limit results to the given range to <i>low</i> and <i>high</i> address range. Notice that the low and high arguments are single string separated with comma.</dd>
+<dt><code>-X</code></dt>
+<dd> Show even more details than the <code>-x</code> option. WARNING: format changes according to <i>/proc/PID/smaps</i></dd>
+<dt><code>-XX</code></dt>
+<dd> Show everything the kernel provides</dd>
+<dt><code>-p</code>, <code>&#8211;show-path</code></dt>
+<dd> Show full path to files in the mapping column</dd>
+<dt><code>-c</code>, <code>&#8211;read-rc</code></dt>
+<dd> Read the default configuration</dd>
+<dt><code>-C</code>, <code>&#8211;read-rc-from</code> <i>file</i></dt>
+<dd> Read the configuration from <i>file</i></dd>
+<dt><code>-n</code>, <code>&#8211;create-rc</code></dt>
+<dd> Create new default configuration</dd>
+<dt><code>-N</code>, <code>&#8211;create-rc-to</code> <i>file</i></dt>
+<dd> Create new configuration to <i>file</i></dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help text and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
+<h2>EXIT STATUS</h2>
+<dl>
+<dl>
+<dt><code>0</code></dt>
+<dd> Success.</dd>
+<dt><code>1</code></dt>
+<dd> Failure.</dd>
+<dt><code>42</code></dt>
+<dd> Did not find all processes asked for.</dd></dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1)</p>
+<h2>STANDARDS</h2>
+<p> No standards apply, but <code>pmap</code> looks an awful lot like a SunOS command.</p>
+<h2>REPORTING BUGS</h2>
+<p> Please send bug reports to </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdregex_traitsvalue(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdregex_traitsvalue/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdregex_traitsvalue(3)</h1>
+
+
+
+
+
+<p>std::regex_traits&lt;CharT&gt;::value - std::regex_traits&lt;CharT&gt;::value</p>
+<h2>Synopsis</h2>
+<pre><code>int value(CharT ch, int radix) const;
+(since C++ 11)</code></pre> 
+<p>Determines the value represented by the digit ch in the numeric base radix, given the currently imbued locale. This function is called by std::regex when processing Quantifiers such as {1} or {2,5}, Backreferences such as \1, and hexadecimal and Unicode character escapes.</p>
+<h2>Parameters</h2>
+<p>ch - the character that may represent a digit
+radix - either 8, 10, or 16</p>
+<h2>Return value</h2>
+<p>The numeric value if ch indeed represents a digit in the currently imbued locale that is valid for the numeric base radix, or -1 on error.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;locale&gt;
+#include &lt;regex&gt;
+#include &lt;map&gt;
+// This custom regex traits allows japanese numerals
+struct jnum_traits : std::regex_traits&lt;wchar_t&gt;
+{
+static std::map&lt;wchar_t, int&gt; data;
+int value(wchar_t ch, int radix) const
+{
+wchar_t up = std::toupper(ch, getloc());
+return data.count(up) ? data[up] : regex_traits::value(ch, radix);
+}
+};
+std::map&lt;wchar_t, int&gt; jnum_traits::data = {{L&rsquo;〇&rsquo;, 0}, {L&rsquo;一&rsquo;, 1}, {L&rsquo;二&rsquo;, 2}, {L&rsquo;三&rsquo;, 3}, {L&rsquo;四&rsquo;, 4}, {L&rsquo;五&rsquo;, 5}, {L&rsquo;六&rsquo;, 6}, {L&rsquo;七&rsquo;, 7}, {L&rsquo;八&rsquo;, 8}, {L&rsquo;九&rsquo;, 9}, {L&rsquo;Ａ&rsquo;, 10}, {L&rsquo;Ｂ&rsquo;, 11}, {L&rsquo;Ｃ&rsquo;, 12}, {L&rsquo;Ｄ&rsquo;, 13}, {L&rsquo;Ｅ&rsquo;, 14}, {L&rsquo;Ｆ&rsquo;, 15}};
+int main()
+{
+std::locale::global(std::locale(&quot;ja_JP.utf8&quot;));
+std::wcout.sync_with_stdio(false);
+std::wcout.imbue(std::locale());
+std::wstring in = L&quot;風&quot;;
+if (std::regex_match(in, std::wregex(L&quot;\u98a8&quot;)))
+std::wcout &lt;&lt; &quot;\u98a8 matched &quot; &lt;&lt; in &lt;&lt; &lsquo;\n&rsquo;;
+if (std::regex_match(in, std::basic_regex&lt;wchar_t, jnum_traits&gt;(L&quot;\u九八ａ八&quot;)))
+std::wcout &lt;&lt; L&quot;\u九八ａ八 with custom traits matched &quot; &lt;&lt; in &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> \u98a8 matched 風
+ <wbr> \u九八ａ八 with custom traits matched 風</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

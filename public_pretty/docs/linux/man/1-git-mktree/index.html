@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-mktree(1) · Linux Manual Pages</title>
+<meta name="description" content="git-mktree – Build a tree-object from ls-tree formatted text">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-mktree/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-mktree(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> git-mktree &#8211; Build a tree-object from ls-tree formatted text </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+git mktree[-z][--missing][--batch]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Reads standard input in non-recursive <code>ls-tree</code> output format, and creates a tree object. The order of the tree entries is normalized by mktree so pre-sorting the input is not required. The object name of the tree object built is written to the standard output.</p>
+<h2>OPTIONS</h2>
+<p> -z</p>
+<dl>
+<dt>
+</dt><dd> Read the NUL-terminated <code>ls-tree -z</code> output instead.</dd></dl>
+<p> &#8211;missing</p>
+<dl>
+<dt>
+</dt><dd> Allow missing objects. The default behaviour (without this option) is to verify that each tree entry&#8217;s sha1 identifies an existing object. This option has no effect on the treatment of gitlink entries (aka &quot;submodules&quot;) which are always allowed to be missing.</dd></dl>
+<p> &#8211;batch</p>
+<dl>
+<dt>
+</dt><dd> Allow building of more than one tree object before exiting. Each tree is separated by as single blank line. The final new-line is optional. Note &#8211; if the <code>-z</code> option is used, lines are terminated with NUL.</dd></dl>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

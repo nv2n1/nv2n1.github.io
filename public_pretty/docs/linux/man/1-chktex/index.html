@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chktex(1) · Linux Manual Pages</title>
+<meta name="description" content="chktex – finds typographic errors in LaTeX.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-chktex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>chktex(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> chktex &#8211; finds typographic errors in LaTeX. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>chktex</code> <i>[-hiqrW] [-v[0-&#8230;]] [-l &lt;rcfile&gt;] [-[wemn] &lt;[1-42]|all&gt;]</i> <i>[-d[0-&#8230;]] [-p &lt;name&gt;] [-o &lt;outfile&gt;] [-[btxgI][0|1]]</i> <code>file1 file2 &#8230;</code></p>
+<h2>DESCRIPTION</h2>
+<p> <i>chktex</i> finds typographic errors in <i>LaTeX</i></p>
+<h2>OPTIONS</h2>
+<p> Miscellaneous options:</p>
+<dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Print a help screen.</dd>
+<dt><code>-i &#8211;license</code></dt>
+<dd> Show distribution information.</dd>
+<dt><code>-l &#8211;localrc</code></dt>
+<dd> Read local .chktexrc formatted file.</dd>
+<dt><code>-d &#8211;debug</code></dt>
+<dd> Debug information. Give it a number.</dd>
+<dt><code>-r &#8211;reset</code></dt>
+<dd> Reset settings to default.</dd></dl>
+<p> Muting warning messages:</p>
+<dl>
+<dt><code>-w &#8211;warnon</code></dt>
+<dd> Makes msg # given a warning and turns it on.</dd>
+<dt><code>-e &#8211;erroron</code></dt>
+<dd> Makes msg # given an error and turns it on.</dd>
+<dt><code>-m &#8211;msgon</code></dt>
+<dd> Makes msg # given a message and turns it on.</dd>
+<dt><code>-n &#8211;nowarn</code></dt>
+<dd> Mutes msg # given.</dd>
+<dt><code>-L &#8211;nolinesupp</code></dt>
+<dd> Do not allow per-line suppressions. These are TeX comments of the form <i>% chktex ##.</i> </dd>
+</dl>
+<p> Output control flags:</p>
+<dl>
+<dt><code>-v &#8211;verbosity</code></dt>
+<dd> How errors are displayed. Default 1, 0=Less, 2=Fancy, 3=lacheck.</dd>
+<dt><code>-V &#8211;pipeverb</code></dt>
+<dd> How errors are displayed when stdout != tty. Defaults to the same as -v.</dd>
+<dt><code>-s &#8211;splitchar</code></dt>
+<dd> String used to split fields when doing -v0</dd>
+<dt><code>-o &#8211;output</code></dt>
+<dd> Redirect error report to a file.</dd>
+<dt><code>-q &#8211;quiet</code></dt>
+<dd> Shuts up about version information.</dd>
+<dt><code>-p &#8211;pseudoname</code></dt>
+<dd> Input file-name when reporting.</dd>
+<dt><code>-f &#8211;format</code></dt>
+<dd> Format to use for output </dd>
+</dl>
+<p> Boolean switches (1 -&gt; enables / 0 -&gt; disables):</p>
+<dl>
+<dt><code>-b &#8211;backup</code></dt>
+<dd> Backup output file.</dd>
+<dt><code>-x &#8211;wipeverb</code></dt>
+<dd> Ignore contents of `erb&#8217; commands.</dd>
+<dt><code>-g &#8211;globalrc</code></dt>
+<dd> Read global .chktexrc file.</dd>
+<dt><code>-I &#8211;inputfiles</code></dt>
+<dd> Execute \input statements.</dd>
+<dt><code>-H &#8211;headererr</code></dt>
+<dd> Show errors found in front of egin{document}</dd></dl>
+<dl>
+<dt><code>-W &#8211;version</code></dt>
+<dd> Version information </dd>
+</dl>
+<p> If no LaTeX files are specified on the command line, we will read from stdin. For explanation of warning/error messages, please consult the main document /usr/share/doc/chktex/ChkTeX.dvi.gz. </p>
+<h2>DISTRIBUTION</h2>
+<p> Copyright (C) 1996 Jens T. Berger Thielemann </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the <i>GNU General Public License</i> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but <code>WITHOUT ANY WARRANTY;</code> without even the implied warranty of <code>MERCHANTABILITY</code> or <code>FITNESS FOR A PARTICULAR PURPOSE.</code> See the <i>GNU General Public License</i> for more details. </p>
+<p> You should have received a copy of the <code>GNU General Public License</code> along with this program; if not, write to the <i>Free Software Foundation, Inc.,</i> 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA </p>
+<h2>ENVIRONMENT</h2>
+<p> No environment variables are used.</p>
+<h2>FILES</h2>
+<p> None.</p>
+<h2>AUTHOR</h2>
+<p> Jens T. Berger Thielemann, <i>&lt;jensthi [at] ifi.uio.no&gt;</i> </p>
+<p> This manual page was cobbled together by Clint Adams &lt;schizo [at] debian.org&gt;, based on the output of &quot;chktex &#8211;help&quot; and <a href="/docs/linux/man/1-deweb/">deweb</a>(1).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-deweb/">deweb</a>(1), <a href="/docs/linux/man/1-chkweb/">chkweb</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

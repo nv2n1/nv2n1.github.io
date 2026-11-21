@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>run_init(8) · Linux Manual Pages</title>
+<meta name="description" content="run_init – run an init script in the proper SELinux context">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-run_init/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>run_init(8)</h1>
+
+
+
+
+
+<p>run_init &#8211; run an init script in the proper SELinux context</p>
+<h2>Synopsis</h2>
+<p><code>run_init </code> <i>SCRIPT</i> [[<i>ARGS</i>]&#8230;]</p>
+<h2>Description</h2>
+<p>Run a init script under the proper context, which is specified in /etc/selinux/POLICYTYPE/contexts/initrc_context.</p>
+<h2>Files</h2>
+<p>/etc/passwd &#8211; user account information<br />
+ /etc/shadow &#8211; encrypted passwords and age information<br />
+ /etc/selinux/POLICYTYPE/contexts/initrc_context &#8211; contains the context to run init scripts under</p>
+<h2>See Also</h2>
+<p><code>newrole</code> (1), <code>runcon</code> (1)</p>
+<h2>Authors</h2>
+<pre>Wayne Salamon (wsalamon [at] tislabs.com) 
+Dan Walsh (dwalsh [at] redhat.com) </pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xvqueryportattributes(3) · Linux Manual Pages</title>
+<meta name="description" content="XvQueryPortAttributes – return list of attributes of a video port">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xvqueryportattributes/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xvqueryportattributes(3)</h1>
+
+
+
+
+
+<p>XvQueryPortAttributes &#8211; return list of attributes of a video port</p>
+<h2>Synopsis</h2>
+<p><code>#include &lt;X11/extensions/Xvlib.h&gt;</code> </p>
+<pre><code>XvAttribute* XvQueryPortAttributes(Display *</code><i>dpy</i><code>,</code>
+<code> XvPortID </code><i>port</i><code>, int *</code><i>p_num_attributes</i><code>);</code></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>dpy</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>port</i></dt>
+<dd>Specifies the port whose adaptor is to be queried for its list of attributes.</dd>
+<dt><i>p_num_attributes</i></dt>
+<dd>A pointer to where the number of attributes returned in the array is written.</dd></dl>
+<h2>Description</h2>
+<p><code><a href="/docs/linux/man/3-xvqueryportattributes/">XvQueryPortAttributes</a></code>(3)<code>returns</code>the<code>number</code>of<code>attributes</code> and an array of XvAttributes valid for the given port. The array may be freed with <code><a href="/docs/linux/man/3-xfree/">XFree</a></code>(3).</p>
+<h2>Return Values</h2>
+<p>XvAttribute has the following structure: </p>
+<p>&nbsp;<wbr>typedef struct&nbsp;<wbr>{<br />
+int flags;<br />
+int min_value;<br />
+int max_value;<br />
+char&nbsp;<wbr>*name;<br />
+&nbsp;<wbr>}&nbsp;<wbr>XvAttribute; </p>
+<dl COMPACT>
+<dt><i>flags</i></dt>
+<dd>May be XvGettable or XvSettable or both OR&#8217;d together indicating the particular attribute is readable, writeable or readable and writeable.</dd>
+<dt><i>min_value</i></dt>
+<dd>The minimum attribute values which are valid for the driver.</dd>
+<dt><i></dt>
+<dd>The maximum attribute values which are valid for the driver.</dd>
+<dt>name</i></dt>
+<dd>A string describing the name of the attribute that may be used to retrieve the Atom for the particular attribute.</dd></dl>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt>[XvBadPort]</dt>
+<dd>Generated if the requested port does not exist.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xvgetportattribute/">XvGetPortAttribute</a></code>(3), <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

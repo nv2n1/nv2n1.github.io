@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mlx5dv_devx_subscribe_devx_event(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mlx5dv_devx_subscribe_devx_event/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mlx5dv_devx_subscribe_devx_event(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>mlx5dv_devx_subscribe_devx_event - Subscribe over an event channel for device events.</p>
+<p>mlx5dv_devx_subscribe_devx_event_fd - Subscribe over an event channel for device events to signal eventfd.</p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt>
+</dt><dd> <pre><code>
+#include &lt;infiniband/mlx5dv.h&gt;
+int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_channel,
+                                     struct mlx5dv_devx_obj *obj,
+                                     uint16_t events_sz,
+                                     uint16_t events_num[],
+                                     uint64_t cookie) int mlx5dv_devx_subscribe_devx_event_fd(struct mlx5dv_devx_event_channel *dv_event_channel,
+                                                                                              int fd,
+                                                                                              struct mlx5dv_devx_obj *obj,
+                                                                                              uint16_t event_num)
+</code></pre></dd></dl>
+<h2>DESCRIPTION</h2>
+<p>Subscribe over a DEVX event channel for device events.</p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>dv_event_channel
+</dt><dd> Event channel to subscribe over.
+</dd><dt>fd
+</dt><dd> A file descriptor that previously was opened by the eventfd() system call.
+</dd><dt>obj
+</dt><dd> DEVX object that events_num relates to, can be NULL for unaffiliated events.
+</dd><dt>events_sz
+</dt><dd> Size of the events_num buffer that holds the events to subscribe for.
+</dd><dt>events_num
+</dt><dd> Holds the required event numbers to subscribe for, numbers are according to the device specification.
+</dd><dt>cookie
+</dt><dd> The value to be returned back when reading the event, can be used as an ID for application use.</dd></dl>
+<h2>NOTES</h2>
+<p>When mlx5dv_devx_subscribe_devx_event_fd will be used the fd will be signaled once an event has occurred.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/3-mlx5dv_open_device/">mlx5dv_open_device</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_devx_create_event_channel/">mlx5dv_devx_create_event_channel</a>(3), <a HREF="/docs/linux/man/3-mlx5dv_devx_get_event/">mlx5dv_devx_get_event</a>(3)</p>
+<p>#AUTHOR</p>
+<p>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

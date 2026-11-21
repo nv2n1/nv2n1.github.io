@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdenable_shared_from_thisweak_from_this(3) · Linux Manual Pages</title>
+<meta name="description" content="std::enable_shared_from_this&lt;T&gt;::weak_from_this – std::enable_shared_from_this&lt;T&gt;::weak_from_this">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdenable_shared_from_thisweak_from_this/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdenable_shared_from_thisweak_from_this(3)</h1>
+
+
+
+
+
+<p>std::enable_shared_from_this&lt;T&gt;::weak_from_this &#8211; std::enable_shared_from_this&lt;T&gt;::weak_from_this</p>
+<h2>Synopsis</h2>
+<p>std::weak_ptr&lt;T&gt; weak_from_this() noexcept; <code>(1)</code> <i>(since C++17)</i><br />
+std::weak_ptr&lt;T const&gt; weak_from_this() const noexcept; <code>(2)</code> <i>(since C++17)</i><br />
+Returns a std::weak_ptr&lt;T&gt; that tracks ownership of *this by all existing std::shared_ptr that refer to *this. </p>
+<h2>Notes</h2>
+<p>This is a copy of the the private mutable weak_ptr member that is part of enable_shared_from_this. </p>
+<h2>Return value</h2>
+<p>std::weak_ptr&lt;T&gt; that shares ownership of *this with pre-existing std::shared_ptrs </p>
+<h2>Example</h2>
+<p>&nbsp;This section is incomplete<br />
+&nbsp;Reason: no example </p>
+<h2>See also</h2>
+<p>shared_ptr smart pointer with shared object ownership semantics<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

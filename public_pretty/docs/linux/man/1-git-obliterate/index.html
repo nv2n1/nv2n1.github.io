@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-obliterate(1) · Linux Manual Pages</title>
+<meta name="description" content="git-obliterate – rewrite past commits to remove some files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-obliterate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-obliterate(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>git-obliterate</code> &#8211; rewrite past commits to remove some files</p>
+<h2>SYNOPSIS</h2>
+<p> git obliterate &lt;files&#8230;&gt; [&#8211; &lt;rev-list options&#8230;&gt;]</p>
+<h2>DESCRIPTION</h2>
+<p> Completely remove some files from the repository, including past commits and tags. WARNING! This command will rewirte the history similar to <code>git rebase</code>(though it affects more). The rewritten history will have different object names for all the objects and will not converge with the original branch. So <code>avoid using it on commits that you shared</code>. And it will mess up stash, so <code>don&#8217;t have stash when you run git obliterate</code>.</p>
+<h2>OPTIONS</h2>
+<p> You can pass rev-list options to indicate the range of commits affected. Those options need to be seperated with &#8216;&#8211;&#8216; before them. Run <code>git help rev-list</code> to see the acceptable options.</p>
+<h2>Examples</h2>
+<p> Remove .secret from the repository:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git obliterate .secret
+</pre>
+</dd></dl>
+<p> Remove .secret from commits between origin and feature:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git obliterate .secret -- feature ^origin
+</pre>
+</dd></dl>
+<p> Remove .secret from commit abcdefg to commit 1234567</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ git obliterate .secret -- abcdefg..1234567
+</pre>
+</dd></dl>
+<h2>AUTHOR</h2>
+<p> Written by &lt;<i>brianloveswords [at] gmail.com</i>&gt;</p>
+<h2>REPORTING BUG</h2>
+<p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras/issues">https://github.com/tj/git-extras/issues</a></i>&gt;</p>
+<h2>SEE ALSO</h2>
+<p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

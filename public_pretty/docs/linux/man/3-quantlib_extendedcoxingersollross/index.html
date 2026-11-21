@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_extendedcoxingersollross(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::ExtendedCoxIngersollRoss – Extended Cox-Ingersoll-Ross model class.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_extendedcoxingersollross/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_extendedcoxingersollross(3)</h1>
+
+
+
+
+
+<p>QuantLib::ExtendedCoxIngersollRoss &#8211; Extended Cox-Ingersoll-Ross model class. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/models/shortrate/onefactormodels/extendedcoxingersollross.hpp&gt; </p>
+<p> Inherits <code>QuantLib::CoxIngersollRoss</code>, and <code>QuantLib::TermStructureConsistentModel</code>. </p>
+<h3>Classes</h3>
+<p>class <code>Dynamics</code><br />
+ <i>Short-rate dynamics in the extended Cox-Ingersoll-Ross model. </i><br />
+ class <code>FittingParameter</code><br />
+ <i>Analytical term-structure fitting parameter $ ndle</i>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, Real theta=0.1, Real k=0.1, Real sigma=0.1, Real x0=0.05)&quot;</p>
+<h3>Public Member Functions</h3>
+<p><code>ExtendedCoxIngersollRoss</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure, Real theta=0.1, Real k=0.1, Real sigma=0.1, Real x0=0.05) </p>
+<p> boost::shared_ptr&lt; <code>Lattice</code> &gt; <code>tree</code> (const <code>TimeGrid</code> &amp;grid) const<br />
+ <i>Return by default a trinomial recombining tree. </i><br />
+ boost::shared_ptr&lt; <code>ShortRateDynamics</code> &gt; <code>dynamics</code> () const<br />
+ <i>returns the short-rate dynamics </i><br />
+ Real <code>discountBondOption</code> (Option::Type type, Real strike, Time maturity, Time bondMaturity) const </p>
+<h3>Protected Member Functions</h3>
+<p>void <code>generateArguments</code> () </p>
+<p> Real <code>A</code> (Time t, Time T) const </p>
+<h2>Detailed Description</h2>
+<p>Extended Cox-Ingersoll-Ross model class. </p>
+<p> This class implements the extended Cox-Ingersoll-Ross model defined by [ dr_t = ( heta(t) &#8211; lpha r_t)dt + qrt{r_t}igma dW_t . ] </p>
+<p> <code>Bug</code></p>
+<dl COMPACT>
+<dd>this class was not tested enough to guarantee its functionality.</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

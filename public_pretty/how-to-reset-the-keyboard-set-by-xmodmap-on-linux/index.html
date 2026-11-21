@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/">
+  <meta name="description" content="When you’ve modified your keyboard layout or key bindings using xmodmap and need to revert to the default, setxkbmap is your primary tool. However, the approach …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/">
+  <meta property="og:description" content="When you’ve modified your keyboard layout or key bindings using xmodmap and need to revert to the default, setxkbmap is your primary tool. However, the approach …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>Resetting Your Linux Keyboard Layout with xmodmap and setxkbmap</h1>
+        <time class="post-date" datetime="2018-03-24T08:22:17Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you’ve modified your keyboard layout or key bindings using xmodmap and need to revert to the default, setxkbmap is your primary tool. However, the approach depends on whether you’re running X11 or Wayland, and what aspects of the configuration you want to reset.</p>
+<h2 id="check-your-session-type">Check Your Session Type</h2>
+<p>Before attempting any resets, verify whether you’re on X11 or Wayland:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$XDG_SESSION_TYPE</span>
+</span></span></code></pre></div><p>If this returns <code>wayland</code>, most of the xmodmap and setxkbmap commands below won’t work. Wayland sessions use the display server’s native input handling, so you’ll need to use your desktop environment’s keyboard settings (GNOME Settings, KDE System Settings, etc.) instead.</p>
+<h2 id="basic-reset-on-x11">Basic Reset on X11</h2>
+<p>The simplest approach is to run setxkbmap without arguments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setxkbmap
+</span></span></code></pre></div><p>This resets your keyboard to the default layout for your locale, typically US English unless configured otherwise.</p>
+<h2 id="check-current-configuration">Check Current Configuration</h2>
+<p>Before resetting, see what’s currently active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setxkbmap -query
+</span></span></code></pre></div><p>This shows your active layout, variant, and options. Example output:</p>
+<pre><code>layout:     us
+variant:    
+options:    caps:escape
+</code></pre>
+<h2 id="granular-resets">Granular Resets</h2>
+<p>If you only want to reset certain aspects while keeping others:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Reset to a specific layout</span>
+</span></span><span class="line"><span class="cl">setxkbmap us
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reset to a specific layout with variant</span>
+</span></span><span class="line"><span class="cl">setxkbmap us dvorak
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Clear only options while keeping layout</span>
+</span></span><span class="line"><span class="cl">setxkbmap -option
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Clear all options explicitly</span>
+</span></span><span class="line"><span class="cl">setxkbmap -option <span class="s2">&#34;&#34;</span>
+</span></span></code></pre></div><h2 id="remove-xmodmap-files">Remove xmodmap Files</h2>
+<p>If you’ve created custom xmodmap rules in <code>~/.Xmodmap</code> or <code>~/.xmodmaprc</code>, these files won’t be automatically cleared when you run setxkbmap. Prevent them from loading on session start:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Rename for backup</span>
+</span></span><span class="line"><span class="cl">mv ~/.Xmodmap ~/.Xmodmap.bak
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Or remove entirely</span>
+</span></span><span class="line"><span class="cl">rm ~/.Xmodmap
+</span></span></code></pre></div><p>Then reload your X session by logging out and back in, or restart your X server.</p>
+<h2 id="stop-xmodmap-from-auto-loading">Stop xmodmap from Auto-Loading</h2>
+<p>Check these locations and remove any xmodmap calls:</p>
+<ul>
+<li><code>~/.xinitrc</code></li>
+<li><code>~/.xsession</code></li>
+<li><code>~/.xprofile</code></li>
+<li><code>~/.bashrc</code> or <code>~/.bash_profile</code> (if xmodmap is called here)</li>
+</ul>
+<p>Look for lines like:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap ~/.Xmodmap
+</span></span><span class="line"><span class="cl">xmodmap -e <span class="s2">&#34;keycode 66 = Escape&#34;</span>
+</span></span></code></pre></div><p>Delete or comment out these lines. The changes take effect on your next login.</p>
+<h2 id="test-changes-without-persistence">Test Changes Without Persistence</h2>
+<p>To test a configuration change temporarily without affecting your saved setup:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Apply temporarily for this session only</span>
+</span></span><span class="line"><span class="cl">setxkbmap us -option ctrl:nocaps
+</span></span></code></pre></div><p>Changes revert when you log out. This is useful for testing before making permanent changes.</p>
+<h2 id="advanced-multiple-keyboard-configuration">Advanced: Multiple Keyboard Configuration</h2>
+<p>If you have multiple keyboards connected and want to configure them separately, use xinput on X11:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List input devices</span>
+</span></span><span class="line"><span class="cl">xinput list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set layout for specific device</span>
+</span></span><span class="line"><span class="cl">setxkbmap -device <span class="m">12</span> us dvorak
+</span></span></code></pre></div><p>Replace <code>12</code> with the device ID from the list output.</p>
+<h2 id="persistent-configuration-for-x11">Persistent Configuration for X11</h2>
+<p>To make changes survive a reboot, add to your <code>~/.xprofile</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setxkbmap -layout us -option ctrl:nocaps
+</span></span></code></pre></div><p>This executes before your window manager starts. For systems without <code>~/.xprofile</code>, create one.</p>
+<h2 id="wayland-keyboard-configuration">Wayland Keyboard Configuration</h2>
+<p>On Wayland systems, keyboard configuration is handled by the display server and desktop environment. GNOME and KDE don’t use xmodmap or setxkbmap. Instead:</p>
+<ul>
+<li><strong>GNOME</strong>: Settings &gt; Keyboard &gt; Input Sources or Keyboard Shortcuts</li>
+<li><strong>KDE Plasma</strong>: System Settings &gt; Input Devices &gt; Keyboard</li>
+<li><strong>Sway/Wlroots</strong>: Configure in <code>~/.config/sway/config</code> with <code>input</code> blocks</li>
+</ul>
+<p>Example Sway configuration:</p>
+<pre><code>input * {
+    xkb_layout us
+    xkb_options caps:escape
+}
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If setxkbmap produces no visible effect:</p>
+<ol>
+<li>Verify X11 is running: <code>echo $XDG_SESSION_TYPE</code> should return <code>x11</code></li>
+<li>Confirm X is accessible: <code>echo $DISPLAY</code> should show something like <code>:0</code> or <code>:1</code></li>
+<li>Check for conflicting configuration in startup scripts</li>
+<li>Some desktop environments override xkb settings after login — check your DE’s keyboard settings</li>
+</ol>
+<p>If you’re certain X11 is running but changes don’t persist, the issue is usually an auto-loading xmodmap or xkb configuration file that reapplies your old settings on each login. Find and remove it.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

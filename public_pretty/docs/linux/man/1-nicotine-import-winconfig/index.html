@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nicotine-import-winconfig(1) · Linux Manual Pages</title>
+<meta name="description" content="nicotine-import-winconfig is a script to convert SoulSeek Windows client configuration file to the Nicotine format.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nicotine-import-winconfig/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nicotine-import-winconfig(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>nicotine-import-winconfig</code> is a script to convert SoulSeek Windows client configuration file to the Nicotine format. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>nicotine-import-winconfig</code> [options] &lt;path_to_the_windows_soulseek_files&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>nicotine-import-winconfig</code> will read the SoulSeek Windows client configuration file and will extract information like download queue, userlist, login information, list of autojoined chatrooms, list of banned users, user info/picture, and write them to $HOME/.nicotine/config, which is the default nicotine configuration file.</p>
+<h2>OPTIONS</h2>
+<p> If you don&#8217;t want to import the whole configuration, you may consider using the command line flags below.</p>
+<dl>
+<dt><i>-q, &#8211;queue</i></dt>
+<dd> Import the download queue.</dd>
+<dt><i>-u, &#8211;userlist</i></dt>
+<dd> Import the userlist.</dd>
+<dt><i>-l, &#8211;login</i></dt>
+<dd> Import the login information.</dd>
+<dt><i>-C, &#8211;chatrooms</i></dt>
+<dd> Import the list of autojoined chatrooms.</dd>
+<dt><i>-b, &#8211;banned</i></dt>
+<dd> Import the list of banned users.</dd>
+<dt><i>-i, &#8211;userinfo</i></dt>
+<dd> Import the userinfo and picture.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Show help and exit.</dd>
+<dt><i>-c &lt;file&gt;, &#8211;config=&lt;file&gt;</i></dt>
+<dd> Use &lt;file&gt; as Nicotine configuration file. If &lt;file&gt; do not exists a new empty configuration file will be created.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Import the SoulSeek Windows client configuration from /mnt/windows into the default nicotine configuration file : </p>
+<p> Nicotine should be shut down before doing this. </p>
+<p> <code>nicotine-import-winconfig</code> &quot;/mnt/windows/Program Files/SoulSeek&quot;</p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Nicotine+ project.<br />
+ Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-nicotine/">nicotine</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

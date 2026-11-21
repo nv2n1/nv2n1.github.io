@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Enable and Disable Your Laptop Keyboard in Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-disable-and-enable-laptop-keyboard-in-linux/">
+  <meta name="description" content="When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance—it’s too easy to brush keys while typing and trigger unwanted …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Enable and Disable Your Laptop Keyboard in Linux">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-disable-and-enable-laptop-keyboard-in-linux/">
+  <meta property="og:description" content="When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance—it’s too easy to brush keys while typing and trigger unwanted …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/general-system-administration/">General System Administration</a>
+        </nav>
+        
+        <h1>How to Enable and Disable Your Laptop Keyboard in Linux</h1>
+        <time class="post-date" datetime="2016-05-14T02:45:52Z">May 14, 2016</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance—it’s too easy to brush keys while typing and trigger unwanted input. Rather than disabling the keyboard at the BIOS level or physically disconnecting it, you can use the <code>xinput</code> tool to disable and re-enable it from within your Linux session.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You’ll need:</p>
+<ul>
+<li><code>xinput</code> installed (included by default on most X11 desktop environments)</li>
+<li>An external USB keyboard connected before disabling the laptop keyboard</li>
+<li>Access to a terminal or SSH session to re-enable if needed</li>
+</ul>
+<p>If <code>xinput</code> isn’t installed, grab it from your distro’s repos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo apt install x11-utils
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fedora</span>
+</span></span><span class="line"><span class="cl">sudo dnf install xorg-x11-utils
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Arch</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S xorg-xinput
+</span></span></code></pre></div><h2 id="finding-your-keyboard-ids">Finding Your Keyboard IDs</h2>
+<p>First, list all input devices to identify your laptop keyboard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput list
+</span></span></code></pre></div><p>You’ll see output like this:</p>
+<pre><code>⎡ Virtual core pointer                      id=2    [master pointer  (3)]
+⎜ ↳ Virtual core XTEST pointer                  id=4    [slave pointer   (2)]
+⎜ ↳ Logitech USB Mouse                          id=9    [slave pointer   (2)]
+⎣ Virtual core keyboard                     id=3    [master keyboard (2)]
+  ↳ Virtual core XTEST keyboard                 id=5    [slave keyboard  (3)]
+  ↳ Power Button                                id=6    [slave keyboard  (3)]
+  ↳ AT Translated Set 2 keyboard                id=10   [slave keyboard  (3)]
+  ↳ HP WMI hotkeys                              id=12   [slave keyboard  (3)]
+</code></pre>
+<p>The <code>AT Translated Set 2 keyboard</code> is almost always your built-in laptop keyboard. Note its ID (in this example, <code>id=10</code>). The <code>Virtual core keyboard</code> is the master device (typically <code>id=3</code>).</p>
+<p>Automate finding the laptop keyboard ID:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">LAPTOP_KB_ID</span><span class="o">=</span><span class="k">$(</span>xinput list <span class="p">|</span> grep <span class="s1">&#39;AT Translated Set 2&#39;</span> <span class="p">|</span> sed -n <span class="s1">&#39;s/.*id=\([0-9]*\).*/\1/p&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Laptop keyboard ID: </span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="disabling-the-keyboard">Disabling the Keyboard</h2>
+<p>To disable the laptop keyboard, detach it from the master keyboard device:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput float &lt;ID&gt;
+</span></span></code></pre></div><p>Replace <code>&lt;ID&gt;</code> with your laptop keyboard’s ID. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput float <span class="m">10</span>
+</span></span></code></pre></div><p>The <code>float</code> command detaches the device from its master, effectively disabling it. You should immediately stop receiving input from the laptop keyboard. Test by pressing keys—they won’t register.</p>
+<h2 id="re-enabling-the-keyboard">Re-enabling the Keyboard</h2>
+<p>To bring the keyboard back online, reattach it to the master keyboard device:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput reattach &lt;ID&gt; &lt;MASTER_ID&gt;
+</span></span></code></pre></div><p>For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xinput reattach <span class="m">10</span> <span class="m">3</span>
+</span></span></code></pre></div><p>The keyboard becomes functional again.</p>
+<h2 id="automated-scripts">Automated Scripts</h2>
+<p>Create a reusable script pair for convenience. Save this as <code>disable-laptop-kb.sh</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nv">LAPTOP_KB_ID</span><span class="o">=</span><span class="k">$(</span>xinput list <span class="p">|</span> grep <span class="s1">&#39;AT Translated Set 2&#39;</span> <span class="p">|</span> sed -n <span class="s1">&#39;s/.*id=\([0-9]*\).*/\1/p&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: Could not find laptop keyboard&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Disabling laptop keyboard (ID: </span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">)...&#34;</span>
+</span></span><span class="line"><span class="cl">xinput float <span class="s2">&#34;</span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Done. Keyboard disabled.&#34;</span>
+</span></span></code></pre></div><p>And <code>enable-laptop-kb.sh</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nv">LAPTOP_KB_ID</span><span class="o">=</span><span class="k">$(</span>xinput list <span class="p">|</span> grep <span class="s1">&#39;AT Translated Set 2&#39;</span> <span class="p">|</span> sed -n <span class="s1">&#39;s/.*id=\([0-9]*\).*/\1/p&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MASTER_ID</span><span class="o">=</span><span class="m">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: Could not find laptop keyboard&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Enabling laptop keyboard (ID: </span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">)...&#34;</span>
+</span></span><span class="line"><span class="cl">xinput reattach <span class="s2">&#34;</span><span class="nv">$LAPTOP_KB_ID</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$MASTER_ID</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Done. Keyboard enabled.&#34;</span>
+</span></span></code></pre></div><p>Make them executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x disable-laptop-kb.sh enable-laptop-kb.sh
+</span></span></code></pre></div><p>Then run them as needed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./disable-laptop-kb.sh
+</span></span><span class="line"><span class="cl">./enable-laptop-kb.sh
+</span></span></code></pre></div><h2 id="desktop-environment-integration">Desktop Environment Integration</h2>
+<p>You can bind these scripts to keyboard shortcuts in your desktop environment for one-key toggling:</p>
+<p><strong>GNOME/MATE:</strong> Settings → Keyboard Shortcuts → Custom Shortcuts
+<strong>KDE Plasma:</strong> System Settings → Shortcuts → Custom Shortcuts
+<strong>Xfce:</strong> Settings → Keyboard → Application Shortcuts</p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>The master keyboard device ID is usually <code>3</code>, but verify with <code>xinput list</code> if the re-enable script fails.</li>
+<li>Changes persist only during your X11 session. Rebooting resets everything.</li>
+<li>If you disable the keyboard without an external keyboard connected, you’ll need to SSH in or restart to recover.</li>
+<li>Some hybrid-sleep or hibernation events may require you to run the disable script again after resuming.</li>
+</ul>
+<h2 id="alternatives">Alternatives</h2>
+<p>If you prefer permanent solutions, check your laptop’s BIOS settings—many allow disabling internal keyboards entirely. Alternatively, use your desktop environment’s accessibility settings under “Physical Keyboard” if available, though <code>xinput</code> is more reliable and reversible.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

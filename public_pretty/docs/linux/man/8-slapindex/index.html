@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slapindex(8) · Linux Manual Pages</title>
+<meta name="description" content="slapindex – Reindex entries in a SLAPD database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-slapindex/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>slapindex(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>slapindex &#8211; Reindex entries in a SLAPD database</p>
+<h2>Synopsis</h2>
+<p><code>/usr/sbin/slapindex</code> [<code>-b</code><i>&nbsp;<wbr>suffix</i>] [<code>-c</code>] [<code>-d</code><i>&nbsp;<wbr>debug-level</i>] [<code>-f</code><i>&nbsp;<wbr>slapd.conf</i>] [<code>-F</code><i>&nbsp;<wbr>confdir</i>] [<code>-g</code>] [<code>-n</code><i>&nbsp;<wbr>dbnum</i>] [<code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]] [<code>-q</code>] [<code>-t</code>] [<code>-v</code>] [<i>attr</i>[<i>&#8230;</i>]] <code> </p>
+</code>
+<h2>Description</h2>
+<p><code>Slapindex</code> is used to regenerate <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) indices based upon the current contents of a database. It opens the given database determined by the database number or suffix and updates the indices for all values of all attributes of all entries. If a list of specific attributes is provided on the command line, only the indices for those attributes will be regenerated. Databases configured as <code>subordinate</code> of this one are also re-indexed, unless <code>-g</code> is specified. </p>
+<p> All files eventually created by <code>slapindex</code> will belong to the identity <code>slapindex</code> is run as, so make sure you either run <code>slapindex</code> with the same identity <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) will be run as (see option <code>-u</code> in <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8)), or change file ownership before running <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8).</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-b</code><i>&nbsp;<wbr>suffix</i></dt>
+<dd>Use the specified <i>suffix</i> to determine which database to generate output for. The <code>-b</code> cannot be used in conjunction with the <code>-n</code> option.</dd>
+<dt><code>-c</code></dt>
+<dd>enable continue (ignore errors) mode.</dd>
+<dt><code>-d</code><i>&nbsp;<wbr>debug-level</i></dt>
+<dd>enable debugging messages as defined by the specified <i>debug-level</i>; see <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) for details.</dd>
+<dt><code>-f</code><i>&nbsp;<wbr>slapd.conf</i></dt>
+<dd>specify an alternative <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file.</dd>
+<dt><code>-F</code><i>&nbsp;<wbr>confdir</i></dt>
+<dd>specify a config directory. If both <code>-f</code> and <code>-F</code> are specified, the config file will be read and converted to config directory format and written to the specified directory. If neither option is specified, an attempt to read the default config directory will be made before trying to use the default config file. If a valid config directory exists then the default config file is ignored.</dd>
+<dt><code>-g</code></dt>
+<dd>disable subordinate gluing. Only the specified database will be processed, and not its glued subordinates (if any).</dd>
+<dt><code>-n</code><i>&nbsp;<wbr>dbnum</i></dt>
+<dd>Generate output for the <i>dbnum</i>-th database listed in the configuration file. The config database <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), is always the first database, so use <code>-n 0</code> </dd>
+<p> The <code>-n</code> cannot be used in conjunction with the <code>-b</code> option.</p>
+<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</dt>
+<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dd></dl>
+<pre> syslog=&lt;subsystems&gt; (see `-s' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
+ syslog-level=&lt;level&gt; (see `-S' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))
+ syslog-user=&lt;user&gt; (see `-l' in <a href="//www.systutorials.com/docs/linux/man/8-slapd/">slapd</a>(8))</pre>
+<dl>
+<dt><code>-q</code></dt>
+<dd>enable quick (fewer integrity checks) mode. Performs no consistency checks when writing the database. Improves indexing time, <code>however</code> the database will most likely be unusable if any errors or interruptions occur.</dd>
+<dt><code>-t</code></dt>
+<dd>enable truncate mode. Truncates (empties) an index database before indexing any entries. May only be used with Quick mode.</dd>
+<dt><code>-v</code></dt>
+<dd>enable verbose mode.</dd></dl>
+<h2>Limitations</h2>
+<p>Your <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) should not be running (at least, not in read-write mode) when you do this to ensure consistency of the database. </p>
+<p> This command provides ample opportunity for the user to obtain and drink their favorite beverage.</p>
+<h2>Examples</h2>
+<p>To reindex your SLAPD database, give the command: </p>
+<pre> /usr/sbin/slapindex</pre>
+<p>To regenerate the index for only a specific attribute, e.g. &quot;uid&quot;, give the command: </p>
+<pre> /usr/sbin/slapindex uid</pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/5-ldif/">ldif</a></code>(5), <code><a href="/docs/linux/man/8-slapadd/">slapadd</a></code>(8), <code><a href="/docs/linux/man/1-ldapadd/">ldapadd</a></code>(1), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8) </p>
+<p> &quot;OpenLDAP Administrator&#8217;s Guide&quot; (<a rel="nofollow" href="http://www.OpenLDAP.org/doc/admin/)">http://www.OpenLDAP.org/doc/admin/)</a></p>
+<h2>Acknowledgements</h2>
+<p><code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

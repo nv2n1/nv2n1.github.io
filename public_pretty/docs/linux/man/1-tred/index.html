@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tred(1) · Linux Manual Pages</title>
+<meta name="description" content="tred – transitive reduction filter for directed graphs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tred/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tred(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> tred &#8211; transitive reduction filter for directed graphs </p>
+<h2>SYNOPSIS</h2>
+<p> <code>tred</code> [ <code>-v?</code> ] [ <i>files </i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>tred</code> computes the transitive reduction of directed graphs, and prints the resulting graphs to standard output. This removes edges implied by transitivity. Nodes and subgraphs are not otherwise affected. The &#8220;meaning&#8221; and validity of the reduced graphs is application dependent. <code>tred </code> is particularly useful as a preprocessor to <i>dot</i> to reduce clutter in dense layouts. </p>
+<p> Undirected graphs are silently ignored.</p>
+<h2>OPTIONS</h2>
+<p> The following options are supported:</p>
+<dl>
+<dt><code>-v</code></dt>
+<dd> Verbose output.</dd>
+<dt><code>-?</code></dt>
+<dd> Print usage information.</dd></dl>
+<h2>OPERANDS</h2>
+<p> The following operand is supported:</p>
+<dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
+<h2>BUGS</h2>
+<p> Using bitmaps internally would substantially decrease running time.</p>
+<h2>DIAGNOSTICS</h2>
+<p> If a graph has cycles, its transitive reduction is not uniquely defined. In this case <i>tred</i> emits a warning.</p>
+<h2>AUTHORS</h2>
+<p> Stephen C. North &lt;north [at] research.att.com&gt;<br />
+ Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-acyclic/">acyclic</a>(1), <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), <a href="/docs/linux/man/1-sccmap/">sccmap</a>(1), libgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

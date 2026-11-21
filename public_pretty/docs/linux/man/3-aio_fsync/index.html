@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aio_fsync(3) · Linux Manual Pages</title>
+<meta name="description" content="aio_fsync – asynchronous file synchronization">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-aio_fsync/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>aio_fsync(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> aio_fsync &#8211; asynchronous file synchronization </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;aio.h&gt;</code> </p>
+<p> <code>int aio_fsync(int </code><i>op</i><code>, struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
+<p> Link with <i>-lrt</i>.</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>aio_fsync</code>() function does a sync on all outstanding asynchronous I/O operations associated with <i>aiocbp-&gt;aio_fildes</i>. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>
+<p> More precisely, if <i>op</i> is <code>O_SYNC</code>, then all currently queued I/O operations shall be completed as if by a call of <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), and if <i>op</i> is <code>O_DSYNC</code>, this call is the asynchronous analog of <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2). </p>
+<p> Note that this is a request only; it does not wait for I/O completion. </p>
+<p> Apart from <i>aio_fildes</i>, the only field in the structure pointed to by <i>aiocbp</i> that is used by this call is the <i>aio_sigevent</i> field (a <i>sigevent</i> structure, described in <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7)), which indicates the desired type of asynchronous notification at completion. All other fields are ignored.</p>
+<h2>RETURN VALUE</h2>
+<p> On success (the sync request was successfully queued) this function returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EAGAIN</code></dt>
+<dd> Out of resources.</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>aio_fildes</i> is not a valid file descriptor open for writing.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Synchronized I/O is not supported for this file, or <i>op</i> is not <code>O_SYNC</code> or <code>O_DSYNC</code>.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_fsync</code>() is not implemented.</dd></dl>
+<h2>VERSIONS</h2>
+<p> The <code>aio_fsync</code>() function is available since glibc 2.1.</p>
+<h2>ATTRIBUTES</h2>
+<p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
+<table BORDER>
+<tr VALIGN=top>
+<td><code>Interface</code></td>
+<td><code>Attribute</code></td>
+<td><code>Value</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>aio_fsync</code>() </td>
+<td>Thread safety</td>
+<td>MT-Safe
+</td>
+</tr>
+</table>
+<h2>CONFORMING TO</h2>
+<p> POSIX.1-2001, POSIX.1-2008.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-aio_cancel/">aio_cancel</a></code>(3), <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3), <code><a href="/docs/linux/man/3-aio_read/">aio_read</a></code>(3), <code><a href="/docs/linux/man/3-aio_return/">aio_return</a></code>(3), <code><a href="/docs/linux/man/3-aio_suspend/">aio_suspend</a></code>(3), <code><a href="/docs/linux/man/3-aio_write/">aio_write</a></code>(3), <code><a href="/docs/linux/man/3-lio_listio/">lio_listio</a></code>(3), <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7), <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

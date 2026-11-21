@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>h5repack(1) · Linux Manual Pages</title>
+<meta name="description" content="h5repack – Copy an HDF5 file to a new file with or without compression/chunking">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-h5repack/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>h5repack(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> h5repack &#8211; Copy an HDF5 file to a new file with or without compression/chunking</p>
+<h2>SYNOPSIS</h2>
+<p> <code>h5repack</code> <code>-i</code> <i>file1</i> <code>-o</code> <i>file2 </i> [<code>-h</code>] [<code>-v</code>] [<code>-f</code> <i>&#8216;filter&#8217;</i>] [<code>-l</code> <i>&#8216;layout&#8217;</i>] [<code>-m</code> <i>number</i>] [<code>-e</code> <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>h5repack</code> is a command line tool that applies HDF5 filters to a input file <i>file1</i>, saving the output in a new file, <i>file2</i>. </p>
+<p> <i>&#8216;filter&#8217;</i> is a string with the format <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;list of objects&gt; : &lt;name of filter&gt; = &lt;filter parameters&gt;.</p>
+<p> <i>&lt;list of objects&gt;</i> is a comma separated list of object names meaning apply compression only to those objects. If no object names are specified, the filter is applied to all objects. </p>
+<p> <i>&lt;name of filter&gt;</i> can be:<br />
+&nbsp;<wbr>GZIP, to apply the HDF5 GZIP filter&nbsp;<wbr>(GZIP compression)<br />
+&nbsp;<wbr>SZIP, to apply the HDF5 SZIP filter&nbsp;<wbr>(SZIP compression)<br />
+&nbsp;<wbr>SHUF, to apply the HDF5 shuffle filter<br />
+&nbsp;<wbr>FLET, to apply the HDF5 checksum filter<br />
+&nbsp;<wbr>NONE, to remove the filter </p>
+<p> <i>&lt;filter parameters&gt;</i> contains the optional compression information:<br />
+&nbsp;<wbr>SHUF&nbsp;<wbr>(no parameter)&nbsp;<wbr><br />
+&nbsp;<wbr>FLET&nbsp;<wbr>(no parameter)&nbsp;<wbr><br />
+&nbsp;<wbr>GZIP=&lt;deflation level&gt;&nbsp;<wbr>from 1-9&nbsp;<wbr><br />
+&nbsp;<wbr>SZIP=&lt;pixels per block,coding&gt;&nbsp;<wbr>(pixels per block is a even number in&nbsp;<wbr> 2-32 and coding method is &#8216;EC&#8217; or &#8216;NN&#8217;) </p>
+<p> <i>&#8216;layout&#8217; is a string with the format</i><br />
+&nbsp;<wbr>&lt;list of objects&gt;&nbsp;<wbr>:&nbsp;<wbr>&lt;layout type&gt;&nbsp;<wbr> </p>
+<p> <i>&lt;list of objects&gt;</i> is a comma separated list of object names, meaning that layout information is supplied for those objects. If no object names are specified, the layout is applied to all objects. </p>
+<p> <i>&lt;layout type&gt; </i> can be:<br />
+&nbsp;<wbr>CHUNK, to apply chunking layout&nbsp;<wbr><br />
+&nbsp;<wbr>COMPA, to apply compact layout&nbsp;<wbr><br />
+&nbsp;<wbr>CONTI, to apply continuous layout&nbsp;<wbr> </p>
+<p> <i>&lt;layout parameters&gt;</i> is present for the chunk case only it is the chunk size of each dimension: <i>&lt;dim_1 x dim_2 x &#8230; dim_n&gt;</i></p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>file1</i>,<i>file2</i></dt>
+<dd> The input and output HDF5 files</dd>
+<dt><code>-h</code></dt>
+<dd> Print a help message</dd>
+<dt><code>-f</code> <i>filter</i></dt>
+<dd> Filter type</dd>
+<dt><code>-l</code> <i>layout</i></dt>
+<dd> Layout type</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Print output (list of objects in the file, filters and layout applied).</dd>
+<dt><code>-e</code> <i>file</i></dt>
+<dd> File with the <code>-f</code> and <code>-l </code> options (only filter and layout flags)</dd>
+<dt><code>-d</code> <i>delta</i></dt>
+<dd> Print only differences that are greater than the limit <i>delta</i>. <i>delta </i> must be a positive number. The comparison criterion is whether the absolute value of the difference of two corresponding values is greater than <i>delta</i> (e.g., |<i>a</i>&#8211;<i>b</i>| &gt; <i>delta</i>, where <i>a</i> is a value in <i>file1</i> and <i>b</i> is a value in <i>file2</i>).</dd>
+<dt><code>-m</code> <i>number</i></dt>
+<dd> Do not apply the filter to objects which size in bytes is smaller than number. If no size is specified a minimum of 1024 bytes is assumed.</dd></dl>
+<h2>EXAMPLES</h2>
+<p> Apply GZIP compression to all objects in <i>file1</i> and save the output in <i>file2</i>: </p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>h5repack -i file1 -o file2 -f GZIP=1 -v</p>
+<p> Apply SZIP compression only to object <i>&#8216;dset1&#8217;</i>: </p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>h5repack -i file1 -o file2 -f dset1:SZIP=8,NN -v</p>
+<p> Apply a chunked layout to objects <i>&#8216;dset1&#8217;</i> and <i>&#8216;dset2&#8217;</i>: </p>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>h5repack -i file1 -o file2 -l dset1,dset2:CHUNK=20&#215;10 -v</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5diff/">h5diff</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fccharsetfirstpage(3) · Linux Manual Pages</title>
+<meta name="description" content="FcCharSetFirstPage – Start enumerating charset contents">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fccharsetfirstpage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fccharsetfirstpage(3)</h1>
+
+
+
+
+
+<p>FcCharSetFirstPage &#8211; Start enumerating charset contents </p>
+<h2>Synopsis</h2>
+<p><code>#include &lt;fontconfig/fontconfig.h&gt; </p>
+<p> FcChar32 FcCharSetFirstPage (const FcCharSet *</code><i>a</i><code>, FcChar32[FC_CHARSET_MAP_SIZE] </code><i>map</i><code>, FcChar32 *</code><i>next</i><code>); </code></p>
+<h2>Description</h2>
+<p>Builds an array of bits in <i>map</i> marking the first page of Unicode coverage of <i>a</i>. <i>*next</i> is set to contains the base code point for the next page in <i>a</i>. Returns the base code point for the page, or FC_CHARSET_DONE if <i>a</i> contains no pages. As an example, if <code>FcCharSetFirstPage</code> returns 0x300 and fills <i>map</i> with </p>
+<pre>0xffffffff 0xffffffff 0x01000008 0x44300002 0xffffd7f0 0xfffffffb 0xffff7fff 0xffff0003</pre>
+<p>Then the page contains code points 0x300 through 0x33f (the first 64 code points on the page) because <i>map[0]</i> and <i>map[1]</i> both have all their bits set. It also contains code points 0x343 (<i>0x300 + 32*2 + (4-1)</i>) and 0x35e (<i>0x300 + 32*2 + (31-1)</i>) because <i>map[2]</i> has the 4th and 31st bits set. The code points represented by map[3] and later are left as an excercise for the reader ;).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

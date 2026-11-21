@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blkdev_issue_zeroout(9) · Linux Manual Pages</title>
+<meta name="description" content="blkdev_issue_zeroout – zero-fill a block range">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-blkdev_issue_zeroout/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>blkdev_issue_zeroout(9)</h1>
+
+
+
+
+
+<p>blkdev_issue_zeroout &#8211; zero-fill a block range</p>
+<h2>Synopsis</h2>
+<pre><code>int blkdev_issue_zeroout(struct block_device *bdev, sector_t sector, sector_t nr_sects, gfp_t gfp_mask, bool discard);</code></pre>
+<h2>Arguments</h2>
+<p><i>bdev</i></p>
+<dl>
+<dd>
+</dd><dd>blockdev to write</dd></dl>
+<p> <i>sector</i></p>
+<dl>
+<dd>start sector</dd></dl>
+<p> <i>nr_sects</i></p>
+<dl>
+<dd>number of sectors to write</dd></dl>
+<p> <i>gfp_mask</i></p>
+<dl>
+<dd>memory allocation flags (for bio_alloc)</dd></dl>
+<p> <i>discard</i></p>
+<dl>
+<dd>whether to discard the block range</dd></dl>
+<h2>Description</h2>
+<p>Zero-fill a block range. If the discard flag is set and the block device guarantees that subsequent READ operations to the block range in question will return zeroes, the blocks will be discarded. Should the discard request fail, if the discard flag is not set, or if discard_zeroes_data is not supported, this function will resort to zeroing the blocks manually, thus provisioning (allocating, anchoring) them. If the block device supports the WRITE SAME command <code>blkdev_issue_zeroout</code> will use it to optimize the process of clearing the block range. Otherwise the zeroing will be performed using regular WRITE calls.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

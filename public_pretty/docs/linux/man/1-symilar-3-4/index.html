@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>symilar-3-4(1) · Linux Manual Pages</title>
+<meta name="description" content="symilar – tool for checking similarities in different files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-symilar-3-4/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>symilar-3-4(1)</h1>
+
+
+
+
+
+<p><code>symilar</code> &#8211; tool for checking similarities in different files</p>
+<h2>Synopsis</h2>
+<p><code>symilar</code> [ <i>options</i> ] [ <i>&lt;files&gt;</i> ] </p>
+<h2>Description</h2>
+<p><code>symilar</code> is a tool for searching blocks of identical lines in different files. It can be used to find copy pasted blocks of code, or stuff that could be refactored. Differences concerning only stuff behind a &#8216;#&#8217; (Python comments) can be ignored. The size of identical blocks can be optionally modified. <code>symilar</code> &#8216;s functionality is integrated in <code>pylint</code> with the refactoring message &#8216;R0801&#8217;. </p>
+<h2>Options</h2>
+<dl COMPACT>
+<dt>-h, &#8211;help</dt>
+<dd>show help message and exit</dd>
+<dt>-d &lt;min_duplicated_lines&gt;, &#8211;duplicates &lt;min_duplicated_lines&gt;</dt>
+<dd>minimum number of identical lines that should trigger a similarity message. Default is 4. So if it finds 3 identical lines, there will be no message, but 4 identical lines will be mentionned.</dd>
+<dt>-i, &#8211;ignore-comments</dt>
+<dd>ignore differences concerning only stuff behind a &#8216;#&#8217; (Python comments). This means that if just a comment was added, the message will still be triggered. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

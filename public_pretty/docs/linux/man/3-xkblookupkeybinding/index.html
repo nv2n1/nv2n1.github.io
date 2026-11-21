@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkblookupkeybinding(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbLookupKeyBinding – Find the string bound to a key by XRebindKeySym">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkblookupkeybinding/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkblookupkeybinding(3)</h1>
+
+
+
+
+
+<p>XkbLookupKeyBinding &#8211; Find the string bound to a key by XRebindKeySym </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>int XkbLookupKeyBinding</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>KeySym </code><i>sym</i><code>,</code> <code>unsigned int </code><i>state</i><code>,</code> <code>char *</code><i>buf</i><code>,</code> <code>int </code><i>nbytes</i><code>,</code> <code>int *</code><i>extra_rtrn</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to server</dd>
+<dt><i>&#8211; sym</i></dt>
+<dd>connection to server</dd>
+<dt><i>&#8211; state</i></dt>
+<dd>state for which string is to be looked up</dd>
+<dt><i>&#8211; buf</i></dt>
+<dd>buffer into which returned string is written</dd>
+<dt><i>&#8211; nbytes</i></dt>
+<dd>size of buffer in bytes</dd>
+<dt><i>&#8211; extra_rtrn</i></dt>
+<dd>backfilled with number bytes overflow</dd></dl>
+<h2>Description</h2>
+<p><i>XkbLookupKeyBinding </i> is the equivalent of the core <i>XLookupString </i> function. </p>
+<p> <i>XRebindKeysym </i> binds an ASCII string to a specified keysym, so that the string and keysym are returned when the key is pressed and a specified list of modifiers are also being held down. <i>XkbLookupKeyBinding </i> returns in <i>buf </i> the string associated with the keysym <i>sym </i> and modifier state <i>state. buf </i> is NULL terminated unless there&#8217;s an overflow. If the string returned is larger than <i>nbytes, </i> a count of bytes that does not fit into the buffer is returned in <i>extra_rtrn. </i> <i>XkbTranslateKeySym </i> returns the number of bytes that it placed into <i>buf.</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbtranslatekeysym/">XkbTranslateKeySym</a></code>(3), <code><a href="/docs/linux/man/3-xlookupstring/">XLookupString</a></code>(3), <code><a href="/docs/linux/man/3-xrebindkeysym/">XRebindKeysym</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

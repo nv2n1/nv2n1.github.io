@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>semanage-module(8) · Linux Manual Pages</title>
+<meta name="description" content="semanage-module – SELinux Policy Management module mapping tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-semanage-module/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>semanage-module(8)</h1>
+
+
+
+
+
+<p><code>semanage-module &#8211; SELinux Policy Management module mapping tool</code></p>
+<h2>Synopsis</h2>
+<p><code>semanage module [-h] [-n] [-N] [-S STORE] (-a | -r | -e | -d | &#8211;extract | &#8211;list [-C] | &#8211;deleteall) [module_name]</code> </p>
+<h2>Description</h2>
+<p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage module installs, removes, disables SELinux Policy modules. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-n, &#8211;noheading</i></dt>
+<dd>Do not print heading when listing the specified object type</dd>
+<dt><i>-N, &#8211;noreload</i></dt>
+<dd>Do not reload policy after commit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-a, &#8211;add</i></dt>
+<dd>Install specified module</dd>
+<dt><i>-r, &#8211;remove</i></dt>
+<dd>Remove specified module</dd>
+<dt><i>-d &#8211;disable</i></dt>
+<dd>Disable specified module</dd>
+<dt><i>-e &#8211;enable</i></dt>
+<dd>Enable specified module</dd>
+<dt><i>-E, &#8211;extract</i></dt>
+<dd>Extract customizable commands, for use within a transaction</dd>
+<dt><i>-l, &#8211;list</i></dt>
+<dd>List records of the specified object type</dd>
+<dt><i>-C, &#8211;locallist</i></dt>
+<dd>List local customizations </dd>
+</dl>
+<h2>Example</h2>
+<pre>List all modules
+# semanage module -l
+Disable unconfined module
+# semanage module --disable unconfined
+Install custom apache policy module
+# semanage module -a myapache</pre>
+<h2>See Also</h2>
+<p><code>selinux (8),</code> <code>semanage (8)</code> <code>semodule (8)</code> </p>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

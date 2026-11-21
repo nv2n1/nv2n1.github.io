@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuring Video Modes on UEFI and Legacy BIOS Systems - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/configuration-of-linux-kernel-video-mode/">
+  <meta name="description" content="The Linux kernel handles video mode configuration through bootloader parameters and kernel graphics drivers. Modern UEFI systems use Kernel Mode Setting (KMS) …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Configuring Video Modes on UEFI and Legacy BIOS Systems">
+  <meta property="og:url" content="https://www.systutorials.com/configuration-of-linux-kernel-video-mode/">
+  <meta property="og:description" content="The Linux kernel handles video mode configuration through bootloader parameters and kernel graphics drivers. Modern UEFI systems use Kernel Mode Setting (KMS) …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>Configuring Video Modes on UEFI and Legacy BIOS Systems</h1>
+        <time class="post-date" datetime="2014-09-24T16:58:06Z">September 24, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The Linux kernel handles video mode configuration through bootloader parameters and kernel graphics drivers. Modern UEFI systems use Kernel Mode Setting (KMS) automatically, but you can override modes when needed. Legacy BIOS systems still use older mechanisms if you’re maintaining older hardware.</p>
+<h2 id="uefi-systems-modern-video-mode-configuration">UEFI Systems: Modern Video Mode Configuration</h2>
+<p>On UEFI systems with GRUB2, add video parameters to the kernel command line in <code>/etc/default/grub</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;video=1920x1080-32@60&#34;</span>
+</span></span></code></pre></div><p>The syntax format is:</p>
+<pre><code>video=&lt;connector&gt;:&lt;xres&gt;x&lt;yres&gt;[M][R][-&lt;bpp&gt;][@&lt;refresh&gt;][i][m][eDd]
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><code>&lt;connector&gt;</code>: Optional display connector name (HDMI-1, DP-2, eDP-1, LVDS-1, etc.)</li>
+<li><code>&lt;xres&gt;x&lt;yres&gt;</code>: Resolution in pixels</li>
+<li><code>M</code>: Reduced blanking</li>
+<li><code>R</code>: CVT reduced blanking v2 (more aggressive reduction)</li>
+<li><code>-&lt;bpp&gt;</code>: Bits per pixel (8, 16, 24, 32)</li>
+<li><code>@&lt;refresh&gt;</code>: Refresh rate in Hz</li>
+<li><code>i</code>: Interlaced mode</li>
+<li><code>m</code>: Margins around the display</li>
+<li><code>e</code>, <code>D</code>, <code>d</code>: Enable/disable output or deep color</li>
+</ul>
+<p>For multi-monitor setups, specify modes per connector:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;video=HDMI-1:1920x1080-32@60 video=DP-2:3840x2160-32@60&#34;</span>
+</span></span></code></pre></div><p>To force a specific connector when detection fails:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;video=eDP-1:1366x768-32@60&#34;</span>
+</span></span></code></pre></div><h3 id="configuring-grub-graphics-mode">Configuring GRUB Graphics Mode</h3>
+<p>Improve boot-time visuals by setting GRUB’s graphics terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_GFXMODE</span><span class="o">=</span>1920x1080x32
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_GFXPAYLOAD_LINUX</span><span class="o">=</span>keep
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_TERMINAL</span><span class="o">=</span>gfxterm
+</span></span></code></pre></div><p>The <code>GRUB_GFXPAYLOAD_LINUX=keep</code> option preserves the GRUB resolution throughout the kernel boot process, eliminating display flicker as the kernel takes over.</p>
+<p>After editing <code>/etc/default/grub</code>, regenerate the configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">sudo update-grub
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># RHEL/Fedora/CentOS</span>
+</span></span><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Systems with separate EFI partition</span>
+</span></span><span class="line"><span class="cl">sudo grub2-mkconfig -o /boot/efi/EFI/ubuntu/grub.cfg
+</span></span></code></pre></div><h2 id="legacy-bios-systems-vga-parameter">Legacy BIOS Systems: vga Parameter</h2>
+<p>Older BIOS systems use the 16-bit boot protocol with the <code>vga=</code> kernel parameter, which accepts decimal values derived from VESA mode numbers.</p>
+<p>The conversion formula is:</p>
+<pre><code>Linux_kernel_mode_number = VESA_mode_number + 0x200
+</code></pre>
+<p>Common VESA mode conversions:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Resolution</th>
+					<th>256 Color</th>
+					<th>15-bit</th>
+					<th>16-bit</th>
+					<th>24-bit</th>
+					<th>32-bit</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>640×480</td>
+					<td>0x101</td>
+					<td>0x110</td>
+					<td>0x111</td>
+					<td>0x112</td>
+					<td>—</td>
+			</tr>
+			<tr>
+					<td>800×600</td>
+					<td>0x103</td>
+					<td>0x113</td>
+					<td>0x114</td>
+					<td>0x115</td>
+					<td>0x10E</td>
+			</tr>
+			<tr>
+					<td>1024×768</td>
+					<td>0x105</td>
+					<td>0x116</td>
+					<td>0x117</td>
+					<td>0x118</td>
+					<td>0x10A</td>
+			</tr>
+			<tr>
+					<td>1280×1024</td>
+					<td>0x107</td>
+					<td>0x119</td>
+					<td>0x11A</td>
+					<td>0x11B</td>
+					<td>0x10D</td>
+			</tr>
+	</tbody>
+</table>
+<p>For example, to set 1024×768 at 16-bit color (VESA 0x117):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Add 0x200: 0x117 + 0x200 = 0x317</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert to decimal: 0x317 = 791</span>
+</span></span><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;vga=791&#34;</span>
+</span></span></code></pre></div><p>Convert hexadecimal to decimal with Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -c <span class="s2">&#34;print(0x317)&#34;</span>  <span class="c1"># Output: 791</span>
+</span></span></code></pre></div><h2 id="querying-available-video-modes">Querying Available Video Modes</h2>
+<h3 id="grub-command-line">GRUB Command Line</h3>
+<p>At the GRUB boot menu, press <code>c</code> to enter the command line and type:</p>
+<pre><code>vbeinfo
+</code></pre>
+<p>This displays all VESA modes your firmware supports:</p>
+<pre><code>VBE info: version: 2.0
+total memory: 4096 KiB
+List of compatible video modes:
+0x101: 640 x 480 x 8 Packed
+0x110: 640 x 480 x 15 Direct
+0x111: 640 x 480 x 16 Direct
+0x112: 640 x 480 x 24 Direct
+0x103: 800 x 600 x 8 Packed
+0x113: 800 x 600 x 15 Direct
+...
+Configured VBE mode = 0x101
+</code></pre>
+<h3 id="using-modetest">Using modetest</h3>
+<p>For modern systems, query connected displays and their capabilities:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># AMD GPUs</span>
+</span></span><span class="line"><span class="cl">modetest -M amdgpu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Intel GPUs</span>
+</span></span><span class="line"><span class="cl">modetest -M i915
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># NVIDIA (when using nouveau driver)</span>
+</span></span><span class="line"><span class="cl">modetest -M nouveau
+</span></span></code></pre></div><p>This shows all detected displays and available resolutions with connector names.</p>
+<h2 id="kernel-mode-setting-kms">Kernel Mode Setting (KMS)</h2>
+<p>Modern systems with KMS enabled (amdgpu, i915, nouveau, radeon, etc.) handle mode-setting automatically. The kernel graphics driver typically handles everything without manual intervention unless you need to:</p>
+<ul>
+<li>Force a specific resolution before the display manager starts</li>
+<li>Work around driver detection or EDID bugs</li>
+<li>Debug display problems</li>
+<li>Configure framebuffer output on headless systems</li>
+</ul>
+<p>Check if KMS is active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/cmdline <span class="p">|</span> grep -o <span class="s1">&#39;video=[^ ]*&#39;</span>
+</span></span></code></pre></div><p>Examine kernel logs for mode-setting activity:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -E <span class="s1">&#39;drm|kms|framebuffer&#39;</span>
+</span></span></code></pre></div><p>Look for messages like <code>[drm] Initialized amdgpu</code> or <code>i915 ... initialized</code>.</p>
+<p>To disable KMS (rarely needed):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;nomodeset&#34;</span>
+</span></span></code></pre></div><p>This forces the kernel to use simple framebuffer drivers instead of hardware-specific drivers. Expect degraded performance and limited resolution.</p>
+<h2 id="troubleshooting-video-mode-issues">Troubleshooting Video Mode Issues</h2>
+<p><strong>Verify firmware support</strong>: Use <code>vbeinfo</code> in GRUB to confirm the mode exists on your system.</p>
+<p><strong>Check connector names</strong>: Use <code>modetest</code> to list connected displays with their exact connector names:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">modetest <span class="p">|</span> head -50
+</span></span></code></pre></div><p>Use the exact connector name from output in your <code>video=</code> parameter.</p>
+<p><strong>Force fallback modes</strong>: Remove custom <code>video=</code> parameters and let the driver auto-detect:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span></code></pre></div><p><strong>Review kernel logs</strong>: Detailed information appears in dmesg:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i <span class="s1">&#39;video\|mode\|display&#39;</span>
+</span></span></code></pre></div><p>Look for messages indicating failed mode-setting or unsupported resolutions.</p>
+<p><strong>Update BIOS/firmware</strong>: Video mode support varies by firmware revision. Firmware updates often improve compatibility and fix display bugs.</p>
+<p><strong>Check EDID data</strong>: The kernel reads display capabilities via EDID. On some displays, EDID is corrupted or missing. Force a known-good mode explicitly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;video=HDMI-1:1920x1080-32@60&#34;</span>
+</span></span></code></pre></div><p><strong>Disable Secure Boot temporarily</strong>: On EFI systems, some firmware has quirks with certain video modes under Secure Boot. Disabling Secure Boot can help isolate firmware-specific issues.</p>
+<p><strong>Reduce resolution at boot</strong>: If high-resolution modes fail, the kernel may lack sufficient firmware-allocated memory. Try a lower resolution:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;video=1024x768-32@60&#34;</span>
+</span></span></code></pre></div><p><strong>Enable verbose graphics logging</strong>: Get detailed driver debugging output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&#34;drm.debug=0xff&#34;</span>
+</span></span></code></pre></div><p>This produces voluminous kernel log output but identifies low-level driver issues. Check <code>dmesg</code> after boot.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

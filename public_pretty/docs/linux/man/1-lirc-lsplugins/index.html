@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lirc-lsplugins(1) · Linux Manual Pages</title>
+<meta name="description" content="lirc-lsplugins – print dynamic modules info">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lirc-lsplugins/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lirc-lsplugins(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> lirc-lsplugins &#8211; print dynamic modules info</p>
+<h2>SYNOPSIS</h2>
+<p> <code>lirc-lsplugins</code> <i>[-l] [-q] [-U plugindir]</i> <i>[drivers]</i><br />
+ <code>lirc-lsplugins</code> <i>-e [-q] [-U plugindir]</i><br />
+ <code>lirc-lsplugins</code> <i>-e [-q|-p|-h|-v]</i></p>
+<h2>DESCRIPTION</h2>
+<p> Tool which writes a simple list with info for each driver found. In particular, it writes info if a plugin can&#8217;t be loaded e. g., due to unresolved references. </p>
+<p> The <i>[drivers]</i> argument is an optional selector which limits the output to matching drivers. The match is a glob-type match as done by fnmatch()</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-U</code> <code>&#8211;plugindir &lt;path&gt;</code></dt>
+<dd> Use &lt;path&gt; to search for plugins. The path is a&#8217;:&#8217;-separated search path similar to e. g., $PATH.</dd>
+<dt><code>-q</code> <code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t write headers and trailing legend.</dd>
+<dt><code>-s</code> <code>&#8211;summary</code></dt>
+<dd> Just write a summary over number of plugins, drivers and errors.</dd>
+<dt><code>-e</code> <code>&#8211;errors</code></dt>
+<dd> Only list plugins which can&#8217;t be loaded, or does not contain any drivers.</dd>
+<dt><code>-l</code> <code>&#8211;long</code></dt>
+<dd> Add info on driver features.</dd>
+<dt><code>-p</code> <code>&#8211;default-path</code></dt>
+<dd> Print default search path and exit.</dd>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> Display usage summary.</dd>
+<dt><code>-v</code> <code>&#8211;version</code></dt>
+<dd> Display version info.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd> $ lirc-lsplugins -U ../lib/.libs:/usr/local/lib/lirc/plugins tira*</dd></dl>
+<p> Lists all drivers with name matching &#8216;tira*&#8217; found in plugins living in ../lib/.libs or /usr/local/lib/lirc/plugins.</p>
+<h2>RETURN VALUE</h2>
+<p> lirc-lsplugins returns a non-zero error code if there is at least one plugin from which no driver can be loaded or options and parameters can&#8217;t be parsed. Otherwise it returns zero.</p>
+<h2>BUGS</h2>
+<p> Some drivers change their capabilities in runtime after inspecting the underlying hardware. These runtime capabilities can not be listed by lirc-lsplugins.</p>
+<h2>STATUS</h2>
+<p> This tool is in an early alpha stage. Both the output format and the command line syntax are subject to change.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3)<br />
+ <a href="/docs/linux/man/8-lircd/">lircd</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

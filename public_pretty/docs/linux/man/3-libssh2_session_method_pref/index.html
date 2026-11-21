@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libssh2_session_method_pref(3) · Linux Manual Pages</title>
+<meta name="description" content="libssh2_session_method_pref – set preferred key exchange method">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libssh2_session_method_pref/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libssh2_session_method_pref(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> libssh2_session_method_pref &#8211; set preferred key exchange method</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;libssh2.h&gt; </p>
+<p> int libssh2_session_method_pref(LIBSSH2_SESSION *session, int method_type, const char *prefs); </p>
+<h2>DESCRIPTION</h2>
+<p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
+<p> <i>method_type</i> &#8211; One of the Method Type constants. </p>
+<p> <i>prefs</i> &#8211; Coma delimited list of preferred methods to use with the most preferred listed first and the least preferred listed last. If a method is listed which is not supported by libssh2 it will be ignored and not sent to the remote host during protocol negotiation. </p>
+<p> Set preferred methods to be negotiated. These preferrences must be set prior to calling <code>libssh2_session_handshake(3)</code> as they are used during the protocol initiation phase. </p>
+<h2>RETURN VALUE</h2>
+<p> Return 0 on success or negative on failure. It returns LIBSSH2_ERROR_EAGAIN when it would otherwise block. While LIBSSH2_ERROR_EAGAIN is a negative number, it isn&#8217;t really a failure per se. </p>
+<h2>ERRORS</h2>
+<p> <i>LIBSSH2_ERROR_INVAL</i> &#8211; The requested method type was invalid. </p>
+<p> <i>LIBSSH2_ERROR_ALLOC</i> &#8211; An internal memory allocation call failed. </p>
+<p> <i>LIBSSH2_ERROR_METHOD_NOT_SUPPORTED</i> &#8211; The requested method is not supported. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> <code>libssh2_session_handshake(3)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

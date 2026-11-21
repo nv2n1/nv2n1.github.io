@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pki-tps-profile(1) · Linux Manual Pages</title>
+<meta name="description" content="pki-tps-profile – Command-Line Interface for managing Certificate System TPS profiles.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pki-tps-profile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pki-tps-profile(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pki-tps-profile &#8211; Command-Line Interface for managing Certificate System TPS profiles.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command options] pki[CLI options] tps - profile - show&lt;profile ID&gt;[command options] pki[CLI options] tps - profile - add-- input&lt;file path&gt;[command options] pki[CLI options] tps - profile - mod&lt;profile ID&gt; &amp;nbsp;
+--action&lt;action&gt;[command options] pki[CLI options] tps - profile - mod&lt;profile ID&gt; &amp;nbsp;
+--input&lt;file path&gt;[command options] pki[CLI options] tps - profile - del&lt;profile ID&gt;[command options]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>pki tps-profile</code> commands provide command-line interfaces to manage profiles on the TPS. </p>
+<p> <code>pki</code> [CLI options] <code>tps-profile-find</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to list the profiles.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>tps-profile-show &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to view the details of a profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>tps-profile-add &#8211;input &lt;file path&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to create a new profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>tps-profile-mod &lt;profile ID&gt;&nbsp;<wbr>&#8211;action &lt;action&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to change the status of a profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>tps-profile-mod &lt;profile ID&gt;&nbsp;<wbr>&#8211;input &lt;file path&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to modify an existing profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>tps-profile-del &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to delete a profile.</dd></dl>
+<h2>OPTIONS</h2>
+<p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
+<h2>OPERATIONS</h2>
+<p> To view available profile commands, type <code>pki tps-profile</code>. To view each command&#8217;s usage, type <code> pki tps-profile-&lt;command&gt; &#8211;help</code>. </p>
+<p> All the tps-profile commands require TPS admin or agent authentication. </p>
+<h3>Listing profiles</h3>
+<p> To list all profile: </p>
+<p> <code>pki &lt;TPS admin/agent authentication&gt; tps-profile-find</code> </p>
+<p> The results can be paged using the <code>&#8211;start</code> and <code>&#8211;size</code> options described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
+<h3>Viewing a profile</h3>
+<p> To view the status and properties of a profile: </p>
+<p> <code>pki &lt;TPS admin/agent authentication&gt; tps-profile-show &lt;profile ID&gt;</code> </p>
+<p> To store the output of the above operation into a file: </p>
+<p> <code>pki &lt;TPS admin/agent authentication&gt; tps-profile-show &lt;profile ID&gt; &#8211;output &lt;file path&gt;</code> </p>
+<h3>Adding a profile</h3>
+<p> To add a new profile, prepare an input file specifying the profile properties in the following format: </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;Profile id=&quot;...&quot; xmlns:ns2=&quot;<a rel="nofollow" href="http://www.w3.org/2005/Atom">http://www.w3.org/2005/Atom</a>&quot;&gt;
+    &lt;Properties&gt;
+        &lt;Property name=&quot;...&quot;&gt;...&lt;/Property&gt;
+        ...
+    &lt;/Properties&gt;
+&lt;/Profile&gt;
+</pre>
+</dd></dl>
+<p> The profile properties are described in <code>pki-tps-profile</code>(5). Then execute the following command: </p>
+<p> <code>pki &lt;TPS admin authentication&gt; tps-profile-add &#8211;input &lt;file path&gt;</code> </p>
+<h3>Changing profile status</h3>
+<p> To change the profile status execute the following command: </p>
+<p> <code>pki &lt;TPS admin/agent authentication&gt; tps-profile-mod &lt;profile ID&gt; &#8211;action &lt;action&gt;</code> </p>
+<p> Available actions for admins: submit, cancel. Available actions for agents: approve, reject. Available actions for users with both admin and agent rights: enable, disable. </p>
+<h3>Modifying a profile</h3>
+<p> To modify a profile, first disable the profile using the <code>tps-profile-mod &#8211;action disable</code> command. Then download the current profile properties using the <code>tps-profile-show &#8211;output</code> command. Make the modifications in the file, then upload the updated file using the following command: </p>
+<p> <code>pki &lt;TPS admin authentication&gt; tps-profile-mod &lt;profile ID&gt; &#8211;input &lt;file path&gt;</code> </p>
+<p> Finally, the profile should be re-enabled using the <code>tps-profile-mod &#8211;action enable</code> command. </p>
+<h3>Deleting a profile</h3>
+<p> To delete a profile, first disable the profile using the <code>tps-profile-mod &#8211;action disable</code> command, then execute: </p>
+<p> <code>pki &lt;TPS admin authentication&gt; tps-profile-del &lt;profile ID&gt;</code> </p>
+<h2>AUTHORS</h2>
+<p> Endi S. Dewata &lt;edewata [at] redhat.com&gt;. </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2015 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pki/">pki</a>(1),</code> <code>pki-tps-profile(5)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

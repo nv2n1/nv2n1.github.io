@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsetfill(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsetfill/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsetfill(3)</h1>
+
+
+
+
+
+<p>std::setfill - std::setfill</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iomanip&gt;
+template&lt; class CharT &gt;
+/*unspecified*/ setfill( CharT c );</code></pre> 
+<p>When used in an expression out &lt;&lt; setfill(c) sets the fill character of the stream out to c.</p>
+<h2>Parameters</h2>
+<p>c - new value for the fill character</p>
+<h2>Return value</h2>
+<p>Returns an object of unspecified type such that if out is the name of an output stream of type std::basic_ostream&lt;CharT, Traits&gt;, then the expression out &lt;&lt; setfill(n) behaves as if the following code was executed :</p>
+<pre><code>out.fill(n);
+</code></pre>
+<h2>Notes</h2>
+<p>The current fill character may be obtained with std::ostream::fill</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+int main()
+{
+std::cout &lt;&lt; &quot;default fill: &quot; &lt;&lt; std::setw(10) &lt;&lt; 42 &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;setfill(&rsquo;<em>&rsquo;): &quot; &lt;&lt; std::setfill(&rsquo;</em>&rsquo;)
+&lt;&lt; std::setw(10) &lt;&lt; 42 &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> default fill: 42
+ <wbr> setfill(&rsquo;*&rsquo;): ********42</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> manages the fill character
+fill <i>(public member function of std::basic_ios&lt;CharT,Traits&gt;)</i>
+internal sets the placement of fill characters
+left <i>(function)</i>
+right
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> changes the width of the next input/output field
+setw <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

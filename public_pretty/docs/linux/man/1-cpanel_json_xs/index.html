@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cpanel_json_xs(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-cpanel_json_xs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>cpanel_json_xs(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>cpanel_json_xs - Cpanel::JSON::XS commandline utility</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+cpanel_json_xs[-v][-f inputformat][-t outputformat]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p><i>cpanel_json_xs</i> converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>).</p>
+<p>The default input format is <tt>&quot;json&quot;</tt> and the default output format is <tt>&quot;json-pretty&quot;</tt>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-v
+</dt><dd> Be slightly more verbose.
+</dd><dt>-f fromformat
+</dt><dd> Read a file in the given format from <font SIZE="-1">STDIN.</font> 
+ <tt>&quot;fromformat&quot;</tt> can be one of:
+</dd><dl>
+<dl>
+<dt>json - a json text encoded, either utf-8, utf16-be/le, utf32-be/le
+</dt><dd>
+</dd><dt>storable - a Storable frozen value
+</dt><dd>
+</dd><dt>storable-file - a Storable file (Storable has two incompatible formats)
+</dt><dd>
+</dd><dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
+</dt><dd>
+</dd><dt>clzf - Compress::LZF format (requires that module to be installed)
+</dt><dd>
+</dd><dt>eval - evaluate the given code as (non-utf-8) Perl, basically the reverse of &quot;-t dump&quot;
+</dt><dd>
+</dd><dt>yaml - <font SIZE="-1">YAML </font>(avoid at all costs, requires the <font SIZE="-1">YAML</font> module :)
+</dt><dd>
+</dd><dt>string - do not attempt to decode the file data
+</dt><dd>
+</dd><dt>none - nothing is read, creates an &quot;undef&quot; scalar - mainly useful with &quot;-e&quot;
+</dt><dd></dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-t toformat
+</dt><dd> Write the file in the given format to <font SIZE="-1">STDOUT.</font> 
+<p><tt>&quot;toformat&quot;</tt> can be one of:</p>
+</dd><dl>
+<dl>
+<dt>json, json-utf-8 - json, utf-8 encoded
+</dt><dd>
+</dd><dt>json-pretty - as above, but pretty-printed
+</dt><dd>
+</dd><dt>json-utf-16le, json-utf-16be - little endian/big endian utf-16
+</dt><dd>
+</dd><dt>json-utf-32le, json-utf-32be - little endian/big endian utf-32
+</dt><dd>
+</dd><dt>storable - a Storable frozen value in network format
+</dt><dd>
+</dd><dt>storable-file - a Storable file in network format (Storable has two incompatible formats)
+</dt><dd>
+</dd><dt>bencode - use Convert::Bencode, if available (used by torrent files, among others)
+</dt><dd>
+</dd><dt>clzf - Compress::LZF format
+</dt><dd>
+</dd><dt>yaml - <font SIZE="-1">YAML</font>
+</dt><dd>
+</dd><dt>dump - Data::Dump
+</dt><dd>
+</dd><dt>dumper - Data::Dumper
+</dt><dd>
+</dd><dt>string - writes the data out as if it were a string
+</dt><dd>
+</dd><dt>none - nothing gets written, mainly useful together with &quot;-e&quot;
+</dt><dd> Note that Data::Dumper doesn't handle self-referential data structures correctly - use ``dump'' instead.</dd></dl>
+</dl>
+<dl>
+</dl>
+<dt>-e code
+</dt><dd> Evaluate perl code after reading the data and before writing it out again - can be used to filter, create or extract data. The data that has been written is in <tt>$_</tt>, and whatever is in there is written out afterwards.</dd></dl>
+<h2>EXAMPLES</h2>
+ <pre>
+   cpanel_json_xs -t none &lt;isitreally.json
+</pre> 
+<p>``<font SIZE="-1">JSON</font> Lint&rsquo;&rsquo; - tries to parse the file <i>isitreally.json</i> as <font SIZE="-1">JSON -</font> if it is valid <font SIZE="-1">JSON,</font> the command outputs nothing, otherwise it will print an error message and exit with non-zero exit status.</p>
+ <pre>
+   &lt;src.json cpanel_json_xs &gt;pretty.json
+</pre> 
+<p>Prettify the <font SIZE="-1">JSON</font> file <i>src.json</i> to <i>dst.json</i>.</p>
+ <pre>
+   cpanel_json_xs -f storable-file &lt;file
+</pre> 
+<p>Read the serialised Storable file <i>file</i> and print a human-readable <font SIZE="-1">JSON</font> version of it to <font SIZE="-1">STDOUT.</font></p>
+ <pre>
+   cpanel_json_xs -f storable-file -t yaml &lt;file
+</pre> 
+<p>Same as above, but write <font SIZE="-1">YAML</font> instead (not using <font SIZE="-1">JSON</font> at all :)</p>
+ <pre>
+   cpanel_json_xs -f none -e '$_ = [1, 2, 3]'
+</pre> 
+<p>Dump the perl array as <font SIZE="-1">UTF-8</font> encoded <font SIZE="-1">JSON</font> text.</p>
+ <pre><code>
+   &lt;torrentfile cpanel_json_xs -f bencode -e '$_ = join "\n", map @$_, @{$_-&gt;{"announce-list"}}' -t string
+</code></pre> 
+<p>Print the tracker list inside a torrent file.</p>
+ <pre>
+   lwp-request <a rel="nofollow" HREF="http://cpantesters.perl.org/show/JSON-XS.json">http://cpantesters.perl.org/show/JSON-XS.json</a> | cpanel_json_xs
+</pre> 
+<p>Fetch the cpan-testers result summary <tt>&quot;Cpanel::JSON::XS&quot;</tt> and pretty-print it.</p>
+<h2>AUTHOR</h2>
+<p>Copyright (C) 2008 Marc Lehmann &lt;json [at] schmorp.de&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

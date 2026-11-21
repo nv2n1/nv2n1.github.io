@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beagle-build-index(8) · Linux Manual Pages</title>
+<meta name="description" content="beagle-build-index">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-beagle-build-index/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>beagle-build-index(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>beagle-build-index</p>
+<h2>Synopsis</h2>
+<p><code>beagle-build-index</code> [<i>options</i>] &lt;<i>index_path</i>&gt; &lt;<i>path</i>&gt; [<i>path path path</i>]</p>
+<h2>Description</h2>
+<p><code>beagle-build-index</code>, is a tool designed for building static indexes outside of the Beagle daemon. </p>
+<p> Running <code>beagle-build-index</code> by hand is of use for those wishing to create and build static indexes used by the Beagle daemon. The static indexes can be helpful in many cases but most notably used as system-wide indexes shared by all users, and as a way for system-administrators to run indexing on a central server in a network environment. </p>
+<p> <code>beagle-build-index</code> will index the data specified by the <i>path</i> arguments and create an index in the <i>index_path</i> directory. If a suitable index is found in the index directory, it will automatically append data to the index if the file at hand has been modified since it was last indexed. If it can&#8217;t find a suitable index (non-existant or version-mismatch) is will purge the directory recursively. </p>
+<p> The <code>beagle-build-index</code> tool is not intended to be invoked by the standard user.</p>
+<h2>Options</h2>
+<p><code>beagle-build-index</code> takes the following options</p>
+<dl>
+<dt><code>&#8211;recursive</code></dt>
+<dd>If specified, do recursive crawling on the paths specified<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt></dd>
+<dt><code>&#8211;debug</code></dt>
+<dd>If specified, echo verbose debugging information</dd>
+<dt><code>&#8211;cache-text</code></dt>
+<dd>If specified, build text-cache of documents used for snippets</dd>
+<dt><code>&#8211;allow-pattern [pattern]</code></dt>
+<dd>Only allow files that match the pattern to be indexed.</dd>
+<dt><code>&#8211;deny-pattern [pattern]</code></dt>
+<dd>Keep any files that match the pattern from being indexed.</dd>
+<dt><code>&#8211;remap </code>[<i>path1</i>:<i>path2</i>]</dt>
+<dd>If specified, remap the target path by prefix. <i>path1</i> will be replaced with <i>path2</i>. This option is intended to be used when generating pre-built indexes, where the final path will be differ from the current one.</dd></dl>
+<h2>Author</h2>
+<p>Novell, Inc.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;dashboard-hackers [at] gnome.org&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2005 Novell, Inc. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), <code><a href="/docs/linux/man/8-beagle-manage-index/">beagle-manage-index</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

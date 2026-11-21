@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>get_request(9) · Linux Manual Pages</title>
+<meta name="description" content="get_request – get a free request">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-get_request/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>get_request(9)</h1>
+
+
+
+
+
+<p>get_request &#8211; get a free request</p>
+<h2>Synopsis</h2>
+<pre><code>struct request *get_request(struct request_queue *q, int op, int op_flags, struct bio *bio, gfp_t gfp_mask);</code></pre>
+<h2>Arguments</h2>
+<p><i>q</i></p>
+<dl>
+<dd>
+</dd><dd>request_queue to allocate request from</dd></dl>
+<p> <i>op</i></p>
+<dl>
+<dd>REQ_OP_READ/REQ_OP_WRITE</dd></dl>
+<p> <i>op_flags</i></p>
+<dl>
+<dd>rq_flag_bits</dd></dl>
+<p> <i>bio</i></p>
+<dl>
+<dd>bio to allocate request for (can be <code>NULL</code>)</dd></dl>
+<p> <i>gfp_mask</i></p>
+<dl>
+<dd>allocation mask</dd></dl>
+<h2>Description</h2>
+<p>Get a free request from <i>q</i>. If <code>__GFP_DIRECT_RECLAIM</code> is set in <i>gfp_mask</i>, this function keeps retrying under memory pressure and fails iff <i>q</i> is dead. </p>
+<p> Must be called with <i>q</i>-&gt;queue_lock held and, Returns ERR_PTR on failure, with <i>q</i>-&gt;queue_lock held. Returns request pointer on success, with <i>q</i>-&gt;queue_lock *not held*.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

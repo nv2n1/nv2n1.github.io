@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fgconsole(1) · Linux Manual Pages</title>
+<meta name="description" content="fgconsole – print the number of the active VT.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fgconsole/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fgconsole(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> fgconsole &#8211; print the number of the active VT.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>fgconsole</code> [ <code>-h &#8211;help</code> | <code>-V &#8211;version</code> | <code>-n &#8211;next-available</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> If the active Virtual Terminal is <i>/dev/ttyN</i>, then prints <i>N</i> on standard output. </p>
+<p> If the console is a serial console, then &quot;serial&quot; is printed instead.</p>
+<dl>
+<dt><i>-h &#8211;help</i></dt>
+<dd> Prints short usage message and exits.</dd>
+<dt><i>-V &#8211;version</i></dt>
+<dd> Prints version number and exits.</dd>
+<dt><i>&#8211;next-available</i></dt>
+<dd> Will show the next unallocated virtual terminal. Normally 6 virtual terminals are allocated, with number 7 used for X; this will return &quot;8&quot; in this case. </dd>
+</dl>
+<h2>NOTES</h2>
+<p> Under <i>devfs</i>, the consoles are in <i>/dev/vc/N</i>. <i>devfsd</i> may maintain symlinks for compatibility.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

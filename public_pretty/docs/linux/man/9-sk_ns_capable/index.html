@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sk_ns_capable(9) · Linux Manual Pages</title>
+<meta name="description" content="sk_ns_capable – General socket capability test">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-sk_ns_capable/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>sk_ns_capable(9)</h1>
+
+
+
+
+
+<p>sk_ns_capable &#8211; General socket capability test</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>bool sk_ns_capable(const struct sock&nbsp;<wbr>*&nbsp;<wbr></code><i>sk</i><code>, struct user_namespace&nbsp;<wbr>*&nbsp;<wbr></code><i>user_ns</i><code>, int&nbsp;<wbr></code><i>cap</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<p><i>sk</i></p>
+<dl>
+<dd>
+</dd><dd>Socket to use a capability on or through</dd></dl>
+<p> <i>user_ns</i></p>
+<dl>
+<dd>The user namespace of the capability to use</dd></dl>
+<p> <i>cap</i></p>
+<dl>
+<dd>The capability to use</dd></dl>
+<h2>Description</h2>
+<p>Test to see if the opener of the socket had when the socket was created and the current process has the capability <i>cap</i> in the user namespace <i>user_ns</i>.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

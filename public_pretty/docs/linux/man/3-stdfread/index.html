@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfread(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfread/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfread(3)</h1>
+
+
+
+
+
+<p>std::fread - std::fread</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdio&gt;
+    std::size_t fread(void *buffer, std::size_t size, std::size_t count, std::FILE *stream);</code></pre> 
+<p>Reads up to count objects into the array buffer from the given input stream stream as if by calling std::fgetc size times for each object, and storing the results, in the order obtained, into the successive positions of buffer, which is reinterpreted as an array of unsigned char. The file position indicator for the stream is advanced by the number of characters read.
+If the objects are not TriviallyCopyable, the behavior is undefined.
+If an error occurs, the resulting value of the file position indicator for the stream is indeterminate. If a partial element is read, its value is indeterminate.</p>
+<h2>Parameters</h2>
+<p>buffer - pointer to the first object in the array to be read
+size - size of each object in bytes
+count - the number of the objects to be read
+stream - input file stream to read from</p>
+<h2>Return value</h2>
+<p>Number of objects read successfully, which may be less than count if an error or end-of-file condition occurs.
+If size or count is zero, fread returns zero and performs no other action.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+int main()
+{
+// prepare file
+std::ofstream(&quot;test.txt&quot;) &lt;&lt; 1 &lt;&lt; &rsquo; &rsquo; &lt;&lt; 2 &lt;&lt; &lsquo;\n&rsquo;;
+std::FILE *f = std::fopen(&quot;test.txt&quot;, &quot;r&quot;);
+std::vector&lt;char&gt; buf(4); // char is trivally copyable
+std::fread(&amp;buf[0], sizeof buf[0], buf.size(), f);
+for (char n : buf)
+std::cout &lt;&lt; n;
+std::vector&lt;std::string&gt; buf2; // string is not trivially copyable
+// this would result in undefined behavior
+//    std::fread(&amp;buf2[0], sizeof buf2[0], buf2.size(), f);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 1 2</p>
+<h2>See also</h2>
+<p>scanf reads formatted input from stdin, a file stream or a buffer
+fscanf <i>(function)</i>
+sscanf
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> gets a character string from a file stream
+fgets <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> writes to a file
+fwrite <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

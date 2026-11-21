@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nwipe(1) · Linux Manual Pages</title>
+<meta name="description" content="nwipe – securely erase disks">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nwipe/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nwipe(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> nwipe &#8211; securely erase disks</p>
+<h2>SYNOPSIS</h2>
+<p> <code>nwipe</code> [<i>options</i>] [<i>device1</i>] [<i>device2</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> nwipe is a command that will securely erase disks using a variety of recognised methods. It is a fork of the dwipe command used by Darik&#8217;s Boot and Nuke (dban). nwipe is included with partedmagic if want a quick and easy bootable CD version. nwipe was created out of a need to run the DBAN dwipe command outside of DBAN, in order to allow its use with any host distribution, thus giving better hardware support. It is essentially the same as dwipe, with a few changes:</p>
+<dl>
+<dt>&#8211; pthreads is used instead of fork</dt>
+<dd>
+</dd><dt>&#8211; The parted library is used to detect drives</dt>
+<dd>
+</dd><dt>&#8211; The code is designed to be compiled with gcc</dt>
+<dd>
+</dd><dt>&#8211; SIGUSR1 can be used to log the stats of the current wipe</dt>
+<dd>
+</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Prints the version number</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Prints a help summary</dd>
+<dt><code>&#8211;autonuke</code></dt>
+<dd> If no devices have been specified on the command line, starts wiping all devices immediately. If devices have been specified, starts wiping only those specified devices immediately.</dd>
+<dt><code>&#8211;sync</code></dt>
+<dd> Open devices in sync mode</dd>
+<dt><code>&#8211;nowait</code></dt>
+<dd> Do not wait for a key before exiting (default is to wait).</dd>
+<dt><code>&#8211;nosignals</code></dt>
+<dd> Do not allow signals to interrupt a wipe (default is to allow).</dd>
+<dt><code>&#8211;nogui</code></dt>
+<dd> Do not show the GUI interface. Can only be used with the autonuke option. Nowait option is automatically invoked with the nogui option. SIGUSR1 can be used to retrieve the current wiping statistics.</dd>
+<dt><code>&#8211;verify</code>=<i>TYPE</i></dt>
+<dd> Whether to perform verification of erasure (default: last) off &#8211; Do not verify last &#8211; Verify after the last pass all &#8211; Verify every pass</dd>
+<dt><code>-m</code>, <code>&#8211;method</code>=<i>METHOD</i></dt>
+<dd> The wiping method (default: dodshort).</dd>
+<dt>
+</dt><dd> dod522022m / dod &#8211; 7 pass DOD 5220.22-M method</dd>
+<dt>
+</dt><dd> dodshort / dod3pass &#8211; 3 pass DOD method</dd>
+<dt>
+</dt><dd> gutmann &#8211; Peter Gutmann&#8217;s Algorithm</dd>
+<dt>
+</dt><dd> ops2 &#8211; RCMP TSSIT OPS-II</dd>
+<dt>
+</dt><dd> random / prng / stream &#8211; PRNG Stream</dd>
+<dt>
+</dt><dd> zero / quick &#8211; Overwrite with zeros</dd>
+<dt><code>-l</code>, <code>&#8211;logfile</code>=<i>FILE</i></dt>
+<dd> Filename to log to. Default is STDOUT</dd>
+<dt><code>-p</code>, <code>&#8211;prng</code>=<i>METHOD</i></dt>
+<dd> PRNG option (mersenne|twister|isaac)</dd>
+<dt><code>-r</code>, <code>&#8211;rounds</code>=<i>NUM</i></dt>
+<dd> Number of times to wipe the device using the selected method (default: 1)</dd></dl>
+<h2>BUGS</h2>
+<p> Please see the sourceforge site for the latest list (<a rel="nofollow" href="http://nwipe.sourceforge.net)">http://nwipe.sourceforge.net)</a></p>
+<h2>AUTHOR</h2>
+<p> Nwipe was released by Andy Beverley &lt;andy [at] andybev.com&gt; as modified version of dwipe from DBAN by Darik Horn &lt;dajhorn-dban [at] vanadac.com&gt;.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-shred/">shred</a></code>(1), <code>dwipe</code>(1), <code><a href="/docs/linux/man/1-dd/">dd</a></code>(1), <code><a href="/docs/linux/man/1-dcfldd/">dcfldd</a></code>(1), <code><a href="/docs/linux/man/1-dc3dd/">dc3dd</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

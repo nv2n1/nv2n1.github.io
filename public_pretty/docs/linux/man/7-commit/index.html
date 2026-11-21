@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>commit(7) · Linux Manual Pages</title>
+<meta name="description" content="COMMIT – commit the current transaction">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-commit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>commit(7)</h1>
+
+
+
+
+
+<p>COMMIT &#8211; commit the current transaction </p>
+<h2>Synopsis</h2>
+<pre>COMMIT [ WORK | TRANSACTION ]</pre>
+<h2>Description</h2>
+<p><code>COMMIT</code> commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs.</p>
+<h2>Parameters</h2>
+<dl>
+<dt><code>WORK</code></dt>
+<dd>
+</dd><dt><code>TRANSACTION</code></dt>
+<dd>Optional key words. They have no effect.</dd></dl>
+<h2>Notes</h2>
+<p>Use ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)] to abort a transaction. </p>
+<p> Issuing <code>COMMIT</code> when not inside a transaction does no harm, but it will provoke a warning message.</p>
+<h2>Examples</h2>
+<p>To commit the current transaction and make all changes permanent: </p>
+<pre>COMMIT;</pre>
+<h2>Compatibility</h2>
+<p>The SQL standard only specifies the two forms COMMIT and COMMIT WORK. Otherwise, this command is fully conforming.</p>
+<h2>See Also</h2>
+<p>BEGIN [<code><a href="/docs/linux/man/7-begin/">begin</a></code>(7)], ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)] </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

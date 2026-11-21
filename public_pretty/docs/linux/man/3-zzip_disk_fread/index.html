@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zzip_disk_fread(3) · Linux Manual Pages</title>
+<meta name="description" content="zzip_disk_fopen, zzip_disk_entry_fopen, zzip_disk_fread, zzip_disk_fclose, zzip_disk_feof – openening a file part wrapped within a (mmapped) zip archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zzip_disk_fread/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zzip_disk_fread(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>zzip_disk_fopen, zzip_disk_entry_fopen, zzip_disk_fread, zzip_disk_fclose, zzip_disk_feof &#8211; openening a file part wrapped within a (mmapped) zip archive</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;zzip/mmapped.h&gt;
+zzip__new__ ZZIP_DISK_FILE *zzip_disk_fopen((ZZIP_DISK * disk, char *filename));
+zzip__new__ ZZIP_DISK_FILE *zzip_disk_entry_fopen((ZZIP_DISK * disk, ZZIP_DISK_ENTRY *entry));
+zzip_size_t zzip_disk_fread((void *ptr, zzip_size_t sized, zzip_size_t nmemb, ZZIP_DISK_FILE *file));
+int zzip_disk_fclose((ZZIP_DISK_FILE * file));
+int zzip_disk_feof((ZZIP_DISK_FILE * file));</code></pre>
+<h2>Description</h2>
+<dd>The <code>zzip_disk_fopen</code> function opens a file found by name, so it does a search into the zip central directory with <code>zzip_disk_findfile</code> and whatever is found first is given to <code>zzip_disk_entry_fopen</code> </dd>
+<p> the ZZIP_DISK_FILE* is rather simple in just encapsulating the arguments given to the <code>zzip_disk_entry_fopen</code> function plus a zlib deflate buffer. Note that the ZZIP_DISK pointer does already contain the full mmapped file area of a zip disk, so open()ing a file part within that area happens to be a lookup of its bounds and encoding. That information is memorized on the ZZIP_DISK_FILE so that subsequent _read() operations will be able to get the next data portion or return an eof condition for that file part wrapped in the zip archive. </p>
+<p> The <code>zzip_disk_fread</code> function reads more bytes into the output buffer specified as arguments. The return value is null on eof or error, the stdio-like interface can not distinguish between these so you need to check with <code>zzip_disk_feof</code> for the difference. </p>
+<p> The <code>zzip_disk_fclose</code> function releases any zlib decoder info needed for decompression and dumps the ZZIP_DISK_FILE* then. </p>
+<p> The <code>zzip_disk_feof</code> function allows to distinguish an error from an eof condition. Actually, if we found an error but we did already reach eof then we just keep on saying that it was an eof, so the app can just continue.</p>
+<h2>Author</h2>
+<dl>
+<dd>&bull; Guido Draheim &lt;guidod [at] gmx.de&gt;</dd></dl>
+<h2>Copyright</h2>
+<p>Copyright (c) 2003,2004,2006 Guido Draheim All rights reserved, use under the restrictions of the Lesser GNU General Public License or alternatively the restrictions of the Mozilla Public License 1.1</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

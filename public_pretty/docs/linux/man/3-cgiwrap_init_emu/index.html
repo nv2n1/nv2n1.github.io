@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cgiwrap_init_emu(3) · Linux Manual Pages</title>
+<meta name="description" content="cgiwrap_init_emu – initialize cgiwrap for emulated use">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cgiwrap_init_emu/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cgiwrap_init_emu(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> cgiwrap_init_emu &#8211; initialize cgiwrap for emulated use </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;cgi/cgiwrap.h&gt;
+</code></pre>
+<pre><code>
+void cgiwrap_init_emu(void *data, READ_FUNC read_cb,
+                      WRITEF_FUNC writef_cb, WRITE_FUNC write_cb, GETENV_FUNC getenv_cb,
+                      PUTENV_FUNC putenv_cb, ITERENV_FUNC iterenv_cb);
+</code></pre>
+<h2>ARGUMENTS</h2>
+<p> data &#8211; user data to be passed to the specified callbacks<br />
+ read_cb &#8211; a cb to replace fread(stdin)<br />
+ writef_cb &#8211; a cb to repalce fprintf(stdout)<br />
+ write_cb &#8211; a cb to replace fwrite(stdout)<br />
+ getenv_cb &#8211; a cb to replace getenv<br />
+ putenv_cb &#8211; a cb to replace putenv<br />
+ iterenv_cb &#8211; a cb to replace the default environment iteration<br />
+ function (which just wraps walking the envp array) </p>
+<h2>DESCRIPTION</h2>
+<p> cgiwrap_init_emu sets up the cgiwrap subsystem for use in an emulated environment where you are providing routines to use in place of the standard routines, ie when used to interface with a server or scripting language. See cgi/cgiwrap.h for the exact definitions of the callback functions. </p>
+<h2>RETURN VALUE</h2>
+<p> None </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-cgiwrap_iterenv/">cgiwrap_iterenv</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_putenv/">cgiwrap_putenv</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_init_emu/">cgiwrap_init_emu</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_writef/">cgiwrap_writef</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_init_std/">cgiwrap_init_std</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_writevf/">cgiwrap_writevf</a><code>(3), <a href="/docs/linux/man/3-cgiwrap_read/">cgiwrap_read</a></code>(3), <a href="/docs/linux/man/3-cgiwrap_write/">cgiwrap_write</a><code>(3), cgiwrap_getenv</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

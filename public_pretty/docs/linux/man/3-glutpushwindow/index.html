@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutpushwindow(3) · Linux Manual Pages</title>
+<meta name="description" content="glutPushWindow – Request to lower the current window to the bottom.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutpushwindow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutpushwindow(3)</h1>
+
+
+
+
+
+<p><code>glutPushWindow</code> &#8211; Request to lower the current window to the bottom.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; window</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutPushWindow void</p>
+<h2>Description</h2>
+<p>This function requests that the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>be&nbsp;<wbr>&#8220;pushed&#8221; to the back. </p>
+<p> A window can be in front of or behind other windows, as determined by the z-order from front to back. Top-level OpenGLUT windows can be placed at the front or back of the z-order by means of the glutPopWindow() and glutPushWindow() API functions. </p>
+<p> A z-order also applies to the subwindows of a top-level window. While the z-order of top-level windows can usually be adjusted by the user, subwindow z-order is controlled entirely by the application. </p>
+<p> There may not be an immediate effect to this function. Wait for the glutWindowStatusFunc() callback to tell you about whatever obscured/visible status your window achieves. </p>
+<h2>Caveats</h2>
+<p>The z-order of top-level windows is ultimately managed by the windowing system. Therefore, a push or pop request by an OpenGLUT application may not necessarily succeed or take immediate effect. </p>
+<p> Not applicable to offscreen windows. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutpopwindow/">glutPopWindow</a>(3) <a href="/docs/linux/man/3-glutwindowstatusfunc/">glutWindowStatusFunc</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

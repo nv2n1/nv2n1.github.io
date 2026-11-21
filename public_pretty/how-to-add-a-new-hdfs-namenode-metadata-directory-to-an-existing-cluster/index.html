@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding a Secondary NameNode Metadata Directory to HDFS - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-add-a-new-hdfs-namenode-metadata-directory-to-an-existing-cluster/">
+  <meta name="description" content="Adding a second metadata directory to your HDFS NameNode increases reliability by maintaining synchronized replicas of the namespace and transaction logs across …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Adding a Secondary NameNode Metadata Directory to HDFS">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-add-a-new-hdfs-namenode-metadata-directory-to-an-existing-cluster/">
+  <meta property="og:description" content="Adding a second metadata directory to your HDFS NameNode increases reliability by maintaining synchronized replicas of the namespace and transaction logs across …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Adding a Secondary NameNode Metadata Directory to HDFS</h1>
+        <time class="post-date" datetime="2018-03-24T11:44:04Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Adding a second metadata directory to your HDFS NameNode increases reliability by maintaining synchronized replicas of the namespace and transaction logs across separate disks. This guide walks through the process safely.</p>
+<h2 id="prerequisites-and-planning">Prerequisites and Planning</h2>
+<p>Before starting, verify your current configuration and plan the new directory location:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -A2 <span class="s2">&#34;dfs.namenode.name.dir&#34;</span> <span class="nv">$HADOOP_HOME</span>/etc/hadoop/hdfs-site.xml
+</span></span></code></pre></div><p>The new directory should be on a physically separate disk from your existing metadata directory. If both directories are on the same disk, you gain no reliability benefit. Ensure the target disk has adequate free space—the new directory will be a full copy of your existing metadata.</p>
+<h2 id="step-1-back-up-existing-namenode-metadata">Step 1: Back Up Existing NameNode Metadata</h2>
+<p>Before making any changes, create a complete backup of your current metadata directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># As the hadoop user (or appropriate service account)</span>
+</span></span><span class="line"><span class="cl">tar czf /backup/namenode-metadata-<span class="k">$(</span>date +%Y%m%d-%H%M%S<span class="k">)</span>.tar.gz /home/hadoop/hdfs/
+</span></span></code></pre></div><p>Keep this backup in a safe location separate from your cluster. If something goes wrong during the procedure, you’ll need this to recover.</p>
+<h2 id="step-2-stop-the-namenode">Step 2: Stop the NameNode</h2>
+<p>Shut down the NameNode gracefully. First check for any running jobs or active file transfers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hdfs dfsadmin -safemode get
+</span></span></code></pre></div><p>Wait until safe mode is entered, then stop the NameNode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$HADOOP_HOME</span>/sbin/stop-namenode.sh
+</span></span></code></pre></div><p>Verify it has fully stopped:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jps <span class="p">|</span> grep NameNode
+</span></span></code></pre></div><h2 id="step-3-prepare-the-new-directory">Step 3: Prepare the New Directory</h2>
+<p>Create the new metadata directory and set proper permissions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /home/hadoop/hdfs2
+</span></span><span class="line"><span class="cl">sudo chown hadoop:hadoop /home/hadoop/hdfs2
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">700</span> /home/hadoop/hdfs2
+</span></span></code></pre></div><p>Copy the entire contents of the existing metadata directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cp -r /home/hadoop/hdfs/* /home/hadoop/hdfs2/
+</span></span></code></pre></div><p>Verify the copy completed successfully and file counts match:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">diff &lt;<span class="o">(</span>find /home/hadoop/hdfs -type f <span class="p">|</span> wc -l<span class="o">)</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">     &lt;<span class="o">(</span>find /home/hadoop/hdfs2 -type f <span class="p">|</span> wc -l<span class="o">)</span>
+</span></span></code></pre></div><h2 id="step-4-update-hdfs-sitexml">Step 4: Update hdfs-site.xml</h2>
+<p>Edit your hdfs-site.xml to include both directories. The NameNode will maintain synchronized copies in both locations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:///home/hadoop/hdfs,file:///home/hadoop/hdfs2<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;description&gt;</span>Comma-separated list of NameNode metadata directories for namespace and transaction logs.<span class="nt">&lt;/description&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/property&gt;</span>
+</span></span></code></pre></div><p>Note: Use commas without spaces between paths, or include spaces consistently—HDFS is sensitive to formatting here.</p>
+<p>Distribute this updated configuration to all NameNode and Secondary NameNode hosts if you have them. Use your configuration management tool (Ansible, Puppet, etc.) if available:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ansible namenode_group -m copy -a <span class="s2">&#34;src=hdfs-site.xml dest=/etc/hadoop/conf/&#34;</span>
+</span></span></code></pre></div><h2 id="step-5-start-the-namenode">Step 5: Start the NameNode</h2>
+<p>Start the NameNode:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$HADOOP_HOME</span>/sbin/start-namenode.sh
+</span></span></code></pre></div><p>Monitor the startup logs for errors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail -f <span class="nv">$HADOOP_HOME</span>/logs/hadoop-*-namenode-*.log
+</span></span></code></pre></div><p>Look for messages confirming both directories are being used. Once started, verify NameNode health:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hdfs dfsadmin -report
+</span></span></code></pre></div><h2 id="step-6-verify-both-directories-are-in-use">Step 6: Verify Both Directories Are in Use</h2>
+<p>Check that both metadata directories contain current transaction logs and images:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls -lh /home/hadoop/hdfs/current/
+</span></span><span class="line"><span class="cl">ls -lh /home/hadoop/hdfs2/current/
+</span></span></code></pre></div><p>Both should have identical <code>fsimage_*</code> and <code>edits_*</code> files with matching timestamps. If one directory is empty or outdated, there’s a configuration problem—stop the NameNode and investigate before proceeding.</p>
+<h2 id="monitoring-and-troubleshooting">Monitoring and Troubleshooting</h2>
+<p>If the NameNode fails to start with multiple directories configured, common issues include:</p>
+<ul>
+<li><strong>Permission problems</strong>: Ensure the hadoop user can write to both directories</li>
+<li><strong>Disk full</strong>: Check available space with <code>df -h</code> on both mount points</li>
+<li><strong>Mismatched metadata</strong>: If directories diverge, you must restart with a single known-good directory and recopy</li>
+</ul>
+<p>If you need to remove a directory later, update hdfs-site.xml with only the desired directory, restart the NameNode, then clean up the removed directory’s files.</p>
+<h2 id="performance-note">Performance Note</h2>
+<p>Maintaining multiple metadata directories has a small I/O cost—each metadata update is written to all configured directories. In 2026 deployments with modern SSDs, this is typically negligible, but high-frequency metadata operations (millions of files) may show slight latency increases. Monitor your NameNode’s write latency before and after adding the secondary directory.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

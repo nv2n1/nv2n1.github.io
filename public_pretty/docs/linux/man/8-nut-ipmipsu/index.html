@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nut-ipmipsu(8) · Linux Manual Pages</title>
+<meta name="description" content="nut-ipmipsu – Driver for IPMI Power Supply Units (PSU)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-nut-ipmipsu/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>nut-ipmipsu(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>nut-ipmipsu &#8211; Driver for IPMI Power Supply Units (PSU)</p>
+<h2>Synopsis</h2>
+<p><code>nut-ipmipsu</code> -h <code>nut-ipmipsu</code> -a <i>PSU_NAME</i> [<i>OPTIONS</i>]</p>
+<dl>
+<dd><font SIZE="+1"> <code>Note</code> </font><br />
+ This driver is experimental, and still a work-in-progress. Feedback is encouraged. </dd>
+<dl>
+<dd><font SIZE="+1"> <code>Note</code> </font><br />
+ This man page only documents the hardware-specific features of the nut-ipmipsu driver. For information about the core driver, see <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8). </dd>
+<h2>Supported Hardware</h2>
+<p>This driver should support a wide range of PSUs through local IPMI interface. </p>
+<p> nut-ipmipsu currently use the GNU FreeIPMI project, for IPMI implementation.</p>
+<h2>Extra Arguments</h2>
+<p>This driver doesn&#8217;t support any optional settings.</p>
+<h2>Installation</h2>
+<p>This driver is not built by default. You can build it by using &quot;configure &#8211;with-ipmi=yes&quot;. </p>
+<p> You also need to give proper permissions on the local IPMI device file (/dev/ipmi0 for example) to allow the NUT user to access it. </p>
+<p> An udev rules file (nut-ipmipsu.rules) is provided and automatically installed on udev enabled system. This file is generally installed in /etc/udev/rules.d/ or /lib/udev/rules.d/ on newer systems, to address the permission settings problem. For more information, refer to nut/scripts/udev/README.</p>
+<h2>Instant Commands</h2>
+<p>This driver doesn&#8217;t support any instant commands.</p>
+<h2>Implementation</h2>
+<p>The &quot;port&quot; value is used to identify the PSU. For instance, to target FRU 0x2, use the following in <code>ups.conf</code>: </p>
+<dl>
+<dd>
+<pre>[pdu]
+ driver = nut-ipmipsu
+ port = id2</pre>
+</dd></dl>
+<p> This driver will report various information related to a PSU, including: </p>
+<dl>
+<dd>&bull; manufacturer, model, serial and part numbers,</dd></dl>
+<dl>
+<dd>&bull; nominal voltage and frequency,</dd></dl>
+<dl>
+<dd>&bull; actual current and voltage,</dd></dl>
+<dl>
+<dd>&bull; status of the PSU: </dd>
+<dl>
+<dd>&bull; </dd>
+<p> <i>OL</i> means that the PSU is present and providing power,</dl>
+<dl>
+<dd>&bull; </dd>
+<p> <i>OFF</i> means that the PSU is present but not providing power (power cable removed),</dl>
+<dl>
+<dd>&bull; </dd>
+<p> <i>stale</i> (no data) means that the PSU is not present (ie physically removed).</dl>
+</dl>
+<p> Here is an example output for a Dell r610 server: </p>
+<dl>
+<dd>
+<pre>device.mfr: DELL
+device.mfr.date: 01/05/11 - 08:51:00
+device.model: PWR SPLY,717W,RDNT
+device.part: 0RN442A01
+device.serial: CN179721130031
+device.type: psu
+driver.name: nut-ipmipsu
+driver.parameter.pollinterval: 2
+driver.parameter.port: id2
+driver.version: 2.6.1-3139M
+driver.version.data: IPMI PSU driver
+driver.version.internal: 0.01
+input.current: 0.20
+input.frequency.high: 63
+input.frequency.low: 47
+input.voltage: 232.00
+input.voltage.maximum: 264
+input.voltage.minimum: 90
+ups.id: 2
+ups.realpower.nominal: 717
+ups.status: OL
+ups.voltage: 12</pre>
+</dd></dl>
+<h2>Author</h2>
+<p>Arnaud Quette &lt;arnaud.quette [at] free.fr&gt;</p>
+<h2>See Also</h2>
+<h3>The core driver:</h3>
+<p><code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8)</p>
+<h3>Internet resources:</h3>
+<p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> GNU FreeIPMI home page: <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
+</dl></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

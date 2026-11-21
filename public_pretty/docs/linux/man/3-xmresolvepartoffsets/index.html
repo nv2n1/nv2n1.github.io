@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmresolvepartoffsets(3) · Linux Manual Pages</title>
+<meta name="description" content="XmResolvePartOffsets — A function that allows writing of upward-compatible applications and widgets">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmresolvepartoffsets/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmresolvepartoffsets(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>XmResolvePartOffsets</code> &#8212; A function that allows writing of upward-compatible applications and widgets</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>void XmResolvePartOffsets</code>(
+<code>WidgetClass widget_class</code>,
+<code>XmOffsetPtr * offset</code>);</pre>
+<h2>Description</h2>
+<p>The use of offset records requires one extra global variable per widget class. The variable consists of a pointer to an array of offsets into the widget record for each part of the widget structure. The <code>XmResolvePartOffsets</code> function allocates the offset records needed by an application to guarantee upward-compatible access to widget instance records by applications and widgets. These offset records are used by the widget to access all of the widget&#8217;s variables. A widget needs to take the steps described in the following paragraphs. </p>
+<p> Instead of creating a resource list, the widget creates an offset resource list. To accomplish this, use the <code>XmPartResource</code> structure and the <code>XmPartOffset</code> macro. The <code>XmPartResource</code> data structure looks just like a resource list, but instead of having one integer for its offset, it has two shorts. This structure is put into the class record as if it were a normal resource list. Instead of using <code>XtOffset</code> for the offset, the widget uses <code>XmPartOffset</code>. </p>
+<pre><tt>XmPartResource resources[] = {
+ { BarNxyz, BarCXyz, XmRBoolean,
+ sizeof(Boolean), XmPartOffset(Bar,xyz),
+ XmRImmediate, (XtPointer)False }
+};</tt></pre>
+<p>Instead of putting the widget size in the class record, the widget puts the widget part size in the same field. </p>
+<p> Instead of putting <code>XtVersion</code> in the class record, the widget puts <code>XtVersionDontCheck</code> in the class record. </p>
+<p> The widget defines a variable, of type <code>XmOffsetPtr</code>, to point to the offset record. This can be part of the widget&#8217;s class record or a separate global variable. </p>
+<p> In class initialization, the widget calls <code>XmResolvePartOffsets</code>, passing it a pointer to contain the address of the offset record and the class record. This does several things:</p>
+<dl COMPACT>
+<dt> &bull;</dt>
+<dd>Adds the superclass (which, by definition, has already been initialized) size field to the part size field</dd>
+<dt> &bull;</dt>
+<dd>Allocates an array based upon the number of superclasses</dd>
+<dt> &bull;</dt>
+<dd>Fills in the offsets of all the widget parts with the appropriate values, determined by examining the size fields of all superclass records</dd>
+<dt> &bull;</dt>
+<dd>Uses the part offset array to modify the offset entries in the resource list to be real offsets, in place</dd></dl>
+<p> The widget defines a constant that will be the index to its part structure in the offsets array. The value should be 1 greater than the index of the widget&#8217;s superclass. Constants defined for all <code>Xm</code> widgets can be found in <code>XmP.h</code>. </p>
+<pre><tt>#define BarIndex (XmBulletinBIndex + 1)</tt></pre>
+<p>Instead of accessing fields directly, the widget must always go through the offset table. The <code>XmField</code> macro helps you access these fields. Because the <code>XmPartOffset</code> and <code>XmField</code> macros concatenate things together, you must ensure that there is no space after the part argument. For example, the following macros do not work because of the space after the part (Label) argument: </p>
+<pre><tt>XmField(w, offset, Label, text, char *)
+XmPartOffset(Label, text)</tt></pre>
+<p>Therefore, you must not have any spaces after the part (Label) argument, as illustrated here: </p>
+<pre><tt>XmField(w, offset, Label, text, char *)</tt></pre>
+<p>You can define macros for each field to make this easier. Assume an integer field <i>xyz</i>: </p>
+<pre><tt>#define BarXyz(w) (*(int *)(((char *) w) + \
+ offset[BarIndex] + XtOffset(BarPart,xyz)))</tt></pre>
+<p>The parameters for <code>XmResolvePartOffsets</code> are</p>
+<dl COMPACT>
+<dt><i>widget_class</i></dt>
+<dd>Specifies the widget class pointer for the created widget</dd>
+<dt><i>offset</i></dt>
+<dd>Returns the offset record</dd></dl>
+<h2>Related Information</h2>
+<p><code><a href="/docs/linux/man/3-xmresolveallpartoffsets/">XmResolveAllPartOffsets</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

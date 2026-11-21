@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mewl(1) · Linux Manual Pages</title>
+<meta name="description" content="mewl – Message scanner for Mew 4 or later">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mewl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mewl(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> mewl &#8211; Message scanner for Mew 4 or later</p>
+<h2>SYNOPSIS</h2>
+<p> mewl [<i>options</i>] [<i>folder</i> [<i>range</i>]]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>mewl</code> utility extracts necessary fields from messages stored in folders. This command is necessary for Mew to implement the asynchronous feature. </p>
+<p> The options are as follows:</p>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Print all necessary fields when picking.</dd>
+<dt><code>-b</code><i> dir</i></dt>
+<dd> Set the Mail home to <i>dir</i>.</dd>
+<dt><code>-c</code><i> bodylen</i></dt>
+<dd> Set the max body length to be extracted to <i>bodylen</i>.</dd>
+<dt><code>-d</code><i> field</i></dt>
+<dd> Set the field to be extracted to <i>field</i>.</dd>
+<dt><code>-e</code><i> command</i></dt>
+<dd> Specify an external <i>command</i> to fetch mailbox.</dd>
+<dt><code>-m</code><i> options</i></dt>
+<dd> Specify <i>options</i> for <i>command</i>.</dd>
+<dt><code>-f</code><i> fields</i></dt>
+<dd> Specify <i>fields</i> to display.</dd>
+<dt><code>-h</code></dt>
+<dd> Display this help message.</dd>
+<dt><code>-i</code><i> file</i></dt>
+<dd> Set the input stream to <i>file</i>.</dd>
+<dt><code>-l</code><i> length</i></dt>
+<dd> Set the max field length to be extracted to <i>length</i>. The default value is 3. 0 means no limit.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t use fstat().</dd>
+<dt><code>-p</code><i> pattern</i></dt>
+<dd> Specify the pick <i>pattern</i>.</dd>
+<dt><code>-s</code><i> src</i></dt>
+<dd> Set message source to <i>src</i> : &#8216;+folder range&#8217;.</dd>
+<dt><code>-w</code></dt>
+<dd> Wait for stdio input to synchronize.</dd>
+<dt><code>-v</code></dt>
+<dd> Display the version.</dd>
+<dt><code>-x</code><i> suffix</i></dt>
+<dd> Use this <i>suffix</i>. </dd>
+<p> Definitions of the symbols above are as follows:</p>
+<dt><i>range</i></dt>
+<dd> N | [start]-[end] | last:N</dd>
+<dt><i>pattern</i></dt>
+<dd> &#8216;key=val&#8217; | &#8216;key!=val&#8217; | &#8216;!&lt;pattern&gt;&#8217; | &#8216;(&lt;pattern&gt;)&#8217; | &#8216;&lt;pattern&gt;&amp;&lt;pattern&gt;&#8217; | &#8216;&lt;pattern&gt;|&lt;pattern&gt;&#8217; </dd>
+</dl>
+<h2>BUGS</h2>
+<p> If a field is long, only the beginning three lines are extracted by default. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

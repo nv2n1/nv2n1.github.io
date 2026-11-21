@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flow-cat(1) · Linux Manual Pages</title>
+<meta name="description" content="flow-cat – Concatenate flow files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-flow-cat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>flow-cat(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> flow-cat &#8211; Concatenate flow files</p>
+<h2>SYNOPSIS</h2>
+<p> <code>flow-cat</code> [ <code>-aghmp</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> filename</i> ] [ <code>-t</code><i> start_time</i> ] [ <code>-T</code><i> start_time</i> ] [ <code>-z</code><i> z_level</i> ] [ <i>file</i><code>|</code><i>directory</i><i>&#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>flow-cat</code> utility processes files and/or directories of files in the flow-tools format. The resulting concatenated data set is written to the standard output or <i>file</i> specified by <code>-o</code>. If <i>file</i> is a single dash (`-&#8216;) or absent, flow-cat will read from the standard input.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd> Do not ignore filenames that begin with <i>tmp</i>.</dd>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-g</code></dt>
+<dd> Sort file list by capture start time before processing.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-m</code></dt>
+<dd> Disable the use of mmap().</dd>
+<dt><code>-p</code></dt>
+<dd> Preload headers. Use to preserve meta information such as lost flows.</dd>
+<dt><code>-o</code><i> file</i></dt>
+<dd> Write to <i>file</i> instead of the standard out.</dd>
+<dt><code>-t</code><i> start_time</i></dt>
+<dd> Select flow files up to <i>start_time</i>. If used with -T select files between <i>start_time</i> and <i>end_time</i>.</dd>
+<dt><code>-T</code><i> end_time</i></dt>
+<dd> Select flow files after <i>end_time</i>. If used with -t select files between <i>start_time</i> and <i>end_time</i>.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd>
+<dt><i>file</i><code>|</code><i>directory&#8230;</i></dt>
+<dd> Process the files and/or directory.</dd></dl>
+<h2>TIME/DATE PARSING</h2>
+<p> start_time and end_time parsing is implemented with <i>getdate.y</i>, a commonly used function to process free-form time date specifications. Example usage borrowed from <code>cvs</code>: 1 month ago 2 hours ago 400000 seconds ago last year last Monday yesterday a fortnight ago 3/31/92 10:00:07 PST January 23, 1987 10:05pm 22:00 GMT</p>
+<h2>EXAMPLES</h2>
+<p> Concatenate all flow files begining with ft-v05.2001-05.01, use flow-print to display the results. </p>
+<p> <code>flow-cat ft-v05.2001-05-01.* | flow-print</code> </p>
+<p> Concatenate flow files in <i>/flows/krc4</i>, store store the output in <i>compressed.flows</i> at compression level 9 (best). The headers are preloaded so various metadata such as the flow count is correct in the result. Filenames begining with <i>tmp</i> which are typically in-progress flow files from <code>flow-capture</code> are not processed. </p>
+<p> <code>flow-cat -p -z9 /flows/krc4 &gt; compressed.flows</code></p>
+<h2>BUGS</h2>
+<p> None known.</p>
+<h2>AUTHOR</h2>
+<p> Mark Fullmer &lt;maf [at] splintered.net&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

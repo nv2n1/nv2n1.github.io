@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_xauth_data(3) · Linux Manual Pages</title>
+<meta name="description" content="pam_xauth_data – structure containing X authentication data">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pam_xauth_data/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pam_xauth_data(3)</h1>
+
+
+
+
+
+<p>pam_xauth_data &#8211; structure containing X authentication data</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;security/pam_appl.h&gt;
+struct pam_xauth_data {
+    int namelen;
+    char *name;
+    int datalen;
+    char *data;
+};</code></pre>
+<h2>Description</h2>
+<p>The <code>pam_xauth_data</code> structure contains X authentication data used to make a connection to an X display. Using this mechanism, an application can communicate X authentication data to PAM service modules. This allows modules to make a connection to the user&#8217;s X display in order to label the user&#8217;s session on login, display visual feedback or for other purposes. </p>
+<p> The <i>name</i> field contains the name of the authentication method, such as &quot;MIT-MAGIC-COOKIE-1&quot;. The <i>namelen</i> field contains the length of this string, not including the trailing NUL character. </p>
+<p> The <i>data</i> field contains the authentication method-specific data corresponding to the specified name. The <i>datalen</i> field contains its length in bytes. </p>
+<p> The X authentication data can be changed with the <i>PAM_XAUTH_DATA</i> item. It can be queried and set with <code><a href="/docs/linux/man/3-pam_get_item/">pam_get_item</a></code>(3) and <code>pam_set_item </code>(3) respectively. The value used to set it should be a pointer to a pam_xauth_data structure. An internal copy of both the structure itself and its fields is made by PAM when setting the item.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-pam_start/">pam_start</a></code>(3), <code><a href="/docs/linux/man/3-pam_get_item/">pam_get_item</a></code>(3),</p>
+<h2>Standards</h2>
+<p>The <code>pam_xauth_data</code> structure and <i>PAM_XAUTH_DATA</i> item are Linux-PAM extensions.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrethrow_if_nested(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrethrow_if_nested/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrethrow_if_nested(3)</h1>
+
+
+
+
+
+<p>std::rethrow_if_nested - std::rethrow_if_nested</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;exception&gt;
+    template &lt;class E&gt;
+    (since C++ 11)
+        void rethrow_if_nested(const E &amp;e);</code></pre> 
+<p>If E is not a polymorphic class type, or if std::nested_exception is an inaccessible or ambiguous base class of E, there is no effect.
+Otherwise, performs if (auto p = dynamic_cast&lt;const std::nested_exception *&gt;(std::addressof(e)))
+p-&gt;rethrow_nested();</p>
+<h2>Parameters</h2>
+<p>e - the exception object to rethrow</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>Unlike many related functions, this function is not intended to be called with a std::exception_ptr but rather an actual exception reference.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> namespace details {
+ <wbr> <wbr> <wbr> <wbr> <wbr> template &lt;class E&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> struct can_dynamic_cast
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> : std::integral_constant&lt;bool,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::is_polymorphic&lt;E&gt;::value &amp;&amp;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> (!std::is_base_of&lt;std::nested_exception, E&gt;::value ||
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::is_convertible&lt;E*, std::nested_exception*&gt;::value)
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> &gt; { };</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> template &lt;class T&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> void rethrow_if_nested_impl(const T&amp; e, std::true_type)
+ <wbr> <wbr> <wbr> <wbr> <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> if(auto nep = dynamic_cast&lt;const std::nested_exception*&gt;(std::addressof(e)))
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> nep-&gt;rethrow_nested();
+ <wbr> <wbr> <wbr> <wbr> <wbr> }</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> template &lt;class T&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> void rethrow_if_nested_impl(const T&amp;, std::false_type) { }
+ <wbr> }</p>
+<p> <wbr> template &lt;class T&gt;
+ <wbr> void rethrow_if_nested(const T&amp; t){
+ <wbr> <wbr> <wbr> <wbr> <wbr> details::rethrow_if_nested_impl(t, details::can_dynamic_cast&lt;T&gt;());
+ <wbr> }</p>
+<h2>Example</h2>
+<p>Demonstrates construction and recursion through a nested exception object
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;exception&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt;
+// prints the explanatory string of an exception. If the exception is nested,
+// recurses to print the explanatory of the exception it holds
+void print_exception(const std::exception &amp;e, int level = 0)
+{
+std::cerr &lt;&lt; std::string(level, &rsquo; &lsquo;) &lt;&lt; &quot;exception: &quot; &lt;&lt; e.what() &lt;&lt; &lsquo;\n&rsquo;;
+try {
+std::rethrow_if_nested(e);
+} catch (const std::exception &amp;e) {
+print_exception(e, level + 1);
+} catch (&hellip;) {
+}
+}
+// sample function that catches an exception and wraps it in a nested exception
+void open_file(const std::string &amp;s)
+{
+try {
+std::ifstream file(s);
+file.exceptions(std::ios_base::failbit);
+} catch (&hellip;) {
+std::throw_with_nested(std::runtime_error(&quot;Couldn&rsquo;t open &quot; + s));
+}
+}
+// sample function that catches an exception and wraps it in a nested exception
+void run()
+{
+try {
+open_file(&quot;nonexistent.file&quot;);
+} catch (&hellip;) {
+std::throw_with_nested(std::runtime_error(&quot;run() failed&quot;));
+}
+}
+// runs the sample function above and prints the caught exception
+int main()
+{
+try {
+run();
+} catch (const std::exception &amp;e) {
+print_exception(e);
+}
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> exception: run() failed
+ <wbr> <wbr> exception: Couldn&rsquo;t open nonexistent.file
+ <wbr> <wbr> <wbr> exception: basic_ios::clear</p>
+<h2>See also</h2>
+<p>nested_exception a mixin type to capture and store current exceptions
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class)</i>
+<i>(C++11)</i>
+throw_with_nested throws its argument with std::nested_exception mixed in
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

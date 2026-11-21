@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grass-dbf(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grass-dbf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grass-dbf(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>Defining the DBF driver</h2>
+<p>The DBF driver is the default driver, in theory no user interaction is required. However, if the settings should be set back from a different to the DBF driver, the following step is required:</p>
+<h1 id="keep-single-quotes">keep single quotes:</h1>
+<p>db.connect driver=dbf database=&rsquo;$GISDBASE/$LOCATION_NAME/$MAPSET/dbf/&rsquo;
+db.connect -p
+The dbf/ subdirectory in the mapset must exist or must be created by the user.</p>
+<h2>Creating a DBF table</h2>
+<p>Usually DBF tables are created by GRASS when generating a vector map with attributes (and using DBF as default attribute driver).</p>
+<p>If a DBF table has to be created manually, db.execute can be used or a spreadsheet application. Also db.copy is sometimes useful as well as db.in.ogr to import external tables.</p>
+<h2>Supported SQL commands by DBF driver</h2>
+<p> <wbr> <wbr>ALTER TABLE table ADD <wbr>[COLUMN] <wbr>columndef</p>
+<p> <wbr> <wbr>ALTER TABLE table DROP COLUMN colname</p>
+<p> <wbr> <wbr>CREATE TABLE table <wbr>( <wbr>columndefs <wbr>)</p>
+<p> <wbr> <wbr>DROP TABLE table</p>
+<p> <wbr> <wbr>SELECT columns FROM table</p>
+<p> <wbr> <wbr>SELECT columns FROM table WHERE condition</p>
+<p> <wbr> <wbr>DELETE FROM table</p>
+<p> <wbr> <wbr>DELETE FROM table WHERE condition</p>
+<p> <wbr> <wbr>INSERT INTO table VALUES <wbr>(value1[,value2,&hellip;])</p>
+<p> <wbr> <wbr>INSERT INTO table <wbr>( <wbr>column1[,column2,&hellip;] <wbr>) <wbr>VALUES <wbr>(value1[,value2,&hellip;])</p>
+<p> <wbr> <wbr>UPDATE table SET assignment1[,assignment2,&hellip;]</p>
+<p> <wbr> <wbr>UPDATE table SET assignment1[,assignment2,&hellip;] <wbr>WHERE condition</p>
+<h2>Operators available in conditions</h2>
+<p> <wbr> <wbr>&quot;=&quot; <wbr> <wbr>: equal</p>
+<p> <wbr> <wbr>&quot;&lt;&quot; <wbr> <wbr>: smaller than</p>
+<p> <wbr> <wbr>&quot;&lt;=&quot; <wbr>: smaller/equal than</p>
+<p> <wbr> <wbr>&quot;&gt;&quot; <wbr> <wbr>: larger than</p>
+<p> <wbr> <wbr>&quot;&gt;=&quot; <wbr>: larger/equal than</p>
+<p> <wbr> <wbr>&quot;&lt;&gt;&quot; <wbr>: not equal</p>
+<p> <wbr> <wbr>&quot;~&quot; <wbr> <wbr>: Substring matching <wbr> <wbr>(non-standard SQL)</p>
+<p> <wbr> <wbr>&quot;%&quot; <wbr> <wbr>: Substring matching <wbr> <wbr>(limited functionality)</p>
+<p> <wbr>Arithmetic expressions using constants and field values are allowed <wbr> in condition clauses and in the RHS of assignments. Usual precedence rules and bracketing (using &lsquo;(&rsquo; and &lsquo;)&rsquo;) are supported. Type conversion is performed if necessary (experimental).</p>
+<p> <wbr>Aggregate functions <wbr>(sum, count, min, max,&hellip;) <wbr>are NOT currently supported <wbr> in SELECT clauses.</p>
+<p> <wbr>Mathematic functions <wbr>(sin, cos, exp, log,&hellip;) <wbr>are NOT currently supported <wbr> in expressions.</p>
+<p> <wbr>Conditions allow boolean expressions using the AND, OR and NOT operators, <wbr> with the usual precedence rules.</p>
+<p> <wbr>NULLs can be tested by <wbr>&lsquo;colname IS NULL&rsquo; <wbr>in conditions. The negation is <wbr>&lsquo;colname NOT NULL&rsquo;.</p>
+<h2>ERROR MESSAGES</h2>
+<p>An error message such as:
+DBMI-DBF driver error:
+SQL parser error: syntax error, unexpected DESC, expecting NAME processing &lsquo;DESC&rsquo;
+indicates that a column name corresponds to a reserved SQL word (here: &lsquo;DESC&rsquo;). A different column name should be used. If this happens during import with <i>v.in.ogr</i>, the <i>cnames</i> parameter can be used to assign different column names on the fly.</p>
+<h2>SEE ALSO</h2>
+<p><i> db.connect, SQL support in GRASS GIS
+DBF Specifications (Shapelib) </i></p>
+<p><i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i>
+Help Index</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

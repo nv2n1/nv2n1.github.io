@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>globus_xio_file_driver_instance(3) · Linux Manual Pages</title>
+<meta name="description" content="Opening/Closing – An XIO handle with the file driver can be created with globus_xio_handle_create()">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-globus_xio_file_driver_instance/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>globus_xio_file_driver_instance(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> Opening/Closing &#8211; An XIO handle with the file driver can be created with <code>globus_xio_handle_create()</code> </p>
+<p> If there is no handle set on the attr passed to the <code>globus_xio_open()</code> call, it performs the equivalent of an open() call. In this case, the contact string must contain either a pathname or one of </p>
+<p><a href="stdin://,">stdin://,</a> <a href="stdout://,">stdout://,</a> or <a href="stderr://.">stderr://.</a> If a pathname is used, that path is opened. If one of the schemes are used the corresponding stdio handle is used (retrieved with fileno()). </p>
+<p> In either of the above cases, it is most efficient to call the blocking version of <code>globus_xio_open()</code>. It is also safe to call within a locked critical section. </p>
+<p> When the XIO handle is closed, the file driver will destroy its internal resources and close the fd (unless this fd was set on an attr or converted from one of the stdio handles).</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for globus_xio from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

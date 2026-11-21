@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_addoption(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_AddOption – Add an option to the option database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_addoption/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_addoption(3)</h1>
+
+
+
+
+
+<p>Tk_AddOption &#8211; Add an option to the option database </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+void
+<code>Tk_AddOption</code>(<i>tkwin, name, value, priority</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>const char <i>*name</i> (in) Multi-element name of option.</dd>
+<dd>const char <i>*value</i> (in) Value of option.</dd>
+<dd>int <i>priority</i> (in) Overall priority level to use for option. </dd>
+</dl>
+<h2>Description</h2>
+<p>This procedure is invoked to add an option to the database associated with <i>tkwin</i>&#8216;s main window. <i>Name</i> contains the option being specified and consists of names and/or classes separated by asterisks or dots, in the usual X format. <i>Value</i> contains the text string to associate with <i>name</i>; this value will be returned in calls to <code>Tk_GetOption</code>. <i>Priority</i> specifies the priority of the value; when options are queried using <code>Tk_GetOption</code>, the value with the highest priority is returned. <i>Priority</i> must be between 0 and <code>TK_MAX_PRIO</code>. Some common priority values are:</p>
+<dl COMPACT>
+<dt>20</dt>
+<dd>Used for default values hard-coded into widgets.</dd>
+<dt>40</dt>
+<dd>Used for options specified in application-specific startup files.</dd>
+<dt>60</dt>
+<dd>Used for options specified in user-specific defaults files, such as <code>.Xdefaults</code>, resource databases loaded into the X server, or user-specific startup files.</dd>
+<dt>80</dt>
+<dd>Used for options specified interactively after the application starts running. </dd>
+</dl>
+<h2>Keywords</h2>
+<p>class, name, option, add</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

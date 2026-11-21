@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>testlintianharness(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-testlintianharness/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>testlintianharness(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Test::Lintian::Harness &ndash; Helper tools for t/runtests</p>
+<h2>Synopsis</h2><pre> use Test::Lintian::Harness qw(up_to_date);
+ if (not up_to_date('some/build-stamp', 'some/dir')) {
+ # do rebuild
+ }</pre><h2>Description</h2>Helper functions for t/runtests.
+<h2>Functions</h2><dl COMPACT><dt>skip_reaon(<font SIZE="-1">SKIP_FILE</font>)
+</dt><dd>Return the (human-readable) reason for skipping a test by reading the <font SIZE="-1">SKIP_FILE.</font>
+</dd><dt>copy_template_dir(<font SIZE="-1">SKEL_DIR, TEST_SRC_DIR, TEST_TARGET_DIR,</font> [EXCL_SKEL[, <font SIZE="-1">EXCL_SRC</font>]])
+</dt><dd>Populate <font SIZE="-1">TEST_TARGET_DIR</font> with files/dirs from <font SIZE="-1">SKEL_DIR</font> and <font SIZE="-1">TEST_SRC_DIR.</font> If given, <font SIZE="-1">EXCL_SKEL</font> and <font SIZE="-1">EXCL_SRC</font> must be a listref containing rsync ``--exclude'' options.
+</dd><dt>runsystem(<font SIZE="-1">CMD...</font>)
+</dt><dd>Run <font SIZE="-1">CMD</font> via system, but throw an error if <font SIZE="-1">CMD</font> does not return 0.
+</dd><dt>runsystem_ok(<font SIZE="-1">CMD...</font>)
+</dt><dd>Run <font SIZE="-1">CMD</font> via system, but throw an error if <font SIZE="-1">CMD</font> does not return 0 or 1. 
+ Returns 1 if <font SIZE="-1">CMD</font> returned successfully (i.e. 0), otherwise 0. 
+ This is mostly useful for running Lintian, which may return 0 or 1 on ``success''.
+</dd><dt>up_to_date(<font SIZE="-1">STAMPFILE,</font> DIR[, <font SIZE="-1">RUNNER_TS</font>])
+</dt><dd>Returns true if the mtime of <font SIZE="-1">STAMPFILE</font> is greater than or equal to the mtime of all files in <font SIZE="-1">DIR.</font> If <font SIZE="-1">RUNNER_TS</font> is given, then the mtime of <font SIZE="-1">STAMPFILE</font> must also be greater than or equal to the value of <font SIZE="-1">RUNNER_TS.</font> 
+ If <font SIZE="-1">STAMPFILE</font> does not exist, this function returns false unconditionally.
+</dd><dt>check_test_depends(<font SIZE="-1">TESTDATA</font>)
+</dt><dd>Given a <font SIZE="-1">TESTDATA</font> with a dependency requirement, check whether the dependency requirement is satisfied. If satisfied, return <tt>&quot;undef&quot;</tt>, otherwise return a (human-readable) string containing the missing dependencies.
+</dd><dt>read_test_desc(<font SIZE="-1">FILENAME</font>)
+</dt><dd>Parse <font SIZE="-1">FILENAME</font> as a test description file, do a quick validation of its contents and return it in a hashref. This is similar get_dsc_control (<font SIZE="-1">DSCFILE</font>) except for the extra validation.
+</dd><dt>fill_in_tmpl(<font SIZE="-1">FILE, DATA</font>)
+</dt><dd>Create <font SIZE="-1">FILE</font> using ``${<font SIZE="-1">FILE</font>}.in'' as a template and <font SIZE="-1">DATA</font> as template data.
+</dd><dt>chdir_runcmd(<font SIZE="-1">DIR,</font> CMD_REF[, <font SIZE="-1">LOG_FILE</font>])
+</dt><dd>Fork, chdir to <font SIZE="-1">DIR</font> and exec the command (plus arguments) contained in <font SIZE="-1">CMD_REF.</font> The child process's <font SIZE="-1">STDERR</font> is merged into its <font SIZE="-1">STDOUT.</font> The <font SIZE="-1">STDOUT</font> stream of the child process is either directed to the path denoted by <font SIZE="-1">LOG_FILE</font> (if given and not <tt>&quot;undef&quot;</tt>) or to <i>/dev/null</i>. 
+ Returns 0 on success and non-zero otherwise.
+</dd><dt>is_tag_in_file(<font SIZE="-1">TAGNAME, FILENAME</font>)
+</dt><dd>Returns true if <font SIZE="-1">FILENAME</font> appears to be output from Lintian, which emitted <font SIZE="-1">TAGNAME</font> from that run.
+</dd><dt>find_tests_for_tag(<font SIZE="-1">TAGNAME, GLOB_EXPR</font>)
+</dt><dd>Find checks for the Lintian tag denoted by <font SIZE="-1">TAGNAME</font> that match the <font SIZE="-1">GLOB_EXPR.</font> Note that <font SIZE="-1">GLOB_EXPR</font> must match only the ``desc'' file of the tests. 
+ This function returns a list of the test-data for each of these tests.
+</dd><dt>generic_find_test_for_tag(<font SIZE="-1">TAGNAME,</font> GLOB_EXPR[, <font SIZE="-1">TCODE</font>])
+</dt><dd>Looks for <font SIZE="-1">TAGNAME</font> in all files returned by using glob on <font SIZE="-1">GLOB_EXPR. TCODE</font> is called for each file with <font SIZE="-1">TAGNAME</font> as first argument and the filename as second argument. <font SIZE="-1">TCODE</font> is expected to return a truth value that if the test should be run. If <font SIZE="-1">TCODE</font> returns something that is not just a raw truth value (e.g. a hash ref), this will be taken as the ``test'', otherwise this sub will attempt to guess the test name from the file. 
+ If <font SIZE="-1">TCODE</font> is omitted, ``is_tag_in_file(<font SIZE="-1">TAGNAME, FILENAME</font>)'' will be used. 
+ Returns a list of values returned by <font SIZE="-1">TCODE</font> or guessed test names (as per above) 
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

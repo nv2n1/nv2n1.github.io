@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rdma_bind_addr(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-rdma_bind_addr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>rdma_bind_addr(3)</h1>
+
+
+
+
+
+<p>rdma_bind_addr - Bind an RDMA identifier to a source address.</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;rdma/rdma_cma.h&gt;
+int rdma_bind_addr
+    (struct rdma_cm_id *id,
+     struct sockaddr *addr);</code></pre>
+<h2>Arguments</h2>
+<dl><dt>id
+</dt><dd>RDMA identifier.
+</dd><dt>addr
+</dt><dd>Local address information. Wildcard values are permitted.</dd></dl>
+<h2>Description</h2>
+<p>Associates a source address with an rdma_cm_id. The address may be wildcarded. If binding to a specific local address, the rdma_cm_id will also be bound to a local RDMA device.</p>
+<h2>Return Value</h2>
+<p>Returns 0 on success, or -1 on error. If an error occurs, errno will be set to indicate the failure reason.</p>
+<h2>Notes</h2>
+<p>Typically, this routine is called before calling rdma_listen to bind to a specific port number, but it may also be called on the active side of a connection before calling rdma_resolve_addr to bind to a specific address.</p>
+<p>If used to bind to port 0, the rdma_cm will select an available port, which can be retrieved with <a HREF="/docs/linux/man/3-rdma_get_src_port/">rdma_get_src_port</a>(3).</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/3-rdma_create_id/">rdma_create_id</a>(3), <a HREF="/docs/linux/man/3-rdma_listen/">rdma_listen</a>(3), <a HREF="/docs/linux/man/3-rdma_resolve_addr/">rdma_resolve_addr</a>(3), <a HREF="/docs/linux/man/3-rdma_create_qp/">rdma_create_qp</a>(3), <a HREF="/docs/linux/man/3-rdma_get_local_addr/">rdma_get_local_addr</a>(3), <a HREF="/docs/linux/man/3-rdma_get_src_port/">rdma_get_src_port</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

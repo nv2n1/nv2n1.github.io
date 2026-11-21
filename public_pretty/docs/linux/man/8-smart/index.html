@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smart(8) · Linux Manual Pages</title>
+<meta name="description" content="smart – The Smart Package Manager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-smart/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>smart(8)</h1>
+
+
+
+
+
+<p>smart &#8211; The Smart Package Manager</p>
+<h2>Synopsis</h2>
+<p><code>smart</code> command [options] [arguments]</p>
+<h2>Description</h2>
+<p>The <code>Smart</code> Package Manager project has the ambitious objective of creating smart and portable algorithms for solving adequately the problem of managing software upgrading and installation. This tool works in all major distributions, and will bring notable advantages over native tools currently in use (APT, APT-RPM, YUM, URPMI, etc).</p>
+<h2>Action commands</h2>
+<pre>update
+install
+reinstall
+upgrade
+remove
+check
+fix
+download
+clean</pre>
+<h2>Setup commands</h2>
+<pre>channel
+priority
+mirror
+flag</pre>
+<h2>Query commands</h2>
+<pre>search
+query
+info
+stats</pre>
+<p>Run &quot;smart command &#8211;help&quot; for more information.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;version</code></dt>
+<dd>Show program&#8217;s version number and exit</dd>
+<dt><code>&#8211;config-file=FILE</code></dt>
+<dd>Configuration file (default is &lt;data-dir&gt;/config)</dd>
+<dt><code>&#8211;data-dir=DIR</code></dt>
+<dd>Specifies the config file location &#8211; can take http, ftp urls and local file Data directory (default is /var/lib/smart/)</dd>
+<dt><code>&#8211;log-level=LEVEL</code></dt>
+<dd>Set the log level to level (debug, info, warning, error)</dd>
+<dt><code>&#8211;gui</code></dt>
+<dd>Use the default graphic interface</dd>
+<dt><code>&#8211;shell</code></dt>
+<dd>Use the default shell interface</dd>
+<dt><code>&#8211;interface=NAME</code></dt>
+<dd>Use the given interface</dd>
+<dt><code>&#8211;ignore-locks</code></dt>
+<dd>Don&#8217;t respect locking</dd>
+<dt><code>-o OPT, &#8211;option=OPT</code></dt>
+<dd>Set the option given by a name=value pair</dd></dl>
+<h2>Examples</h2>
+<pre>smart install --help
+smart install pkgname
+smart --gui
+smart --gui install pkgname
+smart --shell</pre>
+<h2>Files</h2>
+<pre>/etc/smart/
+/var/lib/smart/
+/usr/lib/smart/
+/usr/lib/smart/plugins/</pre>
+<h2>See Also</h2>
+<pre><a rel="nofollow" href="http://labix.org/smart">http://labix.org/smart</a></pre>
+<h2>Author</h2>
+<pre>Gustavo Niemeyer &lt;gustavo [at] niemeyer.net&gt;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

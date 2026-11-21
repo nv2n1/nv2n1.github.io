@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rec_control(1) · Linux Manual Pages</title>
+<meta name="description" content="rec_control – control pdns_recursor">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-rec_control/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>rec_control(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> rec_control &#8211; control pdns_recursor</p>
+<h2>SYNOPSIS</h2>
+<p> rec_control [OPTION]&#8230; COMMAND [COMMAND-OPTION]&#8230;</p>
+<h3>DESCRIPTION</h3>
+<p> <a href="/docs/linux/man/1-rec_control/">rec_control</a>(1) allows the operator to control a running instance of the pdns_recursor. </p>
+<p> The commands that can be passed to the recursor are described on <a rel="nofollow" href="http://doc.powerdns.com/md/recursor/running/#rec_control-commands">http://doc.powerdns.com/md/recursor/running/#rec_control-commands</a></p>
+<h2>EXAMPLES</h2>
+<p> To stop the recursor by hand, run: </p>
+<p> #&nbsp;<wbr>rec_control quit </p>
+<p> To dump the cache to disk, execute: </p>
+<p> #&nbsp;<wbr>rec_control dump-cache&nbsp;<wbr>/tmp/the-cache</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;help</code></dt>
+<dd> provide this helpful message.</dd>
+<dl>
+</dl>
+<dt><code>&#8211;socket-dir=</code>PATH</dt>
+<dd> Where the controlsocket will live.</dd>
+<dl>
+</dl>
+<dt><code>&#8211;socket-pid=</code>PID</dt>
+<dd> When running in SMP mode, pid of pdns_recursor to control.</dd>
+<dl>
+</dl>
+<dt><code>&#8211;timeout=</code>NUM</dt>
+<dd> Number of seconds to wait for the remote PowerDNS Recursor to respond. Set to 0 for infinite.</dd>
+<dl>
+</dl>
+</dl>
+<h2>COMMANDS</h2>
+<dl>
+<dt><code>current-queries</code></dt>
+<dd> Shows the currently active queries.</dd>
+<dl>
+</dl>
+<dt><code>dump-cache </code>FILENAME</dt>
+<dd> Dumps the entire cache to FILENAME. This file should not exist already, PowerDNS will refuse to overwrite it. While dumping, the recursor will not answer questions.</dd>
+<dl>
+</dl>
+<dt><code>dump-edns </code>FILENAME</dt>
+<dd> Dumps the EDNS status to the filename mentioned. This file should not exist already, PowerDNS will refuse to overwrite it. While dumping, the recursor will not answer questions.</dd>
+<dl>
+</dl>
+<dt><code>dump-nsspeeds </code>FILENAME</dt>
+<dd> Dumps the nameserver speed statistics to the FILENAME mentioned. This file should not exist already, PowerDNS will refuse to overwrite it. While dumping, the recursor will not answer questions.</dd>
+<dl>
+</dl>
+<dt><code>get </code>STATISTIC [STATISTIC]&#8230;</dt>
+<dd> Retrieve a statistic. For items that can be queried, see <a rel="nofollow" href="http://doc.powerdns.com/md/recursor/stats/">http://doc.powerdns.com/md/recursor/stats/</a></dd>
+<dl>
+</dl>
+<dt><code>get-all</code></dt>
+<dd> Retrieve all known statistics.</dd>
+<dl>
+</dl>
+<dt><code>get-parameter </code>KEY [KEY]&#8230;</dt>
+<dd> Retrieves the specified configuration parameter(s).</dd>
+<dl>
+</dl>
+<dt><code>get-qtypelist</code></dt>
+<dd> Retrieves QType statistics. Queries from cache aren&#8217;t being counted yet.</dd>
+<dl>
+</dl>
+<dt><code>help</code></dt>
+<dd> Shows a list of supported commands.</dd>
+<dl>
+</dl>
+<dt><code>ping</code></dt>
+<dd> Check if server is alive.</dd>
+<dl>
+</dl>
+<dt><code>quit</code></dt>
+<dd> Request shutdown of the recursor.</dd>
+<dl>
+</dl>
+<dt><code>quit-nicely</code></dt>
+<dd> Request nice shutdown of the recursor.</dd>
+<dl>
+</dl>
+<dt><code>reload-acls</code></dt>
+<dd> Reloads ACLs.</dd>
+<dl>
+</dl>
+<dt><code>reload-lua-script </code>FILENAME</dt>
+<dd> (Re)loads Lua script FILENAME.</dd>
+<dl>
+</dl>
+<dt><code>reload-zones</code></dt>
+<dd> Reload authoritative and forward zones. Retains current configuration in case of errors.</dd>
+<dl>
+</dl>
+<dt><code>set-minimum-ttl </code>NUM</dt>
+<dd> Set minimum-ttl-override to NUM.</dd>
+<dl>
+</dl>
+<dt><code>top-remotes</code></dt>
+<dd> Shows the top-20 most active remote hosts. Statistics are over the last &#8216;remotes-ringbuffer-entries&#8217; queries, which defaults to 0.</dd>
+<dl>
+</dl>
+<dt><code>trace-regex </code>REGEX</dt>
+<dd> Emit resolution trace for matching queries. Empty regex to disable trace.</dd>
+<dl>
+</dl>
+<dt><code>unload-lua-script</code></dt>
+<dd> Unloads Lua script.</dd>
+<dl>
+</dl>
+<dt><code>version</code></dt>
+<dd> Report running version.</dd>
+<dl>
+</dl>
+<dt><code>wipe-cache </code>DOMAIN [DOMAIN] [&#8230;]</dt>
+<dd> Wipe entries for DOMAIN from the cache. This is useful if, for example, an important server has a new IP address, but the TTL has not yet expired. Multiple domain names can be passed. Note that you must terminate a domain with a .! So to wipe powerdns.org, issue &#8216;rec_control wipe-cache powerdns.org.&#8217;. Versions beyond 3.1 don&#8217;t need the trailing dot. Consider not only wiping &#8216;<a rel="nofollow" href="http://www.domain.com">www.domain.com</a>.&#8217; but also &#8216;domain.com.&#8217;, as the cached nameservers or target of CNAME may continue to be undesired.</dd>
+<dl>
+</dl>
+</dl>
+<h2>BUGS</h2>
+<p> None known. File new ones at <a rel="nofollow" href="https://github.com/PowerDNS/pdns/issues.">https://github.com/PowerDNS/pdns/issues.</a></p>
+<h2>RESOURCES</h2>
+<p> Website: <a rel="nofollow" href="http://wiki.powerdns.com,">http://wiki.powerdns.com,</a> <a href="http://www.powerdns.com">http://www.powerdns.com</a></p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-pdns_recursor/">pdns_recursor</a>(1)</p>
+<h2>AUTHORS</h2>
+<p> PowerDNS.COM BV. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

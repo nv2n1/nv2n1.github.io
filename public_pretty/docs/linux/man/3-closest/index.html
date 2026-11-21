@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>closest(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::Rounding – basic rounding class">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-closest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>closest(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::Rounding &#8211; basic rounding class </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/rounding.hpp&gt; </p>
+<p> Inherited by <code>CeilingTruncation</code>, <code>ClosestRounding</code>, <code>DownRounding</code>, <code>FloorTruncation</code>, and <code>UpRounding</code>. </p>
+<h3>Public Types</h3>
+<p>enum <code>Type</code> { <code>None</code>, <code>Up</code>, <code>Down</code>, <code>Closest</code>, <code>Floor</code>, <code>Ceiling</code> }<br />
+ <i>rounding methods </i></p>
+<h3>Public Member Functions</h3>
+<p><code>Rounding</code> ()<br />
+ <i>default constructor </i><br />
+ <code>Rounding</code> (<code>Integer</code> precision, <code>Type</code> type=Closest, <code>Integer</code> digit=5) </p>
+<p> Decimal <code>operator()</code> (Decimal value) const<br />
+ <i>perform rounding </i></p>
+<h3>Inspectors</h3>
+<p><code>Integer</code> <code>precision</code> () const </p>
+<p> <code>Type</code> <code>type</code> () const </p>
+<p> <code>Integer</code> <code>roundingDigit</code> () const </p>
+<h2>Detailed Description</h2>
+<p>basic rounding class </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>the correctness of the returned values is tested by checking them against known good results.</dd></dl>
+<h2>Member Enumeration Documentation</h2>
+<h3>enum <code>Type</code></h3>
+<p>rounding methods </p>
+<p> The rounding methods follow the OMG specification available at <a href="ftp://ftp.omg.org/pub/docs/formal/00-06-29.pdf">ftp://ftp.omg.org/pub/docs/formal/00-06-29.pdf</a> </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd>the names of the <code>Floor</code> and Ceiling methods might be misleading. Check the provided reference.</dd></dl>
+<p> <code>Enumerator: </code></p>
+<dl COMPACT>
+<dt><i>None </i></dt>
+<dd>do not round: return the number unmodified</dd>
+<dt><i>Up </i></dt>
+<dd>the first decimal place past the precision will be rounded up. This differs from the OMG rule which rounds up only if the decimal to be rounded is greater than or equal to the rounding digit</dd>
+<dt><i>Down </i></dt>
+<dd>all decimal places past the precision will be truncated</dd>
+<dt><i>Closest </i></dt>
+<dd>the first decimal place past the precision will be rounded up if greater than or equal to the rounding digit; this corresponds to the OMG round-up rule. When the rounding digit is 5, the result will be the one closest to the original number, hence the name.</dd>
+<dt><i>Floor </i></dt>
+<dd>positive numbers will be rounded up and negative numbers will be rounded down using the OMG round up and round down rules</dd>
+<dt><i>Ceiling </i></dt>
+<dd>positive numbers will be rounded down and negative numbers will be rounded up using the OMG round up and round down rules</dd></dl>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3><code>Rounding</code> ()</h3>
+<p>default constructor </p>
+<p> Instances built through this constructor don&#8217;t perform any rounding. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

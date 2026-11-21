@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qwtcolumnrect(3) · Linux Manual Pages</title>
+<meta name="description" content="QwtColumnRect –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-qwtcolumnrect/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>qwtcolumnrect(3)</h1>
+
+
+
+
+
+<p>QwtColumnRect &#8211; </p>
+<p> Directed rectangle representing bounding rectangle and orientation of a column.</p>
+<h2>Synopsis</h2>
+<p>#include &lt;qwt_column_symbol.h&gt;</p>
+<h3>Public Types</h3>
+<p>enum <code>Direction</code> { <code>LeftToRight</code>, <code>RightToLeft</code>, <code>BottomToTop</code>, <code>TopToBottom</code> }<br />
+ <i>Direction of the column. </i></p>
+<h3>Public Member Functions</h3>
+<p><code>QwtColumnRect</code> ()<br />
+ <i>Build an rectangle with invalid intervals directed BottomToTop. </i><br />
+ QRectF <code>toRect</code> () const </p>
+<p> Qt::Orientation <code>orientation</code> () const </p>
+<h3>Public Attributes</h3>
+<p><code>QwtInterval</code> <code>hInterval</code><br />
+ <i>Interval for the horizontal coordinates. </i><br />
+ <code>QwtInterval</code> <code>vInterval</code><br />
+ <i>Interval for the vertical coordinates. </i><br />
+ <code>Direction</code> <code>direction</code><br />
+ <i>Direction. </i></p>
+<h2>Detailed Description</h2>
+<p>Directed rectangle representing bounding rectangle and orientation of a column.</p>
+<h2>Member Enumeration Documentation</h2>
+<h3>enum <code>QwtColumnRect::Direction</code></h3>
+<p>Direction of the column. </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>LeftToRight </i></dt>
+<dd>From left to right.</dd>
+<dt><i>RightToLeft </i></dt>
+<dd>From right to left.</dd>
+<dt><i>BottomToTop </i></dt>
+<dd>From bottom to top.</dd>
+<dt><i>TopToBottom </i></dt>
+<dd>From top to bottom.</dd></dl>
+<h2>Member Function Documentation</h2>
+<h3>Qt::Orientation QwtColumnRect::orientation () const [inline]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>Orientation</dd></dl>
+<h3>QRectF QwtColumnRect::toRect () const [inline]</h3>
+<p><code>Returns:</code></p>
+<dl COMPACT>
+<dd>A normalized QRect built from the intervals</dd></dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

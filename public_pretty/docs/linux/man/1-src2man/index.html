@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>src2man(1) · Linux Manual Pages</title>
+<meta name="description" content="src2man – extract man pages from source files.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-src2man/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>src2man(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> <code>src2man </code>&#8211; extract man pages from source files.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+src2man[-n][-d date][-v volume][-r release][srcfile...]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> <code>src2man</code> scans source file <i>srcfile</i>. Only C source files are supported for now. Comments blocks starting by &quot;/** num&quot;, where num is a section number, are converted into a man file, using <code><a href="/docs/linux/man/1-txt2man/">txt2man</a></code>(1). </p>
+<p> The first line of the comment block must contain the name of the manpage, usually the function name, followed by a &quot;-&quot; and a short description. The following lines are the &quot;DESCRIPTION&quot; section content, except if they are in upper case, in which case they define a new section. </p>
+<p> If the next line after a comment block is empty, Then no &quot;SYNOPSIS&quot; section will be generated. Otherwise, <code>src2man</code> will look in the following source lines for a function prototype or a type definion (struct, union, typedef, &#8230;) matching the manpage name, and include it in a &quot;SYNOPSIS&quot; section. This avoids to duplicate the type or function prototype in the comment block. </p>
+<p> The best place for code documentation is in the source file, where the body is implemented, not the header file which only contains the prototype. <code>src2man</code> automatically searches for the presence of a prototype in the corresponding header file, and if found, will print a &quot;#include&quot; statement in the synopsis.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-d</code> date</dt>
+<dd> Set the date of the man pages. Defaults to current date.</dd>
+<dt><code>-n</code></dt>
+<dd> No man page is created. The name of the manpages that would be created are printed.</dd>
+<dt><code>-v</code> volume</dt>
+<dd> Specify the name of the volume to be printed in center header of generated manpages.</dd>
+<dt><code>-r</code> <i>release</i></dt>
+<dd> Specify the project name and <i>release</i> number for the generated manpage.</dd></dl>
+<h2>EXAMPLE</h2>
+<p> The following example displays C code and comments to generate a manpage foobar.3: </p>
+<pre><code>
+/** 3
+ * foobar - a sample dummy function
+ * This line is now the first of the description section.
+ * Note that function parameters parm1 and parm2 are highlighted
+ * in the generated man page.
+ */
+int foobar(char *parm1, int parm2)
+{
+    ... return 0;
+}
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-txt2man/">txt2man</a></code>(1), <code><a href="/docs/linux/man/1-bookman/">bookman</a></code>(1).</p>
+<h2>AUTHOR</h2>
+<p> Marc Vertes &lt;mvertes [at] free.fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

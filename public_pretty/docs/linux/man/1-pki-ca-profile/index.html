@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pki-ca-profile(1) · Linux Manual Pages</title>
+<meta name="description" content="pki-profile – Command-Line Interface for managing Certificate System CA profiles.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pki-ca-profile/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pki-ca-profile(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> pki-profile &#8211; Command-Line Interface for managing Certificate System CA profiles.</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+pki[CLI options] ca - profile pki[CLI options] ca - profile - find[command options] pki[CLI options] ca - profile - show&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - add&lt;input file path&gt;[command options] pki[CLI options] ca - profile - mod&lt;input file path&gt;[command options] pki[CLI options] ca - profile - del&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - enable&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - disable&lt;profile ID&gt;[command options]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> The <code>pki ca-profile</code> commands provide command-line interfaces to manage profiles on the CA. </p>
+<p> <code>pki</code> [CLI options] <code>ca-profile-find</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to list the profiles.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-show &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to view the details of a profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-add &lt;input file path&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to create a new profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-mod &lt;input file path&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to modify an existing profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-del &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to delete a profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-enable &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to enable a profile.</dd></dl>
+<p> <code>pki</code> [CLI options] <code>ca-profile-disable &lt;profile ID&gt;</code> [command options]</p>
+<dl>
+<dt>
+</dt><dd> This command is to disable a profile.</dd></dl>
+<h2>OPTIONS</h2>
+<p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
+<h2>OPERATIONS</h2>
+<p> To view available profile commands, type <code>pki ca-profile</code>. To view each command&#8217;s usage, type <code> pki ca-profile-&lt;command&gt; &#8211;help</code>. </p>
+<p> All the ca-profile commands require CA agent authentication. </p>
+<h3>Viewing the profiles</h3>
+<p> <code>pki &lt;CA agent authentication&gt; ca-profile-find</code> </p>
+<p> The results can be paged using the <code>&#8211;start</code> and <code>&#8211;size</code> options described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
+<p> To view the contents of a profile: </p>
+<p> A set of profile inputs, profile outputs, authenticators, policies and constraints are defined in a profile. These contents can be viewed using the following command: </p>
+<p> <code>pki &lt;CA agent authentication&gt; ca-profile-show &lt;profile ID&gt;</code> </p>
+<p> To store the output of the above operation, the output option must be specified. </p>
+<p> <code>pki &lt;CA agent authentication&gt; ca-profile-show &lt;profile ID&gt; &#8211;output &lt;file path&gt;</code> </p>
+<p> This output file can be used for modifying the profile. It can be used as a template for certificate enrollment as well but, a more suitable template can be fetched using the <code>pki cert-request-profile-show</code> command. The <code>pki cert-request-profile-show</code> command does not require an agent/administrator level authentication and contains only the profile inputs section (which is required for certificate enrollment). </p>
+<h3>Add/Modify/Delete a profile</h3>
+<p> <code>pki &lt;CA admin authentication&gt; ca-profile-add &lt;input file path&gt;</code> </p>
+<p> The contents of the input file must be in an XML format returned by the ca-profile-show command. This data will be marshaled by the CLI client to create a new profile in the CA. The profile must be disabled before it is modified. It must be enabled after modification to be used for certificate enrollment. </p>
+<p> To modify an existing profile: </p>
+<p> <code>pki &lt;CA admin authentication&gt; ca-profile-mod &lt;input file path&gt;</code> </p>
+<p> The profile data can be retrieved using the ca-profile-show command and after editing the file, it can be provided to the profile-mod command to modify an existing profile. </p>
+<p> To delete a profile in the CA: </p>
+<p> <code>pki &lt;CA admin authentication&gt; ca-profile-del &lt;profile ID&gt;</code> </p>
+<h3>Enabling/Disabling a profile in the CA</h3>
+<p> To enable a profile in the CA: </p>
+<p> <code>pki &lt;CA agent authenticaton&gt; ca-profile-enable &lt;profile ID&gt;</code> </p>
+<p> A profile must be enabled before it can be used. </p>
+<p> To disable a profile in the CA: </p>
+<p> <code>pki &lt;CA agent authentication&gt; ca-profile-disable &lt;profile ID&gt;</code> </p>
+<p> A profile must be disabled before it can be modified. </p>
+<p> <code>Note:</code> Modifying or deleting a profile requires user(s) that have two roles (admin and agent). The same user may be in both roles. An agent is needed to first disable the profile. Once the profile is disabled, it can be modified/deleted by an admin user. Then, an agent is needed to enable the profile for use by the CA. </p>
+<h2>AUTHORS</h2>
+<p> Abhishek Koneru &lt;akoneru [at] redhat.com&gt;. </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2014 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pki/">pki</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

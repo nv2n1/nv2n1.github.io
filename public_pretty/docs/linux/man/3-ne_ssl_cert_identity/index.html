@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ne_ssl_cert_identity(3) · Linux Manual Pages</title>
+<meta name="description" content="ne_ssl_cert_identity, ne_ssl_cert_signedby, ne_ssl_cert_issuer, ne_ssl_cert_subject – functions to access certificate properties">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ne_ssl_cert_identity/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ne_ssl_cert_identity(3)</h1>
+
+
+
+
+
+<p>ne_ssl_cert_identity, ne_ssl_cert_signedby, ne_ssl_cert_issuer, ne_ssl_cert_subject &#8211; functions to access certificate properties</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;ne_ssl.h&gt;
+const char *ne_ssl_cert_identity(const ne_ssl_certificate *cert);
+const ne_ssl_certificate *ne_ssl_cert_signedby(const ne_ssl_certificate *cert);
+const ne_ssl_dname *ne_ssl_cert_subject(const ne_ssl_certificate *cert);
+const ne_ssl_dname *ne_ssl_cert_issuer(const ne_ssl_certificate *cert);</code></pre>
+<h2>Description</h2>
+<dd>The function <code>ne_ssl_cert_identity</code> retrieves the &#8220;identity&#8221; of a certificate; for an SSL server certificate, this will be the hostname for which the certificate was issued. In PKI parlance, the identity is the <i>common name</i> attribute of the distinguished name of the certificate subject. </dd>
+<p> The functions <code>ne_ssl_cert_subject</code> and <code>ne_ssl_cert_issuer</code> can be used to access the objects representing the distinguished name of the subject and of the issuer of a certificate, respectively. </p>
+<p> If a certificate object is part of a certificate chain, then <code>ne_ssl_cert_signedby</code> can be used to find the certificate which signed a particular certificate. For a self-signed certificate or a certificate for which the full chain is not available, this function will return NULL.</p>
+<h2>Return Value</h2>
+<p><code>ne_ssl_cert_issuer</code> and <code>ne_ssl_cert_subject</code> are guaranteed to never return NULL. <code>ne_ssl_cert_identity</code> may return NULL if the certificate has no specific &#8220;identity&#8221;. <code>ne_ssl_cert_signedby</code> may return NULL as covered above.</p>
+<h2>Examples</h2>
+<p>The following function could be used to display information about a given certificate: </p>
+<pre><code>void dump_cert(const ne_ssl_certificate *cert)
+{
+    const char *id = ne_ssl_cert_identity(cert);
+    char *dn;
+    if (id)
+        printf(&quot;Certificate was issued for '%s'.
+&quot;, id);
+    dn = ne_ssl_readable_dname(ne_ssl_cert_subject(cert));
+    printf(&quot;Subject: %s
+&quot;, dn);
+    free(dn);
+    dn = ne_ssl_readable_dname(ne_ssl_cert_issuer(cert));
+    printf(&quot;Issuer: %s
+&quot;, dn);
+    free(dn);
+}</code></pre>
+<h2>See Also</h2>
+<p>ne_ssl_cert_cmp, ne_ssl_readable_dname</p>
+<h2>Author</h2>
+<p><code>Joe Orton</code> &lt;neon [at] lists.manyfish.co.uk&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

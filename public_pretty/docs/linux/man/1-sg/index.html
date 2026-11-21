@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sg(1) · Linux Manual Pages</title>
+<meta name="description" content="sg – execute command as different group ID">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-sg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>sg(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> sg &#8211; execute command as different group ID </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>sg</code> [-] [group&nbsp;[-c&nbsp;]&nbsp;command]</dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>sg</code> command works similar to <code>newgrp</code> but accepts a command. The command will be executed with the /bin/sh shell. With most shells you may run <code>sg</code> from, you need to enclose multi-word commands in quotes. Another difference between <code>newgrp</code> and <code>sg</code> is that some shells treat <code>newgrp</code> specially, replacing themselves with a new instance of a shell that <code>newgrp</code> creates. This doesn&#8217;t happen with <code>sg</code>, so upon exit from a <code>sg</code> command you are returned to your previous group ID.</dd>
+<h2>CONFIGURATION</h2>
+<p> The following configuration variables in /etc/login.defs change the behavior of this tool: </p>
+<p> <code>SYSLOG_SG_ENAB</code> (boolean)</p>
+<dl>
+<dt>
+</dt><dd> Enable &quot;syslog&quot; logging of <code>sg</code> activity.</dd></dl>
+<h2>FILES</h2>
+<p> /etc/passwd</p>
+<dl>
+<dt>
+</dt><dd> User account information.</dd></dl>
+<p> /etc/shadow</p>
+<dl>
+<dt>
+</dt><dd> Secure user account information.</dd></dl>
+<p> /etc/group</p>
+<dl>
+<dt>
+</dt><dd> Group account information.</dd></dl>
+<p> /etc/gshadow</p>
+<dl>
+<dt>
+</dt><dd> Secure group account information.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-id/">id</a></code>(1), <code><a href="/docs/linux/man/1-login/">login</a></code>(1), <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1), <code><a href="/docs/linux/man/1-su/">su</a></code>(1), <code><a href="/docs/linux/man/1-gpasswd/">gpasswd</a></code>(1), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-gshadow/">gshadow</a></code>(5). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>condor_router_q(1) · Linux Manual Pages</title>
+<meta name="description" content="condor_router_q Display information about routed jobs in the queue">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-condor_router_q/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>condor_router_q(1)</h1>
+
+
+
+
+
+<h2>Name</h2>
+<p> <i>condor_router_q</i> Display information about routed jobs in the queue </p>
+<h2>Synopsis</h2>
+<p> <i>condor_router_q</i> [ <code>-S</code> ] [ <code>-R</code> ] [ <code>-I</code> ] [ <code>-H</code> ] [ <code>-route </code> <i>name</i> ] [ <code>-idle</code> ] [ <code>-held</code> ] [ <code>-constraint </code> <i>X</i> ] [ <code>condor_q options</code> ] </p>
+<h2>Description</h2>
+<p> <i>condor_router_q</i> displays information about jobs managed by the <i>condor_job_router</i> that are in the HTCondor job queue. The functionality of this tool is that of <i>condor_q</i> , with additional options specialized for routed jobs. Therefore, any of the options for <i>condor_q</i> may also be used with <i>condor_router_q</i> . </p>
+<h2>Options</h2>
+<p> <code>-S</code></p>
+<dl>
+<dt>
+</dt><dd> Summarize the state of the jobs on each route.</dd>
+</dl>
+<p> <code>-R</code></p>
+<dl>
+<dt>
+</dt><dd> Summarize the running jobs on each route.</dd>
+</dl>
+<p> <code>-I</code></p>
+<dl>
+<dt>
+</dt><dd> Summarize the idle jobs on each route.</dd>
+</dl>
+<p> <code>-H</code></p>
+<dl>
+<dt>
+</dt><dd> Summarize the held jobs on each route.</dd>
+</dl>
+<p> <code>-route </code> <i>name</i></p>
+<dl>
+<dt>
+</dt><dd> Display only the jobs on the route identified by <i>name</i> .</dd>
+</dl>
+<p> <code>-idle</code></p>
+<dl>
+<dt>
+</dt><dd> Display only the idle jobs.</dd>
+</dl>
+<p> <code>-held</code></p>
+<dl>
+<dt>
+</dt><dd> Display only the held jobs.</dd>
+</dl>
+<p> <code>-constraint </code> <i>X</i></p>
+<dl>
+<dt>
+</dt><dd> Display only the jobs matching constraint <i>X</i> .</dd>
+</dl>
+<h2>Exit Status</h2>
+<p> <i>condor_router_q</i> will exit with a status of 0 (zero) upon success, and non-zero otherwise. </p>
+<h2>Author</h2>
+<p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
+<h2>Copyright</h2>
+<p> Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

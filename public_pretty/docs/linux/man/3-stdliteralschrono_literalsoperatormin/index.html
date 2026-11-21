@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdliteralschrono_literalsoperatormin(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdliteralschrono_literalsoperatormin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdliteralschrono_literalsoperatormin(3)</h1>
+
+
+
+
+
+<p>std::literals::chrono_literals::operator&quot;&quot;min - std::literals::chrono_literals::operator&quot;&quot;min</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;chrono&gt;
+constexpr chrono::minutes operator &quot;&quot; min(unsigned long long mins); (1) (since C++14)
+constexpr chrono::duration&lt;/*unspecified*/, ratio&lt;60,1&gt;&gt;            (2) (since C++14)
+operator &quot;&quot; min(long double mins);</code></pre> 
+<p>Forms a std::chrono::duration literal representing minutes.</p>
+<ol>
+<li>integer literal, returns exactly std::chrono::minutes(mins)</li>
+<li>floating-point literal, returns a floating-point duration equivalent to std::chrono::minutes</li>
+</ol>
+<h2>Parameters</h2>
+<p>minutes - the number of minutes</p>
+<h2>Return value</h2>
+<p>The std::chrono::duration literal.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> constexpr std::chrono::minutes operator &quot;&quot;min(unsigned long long m)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::chrono::minutes(m);
+ <wbr> }
+ <wbr> constexpr std::chrono::duration&lt;long double,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> std::ratio&lt;60,1&gt;&gt; operator &quot;&quot;min(long double m)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return std::chrono::duration&lt;long double, ratio&lt;60,1&gt;&gt; (m);
+ <wbr> }</p>
+<h2>Notes</h2>
+<p>These operators are declared in the namespace std::literals::chrono_literals, where both literals and chrono_literals are inline namespaces. Access to these operators can be gained with using namespace std::literals, using namespace std::chrono_literals, and using namespace std::literals::chrono_literals.
+In addition, within the namespace std::chrono, the directive using namespace literals::chrono_literals; is provided by the standard library, so that if a programmer uses using namespace std::chrono; to gain access to the classes in the chrono library, the corresponding literal operators become visible as well.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+int main()
+{
+using namespace std::chrono_literals;
+auto lesson = 45min;
+auto halfmin = 0.5min;
+std::cout &lt;&lt; &quot;one lesson is &quot; &lt;&lt; lesson.count() &lt;&lt; &quot; minutes\n&quot;
+&lt;&lt; &quot;half a minute is &quot; &lt;&lt; halfmin.count() &lt;&lt; &quot; minutes\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> one lesson is 45 minutes
+ <wbr> half a minute is 0.5 minutes</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs new duration
+constructor <i>(public member function of std::chrono::duration&lt;Rep,Period&gt;)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

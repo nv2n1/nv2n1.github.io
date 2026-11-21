@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fbstat(1) · Linux Manual Pages</title>
+<meta name="description" content="fbstat – analyze firebird database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fbstat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fbstat(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> fbstat &#8211; analyze firebird database </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+fbstat[command][option...] [server:] database
+        fbstat -
+    h server : db
+                   fbstat -
+               all server : db
+                                fbstat -
+                            data server : db
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> (<i>Note</i>: Due to file-level conflict, the Debian package has changed the name of <code>gstat</code> to fbstat.) </p>
+<p> <code>fbstat</code> Analyzes Firebird databases and produces different kinds of reports. These are useful when analyzing where all this huge disk space has gone or when estimating evaluating index efficiency.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-all</dt>
+<dd> Analyze data and index pages.</dd>
+<dt>-data</dt>
+<dd> Analyze data pages.</dd>
+<dt>-system</dt>
+<dd> Analyze system tables.</dd>
+<dt>-header</dt>
+<dd> Display information from the database header, skip analyzing any tables.</dd>
+<dt>-index</dt>
+<dd> Analyze leaf index pages.</dd>
+<dt>-record</dt>
+<dd> Analyze average record and version length.</dd>
+<dt>-table <i>table</i></dt>
+<dd> Analyze data pages used by the given table.</dd>
+<dt>-nocreation</dt>
+<dd> Suppress creation date.</dd>
+<dt>-user <i>name</i></dt>
+<dd>
+</dd><dt>-password <i>secret</i></dt>
+<dd>
+</dd><dt>-fetch_password <i>file</i></dt>
+<dd> Authentication parameters.</dd>
+<dt>-z</dt>
+<dd>
+</dd><dt>-?</dt>
+<dd> Displays version number.</dd></dl>
+<h2>AUTHOR &amp; COPYRIGHT</h2>
+<p> Copyright (C) 2010, Damyan Ivanov. </p>
+<p> This manpage was written by Damyan Ivanov for the Debian project but may be used by others. Permission is granted to use this document, with or without modifications, provided that this notice is retained. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

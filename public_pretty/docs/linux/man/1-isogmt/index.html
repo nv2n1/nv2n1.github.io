@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>isogmt(1) · Linux Manual Pages</title>
+<meta name="description" content="isogmt – Run GMT command or script in isolation mode">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-isogmt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>isogmt(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> isogmt &#8211; Run GMT command or script in isolation mode</p>
+<h2>SYNOPSIS</h2>
+<p> <code>isogmt</code> <i>command</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>isogmt</code> runs a single GMT command or shell script in <code>isolation mode</code>. This means that the files <i>gmt.history</i> and <i>gmt.conf</i> will be read from the usual locations (current directory, <i>~/.gmt</i>, or home directory), but changes will only be written in a temporary directory, which will be removed after execution. The name of the temporary directory will be available to the command or script as the environment variable GMT_TMPDIR.</p>
+<h2>EXAMPLES</h2>
+<p> Run the shell script <i>script.gmt</i> in isolation mode isogmt sh script.gmt</p>
+<h2>SEE ALSO</h2>
+<p> <code>gmt</code>, <code>gmt.conf</code></p>
+<h2>COPYRIGHT</h2>
+<p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

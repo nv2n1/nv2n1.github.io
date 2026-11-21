@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>waffle_get_proc_address(3) · Linux Manual Pages</title>
+<meta name="description" content="waffle_get_proc_address – Query address of OpenGL functions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-waffle_get_proc_address/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>waffle_get_proc_address(3)</h1>
+
+
+
+
+
+<p>waffle_get_proc_address &#8211; Query address of OpenGL functions</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;waffle.h&gt;
+void *waffle_get_proc_address(const char *name);</code></pre>
+<h2>Description</h2>
+<p><code>waffle_get_proc_address()</code></p>
+<dl>
+<dd>
+</dd><dd>On GLX, this redirects to <code>glXGetProcAddress</code>(3). On EGL, this redirects to <code>eglGetProcAddress</code>(3). On CGL, this function returns <code>NULL</code> because there exists no <code>CGLGetProcAdress()</code>. On WGL, this redirects to <code>wglGetProcAddress</code>(3). </dd>
+<p> Some aspects of this function&#8217;s behavior are platform-specific and non-intuitive. For example, </p>
+<dl>
+<dd>&bull; If the queried function is not available, <code>waffle_get_proc_address()</code> may return a non-null pointer.</dd></dl>
+<dl>
+<dd>&bull; If the queried function is statically exposed by the OpenGL library of a given API, then <code>waffle_get_proc_address()</code> may return a <code>NULL</code>.</dd></dl>
+<dl>
+<dd>&bull; Under Windows (WGL) a current context must be available before executing the function. Otherwise <code>waffle_get_proc_address()</code> may return a <code>NULL</code>.</dd></dl>
+<p> For details on this function&#8217;s behavior, see the specification for the relevant platform: the m[blue]<code>GLX 1.4 Specification</code>m[]<font SIZE="-2">[1]</font> the m[blue]<code>EGL 1.4 Specification</code>m[]<font SIZE="-2">[2]</font> or the m[blue]<code>MSDN article</code>m[]<font SIZE="-2">[3]</font>.</dl>
+<h2>Errors</h2>
+<p>See <code><a href="/docs/linux/man/3-waffle_error/">waffle_error</a></code>(3) for the complete list of waffle&#8217;s error codes. </p>
+<p> No errors are specific to any functions listed in this manual page.</p>
+<h2>Issues</h2>
+<p>Please report bugs or and feature requests to m[blue]<code><a rel="nofollow" href="https://github.com/waffle-gl/waffle/issues">https://github.com/waffle-gl/waffle/issues</a></code>m[].</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-waffle/">waffle</a></code>(7), <code><a href="/docs/linux/man/3-waffle_dl_sym/">waffle_dl_sym</a></code>(3)</p>
+<h2>Author</h2>
+<p><code>Chad Versace</code> &lt;chad.versace [at] linux.intel.com&gt;</p>
+<dl>
+<dd>Maintainer</dd></dl>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2013 Intel </p>
+<p> This manual page is licensed under the Creative Commons Attribution-ShareAlike 3.0 United States License (CC BY-SA 3.0). To view a copy of this license, visit m[blue]<code><a rel="nofollow" href="http://creativecommons.org.license/by-sa/3.0/us">http://creativecommons.org.license/by-sa/3.0/us</a></code>m[].</p>
+<h2>Notes</h2>
+<dl>
+<dt> 1.</dt>
+<dd>GLX 1.4 Specification</dd>
+<dl>
+<dd><a rel="nofollow" href="http://www.opengl.org/registry/doc/glx1.4.pdf">http://www.opengl.org/registry/doc/glx1.4.pdf</a></dd></dl>
+<dt> 2.</dt>
+<dd>EGL 1.4 Specification</dd>
+<dl>
+<dd><a rel="nofollow" href="http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf">http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf</a></dd></dl>
+<dt> 3.</dt>
+<dd>MSDN article</dd>
+<dl>
+<dd><a rel="nofollow" href="http://msdn.microsoft.com/en-gb/library/windows/desktop/dd374386(v=vs.85).aspx">http://msdn.microsoft.com/en-gb/library/windows/desktop/dd374386(v=vs.85).aspx</a></dd></dl>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

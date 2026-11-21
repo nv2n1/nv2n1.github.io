@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pw-metadata(1) · Linux Manual Pages</title>
+<meta name="description" content="pw-metadata – The PipeWire metadata">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pw-metadata/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pw-metadata(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pw-metadata &#8211; The PipeWire metadata </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+pw - metadata[options][id[key[value[type]]]]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Monitor, set and delete metadata on PipeWire objects. </p>
+<p> Metadata are key/type/value triplets attached to objects identified by <i>id</i>. The metadata is shared between all applications binding to the same metadata object. When an object is destroyed, all its metadata is automatically removed. </p>
+<p> When no <i>value</i> is given, <code>pw-metadata</code> will query and log the metadata matching the optional arguments <i>id</i> and <i>key</i>. Without any arguments, all metadata is displayed. </p>
+<p> When <i>value</i> is given, <code>pw-metadata</code> will set the metadata for <i>id</i> and <i>key</i> to <i>value</i> and an optional <i>type</i>.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-r | &#8211;remote=NAME</code></dt>
+<dd> The name the remote instance to use. If left unspecified, a connection is made to the default PipeWire instance.</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>-m | &#8211;monitor</code></dt>
+<dd> Keeps running and log the changes to the metadata. </dd>
+<p> -d | &#8211;delete Delete all metadata for <i>id</i> or for the specified <i>key</i> of object <i>id</i> </p>
+<p> Without any option, all metadata is removed</dl>
+<h2>AUTHORS</h2>
+<p> The PipeWire Developers &lt;<i><a rel="nofollow" href="https://gitlab.freedesktop.org/pipewire/pipewire/issues">https://gitlab.freedesktop.org/pipewire/pipewire/issues</a></i>&gt;; PipeWire is available from <i><a rel="nofollow" href="https://pipewire.org">https://pipewire.org</a></i></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pipewire/">pipewire</a>(1)</code>, <code><a href="/docs/linux/man/1-pw-mon/">pw-mon</a>(1)</code>, <code><a href="/docs/linux/man/1-pw-cli/">pw-cli</a>(1)</code>, </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

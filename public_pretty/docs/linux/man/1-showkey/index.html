@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>showkey(1) · Linux Manual Pages</title>
+<meta name="description" content="showkey – examine the codes sent by the keyboard">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-showkey/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>showkey(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> showkey &#8211; examine the codes sent by the keyboard </p>
+<h2>SYNOPSIS</h2>
+<p> showkey [-h|&#8211;help] [-a|&#8211;ascii] [-s|&#8211;scancodes] [-k|&#8211;keycodes] [-V|&#8211;version]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>showkey</code> prints to standard output either the scan codes or the keycode or the `ascii&#8217; code of each key pressed. In the first two modes the program runs until 10 seconds have elapsed since the last key press or release event, or until it receives a suitable signal, like SIGTERM, from another process. In `ascii&#8217; mode the program terminates when the user types ^D. </p>
+<p> When in scancode dump mode, <code>showkey</code> prints in hexadecimal format each byte received from the keyboard to the standard output. A new line is printed when an interval of about 0.1 seconds occurs between the bytes received, or when the internal receive buffer fills up. This can be used to determine roughly, what byte sequences the keyboard sends at once on a given key press. The scan code dumping mode is primarily intended for debugging the keyboard driver or other low level interfaces. As such it shouldn&#8217;t be of much interest to the regular end-user. However, some modern keyboards have keys or buttons that produce scancodes to which the kernel does not associate a keycode, and, after finding out what these are, the user can assign keycodes with <code><a href="/docs/linux/man/8-setkeycodes/">setkeycodes</a></code>(8). </p>
+<p> When in the default keycode dump mode, <code>showkey</code> prints to the standard output the keycode number or each key pressed or released. The kind of the event, press or release, is also reported. Keycodes are numbers assigned by the kernel to each individual physical key. Every key has always only one associated keycode number, whether the keyboard sends single or multiple scan codes when pressing it. Using <code>showkey</code> in this mode, you can find out what numbers to use in your personalized keymap files. </p>
+<p> When in `ascii&#8217; dump mode, <code>showkey</code> prints to the standard output the decimal, octal, and hexadecimal value(s) of the key pressed, according to he present keymap.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-h &#8211;help</dt>
+<dd> <code>showkey</code> prints to the standard error output its version number, a compile option and a short usage message, then exits.</dd>
+<dt>-s &#8211;scancodes</dt>
+<dd> Starts <code>showkey</code> in scan code dump mode.</dd>
+<dt>-k &#8211;keycodes</dt>
+<dd> Starts <code>showkey</code> in keycode dump mode. This is the default, when no command line options are present.</dd>
+<dt>-a &#8211;ascii</dt>
+<dd> Starts <code>showkey</code> in `ascii&#8217; dump mode.</dd>
+<dt>-V &#8211;version</dt>
+<dd> <code>showkey</code> prints version number and exits.</dd></dl>
+<h2>2.6 KERNELS</h2>
+<p> In 2.6 kernels key codes lie in the range 1-255, instead of 1-127. Key codes larger than 127 are returned as three bytes of which the low order 7 bits are: zero, bits 13-7, and bits 6-0 of the key code. The high order bits are: 0/1 for make/break, 1, 1. </p>
+<p> In 2.6 kernels raw mode, or scancode mode, is not very raw at all. Scan codes are first translated to key codes, and when scancodes are desired, the key codes are translated back. Various transformations are involved, and there is no guarantee at all that the final result corresponds to what the keyboard hardware did send. So, if you want to know the scan codes sent by various keys it is better to boot a 2.4 kernel. Since 2.6.9 there also is the boot option atkbd.softraw=0 that tells the 2.6 kernel to return the actual scan codes.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1), <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5), <code><a href="/docs/linux/man/8-setkeycodes/">setkeycodes</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

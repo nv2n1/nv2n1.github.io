@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>passenger-memory-stats(8) · Linux Manual Pages</title>
+<meta name="description" content="passenger-memory-stats – reports a snapshot of the Apache and Phusion Passenger memory statistcs">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-passenger-memory-stats/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>passenger-memory-stats(8)</h1>
+
+
+
+
+
+<p>passenger-memory-stats &#8211; reports a snapshot of the Apache and Phusion Passenger memory statistcs</p>
+<h2>Synopsis</h2>
+<p><code>passenger-memory-stats</code></p>
+<h2>Description</h2>
+<p><code>passenger-memory-stats</code> allows you to easily analyze the real memory usage of Phusion Passenger and Apache. </p>
+<p> Process inspection tools such as <i>ps</i> and <i>top</i> are useful, but they rarely show the correct memory usage. The real memory usage is usually lower than what <i>ps</i> and <i>top</i> report. </p>
+<p> There are many technical reasons why this is so, but an explanation is beyond the scope of this page. We refer the interested reader to operating systems literature about virtual memory and copy-on-write. </p>
+<p> When you run this tool the <i>Private</i> or <i>private dirty RSS</i> field shows the real memory usage of processes.</p>
+<h2>Environment Variables</h2>
+<dl>
+<dt><code>HTTPD</code></dt>
+<dd>The full filename to the Apache executable. By default, Passenger will attempt to autodetect the Apache executable. If autodetection fails for whatever reason, then Apache processes will not be shown in the memory statistics. In that case, you may manually specify the location to the Apache executable using this environment variable.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-passenger-status/">passenger-status</a>(8), <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-top/">top</a>(1), </p>
+<p> User guide at <a rel="nofollow" href="https://www.phusionpassenger.com/documentation_and_support">https://www.phusionpassenger.com/documentation_and_support</a></p>
+<h2>Author</h2>
+<p>Phusion Passenger is written by Phusion (<a rel="nofollow" href="http://www.phusion.nl)">http://www.phusion.nl)</a> </p>
+<p> &quot;Phusion&quot; and &quot;Phusion Passenger&quot; are trademarks of Hongli Lai &amp; Ninh Bui. </p>
+<p> This manual page was written by Neil Wilson &lt;neil [at] brightbox.co.uk&gt; for the Ubuntu project (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

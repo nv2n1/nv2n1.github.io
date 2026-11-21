@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mount Ext4 Partitions as Read-Only in Windows - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/mount-ext4-partitions-in-windows-in-read-only-mode/">
+  <meta name="description" content="Accessing Linux filesystems from Windows is useful when dual-booting, migrating data, or recovering files. Read-only access is essential to prevent accidental …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mount Ext4 Partitions as Read-Only in Windows">
+  <meta property="og:url" content="https://www.systutorials.com/mount-ext4-partitions-in-windows-in-read-only-mode/">
+  <meta property="og:description" content="Accessing Linux filesystems from Windows is useful when dual-booting, migrating data, or recovering files. Read-only access is essential to prevent accidental …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>Mount Ext4 Partitions as Read-Only in Windows</h1>
+        <time class="post-date" datetime="2018-03-24T08:18:16Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Accessing Linux filesystems from Windows is useful when dual-booting, migrating data, or recovering files. Read-only access is essential to prevent accidental corruption of ext4 metadata and data.</p>
+<h2 id="why-read-only-access-matters">Why Read-Only Access Matters</h2>
+<p>Ext4 is designed for Linux environments. Windows drivers lack complete understanding of ext4 journaling, extended attributes, and other advanced features. Writing through an incomplete driver can corrupt the filesystem, making it unrecoverable in Linux. Read-only mode eliminates this risk entirely.</p>
+<h2 id="ext2fsd">Ext2Fsd</h2>
+<p><strong>Ext2Fsd</strong> is the most straightforward option for mounting ext4 in Windows. It’s a lightweight filesystem driver that supports ext2, ext3, and ext4 partitions.</p>
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Download the latest version from the <a href="https://github.com/matt-wu/Ext3Fsd/releases" rel="nofollow noopener" target="_blank">Ext2Fsd GitHub releases</a></li>
+<li>Run the installer and reboot</li>
+<li>Launch the Ext2Fsd GUI application</li>
+</ul>
+<p><strong>Mounting a Partition:</strong></p>
+<ol>
+<li>Open Ext2Fsd</li>
+<li>The drive list shows connected drives with ext4 partitions</li>
+<li>Select your ext4 partition from the list</li>
+<li>Check the “Read-only” checkbox before mounting</li>
+<li>Click the mount button</li>
+<li>The partition appears in Windows Explorer with read-only access</li>
+<li>You can now browse files using standard Windows applications</li>
+</ol>
+<p><strong>Important:</strong> Always enable read-only mode. Writing to ext4 from Windows risks filesystem corruption.</p>
+<h2 id="wsl2-as-an-alternative">WSL2 as an Alternative</h2>
+<p>For Windows 10/11, <strong>Windows Subsystem for Linux 2</strong> (WSL2) offers native ext4 support without additional drivers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># In WSL2, mount the partition directly</span>
+</span></span><span class="line"><span class="cl">sudo mount -t ext4 -o ro /dev/sdX1 /mnt/ext4_partition
+</span></span></code></pre></div><p>This approach provides:</p>
+<ul>
+<li>Full ext4 support with no corruption risk</li>
+<li>Better performance than third-party drivers</li>
+<li>Access from both Windows (via <code>\\wsl.localhost\</code>) and Linux environments</li>
+</ul>
+<p>WSL2 is preferable if you’re running Windows 10 21H2 or later, as it avoids kernel-mode driver complexity.</p>
+<h2 id="diskinternals-linux-reader">DiskInternals Linux Reader</h2>
+<p><strong>DiskInternals Linux Reader</strong> is a commercial alternative with a free version for read-only access:</p>
+<ul>
+<li>GUI-based file browser similar to Explorer</li>
+<li>Supports ext2/3/4 and HFS+</li>
+<li>Free version locked to read-only (enforced at driver level)</li>
+<li>Can export files to NTFS partitions directly</li>
+</ul>
+<p>The paid version adds write support, but read-only mode is sufficient for most recovery and data access scenarios.</p>
+<h2 id="command-line-approach-with-winfsp">Command-Line Approach with WinFsp</h2>
+<p>For more control, use <strong>WinFsp</strong> (Windows File System Proxy) with a third-party FUSE driver:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install WinFsp from https://winfsp.dev/</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Then install ext4fuse via pre-built binaries</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Mount with: ext4fuse X: /mnt/ext4_partition -o ro</span>
+</span></span></code></pre></div><p>This approach requires Windows PowerShell and manual mounting but gives fine-grained control over mount options.</p>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li><strong>Always use <code>-o ro</code> (read-only) flags</strong> when mounting from any tool</li>
+<li><strong>Verify the partition is ext4</strong> before mounting — incorrect driver selection corrupts the disk</li>
+<li><strong>Eject properly</strong> through the Ext2Fsd GUI or <code>umount</code> command to flush any cached metadata</li>
+<li><strong>Don’t mix tools</strong> — mount a partition with only one driver at a time</li>
+<li><strong>Keep Windows and ext4 on separate disks</strong> whenever possible to avoid accidental writes</li>
+</ul>
+<h2 id="checking-if-a-partition-is-ext4">Checking if a Partition is Ext4</h2>
+<p>In Windows PowerShell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Disk</span> <span class="p">|</span> <span class="nb">Get-Partition</span>
+</span></span></code></pre></div><p>Look for partitions with unknown filesystem types — these are likely ext4 and need a driver.</p>
+<p>In Linux (before booting Windows), verify with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo blkid /dev/sdX1
+</span></span></code></pre></div><h2 id="when-to-choose-each-tool">When to Choose Each Tool</h2>
+<ul>
+<li><strong>Ext2Fsd</strong>: Lightweight, minimal setup, best for simple read-only access</li>
+<li><strong>WSL2</strong>: Best for Windows 10/11 users who need frequent access or command-line tools</li>
+<li><strong>DiskInternals</strong>: If you prefer a GUI with file export features</li>
+<li><strong>WinFsp</strong>: Advanced users needing custom mount options or scripting</li>
+</ul>
+<p>For most users, Ext2Fsd with read-only mode enabled is the simplest and safest choice.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

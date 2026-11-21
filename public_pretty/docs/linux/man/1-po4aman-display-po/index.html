@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>po4aman-display-po(1) · Linux Manual Pages</title>
+<meta name="description" content="po4aman-display-po – display a translated man page according to a PO">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-po4aman-display-po/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>po4aman-display-po(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> po4aman-display-po &#8211; display a translated man page according to a PO </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>po4aman-display-po</code> <code>-p</code> <i>PO_FILE</i> [<code>-m</code>&nbsp;<wbr><i>MASTER_FILE</i>] [<code>-o</code>&nbsp;<wbr><i>PO4A_OPT</i>]</dt>
+<dd>
+</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>po4aman-display-po</code></p>
+<dd>can be used by a translator who wants to check how the man page being translated in a PO will be displayed. </dd>
+<p> The manual page must be in one of the formats supported by the po4a&#8217;s <i>man</i> module. The manual page can be provided on the command line, or installed on the system. </p>
+<p> Manual pages generated from other formats, like DocBook or POD, are not supported. See <code><a href="/docs/linux/man/1-po4apod-display-po/">po4apod-display-po</a></code>(1) for an equivalent supporting <i>POD</i> documents.</p>
+<h2>OPTIONS</h2>
+<p> <code>-p </code><i>PO_FILE</i></p>
+<dl>
+<dt>
+</dt><dd> The PO file containing the translations.</dd></dl>
+<p> <code>-m </code><i>MASTER_FILE</i></p>
+<dl>
+<dt>
+</dt><dd> The original man page. It can be the absolute or relative path to the original man page (gzipped or not), the name the man page or the name and section of the man page (using the man.section format). When the master document is not provided with the <code>-m</code> option, <code>po4aman-display-po</code> tries to find the original man page based on the line reference of the first string in the PO.</dd></dl>
+<p> <code>-o </code><i>PO4A_OPT</i></p>
+<dl>
+<dt>
+</dt><dd> Some options to pass to <code><a href="/docs/linux/man/1-po4a-translate/">po4a-translate</a></code>(1).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-po4apod-display-po/">po4apod-display-po</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> Thomas Huriaux </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

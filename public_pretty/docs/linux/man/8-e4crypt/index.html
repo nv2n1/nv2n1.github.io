@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e4crypt(8) · Linux Manual Pages</title>
+<meta name="description" content="e4crypt – ext4 file system encryption utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-e4crypt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>e4crypt(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>e4crypt &#8211; ext4 file system encryption utility</p>
+<h2>Synopsis</h2>
+<p><code>e4crypt add_key -S </code>[<code> -k </code><i>keyring</i> ] [<code>-v</code>] [<code>-q</code>] [<code> -p </code><i>pad</i> ] [ <i>path</i> &#8230; ]<br />
+ <code>e4crypt new_session</code><br />
+ <code>e4crypt get_policy </code><i>path</i> &#8230;<br />
+ <code>e4crypt set_policy </code>[<code> -p </code><i>pad</i> ] <i>policy path</i> &#8230;</p>
+<h2>Description</h2>
+<p><code>e4crypt</code> performs encryption management for ext4 file systems.</p>
+<h2>Commands</h2>
+<dl>
+<dt><code>e4crypt add_key </code>[<code>-vq</code>] [<code>-S</code><i> salt</i> ] [<code>-k </code><i>keyring</i> ] [<code> -p </code><i>pad</i> ] [ <i>path</i> &#8230; ]</dt>
+<dd>Prompts the user for a passphrase and inserts it into the specified keyring. If no keyring is specified, e4crypt will use the session keyring if it exists or the user session keyring if it does not.</dd>
+<dd>The <i>salt</i> argument is interpreted in a number of different ways, depending on how its prefix value. If the first two characters are &quot;s:&quot;, then the rest of the argument will be used as an text string and used as the salt value. If the first two characters are &quot;0x&quot;, then the rest of the argument will be parsed as a hex string as used as the salt. If the first characters are &quot;f:&quot; then the rest of the argument will be interpreted as a filename from which the salt value will be read. If the string begins with a &#8216;/&#8217; character, it will similarly be treated as filename. Finally, if the <i>salt</i> argument can be parsed as a valid UUID, then the UUID value will be used as a salt value.</dd>
+<dd>The <i>keyring</i> argument specifies the keyring to which the key should be added.</dd>
+<dd>The <i>pad</i> value specifies the number of bytes of padding will be added to directory names for obfuscation purposes. Valid <i>pad</i> values are 4, 8, 16, and 32.</dd>
+<dd>If one or more directory paths are specified, e4crypt will try to set the policy of those directories to use the key just added by the <code>add_key</code> command. If a salt was explicitly specified, then it will be used to derive the encryption key of those directories. Otherwise a directory-specific default salt will be used.</dd>
+<dt><code>e4crypt get_policy </code><i>path</i> &#8230;</dt>
+<dd>Print the policy for the directories specified on the command line.</dd>
+<dt><code>e4crypt new_session</code></dt>
+<dd>Give the invoking process (typically a shell) a new session keyring, discarding its old session keyring.</dd>
+<dt><code>e4crypt set_policy </code>[<code> -p </code><i>pad</i> ] <i>policy path</i> &#8230;</dt>
+<dd>Sets the policy for the directories specified on the command line. All directories must be empty to set the policy; if the directory already has a policy established, e4crypt will validate that the policy matches what was specified. A policy is an encryption key identifier consisting of 16 hexadecimal characters.</dd></dl>
+<h2>Author</h2>
+<p>Written by Michael Halcrow &lt;mhalcrow [at] google.com&gt;, Ildar Muslukhov &lt;muslukhovi [at] gmail.com&gt;, and Theodore Ts&#8217;o &lt;tytso [at] mit.edu&gt;</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

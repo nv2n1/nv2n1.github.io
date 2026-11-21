@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbgetdeviceinfochanges(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbGetDeviceInfoChanges – Query the changes that have occurred in the button actions or indicator names and indicator maps associated with an input extension device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbgetdeviceinfochanges/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbgetdeviceinfochanges(3)</h1>
+
+
+
+
+
+<p>XkbGetDeviceInfoChanges &#8211; Query the changes that have occurred in the button actions or indicator names and indicator maps associated with an input extension device </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Status XkbGetDeviceInfoChanges</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>XkbDeviceChangesPtr </code><i>changes</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; dpy</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_info</i></dt>
+<dd>structure to update with results</dd>
+<dt><i>&#8211; changes</i></dt>
+<dd>contains notes of changes that have occurred</dd></dl>
+<h2>Description</h2>
+<p>The <i>changes-&gt;changed </i> field indicates which attributes of the device specified in <i>changes-&gt;device </i> have changed. The parameters describing the changes are contained in the other fields of <i>changes. XkbGetDeviceInfoChanges </i> uses that information to call <i>XkbGetDeviceInfo </i> to obtain the current status of those attributes that have changed. It then updates the local description of the device in <i>device_info </i> with the new information.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-xkbgetdeviceinfo/">XkbGetDeviceInfo</a></code>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

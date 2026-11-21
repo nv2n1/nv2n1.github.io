@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>embryo_swap_group(3) · Linux Manual Pages</title>
+<meta name="description" content="Byte Swapping Functions – Functions that are used to ensure that integers passed to the virtual machine are in small endian format.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-embryo_swap_group/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>embryo_swap_group(3)</h1>
+
+
+
+
+
+<p>Byte Swapping Functions &#8211; Functions that are used to ensure that integers passed to the virtual machine are in small endian format. </p>
+<h3>Functions</h3>
+<p>EAPI void <code>embryo_swap_16</code> (unsigned short *v)<br />
+ <i>Ensures that the given unsigned short integer is in the small endian format. </i><br />
+ EAPI void <code>embryo_swap_32</code> (unsigned int *v)<br />
+ <i>Ensures that the given unsigned integer is in the small endian format. </i></p>
+<h2>Detailed Description</h2>
+<p>Functions that are used to ensure that integers passed to the virtual machine are in small endian format. </p>
+<p> These functions are used to ensure that the virtual machine operates correctly on big endian machines.</p>
+<h2>Function Documentation</h2>
+<h3>EAPI void embryo_swap_16 (unsigned short * v)</h3>
+<p>Ensures that the given unsigned short integer is in the small endian format. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>v</i> Pointer to the given integer.</dd></dl>
+<h3>EAPI void embryo_swap_32 (unsigned int * v)</h3>
+<p>Ensures that the given unsigned integer is in the small endian format. </p>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>v</i> Pointer to the given integer.</dd></dl>
+<p> Referenced by embryo_program_load().</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Embryo from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

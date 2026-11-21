@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>card_eventmgr(1) · Linux Manual Pages</title>
+<meta name="description" content="card_eventmgr – PCSC-Lite Event Manager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-card_eventmgr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>card_eventmgr(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> card_eventmgr &#8211; PCSC-Lite Event Manager</p>
+<h2>SYNTAX</h2>
+<p> <code>card_eventmgr</code> [<code>debug</code>] [[<code>no</code>]<code>daemon</code>] [<code>timeout=</code><i>&lt;msecs&gt;</i>] [<code>config_file=</code><i>&lt;filename&gt;</i>] [<code>kill</code>] [<code>pidfile=</code><i>&lt;pidfile&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>card_eventmgr</code> is a smart card monitoring tool that listen to the status of the card reader and dispatch actions on several events. <code>card_eventmgr</code> can be used for several actions: like screen lock on card removal. </p>
+<p> Three events are supported: card insertion, card removal and timeout on removed card. Actions are specified in a configuration file.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>debug</code></dt>
+<dd> Enable debugging output.</dd>
+<dt>[<code>no</code>]<code>daemon</code></dt>
+<dd> Runs in background if daemon or in foreground if nodaemon (default). If debug is unset, the program dettaches itself from the tty.</dd>
+<dt><code>timeout=</code><i>&lt;msecs&gt;</i></dt>
+<dd> Set polling timeout in milliseconds. Defaults to 1000 (1 second).</dd>
+<dt><code>config_file=</code><i>&lt;configuration file&gt;</i></dt>
+<dd> Sets de configuration file. Default value is <i>/etc/pam_pkcs11/card_eventmgr.conf</i>.</dd>
+<dt><code>pidfile=</code><i>&lt;pidfile&gt;</i></dt>
+<dd> Store the <code>card_eventmgr</code> process ID (pid) in the file <i>pidfile</i>.</dd>
+<dt><code>kill</code></dt>
+<dd> Read a process id from <i>pidfile</i> and kill that process. You must use the argument <code>pidfile=</code><i>&lt;pidfile&gt;</i> to use <code>kill</code>.</dd></dl>
+<h2>FILES</h2>
+<p> <i>/etc/pam_pkcs11/card_eventmgr.conf</i></p>
+<h2>EXAMPLES</h2>
+<p> To run this program the standard way type: </p>
+<p>&nbsp;<wbr>card_eventmgr&nbsp;<wbr> </p>
+<p> Alternatively you can specify options: </p>
+<p>&nbsp;<wbr>card_eventmgr debug nodaemon timeout=500 config_file=$HOME/.card_eventmgr.conf </p>
+<p> If you want to start and stop card_eventmgr automatically in an X11 session you can create a <i>~/.xsession</i> file containing:<br />
+&nbsp;<wbr>#&nbsp;<wbr>start the card autolock<br />
+&nbsp;<wbr>card_eventmgr pidfile=$HOME/.card_eventmgr.pid </p>
+<p>&nbsp;<wbr>#&nbsp;<wbr>start Gnome or something else<br />
+&nbsp;<wbr>/usr/bin/x-session-manager </p>
+<p>&nbsp;<wbr>#&nbsp;<wbr>kill the card autolock<br />
+&nbsp;<wbr>card_eventmgr kill pidfile=$HOME/.card_eventmgr.pid</p>
+<h2>BUGS</h2>
+<p> Some applications like <code>xscreensaver-command</code> may fail due to external events (eg: try to unlock an unlocked session). In this case, the command incorrectly returns error code.</p>
+<h2>AUTHORS</h2>
+<p> Juan Antonio Martinez &lt;jonsito [at] teleline.es&gt;<br />
+ Ludovic Rousseau &lt;ludovic.rousseau [at] free.fr&gt;</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8), <code><a href="/docs/linux/man/1-pkcs11_eventmgr/">pkcs11_eventmgr</a></code>(1), README.eventmgr, PAM-PKCS11 User Manual </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>operatorstdunordered_set(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-operatorstdunordered_set/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>operatorstdunordered_set(3)</h1>
+
+
+
+
+
+<p>operator==,!=(std::unordered_set) - operator==,!=(std::unordered_set)</p>
+<h2>Synopsis</h2>
+<pre><code>template &lt;class Key, class Hash, class KeyEqual, class Allocator&gt;
+bool operator==(const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;lhs, (1)
+                                                                              const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;rhs);
+template &lt;class Key, class Hash, class KeyEqual, class Allocator&gt;
+bool operator!=(const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;lhs, (2)
+                                                                              const unordered_set&lt;Key, Hash, KeyEqual, Allocator&gt; &amp;rhs);</code></pre> 
+<p>Compares the contents of two unordered containers.
+The contents of two unordered containers lhs and rhs are equal if the following conditions hold:</p>
+<ul>
+<li>lhs.size() == rhs.size()</li>
+<li>each group of equivalent elements [lhs_eq1, lhs_eq2) obtained from lhs.equal_range(lhs_eq1) has a corresponding group of equivalent elements in the other container [rhs_eq1, rhs_eq2) obtained from rhs.equal_range(rhs_eq1), that has the following properties:
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::distance(lhs_eq1, lhs_eq2) == std::distance(rhs_eq1, rhs_eq2).
+ <wbr> <wbr> <wbr> <wbr> <wbr> * std::is_permutation(lhs_eq1, lhs_eq2, rhs_eq1) == true.
+The behavior is undefined if Key is not EqualityComparable.
+The behavior is also undefined if
+hash_function() and key_eq() do
+<i>(until C++20)</i>
+key_eq() does
+<i>(since C++20)</i> not have the same behavior on lhs and rhs or if operator== for Key is not a refinement of the partition into equivalent-key groups introduced by key_eq() (that is, if two elements that compare equal using operator== fall into different partitions)</li>
+</ul>
+<h2>Parameters</h2>
+<p>lhs, rhs - unordered containers to compare</p>
+<h2>Return value</h2>
+<ol>
+<li>true if the contents of the containers are equal, false otherwise</li>
+<li>true if the contents of the containers are not equal, false otherwise</li>
+</ol>
+<h2>Complexity</h2>
+<p>Proportional to N calls to operator== on value_type, calls to the predicate returned by key_eq, and calls to the hasher returned by hash_function, in the average case, proportional to N2 in the worst case where N is the size of the container.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

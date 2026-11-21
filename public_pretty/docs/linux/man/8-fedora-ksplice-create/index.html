@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fedora-ksplice-create(8) · Linux Manual Pages</title>
+<meta name="description" content="fedora-ksplice-create – Create a set of kernel modulesfor a rebootless kernel update">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-fedora-ksplice-create/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>fedora-ksplice-create(8)</h1>
+
+
+
+
+
+<p>fedora-ksplice-create &#8211; Create a set of kernel modulesfor a rebootless kernel update</p>
+<h2>Synopsis</h2>
+<p><code>fedora-ksplice-create</code> [<i>OPTIONS</i>] [<i>KERNELVERSION</i>] [<i>PATCH</i>]</p>
+<h2>Description</h2>
+<p>Fedora-ksplice-create allow to patch a kernel without the need to reboot the system to activate the patched kernel. </p>
+<p> If you specified the <i>KERNELVERSION</i> argument, fedora-ksplice-create may be use the downloaded kernel sources for the specified kernel version. </p>
+<p> Please keep in mind, that you must boot the system with this specified kernel version, if you want to apply the generated kernel patch via Ksplice-apply.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output</dd>
+<dt><code>-c</code>, <code>&#8211;config </code><i>CONFIGFILE</i></dt>
+<dd>Define configure file for ksplice</dd>
+<dt><code>&#8211;id </code><i>BUILDID</i></dt>
+<dd>Specifies a uniue value that will be used as the identifier of the Ksplice update. This identifier will be, for example, apper in the name of the update tarball. By default, a random 8-character ID be be generated.</dd>
+<dt><code>&#8211;patch-opt </code><i>OPTIONS</i></dt>
+<dd>Can be used to pass options to the <i><a href="/docs/linux/man/1-patch/">patch</a></i>(1). if this option is NOT specified, then <code>-p1</code> is passed to <code>patch</code>. If this option is specified, then only the specified options will be passed to <code>patch</code>.</dd></dl>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-ksplice-create/">ksplice-create</a></i>(8), <i><a href="/docs/linux/man/8-ksplice-apply/">ksplice-apply</a></i>(8)</p>
+<h2>Author</h2>
+<p>Written by Jochen Schmitt</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to to &lt;Jochen [at] herr-schmitt.de&gt;</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2008 Jochen Schmitt License GPLv3+ GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://www.gnu.org/license/gpl.html">http://www.gnu.org/license/gpl.html</a>&gt;<br />
+ Tnis is free software: you are free to chage and redistribute it. There is NO WARRENTY, to the extent permitted by law.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

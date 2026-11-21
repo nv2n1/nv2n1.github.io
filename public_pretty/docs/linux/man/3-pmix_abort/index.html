@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pmix_abort(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pmix_abort/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pmix_abort(3)</h1>
+
+
+
+
+
+<p>PMIx_Abort - Abort the specified processes</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pmix.h&gt;
+pmix_status_t PMIx_Abort(int status, const char msg[],
+                         pmix_proc_t procs[], size_t nprocs);</code></pre>
+<h2>Arguments</h2>
+<p>status : Status value to be returned. A value of zero is permitted by PMIx, but may not be returned by some resource managers.</p>
+<p>msg : A string message to be displayed</p>
+<p>procs : An array of pmix_proc_t structures defining the processes to be aborted. A NULL for the proc array indicates that all processes in the caller&rsquo;s nspace are to be aborted. A wildcard value for the rank in any structure indicates that all processes in that nspace are to be aborted.</p>
+<p>nprocs : Number of pmix_proc_t structures in the procs array</p>
+<h2>Description</h2>
+<p>Request that the provided array of procs be aborted, returning the provided status and printing the provided message. A NULL for the proc array indicates that all processes in the caller&rsquo;s nspace are to be aborted.</p>
+<p>The response to this request is somewhat dependent on the specific resource manager and its configuration (e.g., some resource managers will not abort the application if the provided status is zero unless specifically configured to do so), and thus lies outside the control of PMIx itself. However, the client will inform the RM of the request that the application be aborted, regardless of the value of the provided status.</p>
+<p>Passing a NULL msg parameter is allowed. Note that race conditions caused by multiple processes calling PMIx_Abort are left to the server implementation to resolve with regard to which status is returned and what messages (if any) are printed.</p>
+<h2>Return Value</h2>
+<p>Returns PMIX_SUCCESS on success. On error, a negative value corresponding to a PMIx errno is returned.</p>
+<h2>Errors</h2>
+<p>PMIx errno values are defined in pmix_common.h.</p>
+<h2>Notes</h2>
+<h2>See Also</h2>
+<h2>Authors</h2>
+<p>PMIx.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

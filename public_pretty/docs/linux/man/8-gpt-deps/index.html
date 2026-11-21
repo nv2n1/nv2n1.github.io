@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gpt-deps(8) · Linux Manual Pages</title>
+<meta name="description" content="gpt-deps – Reports on an installation’s package dependencies">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-gpt-deps/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>gpt-deps(8)</h1>
+
+
+
+
+
+<p><code>gpt-deps</code> &#8211; Reports on an installation&#8217;s package dependencies</p>
+<h2>Synopsis</h2>
+<p>gpt-deps [ -help -man -version ] DependencyTypes</p>
+<h2>Description</h2>
+<p><code>gpt-deps</code> is an experimental script which prints out an html file that contains a hyperlinked report of dependencies for packages installed at <tt>$GLOBUS_LOCATION</tt>. The output file is called ./deptable.html. One or more of the following dependency types can be reported: </p>
+<pre> Runtime - Packages needed at runtime
+ Setup - Packages needed to set up localization data such as 
+ configuration files.
+ Build - Packages needed to build other packages.</pre>
+<p>If you are confused by the dependency types, simply run &#8216;gpt-deps Runtime Setup Build&#8217; and view ./deptree.html with your favorite browser. Be sure to set <tt>$GLOBUS_LOCATION</tt>.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
+<h2>Bugs</h2>
+<p>Future versions will provide more flexibility in inputs, and output formats.</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-gpt-install/">gpt-install</a></i>(8) <i><a href="/docs/linux/man/8-gpt-verify/">gpt-verify</a></i>(8) <i><a href="/docs/linux/man/8-gpt-query/">gpt-query</a></i>(8) <i><a href="/docs/linux/man/8-gpt-postinstall/">gpt-postinstall</a></i>(8)</p>
+<h2>Author</h2>
+<p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

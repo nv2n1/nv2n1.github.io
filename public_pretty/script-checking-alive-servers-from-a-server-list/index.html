@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bash Script for Monitoring Server Uptime - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/script-checking-alive-servers-from-a-server-list/">
+  <meta name="description" content="When managing multiple servers, you need reliable ways to verify which hosts are reachable. While orchestration tools like Kubernetes and Ansible handle …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Bash Script for Monitoring Server Uptime">
+  <meta property="og:url" content="https://www.systutorials.com/script-checking-alive-servers-from-a-server-list/">
+  <meta property="og:description" content="When managing multiple servers, you need reliable ways to verify which hosts are reachable. While orchestration tools like Kubernetes and Ansible handle …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Bash Script for Monitoring Server Uptime</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:35Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>When managing multiple servers, you need reliable ways to verify which hosts are reachable. While orchestration tools like Kubernetes and Ansible handle monitoring at scale, a lightweight Bash script works well for quick spot checks, operational tasks, or smaller deployments.</p>
+<h2 id="basic-icmp-reachability-check">Basic ICMP Reachability Check</h2>
+<p>The simplest approach uses <code>ping</code> to test ICMP reachability:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping -W <span class="m">1</span> -c <span class="m">1</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;up&#34;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&#34;down&#34;</span>
+</span></span></code></pre></div><p>Breaking down the options:</p>
+<ul>
+<li><code>-W 1</code>: timeout after 1 second</li>
+<li><code>-c 1</code>: send only 1 packet</li>
+<li><code>&amp;&gt;/dev/null</code>: suppress all output</li>
+<li><code>&amp;&amp; echo &quot;up&quot; || echo &quot;down&quot;</code>: use the exit status to determine output</li>
+</ul>
+<p>This approach is cleaner than parsing <code>ping</code> output, which varies across different systems (Linux, macOS, BSD).</p>
+<h2 id="sequential-server-check-script">Sequential Server Check Script</h2>
+<p>Here’s a production-ready script that processes a host list sequentially:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -ne <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;usage: </span><span class="nv">$0</span><span class="s2"> &lt;server-list-file&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Each server hostname/IP on a separate line&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> ! -f <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: file &#39;</span><span class="nv">$1</span><span class="s2">&#39; not found&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">alive_count</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nv">dead_count</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r host <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Skip empty lines and comments</span>
+</span></span><span class="line"><span class="cl">    <span class="o">[[</span> -z <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">=</span>~ ^# <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> ping -W <span class="m">1</span> -c <span class="m">1</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✓ </span><span class="nv">$host</span><span class="s2"> is alive&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">((</span>alive_count++<span class="o">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✗ </span><span class="nv">$host</span><span class="s2"> is down&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">((</span>dead_count++<span class="o">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Summary: </span><span class="nv">$alive_count</span><span class="s2"> alive, </span><span class="nv">$dead_count</span><span class="s2"> down&#34;</span>
+</span></span></code></pre></div><p>Save as <code>check-alive-servers.sh</code> and make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x check-alive-servers.sh
+</span></span></code></pre></div><p>Create a server list file with one host per line:</p>
+<pre><code>192.168.1.10
+web01.example.com
+db-server
+10.0.0.5
+# commented-out host
+legacy.internal
+</code></pre>
+<p>Run the script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./check-alive-servers.sh server-list.txt
+</span></span></code></pre></div><p>Output:</p>
+<pre><code>✓ 192.168.1.10 is alive
+✓ web01.example.com is alive
+✗ db-server is down
+✓ 10.0.0.5 is alive
+✓ legacy.internal is alive
+
+Summary: 4 alive, 1 down
+</code></pre>
+<h2 id="parallel-checking-for-large-inventories">Parallel Checking for Large Inventories</h2>
+<p>Sequential pings become slow with large server lists. Use background jobs with controlled concurrency:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">HOST_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">MAX_JOBS</span><span class="o">=</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TEMP_DIR</span><span class="o">=</span><span class="k">$(</span>mktemp -d<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">RESULTS_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$TEMP_DIR</span><span class="s2">/results&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> ! -f <span class="s2">&#34;</span><span class="nv">$HOST_FILE</span><span class="s2">&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Error: file &#39;</span><span class="nv">$HOST_FILE</span><span class="s2">&#39; not found&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">check_host<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">host</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> ping -W <span class="m">1</span> -c <span class="m">1</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✓ </span><span class="nv">$host</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;</span><span class="nv">$RESULTS_FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✗ </span><span class="nv">$host</span><span class="s2">&#34;</span> &gt;&gt; <span class="s2">&#34;</span><span class="nv">$RESULTS_FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r host <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="o">[[</span> -z <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">=</span>~ ^# <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Wait if we hit the job limit</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="o">((</span> <span class="k">$(</span><span class="nb">jobs</span> -r -p <span class="p">|</span> wc -l<span class="k">)</span> &gt;<span class="o">=</span> MAX_JOBS <span class="o">))</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">        sleep 0.05
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    check_host <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$HOST_FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">wait</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sort <span class="s2">&#34;</span><span class="nv">$RESULTS_FILE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">rm -rf <span class="s2">&#34;</span><span class="nv">$TEMP_DIR</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>This version runs up to 10 pings concurrently, dramatically reducing total runtime. The temporary file preserves results across concurrent execution.</p>
+<p>Adjust <code>MAX_JOBS</code> based on your system’s resources. Values between 10–50 work well for most deployments; higher concurrency can exhaust file descriptors or overwhelm slower network links.</p>
+<h2 id="tcp-port-checks-as-an-alternative">TCP Port Checks as an Alternative</h2>
+<p>Some networks block ICMP traffic, making hosts appear unreachable even when they’re running. Test TCP connectivity to a specific port instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">check_tcp<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">host</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">port</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">22</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> timeout <span class="m">1</span> bash -c <span class="s2">&#34;echo &gt;/dev/tcp/</span><span class="nv">$host</span><span class="s2">/</span><span class="nv">$port</span><span class="s2">&#34;</span> 2&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✓ </span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$port</span><span class="s2"> open&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✗ </span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$port</span><span class="s2"> unreachable&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">check_tcp web01.example.com <span class="m">443</span>
+</span></span><span class="line"><span class="cl">check_tcp db-server <span class="m">5432</span>
+</span></span><span class="line"><span class="cl">check_tcp app-server <span class="m">8080</span>
+</span></span></code></pre></div><p>Common ports to check:</p>
+<ul>
+<li><code>22</code>: SSH</li>
+<li><code>80</code>: HTTP</li>
+<li><code>443</code>: HTTPS</li>
+<li><code>3306</code>: MySQL</li>
+<li><code>5432</code>: PostgreSQL</li>
+<li><code>6379</code>: Redis</li>
+<li><code>27017</code>: MongoDB</li>
+</ul>
+<p>This method is more reliable in restrictive network environments where firewalls drop ICMP packets.</p>
+<h2 id="export-results-as-json">Export Results as JSON</h2>
+<p>For integration with monitoring systems or log aggregation, export results as JSON:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">HOST_FILE</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">check_host<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">host</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">status</span><span class="o">=</span><span class="s2">&#34;down&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> ping -W <span class="m">1</span> -c <span class="m">1</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">status</span><span class="o">=</span><span class="s2">&#34;up&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">printf</span> <span class="s1">&#39;{&#34;host&#34;:&#34;%s&#34;,&#34;status&#34;:&#34;%s&#34;,&#34;timestamp&#34;:&#34;%s&#34;}\n&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">        <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$status</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="k">$(</span>date -u +%Y-%m-%dT%H:%M:%SZ<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r host <span class="o">||</span> <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="o">[[</span> -z <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="o">=</span>~ ^# <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">    check_host <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$HOST_FILE</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Pipe results to <code>jq</code> for filtering:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./check-alive-servers.sh servers.txt <span class="p">|</span> jq <span class="s1">&#39;select(.status==&#34;down&#34;)&#39;</span>
+</span></span></code></pre></div><p>Or save to a file for later analysis:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./check-alive-servers.sh servers.txt &gt; server-status.jsonl
+</span></span></code></pre></div><h2 id="dns-resolution-and-error-handling">DNS Resolution and Error Handling</h2>
+<p>The script relies on your system’s DNS resolver via <code>/etc/resolv.conf</code>. In air-gapped environments or when custom DNS is required, validate DNS resolution first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">resolve_host<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">host</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> getent hosts <span class="s2">&#34;</span><span class="nv">$host</span><span class="s2">&#34;</span> <span class="p">&amp;</span>&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;✗ </span><span class="nv">$host</span><span class="s2"> (DNS resolution failed)&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>For scripts running in containers or chroot environments, verify <code>/etc/resolv.conf</code> is properly mounted or populated. Test with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /etc/resolv.conf
+</span></span><span class="line"><span class="cl">nslookup example.com
+</span></span></code></pre></div><h2 id="performance-characteristics">Performance Characteristics</h2>
+<ul>
+<li><strong>Sequential mode</strong>: ~1 second per host (with 1-second timeout)</li>
+<li><strong>Parallel mode (10 jobs)</strong>: ~0.1–0.2 seconds per host</li>
+<li><strong>TCP mode</strong>: Often faster than ICMP on networks with firewall delays</li>
+</ul>
+<p>For inventories exceeding 1000 hosts or when you need continuous monitoring, use dedicated monitoring systems like Prometheus with <code>node_exporter</code>, Icinga2, or Zabbix. For ad-hoc operational tasks and smaller deployments, these scripts are lightweight, portable, and require no external dependencies.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

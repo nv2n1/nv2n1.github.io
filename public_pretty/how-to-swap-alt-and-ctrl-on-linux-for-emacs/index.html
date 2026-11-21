@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remapping Alt and Ctrl Keys in Linux for Emacs - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-swap-alt-and-ctrl-on-linux-for-emacs/">
+  <meta name="description" content="Emacs makes heavy use of Ctrl, and many users find it ergonomically difficult to hit Ctrl repeatedly, especially on modern keyboards where Ctrl is placed far …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Remapping Alt and Ctrl Keys in Linux for Emacs">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-swap-alt-and-ctrl-on-linux-for-emacs/">
+  <meta property="og:description" content="Emacs makes heavy use of Ctrl, and many users find it ergonomically difficult to hit Ctrl repeatedly, especially on modern keyboards where Ctrl is placed far …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/storage-lvm/">Storage &amp; LVM</a>
+        </nav>
+        
+        <h1>Remapping Alt and Ctrl Keys in Linux for Emacs</h1>
+        <time class="post-date" datetime="2018-03-24T08:22:11Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Emacs makes heavy use of Ctrl, and many users find it ergonomically difficult to hit Ctrl repeatedly, especially on modern keyboards where Ctrl is placed far from home row. Swapping Alt and Ctrl can make Emacs navigation more comfortable. This guide covers modern approaches for different desktop environments and input systems.</p>
+<h2 id="emacs-only-configuration-simplest">Emacs-Only Configuration (Simplest)</h2>
+<p>If you only want this behavior in Emacs and don’t need system-wide remapping, configure it directly in your init file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">x-alt-keysym</span> <span class="ss">&#39;control</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">x-ctrl-keysym</span> <span class="ss">&#39;meta</span><span class="p">)</span>
+</span></span></code></pre></div><p>This keeps your system keybindings unchanged while giving Emacs the remapped behavior. This is the least disruptive approach and works across all Linux desktop environments.</p>
+<h2 id="using-xkb-recommended-for-modern-systems">Using XKB (Recommended for Modern Systems)</h2>
+<p>XKB is the standard keyboard configuration system on modern Linux desktops and works with both X11 and Wayland (through the compositor layer).</p>
+<p>Create a custom keyboard layout file at <code>~/.config/xkb/symbols/custom</code>:</p>
+<pre><code>xkb_symbols &quot;altctrl&quot; {
+    key &lt;LALT&gt; { [ Control_L, Control_L ] };
+    key &lt;LCTL&gt; { [ Alt_L, Meta_L ] };
+    key &lt;RALT&gt; { [ Control_R, Control_R ] };
+    key &lt;RCTL&gt; { [ Alt_R, Meta_R ] };
+};
+</code></pre>
+<p>Create <code>~/.config/xkb/keymap/custom</code>:</p>
+<pre><code>xkb_keymap {
+    xkb_keycodes { include &quot;evdev&quot; };
+    xkb_types { include &quot;complete&quot; };
+    xkb_compat { include &quot;complete&quot; };
+    xkb_symbols { include &quot;pc+us+custom(altctrl)&quot; };
+    xkb_geometry { include &quot;pc(pc104)&quot; };
+};
+</code></pre>
+<p>Load it immediately:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">setxkbmap -I<span class="nv">$HOME</span>/.config/xkb custom
+</span></span></code></pre></div><p>To make this persistent, add the command to your session startup. For X11, place it in <code>~/.xinitrc</code> or <code>~/.xprofile</code>. For Wayland sessions with GNOME or KDE, create <code>~/.config/autostart/xkbmap-swap.desktop</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[Desktop Entry]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">Application</span>
+</span></span><span class="line"><span class="cl"><span class="na">Exec</span><span class="o">=</span><span class="s">setxkbmap -I$HOME/.config/xkb custom</span>
+</span></span><span class="line"><span class="cl"><span class="na">NoDisplay</span><span class="o">=</span><span class="s">true</span>
+</span></span></code></pre></div><h2 id="desktop-environment-gui-methods">Desktop Environment GUI Methods</h2>
+<h3 id="gnome-x11-and-wayland">GNOME (X11 and Wayland)</h3>
+<p>GNOME provides built-in keyboard option names for common swaps:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.input-sources xkb-options <span class="s2">&#34;[&#39;ctrl:swap_lalt_lctl&#39;]&#34;</span>
+</span></span></code></pre></div><p>Available options:</p>
+<ul>
+<li><code>ctrl:swap_lalt_lctl</code> — swap left Alt and left Ctrl</li>
+<li><code>ctrl:swap_ralt_rctl</code> — swap right Alt and right Ctrl</li>
+<li><code>ctrl:swapcaps</code> — swap Caps Lock and Ctrl (useful alternative)</li>
+</ul>
+<p>To verify the setting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings get org.gnome.desktop.input-sources xkb-options
+</span></span></code></pre></div><h3 id="kde-plasma">KDE Plasma</h3>
+<ol>
+<li>Open System Settings</li>
+<li>Navigate to Input Devices → Keyboard → Advanced</li>
+<li>Enable “Ctrl position” and select your preferred swap option</li>
+<li>Click Apply</li>
+</ol>
+<h2 id="legacy-xmodmap-x11-only">Legacy: xmodmap (X11 Only)</h2>
+<p>xmodmap works only with X11 and is not recommended for new setups, but remains useful for legacy systems. Create <code>~/.xmodmap</code>:</p>
+<pre><code>clear control
+clear mod1
+
+keycode  64 = Control_L NoSymbol Control_L
+keycode  37 = Alt_L Meta_L Alt_L Meta_L
+keycode 108 = Control_R NoSymbol Control_R
+keycode 105 = Alt_R Meta_R Alt_R Meta_R
+
+add mod1 = Alt_R Alt_L Meta_R Meta_L
+add control = Control_R Control_L
+</code></pre>
+<p>Apply it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap ~/.xmodmap
+</span></span></code></pre></div><p>For persistence, add to <code>~/.xinitrc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap ~/.xmodmap
+</span></span></code></pre></div><h2 id="finding-your-keyboards-keycodes">Finding Your Keyboard’s Keycodes</h2>
+<p>Keycodes vary by keyboard layout and hardware. Find the correct codes for your keyboard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap -pke <span class="p">|</span> grep -E <span class="s1">&#39;(Control|Alt)&#39;</span>
+</span></span></code></pre></div><p>This shows all current mappings. Look for <code>Control_L</code>, <code>Control_R</code>, <code>Alt_L</code>, and <code>Alt_R</code>, then note their keycodes and adjust your configuration accordingly.</p>
+<h2 id="testing-before-permanent-changes">Testing Before Permanent Changes</h2>
+<p>Always test remapping before making it permanent:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xmodmap ~/.xmodmap
+</span></span><span class="line"><span class="cl">xev
+</span></span></code></pre></div><p>Use <code>xev</code> to verify correct key mappings by pressing keys in the window and watching the output. This prevents accidentally breaking your keyboard.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Mappings reset after login:</strong> Ensure your startup file is executable and placed in the correct location. For display managers, <code>~/.xprofile</code> is more reliable than <code>~/.xinitrc</code>.</p>
+<p><strong>Wayland session ignores xmodmap:</strong> Wayland doesn’t use xmodmap. Use XKB method or your desktop environment’s settings instead.</p>
+<p><strong>Keycodes differ between login sessions:</strong> Some display managers source files differently. Test your configuration in a virtual terminal (Ctrl+Alt+F2) before relying on GUI startup.</p>
+<p><strong>Emacs still sees old bindings:</strong> If using the Emacs-only approach, ensure you’ve restarted Emacs after adding the configuration, and verify with <code>C-h k</code> (describe-key) to check what Emacs sees.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

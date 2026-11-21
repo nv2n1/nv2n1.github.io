@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ioperm(2) · Linux Manual Pages</title>
+<meta name="description" content="ioperm – set port input/output permissions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-ioperm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>ioperm(2)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> ioperm &#8211; set port input/output permissions </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;sys/io.h&gt;</code> /* for glibc */ </p>
+<p> <code>int ioperm(unsigned long </code><i>from</i><code>, unsigned long </code><i>num</i><code>, int </code><i>turn_on</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>ioperm</code>() sets the port access permission bits for the calling thread for <i>num</i> bits starting from port address <i>from</i>. If <i>turn_on</i> is nonzero, then permission for the specified bits is enabled; otherwise it is disabled. If <i>turn_on</i> is nonzero, the calling thread must be privileged (<code>CAP_SYS_RAWIO</code>). </p>
+<p> Before Linux 2.6.8, only the first 0x3ff I/O ports could be specified in this manner. For more ports, the <code><a href="/docs/linux/man/2-iopl/">iopl</a></code>(2) system call had to be used (with a <i>level</i> argument of 3). Since Linux 2.6.8, 65,536 I/O ports can be specified. </p>
+<p> Permissions are inherited by the child created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) (but see NOTES). Permissions are preserved across <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2); this is useful for giving port access permissions to unprivileged programs. </p>
+<p> This call is mostly for the i386 architecture. On many other architectures it does not exist or will always return an error.</p>
+<h2>RETURN VALUE</h2>
+<p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid values for <i>from</i> or <i>num</i>.</dd>
+<dt><code>EIO</code></dt>
+<dd> (on PowerPC) This call is not supported.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling thread has insufficient privilege.</dd></dl>
+<h2>CONFORMING TO</h2>
+<p> <code>ioperm</code>() is Linux-specific and should not be used in programs intended to be portable.</p>
+<h2>NOTES</h2>
+<p> The <i>/proc/ioports</i> file shows the I/O ports that are currently allocated on the system. </p>
+<p> Before Linux 2.4, permissions were not inherited by a child created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). </p>
+<p> Glibc has an <code>ioperm</code>() prototype both in <i>&lt;sys/io.h&gt;</i> and in <i>&lt;sys/perm.h&gt;</i>. Avoid the latter, it is available on i386 only.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-iopl/">iopl</a></code>(2), <code><a href="/docs/linux/man/2-outb/">outb</a></code>(2), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

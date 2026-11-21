@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcrelimits(3) · Linux Manual Pages</title>
+<meta name="description" content="PCRE – Perl-compatible regular expressions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pcrelimits/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pcrelimits(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>PCRE &#8211; Perl-compatible regular expressions</p>
+<h2>Size And Other Limitations</h2>
+<p>There are some size limitations in PCRE but it is hoped that they will never in practice be relevant. </p>
+<p> The maximum length of a compiled pattern is approximately 64K data units (bytes for the 8-bit library, 16-bit units for the 16-bit library, and 32-bit units for the 32-bit library) if PCRE is compiled with the default internal linkage size, which is 2 bytes for the 8-bit and 16-bit libraries, and 4 bytes for the 32-bit library. If you want to process regular expressions that are truly enormous, you can compile PCRE with an internal linkage size of 3 or 4 (when building the 16-bit or 32-bit library, 3 is rounded up to 4). See the <code>README</code> file in the source distribution and the <code>pcrebuild</code> documentation for details. In these cases the limit is substantially larger. However, the speed of execution is slower. </p>
+<p> All values in repeating quantifiers must be less than 65536. </p>
+<p> There is no limit to the number of parenthesized subpatterns, but there can be no more than 65535 capturing subpatterns. There is, however, a limit to the depth of nesting of parenthesized subpatterns of all kinds. This is imposed in order to limit the amount of system stack used at compile time. The limit can be specified when PCRE is built; the default is 250. </p>
+<p> There is a limit to the number of forward references to subsequent subpatterns of around 200,000. Repeated forward references with fixed upper limits, for example, (?2){0,100} when subpattern number 2 is to the right, are included in the count. There is no limit to the number of backward references. </p>
+<p> The maximum length of name for a named subpattern is 32 characters, and the maximum number of named subpatterns is 10000. </p>
+<p> The maximum length of a name in a (*MARK), (*PRUNE), (*SKIP), or (*THEN) verb is 255 for the 8-bit library and 65535 for the 16-bit and 32-bit libraries. </p>
+<p> The maximum length of a subject string is the largest positive number that an integer variable can hold. However, when using the traditional matching function, PCRE uses recursion to handle subpatterns and indefinite repetition. This means that the available stack space may limit the size of a subject string that can be processed by certain patterns. For a discussion of stack issues, see the <code>pcrestack</code> documentation.</p>
+<h2>Author</h2>
+<pre>Philip Hazel
+University Computing Service
+Cambridge CB2 3QH, England.</pre>
+<h2>Revision</h2>
+<pre>Last updated: 05 November 2013
+Copyright (c) 1997-2013 University of Cambridge.</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

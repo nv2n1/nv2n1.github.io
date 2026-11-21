@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qdel(1) · Linux Manual Pages</title>
+<meta name="description" content="qdel – delete xxQS_NAMExx jobs from queues">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-qdel/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>qdel(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> qdel &#8211; delete xxQS_NAMExx jobs from queues </p>
+<h2>SYNTAX</h2>
+<p> <code>qdel</code> [<code>-f</code>] [<code>-help</code>] [<code>-u</code> <i>wc_user_list</i>] [<i>wc_job_range_list</i>] [<code>-t</code> <i>task_id_range</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Qdel</i> provides a means for a user/operator/manager to delete one or more jobs. A manager/operator can delete jobs belonging to any user, while a regular user can only delete his or her own jobs. If a manager wants to delete another user&#8217;s job, the manager can specify the job id. A manager using a job name or pattern must also specify the user&#8217;s name via &quot;-u wc_user_list&quot;. A &quot;qdel wc_job_name&quot; will delete only the jobs of the calling user by default. <i>Qdel</i> deletes jobs in the order in which their job identifiers are presented. Find additional information concerning <i>wc_user_list</i> and <i>wc_job_list</i> in</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f</code></dt>
+<dd> Force deletion of job(s). The job(s) are deleted from the list of jobs registered at even if the controlling the job(s) does not respond to the delete request sent by </dd>
+<p> Users who are neither xxQS_NAMExx managers nor operators can only use the <code>-f</code> option (for their own jobs) if the cluster configuration entry <code>qmaster_params</code> contains the flag ENABLE_FORCED_QDEL (see However, the behavior for administrative and non-administrative users differs. Jobs are deleted from the xxQS_NAMExx database immediately in the case of administrators. Otherwise, a regular deletion is attempted first and a forced cancellation is only executed if the regular deletion was unsuccessful. </p>
+<p> Additionally, regular qdel requests can result in a forced deletion of a job if <code>ENABLE_FORCED_QDEL_IF_UNKNOWN</code> is set in the <code>qmaster_params</code> (see</p>
+<dt><code>-help</code></dt>
+<dd> Prints a listing of all options.</dd>
+<dt><code>-t</code></dt>
+<dd> Deletes specified tasks of an array job. It means tasks created by the <i>qsub -t</i> command. For example, after creating an array job with the command &quot;qsub -t 1-100 $SGE_ROOT/examples/sleeper.sh&quot; it is possible to delete tasks 5-10 from the job array with the command &quot;qdel job_id -t 5-10&quot;. All other tasks (1-4 and 11-100) will be executed.</dd>
+<dt><code>-u wc_user_list</code></dt>
+<dd> Deletes only those jobs which were submitted by users specified in the list of usernames. For managers it is possible to use <code>qdel -u &quot;*&quot;</code> to delete all jobs of all users. If a manager wants to delete a specific job of a user, he has to specify the user and the job. If no job is specified, all jobs from that user are deleted.</dd>
+<dt><code>wc_job_range_list</code></dt>
+<dd> A list of jobs which should be deleted.</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><code>xxQS_NAME_Sxx_ROOT</code></dt>
+<dd> Specifies the location of the xxQS_NAMExx standard configuration files.</dd>
+<dt><code>xxQS_NAME_Sxx_CELL</code></dt>
+<dd> If set, specifies the default xxQS_NAMExx cell. To address a xxQS_NAMExx cell <i>qdel</i> uses (in the order of precedence): </dd>
+<dl>
+<dl>
+<dt>
+</dt><dd> The name of the cell specified in the environment variable xxQS_NAME_Sxx_CELL, if it is set. </dd>
+<p> The name of the default cell, i.e. <code>default</code>. </p>
+</dl>
+</dl>
+<dt><code>xxQS_NAME_Sxx_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>xxQS_NAME_Sxx_QMASTER_PORT</code></dt>
+<dd> If set, specifies the tcp port on which is expected to listen for communication requests. Most installations will use a services map entry for the service &quot;sge_qmaster&quot; instead to define that port.</dd></dl>
+<h2>FILES</h2>
+<pre>
+<i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/act_qmaster</i>
+                          xxQS_NAMExx master host file
+</pre>
+<h2>SEE ALSO</h2>
+<h2>COPYRIGHT</h2>
+<p> See for a full statement of rights and permissions. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

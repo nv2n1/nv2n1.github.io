@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curlopt_ftp_use_eprt(3) · Linux Manual Pages</title>
+<meta name="description" content="CURLOPT_FTP_USE_EPRT – enable/disable use of EPRT with FTP">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-curlopt_ftp_use_eprt/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>curlopt_ftp_use_eprt(3)</h1>
+
+
+
+
+
+<p>CURLOPT_FTP_USE_EPRT &#8211; enable/disable use of EPRT with FTP</p>
+<h2>Synopsis</h2>
+<p>#include &lt;curl/curl.h&gt; </p>
+<p> CURLcode curl_easy_setopt(CURL *handle, CURLOPT_FTP_USE_EPRT, long enabled);</p>
+<h2>Description</h2>
+<p>Pass a long. If the value is 1, it tells curl to use the EPRT command when doing active FTP downloads (which is enabled by <i><a href="/docs/linux/man/3-curlopt_ftpport/">CURLOPT_FTPPORT</a>(3)</i>). Using EPRT means that it will first attempt to use EPRT before using PORT, but if you pass zero to this option, it will not try using EPRT, only plain PORT. </p>
+<p> If the server is an IPv6 host, this option will have no effect as EPRT is necessary then.</p>
+<h2>Default</h2>
+<h2>Protocols</h2>
+<h2>Example</h2>
+<h2>Availability</h2>
+<p>Added in 7.10.5</p>
+<h2>Return Value</h2>
+<p>Returns CURLE_OK</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/3-curlopt_ftp_use_epsv/">CURLOPT_FTP_USE_EPSV</a></code>(3), <code><a href="/docs/linux/man/3-curlopt_ftpport/">CURLOPT_FTPPORT</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

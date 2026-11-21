@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipmi-ping(8) · Linux Manual Pages</title>
+<meta name="description" content="ipmiping – send IPMI Get Authentication Capabilitiy request to network hosts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ipmi-ping/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ipmi-ping(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ipmiping &#8211; send IPMI Get Authentication Capabilitiy request to network hosts</p>
+<h2>Synopsis</h2>
+<p><code>ipmiping</code> [<i>OPTION</i>&#8230;] destination</p>
+<h2>Description</h2>
+<p><code>ipmiping</code> uses the IPMI Get Channel Authentication Capabilities request datagram to elicit an IPMI Get Channel Authentication Capabilitiesl response from a remote host. The utility can be used to verify if a remote host supports IPMI. The initial starting sequence number will be randomized. <code>ipmiping</code> will return 0 to the environment if it receives atleast 1 response from the remote host. Otherwise, it exists with a value of 1.</p>
+<h2>Options</h2>
+<p>The following options are available</p>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Output help menu.</dd>
+<dt><code>-V</code></dt>
+<dd>Output version.</dd>
+<dt><code>-c</code> <i>count</i></dt>
+<dd>Stop after sending <i>count</i> packets.</dd>
+<dt><code>-i</code> <i>interval</i></dt>
+<dd>Wait <i>interval</i> seconds between sending each packet. The default is to wait for one second between each packet.</dd>
+<dt><code>-I</code> <i>interface address</i></dt>
+<dd>Set source address to specified interface address. Argument may be numeric IP address or name of device.</dd>
+<dt><code>-t</code> <i>timeout</i></dt>
+<dd>Time to wait for a response, in seconds. Default is five seconds.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output.</dd>
+<dt><code>-s</code> <i>num</i></dt>
+<dd>Specify an initial starting sequence number. The default is to use a random initial sequence number.</dd>
+<dt><code>-d</code></dt>
+<dd>Turn on debugging.</dd>
+<dt><code>-r</code> <i>version</i></dt>
+<dd>Specify IPMI version. Available options are &quot;1.5&quot; and &quot;2.0&quot;. Default is to use &quot;1.5&quot;. Note that packets will always be sent with the IPMI 1.5 protocol, but IPMI 1.5 vs IPMI 2.0 relevant fields will be communicated in the Get Channel Authentication Capabilities datagram depending on user choice.</dd></dl>
+<h2>Known Issues</h2>
+<p>It has been observed that some remote BMCs can get &quot;confused&quot; and delay packet responses if duplicate packets (with duplicate sequence numbers) are sent in succession very quickly. There is no known way to cleanly deal with a &quot;confused&quot; BMC other than the wait awhile. </p>
+<p> Unlike <code><a href="/docs/linux/man/8-ping/">ping</a>(8),</code> local network devicess (e.g. 127.0.0.1) cannot be &quot;pinged&quot;.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;freeipmi-users [at] gnu.org&gt; or &lt;freeipmi-devel [at] gnu.org&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright (C) 2007-2012 Lawrence Livermore National Security, LLC.<br />
+ Copyright (C) 2003-2007 The Regents of the University of California. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
+<h2>Origin</h2>
+<p>Command and manpage based off <code><a href="/docs/linux/man/8-ping/">ping</a>(8).</code></p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/7-freeipmi/">freeipmi</a>(7), <a href="/docs/linux/man/8-ping/">ping</a>(8), <a href="/docs/linux/man/8-rmcpping/">rmcpping</a>(8) <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

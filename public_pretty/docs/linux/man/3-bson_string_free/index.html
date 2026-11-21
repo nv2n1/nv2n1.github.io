@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bson_string_free(3) · Linux Manual Pages</title>
+<meta name="description" content="bson_string_free() – Frees the bson_string_t structure and optionally the string itself.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-bson_string_free/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>bson_string_free(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> bson_string_free() &#8211; Frees the bson_string_t structure and optionally the string itself.</p>
+<h2>SYNOPSIS</h2>
+<pre>
+char *
+bson_string_free (bson_string_t *string,
+                  bool           free_segment);
+</pre>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
+<dl>
+<dt><code>free_segment</code></dt>
+<dd> A bool indicating if <code>str-&gt;str</code> should be returned.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> Frees the bson_string_t structure and optionally the string itself. </p>
+<h2>RETURNS</h2>
+<p> <code>str-&gt;str</code> if <code>free_segment</code> is true, otherwise NULL. </p>
+<h2>COLOPHON</h2>
+<p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

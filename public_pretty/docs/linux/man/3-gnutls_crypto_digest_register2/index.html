@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_crypto_digest_register2(3) · Linux Manual Pages</title>
+<meta name="description" content="gnutls_crypto_digest_register2 – register a digest interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_crypto_digest_register2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_crypto_digest_register2(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> gnutls_crypto_digest_register2 &#8211; register a digest interface</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
+<p> <code>int gnutls_crypto_digest_register2(int </code><i>priority</i><code>, int </code><i>version</i><code>, gnutls_crypto_digest_st * </code><i>s</i><code>);</code></p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>int priority</dt>
+<dd> is the priority of the digest interface</dd>
+<dt>int version</dt>
+<dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></dd>
+<dt>gnutls_crypto_digest_st * s</dt>
+<dd> is a structure holding new interface&#8217;s data</dd></dl>
+<h2>DESCRIPTION</h2>
+<p> This function will register a digest interface to be used by gnutls. Any interface registered will override the included engine and by convention kernel implemented interfaces should have priority of 90. The interface with the lowest priority will be used by gnutls. </p>
+<p> This function should be called before <code>gnutls_global_init()</code>. </p>
+<p> For simplicity you can use the convenience <code>gnutls_crypto_digest_register()</code> macro.</p>
+<h2>RETURNS</h2>
+<p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise an error.</p>
+<h2>SINCE</h2>
+<p> 2.6.0</p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;bug-gnutls [at] gnu.org&gt;. GnuTLS home page: <a rel="nofollow" href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2008 Free Software Foundation.<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+<h2>SEE ALSO</h2>
+<p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
+<dl>
+<dt>
+</dt><dd> <code>info gnutls</code></dd></dl>
+<p> should give you access to the complete manual. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

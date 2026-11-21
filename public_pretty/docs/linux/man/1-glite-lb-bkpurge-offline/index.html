@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glite-lb-bkpurge-offline(1) · Linux Manual Pages</title>
+<meta name="description" content="glite-lb-bkpurge-offline – emergency utility for removing inactive jobs from the L&amp;B database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-glite-lb-bkpurge-offline/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>glite-lb-bkpurge-offline(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> glite-lb-bkpurge-offline &#8211; emergency utility for removing inactive jobs from the L&amp;B database </p>
+<h2>SYNOPSIS</h2>
+<p> <code>glite-lb-bkpurge-offline</code> [<i>OPTIONS</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> <code>glite-lb-bkpurge-offline</code> is a utility for removing inactive jobs from the L&amp;B database. By default, it removes jobs that reached CLEARED, ABORTED and CANCELED state and also OTHER and DONE jobs that are inactive for a specific (rather long) period of time. It calls SQL database commands directly. </p>
+<p> This utility is provided for <code>emergency and expert use only</code>. Exact semantics of job age are slightly different from regular <code>glite-lb-bkpurge</code>, there is no synchronization with running L&amp;B server and/or proxy when jobs receive new events while being purged, and error handling is minimal. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge ABORTED jobs older than NNN seconds/minutes/hours/days (only one number and one letter allowed). If the time is not specified, the default timeout is determined by the server. </dd>
+<dt><code>-c</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge CLEARED jobs older than the given age. </dd>
+<dt><code>-d</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge DONE jobs older than the given age. </dd>
+<dt><code>-h</code></dt>
+<dd> Display help. </dd>
+<dt><code>-m</code> <i>BKSERVER</i></dt>
+<dd> L&amp;B server machine name. If not specified, the environment variable EDG_WL_QUERY_SERVER is checked for hostname and port. </dd>
+<dt><code>-M</code> {singleshot|staged}</dt>
+<dd> Cleaning method (default=staged). </dd>
+<dt><code>-n</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge CANCELED jobs older than the given age. </dd>
+<dt><code>-o</code> <i>NNN</i>[smhd]</dt>
+<dd> Purge OTHER jobs (i.e., jobs in states other than ABORTED, CLEARED or CANCELED) older than the given age. </dd>
+<dt><code>-p</code></dt>
+<dd> Purge L&amp;B proxy database (default: L&amp;B server DB). </dd>
+<dt><code>-t</code></dt>
+<dd> Free unused space if using MyISAM DB engine. Note that MyISAM is not used by default in L&amp;B deployments. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>EDG_WL_QUERY_SERVER</code></dt>
+<dd> If <code>$EDG_WL_QUERY_SERVER</code> is set, its value is used as the bkserver address. </dd>
+</dl>
+<h2>BUGS</h2>
+<p> Please report all bugs to CESNET gLite L&amp;B issue tracker available at <i><a rel="nofollow" href="https://github.com/CESNET/glite-lb/issues">https://github.com/CESNET/glite-lb/issues</a></i> </p>
+<h2>AUTHORS</h2>
+<p> L&amp;B Product Team, CESNET. </p>
+<h2>SEE ALSO</h2>
+<p>&nbsp;<wbr><code><a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

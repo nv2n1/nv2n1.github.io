@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdhas_facet(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdhas_facet/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdhas_facet(3)</h1>
+
+
+
+
+
+<p>std::has_facet - std::has_facet</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;locale&gt;
+    template &lt;class Facet&gt;
+    (until C++ 11)
+        bool has_facet(const locale &amp;loc) throw();
+template &lt;class Facet&gt;
+(since C++ 11)
+    bool has_facet(const locale &amp;loc) noexcept;</code></pre> 
+<p>Checks if the locale loc implements the facet Facet.</p>
+<h2>Parameters</h2>
+<p>loc - the locale object to query</p>
+<h2>Return value</h2>
+<p>Returns true if the facet Facet was installed in the locale loc, false otherwise.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;locale&gt;
+// minimal custom facet
+struct myfacet : public std::locale::facet {
+static std::locale::id id;
+};
+std::locale::id myfacet::id;
+int main()
+{
+// loc is a &quot;C&quot; locale with myfacet added
+std::locale loc(std::locale::classic(), new myfacet);
+std::cout &lt;&lt; std::boolalpha
+&lt;&lt; &quot;Can loc classify chars? &quot;
+&lt;&lt; std::has_facet&lt;std::ctype&lt;char&gt;&gt;(loc) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;Can loc classify char32_t? &quot;
+&lt;&lt; std::has_facet&lt;std::ctype&lt;char32_t&gt;&gt;(loc) &lt;&lt; &lsquo;\n&rsquo;
+&lt;&lt; &quot;Does loc implement myfacet? &quot;
+&lt;&lt; std::has_facet&lt;myfacet&gt;(loc) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Can loc classify chars? true
+ <wbr> Can loc classify char32_t? false
+ <wbr> Does loc implement myfacet? true</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> set of polymorphic facets that encapsulate cultural differences
+locale <i>(class)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> obtains a facet from a locale
+use_facet <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

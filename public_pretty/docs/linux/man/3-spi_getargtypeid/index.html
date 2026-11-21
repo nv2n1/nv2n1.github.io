@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spi_getargtypeid(3) · Linux Manual Pages</title>
+<meta name="description" content="SPI_getargtypeid – return the data type OID for an argument of a statement prepared by SPI_prepare">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-spi_getargtypeid/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>spi_getargtypeid(3)</h1>
+
+
+
+
+
+<p>SPI_getargtypeid &#8211; return the data type OID for an argument of a statement prepared by <code>SPI_prepare</code> </p>
+<h2>Synopsis</h2>
+<pre>Oid SPI_getargtypeid(SPIPlanPtr <i>plan</i>, int <i>argIndex</i>)</pre>
+<h2>Description</h2>
+<p><code>SPI_getargtypeid</code> returns the OID representing the type for the <i>argIndex</i>&#8216;th argument of a statement prepared by <code>SPI_prepare</code>. First argument is at index zero.</p>
+<h2>Arguments</h2>
+<p>SPIPlanPtr <i>plan</i></p>
+<dl COMPACT>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
+<p> int <i>argIndex</i></p>
+<dl COMPACT>
+<dd>zero based index of the argument</dd></dl>
+<h2>Return Value</h2>
+<p>The type OID of the argument at the given index. If the <i>plan</i> is NULL or invalid, or <i>argIndex</i> is less than 0 or not less than the number of arguments declared for the <i>plan</i>, <i>SPI_result</i> is set to SPI_ERROR_ARGUMENT and InvalidOid is returned.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

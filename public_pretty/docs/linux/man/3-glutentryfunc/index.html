@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutentryfunc(3) · Linux Manual Pages</title>
+<meta name="description" content="glutEntryFunc – Window mouse entry/leave callback.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutentryfunc/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutentryfunc(3)</h1>
+
+
+
+
+
+<p><code>glutEntryFunc</code> &#8211; Window mouse entry/leave callback.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; input</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutEntryFunc void( *callback )( int state )</p>
+<h2>Parameters</h2>
+<p>Bf Em<br />
+&nbsp;<wbr>callback Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Client window-entry hook.</p>
+<h2>Description</h2>
+<p>When the mouse enters or exits a window (or sub-window), OpenGLUT can report this transition via the Entry callback. Bf Sy<br />
+&nbsp;<wbr>state Ef<br />
+&nbsp;<wbr>is one of&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_LEFT Ef<br />
+&nbsp;<wbr>or Bf Sy<br />
+&nbsp;<wbr>GLUT_ENTERED Ef<br />
+&nbsp;<wbr>respective of whether the mouse left or entered the window. </p>
+<p> This callback is bound to the Bf Li<br />
+&nbsp;<wbr>current window Ef<br />
+&nbsp;<wbr>. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutpassivemotionfunc/">glutPassiveMotionFunc</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

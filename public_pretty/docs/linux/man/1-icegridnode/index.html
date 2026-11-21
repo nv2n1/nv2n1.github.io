@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>icegridnode(1) · Linux Manual Pages</title>
+<meta name="description" content="icegridnode – The IceGrid node server.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-icegridnode/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>icegridnode(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> icegridnode &#8211; The IceGrid node server.</p>
+<h2>SYNOPSIS</h2>
+<p> icegridnode [options] </p>
+<h2>DESCRIPTION</h2>
+<p> An IceGrid node is a process that activates, monitors, and deactivates registered server processes. You can run any number of nodes in a domain, but typically there is one node per host. A node must be running on each host on which servers are activated automatically, and nodes cannot run without an IceGrid registry. The IceGrid node server is implemented by the icegridnode executable. If you wish to run a registry and node in one process, icegridnode is the executable you must use. Full documentation for icegridnode is available online at:<br />
+ &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridnode">http://doc.zeroc.com/display/Ice/icegridnode</a>&quot;. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>
+ Displays help message. </dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays the Ice version. </dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>
+ Run as a daemon. </dd>
+<dt><code>&#8211;pidfile</code> <code>FILE</code></dt>
+<dd>
+ Write process ID into FILE. </dd>
+<dt><code>&#8211;noclose</code></dt>
+<dd>
+ Do not close open file descriptors. </dd>
+<dt><code>&#8211;nochdir</code></dt>
+<dd>
+ Do not change the current working directory. </dd>
+<dt><code>&#8211;nowarn</code></dt>
+<dd>
+ Do not print security warnings. </dd>
+<dt><code>&#8211;readonly</code></dt>
+<dd>
+ Start the collocated master registry in read-only mode. </dd>
+<dt><code>&#8211;deploy</code> <code>DESCRIPTOR</code> <code>[TARGET1</code> <code>[TARGET2</code> <code>&#8230;]]</code></dt>
+<dd>
+ Add or update descriptor in file DESCRIPTOR, with optional targets. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-icegridadmin/">icegridadmin</a></code>(1), <code><a href="/docs/linux/man/1-icegridregistry/">icegridregistry</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

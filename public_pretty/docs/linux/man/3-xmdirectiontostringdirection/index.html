@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdirectiontostringdirection(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDirectionToStringDirection — A function that converts an XmDirection value to an XmStringDirection value">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdirectiontostringdirection/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdirectiontostringdirection(3)</h1>
+
+
+
+
+
+<p><code>XmDirectionToStringDirection</code> &#8212; A function that converts an XmDirection value to an XmStringDirection value</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+XmStringDirection XmDirectionToStringDirection (<i>dir</i>)
+ XmDirection <i>dir</i>;
+(<code>void</code>)</pre>
+<h2>Description</h2>
+<p><code>XmDirectionToStringDirection</code> converts the specified <code>XmDirection</code> direction value to its equivalent <code>XmStringDirection</code> value. Basically, if the <code>XmDirection</code> value has a horizontal direction specification, that horizontal element is used; otherwise, the <code>XmStringDirection</code> value is interpreted as <code>XmSTRING_DIRECTION_L_TO_R</code>. This function provides backward compatibility with the <code>XmStringDirection</code> data type. </p>
+<p> Note that the Motif toolkit also contains an <code>XmStringDirectionToDirection</code> routine to convert an <code>XmStringDirection</code> value to its <code>XmDirection</code> equivalent.</p>
+<dl COMPACT>
+<dt><i>dir</i></dt>
+<dd>Specifies the <code>XmDirection</code> value to be converted.</dd></dl>
+<h2>Return</h2>
+<p>Returns the following <code>XmStringDirection</code> values:</p>
+<dl COMPACT>
+<dt><code>XmSTRING_DIRECTION_R_TO_L</code></dt>
+<dd>If the <i>dir</i> argument has a right to left horizontal direction value in it, for example <code>XmRIGHT_TO_LEFT_TOP_TO_BOTTOM</code>.</dd>
+<dt><code>XmSTRING_DIRECTION_L_TO_R</code></dt>
+<dd>If the <i>dir</i> argument has a left to right horizontal direction in it, for example <code>XmLEFT_TO_RIGHT_TOP_TO_BOTTOM</code>, or if the horizontal direction value in the <i>dir</i> argument is ambiguous, such as in the <code>XmTOP_TO_BOTTOM</code> value.</dd>
+<dt><code>XmSTRING_DIRECTION_DEFAULT</code></dt>
+<dd>If there was no horizontal direction specified.</dd></dl>
+<h2>Related Information</h2>
+<p><code><a href="/docs/linux/man/3-xmdirection/">XmDirection</a></code>(3), <code><a href="/docs/linux/man/3-xmdirectionmatch/">XmDirectionMatch</a></code>(3), <code><a href="/docs/linux/man/3-xmdirectionmatchpartial/">XmDirectionMatchPartial</a></code>(3), <code><a href="/docs/linux/man/3-xmdirectiontostringdirection/">XmDirectionToStringDirection</a></code>(3), <code><a href="/docs/linux/man/3-xmstring/">XmString</a></code>(3), <code><a href="/docs/linux/man/3-xmstringdirection/">XmStringDirection</a></code>(3), and <code><a href="/docs/linux/man/3-xmstringdirectiontodirection/">XmStringDirectionToDirection</a></code>(3),</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

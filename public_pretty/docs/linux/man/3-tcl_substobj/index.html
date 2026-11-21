@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tcl_substobj(3) · Linux Manual Pages</title>
+<meta name="description" content="Tcl_SubstObj – perform substitutions on Tcl objects">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tcl_substobj/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tcl_substobj(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>Tcl_SubstObj &#8211; perform substitutions on Tcl objects </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tcl.h&gt;</code>
+Tcl_Obj *
+<code>Tcl_SubstObj</code>(<i>interp, objPtr, flags</i>)</pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter in which to execute Tcl scripts and lookup variables. If an error occurs, the interpreter&#8217;s result is modified to hold an error message.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in) A Tcl object containing the string to perform substitutions on.</dd>
+<dd>int <i>flags</i> (in) ORed combination of flag bits that specify which substitutions to perform. The flags <code>TCL_SUBST_COMMANDS</code>, <code>TCL_SUBST_VARIABLES</code> and <code>TCL_SUBST_BACKSLASHES</code> are currently supported, and <code>TCL_SUBST_ALL</code> is provided as a convenience for the common case where all substitutions are desired.
+</dd></dl>
+<h2>Description</h2>
+<p>The <code>Tcl_SubstObj</code> function is used to perform substitutions on strings in the fashion of the <code>subst</code> command. It gets the value of the string contained in <i>objPtr</i> and scans it, copying characters and performing the chosen substitutions as it goes to an output object which is returned as the result of the function. In the event of an error occurring during the execution of a command or variable substitution, the function returns NULL and an error message is left in <i>interp</i>&#8216;s result. </p>
+<p> Three kinds of substitutions are supported. When the <code>TCL_SUBST_BACKSLASHES</code> bit is set in <i>flags</i>, sequences that look like backslash substitutions for Tcl commands are replaced by their corresponding character. </p>
+<p> When the <code>TCL_SUBST_VARIABLES</code> bit is set in <i>flags</i>, sequences that look like variable substitutions for Tcl commands are replaced by the contents of the named variable. </p>
+<p> When the <code>TCL_SUBST_COMMANDS</code> bit is set in <i>flags</i>, sequences that look like command substitutions for Tcl commands are replaced by the result of evaluating that script. Where an uncaught &#8220;continue exception&#8221; occurs during the evaluation of a command substitution, an empty string is substituted for the command. Where an uncaught &#8220;break exception&#8221; occurs during the evaluation of a command substitution, the result of the whole substitution on <i>objPtr</i> will be truncated at the point immediately before the start of the command substitution, and no characters will be added to the result or substitutions performed after that point.</p>
+<h2>See Also</h2>
+<p>subst(n)</p>
+<h2>Keywords</h2>
+<p>backslash substitution, command substitution, variable substitution</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

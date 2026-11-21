@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vnstati(1) · Linux Manual Pages</title>
+<meta name="description" content="vnstati – png image output support for vnStat">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-vnstati/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>vnstati(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> vnstati &#8211; png image output support for vnStat </p>
+<h2>SYNOPSIS</h2>
+<p> <code>vnstati</code> [ <code>-cdhimostv?</code> ] [ <code>&#8211;altdate</code> ] [ <code>&#8211;cache</code> <i>time</i> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;days</code> ] [ <code>&#8211;dbdir</code> <i>directory</i> ] [ <code>&#8211;headertext</code> <i>text</i> ] [ <code>&#8211;help</code> ] [ <code>&#8211;hours</code> ] [ <code>-hs</code> ] [ <code>&#8211;hsummary</code> ] [ <code>-i</code> <i>interface</i> ] [ <code>&#8211;iface</code> <i>interface</i> ] [ <code>&#8211;locale</code> <i>locale</i> ] [ <code>&#8211;months</code> ] [ <code>-ne</code> ] [ <code>-nh</code> ] [ <code>-nl</code> ] [ <code>&#8211;noedge</code> ] [ <code>&#8211;noheader</code> ] [ <code>&#8211;nolegend</code> ] [ <code>&#8211;output</code> <i>file</i> ] [ <code>-ru</code> ] [ <code>&#8211;rateunit</code> ] [ <code>&#8211;style</code> <i>number</i> ] [ <code>&#8211;summary</code> ] [ <code>&#8211;top10</code> ] [ <code>&#8211;transparent</code> ] [ <code>&#8211;version</code> ] [ <code>-vs</code> ] [ <code>&#8211;vsummary</code> ] </p>
+<h2>DESCRIPTION</h2>
+<p> The purpose of <code>vnstati</code> is to provide image output support for statistics collected using <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1). The image file format is limited to png. All basic outputs of vnStat are supported excluding live traffic features. The image can be outputted either to a file or to standard output. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;altdate</code></dt>
+<dd> Use alternative date and time text location. The date and time text will be moved from the upper right header section to the lower left corner. This option will have no effect if <code>-nh, &#8211;noheader</code> has been selected. </dd>
+<dt><code>-c, &#8211;cache </code><i>time</i></dt>
+<dd> Update output file only if at least <i>time</i> minutes have passed since the previous file update. This option is ignored if stdout is used as output. </dd>
+<dt><code>&#8211;config </code><i>file</i></dt>
+<dd> Use <i>file</i> as configuration file instead of using normal configuration file search functionality. </dd>
+<dt><code>-d, &#8211;days</code></dt>
+<dd> Output traffic statistics on a daily basis for the last 30 days. </dd>
+<dt><code>&#8211;dbdir </code><i>directory</i></dt>
+<dd> Use <i>directory</i> as database directory instead of using the directory specified in the configuration file or the hardcoded default if no configuration file is available. </dd>
+<dt><code>&#8211;headertext </code><i>text</i></dt>
+<dd> Show <i>text</i> in image header section instead of automatically generated interface identification. <i>text</i> is limited to 64 characters and may not get completely shown if longer than the width of the image. Use with <code>&#8211;altdate</code> if maximal space is needed. This option will have no effect if <code>-nh, &#8211;noheader</code> has been selected. </dd>
+<dt><code>-h, &#8211;hours</code></dt>
+<dd> Output traffic statistics on a hourly basis for the last 24 hours. </dd>
+<dt><code>-hs, &#8211;hsummary</code></dt>
+<dd> Output traffic summary including hourly data using a horizontal layout. </dd>
+<dt><code>-i, &#8211;iface </code><i>interface</i></dt>
+<dd> Use <i>interface</i> instead of default or configured interface. </dd>
+<dt><code>&#8211;locale </code><i>locale</i></dt>
+<dd> Use <i>locale</i> instead of using the locale setting specified in the configuration file or the system default if no configuration file is available. </dd>
+<dt><code>-m, &#8211;months</code></dt>
+<dd> Output traffic statistics on a monthly basis for the last 12 months. </dd>
+<dt><code>-ne, &#8211;noedge</code></dt>
+<dd> Remove darker edges from around the image. </dd>
+<dt><code>-nh, &#8211;noheader</code></dt>
+<dd> Remove header containing title and update time. Time of the previous update will still be visible in the lower right corner using a less visible color. </dd>
+<dt><code>-nl, &#8211;nolegend</code></dt>
+<dd> Remove legend containing rx and tx color mapping information from the image. </dd>
+<dt><code>-o, &#8211;output </code><i>file</i></dt>
+<dd> Write png image to <i>file</i> and exit. Output can be directed to stdout by giving &quot;-&quot; as filename. </dd>
+<dt><code>-ru, &#8211;rateunit</code></dt>
+<dd> Change the configured rate unit. If rate has been configured to be shown in bytes then rate will be shown in bits if this option is present. In the same way, if rate has been configured to be shown in bits then rate will be shown in bytes when this option is present. Alternatively 0 or 1 can be given as parameter for this option in order to select between bytes (0) and bits (1) regardless of the configuration file setting. </dd>
+<dt><code>&#8211;style </code><i>number</i></dt>
+<dd> Modify the content and style of outputs. Setting <i>number</i> to 3 will show average traffic rate in all outputs where it is supported. Other values will show bar graphics instead. </dd>
+<dt><code>-s, &#8211;summary</code></dt>
+<dd> Output traffic statistics summary. </dd>
+<dt><code>-t, &#8211;top10</code></dt>
+<dd> Output all time top 10 traffic days. </dd>
+<dt><code>&#8211;transparent</code></dt>
+<dd> Toggle background color transparency depending of the TransparentBg setting in the configuration file. Alternatively 0 or 1 can be given as parameter for this option in order to either disable (0) or enable (1) transparency regardless of the configuration file setting. </dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show current version. </dd>
+<dt><code>-vs, &#8211;vsummary</code></dt>
+<dd> Output traffic summary including hourly data using a vertical layout. </dd>
+<dt><code>-?, &#8211;help</code></dt>
+<dd> Show a command option summary. </dd>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt><i>/var/lib/vnstat/</i></dt>
+<dd> Default database directory. Files are named according to the monitored interfaces.</dd>
+<dt><i>/etc/vnstat.conf</i></dt>
+<dd> Config file that will be used unless <i>$HOME/.vnstatrc</i> exists. See <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5) for more information.</dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>vnstati -s -i eth0 -o /tmp/vnstat.png</code></dt>
+<dd> Output traffic summary for interface eth0 to file /tmp/vnstat.png. </dd>
+<dt><code>vnstati -vs -i eth0+eth1+eth2 -o /tmp/vnstat.png</code></dt>
+<dd> Output traffic summary with hourly data under the normal summary for a merge of interfaces eth0, eth1 and eth2 to file /tmp/vnstat.png. </dd>
+<dt><code>vnstati -h -c 15 -o /tmp/vnstat_h.png</code></dt>
+<dd> Output hourly traffic statistics for default interface to file /tmp/vnstat_h.png if the file has not been updated within the last 15 minutes. </dd>
+<dt><code>vnstati -d -ne -nh -o &#8211;</code></dt>
+<dd> Output daily traffic statistics without displaying the header section and edges for default interface to standard output (stdout). </dd>
+<dt><code>vnstati -m &#8211;config /home/me/vnstat.cfg -i -o &#8211;</code></dt>
+<dd> Output monthly traffic statistics for default interface specified in configuration file /home/me/vnstat.cfg to standard output (stdout). </dd>
+</dl>
+<h2>RESTRICTIONS</h2>
+<p> Depending on the font provided by the GD library, not all characters may end up shown correctly when a UTF-8 locale is used. </p>
+<p> Using long date output formats may cause misalignment in shown columns if the length of the date exceeds the fixed size allocation. </p>
+<h2>AUTHOR</h2>
+<p> Teemu Toivola &lt;tst at iki dot fi&gt; </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1), <code><a href="/docs/linux/man/1-vnstatd/">vnstatd</a></code>(1), <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5), <code><a href="/docs/linux/man/7-units/">units</a></code>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

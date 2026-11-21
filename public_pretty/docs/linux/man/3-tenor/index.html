@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tenor(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::InterestRateIndex – base class for interest rate indexes">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tenor/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tenor(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::InterestRateIndex &#8211; base class for interest rate indexes </p>
+<h2>Synopsis</h2>
+<pre><code>virtual Date valueDate (const Date &amp;fixingDate) const
+virtual Date maturityDate (const Date &amp;valueDate) const =0
+Protected Member Functions
+virtual Rate forecastFixing (const Date &amp;fixingDate) const =0
+Protected Attributes</code></pre>
+<p> Inherits <code>QuantLib::Index</code>, and <code>QuantLib::Observer</code>. Inherited by <code>BMAIndex</code>, <code>IborIndex</code>, and <code>SwapIndex</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>InterestRateIndex</code> (const std::string &amp;familyName, const <code>Period</code> &amp;tenor, <code>Natural</code> settlementDays, const <code>Currency</code> &amp;currency, const <code>Calendar</code> &amp;fixingCalendar, const <code>DayCounter</code> &amp;dayCounter)<br />
+ <code>Index interface</code><br />
+ virtual Date valueDate (const Date &amp;fixingDate) const</p>
+<p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
+<p>Protected Member Functions<br />
+virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
+<p>Protected Attributes <code>Observer interface</code><br />
+ virtual Date valueDate (const Date &amp;fixingDate) const</p>
+<p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
+<p>Protected Member Functions<br />
+virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
+<p>Protected Attributes <code>Inspectors</code><br />
+ virtual Date valueDate (const Date &amp;fixingDate) const</p>
+<p>virtual Date maturityDate (const Date &amp;valueDate) const =0</p>
+<p>Protected Member Functions<br />
+virtual Rate forecastFixing (const Date &amp;fixingDate) const =0</p>
+<p>Protected Attributes <code>Date calculations</code><br />
+ These method can be overridden to implement particular conventions (e.g. EurLibor) </p>
+<pre><code>virtual Date valueDate (const Date &amp;fixingDate) const
+virtual Date maturityDate (const Date &amp;valueDate) const =0
+Protected Member Functions
+virtual Rate forecastFixing (const Date &amp;fixingDate) const =0
+Protected Attributes</code></pre>
+<p> std::string <code>familyName_</code> </p>
+<p> <code>Period</code> <code>tenor_</code> </p>
+<p> <code>Natural</code> <code>fixingDays_</code> </p>
+<p> <code>Calendar</code> <code>fixingCalendar_</code> </p>
+<p> <code>Currency</code> <code>currency_</code> </p>
+<p> <code>DayCounter</code> <code>dayCounter_</code></p>
+<h2>Detailed Description</h2>
+<p>base class for interest rate indexes </p>
+<p> <code>Possible enhancements</code></p>
+<dl>
+<dd>add methods returning <code>InterestRate</code></dd></dl>
+<h2>Member Function Documentation</h2>
+<h3>std::string name () const [virtual]</h3>
+<p>Returns the name of the index. </p>
+<p> <code>Warning</code></p>
+<dl>
+<dd>This method is used for output and comparison between indexes. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
+<p> Implements <code>Index</code>. </p>
+<p> Reimplemented in <code>BMAIndex</code>.</p>
+<h3><code>Rate</code> fixing (const <code>Date</code> &amp; fixingDate, bool forecastTodaysFixing = false) const [virtual]</h3>
+<p>returns the fixing at the given date </p>
+<p> the date passed as arguments must be the actual calendar date of the fixing; no settlement days must be used. </p>
+<p> Implements <code>Index</code>.</p>
+<h3>void update () [virtual]</h3>
+<p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
+<p> Implements <code>Observer</code>.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

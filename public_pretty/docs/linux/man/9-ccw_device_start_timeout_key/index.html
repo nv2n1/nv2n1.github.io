@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccw_device_start_timeout_key(9) · Linux Manual Pages</title>
+<meta name="description" content="ccw_device_start_timeout_key – start a s390 channel program with timeout and key">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ccw_device_start_timeout_key/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ccw_device_start_timeout_key(9)</h1>
+
+
+
+
+
+<p>ccw_device_start_timeout_key &#8211; start a s390 channel program with timeout and key</p>
+<h2>Synopsis</h2>
+<pre><code>int ccw_device_start_timeout_key(struct ccw_device *cdev, struct ccw1 *cpa, unsigned long intparm, __u8 lpm, __u8 key, unsigned long flags, int expires);</code></pre>
+<h2>Arguments</h2>
+<p><i>cdev</i></p>
+<dl>
+<dd>
+</dd><dd>target ccw device</dd></dl>
+<p> <i>cpa</i></p>
+<dl>
+<dd>logical start address of channel program</dd></dl>
+<p> <i>intparm</i></p>
+<dl>
+<dd>user specific interruption parameter; will be presented back to <i>cdev</i>&#8216;s interrupt handler. Allows a device driver to associate the interrupt with a particular I/O request.</dd></dl>
+<p> <i>lpm</i></p>
+<dl>
+<dd>defines the channel path to be used for a specific I/O request. A value of 0 will make cio use the opm.</dd></dl>
+<p> <i>key</i></p>
+<dl>
+<dd>storage key to be used for the I/O</dd></dl>
+<p> <i>flags</i></p>
+<dl>
+<dd>additional flags; defines the action to be performed for I/O processing.</dd></dl>
+<p> <i>expires</i></p>
+<dl>
+<dd>timeout value in jiffies</dd></dl>
+<h2>Description</h2>
+<p>Start a S/390 channel program. When the interrupt arrives, the IRQ handler is called, either immediately, delayed (dev-end missing, or sense required) or never (no IRQ handler registered). This function notifies the device driver if the channel program has not completed during the time specified by <i>expires</i>. If a timeout occurs, the channel program is terminated via xsch, hsch or csch, and the device&#8217;s interrupt handler will be called with an irb containing ERR_PTR(-<code>ETIMEDOUT</code>).</p>
+<h2>Return</h2>
+<p><code>0</code>, if the operation was successful; &#8211;<code>EBUSY</code>, if the device is busy, or status pending; &#8211;<code>EACCES</code>, if no path specified in <i>lpm</i> is operational; &#8211;<code>ENODEV</code>, if the device is not operational.</p>
+<h2>Context</h2>
+<p>Interrupts disabled, ccw device lock held</p>
+<h2>Author</h2>
+<p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

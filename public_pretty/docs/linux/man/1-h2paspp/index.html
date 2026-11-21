@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>h2paspp(1) · Linux Manual Pages</title>
+<meta name="description" content="h2paspp – Free Pascal h2pas preprocessor program.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-h2paspp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>h2paspp(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> h2paspp &#8211; Free Pascal h2pas preprocessor program. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>h2paspp [-doih] file1 &#8230; filen</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>h2paspp</code> reads one or more C header files and preprocesses them, writing the result to files with the same name as the originals as it goes along. It does not accept all preprocesser tokens of C, but takes care of the following preprocessor directives:</p>
+<dl>
+<dt><i>#define symbol</i></dt>
+<dd> Defines the new symbol <i>symbol</i> <code>te that macros are not supported.</code></dd>
+<dt><i>#if symbol</i></dt>
+<dd> The text following this directive is included if <i>symbol </i> is defined.</dd>
+<dt><i>#ifdef symbol</i></dt>
+<dd> The text following this directive is included if <i>symbol </i> is defined.</dd>
+<dt><i>#ifndef symbol</i></dt>
+<dd> The text following this directive is included if <i>symbol </i> is not defined.</dd>
+<dt><i>#include filename</i></dt>
+<dd> Include directives are removed, unless the <code>-I</code> option was given, in which case the include file is included and written to the output file.</dd>
+<dt><i>#undef symbol</i></dt>
+<dd> The symbol <i>symbol</i> is undefined. </dd>
+</dl>
+<h2>USAGE</h2>
+<p> <code>h2paspp</code> accepts one or more filenames and preprocesses them. It will read the input, and write output to a file with the same name unless the <code>-o</code> option is given, in which case the file is written to the specified file. Note that only one output filename can be given. </p>
+<h2>OPTIONS</h2>
+<p> h2paspp has a small number of options to control its behaviour: </p>
+<dl>
+<dt><code>-dsymbol</code></dt>
+<dd> Define the symbol <i>symbol</i> before processing is started.</dd>
+<dt><code>-h</code></dt>
+<dd> emit a small helptext.</dd>
+<dt><code>-ooutfile</code></dt>
+<dd> If this option is given, the output will be written to a file named <i>outfile</i> <code>te that only one output file can be given.</code> </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

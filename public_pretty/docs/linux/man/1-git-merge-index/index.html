@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>git-merge-index(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-git-merge-index/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>git-merge-index(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>git-merge-index - Run a merge for files needing merging</p>
+<h2>SYNOPSIS</h2>
+ <pre><code>
+git merge - index[-o][-q]&lt;merge - program&gt;(-a | [--]&lt;file&gt; *)
+</code></pre> 
+<h2>DESCRIPTION</h2>
+<p>This looks up the &lt;file&gt;(s) in the index and, if there are any merge entries, passes the SHA-1 hash for those files as arguments 1, 2, 3 (empty argument if no file), and &lt;file&gt; as argument 4. File modes for the three files are passed as arguments 5, 6 and 7.</p>
+<h2>OPTIONS</h2>
+<p>&ndash;</p>
+<dl>
+<dt>
+</dt><dd> Do not interpret any more arguments as options.</dd></dl>
+<p>-a</p>
+<dl>
+<dt>
+</dt><dd> Run merge against all files in the index that need merging.</dd></dl>
+<p>-o</p>
+<dl>
+<dt>
+</dt><dd> Instead of stopping at the first failed merge, do all of them in one shot - continue with merging even when previous merges returned errors, and only return the error code after all the merges.</dd></dl>
+<p>-q</p>
+<dl>
+<dt>
+</dt><dd> Do not complain about a failed merge program (a merge program failure usually indicates conflicts during the merge). This is for porcelains which might want to emit custom messages.</dd></dl>
+<p>If <i>git merge-index</i> is called with multiple &lt;file&gt;s (or -a) then it processes them in turn only stopping if merge returns a non-zero exit code.</p>
+<p>Typically this is run with a script calling Git&rsquo;s imitation of the <i>merge</i> command from the RCS package.</p>
+<p>A sample script called <i>git merge-one-file</i> is included in the distribution.</p>
+<p>ALERT ALERT ALERT! The Git &quot;merge object order&quot; is different from the RCS <i>merge</i> program merge object order. In the above ordering, the original is first. But the argument order to the 3-way merge program <i>merge</i> is to have the original in the middle. Don&rsquo;t ask me why.</p>
+<p>Examples:</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+torvalds [at] ppc970:~/merge-test&gt; git merge-index cat MM
+This is MM from the original tree.              # original
+This is modified MM in the branch A.            # merge1
+This is modified MM in the branch B.            # merge2
+This is modified MM in the branch B.            # current contents
+</pre></dd></dl>
+<p>or</p>
+<dl>
+<dt>
+</dt><dd> <pre>
+torvalds [at] ppc970:~/merge-test&gt; git merge-index cat AA MM
+cat: : No such file or directory
+This is added AA in the branch A.
+This is added AA in the branch B.
+This is added AA in the branch B.
+fatal: merge program failed
+</pre></dd></dl>
+<p>where the latter example shows how <i>git merge-index</i> will stop trying to merge once anything has returned an error (i.e., <b>cat</b> returned an error for the AA file, because it didn&rsquo;t exist in the original, and thus <i>git merge-index</i> didn&rsquo;t even try to merge the MM thing).</p>
+<h2>GIT</h2>
+<p>Part of the <b><a HREF="/docs/linux/man/1-git/">git</a></b>(1) suite</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

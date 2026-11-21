@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dlange-f(3) · Linux Manual Pages</title>
+<meta name="description" content="dlange.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dlange-f/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dlange-f(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dlange.f &#8211; </p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>DOUBLE PRECISION function <code>dlange</code> (NORM, M, N, A, LDA, WORK)<br />
+ <i></i><code>DLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>DOUBLE PRECISION function dlange (characterNORM, integerM, integerN, double precision, dimension( lda, * )A, integerLDA, double precision, dimension( * )WORK)</h3>
+<p><code>DLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix. </p>
+<p> <code>Purpose: </code></p>
+<dl COMPACT>
+<dd>
+<pre> DLANGE returns the value of the one norm, or the Frobenius norm, or
+ the infinity norm, or the element of largest absolute value of a
+ real matrix A.</pre>
+</dd></dl>
+<p> <code>Returns:</code></p>
+<dl COMPACT>
+<dd>DLANGE </dd>
+<pre> DLANGE = ( max(abs(A(i,j))), NORM = 'M' or 'm'
+ (
+ ( norm1(A), NORM = '1', 'O' or 'o'
+ (
+ ( normI(A), NORM = 'I' or 'i'
+ (
+ ( normF(A), NORM = 'F', 'f', 'E' or 'e'
+ where norm1 denotes the one norm of a matrix (maximum column sum),
+ normI denotes the infinity norm of a matrix (maximum row sum) and
+ normF denotes the Frobenius norm of a matrix (square root of sum of
+ squares). Note that max(abs(A(i,j))) is not a consistent matrix norm.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Parameters:</code></p>
+<dl COMPACT>
+<dd><i>NORM</i> </dd>
+<pre> NORM is CHARACTER*1
+ Specifies the value to be returned in DLANGE as described
+ above.</pre>
+<p><i>M</i> </p>
+<pre> M is INTEGER
+ The number of rows of the matrix A. M &gt;= 0. When M = 0,
+ DLANGE is set to zero.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of columns of the matrix A. N &gt;= 0. When N = 0,
+ DLANGE is set to zero.</pre>
+<p><i>A</i> </p>
+<pre> A is DOUBLE PRECISION array, dimension (LDA,N)
+ The m by n matrix A.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;= max(M,1).</pre>
+<p><i>WORK</i> </p>
+<pre> WORK is DOUBLE PRECISION array, dimension (MAX(1,LWORK)),
+ where LWORK &gt;= M when NORM = 'I'; otherwise, WORK is not
+ referenced.</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl COMPACT>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl COMPACT>
+<dd>September 2012</dd></dl>
+<p> Definition at line 115 of file dlange.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

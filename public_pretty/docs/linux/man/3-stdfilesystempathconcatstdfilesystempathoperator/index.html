@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdfilesystempathconcatstdfilesystempathoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdfilesystempathconcatstdfilesystempathoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdfilesystempathconcatstdfilesystempathoperator(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::filesystem::path::concat,std::filesystem::path::operator+= - std::filesystem::path::concat,std::filesystem::path::operator+=</p>
+<h2>Synopsis</h2>
+<pre><code>path &amp;operator+=(const path &amp;p);
+(1)(since C++ 17)
+    path &amp;
+    operator+=(const string_type &amp;str);
+(2)(since C++ 17)
+    path &amp;
+    operator+=(std::basic_string_view&lt;value_type&gt; str);
+path &amp;operator+=(const value_type *ptr);
+(3)(since C++ 17)
+    path &amp;
+    operator+=(value_type x);
+(4)(since C++ 17)
+    template &lt;class Source&gt;
+    (5)(since C++ 17)
+        path &amp;
+        operator+=(const Source &amp;source);
+template &lt;class CharT&gt;
+(6)(since C++ 17)
+    path &amp;
+    operator+=(CharT x);
+template &lt;class Source&gt;
+(7)(since C++ 17)
+    path &amp;concat(const Source &amp;source);
+template &lt;class InputIt&gt;
+(8)(since C++ 17)
+    path &amp;concat(InputIterator first, InputIterator last);
+Concatenates the current path and the argument
+1-7) Appends path(other).native() to the pathname stored in *this in the native format. This directly manipulates the value of native() and may not be portable between operating systems.
+8) Same as return *this += path(first, last)
+</code></pre>
+<h2>Parameters</h2>
+<p>p - path to append
+str - string or string view to append
+ptr - pointer to the beginning of a null-terminated string to append
+x - single character to append
+source - std::basic_string, std::basic_string_view, null-terminated multicharacter string, or an input iterator pointing to a null-terminated multicharacter sequence, which represents a path name (either in portable or in native format)
+first, last - pair of LegacyInputIterators that specify a multicharacter sequence that represents a path name</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="inputit-must-meet-the-requirements-of-legacyinputiterator">InputIt must meet the requirements of LegacyInputIterator.</h2>
+<h2 id="the-value-type-of-inputit-must-be-one-of-the-encoded-character-types-char-wchar_t-char16_t-and-char32_t">The value type of InputIt must be one of the encoded character types (char, wchar_t, char16_t and char32_t)</h2>
+<p>CharT must be one of the encoded character types (char, wchar_t, char16_t and char32_t)</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Exceptions</h2>
+<p>May throw std::bad_alloc if memory allocation fails.</p>
+<h2>Notes</h2>
+<p>Unlike with append() or operator/=, additional directory separators are never introduced.</p>
+<h2>Example</h2>
+<p>// Run this code #include &lt;iostream&gt;</p>
+<p>#include &lt;filesystem&gt;</p>
+<p>namespace fs = std::filesystem;</p>
+<p>int main()
+{
+fs::path p1; // empty path
+p1 += &quot;var&quot;; // does not insert a separator
+std::cout &lt;&lt; &quot;&amp;quot;&amp;quot; + &amp;quot;var&amp;quot; == &quot; &lt;&lt; p1 &lt;&lt; &lsquo;\n&rsquo;;
+p1 += &quot;lib&quot;; // does not insert a separator
+std::cout &lt;&lt; &quot;&amp;quot;&amp;quot; + &amp;quot;var&amp;quot; + &amp;quot;lib&amp;quot; == &quot; &lt;&lt; p1 &lt;&lt; &lsquo;\n&rsquo;;
+}</p>
+<h2>Output:</h2>
+<p> <wbr> &quot;&quot; + &quot;var&quot; == &quot;var&quot;
+ <wbr> &quot;&quot; + &quot;var&quot; + &quot;lib&quot; == &quot;varlib&quot;</p>
+<h2>See also</h2>
+<pre><code>appends elements to the path with a directory separator
+append     (public member function)
+operator/=
+concatenates two paths with a directory separator
+operator/  (function)
+</code></pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

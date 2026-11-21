@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bdftruncate(1) · Linux Manual Pages</title>
+<meta name="description" content="bdftruncate – generate truncated BDF font from ISO 10646-1-encoded BDF font">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bdftruncate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bdftruncate(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> bdftruncate &#8211; generate truncated BDF font from ISO 10646-1-encoded BDF font </p>
+<h2>SYNOPSIS</h2>
+<p> <code>bdftruncate</code> <i>threshold</i> <code>&lt;</code> <i>source.bdf</i> <code>&gt;</code> <i>destination.bdf</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>bdftruncate</code> allows one to generate from an ISO10646-1 encoded BDF font other ISO10646-1 BDF fonts in which all characters above a threshold code value are stored unencoded. This is often desirable because the Xlib API and X11 protocol data structures used for representing font metric information are extremely inefficient when handling sparsely populated fonts.</p>
+<h2>EXAMPLE</h2>
+<p> The command</p>
+<dl>
+<dt>
+</dt><dd> bdftruncate 0x3200 &lt; 6&#215;13.bdf &gt; 6x13t.bdf</dd></dl>
+<p> will generate the file 6x13t.bdf in which all glyphs with codes &gt;= 0x3200 will only be stored unencoded (i.e., they are encoded at codepoint -1).</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ucs2any/">ucs2any</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> <code>bdftruncate</code> was written by Markus Kuhn. </p>
+<p> Branden Robinson wrote this manual page, originally for the Debian Project. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

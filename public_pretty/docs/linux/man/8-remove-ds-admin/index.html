@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remove-ds-admin(8) · Linux Manual Pages</title>
+<meta name="description" content="remove-ds-admin.pl – Remove all Directory Servers and Admin Server">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-remove-ds-admin/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>remove-ds-admin(8)</h1>
+
+
+
+
+
+<p>remove-ds-admin.pl &#8211; Remove all Directory Servers and Admin Server</p>
+<h2>Synopsis</h2>
+<p><code>remove-ds-admin.pl</code> [-f] [-d -d &#8230; -d] [-y]</p>
+<h2>Description</h2>
+<p>Shuts down and removes all Directory Server instances and the Admin Server from the system. The directory server instance configuration directories will have a .removed extension appended to them, which will contain the retained certificate database files. <code>WARNING: This command is extremely destructive!</code> It will remove all of the data and configuration of all directory servers and admin servers, with no chance of recovery. Therefore, in order to actually do this, you must give the -y option. <code>Please use caution and backup your data if you want to keep it!</code> </p>
+<h2>Options</h2>
+<p>A summary of options is included below:</p>
+<dl>
+<dt><code>-f</code></dt>
+<dd>Force removal &#8211; continue on error &#8211; otherwise, the command will abort at the first error encountered</dd>
+<dt><code>-d</code></dt>
+<dd>Enable debugging &#8211; adding more -d will make output more verbose</dd>
+<dt><code>-y</code></dt>
+<dd>Do the actual processing. Since the command is very destructive, you must provide the -y argument in order for the operation to proceed. <code>Use with extreme caution!</code>
+</dd></dl>
+<h2>Author</h2>
+<p>remove-ds-admin.pl was written by the 389 Project.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a></p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2009 Red Hat, Inc.<br />
+ This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

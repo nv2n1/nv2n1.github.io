@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ncl_gclrwk(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ncl_gclrwk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ncl_gclrwk(3)</h1>
+
+
+
+
+
+<p>GCLRWK (Clear workstation) - clears a workstation.</p>
+<h2>Synopsis</h2>CALL GCLRWK (WKID, COFL)
+<h2>C-Binding Synopsis</h2>#include &lt;ncarg/gks.h&gt; 
+<p>void gclear_ws(Gint ws_id, Gctrl_flag ctrl_flag);</p>
+<h2>Description</h2><dl COMPACT><dt>WKID
+</dt><dd>(Integer, Input) - A number identifying the workstation to be cleared. WKID must be the same as that used in some previous GOPWK call.
+</dd><dt>COFL
+</dt><dd>(Integer, Input) - Clear the workstation display surface. Options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>0
+</dt><dd>Check to see if the display surface is empty. If so, do not issue a clear surface command.
+</dd><dt>1
+</dt><dd>Issue a clear surface command whether the surface has been written to or not.</dd></dl></dl>
+</dl><h2>Usage</h2>For workstations of type &quot;1&quot; (CGM), GCLRWK is interpreted as a picture termination in CGM generation. If COFL = 0 and no output primitives have been written in the current picture, then a call to GCLRWK is a &quot;do nothing&quot;; otherwise, it generates an END PICTURE element (as well as other picture initializing elements). If COFL = 1, then a call to GCLRWK generates an END PICTURE. 
+<p>For workstations of types &quot;7&quot; or &quot;8&quot; (see the man page for GOPWK for a description of workstation types) clear workstations erases all primitives that appear on the screen.</p>
+<p>For all other workstation types, clear workstation simply updates the workstation.</p>
+<h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+<h2>See Also</h2>Online: gopwk, gacwk, gdawk, gclwk, gclear_ws 
+<p>Hardcopy: User&rsquo;s Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version</p>
+<h2>Copyright</h2>Copyright (C) 1987-2009 
+ University Corporation for Atmospheric Research 
+ The use of this Software is governed by a License Agreement.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

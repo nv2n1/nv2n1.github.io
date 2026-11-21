@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk_movetoplevelwindow(3) · Linux Manual Pages</title>
+<meta name="description" content="Tk_MoveToplevelWindow – Adjust the position of a top-level window">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-tk_movetoplevelwindow/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>tk_movetoplevelwindow(3)</h1>
+
+
+
+
+
+<p>Tk_MoveToplevelWindow &#8211; Adjust the position of a top-level window </p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;tk.h&gt;</code>
+<code>Tk_MoveToplevelWindow(</code><i>tkwin, x, y</i><code>)</code></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dd>Tk_Window <i>tkwin</i> (in) Token for top-level window to move.</dd>
+<dd>int <i>x</i> (in) New x-coordinate for the top-left pixel of <i>tkwin</i>&#8216;s border, or the top-left pixel of the decorative border supplied for <i>tkwin</i> by the window manager, if there is one.</dd>
+<dd>int <i>y</i> (in) New y-coordinate for the top-left pixel of <i>tkwin</i>&#8216;s border, or the top-left pixel of the decorative border supplied for <i>tkwin</i> by the window manager, if there is one. </dd>
+</dl>
+<h2>Description</h2>
+<p>In general, a window should never set its own position; this should be done only by the geometry manger that is responsible for the window. For top-level windows the window manager is effectively the geometry manager; Tk provides interface code between the application and the window manager to convey the application&#8217;s desires to the geometry manager. The desired size for a top-level window is conveyed using the usual <code>Tk_GeometryRequest</code> mechanism. The procedure <code>Tk_MoveToplevelWindow</code> may be used by an application to request a particular position for a top-level window; this procedure is similar in function to the <code>wm geometry</code> Tcl command except that negative offsets cannot be specified. It is invoked by widgets such as menus that want to appear at a particular place on the screen. </p>
+<p> When <code>Tk_MoveToplevelWindow</code> is called it does not immediately pass on the new desired location to the window manager; it defers this action until all other outstanding work has been completed, using the <code>Tk_DoWhenIdle</code> mechanism. </p>
+<h2>Keywords</h2>
+<p>position, top-level window, window manager</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

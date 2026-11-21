@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mockchain(1) · Linux Manual Pages</title>
+<meta name="description" content="mockchain – chain package builder.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-mockchain/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>mockchain(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> mockchain &#8211; chain package builder.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>mockchain</code> -r chroot_config [options] [package&#8230;]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>mockchain</code> builds a series of srpms in mock one at a time. After each successful build of a package it adds the resulting packages to a local repo which are available to the next package to satisfy buildreqs.</p>
+<h2>USAGE NOTES</h2>
+<p> This does not try to sort the packages by build order b/c that is too much effort and not obviously doable with the buildreq information we have. </p>
+<p> The build process when you use -l is idempotent so a package which has already been successfully built will not be built again. </p>
+<p> If you want to force the rebuild of a package which has been built successfully simply remove the &#8216;success&#8217; file from the directory for the package in the localrepo path. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code> REPOS, <code>&#8211;addrepo</code>=<i>REPOS</i></dt>
+<dd> add this repo baseurl to the yumconfig for the chroot. This can be specified multiple times. Let&#8217;s you point to multiple paths beyond the default to pull build deps from. </dd>
+<dt><code>-c</code>, <code>&#8211;continue</code></dt>
+<dd> if a pkg fails to build, continue to the next one, default is to stop </dd>
+<dt><code>-l</code> LOCALREPO, <code>&#8211;localrepo</code>=<i>PATH</i></dt>
+<dd> set the path to put the results/repo in. This path needs to be somewhere accessible to users other than you for reading as the mock process doesn&#8217;t run as you. Will make a tempdir if not set. </dd>
+<dt><code>&#8211;log</code>=<i>LOGFILE</i></dt>
+<dd> log to the file named by this option, defaults to not logging </dd>
+<dt><code>-m</code> OPTION, <code>&#8211;mock-option</code>=<i>OPTION</i></dt>
+<dd> pass the OPTION to mock. Can be used several times. For example: </dd>
+<p> <code>-m &#8211;define=&quot;packager Monkey&quot;</code> </p>
+<dt><code>-r</code> CONFIG, <code>&#8211;root</code>=<i>CONFIG</i></dt>
+<dd> chroot config name to use in the mock build </dd>
+<dt><code>&#8211;recurse</code></dt>
+<dd> build all pkgs, record the failures and try to rebuild them again and again until everything gets built (or until the set of pkgs failing to build are the same over) sets &#8211;continue </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> Seth Vidal &lt;skvidal1.3.3&quot;fedoraproject.org&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

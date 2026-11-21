@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/x-data-plane-feature-qemukvm/">
+  <meta name="description" content="QEMU/KVM uses global locks to synchronize threads, which is necessary for correctness but causes performance problems at scale. When multiple I/O requests and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane">
+  <meta property="og:url" content="https://www.systutorials.com/x-data-plane-feature-qemukvm/">
+  <meta property="og:description" content="QEMU/KVM uses global locks to synchronize threads, which is necessary for correctness but causes performance problems at scale. When multiple I/O requests and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/virtualization-containers/">Virtualization &amp; Containers</a>
+        </nav>
+        
+        <h1>Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane</h1>
+        <time class="post-date" datetime="2016-12-17T21:59:26Z">December 17, 2016</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>QEMU/KVM uses global locks to synchronize threads, which is necessary for correctness but causes performance problems at scale. When multiple I/O requests and vCPU threads contend for the same lock, you get lock contention that manifests as scheduling jitter, reduced system scalability, and degraded I/O performance.</p>
+<p>IOThreads (the modern implementation of dataplane) address this by moving I/O request handling to dedicated threads, isolating them from the QEMU main loop. This removes contention between I/O processing and vCPU scheduling.</p>
+<h2 id="identifying-lock-contention-problems">Identifying Lock Contention Problems</h2>
+<p>Lock contention typically manifests as:</p>
+<ul>
+<li>Unstable vCPU timeslices (scheduling jitter)</li>
+<li>High context switch rates on host CPUs</li>
+<li>Poor I/O throughput despite low queue depths</li>
+<li>Uneven load distribution across physical CPUs</li>
+</ul>
+<h3 id="detecting-contention-with-perf">Detecting Contention with perf</h3>
+<p>Kernel-level tracing reveals lock contention clearly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">perf record -e sched:sched_switch,synchronization:futex_wait -g -- &lt;workload&gt;
+</span></span><span class="line"><span class="cl">perf report
+</span></span></code></pre></div><p>Look for excessive futex operations or context switches on I/O path CPUs. The perf output shows which locks are being contended most heavily.</p>
+<h3 id="checking-context-switches-with-pidstat">Checking Context Switches with pidstat</h3>
+<p>Watch for high context switch counts on QEMU threads:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pidstat -w -p <span class="k">$(</span>pidof qemu-system-x86_64<span class="k">)</span> <span class="m">1</span>
+</span></span></code></pre></div><p>High <code>cswch</code> (context switches) indicates the scheduler is preempting threads frequently—a symptom of lock contention. If you see thousands of switches per second on QEMU threads, that’s a strong signal.</p>
+<h3 id="enabling-qemu-trace-points">Enabling QEMU Trace Points</h3>
+<p>Enable QEMU’s built-in trace points to see lock acquisition patterns:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">qemu-system-x86_64 -trace <span class="nv">enable</span><span class="o">=</span>qemu_mutex_lock <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -trace <span class="nv">enable</span><span class="o">=</span>qemu_mutex_unlock <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -trace <span class="nv">file</span><span class="o">=</span>/tmp/qemu.trace
+</span></span></code></pre></div><p>Parse the trace file to identify which locks are acquired most frequently and for how long.</p>
+<h2 id="configuring-iothreads-with-libvirt-recommended">Configuring IOThreads with libvirt (Recommended)</h2>
+<p>Modern QEMU (7.0+) handles IOThreads natively. This is the only approach you should use in new deployments. Define IOThreads in your domain XML:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;domain</span> <span class="na">type=</span><span class="s">&#39;kvm&#39;</span> <span class="na">xmlns:qemu=</span><span class="s">&#39;http://libvirt.org/schemas/domain/qemu/1.0&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;name&gt;</span>guest-vm<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;memory</span> <span class="na">unit=</span><span class="s">&#39;GiB&#39;</span><span class="nt">&gt;</span>16<span class="nt">&lt;/memory&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;vcpu</span> <span class="na">placement=</span><span class="s">&#39;static&#39;</span><span class="nt">&gt;</span>8<span class="nt">&lt;/vcpu&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;iothreads&gt;</span>2<span class="nt">&lt;/iothreads&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;iothreadids&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;iothread</span> <span class="na">id=</span><span class="s">&#39;1&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;iothread</span> <span class="na">id=</span><span class="s">&#39;2&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/iothreadids&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;cputune&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Pin IOThreads to isolated CPUs --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;iothreadpin</span> <span class="na">iothread=</span><span class="s">&#39;1&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;8&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;iothreadpin</span> <span class="na">iothread=</span><span class="s">&#39;2&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;9&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Pin vCPUs to separate cores --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;0&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;0&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;1&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;1&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;2&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;2&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;3&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;3&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;4&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;4&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;5&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;5&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;6&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;6&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;vcpupin</span> <span class="na">vcpu=</span><span class="s">&#39;7&#39;</span> <span class="na">cpuset=</span><span class="s">&#39;7&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Optional: Set CPU affinity for emulator thread --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;emulatorpin</span> <span class="na">cpuset=</span><span class="s">&#39;10&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/cputune&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;devices&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;disk</span> <span class="na">type=</span><span class="s">&#39;file&#39;</span> <span class="na">device=</span><span class="s">&#39;disk&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;driver</span> <span class="na">name=</span><span class="s">&#39;qemu&#39;</span> <span class="na">type=</span><span class="s">&#39;raw&#39;</span> <span class="na">cache=</span><span class="s">&#39;none&#39;</span> <span class="na">io=</span><span class="s">&#39;native&#39;</span> <span class="na">iothread=</span><span class="s">&#39;1&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;source</span> <span class="na">file=</span><span class="s">&#39;/var/lib/libvirt/images/guest-vm.qcow2&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;target</span> <span class="na">dev=</span><span class="s">&#39;vda&#39;</span> <span class="na">bus=</span><span class="s">&#39;virtio&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/disk&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;disk</span> <span class="na">type=</span><span class="s">&#39;file&#39;</span> <span class="na">device=</span><span class="s">&#39;disk&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;driver</span> <span class="na">name=</span><span class="s">&#39;qemu&#39;</span> <span class="na">type=</span><span class="s">&#39;raw&#39;</span> <span class="na">cache=</span><span class="s">&#39;none&#39;</span> <span class="na">io=</span><span class="s">&#39;native&#39;</span> <span class="na">iothread=</span><span class="s">&#39;2&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;source</span> <span class="na">file=</span><span class="s">&#39;/var/lib/libvirt/images/guest-vm-data.qcow2&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;target</span> <span class="na">dev=</span><span class="s">&#39;vdb&#39;</span> <span class="na">bus=</span><span class="s">&#39;virtio&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/disk&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;interface</span> <span class="na">type=</span><span class="s">&#39;network&#39;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;model</span> <span class="na">type=</span><span class="s">&#39;virtio&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;driver</span> <span class="na">name=</span><span class="s">&#39;qemu&#39;</span> <span class="na">iothread=</span><span class="s">&#39;1&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;source</span> <span class="na">network=</span><span class="s">&#39;default&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/interface&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/devices&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/domain&gt;</span>
+</span></span></code></pre></div><p>Key configuration points:</p>
+<ul>
+<li><code>&lt;iothreads&gt;</code>: Number of dedicated I/O threads to create</li>
+<li><code>&lt;iothreadpin&gt;</code>: Pin each IOThread to specific CPUs, typically isolated cores separate from vCPUs</li>
+<li><code>iothread='1'</code> in disk and network drivers: Associates the device with a specific IOThread</li>
+<li><code>&lt;emulatorpin&gt;</code>: Optional; pins the emulator thread to a separate core to further reduce contention</li>
+</ul>
+<h2 id="direct-qemu-command-line-no-libvirt">Direct QEMU Command Line (No libvirt)</h2>
+<p>If running QEMU directly without libvirt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">qemu-system-x86_64 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -object iothread,id<span class="o">=</span>io1 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -object iothread,id<span class="o">=</span>io2 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -drive <span class="nv">file</span><span class="o">=</span>disk1.qcow2,format<span class="o">=</span>qcow2,cache<span class="o">=</span>none,aio<span class="o">=</span>native,iothread<span class="o">=</span>io1 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -drive <span class="nv">file</span><span class="o">=</span>disk2.qcow2,format<span class="o">=</span>qcow2,cache<span class="o">=</span>none,aio<span class="o">=</span>native,iothread<span class="o">=</span>io2 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -netdev user,id<span class="o">=</span>net0 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -device virtio-net,netdev<span class="o">=</span>net0,iothread<span class="o">=</span>io1 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  ...
+</span></span></code></pre></div><p>Then pin threads from the host:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Find IOThread PIDs</span>
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> grep qemu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Pin to CPUs</span>
+</span></span><span class="line"><span class="cl">taskset -cp <span class="m">8</span> &lt;io-thread-pid-1&gt;
+</span></span><span class="line"><span class="cl">taskset -cp <span class="m">9</span> &lt;io-thread-pid-2&gt;
+</span></span></code></pre></div><h2 id="working-with-older-qemu-22-70">Working with Older QEMU (2.2-7.0)</h2>
+<p>If you’re stuck with QEMU versions between 2.2 and 7.0, you can use the legacy x-data-plane parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;qemu:commandline&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;qemu:arg</span> <span class="na">value=</span><span class="s">&#39;-set&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;qemu:arg</span> <span class="na">value=</span><span class="s">&#39;device.virtio-disk0.x-data-plane=on&#39;</span><span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/qemu:commandline&gt;</span>
+</span></span></code></pre></div><p>This parameter is ignored in QEMU 7.0+ and has been removed entirely in later versions. Plan your upgrade path accordingly. Most distributions have moved to QEMU 8.0+ or later, so this approach is increasingly obsolete.</p>
+<h2 id="cpu-isolation-and-pinning-strategy">CPU Isolation and Pinning Strategy</h2>
+<p>Pin IOThreads to CPUs separate from vCPU threads to minimize cache misses and context switching:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># View current pinning</span>
+</span></span><span class="line"><span class="cl">virsh vcpupin guest-vm
+</span></span><span class="line"><span class="cl">virsh iothreadpin guest-vm
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Manually adjust if needed</span>
+</span></span><span class="line"><span class="cl">virsh iothreadpin guest-vm <span class="m">1</span> <span class="m">8</span> --live
+</span></span><span class="line"><span class="cl">virsh vcpupin guest-vm <span class="m">0</span> <span class="m">0</span> --live
+</span></span></code></pre></div><p>Check your host CPU topology first:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lscpu
+</span></span><span class="line"><span class="cl">numactl --hardware
+</span></span></code></pre></div><p>Ideally, pin IOThreads to CPUs on the same NUMA node as storage controllers, and vCPUs to separate nodes if the hardware supports it. For systems with SMT (hyperthreading), avoid pairing IOThreads and vCPUs on the same physical core.</p>
+<h2 id="io-scheduler-configuration">I/O Scheduler Configuration</h2>
+<p>Inside the guest, use <code>none</code> or <code>mq-deadline</code> scheduler for predictable latency:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check current scheduler</span>
+</span></span><span class="line"><span class="cl">cat /sys/block/vda/queue/scheduler
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set to deadline</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> mq-deadline &gt; /sys/block/vda/queue/scheduler
+</span></span></code></pre></div><p>For the host, <code>none</code> works well for high-concurrency workloads. <code>bfq</code> provides fair I/O scheduling if you have many competing VMs.</p>
+<h2 id="cache-mode-selection">Cache Mode Selection</h2>
+<p>The cache parameter significantly affects performance and data safety:</p>
+<ul>
+<li><code>cache='none'</code>: Bypass host page cache entirely. Required for databases and workloads requiring synchronous I/O. Safest for data integrity.</li>
+<li><code>cache='directsync'</code>: Direct I/O with flush on every write. Safe but slower.</li>
+<li><code>cache='writeback'</code>: Use host page cache with delayed flushing. Fast but risk of data loss on host crash.</li>
+<li><code>cache='writethrough'</code>: Write-through caching. Good balance for many workloads.</li>
+</ul>
+<p>For production databases, always use <code>cache='none'</code> with <code>io='native'</code>. For read-heavy workloads, <code>cache='writeback'</code> improves throughput significantly.</p>
+<h2 id="monitoring-iothread-activity">Monitoring IOThread Activity</h2>
+<p>Verify that IOThreads are active:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Check if IOThreads were created</span>
+</span></span><span class="line"><span class="cl">virsh qemu-monitor-command guest-vm <span class="s1">&#39;{&#34;execute&#34;:&#34;query-iothreads&#34;}&#39;</span>
+</span></span></code></pre></div><p>Output example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;return&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;io1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;thread-id&#34;</span><span class="p">:</span> <span class="mi">12345</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;io2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;thread-id&#34;</span><span class="p">:</span> <span class="mi">12346</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Monitor I/O performance with iostat:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">iostat -x <span class="m">1</span> /dev/vda
+</span></span></code></pre></div><p>Watch for:</p>
+<ul>
+<li><code>await</code>: Average wait time per request (lower is better)</li>
+<li><code>svctm</code>: Service time (should decrease with IOThreads)</li>
+<li><code>util</code>: Utilization percentage (should be distributed across multiple threads)</li>
+</ul>
+<p>Compare metrics before and after enabling IOThreads; you should see reduced await and more balanced load.</p>
+<p>For more detailed device monitoring, use <code>virsh domblklist</code> and <code>virsh domstats</code> to track performance across multiple block devices.</p>
+<h2 id="when-iothreads-provide-real-benefits">When IOThreads Provide Real Benefits</h2>
+<p>IOThreads help most when:</p>
+<ul>
+<li>Multiple vCPUs generate sustained, concurrent I/O load</li>
+<li>I/O and CPU work overlap (not sequential bottlenecks)</li>
+<li>The workload is I/O-bound with queue depths &gt; 2</li>
+<li>You have spare CPU cores dedicated to IOThreads (not oversubscribed)</li>
+<li>Storage latency is high enough that thread scheduling matters (network storage, large systems)</li>
+</ul>
+<p>IOThreads add overhead and provide no benefit for:</p>
+<ul>
+<li>Light I/O workloads (&lt; 1000 IOPS)</li>
+<li>CPU-bound VMs</li>
+<li>Single-threaded guest applications</li>
+<li>Heavily oversubscribed hosts with no spare cores</li>
+</ul>
+<p>Measure before and after. If iostat and guest I/O benchmarks don’t improve, disable IOThreads and reclaim the CPU cores. Some workloads (particularly those with very low queue depth or light I/O) may actually regress slightly due to context switching overhead introduced by thread scheduling.</p>
+<h2 id="practical-benchmarking">Practical Benchmarking</h2>
+<p>Use fio to test the impact of IOThreads:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Inside guest: sequential read test</span>
+</span></span><span class="line"><span class="cl">fio --name<span class="o">=</span>seqread --ioengine<span class="o">=</span>libaio --direct<span class="o">=</span><span class="m">1</span> --rw<span class="o">=</span><span class="nb">read</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --bs<span class="o">=</span>4k --iodepth<span class="o">=</span><span class="m">32</span> --numjobs<span class="o">=</span><span class="m">4</span> --runtime<span class="o">=</span><span class="m">60</span> --group_reporting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Random read/write test</span>
+</span></span><span class="line"><span class="cl">fio --name<span class="o">=</span>randrw --ioengine<span class="o">=</span>libaio --direct<span class="o">=</span><span class="m">1</span> --rw<span class="o">=</span>randrw --rwmixread<span class="o">=</span><span class="m">70</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    --bs<span class="o">=</span>4k --iodepth<span class="o">=</span><span class="m">32</span> --numjobs<span class="o">=</span><span class="m">4</span> --runtime<span class="o">=</span><span class="m">60</span> --group_reporting
+</span></span></code></pre></div><p>Run these tests with and without IOThreads enabled, recording latency percentiles and throughput. A well-tuned IOThread setup typically shows 15-30% improvement in latency p99 and throughput for concurrent I/O workloads.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

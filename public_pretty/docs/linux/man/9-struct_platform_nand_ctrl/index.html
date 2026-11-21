@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_platform_nand_ctrl(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_platform_nand_ctrl – controller level device structure">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_platform_nand_ctrl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_platform_nand_ctrl(9)</h1>
+
+
+
+
+
+<p>struct_platform_nand_ctrl &#8211; controller level device structure</p>
+<h2>Synopsis</h2>
+<pre><code>struct platform_nand_ctrl {
+    int (*probe)(struct platform_device *pdev);
+    void (*remove)(struct platform_device *pdev);
+    void (*hwcontrol)(struct mtd_info *mtd, int cmd);
+    int (*dev_ready)(struct mtd_info *mtd);
+    void (*select_chip)(struct mtd_info *mtd, int chip);
+    void (*cmd_ctrl)(struct mtd_info *mtd, int dat, unsigned int ctrl);
+    void (*write_buf)(struct mtd_info *mtd, const uint8_t *buf, int len);
+    void (*read_buf)(struct mtd_info *mtd, uint8_t *buf, int len);
+    unsigned char (*read_byte)(struct mtd_info *mtd);
+    void *priv;
+};</code></pre>
+<h2>Members</h2>
+<p>probe</p>
+<dl>
+<dd>platform specific function to probe/setup hardware</dd></dl>
+<p> remove</p>
+<dl>
+<dd>platform specific function to remove/teardown hardware</dd></dl>
+<p> hwcontrol</p>
+<dl>
+<dd>platform specific hardware control structure</dd></dl>
+<p> dev_ready</p>
+<dl>
+<dd>platform specific function to read ready/busy pin</dd></dl>
+<p> select_chip</p>
+<dl>
+<dd>platform specific chip select function</dd></dl>
+<p> cmd_ctrl</p>
+<dl>
+<dd>platform specific function for controlling ALE/CLE/nCE. Also used to write command and address</dd></dl>
+<p> write_buf</p>
+<dl>
+<dd>platform specific function for write buffer</dd></dl>
+<p> read_buf</p>
+<dl>
+<dd>platform specific function for read buffer</dd></dl>
+<p> read_byte</p>
+<dl>
+<dd>platform specific function to read one byte from chip</dd></dl>
+<p> priv</p>
+<dl>
+<dd>private data to transport driver specific settings</dd></dl>
+<h2>Description</h2>
+<p>All fields are optional and depend on the hardware driver requirements</p>
+<h2>Author</h2>
+<p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbsetautorepeatrate(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbSetAutoRepeatRate – Sets the attributes of the RepeatKeys control for a keyboard device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbsetautorepeatrate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbsetautorepeatrate(3)</h1>
+
+
+
+
+
+<p>XkbSetAutoRepeatRate &#8211; Sets the attributes of the RepeatKeys control for a keyboard device </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbSetAutoRepeatRate</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>unsigned int </code><i>timeout</i><code>,</code> <code>unsigned int </code><i>interval</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; display</i></dt>
+<dd>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device to configure, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; timeout</i></dt>
+<dd>initial delay, ms</dd>
+<dt><i>&#8211; interval</i></dt>
+<dd>delay between repeats, ms</dd></dl>
+<h2>Description</h2>
+<p>The core protocol allows only control over whether or not the entire keyboard or individual keys should auto-repeat when held down. RepeatKeys is a boolean control that extends this capability by adding control over the delay until a key begins to repeat and the rate at which it repeats. RepeatKeys is coupled with the core auto-repeat control: when RepeatKeys is enabled or disabled, the core auto-repeat is enabled or disabled and vice versa. </p>
+<p> Auto-repeating keys are controlled by two attributes. The first, <i>timeout, </i> is the delay after the initial press of an auto-repeating key and the first generated repeat event. The second, <i>interval, </i> is the delay between all subsequent generated repeat events. As with all boolean controls, configuring the attributes that determine how the control operates does not automatically enable the control as a whole. </p>
+<p> <i>XkbSetAutoRepeatRate </i> sends a request to the X server to configure the AutoRepeat control attributes to the values specified in <i>timeout </i> and <i>interval.</i><br />
+&nbsp; <i>XkbSetAutoRepeatRate </i> does not wait for a reply; it normally returns True. Specifying a zero value for either <i>timeout </i> or <i>interval </i> causes the server to generate a BadValue protocol error. If a compatible version of the Xkb extension is not available in the server, <i>XkbSetAutoRepeatRate </i> returns False.</p>
+<h2>Return Values</h2>
+<dl COMPACT>
+<dt>True</dt>
+<dd>The <i>XkbSetAutoRepeatRate </i> function returns True normally.</dd>
+<dt>False</dt>
+<dd>The <i>XkbSetAutoRepeatRate </i> function returns False if a compatible version of the Xkb extension is not available in the server.</dd></dl>
+<h2>Diagnostics</h2>
+<dl COMPACT>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimizing Large File Uploads to S3 with AWS CLI - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/uploading-large-files-amazon-s3-aws-cli/">
+  <meta name="description" content="Install AWS CLI v2 through your system’s package manager for production deployments.
+On Debian/Ubuntu:
+sudo apt-get update sudo apt-get install awscli On …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Optimizing Large File Uploads to S3 with AWS CLI">
+  <meta property="og:url" content="https://www.systutorials.com/uploading-large-files-amazon-s3-aws-cli/">
+  <meta property="og:description" content="Install AWS CLI v2 through your system’s package manager for production deployments.
+On Debian/Ubuntu:
+sudo apt-get update sudo apt-get install awscli On …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/performance/">Performance</a>
+        </nav>
+        
+        <h1>Optimizing Large File Uploads to S3 with AWS CLI</h1>
+        <time class="post-date" datetime="2015-11-29T01:01:40Z">November 29, 2015</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Install AWS CLI v2 through your system’s package manager for production deployments.</p>
+<p>On Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install awscli
+</span></span></code></pre></div><p>On RHEL/CentOS/Fedora:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install awscli
+</span></span></code></pre></div><p>Or use the official installer directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl <span class="s2">&#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34;</span> -o <span class="s2">&#34;awscli-v2.zip&#34;</span>
+</span></span><span class="line"><span class="cl">unzip awscli-v2.zip
+</span></span><span class="line"><span class="cl">sudo ./aws/install
+</span></span></code></pre></div><p>Verify installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws --version
+</span></span></code></pre></div><h2 id="configure-aws-cli-credentials">Configure AWS CLI credentials</h2>
+<p>Set up credentials interactively:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure
+</span></span></code></pre></div><p>You’ll be prompted for AWS Access Key ID, Secret Access Key, default region, and output format. Credentials are stored in <code>~/.aws/credentials</code> and <code>~/.aws/config</code>.</p>
+<p>For multiple environments, use named profiles:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure --profile production
+</span></span><span class="line"><span class="cl">aws configure --profile development
+</span></span><span class="line"><span class="cl">aws configure --profile staging
+</span></span></code></pre></div><p>Reference the profile when running commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp file.data s3://bucket/path/ --profile production
+</span></span></code></pre></div><p><strong>For EC2 instances:</strong> Use IAM instance roles instead of stored credentials. IAM roles provide temporary credentials automatically, eliminating the need to manage long-lived access keys. Configure your EC2 instance profile with the appropriate IAM role, and AWS CLI will use those credentials without additional setup.</p>
+<h2 id="upload-large-files-to-s3">Upload large files to S3</h2>
+<p>AWS CLI handles multipart uploads automatically for large files. For a 150GB file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/
+</span></span></code></pre></div><p>The tool automatically:</p>
+<ul>
+<li>Splits the file into configurable chunks (default 8MB for files over 100MB)</li>
+<li>Uploads parts in parallel with automatic retry</li>
+<li>Reassembles on S3</li>
+</ul>
+<p>Progress output shows:</p>
+<pre><code>Completed 1234 of 9896 part(s) with 1 file(s) remaining
+upload: ./150GB.data to s3://bucket-name/store_dir/150GB.data
+</code></pre>
+<p>Individual parts can fail and retry without restarting the entire upload.</p>
+<h2 id="optimize-upload-performance">Optimize upload performance</h2>
+<p>Control parallelism, part size, and bandwidth by editing <code>~/.aws/cli/config</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[default]</span>
+</span></span><span class="line"><span class="cl"><span class="na">s3</span> <span class="o">=</span><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">    max_concurrent_requests = 20
+</span></span></span><span class="line"><span class="cl"><span class="s">    max_queue_size = 10000
+</span></span></span><span class="line"><span class="cl"><span class="s">    max_bandwidth = 100MB/s
+</span></span></span><span class="line"><span class="cl"><span class="s">    multipart_threshold = 64MB
+</span></span></span><span class="line"><span class="cl"><span class="s">    multipart_chunksize = 16MB
+</span></span></span><span class="line"><span class="cl"><span class="s">    max_in_memory_upload_chunks = 10</span>
+</span></span></code></pre></div><p>Tuning these values depends on your network and system resources:</p>
+<ul>
+<li><strong>max_concurrent_requests:</strong> Higher values (10-20) improve throughput on fast networks; lower values reduce memory usage</li>
+<li><strong>multipart_chunksize:</strong> Larger chunks (32MB-64MB) reduce overhead for gigabit networks; smaller chunks (8MB) work better on constrained connections</li>
+<li><strong>max_bandwidth:</strong> Limit concurrent bandwidth to avoid saturating your network connection</li>
+<li><strong>multipart_threshold:</strong> Files smaller than this threshold use a single request</li>
+<li><strong>max_in_memory_upload_chunks:</strong> Limits the number of parts buffered in memory; reduce this if you’re memory-constrained</li>
+</ul>
+<p>Example upload with explicit settings and metadata:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/ <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --region us-west-2 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --metadata <span class="s2">&#34;uploaded-by=automation,timestamp=</span><span class="k">$(</span>date +%s<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>For faster uploads across regions, enable S3 Transfer Acceleration on the bucket:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api put-bucket-accelerate-configuration <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --accelerate-configuration <span class="nv">Status</span><span class="o">=</span>Enabled
+</span></span></code></pre></div><p>Then use the accelerated endpoint:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/ <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --region us-west-2 <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --expected-size <span class="m">161061273600</span>
+</span></span></code></pre></div><p>Transfer Acceleration uses CloudFront edge locations but incurs additional costs. Test whether it improves performance for your specific use case.</p>
+<h2 id="monitor-uploads">Monitor uploads</h2>
+<p>Check transfer progress with verbose logging:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/ --debug 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep -i <span class="s2">&#34;transfer&#34;</span>
+</span></span></code></pre></div><p>The <code>--debug</code> flag outputs detailed HTTP requests and responses. For large files this generates substantial output; redirect to a file for later review:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/ --debug &gt; transfer.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span></code></pre></div><p>List in-progress multipart uploads:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api list-multipart-uploads --bucket bucket-name
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Uploads&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;UploadId&#34;</span><span class="p">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Key&#34;</span><span class="p">:</span> <span class="s2">&#34;store_dir/150GB.data&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Initiated&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-11-15T10:30:00Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;StorageClass&#34;</span><span class="p">:</span> <span class="s2">&#34;STANDARD&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Owner&#34;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&#34;DisplayName&#34;</span><span class="p">:</span> <span class="s2">&#34;...&#34;</span><span class="p">,</span> <span class="nt">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;...&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Check parts already uploaded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api list-parts <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --key store_dir/150GB.data <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --upload-id &lt;upload-id&gt;
+</span></span></code></pre></div><h2 id="sync-directories-and-batch-operations">Sync directories and batch operations</h2>
+<p>Upload entire directories with change detection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 sync ./local/directory/ s3://bucket-name/remote/
+</span></span></code></pre></div><p>Sync compares local file modification times with S3 object metadata and uploads only changed files.</p>
+<p>Common sync options:</p>
+<ul>
+<li><strong>–delete:</strong> Remove S3 objects not present in local directory (dangerous—test first)</li>
+<li>*<em>–exclude “</em>.tmp”:** Skip files matching the pattern</li>
+<li>*<em>–include “</em>.log”:** Upload only matching files (when combined with –exclude)</li>
+<li><strong>–no-progress:</strong> Suppress per-file progress output</li>
+<li><strong>–storage-class GLACIER:</strong> Use Glacier for cheaper long-term storage</li>
+</ul>
+<p>Always use <code>--dryrun</code> before <code>--delete</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 sync ./local/directory/ s3://bucket-name/remote/ --delete --dryrun
+</span></span></code></pre></div><h2 id="handle-interrupted-uploads">Handle interrupted uploads</h2>
+<p>Incomplete multipart uploads remain in S3 and incur storage charges. List them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api list-multipart-uploads --bucket bucket-name
+</span></span></code></pre></div><p>Abort a specific upload:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api abort-multipart-upload <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --key store_dir/150GB.data <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --upload-id &lt;upload-id&gt;
+</span></span></code></pre></div><p>Prevent accidental charges by configuring a bucket lifecycle policy to delete incomplete uploads older than 7 days:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api put-bucket-lifecycle-configuration <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --lifecycle-configuration <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;Rules&#34;: [{
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;Id&#34;: &#34;AbortIncompleteUploads&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;Status&#34;: &#34;Enabled&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;AbortIncompleteMultipartUpload&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">        &#34;DaysAfterInitiation&#34;: 7
+</span></span></span><span class="line"><span class="cl"><span class="s1">      }
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }]
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span>
+</span></span></code></pre></div><p>Alternatively, retry the upload command; AWS CLI will resume from the last successful part if the connection dropped.</p>
+<h2 id="encryption-and-security">Encryption and security</h2>
+<p>Always enable encryption for sensitive data. S3-managed encryption (AES256) is free and transparent:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api put-bucket-encryption <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --server-side-encryption-configuration <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;Rules&#34;: [{
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;ApplyServerSideEncryptionByDefault&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">        &#34;SSEAlgorithm&#34;: &#34;AES256&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">      }
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }]
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span>
+</span></span></code></pre></div><p>For compliance requirements, use customer-managed KMS keys:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3 cp ./150GB.data s3://bucket-name/store_dir/ <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --sse aws:kms <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --sse-kms-key-id arn:aws:kms:region:account:key/key-id
+</span></span></code></pre></div><p>Block public access at the bucket level:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api put-public-access-block <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --public-access-block-configuration <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="nv">BlockPublicAcls</span><span class="o">=</span>true,IgnorePublicAcls<span class="o">=</span>true,BlockPublicPolicy<span class="o">=</span>true,RestrictPublicBuckets<span class="o">=</span><span class="nb">true</span>
+</span></span></code></pre></div><h2 id="common-upload-options">Common upload options</h2>
+<ul>
+<li><strong>–storage-class GLACIER:</strong> Archive to cheaper long-term storage (retrieval has delay)</li>
+<li><strong>–storage-class INTELLIGENT_TIERING:</strong> Automatic cost optimization based on access patterns</li>
+<li><strong>–sse AES256:</strong> Enable server-side encryption with S3-managed keys</li>
+<li><strong>–acl private:</strong> Set object permissions (avoid <code>--acl public-read</code> in production)</li>
+<li><strong>–metadata key=value:</strong> Add custom metadata for tracking and automation</li>
+<li><strong>–region:</strong> Specify AWS region explicitly (overrides default config)</li>
+<li><strong>–expected-size:</strong> Hint to AWS CLI the file size for better progress estimation</li>
+</ul>
+<h2 id="monitoring-and-cost-management">Monitoring and cost management</h2>
+<p>Monitor CloudWatch metrics for PutObject requests and data transfer costs. Enable access logging to audit S3 operations:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws s3api put-bucket-logging <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket bucket-name <span class="se">\
+</span></span></span><span class="line"><span class="cl">  --bucket-logging-status <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;LoggingEnabled&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;TargetBucket&#34;: &#34;log-bucket&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;TargetPrefix&#34;: &#34;logs/&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span>
+</span></span></code></pre></div><p>For production workflows handling large volumes, test your configuration with smaller files first. Consider S3 Transfer Acceleration if standard multipart uploads don’t meet latency requirements, but measure the performance gain against additional costs.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

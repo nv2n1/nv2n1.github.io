@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_rio_switch(9) · Linux Manual Pages</title>
+<meta name="description" content="struct_rio_switch – RIO switch info">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_rio_switch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_rio_switch(9)</h1>
+
+
+
+
+
+<p>struct_rio_switch &#8211; RIO switch info</p>
+<h2>Synopsis</h2>
+<pre><code>struct rio_switch {
+    struct list_head node;
+    u8 *route_table;
+    u32 port_ok;
+    struct rio_switch_ops *ops;
+    spinlock_t lock;
+    struct rio_dev *nextdev[0];
+};</code></pre>
+<h2>Members</h2>
+<p>node</p>
+<dl>
+<dd>Node in global list of switches</dd></dl>
+<p> route_table</p>
+<dl>
+<dd>Copy of switch routing table</dd></dl>
+<p> port_ok</p>
+<dl>
+<dd>Status of each port (one bit per port) &#8211; OK=1 or UNINIT=0</dd></dl>
+<p> ops</p>
+<dl>
+<dd>pointer to switch-specific operations</dd></dl>
+<p> lock</p>
+<dl>
+<dd>lock to serialize operations updates</dd></dl>
+<p> nextdev[0]</p>
+<dl>
+<dd>Array of per-port pointers to the next attached device</dd></dl>
+<h2>Author</h2>
+<p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

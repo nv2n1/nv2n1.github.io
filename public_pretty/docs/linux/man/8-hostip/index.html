@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hostip(8) · Linux Manual Pages</title>
+<meta name="description" content="hostip – Resolve a host name to an IP address">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-hostip/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>hostip(8)</h1>
+
+
+
+
+
+<p><code>hostip</code> &#8211; Resolve a host name to an IP address</p>
+<h2>Synopsis</h2>
+<p><code>hostip</code> [<i>options</i>] host_name</p>
+<h2>Description</h2>
+<p><code>hostip</code> sends a DNS query to a resolver, and prints the IP addresses for the given host name. </p>
+<p> It can be useful in order to retrieve IP addresses before <a href="/docs/linux/man/8-dnscrypt-proxy/">dnscrypt-proxy</a>(8) is started.</p>
+<h2>Options</h2>
+<dl>
+<dt>&bull;</dt>
+<dd><code>-6</code>, <code>&#8211;ipv6</code>: ask for AAAA records.</dd>
+<dt>&bull;</dt>
+<dd><code>-h</code>, <code>&#8211;help</code>: show usage.</dd>
+<dt>&bull;</dt>
+<dd><code>-r</code>, <code>&#8211;resolver-address=&lt;ip&gt;[:port]</code>: the resolver IP address (default: 8.8.8.8, Google DNS).</dd>
+<dt>&bull;</dt>
+<dd><code>-V</code>, <code>&#8211;version</code>: show version number.</dd>
+<dd></dd></dl>
+<h2>Simple Usage Example</h2>
+<pre>$ hostip <a rel="nofollow" href="http://www.example.com">www.example.com</a></pre>
+<h2>Advanced Usage Example</h2>
+<pre>$ hostip -6 -r 4.2.2.2 <a rel="nofollow" href="http://www.google.com">www.google.com</a></pre>
+<h2>Exit Status</h2>
+<p>The <code>hostip</code> utility exits 0 on success, and &gt; 0 if an error occurs.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-dnscrypt-proxy/">dnscrypt-proxy</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

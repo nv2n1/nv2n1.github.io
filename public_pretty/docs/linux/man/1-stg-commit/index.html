@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stg-commit(1) · Linux Manual Pages</title>
+<meta name="description" content="stg-commit – Permanently store the applied patches into the stack base">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-stg-commit/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>stg-commit(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> stg-commit &#8211; Permanently store the applied patches into the stack base </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+stg commit
+        stg commit[--]&lt;patchnames&gt;
+            stg commit - n NUM
+                             stg commit-- all
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> Merge one or more patches into the base of the current stack and remove them from the series while advancing the base. This is the opposite of <i>stg uncommit</i>. Use this command if you no longer want to manage a patch with StGIT. </p>
+<p> By default, the bottommost patch is committed. If patch names are given, the stack is rearranged so that those patches are at the bottom, and then they are committed. </p>
+<p> The -n/&#8211;number option specifies the number of applied patches to commit (counting from the bottom of the stack). If -a/&#8211;all is given, all applied patches are committed.</p>
+<h2>OPTIONS</h2>
+<p> -n NUMBER, &#8211;number NUMBER</p>
+<dl>
+<dt>
+</dt><dd> Commit the specified number of patches.</dd></dl>
+<p> -a, &#8211;all</p>
+<dl>
+<dt>
+</dt><dd> Commit all applied patches.</dd></dl>
+<h2>STGIT</h2>
+<p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

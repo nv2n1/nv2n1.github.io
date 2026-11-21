@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afgetdataoffset(3) · Linux Manual Pages</title>
+<meta name="description" content="afGetFrameCount, afGetTrackBytes, afGetDataOffset – get the total sample frame count, length of audio track in bytes, offset of the audio track for a track in an audio file">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-afgetdataoffset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>afgetdataoffset(3)</h1>
+
+
+
+
+
+<p>afGetFrameCount, afGetTrackBytes, afGetDataOffset &#8211; get the total sample frame count, length of audio track in bytes, offset of the audio track for a track in an audio file </p>
+<h2>Synopsis</h2>
+<pre>#include &lt;audiofile.h&gt;</pre>
+<pre>AFframecount afGetFrameCount (AFfilehandle file, int track);</pre>
+<pre>AFfileoffset afGetTrackBytes (AFfilehandle file, int track);</pre>
+<pre>AFfileoffset afGetDataOffset (AFfilehandle file, int track);</pre>
+<h2>Parameters</h2>
+<p><i>file</i> is an audio file handle created by a previous call to <code><a href="/docs/linux/man/3-afopenfile/">afOpenFile</a></code>(3). </p>
+<p> <i>track</i> is an integer which specifies an audio track within <i>file</i>. All supported file formats contain exactly one audio track per file, so the constant AF_DEFAULT_TRACK should always be used.</p>
+<h2>Description</h2>
+<p>afGetFrameCount returns the total number of sample frames contained within the specified track of the specified file. </p>
+<p> Each sample frame of audio consists of a fixed number of samples (equal to the number of audio channels in the track. For monaural data, a sample frame consists of one audio sample. For stereophonic data, a sample frame consists of a stereo pair. </p>
+<p> afGetTrackBytes returns the total number of bytes of raw audio data (i.e., prior to decompression or conversion) in the track. </p>
+<p> afGetDataOffset returns the offset in bytes of the start of the audio data contained within the specified track of the specified file.</p>
+<h2>Return Value</h2>
+<p>afGetFrameCount returns the total number of sample frames in <i>track</i>. </p>
+<p> afGetTrackBytes returns the total number of bytes of audio data in <i>track</i>. </p>
+<p> afGetDataOffset returns the offset in bytes to the beginning of the audio data in <i>track</i>. </p>
+<p> Each of these routines returns -1 in case of error.</p>
+<h2>Author</h2>
+<p>Michael Pruett &lt;michael [at] 68k.org&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pto_mask(1) · Linux Manual Pages</title>
+<meta name="description" content="pto_mask – Apply a mask">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pto_mask/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pto_mask(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pto_mask &#8211; Apply a mask </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pto_mask</code> [options] input.pto</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pto_mask</code> applies a mask to nominated images</p>
+<h2>USAGE</h2>
+<pre>
+   pto_mask --mask=maskfile
+</pre>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-o</code> | &#8211;output=file.pto</dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file. Default: &lt;filename&gt;_mask.pto</dd>
+<dt><code>&#8211;mask=filename [at] imgNr</code></dt>
+<dd> Read the mask from the file and assign to given image</dd>
+<dt><code>&#8211;rotate=CLOCKWISE|90|COUNTERCLOCKWISE|-90</code></dt>
+<dd> Rotates the mask clock- or counterclockwise</dd>
+<dt><code>&#8211;process=CLIP|SCALE|PROP_SCALE</code></dt>
+<dd> Specify how the mask should be modified if the mask is created for an image with different size </dd>
+<pre>
+   * CLIP: clipping (Default)
+   * SCALE: Scaling width and height individually
+   * PROP_SCALE: Proportional scale
+</pre>
+<dt><code>-h</code> | &#8211;help</dt>
+<dd> Shows this help</dd></dl>
+<h2>AUTHORS</h2>
+<p> Thomas Modes </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

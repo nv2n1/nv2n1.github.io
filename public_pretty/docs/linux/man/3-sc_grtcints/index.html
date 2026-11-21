@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_grtcints(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::GRTCints –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_grtcints/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_grtcints(3)</h1>
+
+
+
+
+
+<p>sc::GRTCints &#8211; </p>
+<p> <code>GRTCints</code> is a specialization of <code>Int2eCints</code> that computes two-electron integrals specific to linear R12 methods.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;grt.h&gt;</code></pre>
+<p> Inherits <code>sc::Int2eCints</code>.</p>
+<h3>Public Member Functions</h3>
+<p><code>GRTCints</code> (<code>Integral</code> *, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, const <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; &amp;, size_t storage) </p>
+<p> double * <code>buffer</code> (<code>TwoBodyInt::tbint_type</code> te_type) const<br />
+ <i>Returns the location of the buffer with target integrals. </i><br />
+ void <code>compute_quartet</code> (int *, int *, int *, int *)<br />
+ <i>Evaluate the target quartet of integrals. </i></p>
+<h3>Static Public Member Functions</h3>
+<pre><code>static size_t storage_required (const Ref&lt; GaussianBasisSet &gt; &amp;b1, const Ref&lt; GaussianBasisSet &gt; &amp;b2=0, const Ref&lt; GaussianBasisSet &gt; &amp;b3=0, const Ref&lt; GaussianBasisSet &gt; &amp;b4=0)</code></pre>
+<h2>Detailed Description</h2>
+<p><code>GRTCints</code> is a specialization of <code>Int2eCints</code> that computes two-electron integrals specific to linear R12 methods.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wpa_supplicant(8) · Linux Manual Pages</title>
+<meta name="description" content="wpa_supplicant – Wi-Fi Protected Access client and IEEE 802.1X supplicant">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-wpa_supplicant/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>wpa_supplicant(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>wpa_supplicant &#8211; Wi-Fi Protected Access client and IEEE 802.1X supplicant</p>
+<h2>Synopsis</h2>
+<p><code>wpa_supplicant</code> [ <code>-BddfhKLqqsTtuvW</code> ] [ <code>-i</code><i>ifname</i> ] [ <code>-c</code><i>config file</i> ] [ <code>-D</code><i>driver</i> ] [ <code>-P</code><i>PID_file</i> ] [ <code>-f</code><i>output file</i> ] </p>
+<h2>Overview</h2>
+<p>Wireless networks do not require physical access to the network equipment in the same way as wired networks. This makes it easier for unauthorized users to passively monitor a network and capture all transmitted frames. In addition, unauthorized use of the network is much easier. In many cases, this can happen even without user&#8217;s explicit knowledge since the wireless LAN adapter may have been configured to automatically join any available network. </p>
+<p> Link-layer encryption can be used to provide a layer of security for wireless networks. The original wireless LAN standard, IEEE 802.11, included a simple encryption mechanism, WEP. However, that proved to be flawed in many areas and network protected with WEP cannot be consider secure. IEEE 802.1X authentication and frequently changed dynamic WEP keys can be used to improve the network security, but even that has inherited security issues due to the use of WEP for encryption. Wi-Fi Protected Access and IEEE 802.11i amendment to the wireless LAN standard introduce a much improved mechanism for securing wireless networks. IEEE 802.11i enabled networks that are using CCMP (encryption mechanism based on strong cryptographic algorithm AES) can finally be called secure used for applications which require efficient protection against unauthorized access. </p>
+<p> <code>wpa_supplicant</code> is an implementation of the WPA Supplicant component, i.e., the part that runs in the client stations. It implements WPA key negotiation with a WPA Authenticator and EAP authentication with Authentication Server. In addition, it controls the roaming and IEEE 802.11 authentication/association of the wireless LAN driver. </p>
+<p> <code>wpa_supplicant</code> is designed to be a &quot;daemon&quot; program that runs in the background and acts as the backend component controlling the wireless connection. <code>wpa_supplicant</code> supports separate frontend programs and an example text-based frontend, <code>wpa_cli</code>, is included with wpa_supplicant. </p>
+<p> Before wpa_supplicant can do its work, the network interface must be available. That means that the physical device must be present and enabled, and the driver for the device must be loaded. The daemon will exit immediately if the device is not already available. </p>
+<p> After <code>wpa_supplicant</code> has configured the network device, higher level configuration such as DHCP may proceed. There are a variety of ways to integrate wpa_supplicant into a machine&#8217;s networking scripts, a few of which are described in sections below. </p>
+<p> The following steps are used when associating with an AP using WPA:</p>
+<dl>
+<dt>&bull;</dt>
+<dd><code>wpa_supplicant</code> requests the kernel driver to scan neighboring BSSes</dd>
+<dt>&bull;</dt>
+<dd><code>wpa_supplicant</code> selects a BSS based on its configuration</dd>
+<dt>&bull;</dt>
+<dd><code>wpa_supplicant</code> requests the kernel driver to associate with the chosen BSS</dd>
+<dt>&bull;</dt>
+<dd>If WPA-EAP: integrated IEEE 802.1X Supplicant completes EAP authentication with the authentication server (proxied by the Authenticator in the AP)</dd>
+<dt>&bull;</dt>
+<dd>If WPA-EAP: master key is received from the IEEE 802.1X Supplicant</dd>
+<dt>&bull;</dt>
+<dd>If WPA-PSK: <code>wpa_supplicant</code> uses PSK as the master session key</dd>
+<dt>&bull;</dt>
+<dd><code>wpa_supplicant</code> completes WPA 4-Way Handshake and Group Key Handshake with the Authenticator (AP)</dd>
+<dt>&bull;</dt>
+<dd><code>wpa_supplicant</code> configures encryption keys for unicast and broadcast</dd>
+<dt>&bull;</dt>
+<dd>normal data packets can be transmitted and received</dd></dl>
+<h2>Supported Features</h2>
+<p>Supported WPA/IEEE 802.11i features:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>WPA-PSK (&quot;WPA-Personal&quot;)</dd>
+<dt>&bull;</dt>
+<dd>WPA with EAP (e.g., with RADIUS authentication server) (&quot;WPA-Enterprise&quot;) Following authentication methods are supported with an integrate IEEE 802.1X Supplicant:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>EAP-TLS</dd></dl>
+</dl>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>EAP-PEAP/MSCHAPv2 (both PEAPv0 and PEAPv1)</dd>
+<dt>&bull;</dt>
+<dd>EAP-PEAP/TLS (both PEAPv0 and PEAPv1)</dd>
+<dt>&bull;</dt>
+<dd>EAP-PEAP/GTC (both PEAPv0 and PEAPv1)</dd>
+<dt>&bull;</dt>
+<dd>EAP-PEAP/OTP (both PEAPv0 and PEAPv1)</dd>
+<dt>&bull;</dt>
+<dd>EAP-PEAP/MD5-Challenge (both PEAPv0 and PEAPv1)</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/EAP-MD5-Challenge</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/EAP-GTC</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/EAP-OTP</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/EAP-MSCHAPv2</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/EAP-TLS</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/MSCHAPv2</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/MSCHAP</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/PAP</dd>
+<dt>&bull;</dt>
+<dd>EAP-TTLS/CHAP</dd>
+<dt>&bull;</dt>
+<dd>EAP-SIM</dd>
+<dt>&bull;</dt>
+<dd>EAP-AKA</dd>
+<dt>&bull;</dt>
+<dd>EAP-PSK</dd>
+<dt>&bull;</dt>
+<dd>EAP-PAX</dd>
+<dt>&bull;</dt>
+<dd>LEAP (note: requires special support from the driver for IEEE 802.11 authentication)</dd>
+<dt>&bull;</dt>
+<dd>(following methods are supported, but since they do not generate keying material, they cannot be used with WPA or IEEE 802.1X WEP keying)</dd>
+<dt>&bull;</dt>
+<dd>EAP-MD5-Challenge</dd>
+<dt>&bull;</dt>
+<dd>EAP-MSCHAPv2</dd>
+<dt>&bull;</dt>
+<dd>EAP-GTC</dd>
+<dt>&bull;</dt>
+<dd>EAP-OTP</dd></dl>
+</dl>
+<dt>&bull;</dt>
+<dd>key management for CCMP, TKIP, WEP104, WEP40</dd>
+<dt>&bull;</dt>
+<dd>RSN/WPA2 (IEEE 802.11i)</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>pre-authentication</dd>
+<dt>&bull;</dt>
+<dd>PMKSA caching</dd></dl>
+</dl>
+</dl>
+<h2>Available Drivers</h2>
+<p>A summary of available driver backends is below. Support for each of the driver backends is chosen at wpa_supplicant compile time. For a list of supported driver backends that may be used with the -D option on your system, refer to the help output of wpa_supplicant (<code>wpa_supplicant -h</code>).</p>
+<dl>
+<dt><code>nl80211</code></dt>
+<dd>Uses the modern Linux nl80211/cfg80211 netlink-based interface (most new drivers).</dd>
+<dt><code>wext</code></dt>
+<dd>Uses the legacy Linux wireless extensions ioctl-based interface (older hardware/drivers).</dd>
+<dt><code>wired</code></dt>
+<dd>wpa_supplicant wired Ethernet driver</dd>
+<dt><code>roboswitch</code></dt>
+<dd>wpa_supplicant Broadcom switch driver</dd>
+<dt><code>bsd</code></dt>
+<dd>BSD 802.11 support (Atheros, etc.).</dd>
+<dt><code>ndis</code></dt>
+<dd>Windows NDIS driver.</dd></dl>
+<h2>Command Line Options</h2>
+<p>Most command line options have global scope. Some are given per interface, and are only valid if at least one <code>-i</code> option is specified, otherwise they&#8217;re ignored. Option groups for different interfaces must be separated by <code>-N</code> option.</p>
+<dl>
+<dt><code>-b br_ifname</code></dt>
+<dd>Optional bridge interface name. (Per interface)</dd>
+<dt><code>-B</code></dt>
+<dd>Run daemon in the background.</dd>
+<dt><code>-c filename</code></dt>
+<dd>Path to configuration file. (Per interface)</dd>
+<dt><code>-C ctrl_interface</code></dt>
+<dd>Path to ctrl_interface socket (Per interface. Only used if <code>-c</code> is not).</dd>
+<dt><code>-i ifname</code></dt>
+<dd>Interface to listen on. Multiple instances of this option can be present, one per interface, separated by <code>-N</code> option (see below).</dd>
+<dt><code>-d</code></dt>
+<dd>Increase debugging verbosity (<code>-dd</code> even more).</dd>
+<dt><code>-D driver</code></dt>
+<dd>Driver to use (can be multiple drivers: nl80211,wext). (Per interface, see the available options below.)</dd>
+<dt><code>-e entropy file</code></dt>
+<dd>File for <code>wpa_supplicant</code> to use to maintain its internal entropy store in over restarts.</dd>
+<dt><code>-f output file</code></dt>
+<dd>Log output to specified file instead of stdout. (This is only available if <code>wpa_supplicant</code> was built with the CONFIG_DEBUG_FILE option.)</dd>
+<dt><code>-g global ctrl_interface</code></dt>
+<dd>Path to global ctrl_interface socket. If specified, interface definitions may be omitted.</dd>
+<dt><code>-K</code></dt>
+<dd>Include keys (passwords, etc.) in debug output.</dd>
+<dt><code>-h</code></dt>
+<dd>Help. Show a usage message.</dd>
+<dt><code>-L</code></dt>
+<dd>Show license (BSD).</dd>
+<dt><code>-o override driver</code></dt>
+<dd>Override the driver parameter for new interfaces.</dd>
+<dt><code>-O override ctrl_interface</code></dt>
+<dd>Override the ctrl_interface parameter for new interfaces.</dd>
+<dt><code>-p</code></dt>
+<dd>Driver parameters. (Per interface)</dd>
+<dt><code>-P PID_file</code></dt>
+<dd>Path to PID file.</dd>
+<dt><code>-q</code></dt>
+<dd>Decrease debugging verbosity (<code>-qq</code> even less).</dd>
+<dt><code>-s</code></dt>
+<dd>Log output to syslog instead of stdout. (This is only available if <code>wpa_supplicant</code> was built with the CONFIG_DEBUG_SYSLOG option.)</dd>
+<dt><code>-T</code></dt>
+<dd>Log output to Linux tracing in addition to any other destinations. (This is only available if <code>wpa_supplicant</code> was built with the CONFIG_DEBUG_LINUX_TRACING option.)</dd>
+<dt><code>-t</code></dt>
+<dd>Include timestamp in debug messages.</dd>
+<dt><code>-u</code></dt>
+<dd>Enable DBus control interface. If enabled, interface definitions may be omitted. (This is only available if <code>wpa_supplicant</code> was built with the CONFIG_CTRL_IFACE_DBUS_NEW option.)</dd>
+<dt><code>-v</code></dt>
+<dd>Show version.</dd>
+<dt><code>-W</code></dt>
+<dd>Wait for a control interface monitor before starting.</dd>
+<dt><code>-N</code></dt>
+<dd>Start describing new interface.</dd></dl>
+<h2>Examples</h2>
+<p>In most common cases, <code>wpa_supplicant</code> is started with:  </p>
+<pre>wpa_supplicant -B -c/etc/wpa_supplicant.conf -iwlan0</pre>
+</dl>
+<p> This makes the process fork into background. The easiest way to debug problems, and to get debug log for bug reports, is to start <code>wpa_supplicant</code> on foreground with debugging enabled:  </p>
+<pre>wpa_supplicant -c/etc/wpa_supplicant.conf -iwlan0 -d</pre>
+</dl>
+<p> If the specific driver wrapper is not known beforehand, it is possible to specify multiple comma separated driver wrappers on the command line. <code>wpa_supplicant</code> will use the first driver wrapper that is able to initialize the interface.  </p>
+<pre>wpa_supplicant -Dnl80211,wext -c/etc/wpa_supplicant.conf -iwlan0</pre>
+</dl>
+<p> <code>wpa_supplicant</code> can control multiple interfaces (radios) either by running one process for each interface separately or by running just one process and list of options at command line. Each interface is separated with -N argument. As an example, following command would start wpa_supplicant for two interfaces:  </p>
+<pre>wpa_supplicant \
+ -c wpa1.conf -i wlan0 -D nl80211 -N \
+ -c wpa2.conf -i ath0 -D wext</pre>
+</dl>
+<h2>Os Requirements</h2>
+<p>Current hardware/software requirements:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>Linux kernel 2.6.30 or higher with nl80211/cfg80211 support</dd>
+<dt>&bull;</dt>
+<dd>Linux kernel 2.4.x or higher with Linux Wireless Extensions v15 or newer</dd>
+<dt>&bull;</dt>
+<dd>FreeBSD 6-CURRENT</dd>
+<dt>&bull;</dt>
+<dd>Microsoft Windows with WinPcap (at least WinXP, may work with other versions)</dd></dl>
+<h2>Supported Drivers</h2>
+<dl>
+<dt><code>Linux nl80211/cfg80211</code></dt>
+<dd>This is the preferred driver for Linux.</dd>
+<dt><code>Linux wireless extensions</code></dt>
+<dd>In theory, any driver that supports Linux wireless extensions can be used with IEEE 802.1X (i.e., not WPA) when using ap_scan=0 option in configuration file.</dd>
+<dt><code>Wired Ethernet drivers</code></dt>
+<dd>Use ap_scan=0.</dd>
+<dt><code>BSD net80211 layer (e.g., Atheros driver)</code></dt>
+<dd>At the moment, this is for FreeBSD 6-CURRENT branch.</dd>
+<dt><code>Windows NDIS</code></dt>
+<dd>The current Windows port requires WinPcap (<a rel="nofollow" href="http://winpcap.polito.it/">http://winpcap.polito.it/</a>). See README-Windows.txt for more information.</dd></dl>
+<p> wpa_supplicant was designed to be portable for different drivers and operating systems. Hopefully, support for more wlan cards and OSes will be added in the future. See developer.txt for more information about the design of wpa_supplicant and porting to other drivers. One main goal is to add full WPA/WPA2 support to Linux wireless extensions to allow new drivers to be supported without having to implement new driver-specific interface code in wpa_supplicant.</p>
+<h2>Architecture</h2>
+<p>The <code>wpa_supplicant</code> system consists of the following components:</p>
+<dl>
+<dt><i>wpa_supplicant.conf</i></dt>
+<dd>the configuration file describing all networks that the user wants the computer to connect to.</dd>
+<dt><code>wpa_supplicant</code></dt>
+<dd>the program that directly interacts with the network interface.</dd>
+<dt><code>wpa_cli</code></dt>
+<dd>the client program that provides a high-level interface to the functionality of the daemon.</dd>
+<dt><code>wpa_passphrase</code></dt>
+<dd>a utility needed to construct <i>wpa_supplicant.conf</i> files that include encrypted passwords.</dd></dl>
+<h2>Quick Start</h2>
+<p>First, make a configuration file, e.g. <i>/etc/wpa_supplicant.conf</i>, that describes the networks you are interested in. See <code><a href="/docs/linux/man/5-wpa_supplicant-conf/">wpa_supplicant.conf</a></code>(5) for details. </p>
+<p> Once the configuration is ready, you can test whether the configuration works by running <code>wpa_supplicant</code> with following command to start it on foreground with debugging enabled: </p>
+<dl>
+<dd>
+<pre>wpa_supplicant -iwlan0 -c/etc/wpa_supplicant.conf -d</pre>
+</dd></dl>
+<p> Assuming everything goes fine, you can start using following command to start <code>wpa_supplicant</code> on background without debugging: </p>
+<dl>
+<dd>
+<pre>wpa_supplicant -iwlan0 -c/etc/wpa_supplicant.conf -B</pre>
+</dd></dl>
+<p> Please note that if you included more than one driver interface in the build time configuration (.config), you may need to specify which interface to use by including -D&lt;driver name&gt; option on the command line.</p>
+<h2>Interface To Pcmcia-Cs/Cardmrg</h2>
+<p>For example, following small changes to pcmcia-cs scripts can be used to enable WPA support: </p>
+<p> Add MODE=&quot;Managed&quot; and WPA=&quot;y&quot; to the network scheme in <i>/etc/pcmcia/wireless.opts</i>. </p>
+<p> Add the following block to the end of <code>start</code> action handler in <i>/etc/pcmcia/wireless</i>: </p>
+<dl>
+<dd>
+<pre>if [ &quot;$WPA&quot; = &quot;y&quot; -a -x /usr/local/bin/wpa_supplicant ]; then
+ /usr/local/bin/wpa_supplicant -B -c/etc/wpa_supplicant.conf -i$DEVICE
+fi</pre>
+</dd></dl>
+<p> Add the following block to the end of <code>stop</code> action handler (may need to be separated from other actions) in <i>/etc/pcmcia/wireless</i>: </p>
+<dl>
+<dd>
+<pre>if [ &quot;$WPA&quot; = &quot;y&quot; -a -x /usr/local/bin/wpa_supplicant ]; then
+ killall wpa_supplicant
+fi</pre>
+</dd></dl>
+<p> This will make <code>cardmgr</code> start <code>wpa_supplicant</code> when the card is plugged in.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-wpa_background/">wpa_background</a></code>(8) <code><a href="/docs/linux/man/5-wpa_supplicant-conf/">wpa_supplicant.conf</a></code>(5) <code><a href="/docs/linux/man/8-wpa_cli/">wpa_cli</a></code>(8) <code><a href="/docs/linux/man/8-wpa_passphrase/">wpa_passphrase</a></code>(8)</p>
+<h2>Legal</h2>
+<p>wpa_supplicant is copyright (c) 2003-2022, Jouni Malinen &lt;j@w1.fi&gt; and contributors. All Rights Reserved. </p>
+<p> This program is licensed under the BSD license (the one with advertisement clause removed).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

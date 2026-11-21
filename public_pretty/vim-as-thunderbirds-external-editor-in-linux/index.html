@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Vim as Thunderbird’s External Editor on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/vim-as-thunderbirds-external-editor-in-linux/">
+  <meta name="description" content="Thunderbird’s built-in compose window is functional but limited. Using Vim as an external editor gives you the full power of modal editing and your …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Using Vim as Thunderbird’s External Editor on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/vim-as-thunderbirds-external-editor-in-linux/">
+  <meta property="og:description" content="Thunderbird’s built-in compose window is functional but limited. Using Vim as an external editor gives you the full power of modal editing and your …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Using Vim as Thunderbird’s External Editor on Linux</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:24Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Thunderbird’s built-in compose window is functional but limited. Using Vim as an external editor gives you the full power of modal editing and your customizations for email composition.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>You need Thunderbird with the <strong>External Editor</strong> extension installed. As of 2026, this extension continues to work with current Thunderbird versions. Install it from the Thunderbird add-ons repository.</p>
+<h2 id="setting-up-the-external-editor">Setting up the external editor</h2>
+<p>You have two main approaches: use a graphical Vim variant, or invoke Vim in a terminal.</p>
+<h3 id="option-1-using-gvim-simpler">Option 1: Using gvim (simpler)</h3>
+<p>If you have gvim installed, configuration is straightforward. In External Editor’s preferences, set the text editor command to:</p>
+<pre><code>gvim -f
+</code></pre>
+<p>The <code>-f</code> flag keeps gvim in the foreground, blocking Thunderbird until you save and exit.</p>
+<h3 id="option-2-using-vim-in-a-terminal-recommended">Option 2: Using Vim in a terminal (recommended)</h3>
+<p>If you prefer the terminal version, you’ll need a wrapper script since Vim alone won’t work reliably with Thunderbird’s IPC mechanism.</p>
+<p>Create a script called <code>callvim</code> in a directory on your PATH (e.g., <code>~/bin/</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Wrapper to launch Vim in a terminal for Thunderbird&#39;s External Editor</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Works with xterm, but modern terminals like Alacritty or foot also work</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">command</span> -v xterm <span class="p">&amp;</span>&gt; /dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    xterm -e vim <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="nb">command</span> -v alacritty <span class="p">&amp;</span>&gt; /dev/null<span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    alacritty -e vim <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Fallback - adjust based on your system&#39;s available terminals</span>
+</span></span><span class="line"><span class="cl">    urxvt -e vim <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></div><p>Make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ~/bin/callvim
+</span></span></code></pre></div><p>Then in External Editor’s preferences, set the text editor command to:</p>
+<pre><code>callvim
+</code></pre>
+<p>The script uses <code>xterm</code> by default (widely available), but you can replace it with <code>alacritty</code>, <code>foot</code>, or your preferred terminal if it’s faster or better integrated with your desktop.</p>
+<h2 id="using-vim-in-thunderbird">Using Vim in Thunderbird</h2>
+<p>Once configured, press <strong>Ctrl+E</strong> while composing a new message or replying to open your external editor. Edit the message in Vim, save it (<code>:wq</code>), and exit. Thunderbird immediately updates the compose window with your changes.</p>
+<h2 id="optimizing-vim-for-email">Optimizing Vim for email</h2>
+<p>Add email-specific configuration to your <code>~/.vimrc</code> to tailor Vim for message composition:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">augroup</span> <span class="nx">email</span>
+</span></span><span class="line"><span class="cl">  <span class="k">autocmd</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">  <span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">mail</span> <span class="nx">call</span> <span class="nx">SetupMailOptions</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">augroup</span> <span class="nx">END</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">SetupMailOptions</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">textwidth</span><span class="p">=</span><span class="m">72</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">spell</span> <span class="nx">spelllang</span><span class="p">=</span><span class="nx">en</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">wrap</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">linebreak</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">noautoindent</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">nocindent</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">  &#34; Auto-format quoted text (lines starting with &gt;)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">formatoptions</span><span class="p">=</span><span class="nx">aw</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">  &#34; Abbreviations for common phrases</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">iabbrev</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="nx">gd</span> <span class="nx">Good</span> <span class="nx">day</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">iabbrev</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="nx">regards</span> <span class="nx">Best</span> <span class="nx">regards</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">iabbrev</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="nx">thx</span> <span class="nx">Thank</span> <span class="nx">you</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></div><p>Key settings explained:</p>
+<ul>
+<li><code>textwidth=72</code>: Standard email width for better readability and compatibility with quoted text</li>
+<li><code>spell spelllang=en</code>: Enable spell checking</li>
+<li><code>wrap</code> and <code>linebreak</code>: Wrap long lines without breaking words</li>
+<li><code>formatoptions=aw</code>: Auto-format paragraphs and preserve existing formatting</li>
+<li><code>iabbrev &lt;buffer&gt;</code>: Buffer-local abbreviations that expand as you type</li>
+</ul>
+<h2 id="advanced-customization">Advanced customization</h2>
+<p>You can detect Thunderbird-specific mail files (typically temporary files) and apply settings automatically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="c">&#34; Detect Thunderbird&#39;s temporary mail files</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">BufRead</span><span class="p">,</span><span class="nx">BufNewFile</span> <span class="sr">/tmp/</span><span class="nx">nscopy</span>*<span class="p">,</span><span class="sr">/tmp/</span><span class="nx">mutt</span>* <span class="nx">setfiletype</span> <span class="nx">mail</span>
+</span></span></code></pre></div><p>For signature handling, add this to skip signatures during spell checking:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">SetupMailOptions</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c">  &#34; ... existing settings ...</span>
+</span></span><span class="line"><span class="cl"><span class="c">  &#34; Skip lines starting with -- (signature delimiter)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setlocal</span> <span class="nx">spellcapcheck</span><span class="p">=</span>[.?<span class="p">!</span>]\\<span class="nx">_</span>[\\]\\ ]\\<span class="p">+</span>
+</span></span><span class="line"><span class="cl">  <span class="k">syntax</span> <span class="nx">match</span> <span class="nx">mailSignature</span> <span class="sr">/^-- $/</span> <span class="nx">nextgroup</span><span class="p">=</span><span class="nx">mailSignatureBody</span>
+</span></span><span class="line"><span class="cl">  <span class="k">syntax</span> <span class="nx">match</span> <span class="nx">mailSignatureBody</span> <span class="sr">/.*/</span> <span class="nx">contained</span>
+</span></span><span class="line"><span class="cl">  <span class="k">highlight</span> <span class="nx">mailSignatureBody</span> <span class="nx">ctermfg</span><span class="p">=</span><span class="nx">gray</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Editor doesn’t open</strong>: Verify the command path is correct by running it directly in a terminal with a test file.</p>
+<p><strong>Thunderbird hangs</strong>: Make sure your wrapper script blocks until Vim exits. Avoid background processes or detached terminals.</p>
+<p><strong>Character encoding issues</strong>: Thunderbird defaults to UTF-8 for modern email. Vim’s default settings handle this, but if you see garbled text, check your locale and Vim’s <code>fileencoding</code> setting.</p>
+<p><strong>Terminal doesn’t appear</strong>: On some X11 systems, use <code>gnome-terminal -- vim &quot;$@&quot;</code> instead of xterm, or switch to a lightweight terminal like Alacritty for better startup time.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

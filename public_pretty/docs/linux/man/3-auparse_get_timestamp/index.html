@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>auparse_get_timestamp(3) · Linux Manual Pages</title>
+<meta name="description" content="auparse_get_timestamp – access timestamp of the event">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-auparse_get_timestamp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>auparse_get_timestamp(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> auparse_get_timestamp &#8211; access timestamp of the event</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;auparse.h&gt;</code> </p>
+<p> const au_event_t *auparse_get_timestamp(auparse_state_t *au); </p>
+<h2>DESCRIPTION</h2>
+<p> auparse_get_timestamp provides an accessor function for the event&#8217;s timestamp data structure. The data structure is as follows: </p>
+<pre><code>
+typedef struct
+{
+    time_t sec;           // Event seconds
+    unsigned int milli;   // millisecond of the timestamp
+    unsigned long serial; // Serial number of the event
+    const char *host;     // Machine's node name
+} au_event_t;
+</code></pre>
+<h2>RETURN VALUE</h2>
+<p> Returns NULL if an error occurs; otherwise, a valid pointer to the data. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-auparse_get_time/">auparse_get_time</a></code>(3), <code><a href="/docs/linux/man/3-auparse_get_milli/">auparse_get_milli</a></code>(3), <code><a href="/docs/linux/man/3-auparse_get_serial/">auparse_get_serial</a></code>(3), <code><a href="/docs/linux/man/3-auparse_get_node/">auparse_get_node</a></code>(3), <code><a href="/docs/linux/man/3-auparse_timestamp_compare/">auparse_timestamp_compare</a></code>(3). </p>
+<h2>AUTHOR</h2>
+<p> Steve Grubb </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

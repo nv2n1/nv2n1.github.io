@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>portreserve(1) · Linux Manual Pages</title>
+<meta name="description" content="portreserve – reserve ports to prevent portmap mapping them">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-portreserve/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>portreserve(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> portreserve &#8211; reserve ports to prevent portmap mapping them </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>portreserve</code></dt></dl>
+<h2>DESCRIPTION</h2>
+<dd>The <code>portreserve</code> program aims to help services with well-known ports that lie in the <code>bindresvport</code> range. It prevents portmap (or other programs using <code>bindresvport</code>) from occupying a real service&#8217;s port by occupying it itself, until the real service tells it to release the port (generally in its init script). </dd>
+<p> It is intended that <code>portreserve</code> runs from an initscript of its own, and services wishing to interact with it should use <code>portrelease</code>. </p>
+<p> When the <code>portreserve</code> daemon is started, it examines the /etc/portreserve/ directory. Each file not containing &#8220;.&#8221; or &#8220;~&#8221; in its name is considered to be a service configuration file, and must contain a service name (as listed in /etc/services) or a port number. UDP services may be specified by appending &quot;/udp&quot; to the service name, and TCP services by &quot;/tcp&quot;. Several services may be specified, one per line. </p>
+<p> For example, /etc/portreserve/cups might contain the string &#8220;ipp&#8221; or, equivalently, &#8220;ipp/tcp&#8221; and &#8220;ipp/udp&#8221; on separate lines. </p>
+<p> For each service configuration file, a socket is created and bound to the appropriate port. A service wishing to bind to its port must first run <code>portrelease</code>, which instructs <code>portreserve</code> to release the port associated with the service. </p>
+<p> Once all the reserved ports have been released, the daemon exits.</p>
+<h2>FILES</h2>
+<p> /etc/portreserve/*</p>
+<dl>
+<dt>
+</dt><dd> Service configuration files</dd></dl>
+<p> /var/run/portreserve/socket</p>
+<dl>
+<dt>
+</dt><dd> communication socket for <code>portrelease</code></dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-portrelease/">portrelease</a></code>(1)</p>
+<h2>AUTHOR</h2>
+<p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

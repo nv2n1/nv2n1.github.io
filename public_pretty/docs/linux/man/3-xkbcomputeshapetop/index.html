@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbcomputeshapetop(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbComputeShapeTop – Determines the bounding box of the top surface of a shape">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbcomputeshapetop/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbcomputeshapetop(3)</h1>
+
+
+
+
+
+<p>XkbComputeShapeTop &#8211; Determines the bounding box of the top surface of a shape </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>Bool XkbComputeShapeTop</code> <code>(XkbShapePtr </code><i>shape</i><code>,</code> <code>XkbBoundsPtr </code><i>bounds_rtrn</i><code>);</code><br />
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; shape</i></dt>
+<dd>
+</dd><dd>shape to be examined</dd>
+<dt><i>&#8211; bounds_rtrn</i></dt>
+<dd>backfilled with the bounding box for the shape</dd></dl>
+<h2>Description</h2>
+<p>Xkb provides a number of convenience functions to help use a keyboard geometry. These include functions to return the bounding box of a shape&#8217;s top surface and to update the bounding box of a shape row or section. </p>
+<p> A shape is made up of a number of outlines. Each outline is a polygon made up of a number of points. The bounding box of a shape is a rectangle that contains all the outlines of that shape. </p>
+<p> <i>XkbComputeShapeTop </i> returns a BoundsRec that contains two x and y coordinates. These coordinates describe the corners of a rectangle that contains the outline that describes the top surface of the shape. The top surface is defined to be the approximating outline if the <i>approx </i> field of <i>shape </i> is not NULL. If <i>approx </i> is NULL, the top surface is defined as the last outline in the <i>shape&#8217;s </i> array of outlines. <i>XkbComputeShapeTop </i> returns False if <i>shape </i> is NULL or if there are no outlines for the shape; otherwise, it returns True.</p>
+<h2>Structures</h2>
+<pre>typedef struct _XkbBounds {
+ short x1,y1; /* upper left corner of the bounds, in mm/10 */
+ short x2,y2; /* lower right corner of the bounds, in mm/10 */
+} XkbBoundsRec, *XkbBoundsPtr;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

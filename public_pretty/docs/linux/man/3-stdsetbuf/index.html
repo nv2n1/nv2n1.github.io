@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdsetbuf(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdsetbuf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdsetbuf(3)</h1>
+
+
+
+
+
+<p>std::setbuf - std::setbuf</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;cstdio&gt;
+    void setbuf(std::FILE *stream, char *buffer);</code></pre> 
+<p>Sets the internal buffer to use for I/O operations performed on the C stream stream.
+If buffer is not null, equivalent to std::setvbuf(stream, buffer, _IOFBF, BUFSIZ)
+If buffer is null, equivalent to std::setvbuf(stream, NULL, _IONBF, 0), which turns off buffering.</p>
+<h2>Parameters</h2>
+<p>stream - the file stream to set the buffer to.
+buffer - pointer to a buffer for the stream to use. If NULL is supplied, the buffering is turned off. If not null, must be able to hold at least BUFSIZ characters</p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Notes</h2>
+<p>If BUFSIZ is not the appropriate buffer size, std::setvbuf can be used to change it.
+std::setvbuf should also be used to detect errors, since std::setbuf does not indicate success or failure.
+This function may only be used after stream has been associated with an open file, but before any other operation (other than a failed call to std::setbuf/std::setvbuf).
+A common error is setting the buffer of stdin or stdout to an array whose lifetime ends before the program terminates: int main()
+{
+char buf[BUFSIZ];
+std::setbuf(stdin, buf);</p>
+<p>} // lifetime of buf ends, undefined behavior</p>
+<h2>Example</h2>
+<p>setbuf may be used to disable buffering on streams that require immediate output
+// Run this code <pre><code>#include &lt;cstdio&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+int main()
+{
+using namespace std::chrono_literals;
+std::setbuf(stdout, NULL); // unbuffered stdout
+std::putchar(&lsquo;a&rsquo;);         // appears immediately on unbuffered stream
+std::this_thread::sleep_for(1s);
+std::putchar(&lsquo;b&rsquo;);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> ab</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> sets the buffer and its size for a file stream
+setvbuf <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

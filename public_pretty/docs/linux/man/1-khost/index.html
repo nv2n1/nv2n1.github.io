@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>khost(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-khost/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>khost(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<dl>
+<dt><code>khost</code></dt>
+<dd> &#8211; Simple DNS lookup utility (libknot equivalent of ISC host)</dd></dl>
+<h2>SYNOPSIS</h2>
+<p> <code>khost</code> [<i>options</i>] <i>name</i> [<i>server</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> This utility sends a DNS query for the <i>name</i> to the <i>server</i> and prints a reply in more user-readable form. For more advanced DNS queries use <code>kdig</code> instead.</p>
+<dl>
+<dt><i>name</i></dt>
+<dd> Is a domain name that is to be looked up. If the <i>name</i> is IPv4 or IPv6 address the <i>PTR</i> query type is used.</dd>
+<dt><i>server</i></dt>
+<dd> Is a name or an address of the nameserver to send a query to. The address can be specified using [address]:port notation. If no server is specified the servers from <code>/etc/resolv.conf</code> are used.</dd>
+<dt>If no arguments are provided, <code>khost</code> prints short help.</dt>
+<dd></dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-4</code></dt>
+<dd> Use IPv4 protocol only.</dd>
+<dt><code>-6</code></dt>
+<dd> Use IPv6 protocol only.</dd>
+<dt><code>-a</code></dt>
+<dd> Send ANY query with verbose mode.</dd>
+<dt><code>-d</code></dt>
+<dd> Enable debug messages if any.</dd>
+<dt><code>-h</code>,&nbsp;<wbr><code>&#8211;help</code></dt>
+<dd> Print help.</dd>
+<dt><code>-r</code></dt>
+<dd> Disable recursion.</dd>
+<dt><code>-s</code></dt>
+<dd> Stop querying next nameserver if SERVFAIL response is received.</dd>
+<dt><code>-T</code></dt>
+<dd> Use TCP protocol.</dd>
+<dt><code>-v</code></dt>
+<dd> Enable verbose output.</dd>
+<dt><code>-V</code>,&nbsp;<wbr><code>&#8211;version</code></dt>
+<dd> Print program version.</dd>
+<dt><code>-w</code></dt>
+<dd> Wait forever for the reply.</dd>
+<dt><code>-c</code><i>&nbsp;<wbr>class</i></dt>
+<dd> Set query class (e.g. <i>CH</i>, <i>CLASS4</i>). The default class is <i>IN</i>.</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>type</i></dt>
+<dd> Set query type (e.g. <i>NS</i>, <i>IXFR=12345</i>, <i>TYPE65535</i>). The default is to send 3 queries (<i>A</i>, <i>AAAA</i> and <i>MX</i>).</dd>
+<dt><code>-R</code><i>&nbsp;<wbr>retries</i></dt>
+<dd> The number (&gt;=0) of UDP retries to query a nameserver. The default is <i>1</i>.</dd>
+<dt><code>-W</code><i>&nbsp;<wbr>wait</i></dt>
+<dd> The time to wait for a reply in seconds. This timeout applies to each query try. The default is <i>2</i> seconds.</dd></dl>
+<h2>NOTES</h2>
+<h3>Missing features with regard to ISC host</h3>
+<p> Options <code>-C, -i, -l, -m, -N</code>.</p>
+<h3>Differences with regard to ISC host</h3>
+<p> Option <code>-d</code> is not equivalent to <code>-v</code>, but enables debug messages.</p>
+<dl>
+<dt>The number of retries can be set to zero.</dt>
+<dd>
+</dd><dt>Verbose mode has slightly different format (same as <code>kdig</code>).</dt>
+<dd></dd></dl>
+<h2>EXAMPLES</h2>
+<p> <code>Example 1. Get A, AAAA and MX records for example.com:</code></p>
+<dl>
+<dt># khost example.com</dt>
+<dd>
+</dd><dt><code>Example 2. Get reverse record for address 192.0.2.1:</code></dt>
+<dd>
+</dd><dt># khost 192.0.2.1</dt>
+<dd>
+</dd><dt><code>Example 3. Perform verbose zone transfer for zone example.com:</code></dt>
+<dd>
+</dd><dt># khost -t AXFR -v example.com</dt>
+<dd></dd></dl>
+<h2>FILES</h2>
+<p> <i>/etc/resolv.conf</i></p>
+<h2>AUTHOR</h2>
+<p> Daniel Salzman (<code><a rel="nofollow" href="http://www.knot-dns.cz">www.knot-dns.cz</a></code>)</p>
+<dl>
+<dt>Please send any bug reports or comments to <code>knot-dns [at] labs.nic.cz</code></dt>
+<dd></dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-kdig/">kdig</a></code>(1), <code><a href="/docs/linux/man/1-knsupdate/">knsupdate</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

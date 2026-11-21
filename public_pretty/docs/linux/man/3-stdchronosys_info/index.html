@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdchronosys_info(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdchronosys_info/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdchronosys_info(3)</h1>
+
+
+
+
+
+<p>std::chrono::sys_info - std::chrono::sys_info</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;chrono&gt;
+struct sys_info; <i>(since C++20)</i>
+The class sys_info describes time zone information associated with a time zone at a particular point in time (represented as either a std::chrono::sys_time or a std::chrono::local_time). This is a low-level data structure typically not used directly by user code.</p>
+<h2>Member objects</h2>
+<p>Member object Type
+begin, end std::chrono::sys_seconds
+offset std::chrono::seconds
+save std::chrono::minutes
+abbrev std::string</p>
+<p>The begin and end data members indicate the range - [begin, end) - in which the offset and abbrev are in effect for the time zone associated with this sys_info.
+The offset and abbrev data member indicate the UTC offset and time zone abbreviation, respectively, in effect for the associated time zone and std::chrono::time_point. Note that time zone abbreviations are not unique.
+The save data member, if nonzero, indicates that the time zone is on daylight saving time at the specified time point. In this case, offset - save is a suggestion of what offset this time zone might use if it were off daylight saving time. However, this information is not authoritative: the only way to ascertain the actual offset is to query the time zone with a time point that is actually off daylight savings time (i.e. returns a sys_info such that save == 0min).</p>
+<p>Nonmember functions</p>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> outputs a sys_info into a stream
+operator&lt;&lt; <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

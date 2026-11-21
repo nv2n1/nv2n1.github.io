@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/">
+  <meta name="description" content="The kernel commit “fs: handle SEEK_HOLE/SEEK_DATA properly in all fs’s that define their own llseek” (06222e4) by Josef Bacik ensures that all filesystems with …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers">
+  <meta property="og:url" content="https://www.systutorials.com/fs-handle-seek_hole-seek_data-properly-in-all-fss-that-define-their-own-llseek/">
+  <meta property="og:description" content="The kernel commit “fs: handle SEEK_HOLE/SEEK_DATA properly in all fs’s that define their own llseek” (06222e4) by Josef Bacik ensures that all filesystems with …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>Linux Kernel: Implement SEEK_HOLE/SEEK_DATA in Custom llseek Handlers</h1>
+        <time class="post-date" datetime="2020-09-20T14:38:33Z">September 20, 2020</time> <span class="post-author">&middot; <a href="/author/tony/">Tony</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The kernel commit “fs: handle SEEK_HOLE/SEEK_DATA properly in all fs’s that define their own llseek” (06222e4) by Josef Bacik ensures that all filesystems with custom <code>llseek</code> implementations properly handle the <code>SEEK_HOLE</code> and <code>SEEK_DATA</code> whence values introduced in Linux 3.1.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>When a filesystem implements a custom <code>llseek</code> handler, it bypasses the generic implementation. Without explicit <code>SEEK_HOLE</code> and <code>SEEK_DATA</code> support, applications using these flags would receive incorrect results or errors. This commit standardizes behavior across NFS, CIFS, Ceph, FUSE, block devices, and other filesystems.</p>
+<h3 id="what-seek_hole-and-seek_data-do">What SEEK_HOLE and SEEK_DATA Do</h3>
+<p><code>SEEK_DATA</code> and <code>SEEK_HOLE</code> allow applications to efficiently skip sparse regions in files:</p>
+<ul>
+<li><code>SEEK_DATA</code>: Find the next byte with data at or after the given offset</li>
+<li><code>SEEK_HOLE</code>: Find the next hole (unallocated space) at or after the given offset</li>
+</ul>
+<p>These are critical for tools like <code>cp --sparse</code>, backup utilities, and database engines that need to handle sparse files efficiently.</p>
+<h3 id="implementation-patterns">Implementation Patterns</h3>
+<p>The commit introduces three patterns across different filesystems:</p>
+<p><strong>Pattern 1: Return -EINVAL</strong></p>
+<p>Filesystems that don’t support sparse file semantics return <code>EINVAL</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">whence</span> <span class="o">==</span> <span class="n">SEEK_DATA</span> <span class="o">||</span> <span class="n">whence</span> <span class="o">==</span> <span class="n">SEEK_HOLE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
+</span></span></code></pre></div><p>HPFS used this approach since it doesn’t track holes.</p>
+<p><strong>Pattern 2: Revalidate File Size First</strong></p>
+<p>Network filesystems (NFS, CIFS) must refresh file metadata before handling <code>SEEK_HOLE</code> and <code>SEEK_DATA</code>, since the file could have changed on the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">origin</span> <span class="o">!=</span> <span class="n">SEEK_SET</span> <span class="o">&amp;&amp;</span> <span class="n">origin</span> <span class="o">!=</span> <span class="n">SEEK_CUR</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="nf">nfs_revalidate_file_size</span><span class="p">(</span><span class="n">inode</span><span class="p">,</span> <span class="n">filp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">rc</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">origin</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SEEK_END</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SEEK_DATA</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SEEK_HOLE</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* handle accordingly */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>Pattern 3: Full Implementation</strong></p>
+<p>Filesystems like Ceph and FUSE that support sparse files implement the full logic:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SEEK_DATA</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">inode</span><span class="o">-&gt;</span><span class="n">i_size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="n">ENXIO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">case</span> <span class="nl">SEEK_HOLE</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">inode</span><span class="o">-&gt;</span><span class="n">i_size</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="n">ENXIO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">=</span> <span class="n">inode</span><span class="o">-&gt;</span><span class="n">i_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span></code></pre></div><p>They return <code>ENXIO</code> when seeking beyond file bounds, and for <code>SEEK_HOLE</code>, they return the file size (the first hole after valid data).</p>
+<h3 id="key-code-changes">Key Code Changes</h3>
+<p>The commit standardized several improvements:</p>
+<ol>
+<li><strong>Consistent whence handling</strong>: Replaced numeric constants (0, 1, 2) with symbolic <code>SEEK_SET</code>, <code>SEEK_CUR</code>, <code>SEEK_END</code> values</li>
+<li><strong>Explicit default cases</strong>: Added <code>default:</code> clauses returning <code>-EINVAL</code> for unsupported whence values</li>
+<li><strong>Proper bounds checking</strong>: Added validation to catch out-of-range offsets early</li>
+</ol>
+<p>Block device handling was particularly important:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* Before: incomplete switch handling */</span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">origin</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>  <span class="cm">/* SEEK_END */</span>
+</span></span><span class="line"><span class="cl">        <span class="n">offset</span> <span class="o">+=</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>  <span class="cm">/* SEEK_CUR */</span>
+</span></span><span class="line"><span class="cl">        <span class="n">offset</span> <span class="o">+=</span> <span class="n">file</span><span class="o">-&gt;</span><span class="n">f_pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* After: explicit cases and default */</span>
+</span></span><span class="line"><span class="cl"><span class="k">switch</span> <span class="p">(</span><span class="n">origin</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">SEEK_END</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">offset</span> <span class="o">+=</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">SEEK_CUR</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">offset</span> <span class="o">+=</span> <span class="n">file</span><span class="o">-&gt;</span><span class="n">f_pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nl">SEEK_SET</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">default</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="practical-implications">Practical Implications</h3>
+<p>For system administrators and developers, this meant:</p>
+<ul>
+<li>Sparse file tools now work correctly on network mounts</li>
+<li>Block device seeking is more predictable</li>
+<li>Custom filesystems (FUSE) can properly support sparse semantics</li>
+<li>Applications using <code>lseek(fd, offset, SEEK_HOLE)</code> get consistent behavior</li>
+</ul>
+<h3 id="testing-seek_holeseek_data">Testing SEEK_HOLE/SEEK_DATA</h3>
+<p>You can verify support with simple commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a sparse file</span>
+</span></span><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>sparse.img <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span><span class="m">0</span> <span class="nv">seek</span><span class="o">=</span><span class="m">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Test with lseek (requires testing tool)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Most modern file utilities handle this transparently</span>
+</span></span><span class="line"><span class="cl">cp --sparse<span class="o">=</span>always sparse.img sparse_copy.img
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Verify sparseness</span>
+</span></span><span class="line"><span class="cl">du -s sparse.img sparse_copy.img
+</span></span><span class="line"><span class="cl">ls -lh sparse.img sparse_copy.img
+</span></span></code></pre></div><p>The kernel continues to support these semantics, with modern filesystems expected to implement proper <code>SEEK_HOLE</code>/<code>SEEK_DATA</code> handlers rather than returning <code>EINVAL</code>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

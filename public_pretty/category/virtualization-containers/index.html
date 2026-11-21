@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtualization &amp; Containers</title>
+  <link rel="canonical" href="https://www.systutorials.com/category/virtualization-containers/">
+  <meta name="description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Virtualization &amp; Containers">
+  <meta property="og:url" content="https://www.systutorials.com/category/virtualization-containers/">
+  <meta property="og:description" content="Tutorials and Q&amp;A on Linux, systems, and software.">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.2rem 0 0.6rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    a {
+      color: #0a58ca;
+    }
+    .academies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .academy {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      background: #fff;
+    }
+    .academy h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .academy p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .academy .paths {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .academy .explore {
+      margin-bottom: 0;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    ul.posts {
+      list-style: none;
+      padding-left: 0;
+    }
+    .recent-post {
+      margin-bottom: 1.2rem;
+    }
+    .recent-post h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.05rem;
+    }
+    .recent-post .meta {
+      margin: 0;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    ul.cat-grid {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+    ul.cat-grid span {
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .year-strip a {
+      margin-right: 0.9rem;
+      white-space: nowrap;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    ul.posts li {
+      margin-bottom: 0.45rem;
+    }
+    ul.posts time {
+      color: #888;
+      font-size: 0.9rem;
+      display: inline-block;
+      min-width: 5.5rem;
+    }
+    footer.site {
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer.site a {
+      margin-left: 1rem;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">Recent</a>
+        <a href="/archive/">Archive</a><a href="/docs/linux/man/">Linux Manual Pages</a>
+      </nav>
+    </header>
+    
+
+
+
+<h1 id="virtualization-containers">Virtualization &amp; Containers</h1>
+
+
+
+  
+
+<p>Part of <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>.</p>
+
+<p>42 posts.</p>
+
+<ul class="posts">
+
+  <li><time>Sep 19, 2021</time> <a href="/running-ephemeral-docker-containers-automatically-remove-a-docker-container-after-running-it/">Running Ephemeral Docker Containers with Automatic Cleanup</a></li>
+
+  <li><time>Feb 29, 2020</time> <a href="/how-to-list-and-start-virtualbox-vms-in-command-line-in-linux/">Managing VirtualBox VMs from the Linux Command Line</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-resize-a-virtual-disk-of-kvm/">Resizing a KVM Virtual Disk: A Step-by-Step Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-tune-systems-to-achieve-high-performance-in-virtualization-circumstances/">Optimizing Virtual Machine Performance: A Tuning Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-vcpu-thread-id-in-qemu-kvm-host-os/">Getting vCPU Thread IDs in QEMU/KVM</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/for-qemu-kvm-how-to-share-data-between-host-and-guest/">Sharing Data Between QEMU/KVM Host and Guest</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-get-the-ip-addresses-of-vms-in-kvm-with-virsh/">Retrieving VM IP Addresses in KVM with virsh</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-attach-and-mount-xen-domus-disk-partitions-on-linux-without-xen/">Mount Xen DomU Disk Images with kpartx on Linux</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/printing-powernow-k8-transition-frequency-failed-after-install-xen/">Fix PowerNow-k8 Frequency Scaling Errors on Xen</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/virtualbox-report-kernel-driver-not-installed-on-fedora-21/">VirtualBox Kernel Driver Error on Fedora with Secure Boot</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-config-network-in-host-wireless-network-for-qemu-guest-os/">Configuring QEMU Guest Network Access Over Wireless</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/kernel-netfront-too-many-frags-in-xen-vm/">Resolving “Too many frags” and “skb rides the rocket” Errors in Xen</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/cannot-connect-qemu-guest-os-with-vncviewer/">QEMU VNC Connection Refused: Troubleshooting Guide</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-use-lvm-groups-with-libvirt/">Managing LVM Storage with libvirt</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/xen-hvm-domu-configuration-file/">Configuring Xen HVM DomU Systems</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/how-to-attach-and-mount-xen-domus-disk-to-dom0/">How to Attach and Mount a Xen DomU Disk in Dom0</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/windows-7-64-bit-fails-to-install-on-virtualbox-linux-with-status-code-0xc0000225/">Windows 7 64-bit Installation Fails with Error 0xc0000225 on VirtualBox</a></li>
+
+  <li><time>Mar 24, 2018</time> <a href="/xen-passing-kernel-parameters-to-domus/">Passing Kernel Parameters to Xen DomU Guests</a></li>
+
+  <li><time>Aug 26, 2017</time> <a href="/qemukvm-network-mechanisms/">QEMU/KVM Networking: TAP, virtio, and vhost Explained</a></li>
+
+  <li><time>Apr 15, 2017</time> <a href="/install-paravirtualized-centos-7-domu-xen/">Installing a Paravirtualized DomU on Xen with Rocky Linux 9</a></li>
+
+  <li><time>Dec 17, 2016</time> <a href="/x-data-plane-feature-qemukvm/">Reducing QEMU/KVM Lock Contention with IOThreads and Dataplane</a></li>
+
+  <li><time>Jul 28, 2014</time> <a href="/creating-fedora-20-domain-u-on-fedora-20-domain-0/">Creating a Xen DomU Guest on Fedora Dom0</a></li>
+
+  <li><time>Jul 25, 2014</time> <a href="/installing-xen-on-fedora-20-as-domain-0/">Installing and Configuring Xen Hypervisor on Fedora</a></li>
+
+  <li><time>May 24, 2014</time> <a href="/how-to-install-run-and-uninstall-vmware-player-and-virtualbox-on-fedora-linux/">Running VMware Player and VirtualBox on Fedora</a></li>
+
+  <li><time>Sep 25, 2013</time> <a href="/managing-xen-dom0s-cpu-and-memory/">Managing CPU and Memory in Xen Dom0 Environments</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/script-shutting-down-all-xen-vms-on-a-server/">Safely Shutting Down All Xen Virtual Machines on a Server</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/installing-fedora-17-domain-u-on-xen-with-pxe-booting/">Installing Fedora 17 PV Guest on Xen with PXE Boot</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/installing-xen-domain-0-on-fedora-17/">Installing Xen on Fedora 17 as Domain-0</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-up-ubuntu-domu-on-xen-use-ubuntu-10-10-on-fedora-xen-dom0/">Setting Up Ubuntu 10.10 as a Xen DomU on Fedora</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/a-introduction-to-xen-source-code-structure-and-disk-in-xen/">Understanding Xen’s Codebase Architecture</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-up-lvm-backed-xen-domu/">Setting Up LVM-Backed Xen DomUs</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/duplicating-lvm-backed-xen-domu/">Cloning LVM-Backed Xen Domains</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/duplicating-and-backing-up-lvm-backed-xen-domu-from-a-remote-server/">Backing Up LVM-Based Xen DomUs Over the Network</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/xen-domus-io-performance-of-lvm-and-loopback-backed-vbds/">Xen DomU I/O Performance: LVM vs. Loopback Block Devices</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/xen-solutions/">Setting Up Linux Xen Dom0 and DomU Virtual Machines</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/problems-during-installing-xen-dom0-in-fedora/">Installing Xen Dom0 on Fedora: Common Issues and Fixes</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/setting-up-stable-xen-domu-with-fedora-unmodified-fedora-12-on-top-of-xenified-fedora-12-dom0-with-xen-4-0-0/">Setting Up Xen DomU on Fedora 12</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/unified-xen-domu-configuration-file/">Xen DomU Configuration File Format</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/automatically-backing-up-xen-file-backed-domu/">Automating Backups of Xen File-backed VMs</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/how-to-duplicate-xen-domu-virtual-machines/">How to Clone Xen DomU Virtual Machines</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/a-simple-cpu-and-memory-performance-test-of-xen-dom0-and-domu/">CPU and Memory Performance: Xen Dom0 vs DomU Comparison</a></li>
+
+  <li><time>Jul 12, 2013</time> <a href="/create-and-manage-virtual-machines-on-xen/">Managing Virtual Machines on Xen: A Getting Started Guide</a></li>
+
+</ul>
+
+    <footer class="site">
+      <a href="/about/">About</a><a href="/authors/">Authors</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/license/">License</a><a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">GitHub</a><a href="/linux-manual-pages/">Linux Manual Pages</a><a href="/tools/bbeditor/">BB Code Editor</a>
+    </footer>
+  </main>
+  
+  <script>
+  (function () {
+    var addr = ['con', 'tact', '@', 'systut', 'orials', '.', 'com'].join('');
+    document.querySelectorAll('.email-contact').forEach(function (el) {
+      var a = document.createElement('a');
+      a.href = 'mai' + 'lto:' + addr;
+      a.textContent = addr;
+      el.appendChild(a);
+    });
+  })();
+  </script>
+</body>
+</html>

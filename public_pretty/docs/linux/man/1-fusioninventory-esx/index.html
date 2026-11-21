@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fusioninventory-esx(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fusioninventory-esx/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fusioninventory-esx(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>fusioninventory-esx - vCenter/ESX/ESXi remote inventory from command line</p>
+<h2>SYNOPSIS</h2>
+<p>fusioninventory-esx &ndash;host &lt;host&gt; &ndash;user &lt;user&gt; &ndash;password &lt;password&gt; &ndash;directory &lt;directory&gt;</p>
+ <pre><code>
+  Options:
+    --help                 this menu
+    --host hostname        ESX server hostname
+    --user username        user name
+    --password xxxx        user password
+    --directory directory  output directory
+    --tag tag              tag for the inventoried machine
+</code></pre>
+<h2>EXAMPLES</h2>
+ <pre><code>
+% fusioninventory - esx-- host myesx-- user foo-- password bar-- directory / tmp
+</code></pre> 
+<p>You can import the .ocs file in your inventory server with the fusioninventory-injector tool.
+ <wbr><tt>%fusioninventory</tt>-injector -v &ndash;file <wbr>/tmp/*.ocs -u <wbr><a rel="nofollow" HREF="https://myserver/ocsinventory">https://myserver/ocsinventory</a></p>
+<h2>DESCRIPTION</h2>
+<p><i>fusioninventory-esx</i> creates inventory of remote ESX/ESXi and vCenter VMware. It uses the <font SIZE="-1">SOAP</font> interface of the remote server.</p>
+<p>Supported systems:</p>
+<dl>
+<dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 3.5</i>
+</dt><dd>
+</dd><dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 4.1</i>
+</dt><dd>
+</dd><dt><i>ESXi 5.0</i>
+</dt><dd>
+</dd><dt><i>vCenter 4.1</i>
+</dt><dd>
+</dd><dt><i>vCenter 5.0</i>
+</dt><dd></dd></dl>
+<p>Active Directory users, please note the <font SIZE="-1">AD</font> authentication doesn&rsquo;t work. You must create a account on the VMware server.</p>
+<h2>LIMITATION</h2>
+<p>So far, <font SIZE="-1">ESX</font> serial number are not collected.</p>
+<h2>SECURITY</h2>
+<p>The <font SIZE="-1">SSL</font> hostname check of the server is disabled.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

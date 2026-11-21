@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>advancestep(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::MarketModelEvolver – Market-model evolver.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-advancestep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>advancestep(3)</h1>
+
+
+
+
+
+<p>QuantLib::MarketModelEvolver &#8211; Market-model evolver. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/models/marketmodels/evolver.hpp&gt; </p>
+<p> Inherited by <code>ConstrainedEvolver</code>, <code>LogNormalCmSwapRatePc</code>, <code>LogNormalCotSwapRatePc</code>, <code>LogNormalFwdRateEuler</code>, <code>LogNormalFwdRateIpc</code>, <code>LogNormalFwdRatePc</code>, <code>NormalFwdRatePc</code>, and <code>SVDDFwdRatePc</code>. </p>
+<h3>Public Member Functions</h3>
+<p>virtual const std::vector&lt; Size &gt; &amp; <code>numeraires</code> () const =0 </p>
+<p> virtual <code>Real</code> <code>startNewPath</code> ()=0 </p>
+<p> virtual <code>Real</code> <code>advanceStep</code> ()=0 </p>
+<p> virtual Size <code>currentStep</code> () const =0 </p>
+<p> virtual const <code>CurveState</code> &amp; <code>currentState</code> () const =0 </p>
+<p> virtual void <code>setInitialState</code> (const <code>CurveState</code> &amp;)=0 </p>
+<h2>Detailed Description</h2>
+<p>Market-model evolver. </p>
+<p> Abstract base class. The evolver does the actual gritty work of evolving the forward rates from one time to the next. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

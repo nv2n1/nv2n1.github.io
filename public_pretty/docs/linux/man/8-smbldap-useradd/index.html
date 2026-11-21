@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smbldap-useradd(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-smbldap-useradd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>smbldap-useradd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>smbldap-useradd - Create a new user</p>
+<h2>Synopsis</h2>
+<p>smbldap-useradd [-abinwPW] [-c comment] [-d home_dir] [-g initial_group] [-m [-k skeleton_dir]] [-o user_ou] [-s shell] [-t time] [-u uid] [-A canchange] [-B mustchange] [-C smbhome] [-D homedrive] [-E scriptpath] [-F profilepath] [-G group[,&hellip;]] [-H acctflags] [-M mailaddr[,&hellip;]] [-N givenname] [-O mailaddr[,&hellip;]] [-S surname] [-T mailaddr[,&hellip;]] [-X encoding] [-Z name=value[,&hellip;]] login</p>
+<h2>Description</h2>
+<p>Creating New Users The smbldap-useradd command creates a new user account using the values specified on the command line and the default values from the system and from the configuration files (in the /etc/smbldap-tools directory).</p>
+<p>Without any option, the account created will be a Unix (Posix) account. The following options may be used to add information:</p>
+<p>-a
+The user will have a Samba account <wbr>(and Unix).</p>
+<p>-A
+Can change password? <wbr>0 if no, 1 if yes.</p>
+<p>-b
+The user is an <wbr><font SIZE="-1">AIX</font> <wbr>account.</p>
+<p>-B
+Must change password? <wbr>0 if no, 1 if yes.</p>
+<p>-c ``comment&rsquo;&rsquo;
+The new user&rsquo;s comment field <wbr>(gecos). This option is for gecos only! <wbr>To set as user&rsquo;s full name use the -N and -S options.</p>
+<p>-C sambaHomePath
+<font SIZE="-1">SMB</font> <wbr>home share, like <wbr>&rsquo;\\PDC-SRV\homes'.</p>
+<p>-d home_dir
+The new user will be created using home_dir for the user&rsquo;s login directory. The default is to append the login name to userHomePrefix <wbr>(defined in the configuration file) <wbr>and use that as the login directory name.</p>
+<p>-D sambaHomeDrive
+Letter associated with home share, like <wbr>&lsquo;H:&rsquo;.</p>
+<p>-E sambaLogonScript
+Relative to the <wbr>[netlogon] <wbr>share <wbr>(<font SIZE="-1">DOS</font> <wbr>script to execute on login, like <wbr>&lsquo;foo.bat&rsquo;.</p>
+<p>-F sambaProfilePath
+Profile directory, like <wbr>&rsquo;\\PDC-SRV\profiles\foo'.</p>
+<p>-g initial_group
+The group name or number of the user&rsquo;s initial login group. The group name must exist. A group number must refer to an already existing group. The default group number is defined in the configuration file <wbr>(defaultUserGid=``513&rsquo;&rsquo;).</p>
+<p>-G group,[&hellip;]
+A list of supplementary groups that the user is also a member of. Each group is separated from the next by a comma, with no intervening whitespace. The groups are subject to the same restrictions as the group given with the -g option. The default is for the user to belong only to the initial group.</p>
+<p>-H sambaAcctFlags
+Spaces and trailing bracket are ignored <wbr>(samba account control bits like <wbr>&rsquo;[<font SIZE="-1">NDHTUMWSLKI</font>]&rsquo;).</p>
+<p>-i
+Creates an interdomain trust account <wbr>(machine Workstation). A password will be asked for the trust account.</p>
+<p>-k skeletonDir
+When creating the user&rsquo;s home directory, copy files and directories from skeletonDir rather than <wbr>/etc/skel. The -k option is only valid in conjunction with the -m option. The default is not to create the directory and not to copy any files.</p>
+<p>-m
+The user&rsquo;s home directory will be created if it does not exist. The files contained in skeletonDir will be copied to the home directory if the -k option is used, otherwise the files contained in <wbr>/etc/skel will be used instead. <wbr> <wbr>Any directories contained in skeletonDir or <wbr>/etc/skel will be created in the user&rsquo;s home directory as well.</p>
+<p>-M mail
+E-mail addresses <wbr>(multiple addresses are separated by commas).</p>
+<p>&ndash;non-unique
+Allow the creation of a user account with a duplicate <wbr>(non-unique) <wbr><font SIZE="-1">UID.</font></p>
+<p>-n
+Do not print banner message.</p>
+<p>-N givenname
+Family name. Defaults to username.</p>
+<p>-o node
+The user&rsquo;s account will be created in the specified organizational unit. It is relative to the user suffix dn <wbr>($usersdn) <wbr>defined in the configuration file. Ex: &lsquo;ou=admin,ou=all&rsquo;</p>
+<p>-O localMailAddress
+localMailAddresses <wbr>(multiple addresses are separated by commas).</p>
+<p>-P
+Ends by invoking smbldap-passwd.</p>
+<p>-p
+Read password from <wbr><font SIZE="-1">STDIN</font> <wbr>without verification.</p>
+<p>-s shell
+The name of the user&rsquo;s login shell. The default is to leave this field blank, which causes the system to select the default login shell.</p>
+<p>-S surname
+Defaults to username.</p>
+<p>-t time
+Wait <wbr>&lt;time&gt; <wbr>seconds before exiting script when adding computer&rsquo;s account. This is useful when Master/PDC and Slaves/BDCs are connected through the Internet <wbr>(replication is not real time).</p>
+<p>-T mailToAddress
+Forward address <wbr>(multiple addresses are separated by commas).</p>
+<p>-u uid
+The numerical value of the user&rsquo;s <wbr><font SIZE="-1">ID.</font> <wbr>This value must be unique, unless the &ndash;non-unique option is used. The value must be non-negative. The default is to use the smallest <wbr><font SIZE="-1">ID</font> <wbr>value greater than 1000 and greater than every other user.</p>
+<p>-w/-W
+Creates an account for a Samba machine <wbr>(Workstation), so that it can join a sambaDomainName. Normally -w is used for adding machines through Samba but -W can be used for manual addition of samba attributes.</p>
+<p>-X encoding
+Specify input encoding for givenname and surname <wbr>(default <wbr><font SIZE="-1">UTF-8</font>).</p>
+<p>-Z name=value
+Specify custom <wbr><font SIZE="-1">LDAP</font> <wbr>attributes, using comma-separated name=value pairs.</p>
+<h2>See Also</h2>
+<p><i>useradd</i>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

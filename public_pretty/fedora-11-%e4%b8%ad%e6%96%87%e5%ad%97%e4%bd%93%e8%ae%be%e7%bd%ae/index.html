@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Character Support on Fedora 11 - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/fedora-11-%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE/">
+  <meta name="description" content="Configuring proper Chinese character rendering in Fedora requires attention to font selection and system settings. This guide covers configuration for …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chinese Character Support on Fedora 11">
+  <meta property="og:url" content="https://www.systutorials.com/fedora-11-%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE/">
+  <meta property="og:description" content="Configuring proper Chinese character rendering in Fedora requires attention to font selection and system settings. This guide covers configuration for …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/packages-desktop-applications/">Packages, Desktop &amp; Applications</a>
+        </nav>
+        
+        <h1>Chinese Character Support on Fedora 11</h1>
+        <time class="post-date" datetime="2013-07-12T16:31:37Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Configuring proper Chinese character rendering in Fedora requires attention to font selection and system settings. This guide covers configuration for contemporary Fedora/RHEL systems where you run an English locale but need reliable Chinese character display.</p>
+<h2 id="font-selection">Font Selection</h2>
+<p>You have several solid open-source options for Chinese fonts. Each has different characteristics suited to different use cases.</p>
+<h3 id="using-uming-and-ukai-fonts">Using UMing and UKai Fonts</h3>
+<p>The AR PL UMing and UKai fonts provide good rendering across most applications. Install them via:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install cjkuni-ukai-fonts cjkuni-uming-fonts
+</span></span></code></pre></div><p>Configure font preferences in <code>~/.config/fontconfig/fonts.conf</code> (modern Fontconfig uses this path instead of <code>~/.fonts.conf</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE fontconfig SYSTEM &#34;fonts.dtd&#34;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;fontconfig&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Set preferred Chinese fonts for sans-serif --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&#34;pattern&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&#34;any&#34;</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>sans-serif<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/test&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span> <span class="na">mode=</span><span class="s">&#34;prepend&#34;</span> <span class="na">binding=</span><span class="s">&#34;strong&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>AR PL UMing CN<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/match&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Set preferred Chinese fonts for serif --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&#34;pattern&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&#34;any&#34;</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>serif<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/test&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span> <span class="na">mode=</span><span class="s">&#34;prepend&#34;</span> <span class="na">binding=</span><span class="s">&#34;strong&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>AR PL UMing CN<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/match&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Set preferred Chinese fonts for monospace --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&#34;pattern&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&#34;any&#34;</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>monospace<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/test&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span> <span class="na">mode=</span><span class="s">&#34;prepend&#34;</span> <span class="na">binding=</span><span class="s">&#34;strong&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;string&gt;</span>AR PL UMing Mono CN<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/match&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- Enable font smoothing --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&#34;font&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;antialias&#34;</span> <span class="na">mode=</span><span class="s">&#34;assign&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;hinting&#34;</span> <span class="na">mode=</span><span class="s">&#34;assign&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;hintstyle&#34;</span> <span class="na">mode=</span><span class="s">&#34;assign&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;const&gt;</span>hintslight<span class="nt">&lt;/const&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/match&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/fontconfig&gt;</span>
+</span></span></code></pre></div><p>After modifying the config, reload Fontconfig:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fc-cache -fv
+</span></span></code></pre></div><h3 id="using-wenquanyi-fonts">Using WenQuanYi Fonts</h3>
+<p>WenQuanYi is a comprehensive open-source font project with excellent coverage. Installation is straightforward:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install wqy-microhei wqy-microhei-light wqy-bitmapfont
+</span></span></code></pre></div><p>Then add to your Fontconfig similarly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;match</span> <span class="na">target=</span><span class="s">&#34;pattern&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;test</span> <span class="na">qual=</span><span class="s">&#34;any&#34;</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;string&gt;</span>sans-serif<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/test&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;edit</span> <span class="na">name=</span><span class="s">&#34;family&#34;</span> <span class="na">mode=</span><span class="s">&#34;prepend&#34;</span> <span class="na">binding=</span><span class="s">&#34;strong&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;string&gt;</span>WenQuanYi Micro Hei<span class="nt">&lt;/string&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/edit&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/match&gt;</span>
+</span></span></code></pre></div><h3 id="other-available-options">Other Available Options</h3>
+<p>Modern Fedora repositories include:</p>
+<ul>
+<li><code>noto-fonts-cjk</code> — Google’s Noto Sans CJK, comprehensive and well-maintained</li>
+<li><code>source-han-sans-fonts</code> / <code>source-han-serif-fonts</code> — Adobe’s Source Han fonts</li>
+<li><code>lato-fonts</code> — Good Latin coverage with reasonable Chinese support</li>
+</ul>
+<p>Stick with open-source fonts. Avoid proprietary Microsoft fonts; they violate licensing terms and open-source alternatives are now comparable in quality.</p>
+<h2 id="desktop-environment-integration">Desktop Environment Integration</h2>
+<h3 id="gnomegnome-wayland">GNOME/GNOME Wayland</h3>
+<p>Font settings in GNOME 45+ are managed through <code>gnome-control-center</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gnome-control-center fonts
+</span></span></code></pre></div><p>Enable hinting and antialiasing through the interface, or configure via dconf:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface font-name <span class="s1">&#39;Cantarell 11&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface monospace-font-name <span class="s1">&#39;Monospace 10&#39;</span>
+</span></span><span class="line"><span class="cl">gsettings <span class="nb">set</span> org.gnome.desktop.interface document-font-name <span class="s1">&#39;Cantarell 10&#39;</span>
+</span></span></code></pre></div><h3 id="kde-plasma">KDE Plasma</h3>
+<p>In KDE Settings → Appearance → Fonts, set your preferred Chinese font as a fallback.</p>
+<h2 id="terminal-and-monospace-applications">Terminal and Monospace Applications</h2>
+<p>For terminal emulators and text editors, ensure your terminal font supports CJK. Recommended monospace fonts:</p>
+<ul>
+<li><code>noto-fonts-monospace-cjk</code></li>
+<li><code>sarasa-gothic-fonts</code> (Sarasa Gothic has excellent monospace CJK rendering)</li>
+</ul>
+<p>Configure in your terminal emulator settings (GNOME Terminal, Konsole, etc.) directly.</p>
+<h2 id="emacs-configuration">Emacs Configuration</h2>
+<p>Emacs often benefits from explicit locale configuration. Create a wrapper script at <code>~/bin/emacs-cjk</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> /usr/bin/emacs <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>Make it executable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod +x ~/bin/emacs-cjk
+</span></span></code></pre></div><p>Then add to your Emacs configuration (<code>~/.config/emacs/init.el</code> or <code>~/.emacs.d/init.el</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="c1">;; Set preferred fonts for CJK</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">set-face-attribute</span> <span class="ss">&#39;default</span> <span class="no">nil</span> <span class="nb">:font</span> <span class="s">&#34;Monospace 10&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">charset</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">kana</span> <span class="nv">han</span> <span class="nv">symbol</span> <span class="nv">cjk-misc</span> <span class="nv">bopomofo</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">set-fontset-font</span> <span class="p">(</span><span class="nf">frame-parameter</span> <span class="no">nil</span> <span class="ss">&#39;fontset</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="nv">charset</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="nf">font-spec</span> <span class="nb">:family</span> <span class="s">&#34;Noto Sans Mono CJK SC&#34;</span> <span class="nb">:size</span> <span class="mi">10</span><span class="p">)))</span>
+</span></span></code></pre></div><p>Or use the simpler approach of aliasing your terminal’s emacs command to the wrapper script in your shell configuration.</p>
+<h2 id="verification">Verification</h2>
+<p>Test font rendering by checking available fonts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fc-list :lang<span class="o">=</span>zh
+</span></span></code></pre></div><p>This lists all fonts with Chinese language support. Verify a specific font is installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fc-list <span class="p">|</span> grep <span class="s2">&#34;WenQuanYi\|UMing\|Noto Sans CJK&#34;</span>
+</span></span></code></pre></div><p>Restart your applications after modifying Fontconfig to load the new settings. Some applications cache font information and won’t reflect changes until restarted.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If Chinese characters still display as boxes or broken glyphs:</p>
+<ol>
+<li>Verify the font package actually installed: <code>rpm -q cjkuni-uming-fonts</code></li>
+<li>Check Fontconfig syntax: <code>xmllint ~/.config/fontconfig/fonts.conf</code></li>
+<li>Clear the Fontconfig cache: <code>fc-cache -fv</code></li>
+<li>Inspect which font is actually being used in your application (many have font debugging options)</li>
+<li>Some older X11 applications may need core fonts; install <code>xorg-x11-fonts-misc</code> for fallback support</li>
+</ol>
+<p>Modern distributions have largely moved to Fontconfig and Xft rendering, making Chinese character support substantially more reliable than in older Fedora releases.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

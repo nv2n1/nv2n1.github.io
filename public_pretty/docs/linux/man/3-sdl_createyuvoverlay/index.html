@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sdl_createyuvoverlay(3) · Linux Manual Pages</title>
+<meta name="description" content="SDL_CreateYUVOverlay – Create a YUV video overlay">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sdl_createyuvoverlay/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sdl_createyuvoverlay(3)</h1>
+
+
+
+
+
+<p>SDL_CreateYUVOverlay &#8211; Create a YUV video overlay</p>
+<h2>Synopsis</h2>
+<p> <code>#include &quot;SDL.h&quot; </p>
+<p> SDL_Overlay *SDL_CreateYUVOverlay</code>(<code>int width, int height, Uint32 format, SDL_Surface *display</code>);</p>
+<h2>Description</h2>
+<p> <code>SDL_CreateYUVOverlay</code> creates a YUV overlay of the specified <code>width</code>, <code>height</code> and <code>format</code> (see <i></i><code>SDL_Overlay</code> for a list of available formats), for the provided <code>display</code>. A <i></i><code>SDL_Overlay</code> structure is returned. </p>
+<p> The term &#8216;overlay&#8217; is a misnomer since, unless the overlay is created in hardware, the contents for the display surface underneath the area where the overlay is shown will be overwritten when the overlay is displayed.</p>
+<h2>See Also</h2>
+<p> <i></i><code>SDL_Overlay</code>, <i></i><code>SDL_DisplayYUVOverlay</code>, <i></i><code>SDL_FreeYUVOverlay</code></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

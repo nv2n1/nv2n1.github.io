@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tchmttest(1) · Linux Manual Pages</title>
+<meta name="description" content="tchmttest – test cases of the hash database API">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tchmttest/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tchmttest(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> tchmttest &#8211; test cases of the hash database API</p>
+<h2>DESCRIPTION</h2>
+<p> The command `<code>tchmttest</code>&#8216; is a utility for facility test under multi-thread situation. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>tnum</i>&#8216; specifies the number of running threads. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. </p>
+<dl>
+<dt>
+</dt><dd>
+ <code>tchmttest write </code>[<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-rc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-as</code>][<code>-rnd</code>]<i>path</i><i>tnum</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]]</dd>
+<dl>
+<dt>
+</dt><dd> Store records with keys of 8 bytes. They change as `00000001&#8242;, `00000002&#8217;&#8230;</dd></dl>
+<p> <code>tchmttest read </code>[<code>-rc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-wb</code>][<code>-rnd</code>]<i>path</i><i>tnum</i></p>
+<dl>
+<dt>
+</dt><dd> Retrieve all records of the database above.</dd></dl>
+<p> <code>tchmttest remove </code>[<code>-rc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-rnd</code>]<i>path</i><i>tnum</i></p>
+<dl>
+<dt>
+</dt><dd> Remove all records of the database above.</dd></dl>
+<p> <code>tchmttest wicked </code>[<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-nl</code>|<code>-nb</code>][<code>-nc</code>]<i>path</i><i>tnum</i><i>rnum</i></p>
+<dl>
+<dt>
+</dt><dd> Perform updating operations selected at random.</dd></dl>
+<p> <code>tchmttest typical </code>[<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-rc </code><i>num</i>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>][<code>-nc</code>][<code>-rr </code><i>num</i>]<i>path</i><i>tnum</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]</p>
+<dl>
+<dt>
+</dt><dd> Perform typical operations selected at random.</dd></dl>
+<p> <code>tchmttest race </code>[<code>-tl</code>][<code>-td</code>|<code>-tb</code>|<code>-tt</code>|<code>-tx</code>][<code>-xm </code><i>num</i>][<code>-df </code><i>num</i>][<code>-nl</code>|<code>-nb</code>]<i>path</i><i>tnum</i><i>rnum</i>[<i>bnum</i>[<i>apow</i>[<i>fpow</i>]]</p>
+<dl>
+<dt>
+</dt><dd> Perform race condition test.</dd></dl>
+</dl>
+<p> Options feature the following. </p>
+<dl>
+<dt>
+</dt><dd> <code>-tl</code> : enable the option `HDBTLARGE&#8217;.<br />
+ <code>-td</code> : enable the option `HDBTDEFLATE&#8217;.<br />
+ <code>-tb</code> : enable the option `HDBTBZIP&#8217;.<br />
+ <code>-tt</code> : enable the option `HDBTTCBS&#8217;.<br />
+ <code>-tx</code> : enable the option `HDBTEXCODEC&#8217;.<br />
+ <code>-rc </code><i>num</i> : specify the number of cached records.<br />
+ <code>-xm </code><i>num</i> : specify the size of the extra mapped memory.<br />
+ <code>-df </code><i>num</i> : specify the unit step number of auto defragmentation.<br />
+ <code>-nl</code> : enable the option `HDBNOLCK&#8217;.<br />
+ <code>-nb</code> : enable the option `HDBLCKNB&#8217;.<br />
+ <code>-as</code> : use the function `tchdbputasync&#8217; instead of `tchdbput&#8217;.<br />
+ <code>-rnd</code> : select keys at random.<br />
+ <code>-wb</code> : use the function `tchdbget3&#8242; instead of `tchdbget&#8217;.<br />
+ <code>-nc</code> : omit the comparison test.<br />
+ <code>-rr </code><i>num</i> : specify the ratio of reading operation by percentage.
+</dd></dl>
+<p> This command returns 0 on success, another on failure. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-tchtest/">tchtest</a></code>(1), <code><a href="/docs/linux/man/1-tchmgr/">tchmgr</a></code>(1), <code><a href="/docs/linux/man/3-tchdb/">tchdb</a></code>(3), <code><a href="/docs/linux/man/3-tokyocabinet/">tokyocabinet</a></code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

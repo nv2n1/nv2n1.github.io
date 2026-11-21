@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_aggregatekeyval(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::AggregateKeyVal –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_aggregatekeyval/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_aggregatekeyval(3)</h1>
+
+
+
+
+
+<p>sc::AggregateKeyVal &#8211; </p>
+<p> This takes several <code>KeyVal</code> objects and makes them look like one <code>KeyVal</code> object.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;keyval.h&gt;</code></pre>
+<p> Inherits <code>sc::KeyVal</code>.</p>
+<h3>Public Member Functions</h3>
+<p>void <code>errortrace</code> (std::ostream &amp;fp=ExEnv::err0())<br />
+ <i>Write a message to fp describing the error. </i><br />
+ void <code>dump</code> (std::ostream &amp;fp=ExEnv::err0())<br />
+ <i>Write a message to fp describing the error. </i> <code>Constructors.</code><br />
+ These contructors create an <code>AggregateKeyVal</code> that is formed from several other <code>KeyVal</code> objects. The search order is keyval1, keyval2, and so on. All <code>KeyVal</code> objects including and after the first null <code>KeyVal</code> will be ignored.<br />
+ <code>AggregateKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval1) </p>
+<p> <code>AggregateKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval1, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval2) </p>
+<p> <code>AggregateKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval1, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval2, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval3) </p>
+<p> <code>AggregateKeyVal</code> (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval1, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval2, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval3, const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;keyval4)</p>
+<h3>Protected Member Functions</h3>
+<p>int <code>key_exists</code> (const char *)<br />
+ <i>Ultimately called by exists. </i><br />
+ <code>Ref</code>&lt; <code>KeyValValue</code> &gt; <code>key_value</code> (const char *, const <code>KeyValValue</code> &amp;def)<br />
+ <i>Ultimately called by value. </i></p>
+<h2>Detailed Description</h2>
+<p>This takes several <code>KeyVal</code> objects and makes them look like one <code>KeyVal</code> object. </p>
+<p> When a key is sought first <code>KeyVal</code>, then the next, and so on is searched until the keyword is found.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rtmon(8) · Linux Manual Pages</title>
+<meta name="description" content="rtmon – listens to and monitors RTnetlink">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rtmon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rtmon(8)</h1>
+
+
+
+
+
+<p>rtmon &#8211; listens to and monitors RTnetlink</p>
+<h2>Synopsis</h2>
+<p><code>rtmon</code> [ options ] file FILE [ all | LISTofOBJECTS ]</p>
+<h2>Description</h2>
+<p>This manual page documents briefly the <code>rtmon</code> command. <code>rtmon</code> listens on <i>netlink</i> socket and monitors routing table changes. <i>rtmon</i> can be started before the first network configuration command is issued. For example if you insert: <code>rtmon file /var/log/rtmon.log</code> in a startup script, you will be able to view the full history later. Certainly, it is possible to start rtmon at any time. It prepends the history with the state snapshot dumped at the moment of starting. </p>
+<h2>Options</h2>
+<p><i>rtmon supports the following options:</i></p>
+<dl>
+<dt><code>-Version</code></dt>
+<dd>Print version and exit.</dd>
+<dt><code>help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>file FILE [ all | LISTofOBJECTS ]</code></dt>
+<dd>Log output to FILE. LISTofOBJECTS is the list of object types that we want to monitor. It may contain &#8216;link&#8217;, &#8216;address&#8217;, &#8216;route&#8217; and &#8216;all&#8217;. &#8216;link&#8217; specifies the network device, &#8216;address&#8217; the protocol (IP or IPv6) address on a device, &#8216;route&#8217; the routing table entry and &#8216;all&#8217; does what the name says.</dd>
+<dt><code>-family [ inet | inet6 | link | help ]</code></dt>
+<dd>Specify protocol family. &#8216;inet&#8217; is IPv4, &#8216;inet6&#8217; is IPv6, &#8216;link&#8217; means that no networking protocol is involved and &#8216;help&#8217; prints usage information.</dd>
+<dt><code>-4</code></dt>
+<dd>Use IPv4. Shortcut for -family inet.</dd>
+<dt><code>-6</code></dt>
+<dd>Use IPv6. Shortcut for -family inet6.</dd>
+<dt><code>-0</code></dt>
+<dd>Use a special family identifier meaning that no networking protocol is involved. Shortcut for -family link.</dd></dl>
+<h2>Usage Examples</h2>
+<dl>
+<dt><code># rtmon file /var/log/rtmon.log</code></dt>
+<dd>Log to file /var/log/rtmon.log, then run:</dd>
+<dt><code># ip monitor file /var/log/rtmon.log</code></dt>
+<dd>to display logged output from file.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8)</p>
+<h2>Author</h2>
+<p><code>rtmon</code> was written by Alexey Kuznetsov &lt;kuznet [at] ms2.inr.ac.ru&gt;. </p>
+<p> This manual page was written by Michael Prokop &lt;mika [at] grml.org&gt;, for the Debian project (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

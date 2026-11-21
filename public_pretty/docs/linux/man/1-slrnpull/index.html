@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>slrnpull(1) · Linux Manual Pages</title>
+<meta name="description" content="slrnpull – Pull a small newsfeed for offline reading.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-slrnpull/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>slrnpull(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> slrnpull &#8211; Pull a small newsfeed for offline reading. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>slrnpull</code> [-d&nbsp;<wbr><i>spooldir</i>] [-h&nbsp;<wbr><i>server</i>] [&#8211;debug&nbsp;<wbr><i>file</i>] [&#8211;expire] [&#8211;fetch-score <i>n</i>] [&#8211;help] [&#8211;kill-log&nbsp;<wbr><i>file</i>] [&#8211;kill-score <i>n</i>] [&#8211;logfile&nbsp;<wbr><i>file</i>] [&#8211;marked-bodies] [&#8211;new-groups] [&#8211;no-post] [&#8211;post] [&#8211;post-only] [&#8211;rebuild] [&#8211;version] </p>
+<h2>DESCRIPTION</h2>
+<p> <i>slrnpull</i> pulls a small newsfeed from an NNTP server. It puts the articles into a spool directory from which <i>slrn</i> can later read them, even if the server is unreachable at that time. Typically, this is useful if you do not have a permanent network connection.</p>
+<h2>OPTIONS</h2>
+<p> The following options can be used when calling <i>slrnpull</i> from the command line.</p>
+<dl>
+<dt>-d <i>spooldir</i></dt>
+<dd> Set slrnpull&#8217;s root directory for this run to <i>spooldir</i>, overriding the <i>$SLRNPULL_ROOT</i> environment variable.</dd>
+<dt>-h <i>host[:port]</i></dt>
+<dd> Connect to the NNTP server on <i>host</i>, overriding the <i>$NNTPSERVER</i> environment variable. If no <i>port</i> is given, the default NNTP port (119) will be used.</dd>
+<dt>&#8211;debug <i>file</i></dt>
+<dd> Write dialogue with the server and some additional debugging output to <i>file</i>.</dd>
+<dt>&#8211;expire</dt>
+<dd> Expire (remove) old messages from the spool, but do not fetch news.</dd>
+<dt>&#8211;fetch-score <i>n</i></dt>
+<dd> Fetch article bodies with a score of at least <i>n</i> automatically (in true offline mode, the default is to fetch only bodies that were explicitly marked by the user).</dd>
+<dt>&#8211;help</dt>
+<dd> Show help for command line switches.</dd>
+<dt>&#8211;kill-log <i>file</i></dt>
+<dd> Keep a log of all articles that were killed by the scorefile in <i>file</i>. By default, no such logfile is created.</dd>
+<dt>&#8211;kill-score <i>n</i></dt>
+<dd> Kill all articles with a score below <i>n</i>. The default value for this is 0.</dd>
+<dt>&#8211;logfile <i>file</i></dt>
+<dd> Log the messages and errors that slrnpull prints to the screen to <i>file</i>. By default, they get written to the file log in slrnpull&#8217;s root directory.</dd>
+<dt>&#8211;marked-bodies</dt>
+<dd> Only fetch bodies that were marked for download within slrn.</dd>
+<dt>&#8211;new-groups</dt>
+<dd> Check for new groups, appending them to the file new.groups in the data directory.</dd>
+<dt>&#8211;no-post</dt>
+<dd> Do not post any articles to the server.</dd>
+<dt>&#8211;post</dt>
+<dd> Obsolete version of <i>&#8211;post-only</i>.</dd>
+<dt>&#8211;post-only</dt>
+<dd> Post outgoing articles, but do not fetch news.</dd>
+<dt>&#8211;rebuild</dt>
+<dd> Like &#8211;expire, but also rebuild the overview information. To be used when the overview information is damaged.</dd>
+<dt>&#8211;version</dt>
+<dd> Print the version number. </dd>
+</dl>
+<h2>ENVIRONMENT</h2>
+<p> <i>slrnpull</i> reads the following environment variables. Note that they can be overridden by command line switches.</p>
+<dl>
+<dt><code>NNTPSERVER</code></dt>
+<dd> You can use this variable to tell <i>slrnpull</i> which NNTP server to connect to. It can be overridden by the command line option -h.</dd>
+<dt><code>SLRNPULL_ROOT</code></dt>
+<dd> Defines the directory where <i>slrnpull</i> will look for its configuration files and spool the articles. An absolute filename is needed here. This can be overriden by the option -d.</dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt>$SLRNPULL_ROOT/authinfo</dt>
+<dd> If the server requires authentication, this file needs to contain the data (username in the first line, password in the second). Be careful not to make this file world-readable!</dd>
+<dt>$SLRNPULL_ROOT/log</dt>
+<dd> The default file to log status and error messages to.</dd>
+<dt>$SLRNPULL_ROOT/score</dt>
+<dd> If you want <i>slrnpull</i> to apply scoring rules to decide which articles to download, put them into this file.</dd>
+<dt>$SLRNPULL_ROOT/slrnpull.conf</dt>
+<dd> The main configuration file. It tells <i>slrnpull</i> how many articles to get from which groups and when to expire them. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> The documentation that comes with <i>slrnpull</i>, especially README and SETUP. The FAQ of slrn also answers some questions about slrnpull. </p>
+<p> You might also want to look at slrn&#8217;s official home page, <i><a rel="nofollow" href="http://slrn.sourceforge.net/">http://slrn.sourceforge.net/</a></i> or post to <i>news.software.readers</i> if you have a question not covered by existing documentation. </p>
+<p> The latest version of <i>slrnpull</i> is part of the slrn package available from <i><a rel="nofollow" href="http://prdownloads.sourceforge.net/slrn/">http://prdownloads.sourceforge.net/slrn/</a></i></p>
+<h2>AUTHOR</h2>
+<p> John E. Davis &lt;davis [at] space.mit.edu&gt; </p>
+<p> Please send any bug reports to the current maintainer, Thomas Schultz &lt;tststs [at] gmx.de&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

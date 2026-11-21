@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lintianinspectchangelogentry(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-lintianinspectchangelogentry/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>lintianinspectchangelogentry(3)</h1>
+
+
+
+
+
+<p>Lintian::Inspect::Changelog::Entry - represents one entry in a Debian changelog</p>
+<h2>Synopsis</h2><h2>Description</h2><h3>Methods</h3><i>init</i> 
+<p>Creates a new object, no options.</p>
+<p><i>new</i></p>
+<p>Alias for init.</p>
+<p><i>is_empty</i></p>
+<p>Checks if the object is actually initialized with data. Due to limitations in Parse::DebianChangelog this currently simply checks if one of the fields Source, Version, Maintainer, Date, or Changes is initialized.</p>
+<h3>Accessors</h3>The following fields are available via accessor functions (all fields are string values unless otherwise noted):
+<dl COMPACT><dt>Source
+</dt><dd></dd><dt>Version
+</dt><dd></dd><dt>Distribution
+</dt><dd></dd><dt>Urgency
+</dt><dd></dd><dt>Urgency_Comment
+</dt><dd></dd><dt>&quot;Urgency_LC&quot;
+</dt><dd></dd><dt>&quot;ExtraFields&quot;
+</dt><dd>Extra_Fields (all fields except for urgency as hash; <font SIZE="-1">POD</font> spelling forces the underscore)
+</dd><dt>Header
+</dt><dd>Header (the whole header in verbatim form)
+</dd><dt>Changes
+</dt><dd>Changes (the actual content of the bug report, in verbatim form)
+</dd><dt>Trailer
+</dt><dd>Trailer (the whole trailer in verbatim form)
+</dd><dt>Closes
+</dt><dd>Closes (Array of bug numbers)
+</dd><dt>Maintainer
+</dt><dd></dd><dt>&quot;MaintainerEmail&quot;
+</dt><dd></dd><dt>Date
+</dt><dd></dd><dt>Timestamp
+</dt><dd>Timestamp (Date expressed in seconds since the epoch)
+</dd><dt><font SIZE="-1">ERROR</font>
+</dt><dd><font SIZE="-1">ERROR</font> (last parse error related to this entry in the format described at Parse::DebianChangelog::get_parse_errors.</dd></dl><h2>See Also</h2>Originally based on Parse::DebianChangelog by Frank Lichtenheld, &lt;frank [at] lichtenheld.de&gt;
+<h2>Author</h2>Written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian in response to #933134.
+<h2>Copyright And License</h2>Please see in the code; <font SIZE="-1">FSF</font>'s standard short text triggered a <font SIZE="-1">POD</font> spelling error here.
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>faxq-helper(8) · Linux Manual Pages</title>
+<meta name="description" content="faxq-helper – privileged helper process to access the fax queue">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-faxq-helper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>faxq-helper(8)</h1>
+
+
+
+
+
+<p>faxq-helper &#8211; privileged helper process to access the fax queue</p>
+<h2>Synopsis</h2>
+<p><code>faxq-helper &lt;command&gt; [&lt;options&gt;]</code></p>
+<h2>Description</h2>
+<p><i>faxq-helper</i> is part of the internal workings of <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). Formerly, the /var/spool/fax/outgoing directory was world-writeable, leading to all sort of funny symlink attacks against <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) and faxrunq(8). These days, it&#8217;s owned by the user &#8220;fax&#8221;, and only this user can write to it. To be able to put jobs there, <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) calls <i>faxq-helper</i> for very clearly defined purposes:<br />
+&nbsp;<wbr>&#8211; make a new queue directory<br />
+&nbsp;<wbr>&#8211; put a new fax G3 file into this queue directory<br />
+&nbsp;<wbr>&#8211; put a JOB file into this queue directory, and activate the fax job and possibly:<br />
+&nbsp;<wbr>&#8211; remove a fax job from the queue&nbsp;<wbr>(to be used by faxrm and in case of errors)<br />
+&nbsp;<wbr>&#8211; re-queue a job that has been suspended due to repeated failures&nbsp;<wbr>(faxq -r) To achieve this, <i>faxq-helper</i> is installed set-user-id fax. If you remove the suid bit, or chown the fax queue directory to a different user, it will stop working. </p>
+<h2>Return Values</h2>
+<p><i>faxq-helper</i> has the following exit() values: </p>
+<dl>
+<dt><code>0</code></dt>
+<dd>everything went fine </dd>
+<dt><code>1</code></dt>
+<dd>invalid JOB ID specified on the command line </dd>
+<dt><code>2</code></dt>
+<dd>some problem with the directory setup of the outgoing queue dir, /var/spool/fax/outgoing (it will print a detailed error message) </dd>
+<dt><code>3</code></dt>
+<dd>some problems with the user ID setup of the &#8220;fax&#8221; user (it will print a detailed error message) </dd>
+<dt><code>10</code></dt>
+<dd>failure to process the specified command (it will print a detailed error message) </dd>
+</dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-faxq/">faxq</a>(1), <a href="/docs/linux/man/1-faxrm/">faxrm</a>(1), <a href="/docs/linux/man/5-faxqueue/">faxqueue</a>(5)</p>
+<h2>Author</h2>
+<p><i>faxq-helper</i> is Copyright (C) 2004-2006 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

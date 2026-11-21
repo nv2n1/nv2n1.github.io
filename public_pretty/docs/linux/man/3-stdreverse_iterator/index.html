@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdreverse_iterator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdreverse_iterator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdreverse_iterator(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::reverse_iterator - std::reverse_iterator</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;iterator&gt;
+template&lt; class Iter &gt;
+class reverse_iterator : public std::iterator&lt;
+typename std::iterator_traits&lt;Iter&gt;::iterator_category,
+typename std::iterator_traits&lt;Iter&gt;::value_type,         (until C++17)
+typename std::iterator_traits&lt;Iter&gt;::difference_type,
+typename std::iterator_traits&lt;Iter&gt;::pointer,
+typename std::iterator_traits&lt;Iter&gt;::reference &gt;
+template&lt; class Iter &gt;                                   (since C++17)
+class reverse_iterator;</code></pre> 
+<p>std::reverse_iterator is an iterator adaptor that reverses the direction of a given iterator. In other words, when provided with a bidirectional iterator, std::reverse_iterator produces a new iterator that moves from the end to the beginning of the sequence defined by the underlying bidirectional iterator.
+For a reverse iterator r constructed from an iterator i, the relationship &amp;<em>r == &amp;</em>(i-1) is always true (as long as r is dereferenceable); thus a reverse iterator constructed from a one-past-the-end iterator dereferences to the last element in a sequence.
+This is the iterator returned by member functions rbegin() and rend() of the standard library containers.
+ range-rbegin-rend.svg</p>
+<h2>Member types</h2>
+<p>Member type Definition
+value_type std::iterator_traits&lt;Iter&gt;::value_type
+difference_type std::iterator_traits&lt;Iter&gt;::difference_type
+pointer std::iterator_traits&lt;Iter&gt;::pointer
+reference std::iterator_traits&lt;Iter&gt;::reference
+iterator_category std::iterator_traits&lt;Iter&gt;::iterator_category</p>
+<p>These member types are required to be obtained by inheriting from std::iterator&lt; std::iterator_traits&lt;Iter&gt;::iterator_category
+, std::iterator_traits&lt;Iter&gt;::value_type
+, std::iterator_traits&lt;Iter&gt;::difference_type <i>(until C++17)</i>
+, std::iterator_traits&lt;Iter&gt;::pointer
+, std::iterator_traits&lt;Iter&gt;::reference
+&gt;.</p>
+<p>Member type Definition
+iterator_type Iter</p>
+<h2>Member functions</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs a new iterator adaptor
+constructor <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> assigns another iterator
+operator= <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> accesses the underlying iterator
+base <i>(public member function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> accesses the pointed-to element
+operator* <i>(public member function)</i>
+operator-&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> accesses an element by index
+operator[] <i>(public member function)</i></p>
+<p>operator++
+operator++(int)
+operator+= advances or decrements the iterator
+operator+ <i>(public member function)</i>
+operator&ndash;
+operator&ndash;(int)
+operator-=
+operator-</p>
+<h2>Member objects</h2>
+<p>Member name Definition
+current (protected) a copy of the base() iterator</p>
+<h2>Non-member functions</h2>
+<p>make_reverse_iterator creates a std::reverse_iterator of type inferred from the argument
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++14)</i></p>
+<p>operator==
+operator!= compares the underlying iterators
+operator&lt; <i>(function template)</i>
+operator&lt;=
+operator&gt;
+operator&gt;=
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> advances the iterator
+operator+ <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> computes the distance between two iterator adaptors
+operator- <i>(function template)</i></p>
+<h2>Notes</h2>
+<p>std::reverse_iterator does not work with iterators that return a reference to a member object (so-called &quot;stashing iterators&quot;). An example of stashing iterator is std::filesystem::path::iterator.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;iterator&gt;
+int main()
+{
+std::string s = &quot;Hello, world&quot;;
+std::reverse_iterator&lt;std::string::iterator&gt; r = s.rbegin();
+r[7] = &lsquo;O&rsquo;; // replaces &lsquo;o&rsquo; with &lsquo;O&rsquo;
+r += 7;     // iterator now points at &lsquo;O&rsquo;
+std::string rev(r, s.rend());
+std::cout &lt;&lt; rev &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> OlleH</p>
+<h2>See also</h2>
+<p>iterator base class to ease the definition of required types for simple iterators
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+(deprecated in C++17)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

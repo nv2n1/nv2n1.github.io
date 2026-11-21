@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalto_array(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalto_array/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalto_array(3)</h1>
+
+
+
+
+
+<p>std::experimental::to_array - std::experimental::to_array</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/array&gt;
+template &lt;class T, std::size_t N&gt;                                  (library fundamentals TS v2)
+constexpr std::array&lt;std::remove_cv_t&lt;T&gt;, N&gt; to_array(T (&amp;a)[N]);</code></pre> 
+<p>Creates a std::array from the built-in array a. The elements of the std::array are copy-initialized from the corresponding element of a.</p>
+<h2>Parameters</h2>
+<p>a - the built-in array to be used to initialize the std::array</p>
+<h2>Return value</h2>
+<p>An std::array object whose elements are copy-initialized from the corresponding element of a.</p>
+<h2>Possible implementation</h2>
+<p> <wbr> namespace detail {
+ <wbr> template &lt;class T, std::size_t N, std::size_t&hellip; I&gt;
+ <wbr> constexpr std::array&lt;std::remove_cv_t&lt;T&gt;, N&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> to_array_impl(T (&amp;a)[N], std::index_sequence&lt;I&hellip;&gt;)
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return { {a[I]&hellip;} };
+ <wbr> }
+ <wbr> }</p>
+<p> <wbr> template &lt;class T, std::size_t N&gt;
+ <wbr> constexpr std::array&lt;std::remove_cv_t&lt;T&gt;, N&gt; to_array(T (&amp;a)[N])
+ <wbr> {
+ <wbr> <wbr> <wbr> <wbr> <wbr> return detail::to_array_impl(a, std::make_index_sequence&lt;N&gt;{});
+ <wbr> }</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;cstdlib&gt;
+#include &lt;cassert&gt;
+#include &lt;experimental/array&gt;
+#include &lt;unistd.h&gt;
+// mkstemp(3) that works
+template &lt;std::size_t N&gt;
+int tempfd(char const (&amp;tmpl)[N])
+{
+auto s = std::experimental::to_array(tmpl);
+int fd = mkstemp(s.data());
+if (fd != -1)
+unlink(s.data());
+return fd;
+}
+int main()
+{
+int fd = tempfd(&quot;/tmp/test.XXXXXX&quot;);
+int rt = close(fd);
+assert(rt == 0);
+}
+</code></pre></p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Creates a std::array object whose size and optionally element type are deduced from the arguments
+make_array <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

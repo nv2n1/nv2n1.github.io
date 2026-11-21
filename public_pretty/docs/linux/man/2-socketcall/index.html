@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>socketcall(2) · Linux Manual Pages</title>
+<meta name="description" content="socketcall – socket system calls">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/2-socketcall/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/2/">Section 2</a></p>
+<article>
+<h1>socketcall(2)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> socketcall &#8211; socket system calls </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;linux/net.h&gt;</code> </p>
+<p> <code>int socketcall(int </code><i>call</i><code>, unsigned long *</code><i>args</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
+<p> <code>socketcall</code>() is a common kernel entry point for the socket system calls. <i>call</i> determines which socket function to invoke. <i>args</i> points to a block containing the actual arguments, which are passed through to the appropriate call. </p>
+<p> User programs should call the appropriate functions by their usual names. Only standard library implementors and kernel hackers need to know about <code>socketcall</code>(). </p>
+<table>
+<tr VALIGN=top>
+<td><i>call</i></td>
+<td>Man page
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SOCKET</code> </td>
+<td> <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_BIND</code> </td>
+<td> <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_CONNECT</code> </td>
+<td> <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_LISTEN</code> </td>
+<td> <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_ACCEPT</code> </td>
+<td> <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_GETSOCKNAME</code> </td>
+<td> <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_GETPEERNAME</code> </td>
+<td> <code><a href="/docs/linux/man/2-getpeername/">getpeername</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SOCKETPAIR</code> </td>
+<td> <code><a href="/docs/linux/man/2-socketpair/">socketpair</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SEND</code> </td>
+<td> <code><a href="/docs/linux/man/2-send/">send</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_RECV</code> </td>
+<td> <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SENDTO</code> </td>
+<td> <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_RECVFROM</code> </td>
+<td> <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SHUTDOWN</code> </td>
+<td> <code><a href="/docs/linux/man/2-shutdown/">shutdown</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SETSOCKOPT</code> </td>
+<td> <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_GETSOCKOPT</code> </td>
+<td> <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SENDMSG</code> </td>
+<td> <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_RECVMSG</code> </td>
+<td> <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_ACCEPT4</code> </td>
+<td> <code><a href="/docs/linux/man/2-accept4/">accept4</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_RECVMMSG</code> </td>
+<td> <code><a href="/docs/linux/man/2-recvmmsg/">recvmmsg</a></code>(2)
+</td>
+</tr>
+<tr VALIGN=top>
+<td> <code>SYS_SENDMMSG</code> </td>
+<td> <code><a href="/docs/linux/man/2-sendmmsg/">sendmmsg</a></code>(2)
+</td>
+</tr>
+</table>
+<h2>CONFORMING TO</h2>
+<p> This call is specific to Linux, and should not be used in programs intended to be portable.</p>
+<h2>NOTES</h2>
+<p> On a some architectures&#8212;for example, x86-64 and ARM&#8212;there is no <code>socketcall</code>() system call; instead <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), and so on really are implemented as separate system calls. </p>
+<p> On x86-32, <code>socketcall</code>() was historically the only entry point for the sockets API. However, starting in Linux 4.3, direct system calls are provided on x86-32 for the sockets API. This facilitates the creation of <code><a href="/docs/linux/man/2-seccomp/">seccomp</a></code>(2) filters that filter sockets system calls (for new user-space binaries that are compiled to use the new entry points) and also provides a (very) small performance improvement.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-getpeername/">getpeername</a></code>(2), <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2), <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2), <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2), <code><a href="/docs/linux/man/2-recv/">recv</a></code>(2), <code><a href="/docs/linux/man/2-recvfrom/">recvfrom</a></code>(2), <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-send/">send</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2), <code><a href="/docs/linux/man/2-shutdown/">shutdown</a></code>(2), <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), <code><a href="/docs/linux/man/2-socketpair/">socketpair</a></code>(2)</p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

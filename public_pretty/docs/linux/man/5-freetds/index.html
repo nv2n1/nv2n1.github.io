@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>freetds(5) · Linux Manual Pages</title>
+<meta name="description" content="freetds.conf – configuration file for FreeTDS">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-freetds/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>freetds(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>freetds.conf</code> &#8211; configuration file for FreeTDS</p>
+<h2>Synopsis</h2>
+<p>The freetds.conf file describes Sybase and Microsoft dataservers to the FreeTDS library. It comprises sections headed by a servername, followed by a list of connection properties denoted as name-value pairs. Defaults are defined via a Bq global section. This file supersedes the interfaces file that Sybase defines for the same purpose, although the latter is still supported.</p>
+<h2>Description</h2>
+<p>A section begins with a servername &#8212; the name of the server &#8212; in square brackets. The servername is chosen at the client&#8217;s descretion. (One exception: with Sybase ASA the servername must match the database name to be used.) </p>
+<p> Sections contain properties, one per line, in the form </p>
+<blockquote><p><tt>name = value</tt></p></blockquote>
+<p> where <i>name</i> is the connection property to be described. Servernames and properties are not case sensitive. Values are case-preserving i.e., copied literally. Comments begin with either a semicolon (So ; Sc or pound sign ) (So # Sc and continue to end of line. Blank lines are ignored. Whitespace surrounding the ) So = Sc is ignored.</p>
+<h2>Properties</h2>
+<dl>
+<dt><code>client charset</code></dt>
+<dd>encoding of client data; overrides <a href="/docs/linux/man/1-locale/">locale</a>(1) settings</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>iconv character set names</dd>
+<dt><code>Default:</code></dt>
+<dd>ISO-8859-1</dd></dl>
+<dt><code>connect timeout</code></dt>
+<dd>seconds to wait for response from connect request</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>0 to MAX_INT</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>debug flags</code></dt>
+<dd>logging granularity</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>32-bit integer</dd>
+<dt><code>Default:</code></dt>
+<dd>0x4fff</dd></dl>
+<dt><code>dump file</code></dt>
+<dd>specifies location of a logfile and turns on logging</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>valid file name</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>dump file append</code></dt>
+<dd>log data appended to file instead of re-writing for each connection</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>yes/no</dd>
+<dt><code>Default:</code></dt>
+<dd>no</dd></dl>
+<dt><code>emulate little endian</code></dt>
+<dd>forces big endian machines to act as little endian to communicate with Microsoft Servers</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>yes/no</dd>
+<dt><code>Default:</code></dt>
+<dd>no</dd></dl>
+<dt><code>encryption</code></dt>
+<dd>
+</dd><dl>
+<dt><i>off</i></dt>
+<dd>disables encryption (default)</dd>
+<dt><i>request</i></dt>
+<dd>use if available</dd>
+<dt><i>required</i></dt>
+<dd>allow encrypted connections only</dd></dl>
+<dt><code>host</code></dt>
+<dd>Name of the host the dataserver is running on.</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>host name or IP address</dd>
+<dt><code>Default:</code></dt>
+<dd>SYBASE</dd></dl>
+<dt><code>initial block size</code></dt>
+<dd>maximum size of a protocol block</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>multiple of 512</dd>
+<dt><code>Default:</code></dt>
+<dd>512</dd></dl>
+<dt><code>instance</code></dt>
+<dd>name of Microsoft SQL Server instance to connect to (supersedes <i>port</i></dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>instance name</dd>
+<dt><code>Default:</code></dt>
+<dd>none</dd></dl>
+<dt><code>port</code></dt>
+<dd>port number that the dataserver is listening to</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>any valid port</dd>
+<dt><code>Default:</code></dt>
+<dd>TDS 5.0, 5000; TDS 7.0 and up, 1433</dd></dl>
+<dt><code>tds version</code></dt>
+<dd>TDS protocol version to use</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>4.2, 5.0, 7.0, 8.0</dd>
+<dt><code>Default:</code></dt>
+<dd>&#8211;<code>-with-tdsver</code> value (5.0 if unspecified)</dd></dl>
+<dt><code>text size</code></dt>
+<dd>default value of TEXTSIZE, in bytes</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>0 to 4,294,967,295</dd>
+<dt><code>Default:</code></dt>
+<dd>4,294,967,295</dd></dl>
+<dt><code>timeout</code></dt>
+<dd>seconds to wait for response to a query</dd>
+<dl>
+<dt><code>Domain:</code></dt>
+<dd>0 to MAX_INT</dd>
+<dt><code>Default:</code></dt>
+<dd>none (wait forever)</dd></dl>
+</dl>
+<p> Boolean property values may be denoted as on/off, true/false, or 1/0.</p>
+<h3>Debug Flags</h3>
+<p>The log&#8217;s granularity can be controlled with the <i>debug flags</i> property.</p>
+<dl>
+<dt><code>Value Ta </code><code>Meaning</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x02<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>severe error</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x04<tt>&nbsp;<wbr>&nbsp;<wbr></tt>error</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x08<tt>&nbsp;<wbr></tt>warning</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x10<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>network</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x20information level 1</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x40information level 2</code></dt>
+<dd>
+</dd><dt><code>&nbsp;<wbr>&nbsp;<wbr>0x80function trace and info</code></dt>
+<dd>
+</dd><dt><code>0x1000show pid</code></dt>
+<dd>
+</dd><dt><code>0x2000show time</code></dt>
+<dd>
+</dd><dt><code>0x4000show source level info (source file and line)</code></dt>
+<dd>
+</dd><dt><code>0x8000thread id (not implemented).</code></dt>
+<dd></dd></dl>
+<h2>Names And Locations</h2>
+<p>The file is normally named<br />
+ /etc/freetds.conf or ${HOME}/.freetds.conf That name can be overridden with the FREETDSCONF environment variable. </p>
+<p> FreeTDS will search conf files for a servername in the following order: </p>
+<ol>
+<li> a filename set programatically via dbsetifile() that is in .conf format
+<li> a filename in the environment variable FREETDSCONF that is in .conf format
+<li> ${HOME}/.freetds.conf if extant
+<li> @sysconfdir@/freetds.conf </ol>
+<p> The search stops with the first file containing the servername. </p>
+<p> If no conf file is found, FreeTDS searches for an interfaces file in the following order: </p>
+<ol>
+<li> a filename set programatically via dbsetifile() that is in interfaces format
+<li> ${HOME}/.interfaces
+<li> $SYBASE/interfaces (where <code>$SYBASE is an environment variable)</code> </ol>
+<p> If the requested servername is not found in any configuration file, the fallback mechanism is: </p>
+<ol>
+<li> attempt to convert the name to an IP address with inet_addr(3), else
+<li> attempt to convert the name to an IP address with <a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a>(3), else
+<li> attempt to look up the literal name &#8220;SYBASE&#8221; </ol>
+<h2>Environment</h2>
+<dl>
+<dt><code>FREETDSCONF</code></dt>
+<dd>overrides name and location of the system-wide conf file</dd>
+<dt><code>TDSDUMP</code></dt>
+<dd>overrides the name and location of the FreeTDS log file</dd>
+<dt><code>TDSDUMPCONFIG</code></dt>
+<dd>specifies a name and location of a file that logs the search of configuration files</dd>
+<dt><code>TDSHOST</code></dt>
+<dd>overrides the host property</dd>
+<dt><code>TDSPORT</code></dt>
+<dd>overrides the port property</dd>
+<dt><code>TDSQUERY</code></dt>
+<dd>synonym for DSQUERY, the default servername</dd>
+<dt><code>TDSVER</code></dt>
+<dd>overrides the version specified in the freetds.conf</dd></dl>
+<p> The environment variables <code>TDSVER, TDSDUMP, TDSPORT, TDSQUERY, and TDSHOST</code> override values set by a .conf or interfaces file.</p>
+<h2>Files</h2>
+<p>@sysconfdir@/freetds.conf , ${HOME}/.freetds.conf</p>
+<h2>See Also</h2>
+<dl>
+<dd><i>FreeTDS User Guide</i></dd></dl>
+<h2>History</h2>
+<p>.conf files first appeared with version 0.53 of FreeTDS.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

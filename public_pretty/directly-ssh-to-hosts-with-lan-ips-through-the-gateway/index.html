@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSH Through a Gateway to Internal Networks Using ProxyCommand - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/directly-ssh-to-hosts-with-lan-ips-through-the-gateway/">
+  <meta name="description" content="You’ve got internal hosts on RFC 1918 addresses (10.0.3.0/24, 172.16.0.0/12, etc.) behind a gateway, and you need SSH access to them from your workstation. …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SSH Through a Gateway to Internal Networks Using ProxyCommand">
+  <meta property="og:url" content="https://www.systutorials.com/directly-ssh-to-hosts-with-lan-ips-through-the-gateway/">
+  <meta property="og:description" content="You’ve got internal hosts on RFC 1918 addresses (10.0.3.0/24, 172.16.0.0/12, etc.) behind a gateway, and you need SSH access to them from your workstation. …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/networking/">Networking</a>
+        </nav>
+        
+        <h1>SSH Through a Gateway to Internal Networks Using ProxyCommand</h1>
+        <time class="post-date" datetime="2014-04-30T04:38:18Z">April 30, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>You’ve got internal hosts on RFC 1918 addresses (10.0.3.0/24, 172.16.0.0/12, etc.) behind a gateway, and you need SSH access to them from your workstation. Traditional solutions involve iptables port forwarding, non-standard ports, and a maintenance nightmare. ProxyCommand offers a cleaner approach: direct SSH connections to internal IPs that actually work.</p>
+<h2 id="how-proxycommand-works">How ProxyCommand Works</h2>
+<p>SSH’s <code>ProxyCommand</code> directive executes a command to establish your connection. Instead of connecting directly to an unreachable internal IP:</p>
+<ol>
+<li>SSH connects to your gateway normally</li>
+<li>The gateway pipes the connection through <code>nc</code> (netcat) or <code>socat</code></li>
+<li>Those tools bridge your SSH client to the internal host’s SSH daemon</li>
+<li>From your perspective, you’ve SSH’d directly to the internal IP</li>
+</ol>
+<p>It’s transparent. No persistent tunnels. No weird port mappings to remember.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Key-based SSH access to the gateway (no passwords in the proxy chain)</li>
+<li><code>nc</code> or <code>socat</code> installed on the gateway</li>
+<li>SSH client on your local machine (OpenSSH 7.3+)</li>
+</ul>
+<h2 id="basic-configuration">Basic Configuration</h2>
+<p>Edit <code>~/.ssh/config</code>:</p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q gateway.example.org nc %h %p
+</code></pre>
+<p>Secure it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/config
+</span></span></code></pre></div><p>That’s it. Now connect:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh user@10.0.3.100
+</span></span><span class="line"><span class="cl">ssh 10.0.3.50
+</span></span></code></pre></div><p>Your SSH client expands this to:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -q gateway.example.org nc 10.0.3.100 <span class="m">22</span>
+</span></span></code></pre></div><p>The gateway executes <code>nc 10.0.3.100 22</code>, which opens a TCP tunnel. Your local SSH client communicates through it as if you’re connected directly.</p>
+<h2 id="expanding-across-multiple-networks">Expanding Across Multiple Networks</h2>
+<p>Add more patterns:</p>
+<pre><code>Host 10.0.3.* 10.0.4.*
+  ProxyCommand ssh -q gateway.example.org nc %h %p
+
+Host 172.16.*.*
+  ProxyCommand ssh -q gateway.example.org nc %h %p
+</code></pre>
+<p>For multiple gateways serving different subnets:</p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q gateway-a.example.org nc %h %p
+
+Host 10.0.4.*
+  ProxyCommand ssh -q gateway-b.example.org nc %h %p
+</code></pre>
+<h2 id="practical-options">Practical Options</h2>
+<p><strong>Non-standard gateway SSH port:</strong></p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q -p 2222 gateway.example.org nc %h %p
+</code></pre>
+<p><strong>Different username on gateway:</strong></p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q sysadmin@gateway.example.org nc %h %p
+</code></pre>
+<p><strong>Using socat instead of netcat:</strong></p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q gateway.example.org socat - TCP:%h:%p
+</code></pre>
+<p><strong>Combined with other SSH directives:</strong></p>
+<pre><code>Host 10.0.3.*
+  ProxyCommand ssh -q gateway.example.org nc %h %p
+  User sysadmin
+  IdentityFile ~/.ssh/id_rsa_internal
+  StrictHostKeyChecking accept-new
+  ConnectTimeout 5
+</code></pre>
+<h2 id="modern-alternative-ssh-jump--j">Modern Alternative: SSH Jump (-J)</h2>
+<p>OpenSSH 7.3+ supports the <code>-J</code> flag, which is essentially syntactic sugar for ProxyCommand:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -J gateway.example.org user@10.0.3.100
+</span></span></code></pre></div><p>For a permanent config, use the <code>ProxyJump</code> directive:</p>
+<pre><code>Host 10.0.3.*
+  ProxyJump gateway.example.org
+  User sysadmin
+</code></pre>
+<p><code>ProxyJump</code> is cleaner and recommended for new setups. It handles the netcat plumbing automatically. Use <code>ProxyCommand</code> when you need fine-grained control or logging.</p>
+<h2 id="debugging">Debugging</h2>
+<p>Connection hanging or failing? Test methodically.</p>
+<p><strong>Verify gateway access:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v gateway.example.org
+</span></span></code></pre></div><p><strong>Check netcat on the gateway:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh gateway.example.org which nc
+</span></span></code></pre></div><p><strong>Test the proxy command directly:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -v -q gateway.example.org nc 10.0.3.100 <span class="m">22</span>
+</span></span></code></pre></div><p>This should hang while connecting to the internal host’s SSH daemon (press Ctrl+C). If it fails immediately, the internal host is unreachable from the gateway.</p>
+<p><strong>Test from gateway to internal host:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh gateway.example.org nc -zv 10.0.3.100 <span class="m">22</span>
+</span></span></code></pre></div><p>The <code>-z</code> flag just checks if the port is open without establishing a full connection.</p>
+<p><strong>Full verbose SSH test:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -vvv user@10.0.3.100
+</span></span></code></pre></div><p>Look for lines starting with <code>Executing proxy command</code> to confirm ProxyCommand is being invoked.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li><strong>Keys only:</strong> ProxyCommand must use key-based authentication. Password prompts in the proxy chain hang your session and expose you to man-in-the-middle attacks.</li>
+<li><strong>Gateway access control:</strong> Restrict SSH access to the gateway (IP whitelisting, firewall rules).</li>
+<li><strong>Network isolation:</strong> This assumes your internal network is properly isolated from untrusted networks.</li>
+<li><strong>Audit logging:</strong> Enable logging on the gateway to track who’s accessing internal hosts.</li>
+<li><strong>Command restrictions:</strong> For tighter security, configure sshd on the gateway with <code>Match</code> blocks to limit what commands can be proxied.</li>
+</ul>
+<h2 id="when-to-use-alternatives">When to Use Alternatives</h2>
+<p><strong>For one-off connections:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -J gateway.example.org user@10.0.3.100
+</span></span></code></pre></div><p><strong>For broader network access (not just SSH):</strong>
+Consider a VPN. ProxyCommand is SSH-specific.</p>
+<p><strong>For teams and complex access control:</strong>
+A bastion host with restricted commands and audit logging beats simple ProxyCommand.</p>
+<h2 id="summary">Summary</h2>
+<p>ProxyCommand lets you treat internal hosts as if they’re directly reachable, without port forwarding chaos or firewall rules. Set it once in <code>~/.ssh/config</code>, authenticate with keys, and you’re done. For modern OpenSSH, <code>ProxyJump</code> is the simpler option. Both scale well and integrate seamlessly with your existing SSH setup.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libssh2_free(3) · Linux Manual Pages</title>
+<meta name="description" content="libssh2_free – deallocate libssh2 memory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-libssh2_free/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>libssh2_free(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> libssh2_free &#8211; deallocate libssh2 memory</p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;libssh2.h&gt; </p>
+<p> void libssh2_free(LIBSSH2_SESSION *session, void *ptr);</p>
+<h2>DESCRIPTION</h2>
+<p> Deallocate memory allocated by earlier call to libssh2 functions. It uses the memory allocation callbacks provided by the application, if any. Otherwise, this will just call free(). </p>
+<p> This function is mostly useful under Windows when libssh2 is linked to one run-time library and the application to another.</p>
+<h2>AVAILABILITY</h2>
+<p> Added in libssh2 1.2.8</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>system-config-printer-applet(1) · Linux Manual Pages</title>
+<meta name="description" content="system-config-printer-applet – print job manager">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-system-config-printer-applet/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>system-config-printer-applet(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> system-config-printer-applet &#8211; print job manager </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>system-config-printer-applet</code> [&#8211;help] [&#8211;version] [&#8211;debug]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>system-config-printer-applet</code></p>
+<dd>is a print job manager for CUPS. Normally it will display a printer icon in the notification area, greyed out when there are no print jobs for the current user. Clicking on the icon displays a simple print job manager for cancelling or reprinting jobs. </dd>
+<p> To save memory, the applet waits first of all until the user has printed a job before putting the icon in the notification area. To invoke the print job manager before a job has been printed, run the applet with the <code>&#8211;no-tray-icon</code> option: a desktop file is provided for this, so that it should appear in the system menu. </p>
+<p> As well as displaying a printer icon in the notification area, the applet also provides a D-BUS server for the com.redhat.PrintDriverSelection interface, to help configure a new printer when it is plugged in.</p>
+<h2>OPTIONS</h2>
+<p> <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Display a short usage message.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Display the version of the applet.</dd></dl>
+<p> <code>&#8211;debug</code></p>
+<dl>
+<dt>
+</dt><dd> Show debugging information.</dd></dl>
+<h2>AUTHOR</h2>
+<p> <code>Tim Waugh</code> &lt;twaugh [at] redhat.com&gt;</p>
+<dl>
+<dt>
+</dt><dd> Author.</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

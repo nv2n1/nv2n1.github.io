@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>usbguard-daemon(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-usbguard-daemon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>usbguard-daemon(8)</h1>
+
+
+
+
+
+<p>usbguard-daemon &ndash; USBGuard daemon</p>
+<h2>Synopsis</h2>
+<p>usbguard-daemon <wbr>[OPTIONS]</p>
+<h2>Description</h2>
+<p>The usbguard-daemon is the main component of the USBGuard software framework. It runs as a service in the background and enforces the USB device authorization policy for all USB devices. The policy is defined by a set of rules using a rule language described in <a HREF="/docs/linux/man/5-usbguard-rules-conf/">usbguard-rules.conf</a>(5). The policy and the authorization state of USB devices can be modified during runtime using the <a HREF="/docs/linux/man/1-usbguard/">usbguard</a>(1) tool.</p>
+<h2>Options</h2>
+<dl><dt>-d
+</dt><dd>Enable debugging messages in the log.
+</dd><dl><dd></dd></dl><dt>-s
+</dt><dd>Log to syslog.
+</dd><dl><dd></dd></dl><dt>-k
+</dt><dd>Log to console.
+</dd><dl><dd></dd></dl><dt>-l &lt;path&gt;
+</dt><dd>Log to a file at path.
+</dd><dl><dd></dd></dl><dt>-p &lt;path&gt;
+</dt><dd>Write PID to a file at path.
+</dd><dl><dd></dd></dl><dt>-c &lt;path&gt;
+</dt><dd>Load configuration from a file at path (default: /etc/usbguard/usbguard-daemon.conf).
+</dd><dl><dd></dd></dl><dt>-h
+</dt><dd>Show the help/usage screen.
+</dd><dl><dd></dd></dl></dl>
+<h2>Security Considerations</h2>
+<p>The daemon provides the USBGuard public IPC interface. Depending on your distribution defaults, the access to this interface is limited to a certain group or a specific user only. Please refer to the <a HREF="/docs/linux/man/5-usbguard-daemon-conf/">usbguard-daemon.conf</a>(5) man page for more information on how to configure the ACL correctly. Do not leave the ACL unconfigured as that will expose the IPC interface to all local users and will allow them to manipulate the authorization state of USB devices and modify the USBGuard policy.</p>
+<h2>Bugs</h2>
+<p>If you find a bug in this software or if you&rsquo;d like to request a feature to be implemented, please file a ticket at &lt;<a rel="nofollow" HREF="https://github.com/dkopecek/usbguard/issues/new"><a href="https://github.com/dkopecek/usbguard/issues/new">https://github.com/dkopecek/usbguard/issues/new</a></a>&gt;.</p>
+<h2>Copyright</h2>
+<p>Copyright © 2015 Red Hat, Inc. License GPLv2+: GNU GPL version 2 or later &lt;<a rel="nofollow" HREF="http://gnu.org/licenses/gpl.html"><a href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a></a>&gt;. This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/5-usbguard-daemon-conf/">usbguard-daemon.conf</a>(5), <a HREF="/docs/linux/man/5-usbguard-rules-conf/">usbguard-rules.conf</a>(5), <a HREF="/docs/linux/man/1-usbguard/">usbguard</a>(1), <a HREF="/docs/linux/man/1-usbguard-applet-qt/">usbguard-applet-qt</a>(1)</p>
+<h2>Authors</h2>
+<p>Daniel Kopeček &lt;dkopecek [at] redhat.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

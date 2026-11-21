@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging C/C&#43;&#43; with GDB on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/gdb-cheat-sheet/">
+  <meta name="description" content="GDB is the standard debugger for C/C&#43;&#43; development on Linux. This reference covers essential commands for breakpoints, execution control, inspection, and …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Debugging C/C&#43;&#43; with GDB on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/gdb-cheat-sheet/">
+  <meta property="og:description" content="GDB is the standard debugger for C/C&#43;&#43; development on Linux. This reference covers essential commands for breakpoints, execution control, inspection, and …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Debugging C/C&#43;&#43; with GDB on Linux</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:45Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>GDB is the standard debugger for C/C++ development on Linux. This reference covers essential commands for breakpoints, execution control, inspection, and troubleshooting common debugging scenarios.</p>
+<h2 id="starting-gdb">Starting GDB</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./program
+</span></span><span class="line"><span class="cl">gdb ./program core.dump           <span class="c1"># Debug with core file</span>
+</span></span><span class="line"><span class="cl">gdb -p &lt;pid&gt;                      <span class="c1"># Attach to running process</span>
+</span></span><span class="line"><span class="cl">gdb --args ./program arg1 arg2    <span class="c1"># Pass arguments to program</span>
+</span></span><span class="line"><span class="cl">gdb -tui ./program                <span class="c1"># Text UI mode (split screen with source)</span>
+</span></span></code></pre></div><h2 id="execution-control">Execution Control</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>Shortcut</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>run</td>
+					<td>r</td>
+					<td>Start program execution</td>
+			</tr>
+			<tr>
+					<td>run arg1 arg2</td>
+					<td>r arg1 arg2</td>
+					<td>Run with arguments</td>
+			</tr>
+			<tr>
+					<td>continue</td>
+					<td>c</td>
+					<td>Resume after breakpoint</td>
+			</tr>
+			<tr>
+					<td>next</td>
+					<td>n</td>
+					<td>Execute next line (step over functions)</td>
+			</tr>
+			<tr>
+					<td>step</td>
+					<td>s</td>
+					<td>Execute next line (step into functions)</td>
+			</tr>
+			<tr>
+					<td>finish</td>
+					<td>fin</td>
+					<td>Run until current function returns</td>
+			</tr>
+			<tr>
+					<td>until</td>
+					<td>u</td>
+					<td>Run until line number (avoid loops)</td>
+			</tr>
+			<tr>
+					<td>nexti</td>
+					<td>ni</td>
+					<td>Execute next machine instruction</td>
+			</tr>
+			<tr>
+					<td>stepi</td>
+					<td>si</td>
+					<td>Step one machine instruction</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="breakpoints">Breakpoints</h2>
+<h3 id="setting-breakpoints">Setting Breakpoints</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">break</span> main                        <span class="c1"># Break at function</span>
+</span></span><span class="line"><span class="cl"><span class="nb">break</span> file.c:42                   <span class="c1"># Break at line 42 in file.c</span>
+</span></span><span class="line"><span class="cl"><span class="nb">break</span> file.c:main                 <span class="c1"># Break at main in specific file</span>
+</span></span><span class="line"><span class="cl">tbreak file.c:100                 <span class="c1"># Temporary breakpoint (cleared after hit)</span>
+</span></span><span class="line"><span class="cl">rbreak regex                      <span class="c1"># Break on all functions matching regex</span>
+</span></span><span class="line"><span class="cl"><span class="nb">break</span> my_function <span class="k">if</span> count &gt; <span class="m">100</span>  <span class="c1"># Conditional breakpoint</span>
+</span></span><span class="line"><span class="cl"><span class="nb">break</span> parse.c:234 <span class="k">if</span> strlen<span class="o">(</span>buf<span class="o">)</span> <span class="o">==</span> <span class="m">0</span>
+</span></span></code></pre></div><h3 id="managing-breakpoints">Managing Breakpoints</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">info breakpoints                  <span class="c1"># List all breakpoints</span>
+</span></span><span class="line"><span class="cl">delete <span class="m">1</span>                          <span class="c1"># Remove breakpoint 1</span>
+</span></span><span class="line"><span class="cl">delete                            <span class="c1"># Remove all breakpoints</span>
+</span></span><span class="line"><span class="cl">disable <span class="m">2</span>                         <span class="c1"># Disable breakpoint 2 (keep for later)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">enable</span> <span class="m">2</span>                          <span class="c1"># Re-enable breakpoint 2</span>
+</span></span><span class="line"><span class="cl">clear file.c:50                   <span class="c1"># Clear all breakpoints at line 50</span>
+</span></span><span class="line"><span class="cl">condition <span class="m">1</span> count &gt; <span class="m">50</span>            <span class="c1"># Add/modify condition on breakpoint 1</span>
+</span></span></code></pre></div><h2 id="inspection-and-variables">Inspection and Variables</h2>
+<h3 id="printing-values">Printing Values</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">print variable                    <span class="c1"># Print variable value</span>
+</span></span><span class="line"><span class="cl">print variable@10                 <span class="c1"># Print first 10 elements of array</span>
+</span></span><span class="line"><span class="cl">print *pointer                    <span class="c1"># Dereference pointer</span>
+</span></span><span class="line"><span class="cl">print <span class="p">&amp;</span>variable                   <span class="c1"># Print address of variable</span>
+</span></span><span class="line"><span class="cl">print variable.field              <span class="c1"># Access struct field</span>
+</span></span><span class="line"><span class="cl">print variable-&gt;field             <span class="c1"># Access struct via pointer</span>
+</span></span><span class="line"><span class="cl">print <span class="o">((</span><span class="nb">type</span> *<span class="o">)</span>address<span class="o">)</span>-&gt;field     <span class="c1"># Cast and dereference</span>
+</span></span><span class="line"><span class="cl">print <span class="nv">$variable</span>                   <span class="c1"># Print convenience variable</span>
+</span></span></code></pre></div><h3 id="memory-examination">Memory Examination</h3>
+<p>The <code>x</code> command examines memory at an address with format specifiers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">x/fmt address
+</span></span></code></pre></div><p>Format: <code>count type format</code></p>
+<ul>
+<li><strong>Type</strong>: <code>b</code> (byte), <code>h</code> (halfword/2 bytes), <code>w</code> (word/4 bytes), <code>g</code> (giant/8 bytes)</li>
+<li><strong>Format</strong>: <code>x</code> (hex), <code>d</code> (decimal), <code>u</code> (unsigned), <code>o</code> (octal), <code>s</code> (string), <code>i</code> (instruction), <code>a</code> (address), <code>c</code> (char)</li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">x/10xb 0x7fff0000                <span class="c1"># 10 bytes in hex</span>
+</span></span><span class="line"><span class="cl">x/20xw <span class="nv">$sp</span>                       <span class="c1"># 20 words in hex starting at stack pointer</span>
+</span></span><span class="line"><span class="cl">x/5s 0x7fff0000                  <span class="c1"># 5 strings</span>
+</span></span><span class="line"><span class="cl">x/10i main                       <span class="c1"># 10 instructions from main (disassembly)</span>
+</span></span></code></pre></div><h2 id="stack-and-frames">Stack and Frames</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">backtrace                         <span class="c1"># Show call stack</span>
+</span></span><span class="line"><span class="cl">backtrace full                    <span class="c1"># Show call stack with local variables</span>
+</span></span><span class="line"><span class="cl">backtrace <span class="m">5</span>                       <span class="c1"># Show last 5 frames</span>
+</span></span><span class="line"><span class="cl">frame <span class="m">2</span>                           <span class="c1"># Switch to frame 2</span>
+</span></span><span class="line"><span class="cl">up                                <span class="c1"># Move to calling frame</span>
+</span></span><span class="line"><span class="cl">down                              <span class="c1"># Move to called frame</span>
+</span></span><span class="line"><span class="cl">info locals                       <span class="c1"># List local variables in current frame</span>
+</span></span><span class="line"><span class="cl">info args                         <span class="c1"># List function arguments</span>
+</span></span></code></pre></div><h2 id="watchpoints">Watchpoints</h2>
+<p>Watchpoints stop execution when a variable changes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch variable                    <span class="c1"># Stop when variable is written</span>
+</span></span><span class="line"><span class="cl">watch variable <span class="k">if</span> condition       <span class="c1"># Conditional watchpoint</span>
+</span></span><span class="line"><span class="cl">rwatch variable                   <span class="c1"># Stop when variable is read</span>
+</span></span><span class="line"><span class="cl">awatch variable                   <span class="c1"># Stop on read or write</span>
+</span></span><span class="line"><span class="cl">info watchpoints                  <span class="c1"># List all watchpoints</span>
+</span></span><span class="line"><span class="cl">delete watch <span class="m">1</span>                    <span class="c1"># Remove watchpoint 1</span>
+</span></span></code></pre></div><h2 id="disassembly-and-registers">Disassembly and Registers</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">disassemble main                  <span class="c1"># Show assembly for function</span>
+</span></span><span class="line"><span class="cl">disassemble /m main               <span class="c1"># Assembly with source code interleaved</span>
+</span></span><span class="line"><span class="cl">disassemble 0x7fff0000 0x7fff0100 <span class="c1"># Assembly in address range</span>
+</span></span><span class="line"><span class="cl">info registers                    <span class="c1"># Show all register contents</span>
+</span></span><span class="line"><span class="cl">info all-registers                <span class="c1"># Show all registers including FP/vector</span>
+</span></span><span class="line"><span class="cl">print <span class="nv">$rax</span>                        <span class="c1"># Print specific register (x86-64)</span>
+</span></span><span class="line"><span class="cl">print <span class="nv">$rbp</span>                        <span class="c1"># Print base pointer</span>
+</span></span></code></pre></div><h2 id="source-code-navigation">Source Code Navigation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">list                              <span class="c1"># Show source around current location</span>
+</span></span><span class="line"><span class="cl">list file.c:50                    <span class="c1"># Show source at line 50</span>
+</span></span><span class="line"><span class="cl">list -                            <span class="c1"># Show previous 10 lines</span>
+</span></span><span class="line"><span class="cl">list +                            <span class="c1"># Show next 10 lines</span>
+</span></span><span class="line"><span class="cl">directory /path/to/source         <span class="c1"># Add source directory to search path</span>
+</span></span></code></pre></div><h2 id="advanced-techniques">Advanced Techniques</h2>
+<h3 id="automation-with-commands">Automation with Commands</h3>
+<p>Execute commands automatically at breakpoints:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">commands <span class="m">1</span>
+</span></span><span class="line"><span class="cl">silent
+</span></span><span class="line"><span class="cl">print variable
+</span></span><span class="line"><span class="cl">print another_var
+</span></span><span class="line"><span class="cl"><span class="k">continue</span>
+</span></span><span class="line"><span class="cl">end
+</span></span></code></pre></div><p>The <code>silent</code> keyword suppresses standard breakpoint messages. This is useful for logging variable values without manual inspection.</p>
+<h3 id="custom-functions">Custom Functions</h3>
+<p>Define reusable debugging commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">define print_struct
+</span></span><span class="line"><span class="cl">print <span class="nv">$arg0</span>
+</span></span><span class="line"><span class="cl">print <span class="nv">$arg0</span>-&gt;field1
+</span></span><span class="line"><span class="cl">print <span class="nv">$arg0</span>-&gt;field2
+</span></span><span class="line"><span class="cl">end
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Usage:</span>
+</span></span><span class="line"><span class="cl">print_struct my_struct_ptr
+</span></span></code></pre></div><h3 id="reverse-debugging">Reverse Debugging</h3>
+<p>Some builds of GDB support reverse execution (requires Intel Processor Trace or rr):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">set</span> record full insn-number-max unlimited
+</span></span><span class="line"><span class="cl">record
+</span></span><span class="line"><span class="cl"><span class="c1"># ... run program</span>
+</span></span><span class="line"><span class="cl">reverse-continue                  <span class="c1"># Go backward</span>
+</span></span><span class="line"><span class="cl">reverse-step                      <span class="c1"># Step backward</span>
+</span></span></code></pre></div><p>Note: Reverse debugging requires compilation with debug symbols and works best with the <code>rr</code> tool for Linux process recording.</p>
+<h3 id="expression-evaluation">Expression Evaluation</h3>
+<p>Evaluate complex expressions in the program’s context:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">print array<span class="o">[</span>index<span class="o">]</span>
+</span></span><span class="line"><span class="cl">print sizeof<span class="o">(</span><span class="nb">type</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">print <span class="o">(</span>int<span class="o">)</span>pointer_var            <span class="c1"># Cast during evaluation</span>
+</span></span><span class="line"><span class="cl">call my_function<span class="o">(</span>arg1, arg2<span class="o">)</span>      <span class="c1"># Call a function from the program</span>
+</span></span></code></pre></div><h2 id="configuration-and-output">Configuration and Output</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">set</span> print pretty on               <span class="c1"># Format struct output nicely</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> print array on                <span class="c1"># Print arrays on multiple lines</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> print array-indexes on        <span class="c1"># Show array indices</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> pagination off                <span class="c1"># Disable paging (useful in scripts)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> confirm off                   <span class="c1"># Disable confirmation prompts</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> logging on                    <span class="c1"># Log session to gdb.txt</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> logging file output.log       <span class="c1"># Specify log filename</span>
+</span></span><span class="line"><span class="cl">handle SIGPIPE noprint nostop     <span class="c1"># Ignore signal SIGPIPE</span>
+</span></span></code></pre></div><h2 id="common-debugging-workflows">Common Debugging Workflows</h2>
+<h3 id="segmentation-fault">Segmentation Fault</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb ./program
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> run
+</span></span><span class="line"><span class="cl"><span class="c1"># ... crash occurs</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> backtrace full              <span class="c1"># See full call stack with locals</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> frame <span class="m">2</span>                     <span class="c1"># Switch to frame 2</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> info locals                 <span class="c1"># Examine local variables</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>gdb<span class="o">)</span> x/20x <span class="nv">$sp</span>                   <span class="c1"># Dump stack memory</span>
+</span></span></code></pre></div><h3 id="memory-corruption-with-addresssanitizer">Memory Corruption with AddressSanitizer</h3>
+<p>Instead of hunting with GDB, compile with AddressSanitizer for faster detection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -fsanitize<span class="o">=</span>address -g -O1 program.c -o program
+</span></span><span class="line"><span class="cl">./program
+</span></span></code></pre></div><p>AddressSanitizer will pinpoint the exact line causing memory errors.</p>
+<h3 id="debugging-optimized-binaries">Debugging Optimized Binaries</h3>
+<p>Compile with <code>-O0 -g</code> for reliable debugging:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -O0 -g program.c -o program
+</span></span></code></pre></div><p>Higher optimization levels (<code>-O2</code>, <code>-O3</code>) reorder instructions and inline functions, making breakpoints and variable inspection unreliable.</p>
+<h3 id="following-child-processes">Following Child Processes</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">set</span> follow-fork-mode child        <span class="c1"># Debug child process instead of parent</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> detach-on-fork off            <span class="c1"># Keep both processes under GDB control</span>
+</span></span><span class="line"><span class="cl">info inferiors                    <span class="c1"># List all processes</span>
+</span></span><span class="line"><span class="cl">inferior <span class="m">2</span>                        <span class="c1"># Switch to process 2</span>
+</span></span></code></pre></div><h3 id="scripting-gdb">Scripting GDB</h3>
+<p>Create a script file for automation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat &gt; debug.gdb <span class="s">&lt;&lt; &#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">break main
+</span></span></span><span class="line"><span class="cl"><span class="s">run
+</span></span></span><span class="line"><span class="cl"><span class="s">backtrace
+</span></span></span><span class="line"><span class="cl"><span class="s">info locals
+</span></span></span><span class="line"><span class="cl"><span class="s">quit
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gdb -x debug.gdb ./program
+</span></span></code></pre></div><p>Or non-interactively:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gdb -batch -x script.gdb ./program
+</span></span></code></pre></div><h2 id="tips-and-tricks">Tips and Tricks</h2>
+<ul>
+<li><strong>Tab completion</strong>: Works for commands, functions, and variable names</li>
+<li><strong>History</strong>: Use arrow keys to navigate command history, or <code>history</code> command</li>
+<li><strong>Convenience variables</strong>: Create variables with <code>set $myvar = value</code></li>
+<li><strong>Help system</strong>: <code>help command</code> or <code>help category</code> for detailed information</li>
+<li><strong>Quit</strong>: <code>quit</code>, <code>q</code>, or Ctrl+D</li>
+<li><strong>Large output</strong>: Use <code>set pagination off</code> in scripts to prevent hanging</li>
+<li><strong>GDB dashboard</strong>: Install <code>gdb-dashboard</code> for a tmux-like UI showing registers, stack, and source simultaneously</li>
+</ul>
+<h2 id="performance-debugging">Performance Debugging</h2>
+<p>For CPU-intensive programs, use sampling profilers alongside GDB:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Attach to running process and sample</span>
+</span></span><span class="line"><span class="cl">perf record -p &lt;pid&gt; -g -- sleep <span class="m">10</span>
+</span></span><span class="line"><span class="cl">perf report
+</span></span></code></pre></div><p>Then use GDB to examine hot functions identified by perf.</p>
+<p>For detailed GDB documentation, consult the <a href="https://sourceware.org/gdb/documentation/" rel="nofollow noopener" target="_blank">GDB manual</a>.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

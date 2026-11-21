@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>virt-copy-in(1) · Linux Manual Pages</title>
+<meta name="description" content="virt-copy-in – Copy files and directories into a virtual machine disk image.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-virt-copy-in/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>virt-copy-in(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> virt-copy-in &#8211; Copy files and directories into a virtual machine disk image. </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+virt - copy - in - a disk.img file | dir[file | dir...] / destination virt - copy - in - d domain file | dir[file | dir...] / destination
+</code></pre>
+<h2>WARNING</h2>
+<p> Using <tt>&quot;virt-copy-in&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
+<h2>DESCRIPTION</h2>
+<p> <tt>&quot;virt-copy-in&quot;</tt> copies files and directories from the local disk into a virtual machine disk image or named libvirt domain. </p>
+<p> You can give one of more filenames and directories on the command line. Directories are copied in recursively. The final parameter must be the destination directory in the disk image which must be an absolute path starting with a <i>/</i> character.</p>
+<h2>EXAMPLES</h2>
+<p> Update <i>/etc/resolv.conf</i> in a guest: </p>
+<pre>
+ virt-copy-in -d MyGuest resolv.conf /etc
+</pre>
+<p> Upload a home directory to a guest: </p>
+<pre>
+ virt-copy-in -d MyGuest skel /home
+</pre>
+<h2>JUST A SHELL SCRIPT WRAPPER AROUND GUESTFISH</h2>
+<p> This command is just a simple shell script wrapper around the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) <tt>&quot;copy-in&quot;</tt> command. For anything more complex than a trivial copy, you are probably better off using guestfish directly.</p>
+<h2>OPTIONS</h2>
+<p> Since the shell script just passes options straight to guestfish, read <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) to see the full list of options.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar-in/">virt-tar-in</a></i>(1), <i><a href="/docs/linux/man/1-virt-tar-out/">virt-tar-out</a></i>(1), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a></p>
+<h2>AUTHORS</h2>
+<p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2011-2012 Red Hat Inc.</p>
+<h2>LICENSE</h2>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
+<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<h2>BUGS</h2>
+<p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> When reporting a bug, please supply:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

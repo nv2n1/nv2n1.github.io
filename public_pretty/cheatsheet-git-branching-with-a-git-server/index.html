@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Branches and Remote Repositories: A Practical Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/cheatsheet-git-branching-with-a-git-server/">
+  <meta name="description" content="git clone https://example.com/your/repo.git git clone git@github.com:user/repo.git Use HTTPS for better firewall compatibility, or SSH if you have keys …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Git Branches and Remote Repositories: A Practical Guide">
+  <meta property="og:url" content="https://www.systutorials.com/cheatsheet-git-branching-with-a-git-server/">
+  <meta property="og:description" content="git clone https://example.com/your/repo.git git clone git@github.com:user/repo.git Use HTTPS for better firewall compatibility, or SSH if you have keys …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/scripting-automation/">Scripting &amp; Automation</a>
+        </nav>
+        
+        <h1>Git Branches and Remote Repositories: A Practical Guide</h1>
+        <time class="post-date" datetime="2014-07-24T05:36:22Z">July 24, 2014</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://example.com/your/repo.git
+</span></span><span class="line"><span class="cl">git clone git@github.com:user/repo.git
+</span></span></code></pre></div><p>Use HTTPS for better firewall compatibility, or SSH if you have keys configured. HTTPS requires authentication via personal access tokens or git credentials; SSH uses key-based auth.</p>
+<h2 id="list-branches">List branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Local branches only</span>
+</span></span><span class="line"><span class="cl">git branch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># All branches (local and remote)</span>
+</span></span><span class="line"><span class="cl">git branch -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Show branch tracking information</span>
+</span></span><span class="line"><span class="cl">git branch -vv
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Show last commit on each branch</span>
+</span></span><span class="line"><span class="cl">git branch -v
+</span></span></code></pre></div><p>Use <code>git branch -vv</code> to see which remote branches your locals are tracking. This is especially useful when working across multiple remotes.</p>
+<h2 id="fetch-and-update">Fetch and update</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Fetch changes without merging</span>
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fetch and merge into current branch</span>
+</span></span><span class="line"><span class="cl">git pull origin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fetch all remotes</span>
+</span></span><span class="line"><span class="cl">git fetch --all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove stale remote tracking branches</span>
+</span></span><span class="line"><span class="cl">git fetch origin --prune
+</span></span></code></pre></div><p>Always fetch before pulling to review changes. If you need to sync multiple remotes, use <code>git fetch --all</code> to update all tracked remotes at once.</p>
+<h2 id="switch-branches">Switch branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Preferred modern syntax (Git 2.23+)</span>
+</span></span><span class="line"><span class="cl">git switch rc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create and switch in one command</span>
+</span></span><span class="line"><span class="cl">git switch -c dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch to tracking a remote branch</span>
+</span></span><span class="line"><span class="cl">git switch --track origin/dev-b1
+</span></span></code></pre></div><p><code>git switch</code> is clearer than <code>git checkout</code> for branch operations. Reserve <code>checkout</code> for file restoration (<code>git checkout -- file</code>).</p>
+<h2 id="create-a-new-branch">Create a new branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create locally</span>
+</span></span><span class="line"><span class="cl">git branch dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create and switch immediately</span>
+</span></span><span class="line"><span class="cl">git switch -c dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create from a specific commit</span>
+</span></span><span class="line"><span class="cl">git branch dev-b1 abc1234
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create from a remote branch</span>
+</span></span><span class="line"><span class="cl">git switch --track origin/dev-b1
+</span></span></code></pre></div><p>Creating from a remote branch with <code>--track</code> automatically sets up upstream tracking, so future pulls work without specifying the remote.</p>
+<h2 id="push-branches">Push branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Push specific branch and set upstream</span>
+</span></span><span class="line"><span class="cl">git push -u origin dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push all branches</span>
+</span></span><span class="line"><span class="cl">git push origin --all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push all branches and tags</span>
+</span></span><span class="line"><span class="cl">git push origin --all --tags
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Delete a remote branch</span>
+</span></span><span class="line"><span class="cl">git push origin --delete dev-b1
+</span></span></code></pre></div><p>Always use <code>-u</code> on the first push to establish upstream tracking. This makes future <code>git pull</code> commands work without arguments.</p>
+<h2 id="merge-branches">Merge branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Switch to target branch first</span>
+</span></span><span class="line"><span class="cl">git switch rc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Merge another branch into current branch</span>
+</span></span><span class="line"><span class="cl">git merge dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Merge with explicit commit message</span>
+</span></span><span class="line"><span class="cl">git merge dev-b1 -m <span class="s2">&#34;Merge dev-b1 into rc&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create merge commit even if fast-forward is possible</span>
+</span></span><span class="line"><span class="cl">git merge --no-ff dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fast-forward only (fail if not possible)</span>
+</span></span><span class="line"><span class="cl">git merge --ff-only dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort if conflicts are complex</span>
+</span></span><span class="line"><span class="cl">git merge --abort
+</span></span></code></pre></div><p>Use <code>--no-ff</code> for feature branches to preserve history. Use <code>--ff-only</code> when merging into main to ensure linear history. Always push after merging: <code>git push origin rc</code>.</p>
+<h2 id="cherry-pick-specific-commits">Cherry-pick specific commits</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Apply a single commit</span>
+</span></span><span class="line"><span class="cl">git cherry-pick abc1234
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply multiple commits</span>
+</span></span><span class="line"><span class="cl">git cherry-pick abc1234 def5678
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply a range (inclusive)</span>
+</span></span><span class="line"><span class="cl">git cherry-pick abc1234^..def5678
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Continue after resolving conflicts</span>
+</span></span><span class="line"><span class="cl">git cherry-pick --continue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort if unresolvable</span>
+</span></span><span class="line"><span class="cl">git cherry-pick --abort
+</span></span></code></pre></div><p>Cherry-picking is useful for backporting critical fixes or applying specific changes to multiple branches. However, avoid it in team workflows—it duplicates commits and creates confusion. Prefer rebasing or merging for shared work.</p>
+<h2 id="rebase-for-linear-history">Rebase for linear history</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Rebase current branch onto main</span>
+</span></span><span class="line"><span class="cl">git rebase main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Interactive rebase to squash or reorder commits</span>
+</span></span><span class="line"><span class="cl">git rebase -i HEAD~3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Continue after resolving conflicts</span>
+</span></span><span class="line"><span class="cl">git rebase --continue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Abort a rebase</span>
+</span></span><span class="line"><span class="cl">git rebase --abort
+</span></span></code></pre></div><p>Rebasing creates linear history but rewrites commits, changing their SHAs. <strong>Never rebase shared or public branches.</strong> Only rebase feature branches before merging to main. After rebasing, you must force-push: <code>git push origin feature-branch --force-with-lease</code> (safer than <code>--force</code>).</p>
+<h2 id="inspect-branch-state">Inspect branch state</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Show branches merged into current branch</span>
+</span></span><span class="line"><span class="cl">git branch --merged
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Show branches not yet merged</span>
+</span></span><span class="line"><span class="cl">git branch --no-merged
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Show detailed tracking status</span>
+</span></span><span class="line"><span class="cl">git branch -vv
+</span></span></code></pre></div><p>Run <code>git branch --merged</code> before cleanup to identify which branches are safe to delete. Use <code>git branch --no-merged</code> to see active development branches.</p>
+<h2 id="clean-up-local-branches">Clean up local branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Delete a local branch</span>
+</span></span><span class="line"><span class="cl">git branch -d dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Force delete (even if unmerged)</span>
+</span></span><span class="line"><span class="cl">git branch -D dev-b1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Delete all merged branches</span>
+</span></span><span class="line"><span class="cl">git branch --merged <span class="p">|</span> grep -v <span class="s2">&#34;^\*\|main\|master&#34;</span> <span class="p">|</span> xargs git branch -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prune stale remote tracking branches</span>
+</span></span><span class="line"><span class="cl">git fetch origin --prune
+</span></span></code></pre></div><p>Always verify with <code>git branch --merged</code> before bulk deletion. The grep filter above excludes current branch (<code>^\*</code>) and main branches to prevent accidents. Run <code>git fetch --prune</code> regularly to clean up remote-deleted branches from your local tracking.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

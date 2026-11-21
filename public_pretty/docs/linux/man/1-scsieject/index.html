@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scsieject(1) · Linux Manual Pages</title>
+<meta name="description" content="scsieject – control SCSI tape devices">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-scsieject/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>scsieject(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> scsieject &#8211; control SCSI tape devices</p>
+<h2>SYNOPSIS</h2>
+<p> scsieject [-f &lt;scsi-generic-device&gt;] commands</p>
+<h2>DESCRIPTION</h2>
+<p> The <code>scsieject</code> command controls SCSI devices in a platform-independent manner. As long as &#8216;mtx&#8217; works on the platform, so does &#8216;scsieject&#8217;.</p>
+<h2>OPTIONS</h2>
+<p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your tape drive. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally /dev/sg0 through /dev/sg15, under FreeBSD these are /dev/pass0 through /dev/passX. Under Solaris this is usually the same as your tape drive (Solaris has a SCSI passthrough ioctl). You can set the STAPE or TAPE environment variable rather than use -f. </p>
+<h2>COMMANDS</h2>
+<dl>
+<dt><code>load</code></dt>
+<dd> Load the medium into the drive. When this command is issued to a CD/DVD drive and the tray is extended the tray will be retracted if the drive is capable of it. </dd>
+<dt><code>unload</code></dt>
+<dd> Unload the medium from the drive (also known as eject). When this command is issued to a CD/DVD drive or a tape drive the media will be ejected if the device supports it. </dd>
+<dt><code>start</code></dt>
+<dd> Start the device. Some devices require a start command after a media changer has loaded new media into the device. </dd>
+<dt><code>stop</code></dt>
+<dd> Stop the device. Some devices require a stop command prior to unloading the medium from the device when using a media changer. </dd>
+<dt><code>lock</code></dt>
+<dd> Lock the device. Locks the device so that the medium cannot be removed manually. </dd>
+<dt><code>unlock</code></dt>
+<dd> Unlock the device. Unlocks the device so that the medium can be removed manually. </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> This program was written by Robert Nelson &lt;robertnelson [at] users.sourceforge.net&gt; based on the scsitape program written by Eric Lee Green &lt;eric [at] badtux.org&gt;. Major portions of the &#8216;mtxl.c&#8217; library used herein were written by Leonard Zubkoff. </p>
+<h2>HINTS</h2>
+<p> Under Linux, <code>cat /proc/scsi/scsi</code> will tell you what SCSI devices you have. You can then refer to them as <code>/dev/sga,</code> <code>/dev/sgb, </code> etc. by the order they are reported. </p>
+<p> Under FreeBSD, <code>camcontrol devlist</code> will tell you what SCSI devices you have, along with which <code>pass</code> device controls them. </p>
+<p> Under Solaris 7 and 8, <code>/usr/sbin/devfsadm -C</code> will clean up your /devices directory. Then <code>find /devices -name &#8216;st@*&#8217; -print </code> will return a list of all tape drives. /dev on Solaris is apparently only of historical interest. </p>
+<h2>BUGS AND LIMITATIONS</h2>
+<p> There are no known bugs or limitations. </p>
+<h2>AVAILABILITY</h2>
+<p> This version of <code>scsieject</code> is currently being maintained by Robert Nelson &lt;robertnelson [at] users.sourceforge.net&gt; as part of the &#8216;mtx&#8217; suite of programs. The &#8216;mtx&#8217; home page is <a rel="nofollow" href="http://mtx.sourceforge.net">http://mtx.sourceforge.net</a> and the actual code is currently available there and via SVN from <a rel="nofollow" href="http://sourceforge.net/projects/mtx.">http://sourceforge.net/projects/mtx.</a> </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-loaderinfo/">loaderinfo</a></code>(1),<code><a href="/docs/linux/man/1-tapeinfo/">tapeinfo</a></code>(1),<code><a href="/docs/linux/man/1-mtx/">mtx</a></code>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

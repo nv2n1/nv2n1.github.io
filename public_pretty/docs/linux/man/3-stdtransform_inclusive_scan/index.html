@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtransform_inclusive_scan(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtransform_inclusive_scan/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtransform_inclusive_scan(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::transform_inclusive_scan - std::transform_inclusive_scan</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;numeric&gt;
+template&lt; class InputIt, class OutputIt,
+class BinaryOperation, class UnaryOperation &gt;                                     (1) (since C++17)
+OutputIt transform_inclusive_scan( InputIt first, InputIt last, OutputIt d_first,
+BinaryOperation binary_op, UnaryOperation unary_op );
+template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
+class BinaryOperation, class UnaryOperation &gt;
+ForwardIt2 transform_inclusive_scan( ExecutionPolicy&amp;&amp; policy,                    (2) (since C++17)
+ForwardIt1 first, ForwardIt1 last, ForwardIt2 d_first,
+BinaryOperation binary_op, UnaryOperation unary_op );
+template&lt; class InputIt, class OutputIt,
+class BinaryOperation, class UnaryOperation, class T &gt;
+OutputIt transform_inclusive_scan( InputIt first, InputIt last, OutputIt d_first, (3) (since C++17)
+BinaryOperation binary_op, UnaryOperation unary_op,
+T init );
+template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2,
+class BinaryOperation, class UnaryOperation, class T &gt;
+ForwardIt2 transform_inclusive_scan( ExecutionPolicy&amp;&amp; policy,                    (4) (since C++17)
+ForwardIt1 first, ForwardIt1 last, ForwardIt2 d_first,
+BinaryOperation binary_op, UnaryOperation unary_op,
+T init );</code></pre> 
+<p>Transforms each element in the range [first, last) with unary_op, then computes an inclusive prefix sum operation using binary_op over the resulting range, optionally with init as the initial value, and writes the results to the range beginning at d_first. &quot;inclusive&quot; means that the i-th input element is included in the i-th sum.
+Formally, assigns through each iterator i in [d_first, d_first + (last - first)) the value of</p>
+<ul>
+<li>for overloads (1-2), the generalized noncommutative sum of unary_op(*j)&hellip; for every j in [first, first + (i - d_first + 1)) over binary_op,</li>
+<li>for overloads (3-4), the generalized noncommutative sum of init, unary_op(*j)&hellip; for every j in [first, first + (i - d_first + 1)) over binary_op,
+where generalized noncommutative sum GNSUM(op, a
+1, &hellip;, a
+N) is defined as follows: * if N=1, a</li>
+</ul>
+<p>1</p>
+<ul>
+<li>if N &gt; 1, op(GNSUM(op, a</li>
+</ul>
+<p>1, &hellip;, a</p>
+<p>K), GNSUM(op, a</p>
+<p>M, &hellip;, a</p>
+<p>N)) for any K where 1 &lt; K+1 = M ≤ N
+In other words, the summation operations may be performed in arbitrary order, and the behavior is nondeterministic if binary_op is not associative.
+Overloads (2, 4) are executed according to policy, and do not participate in overload resolution unless std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true.
+unary_op and binary_op shall not invalidate iterators (including the end iterators) or subranges, nor modify elements in the ranges [first, last) or [d_first, d_first + (last - first)). Otherwise, the behavior is undefined.</p>
+<h2>Parameters</h2>
+<p>first, last - the range of elements to sum
+d_first - the beginning of the destination range; may be equal to first
+policy - the execution policy to use. See execution_policy for details.
+init - the initial value
+unary_op - unary FunctionObject that will be applied to each element of the input range. The return type must be acceptable as input to binary_op.
+binary_op - binary FunctionObject that will be applied in to the result of unary_op, the results of other binary_op, and init if provided.</p>
+<h2>Type requirements</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="inputit-must-meet-the-requirements-of-legacyinputiterator">InputIt must meet the requirements of LegacyInputIterator.</h2>
+<h2 id="outputit-must-meet-the-requirements-of-legacyoutputiterator">OutputIt must meet the requirements of LegacyOutputIterator.</h2>
+<h2 id="forwardit1-must-meet-the-requirements-of-legacyforwarditerator-and-if-init-is-not-provided-forwardit1s-value_type-must-be-moveconstructible-and-binary_opunary_opfirst-unary_opfirst-must-be-convertible-to-forwardit1s-value-type">ForwardIt1 must meet the requirements of LegacyForwardIterator. and, if init is not provided, ForwardIt1&rsquo;s value_type must be MoveConstructible and binary_op(unary_op(*first), unary_op(*first)) must be convertible to ForwardIt1&rsquo;s value type</h2>
+<h2 id="forwardit2-must-meet-the-requirements-of-legacyforwarditerator">ForwardIt2 must meet the requirements of LegacyForwardIterator.</h2>
+<p>T (if init is provided) must meet the requirements of MoveConstructible. All of binary_op(init, unary_op(*first)), binary_op(init, init), and binary_op(unary_op(*first), unary_op(*first)) must be convertible to T</p>
+<h2>Return value</h2>
+<p>Iterator to the element past the last element written.</p>
+<h2>Complexity</h2>
+<p>O(last - first) applications of each of binary_op and unary_op.</p>
+<h2>Exceptions</h2>
+<p>The overloads with a template parameter named ExecutionPolicy report errors as follows:</p>
+<ul>
+<li>If execution of a function invoked as part of the algorithm throws an exception and ExecutionPolicy is one of the standard_policies, std::terminate is called. For any other ExecutionPolicy, the behavior is implementation-defined.</li>
+<li>If the algorithm fails to allocate memory, std::bad_alloc is thrown.</li>
+</ul>
+<h2>Notes</h2>
+<p>unary_op is not applied to init.
+The parameter init appears last, differing from std::transform_exclusive_scan, because it is optional for this function.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;numeric&gt;
+#include &lt;vector&gt;
+int times_10(int x)
+{
+return x * 10;
+}
+int main()
+{
+std::vector data{3, 1, 4, 1, 5, 9, 2, 6};
+std::cout &lt;&lt; &quot;10 times exclusive sum: &quot;;
+std::transform_exclusive_scan(data.begin(), data.end(),
+std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
+0, std::plus&lt;int&gt;{}, times_10);
+std::cout &lt;&lt; &quot;\n10 times inclusive sum: &quot;;
+std::transform_inclusive_scan(data.begin(), data.end(),
+std::ostream_iterator&lt;int&gt;(std::cout, &quot; &quot;),
+std::plus&lt;int&gt;{}, times_10);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 10 times exclusive sum: 0 30 40 80 90 140 230 250
+ <wbr> 10 times inclusive sum: 30 40 80 90 140 230 250 310</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> computes the partial sum of a range of elements
+partial_sum <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> applies a function to a range of elements
+transform <i>(function template)</i>
+inclusive_scan similar to std::partial_sum, includes the ith input element in the ith sum
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i>
+transform_exclusive_scan applies a functor, then calculates exclusive scan
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(function template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

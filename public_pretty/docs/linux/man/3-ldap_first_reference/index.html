@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ldap_first_reference(3) · Linux Manual Pages</title>
+<meta name="description" content="ldap_first_reference, ldap_next_reference, ldap_count_references – Stepping through continuation references in a result chain">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ldap_first_reference/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ldap_first_reference(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ldap_first_reference, ldap_next_reference, ldap_count_references &#8211; Stepping through continuation references in a result chain </p>
+<h2>LIBRARY</h2>
+<p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ldap.h&gt;
+int ldap_count_references(LDAP *ld, LDAPMessage *result)
+    LDAPMessage *ldap_first_reference(LDAP *ld, LDAPMessage *result)
+        LDAPMessage *ldap_next_reference(LDAP *ld, LDAPMessage *reference)
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> These routines are used to step through the continuation references in a result chain received from <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3) or the synchronous LDAP search operation routines. </p>
+<p> The <code>ldap_first_reference()</code> routine is used to retrieve the first reference message in a result chain. It takes the <i>result</i> as returned by a call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-ldap_search_s/">ldap_search_s</a></code>(3) or <code><a href="/docs/linux/man/3-ldap_search_st/">ldap_search_st</a></code>(3) and returns a pointer to the first reference message in the result chain. </p>
+<p> This pointer should be supplied on a subsequent call to <code>ldap_next_reference()</code> to get the next reference message, the result of which should be supplied to the next call to <code>ldap_next_reference()</code>, etc. <code>ldap_next_reference()</code> will return NULL when there are no more reference messages. The reference messages returned from these calls are used by <code><a href="/docs/linux/man/3-ldap_parse_reference/">ldap_parse_reference</a></code>(3) to extract referrals and controls. </p>
+<p> A count of the number of reference messages in the search result can be obtained by calling <code>ldap_count_references()</code>. It can also be used to count the number of reference messages remaining in a result chain.</p>
+<h2>ERRORS</h2>
+<p> If an error occurs in <code>ldap_first_reference()</code> or <code>ldap_next_reference()</code>, NULL is returned. If an error occurs in <code>ldap_count_references()</code>, -1 is returned.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code><a href="/docs/linux/man/3-ldap_search/">ldap_search</a></code>(3), <code><a href="/docs/linux/man/3-ldap_parse_reference/">ldap_parse_reference</a></code>(3)</p>
+<h2>ACKNOWLEDGEMENTS</h2>
+<p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-configuration(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-abrt-configuration/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>abrt-configuration(8)</h1>
+
+
+
+
+
+<p>abrt-configuration - dbus server for reading/writing ABRT configuration</p>
+<h2>Synopsis</h2>
+<p><i>abrt-configuration</i> [-v[v]&hellip;] [-t NUM]</p>
+<h2>Description</h2>
+<p><i>abrt-configuration</i> allows other programs to read/write ABRT configuration over D-Bus. Normally <i>abrt-configuration</i> is started by D-Bus daemon on demand, and terminates after a timeout. The server listens on <i>com.redhat.problem.configuration</i> address on the system bus and exports the configuration as D-Bus objects identified by D-Bus path and D-Bus interface. The configuration objects are created from D-BUS Object Introspection XML files placed in /usr/share/problems/config/interfaces directory. Each file must contain exactly one <i>node</i> element with one <i>interface</i> element and the interface must contain only <i>property</i> elements. The node element must also have both <i>com.redhat.problems.configuration.ConfFile</i> and <i>com.rehdat.problems.configuration.DefaultConfFile</i> annotations elements which provide path to the working configuration file, where the changes are written, and to the default configuration file. <i>property</i> elements can also have the path annotations but they must be specified both or neither. &lsquo;propety&rsquo;s name must be equal to some option from the configuration files and its type must be one of the following D-Bus types: b,i,s,as. The server allows all users to read the configuration, but modifications are authorized over PolicyKit with <i>com.redhat.problem.configuration.update</i> policy.</p>
+<h3>Example of the configuration XML file:</h3>
+<pre><code>&lt;node name=&quot;/com/redhat/problems/configuration/ccpp&quot;&gt;
+&lt;annotation name=&quot;com.redhat.problems.ConfFile&quot; value=&quot;/etc/abrt/plugins/CCpp.conf&quot; /&gt;
+&lt;annotation name=&quot;com.redhat.problems.DefaultConfFile&quot; value=&quot;/usr/share/abrt/conf.d/plugins/CCpp.conf&quot; /&gt;
+&lt;interface name=&quot;com.redhat.problems.configuration.ccpp&quot;&gt;
+&lt;property name=&quot;MakeCompatCore&quot; type=&quot;b&quot; access=&quot;readwrite&quot;/&gt;
+&lt;property name=&quot;SaveBinaryImage&quot; type=&quot;b&quot; access=&quot;readwrite&quot;/&gt;
+&lt;property name=&quot;VerboseLog&quot; type=&quot;i&quot; access=&quot;readwrite&quot;/&gt;
+&lt;property name=&quot;DebuginfoLocation&quot; type=&quot;s&quot; access=&quot;readwrite&quot;/&gt;
+&lt;/interface&gt;
+&lt;/node&gt;</code></pre>
+<h2>Options</h2>
+<p>-v</p>
+<dl><dd>Log more detailed debugging information.</dd></dl>
+<p>-t NUM</p>
+<dl><dd>Exit after NUM seconds of inactivity.</dd></dl>
+<h2>Authors</h2>
+<dl><dd>&bull; ABRT team</dd></dl>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a>(5)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

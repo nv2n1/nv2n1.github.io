@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_haltonrsg(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::HaltonRsg – Halton low-discrepancy sequence generator.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_haltonrsg/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_haltonrsg(3)</h1>
+
+
+
+
+
+<p>QuantLib::HaltonRsg &#8211; Halton low-discrepancy sequence generator. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/randomnumbers/haltonrsg.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>typedef <code>Sample</code>&lt; std::vector&lt; <code>Real</code> &gt; &gt; <code>sample_type</code> </p>
+<h3>Public Member Functions</h3>
+<p><code>HaltonRsg</code> (Size dimensionality, unsigned long seed=0, bool randomStart=true, bool randomShift=false) </p>
+<p> const <code>sample_type</code> &amp; <code>nextSequence</code> () const </p>
+<p> const <code>sample_type</code> &amp; <code>lastSequence</code> () const </p>
+<p> Size <code>dimension</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Halton low-discrepancy sequence generator. </p>
+<p> Halton algorithm for low-discrepancy sequence. For more details see chapter 8, paragraph 2 of &#8216;Monte Carlo Methods in Finance&#8217;, by Peter J�ckel </p>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by reproducing known good values.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned values is tested by checking their discrepancy against known good values.</dd></dl>
+</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

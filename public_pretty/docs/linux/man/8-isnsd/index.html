@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>isnsd(8) · Linux Manual Pages</title>
+<meta name="description" content="isnsd – iSNS server daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-isnsd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>isnsd(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>isnsd &#8211; iSNS server daemon</p>
+<h2>Synopsis</h2>
+<p><code>isnsd</code> [<code>-f</code>] [<code>-4</code>] [<code>-6</code>] [<code>-c </code><i>filename</i>] [<code>-d </code><i>debug-facility</i>] [<code>&#8211;dump-db</code>] [<code>&#8211;init</code>] </p>
+<h2>Description</h2>
+<p><code>Isnsd</code> implements the iSNS protocol as defined in RFC 4171. iSNS is a discovery protocol for iSCSI and iFCP.</p>
+<h2>Options</h2>
+<p>By default, <code>isnsd</code> will take most of its settings from the configuration file <code>/etc/isns/isnsd.conf</code>, with the exception of the following options:</p>
+<dl>
+<dt><code>&#8211;config</code><i> filename</i>, <code>-c</code><i> filename</i></dt>
+<dd>This option overrides the default configuration file.</dd>
+<dt><code>&#8211;foreground</code>,<code>-f</code></dt>
+<dd>By default, <code>isnsd</code> will put itself into the background. By specifying this option, you can tell it to run in the foreground. Any error messages or debug output will be printed to the console rather than being sent to syslog.</dd>
+<dt><code>-4</code></dt>
+<dd>tells <code>isnsd</code> to create an IPv4 socket only. Normally, it defaults to IPv6 (which will accept both IPv4 and IPv6 connections).</dd>
+<dt><code>-6</code></dt>
+<dd>tells <code>isnsd</code> explicitly to create an IPv6 socket only. Since it defaults to IPv6 anyway, this is really a no-op.</dd>
+<dt><code>&#8211;debug</code><i> facility</i>, <code>-d</code><i> facility</i></dt>
+<dd>enables debugging. Valid facilities are</dd></dl>
+<p> <center></p>
+<table BORDER>
+<tr>
+<td>
+<table>
+<tr VALIGN=top>
+<td><code>socket</code></td>
+<td>network send/receive</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>auth</code></td>
+<td>authentication and security related information</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>message</code></td>
+<td>iSNS protocol layer</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>state</code></td>
+<td>database state</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>scn</code></td>
+<td>SCN (state change notification) messages</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>esi</code></td>
+<td>ESI (entity status inquiry) messages</td>
+<td ALIGN=right>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>all</code></td>
+<td>all of the above</td>
+<td ALIGN=right>
+</td>
+</tr>
+</table>
+</table>
+<p></center> </p>
+<dl>
+<dt><code>&#8211;dump-db</code></dt>
+<dd>This is a helper function that will read the database from the file system, and display it in human readable form. When using this option, <code>isnsd</code> will not open any sockets, and terminate immediately after display the database.</dd>
+<dd>This option is intended to be used by the administrator when suspecting that the database contains bad/inconsistent information.</dd>
+<dt><code>&#8211;init</code></dt>
+<dd>This option will create the server&#8217;s authentication key, and the required DSA parameters. The private key is stored in the file specified by the <code>AuthKey</code> option (usually <code>/etc/isns/auth_key</code>). The public portion of the key is written to same directory, with the suffix <code>.pub</code> appended to the key file name.</dd></dl>
+<h2>See Also</h2>
+<p>RFC 4171, <code><a href="/docs/linux/man/8-isnsadm/">isnsadm</a></code>(8), <code><a href="/docs/linux/man/8-isnsdd/">isnsdd</a></code>(8), <code><a href="/docs/linux/man/5-isns_config/">isns_config</a></code>(5).</p>
+<h2>Authors</h2>
+<p>Olaf Kirch &lt;olaf.kirch [at] oracle.com&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

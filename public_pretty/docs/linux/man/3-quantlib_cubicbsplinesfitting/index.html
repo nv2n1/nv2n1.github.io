@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_cubicbsplinesfitting(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::CubicBSplinesFitting – CubicSpline B-splines fitting method.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_cubicbsplinesfitting/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_cubicbsplinesfitting(3)</h1>
+
+
+
+
+
+<p>QuantLib::CubicBSplinesFitting &#8211; CubicSpline B-splines fitting method. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/termstructures/yield/nonlinearfittingmethods.hpp&gt; </p>
+<p> Inherits <code>QuantLib::FittedBondDiscountCurve::FittingMethod</code>. </p>
+<h3>Public Member Functions</h3>
+<p><code>CubicBSplinesFitting</code> (const std::vector&lt; Time &gt; &amp;knotVector, bool constrainAtZero=true) </p>
+<p> <code>Real</code> <code>basisFunction</code> (<code>Integer</code> i, Time t) const<br />
+ <i>cubic B-spline basis functions </i><br />
+ std::auto_ptr&lt; <code>FittedBondDiscountCurve::FittingMethod</code> &gt; <code>clone</code> () const<br />
+ <i>clone of the current object </i></p>
+<h2>Detailed Description</h2>
+<p>CubicSpline B-splines fitting method. </p>
+<p> Fits a discount function to a set of cubic B-splines $ N_{i,3}(t) $, i.e., [ d(t) = um_{i=0}^{n} c_i * N_{i,3}(t) ] </p>
+<p> See: McCulloch, J. 1971, &#8216;Measuring the Term Structure of Interest Rates.&#8217; Journal of Business, 44: 19-31 </p>
+<p> McCulloch, J. 1975, &#8216;The tax adjusted yield curve.&#8217; Journal of Finance, XXX811-30 </p>
+<p> <code>Warning</code></p>
+<dl COMPACT>
+<dd></dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>FittedBondCurve.cpp</code>. </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

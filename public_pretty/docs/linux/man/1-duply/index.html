@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>duply(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-duply/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>duply(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>VERSION</h2>
+<p> duply version 1.11.3 (<a rel="nofollow" href="http://duply.net)">http://duply.net)</a></p>
+<h2>DESCRIPTION</h2>
+<p> Duply deals as a wrapper for the mighty duplicity magic. It simplifies running duplicity with cron or on command line by:</p>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> keeping recurring settings in profiles per backup job</dd>
+<dt>&bull;</dt>
+<dd> enabling batch operations eg. backup_verify+purge</dd>
+<dt>&bull;</dt>
+<dd> executing pre/post scripts (different actions possible depending on previous or next command or it&#8217;s exit status)</dd>
+<dt>&bull;</dt>
+<dd> precondition checking for flawless duplicity operation</dd></dl>
+</dl>
+<p> For each backup job one configuration profile must be created. The profile folder will be stored under &#8216;~/.duply/&lt;profile&gt;&#8217; (where ~ is the current users home directory).</p>
+<dl>
+<dt><code>Hint:</code></dt>
+<dd> If the folder &#8216;/etc/duply&#8217; exists, the profiles for the super user root will be searched &amp; created there.</dd></dl>
+<h2>USAGE</h2>
+<dl>
+<dt><code>first time usage (profile creation):</code></dt>
+<dd> duply &lt;profile&gt; create</dd>
+<dt><code>general usage in single or batch mode (see EXAMPLES):</code></dt>
+<dd> duply &lt;profile&gt; &lt;command&gt;[[_|+|-]&lt;command&gt;[_|+|-]&#8230;] [&lt;options&gt; &#8230;]</dd></dl>
+<p> For batches the conditional separators can also be written as pseudo commands <code>and</code>(+), <code>or</code>(-). See SEPARATORS for details. </p>
+<p> Non duply options are passed on to duplicity (see OPTIONS). All conf parameters can also be defined in the environment instead.</p>
+<h2>PROFILE</h2>
+<p> Indicated by a path or a profile name (&lt;profile&gt;), which is resolved to &#8216;~/.duply/&lt;profile&gt;&#8217; (~ expands to environment variable $HOME). </p>
+<p> Superuser root can place profiles under &#8216;/etc/duply&#8217;. Simply create the folder manually before running duply as superuser.</p>
+<dl>
+<dt><code>Note:</code></dt>
+<dd> Already existing profiles in root&#8217;s home folder will cease to work unless they are moved to the new location manually.</dd>
+<dt><code>example 1:</code></dt>
+<dd> duply humbug backup</dd></dl>
+<p> Alternatively a _path_ might be used e.g. useful for quick testing, restoring or exotic locations. Shell expansion should work as usual.</p>
+<dl>
+<dt><code>Hint:</code></dt>
+<dd> The path must contain at least one path separator &#8216;/&#8217;, e.g. &#8216;./test&#8217; instead of only &#8216;test&#8217;.</dd>
+<dt><code>example 2:</code></dt>
+<dd> duply ~/.duply/humbug backup</dd></dl>
+<h2>SEPARATORS</h2>
+<dl>
+<dt><code>_ (underscore)</code></dt>
+<dd> neutral separator</dd>
+<dt><code>+ (plus sign), _and_</code></dt>
+<dd> conditional AND the next command will only be executed if the previous succeeded</dd>
+<dt><code>&#8211; (minus sign), _or_</code></dt>
+<dd> conditional OR the next command will only be executed if the previous failed</dd>
+<dl>
+<dl>
+<dt><code>example:</code></dt>
+<dd> &#8216;pre+bkp-verify_post&#8217; translates to &#8216;pre_and_bkp_or_verify_post&#8217;</dd></dl>
+</dl>
+</dl>
+<h2>COMMANDS</h2>
+<dl>
+<dt><code>usage</code></dt>
+<dd> get usage help text</dd>
+<dt><code>and/or</code></dt>
+<dd> pseudo commands for better batch cmd readability (see SEPARATORS)</dd>
+<dt><code>create</code></dt>
+<dd> creates a configuration profile</dd>
+<dt><code>backup</code></dt>
+<dd> backup with pre/post script execution (batch: pre_bkp_post), full (if full_if_older matches or no earlier backup is found) incremental (in all other cases)</dd>
+<dt><code>pre/post</code></dt>
+<dd> execute &#8216;&lt;profile&gt;/pre&#8217;, &#8216;&lt;profile&gt;/post&#8217; scripts</dd>
+<dt><code>bkp</code></dt>
+<dd> as above but without executing pre/post scripts</dd>
+<dt><code>full</code></dt>
+<dd> force full backup</dd>
+<dt><code>incr</code></dt>
+<dd> force incremental backup</dd>
+<dt><code>list [&lt;age&gt;]</code></dt>
+<dd> list all files in backup (as it was at &lt;age&gt;, default: now)</dd>
+<dt><code>status</code></dt>
+<dd> prints backup sets and chains currently in repository</dd>
+<dt><code>verify [&lt;age&gt;] [&#8211;compare-data</code>]</dt>
+<dd> list files changed, since age if given</dd>
+<dt><code>verifyPath &lt;rel_path_in_bkp&gt; &lt;local_path&gt; [&lt;age&gt;] [&#8211;compare-data</code>]</dt>
+<dd> list changes of a file or folder path in backup compared to a local path, since age if given</dd>
+<dt><code>restore &lt;target_path&gt; [&lt;age&gt;]</code></dt>
+<dd> restore the complete backup to &lt;target_path&gt; [as it was at &lt;age&gt;]</dd>
+<dt><code>fetch &lt;src_path&gt; &lt;target_path&gt; [&lt;age&gt;]</code></dt>
+<dd> fetch single file/folder from backup [as it was at &lt;age&gt;]</dd>
+<dt><code>purge [&lt;max_age&gt;] [&#8211;force</code>]</dt>
+<dd> list outdated backup files (older than $MAX_AGE) [use <code>&#8211;force</code> to actually delete these files]</dd>
+<dt><code>purgeFull [&lt;max_full_backups&gt;] [&#8211;force</code>]</dt>
+<dd> list outdated backup files ($MAX_FULL_BACKUPS being the number of full backups and associated incrementals to keep, counting in reverse chronological order) [use <code>&#8211;force</code> to actually delete these files]</dd>
+<dt><code>purgeIncr [&lt;max_fulls_with_incrs&gt;] [&#8211;force</code>]</dt>
+<dd> list outdated incremental backups ($MAX_FULLS_WITH_INCRS being the number of full backups which associated incrementals will be kept, counting in reverse chronological order) [use <code>&#8211;force</code> to actually delete these files]</dd>
+<dt><code>cleanup [&#8211;force</code>]</dt>
+<dd> list broken backup chain files archives (e.g. after unfinished run) [use <code>&#8211;force</code> to actually delete these files]</dd>
+<dt><code>changelog</code></dt>
+<dd> print changelog / todo list</dd>
+<dt><code>txt2man</code></dt>
+<dd> feature for package maintainers &#8211; create a manpage based on the usage output. download txt2man from <a rel="nofollow" href="http://mvertes.free.fr/,">http://mvertes.free.fr/,</a> put it in the PATH and run &#8216;duply txt2man&#8217; to create a man page.</dd>
+<dt><code>version</code></dt>
+<dd> show version information of duply and needed programs</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;force</code></dt>
+<dd> passed to duplicity (see commands: purge, purge-full, cleanup)</dd>
+<dt><code>&#8211;preview</code></dt>
+<dd> do nothing but print out generated duplicity command lines</dd>
+<dt><code>&#8211;disable-encryption</code></dt>
+<dd> disable encryption, overrides profile settings</dd></dl>
+<h2>TIME FORMATS</h2>
+<p> For all time related parameters like age, max_age etc. Refer to the duplicity manpage for all available formats. Here some examples: 2002-01-25T07:00:00+02:00 (full date time format string) 2002/3/5 (date string YYYY/MM/DD) 12D (interval, 12 days ago) 1h78m (interval, 1 hour 78 minutes ago)</p>
+<h2>PRE POST SCRIPTS</h2>
+<p> Useful internal duply variables will be readable in the scripts. Some of interest may be </p>
+<pre>
+    CONFDIR, SOURCE, TARGET_URL_&lt;PROT|HOSTPATH|USER|PASS&gt;, 
+    GPG_&lt;KEYS_ENC|KEY_SIGN|PW&gt;, CMD_&lt;PREV|NEXT&gt;, CMD_ERR
+</pre>
+<p> The CMD_* variables were introduced to allow different actions according to the command the scripts were attached to e.g. &#8216;pre_bkp_post_pre_verify_post&#8217; will call the pre script two times, with CMD_NEXT variable set to &#8216;bkp&#8217; on the first and to &#8216;verify&#8217; on the second run. CMD_ERR holds the exit code of the CMD_PREV .</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>create profile &#8216;humbug&#8217;:</code></dt>
+<dd> duply humbug create (don&#8217;t forget to edit this new conf file)</dd>
+<dt><code>backup &#8216;humbug&#8217; now:</code></dt>
+<dd> duply humbug backup</dd>
+<dt><code>list available backup sets of profile &#8216;humbug&#8217;:</code></dt>
+<dd> duply humbug status</dd>
+<dt><code>list and delete outdated backups of &#8216;humbug&#8217;:</code></dt>
+<dd> duply humbug purge <code>&#8211;force</code></dd>
+<dt><code>restore latest backup of &#8216;humbug&#8217; to /mnt/restore:</code></dt>
+<dd> duply humbug restore /mnt/restore</dd>
+<dt><code>restore /etc/passwd of &#8216;humbug&#8217; from 4 days ago to /root/pw:</code></dt>
+<dd> duply humbug fetch etc/passwd /root/pw 4D (see &quot;duplicity manpage&quot;, section TIME FORMATS)</dd>
+<dt><code>a one line batch job on &#8216;humbug&#8217; for cron execution:</code></dt>
+<dd> duply humbug backup_verify_purge <code>&#8211;force</code></dd>
+<dt><code>batch job to run a full backup with pre/post scripts:</code></dt>
+<dd> duply humbug pre_full_post</dd></dl>
+<h2>FILES</h2>
+<p> in profile folder &#8216;~/.duply/&lt;profile&gt;&#8217; or &#8216;/etc/duply&#8217;</p>
+<dl>
+<dt><code>conf</code></dt>
+<dd> profile configuration file</dd>
+<dt><code>pre,post</code></dt>
+<dd> pre/post scripts (see above for details)</dd>
+<dt><code>gpgkey.*.asc</code></dt>
+<dd> exported GPG key files</dd>
+<dt><code>exclude</code></dt>
+<dd> a globbing list of included or excluded files/folders (see &quot;duplicity manpage&quot;, section FILE SELECTION)</dd></dl>
+<h2>IMPORTANT</h2>
+<p> Copy the _whole_ profile folder after the first backup to a safe place. It contains everything needed to restore your backups. You will need it if you have to restore the backup from another system (e.g. after a system crash). Keep access to these files restricted as they contain _all_ informations (gpg data, ftp data) to access and modify your backups. </p>
+<p> Repeat this step after _all_ configuration changes. Some configuration options are crucial for restoration.</p>
+<h2>SEE ALSO</h2>
+<p> duplicity man page: <code><a href="/docs/linux/man/1-duplicity/">duplicity</a></code>(1) or <a rel="nofollow" href="http://duplicity.nongnu.org/duplicity.1.html">http://duplicity.nongnu.org/duplicity.1.html</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

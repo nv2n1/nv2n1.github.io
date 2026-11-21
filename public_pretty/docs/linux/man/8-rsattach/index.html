@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rsattach(8) · Linux Manual Pages</title>
+<meta name="description" content="rsattach – Start a Rose interface">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rsattach/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rsattach(8)</h1>
+
+
+
+
+
+<p>rsattach &#8211; Start a Rose interface</p>
+<h2>Synopsis</h2>
+<p><code>rsattach [-i inetaddr] [-v] port</code></p>
+<h2>Description</h2>
+<p><code>Rsattach</code> takes many of the parameters for the port from the <a href="/docs/linux/man/5-rsports/">rsports</a>(5) file. The port argument is the name of a port as given in the <a href="/docs/linux/man/5-rsports/">rsports</a>(5) file. </p>
+<p> <code>Rsattach</code> tries to find the free Rose device in the system. The device name checked is rose0. If no free Rose device is available an error is generated and the program terminates.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-i inetaddr</code></dt>
+<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/4-rose/">rose</a></code>(4), <code>rsparms</code>(4), <code><a href="/docs/linux/man/5-rsports/">rsports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
+<h2>Bugs</h2>
+<p>The program can be run many times with the same arguments creating many instances of the same attributes on different devices. Not a good idea.</p>
+<h2>Author</h2>
+<p>Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

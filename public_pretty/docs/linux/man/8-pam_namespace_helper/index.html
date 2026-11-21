@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_namespace_helper(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_namespace_helper – Helper binary that creates home directories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_namespace_helper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_namespace_helper(8)</h1>
+
+
+
+
+
+<p>pam_namespace_helper &#8211; Helper binary that creates home directories</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>pam_namespace_helper</code></dt></dl>
+<h2>Description</h2>
+<p><i>pam_namespace_helper</i></p>
+<dd>is a helper program for the <i>pam_namespace</i> module that sets up a private namespace for a session with polyinstantiated directories. The helper ensures that the namespace mount points exist before they are started to be used for the polyinstantiated directories. Mount points for home directories (lines with $HOME) are not created. </dd>
+<p> <i>pam_namespace_helper</i> should be run by systemd at system startup. It should also be run by the administrator after defining the polyinstantiated directories but before enabling them.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pam_namespace/">pam_namespace</a></code>(8)</p>
+<h2>Author</h2>
+<p>Written by Topi Miettinen.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

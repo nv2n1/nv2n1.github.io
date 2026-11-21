@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>create_sub_zbuffer(3) · Linux Manual Pages</title>
+<meta name="description" content="create_sub_zbuffer – Creates a sub-z-buffer. Allegro game programming library.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-create_sub_zbuffer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>create_sub_zbuffer(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> create_sub_zbuffer &#8211; Creates a sub-z-buffer. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
+<p> <code>ZBUFFER *create_sub_zbuffer(ZBUFFER *parent, int x, int y, int width, int height);</code></p>
+<h2>DESCRIPTION</h2>
+<p> Creates a sub-z-buffer, ie. a z-buffer sharing drawing memory with a pre-existing z-buffer, but possibly with a different size. The same rules as for sub-bitmaps apply: the sub-z-buffer width and height can extend beyond the right and bottom edges of the parent (they will be clipped), but the origin point must lie within the parent region. </p>
+<p> When drawing z-buffered to a bitmap, the top left corner of the bitmap is always mapped to the top left corner of the current z-buffer. So this function is primarily useful if you want to draw to a sub-bitmap and use the corresponding sub-area of the z-buffer. In other cases, eg. if you just want to draw to a sub-bitmap of screen (and not to other parts of screen), then you would usually want to create a normal z-buffer (not sub-z-buffer) the size of the visible screen. You don&#8217;t need to first create a z-buffer the size of the virtual screen and then a sub-z-buffer of that.</p>
+<h2>RETURN VALUE</h2>
+<p> Returns the pointer to the sub ZBUFFER or NULL if there was an error. Remember to destroy the ZBUFFER once you are done with it, to avoid having memory leaks. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-create_sub_bitmap/">create_sub_bitmap</a></code>(3), <code>destroy_zbuffer</code>(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

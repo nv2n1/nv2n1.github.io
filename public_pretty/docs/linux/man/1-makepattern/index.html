@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>makepattern(1) · Linux Manual Pages</title>
+<meta name="description" content="makepattern – make GMT color pattern from b/w pattern or icon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-makepattern/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>makepattern(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> makepattern &#8211; make GMT color pattern from b/w pattern or icon</p>
+<h2>SYNOPSIS</h2>
+<p> <code>makepattern</code> <i>1bit.ras</i> | <i>iconfile</i> <code>-Cf</code><i>r/g/b</i> <code>-Cb</code><i>r/g/b</i></p>
+<h2>DESCRIPTION</h2>
+<p> <code>makepattern</code> reads either a Sun 1-bit rasterfile OR a Sun icon file. It then accepts color choices for the foreground and background pixels and colorizes the pattern, writing it as a 8-bit Sun rasterfile on stdout. These patterns may then be used in <code>GMT</code> (3.1 or later) <code>-Gp</code> settings or by <code>psimage</code>.</p>
+<dl>
+<dt><i>1bit.ras</i> | <i>iconfile</i></dt>
+<dd> Either a 1-bit Sun rasterfile (standard format, no RLE) or a Sun icon file (as used in <code>GMT</code> 3.0).</dd>
+<dt><code>-Cf</code></dt>
+<dd> Sets the color for the foreground pixels (the ones) [black].</dd>
+<dt><code>-Cb</code></dt>
+<dd> Sets the color for the background pixels (the zeros) [white].</dd></dl>
+<h2>WIN32 fix</h2>
+<p> Since binary redirection under WIN32 does not work, you must specify the output file with <code>-G</code><i>newfile.ras</i>. This option is only available under WIN32.</p>
+<h2>EXAMPLES</h2>
+<p> To create a colorized red/blue 8-bit Sun rasterfile pattern from the old 3.0-style iconpattern stored in file custom.icon, run </p>
+<p> <code>makepattern</code> custom.icon <code>-Cf</code>red <code>-Cb</code>blue &gt; custom.ras </p>
+<p> To create a green/blue 8-bit Sun rasterfile pattern from a 1-bit Sun raster called bits.ras, run </p>
+<p> <code>makepattern</code> bits.ras <code>-Cf</code>green <code>-Cb</code>blue &gt; colorbits.ras</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-psimage/">psimage</a></i>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

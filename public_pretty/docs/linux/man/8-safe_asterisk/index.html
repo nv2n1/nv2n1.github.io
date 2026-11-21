@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>safe_asterisk(8) · Linux Manual Pages</title>
+<meta name="description" content="safe_asterisk — A wrapper to run the asterisk executable in a loop">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-safe_asterisk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>safe_asterisk(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>safe_asterisk</code> &#8212; A wrapper to run the asterisk executable in a loop</p>
+<h2>Synopsis</h2>
+<p><code>safe_asterisk</code> <i>[ asterisk_params ]</i> </p>
+<h2>Description</h2>
+<p><code>safe_asterisk </code> is a script that runs asterisk in a loop, which can be useful if you fear asterisk may crash. The script does not run in the background like a standard service. Rather, it runs in its own linux virtual console (9, by default). It also uses the option &#8216;-c&#8217; of <a href="/docs/linux/man/8-asterisk/">asterisk</a>(8) to avoid detaching asterisk from that terminal. safe_asterisk also runs asterisk with unlimited core file size, and thus asterisk will dump core in case of a crash. To get a &quot;picture&quot; of console 9, from another terminal (e.g: from a remote shell session) you can use:<br />
+&nbsp;<wbr>&nbsp;<wbr>screendump 9 The init script of the Debian package should be able to run safe_asterisk as the asterisk service, if so configured. See coments in /etc/default/asterisk </p>
+<h2>Files</h2>
+<p><code>/tmp</code></p>
+<dl>
+<dd>safe_asterisk runs in that directory, rather than in / as usual.</dd></dl>
+<p> <code>/tmp/core</code></p>
+<dl>
+<dd>If core files were generated there, they may be</dd></dl>
+<p> <code>/etc/asterisk/startup.d</code></p>
+<dl>
+<dd>Files in this directory will be &#8216;source&#8217;d by the safe_asterisk script before it starts Asterisk proper, allowing them to set additional environment variables or run any other steps that are needed for your system.</dd></dl>
+<h2>Bugs</h2>
+<p>While showing the output on a console is useful, using <a href="/docs/linux/man/1-screen/">screen</a>(1) as the terminal may be better. The script does not read configuration from standard location under /etc It uses fixed locations under /tmp , and thus may be exposed to a symlink attacks. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-asterisk/">asterisk</a>(8), screendump(9) </p>
+<h2>Author</h2>
+<p>This manual page was written by Tzafrir Cohen &lt;tzafrir.cohen [at] xorcom.com&gt; Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
+<p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

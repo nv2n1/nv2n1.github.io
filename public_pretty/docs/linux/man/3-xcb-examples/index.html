@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcb-examples(3) · Linux Manual Pages</title>
+<meta name="description" content="xcb-examples – manpage examples">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcb-examples/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcb-examples(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>xcb-examples &#8211; manpage examples</p>
+<h2>Description</h2>
+<p>Many of the XCB manpages contain example code. These examples intend to explain how to use one particular part of XCB. They almost never represent a standalone (or even useful) program &#8211; X11 programs are relatively involved and thus beyond the scope of a manpage example. </p>
+<h2>Environment</h2>
+<p>Every example assumes you have an <i>xcb_connection</i> and possibly other variables at hand. For illustrating how <i>xcb_get_property</i> works, you need the window of which you want to get the property, for example. To make it clear that these variables are your responsibility, these examples consist of a single function which takes the necessary variables as parameters.</p>
+<h2>Flushing</h2>
+<p>Flushing means calling <i>xcb_flush</i> to clear the XCB-internal write buffer and send all pending requests to the X11 server. You don&#8217;t explicitly need to flush before using a reply function (like <i>xcb_query_pointer_reply</i>), but you do need to flush before entering the event loop of your program. </p>
+<p> There are only two cases when XCB flushes by itself. The first case is when its write buffer becomes full, the second case is when you are asking for the reply of a request which wasn&#8217;t flushed out yet (like <i>xcb_query_pointer_reply</i>). This last point also includes xcb_request_check(). Please note that waiting for an event does <code>NOT</code> flush. </p>
+<p> Examples generally include the <i>xcb_flush</i> call where appropriate (for example after setting a property). Therefore, including these functions and calling them in your application should just work. However, you might get better results when flushing outside of the function, depending on the architecture of your program.</p>
+<h2>Compilation</h2>
+<p>If an example does not compile (without warnings) when using <i>-std=c99</i>, that is considered a documentation bug. Similarly, not handling errors or leaking memory is also considered a documentation bug. Please inform us about it on xcb [at] lists.freedesktop.org.</p>
+<h2>Coding Style</h2>
+<p>Every example uses 4 spaces for indentation. </p>
+<p> Comments are in asterisks, like /* this */. </p>
+<p> No line is longer than 80 characters (including indentation).</p>
+<h2>See Also</h2>
+<p><code>xcb_connect</code>(3), <code><a href="/docs/linux/man/3-xcb_get_property/">xcb_get_property</a></code>(3), <code>xcb_flush</code>(3)</p>
+<h2>Author</h2>
+<p>Michael Stapelberg &lt;michael+xcb at stapelberg dot de&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

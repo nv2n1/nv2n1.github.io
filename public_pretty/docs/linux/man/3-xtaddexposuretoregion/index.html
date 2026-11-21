@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtaddexposuretoregion(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAddExposureToRegion – merge exposure events into a region">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtaddexposuretoregion/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtaddexposuretoregion(3)</h1>
+
+
+
+
+
+<p>XtAddExposureToRegion &#8211; merge exposure events into a region </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>void XtAddExposureToRegion(XEvent *<i>event</i>, Region <i>region</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>event</i></dt>
+<dd>Specifies a pointer to the <code>Expose</code> or <code>GraphicsExpose</code> event.</dd>
+<dt><i>region</i></dt>
+<dd>Specifies the region object (as defined in <code>&lt;X11/Xutil.h&gt;</code>).</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtAddExposureToRegion</code> function computes the union of the rectangle defined by the exposure event and the specified region. Then, it stores the results back in region. If the event argument is not an <code>Expose</code> or <code>GraphicsExpose</code> event, <code>XtAddExposureToRegion</code> returns without an error and without modifying region. </p>
+<p> This function is used by the exposure compression mechanism (see Section 7.9.3).</p>
+<h2>See Also</h2>
+<p><i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>superhyway_add_device(9) · Linux Manual Pages</title>
+<meta name="description" content="superhyway_add_device – Add a SuperHyway module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-superhyway_add_device/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>superhyway_add_device(9)</h1>
+
+
+
+
+
+<p>superhyway_add_device &#8211; Add a SuperHyway module</p>
+<h2>Synopsis</h2>
+<pre><code>int superhyway_add_device(unsigned long base, struct superhyway_device *sdev, struct superhyway_bus *bus);</code></pre>
+<h2>Arguments</h2>
+<p><i>base</i></p>
+<dl>
+<dd>
+</dd><dd>Physical address where module is mapped.</dd></dl>
+<p> <i>sdev</i></p>
+<dl>
+<dd>SuperHyway device to add, or NULL to allocate a new one.</dd></dl>
+<p> <i>bus</i></p>
+<dl>
+<dd>Bus where SuperHyway module resides.</dd></dl>
+<h2>Description</h2>
+<p>This is responsible for adding a new SuperHyway module. This sets up a new struct superhyway_device for the module being added if <i>sdev</i> == NULL. </p>
+<p> Devices are initially added in the order that they are scanned (from the top-down of the memory map), and are assigned an ID based on the order that they are added. Any manual addition of a module will thus get the ID after the devices already discovered regardless of where it resides in memory. </p>
+<p> Further work can and should be done in <code>superhyway_scan_bus</code>, to be sure that any new modules are properly discovered and subsequently registered.</p>
+<h2>Author</h2>
+<p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

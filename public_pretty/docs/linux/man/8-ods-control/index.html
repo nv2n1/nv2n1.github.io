@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ods-control(8) · Linux Manual Pages</title>
+<meta name="description" content="ods-control – OpenDNSSEC control utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ods-control/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ods-control(8)</h1>
+
+
+
+
+
+<p><code>ods-control</code> &#8211; OpenDNSSEC control utility</p>
+<h2>Synopsis</h2>
+<p><code>ods-control ksm &#8230;</code><br />
+ <code>ods-control hsm &#8230;</code><br />
+ <code>ods-control signer &#8230;</code><br />
+ <code>ods-control start</code><br />
+ <code>ods-control stop</code><br />
+ <code>ods-control enforcer start</code><br />
+ <code>ods-control enforcer stop</code><br />
+ <code>ods-control enforcer notify</code></p>
+<h2>Description</h2>
+<p>ods-control is a helper utility which gives a combined interface for different command utilities within OpenDNSSEC. It can also start and stop OpenDNSSEC by controlling the two daemons.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>ksm</code></dt>
+<dd>The remainder of the command line will be sent to the ods-ksmutil utility</dd>
+<dt><code>hsm</code></dt>
+<dd>The remainder of the command line will be sent to the ods-hsmutil utility</dd>
+<dt><code>signer</code></dt>
+<dd>The remainder of the command line will be sent to the ods-signer utility</dd>
+<dt><code>start</code></dt>
+<dd>Will start the two daemons of OpenDNSSEC, ods-enforcerd and ods-signerd</dd>
+<dt><code>stop</code></dt>
+<dd>Will stop the two daemons of OpenDNSSEC, ods-enforcerd and ods-signerd</dd>
+<dt><code>enforcer start</code></dt>
+<dd>Start the ods-enforcerd daemon without touching the ods-signerd and return non-zero on problems</dd>
+<dt><code>enforcer stop</code></dt>
+<dd>Stop the ods-enforcerd daemon without touching the ods-signerd and return non-zero on problems</dd>
+<dt><code>enforcer notify</code></dt>
+<dd>Notify the enforcer that its database has been updated and may need further processing by the KASP Enforcer.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-ods-enforcerd/">ods-enforcerd</a>(8), <a href="/docs/linux/man/1-ods-hsmspeed/">ods-hsmspeed</a>(1), <a href="/docs/linux/man/1-ods-hsmutil/">ods-hsmutil</a>(1), <a href="/docs/linux/man/1-ods-kaspcheck/">ods-kaspcheck</a>(1), <a href="/docs/linux/man/1-ods-ksmutil/">ods-ksmutil</a>(1), <a href="/docs/linux/man/8-ods-signer/">ods-signer</a>(8), <a href="/docs/linux/man/8-ods-signerd/">ods-signerd</a>(8), <a href="/docs/linux/man/5-ods-timing/">ods-timing</a>(5), <a href="/docs/linux/man/7-opendnssec/">opendnssec</a>(7), <code><a rel="nofollow" href="http://www.opendnssec.org/">http://www.opendnssec.org/</a></code></p>
+<h2>Authors</h2>
+<p><code>ods-control</code> was written by Jakob Schlyter as part of the OpenDNSSEC project.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

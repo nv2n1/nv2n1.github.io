@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tsung(1) · Linux Manual Pages</title>
+<meta name="description" content="tsung – A distributed multi-protocol load testing tool.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tsung/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tsung(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> tsung &#8211; A distributed multi-protocol load testing tool.</p>
+<h2>SYNOPSIS</h2>
+<p> <code>tsung</code> [ <code>-f configuration file</code> ] [ <code>-l log dir</code> ] [ <code>-m filename</code> ] [ <code>-r command</code> ] [ <code>-X directory</code> ] [ <code>-w delay</code> ] [ <code>-L lifetime</code> ] [ <code>-s</code> ] [ <code>-n</code> ] [ <code>-k</code> ] [ <code>-v</code> ] [ <code>-6</code> ] [ <code>-h</code> ] [ <code>start|stop|debug|status</code> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>tsung</code> is a distributed load testing tool. It is protocol-independent and can currently be used to stress and benchmark HTTP, WebDAV, LDAP, PostgreSQL, MySQL and Jabber/XMPP servers. </p>
+<p> It simulates user behaviour using an XML description file, reports many measurements in real time (statistics can be customized with transactions, and graphics generated using gnuplot). </p>
+<p> For HTTP, it supports 1.0 and 1.1, has a proxy mode to record sessions, supports GET and POST methods, Cookies, and Basic WWW-authentication. It also has support for SSL. </p>
+<p> Several config examples can be found in <i>/usr/share/doc/tsung/examples/</i>.</p>
+<dl>
+<dt><code>start</code></dt>
+<dd> start tsung load testing</dd>
+<dt><code>debug</code></dt>
+<dd> start tsung with an interactive erlang shell</dd>
+<dt><code>stop</code></dt>
+<dd> stop tsung</dd>
+<dt><code>status</code></dt>
+<dd> print current status of a running instance of tsung (must be run on the controller host)</dd></dl>
+<h2>MANUAL</h2>
+<p> A manual should be available at <i>/usr/share/doc/tsung/user_manual.html</i>. It is also available online at </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<a rel="nofollow" href="http://tsung.erlang-projects.org/user_manual.html">http://tsung.erlang-projects.org/user_manual.html</a>
+</pre>
+</dd></dl>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-f filename</code></dt>
+<dd> specifies the configuration file to use. The default file name is <i>~/.tsung/tsung.xml</i>. Use &#8211; for standard input</dd>
+<dt><code>-l logdir</code></dt>
+<dd> Specifies the log directory to use. The default log dir name is <i>~/.tsung/log/YYYYMMDD-HHMM/</i></dd>
+<dt><code>-m monitoring_file</code></dt>
+<dd> Specifies the monitoring log file name to use. The default log file name is <i>tsung.log</i>. Use &#8211; for standard output</dd>
+<dt><code>-r command</code></dt>
+<dd> Specifies an alternative to ssh (rsh for ex.) for starting a slave node on a remote host</dd>
+<dt><code>-i id</code></dt>
+<dd> set controller id (default is empty). Needed to start several controllers on the same host.</dd>
+<dt><code>-F</code></dt>
+<dd> Use long names for erlang nodes (FQDN)</dd>
+<dt><code>-s</code></dt>
+<dd> Enable erlang smp on client nodes</dd>
+<dt><code>-p</code></dt>
+<dd> set maximum erlang processes per vm (default is 250000)</dd>
+<dt><code>-X directory</code></dt>
+<dd> add additional erlang load paths (multiple -X arguments allowed)</dd>
+<dt><code>-L lifetime</code></dt>
+<dd> SSL session lifetime in seconds (600 sec by default)</dd>
+<dt><code>-w delay</code></dt>
+<dd> warmup delay in seconds (1 sec by default)</dd>
+<dt><code>-v</code></dt>
+<dd> Show version</dd>
+<dt><code>-n</code></dt>
+<dd> disable web GUI</dd>
+<dt><code>-k</code></dt>
+<dd> keep web GUI (and controller) alive after the test has finished</dd>
+<dt><code>-6</code></dt>
+<dd> Use IPv6 for tsung internal communications</dd>
+<dt><code>-h</code></dt>
+<dd> Show usage</dd></dl>
+<h2>BUGS</h2>
+<p> Please reports bugs to the mailing list &lt;tsung-users [at] process-one.net&gt;, see </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<a rel="nofollow" href="https://lists.process-one.net/mailman/listinfo/tsung-users">https://lists.process-one.net/mailman/listinfo/tsung-users</a>
+</pre>
+</dd></dl>
+<p> for archives. You can also use the issue tracker </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+<a rel="nofollow" href="https://github.com/processone/tsung/issues">https://github.com/processone/tsung/issues</a>
+</pre>
+</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>erlang</code>(3)</p>
+<h2>AUTHORS</h2>
+<p> <code>Tsung</code> is written by Nicolas Niclausse &lt;nicolas [at] niclux.org&gt;. Contributors list is available in <i>/usr/share/doc/tsung/CONTRIBUTORS</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

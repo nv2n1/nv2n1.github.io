@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-token(1) · Linux Manual Pages</title>
+<meta name="description" content="npm-token – Manage your authentication tokens">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-npm-token/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>npm-token(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>npm-token</code> &#8211; Manage your authentication tokens </p>
+<h3>Synopsis</h3>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
+npm token list[--json | --parseable] npm token create[--read - only][--cidr = 1.1.1.1 / 24, 2.2.2.2 / 16] npm token revoke&lt;id | token&gt;
+</code></pre>
+</dd></dl>
+<h3>Description</h3>
+<p> This lets you list, create and revoke authentication tokens.</p>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>npm token list</code>: Shows a table of all active authentication tokens. You can request this as JSON with <code>&#8211;json</code> or tab-separated values with <code>&#8211;parseable</code>. </dd>
+</dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
++ &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | id | token | created | read &#8211; only | CIDR whitelist |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | 7f3134 | 1fa9ba… | 2017 &#8211; 10 &#8211; 02 | yes | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | c03241 | af7aef… | 2017 &#8211; 10 &#8211; 02 | no | 192.168.0.1 / 24 |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | e0cf92 | 3a436a… | 2017 &#8211; 10 &#8211; 02 | no | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | 63eb9d | 74ef35… | 2017 &#8211; 09 &#8211; 28 | no | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | 2daaa8 | cbad5f… | 2017 &#8211; 09 &#8211; 26 | no | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | 68c2fe | 127e51… | 2017 &#8211; 09 &#8211; 23 | no | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+ | 6334e1 | 1dadd1… | 2017 &#8211; 09 &#8211; 23 | no | |<br />
+    +&#8211; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; -+&#8211; &#8212; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8211;+&#8211; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8211;+
+</dd></dl>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>npm token create [&#8211;read-only] [&#8211;cidr=&lt;cidr-ranges&gt;]</code>: Create a new authentication token. It can be <code>&#8211;read-only</code> or accept a list of CIDR <i><a rel="nofollow" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing</a></i> ranges to limit use of this token to. This will prompt you for your password, and, if you have two-factor authentication enabled, an otp. </dd>
+</dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
+<pre><code>
++ -- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --+ | token | a73c9572 - f1b9 - 8983 - 983d - ba3ac3cc913d |
+    +-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --+ | cidr_whitelist | |
+    +-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --+ | readonly | false |
+    +-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --+ | created | 2017 - 10 -
+    02T07:52:24.838Z |
+             +-- -- -- -- -- -- -- --+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --+
+</code></pre>
+</dd></dl>
+<dl>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>npm token revoke &lt;token|id&gt;</code>: This removes an authentication token, making it immediately unusable. This can accept both complete tokens (as you get back from <code>npm token create</code> and will find in your <code>.npmrc</code>) and ids as seen in the <code>npm token list</code> output. This will NOT accept the truncated token found in <code>npm token list</code> output. </dd>
+</dl>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

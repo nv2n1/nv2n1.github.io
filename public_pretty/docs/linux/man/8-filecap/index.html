@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>filecap(8) · Linux Manual Pages</title>
+<meta name="description" content="filecap – a program to see capabilities">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-filecap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>filecap(8)</h1>
+
+
+
+
+
+<p>filecap &#8211; a program to see capabilities</p>
+<h2>Synopsis</h2>
+<p><code>filecap [ -a | -d | /dir | /dir/file [cap1 cap2 &#8230;] ]</code></p>
+<h2>Description</h2>
+<p><code>filecap</code> is a program that prints out a report of programs with file based capabilities. If a file is not in the report or there is no report at all, no capabilities were found. For expedience, the default is to check only the directories in the PATH environmental variable. If the -a command line option is given, then all directories will be checked. If a directory is passed, it will recursively check that directory. If a path to a file is given, it will only check that file. If the path to the file includes capabilities, then they are written to the file. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-a</code></dt>
+<dd>This tells the program to show all capabilities starting from the / directory. Normally the PATH environmental variable is used to show you capabilities on files you are likely to execute.</dd>
+<dt><code>-d</code></dt>
+<dd>This dumps all capabilities for reference. </dd>
+</dl>
+<h2>Examples</h2>
+<pre><code>To check file capabilities in $PATH:</code>
+<code>filecap</code>
+<code>To check file capabilities of whole system:</code>
+<code>filecap -a</code>
+<code>To check file capabilities recursively in a directory:</code>
+<code>filecap /usr</code>
+<code>To check file capabilities of a specific program:</code>
+<code>filecap /bin/passwd</code>
+<code>To list all possible capabilities:</code>
+<code>filecap -d</code>
+<code>To set a file capability on a specific program:</code>
+<code>filecap /bin/ping net_raw net_admin </code></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-pscap/">pscap</a></code>(8), <code><a href="/docs/linux/man/8-netcap/">netcap</a></code>(8), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7). </p>
+<h2>Author</h2>
+<p>Steve Grubb</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

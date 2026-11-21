@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>checkmk(1) · Linux Manual Pages</title>
+<meta name="description" content="checkmk – Awk script for generating C unit tests for use with the Check unit testing framework.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-checkmk/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>checkmk(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> checkmk &#8211; Awk script for generating C unit tests for use with the Check unit testing framework. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>checkmk</code> [ <code>clean_mode=1</code> ] [ <i>input-file</i> ] </p>
+<h2>DESCRIPTION</h2>
+<p> Generate C-language source files containing unit tests for use with the Check unit testing framework. The aim of this script is to automate away some of the typical boilerplate one must write when writing a test suite using Check: specifically, the instantiation of an SRunner, Suite(s), and TCase(s), and the building of relationships between these objects and the test functions. </p>
+<p> This tool is intended to be used by those who are familiar with the Check unit testing framework. Familiarity with the framework will be assumed throughout this manual. </p>
+<p> The Check framework, along with information regarding it, is available at <a rel="nofollow" href="http://check.sourceforge.net/">http://check.sourceforge.net/</a> &lt;URL:<a href="http://check.sourceforge.net/">http://check.sourceforge.net/</a>&gt;. </p>
+<p> The <i>input-file</i> argument to <code>checkmk</code> uses a simple, C-preprocessor-like syntax to declare test functions, and to describe their relationships to Suites and TCases in Check. <code>checkmk</code> then uses this information to automatically write a <code>main()</code> function containing all of the necessary declarations, and whatever code is needed to run the test suites. The final C-language output is printed to <code>checkmk</code>&#8216;s standard output. </p>
+<p> Facilities are provided for the insertion of user code into the generated <code>main()</code> function, to provide for the use of logging, test fixtures or specialized exit values. </p>
+<p> While it is possible to omit the <i>input-file</i> argument to <code>checkmk</code> and provide the input file on <code>checkmk</code>&#8216;s standard input instead, it is generally recommended to provide it as an argument. Doing this allows <code>checkmk</code> to be aware of the file&#8217;s name, to place references to it in the initial comments of the C-language output, and to intersperse C #line directives throughout, to facilitate in debugging problems by directing the user to the original input file.</p>
+<h2>OPTIONS</h2>
+<p> The only officially supported option is specifying a true value (using Awk&#8217;s definition for &quot;true&quot;) for the variable <code>clean_mode</code>. This causes <code>checkmk</code> not to place appropriate #line directives in the source code, which some might find to be unnecessary clutter. </p>
+<p> The author recommends against the use of this option, as it will cause C compilers and debugging tools to refer to lines in the automatically generated output, rather than the original input files to <code>checkmk</code>. This would encourage users to edit the output files instead of the original input files, would make it difficult for intelligent editors or IDEs to pull up the right file to edit, and could result in the fixes being overwritten when the output files are regenerated. </p>
+<p> #line directives are automatically supressed when the input file is provided on standard input instead of as a command-line argument.</p>
+<h2>BASIC EXAMPLE</h2>
+<p> In its most basic form, an input file can be simply a prologue and a test function. Anything that appears before the first test function is in the prologue, and will be copied into the output verbatim. The test function is begun by a line in the form: </p>
+<pre>
+#test <i>test_name</i>
+</pre>
+<p> Where <i>test_name</i> is the name of your test function. This will be used to name a C function, so it must be a valid C identifier. </p>
+<p> Here is a small, complete example: </p>
+<pre><code>
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+/* A complete test example */
+#include &lt;stdio.h&gt;
+#test the_test
+                                                                        int nc;
+const char msg[] = "
+    Hello, world!
+";
+nc = printf("%s", msg);
+fail_unless(nc == (sizeof msg - 1) /* for terminating NUL. */
+);
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+</code></pre>
+<p> If you place the above into a file named <i>basic_complete.ts</i> and process it using the following command: </p>
+<p> <code>$ checkmk basic_complete.ts &gt; basic_complete.c</code> </p>
+<p> <i>basic_complete.c</i> will contain output similar to: </p>
+<p>&#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212; &#8212;<br />
+/*<br />
+ * DO NOT EDIT THIS FILE. Generated by checkmk.<br />
+ * Edit the original source file &#8220;in&#8221; instead.<br />
+ */<br />
+#include &lt;check.h&gt;<br />
+/* A complete test example */<br />
+#include &lt;stdio.h&gt;<br />
+                                                                        START_TEST(the_test)<br />
+{<br />
+    int nc;<br />
+    const char msg[] = &#8220;
+<pre><code>Hello, world!
+</code></pre>
+<p>”;<br />
+nc = printf(“%s”, msg);<br />
+fail_unless(nc == (sizeof msg – 1) /* for terminating NUL. */<br />
+);<br />
+}<br />
+END_TEST<br />
+int main(void)<br />
+{<br />
+Suite *s1 = suite_create(“Core”);<br />
+TCase *tc1_1 = tcase_create(“Core”);<br />
+SRunner *sr = srunner_create(s1);<br />
+int nf;<br />
+suite_add_tcase(s1, tc1_1);<br />
+tcase_add_test(tc1_1, the_test);<br />
+srunner_run_all(sr, CK_ENV);<br />
+nf = srunner_ntests_failed(sr);<br />
+srunner_free(sr);<br />
+return nf == 0 ? 0 : 1;<br />
+}<br />
+— — — — — — — — — — — — — — — — — — — — — — — — —</p></p>
+<p> In real usage, <i>basic_complete.c</i> would also contain #line directives.</p>
+<h2>DIRECTIVE SUMMARY</h2>
+<p> Here is a complete summary of all the C-preprocessor-style directives that are understood by <code>checkmk</code>. See below for more details. </p>
+<pre>
+# test <i>test_name</i>
+# suite <i>TestSuiteName</i>
+# tcase <i>TestCaseName</i>
+# main-pre
+# main-post
+</pre>
+<p> All directives are case-insensitive. Whitespace may appear at the beginning of the line before the #, between the # and the directive, between the directive and any argument, and at the end of the line.</p>
+<h2>TEST-DEFINING DIRECTIVES</h2>
+<p> Here is a more detailed explanation of the directives that may be used to define test functions and their containers.</p>
+<h3>TEST FUNCTIONS</h3>
+<pre>
+# test <i>test_name</i>
+</pre>
+<p> This is the most basic directive for creating a template for input to <code>checkmk</code>. It is the only directive that is required: there must be at least one #test directive appearing in the template, or <code>checkmk</code> will fail with an error message. The #test directive may be specified several times, each one beginning the definition of a new test function. </p>
+<p> The <i>test_name</i> argument will be used as the name of a test function in the C-language output, so it must be a valid C identifier. That is, it must begin with an alphabetic character or the underscore (_), followed by optional alpha-numeric characters and/or underscores. </p>
+<p> Universal Character Names (introduced in C99) are also allowed, of the form \uXXXX or \UXXXXXXXX, where the X&#8217;s represent hexadecimal digits. </p>
+<p> It is an error to specify the same <i>test_name</i> in more than one #test directive, regardless of whether they are associated with different test cases or suites. </p>
+<p> See CHECKMK IDENTIFIERS for the list of identifiers which should be avoided for use as test function names.  </p>
+<h3>TEST SUITES</h3>
+<pre><code># suite TestSuiteName 
+</code></pre>
+<p> This directive specifies the name of the test suite (<code>Suite</code> object in the Check test framework) to which all future test cases (and their test functions) will be added. </p>
+<p> The <i>TestSuiteName</i> is a text string, and may contain any sort of characters at all (other than ASCII NUL character, and the newline, which would terminate the directive). Any leading or trailing whitespace will be omitted from the test suite name. </p>
+<p> Starting a new test suite also begins a new test case, whose name is identical to the new test suite. This test case name may be overridden by a subsequent #tcase directive. </p>
+<p> Note that a <code>Suite</code> object won&#8217;t actually be defined by <code>checkmk</code> in the C output, unless it is followed at some point by a #test directive (without an intervening #suite). It is not an error for a #suite to have no associated #test&#8217;s; the #suite (and any associated #tcase&#8217;s) simply won&#8217;t result in any action on the part of <code>checkmk</code> (and would therefore be useless). </p>
+<p> It is an error for a #suite directive to specify the same (case sensitive) suite multiple times, unless the previous uses were not instantiated by the presence of at least one associated #test directive. </p>
+<p> If you do not specify a #suite directive before the first #test directive, <code>checkmk</code> performs the equivalent of an implicit #suite directive, with the string &quot;Core&quot; as the value for <i>TestSuiteName</i> (this also implies a &quot;Core&quot; test case object). This is demonstrated above in BASIC EXAMPLE.  </p>
+<h3>TEST CASES</h3>
+<pre><code># tcase TestCaseName 
+</code></pre>
+<p> This directive specifies the name of the test case (<code>TCase</code> object in the Check test framework) to which all future test functions will be added. </p>
+<p> The #tcase works very in a way very similar to #suite. The <i>TestCaseName</i> is a text string, and may contain arbitrary characters; and a <code>TCase</code> object won&#8217;t actually be defined unless it is followed by an associated #test directive. </p>
+<p> It is an error for a #tcase directive to specify the same (case sensitive) test case multiple times, unless the previous uses were not instantiated by the presence of at least one associated #test directive. </p>
+<p> See also the #suite directive, described above.  </p>
+<h2>USER CODE IN MAIN()</h2>
+<p> The C <code>main()</code> is automatically generated by <code>checkmk</code>, defining the necessary <code>SRunner</code>&#8216;s, <code>Suite</code>&#8216;s, and~<code>TCase</code>&#8216;s required by the test-defining directives specified by the user. </p>
+<p> For most situations, this completely automated <code>main()</code> is quite suitable as-is. However, there are situations where one might wish to add custom code to the <code>main()</code>. For instance, if the user wishes to: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> change the test timeout value via <code>tcase_set_timeout()</code>, </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> specify Check&#8217;s &quot;no-fork-mode&quot; via <code>srunner_set_fork_status()</code>, </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> set up test fixtures for some test cases, via <code>tcase_add_checked_fixture()</code> or~<code>tcase_add_unchecked_fixture()</code>, </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> set up test logging for the suite runner, via <code>srunner_set_log()</code> or~<code>srunner_set_xml()</code>, or </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perform custom wrap-up after the test suites have been run. </p>
+ </dd></dl>
+<p> For these purposes, the #main-pre and~#main-post directives have been provided.  </p>
+<h3>MAIN() PROLOGUE</h3>
+<pre><code># main-pre
+</code></pre>
+<p> The text following this directive will be placed verbatim into the body of the generated <code>main()</code> function, just after <code>checkmk</code>&#8216;s own local variable declarations, and before any test running has taken place (indeed, before even the relationships between the tests, test cases, and test suites have been set up, though that fact shouldn&#8217;t make much difference). Since <code>checkmk</code> has only just finished making its declarations, it is permissible, even under strict 1990 ISO C guidelines, to make custom variable declarations here. </p>
+<p> Unlike the previously-described directives, #main-pre may be specified at most once. It may not be preceded by the #main-post directive, and no #suite, #tcase, or #test directive may appear after it. </p>
+<p> #main-pre is a good place to tweak settings or set up test fixtures. Of course, in order to do so, you need to know what names <code>checkmk</code> has used to instantiate the <code>SRunner</code>&#8216;s, <code>Suite</code>&#8216;s, and~<code>TCase</code>&#8216;s.  </p>
+<h3>CHECKMK IDENTIFIERS</h3>
+<p> Pointers to <code>Suite</code>&#8216;s are declared using the pattern s <i>X</i>, where <i>X</i> is a number that starts at 1, and is incremented for each subsequent #suite directive. s1 always exists, and contains the test function declared by the first #test directive. If that directive was not preceded by a #suite, it will be given the name &quot;Core&quot;. </p>
+<p> Pointers to <code>TCase</code>&#8216;s are declared using the pattern tc <i>X</i>_<i>Y</i>, where <i>X</i> corresponds to the number used for the name of the <code>Suite</code> that will contain this <code>TCase</code>; and <i>Y</i> is a number that starts at 1 for each new <code>Suite</code>, and is incremented for each <code>TCase</code> in that <code>Suite</code>. </p>
+<p> A pointer to <code>SRunner</code> is declared using the identifier sr; there is also an integer named nf which holds the number of test failures (after the tests have run). </p>
+<p> For obvious reasons, the user should not attempt to declare local identifiers in <code>main()</code>, or define any macros or test functions, whose names might conflict with the local variable names used by <code>checkmk</code>. To summarize, these names are: </p>
+<p> s <i>X</i> </p>
+<p> tc <i>X</i>_<i>Y</i> </p>
+<p> sr </p>
+<p> nf.  </p>
+<h3>MAIN() EPILOGUE</h3>
+<pre><code># main-post
+</code></pre>
+<p> Though it is not as useful, <code>checkmk</code> also provides a #main-post directive to insert custom code at the end of <code>main()</code>, after the tests have run. This could be used to clean up resources that were allocated in the prologue, or to print information about the failed tests, or to provide a custom exit status code. </p>
+<p> Note that, if you make use of this directive, <code>checkmk</code> will <code>not</code> provide a return statement: you will need to provide one yourself. </p>
+<p> The #main-post directive may not be followed by any other directives recognized by <code>checkmk</code>.  </p>
+<h2>COMPREHENSIVE EXAMPLE</h2>
+<p> Now that you&#8217;ve gotten the detailed descriptions of the various directives, let&#8217;s see it all put to action with this fairly comprehensive template. </p>
+<pre><code>--------------------------------------------------
+#include &quot;mempool.h&quot; /* defines MEMPOOLSZ, prototypes for
+                         mempool_init() and mempool_free() */
+void *mempool;
+void mp_setup(void)
+{
+    mempool = mempool_init(MEMPOOLSZ);
+    fail_if(mempool == NULL, &quot;Couldn't allocate mempool.&quot;);
+}
+void mp_teardown(void)
+{
+    mempool_free(mempool);
+}
+/* end of prologue */
+#suite Mempool
+#tcase MP Init
+#test mempool_init_zero_test
+    mempool = mempool_init(0);
+    fail_unless(mempool == NULL, &quot;Allocated a zero-sized mempool!&quot;);
+    fail_unless(mempool_error(), &quot;Didn't get an error for zero alloc.&quot;);
+/* &quot;MP Util&quot; TCase uses checked fixture. */
+#tcase MP Util
+#test mempool_copy_test
+    void *cp = mempool_copy(mempool);
+    fail_if(cp == NULL, &quot;Couldn't perform mempool copy.&quot;);
+    fail_if(cp == mempool, &quot;Copy returned original pointer!&quot;);
+#test mempool_size_test
+    fail_unless(mempool_getsize(mempool) != MEMPOOLSZ);
+#main-pre
+    tcase_add_checked_fixture(tc1_2, mp_setup, mp_teardown);
+    srunner_set_log(sr, &quot;mplog.txt&quot;);
+#main-post
+    if (nf != 0) {
+      printf(&quot;Hey, something's wrong! %d whole tests failed!\n&quot;, nf);
+    }
+    return 0; /* Harness checks for output, always return success
+                 regardless. */
+--------------------------------------------------
+</code></pre>
+<p> Plugging this into <code>checkmk</code>, we&#8217;ll get output roughly like the following: </p>
+<pre><code>--------------------------------------------------
+/*
+ * DO NOT EDIT THIS FILE. Generated by checkmk.
+ * Edit the original source file &quot;comprehensive.ts&quot; instead.
+ */
+#include &lt;check.h&gt;
+#include &quot;mempool.h&quot;
+void *mempool;
+void mp_setup(void)
+{
+...
+}
+void mp_teardown(void)
+{
+...
+}
+/* end of prologue */
+START_TEST(mempool_init_zero_test)
+{
+...
+}
+END_TEST
+START_TEST(mempool_copy_test)
+{
+...
+}
+END_TEST
+START_TEST(mempool_size_test)
+{
+...
+}
+END_TEST
+int main(void)
+{
+    Suite *s1 = suite_create(&quot;Mempool&quot;);
+    TCase *tc1_1 = tcase_create(&quot;MP Init&quot;);
+    TCase *tc1_2 = tcase_create(&quot;MP Util&quot;);
+    SRunner *sr = srunner_create(s1);
+    int nf;
+    /* User-specified pre-run code */
+    tcase_add_checked_fixture(tc1_2, mp_setup, mp_teardown);
+    srunner_set_log(sr, &quot;mplog.txt&quot;);
+    suite_add_tcase(s1, tc1_1);
+    tcase_add_test(tc1_1, mempool_init_zero_test);
+    suite_add_tcase(s1, tc1_2);
+    tcase_add_test(tc1_2, mempool_copy_test);
+    tcase_add_test(tc1_2, mempool_size_test);
+    srunner_run_all(sr, CK_ENV);
+    nf = srunner_ntests_failed(sr);
+    srunner_free(sr);
+    /* User-specified post-run code */
+    if (nf != 0) {
+      printf(&quot;Hey, something's wrong! %d whole tests failed!\n&quot;, nf);
+    }
+    return 0; /* Harness checks for output, always return success
+                 regardless. */
+}
+--------------------------------------------------
+</code></pre>
+<h2>AUTHOR</h2>
+<p> <code>checkmk</code> and this manual were written by Micah J Cowan. </p>
+<p> Copyright (C) 2006, 2010 Micah J Cowan. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

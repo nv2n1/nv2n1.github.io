@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iconvconfig(8) · Linux Manual Pages</title>
+<meta name="description" content="iconvconfig – create iconv module configuration cache">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-iconvconfig/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>iconvconfig(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>iconvconfig &#8211; create iconv module configuration cache</p>
+<h2>Synopsis</h2>
+<p><code>iconvconfig</code> [<i>options</i>] [<i>directory</i>]&#8230;</p>
+<h2>Description</h2>
+<p>The <code>iconv</code>(3) function internally uses <i>gconv</i> modules to convert to and from a character set. A configuration file is used to determine the needed modules for a conversion. Loading and parsing such a configuration file would slow down programs that use <code>iconv</code>(3), so a caching mechanism is employed. </p>
+<p> The <code>iconvconfig</code> program reads iconv module configuration files and writes a fast-loading gconv module configuration cache file. </p>
+<p> In addition to the system provided gconv modules, the user can specify custom gconv module directories with the environment variable <code>GCONV_PATH</code>. However, iconv module configuration caching is used only when the environment variable <code>GCONV_PATH</code> is not set.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>&#8211;nostdlib</code></dt>
+<dd>Do not search the system default gconv directory, only the directories provided on the command line.</dd>
+<dt><code>-o</code><i> outputfile</i><code>, &#8211;output=</code><i>outputfile</i></dt>
+<dd>Use <i>outputfile</i> for output instead of the system default cache location.</dd>
+<dt><code>&#8211;prefix=</code><i>pathname</i></dt>
+<dd>Set the prefix to be prepended to the system pathnames. See FILES, below. By default, the prefix is empty. Setting the prefix to <i>foo</i>, the gconv module configuration would be read from <i>foo/usr/lib/gconv/gconv-modules</i> and the cache would be written to <i>foo/usr/lib/gconv/gconv-modules.cache</i>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print a usage summary and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Print a short usage summary and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print the version number, license, and disclaimer of warranty for <code>iconv</code>.</dd></dl>
+<h2>Exit Status</h2>
+<p>Zero on success, nonzero on errors.</p>
+<h2>Files</h2>
+<dl>
+<dt><i>/usr/lib/gconv</i></dt>
+<dd>Usual default gconv module path.</dd>
+<dt><i>/usr/lib/gconv/gconv-modules</i></dt>
+<dd>Usual system default gconv module configuration file.</dd>
+<dt><i>/usr/lib/gconv/gconv-modules.cache</i></dt>
+<dd>Usual system gconv module configuration cache.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code>iconv</code>(3)</p>
+<h2>Colophon</h2>
+<p>This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

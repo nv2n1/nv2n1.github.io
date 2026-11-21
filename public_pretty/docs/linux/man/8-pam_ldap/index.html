@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_ldap(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_ldap – PAM module for LDAP-based authentication">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_ldap/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_ldap(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>pam_ldap &#8211; PAM module for LDAP-based authentication</p>
+<h2>Synopsis</h2>
+<p><code>pam_ldap.so</code> [<i>&#8230;</i>]</p>
+<h2>Description</h2>
+<p>This is a PAM module that uses an LDAP server to verify user access rights and credentials.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>use_first_pass</code></dt>
+<dd>Specifies that the PAM module should use the first password provided in the authentication stack and not prompt the user for a password.</dd>
+<dt><code>try_first_pass</code></dt>
+<dd>Specifies that the PAM module should use the first password provided in the authentication stack and if that fails prompt the user for a password.</dd>
+<dt><code>nullok</code></dt>
+<dd>Specifying this option allows users to log in with a blank password. Normally logins without a password are denied.</dd>
+<dt><code>ignore_unknown_user</code></dt>
+<dd>Specifies that the PAM module should return PAM_IGNORE for users that are not present in the LDAP directory. This causes the PAM framework to ignore this module.</dd>
+<dt><code>ignore_authinfo_unavail</code></dt>
+<dd>Specifies that the PAM module should return PAM_IGNORE if it cannot contact the LDAP server. This causes the PAM framework to ignore this module.</dd>
+<dt><code>no_warn</code></dt>
+<dd>Specifies that warning messages should not be propagated to the PAM application.</dd>
+<dt><code>use_authtok</code></dt>
+<dd>This causes the PAM module to use the earlier provided password when changing the password. The module will not prompt the user for a new password (it is analogous to <code>use_first_pass</code>).</dd>
+<dt><code>debug</code></dt>
+<dd>This option causes the PAM module to log debugging information to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3).</dd>
+<dt><code>minimum_uid=</code><i>UID</i></dt>
+<dd>This option causes the PAM module to ignore the user if the user id is lower than the specified value. This can be used to bypass LDAP checks for system users (e.g. by setting it to 1000).</dd></dl>
+<h2>Module Services Provided</h2>
+<p>All services are provided by this module but currently sessions changes are not implemented in the nslcd daemon.</p>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/pam.conf</i></dt>
+<dd>the main PAM configuration file</dd>
+<dt><i>/etc/nslcd.conf</i></dt>
+<dd>The configuration file for the <code>nslcd</code> daemon (see <code><a href="/docs/linux/man/5-nslcd-conf/">nslcd.conf</a></code>(5))</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-pam-conf/">pam.conf</a></code>(5), <code><a href="/docs/linux/man/8-nslcd/">nslcd</a></code>(8), <code><a href="/docs/linux/man/5-nslcd-conf/">nslcd.conf</a></code>(5)</p>
+<h2>Author</h2>
+<p>This manual was written by Arthur de Jong &lt;arthur [at] arthurdejong.org&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

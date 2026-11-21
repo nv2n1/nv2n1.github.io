@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tarantoolctl(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-tarantoolctl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>tarantoolctl(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>tarantoolctl - an utility to control tarantool instances</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+    vim /etc/tarantool/instances.enabled/my_instance.lua
+    tarantoolctl start my_instance
+    tarantoolctl stop  my_instance
+    tarantoolctl logrotate my_instance
+</pre>
+<h2>DESCRIPTION</h2>
+<p>The script is read <tt>&quot;/etc/sysconfig/tarantool&quot;</tt> or <tt>&quot;/etc/default/tarantool&quot;</tt>. The file contains common default instances options:</p>
+ <pre><code>
+    $ cat /etc/default/tarantool
+    -- Options for Tarantool
+    default_cfg = {
+        -- will become pid_file .. instance .. '.pid'
+        pid_file    =   "/var/run/tarantool",
+        -- will become wal_dir/instance/
+        wal_dir     =   "/var/lib/tarantool",
+        -- snap_dir/instance/
+        snap_dir    =   "/var/lib/tarantool",
+        -- sophia_dir/instance/
+        sophia_dir  =   "/var/lib/tarantool/sophia",
+        -- logger/instance .. '.log'
+        logger      =   "/var/log/tarantool",
+        username    =   "tarantool",
+    }
+    instance_dir = "/etc/tarantool/instances.enabled"
+</code></pre> 
+<p>The file defines <tt>&quot;instance_dir&quot;</tt> where user can place his applications (instances).</p>
+<p>Each instance can be controlled by <tt>&quot;tarantoolctl&quot;</tt>:</p>
+<h3>Starting instance</h3>
+ <pre>
+    tarantoolctl start instance_name
+</pre>
+<h3>Stopping instance</h3>
+ <pre>
+    tarantoolctl stop instance_name
+</pre>
+<h3>Logrotate instance's log</h3>
+ <pre>
+    tarantoolctl logrotate instance_name
+</pre>
+<h3>Enter instance admin console</h3>
+ <pre>
+    tarantoolctl enter instance_name
+</pre>
+<h3>status</h3>
+ <pre>
+    tarantoolctl status instance_name
+</pre> 
+<p>Check if instance is up.</p>
+<p>If pid file exists and control socket exists and control socket is alive returns code <tt>0</tt>.</p>
+<p>Return code != 0 in other cases. Can complain in log (stderr) if pid file exists and socket doesn&rsquo;t, etc.</p>
+<h3>separate instances control</h3>
+<p>If You use SysV init, You can use symlink from <tt>&quot;tarantoolctl&quot;</tt> to <tt>&quot;/etc/init.d/instance_name[.lua]&quot;</tt>. <tt>&quot;tarantoolctl&quot;</tt> detects if it is started by symlink and uses instance_name as <tt>&quot;<code>basename $0 .lua</code>&quot;</tt>.</p>
+<h2>COPYRIGHT</h2>
+<p>Copyright (C) 2010-2013 Tarantool <font SIZE="-1">AUTHORS:</font> please see <font SIZE="-1">AUTHORS</font> file.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

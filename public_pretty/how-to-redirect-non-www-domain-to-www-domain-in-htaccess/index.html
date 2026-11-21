@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Non-WWW URLs to WWW with .htaccess - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-redirect-non-www-domain-to-www-domain-in-htaccess/">
+  <meta name="description" content="The most common approach is using Apache’s mod_rewrite module. Add this to your .htaccess file in your document root:
+&lt;IfModule mod_rewrite.c&gt; …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Redirect Non-WWW URLs to WWW with .htaccess">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-redirect-non-www-domain-to-www-domain-in-htaccess/">
+  <meta property="og:description" content="The most common approach is using Apache’s mod_rewrite module. Add this to your .htaccess file in your document root:
+&lt;IfModule mod_rewrite.c&gt; …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>Redirect Non-WWW URLs to WWW with .htaccess</h1>
+        <time class="post-date" datetime="2018-03-24T11:51:21Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The most common approach is using Apache’s <code>mod_rewrite</code> module. Add this to your <code>.htaccess</code> file in your document root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^www\. [NC]
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^$
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteRule</span> ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><p>This uses a 301 permanent redirect, which tells browsers and search engines that the www version is canonical. The conditions ensure you’re not rewriting:</p>
+<ul>
+<li>Requests that already have <code>www.</code></li>
+<li>Requests with an empty host (prevents malformed redirects)</li>
+</ul>
+<h2 id="using-https-recommended">Using HTTPS (recommended)</h2>
+<p>If your site uses HTTPS, adjust the rewrite target:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^www\. [NC]
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^$
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteRule</span> ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><p>Or use the <code>%{REQUEST_SCHEME}</code> variable to handle both HTTP and HTTPS dynamically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^www\. [NC]
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} !^$
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteRule</span> ^(.*)$ %{REQUEST_SCHEME}://www.%{HTTP_HOST}/$1 [L,R=301]
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><h2 id="alternative-redirect-www-to-non-www">Alternative: Redirect www to non-www</h2>
+<p>If you prefer the opposite direction, swap the logic:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteCond</span> %{HTTP_HOST} ^www\. [NC]
+</span></span><span class="line"><span class="cl">    <span class="nb">RewriteRule</span> ^(.*)$ https://%{HTTP_HOST:4}/$1 [L,R=301]
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div><p>The <code>%{HTTP_HOST:4}</code> strips the first 4 characters (<code>www.</code>) from the hostname.</p>
+<h2 id="modern-alternative-server-configuration">Modern alternative: Server configuration</h2>
+<p>For better performance and clearer intent, use your web server configuration instead of <code>.htaccess</code>. In Apache’s <code>httpd.conf</code> or a site config file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nt">&lt;VirtualHost</span> <span class="s">*:443</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">ServerName</span> example.com
+</span></span><span class="line"><span class="cl">    <span class="nb">ServerAlias</span> www.example.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;IfModule</span> <span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">RewriteEngine</span> <span class="k">On</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">RewriteCond</span> %{HTTP_HOST} !^www\. [NC]
+</span></span><span class="line"><span class="cl">        <span class="nb">RewriteRule</span> ^(.*)$ https://www.example.com/$1 [L,R=301]
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/IfModule&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/VirtualHost&gt;</span>
+</span></span></code></pre></div><p>This is faster than <code>.htaccess</code> since the file isn’t parsed on every request.</p>
+<h2 id="for-nginx-users">For Nginx users</h2>
+<p>If you’re running Nginx, use a server block instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://www.example.com</span><span class="nv">$request_uri</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">www.example.com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># your actual config here
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="testing-your-redirect">Testing your redirect</h2>
+<p>Verify the redirect is working:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -I https://example.com
+</span></span></code></pre></div><p>Look for a <code>301 Moved Permanently</code> response header and check the <code>Location</code> header points to the www version.</p>
+<h2 id="common-issues">Common issues</h2>
+<p><strong>Redirect loops</strong>: Ensure your <code>.htaccess</code> condition excludes <code>www.</code> correctly. If you see a 310-redirect limit exceeded error, double-check the rewrite conditions.</p>
+<p><strong>mod_rewrite not enabled</strong>: The <code>&lt;IfModule&gt;</code> wrapper prevents errors if the module isn’t loaded, but the rule won’t execute. Enable it with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo a2enmod rewrite
+</span></span><span class="line"><span class="cl">sudo systemctl restart apache2
+</span></span></code></pre></div><p><strong>Query strings</strong>: The rules above preserve query strings automatically, but test with URLs like <code>example.com/page?param=value</code> to confirm.</p>
+<p><strong>Subdomain preservation</strong>: The rules work correctly with subdomains—<code>api.example.com</code> becomes <code>www.api.example.com</code>. If you want to exclude subdomains from redirects, add this condition:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-apache" data-lang="apache"><span class="line"><span class="cl"><span class="nb">RewriteCond</span> %{HTTP_HOST} ^[^.]+\.[^.]+$ [NC]
+</span></span></code></pre></div><p>This only matches second-level domains (no subdomains present).</p>
+<h2 id="web-server-best-practices">Web Server Best Practices</h2>
+<p>Keep your web server configuration clean and well-documented. Use version control for configuration files so changes can be tracked and rolled back. Always test configuration changes in a staging environment before applying to production.</p>
+<p>Enable gzip compression and browser caching for better performance. Configure proper security headers including Content-Security-Policy, X-Frame-Options, and Strict-Transport-Security for HTTPS sites. Regularly update all server software to patch security vulnerabilities.</p>
+<h2 id="quick-verification">Quick Verification</h2>
+<p>After applying the changes described above, verify that everything works as expected. Run the relevant commands to confirm the new configuration is active. Check system logs for any errors or warnings that might indicate problems. If something does not work as expected, review the steps carefully and consult the official documentation for your specific version.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

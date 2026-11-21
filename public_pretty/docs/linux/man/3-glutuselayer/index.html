@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutuselayer(3) · Linux Manual Pages</title>
+<meta name="description" content="glutUseLayer – Allows you to switch between normal and layer mode.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutuselayer/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutuselayer(3)</h1>
+
+
+
+
+
+<p><code>glutUseLayer</code> &#8211; Allows you to switch between normal and layer mode.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; overlays</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft void Fn glutUseLayer GLenum layer</p>
+<h2>Parameters</h2>
+<p>Bf Em<br />
+&nbsp;<wbr>layer Ef<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Whether to be in a layer or in the normal window.</p>
+<h2>Description</h2>
+<p>By default, OpenGLUT operates in &quot;normal&quot; mode, with respect to layers. If you have a layer open and wish to operate on the layer, you must use glutUseLayer(). </p>
+<p> Bf Sy<br />
+&nbsp;<wbr>layer Ef<br />
+&nbsp;<wbr>can take on the following values, indicating the layer mode to use: </p>
+<p>&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_NORMAL Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_LAYER Ef<br />
+&nbsp;<wbr> </p>
+<h2>Caveats</h2>
+<p>Unimplemented. </p>
+<p> It is unclear what the consequences are if you are in Bf Sy<br />
+&nbsp;<wbr>GLUT_OVERLAY Ef<br />
+&nbsp;<wbr>mode and switch to another&nbsp;<wbr>(or the same)&nbsp;<wbr>window via glutSetWindow().&nbsp;<wbr>&nbsp;<wbr>What if the target has a layer?&nbsp;<wbr>&nbsp;<wbr>What if it doesn&#8217;t? </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutestablishoverlay/">glutEstablishOverlay</a>(3) <a href="/docs/linux/man/3-glutremoveoverlay/">glutRemoveOverlay</a>(3) <a href="/docs/linux/man/3-glutpostoverlayredisplay/">glutPostOverlayRedisplay</a>(3) <a href="/docs/linux/man/3-glutpostwindowoverlayredisplay/">glutPostWindowOverlayRedisplay</a>(3) <a href="/docs/linux/man/3-glutshowoverlay/">glutShowOverlay</a>(3) <a href="/docs/linux/man/3-gluthideoverlay/">glutHideOverlay</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

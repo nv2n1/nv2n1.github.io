@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdbad_variant_access(3) · Linux Manual Pages</title>
+<meta name="description" content="std::bad_variant_access – std::bad_variant_access">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdbad_variant_access/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdbad_variant_access(3)</h1>
+
+
+
+
+
+<p>std::bad_variant_access &#8211; std::bad_variant_access</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;variant&gt;<br />
+class bad_variant_access : public std::exception <i>(since C++17)</i><br />
+std::bad_variant_access is the type of the exception thrown in the following situations:<br />
+* std::get(std::variant) called with an index or type that does not match the currently active alternative<br />
+* std::visit called to visit a variant that is valueless_by_exception </p>
+<h2>Member functions</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs the bad_variant_access object<br />
+constructor <i>(public member function)</i> </p>
+<p>&nbsp;std::bad_variant_access ::bad_variant_access() </p>
+<p>bad_variant_access() noexcept; </p>
+<p>Constructs a new instance of std::bad_variant_access.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i> </p>
+<p>Inherited from std::exception</p>
+<h2>Member functions</h2>
+<p>destructor destroys the exception object<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br />
+<code>[virtual]</code> </p>
+<p>what returns an explanatory string<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual public member function of std::exception)</i><br />
+<code>[virtual]</code></p>
+<h2>Example</h2>
+<p>// Run this code </p>
+<pre><code>#include &lt;variant&gt;
+#include &lt;iostream&gt;
+int main()
+{
+    std::variant&lt;int, float&gt; v;
+    v = 12;
+    try {
+        std::get&lt;float&gt;(v);
+    } catch (const std::bad_variant_access &amp;e) {
+        std::cout &lt;&lt; e.what() &lt;&lt; '
+';
+    }
+}
+</code></pre>
+<h2>Possible output:</h2>
+<p>&nbsp;<wbr>&nbsp;bad_variant_access</p>
+<h2>See also</h2>
+<p>std::get(std::variant) reads the value of the variant given the index or the type (if the type is unique), throws on error<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<i>(C++17)</i><br />
+visit calls the provided functor with the arguments held by one or more variants<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(function template)</i><br />
+<i>(C++17)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

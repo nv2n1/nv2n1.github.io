@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Monitor Process I/O Utilization - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-get-processes-i-o-utilization-percentage/">
+  <meta name="description" content="Getting accurate I/O metrics per process is critical for troubleshooting performance issues, identifying storage bottlenecks, and capacity planning. Linux …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Monitor Process I/O Utilization">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-get-processes-i-o-utilization-percentage/">
+  <meta property="og:description" content="Getting accurate I/O metrics per process is critical for troubleshooting performance issues, identifying storage bottlenecks, and capacity planning. Linux …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/programming-languages/">Programming Languages</a>
+        </nav>
+        
+        <h1>How to Monitor Process I/O Utilization</h1>
+        <time class="post-date" datetime="2018-03-24T11:54:03Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/harryxiyou/">Weiwei Jia</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Getting accurate I/O metrics per process is critical for troubleshooting performance issues, identifying storage bottlenecks, and capacity planning. Linux provides several tools for this task, each with different trade-offs between accuracy and overhead.</p>
+<h2 id="using-procpidio">Using <code>/proc/[pid]/io</code></h2>
+<p>The simplest approach is reading directly from the proc filesystem. Each process has an <code>io</code> file containing I/O statistics:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /proc/1234/io
+</span></span></code></pre></div><p>Output looks like:</p>
+<pre><code>rchar: 1234567
+wchar: 7654321
+syscr: 456
+syscw: 789
+read_bytes: 2097152
+write_bytes: 5242880
+cancelled_write_bytes: 0
+</code></pre>
+<p>The relevant fields are:</p>
+<ul>
+<li><code>read_bytes</code>: Physical bytes read from storage</li>
+<li><code>write_bytes</code>: Physical bytes written to storage</li>
+<li><code>rchar</code> and <code>wchar</code>: Characters read/written (includes page cache)</li>
+</ul>
+<p>To get current I/O rate, sample these values twice with a time interval:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="nv">pid</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">interval</span><span class="o">=</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">read_bytes_start</span><span class="o">=</span><span class="k">$(</span>grep <span class="s2">&#34;^read_bytes&#34;</span> /proc/<span class="nv">$pid</span>/io <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">write_bytes_start</span><span class="o">=</span><span class="k">$(</span>grep <span class="s2">&#34;^write_bytes&#34;</span> /proc/<span class="nv">$pid</span>/io <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">timestamp_start</span><span class="o">=</span><span class="k">$(</span>date +%s%N<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sleep <span class="nv">$interval</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">read_bytes_end</span><span class="o">=</span><span class="k">$(</span>grep <span class="s2">&#34;^read_bytes&#34;</span> /proc/<span class="nv">$pid</span>/io <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">write_bytes_end</span><span class="o">=</span><span class="k">$(</span>grep <span class="s2">&#34;^write_bytes&#34;</span> /proc/<span class="nv">$pid</span>/io <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">timestamp_end</span><span class="o">=</span><span class="k">$(</span>date +%s%N<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">elapsed</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;scale=3; (</span><span class="nv">$timestamp_end</span><span class="s2"> - </span><span class="nv">$timestamp_start</span><span class="s2">) / 1000000000&#34;</span> <span class="p">|</span> bc<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">read_rate</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;scale=2; (</span><span class="nv">$read_bytes_end</span><span class="s2"> - </span><span class="nv">$read_bytes_start</span><span class="s2">) / </span><span class="nv">$elapsed</span><span class="s2"> / 1024 / 1024&#34;</span> <span class="p">|</span> bc<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">write_rate</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;scale=2; (</span><span class="nv">$write_bytes_end</span><span class="s2"> - </span><span class="nv">$write_bytes_start</span><span class="s2">) / </span><span class="nv">$elapsed</span><span class="s2"> / 1024 / 1024&#34;</span> <span class="p">|</span> bc<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Read: </span><span class="si">${</span><span class="nv">read_rate</span><span class="si">}</span><span class="s2"> MB/s&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Write: </span><span class="si">${</span><span class="nv">write_rate</span><span class="si">}</span><span class="s2"> MB/s&#34;</span>
+</span></span></code></pre></div><p><strong>Limitations</strong>: This approach doesn’t give you percentage utilization relative to disk capacity. It only shows throughput.</p>
+<h2 id="using-iotop">Using <code>iotop</code></h2>
+<p><code>iotop</code> is purpose-built for this task and shows actual disk I/O per process:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iotop -o -b -n <span class="m">1</span>
+</span></span></code></pre></div><p>Flags:</p>
+<ul>
+<li><code>-o</code>: Show only processes doing I/O</li>
+<li><code>-b</code>: Batch mode (non-interactive)</li>
+<li><code>-n 1</code>: Exit after one iteration</li>
+</ul>
+<p>Output includes <code>DISK READ</code>, <code>DISK WRITE</code>, and <code>IO%</code> columns. The <code>IO%</code> represents the percentage of time the disk was busy servicing that process’s I/O requests.</p>
+<p>For continuous monitoring:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo iotop -d <span class="m">2</span> -o
+</span></span></code></pre></div><p>This refreshes every 2 seconds showing only active processes.</p>
+<h2 id="using-pidstat">Using <code>pidstat</code></h2>
+<p>The <code>pidstat</code> tool from sysstat package provides flexible I/O reporting:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pidstat -d -p <span class="m">1234</span> <span class="m">1</span> <span class="m">10</span>
+</span></span></code></pre></div><p>This shows I/O stats for PID 1234, sampling every 1 second for 10 iterations. Output columns include:</p>
+<ul>
+<li><code>kB_rd/s</code>: KB read per second</li>
+<li><code>kB_wr/s</code>: KB written per second</li>
+<li><code>kB_ccwr/s</code>: Cancelled write KB/s (important for understanding actual vs attempted I/O)</li>
+</ul>
+<p>For all processes with significant I/O:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pidstat -d -u <span class="m">1</span>
+</span></span></code></pre></div><h2 id="ebpf-based-approaches">eBPF-Based Approaches</h2>
+<p>For production environments requiring minimal overhead and kernel-level insights, eBPF tools are superior. These use in-kernel filtering to avoid expensive context switches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install bpftrace
+</span></span></code></pre></div><p>A simple tracing script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo bpftrace -e <span class="s1">&#39;tracepoint:syscalls:sys_enter_read,
+</span></span></span><span class="line"><span class="cl"><span class="s1">                   tracepoint:syscalls:sys_enter_write {
+</span></span></span><span class="line"><span class="cl"><span class="s1">  @[comm] = count();
+</span></span></span><span class="line"><span class="cl"><span class="s1">}&#39;</span>
+</span></span></code></pre></div><p>This counts read/write syscalls by process name without overhead of context switching back to userspace.</p>
+<p>For production-grade monitoring, tools like <strong>Cilium Hubble</strong> and <strong>Datadog</strong> provide eBPF-based I/O telemetry that’s far more efficient than traditional tools.</p>
+<h2 id="practical-considerations">Practical Considerations</h2>
+<ul>
+<li><code>/proc/[pid]/io</code> is always available but requires root on some systems</li>
+<li><code>iotop</code> gives the clearest picture but uses some CPU sampling overhead</li>
+<li><code>pidstat</code> is best for scripting and integration into monitoring systems</li>
+<li>eBPF tools scale to thousands of processes without performance degradation</li>
+</ul>
+<p>For containerized workloads, use <code>cgroup</code> v2 I/O limits and monitoring which integrate directly with container runtimes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat /sys/fs/cgroup/system.slice/docker-*.scope/io.stat
+</span></span></code></pre></div><p>Choose your tool based on whether you need real-time interactivity (<code>iotop</code>), scriptable metrics (<code>pidstat</code>), or production-scale observability (eBPF platforms).</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

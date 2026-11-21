@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdptr_fun(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdptr_fun/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdptr_fun(3)</h1>
+
+
+
+
+
+<p>std::ptr_fun - std::ptr_fun</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;functional&gt;
+template&lt; class Arg, class Result &gt;                   (deprecated in C++11)
+std::pointer_to_unary_function&lt;Arg,Result&gt;        (1) (removed in C++17)
+ptr_fun( Result (*f)(Arg) );
+template&lt; class Arg1, class Arg2, class Result &gt;      (deprecated in C++11)
+std::pointer_to_binary_function&lt;Arg1,Arg2,Result&gt; (2) (removed in C++17)
+ptr_fun( Result (*f)(Arg1, Arg2) );</code></pre> 
+<p>Creates a function wrapper object (either std::pointer_to_unary_function or std::pointer_to_binary_function), deducing the target type from the template arguments.</p>
+<ol>
+<li>Effectively calls std::pointer_to_unary_function&lt;Arg,Result&gt;(f).</li>
+<li>Effectively calls std::pointer_to_binary_function&lt;Arg1,Arg2,Result&gt;(f).
+This function and the related types are deprecated as of C++11 in favor of the more general std::function and std::ref, both of which create callable adapter-compatible function objects from plain functions.</li>
+</ol>
+<h2>Parameters</h2>
+<p>f - pointer to a function to create a wrapper for</p>
+<h2>Return value</h2>
+<p>A function object wrapping f.</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+bool isvowel(char c)
+{
+return std::string(&quot;aeoiuAEIOU&quot;).find(c) != std::string::npos;
+}
+int main()
+{
+std::string s = &quot;Hello, world!&quot;;
+std::copy_if(s.begin(), s.end(), std::ostreambuf_iterator&lt;char&gt;(std::cout),
+std::not1(std::ptr_fun(isvowel)));
+// C++11 alternatives:
+//               std::not1(std::cref(isvowel)));
+//               std::not1(std::function&lt;bool(char)&gt;(isvowel)));
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Hll, wrld!</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

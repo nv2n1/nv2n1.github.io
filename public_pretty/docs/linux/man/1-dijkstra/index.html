@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dijkstra(1) · Linux Manual Pages</title>
+<meta name="description" content="dijkstra – single-source distance filter for Graphviz">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dijkstra/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dijkstra(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dijkstra &#8211; single-source distance filter for Graphviz </p>
+<h2>SYNOPSIS</h2>
+<p> <code>dijkstra</code> [ <code>-adp?</code> ] [ <i>sourcenode file</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>dijkstra</code> reads a stream of Graphviz formatted graphs and for each computes the distance of every node from <i>sourcenode.</i> Edge length is given in the <i>len</i> attribute, and the default is 1. The <i>dist</i> attribute of every node is set to its distance from <i>sourcenode.</i> If the <code>-p</code> flag is used, the <i>prev</i> attribute of each node reachable from <i>sourcenode</i> is set to the name of the previous node on a shortest path. The graph attribute <i>maxdist</i> is set to the maximum <i>dist</i> of all nodes in the graph. </p>
+<p> If the <code>-d</code> flag is used, the graph is treated as directed and only forward edges are used. </p>
+<p> By default, if the graph is disconnected, the <i>dist</i> attribute of nodes unreachable from <i>sourcenode</i> are left untouched, and <i>maxdist</i> is set to the maximum of any previous value and the largest distance recorded in this run. On the other hand, if the <code>-a</code> flag is used, the <i>dist</i> attribute of an unreachable node is assigned a very large value, and <i>maxdist</i> records the maximum distance found in the component containing <i>sourcenode.</i> </p>
+<p> Any number of <i>sourcenode file</i> pairs may be given. If the last <i>file </i> is missing, <code>stdin</code> is used. All output is written to <code>stdout</code>. </p>
+<p> In a typical application, <i>dist</i> and <i>maxdist</i> can drive a downstream calculation of color or some other attribute.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), libgraph(3) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

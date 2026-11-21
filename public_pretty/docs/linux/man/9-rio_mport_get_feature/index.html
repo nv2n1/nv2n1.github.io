@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rio_mport_get_feature(9) · Linux Manual Pages</title>
+<meta name="description" content="rio_mport_get_feature – query for devices’ extended features">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-rio_mport_get_feature/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>rio_mport_get_feature(9)</h1>
+
+
+
+
+
+<p>rio_mport_get_feature &#8211; query for devices&#8217; extended features</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>u32 rio_mport_get_feature(struct rio_mport&nbsp;<wbr>*&nbsp;<wbr></code><i>port</i><code>, int&nbsp;<wbr></code><i>local</i><code>, u16&nbsp;<wbr></code><i>destid</i><code>, u8&nbsp;<wbr></code><i>hopcount</i><code>, int&nbsp;<wbr></code><i>ftr</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<p><i>port</i></p>
+<dl>
+<dd>
+</dd><dd>Master port to issue transaction</dd></dl>
+<p> <i>local</i></p>
+<dl>
+<dd>Indicate a local master port or remote device access</dd></dl>
+<p> <i>destid</i></p>
+<dl>
+<dd>Destination ID of the device</dd></dl>
+<p> <i>hopcount</i></p>
+<dl>
+<dd>Number of switch hops to the device</dd></dl>
+<p> <i>ftr</i></p>
+<dl>
+<dd>Extended feature code</dd></dl>
+<h2>Description</h2>
+<p>Tell if a device supports a given RapidIO capability. Returns the offset of the requested extended feature block within the device&#8217;s RIO configuration space or 0 in case the device does not support it.</p>
+<h2>Author</h2>
+<p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

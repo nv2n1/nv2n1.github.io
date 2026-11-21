@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mkfs-gfs2(8) · Linux Manual Pages</title>
+<meta name="description" content="mkfs.gfs2 – create a gfs2 filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mkfs-gfs2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mkfs-gfs2(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mkfs.gfs2 &#8211; create a gfs2 filesystem</p>
+<h2>Synopsis</h2>
+<p><code>mkfs.gfs2</code> [<i>options</i>] <i>device</i> <i>[block-count]</i> </p>
+<h2>Description</h2>
+<p>mkfs.gfs2 is used to create a gfs2 file system. </p>
+<h2>Options</h2>
+<p>The default values of the following options have been chosen for best results. In most cases, there should be no need to choose different values. The exceptions to this are the number of journals (<code>-j</code>) and the lock table (<code>-t</code>), as these options will be specific to your cluster.</p>
+<dl>
+<dt><code>-b</code> <i>bytes</i></dt>
+<dd>Set the filesystem block size to <i>bytes</i> which must be a power of two. The minimum block size is 512 and the block size cannot exceed the machine&#8217;s memory page size, which on most architectures is 4096 bytes. The default block size is 4096 bytes.</dd>
+<dt><code>-c</code> <i>megabytes</i></dt>
+<dd>Initial size of each journal&#8217;s quota change file. The default is 1MB.</dd>
+<dt><code>-D</code></dt>
+<dd>Enable debugging output.</dd>
+<dt><code>-h</code></dt>
+<dd>Print out a help message describing the available options, then exit.</dd>
+<dt><code>-J</code> <i>megabytes</i></dt>
+<dd>The size of each journal. The default journal size is 128 megabytes and the minimum size is 8 megabytes.</dd>
+<dt><code>-j</code> <i>journals</i></dt>
+<dd>The number of journals for mkfs.gfs2 to create. At least one journal is required for each machine that will mount the filesystem concurrently. If this option is not specified, only one journal will be created. This number may be used as an indicator of the number of nodes in the cluster in order to optimize the layout of the filesystem. As such, it is best to set this option with the maximum number of mounters in mind than to add more journals later.</dd>
+<dt><code>-K</code></dt>
+<dd>Do not attempt to discard the block device contents. Issuing discards to the device allows some solid state devices and sparse or thin-provisioned storage devices to optimise free space. Other devices may emulate this behaviour by zeroing the device contents, which can be a slow process.</dd>
+<dt><code>-O</code></dt>
+<dd>Override. This option prevents mkfs.gfs2 from asking for confirmation before writing the filesystem.</dd>
+<dt><code>-o</code></dt>
+<dd>Specify extended options. Multiple options can be separated by commas. Valid extended options are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>help</code></dt>
+<dd>Display an extended options help summary, then exit.</dd>
+<dt><code>sunit=</code><i>bytes</i></dt>
+<dd>This is used to specify the stripe unit for a RAID device or striped logical volume. This option ensures that resource groups will be stripe unit aligned and overrides the stripe unit value obtained by probing the device. This value must be a multiple of the file system block size and must be specified with the <i>swidth</i> option.</dd>
+<dt><code>swidth=</code><i>bytes</i></dt>
+<dd>This is used to specify the stripe width for a RAID device or striped logical volume. This option ensures that resource groups will be stripe aligned and overrides the stripe width value obtained by probing the device. This value must be a multiple of the <i>sunit</i> option and must also be specified with it.</dd>
+<dt><code>align=</code><i>[0|1]</i></dt>
+<dd>Disable or enable the alignment of resource groups. The default behaviour is to align resource groups to the stripe width and stripe unit values obtained from probing the device or specified with the <i>swidth</i> and <i>sunit</i> extended options.</dd></dl>
+</dl>
+<dt><code>-p</code> <i>protocol</i></dt>
+<dd>Specify the locking protocol to use when no locking protocol is specified at mount time. Valid locking protocols are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt><code>lock_dlm</code></dt>
+<dd>This is the default. It enables DLM-based locking for use in shared storage configurations.</dd>
+<dt><code>lock_nolock</code></dt>
+<dd>This enables single-node locking</dd></dl>
+</dl>
+<dt><code>-q</code></dt>
+<dd>Quiet mode. Do not print anything.</dd>
+<dt><code>-r</code> <i>megabytes</i></dt>
+<dd>mkfs.gfs2 will try to make resource groups approximately this large. The minimum resource group size is 32 MB and the maximum is 2048 MB. A large resource group size may increase performance on very large file systems. If not specified, mkfs.gfs2 will choose the resource group size based on the size and alignment characteristics of the target device.</dd>
+<dt><code>-t</code> <i>clustername:lockspace</i></dt>
+<dd>The &quot;lock table&quot; pair used to uniquely identify this filesystem in a cluster. The cluster name segment (maximum 32 characters) must match the name given to your cluster in its configuration; only members of this cluster are permitted to use this file system. The lockspace segment (maximum 30 characters) is a unique file system name used to distinguish this gfs2 file system. Valid <i>clustername</i>s and <i>lockspace</i>s may only contain alphanumeric characters, hyphens (-) and underscores (_).</dd>
+<dt><code>-V</code></dt>
+<dd>Print program version information, then exit.</dd>
+<dt><i>block-count</i></dt>
+<dd>Use <i>block-count</i> as the size of the filesystem instead of using the whole device. <i>block-count</i> is specified as a number of filesystem blocks.</dd></dl>
+<h2>Example</h2>
+<pre><dl><dt></dt><dd># mkfs.gfs2 -t mycluster:mygfs2 -p lock_dlm -j 2 /dev/vg0/lv_gfs2
+This will create a gfs2 filesystem on the block device /dev/vg0/lv_gfs2. It
+will belong to a cluster named &quot;mycluster&quot; and use the &quot;mygfs2&quot; lock space. It
+will use DLM for locking and create journals for a two-node cluster.
+# mkfs.gfs2 -t mycluster:mygfs2 -p lock_nolock -j 3 /dev/vg0/lv_gfs2
+This will create a filesystem on the block device /dev/vg0/lv_gfs2. It
+will belong to a cluster named &quot;mycluster&quot; and use the &quot;mygfs2&quot; lockspace, but
+it will have no cluster locking by default as lock_nolock is used. It will
+have journals for a three-node cluster.
+</dd></dl></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/5-gfs2/">gfs2</a></code>(5), <code><a href="/docs/linux/man/8-gfs2_jadd/">gfs2_jadd</a></code>(8), <code><a href="/docs/linux/man/8-gfs2_grow/">gfs2_grow</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

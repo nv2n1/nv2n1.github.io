@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>thermald(8) · Linux Manual Pages</title>
+<meta name="description" content="thermald – start Linux thermal daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-thermald/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>thermald(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>thermald &#8211; start Linux thermal daemon</p>
+<h2>Synopsis</h2>
+<p><code>thermald</code> [ <i>OPTIONS</i> ] </p>
+<h2>Description</h2>
+<p><code>thermald</code> is a Linux daemon used to prevent the overheating of platforms. This daemon monitors temperature and applies compensation using available cooling methods. </p>
+<p> By default, it monitors CPU temperature using available CPU digital temperature sensors and maintains CPU temperature under control, before HW takes aggressive correction action. </p>
+<p> Thermal daemon looks for thermal sensors and thermal cooling drivers in the Linux thermal sysfs (/sys/class/thermal) and builds a list of sensors and cooling drivers. Each of the thermal sensors can optionally be binded to a cooling driver by the in kernel drivers. In this case the Linux kernel thermal core can directly take actions based on the temperature trip points, for each sensor and associated cooling device. For example a trip temperature X in a sensor can be associates a cooling driver Y. So when the sensor temperature = X, the cooling driver &quot;Y&quot; is activated. </p>
+<p> Thermal daemon allows one to change this relationship or add new one via a thermal configuration file (thermal-conf.xml). This file is automatically created (thermal-conf.xml.auto) and used, if the platform has ACPI thermal relationship table. If not this needs to be manually configured. </p>
+<p> For manual configuration refer to the manual page of the thermal-conf.xml. </p>
+<p> In some newer platforms the auto creation of the config file is done by a companion tool &quot;dptfxtract&quot;. This tool can be downloaded from &quot;<a rel="nofollow" href="https://github.com/intel/dptfxtract">https://github.com/intel/dptfxtract</a>&quot;. It is suggested as parts of the install process, run dptfxtract. </p>
+<p> There can be multiple configuration files. User can select a configuration file via -config-file option to override the default selection. The default selection picks one of the file in the following order: </p>
+<p> &#8211; /etc/thermald/thermal-conf.xml.auto </p>
+<p> &#8211; /var/run/thermald/thermal-conf.xml.auto </p>
+<p> &#8211; /etc/thermald/thermal-conf.xml </p>
+<p> (*Assuming configure prefix=/ is used during build.) </p>
+<p> There is another companion tool &quot;ThermalMonitor&quot;, which presents a graphical front end. This allows the monitoring of sensors and changing of thermal trips to give the user more control. The source code of &quot;ThermalMonitor&quot; is a part of the thermald github source, in the tools folder.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show help options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print thermald version and exit.</dd>
+<dt><code>&#8211;no-daemon</code></dt>
+<dd>Don&#8217;t become a daemon: Default is daemon mode.</dd>
+<dt><code>&#8211;loglevel=info</code></dt>
+<dd>log severity: info level and up.</dd>
+<dt><code>&#8211;loglevel=debug</code></dt>
+<dd>log severity: debug level and up: Max logging.</dd>
+<dt><code>&#8211;poll-interval</code></dt>
+<dd>Poll interval in seconds: Poll for zone temperature changes. To disable polling, set to zero. Polling can only be disabled, if available temperature sensors can notify temperature change asynchronously.</dd>
+<dt><code>&#8211;dbus-enable</code></dt>
+<dd>Enable Dbus.</dd>
+<dt><code>&#8211;exclusive-control</code></dt>
+<dd>Act as exclusive thermal controller. This will use user-space governor for thermal sysfs and take over control.</dd>
+<dt><code>&#8211;ignore-cpuid-check</code></dt>
+<dd>Ignore cpuid check for supported CPU models.</dd>
+<dt><code>&#8211;config-file</code></dt>
+<dd>Specify thermal-conf.xml path and ignore default thermal-conf.xml.</dd>
+<dt><code>&#8211;ignore-default-control</code></dt>
+<dd>Ignore default CPU temperature control. Strictly follow thermal-conf.xml or thermal-conf.xml.auto.</dd>
+<dt><code>&#8211;workaround-enabled</code></dt>
+<dd>Enable special workarounds for RAPL MMIO power limit and TCC offset every 30 seconds. This helps to disable RAPL MMIO when not used and adjust TCC offset in certain Lenovo laptops.</dd>
+<dt><code>&#8211;disable-active-power</code></dt>
+<dd>Disable active power management. This will not set active power limits using RAPL MMIO. This may result in constrained performance, if the system boots up with lower power limits.</dd>
+<dt><code>&#8211;adaptive</code></dt>
+<dd>Use DPTF adaptive tables when present. This will ignore thermald config via xml files.</dd>
+<dt><code>&#8211;test-mode</code></dt>
+<dd>Force use adaptive mode and exit if not supported, instead of restarting in non adaptive mode. This option is primarily for developers.</dd>
+<dt><code>&#8211;systemd</code></dt>
+<dd>Assume that thermald is started by systemd. This will prevent running as daemon irrespective of &#8211;no-daemon option.</dd>
+<dt><code>&#8211;ignore-critical-trip</code></dt>
+<dd>If the configuration defined a critical temperature point, which is too low, this option will avoid shutting down the system on reaching this temperature limit.</dd></dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/5-thermal-conf-xml/">thermal-conf.xml</a>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

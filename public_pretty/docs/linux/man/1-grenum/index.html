@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>grenum(1) · Linux Manual Pages</title>
+<meta name="description" content="grenum – An advanced refdes renumber utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-grenum/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>grenum(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>grenum</code> &#8211; An advanced refdes renumber utility</p>
+<h2>SYNOPSIS</h2>
+<p> <code>grenum</code> [-v|&#8211;version -h|&#8211;help -p|&#8211;pagejump] <i>infile1.sch infile2.sch</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>grenum</code> program will renumber the refdes definitions read from <i>infile.</i> </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-p, &#8211;pagejump</dt>
+<dd> This will switch on the page jump mode. It means that refdes&#8217;s from each <i>inputfile</i> gets renumbered from 100,200&#8230; etc.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> prints version information</dd>
+<dt>-h, &#8211;help</dt>
+<dd> prints help message </dd>
+</dl>
+<h2>RETURN VALUE</h2>
+<p> <code>grenum</code> will return <code>0</code> if all files processed successfully, <code>1</code> if there was no input file specified, <code>2</code> if I/O files can&#8217;t be opened/written, <code>3</code> if there is parse error in input file, <code>4</code> if there is not enough memory to store refdes prefixes.</p>
+<h2>BUGS</h2>
+<p> If you find one, please report it to: </p>
+<h2>AUTHOR</h2>
+<p> Levente Kovacs </p>
+<p> Levente.Kovacs [at] interware.hu </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gschem/">gschem</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

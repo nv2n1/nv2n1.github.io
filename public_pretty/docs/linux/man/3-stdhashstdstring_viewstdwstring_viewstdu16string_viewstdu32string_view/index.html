@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdhashstdstring_viewstdwstring_viewstdu16string_viewstdu32string_view(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdhashstdstring_viewstdwstring_viewstdu16string_viewstdu32string_view/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdhashstdstring_viewstdwstring_viewstdu16string_viewstdu32string_view(3)</h1>
+
+
+
+
+
+<p>std::hash(std::string_view,std::wstring_view,std::u16string_view,std::u32string_view) - std::hash(std::string_view,std::wstring_view,std::u16string_view,std::u32string_view)</p>
+<h2>Synopsis</h2>
+<p>Defined in header &lt;string_view&gt;
+template&lt;&gt; struct hash&lt;std::string_view&gt;; <i>(since C++17)</i>
+template&lt;&gt; struct hash&lt;std::wstring_view&gt;; <i>(since C++17)</i>
+template&lt;&gt; struct hash&lt;std::u8string_view&gt;; <i>(since C++20)</i>
+template&lt;&gt; struct hash&lt;std::u16string_view&gt;; <i>(since C++17)</i>
+template&lt;&gt; struct hash&lt;std::u32string_view&gt;; <i>(since C++17)</i>
+Template specializations of std::hash for the various view classes for hashing views.
+These hashes equal the hashes of corresponding std::basic_string classes: If S is one of the standard basic_string types, SV is the corresponding string view type, and s is an object of type S, then std::hash&lt;S&gt;()(s) == std::hash&lt;SV&gt;()(SV(s)).</p>
+<h2>See also</h2>
+<p>hash hash function object
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

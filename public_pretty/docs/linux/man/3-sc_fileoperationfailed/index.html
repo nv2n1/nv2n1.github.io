@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_fileoperationfailed(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::FileOperationFailed –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_fileoperationfailed/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_fileoperationfailed(3)</h1>
+
+
+
+
+
+<p>sc::FileOperationFailed &#8211; </p>
+<p> This is thrown when an operation on a file fails.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;scexception.h&gt;</code></pre>
+<p> Inherits <code>sc::SystemException</code>.</p>
+<h3>Public Types</h3>
+<p>enum <code>FileOperation</code> { <code>Unknown</code>, <code>OpenR</code>, <code>OpenW</code>, <code>OpenRW</code>, <code>Close</code>, <code>Read</code>, <code>Write</code>, <code>Corrupt</code>, <code>Other</code> }</p>
+<h3>Public Member Functions</h3>
+<pre><code>FileOperationFailed (const char *description=0, const char *source_file=0, int line=0, const char *filename=0, FileOperation operation=Unknown, const ClassDesc *class_desc=0, const char *exception_type='FileOperationFailed')  throw ()
+FileOperationFailed (const FileOperationFailed &amp;)  throw ()
+const char * filename () const   throw ()
+Returns the file name of the file that caused the error, if known.
+FileOperation operation () const   throw ()</code></pre>
+<h2>Detailed Description</h2>
+<p>This is thrown when an operation on a file fails.</p>
+<h2>Member Function Documentation</h2>
+<h3>const char* sc::FileOperationFailed::filename () const throw () [inline]</h3>
+<p>Returns the file name of the file that caused the error, if known. Otherwise 0 is returned.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pam_sge-qrsh-setup(8) · Linux Manual Pages</title>
+<meta name="description" content="pam_sge-qrsh-setup – PAM module for tight integration with xxQS_NAMExx">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-pam_sge-qrsh-setup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>pam_sge-qrsh-setup(8)</h1>
+
+
+
+
+
+<p>pam_sge-qrsh-setup &#8211; PAM module for tight integration with xxQS_NAMExx</p>
+<h2>Synopsis</h2>
+<p><code>pam_sge-qrsh-setup</code></p>
+<h2>Description</h2>
+<p>This PAM module provides tight integration of SSH communication into xxQS_NAMExx when is used with <code>qrsh</code> etc. It may also work with other communication methods that run daemons which use PAM. See It provides to the spawned processes the group id from <i>$SGE_ROOT</i><code>/default/spool/</code><i>hostname</i><code>/active_jobs/</code><i>job_id</i><code>/addgrpid</code> and the environment from <i>$SGE_ROOT</i><code>/default/spool/</code><i>hostname</i><code>/active_jobs/</code><i>job_id</i><code>/environment</code>. </p>
+<p> It assumes the use of a wrapper for <code>rshd</code>. A suitable one is distributed as <code>util/resources/wrappers/rshd-wrapper</code> under the xxQS_NAMExx root directory.</p>
+<h2>Options</h2>
+<p>The module has no options.</p>
+<h2>Example</h2>
+<p>On a typical GNU/Linux system, add the following line to <code>/etc/pam.d/sshd</code>, e.g. at the top of the file. </p>
+<dl>
+<dd>&nbsp;auth required&nbsp;/opt/sge/lib/lx-amd64/pam_sge-qrsh-setup.so </dd>
+</dl>
+<p> On some systems it might be necessary to copy pam_sge-qrsh-setup.so into, say, <code>/lib/security</code> and instead use it as </p>
+<dl>
+<dd>&nbsp;auth required pam_sge-qrsh-setup.so</dd></dl>
+<h2>Files</h2>
+<p><code>/var/run/sge-qrsh-setup</code><br />
+ <code>$SGE_ROOT/util/resources/wrappers/rshd-wrapper</code></p>
+<h2>See Also</h2>
+<h2>Author</h2>
+<p>Andreas Haupt, man page by Dave Love.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xtappaddsignal(3) · Linux Manual Pages</title>
+<meta name="description" content="XtAppAddSignal, XtRemoveSignal, XtNoticeSignal – register and remove a signal source">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xtappaddsignal/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xtappaddsignal(3)</h1>
+
+
+
+
+
+<p>XtAppAddSignal, XtRemoveSignal, XtNoticeSignal &#8211; register and remove a signal source </p>
+<h2>Syntax</h2>
+<p>#include &lt;X11/Intrinsic.h&gt;</p>
+<dl COMPACT>
+<dd>XtSignalId XtAppAddSignal(XtAppContext <i>app_context</i>, XtSignalCallbackProc <i>proc</i>, XtPointer <i>client_data</i>);</dd>
+<dd>void XtRemoveSignal(XtSignalId <i>id</i>);</dd>
+<dd>void XtNoticeSignal(XtSignalId <i>id</i>);</dd></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the argument that is to be passed to the specified procedure when a signal has been raised.</dd>
+<dt><i>id</i></dt>
+<dd>Specifies the ID returned from the corresponding <code>XtAppAddSignal</code> call.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to be called when the signal has been raised.</dd></dl>
+<h2>Description</h2>
+<p>The <code>XtAppAddSignal</code> function initiates a mechanism for handling signals within the context of the Intrinsics. Prior to establishing an operating system dependent signal handler the application may call <code>XtAppAddSignal</code> and store the returned <i>id</i> in a place accessible to the signal handler. </p>
+<p> Upon receipt of a signal from the operating system, the application may call <code>XtNoticeSignal</code> passing the <i>id</i> returned by the call to <code>XtAppAddSignal</code>. </p>
+<p> <code>XtNoticeSignal</code> is the only Intrinsics function that can safely be called from a signal handler. If <code>XtNoticeSignal</code> is called multiple times before the Intrinsics are able to invoke the registered callback, the callback is only called once. Logically the Intrinsics maintain &#8220;pending&#8221; for each registered callback. This flag is initially <code>False</code> and is set to <code>True</code> by <code>XtNoticeSignal</code>; the Intrinsics invoke the callback whenever the flag is <code>True</code>, and the flag is set to <code>False</code> just before the callback is invoked. </p>
+<p> The <code>XtRemoveSignal</code> function is called to remove the specified Intrinsics signal handler. The client should disable the source of the signal before calling <code>XtRemoveSignal</code>.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-xtappaddtimeout/">XtAppAddTimeOut</a>(3),<a href="/docs/linux/man/3-xtappaddinput/">XtAppAddInput</a>(3),<a href="/docs/linux/man/3-xtappaddworkproc/">XtAppAddWorkProc</a>(3)<br />
+ <i>X Toolkit Intrinsics &#8211; C Language Interface</i><br />
+ <i>Xlib &#8211; C Language X Interface</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

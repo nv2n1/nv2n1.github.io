@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sge_request(5) · Linux Manual Pages</title>
+<meta name="description" content="xxqs_name_sxx_request – xxQS_NAMExx default request definition file format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-sge_request/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>sge_request(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>xxqs_name_sxx_request &#8211; xxQS_NAMExx default request definition file format</p>
+<h2>Description</h2>
+<p><i>xxqs_name_sxx_request</i> reflects the format of the files defining default request profiles. These apply to and but for convenience, only qsub is mentioned below. If available, default request files are read and processed during job submission, before any submit options embedded in the job script, and before any options in the command-line are considered. Thus, the command-line and embedded script options may overwrite the settings in the default request files (see for details). However, where options may be repeated and accumulated, typically they are collected into a list from the various sources, which may not be what you want. </p>
+<p> There is a cluster global, a user private, and a working directory local default request definition file. The working directory local default request file has the highest precedence and is followed by the user private and then the cluster global default request file. </p>
+<p> <code>Note</code>, that the <i>-clear</i> option to can be used to discard any previous settings at any time in a default request file, in the embedded script flags or in a command-line option. </p>
+<p> The format of the default request definition files is:</p>
+<dl>
+<dt>&bull;</dt>
+<dd>The default request files may contain an arbitrary number of lines. Blank lines, and lines with a &#8216;#&#8217; sign in the first column, are skipped.</dd>
+<dt>&bull;</dt>
+<dd>Each line not to be skipped may contain any option. More than one option per line is allowed. The batch script file and argument options to the batch script are not considered as options and thus are not allowed in a default request file.</dd></dl>
+<h2>Examples</h2>
+<p>The following is a simple example of a default request definition file: </p>
+<pre>=====================================================
+# Default Requests File
+# request group to be sun4 and a CPU-time of 5hr
+-l arch=sun4,s_cpu=5:0:0
+# don't restart the job in case of system crashes
+-r n
+=====================================================</pre>
+<p>Having defined a default request definition file like this, submitting a job as follows: </p>
+<pre>qsub test.sh</pre>
+<p>would have precisely the same effect as if the job was submitted with: </p>
+<pre>qsub -l arch=sun4,s_cpu=5:0:0 -r n test.sh</pre>
+<h2>Files</h2>
+<pre><i>&lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/xxqs_name_sxx_request</i>
+ global defaults file
+<i>$HOME/.xxqs_name_sxx_request</i> user private defaults file
+<i>$cwd/.xxqs_name_sxx_request</i> cwd directory defaults file</pre>
+<h2>See Also</h2>
+<h2>Copyright</h2>
+<p>See for a full statement of rights and permissions.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installing AMD GPU Drivers on Fedora: A Setup Guide - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/install-ati-fglrx-driver-on-fedora/">
+  <meta name="description" content="The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU—AMD’s actively …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installing AMD GPU Drivers on Fedora: A Setup Guide">
+  <meta property="og:url" content="https://www.systutorials.com/install-ati-fglrx-driver-on-fedora/">
+  <meta property="og:description" content="The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU—AMD’s actively …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-sysadmin-path/">Linux System Administration Path</a>
+          &rsaquo; <a href="/category/kernel/">Kernel</a>
+        </nav>
+        
+        <h1>Installing AMD GPU Drivers on Fedora: A Setup Guide</h1>
+        <time class="post-date" datetime="2013-09-25T10:32:06Z">September 25, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU—AMD’s actively maintained open-source driver that supports Wayland, current kernel versions, and both desktop and compute workloads.</p>
+<h2 id="gpu-compatibility">GPU Compatibility</h2>
+<p><strong>RDNA and newer</strong> (RX 5000 series and later): AMDGPU is required and fully supported.</p>
+<p><strong>GCN-era Radeons</strong> (R9 290X, Fury, RX 400/500): AMDGPU is recommended, but the open-source <code>radeon</code> driver is included by default and provides basic 3D acceleration.</p>
+<p><strong>Older Radeons</strong> (pre-GCN): Use the <code>radeon</code> driver; AMDGPU may have limited support.</p>
+<h2 id="installing-amdgpu">Installing AMDGPU</h2>
+<h3 id="enable-rpm-fusion-repositories">Enable RPM Fusion Repositories</h3>
+<p>AMDGPU packages are available in RPM Fusion’s free and nonfree repositories:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-<span class="k">$(</span>rpm -E %fedora<span class="k">)</span>.noarch.rpm
+</span></span><span class="line"><span class="cl">sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-<span class="k">$(</span>rpm -E %fedora<span class="k">)</span>.noarch.rpm
+</span></span><span class="line"><span class="cl">sudo dnf makecache
+</span></span></code></pre></div><h3 id="install-the-driver-stack">Install the Driver Stack</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install amdgpu-dkms libdrm-amdgpu vulkan-amdgpu
+</span></span></code></pre></div><p>The <code>amdgpu-dkms</code> package automatically compiles the kernel module for your running kernel. When you install kernel updates, DKMS rebuilds the module automatically.</p>
+<p>For gaming and 3D graphics:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install vulkan-amdgpu-libs
+</span></span></code></pre></div><p>For GPU compute workloads (HIP/ROCm):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install rocm-hip rocm-smi rocm-core
+</span></span></code></pre></div><p>Then reboot:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div><h2 id="verify-installation">Verify Installation</h2>
+<p>Confirm hardware detection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lspci <span class="p">|</span> grep -i amd
+</span></span></code></pre></div><p>Check that the kernel module loaded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsmod <span class="p">|</span> grep amdgpu
+</span></span></code></pre></div><p>Inspect GPU details:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi
+</span></span></code></pre></div><p>Verify Vulkan support:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vulkaninfo --summary
+</span></span></code></pre></div><p>Check GPU memory and temperature:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --showmeminfo
+</span></span><span class="line"><span class="cl">rocm-smi --showtemp
+</span></span></code></pre></div><h2 id="gpu-monitoring-and-power-management">GPU Monitoring and Power Management</h2>
+<p>Monitor real-time GPU status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi
+</span></span><span class="line"><span class="cl">watch -n <span class="m">1</span> rocm-smi
+</span></span></code></pre></div><p>Check temperature, clock speeds, and power draw:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --showtemp
+</span></span><span class="line"><span class="cl">rocm-smi --sclk
+</span></span><span class="line"><span class="cl">rocm-smi --mclk
+</span></span><span class="line"><span class="cl">rocm-smi --showpower
+</span></span></code></pre></div><p>Check GPU utilization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --showuse
+</span></span></code></pre></div><p>Set performance level to control frequency scaling:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --setperflevel high    <span class="c1"># Maximum clocks</span>
+</span></span><span class="line"><span class="cl">rocm-smi --setperflevel auto    <span class="c1"># Dynamic scaling (default)</span>
+</span></span><span class="line"><span class="cl">rocm-smi --setperflevel low     <span class="c1"># Minimum clocks</span>
+</span></span></code></pre></div><p>Monitor kernel messages for thermal or driver events:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dmesg <span class="p">|</span> grep -i amdgpu <span class="p">|</span> tail -20
+</span></span><span class="line"><span class="cl">journalctl -u amdgpu <span class="p">|</span> tail -20
+</span></span><span class="line"><span class="cl">journalctl -b -p err..warn <span class="p">|</span> grep -i amdgpu
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="gpu-not-detected-or-no-3d-acceleration">GPU Not Detected or No 3D Acceleration</h3>
+<p>Verify the kernel module loaded:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsmod <span class="p">|</span> grep amdgpu
+</span></span></code></pre></div><p>If the module is missing, check Xorg logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -i error /var/log/Xorg.0.log
+</span></span><span class="line"><span class="cl">grep -i amdgpu /var/log/Xorg.0.log
+</span></span></code></pre></div><p>Check the systemd journal for driver errors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -xe <span class="p">|</span> grep -i amdgpu
+</span></span><span class="line"><span class="cl">journalctl -b -p err
+</span></span></code></pre></div><p>If Xorg isn’t installed or you’re on Wayland, check the Wayland compositor logs (GNOME and KDE log to journalctl).</p>
+<h3 id="dkms-kernel-module-build-failure">DKMS Kernel Module Build Failure</h3>
+<p>Install kernel headers matching your running kernel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install kernel-devel-<span class="k">$(</span>uname -r<span class="k">)</span>
+</span></span></code></pre></div><p>Rebuild the DKMS module manually:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dkms autoinstall
+</span></span></code></pre></div><p>Check DKMS logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo cat /var/lib/dkms/amdgpu/*/build/make.log
+</span></span></code></pre></div><p>Or trigger a rebuild explicitly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dkms remove -m amdgpu -v <span class="k">$(</span>dnf list installed amdgpu-dkms <span class="p">|</span> tail -1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span> --all
+</span></span><span class="line"><span class="cl">sudo dkms install -m amdgpu -v <span class="k">$(</span>dnf list installed amdgpu-dkms <span class="p">|</span> tail -1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+</span></span></code></pre></div><h3 id="wayland-display-server-issues">Wayland Display Server Issues</h3>
+<p>AMDGPU fully supports Wayland on GNOME and KDE. Verify your session type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$XDG_SESSION_TYPE</span>
+</span></span></code></pre></div><p>Should return <code>wayland</code>. If it returns <code>x11</code>, switch to Wayland at the login screen (usually a dropdown menu in the bottom-left).</p>
+<h3 id="screen-tearing-on-wayland">Screen Tearing on Wayland</h3>
+<p>GNOME compositing is enabled by default. For KDE Plasma, ensure compositing is enabled:</p>
+<ol>
+<li>Open System Settings</li>
+<li>Go to Workspace Behavior → Screen Locking</li>
+<li>Ensure “Block compositing when windows are maximized” is disabled</li>
+</ol>
+<h3 id="vulkan-not-detected">Vulkan Not Detected</h3>
+<p>Verify Vulkan libraries are installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vulkaninfo --summary
+</span></span><span class="line"><span class="cl">vulkan-config
+</span></span></code></pre></div><p>If Vulkan layers are missing, reinstall the drivers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf reinstall vulkan-amdgpu-libs amdgpu-dkms
+</span></span><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div><h3 id="gpu-overheating-or-thermal-throttling">GPU Overheating or Thermal Throttling</h3>
+<p>Monitor GPU temperature:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">watch -n <span class="m">1</span> <span class="s1">&#39;rocm-smi --showtemp&#39;</span>
+</span></span></code></pre></div><p>The GPU automatically throttles when approaching ~85°C. Ensure:</p>
+<ul>
+<li>Case has adequate ventilation</li>
+<li>Dust filters are clean</li>
+<li>GPU fans spin freely</li>
+<li>Thermal paste on the GPU heatsink isn’t degraded</li>
+</ul>
+<p>If temperatures exceed 95°C consistently, check for dust buildup or insufficient airflow.</p>
+<h3 id="hiprocm-compute-not-working">HIP/ROCm Compute Not Working</h3>
+<p>Verify the ROCm installation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --showproductname
+</span></span><span class="line"><span class="cl">hipcc --version
+</span></span></code></pre></div><p>Check that the user is in the <code>render</code> and <code>video</code> groups (required for GPU access without sudo):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">groups
+</span></span><span class="line"><span class="cl">sudo usermod -a -G render,video <span class="nv">$USER</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Log out and back in for group changes to take effect</span>
+</span></span></code></pre></div><p>Test GPU compute access:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rocm-smi --showmeminfo system
+</span></span></code></pre></div><h2 id="legacy-radeon-driver-gcn-1-3-era">Legacy Radeon Driver (GCN 1-3 Era)</h2>
+<p>Older GCN-era GPUs can use the open-source <code>radeon</code> driver, which is installed by default:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lspci <span class="p">|</span> grep -i radeon
+</span></span><span class="line"><span class="cl">lsmod <span class="p">|</span> grep radeon
+</span></span></code></pre></div><p>No additional installation is needed. The module loads automatically at boot. Basic 3D acceleration works out-of-the-box, though performance and feature support are limited. For better performance and modern features, install AMDGPU instead—it’s backward compatible with GCN-era cards.</p>
+<h2 id="why-not-fglrx">Why Not fglrx?</h2>
+<p>The proprietary fglrx (Catalyst) driver is unsupported on modern Fedora:</p>
+<ul>
+<li>No compatibility with Xorg 1.20+ or Xwayland</li>
+<li>No Wayland support</li>
+<li>Incompatible with kernel 5.10 and later</li>
+<li>No GNOME/KDE support past 2015</li>
+<li>No security updates since end-of-life in 2015</li>
+</ul>
+<p>AMDGPU is the only supported path for AMD GPUs on modern Fedora systems.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>createhdf(1) · Linux Manual Pages</title>
+<meta name="description" content="createhdf – Create a blank IDE hard disk image in .hdf format">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-createhdf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>createhdf(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> createhdf &#8211; Create a blank IDE hard disk image in .hdf format </p>
+<h2>SYNOPSIS</h2>
+<p> <code>createhdf</code> [ -c ] [ -s ] <i>cylinders heads sectors file</i></p>
+<h2>DESCRIPTION</h2>
+<p> createhdf creates a blank image of an IDE hard disk in .hdf format for use with Sinclair ZX Spectrum emulators.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>-c</i></dt>
+<dd> specifies that the .hdf image should be created in `compact&#8217; mode, where only the low byte of every word is stored in the image. This is useful for saving space if the hard disk image is for use with an interface which accesses only the low byte of every word.</dd>
+<dt><i>-s</i></dt>
+<dd> specifies that the .hdf image should <code>not</code> be created as a sparse file. Normally, <i>createhdf</i> will attempt to create the hard disk image as a `sparse file&#8217;, where the operating system knows that the file consists mostly of zero bytes and fills those in without using any space in the file. This option disables this. (There&#8217;s nothing `magic&#8217; about this: if data is written to the file, it will take up space just like any other data; it&#8217;s only empty space which is synthesised by the operating system).</dd>
+<dt><i>-v version</i></dt>
+<dd> specifies the version of .hdf image to be created. Valid values are `<i>1.0</i>&#8216; for a version 1.0 file and `<i>1.1</i>&#8216; for a version 1.1 file. Defaults to creating version 1.1 files.</dd>
+<dt><i>cylinders</i></dt>
+<dd> specifies the number of cylinders in the image.</dd>
+<dt><i>heads</i></dt>
+<dd> specifies the number of heads in the image.</dd>
+<dt><i>sectors</i></dt>
+<dd> specifies the number of sectors in the image.</dd>
+<dt><i>file</i></dt>
+<dd> specifies the file to which the image should be written.</dd></dl>
+<h2>BUGS</h2>
+<p> None known.</p>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-fuse/">fuse</a></i>(1), <i><a href="/docs/linux/man/1-fuse-utils/">fuse-utils</a></i>(1), <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3) </p>
+<p> The .hdf format specification, at<br />
+ <i><a rel="nofollow" href="http://www.ramsoft.bbk.org/hdfform.html">http://www.ramsoft.bbk.org/hdfform.html</a></i>. </p>
+<p> The comp.sys.sinclair Spectrum FAQ, at<br />
+ <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
+<h2>AUTHOR</h2>
+<p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

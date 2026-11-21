@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpackaged_taskreset(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpackaged_taskreset/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpackaged_taskreset(3)</h1>
+
+
+
+
+
+<p>std::packaged_task&lt;R(Args&hellip;)&gt;::reset - std::packaged_task&lt;R(Args&hellip;)&gt;::reset</p>
+<h2>Synopsis</h2>
+<pre><code>void reset();
+(since C++ 11)</code></pre> 
+<p>Resets the state abandoning the results of previous executions. New shared state is constructed.
+Equivalent to *this = packaged_task(std::move(f)), where f is the stored task.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p><i>(none)</i></p>
+<h2>Exceptions</h2>
+<ul>
+<li>std::future_error if *this has no shared state. The error condition is set to no_state.</li>
+<li>std::bad_alloc if there was not enough memory for a new shared state.</li>
+<li>any exception thrown by the move_constructor of the new packaged_task</li>
+</ul>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;thread&gt;
+#include &lt;future&gt;
+int main()
+{
+std::packaged_task&lt;int(int, int)&gt; task([](int a, int b) {
+return std::pow(a, b);
+});
+std::future&lt;int&gt; result = task.get_future();
+task(2, 9);
+std::cout &lt;&lt; &quot;2^9 = &quot; &lt;&lt; result.get() &lt;&lt; &lsquo;\n&rsquo;;
+task.reset();
+result = task.get_future();
+std::thread task_td(std::move(task), 2, 10);
+task_td.join();
+std::cout &lt;&lt; &quot;2^10 = &quot; &lt;&lt; result.get() &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> 2^9 = 512
+ <wbr> 2^10 = 1024</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

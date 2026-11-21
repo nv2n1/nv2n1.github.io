@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pgmtexture(1) · Linux Manual Pages</title>
+<meta name="description" content="pgmtexture – calculate textural features on a portable graymap">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pgmtexture/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pgmtexture(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pgmtexture &#8211; calculate textural features on a portable graymap </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pgmtexture</code> [<code>-d</code> <i>d</i>] [<i>pgmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p> Reads a portable graymap as input. Calculates textural features based on spatial dependence matrices at 0, 45, 90, and 135 degrees for a distance <i>d</i> (default = 1). Textural features include:</p>
+<dl>
+<dt>
+</dt><dd> (1) Angular Second Moment,<br />
+ (2) Contrast,<br />
+ (3) Correlation,<br />
+ (4) Variance,<br />
+ (5) Inverse Difference Moment,<br />
+ (6) Sum Average,<br />
+ (7) Sum Variance,<br />
+ (8) Sum Entropy,<br />
+ (9) Entropy,<br />
+ (10) Difference Variance,<br />
+ (11) Difference Entropy,<br />
+ (12, 13) Information Measures of Correlation, and<br />
+ (14) Maximal Correlation Coefficient.</dd></dl>
+<p> Algorithm taken from:<br />
+ Haralick, R.M., K. Shanmugam, and I. Dinstein. 1973. Textural features for image classification. <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> SMC-3(6):610-621.</p>
+<h2>BUGS</h2>
+<p> The program can run incredibly slow for large images (larger than 64 x 64) and command line options are limited. The method for finding (14) the maximal correlation coefficient, which requires finding the second largest eigenvalue of a matrix Q, does not always converge.</p>
+<h2>REFERENCES</h2>
+<p> <i>IEEE Transactions on Systems, Man, </i> <i>and Cybertinetics,</i> SMC-3(6):610-621.</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/1-pnmcut/">pnmcut</a>(1)</p>
+<h2>AUTHOR</h2>
+<p> Copyright (C) 1991 by Texas Agricultural Experiment Station, employer for hire of James Darrell McCauley. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perf-bench(1) · Linux Manual Pages</title>
+<meta name="description" content="perf-bench – General framework for benchmark suites">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perf-bench/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perf-bench(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> perf-bench &#8211; General framework for benchmark suites </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;]
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> This <i>perf bench</i> command is a general framework for benchmark suites.</p>
+<h2>COMMON OPTIONS</h2>
+<p> -r, &#8211;repeat=</p>
+<dl>
+<dt>
+</dt><dd> Specify amount of times to repeat the run (default 10).</dd></dl>
+<p> -f, &#8211;format=</p>
+<dl>
+<dt>
+</dt><dd> Specify format style. Current available format styles are:</dd></dl>
+<p> <i>default</i></p>
+<dl>
+<dt>
+</dt><dd> Default style. This is mainly for human reading.</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+.ft C
+% perf bench sched pipe                      # with no style specified
+(executing 1000000 pipe operations between two tasks)
+        Total time:5.855 sec
+                5.855061 usecs/op
+                170792 ops/sec
+.ft
+</pre>
+</dd></dl>
+<p> <i>simple</i></p>
+<dl>
+<dt>
+</dt><dd> This simple style is friendly for automated processing by scripts.</dd></dl>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+.ft C
+% perf bench --format=simple sched pipe      # specified simple
+5.988
+.ft
+</pre>
+</dd></dl>
+<h2>SUBSYSTEM</h2>
+<p> <i>sched</i></p>
+<dl>
+<dt>
+</dt><dd> Scheduler and IPC mechanisms.</dd></dl>
+<p> <i>mem</i></p>
+<dl>
+<dt>
+</dt><dd> Memory access performance.</dd></dl>
+<p> <i>numa</i></p>
+<dl>
+<dt>
+</dt><dd> NUMA scheduling and MM benchmarks.</dd></dl>
+<p> <i>futex</i></p>
+<dl>
+<dt>
+</dt><dd> Futex stressing benchmarks.</dd></dl>
+<p> <i>all</i></p>
+<dl>
+<dt>
+</dt><dd> All benchmark subsystems.</dd></dl>
+<h3>SUITES FOR <i>sched</i></h3>
+<p> <code>messaging</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating performance of scheduler and IPC mechanisms. Based on hackbench by Rusty Russell.</dd></dl>
+<p> <font SIZE="+1"> <code>Options of messaging</code></p>
+<dl>
+<dt>
+</dt><dd>
+<p> -p, &#8211;pipe</p>
+</dd><dl>
+<dt>
+</dt><dd> Use pipe() instead of socketpair()</dd></dl>
+<p> -t, &#8211;thread</p>
+<dl>
+<dt>
+</dt><dd> Be multi thread instead of multi process</dd></dl>
+<p> -g, &#8211;group=</p>
+<dl>
+<dt>
+</dt><dd> Specify number of groups</dd></dl>
+<p> -l, &#8211;loop=</p>
+<dl>
+<dt>
+</dt><dd> Specify number of loops</dd></dl>
+</dl>
+<p> </font><font SIZE="+2"> <code>Example of messaging</code></p>
+<dl>
+<dl>
+<dt>
+</dt><dd> </font></dd>
+<pre>
+.ft C
+% perf bench sched messaging                 # run with default
+options (20 sender and receiver processes per group)
+(10 groups == 400 processes run)
+      Total time:0.308 sec
+% perf bench sched messaging -t -g 20        # be multi-thread, with 20 groups
+(20 sender and receiver threads per group)
+(20 groups == 800 threads run)
+      Total time:0.582 sec
+.ft
+</pre>
+</dl>
+<p> <code>pipe</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for pipe() system call. Based on pipe-test-1m.c by Ingo Molnar.</dd></dl>
+</dl>
+<p> <font SIZE="+1"> <code>Options of pipe</code></p>
+<dl>
+<dt>
+</dt><dd>
+<p> -l, &#8211;loop=</p>
+</dd><dl>
+<dt>
+</dt><dd> Specify number of loops.</dd></dl>
+</dl>
+<p> </font><font SIZE="+2"> <code>Example of pipe</code></p>
+<dl>
+<dl>
+<dt>
+</dt><dd> </font></dd>
+<pre>
+.ft C
+% perf bench sched pipe
+(executing 1000000 pipe operations between two tasks)
+        Total time:8.091 sec
+                8.091833 usecs/op
+                123581 ops/sec
+% perf bench sched pipe -l 1000              # loop 1000
+(executing 1000 pipe operations between two tasks)
+        Total time:0.016 sec
+                16.948000 usecs/op
+                59004 ops/sec
+.ft
+</pre>
+</dl>
+</dl>
+<h3>SUITES FOR <i>mem</i></h3>
+<p> <code>memcpy</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating performance of simple memory copy in various ways.</dd></dl>
+<p> <font SIZE="+1"> <code>Options of memcpy</code></p>
+<dl>
+<dt>
+</dt><dd>
+<p> -l, &#8211;length</p>
+</dd><dl>
+<dt>
+</dt><dd> Specify length of memory to copy (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dd></dl>
+<p> -r, &#8211;routine</p>
+<dl>
+<dt>
+</dt><dd> Specify routine to copy (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-movsq and x86-64-movsb are supported.</dd></dl>
+<p> -i, &#8211;iterations</p>
+<dl>
+<dt>
+</dt><dd> Repeat memcpy invocation this number of times.</dd></dl>
+<p> -c, &#8211;cycle</p>
+<dl>
+<dt>
+</dt><dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dd></dl>
+<p> -o, &#8211;only-prefault</p>
+<dl>
+<dt>
+</dt><dd> Show only the result with page faults before memcpy.</dd></dl>
+<p> -n, &#8211;no-prefault</p>
+<dl>
+<dt>
+</dt><dd> Show only the result without page faults before memcpy.</dd></dl>
+<p> <code>memset</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating performance of simple memory set in various ways.</dd></dl>
+</dl>
+<p> </font><font SIZE="+2"> <code>Options of memset</code></p>
+<dl>
+<dt>
+</dt><dd>
+<p> -l, &#8211;length</p>
+</dd><dl>
+<dt>
+</dt><dd> Specify length of memory to set (default: 1MB). Available units are B, KB, MB, GB and TB (case insensitive).</dd></dl>
+<p> -r, &#8211;routine</p>
+<dl>
+<dt>
+</dt><dd> Specify routine to set (default: default). Available routines are depend on the architecture. On x86-64, x86-64-unrolled, x86-64-stosq and x86-64-stosb are supported.</dd></dl>
+<p> -i, &#8211;iterations</p>
+<dl>
+<dt>
+</dt><dd> Repeat memset invocation this number of times.</dd></dl>
+<p> -c, &#8211;cycle</p>
+<dl>
+<dt>
+</dt><dd> Use perf&#8217;s cpu-cycles event instead of gettimeofday syscall.</dd></dl>
+<p> -o, &#8211;only-prefault</p>
+<dl>
+<dt>
+</dt><dd> Show only the result with page faults before memset.</dd></dl>
+<p> -n, &#8211;no-prefault</p>
+<dl>
+<dt>
+</dt><dd> Show only the result without page faults before memset.</dd></dl>
+</dl>
+<p> </font></p>
+<h3>SUITES FOR <i>numa</i></h3>
+<p> <code>mem</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating NUMA workloads.</dd></dl>
+<h3>SUITES FOR <i>futex</i></h3>
+<p> <code>hash</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating hash tables.</dd></dl>
+<p> <code>wake</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating wake calls.</dd></dl>
+<p> <code>requeue</code></p>
+<dl>
+<dt>
+</dt><dd> Suite for evaluating requeue calls.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-perf/">perf</a></code>(1) </p>
+<h2>Index</h2>
+<dt><a href="#lbAK">SEE ALSO</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

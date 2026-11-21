@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmdropsiteconfigurestackingorder(3) · Linux Manual Pages</title>
+<meta name="description" content="XmDropSiteConfigureStackingOrder — A Drag and Drop function that reorders a stack of widgets that are registered drop sites">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmdropsiteconfigurestackingorder/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmdropsiteconfigurestackingorder(3)</h1>
+
+
+
+
+
+<p><code>XmDropSiteConfigureStackingOrder</code> &#8212; A Drag and Drop function that reorders a stack of widgets that are registered drop sites</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/DragDrop.h&gt;
+<code>void XmDropSiteConfigureStackingOrder</code>(
+<code>Widget widget</code>,
+<code>Widget sibling</code>,
+<code>Cardinal stack_mode</code>);</pre>
+<h2>Description</h2>
+<p><code>XmDropSiteConfigureStackingOrder</code> changes the stacking order of the drop site specified by <i>widget</i>. The stacking order controls the manner in which drag-under effects are clipped by overlapping siblings, regardless of whether they are active. The stack mode is relative either to the entire stack, or to another drop site within the stack. The stack order can be modified only if the drop sites are siblings in both the widget and drop site hierarchy, and the widget parent of the drop sites is registered as a composite drop site.</p>
+<dl COMPACT>
+<dt><i>widget</i></dt>
+<dd>Specifies the drop site to be restacked.</dd>
+<dt><i>sibling</i></dt>
+<dd>Specifies a sibling drop site for stacking operations. If specified, then <i>widget</i> is restacked relative to this drop site&#8217;s stack position.</dd>
+<dt><i>stack_mode</i></dt>
+<dd>Specifies the new stack position for the specified widget. The values are <code>XmABOVE</code> and <code>XmBELOW</code>. If a sibling is specified, then <i>widget</i> is restacked as follows:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt><code>XmABOVE</code></dt>
+<dd>The widget is placed just above the sibling.</dd>
+<dt><code>XmBELOW</code></dt>
+<dd>The widget is placed just below the sibling.</dd></dl>
+</dl>
+<dd>If the <i>sibling</i> parameter is not specified, then <i>widget</i> is restacked as follows:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt><code>XmABOVE</code></dt>
+<dd>The widget is placed at the top of the stack.</dd>
+<dt><code>XmBELOW</code></dt>
+<dd>The widget is placed at the bottom of the stack.</dd></dl>
+</dl>
+</dl>
+<p> For a complete definition of DropSite and its associated resources, see <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3).</p>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteretrieve/">XmDropSiteRetrieve</a></code>(3), and <code><a href="/docs/linux/man/3-xmdropsitequerystackingorder/">XmDropSiteQueryStackingOrder</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

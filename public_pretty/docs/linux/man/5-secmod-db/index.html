@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>secmod-db(5) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-secmod-db/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>secmod-db(5)</h1>
+
+
+
+
+
+<p>secmod.db - Legacy NSS security modules database</p>
+<h2>Description</h2>
+<p><i>secmod.db</i> is an NSS security modules database.</p>
+<p>The security modules database is used to keep track of the NSS security modules. The NSS security modules export their services via the PKCS #11 API which NSS uses as its Services Provider Interface.</p>
+<p>The command line utility <i>modutil</i> is used for managing PKCS #11 module information both within secmod.db files and within hardware tokens.</p>
+<p>For new applications the recommended way of tracking security modules is via the pkcs11.txt configuration file used in conjunction the new sqlite-based shared database format for certificate and key databases.</p>
+<h2>Files</h2>
+<p>/etc/pki/nssdb/secmod.db</p>
+<h2>See Also</h2>
+<p><a HREF="/docs/linux/man/1-modutil/">modutil</a>(1), <a HREF="/docs/linux/man/5-cert8-db/">cert8.db</a>(5), <a HREF="/docs/linux/man/5-cert9-db/">cert9.db</a>(5), <a HREF="/docs/linux/man/5-key3-db/">key3.db</a>(5), <a HREF="/docs/linux/man/5-key4-db/">key4.db</a>(5), <a HREF="/docs/linux/man/5-pkcs11-txt/">pkcs11.txt</a>(5)</p>
+<h2>Authors</h2>
+<p>The nss libraries were written and maintained by developers with Netscape, Red Hat, Sun, Oracle, Mozilla, and Google.</p>
+<p>Authors: Elio Maldonado &lt;emaldona [at] redhat.com&gt;.</p>
+<h2>License</h2>
+<p>Licensed under the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at <a rel="nofollow" HREF="http://mozilla.org/MPL/2.0/."><a href="http://mozilla.org/MPL/2.0/">http://mozilla.org/MPL/2.0/</a>.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

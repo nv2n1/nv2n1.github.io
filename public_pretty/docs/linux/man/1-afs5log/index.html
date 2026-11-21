@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>afs5log(1) · Linux Manual Pages</title>
+<meta name="description" content="afs5log – AFS token initializer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-afs5log/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>afs5log(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> afs5log &#8211; AFS token initializer</p>
+<h2>SYNOPSIS</h2>
+<p> afs5log [ [-v] [-5] [-k] [-p <i>path</i>] [cell[=principal] ] ] [&#8230;] </p>
+<h2>DESCRIPTION</h2>
+<p> The <i>afs5log</i> command uses Kerberos to obtain AFS tokens for the named cells. If no cell is named, tokens are obtained for the local cell. If the principal name of the <i>afs</i> service for the cell is known, the cell name may also be given in the form <i>cell</i>=<i>principal_name</i>. Attempts are made to obtain Kerberos IV credentials first, and if that fails, <i>afs5log</i> will create Kerberos 5 (<i>2b-style</i>) tokens. </p>
+<h2>ARGUMENTS</h2>
+<dl>
+<dt>-v</dt>
+<dd> Turns on verbose mode. <i>afs5log</i> will print debugging messages while it does its work. Use more than once to get more detail.</dd>
+<dt>-p <i>path</i></dt>
+<dd> Determine which cell the specified <i>path</i> resides in, and obtain tokens for that cell.</dd>
+<dt>-s <i>strategy</i></dt>
+<dd> Overrides the default token-setting strategy (&quot;<i>2b</i>&quot;) with the named strategy. Recognized strategy names include:<br />
+&nbsp;<wbr><i>rxk5</i>&nbsp;<wbr>&nbsp;<wbr>rxk5&nbsp;<wbr>(requires OpenAFS 1.6 or later)<br />
+&nbsp;<wbr><i>2b</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>rxkad&nbsp;<wbr>&quot;2b&quot;&nbsp;<wbr>(requires OpenAFS 1.2.8 or later)</dd>
+<dt>-5</dt>
+<dd> Skip attempts to use Kerberos IV and just use <i>2b</i>-style tokens, which are only supported by OpenAFS 1.2.8 and later.</dd>
+<dt>-k</dt>
+<dd> Skip attempts to use Kerberos IV and use <i>rxk5</i>-style tokens, which are only supported by OpenAFS 1.6 and later.</dd>
+<dt>-n</dt>
+<dd> Assume that, if a cell name and a realm name differ only by case, that the name of the AFS service&#8217;s principal name doesn&#8217;t include an instance. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/5-pam_krb5/">pam_krb5</a></code>(5) <code><a href="/docs/linux/man/5-krb5-conf/">krb5.conf</a></code>(5) </p>
+<h2>BUGS</h2>
+<p> Probably, but let&#8217;s hope not. If you find any, please file them in the bug database at <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a> against the &quot;pam_krb5&quot; component. </p>
+<h2>AUTHOR</h2>
+<p> Nalin Dahyabhai &lt;nalin [at] redhat.com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

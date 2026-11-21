@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rlm_detail(5) · Linux Manual Pages</title>
+<meta name="description" content="rlm_detail – FreeRADIUS Module">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-rlm_detail/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>rlm_detail(5)</h1>
+
+
+
+
+
+<p>rlm_detail &#8211; FreeRADIUS Module</p>
+<h2>Description</h2>
+<p>The <i>rlm_detail</i> module writes radius packets to &#8216;detail&#8217; files. It is primarily used for storing accounting information, but can be used in other sections to write packet details as well. </p>
+<p> The file format is similar to that of the old Livingston servers, and many &#8216;detail&#8217; file parsers should work with FreeRADIUS. </p>
+<p> The main configuration items to be aware of are:</p>
+<dl>
+<dt>file</dt>
+<dd>The file name in which to store the radius packet records. NOTE: this variable is run through dynamic string expansion, and can include FreeRADIUS variables to create a dynamic filename.</dd></dl>
+<p>&nbsp;<wbr>&nbsp;<wbr>%{radacctdir}/%{Client-IP-Address}/detail-%Y%m </p>
+<p>&nbsp;<wbr>&nbsp;<wbr>This will create one file per month, for each client.&nbsp;<wbr>&nbsp;<wbr><br />
+&nbsp;<wbr>&nbsp;<wbr>This accomplishes&nbsp;<wbr>&#8216;file rotation&#8217;&nbsp;<wbr>automatically from&nbsp;<wbr><br />
+&nbsp;<wbr>&nbsp;<wbr>within the server. </p>
+<dl>
+<dt>perm</dt>
+<dd>The file permissions of the file. If omitted, the default is 0600.</dd>
+<dt>dirperm</dt>
+<dd>The directory permissions of the directory where the detail files are created. The default is 0755.</dd>
+<dt>locking</dt>
+<dd>This option is set to &#8216;yes&#8217; or &#8216;no&#8217;. By default it is &#8216;no&#8217;. Set this to yes to enable file locking, which is used with the &#8216;radrelay&#8217; program.</dd></dl>
+<h2>Configuration</h2>
+<dl>
+<dd>
+<pre>modules {
+ ...
+<br>
+ detail {
+<br>
+ filename = %A/%{Client-IP-Address}/detail-%Y%m
+<br>
+ permissions = 0600
+<br>
+ dir_permissions = 0755
+<br>
+ locking = no
+<br>
+ }
+<br>
+ ... 
+<br>
+}
+ ...
+<br>
+accounting {
+ ...
+<br>
+ detail
+ ...
+<br>
+}</pre>
+</dd></dl>
+<h2>Sections</h2>
+<p><code>authorization,</code> <code>accounting,</code> <code>pre_proxy,</code> <code>post_proxy,</code> <code>post_authentication</code></p>
+<h2>Files</h2>
+<p><i>/etc/raddb/radiusd.conf</i></p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a></code>(5)</p>
+<h2>Authors</h2>
+<p>Chris Parker, cparker [at] segv.org</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

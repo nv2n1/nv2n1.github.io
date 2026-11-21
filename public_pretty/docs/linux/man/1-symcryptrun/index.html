@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>symcryptrun(1) · Linux Manual Pages</title>
+<meta name="description" content="symcryptrun – Call a simple symmetric encryption tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-symcryptrun/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>symcryptrun(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>symcryptrun</code> &#8211; Call a simple symmetric encryption tool </p>
+<h2>SYNOPSIS</h2>
+<p> <code>symcryptrun</code> <code>&#8211;class</code> <i>class</i> <code>&#8211;program</code> <i>program</i> <code>&#8211;keyfile</code> <i>keyfile</i> [<code>&#8211;decrypt</code>|<code>&#8211;encrypt</code>] [<i>inputfile</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> Sometimes simple encryption tools are already in use for a long time and there might be a desire to integrate them into the GnuPG framework. The protocols and encryption methods might be non-standard or not even properly documented, so that a full-fledged encryption tool with an interface like <code>gpg</code> is not doable. <code>symcryptrun</code> provides a solution: It operates by calling the external encryption/decryption module and provides a passphrase for a key using the standard <code>pinentry</code> based mechanism through <code>gpg-agent</code>. </p>
+<p> Note, that <code>symcryptrun</code> is only available if GnuPG has been configured with &#8216;&#8211;enable-symcryptrun&#8217; at build time. </p>
+<p> For encryption, the plain text must be provided on STDIN or as the argument <i>inputfile</i>, and the ciphertext will be output to STDOUT. For decryption vice versa. </p>
+<p> <i>CLASS</i> describes the calling conventions of the external tool. Currently it must be given as &#8216;confucius&#8217;. <i>PROGRAM</i> is the full filename of that external tool. </p>
+<p> For the class &#8216;confucius&#8217; the option <code>&#8211;keyfile</code> is required; <i>keyfile</i> is the name of a file containing the secret key, which may be protected by a passphrase. For detailed calling conventions, see the source code. </p>
+<p> Note, that <code>gpg-agent</code> must be running before starting <code>symcryptrun</code>. </p>
+<p> The following additional options may be used: </p>
+<dl>
+<dt><code>-v</code></dt>
+<dd> <code>&#8211;verbose</code> Output additional information while running. </dd>
+<dt><code>-q</code></dt>
+<dd>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Try to be as quiet as possible. </dd>
+<dt><code>&#8211;homedir </code><i>dir</i></dt>
+<dd> Set the name of the home directory to <i>dir</i>. If this option is not used, the home directory defaults to &#8216;<i>~/.gnupg</i>&#8216;. It is only recognized when given on the command line. It also overrides any home directory stated through the environment variable &#8216;<i>GNUPGHOME</i>&#8216; or (on Windows systems) by means of the Registry entry <i>HKCU\Software\GNU\GnuPG:HomeDir</i>. </dd>
+<p> On Windows systems it is possible to install GnuPG as a portable application. In this case only this command line option is considered, all other ways to set a home directory are ignored. </p>
+<p> To install GnuPG as a portable application under Windows, create an empty file named &#8216;<i>gpgconf.ctl</i>&#8216; in the same directory as the tool &#8216;<i>gpgconf.exe</i>&#8216;. The root of the installation is then that directory; or, if &#8216;<i>gpgconf.exe</i>&#8216; has been installed directly below a directory named &#8216;<i>bin</i>&#8216;, its parent directory. You also need to make sure that the following directories exist and are writable: &#8216;<i>ROOT/home</i>&#8216; for the GnuPG home and &#8216;<i>ROOT/var/cache/gnupg</i>&#8216; for internal cache files. </p>
+<dt><code>&#8211;log-file </code><i>file</i></dt>
+<dd> Append all logging output to <i>file</i>. Use &#8216;<i>socket://</i>&#8216; to log to socket. Default is to write logging information to STDERR. </dd>
+</dl>
+<p> The possible exit status codes of <code>symcryptrun</code> are: </p>
+<dl>
+<dt><code>0</code></dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Success.</dd>
+<dt><code>1</code></dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Some error occurred.</dd>
+<dt><code>2</code></dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;No valid passphrase was provided.</dd>
+<dt><code>3</code></dt>
+<dd>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The operation was canceled by the user. </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), <code><a href="/docs/linux/man/1-gpgsm/">gpgsm</a></code>(1), <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1), </p>
+<p> The full documentation for this tool is maintained as a Texinfo manual. If GnuPG and the info program are properly installed at your site, the command </p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+info gnupg
+</pre>
+</dd></dl>
+<p> should give you access to the complete manual including a menu structure and an index. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

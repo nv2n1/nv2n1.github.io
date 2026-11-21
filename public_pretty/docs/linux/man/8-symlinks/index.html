@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>symlinks(8) · Linux Manual Pages</title>
+<meta name="description" content="symlinks – symbolic link maintenance utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-symlinks/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>symlinks(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>symlinks &#8211; symbolic link maintenance utility</p>
+<h2>Synopsis</h2>
+<p><code>symlinks</code> [ <code>-cdorstv</code> ] dirlist</p>
+<h2>Description</h2>
+<p><code>symlinks</code> is a useful utility for maintainers of FTP sites, CDROMs, and Linux software distributions. It scans directories for symbolic links and lists them on stdout, often revealing flaws in the filesystem tree. Each link is output with a classification of <code>relative,</code> <code>absolute,</code> <code>dangling,</code> <code>messy,</code> <code>lengthy,</code> or <code>other_fs.</code> <code>relative</code> links are those expressed as paths relative to the directory in which the links reside, usually independent of the mount point of the filesystem. <code>absolute</code> links are those given as an absolute path from the root directory as indicated by a leading slash (/). <code>dangling</code> links are those for which the target of the link does not currently exist. This commonly occurs for <code>absolute</code> links when a filesystem is mounted at other than its customary mount point (such as when the normal root filesystem is mounted at /mnt after booting from alternative media). <code>messy</code> links are links which contain unnecessary slashes or dots in the path. These are cleaned up as well when <code>-c</code> is specified. <code>lengthy</code> links are links which use &quot;../&quot; more than necessary in the path (eg. /bin/vi -&gt; ../bin/vim) These are only detected when <code>-s</code> is specified, and are only cleaned up when <code>-c</code> is also specified. <code>other_fs</code> are those links whose target currently resides on a different filesystem from where symlinks was run (most useful with <code>-r</code> ). </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-c </i></dt>
+<dd>convert absolute links (within the same filesystem) to relative links. This permits links to maintain their validity regardless of the mount point used for the filesystem &#8212; a desirable setup in most cases. This option also causes any <code>messy</code> links to be cleaned up, and, if <code>-s</code> was also specified, then <code>lengthy</code> links are also shortened. Links affected by <code>-c</code> are prefixed with <code>changed</code> in the output.</dd>
+<dt><i>-d</i></dt>
+<dd>causes <code>dangling</code> links to be removed.</dd>
+<dt><i>-o </i></dt>
+<dd>fix links on other filesystems encountered while recursing. Normally, other filesystems encountered are not modified by symlinks.</dd>
+<dt><i>-r </i></dt>
+<dd>recursively operate on subdirectories within the same filesystem.</dd>
+<dt><i>-s</i></dt>
+<dd>causes <code>lengthy</code> links to be detected.</dd>
+<dt><i>-t</i></dt>
+<dd>is used to test for what <code>symlinks</code> would do if <code>-c</code> were specified, but without really changing anything.</dd>
+<dt><i>-v </i></dt>
+<dd>show all symbolic links. By default, <code>relative</code> links are not shown unless <code>-v</code> is specified.</dd></dl>
+<h2>Bugs</h2>
+<p><code>symlinks</code> does not recurse or change links across filesystems. </p>
+<h2>Author</h2>
+<p><code>symlinks </code> has been written by Mark Lord &lt;mlord [at] pobox.com&gt;, the original developer and maintainer of the IDE Performance Package for linux, the Linux IDE Driver subsystem, hdparm, and a current day libata hacker.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/2-symlink/">symlink</a></code>(2) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

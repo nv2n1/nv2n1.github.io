@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pcp-numastat(1) · Linux Manual Pages</title>
+<meta name="description" content="pcp-numastat – report on NUMA memory allocation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pcp-numastat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pcp-numastat(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> <code>pcp-numastat</code> &#8211; report on NUMA memory allocation</p>
+<h2>SYNOPSIS</h2>
+<p> <code>pcp</code> [<i>pcp options</i>] <code>numastat</code> [<code>-V</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> <code>pcp-numastat</code> displays NUMA allocation statistics from the kernel memory allocator. Each process has NUMA policies that specify on which node pages are allocated. The performance counters in the kernel track on which nodes memory is allocated and these values are sampled and reported by <code>pcp-numastat</code>. </p>
+<p> Counters are maintained individually for each NUMA node. Details of the semantics of each reported metric can be retrieved using the following command: </p>
+<pre>
+# pminfo -dt mem.numa.alloc
+</pre>
+<p> When invoked via the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, the <code>-h</code>/<code>&#8211;host</code>, <code>-a</code>/<code>&#8211;archive</code>, <code>-O</code>/<code>&#8211;origin</code>, <code>-Z</code>/<code>&#8211;timezone</code> and several other <i>pcp options</i> become indirectly available. </p>
+<p> The current version of <code>pcp-numastat</code> can be queried using the <code>-V</code>/<code>&#8211;version</code> option.</p>
+<h2>NOTES</h2>
+<p> <code>pcp-numastat</code> is inspired by the <code>numastat</code>(1) command and produces exactly the same output.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code>numastat</code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

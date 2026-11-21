@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>futex_wait_setup(9) · Linux Manual Pages</title>
+<meta name="description" content="futex_wait_setup – Prepare to wait on a futex">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-futex_wait_setup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>futex_wait_setup(9)</h1>
+
+
+
+
+
+<p>futex_wait_setup &#8211; Prepare to wait on a futex</p>
+<h2>Synopsis</h2>
+<pre><code>int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags, struct futex_q *q, struct futex_hash_bucket **hb);</code></pre>
+<h2>Arguments</h2>
+<p><i>uaddr</i></p>
+<dl>
+<dd>
+</dd><dd>the futex userspace address</dd></dl>
+<p> <i>val</i></p>
+<dl>
+<dd>the expected value</dd></dl>
+<p> <i>flags</i></p>
+<dl>
+<dd>futex flags (FLAGS_SHARED, etc.)</dd></dl>
+<p> <i>q</i></p>
+<dl>
+<dd>the associated futex_q</dd></dl>
+<p> <i>hb</i></p>
+<dl>
+<dd>storage for hash_bucket pointer to be returned to caller</dd></dl>
+<h2>Description</h2>
+<p>Setup the futex_q and locate the hash_bucket. Get the futex value and compare it with the expected value. Handle atomic faults internally. Return with the hb lock held and a q.key reference on success, and unlocked with no q.key reference on failure.</p>
+<h2>Return</h2>
+<p>0 &#8211; uaddr contains val and hb has been locked; &lt;1 &#8211; -EFAULT or -EWOULDBLOCK (uaddr does not contain val) and hb is unlocked</p>
+<h2>Author</h2>
+<p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abrt-runapp(7) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-abrt-runapp/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>abrt-runapp(7)</h1>
+
+
+
+
+
+<p>RunApp plugin for abrt(8)</p>
+<h2>Description</h2>
+<p><i>abrt</i> is a daemon that watches for application crashes. When a crash occurs, it collects the crash data and takes action according to its configuration. This manual page describes the <i>RunApp</i> plugin for <i>abrt</i>. This plugin is used to run a specified application when the crash occurs.</p>
+<h2>Invocation</h2>
+<p>The plugin is invoked in the <i>abrt.conf</i> configuration file. The first parameter is the command to run. The second, optional parameter specifies an output file, to which the standard output of the program is saved.</p>
+<h2>Configuration</h2>
+<p>There is no configuration file, the plugin parameters are sufficient.</p>
+<h2>Examples</h2>
+<p>These are snippets from the <i>abrt.conf</i> configuration file. 1) Each time something crashes, print (and save in a text file) which processes are running on the system.</p>
+<p>[common]
+ActionsAndReporters = RunApp(&quot;ps ax&quot;,&quot;processes.txt&quot;) 2) When proftpd crashes, restart it.</p>
+<p>[AnalyzerActionsAndReporters]
+CCpp:proftpd = RunApp(&quot;/etc/init.d/proftpd restart&quot;)</p>
+<h2>See Also</h2>
+<p><i>abrt</i>(8), <i><a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a></i>(5), <i><a HREF="/docs/linux/man/7-abrt-plugins/">abrt-plugins</a></i>(7)</p>
+<h2>Author</h2>
+<p>Written by Zdenek Prikryl &lt;zprikryl [at] redhat.com&gt;. Manual page by Daniel Novotny &lt;dnovotny [at] redhat.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

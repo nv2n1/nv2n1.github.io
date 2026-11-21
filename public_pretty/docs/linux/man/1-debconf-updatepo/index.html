@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>debconf-updatepo(1) · Linux Manual Pages</title>
+<meta name="description" content="debconf-updatepo – update PO files about debconf templates">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-debconf-updatepo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>debconf-updatepo(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> debconf-updatepo &#8211; update PO files about debconf templates </p>
+<h2>SYNOPSIS</h2>
+<p> <code>debconf-updatepo</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;skip-pot</code>] [<code>&#8211;skip-merge</code>] [<code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font>]</p>
+<h2>DESCRIPTION</h2>
+<p> This program reads <i>po/POTFILES.in</i> to determine which master files need to be processed, then extracts new gettext strings into <i>po/templates.pot</i> and updates all <i>po/*.po</i> files. This script can be called either in the top-level directory, or in the <i>debian</i> or <i>debian/po</i> subdirectories. It is run by developer and/or translator to update <font SIZE="-1">PO</font> files when the English text is modified in <i>templates</i> files.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display a usage summary and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Process in verbose mode.</dd>
+<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></dt>
+<dd> Set directory for <font SIZE="-1">PO</font> files. By default <font SIZE="-1">PO</font> files are searched in <i>debian/po</i>, <i>po</i> and <i>../po</i> directories in that order.</dd>
+<dt><code>&#8211;skip-pot</code></dt>
+<dd> Do not generate a new <i>po/templates.pot</i> file.</dd>
+<dt><code>&#8211;skip-merge</code></dt>
+<dd> Do not merge existing <font SIZE="-1">PO</font> files with <i>po/templates.pot</i>.</dd>
+<dt><code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font></dt>
+<dd> Set the email address that will be specified in the <font SIZE="-1">POT</font>&#8216;s Report-Msgid-Bugs-To field. </dd>
+<p> By default, this field is set to &lt;package&gt;@package.debian.org. </p>
+<p> It is intended for the maintainers of Debian based distributions, and should be used in the following cases:</p>
+<dl>
+<dl>
+<dt>o</dt>
+<dd> The package is not present in Debian (and thus the &lt;package&gt;@packages.debian.org address does not exist).</dd>
+<dt>o</dt>
+<dd> The maintainer made significant changes in the debconf templates (or added templates to a Debian package without templates), and does not want to bother the Debian maintainer with bug reports that won&#8217;t be relevant for the Debian maintainer.</dd></dl>
+</dl>
+<dl>
+<dt>
+</dt><dd>
+<p> The default address is preferred to avoid corrections in the Debian based distribution without a notification to the Debian maintainer.</dd></dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-debconf-gettextize/">debconf-gettextize</a></code>(1), <code><a href="/docs/linux/man/1-po2debconf/">po2debconf</a></code>(1), <code><a href="/docs/linux/man/1-podebconf-report-po/">podebconf-report-po</a></code>(1), <code><a href="/docs/linux/man/7-po-debconf/">po-debconf</a></code>(7).</p>
+<h2>AUTHOR</h2>
+<pre>
+  Denis Barbier &lt;barbier [at] linuxfr.org&gt;
+</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

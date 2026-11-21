@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ident(8) · Linux Manual Pages</title>
+<meta name="description" content="ident – nnrpd ident resolver">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ident/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ident(8)</h1>
+
+
+
+
+
+<p>ident &#8211; nnrpd ident resolver</p>
+<h2>Synopsis</h2>
+<p><code>ident</code> [<code>-p</code> <i>port</i>] [<code>-t</code>]</p>
+<h2>Description</h2>
+<p>This program attempts to resolve usernames for <code>nnrpd</code> by using the ident protocol to query the remote host. It contacts the remote host using either IPv4 or IPv6 depending on which protocol was used for the incoming <font SIZE="-1">NNTP</font> connection.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-p</code> <i>port</i></dt>
+<dd>If this option is given, attempt to contact identd on the specified remote port (which can be a numeric or symbolic specification). Non-numeric values will be looked up using <i><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></i>(3). The default value is the result of <tt>&quot;getservbyname(&quot;ident&quot;)&quot;</tt> if available, or port 113 otherwise.</dd>
+<dt><code>-t</code></dt>
+<dd>If this option is given, the identity returned will never have a domain part. That is, if the remote server returns a result containing an <tt>&quot;@&quot;</tt> character, <code>ident</code> truncates the response at the <tt>&quot;@&quot;</tt>. This is useful to allow the <i>default-domain</i> parameter in <i>reaers.conf</i> to override the domain supplied by the remote host (particularly if the supplied domain part is an unqualified local machine name rather than a full domain name).</dd></dl>
+<h2>Example</h2>
+<p>The following <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5) fragment tells nnrpd to trust ident information for hosts on a local network, but to replace the domain returned from the ident query: </p>
+<pre> auth LAN {
+ hosts: &quot;192.168/16&quot;
+ res: &quot;ident -t&quot;
+ default-domain: &quot;internal.example.com&quot;
+ }
+ access LAN {
+ users: &quot;*@internal.example.com&quot;
+ newsgroups: example.*
+ }</pre>
+<p>Access is granted to the example.* groups for all users on the local network whose machines respond to ident queries.</p>
+<h2>History</h2>
+<p>This documentation was written by Jeffrey M. Vinocur &lt;jeff [at] litech.org&gt;. </p>
+<p> <tt>$Id:</tt> ident.pod 8200 2008-11-30 13:31:30Z iulius $</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

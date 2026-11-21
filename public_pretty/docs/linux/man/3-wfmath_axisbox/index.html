@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wfmath_axisbox(3) · Linux Manual Pages</title>
+<meta name="description" content="WFMath::AxisBox – A dim dimensional axis-aligned box.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-wfmath_axisbox/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>wfmath_axisbox(3)</h1>
+
+
+
+
+
+<p>WFMath::AxisBox &#8211; A dim dimensional axis-aligned box. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;<a href="file:/usr/include/axisbox.h">axisbox.h</a>&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>AxisBox</code> ()<br />
+ <i>Construct an uninitialized box. </i><br />
+ <code>AxisBox</code> (const <code>Point</code>&lt; dim &gt; &amp;p1, const <code>Point</code>&lt; dim &gt; &amp;p2, bool ordered=false)<br />
+ <i>Construct a box with opposite corners p1 and p2. </i><br />
+ <code>AxisBox</code> (const <code>AxisBox</code> &amp;a)<br />
+ <i>Construct a copy of a box. </i><br />
+ <code>AxisBox</code> (const AtlasInType &amp;a)<br />
+ <i>Construct a box from an object passed by Atlas. </i><br />
+ AtlasOutType <code>toAtlas</code> () const<br />
+ <i>Create an Atlas object from the box. </i><br />
+ void <code>fromAtlas</code> (const AtlasInType &amp;a)<br />
+ <i>Set the box&#8217;s value to that given by an Atlas object. </i><br />
+ const <code>Point</code>&lt; dim &gt; &amp; <code>lowCorner</code> () const<br />
+ <i>Get a reference to corner 0. </i><br />
+ const <code>Point</code>&lt; dim &gt; &amp; <code>highCorner</code> () const<br />
+ <i>Get a reference to corner (2^dim)-1. </i><br />
+ <code>CoordType</code> <code>lowerBound</code> (const int axis) const<br />
+ <i>Get the lower bound of the box on the i&#8217;th axis. </i><br />
+ <code>CoordType</code> <code>upperBound</code> (const int axis) const<br />
+ <i>Get the upper bound of the box on the i&#8217;th axis. </i><br />
+ <code>AxisBox</code> &amp; <code>setCorners</code> (const <code>Point</code>&lt; dim &gt; &amp;p1, const <code>Point</code>&lt; dim &gt; &amp;p2, bool ordered=false)<br />
+ <i>Set the box to have opposite corners p1 and p2. </i></p>
+<h3>Friends</h3>
+<p>bool <code>Intersection</code> (const <code>AxisBox</code> &amp;a1, const <code>AxisBox</code> &amp;a2, <code>AxisBox</code> &amp;out)<br />
+ <i>Return true if the boxes intersect, and set &#8216;out&#8217; to their intersection. </i><br />
+ <code>AxisBox</code> <code>Union</code> (const <code>AxisBox</code> &amp;a1, const <code>AxisBox</code> &amp;a2)<br />
+ <i>Get the minimal box that contains a1 and a2. </i></p>
+<h2>Detailed Description</h2>
+<h3>template&lt;const int dim&gt; class WFMath::AxisBox&lt; dim &gt;</h3>
+<p>A dim dimensional axis-aligned box. </p>
+<p> This class implements the full shape interface, as described in the fake class <code>Shape</code>, with the exception of the rotation functions.</p>
+<h2>Member Function Documentation</h2>
+<h3>template&lt;const int dim&gt; <code>AxisBox</code>&lt; dim &gt; &amp; <code>WFMath::AxisBox</code>&lt; dim &gt;::setCorners (const <code>Point</code>&lt; dim &gt; &amp; p1, const <code>Point</code>&lt; dim &gt; &amp; p2, bool ordered = false) [inline]</h3>
+<p>Set the box to have opposite corners p1 and p2. </p>
+<p> The &#8216;ordered&#8217; variable may be set to true if p1[i] &lt;= p2[i] for all i. It is always safe to leave &#8216;ordered&#8217; as false, it is a speed optimization primarily intended for use inside the library. </p>
+<p> Referenced by WFMath::AxisBox&lt; dim &gt;::AxisBox(). </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for WFMath from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

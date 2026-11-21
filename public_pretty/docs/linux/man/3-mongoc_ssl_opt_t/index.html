@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mongoc_ssl_opt_t(3) · Linux Manual Pages</title>
+<meta name="description" content="mongoc_ssl_opt_t – typedef struct { const char *pem_file; const char *pem_pwd; const char *ca_file; const char *ca_dir; const char *crl_file; bool weak_cert_validation; void *padding [8]; } mongoc_...">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-mongoc_ssl_opt_t/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>mongoc_ssl_opt_t(3)</h1>
+
+
+
+
+
+<p>mongoc_ssl_opt_t &#8211; typedef struct {<br />
+const char&nbsp;<wbr>*pem_file;<br />
+const char&nbsp;<wbr>*pem_pwd;<br />
+const char&nbsp;<wbr>*ca_file;<br />
+const char&nbsp;<wbr>*ca_dir;<br />
+const char&nbsp;<wbr>*crl_file;<br />
+bool&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>weak_cert_validation;<br />
+void&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>*padding&nbsp;<wbr>[8]; } mongoc_ssl_opt_t;</p>
+<h2>Synopsis</h2>
+<pre>typedef struct
+{
+ const char *pem_file;
+ const char *pem_pwd;
+ const char *ca_file;
+ const char *ca_dir;
+ const char *crl_file;
+ bool weak_cert_validation;
+ void *padding [8];
+} mongoc_ssl_opt_t;</pre>
+<h2>Description</h2>
+<p>This structure is used to set the SSL options for a <code>mongoc_client_t</code> or <code>mongoc_client_pool_t</code> \&amp;. </p>
+<p> Beginning in version 1.2.0, once a pool or client has any SSL options set, all connections use SSL, even if &quot;ssl=true&quot; is omitted from the MongoDB URI. Before, SSL options were ignored unless &quot;ssl=true&quot; was included in the URI. </p>
+<h2>See Also</h2>
+<dl COMPACT>
+<dt>\[bu]</dt>
+<dd>
+</dd><dt>\[bu]</dt>
+<dd><code></dd></dl>
+<p> </code></p>
+<h2>Colophon</h2>
+<p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

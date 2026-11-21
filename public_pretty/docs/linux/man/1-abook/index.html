@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abook(1) · Linux Manual Pages</title>
+<meta name="description" content="abook – text-based address book program">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-abook/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>abook(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> abook &#8211; text-based address book program </p>
+<h2>SYNOPSIS</h2>
+<p> <code>abook</code> [ <i>OPTION</i> ]</p>
+<h2>DESCRIPTION</h2>
+<p> This manual page documents briefly the <code>abook</code> program. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
+<p> <code>abook </code> is a text-based address book program. It contains Name, Email, Address and various Phone fields. It is designed for use with mutt, but can be equally useful on its own.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h &#8211;help</code></dt>
+<dd> Show usage.</dd>
+<dt><code>-C &#8211;config</code> <i>&lt;filename&gt;</i></dt>
+<dd> Use an alternative configuration file (default is <i>$HOME/.abook/abookrc</i>).</dd>
+<dt><code>&#8211;datafile</code> <i>&lt;filename&gt;</i></dt>
+<dd> Use an alternative addressbook file (default is <i>$HOME/.abook/addressbook</i>).</dd>
+<dt><code>&#8211;mutt-query</code> <i>&lt;string&gt;</i></dt>
+<dd> Make a query for mutt (search the addressbook for <i>&lt;string&gt;</i>).<br />
+ The <code>&#8211;datafile</code> option, as documented above, may be used <code>BEFORE</code> this option to search a different addressbook file.</dd>
+<dt><code>&#8211;convert</code> [ <code>&#8211;informat</code> <i>&lt;inputformat&gt;</i> ] [ <code>&#8211;infile</code> <i>&lt;inputfile&gt;</i> ] [ <code>&#8211;outformat</code> <i>&lt;outputformat&gt;</i> ] [ <code>&#8211;outfile</code> <i>&lt;outputfile&gt;</i> ]</dt>
+<dd> Converts <i>&lt;inputfile&gt;</i> in <i>&lt;inputformat&gt;</i> to <i>&lt;outputfile&gt;</i> in <i>&lt;outputformat&gt;</i> (defaults are <code>abook</code>, <code>stdin</code>, <code>text</code> and <code>stdout</code>). </dd>
+<p> The following <i>inputformats</i> are supported:<br />
+ &#8211; <code>abook</code> abook native format<br />
+ &#8211; <code>ldif</code> ldif / Netscape addressbook<br />
+ &#8211; <code>mutt</code> mutt alias<br />
+ &#8211; <code>pine</code> pine addressbook<br />
+ &#8211; <code>csv</code> comma separated values<br />
+ &#8211; <code>palmcsv</code> Palm comma separated values </p>
+<p> The following <i>outputformats</i> are supported:<br />
+ &#8211; <code>abook</code> abook native format<br />
+ &#8211; <code>ldif</code> ldif / Netscape addressbook (.4ld)<br />
+ &#8211; <code>mutt</code> mutt alias<br />
+ &#8211; <code>html</code> html document<br />
+ &#8211; <code>pine</code> pine addressbook<br />
+ &#8211; <code>gcrd</code> GnomeCard (VCard) addressbook<br />
+ &#8211; <code>csv</code> comma separated values<br />
+ &#8211; <code>palmcsv</code> Palm comma separated values<br />
+ &#8211; <code>elm</code> elm alias<br />
+ &#8211; <code>text</code> plain text<br />
+ &#8211; <code>spruce</code> Spruce address book<br />
+ &#8211; <code>wl</code> Wanderlust address book<br />
+ &#8211; <code>bsdcal</code> BSD calendar</p>
+<dt><code>&#8211;add-email</code></dt>
+<dd> Read an e-mail message from stdin and add the sender to the addressbook.</dd>
+<dt><code>&#8211;add-email-quiet</code></dt>
+<dd> Same as &#8211;add-email but doesn&#8217;t confirm adding.</dd>
+<dt><code>&#8211;formats</code></dt>
+<dd> List available formats. </dd>
+</dl>
+<h2>COMMANDS DURING USE</h2>
+<p> Press &#8216;<code>?</code>&#8216; during use to get a list of commands.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/5-abookrc/">abookrc</a></code>(5) </p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Alan Ford &lt;alan [at] whirlnet.co.uk&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
+<p> <code>abook</code> was written by Jaakko Heinonen &lt;jheinonen [at] users.sourceforge.net&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

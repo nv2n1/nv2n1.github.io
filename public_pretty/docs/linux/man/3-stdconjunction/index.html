@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdconjunction(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdconjunction/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdconjunction(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::conjunction - std::conjunction</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class... B&gt;
+    (1)(since C++ 17)
+        struct conjunction;</code></pre> 
+<p>Forms the logical_conjunction of the type traits B&hellip;, effectively performing a logical AND on the sequence of traits.
+The specialization std::conjunction&lt;B1, &hellip;, BN&gt; has a public and unambiguous base that is</p>
+<ul>
+<li>if sizeof&hellip;(B) == 0, std::true_type; otherwise</li>
+<li>the first type Bi in B1, &hellip;, BN for which bool(Bi::value) == false, or BN if there is no such type.
+The member names of the base class, other than conjunction and operator=, are not hidden and are unambiguously available in conjunction.
+Conjunction is short-circuiting: if there is a template type argument Bi with bool(Bi::value) == false, then instantiating conjunction&lt;B1, &hellip;, BN&gt;::value does not require the instantiation of Bj::value for j &gt; i.</li>
+</ul>
+<h2>Template parameters</h2>
+<p>B&hellip; - every template argument Bi for which Bi::value is instantiated must be usable as a base class and define member value that is convertible to bool</p>
+<p>Helper variable template</p>
+<p>template&lt;class&hellip; B&gt; <i>(since C++17)</i>
+inline constexpr bool conjunction_v = conjunction&lt;B&hellip;&gt;::value;</p>
+<h2>Possible implementation</h2>
+<p> <wbr> template&lt;class&hellip;&gt; struct conjunction : std::true_type { };
+ <wbr> template&lt;class B1&gt; struct conjunction&lt;B1&gt; : B1 { };
+ <wbr> template&lt;class B1, class&hellip; Bn&gt;
+ <wbr> struct conjunction&lt;B1, Bn&hellip;&gt;
+ <wbr> <wbr> <wbr> <wbr> <wbr> : std::conditional_t&lt;bool(B1::value), conjunction&lt;Bn&hellip;&gt;, B1&gt; {};</p>
+<h2>Notes</h2>
+<p>A specialization of conjunction does not necessarily inherit from either std::true_type or std::false_type: it simply inherits from the first B whose ::value, explicitly converted to bool, is false, or from the very last B when all of them convert to true. For example, std::conjunction&lt;std::integral_constant&lt;int, 2&gt;, std::integral_constant&lt;int, 4&gt;&gt;::value is 4.
+The short-circuit instantiation differentiates conjunction from fold expressions: a fold expression like (&hellip; &amp;&amp; Bs::value) instantiates every B in Bs, while std::conjunction_v&lt;Bs&hellip;&gt; stops instantiation once the value can be determined. This is particularly useful if the later type is expensive to instantiate or can cause a hard error when instantiated with the wrong type.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+// func is enabled if all Ts&hellip; have the same type as T
+template &lt;typename T, typename&hellip; Ts&gt;
+std::enable_if_t&lt;std::conjunction_v&lt;std::is_same&lt;T, Ts&gt;&hellip;&gt;&gt;
+func(T, Ts&hellip;)
+{
+std::cout &lt;&lt; &quot;all types in pack are T\n&quot;;
+}
+// otherwise
+template &lt;typename T, typename&hellip; Ts&gt;
+std::enable_if_t&lt;!std::conjunction_v&lt;std::is_same&lt;T, Ts&gt;&hellip;&gt;&gt;
+func(T, Ts&hellip;)
+{
+std::cout &lt;&lt; &quot;not all types in pack are T\n&quot;;
+}
+int main()
+{
+func(1, 2, 3);
+func(1, 2, &quot;hello!&quot;);
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> all types in pack are T
+ <wbr> not all types in pack are T</p>
+<h2>See also</h2>
+<p>negation logical NOT metafunction
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i>
+disjunction variadic logical OR metafunction
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(class template)</i>
+<i>(C++17)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ipsec_addconn(8) · Linux Manual Pages</title>
+<meta name="description" content="ipsec_addconn – load a given policy into the pluto IKE daemon">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ipsec_addconn/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ipsec_addconn(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ipsec_addconn &#8211; load a given policy into the pluto IKE daemon</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;configsetup [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;liststack [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;noexport] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;checkconfig [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> &#8211;autoall [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal] <i>name1</i> [<i>name2 ..</i>]</dt>
+<dt> <code>ipsec</code> <i>addconn</i> [&#8211;listall] [&#8211;liststart] [&#8211;listroute] [&#8211;listadd] [&#8211;listignore] [&#8211;rootdir&nbsp;<wbr><i>dir</i>] [&#8211;config&nbsp;<wbr><i>filename</i>] [&#8211;ctlbase&nbsp;<wbr><i>socketfile</i>] [&#8211;verbose] [&#8211;warningsfatal]</dt>
+<dt> <code>ipsec</code> <i>addconn &#8211;help</i></dt></dl>
+<h2>Description</h2>
+<p><i>ipsec addconn</i></p>
+<dd>takes a config file (or stdin) containing the format of ipsec.conf, or the format of individual &quot;conn&quot; sections, and uses that information to load named or all connections defined in that configuration file into the running libreswan pluto IKE daemon. If no configuration file is specified, the default configuration file is used. If no pluto socket is specified, the default socket location will be used. </dd>
+<p> When <i>&#8211;addall</i> is used, all connections defined in the config file will be operated on. Otherwise, only the specified connection names will be affected. </p>
+<p> When addcon is run, connections that have the <i>auto=</i> option set to <i>add</i>, <i>start</i> or <i>route</i> will be loaded, routed or initiated. If a connection was loaded or initiated already, it will be replaced. </p>
+<p> When <i>&#8211;configsetup</i> is specified, the configuration file is parsed for the <i>config setup</i> section and printed to the terminal usable as a shell script. These are prefaced with <i>export </i> unless <i>&#8211;noexport</i> is specified. </p>
+<p> When <i>&#8211;checkconfig</i> is specified, the configuration file is parsed and all sections are checked for correct syntax. If an error is found, information about it is printed to the terminal. </p>
+<p> When <i>&#8211;listroute</i> or <i>&#8211;liststart</i> is specified, no connections are added or replaced, only shown. This command can be used to verify which connections the addcon command would act upon, without actually performing any action.</p>
+<h2>History</h2>
+<p>Man page written for the Libreswan project &lt;m[blue]<code><a rel="nofollow" href="http://www.libreswan.org/">http://www.libreswan.org/</a></code>m[]&gt; by Paul Wouters</p>
+<h2>Author</h2>
+<p><code>Paul Wouters</code></p>
+<dl>
+<dd>placeholder to suppress warning</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

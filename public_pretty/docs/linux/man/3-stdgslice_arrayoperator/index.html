@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdgslice_arrayoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdgslice_arrayoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdgslice_arrayoperator(3)</h1>
+
+
+
+
+
+<p>std::gslice_array&lt;T&gt;::operator= - std::gslice_array&lt;T&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>void operator=(const T &amp;value) const;
+(1)
+    void
+    operator=(const std::valarray&lt;T&gt; &amp;val_arr) const;
+(2)
+    const gslice_array &amp;
+    operator=(const gslice_array &amp;sl_arr) const;
+(3)(since C++ 11)</code></pre> 
+<p>Assigns values to all referred elements.</p>
+<ol>
+<li>Assigns value to all of the elements.</li>
+<li>Assigns the elements of val_arr to the referred to elements of *this.</li>
+<li>Assigns the selected elements from sl_arr to the referred to elements of *this.</li>
+</ol>
+<h2>Parameters</h2>
+<p>value - a value to assign to all of the referred elements
+val_arr - std::valarray to assign
+sl_arr - std::gslice_array to assign</p>
+<h2>Return value</h2>
+<p>1-2) <i>(none)</i>
+3) *this</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p> This section is incomplete
+ Reason: no example</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

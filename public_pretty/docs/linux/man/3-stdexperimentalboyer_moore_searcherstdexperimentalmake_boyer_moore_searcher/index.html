@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalboyer_moore_searcherstdexperimentalmake_boyer_moore_searcher(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalboyer_moore_searcherstdexperimentalmake_boyer_moore_searcher/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalboyer_moore_searcherstdexperimentalmake_boyer_moore_searcher(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>std::experimental::boyer_moore_searcher,std::experimental::make_boyer_moore_searcher - std::experimental::boyer_moore_searcher,std::experimental::make_boyer_moore_searcher</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;experimental/functional&gt;
+template&lt; class RandomIt1,
+class Hash = std::hash&lt;typename std::iterator_traits&lt;RandomIt1&gt;::value_type&gt;,  (library fundamentals TS)
+class BinaryPredicate = std::equal_to&lt;&gt; &gt;
+class boyer_moore_searcher;</code></pre> 
+<p>A searcher suitable for use with std::experimental::search that implements the Boyer-Moore_string_searching_algorithm.
+boyer_moore_searcher is CopyConstructible and CopyAssignable.
+RandomIt1 must meet the requirements of LegacyRandomAccessIterator.</p>
+<h2>Member functions</h2>
+<p> std::experimental::boyer_moore_searcher::boyer_moore_searcher</p>
+<p>boyer_moore_searcher( RandomIt1 pat_first,
+RandomIt1 pat_last,
+Hash hf = Hash(),
+BinaryPredicate pred = BinaryPredicate());</p>
+<p>Constructs a boyer_moore_searcher by storing copies of pat_first, pat_last, hf, and pred, setting up any necessary internal data structures.
+The value type of RandomIt1 must be DefaultConstructible, CopyConstructible and CopyAssignable.
+For any two values A and B of the type std::iterator_traits&lt;RandomIt1&gt;::value_type, if pred(A, B) == true, then hf(A) == hf(B) shall be true.</p>
+<h2>Parameters</h2>
+<p>pat_first, pat_last - a pair of iterators designating the string to be searched for
+hf - a callable object used to hash the elements of the string
+pred - a callable object used to determine equality</p>
+<h2>Exceptions</h2>
+<p>Any exceptions thrown by</p>
+<ul>
+<li>the copy constructor of RandomIt1;</li>
+<li>the default constructor, copy constructor, and copy assignment operator of the value type of RandomIt1; or</li>
+<li>the copy constructor and function call operator of BinaryPredicate or Hash.</li>
+</ul>
+<p>May also throw std::bad_alloc if additional memory required for internal data structures cannot be allocated.</p>
+<p> std::experimental::boyer_moore_searcher::operator()</p>
+<p>template&lt; class RandomIt2 &gt; <i>(until C++17)</i>
+RandomIt2 operator()( RandomIt2 first, RandomIt2 last ) const;
+template&lt; class RandomIt2 &gt; <i>(since C++17)</i>
+std::pair&lt;RandomIt2,RandomIt2&gt; operator()( RandomIt2 first, RandomIt2 last ) const;</p>
+<p>The member function called by std::experimental::search to perform a search with this searcher. RandomIt2 must meet the requirements of LegacyRandomAccessIterator.
+RandomIt1 and RandomIt2 must have the same value type.</p>
+<h2>Parameters</h2>
+<p>first, last - a pair of iterators designating the string to be examined</p>
+<h2>Return value</h2>
+<p>If the pattern ([pat_first, pat_last)) is empty, returns first. <i>(until C++17)</i>
+Otherwise, an iterator to the first position in [first, last) where a subsequence that compares equal to [pat_first, pat_last) as defined by pred is located, or a copy of last otherwise.
+If the pattern ([pat_first, pat_last)) is empty, returns make_pair(first, first). <i>(since C++17)</i>
+Otherwise, returns a pair of iterators to the first and one past last positions in [first, last) where a subsequence that compares equal to [pat_first, pat_last) as defined by pred is located, or make_pair(last, last) otherwise.
+Helper Functions template &lt;class RandomIt,</p>
+<pre><code>      class Hash = std::hash&amp;lt;typename std::iterator_traits&amp;lt;RandomIt&amp;gt;::value_type&amp;gt;,
+
+      class BinaryPredicate = std::equal_to&amp;lt;&amp;gt;&amp;gt;
+</code></pre>
+<p>boyer_moore_searcher&lt;RandomIt, Hash, BinaryPredicate&gt; make_boyer_moore_searcher((library fundamentals TS)</p>
+<pre><code>                                                                                RandomIt pat_first,
+
+                                                                            RandomIt pat_last,
+
+                                                                            Hash hf = Hash(),
+
+                                                                            BinaryPredicate pred = BinaryPredicate());
+</code></pre>
+<p>Helper function that constructs a std::experimental::boyer_moore_searcher using template argument deduction.Equivalent to return boyer_moore_searcher&lt;RandomIt, Hash, BinaryPredicate&gt;(pat_first, pat_last, hf, pred);</p>
+<h2>Parameters</h2>
+<p>pat_first, pat_last - a pair of iterators designating the string to be searched for
+hf - a callable object used to hash the elements of the string
+pred - a callable object used to determine equality</p>
+<h2>Return value</h2>
+<p>A boyer_moore_searcher constructed with the arguments pat_first, pat_last, hf, and pred.</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;experimental/algorithm&gt;
+#include &lt;experimental/functional&gt;
+int main()
+{
+std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
+&quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;
+std::string needle = &quot;pisci&quot;;
+auto it = std::experimental::search(in.begin(), in.end(),
+std::experimental::make_boyer_moore_searcher(
+needle.begin(), needle.end()));
+if (it != in.end())
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; found at offset &quot;
+&lt;&lt; it - in.begin() &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; not found\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> The string pisci found at offset 43</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for a range of elements
+search <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cpttrs(3) · Linux Manual Pages</title>
+<meta name="description" content="cpttrs.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-cpttrs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>cpttrs(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> cpttrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p> subroutine <code>cpttrs</code> (UPLO, N, NRHS, D, E, B, LDB, INFO)<br />
+ <i></i><code>CPTTRS</code></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine cpttrs (characterUPLO, integerN, integerNRHS, real, dimension( * )D, complex, dimension( * )E, complex, dimension( ldb, * )B, integerLDB, integerINFO)</h3>
+<p> <code>CPTTRS</code> </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+ CPTTRS solves a tridiagonal system of the form
+    A * X = B
+ using the factorization A = U**H*D*U or A = L*D*L**H computed by CPTTRF.
+ D is a diagonal matrix specified in the vector D, U (or L) is a unit
+ bidiagonal matrix whose superdiagonal (subdiagonal) is specified in
+ the vector E, and X and B are N by NRHS matrices.
+</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dt>
+</dt><dd> <i>UPLO</i> </dd>
+<pre>
+          UPLO is CHARACTER*1
+          Specifies the form of the factorization and whether the
+          vector E is the superdiagonal of the upper bidiagonal factor
+          U or the subdiagonal of the lower bidiagonal factor L.
+          = 'U':  A = U**H*D*U, E is the superdiagonal of U
+          = 'L':  A = L*D*L**H, E is the subdiagonal of L
+</pre>
+<p> <i>N</i> </p>
+<pre>
+          N is INTEGER
+          The order of the tridiagonal matrix A.  N &gt;= 0.
+</pre>
+<p> <i>NRHS</i> </p>
+<pre>
+          NRHS is INTEGER
+          The number of right hand sides, i.e., the number of columns
+          of the matrix B.  NRHS &gt;= 0.
+</pre>
+<p> <i>D</i> </p>
+<pre>
+          D is REAL array, dimension (N)
+          The n diagonal elements of the diagonal matrix D from the
+          factorization A = U**H*D*U or A = L*D*L**H.
+</pre>
+<p> <i>E</i> </p>
+<pre>
+          E is COMPLEX array, dimension (N-1)
+          If UPLO = 'U', the (n-1) superdiagonal elements of the unit
+          bidiagonal factor U from the factorization A = U**H*D*U.
+          If UPLO = 'L', the (n-1) subdiagonal elements of the unit
+          bidiagonal factor L from the factorization A = L*D*L**H.
+</pre>
+<p> <i>B</i> </p>
+<pre>
+          B is REAL array, dimension (LDB,NRHS)
+          On entry, the right hand side vectors B for the system of
+          linear equations.
+          On exit, the solution vectors, X.
+</pre>
+<p> <i>LDB</i> </p>
+<pre>
+          LDB is INTEGER
+          The leading dimension of the array B.  LDB &gt;= max(1,N).
+</pre>
+<p> <i>INFO</i> </p>
+<pre>
+          INFO is INTEGER
+          = 0: successful exit
+          &lt; 0: if INFO = -k, the k-th argument had an illegal value
+</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dt>
+</dt><dd> Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dt>
+</dt><dd> September 2012</dd></dl>
+<p> Definition at line 122 of file cpttrs.f.</p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for LAPACK from the source code. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

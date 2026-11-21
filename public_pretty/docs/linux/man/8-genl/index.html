@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>genl(8) · Linux Manual Pages</title>
+<meta name="description" content="genl – generic netlink utility frontend">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-genl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>genl(8)</h1>
+
+
+
+
+
+<p>genl &#8211; generic netlink utility frontend</p>
+<h2>Synopsis</h2>
+<p><code>genl</code> [ <code>-s</code>[<code>tatistics</code>] ] [ <code>-d</code>[<code>etails</code>] ] [ <code>-r</code>[<code>aw</code>] ] <code>OBJECT</code> </p>
+<pre><code>genl { -V[ersion] | -h[elp] }
+OBJECT := {
+    ctrl
+    CTRL_OPTS }
+CTRL_OPTS := {
+    help | list | monitor | get
+    PARMS }
+PARMS := {
+    name
+    NAME |
+    id
+    ID }</code></pre>
+<h2>Description</h2>
+<p>The <code>genl</code> utility provides a simple frontend to the generic netlink library. Although it&#8217;s designed to support multiple <i>OBJECT</i>s, for now only the <code>ctrl</code> object is available, which is used to query the generic netlink controller.</p>
+<h3>ctrl</h3>
+<p>The generic netlink controller can be queried in various ways:</p>
+<dl>
+<dt><code>help</code></dt>
+<dd>This command just prints a help text for the <code>ctrl</code> object.</dd>
+<dt><code>list</code></dt>
+<dd>Show the registered netlink users.</dd>
+<dt><code>monitor</code></dt>
+<dd>Listen for generic netlink notifications.</dd>
+<dt><code>get</code></dt>
+<dd>Query the controller for a given user, identified either by <code>name</code> or <code>id</code>.</dd></dl>
+<h2>Options</h2>
+<p>genl supports the following options.</p>
+<dl>
+<dt><code>-h, -help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-V, -Version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-s, -stats, -statistics</code></dt>
+<dd>Show object statistics.</dd>
+<dt><code>-d, -details</code></dt>
+<dd>Show object details.</dd>
+<dt><code>-r, -raw</code></dt>
+<dd>Dump raw output only.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8)</p>
+<h2>Author</h2>
+<p>genl was written by Jamal Hadi Salim &lt;hadi [at] cyberus.ca&gt;. </p>
+<p> This manual page was written by Petr Sabata &lt;contyk [at] redhat.com&gt;.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

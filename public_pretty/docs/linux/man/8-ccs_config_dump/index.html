@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccs_config_dump(8) · Linux Manual Pages</title>
+<meta name="description" content="ccs_config_dump – Tool to generate XML output of running configuration.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ccs_config_dump/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ccs_config_dump(8)</h1>
+
+
+
+
+
+<p>ccs_config_dump &#8211; Tool to generate XML output of running configuration. </p>
+<h2>Synopsis</h2>
+<p><code>ccs_config_dump</code> [<i>OPTION</i>].. </p>
+<h2>Description</h2>
+<p><code>ccs_config_dump</code> is part of the Cluster Configuration System (CCS). It is used to dump the current running configuration in XML format. The running configuration is, sometimes, different from the stored configuration on file or ldap because some subsystems store or set some default information into the configuration. Those values are generally not present on the on-disk version of the configuration but are required at runtime for the cluster to work properly. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-h</code></dt>
+<dd>Help. Print out the usage.</dd>
+<dt><code>-V</code></dt>
+<dd>Print the version information.</dd>
+<dt><code>-r</code></dt>
+<dd>Force config dump from running cluster. This option is only for expert users and debugging sessions. Don&#8217;t use it for random purposes. ccs_config_dump can be configured to use different configuration sources via environment variables. This option will clear them to use the default and use only the runtime configuration. </dd>
+</dl>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-ccs_config_validate/">ccs_config_validate</a>(8), cluster.conf(5) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

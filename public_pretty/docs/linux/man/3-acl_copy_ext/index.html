@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>acl_copy_ext(3) · Linux Manual Pages</title>
+<meta name="description" content="acl_copy_ext – copy an ACL from internal to external representation">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-acl_copy_ext/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>acl_copy_ext(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> <code>acl_copy_ext</code> &#8211; copy an ACL from internal to external representation </p>
+<h2>LIBRARY</h2>
+<p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
+<p> In sys/types.h In sys/acl.h Ft ssize_t Fn acl_copy_ext void *buf_p acl_t acl ssize_t size</p>
+<h2>DESCRIPTION</h2>
+<p> The Fn acl_copy_ext function copies the ACL pointed to by <i>acl</i> from system-managed space to the user managed space pointed to by <i>buf_p</i> The <i>size</i> parameter represents the size in bytes of the buffer pointed to by <i>buf_p</i> The format of the ACL placed in the buffer pointed to by <i>buf_p</i> is a contiguous, persistent data item, the format of which is unspecified. It is the responsibility of the invoker to allocate an area large enough to hold the copied ACL. The size of the exportable, contiguous, persistent form of the ACL may be obtained by invoking the Fn acl_size function. </p>
+<p> Any ACL entry descriptors that refer to an entry in the ACL referenced by <i>acl</i> continue to refer to those entries. Any existing ACL pointers that refer to the ACL referenced by <i>acl</i> continue to refer to the ACL.</p>
+<h2>RETURN VALUE</h2>
+<p> Upon success, this function returns the number of bytes placed in the buffer pointed to by <i>buf_p</i> On error, a value of <code>(ssize_t)-1</code> is returned and <i>errno</i> is set appropriately.</p>
+<h2>ERRORS</h2>
+<p> If any of the following conditions occur, the Fn acl_copy_ext function returns a value of <code>(ssize_t)-1</code> and sets <i>errno</i> to the corresponding value:</p>
+<dl>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The <i>size</i> parameter is zero or negative. </dd>
+<p> The argument <i>acl</i> is not a valid pointer to an ACL. </p>
+<p> The ACL referenced by <i>acl</i> contains one or more improperly formed ACL entries, or for some other reason cannot be translated into the external form of an ACL.</p>
+<dt><code>Bq </code>Er ERANGE</dt>
+<dd> The <i>size</i> parameter is greater than zero but smaller than the length of the contiguous, persistent form of the ACL.</dd></dl>
+<h2>STANDARDS</h2>
+<p> IEEE Std 1003.1e draft 17 (&#8220;POSIX.1e&#8221;, abandoned)</p>
+<h2>SEE ALSO</h2>
+<p> acl_copy_int3, acl_size3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
+<h2>AUTHOR</h2>
+<p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

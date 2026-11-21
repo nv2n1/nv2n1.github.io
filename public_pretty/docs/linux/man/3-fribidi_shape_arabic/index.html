@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fribidi_shape_arabic(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-fribidi_shape_arabic/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>fribidi_shape_arabic(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>fribidi_shape_arabic - do Arabic shaping</p>
+<h2>SYNOPSIS</h2>
+<p><b> #include &lt;fribidi.h&gt;</p>
+<p>extern void fribidi_shape_arabic
+(
+<tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </tt>FriBidiFlags flags,</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </tt>const FriBidiLevel *embedding_levels,</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </tt>const FriBidiStrIndex len,</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </tt>FriBidiArabicProp *ar_props,</p>
+<p><tt> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> </tt>FriBidiChar *str</p>
+<p>); </b></p>
+<h2>PARAMETERS</h2>
+<dl>
+<dt><b>FriBidiFlags flags</b>
+</dt><dd> Shaping flags.
+</dd><dt><b>const FriBidiLevel *embedding_levels</b>
+</dt><dd> Not Documented.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>FriBidiArabicProp *ar_props</b>
+</dt><dd> Input/output Arabic properties as computed by fribidi_join_arabic.
+</dd><dt><b>FriBidiChar *str</b>
+</dt><dd> String to shape.</dd></dl>
+<h2>DESCRIPTION</h2>
+<p>The actual shaping that is done depends on the flags set. Only flags starting with FRIBIDI_FLAG_SHAPE_ARAB_ affect this function. Currently these are:</p>
+<ul>
+<li>FRIBIDI_FLAG_SHAPE_MIRRORING: Do mirroring.</li>
+<li>FRIBIDI_FLAG_SHAPE_ARAB_PRES: Shape Arabic characters to their presentation form glyphs.</li>
+<li>FRIBIDI_FLAG_SHAPE_ARAB_LIGA: Form mandatory Arabic ligatures.</li>
+<li>FRIBIDI_FLAG_SHAPE_ARAB_CONSOLE: Perform additional Arabic shaping suitable for text rendered on grid terminals with no mark rendering capabilities.</li>
+</ul>
+<p>Of the above, FRIBIDI_FLAG_SHAPE_ARAB_CONSOLE is only used in special cases, but the rest are recommended in any environment that doesn&rsquo;t have other means for doing Arabic shaping. The set of extra flags that enable this level of Arabic support has a shortcut named FRIBIDI_FLAGS_ARABIC.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/3-fribidi_get_par_direction/">fribidi_get_par_direction</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_par_embedding_levels_ex/">fribidi_get_par_embedding_levels_ex</a>(3), <a HREF="/docs/linux/man/3-fribidi_reorder_line/">fribidi_reorder_line</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_bidi_type/">fribidi_get_bidi_type</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_bidi_types/">fribidi_get_bidi_types</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_bidi_type_name/">fribidi_get_bidi_type_name</a>(3), <a HREF="/docs/linux/man/3-fribidi_debug_status/">fribidi_debug_status</a>(3), <a HREF="/docs/linux/man/3-fribidi_set_debug/">fribidi_set_debug</a>(3), <a HREF="/docs/linux/man/3-fribidi_charset_to_unicode/">fribidi_charset_to_unicode</a>(3), <a HREF="/docs/linux/man/3-fribidi_unicode_to_charset/">fribidi_unicode_to_charset</a>(3), <a HREF="/docs/linux/man/3-fribidi_parse_charset/">fribidi_parse_charset</a>(3), <a HREF="/docs/linux/man/3-fribidi_mirroring_status/">fribidi_mirroring_status</a>(3), <a HREF="/docs/linux/man/3-fribidi_set_mirroring/">fribidi_set_mirroring</a>(3), <a HREF="/docs/linux/man/3-fribidi_reorder_nsm_status/">fribidi_reorder_nsm_status</a>(3), <a HREF="/docs/linux/man/3-fribidi_set_reorder_nsm/">fribidi_set_reorder_nsm</a>(3), <a HREF="/docs/linux/man/3-fribidi_log2vis_get_embedding_levels/">fribidi_log2vis_get_embedding_levels</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_type/">fribidi_get_type</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_type_internal/">fribidi_get_type_internal</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_par_embedding_levels/">fribidi_get_par_embedding_levels</a>(3), <a HREF="/docs/linux/man/3-fribidi_join_arabic/">fribidi_join_arabic</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_joining_type/">fribidi_get_joining_type</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_joining_types/">fribidi_get_joining_types</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_joining_type_name/">fribidi_get_joining_type_name</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_mirror_char/">fribidi_get_mirror_char</a>(3), <a HREF="/docs/linux/man/3-fribidi_shape_mirroring/">fribidi_shape_mirroring</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_bracket/">fribidi_get_bracket</a>(3), <a HREF="/docs/linux/man/3-fribidi_get_bracket_types/">fribidi_get_bracket_types</a>(3), <a HREF="/docs/linux/man/3-fribidi_shape/">fribidi_shape</a>(3), <a HREF="/docs/linux/man/3-fribidi_remove_bidi_marks/">fribidi_remove_bidi_marks</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opadisablehosts(8) · Linux Manual Pages</title>
+<meta name="description" content="opadisablehosts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-opadisablehosts/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>opadisablehosts(8)</h1>
+
+
+
+
+
+<p>opadisablehosts </p>
+<p> <code>(Linux)</code> Searches for a set of hosts in the fabric and disables their corresponding switch port.</p>
+<h2>Syntax</h2>
+<p>opadisablehosts [-h <i>hfi</i>] [-p <i>port</i>] <i>reason</i> host &#8230;</p>
+<h2>Options</h2>
+<dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text. </dd>
+<dt>-h/&#8211;hfi <i>hfi</i></dt>
+<dd>HFI to send through. The default is the first HFI. </dd>
+<dt>-p/&#8211;port <i>port</i></dt>
+<dd>Port to send through. The default is the first active port. </dd>
+<dt>
+&nbsp;<wbr><i>reason</i>&nbsp;<wbr></dt>
+<dd>Text describing the reason hosts are being disabled. <i>reason</i> is saved in the reason field of the output file. </dd>
+<dd>Information about the links disabled is written to a CSV file. By default, this file is named /opa/disabled:hfi:port.csv where the hfi:port part of the file name is replaced by the HFI number and the port number being operated on (such as 0:0 or 1:2). This CSV file can be used as input to opaenableports.</dd>
+<dd>The list is of the form: NodeGUID;PortNum;NodeType;NodeDesc;NodeGUID; PortNum;NodeType;NodeDesc;Reason For each listed link, the switch port closer to this is the one that has been disabled.</dd></dl>
+<h2>Examples</h2>
+<p>opadisablehosts &#8216;bad DRAM&#8217; compute001 compute045<br />
+ opadisablehosts -h 1 -p 2 &#8216;crashed&#8217; compute001 compute045 </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

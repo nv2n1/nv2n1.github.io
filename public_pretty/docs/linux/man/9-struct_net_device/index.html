@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>struct_net_device(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-struct_net_device/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>struct_net_device(9)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>struct_net_device - The DEVICE structure. Actually, this whole structure is a big mistake. It mixes I/O data with strictly &ldquo;high-level&rdquo; data, and it has to know about almost every data structure used in the INET module.</p>
+<h2>Synopsis</h2>
+<pre><code>struct net_device {
+    char name[IFNAMSIZ];
+    struct hlist_node name_hlist;
+    char *ifalias;
+    unsigned long mem_end;
+    unsigned long mem_start;
+    unsigned long base_addr;
+    int irq;
+    atomic_t carrier_changes;
+    unsigned long state;
+    struct list_head dev_list;
+    struct list_head napi_list;
+    struct list_head unreg_list;
+    struct list_head close_list;
+    struct list_head ptype_all;
+    struct list_head ptype_specific;
+    struct {
+        unnamed_struct
+    };
+    struct garp_port __rcu *garp_port;
+    struct mrp_port __rcu *mrp_port;
+    struct device dev;
+    const struct attribute_group *sysfs_groups[4];
+    const struct attribute_group *sysfs_rx_queue_group;
+    const struct rtnl_link_ops *rtnl_link_ops;
+#define GSO_MAX_SIZE 65536
+    unsigned int gso_max_size;
+#define GSO_MAX_SEGS 65535
+    u16 gso_max_segs;
+#ifdef CONFIG_DCB
+    const struct dcbnl_rtnl_ops *dcbnl_ops;
+#endif
+    u8 num_tc;
+    struct netdev_tc_txq tc_to_txq[TC_MAX_QUEUE];
+    u8 prio_tc_map[TC_BITMASK + 1];
+#if IS_ENABLED(CONFIG_FCOE)
+    unsigned int fcoe_ddp_xid;
+#endif
+#if IS_ENABLED(CONFIG_CGROUP_NET_PRIO)
+    struct netprio_map __rcu *priomap;
+#endif
+    struct phy_device *phydev;
+    struct lock_class_key *qdisc_tx_busylock;
+    struct lock_class_key *qdisc_running_key;
+    bool proto_down;
+};</code></pre>
+<h2>Members</h2>
+<p>name[IFNAMSIZ]</p>
+<dl><dd>This is the first field of the "visible" part of this structure (i.e. as seen by users in the "Space.c" file). It is the name of the interface.</dd></dl>
+<p>name_hlist</p>
+<dl><dd>Device name hash chain, please keep it close to name[]</dd></dl>
+<p>ifalias</p>
+<dl><dd>SNMP alias</dd></dl>
+<p>mem_end</p>
+<dl><dd>Shared memory end</dd></dl>
+<p>mem_start</p>
+<dl><dd>Shared memory start</dd></dl>
+<p>base_addr</p>
+<dl><dd>Device I/O address</dd></dl>
+<p>irq</p>
+<dl><dd>Device IRQ number</dd></dl>
+<p>carrier_changes</p>
+<dl><dd>Stats to monitor carrier on&lt;-&gt;off transitions</dd></dl>
+<p>state</p>
+<dl><dd>Generic network queuing layer state, see netdev_state_t</dd></dl>
+<p>dev_list</p>
+<dl><dd>The global list of network devices</dd></dl>
+<p>napi_list</p>
+<dl><dd>List entry used for polling NAPI devices</dd></dl>
+<p>unreg_list</p>
+<dl><dd>List entry when we are unregistering the device; see the function unregister_netdev</dd></dl>
+<p>close_list</p>
+<dl><dd>List entry used when we are closing the device</dd></dl>
+<p>ptype_all</p>
+<dl><dd>Device-specific packet handlers for all protocols</dd></dl>
+<p>ptype_specific</p>
+<dl><dd>Device-specific, protocol-specific packet handlers</dd></dl>
+<p>{unnamed_struct}</p>
+<dl><dd>anonymous</dd></dl>
+<p>garp_port</p>
+<dl><dd>GARP</dd></dl>
+<p>mrp_port</p>
+<dl><dd>MRP</dd></dl>
+<p>dev</p>
+<dl><dd>Class/net/name entry</dd></dl>
+<p>sysfs_groups[4]</p>
+<dl><dd>Space for optional device, statistics and wireless sysfs groups</dd></dl>
+<p>sysfs_rx_queue_group</p>
+<dl><dd>Space for optional per-rx queue attributes</dd></dl>
+<p>rtnl_link_ops</p>
+<dl><dd>Rtnl_link_ops</dd></dl>
+<p>gso_max_size</p>
+<dl><dd>Maximum size of generic segmentation offload</dd></dl>
+<p>gso_max_segs</p>
+<dl><dd>Maximum number of segments that can be passed to the NIC for GSO</dd></dl>
+<p>dcbnl_ops</p>
+<dl><dd>Data Center Bridging netlink ops</dd></dl>
+<p>num_tc</p>
+<dl><dd>Number of traffic classes in the net device</dd></dl>
+<p>tc_to_txq[TC_MAX_QUEUE]</p>
+<dl><dd>XXX: need comments on this one</dd></dl>
+<p>prio_tc_map[TC_BITMASK + 1]</p>
+<dl><dd>XXX: need comments on this one</dd></dl>
+<p>fcoe_ddp_xid</p>
+<dl><dd>Max exchange id for FCoE LRO by ddp</dd></dl>
+<p>priomap</p>
+<dl><dd>XXX: need comments on this one</dd></dl>
+<p>phydev</p>
+<dl><dd>Physical device may attach itself for hardware timestamping</dd></dl>
+<p>qdisc_tx_busylock</p>
+<dl><dd>lockdep class annotating Qdisc-&gt;busylock spinlock</dd></dl>
+<p>qdisc_running_key</p>
+<dl><dd>lockdep class annotating Qdisc-&gt;running seqcount</dd></dl>
+<p>proto_down</p>
+<dl><dd>protocol port state information can be sent to the switch driver and used to set the phys state of the switch port.</dd></dl>
+<h2>Description</h2>
+<p>interface address info:</p>
+<p>FIXME: cleanup struct net_device such that network protocol info moves out.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

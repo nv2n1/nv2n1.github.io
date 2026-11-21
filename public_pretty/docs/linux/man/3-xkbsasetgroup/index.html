@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xkbsasetgroup(3) · Linux Manual Pages</title>
+<meta name="description" content="XkbSASetGroup – Sets the group_XXX field of act from the group index grp">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xkbsasetgroup/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xkbsasetgroup(3)</h1>
+
+
+
+
+
+<p>XkbSASetGroup &#8211; Sets the group_XXX field of act from the group index grp </p>
+<h2>Synopsis</h2>
+<dl COMPACT>
+<dt> <code>void XkbSASetGroup</code> <code>(XkbAction </code><i>act</i><code>,</code> <code>int </code><i>grp</i><code>);</code></dt></dl>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>&#8211; act</i></dt>
+<dd>
+</dd><dd>action from which to set group</dd>
+<dt><i>&#8211; grp</i></dt>
+<dd>group index to set in group_XXX</dd></dl>
+<h2>Description</h2>
+<p><i>XkbSASetGroup </i> sets the <i>group_XXX </i> field of <i>act </i> from the group index <i>grp. </i></p>
+<h2>Structure</h2>
+<p>Actions associated with the XkbGroupAction structure change the current group state when keys are pressed and released: </p>
+<pre> typedef struct _XkbGroupAction {
+ unsigned char type; /* XkbSA_{Set|Latch|Lock}Group */
+ unsigned char flags; /* with type, controls the effect on groups */
+ char group_XXX; /* represents a group index or delta */
+ } XkbGroupAction;</pre>
+<h2>Warning</h2>
+<p>This manpage seems to be incomplete</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

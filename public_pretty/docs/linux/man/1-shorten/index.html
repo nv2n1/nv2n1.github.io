@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shorten(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-shorten/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>shorten(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>shorten - CLI program to demonstrate use of WWW::Shorten</p>
+<h2>SYNOPSIS</h2>
+ <pre>
+    # Default shortening service is Metamark
+    $ shorten books.perl.org/book/171
+    <a rel="nofollow" HREF="http://xrl.us/dv8">http://xrl.us/dv8</a>
+    # Change with an environment variable
+    $ SHORTEN_SERVICE=TinyURL shorten books.perl.org/book/171
+    <a rel="nofollow" HREF="http://tinyurl.com/ye7gjf4">http://tinyurl.com/ye7gjf4</a>
+    # Change with command line option
+    $ shorten --service=TinyURL books.perl.org/book/171
+    <a rel="nofollow" HREF="http://tinyurl.com/ye7gjf4">http://tinyurl.com/ye7gjf4</a>
+    # Change using config file
+    $ cat ~/.shortenrc 
+    service = TinyURL
+    $ shorten books.perl.org/book/171
+    <a rel="nofollow" HREF="http://tinyurl.com/ye7gjf4">http://tinyurl.com/ye7gjf4</a>
+</pre>
+<h2>CONFIGURATION</h2>
+<p>The service used can be controlled in various ways. The program will use the first of the following values that it finds:</p>
+<dl>
+<dt>&bull;
+</dt><dd> The value of the <tt>&quot;--service&quot;</tt> command line option.
+</dd><dt>&bull;
+</dt><dd> The value of the <tt>&quot;SHORTEN_SERVICE&quot;</tt> environment variable.
+</dd><dt>&bull;
+</dt><dd> The value of the <tt>&quot;service&quot;</tt> option from the configuration file (see below).
+</dd><dt>&bull;
+</dt><dd> If none of the above options is found, the program defaults to using Metamark.</dd></dl>
+<h2>CONFIGURATION FILE</h2>
+<p>As we use the <tt>&quot;Config::Auto&quot;</tt> module for configuration, shorten&rsquo;s fairly flexible when it comes to format.</p>
+<p>Configuration will be found in whichever of the following files comes first.</p>
+ <pre>
+    shortenconfig
+    ~/shortenconfig
+    /etc/shortenconfig
+    shorten.config
+    ~/shorten.config
+    /etc/shorten.config
+    shortenrc
+    ~/shortenrc
+    /etc/shortenrc
+    .shortenrc
+    ~/.shortenrc
+    /etc/.shortenrc
+</pre> 
+<p>Generally, I use the format:</p>
+ <pre>
+    service = MakeAShorterLink
+</pre> 
+<p>which is simple and works. <tt>&quot;service&quot;</tt> is the only configuration keyword at present. Its value should be a correctly capitalized service name as per WWW::Shorten&rsquo;s documentation.</p>
+<h2>BUGS, REQUESTS, COMMENTS</h2>
+<p>Please report any requests, suggestions or bugs via the system at &lt;<a rel="nofollow" HREF="http://rt.cpan.org/"><a href="http://rt.cpan.org/">http://rt.cpan.org/</a></a>&gt;, or email &lt;bug-WWW-Shorten [at] rt.cpan.org&gt;. This makes it much easier for me to track things and thus means your problem is less likely to be neglected.</p>
+<h2>LICENSE AND COPYRIGHT</h2>
+<p>Copyright X Magnum Solutions Ltd, 2002 - 2010. All rights reserved.</p>
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+<h2>AUTHOR</h2>
+<p>Dave Cross &lt;dave [at] mag-sol.com&gt;, taking over from Iain Truskett &lt;spoon [at] cpan.org&gt;</p>
+<h2>SEE ALSO</h2>
+<p>perl</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pkcsicsf(1) · Linux Manual Pages</title>
+<meta name="description" content="pkcsicsf – configuration utility for the ICSF token">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pkcsicsf/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pkcsicsf(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> pkcsicsf &#8211; configuration utility for the ICSF token </p>
+<h2>SYNOPSIS</h2>
+<p> <code>pkcsicsf</code> [<code>-h</code>] [<code>-l|-a</code> <i>token name</i>] [<code>-b</code> <i>BINDDN</i>] [<code>-c</code> <i>client-cert-file</i>] [<code>-C</code> <i>CA-cert-file</i>] [<code>-k</code> <i>privatekey</i>] [<code>-m</code> <i>mechanism</i>] [<code>-u</code> <i>URI</i>] </p>
+<h2>DESCRIPTION</h2>
+<p> The <code>pkcsicsf</code> utility lists available ICSF tokens and allows user to add one specific ICSF token to opencryptoki. </p>
+<p> The ICSF token must be added first to opencryptoki. This creates an entry in the opencryptoki.conf file for the ICSF token. It also creates<br />
+&nbsp;<wbr>a&nbsp;<wbr><i>token_name.conf</i>&nbsp;<wbr>configuration file in the same directory as the opencryptoki.conf file, containing ICSF specific information. This information is read by the ICSF token. </p>
+<p> The ICSF token must bind and authenticate to an LDAP server. The supported authentication mechanisms are simple and sasl. One of these mechanisms must be entered when listing the available ICSF tokens or when adding an ICSF token. Opencryptoki currently supports adding only one ICSF token. </p>
+<p> The system admin can either allow the ldap calls to utilize exisiting ldap configs, such as ldap.conf or .ldaprc for bind and authentication information or set the bind and authentication information within opencryptoki by using this utility and its options. The information will then be placed in the <i>token_name.conf</i> file to be used in the ldap calls. When using simple authentication, the user will be prompted for the racf password when listing or adding a token. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-a</code> <i>token name</i></dt>
+<dd> add the specified ICSF token to opencryptoki.</dd>
+<dt><code>-b</code> <i>BINDND</i></dt>
+<dd> the distinguish name to bind when using simple authentication</dd>
+<dt><code>-c</code> <i>client-cert-file</dt>
+<dd> the client certificate file when using SASL authentication</dd>
+<dt></i><code>-C</code> <i>CA-cert-file</i></dt>
+<dd> the CA certificate file when using SASL authentication</dd>
+<dt><code>-h</code></dt>
+<dd> show usage information</dd>
+<dt><code>-k</code> <i>privatekey</i></dt>
+<dd> the client private key file when using SASL authentication</dd>
+<dt><code>-m</code> <i>mechanism</i></dt>
+<dd> the authentication mechanism to use when binding to the LDAP server (this should be either <code>simple</code> or <code>sasl</code>)</dd>
+<dt><code>-l</code></dt>
+<dd> list available ICSF tokens</dd>
+<dt><code>-h</code></dt>
+<dd> show usage information </dd>
+</dl>
+<h2>FILES</h2>
+<dl>
+<dt>/etc/opencryptoki/opencryptoki.conf</dt>
+<dd> the opencryptoki config file containing token configuration information</dd>
+<dt>/etc/opencryptoki/<i>token_name.conf</i></dt>
+<dd> contains ICSF configuration information for the ICSF token </dd>
+</dl>
+<h2>SEE ALSO</h2>
+<dl>
+<dt><code><a href="/docs/linux/man/7-opencryptoki/">opencryptoki</a></code>(7),</dt>
+<dd>
+</dd><dt><code><a href="/docs/linux/man/8-pkcsslotd/">pkcsslotd</a></code>(8).</dt>
+<dd>
+</dd><dt><code>pkcsconf</code>(8).</dt>
+<dd>
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

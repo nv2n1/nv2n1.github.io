@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dblink_is_busy(3) · Linux Manual Pages</title>
+<meta name="description" content="dblink_is_busy – checks if connection is busy with an async query">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-dblink_is_busy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>dblink_is_busy(3)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> dblink_is_busy &#8211; checks if connection is busy with an async query </p>
+<h2>SYNOPSIS</h2>
+<pre>
+dblink_is_busy(text connname) returns int
+</pre>
+<h2>DESCRIPTION</h2>
+<p> <code>dblink_is_busy</code> tests whether an async query is in progress.</p>
+<h2>ARGUMENTS</h2>
+<p> <i>connname</i></p>
+<dl>
+<dt>
+</dt><dd> Name of the connection to check.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p> Returns 1 if connection is busy, 0 if it is not busy. If this function returns 0, it is guaranteed that <code>dblink_get_result</code> will not block.</p>
+<h2>EXAMPLES</h2>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+SELECT dblink_is_busy('dtest1');
+</pre>
+</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

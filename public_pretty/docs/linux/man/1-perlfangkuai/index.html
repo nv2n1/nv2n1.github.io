@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perlfangkuai(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-perlfangkuai/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>perlfangkuai(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>tetris - A tetris game</p>
+<h2>SYNOPSIS</h2>
+<p>perl tetris.pl</p>
+<h2>CONFIGURATION</h2>
+<p>The configuration file should be the file with name ``.tetris&rsquo;&rsquo; under <font SIZE="-1">HOME</font> directory. Another option is using Tetris/Config.pm in any directory of <tt>@INC</tt>.</p>
+<p>Here is an example of configuration:
+ <wbr># <wbr>-<em>- perl -</em>-
+ <wbr><tt>%Config</tt> <wbr>= <wbr>(
+ <wbr> <wbr><tt>%Config</tt>,
+ <wbr> <wbr>&lsquo;start_level&rsquo; <wbr>=&gt; <wbr>3,
+ <wbr> <wbr>&lsquo;down_step&rsquo; <wbr>=&gt; <wbr>2,
+ <wbr> <wbr>&lsquo;keybindings&rsquo; <wbr>=&gt; <wbr>{
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>%{$Config{keybindings}},
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>ord(&lsquo;j&rsquo;) <wbr>=&gt; <wbr>&amp;amp;move_left,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>ord(&rsquo;l&rsquo;) <wbr>=&gt; <wbr>&amp;amp;move_right,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>ord(&lsquo;k&rsquo;) <wbr>=&gt; <wbr>&amp;amp;rotate,
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr>ord(&rsquo;n&rsquo;) <wbr>=&gt; <wbr>&amp;amp;new_game,
+ <wbr> <wbr>}
+ <wbr>);
+ <wbr>push <wbr>@$shapes, shape_from_string(&lt;&lt;<font SIZE="-1">SHAPE</font>);
+ <wbr>0 0 8 0 <wbr> <wbr> <wbr>0 8 0 0 <wbr> <wbr> <wbr>0 8 8 8 <wbr> <wbr> <wbr>0 0 0 8
+ <wbr>0 0 8 0 <wbr> <wbr> <wbr>0 8 8 8 <wbr> <wbr> <wbr>0 0 8 0 <wbr> <wbr> <wbr>0 8 8 8
+ <wbr>0 8 8 8 <wbr> <wbr> <wbr>0 8 0 0 <wbr> <wbr> <wbr>0 0 8 0 <wbr> <wbr> <wbr>0 0 0 8
+ <wbr>0 0 0 0 <wbr> <wbr> <wbr>0 0 0 0 <wbr> <wbr> <wbr>0 0 0 0 <wbr> <wbr> <wbr>0 0 0 0
+ <wbr><font SIZE="-1">SHAPE</font></p>
+ <pre>
+    push @$shapes, shape_from_string(&lt;&lt;SHAPE);
+    0 0 9 0   0 0 0 0   0 0 0 0   0 0 9 0
+    0 0 9 9   0 0 9 9   0 9 9 0   0 9 9 0
+    0 0 0 0   0 0 9 0   0 0 9 0   0 0 0 0
+    0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0
+    SHAPE
+</pre> 
+<p>The key specification can get from this script:</p>
+ <pre><code>
+use Gtk2::Gdk::Keysyms;
+use Glib qw / TRUE FALSE / ;
+use Gtk2 - init;
+my $window = Gtk2::Window-&gt;new ('toplevel');
+$window-&gt;signal_connect(delete_event = &gt; sub{Gtk2-&gt;main_quit});
+$window-&gt;signal_connect('key-press-event' = &gt; \&amp; show_key);
+my $label = Gtk2::Label-&gt;new ();
+$label-&gt;set_markup("&lt;span foreground=\"blue\" size=\"x-large\"&gt;Type something on the keyboard!&lt;/span&gt;");
+$window-&gt;add($label);
+$window-&gt;show_all;
+$window-&gt;set_position('center-always');
+Gtk2-&gt;main;
+sub show_key
+{
+    my($widget, $event, $parameter) = @_;
+    my $key_nr = $event-&gt;keyval();
+    foreach
+        my $key(keys % Gtk2::Gdk::Keysyms)
+        {
+            my $key_compare = $Gtk2::Gdk::Keysyms{$key};
+            if ($key_compare == $key_nr) {
+                print "'$key' =&gt; $key_nr,\n";
+            }
+        }
+    return FALSE;
+}
+</code></pre> 
+<p>Code to run after the <font SIZE="-1">GUI</font> setup, add to code ref <tt>$after_load_function</tt>.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

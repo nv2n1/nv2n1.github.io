@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdatomic_refoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdatomic_refoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdatomic_refoperator(3)</h1>
+
+
+
+
+
+<p>std::atomic_ref&lt;T&gt;::operator= - std::atomic_ref&lt;T&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>T operator=(T desired) const noexcept;
+(1)
+    atomic_ref &amp;
+    operator=(const atomic_ref &amp;) = delete;
+(2)</code></pre> 
+<ol>
+<li>Atomically assigns a value desired to the referenced object. Equivalent to store(desired).</li>
+<li>atomic_ref is not CopyAssignable.</li>
+</ol>
+<h2>Parameters</h2>
+<p>desired - value to assign</p>
+<h2>Return value</h2>
+<p>desired.</p>
+<h2>Notes</h2>
+<p>Unlike most assignment operators, the assignment operator for atomic_ref does not return a reference to its left-hand argument. It returns a copy of the stored value instead.</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> constructs an atomic_ref object
+constructor <i>(public member function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

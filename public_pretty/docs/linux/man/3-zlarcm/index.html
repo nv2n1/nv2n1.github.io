@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zlarcm(3) · Linux Manual Pages</title>
+<meta name="description" content="zlarcm.f –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zlarcm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zlarcm(3)</h1>
+
+
+
+
+
+<p>zlarcm.f &#8211;</p>
+<h2>Synopsis</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <code>zlarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
+ <i></i><code>ZLARCM</code> copies all or part of a real two-dimensional array to a complex array.</p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine zlarcm (integerM, integerN, double precision, dimension( lda, * )A, integerLDA, complex*16, dimension( ldb, * )B, integerLDB, complex*16, dimension( ldc, * )C, integerLDC, double precision, dimension( * )RWORK)</h3>
+<p><code>ZLARCM</code> copies all or part of a real two-dimensional array to a complex array. </p>
+<p> <code>Purpose: </code></p>
+<dl>
+<dd>
+<pre> ZLARCM performs a very simple matrix-matrix multiplication:
+ C := A * B,
+ where A is M by M and real; B is M by N and complex;
+ C is M by N and complex.</pre>
+<p>&nbsp;<wbr></dd></dl>
+<p> <code>Parameters:</code></p>
+<dl>
+<dd><i>M</i> </dd>
+<pre> M is INTEGER
+ The number of rows of the matrix A and of the matrix C.
+ M &gt;= 0.</pre>
+<p><i>N</i> </p>
+<pre> N is INTEGER
+ The number of columns and rows of the matrix B and
+ the number of columns of the matrix C.
+ N &gt;= 0.</pre>
+<p><i>A</i> </p>
+<pre> A is DOUBLE PRECISION array, dimension (LDA, M)
+ A contains the M by M matrix A.</pre>
+<p><i>LDA</i> </p>
+<pre> LDA is INTEGER
+ The leading dimension of the array A. LDA &gt;=max(1,M).</pre>
+<p><i>B</i> </p>
+<pre> B is DOUBLE PRECISION array, dimension (LDB, N)
+ B contains the M by N matrix B.</pre>
+<p><i>LDB</i> </p>
+<pre> LDB is INTEGER
+ The leading dimension of the array B. LDB &gt;=max(1,M).</pre>
+<p><i>C</i> </p>
+<pre> C is COMPLEX*16 array, dimension (LDC, N)
+ C contains the M by N matrix C.</pre>
+<p><i>LDC</i> </p>
+<pre> LDC is INTEGER
+ The leading dimension of the array C. LDC &gt;=max(1,M).</pre>
+<p><i>RWORK</i> </p>
+<pre> RWORK is DOUBLE PRECISION array, dimension (2*M*N)</pre>
+<p>&nbsp;<wbr></dl>
+<p> <code>Author:</code></p>
+<dl>
+<dd>Univ. of Tennessee </dd>
+<p> Univ. of California Berkeley </p>
+<p> Univ. of Colorado Denver </p>
+<p> NAG Ltd.</dl>
+<p> <code>Date:</code></p>
+<dl>
+<dd>September 2012</dd></dl>
+<p> Definition at line 115 of file zlarcm.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

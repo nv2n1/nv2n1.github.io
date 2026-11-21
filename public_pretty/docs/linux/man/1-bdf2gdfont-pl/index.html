@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bdf2gdfont-pl(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-bdf2gdfont-pl/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>bdf2gdfont-pl(1)</h1>
+
+
+
+
+
+<p>bdf2gdfont.pl - Convert X11 &quot;BDF&quot; fonts into a loadable font format for GD.</p>
+<h2>Synopsis</h2><pre> % bdf2gdfont.pl courR12.bdf &gt; courR12.fnt</pre><h2>Description</h2>This script converts BDF-style X11 font files into a format that can be loaded by the <font SIZE="-1">GD</font> module using the GD::Font-&gt;<i>load()</i> method. There are a number of ways to obtain <font SIZE="-1">BDF</font> fonts.
+<dl><dt>1. The font is already present on your system.
+</dt><dd>Some <font SIZE="-1">BDF</font> fonts can be found in the standard X11R6 distribution. This script will automatically uncompress gzipped font files if their extension ends with .gz (the gunzip program must be on your path).
+</dd><dt>2. From a font server.
+</dt><dd>The ``fstobdf'' utility, a standard X11 utility, will read a named font from the font server of your choice and return it in <font SIZE="-1">BDF</font> format. You can pipe it to bdf2gdfont.pl: 
+ <pre> fstobdf -s fontserverhost:7100 -fn 8x16 | bdf2gdfont.pl &gt; newfont.fnt</pre>Use xlsfonts to find out what fonts are available. Most fonts will have long names like -B&amp;H-LucidaTypewriter-Bold-R-Normal-Sans-18-180-75-75-M-110-ISO8859-10.
+</dd><dt>3. Using the pcf2bdf utility.
+</dt><dd>Some fonts are only available in <font SIZE="-1">PCF </font>(compiled) format. To obtain these, you can either turn on a font server and follow recipe (2), or use <font SIZE="-1">TAGA</font> Nayuta's pcf2bdf utility. This utility is available from <a rel="nofollow" HREF="http://www.tsg.ne.jp/GANA/S/pcf2bdf/">http://www.tsg.ne.jp/GANA/S/pcf2bdf/</a> (page is in Japanese, but you can find the download link).</dd></dl><h3>Limitations</h3>This font converter only works with fixed-width fonts. If used with a TrueType or proportional font it will die with an error message.
+<h2>See Also</h2><font SIZE="-1">GD</font>
+<h2>Author</h2>Lincoln Stein &lt;lstein [at] cshl.org&gt;, heavily adapted from bdftogd from Jan Pazdziora &lt;adelton [at] fi.muni.cz&gt;. 
+<p>Copyright (c) 2004 Cold Spring Harbor Laboratory</p>
+<p>This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

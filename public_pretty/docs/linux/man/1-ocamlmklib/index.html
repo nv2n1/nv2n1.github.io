@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ocamlmklib(1) · Linux Manual Pages</title>
+<meta name="description" content="ocamlmklib – generate libraries with mixed C / Caml code.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ocamlmklib/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ocamlmklib(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> ocamlmklib &#8211; generate libraries with mixed C / Caml code. </p>
+<h2>SYNOPSIS</h2>
+<p> <code>ocalmklib</code> [<i>options</i>]<i> files</i></p>
+<h2>DESCRIPTION</h2>
+<p> The <code>ocamlmklib</code> command facilitates the construction of libraries containing both Caml code and C code, and usable both in static linking and dynamic linking modes.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-cclib&nbsp;<wbr></code><i>lib</i></dt>
+<dd> C library passed to ocamlc <code>-a</code> or <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) <code>-a</code> only.</dd>
+<dt><code>-ccopt&nbsp;<wbr></code><i>opt</i></dt>
+<dd> C option passed to <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) <code>-a</code> or <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) <code>-a</code> only.</dd>
+<dt><code>-custom</code></dt>
+<dd> Disable dynamic loading.</dd>
+<dt><code>-dllpath&nbsp;<wbr></code><i>dir</i></dt>
+<dd> Add <i>dir</i> to the run-time search path for DLLs.</dd>
+<dt><code>-I&nbsp;<wbr></code><i>dir</i></dt>
+<dd> Add <i>dir</i> to the path searched for Caml object files.</dd>
+<dt><code>-failsafe</code></dt>
+<dd> Fall back to static linking if DLL construction failed.</dd>
+<dt><code>-ldopt opt</code></dt>
+<dd> C option passed to the shared linker only.</dd>
+<dt><code>-linkall</code></dt>
+<dd> Build Caml archive with link-all behavior.</dd>
+<dt><code>-l</code><i>lib</i></dt>
+<dd> Specify a dependent C library.</dd>
+<dt><code>-L</code><i>dir</i></dt>
+<dd> Add <i>dir</i> to the path searched for C libraries.</dd>
+<dt><code>-ocamlc&nbsp;<wbr></code><i>cmd</i></dt>
+<dd> Use <i>cmd</i> in place of <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).</dd>
+<dt><code>-ocamlopt&nbsp;<wbr></code><i>cmd</i></dt>
+<dd> Use <i>cmd</i> in place of <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).</dd>
+<dt><code>-o&nbsp;<wbr></code><i>name</i></dt>
+<dd> Generated Caml library is named <i>name</i>.cma or <i>name</i>.cmxa.</dd>
+<dt><code>-oc&nbsp;<wbr></code><i>name</i></dt>
+<dd> Generated C library is named dll<i>name</i>.so or lib<i>name</i>.a.</dd>
+<dt><code>-rpath&nbsp;<wbr></code><i>dir</i></dt>
+<dd> Same as <code>-dllpath</code> <i>dir</i>.</dd>
+<dt><code>-R</code><i>dir</i></dt>
+<dd> Same as <code>-rpath</code>.</dd>
+<dt><code>-verbose</code></dt>
+<dd> Print commands before executing them.</dd>
+<dt><code>-Wl</code>, <code>-rpath </code><i>dir</dt>
+<dd> Same as </i><code>-dllpath</code> <i>dir</i>.</dd>
+<dt><code>-Wl</code>, <code>-rpath -Wl </code><i>dir</dt>
+<dd> Same as </i><code>-dllpath</code> <i>dir</i>.</dd>
+<dt><code>-Wl</code>, <code>-R</code><i>dir</dt>
+<dd> Same as </i><code>-dllpath</code> <i>dir</i>.</dd>
+<dt><code>-F</code><i>dir</i></dt>
+<dd> Specify a framework directory (MacOSX).</dd>
+<dt><code>-framework&nbsp;<wbr></code><i>name</i></dt>
+<dd> Use framework <i>name</i> (MacOSX).</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).</p>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Samuel Mimram &lt;samuel.mimram [at] ens-lyon.org&gt;, for the Debian project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

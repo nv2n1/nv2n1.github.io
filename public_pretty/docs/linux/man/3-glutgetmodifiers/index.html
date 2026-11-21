@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glutgetmodifiers(3) · Linux Manual Pages</title>
+<meta name="description" content="glutGetModifiers – Returns the status of Alt, Shift, and Ctrl keys.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-glutgetmodifiers/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>glutgetmodifiers(3)</h1>
+
+
+
+
+
+<p><code>glutGetModifiers</code> &#8211; Returns the status of Alt, Shift, and Ctrl keys.</p>
+<h2>Library</h2>
+<p>OpenGLUT &#8211; inputstate</p>
+<h2>Synopsis</h2>
+<p>In openglut.h Ft int Fn glutGetModifiers void</p>
+<h2>Description</h2>
+<p>According to which, if any, modifier keys are held, the return value is the logical Bf Sy<br />
+&nbsp;<wbr>OR Ef<br />
+&nbsp;<wbr>combination of any of the following symbolic bitmasks: </p>
+<p>&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_ACTIVE_SHIFT Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_ACTIVE_CTRL Ef<br />
+&nbsp;<wbr><br />
+&nbsp;<wbr>&#8211;&nbsp;<wbr> Bf Sy<br />
+&nbsp;<wbr>GLUT_ACTIVE_ALT Ef<br />
+&nbsp;<wbr> </p>
+<p> E.g., if the shift key is held, and no other modifier keys are held, this function will return Bf Sy<br />
+&nbsp;<wbr>GLUT_ACTIVE_SHIFT. Ef<br />
+&nbsp;<wbr> </p>
+<h2>Bugs</h2>
+<p>Complains if not invoked by a client callback. </p>
+<p> Does not differentiate between the left and right forms of the modifiers. </p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/3-glutsetoption/">glutSetOption</a>(3) <a href="/docs/linux/man/3-glutget/">glutGet</a>(3) <a href="/docs/linux/man/3-glutdeviceget/">glutDeviceGet</a>(3) <a href="/docs/linux/man/3-glutlayerget/">glutLayerGet</a>(3)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

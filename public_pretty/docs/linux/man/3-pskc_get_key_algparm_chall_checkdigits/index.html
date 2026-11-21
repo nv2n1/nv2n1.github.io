@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pskc_get_key_algparm_chall_checkdigits(3) · Linux Manual Pages</title>
+<meta name="description" content="pskc_get_key_algparm_chall_checkdigits – API function">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-pskc_get_key_algparm_chall_checkdigits/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>pskc_get_key_algparm_chall_checkdigits(3)</h1>
+
+
+
+
+
+<p>pskc_get_key_algparm_chall_checkdigits &#8211; API function</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;pskc.h&gt;
+int pskc_get_key_algparm_chall_checkdigits(pskc_key_t *key, int *present);</code></pre>
+<h2>Arguments</h2>
+<dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
+<h2>Description</h2>
+<p>Get the PSKC KeyPackage Key AlgorithmParameters ChallengeFormat CheckDigits value. This attribute indicates whether a device needs to check the appended Luhn check digit, as defined in [ISOIEC7812], contained in a challenge. This is only valid if the &#8216;Encoding&#8217; attribute is set to &#8216;DECIMAL&#8217;. A value of TRUE indicates that the device will check the appended Luhn check digit in a provided challenge. A value of FALSE indicates that the device will not check the appended Luhn check digit in the challenge. </p>
+<p> If <i>present</i> is non-NULL, it will be 0 if the field is not present or 1 if it was present.</p>
+<h2>Returns</h2>
+<p>1 to indicate a CheckDigits value of true, or 0 to indicate false.</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;oath-toolkit-help [at] nongnu.org&gt;. libpskc home page: <a rel="nofollow" href="http://www.gnu.org/software/libpskc/">http://www.gnu.org/software/libpskc/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2012 Simon Josefsson.<br />
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

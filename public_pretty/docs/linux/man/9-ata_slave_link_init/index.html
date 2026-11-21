@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ata_slave_link_init(9) · Linux Manual Pages</title>
+<meta name="description" content="ata_slave_link_init – initialize slave link">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-ata_slave_link_init/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>ata_slave_link_init(9)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>ata_slave_link_init &#8211; initialize slave link</p>
+<h2>Synopsis</h2>
+<pre><code>int ata_slave_link_init(struct ata_port *ap);</code></pre>
+<h2>Arguments</h2>
+<p><i>ap</i></p>
+<dl>
+<dd>
+</dd><dd>port to initialize slave link for</dd></dl>
+<h2>Description</h2>
+<p>Create and initialize slave link for <i>ap</i>. This enables slave link handling on the port. </p>
+<p> In libata, a port contains links and a link contains devices. There is single host link but if a PMP is attached to it, there can be multiple fan-out links. On SATA, there&#8217;s usually a single device connected to a link but PATA and SATA controllers emulating TF based interface can have two &#8211; master and slave. </p>
+<p> However, there are a few controllers which don&#8217;t fit into this abstraction too well &#8211; SATA controllers which emulate TF interface with both master and slave devices but also have separate SCR register sets for each device. These controllers need separate links for physical link handling (e.g. onlineness, link speed) but should be treated like a traditional M/S controller for everything else (e.g. command issue, softreset). </p>
+<p> slave_link is libata&#8217;s way of handling this class of controllers without impacting core layer too much. For anything other than physical link handling, the default host link is used for both master and slave. For physical link handling, separate <i>ap</i>-&gt;slave_link is used. All dirty details are implemented inside libata core layer. From LLD&#8217;s POV, the only difference is that prereset, hardreset and postreset are called once more for the slave link, so the reset sequence looks like the following. </p>
+<p> prereset(M) -&gt; prereset(S) -&gt; hardreset(M) -&gt; hardreset(S) -&gt; softreset(M) -&gt; postreset(M) -&gt; postreset(S) </p>
+<p> Note that softreset is called only for the master. Softreset resets both M/S by definition, so SRST on master should handle both (the standard method will work just fine). </p>
+<p> LOCKING: Should be called before host is registered.</p>
+<h2>Return</h2>
+<p>0 on success, -errno on failure.</p>
+<h2>Author</h2>
+<p><code>Jeff Garzik</code></p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

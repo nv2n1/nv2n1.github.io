@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lchage(1) · Linux Manual Pages</title>
+<meta name="description" content="lchage – Display or change user password policy">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lchage/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lchage(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> lchage &#8211; Display or change user password policy</p>
+<h2>SYNOPSIS</h2>
+<p> lchage [<i>OPTION</i>]&#8230; <i>user</i> </p>
+<h2>DESCRIPTION</h2>
+<p> Displays or allows changing password policy of <i>user</i>. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>-d</code>, <code>&#8211;date</code>=<i>days</i></dt>
+<dd> Set the date of last password change to <i>days</i> after Jan 1 1970. </dd>
+<p> Set <i>days</i> to -1 to disable password expiration (i.e. to ignore <code>&#8211;mindays</code>, and <code>&#8211;maxdays</code> and related settings). </p>
+<p> Set <i>days</i> to 0 to enforce password change on next login. (This also disables password expiration until the password is changed.) </p>
+<dt><code>-E</code>, <code>&#8211;expire</code>=<i>days</i></dt>
+<dd> Set the account expiration date to <i>days</i> after Jan 1 1970. Set <i>days</i> to -1 to disable account expiration. </dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
+<dt><code>-I</code>, <code>&#8211;inactive</code>=<i>days</i></dt>
+<dd> Disable the account after <i>days</i> after password expires (after the user is required to change the password). Set <i>days</i> to -1 to keep the account enabled indefinitely after password expiration. </dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> Only list current <i>user</i>&#8216;s policy and make no changes. </dd>
+<dt><code>-m</code>, <code>&#8211;mindays</code>=<i>days</i></dt>
+<dd> Require at least <i>days</i> days between password changes. Set <i>days</i> to 0 or -1 to disable this requirement. </dd>
+<p> If this value is larger than the value set by <code>&#8211;maxdays</code>, the user cannot change the pasword. </p>
+<dt><code>-M</code>, <code>&#8211;maxdays</code>=<i>days</i></dt>
+<dd> Require changing the password after <i>days</i> since last password change. Set <i>days</i> to -1 to disable password expiration. </dd>
+<dt><code>-W</code>, <code>&#8211;warndays</code>=<i>days</i></dt>
+<dd> Start warning the user <i>days</i> before password expires (before the user is required to change the password). Set <i>days</i> to 0 or -1 to disable the warning. </dd>
+</dl>
+<h2>EXIT STATUS</h2>
+<p> The exit status is 0 on success, nonzero on error. </p>
+<h2>NOTES</h2>
+<p> Note that &#8220;account expiration&#8221; (set by <code>&#8211;expire</code>) is distinct from &#8220;password expiration&#8221; (set by <code>&#8211;maxdays</code>). Account expiration happens on a fixed date regardless of password changes. Password expiration is relative to the date of last password change. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

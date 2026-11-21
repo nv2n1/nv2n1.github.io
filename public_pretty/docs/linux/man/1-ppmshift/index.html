@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ppmshift(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ppmshift/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ppmshift(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p>ppmshift - shift lines of a portable pixmap left or right by a random amount</p>
+<h2>SYNOPSIS</h2>
+<p>ppmshift <i>shift</i> [<i>ppmfile</i>]</p>
+<h2>DESCRIPTION</h2>
+<p>Reads a portable pixmap as input. Shifts every row of image data to the left or right by a certain amount. The &lsquo;shift&rsquo; parameter determines by how many pixels a row is to be shifted at most.</p>
+<p>Another one of those effects I intended to use for MPEG tests. Unfortunately, this program will not help me here - it creates too random patterns to be used for animations. Still, it might give interesting results on still images.</p>
+<h2>EXAMPLE</h2>
+<p>Check this out: Save your favourite model&rsquo;s picture from something like alt.binaries.pictures.supermodels (ok, or from any other picture source), convert it to ppm, and process it e.g. like this, assuming the picture is 800x600 pixels:
+ <wbr> # take the upper half, and leave it like it is
+ <wbr> pnmcut 0 0 800 300 cs.ppm &gt;upper.ppm</p>
+<p> <wbr> # take the lower half, flip it upside down, dim it and distort it a little
+ <wbr> pnmcut 0 300 800 300 cs.ppm | pnmflip -tb | ppmdim 0.7 | 
+ <wbr> <wbr> <wbr> <wbr> ppmshift 10 &gt;lower.ppm</p>
+<p> <wbr> # and concatenate the two pieces
+ <wbr> pnmcat -tb upper.ppm lower.ppm &gt;newpic.ppm The resulting picture looks like the image being reflected on a water surface with slight ripples.</p>
+<h2>SEE ALSO</h2>
+<p><a HREF="/docs/linux/man/5-ppm/">ppm</a>(5), <a HREF="/docs/linux/man/1-pnmcut/">pnmcut</a>(1), <a HREF="/docs/linux/man/1-pnmflip/">pnmflip</a>(1), <a HREF="/docs/linux/man/1-ppmdim/">ppmdim</a>(1), <a HREF="/docs/linux/man/1-pnmcat/">pnmcat</a>(1)</p>
+<h2>AUTHOR</h2>
+<p>Copyright (C) 1993 by Frank Neumann</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

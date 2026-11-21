@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ares_set_socket_callback(3) · Linux Manual Pages</title>
+<meta name="description" content="ares_set_socket_callback – Set a socket creation callback">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ares_set_socket_callback/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ares_set_socket_callback(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> ares_set_socket_callback &#8211; Set a socket creation callback</p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+#include &lt;ares.h&gt;
+void ares_set_socket_callback(ares_channel channel,
+                              ares_sock_create_callback callback,
+                              void *userdata)
+        cc file.c
+    - lcares
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> This function sets a <i>callback</i> in the given ares channel handle. This callback function will be invoked after the socket has been created, and connected to the remote server. The callback must return ARES_SUCCESS if things are fine, or use the standard ares error codes to signal errors back. Returned errors will abort the ares operation.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ares_init_options/">ares_init_options</a></code>(3)</p>
+<h2>AVAILABILITY</h2>
+<p> <a href="/docs/linux/man/3-ares_set_socket_callback/">ares_set_socket_callback</a>(3) was added in c-ares 1.6.0</p>
+<h2>AUTHOR</h2>
+<p> Gregor Jasny </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

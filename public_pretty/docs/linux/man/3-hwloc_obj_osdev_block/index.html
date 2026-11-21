@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hwloc_obj_osdev_block(3) · Linux Manual Pages</title>
+<meta name="description" content="hwlocality_object_types – Object Types">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-hwloc_obj_osdev_block/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>hwloc_obj_osdev_block(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>hwlocality_object_types &#8211; Object Types </p>
+<h3>Typedefs</h3>
+<p>typedef enum <code>hwloc_obj_cache_type_e</code> <code>hwloc_obj_cache_type_t</code> </p>
+<p> typedef enum <code>hwloc_obj_bridge_type_e</code> <code>hwloc_obj_bridge_type_t</code> </p>
+<p> typedef enum <code>hwloc_obj_osdev_type_e</code> <code>hwloc_obj_osdev_type_t</code> </p>
+<h3>Enumerations</h3>
+<p>enum <code>hwloc_obj_type_t</code> { <code>HWLOC_OBJ_SYSTEM</code>, <code>HWLOC_OBJ_MACHINE</code>, <code>HWLOC_OBJ_NUMANODE</code>, <code>HWLOC_OBJ_PACKAGE</code>, <code>HWLOC_OBJ_CACHE</code>, <code>HWLOC_OBJ_CORE</code>, <code>HWLOC_OBJ_PU</code>, <code>HWLOC_OBJ_GROUP</code>, <code>HWLOC_OBJ_MISC</code>, <code>HWLOC_OBJ_BRIDGE</code>, <code>HWLOC_OBJ_PCI_DEVICE</code>, <code>HWLOC_OBJ_OS_DEVICE</code>, <code>HWLOC_OBJ_TYPE_MAX</code> } </p>
+<p> enum <code>hwloc_obj_cache_type_e</code> { <code>HWLOC_OBJ_CACHE_UNIFIED</code>, <code>HWLOC_OBJ_CACHE_DATA</code>, <code>HWLOC_OBJ_CACHE_INSTRUCTION</code> } </p>
+<p> enum <code>hwloc_obj_bridge_type_e</code> { <code>HWLOC_OBJ_BRIDGE_HOST</code>, <code>HWLOC_OBJ_BRIDGE_PCI</code> } </p>
+<p> enum <code>hwloc_obj_osdev_type_e</code> { <code>HWLOC_OBJ_OSDEV_BLOCK</code>, <code>HWLOC_OBJ_OSDEV_GPU</code>, <code>HWLOC_OBJ_OSDEV_NETWORK</code>, <code>HWLOC_OBJ_OSDEV_OPENFABRICS</code>, <code>HWLOC_OBJ_OSDEV_DMA</code>, <code>HWLOC_OBJ_OSDEV_COPROC</code> } </p>
+<p> enum <code>hwloc_compare_types_e</code> { <code>HWLOC_TYPE_UNORDERED</code> } </p>
+<h3>Functions</h3>
+<p>int <code>hwloc_compare_types</code> (<code>hwloc_obj_type_t</code> type1, <code>hwloc_obj_type_t</code> type2) </p>
+<h2>Detailed Description</h2>
+<h2>Typedef Documentation</h2>
+<h3>typedef enum <code>hwloc_obj_bridge_type_e</code> <code>hwloc_obj_bridge_type_t</code></h3>
+<p>Type of one side (upstream or downstream) of an I/O bridge.</p>
+<h3>typedef enum <code>hwloc_obj_cache_type_e</code> <code>hwloc_obj_cache_type_t</code></h3>
+<p>Cache type.</p>
+<h3>typedef enum <code>hwloc_obj_osdev_type_e</code> <code>hwloc_obj_osdev_type_t</code></h3>
+<p>Type of a OS device.</p>
+<h2>Enumeration Type Documentation</h2>
+<h3>enum <code>hwloc_compare_types_e</code></h3>
+<p><code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>HWLOC_TYPE_UNORDERED </i></dt>
+<dd>Value returned by <code>hwloc_compare_types()</code> when types can not be compared.</dd></dl>
+<h3>enum <code>hwloc_obj_bridge_type_e</code></h3>
+<p>Type of one side (upstream or downstream) of an I/O bridge. </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>HWLOC_OBJ_BRIDGE_HOST </i></dt>
+<dd>Host-side of a bridge, only possible upstream.</dd>
+<dt><i>HWLOC_OBJ_BRIDGE_PCI </i></dt>
+<dd>PCI-side of a bridge.</dd></dl>
+<h3>enum <code>hwloc_obj_cache_type_e</code></h3>
+<p>Cache type. </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>HWLOC_OBJ_CACHE_UNIFIED </i></dt>
+<dd>Unified cache.</dd>
+<dt><i>HWLOC_OBJ_CACHE_DATA </i></dt>
+<dd>Data cache.</dd>
+<dt><i>HWLOC_OBJ_CACHE_INSTRUCTION </i></dt>
+<dd>Instruction cache. Only used when the <code>HWLOC_TOPOLOGY_FLAG_ICACHES</code> topology flag is set.</dd></dl>
+<h3>enum <code>hwloc_obj_osdev_type_e</code></h3>
+<p>Type of a OS device. </p>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>HWLOC_OBJ_OSDEV_BLOCK </i></dt>
+<dd>Operating system block device. For instance &#8216;sda&#8217; on Linux.</dd>
+<dt><i>HWLOC_OBJ_OSDEV_GPU </i></dt>
+<dd>Operating system GPU device. For instance &#8216;:0.0&#8217; for a GL display, &#8216;card0&#8217; for a Linux DRM device.</dd>
+<dt><i>HWLOC_OBJ_OSDEV_NETWORK </i></dt>
+<dd>Operating system network device. For instance the &#8216;eth0&#8217; interface on Linux.</dd>
+<dt><i>HWLOC_OBJ_OSDEV_OPENFABRICS </i></dt>
+<dd>Operating system openfabrics device. For instance the &#8216;mlx4_0&#8217; InfiniBand HCA device on Linux.</dd>
+<dt><i>HWLOC_OBJ_OSDEV_DMA </i></dt>
+<dd>Operating system dma engine device. For instance the &#8216;dma0chan0&#8217; DMA channel on Linux.</dd>
+<dt><i>HWLOC_OBJ_OSDEV_COPROC </i></dt>
+<dd>Operating system co-processor device. For instance &#8216;mic0&#8217; for a Xeon Phi (MIC) on Linux, &#8216;opencl0d0&#8217; for a OpenCL device, &#8216;cuda0&#8217; for a CUDA device.</dd></dl>
+<h3>enum <code>hwloc_obj_type_t</code></h3>
+<p>Type of topology object. </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd>Do not rely on the ordering or completeness of the values as new ones may be defined in the future! If you need to compare types, use <code>hwloc_compare_types()</code> instead.</dd></dl>
+<p> <code>Enumerator</code></p>
+<dl COMPACT>
+<dt><i>HWLOC_OBJ_SYSTEM </i></dt>
+<dd>Whole system (may be a cluster of machines). The whole system that is accessible to hwloc. That may comprise several machines in SSI systems like Kerrighed.</dd>
+<dt><i>HWLOC_OBJ_MACHINE </i></dt>
+<dd>Machine. The typical root object type. A set of processors and memory with cache coherency.</dd>
+<dt><i>HWLOC_OBJ_NUMANODE </i></dt>
+<dd>NUMA node. A set of processors around memory which the processors can directly access.</dd>
+<dt><i>HWLOC_OBJ_PACKAGE </i></dt>
+<dd>Physical package, what goes into a socket. In the physical meaning, i.e. that you can add or remove physically.</dd>
+<dt><i>HWLOC_OBJ_CACHE </i></dt>
+<dd>Cache. Can be L1i, L1d, L2, L3, &#8230;</dd>
+<dt><i>HWLOC_OBJ_CORE </i></dt>
+<dd>Core. A computation unit (may be shared by several logical processors).</dd>
+<dt><i>HWLOC_OBJ_PU </i></dt>
+<dd>Processing Unit, or (Logical) Processor. An execution unit (may share a core with some other logical processors, e.g. in the case of an SMT core). Objects of this kind are always reported and can thus be used as fallback when others are not.</dd>
+<dt><i>HWLOC_OBJ_GROUP </i></dt>
+<dd>Group objects. Objects which do not fit in the above but are detected by hwloc and are useful to take into account for affinity. For instance, some operating systems expose their arbitrary processors aggregation this way. And hwloc may insert such objects to group NUMA nodes according to their distances. See also <code>What are these Group objects in my topology?</code>. These objects are ignored when they do not bring any structure.</dd>
+<dt><i>HWLOC_OBJ_MISC </i></dt>
+<dd>Miscellaneous objects. Objects without particular meaning, that can e.g. be added by the application for its own use, or by hwloc for miscellaneous objects such as MemoryModule (DIMMs).</dd>
+<dt><i>HWLOC_OBJ_BRIDGE </i></dt>
+<dd>Bridge. Any bridge that connects the host or an I/O bus, to another I/O bus. Bridge objects have neither CPU sets nor node sets. They are not added to the topology unless I/O discovery is enabled with <code>hwloc_topology_set_flags()</code>.</dd>
+<dt><i>HWLOC_OBJ_PCI_DEVICE </i></dt>
+<dd>PCI device. These objects have neither CPU sets nor node sets. They are not added to the topology unless I/O discovery is enabled with <code>hwloc_topology_set_flags()</code>.</dd>
+<dt><i>HWLOC_OBJ_OS_DEVICE </i></dt>
+<dd>Operating system device. These objects have neither CPU sets nor node sets. They are not added to the topology unless I/O discovery is enabled with <code>hwloc_topology_set_flags()</code>.</dd>
+<dt><i>HWLOC_OBJ_TYPE_MAX </i></dt>
+<dd>Sentinel value</dd></dl>
+<h2>Function Documentation</h2>
+<h3>int hwloc_compare_types (<code>hwloc_obj_type_t</code> type1, <code>hwloc_obj_type_t</code> type2)</h3>
+<p>Compare the depth of two object types. Types shouldn&#8217;t be compared as they are, since newer ones may be added in the future. This function returns less than, equal to, or greater than zero respectively if type1 objects usually include type2 objects, are the same as type2 objects, or are included in type2 objects. If the types can not be compared (because neither is usually contained in the other), <code>HWLOC_TYPE_UNORDERED</code> is returned. Object types containing CPUs can always be compared (usually, a system contains machines which contain nodes which contain packages which contain caches, which contain cores, which contain processors). </p>
+<p> <code>Note:</code></p>
+<dl COMPACT>
+<dd><code>HWLOC_OBJ_PU</code> will always be the deepest. </dd>
+<p> This does not mean that the actual topology will respect that order: e.g. as of today cores may also contain caches, and packages may also contain nodes. This is thus just to be seen as a fallback comparison method.</dl>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code.</p>
+</p>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

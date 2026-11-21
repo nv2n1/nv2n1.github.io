@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sys-unconfig(8) · Linux Manual Pages</title>
+<meta name="description" content="sys-unconfig – shell script to reconfigure the system upon next boot">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sys-unconfig/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sys-unconfig(8)</h1>
+
+
+
+
+
+<p>sys-unconfig &#8211; shell script to reconfigure the system upon next boot</p>
+<h2>Synopsis</h2>
+<p><code>sys-unconfig</code></p>
+<h2>Description</h2>
+<p><code>sys-unconfig</code> provides a simple method of reconfiguring a system in a new environment. Upon executing sys-unconfig will poweroff your system, and run firstboot at next boot. </p>
+<h2>Files</h2>
+<dl>
+<dt><i>/.unconfigured</i></dt>
+<dd>The presence of this file will trigger firsboot. </dd>
+</dl>
+<h2>Notes</h2>
+<p>This utility should not be used for creating cloud or virtual machine images. For that use please see <code>virt-sysprep</code>. </p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a>(1)</code> </p>
+<h2>Authors</h2>
+<pre>H.J. Lu &lt;hjl [at] valinux.com&gt;</pre>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

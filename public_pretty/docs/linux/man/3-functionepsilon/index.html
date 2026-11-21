@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>functionepsilon(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::EndCriteria – Criteria to end optimization process:.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-functionepsilon/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>functionepsilon(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>QuantLib::EndCriteria &#8211; Criteria to end optimization process:. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/optimization/endcriteria.hpp&gt; </p>
+<h3>Public Types</h3>
+<p>enum <code>Type</code> { <code>None</code>, <code>MaxIterations</code>, <code>StationaryPoint</code>, <code>StationaryFunctionValue</code>, <code>StationaryFunctionAccuracy</code>, <code>ZeroGradientNorm</code>, <code>Unknown</code> } </p>
+<h3>Public Member Functions</h3>
+<p><code>EndCriteria</code> (Size maxIterations, Size maxStationaryStateIterations, <code>Real</code> rootEpsilon, <code>Real</code> functionEpsilon, <code>Real</code> gradientNormEpsilon)<br />
+ <i>Initialization constructor. </i><br />
+ Size <code>maxIterations</code> () const </p>
+<p> Size <code>maxStationaryStateIterations</code> () const </p>
+<p> <code>Real</code> <code>rootEpsilon</code> () const </p>
+<p> <code>Real</code> <code>functionEpsilon</code> () const </p>
+<p> <code>Real</code> <code>gradientNormEpsilon</code> () const </p>
+<p> bool <code>operator()</code> (const Size iteration, Size &amp;statState, const bool positiveOptimization, const <code>Real</code> fold, const <code>Real</code> normgold, const <code>Real</code> fnew, const <code>Real</code> normgnew, EndCriteria::Type &amp;ecType) const </p>
+<p> bool <code>checkMaxIterations</code> (const Size iteration, EndCriteria::Type &amp;ecType) const </p>
+<p> bool <code>checkStationaryPoint</code> (const <code>Real</code> xOld, const <code>Real</code> xNew, Size &amp;statStateIterations, EndCriteria::Type &amp;ecType) const </p>
+<p> bool <code>checkStationaryFunctionValue</code> (const <code>Real</code> fxOld, const <code>Real</code> fxNew, Size &amp;statStateIterations, EndCriteria::Type &amp;ecType) const </p>
+<p> bool <code>checkStationaryFunctionAccuracy</code> (const <code>Real</code> f, const bool positiveOptimization, EndCriteria::Type &amp;ecType) const </p>
+<p> bool <code>checkZeroGradientNorm</code> (const <code>Real</code> gNorm, EndCriteria::Type &amp;ecType) const </p>
+<h3>Protected Attributes</h3>
+<p>Size <code>maxIterations_</code><br />
+ <i>Maximum number of iterations. </i><br />
+ Size <code>maxStationaryStateIterations_</code><br />
+ <i>Maximun number of iterations in stationary state. </i><br />
+ <code>Real</code> <code>rootEpsilon_</code><br />
+ <i>root, function and gradient epsilons </i><br />
+ <code>Real</code> <code>functionEpsilon_</code> </p>
+<p> <code>Real</code> <code>gradientNormEpsilon_</code> </p>
+<h2>Detailed Description</h2>
+<p>Criteria to end optimization process:. </p>
+<dl COMPACT>
+<dt>*</dt>
+<dd>maximum number of iterations AND minimum number of iterations around stationary point</dd>
+<dt> *</dt>
+<dd>x (independent variable) stationary point</dd>
+<dt> *</dt>
+<dd>y=f(x) (dependent variable) stationary point</dd>
+<dt> *</dt>
+<dd>stationary gradient</dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>BermudanSwaption.cpp</code>.</p>
+<h2>Member Function Documentation</h2>
+<h3>bool operator() (const Size iteration, Size &amp; statState, const bool positiveOptimization, const <code>Real</code> fold, const <code>Real</code> normgold, const <code>Real</code> fnew, const <code>Real</code> normgnew, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the number of iterations is not too big and if a minimum point is not reached</p>
+<h3>bool checkMaxIterations (const Size iteration, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the number of iteration is below MaxIterations</p>
+<h3>bool checkStationaryPoint (const <code>Real</code> xOld, const <code>Real</code> xNew, Size &amp; statStateIterations, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the root variation is below rootEpsilon</p>
+<h3>bool checkStationaryFunctionValue (const <code>Real</code> fxOld, const <code>Real</code> fxNew, Size &amp; statStateIterations, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the function variation is below functionEpsilon</p>
+<h3>bool checkStationaryFunctionAccuracy (const <code>Real</code> f, const bool positiveOptimization, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the function value is below functionEpsilon</p>
+<h3>bool checkZeroGradientNorm (const <code>Real</code> gNorm, EndCriteria::Type &amp; ecType) const</h3>
+<p>Test if the gradient norm variation is below gradientNormEpsilon </p>
+<p> Test if the gradient norm value is below gradientNormEpsilon </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

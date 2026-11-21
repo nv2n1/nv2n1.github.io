@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmtransferdone(3) · Linux Manual Pages</title>
+<meta name="description" content="XmTransferDone — A toolkit function that completes a data transfer">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmtransferdone/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmtransferdone(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>XmTransferDone</code> &#8212; A toolkit function that completes a data transfer</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/Xm.h&gt;
+<code>void XmTransferDone</code>(
+<code>XtPointer transfer_id</code>,
+<code>XmTransferStatus status</code>);</pre>
+<h2>Description</h2>
+<p><code>XmTransferDone</code> completes an already-initiated data transfer operation. An application can call this routine from an <code>XmNdestinationCallback</code> procedure or any function called as a result, including the selection procedures called as a result of calls to <code>XmTransferValue</code>. </p>
+<p> The caller of <code>XmTransferDone</code> supplies an identifier for the transfer operation and an indication of the completion status. <code>XmTransferDone</code> causes any remaining transfers for the operation to be discarded.</p>
+<dl COMPACT>
+<dt><code>transfer_id</code></dt>
+<dd>Specifies a unique indentifier for the data transfer operation. The value must be the same as the value of the <code>transfer_id</code> member of the <code>XmDestinationCallbackStruct</code> passed to the <code>XmNdestinationCallback</code> procedure.</dd>
+<dt><i>status</i></dt>
+<dd>Specifies the completion status of the data transfer. Following are the possible values:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt><code>XmTRANSFER_DONE_SUCCEED</code></dt>
+<dd>The transfer was completed successfully. This status has the following additional effects:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>For a move operation, the selection owner receives a request to convert the selection to the <code>DELETE</code> target.</dd>
+<dt> &bull;</dt>
+<dd>If a <code>TRANSACT</code> operation is in progress, the owner receives a request to commit the transaction.</dd>
+<dt> &bull;</dt>
+<dd>If a <code>PERSIST</code> or <code>_MOTIF_SNAPSHOT</code> operation is in progress, the owner receives a notification that the operation is finished.</dd>
+<dt> &bull;</dt>
+<dd>The widget class destination procedure is not called.</dd></dl>
+</dl>
+<dt><code>XmTRANSFER_DONE_FAIL</code></dt>
+<dd>The transfer was completed unsuccessfully. This status has the following additional effects:</dd>
+<dl COMPACT>
+<dd>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd>For a move operation, the selection owner does not receive a request to convert the selection to the <code>DELETE</code> target.</dd>
+<dt> &bull;</dt>
+<dd>For a drag and drop operation, the DropTransfer&#8217;s <code>XmNtransferStatus</code> is set to <code>XmTRANSFER_FAILURE</code>.</dd>
+<dt> &bull;</dt>
+<dd>If a <code>TRANSACT</code> operation is in progress, the owner receives a request to abort the transaction.</dd>
+<dt> &bull;</dt>
+<dd>If a <code>PERSIST</code> or <code>_MOTIF_SNAPSHOT</code> operation is in progress, the owner receives a notification that the operation is finished.</dd>
+<dt> &bull;</dt>
+<dd>The widget class destination procedure is not called.</dd></dl>
+</dl>
+<dt><code>XmTRANSFER_DONE_CONTINUE</code></dt>
+<dd>This status has the same effect as <code>XmTRANSFER_DONE_SUCCEED</code>, except that if a <code>PERSIST</code> or <code>_MOTIF_SNAPSHOT</code> operation is in progress, the owner does not receive a notification that the operation is finished.</dd>
+<dt><code>XmTRANSFER_DONE_DEFAULT</code></dt>
+<dd>The widget class destination procedure is called. Further effects depend on the actions of that procedure.</dd></dl>
+</dl>
+</dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmtransfersendrequest/">XmTransferSendRequest</a></code>(3), <code><a href="/docs/linux/man/3-xmtransferstartrequest/">XmTransferStartRequest</a></code>(3), <code><a href="/docs/linux/man/3-xmtransferstartrequest/">XmTransferStartRequest</a></code>(3), and <code><a href="/docs/linux/man/3-xmtransfervalue/">XmTransferValue</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

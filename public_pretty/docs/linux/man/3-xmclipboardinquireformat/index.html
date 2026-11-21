@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xmclipboardinquireformat(3) · Linux Manual Pages</title>
+<meta name="description" content="XmClipboardInquireFormat — A clipboard function that returns a specified format name">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xmclipboardinquireformat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xmclipboardinquireformat(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>XmClipboardInquireFormat</code> &#8212; A clipboard function that returns a specified format name</p>
+<h2>Synopsis</h2>
+<pre>#include &lt;Xm/CutPaste.h&gt;
+int XmClipboardInquireFormat (<i>display, window, index, format_name_buf,
+ buffer_len, copied_len</i>)
+ Display <i>* display</i>;
+ Window <i>window</i>;
+ int <i>index</i>;
+ XtPointer <i>format_name_buf</i>;
+ unsigned long <i>buffer_len</i>;
+ unsigned long <i>* copied_len</i>;
+(<code>void</code>)</pre>
+<h2>Description</h2>
+<p><code>XmClipboardInquireFormat</code> returns a specified format name for the data item in the clipboard. If the name must be truncated, the function returns a warning status.</p>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each of the clipboard functions that it calls.</dd>
+<dt><i>index</i></dt>
+<dd>Specifies which of the ordered format names to obtain. If this index is greater than the number of formats for the data item, this function returns a 0 (zero) in the <i>copied_len</i> argument.</dd>
+<dt><i>format_name_buf</i></dt>
+<dd>Specifies the buffer that receives the format name.</dd>
+<dt><i>buffer_len</i></dt>
+<dd>Specifies the number of bytes in the format name buffer.</dd>
+<dt><i>copied_len</i></dt>
+<dd>Specifies the number of bytes in the data item copied to the buffer. If this argument equals 0 (zero), there is no <i>n</i>th format for the data item.</dd></dl>
+<h2>Return</h2>
+<dl COMPACT>
+<dt><code>XmClipboardSuccess</code></dt>
+<dd>The function was successful.</dd>
+<dt><code>XmClipboardLocked</code></dt>
+<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</dd>
+<dt><code>XmClipboardTruncate</code></dt>
+<dd>The data returned is truncated because the user did not provide a buffer large enough to hold the data.</dd>
+<dt><code>XmClipboardNoData</code></dt>
+<dd>The function could not find data on the clipboard corresponding to the format requested. This could occur because the clipboard is empty; there is data on the clipboard, but not in the requested format; or the data in the requested format was passed by name and is no longer available.</dd></dl>
+<h2>Related</h2>
+<p><code><a href="/docs/linux/man/3-xmclipboardstartcopy/">XmClipboardStartCopy</a></code>(3).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

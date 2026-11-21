@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>updatenews(8) · Linux Manual Pages</title>
+<meta name="description" content="updatenews – post articles from outgoing spool directory and prefetch newsgroups">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-updatenews/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>updatenews(8)</h1>
+
+
+
+
+
+<p>updatenews &#8211; post articles from outgoing spool directory and prefetch newsgroups</p>
+<h2>Synopsis</h2>
+<p><code>updatenews [ -h ] [ -v ] [ -a ] [ -g ] [ -o ] [ -l ] [ -w # ]</code></p>
+<h2>Description</h2>
+<p>Updatenews submits all those articles that have been stored within NewsCache&#8217;s outgoing-queue. If necessary the ActiveDB will be updated (see the -a option to force the update). Afterwards retrieves all the articles from the newsgroups listed in the PrefetchFile (This can be configured in newscache.conf). </p>
+<h2>Options</h2>
+<p>These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
+<dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd>Show version of program.</dd>
+<dt><code>-a, &#8211;active</code></dt>
+<dd>Force the prefetch the active data base. Updatenews first invalidate the ActiveDB to force the update.</dd>
+<dt><code>-g, &#8211;group</code></dt>
+<dd>Prefetch whole newsgroups.</dd>
+<dt><code>-o, &#8211;over</code></dt>
+<dd>Only prefetch the overview database.</dd>
+<dt><code>-l, &#8211;lock-group</code></dt>
+<dd>Always lock the newsgroup while prefetching it. This improves the performance of update- news slightly, but nobody else can read this newsgroup while prefetching.</dd>
+<dt><code>-w, &#8211;workers #</code></dt>
+<dd>Use # workers for prefetching. Each worker is assigned its own newsgroup to prefetch. </dd>
+</dl>
+<h2>Files</h2>
+<p>/etc/newscache.conf<br />
+ /usr/sbin/newscache<br />
+ /usr/sbin/newscacheclean<br />
+ /usr/sbin/newscacheclean<br />
+ /usr/sbin/updatenews</p>
+<h2>See Also</h2>
+<p><code>newscache.conf</code>(5), <code><a href="/docs/linux/man/8-newscacheclean/">newscacheclean</a></code>(8), <code><a href="/docs/linux/man/8-updatenews/">updatenews</a></code>(8).</p>
+<h2>Authors</h2>
+<p>1997-2000 Thomas Gschwind &lt;tom [at] infosys.tuwien.ac.at&gt;<br />
+ 2001-2004 Herbert Straub &lt;h.straub [at] aon.at&gt;</p>
+<h2>Reporting Bugs</h2>
+<p>Report bugs to &lt;newscache [at] linuxhacker.org&gt;.</p>
+<h2>Copyright</h2>
+<p><code>NewsCache</code> is released under the <code>GNU General Public License (GPL).</code> There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

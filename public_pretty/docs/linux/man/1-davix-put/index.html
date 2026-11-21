@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>davix-put(1) · Linux Manual Pages</title>
+<meta name="description" content="davix-put – Upload tool based on libdavix">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-davix-put/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>davix-put(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> davix-put &#8211; Upload tool based on libdavix</p>
+<h2>SYNOPSIS</h2>
+<p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-put [options]&#8230; local_file url</p>
+<h2>DESCRIPTION</h2>
+<p> <code>davix-put</code> is a tool to upload resources to http, Webdav or REST compatible services.<br />
+ The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
+<p> Local resources can either be a single file or a collection.<br />
+ In the case of collection, all sub-collections will also be uploaded. </p>
+<p> davix-put is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>
+<h2>OPTIONS</h2>
+<p> <code>Common Options:</code> </p>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;debug</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Debug mode</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;header, -H</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Add a header field to the request (eg: -H &quot;Depth: 1&quot; )</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;help, -h</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Display this help message</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;metalink OPT </code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Metalink support. (OPT=failover[default]|no)</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;module, -P PLUGIN_NAME</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Load a plugin or profile by name</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;redirection OPT </code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Transparent redirection support. (OPT=yes[default]|no)</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;proxy, -x URL</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> SOCKS5 proxy server URL. (ex: socks5://login:pass [at] socks.example.org)</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;trace</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Traces specific scope(s), options include:</dd></dl>
+<dl>
+<dt>
+</dt><dd> file &#8211; Davix file interface</dd></dl>
+<dl>
+<dt>
+</dt><dd> posix &#8211; Davix POSIX interface</dd></dl>
+<dl>
+<dt>
+</dt><dd> xml &#8211; XML parser output</dd></dl>
+<dl>
+<dt>
+</dt><dd> ssl &#8211; SSL and certs details</dd></dl>
+<dl>
+<dt>
+</dt><dd> header &#8211; HTTP queries headers</dd></dl>
+<dl>
+<dt>
+</dt><dd> body &#8211; HTTP bodies</dd></dl>
+<dl>
+<dt>
+</dt><dd> chain &#8211; IO chains info</dd></dl>
+<dl>
+<dt>
+</dt><dd> core &#8211; Config and Davix command line tools info</dd></dl>
+<dl>
+<dt>
+</dt><dd> grid &#8211; Misc info from 3rd parties</dd></dl>
+<dl>
+<dt>
+</dt><dd> socket &#8211; Socket info</dd></dl>
+<dl>
+<dt>
+</dt><dd> locks &#8211; WebDAV locking info</dd></dl>
+<dl>
+<dt>
+</dt><dd> all &#8211; Traces everything</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;version</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Display version</dd></dl>
+<p> <code>Security Options:</code> </p>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;capath CA_path</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Add an additional certificate authority directory</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;cert, -E cred_path</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Client Certificate in PEM format</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;key priv_path</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Private key in PEM format</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;insecure, -k</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Disable SSL credential checks</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;userlogin</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> User login for login/password authentication</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;userpass</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> User password for login/password authentication</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;s3secretkey</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> AWS S3 authentication: secret key</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;s3accesskey</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> AWS S3 authentication: access key</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;s3region</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> AWS S3 authentication: region</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;s3token</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> AWS S3 security token &#8211; used along with STS temporary credentials</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;s3alternate</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Specify this flag if you need to use a path-based S3 URL</dd></dl>
+<dl>
+<dt>
+</dt><dd> <code>&#8211;azurekey</code></dd></dl>
+<dl>
+<dt>
+</dt><dd> Azure authentication key</dd></dl>
+<h2>EXAMPLES</h2>
+<p> <code>Upload local file to a http server<br />
+&nbsp;<wbr>&nbsp;<wbr>davix-put&nbsp;<wbr>/tmp/file1&nbsp;<wbr><a rel="nofollow" href="http://example.org/dir1/dir2/file1">http://example.org/dir1/dir2/file1</a> </p>
+<p> Upload a local file to a Grid compatible storage<br />
+&nbsp;<wbr>&nbsp;<wbr>davix-put -P grid&nbsp;<wbr>/tmp/file1&nbsp;<wbr><a href="davs://grid-storage.example.org/dir1/file1">davs://grid-storage.example.org/dir1/file1</a> </p>
+<p> Upload a resource to a OAuth 2.0 compatible service<br />
+&nbsp;<wbr>&nbsp;<wbr>davix-put&nbsp;<wbr>/tmp/file&nbsp;<wbr><a rel="nofollow" href="https://example.org/dir1/tmpfile">https://example.org/dir1/tmpfile</a>&nbsp;<wbr>-H&nbsp;<wbr>&quot;Authorization: Bearer mytoken&quot; </p>
+<p> Upload local directory to a http server<br />
+&nbsp;<wbr>&nbsp;<wbr>davix-put mydir&nbsp;<wbr><a rel="nofollow" href="http://example.org/dir1">http://example.org/dir1</a> </p>
+<p> </code></p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-libdavix/">libdavix</a>(3),</code><a href="/docs/linux/man/1-davix-put/">davix-put</a>(1),<code><a href="/docs/linux/man/1-davix-put/">davix-put</a>(1),</code> </p>
+<h2>LINKS</h2>
+<p> <code><a rel="nofollow" href="http://dmc.web.cern.ch/projects/davix/home">http://dmc.web.cern.ch/projects/davix/home</a></code> </p>
+<h2>AUTHORS</h2>
+<p> Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;, IT-SDC-ID, CERN </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

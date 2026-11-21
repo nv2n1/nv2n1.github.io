@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>guestunmount(1) · Linux Manual Pages</title>
+<meta name="description" content="guestunmount – Unmount a guestmounted filesystem">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-guestunmount/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>guestunmount(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> guestunmount &#8211; Unmount a guestmounted filesystem </p>
+<h2>SYNOPSIS</h2>
+<pre>
+ guestunmount mountpoint
+ guestunmount --fd=&lt;FD&gt; mountpoint
+</pre>
+<h2>DESCRIPTION</h2>
+<p> guestunmount is a utility to clean up mounted filesystems automatically. <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) mounts filesystems using libguestfs. This program unmounts the filesystem when a program or script has finished with it. </p>
+<p> guestunmount is a wrapper around the <font SIZE="-1">FUSE </font><i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program, which must exist on the current <tt>&quot;PATH&quot;</tt>. </p>
+<p> There are two ways to use guestunmount. When called as: </p>
+<pre>
+ guestunmount mountpoint
+</pre>
+<p> it unmounts <tt>&quot;mountpoint&quot;</tt> immediately. </p>
+<p> When called as: </p>
+<pre>
+ guestunmount --fd=FD mountpoint
+</pre>
+<p> it waits until the pipe <tt>&quot;FD&quot;</tt> is closed. This can be used to monitor another process and clean up its mountpoint when that process exits, as described below.</p>
+<h3><font SIZE="-1">FROM PROGRAMS</font></h3>
+<p> You can just call <tt>&quot;guestunmount mountpoint&quot;</tt> from the program, but a more sophisticated way to use guestunmount is to have it monitor your program so it can clean up the mount point if your program exits unexpectedly. </p>
+<p> In the program, create a pipe (eg. by calling <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2)). Let <tt>&quot;FD&quot;</tt> be the file descriptor number of the read side of the pipe (ie. <tt>&quot;pipefd[0]&quot;</tt>). </p>
+<p> After mounting the filesystem with <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) (on <tt>&quot;mountpoint&quot;</tt>), fork and run guestunmount like this: </p>
+<pre>
+ guestunmount --fd=FD mountpoint
+</pre>
+<p> Close the read side of the pipe in the parent process. </p>
+<p> Now, when the write side of the pipe (ie. <tt>&quot;pipefd[1]&quot;</tt>) is closed for any reason, either explicitly or because the parent process exits, guestunmount notices and unmounts the mountpoint. </p>
+<p> If your operating system supports it, you should set the <tt>&quot;FD_CLOEXEC&quot;</tt> flag on the write side of the pipe. This is so that other child processes don&#8217;t inherit the file descriptor and keep it open. </p>
+<p> Guestunmount never daemonizes itself.</p>
+<h3><font SIZE="-1">FROM SHELL SCRIPTS</font></h3>
+<p> Since bash doesn&#8217;t provide a way to create an unnamed pipe, use a trap to call guestunmount on exit like this: </p>
+<pre>
+ trap &quot;guestunmount mountpoint&quot; EXIT INT QUIT TERM
+</pre>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;fd=FD</code></dt>
+<dd> Specify the pipe file descriptor to monitor, and delay cleanup until that pipe is closed.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help and exit.</dd>
+<dt><code>-q</code></dt>
+<dd>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t display error messages from fusermount. The return status is still set (see &#8220;<font SIZE="-1">EXIT STATUS&#8221;</font> below).</dd>
+<dt><code>&#8211;no-retry</code></dt>
+<dd>
+</dd><dt><code>&#8211;retry=N</code></dt>
+<dd> By default, guestunmount will retry the fusermount operation up to 5 times (that is, it will run it up to 6 times = 1 try + 5 retries). </dd>
+<p> Use <i>&#8211;no-retry</i> to make guestunmount run fusermount only once. </p>
+<p> Use <i>&#8211;retry=N</i> to make guestunmount retry <tt>&quot;N&quot;</tt> times instead of 5. </p>
+<p> guestunmount performs an exponential back-off between retries, waiting 1 second, 2 seconds, 4 seconds, etc before each retry.</p>
+<dt><code>-V</code></dt>
+<dd>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the program version and exit.</dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt>&quot;PATH&quot;</dt>
+<dd> The <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program (supplied by <font SIZE="-1">FUSE</font>) must be available on the current <tt>&quot;PATH&quot;</tt>.</dd></dl>
+<h2>EXIT STATUS</h2>
+<p> This program returns 0 if successful, or one of the following error codes:</p>
+<dl>
+<dt>1</dt>
+<dd> Program error, eg. could not allocate memory, could not run fusermount. See the error message printed for more information.</dd>
+<dt>2</dt>
+<dd> The mount point could not be unmounted even after retrying. See the error message printed for the underlying fusermount error.</dd>
+<dt>3</dt>
+<dd> The mount point is not mounted.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1), <i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1), <i><a href="/docs/linux/man/2-pipe/">pipe</a></i>(2), &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3), <a rel="nofollow" href="http://libguestfs.org/,">http://libguestfs.org/,</a> <a rel="nofollow" href="http://fuse.sf.net/.">http://fuse.sf.net/.</a></p>
+<h2>AUTHORS</h2>
+<p> Richard W.M. Jones (<tt>&quot;rjones at redhat dot com&quot;</tt>)</p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2013 Red Hat Inc.</p>
+<h2>LICENSE</h2>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
+<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font></p>
+<h2>BUGS</h2>
+<p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> When reporting a bug, please supply:</p>
+<dl>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
+</dl>
+<h2>Index</h2>
+<dt><a href="#lbAG">OPTIONS</a></dt>
+<dd>
+</dd><dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></dt>
+<dd>
+</dd><dt><a href="#lbAI">EXIT STATUS</a></dt>
+<dd>
+</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
+<dd>
+</dd><dt><a href="#lbAK">AUTHORS</a></dt>
+<dd>
+</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
+<dd>
+</dd><dt><a href="#lbAM">LICENSE</a></dt>
+<dd>
+</dd><dt><a href="#lbAN">BUGS</a></dt>
+<dd></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

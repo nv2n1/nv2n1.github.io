@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdpromiseoperator(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdpromiseoperator/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdpromiseoperator(3)</h1>
+
+
+
+
+
+<p>std::promise&lt;R&gt;::operator= - std::promise&lt;R&gt;::operator=</p>
+<h2>Synopsis</h2>
+<pre><code>promise &amp;operator=(promise &amp;&amp;other) noexcept;
+(1)(since C++ 11)
+    promise &amp;
+    operator=(const promise &amp;rhs) = delete;
+(2)(since C++ 11)</code></pre> 
+<p>Assigns the contents.</p>
+<ol>
+<li>Move assignment operator. First, abandons the shared state (as in ~promise()), then assigns the shared state of other as if by executing std::promise(std::move(other)).swap(*this).</li>
+<li>promise is not copy-assignable.</li>
+</ol>
+<h2>Parameters</h2>
+<p>other - another promise to acquire the state from</p>
+<h2>Return value</h2>
+<p>*this</p>
+<h2>Exceptions</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

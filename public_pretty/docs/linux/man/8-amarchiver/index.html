@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amarchiver(8) · Linux Manual Pages</title>
+<meta name="description" content="amarchiver – Create, extract or list amanda archive">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-amarchiver/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>amarchiver(8)</h1>
+
+
+
+
+
+<p>amarchiver &#8211; Create, extract or list amanda archive</p>
+<h2>Synopsis</h2>
+<dl>
+<dt> <code>amarchiver</code> &#8211;version|&#8211;create|&#8211;extract|&#8211;list [&#8211;verbose] [&#8211;file&nbsp;<wbr><i>file</i>] [<i>filename</i>]&#8230;</dt></dl>
+<h2>Description</h2>
+<p><code>Amarchiver</code></p>
+<dd>manipulates amanda archive file. On creation, amarchiver doesn&#8217;t recurse into directories. If a filename specifies a directory, it will be ignored. If it specifies a character device, amarchiver reads the device and archives the data. If a filename specifies a named pipe, amarchiver reads the named pipe and archives the data. </dd>
+<p> Note that this tool is more limited than the Amanda archive library, and may not be appropriate for some archive files &#8212; particularly those which use non-strings in their filenames.</p>
+<h2>Options</h2>
+<p><code>&#8211;version</code></p>
+<dl>
+<dd>print the amarchiver version</dd></dl>
+<p> <code>&#8211;create</code></p>
+<dl>
+<dd>Create an amanda archive. Only the supplied filenames are included. With one <code>&#8211;verbose</code>, lists the filenames. With two, lists the filenames and sizes.</dd></dl>
+<p> <code>&#8211;list</code></p>
+<dl>
+<dd>List the filenames in an amanda archive. No additional filenames are allowed on the command line.</dd></dl>
+<p> <code>&#8211;extract</code></p>
+<dl>
+<dd>Extract an amanda archive. If filenames are supplied, only those files are extracted. Files are created in the current directory, suffixed with a dot (&#8216;.&#8217;) and the attribute ID.</dd></dl>
+<p> <code>&#8211;verbose</code></p>
+<dl>
+<dd>Give more information.</dd></dl>
+<p> <code>&#8211;file</code> file</p>
+<dl>
+<dd>Create, list or extract from the given file instead of stdin/stdout.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8), <code><a href="/docs/linux/man/5-amanda-archive-format/">amanda-archive-format</a></code>(5) </p>
+<p> The Amanda Wiki: : <a rel="nofollow" href="http://wiki.zmanda.com/">http://wiki.zmanda.com/</a></p>
+<h2>Authors</h2>
+<p><code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
+<dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
+<p> <code>Jean-Louis Martineau</code> &lt;martineau [at] zmanda.com&gt;</p>
+<dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

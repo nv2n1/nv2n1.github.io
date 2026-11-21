@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdkill_dependency(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdkill_dependency/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdkill_dependency(3)</h1>
+
+
+
+
+
+<p>std::kill_dependency - std::kill_dependency</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;atomic&gt;
+template&lt; class T &gt;                 (since C++11)
+T kill_dependency( T y ) noexcept;</code></pre> 
+<p>Informs the compiler that the dependency tree started by an std::memory_order_consume atomic load operation does not extend past the return value of std::kill_dependency; that is, the argument does not carry a dependency into the return value.
+This may be used to avoid unnecessary std::memory_order_acquire fences when the dependency chain leaves function scope (and the function does not have the [[carries_dependency]] attribute)</p>
+<h2>Parameters</h2>
+<p>y - the expression whose return value is to be removed from a dependency tree</p>
+<h2>Return value</h2>
+<p>Returns y, no longer a part of a dependency tree.</p>
+<h2>Examples</h2>
+<pre><code>// file1.cpp
+struct foo {
+    int *a;
+    int *b;
+};
+std::atomic&lt;struct foo *&gt; foo_head[10];
+int foo_array[10][10];
+// consume operation starts a dependency chain, which escapes this function
+[[carries_dependency]] struct foo *f(int i)
+{
+    return foo_head[i].load(memory_order_consume);
+}
+// the dependency chain enters this function through the right parameter
+// and is killed before the function ends (so no extra acquire operation takes place)
+int g(int *x, int *y [[carries_dependency]])
+{
+    return std::kill_dependency(foo_array[*x][*y]);
+}
+// file2.cpp
+[[carries_dependency]] struct foo *f(int i);
+int g(int *x, int *y [[carries_dependency]]);
+int c = 3;
+void h(int i)
+{
+    struct foo *p;
+    p = f(i);                       // dependency chain started inside f continues into p without undue acquire
+    do_something_with(g(&amp;c, p-&gt;a)); // p-&gt;b is not brought in from the cache
+    do_something_with(g(p-&gt;a, &amp;c)); // left argument does not have the carries_dependency
+                                    // attribute: memory acquire fence may be issued
+                                    // p-&gt;b becomes visible before g() is entered
+}
+</code></pre>
+<h2>See also</h2>
+<p>memory_order defines memory ordering constraints for the given atomic operation
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <i>(enum)</i>
+<i>(C++11)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

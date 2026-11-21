@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugging C and C&#43;&#43; with cgdb and Vim Keybindings - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/vim-cgdb/">
+  <meta name="description" content="cgdb is a curses-based frontend to gdb that keeps your source code visible while you debug. Unlike raw gdb, it splits the interface into two panes: source code …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Debugging C and C&#43;&#43; with cgdb and Vim Keybindings">
+  <meta property="og:url" content="https://www.systutorials.com/vim-cgdb/">
+  <meta property="og:description" content="cgdb is a curses-based frontend to gdb that keeps your source code visible while you debug. Unlike raw gdb, it splits the interface into two panes: source code …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/scripting-automation/">Scripting &amp; Automation</a>
+        </nav>
+        
+        <h1>Debugging C and C&#43;&#43; with cgdb and Vim Keybindings</h1>
+        <time class="post-date" datetime="2013-07-12T16:47:45Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>cgdb is a curses-based frontend to gdb that keeps your source code visible while you debug. Unlike raw gdb, it splits the interface into two panes: source code on top, gdb command prompt below. If you’re already comfortable with Vim keybindings, cgdb feels natural—it uses the same navigation keys and modal editing paradigms you’re used to.</p>
+<h2 id="why-cgdb-over-gdb-alone">Why cgdb over gdb alone</h2>
+<p>Raw gdb hides your code context. You type commands and watch output scroll past, losing track of where you are in the source. cgdb solves this by maintaining a visual split: navigate the code pane with Vim keys (hjkl, /, G, gg), set breakpoints by pressing spacebar, and issue debug commands without context switching.</p>
+<p>Function keys handle common operations—F5 to run, F8 to step over, F10 to step into. When you need arbitrary gdb commands, press <code>i</code> to drop into GDB mode, type what you need, then <code>Ctrl+[</code> to return to code viewing. This is faster than reaching for Escape on a split keyboard.</p>
+<h2 id="essential-cgdb-shortcuts">Essential cgdb shortcuts</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Shortcut</th>
+					<th>Action</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>F5</td>
+					<td>Run program</td>
+			</tr>
+			<tr>
+					<td>F6</td>
+					<td>Continue execution</td>
+			</tr>
+			<tr>
+					<td>F7</td>
+					<td>Finish current function (step out)</td>
+			</tr>
+			<tr>
+					<td>F8</td>
+					<td>Next (step over)</td>
+			</tr>
+			<tr>
+					<td>F10</td>
+					<td>Step (step into)</td>
+			</tr>
+			<tr>
+					<td>Spacebar</td>
+					<td>Toggle breakpoint at current line</td>
+			</tr>
+			<tr>
+					<td><code>t</code></td>
+					<td>Set temporary breakpoint at current line</td>
+			</tr>
+			<tr>
+					<td><code>d</code></td>
+					<td>Delete breakpoint at current line</td>
+			</tr>
+			<tr>
+					<td><code>i</code></td>
+					<td>Enter GDB command mode</td>
+			</tr>
+			<tr>
+					<td><code>I</code></td>
+					<td>Enter TTY mode (interact with program stdin/stdout)</td>
+			</tr>
+			<tr>
+					<td><code>Ctrl+[</code></td>
+					<td>Return to code viewer mode</td>
+			</tr>
+			<tr>
+					<td><code>/</code></td>
+					<td>Search in current file</td>
+			</tr>
+			<tr>
+					<td><code>G</code></td>
+					<td>Jump to end of file</td>
+			</tr>
+			<tr>
+					<td><code>gg</code></td>
+					<td>Jump to start of file</td>
+			</tr>
+	</tbody>
+</table>
+<p>The <code>I</code> key is particularly useful for programs that read input. It allows you to interact with the running program’s stdin while maintaining the debugger state.</p>
+<h2 id="building-with-debug-symbols">Building with debug symbols</h2>
+<p>Always compile with <code>-g</code>. For macro expansion and better stepping accuracy, use <code>-g3</code>. Avoid high optimization levels during development:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g3 -Og -Wall -Wextra -o my_program main.c
+</span></span></code></pre></div><p><code>-Og</code> optimizes for debugging—it enables some optimizations without breaking stepping or variable inspection. If you use <code>-O2</code> or <code>-O3</code>, stepping becomes unintuitive and local variables disappear.</p>
+<p>For C++, add the same flags:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">g++ -g3 -Og -Wall -Wextra -std<span class="o">=</span>c++20 -o my_program main.cpp
+</span></span></code></pre></div><h2 id="configuration">Configuration</h2>
+<p>Create or edit <code>~/.cgdbrc</code>:</p>
+<pre><code>set winsplit=top_big
+set syntax=on
+set showlinenum=on
+set autosourcereload=on
+set srcpath=/path/to/source
+</code></pre>
+<ul>
+<li><code>winsplit=top_big</code>: Makes the source pane larger, giving you more room to see code</li>
+<li><code>syntax=on</code>: Enable syntax highlighting</li>
+<li><code>showlinenum=on</code>: Display line numbers</li>
+<li><code>autosourcereload=on</code>: Reload source files if they change on disk</li>
+<li><code>srcpath</code>: Specify source directories for out-of-tree builds</li>
+</ul>
+<p>If your binary was built in one directory but sources live elsewhere, add multiple srcpath entries:</p>
+<pre><code>set srcpath=/home/user/project/src
+set srcpath=/home/user/project/include
+</code></pre>
+<h2 id="custom-keybindings">Custom keybindings</h2>
+<p>Map frequently used gdb operations to fewer keystrokes:</p>
+<pre><code>bind c F6
+bind s F8
+bind n F10
+bind f F7
+bind b spacebar
+</code></pre>
+<p>Now <code>c</code> continues, <code>s</code> steps over, <code>n</code> steps into, <code>f</code> finishes the function, and <code>b</code> toggles breakpoints. Avoid remapping navigation keys (hjkl, /, G, gg) as they conflict with Vim-style movement.</p>
+<h2 id="workflow-example">Workflow example</h2>
+<p>Compile with debug symbols:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcc -g3 -Og -Wall -o my_program main.c
+</span></span></code></pre></div><p>Start cgdb:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cgdb ./my_program arg1 arg2
+</span></span></code></pre></div><p>Navigate to the line where you want to break and press spacebar:</p>
+<pre><code>spacebar
+</code></pre>
+<p>Run with F5:</p>
+<pre><code>F5
+</code></pre>
+<p>The program executes and stops at your breakpoint. Step through with F8 (next) or F10 (step into). To enter a function, press F10. To skip over it, press F8. To exit the current function, press F7.</p>
+<p>For variable inspection, press <code>i</code> to enter GDB mode:</p>
+<pre><code>print my_variable
+p *(my_ptr)
+p my_array@10
+bt
+info registers
+</code></pre>
+<p>Print variables, dereference pointers, inspect array elements, print backtraces, and examine registers. Press <code>Ctrl+[</code> to return to the code viewer.</p>
+<h2 id="debugging-multi-threaded-programs">Debugging multi-threaded programs</h2>
+<p>For programs with multiple threads, use GDB mode to inspect them:</p>
+<pre><code>info threads
+thread 2
+bt
+</code></pre>
+<p>Switch between threads and print their backtraces. Set thread-specific breakpoints:</p>
+<pre><code>break main.c:42 thread 2
+</code></pre>
+<p>This breakpoint only triggers when thread 2 reaches line 42. cgdb displays the thread ID when a breakpoint is hit.</p>
+<p>For race conditions, you can temporarily disable other threads:</p>
+<pre><code>thread apply all step
+</code></pre>
+<p>Step all threads together, or:</p>
+<pre><code>thread apply 1 continue
+</code></pre>
+<p>Continue only thread 1 while others remain suspended.</p>
+<h2 id="debugging-optimized-binaries">Debugging optimized binaries</h2>
+<p>High optimization levels (<code>-O2</code>, <code>-O3</code>) break cgdb’s ability to map instructions back to source. Local variables vanish, stepping jumps unexpectedly, and the source view becomes misleading.</p>
+<p>If you must debug optimized code, use print-based debugging or conditional breakpoints in GDB mode:</p>
+<pre><code>break main.c:42 if condition
+commands
+print my_var
+continue
+end
+</code></pre>
+<p>This breakpoint prints a variable every time it’s hit before automatically continuing—useful for tracing program state in optimized builds.</p>
+<h2 id="installation">Installation</h2>
+<p>On most Linux distributions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Debian/Ubuntu</span>
+</span></span><span class="line"><span class="cl">apt install cgdb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fedora/RHEL</span>
+</span></span><span class="line"><span class="cl">dnf install cgdb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Arch</span>
+</span></span><span class="line"><span class="cl">pacman -S cgdb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># macOS</span>
+</span></span><span class="line"><span class="cl">brew install cgdb
+</span></span></code></pre></div><p>cgdb requires readline and ncurses development libraries. On older systems, you may need to build from source:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/cgdb/cgdb.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> cgdb
+</span></span><span class="line"><span class="cl">./autogen.sh
+</span></span><span class="line"><span class="cl">./configure
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">sudo make install
+</span></span></code></pre></div><h2 id="alternatives-and-modern-approaches">Alternatives and modern approaches</h2>
+<p>For pure source-level debugging without launching a separate tool, Neovim’s DAP integration (Debug Adapter Protocol) has matured significantly. Plugins like <code>nvim-dap</code> and <code>nvim-dap-ui</code> let you debug within your editor:</p>
+<ul>
+<li><strong>gdb-dashboard</strong>: Python-based TUI that runs inside gdb itself, no separate binary needed</li>
+<li><strong>LLDB</strong>: Modern C/C++ debugger with DAP support via <code>lldb-mi</code></li>
+<li><strong>rr (record and replay)</strong>: Records program execution and lets you step backward through code—powerful for reproducing intermittent bugs</li>
+</ul>
+<p>If you’re already in Neovim and want an integrated experience, DAP is worth exploring. For quick debugging sessions from the terminal or when jumping between projects, cgdb’s lightweight startup and Vim-like navigation remain faster than configuring editor plugins.</p>
+<h2 id="common-gotchas">Common gotchas</h2>
+<p><strong>Breakpoints not hit</strong>: Ensure the binary has debug symbols (<code>readelf -S my_program | grep debug</code> should show <code>.debug_*</code> sections). Recompile with <code>-g</code>.</p>
+<p><strong>Variables unavailable</strong>: You’re likely debugging optimized code. Recompile with <code>-Og</code> instead of <code>-O2</code> or <code>-O3</code>.</p>
+<p><strong>Source not found</strong>: Use <code>set srcpath</code> in <code>~/.cgdbrc</code> to tell cgdb where your sources live, or use <code>directory /path/to/source</code> in GDB mode.</p>
+<p><strong>Program doesn’t stop at breakpoint</strong>: Check that the breakpoint was set (highlighted in red in the source pane). Use <code>info breakpoints</code> in GDB mode to verify.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

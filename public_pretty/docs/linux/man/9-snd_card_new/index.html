@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snd_card_new(9) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-snd_card_new/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>snd_card_new(9)</h1>
+
+
+
+
+
+<p>snd_card_new - create and initialize a soundcard structure</p>
+<h2>Synopsis</h2>
+<pre><code>int snd_card_new(struct device *parent, int idx, const char *xid, struct module *module, int extra_size, struct snd_card **card_ret);</code></pre>
+<h2>Arguments</h2>
+<p><i>parent</i></p>
+<dl><dd></dd><dd>the parent device object</dd></dl>
+<p><i>idx</i></p>
+<dl><dd>card index (address) [0 ... (SNDRV_CARDS-1)]</dd></dl>
+<p><i>xid</i></p>
+<dl><dd>card identification (ASCII string)</dd></dl>
+<p><i>module</i></p>
+<dl><dd>top level module for locking</dd></dl>
+<p><i>extra_size</i></p>
+<dl><dd>allocate this extra size after the main soundcard structure</dd></dl>
+<p><i>card_ret</i></p>
+<dl><dd>the pointer to store the created card instance</dd></dl>
+<h2>Description</h2>
+<p>Creates and initializes a soundcard structure.</p>
+<p>The function allocates snd_card instance via kzalloc with the given space for the driver to use freely. The allocated struct is stored in the given card_ret pointer.</p>
+<h2>Return</h2>
+<p>Zero if successful or a negative error code.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

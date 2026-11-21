@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>radwho(1) · Linux Manual Pages</title>
+<meta name="description" content="radwho – show online users">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-radwho/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>radwho(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> radwho &#8211; show online users</p>
+<h2>SYNOPSIS</h2>
+<p> <code>radwho</code> [<code>-c</code>] [<code>-d</code> <i>raddb_directory</i>] [<code>-F</code> <i>radutmp_file</i>] [<code>-i</code>] [<code>-n</code>] [<code>-N</code> <i>nas_ip_address</i>] [<code>-p</code>] [<code>-P</code> <i>nas_port</i>] [<code>-r</code>] [<code>-R</code>] [<code>-s</code>] [<code>-S</code>] [<code>-u</code> <i>user</i>] [<code>-U</code> <i>user</i>] [<code>-Z</code>]</p>
+<h2>DESCRIPTION</h2>
+<p> The FreeRADIUS server can be configured to maintain an active session database in a file called <i>radutmp</i>. This utility shows the content of that session database.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt>-c</dt>
+<dd> Shows caller ID (if available) instead of the full name.</dd>
+<dt>-d&nbsp;<wbr><i>raddb_directory</i></dt>
+<dd> The directory that contains the RADIUS configuration files. Defaults to <i>/etc/raddb</i>.</dd>
+<dt>-F&nbsp;<wbr><i>radutmp_file</i></dt>
+<dd> The file that contains the radutmp file. If this is specified, -d is not necessary.</dd>
+<dt>-i</dt>
+<dd> Shows the session ID instead of the full name.</dd>
+<dt>-n</dt>
+<dd> Normally radwho looks up the username in the systems password file, and shows the full username as well. The <code>-n</code> flags prevents this.</dd>
+<dt>-N&nbsp;<wbr><i>nas_ip_address</i></dt>
+<dd> Show only those entries which match the given NAS IP address.</dd>
+<dt>-p</dt>
+<dd> Adds an extra column for the port type &#8211; I for ISDN, A for Analog.</dd>
+<dt>-P&nbsp;<wbr><i>nas_port</i></dt>
+<dd> Show only those entries which match the given NAS port.</dd>
+<dt>-r</dt>
+<dd> Outputs all data in <i>raw</i> format &#8211; no headers, no formatting, fields are comma-separated.</dd>
+<dt>-R</dt>
+<dd> Output all data in RADIUS attribute format. All fields are printed.</dd>
+<dt>-s</dt>
+<dd> Show full name.</dd>
+<dt>-S</dt>
+<dd> Hide shell users. Doesn&#8217;t show the entries for users that do not have a SLIP or PPP session.</dd>
+<dt>-u&nbsp;<wbr><i>user</i></dt>
+<dd> Show only those entries which match the given username (case insensitive).</dd>
+<dt>-U&nbsp;<wbr><i>user</i></dt>
+<dd> Show only those entries which match the given username (case sensitive).</dd>
+<dt>-Z</dt>
+<dd> When combined with <i>-R</i>, prints out the contents of an Accounting-Request packet which can be passed to <i>radclient</i>, in order to &quot;zap&quot; that users session from <i>radutmp</i>.</dd></dl>
+<p> For example,</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ radwho -ZRN 10.0.0.1 | radclient -f - radius.example.net acct testing123
+</pre>
+</dd></dl>
+<p> will result in all an Accounting-Request packet being sent to the RADIUS server, which tells the server that the NAS rebooted. i.e. It &quot;zaps&quot; all of the users on that NAS. </p>
+<p> To &quot;zap&quot; one user, specifiy NAS, username, and NAS port:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+$ radwho -ZRN 10.0.0.1 -u user -P 10 | radclient -f - radius.example.net acct testing123
+</pre>
+</dd></dl>
+<p> Other combinations are also possible. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/1-radclient/">radclient</a>(1), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5).</p>
+<h2>AUTHOR</h2>
+<p> Miquel van Smoorenburg, miquels [at] cistron.nl. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

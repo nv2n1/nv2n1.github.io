@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>debhelper-obsolete-compat(7) · Linux Manual Pages</title>
+<meta name="description" content="debhelper-obsolete-compat – List of no longer supported compat levels">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-debhelper-obsolete-compat/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>debhelper-obsolete-compat(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>debhelper-obsolete-compat &#8211; List of no longer supported compat levels</p>
+<h2>Synopsis</h2>
+<p>This document contains the upgrade guidelines from all compat levels which are no longer supported. Accordingly it is mostly for historical purposes and to assist people upgrading from a non-supported compat level to a supported level. </p>
+<p> For upgrades from supported compat levels, please see <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7).</p>
+<h2>Upgrade List For Compat Levels</h2>
+<p>The following is the list of now obsolete compat levels and their changes.</p>
+<dl>
+<dt>v1</dt>
+<dd>This is the original debhelper compatibility level, and so it is the default one. In this mode, debhelper will use <i>debian/tmp</i> as the package tree directory for the first binary package listed in the control file, while using debian/<i>package</i> for all other packages listed in the <i>control</i> file. </dd>
+<p> This mode is deprecated.</p>
+<dt>v2</dt>
+<dd>In this mode, debhelper will consistently use debian/<i>package</i> as the package tree directory for every package that is built. </dd>
+<p> This mode is deprecated.</p>
+<dt>v3</dt>
+<dd>This mode works like v2, with the following additions:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>Debhelper config files support globbing via <code>*</code> and <code>?</code>, when appropriate. To turn this off and use those characters raw, just prefix with a backslash.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_makeshlibs</code> makes the <i>postinst</i> and <i>postrm</i> scripts call <code>ldconfig</code>.</dd>
+<dt>&#8211;</dt>
+<dd>Every file in <i>etc/</i> is automatically flagged as a conffile by <code>dh_installdeb</code>.</dd></dl>
+</dl>
+<dl>
+<dd>This mode is deprecated.</dd></dl>
+<dt>v4</dt>
+<dd>Changes from v3 are:</dd>
+<dl>
+<dd>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd><code>dh_makeshlibs -V</code> will not include the Debian part of the version number in the generated dependency line in the shlibs file.</dd>
+<dt>&#8211;</dt>
+<dd>You are encouraged to put the new <code>${misc:Depends}</code> into <i>debian/control</i> to supplement the <code>${shlibs:Depends}</code> field.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_fixperms</code> will make all files in <i>bin/</i> directories and in <i>etc/init.d</i> executable.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_link</code> will correct existing links to conform with policy.</dd></dl>
+</dl>
+<dl>
+<dd>This mode is deprecated.</dd></dl>
+<dt>v5</dt>
+<dd>This is the lowest supported compatibility level. </dd>
+<p> Changes from v4 are:</p>
+<dl>
+<dd>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>Comments are ignored in debhelper config files.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_strip &#8211;dbg-package</code> now specifies the name of a package to put debugging symbols in, not the packages to take the symbols from.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_installdocs</code> skips installing empty files.</dd>
+<dt>&#8211;</dt>
+<dd><code>dh_install</code> errors out if wildcards expand to nothing.</dd></dl>
+</dl>
+<dl>
+<dd></dd></dl>
+</dl>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7)</p>
+<h2>Authors</h2>
+<p>Niels Thykier &lt;niels [at] thykier.net&gt; </p>
+<p> Joey Hess</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

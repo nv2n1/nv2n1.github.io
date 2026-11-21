@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fi_direct(7) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/7-fi_direct/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/7/">Section 7</a></p>
+<article>
+<h1>fi_direct(7)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>fi_direct - Direct fabric provider access</p>
+<h2>Synopsis</h2>
+<pre><code>-DFABRIC_DIRECT
+#define FABRIC_DIRECT</code></pre> Fabric direct provides a mechanism for applications to compile against a specific fabric providers without going through the libfabric framework or function vector tables. This allows for extreme optimization via function inlining at the cost of supporting multiple providers or different versions of the same provider.
+<h2>Description</h2>
+<p>The use of fabric direct is intended only for applications that require the absolute minimum software latency, and are willing to re-compile for specific fabric hardware. Providers that support fabric direct implement their own versions of the static inline calls which are define in the libfabric header files, define selected enum values, and provide defines for compile-time optimizations. Applications can then code against the standard libfabric calls, but link directly against the provider calls by defining FABRIC_DIRECT as part of their build.</p>
+<p>In general, the use of fabric direct does not require application source code changes, and, instead, is limited to the build process.</p>
+<p>Providers supporting fabric direct must install &lsquo;direct&rsquo; versions of all libfabric header files. For convenience, the libfabric sources contain sample header files that may be modified by a provider. The &lsquo;direct&rsquo; header file names have &lsquo;fi_direct&rsquo; as their prefix: fi_direct.h, fi_direct_endpoint.h, etc.</p>
+<p>Direct providers are prohibited from overriding or modifying existing data structures. However, provider specific extensions are still available. In addition to provider direct function calls to provider code, a fabric direct provider may define zero of more of the following capability definitions. Applications can check for these capabilities in order to optimize code paths at compile time, versus relying on run-time checks.</p>
+<h2>Capability Definitions</h2>
+<p>In order that application code may be optimized during compile time, direct providers must provide definitions for various capabilities and modes, if those capabilities are supported. The following #define values may be used by an application to test for provider support of supported features.</p>
+<p>FI_DIRECT_CONTEXT : The provider sets FI_CONTEXT or FI_CONTEXT2 for fi_info:mode. See fi_getinfo for additional details. When FI_DIRECT_CONTEXT is defined, applications should use struct fi_context in their definitions, even if FI_CONTEXT2 is set.</p>
+<p>FI_DIRECT_LOCAL_MR : The provider sets FI_LOCAL_MR for fi_info:mode. See fi_getinfo for additional details.</p>
+<h2>See Also</h2>
+<p>fi_getinfo(3), fi_endpoint(3), fi_domain(3)</p>
+<h2>Authors</h2>
+<p>OpenFabrics.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

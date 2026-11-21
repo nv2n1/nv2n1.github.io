@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lbzgrep(1) · Linux Manual Pages</title>
+<meta name="description" content="lbzgrep – search possibly compressed files for a regular expression">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-lbzgrep/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>lbzgrep(1)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> lbzgrep &#8211; search possibly compressed files for a regular expression</p>
+<h2>SYNOPSIS</h2>
+<p> <code>lbzgrep</code> [ grep_options ] <code>[&nbsp;<wbr>-e&nbsp;<wbr>]</code><i> pattern</i> <i>filename</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <i>Zgrep</i> invokes <i>grep</i> on compressed or lbzip2ped files. All options specified are passed directly to <i>grep</i>. If no file is specified, then the standard input is decompressed if necessary and fed to grep. Otherwise the given files are uncompressed if necessary and fed to <i>grep</i>. </p>
+<p> If the GREP environment variable is set, <i>lbzgrep</i> uses it as the <i>grep</i> program to be invoked.</p>
+<h2>EXIT STATUS</h2>
+<p> Exit status is 0 for a match, 1 for no matches, and 2 if trouble.</p>
+<h2>BUGS</h2>
+<p> The following <i>grep</i> options are not supported: <code>&#8211;dereference-recursive</code> (<code>-R</code>), <code>&#8211;directories</code> (<code>-d</code>), <code>&#8211;exclude</code>, <code>&#8211;exclude-from</code>, <code>&#8211;exclude-dir</code>, <code>&#8211;include</code>, <code>&#8211;null</code> (<code>-Z</code>), <code>&#8211;null-data</code> (<code>-z</code>), and <code>&#8211;recursive</code> (<code>-r</code>).</p>
+<h2>AUTHOR</h2>
+<p> Charles Levert (charles [at] comm.polymtl.ca)</p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/1-lbzexe/">lbzexe</a>(1), <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzdiff/">lbzdiff</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1), <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

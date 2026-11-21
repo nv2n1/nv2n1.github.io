@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heimdal-kadmind(8) · Linux Manual Pages</title>
+<meta name="description" content="kadmind – server for administrative access to Kerberos database">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-heimdal-kadmind/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>heimdal-kadmind(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>kadmind</code> &#8211; server for administrative access to Kerberos database</p>
+<h2>Synopsis</h2>
+<p>-words [-<code>c </code><i>file | </i> &#8211;<code>-config-file= </code><i>file</i> ] [-<code>k </code><i>file | </i> &#8211;<code>-key-file= </code><i>file</i> ] [-<code>-keytab= </code><i>keytab</i> ] [-<code>r </code><i>realm | </i> &#8211;<code>-realm= </code><i>realm</i> ] [-<code>d | &#8211;debug</code> ] [-<code>p </code><i>port | </i> &#8211;<code>-ports= </code><i>port</i> ]</p>
+<h2>Description</h2>
+<p>listens for requests for changes to the Kerberos database and performs these, subject to permissions. When starting, if stdin is a socket it assumes that it has been started by inetd(8), otherwise it behaves as a daemon, forking processes for each new connection. The &#8211;<code>-debug</code> option causes to accept exactly one connection, which is useful for debugging. The <a href="/docs/linux/man/8-kpasswdd/">kpasswdd</a>(8) daemon is responsible for the Kerberos 5 password changing protocol (used by <a href="/docs/linux/man/1-kpasswd/">kpasswd</a>(1)). This daemon should only be run on the master server, and not on any slaves. Principals are always allowed to change their own password and list their own principal. Apart from that, doing any operation requires permission explicitly added in the ACL file /var/heimdal/kadmind.acl The format of this file is: <i>principal</i> <i>rights</i> [<i>principal-pattern</i> ] Where rights is any (comma separated) combination of: </p>
+<ul>
+<li> change-password or cpw
+<li> list
+<li> delete
+<li> modify
+<li> add
+<li> get
+<li> get-keys
+<li> all </ul>
+<p> And the optional <i>principal-pattern</i> restricts the rights to operations on principals that match the glob-style pattern. Supported options:</p>
+<dl>
+<dt><code>-c </code><i>file , &#8211;</i><code>-config-file= </code><i>file</i></dt>
+<dd>location of config file</dd>
+<dt><code>-k </code><i>file , &#8211;</i><code>-key-file= </code><i>file</i></dt>
+<dd>location of master key file</dd>
+<dt><code>&#8211;keytab= </code><i>keytab</i></dt>
+<dd>what keytab to use</dd>
+<dt><code>-r </code><i>realm , &#8211;</i><code>-realm= </code><i>realm</i></dt>
+<dd>realm to use</dd>
+<dt><code>-d , &#8211;debug</code></dt>
+<dd>enable debugging</dd>
+<dt><code>-p </code><i>port , &#8211;</i><code>-ports= </code><i>port</i></dt>
+<dd>ports to listen to. By default, if run as a daemon, it listens to port 749, but you can add any number of ports with this option. The port string is a whitespace separated list of port specifications, with the special string &#8220;+&#8221; representing the default port.</dd></dl>
+<h2>Files</h2>
+<p>/var/heimdal/kadmind.acl</p>
+<h2>Examples</h2>
+<p>This will cause to listen to port 4711 in addition to any compiled in defaults: </p>
+<p> This acl file will grant Joe all rights, and allow Mallory to view and add host principals, as well as extract host principal keys (e.g., into keytabs). </p>
+<blockquote>
+<pre>joe/admin [at] EXAMPLE.COM all
+mallory/admin [at] EXAMPLE.COM add,get-keys host/*@EXAMPLE.COM</pre>
+</blockquote>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-kpasswd/">kpasswd</a>(1), kadmin(8), <a href="/docs/linux/man/8-kdc/">kdc</a>(8), <a href="/docs/linux/man/8-kpasswdd/">kpasswdd</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

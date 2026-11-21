@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nessus-fetch(1) · Linux Manual Pages</title>
+<meta name="description" content="nessus-fetch – A simple utility to retrieve plugins from www.nessus.org">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-nessus-fetch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>nessus-fetch(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> nessus-fetch &#8211; A simple utility to retrieve plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a></p>
+<h2>SYNOPSIS</h2>
+<p> <code>nessus-fetch &#8211;plugins </code> <code>nessus-fetch &#8211;plugins-md5</code> <code>nessus-fetch &#8211;register &lt;code&gt; </code> <code>nessus-fetch &#8211;check</code> <code>nessus-fetch &#8211;url &lt;url&gt; &lt;localfile&gt; [&lt;http_login&gt; &lt;http_password&gt;]</code> </p>
+<h2>DESCRIPTION</h2>
+<p> <code>nessus-fetch</code> is a simple utility is used by <code>nessus-update-plugins</code> to fetch the newest Nessus plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a> and to register a Nessus installation with plugins.nessus.org. It can also be used to retrieve arbitrary files from third party servers. </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>&#8211;register &lt;code&gt; </code></dt>
+<dd> Register the current Nessus installation to <a rel="nofollow" href="http://plugins.nessus.org.">http://plugins.nessus.org.</a> Registering entitles you to receive a complete feed of the newest Nessus plugins. To register, an <code>activation code</code> is required. Please see <a rel="nofollow" href="http://plugins.nessus.org">http://plugins.nessus.org</a> for more details on how to get such a code. </dd>
+<dt><code>&#8211;check </code></dt>
+<dd> Makes sure that nessus-fetch is properly configured to receive a direct plugin feed from plugins.nessus.org by attempting to login into the remote server with the username and password obtained with nessus-fetch &#8211;register. Please see <a rel="nofollow" href="http://plugins.nessus.org">http://plugins.nessus.org</a> for more details on how to get a direct plugin feed. </dd>
+<dt><code>&#8211;plugins-md5</code></dt>
+<dd> Obtains the MD5 of the remote plugin archive. Depending if the user registered or not, the file will be fetched from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a> or plugins.nessus.org. A file named &#8216;all-2.0.tar.gz.md5&#8217; will be created in the current working directory. </dd>
+<dt><code>&#8211;plugins</code></dt>
+<dd> Obtains the newest Nessus plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a> or plugins.nessus.org, as well as their signature file. The files &#8216;all-2.0.tar.gz&#8217; and &#8216;all-2.0.tar.gz.sig&#8217; will be created in the current working directory. </dd>
+<dt><code>&#8211;url &lt;url&gt; &lt;localfile&gt; [&lt;http_login&gt; &lt;http_password&gt;]</code></dt>
+<dd> Retrieves the file located at &lt;url&gt; (ie: <a rel="nofollow" href="http://www.nessus.org/index.html)">http://www.nessus.org/index.html)</a> and stores in in &lt;localfile&gt;. An optional http login and passwords can be provided if the remote server requires Basic authentication. </dd>
+</dl>
+<h2>PROXY SUPPORT</h2>
+<p> If you need to connect to the internet through a proxy, nessus-fetch can be configured to use one. Simply edit the file <code>nessus-fetch.rc</code> and add the following lines, changing the appropriate values where necessary : proxy=192.168.0.1 proxy_port=3128 proxy_username=renaud proxy_password=s3cr3t </p>
+<h2>BUGS</h2>
+<p> nessus-fetch will not retrieve files bigger than 40MB. </p>
+<h2>SEE ALSO</h2>
+<p> <code>nessus-update-plugins</code>(1) </p>
+<h2>MORE INFORMATION ABOUT THE NESSUS PROJECT</h2>
+<p> The canonical place where you will find more information about the Nessus project is : </p>
+<dl>
+<dt>
+</dt><dd> <a rel="nofollow" href="http://www.nessus.org/">http://www.nessus.org/</a> </dd>
+</dl>
+<h2>AUTHORS</h2>
+<p> nessus-fetch is (C) 2004 Tenable Network Security </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

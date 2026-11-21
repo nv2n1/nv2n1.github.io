@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>snap-discard-ns(8) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-snap-discard-ns/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>snap-discard-ns(8)</h1>
+
+
+
+
+
+<p>snap-discard-ns - internal tool for discarding preserved namespaces of snappy applications</p>
+<h2>Synopsis</h2>
+<p>snap-discard-ns [&ndash;from-snap-confine] SNAP_INSTANCE_NAME</p>
+<h2>Description</h2>
+<p>The <i>snap-discard-ns</i> is a program used internally by <i>snapd</i> to discard a preserved mount namespace of a particular snap.</p>
+<h2>Options</h2>
+<p>The &ndash;from-snap-confine option is used internally by snap-confine to tell snap-discard-ns that it is invoked from snap-confine and can disable locking.</p>
+<h2>Environment</h2>
+<p><i>snap-discard-ns</i> responds to the following environment variables</p>
+<dl><dt><i>SNAP_CONFINE_DEBUG</i>:
+</dt><dd>When defined the program will print additional diagnostic information about the actions being performed. All the output goes to stderr.</dd></dl>
+<h2>Files</h2>
+<p><i>snap-discard-ns</i> uses the following files:</p>
+<p><i>/run/snapd/ns/$SNAP_INSTNACE_NAME.mnt</i>: <i>/run/snapd/ns/$SNAP_INSTNACE_NAME.*.mnt</i>: The preserved mount namespace that is unmounted and removed by <i>snap-discard-ns</i>. The second form is for the per-user mount namespace.</p>
+<p><i>/run/snapd/ns/snap.$SNAP_INSTNACE_NAME.fstab</i>: <i>/run/snapd/ns/snap.$SNAP_INSTNACE_NAME.*.user-fstab</i>: The current mount profile of a preserved mount namespace that is removed by <i>snap-discard-ns</i>.</p>
+<h2>Bugs</h2>
+<p>Please report all bugs with <i><a rel="nofollow" HREF="https://bugs.launchpad.net/snapd/+filebug"><a href="https://bugs.launchpad.net/snapd/+filebug">https://bugs.launchpad.net/snapd/+filebug</a></a></i></p>
+<h2>Author</h2>
+<p>zygmunt.krynicki [at] canonical.com</p>
+<h2>Copyright</h2>
+<p>Canonical Ltd.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

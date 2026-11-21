@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gdalsrsinfo(1) · Linux Manual Pages</title>
+<meta name="description" content="gdalsrsinfo – gdalsrsinfo lists info about a given SRS in number of formats (WKT, PROJ.4, etc.)">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-gdalsrsinfo/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>gdalsrsinfo(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> gdalsrsinfo &#8211; gdalsrsinfo lists info about a given SRS in number of formats (WKT, PROJ.4, etc.) </p>
+<h2>SYNOPSIS</h2>
+<pre>
+Usage: gdalsrsinfo [options] srs_def
+srs_def may be the filename of a dataset supported by GDAL/OGR from which to extract SRS information
+OR any of the usual GDAL/OGR forms (complete WKT, PROJ.4, EPSG:n or a file containing the SRS)
+Options: 
+   [--help-general] [-h]  Show help and exit
+   [-p]                   Pretty-print where applicable (e.g. WKT)
+   [-V]                   Validate SRS
+   [-o out_type]          Output type { default, all, wkt_all, proj4,
+                                        wkt, wkt_simple, wkt_noct, wkt_esri,
+                                        mapinfo, xml }.fi
+</pre>
+<h2>DESCRIPTION</h2>
+<p> The gdalsrsinfo utility reports information about a given SRS from one of the following: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> The filename of a dataset supported by GDAL/OGR which contains SRS information</dd>
+<dt>&bull;</dt>
+<dd> Any of the usual GDAL/OGR forms (complete WKT, PROJ.4, EPSG:n or a file containing the SRS)</dd></dl>
+<p> Output types: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <code>default</code> proj4 and wkt (default option)</dd>
+<dt>&bull;</dt>
+<dd> <code>all</code> all options available</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_all</code> all wkt options available</dd>
+<dt>&bull;</dt>
+<dd> <code>proj4</code> PROJ.4 string</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt</code> OGC WKT format (full)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_simple</code> OGC WKT (simplified)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_noct</code> OGC WKT (without OGC CT params)</dd>
+<dt>&bull;</dt>
+<dd> <code>wkt_esri</code> ESRI WKT format</dd>
+<dt>&bull;</dt>
+<dd> <code>mapinfo</code> Mapinfo style CoordSys format</dd>
+<dt>&bull;</dt>
+<dd> <code>xml</code> XML format (GML based)</dd></dl>
+<h2>EXAMPLE</h2>
+<pre><code>
+$ gdalsrsinfo "EPSG:4326" PROJ .4 : '+proj=longlat +datum=WGS84 +no_defs ' OGC WKT : GEOGCS["WGS 84",
+                                                                                            DATUM["WGS_1984",
+                                                                                                  SPHEROID["WGS 84", 6378137, 298.257223563,
+                                                                                                           AUTHORITY["EPSG", "7030"]],
+                                                                                                  AUTHORITY["EPSG", "6326"]],
+                                                                                            PRIMEM["Greenwich", 0,
+                                                                                                   AUTHORITY["EPSG", "8901"]],
+                                                                                            UNIT["degree", 0.0174532925199433,
+                                                                                                 AUTHORITY["EPSG", "9122"]],
+                                                                                            AUTHORITY["EPSG", "4326"]]
+                                                                                         .fi
+                                                                                             $ gdalsrsinfo -
+    o proj4 osr / data / lcc_esri.prj
+</code></pre>
+<pre>
+$ gdalsrsinfo -o proj4 landsat.tif
+PROJ.4 : '+proj=utm +zone=19 +south +datum=WGS84 +units=m +no_defs '
+</pre>
+<p>$ gdalsrsinfo &#8211; o wkt &#8211; p &#8220;EPSG:32722&#8221; PROJCS[&#8220;WGS 84 / UTM zone 22S&#8221;, GEOGCS[&#8220;WGS 84&#8221;, DATUM[&#8220;WGS_1984&#8221;, SPHEROID[&#8220;WGS 84&#8221;, 6378137, 298.257223563, AUTHORITY[&#8220;EPSG&#8221;, &#8220;7030&#8221;]], AUTHORITY[&#8220;EPSG&#8221;, &#8220;6326&#8221;]], PRIMEM[&#8220;Greenwich&#8221;, 0, AUTHORITY[&#8220;EPSG&#8221;, &#8220;8901&#8221;]], UNIT[&#8220;degree&#8221;, 0.0174532925199433, AUTHORITY[&#8220;EPSG&#8221;, &#8220;9122&#8221;]], AUTHORITY[&#8220;EPSG&#8221;, &#8220;4326&#8221;]], PROJECTION[&#8220;Transverse_Mercator&#8221;], PARAMETER[&#8220;latitude_of_origin&#8221;, 0], PARAMETER[&#8220;central_meridian&#8221;, -51], PARAMETER[&#8220;scale_factor&#8221;, 0.9996], PARAMETER[&#8220;false_easting&#8221;, 500000], PARAMETER[&#8220;false_northing&#8221;, 10000000], UNIT[&#8220;metre&#8221;, 1, AUTHORITY[&#8220;EPSG&#8221;, &#8220;9001&#8221;]], AXIS[&#8220;Easting&#8221;, EAST], AXIS[&#8220;Northing&#8221;, NORTH], AUTHORITY[&#8220;EPSG&#8221;, &#8220;32722&#8221;]]</p>
+<pre><code>
+$ gdalsrsinfo - o wkt_all "EPSG:4618" OGC WKT : GEOGCS["SAD69",
+                                                       DATUM["South_American_Datum_1969",
+                                                             SPHEROID["GRS 1967 Modified", 6378160, 298.25,
+                                                                      AUTHORITY["EPSG", "7050"]],
+                                                             TOWGS84[-57, 1, -41, 0, 0, 0, 0],
+                                                             AUTHORITY["EPSG", "6618"]],
+                                                       PRIMEM["Greenwich", 0,
+                                                              AUTHORITY["EPSG", "8901"]],
+                                                       UNIT["degree", 0.0174532925199433,
+                                                            AUTHORITY["EPSG", "9122"]],
+                                                       AUTHORITY["EPSG", "4618"]] OGC
+                                                WKT(simple)
+    : GEOGCS["SAD69",
+             DATUM["South_American_Datum_1969",
+                   SPHEROID["GRS 1967 Modified", 6378160, 298.25],
+                   TOWGS84[-57, 1, -41, 0, 0, 0, 0]],
+             PRIMEM["Greenwich", 0],
+             UNIT["degree", 0.0174532925199433]] OGC WKT(no CT)
+    : GEOGCS["SAD69",
+             DATUM["South_American_Datum_1969",
+                   SPHEROID["GRS 1967 Modified", 6378160, 298.25]],
+             PRIMEM["Greenwich", 0],
+             UNIT["degree", 0.0174532925199433]] ESRI WKT : GEOGCS["SAD69",
+                                                                   DATUM["D_South_American_1969",
+                                                                         SPHEROID["GRS_1967_Truncated", 6378160, 298.25]],
+                                                                   PRIMEM["Greenwich", 0],
+                                                                   UNIT["Degree", 0.017453292519943295]]
+</code></pre>
+<h2>AUTHORS</h2>
+<p> Frank Warmerdam warmerdam [at] pobox.com, Etienne Tourigny &lt;etourigny.dev-at-gmail-dot-com&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>libtranslate(5) · Linux Manual Pages</title>
+<meta name="description" content="services.xml – libtranslate generic service definitions">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-libtranslate/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>libtranslate(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>services.xml &#8211; libtranslate generic service definitions</p>
+<h2>Description</h2>
+<p>The <i>services.xml</i> file contains translation service definitions for the libtranslate generic module. The generic module provides an abstract framework for supporting web-based translation services. When the generic module is initialized, it reads service definitions from the <i>services.xml</i> files located in <i>/usr/share/libtranslate</i> and <i>~/.libtranslate</i>, creates the services defined in these files, and makes them available to libtranslate. The <i>services.xml</i> file must be encoded in UTF-8, and conform to the <i>services.xml</i> Document Type Definition, located in <i>/usr/share/libtranslate/services.dtd</i>. </p>
+<h2>Elements</h2>
+<h3>services</h3>
+<dl>
+<dt>Description</dt>
+<dd>The services element is the root of the document, and may contains service definitions and language mappings. </dd>
+<dt>Children</dt>
+<dd>These elements may occur zero or more times in services: custom-language, service. </dd>
+</dl>
+<h3>custom-language</h3>
+<dl>
+<dt>Description</dt>
+<dd>The custom-language element maps a RFC 3066 language tag to a language name. </dd>
+<dl>
+<dd><code>Note</code> </dd>
+<p> Some RFC 3066 tag to name mappings are built into libtranslate and do not need to be added (see the Built-In RFC 3066 Tag to Name Mappings appendix in the libtranslate Reference Manual). </p>
+</dl>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>tag</i> (required)</dt>
+<dd>The RFC 3066 language tag. </dd>
+<dt><i>name</i> (required)</dt>
+<dd>The language human-readable name. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains custom-language: services. </dd>
+</dl>
+<h3>service</h3>
+<dl>
+<dt>Description</dt>
+<dd>The service element defines a translation service. </dd>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>name</i> (required)</dt>
+<dd>The service symbolic name, encoded in ASCII. </dd>
+<dt><i>nick</i> (implied, default: <i>name</i>)</dt>
+<dd>The service human-readable name. </dd>
+<dt><i>max-chunk-len</i> (optional, default: 1000)</dt>
+<dd>The maximum length of an input chunk, in characters (0 means unlimited). </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains service: services. </dd>
+<dt>Children</dt>
+<dd>This element may occur zero or more times in service: group. </dd>
+</dl>
+<h3>group</h3>
+<dl>
+<dt>Description</dt>
+<dd>The group element defines a translation group (a group represents a set of languages and translation methods). </dd>
+<dt>Parents</dt>
+<dd>This element contains group: service. </dd>
+<dt>Children</dt>
+<dd>These elements may occur zero or more times in group: language, http-header. </dd>
+<p> These elements may occur zero or one time in group: text-translation, web-page-translation. </p>
+</dl>
+<h3>language</h3>
+<dl>
+<dt>Description</dt>
+<dd>The language element adds a language to the list of languages supported by a group. </dd>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>tag</i> (required)</dt>
+<dd>The RFC 3066 language tag. </dd>
+<dt><i>service-tag</i> (implied, default: <i>tag</i>)</dt>
+<dd>The language service-specific tag. This tag is not exposed to libtranslate, but is available as <i>from</i> and <i>to</i> variables (see Variable Substitution). </dd>
+<dt><i>to</i> (optional, default: none)</dt>
+<dd>A comma-separated list of RFC 3066 language tags this language can be translated into. The special list element * means &quot;every language of this group but this one&quot;. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains language: group. </dd>
+</dl>
+<h3>http-header</h3>
+<dl>
+<dt>Description</dt>
+<dd>The http-header element adds a HTTP header to the list of headers that are set when a HTTP request is issued. </dd>
+<p> If the http-header element occurs inside a group element, the header is added for text and web page translations. </p>
+<p> If it occurs inside a text-translation or web-page-translation element, the header is only added for a text or web page translation, respectively. </p>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>name</i> (required)</dt>
+<dd>The HTTP header name. </dd>
+<dt><i>value</i> (required)</dt>
+<dd>The HTTP header value. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>These elements contain http-header: group, text-translation, web-page-translation. </dd>
+</dl>
+<h3>text-translation</h3>
+<dl>
+<dt>Description</dt>
+<dd>The presence of the text-translation element specifies that the group can translate text. </dd>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>url</i> (required)</dt>
+<dd>The URL to use for translating text. Variable substitution is performed on the URL (see Variable Substitution). </dd>
+<dt><i>post</i> (optional, default: none)</dt>
+<dd>If this attribute is present, a HTTP POST request is issued (using the attribute value as post data). Otherwise, a HTTP GET request is issued. Variable substitution is performed on the post data (see Variable Substitution). </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains text-translation: group. </dd>
+<dt>Children</dt>
+<dd>These element may occur zero or more times in text-translation: http-header, pre-marker, error-marker. </dd>
+<p> This element may occur zero or one time in text-translation: post-marker. </p>
+</dl>
+<h3>pre-marker</h3>
+<dl>
+<dt>Description</dt>
+<dd>The pre-marker element is used to extract the translated text from the response to a text translation request. </dd>
+<p> For each pre-marker element, the parser locates <i>text</i> in the server response. If <i>text</i> is found, the parser moves to the character following <i>text</i>. If it is not found, the translation fails. The translated text starts at the character following the last pre-marker match. If no pre-marker element is specified, the translated text starts at the first character of the server response. </p>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>text</i> (required)</dt>
+<dd>The text to match. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains pre-marker: text-translation. </dd>
+</dl>
+<h3>post-marker</h3>
+<dl>
+<dt>Description</dt>
+<dd>The post-marker element is used to extract the translated text from the response to a text translation request. </dd>
+<p> If <i>text</i> can be located in the server response, the translated text ends at the character preceding <i>text</i>. Otherwise, the translation fails. If no post-marker element is specified, the translated text ends at the last character of the server response. </p>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>text</i> (required)</dt>
+<dd>The text to match. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains post-marker: text-translation. </dd>
+</dl>
+<h3>error-marker</h3>
+<dl>
+<dt>Description</dt>
+<dd>The error-marker element is used to check if a text translation error has occurred. </dd>
+<p> If one or more error-marker elements are specified and the <i>text</i> of any of them can be located anywhere in the server response, the translation fails. </p>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>text</i> (required)</dt>
+<dd>The text to match. </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains error-marker: text-translation. </dd>
+</dl>
+<h3>web-page-translation</h3>
+<dl>
+<dt>Description</dt>
+<dd>The presence of the web-page-translation element specifies that the group can translate a web page. </dd>
+<p> If no http-header element is specified and if <i>post</i> is not specified, the generic module does not need to connect to the server. In this case, <i>url</i> is returned as the URL of the translated web page. Otherwise, the generic module connects to the server, issues a HTTP GET or POST request, saves the response to a local file, and returns a file:// URL pointing to that file. </p>
+<dt>Attributes</dt>
+<dd>
+</dd><dl>
+<dd>
+</dd><dl>
+<dt><i>url</i> (required)</dt>
+<dd>The URL to use for translating a web page. Variable substitution is performed on the URL (see Variable Substitution). </dd>
+<dt><i>post</i> (optional, default: none)</dt>
+<dd>If this attribute is present, a HTTP POST request is issued (using the attribute value as post data). Otherwise, a HTTP GET request is issued (or no request at all, see above). Variable substitution is performed on the post data (see Variable Substitution). </dd>
+</dl>
+</dl>
+<dd>
+</dd><dt>Parents</dt>
+<dd>This element contains web-page-translation: group. </dd>
+<dt>Children</dt>
+<dd>This element may occur zero or more times in web-page-translation: http-header. </dd>
+</dl>
+<h2>Variable Substitution</h2>
+<p>Variable substitution is performed at translation time on the <i>url</i> and <i>post</i> attributes of the text-translation and web-page-translation elements. </p>
+<p> A variable has the syntax ${<i>varname</i>[:<i>modifiers</i>]}. </p>
+<p> <i>varname</i> may be any of the following variables: </p>
+<dl>
+<dt><i>text</i> (text-translation only)</dt>
+<dd>The text to translate. </dd>
+<dt><i>url</i> (web-page-translation only)</dt>
+<dd>The URL of the web page to translate. </dd>
+<dt><i>from</i></dt>
+<dd>The source language service tag. </dd>
+<dt><i>to</i></dt>
+<dd>The destination language service tag. </dd>
+<dt><i>time</i></dt>
+<dd>The number of seconds since 0 hours, 0 minutes, 0 seconds, January 1, 1970, Coordinated Universal Time. </dd>
+</dl>
+<p> <i>modifiers</i> is a comma-separated list of modifiers. Each modifier is applied (in the specified order) on the contents of the variable. A modifier has the syntax <i>name</i>[=<i>value</i>]. </p>
+<p> <i>name</i> may be any of the following modifiers: </p>
+<dl>
+<dt>escape</dt>
+<dd>Escapes the unsafe characters in the variable using URI percent notation. </dd>
+<dt>charset</dt>
+<dd>Converts the variable from UTF-8 (the libtranslate character set) to the character set <i>value</i>. </dd>
+</dl>
+<h2>Files</h2>
+<dl>
+<dt><i>/usr/share/libtranslate/services.xml</i></dt>
+<dd></dd></dl>
+<p> The system-wide service definitions. </p>
+<dl>
+<dt><i>~/.libtranslate/services.xml</i></dt>
+<dd></dd></dl>
+<p> The user service definitions. </p>
+<dl>
+<dt><i>/usr/share/libtranslate/services.dtd</i></dt>
+<dd></dd></dl>
+<p> The <i>services.xml</i> Document Type Definition.</p>
+<h2>See Also</h2>
+<p>The libtranslate Reference Manual </p>
+<h2>Author</h2>
+<p>Jean-Yves Lefort.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

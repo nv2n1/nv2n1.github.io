@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xcupgetreservedcolormapentries(3) · Linux Manual Pages</title>
+<meta name="description" content="XcupGetReservedColormapEntries – list colormap entries reserved by the system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-xcupgetreservedcolormapentries/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>xcupgetreservedcolormapentries(3)</h1>
+
+
+
+
+
+<p>XcupGetReservedColormapEntries &#8211; list colormap entries reserved by the system </p>
+<h2>Synopsis</h2>
+<pre><code>cc</code> [ <i>flag</i> ... ] <i>file</i> ... -<code>lXext</code> [ <i>library</i> ... ]
+#include &lt;X11/extensions/Xcup.h&gt;
+<dl COMPACT><dt></dt><dd>Status <code>XcupGetReservedColormapEntries</code>(Display *<i>display</i>,
+int <i>screen</i>, XColor **<i>colors_out</i>, int *<i>ncolors</i>);
+<br>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dd></dl></pre>
+<h2>Arguments</h2>
+<dl COMPACT>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>screen</i></dt>
+<dd>Screen number on the host server.</dd>
+<dt><i>colors_out</i></dt>
+<dd>Returns the values reserved by the server.</dd>
+<dt><i>ncolors</i></dt>
+<dd>Returns the number of items in <i>colors_out</i>.</dd></dl>
+<h2>Description</h2>
+<p>The <i>XcupGetReservedColormapEntries</i> function returns a list of colormap entries (pixels) that are reserved by the system. This list will, at a minimum, contain entries for the BlackPixel and WhitePixel of the specified screen. Use <i>XFree</i> to free <i>colors_out.</i> </p>
+<p> To minimize colormap flash, an application which installs its own private colormap should query the special colors by calling <i>XCupGetReservedColormapEntries</i>, and can then store those entries (in the proper location) in its private colormap using <i>XCupStoreColors</i>.</p>
+<h2>See Also</h2>
+<p><code>XcupQueryVersion</code>(3Xext), <code>XcupStoreColors</code>(3Xext), <code>XFree</code>(3X11),<br />
+ <i>Colormap Utilization Policy and Extension</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

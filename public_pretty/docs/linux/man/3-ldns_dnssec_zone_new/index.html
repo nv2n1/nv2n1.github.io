@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ldns_dnssec_zone_new(3) · Linux Manual Pages</title>
+<meta name="description" content="ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-ldns_dnssec_zone_new/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>ldns_dnssec_zone_new(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals </p>
+<h2>SYNOPSIS</h2>
+<p> #include &lt;stdint.h&gt;<br />
+ #include &lt;stdbool.h&gt; </p>
+<p> #include &lt;ldns/ldns.h&gt; </p>
+<p> ldns_dnssec_rrsets* ldns_dnssec_zone_find_rrset(ldns_dnssec_zone *zone, ldns_rdf *dname, ldns_rr_type type); </p>
+<p> ldns_dnssec_zone* ldns_dnssec_zone_new(); </p>
+<p> void ldns_dnssec_zone_free(ldns_dnssec_zone *zone); </p>
+<p> ldns_status ldns_dnssec_zone_add_rr(ldns_dnssec_zone *zone, ldns_rr *rr); </p>
+<p> void ldns_dnssec_zone_names_print(FILE *out, ldns_rbtree_t *tree, bool print_soa); </p>
+<p> void ldns_dnssec_zone_print(FILE *out, ldns_dnssec_zone *zone); </p>
+<p> ldns_status ldns_dnssec_zone_add_empty_nonterminals(ldns_dnssec_zone *zone); </p>
+<h2>DESCRIPTION</h2>
+<dl>
+<dt> <i>ldns_dnssec_zone_find_rrset</i>()</dt>
+<dd>Find the RRset with the given name and type in the zone </dd>
+<p> .br <code>zone</code>: the zone structure to find the RRset in .br <code>dname</code>: the domain name of the RRset to find .br <code>type</code>: the type of the RRset to find .br Returns the RRset, or NULL if not present</dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_new</i>()</dt>
+<dd>Creates a new dnssec_zone structure .br Returns the allocated structure</dd></dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_free</i>()</dt>
+<dd>Frees the given zone structure, and its rbtree of dnssec_names Individual ldns_rr RRs within those names are *not* freed .br <code>*zone</code>: the zone to free</dd></dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_add_rr</i>()</dt>
+<dd>Adds the given RR to the zone. It find whether there is a dnssec_name with that name present. If so, add it to that, if not create a new one. Special handling of NSEC and RRSIG provided </dd>
+<p> .br <code>zone</code>: the zone to add the RR to .br <code>rr</code>: The RR to add .br Returns LDNS_STATUS_OK on success, an error code otherwise</dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_names_print</i>()</dt>
+<dd>Prints the rbtree of ldns_dnssec_name structures to the file descriptor </dd>
+<p> .br <code>out</code>: the file descriptor to print the names to .br <code>tree</code>: the tree of ldns_dnssec_name structures to print .br <code>print_soa</code>: if true, print SOA records, if false, skip them</dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_print</i>()</dt>
+<dd>Prints the complete zone to the given file descriptor </dd>
+<p> .br <code>out</code>: the file descriptor to print to .br <code>zone</code>: the dnssec_zone to print</dl>
+<dl>
+<dt> <i>ldns_dnssec_zone_add_empty_nonterminals</i>()</dt>
+<dd>Adds explicit dnssec_name structures for the empty nonterminals in this zone. (this is needed for NSEC3 generation) </dd>
+<p> .br <code>zone</code>: the zone to check for empty nonterminals return LDNS_STATUS_OK on success.</dl>
+<h2>AUTHOR</h2>
+<p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
+<h2>REPORTING BUGS</h2>
+<p> Please report bugs to ldns-team [at] nlnetlabs.nl or in our bugzilla at <a rel="nofollow" href="http://www.nlnetlabs.nl/bugs/index.html">http://www.nlnetlabs.nl/bugs/index.html</a> </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2004 &#8211; 2006 NLnet Labs. </p>
+<p> Licensed under the BSD License. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<h2>SEE ALSO</h2>
+<p> <i>ldns_dnssec_zone</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
+<h2>REMARKS</h2>
+<p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

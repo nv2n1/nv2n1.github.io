@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>testlintianprepare(3) · Linux Manual Pages</title>
+<meta name="description" content="Test::Lintian::Prepare — routines to prepare the work directories">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-testlintianprepare/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>testlintianprepare(3)</h1>
+
+
+
+
+
+<p>Test::Lintian::Prepare &#8212; routines to prepare the work directories </p>
+<h2>Synopsis</h2>
+<pre> use Test::Lintian::Prepare qw(prepare);</pre>
+<h2>Description</h2>
+<p>The routines in this module prepare the work directories in which the tests are run. To do so, they use the specifications in the test set.</p>
+<h2>Functions</h2>
+<dl COMPACT>
+<dt>prepare(<font SIZE="-1">SPEC_PATH, SOURCE_PATH, TEST_SET, REBUILD</font>)</dt>
+<dd>Populates a work directory <font SIZE="-1">SOURCE_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</dd>
+<dt>filleval(<font SIZE="-1">SPEC_PATH, EVAL_PATH, TEST_SET, REBUILD</font>)</dt>
+<dd>Populates a evaluation directory <font SIZE="-1">EVAL_PATH</font> with data from the test located in <font SIZE="-1">SPEC_PATH.</font> The optional parameter <font SIZE="-1">REBUILD</font> forces a rebuild if true.</dd>
+<dt>combine_fields</dt>
+<dd>
+</dd><dt>fill_hash_from_hash</dt>
+<dd></dd></dl>
+<h2>Author</h2>
+<p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>npm-tag(1) · Linux Manual Pages</title>
+<meta name="description" content="npm-tag – Tag a published version">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-npm-tag/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>npm-tag(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> <code>npm-tag</code> &#8211; Tag a published version </p>
+<h2>SYNOPSIS</h2>
+<pre><code>
+[DEPRECATED] npm tag&lt;name&gt; @&lt;version&gt;[&lt;tag&gt;] See `dist - tag`
+</code></pre>
+<h2>DESCRIPTION</h2>
+<p> THIS COMMAND IS DEPRECATED. See npm help dist-tag for details. </p>
+<p> Tags the specified version of the package with the specified tag, or the <code>&#8211;tag</code> config if not specified. </p>
+<p> A tag can be used when installing packages as a reference to a version instead of using a specific version number:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+npm install &lt;name&gt;@&lt;tag&gt;
+</pre>
+</dd></dl>
+<p> When installing dependencies, a preferred tagged version may be specified:</p>
+<dl>
+<dt>
+</dt><dd>
+<pre>
+npm install --tag &lt;tag&gt;
+</pre>
+</dd></dl>
+<p> This also applies to <code>npm dedupe</code>. </p>
+<p> Publishing a package always sets the &quot;latest&quot; tag to the published version.</p>
+<h2>PURPOSE</h2>
+<p> Tags can be used to provide an alias instead of version numbers. For example, <code>npm</code> currently uses the tag &quot;next&quot; to identify the upcoming version, and the tag &quot;latest&quot; to identify the current version. </p>
+<p> A project might choose to have multiple streams of development, e.g., &quot;stable&quot;, &quot;canary&quot;.</p>
+<h2>CAVEATS</h2>
+<p> Tags must share a namespace with version numbers, because they are specified in the same slot: <code>npm install &lt;pkg&gt;@&lt;version&gt;</code> vs <code>npm install &lt;pkg&gt;@&lt;tag&gt;</code>. </p>
+<p> Tags that can be interpreted as valid semver ranges will be rejected. For example, <code>v1.4</code> cannot be used as a tag, because it is interpreted by semver as <code>&gt;=1.4.0 &lt;1.5.0</code>. See <i><a rel="nofollow" href="https://github.com/npm/npm/issues/6082">https://github.com/npm/npm/issues/6082</a></i>. </p>
+<p> The simplest way to avoid semver problems with tags is to use tags that do not begin with a number or the letter <code>v</code>.</p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> npm help publish</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help dedupe</dd>
+<dt>&bull;</dt>
+<dd> npm help 7 registry</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd> npm apihelp tag</dd>
+<dt>&bull;</dt>
+<dd> npm help 5 npmrc</dd>
+</dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ip-mroute(8) · Linux Manual Pages</title>
+<meta name="description" content="ip-mroute – multicast routing cache management">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-ip-mroute/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>ip-mroute(8)</h1>
+
+
+
+
+
+<p>ip-mroute &#8211; multicast routing cache management</p>
+<h2>Synopsis</h2>
+<p><code>ip mroute show</code> [ [ <code> to </code> ] <i>PREFIX</i> ] [ <code>from</code> <i>PREFIX</i> ] [ <code>iif</code> <i>DEVICE</i> ] [ <code>table</code> <i>TABLE_ID</i> ] </p>
+<h2>Description</h2>
+<p><code>mroute</code> objects are multicast routing cache entries created by a user-level mrouting daemon (f.e. <code>pimd</code> or <code>mrouted</code> ). Due to the limitations of the current interface to the multicast routing engine, it is impossible to change <code>mroute</code> objects administratively, so we can only display them. This limitation will be removed in the future.</p>
+<h3>ip mroute show &#8211; list mroute cache entries</h3>
+<dl>
+<dt><code>to</code><i> PREFIX </i><code>(default)</code></dt>
+<dd>the prefix selecting the destination multicast addresses to list.</dd>
+<dt><code>iif</code><i> NAME</i></dt>
+<dd>the interface on which multicast packets are received.</dd>
+<dt><code>from</code><i> PREFIX</i></dt>
+<dd>the prefix selecting the IP source addresses of the multicast route.</dd>
+<dt><code>table</code><i> TABLE_ID</i></dt>
+<dd>the table id selecting the multicast table. It can be <code>local</code>, <code>main</code>, <code>default</code>, <code>all</code> or a number. </dd>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ip/">ip</a></code>(8) </p>
+<h2>Author</h2>
+<p>Original Manpage by Michail Litvak &lt;mci [at] owl.openwall.com&gt;</p>
+</dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

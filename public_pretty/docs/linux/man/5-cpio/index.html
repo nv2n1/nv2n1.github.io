@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cpio(5) · Linux Manual Pages</title>
+<meta name="description" content="cpio – format of cpio archive files">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-cpio/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>cpio(5)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><code>cpio</code> &#8211; format of cpio archive files</p>
+<h2>Description</h2>
+<p>The archive format collects any number of files, directories, and other file system objects (symbolic links, device nodes, etc.) into a single stream of bytes.</p>
+<h3>General Format</h3>
+<p>Each file system object in a archive comprises a header record with basic numeric metadata followed by the full pathname of the entry and the file data. The header record stores a series of integer values that generally follow the fields in <i>struct stat</i> (See <a href="/docs/linux/man/2-stat/">stat</a>(2) for details.) The variants differ primarily in how they store those integers (binary, octal, or hexadecimal). The header is followed by the pathname of the entry (the length of the pathname is stored in the header) and any file data. The end of the archive is indicated by a special record with the pathname &#8220;TRAILER!!!&#8221;</p>
+<h3>PWB format</h3>
+<p>XXX Any documentation of the original PWB/UNIX 1.0 format? XXX</p>
+<h3>Old Binary Format</h3>
+<p>The old binary format stores numbers as 2-byte and 4-byte binary values. Each entry begins with a header in the following format: </p>
+<blockquote>
+<pre>struct header_old_cpio {
+ unsigned short c_magic;
+ unsigned short c_dev;
+ unsigned short c_ino;
+ unsigned short c_mode;
+ unsigned short c_uid;
+ unsigned short c_gid;
+ unsigned short c_nlink;
+ unsigned short c_rdev;
+ unsigned short c_mtime[2];
+ unsigned short c_namesize;
+ unsigned short c_filesize[2];
+};</pre>
+</blockquote>
+<p> The <i>unsigned short</i> fields here are 16-bit integer values; the <i>unsigned int</i> fields are 32-bit integer values. The fields are as follows</p>
+<dl>
+<dt><i>magic</i></dt>
+<dd>The integer value octal 070707. This value can be used to determine whether this archive is written with little-endian or big-endian integers.</dd>
+<dt><i>dev , ino</i></dt>
+<dd>The device and inode numbers from the disk. These are used by programs that read archives to determine when two entries refer to the same file. Programs that synthesize archives should be careful to set these to distinct values for each entry.</dd>
+<dt><i>mode</i></dt>
+<dd>The mode specifies both the regular permissions and the file type. It consists of several bit fields as follows:</dd>
+<dl>
+<dt><code>0170000</code></dt>
+<dd>This masks the file type bits.</dd>
+<dt><code>0140000</code></dt>
+<dd>File type value for sockets.</dd>
+<dt><code>0120000</code></dt>
+<dd>File type value for symbolic links. For symbolic links, the link body is stored as file data.</dd>
+<dt><code>0100000</code></dt>
+<dd>File type value for regular files.</dd>
+<dt><code>0060000</code></dt>
+<dd>File type value for block special devices.</dd>
+<dt><code>0040000</code></dt>
+<dd>File type value for directories.</dd>
+<dt><code>0020000</code></dt>
+<dd>File type value for character special devices.</dd>
+<dt><code>0010000</code></dt>
+<dd>File type value for named pipes or FIFOs.</dd>
+<dt><code>0004000</code></dt>
+<dd>SUID bit.</dd>
+<dt><code>0002000</code></dt>
+<dd>SGID bit.</dd>
+<dt><code>0001000</code></dt>
+<dd>Sticky bit. On some systems, this modifies the behavior of executables and/or directories.</dd>
+<dt><code>0000777</code></dt>
+<dd>The lower 9 bits specify read/write/execute permissions for world, group, and user following standard POSIX conventions.</dd></dl>
+<dt><i>uid , gid</i></dt>
+<dd>The numeric user id and group id of the owner.</dd>
+<dt><i>nlink</i></dt>
+<dd>The number of links to this file. Directories always have a value of at least two here. Note that hardlinked files include file data with every copy in the archive.</dd>
+<dt><i>rdev</i></dt>
+<dd>For block special and character special entries, this field contains the associated device number. For all other entry types, it should be set to zero by writers and ignored by readers.</dd>
+<dt><i>mtime</i></dt>
+<dd>Modification time of the file, indicated as the number of seconds since the start of the epoch, 00:00:00 UTC January 1, 1970. The four-byte integer is stored with the most-significant 16 bits first followed by the least-significant 16 bits. Each of the two 16 bit values are stored in machine-native byte order.</dd>
+<dt><i>namesize</i></dt>
+<dd>The number of bytes in the pathname that follows the header. This count includes the trailing NUL byte.</dd>
+<dt><i>filesize</i></dt>
+<dd>The size of the file. Note that this archive format is limited to four gigabyte file sizes. See <i>mtime</i> above for a description of the storage of four-byte integers.</dd></dl>
+<p> The pathname immediately follows the fixed header. If the <code>namesize</code> is odd, an additional NUL byte is added after the pathname. The file data is then appended, padded with NUL bytes to an even length. </p>
+<p> Hardlinked files are not given special treatment; the full file contents are included with each copy of the file.</p>
+<h3>Portable ASCII Format</h3>
+<p>St -susv2 standardized an ASCII variant that is portable across all platforms. It is commonly known as the &#8220;old character&#8221; format or as the &#8220;odc&#8221; format. It stores the same numeric fields as the old binary format, but represents them as 6-character or 11-character octal values. </p>
+<blockquote>
+<pre>struct cpio_odc_header {
+ char c_magic[6];
+ char c_dev[6];
+ char c_ino[6];
+ char c_mode[6];
+ char c_uid[6];
+ char c_gid[6];
+ char c_nlink[6];
+ char c_rdev[6];
+ char c_mtime[11];
+ char c_namesize[6];
+ char c_filesize[11];
+};</pre>
+</blockquote>
+<p> The fields are identical to those in the old binary format. The name and file body follow the fixed header. Unlike the old binary format, there is no additional padding after the pathname or file contents. If the files being archived are themselves entirely ASCII, then the resulting archive will be entirely ASCII, except for the NUL byte that terminates the name field.</p>
+<h3>New ASCII Format</h3>
+<p>The &quot;new&quot; ASCII format uses 8-byte hexadecimal fields for all numbers and separates device numbers into separate fields for major and minor numbers. </p>
+<blockquote>
+<pre>struct cpio_newc_header {
+ char c_magic[6];
+ char c_ino[8];
+ char c_mode[8];
+ char c_uid[8];
+ char c_gid[8];
+ char c_nlink[8];
+ char c_mtime[8];
+ char c_filesize[8];
+ char c_devmajor[8];
+ char c_devminor[8];
+ char c_rdevmajor[8];
+ char c_rdevminor[8];
+ char c_namesize[8];
+ char c_check[8];
+};</pre>
+</blockquote>
+<p> Except as specified below, the fields here match those specified for the old binary format above.</p>
+<dl>
+<dt><i>magic</i></dt>
+<dd>The string &#8220;070701&#8221;</dd>
+<dt><i>check</i></dt>
+<dd>This field is always set to zero by writers and ignored by readers. See the next section for more details.</dd></dl>
+<p> The pathname is followed by NUL bytes so that the total size of the fixed header plus pathname is a multiple of four. Likewise, the file data is padded to a multiple of four bytes. Note that this format supports only 4 gigabyte files (unlike the older ASCII format, which supports 8 gigabyte files). </p>
+<p> In this format, hardlinked files are handled by setting the filesize to zero for each entry except the last one that appears in the archive.</p>
+<h3>New CRC Format</h3>
+<p>The CRC format is identical to the new ASCII format described in the previous section except that the magic field is set to &#8220;070702&#8221; and the <i>check</i> field is set to the sum of all bytes in the file data. This sum is computed treating all bytes as unsigned values and using unsigned arithmetic. Only the least-significant 32 bits of the sum are stored.</p>
+<h3>HP variants</h3>
+<p>The <code>cpio</code> implementation distributed with HPUX used XXXX but stored device numbers differently XXX.</p>
+<h3>Other Extensions and Variants</h3>
+<p>Sun Solaris uses additional file types to store extended file data, including ACLs and extended attributes, as special entries in cpio archives. </p>
+<p> XXX Others? XXX</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/1-cpio/">cpio</a>(1), <a href="/docs/linux/man/5-tar/">tar</a>(5)</p>
+<h2>Standards</h2>
+<p>The <code>cpio</code> utility is no longer a part of POSIX or the Single Unix Standard. It last appeared in St -susv2 . It has been supplanted in subsequent standards by pax(1). The portable ASCII format is currently part of the specification for the pax(1) utility.</p>
+<h2>History</h2>
+<p>The original cpio utility was written by Dick Haight while working in AT&amp;T&#8217;s Unix Support Group. It appeared in 1977 as part of PWB/UNIX 1.0, the &#8220;Programmer&#8217;s Work Bench&#8221; derived from AT&amp;T System v6 that was used internally at AT&amp;T. Both the old binary and old character formats were in use by 1980, according to the System III source released by SCO under their &#8220;Ancient Unix&#8221; license. The character format was adopted as part of St -p1003.1-88 . XXX when did &quot;newc&quot; appear? Who invented it? When did HP come out with their variant? When did Sun introduce ACLs and extended attributes? XXX</p>
+<h2>Bugs</h2>
+<p>The &#8220;CRC&#8221; format is mis-named, as it uses a simple checksum and not a cyclic redundancy check. The old binary format is limited to 16 bits for user id, group id, device, and inode numbers. It is limited to 4 gigabyte file sizes. The old ASCII format is limited to 18 bits for the user id, group id, device, and inode numbers. It is limited to 8 gigabyte file sizes. The new ASCII format is limited to 4 gigabyte file sizes. None of the cpio formats store user or group names, which are essential when moving files between systems with dissimilar user or group numbering. Especially when writing older cpio variants, it may be necessary to map actual device/inode values to synthesized values that fit the available fields. With very large filesystems, this may be necessary even for the newer formats. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

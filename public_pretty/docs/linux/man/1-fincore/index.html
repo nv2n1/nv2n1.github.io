@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fincore(1) · Linux Manual Pages</title>
+<meta name="description" content="fincore – count pages of file contents in core">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-fincore/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>fincore(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> fincore &#8211; count pages of file contents in core </p>
+<h2>SYNOPSIS</h2>
+<p> <code>fincore</code> [options] <i>file</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>fincore</code> counts pages of file contents being resident in memory (in core), and reports the numbers. If an error occurs during counting, then an error message is printed to the stderr and <code>fincore</code> continues processing the rest of files listed in a command line. </p>
+<p> The default output is subject to change. So whenever possible, you should avoid using default outputs in your scripts. Always explicitly define expected columns by using <code>&#8211;output</code> <i>columns-list</i> in environments where a stable output is required.</p>
+<h2>OPTIONS</h2>
+<p> <code>-n</code>, <code>&#8211;noheadings</code></p>
+<dl>
+<dt>
+</dt><dd> Do not print a header line in status output.</dd></dl>
+<p> <code>-b</code>, <code>&#8211;bytes</code></p>
+<dl>
+<dt>
+</dt><dd> Print the SIZE column in bytes rather than in a human-readable format.</dd></dl>
+<p> <code>-o</code>, <code>&#8211;output</code> <i>list</i></p>
+<dl>
+<dt>
+</dt><dd> Define output columns. See the <code>&#8211;help</code> output to get a list of the currently supported columns. The default list of columns may be extended if <i>list</i> is specified in the format <i>+list</i>.</dd></dl>
+<p> <code>-r</code>, <code>&#8211;raw</code></p>
+<dl>
+<dt>
+</dt><dd> Produce output in raw format. All potentially unsafe characters are hex-escaped (
+</dd></dl>
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

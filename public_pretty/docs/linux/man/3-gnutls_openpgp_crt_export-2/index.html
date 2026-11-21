@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnutls_openpgp_crt_export-2(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-gnutls_openpgp_crt_export-2/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>gnutls_openpgp_crt_export-2(3)</h1>
+
+
+
+
+
+<p>gnutls_openpgp_crt_export - API function</p>
+<h2>Synopsis</h2><b>#include &lt;gnutls/openpgp.h&gt;</b> 
+<p><b>int gnutls_openpgp_crt_export(gnutls_openpgp_crt_t </b><i>key</i><b>, gnutls_openpgp_crt_fmt_t </b><i>format</i><b>, void * </b><i>output_data</i><b>, size_t * </b><i>output_data_size</i><b>);</b></p>
+<h2>Arguments</h2><dl COMPACT><dt>gnutls_openpgp_crt_t key
+</dt><dd>Holds the key.
+</dd><dt>gnutls_openpgp_crt_fmt_t format
+</dt><dd>One of gnutls_openpgp_crt_fmt_t elements.
+</dd><dt>void * output_data
+</dt><dd>will contain the raw or base64 encoded key
+</dd><dt>size_t * output_data_size
+</dt><dd>holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl><h2>Description</h2>This function will convert the given key to RAW or Base64 format. If the buffer provided is not long enough to hold the output, then <b>GNUTLS_E_SHORT_MEMORY_BUFFER</b> will be returned.
+<h2>Returns</h2><b>GNUTLS_E_SUCCESS</b> on success, or an error code.
+<h2>Reporting Bugs</h2>Report bugs to &lt;bugs [at] gnutls.org&gt;. 
+ Home page: <a rel="nofollow" HREF="http://www.gnutls.org">http://www.gnutls.org</a> 
+<h2>Copyright</h2>Copyright &#169; 2001-2014 Free Software Foundation, Inc.. 
+ Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.
+<h2>See Also</h2>The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
+<dl COMPACT><dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
+</dt><dd></b></dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

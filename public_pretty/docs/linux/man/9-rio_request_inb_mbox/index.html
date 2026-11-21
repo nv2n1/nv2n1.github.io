@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rio_request_inb_mbox(9) · Linux Manual Pages</title>
+<meta name="description" content="rio_request_inb_mbox – request inbound mailbox service">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-rio_request_inb_mbox/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>rio_request_inb_mbox(9)</h1>
+
+
+
+
+
+<p>rio_request_inb_mbox &#8211; request inbound mailbox service</p>
+<h2>Synopsis</h2>
+<pre><code>int rio_request_inb_mbox(struct rio_mport *mport, void *dev_id, int mbox, int entries, void (*minb)(struct rio_mport *mport, void *dev_id, int mbox, int slot));</code></pre>
+<h2>Arguments</h2>
+<p><i>mport</i></p>
+<dl>
+<dd>
+</dd><dd>RIO master port from which to allocate the mailbox resource</dd></dl>
+<p> <i>dev_id</i></p>
+<dl>
+<dd>Device specific pointer to pass on event</dd></dl>
+<p> <i>mbox</i></p>
+<dl>
+<dd>Mailbox number to claim</dd></dl>
+<p> <i>entries</i></p>
+<dl>
+<dd>Number of entries in inbound mailbox queue</dd></dl>
+<p> <i>minb</i></p>
+<dl>
+<dd>Callback to execute when inbound message is received</dd></dl>
+<h2>Description</h2>
+<p>Requests ownership of an inbound mailbox resource and binds a callback function to the resource. Returns <code>0</code> on success.</p>
+<h2>Author</h2>
+<p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
+<dl>
+<dd>Author.</dd></dl>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

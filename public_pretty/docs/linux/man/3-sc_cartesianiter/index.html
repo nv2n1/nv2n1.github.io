@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sc_cartesianiter(3) · Linux Manual Pages</title>
+<meta name="description" content="sc::CartesianIter –">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sc_cartesianiter/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sc_cartesianiter(3)</h1>
+
+
+
+
+
+<p>sc::CartesianIter &#8211; </p>
+<p> <code>CartesianIter</code> gives the ordering of the Cartesian functions within a shell for the particular integrals specialization.</p>
+<h2>Synopsis</h2>
+<pre><code>
+#include &lt;cartiter.h&gt;</code></pre>
+<p> Inherited by <code>MPQC::CartesianIterCCA</code>, <code>sc::CartesianIterCCA</code>, <code>sc::CartesianIterCints</code>, and <code>sc::CartesianIterV3</code>.</p>
+<h3>Public Member Functions</h3>
+<pre><code>CartesianIter (int l)
+Initialize an iterator for the given angular momentum.
+virtual void start ()=0
+Start the iteration.
+virtual void next ()=0
+Move to the next Cartesian function.
+virtual operator int ()=0
+Returns nonzero if the iterator currently hold valid data.
+int n ()
+Returns the number of Cartesian functions.
+int a ()
+Returns the exponent of x.
+int b ()
+Returns the exponent of y.
+int c ()
+Returns the exponent of z.
+int l ()
+Returns the angular momentum.
+int l (int i)
+Returns a() if i==0, b() if i==1, and c() if i==2.
+int bfn ()
+Returns the number of the current basis function within the shell.
+Protected Attributes
+int a_
+int b_
+int c_
+int l_
+int bfn_</code></pre>
+<h2>Detailed Description</h2>
+<p><code>CartesianIter</code> gives the ordering of the Cartesian functions within a shell for the particular integrals specialization.</p>
+<h2>Member Function Documentation</h2>
+<h3>int sc::CartesianIter::bfn () [inline]</h3>
+<p>Returns the number of the current basis function within the shell. This starts at 0 and sequentially increases as <code>next()</code> is called.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for MPQC from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

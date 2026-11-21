@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ikiwiki-transition(1) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-ikiwiki-transition/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>ikiwiki-transition(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p>ikiwiki-transition - transition ikiwiki pages to new syntaxes, etc</p>
+<h2>SYNOPSIS</h2>
+<p>ikiwiki-transition type &hellip;</p>
+<h2>DESCRIPTION</h2>
+<p>ikiwiki-transition aids in converting wiki pages when there&rsquo;s a major change in ikiwiki syntax. It also handles other transitions not involving wiki pages.</p>
+<h2>prefix_directives your.setup</h2>
+<p>The prefix_directives mode converts all pages from the old preprocessor directive syntax, requiring a space, to the new syntax, prefixed by &lsquo;!&rsquo;.</p>
+<p>Preprocessor directives which already use the new syntax will remain unchanged.</p>
+<p>Note that if a page contains wiki links with spaces, which some older versions of ikiwiki accepted, the prefix_directives transition will treat these as preprocessor directives and convert them.</p>
+<h2>setupformat your.setup</h2>
+<p>The setupformat mode converts a setup file from using a single wrappers block to using cgi_wrapper, git_wrapper, etc.</p>
+<p>Note that all comments and any unusual stuff like perl code in the setup file will be lost, as it is entirely rewritten by the transition.</p>
+<h2>aggregateinternal your.setup</h2>
+<p>The aggregateinternal mode moves pages aggregated by the aggregate plugin so that the aggregateinternal option can be enabled.</p>
+<h2>moveprefs your.setup</h2>
+<p>Moves values that used to be admin preferences into the setup file.</p>
+<p>Note that all comments and any unusual stuff like perl code in the setup file will be lost, as it is entirely rewritten by the move.</p>
+<h2>indexdb your.setup|srcdir</h2>
+<p>The indexdb mode handles converting a plain text .ikiwiki/index file to a binary .ikiwiki/indexdb. You do not normally need to run ikiwiki-transition indexdb; ikiwiki will automatically run it as necessary.</p>
+<h2>hashpassword your.setup|srcdir</h2>
+<p>The hashpassword mode forces any plaintext passwords stored in the .ikiwiki/userdb file to be replaced with password hashes. (The Authen::Passphrase perl module is needed to do this.)</p>
+<p>If this is not done explicitly, a user&rsquo;s plaintext password will be automatically converted to a hash when a user logs in for the first time after upgrade to ikiwiki 2.48.</p>
+<h2>deduplinks your.setup</h2>
+<p>In the past, bugs in ikiwiki have allowed duplicate link information to be stored in its indexdb. This mode removes such duplicate information, which may speed up wikis afflicted by it. Note that rebuilding the wiki will have the same effect.</p>
+<h2>AUTHOR</h2>
+<p>Josh Triplett &lt;josh [at] freedesktop.org&gt;, Joey Hess &lt;joey [at] ikiwiki.info&gt;</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

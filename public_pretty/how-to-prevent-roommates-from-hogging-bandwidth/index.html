@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managing Bandwidth Hogging Among Roommates - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-prevent-roommates-from-hogging-bandwidth/">
+  <meta name="description" content="Sharing a router with roommates means dealing with bandwidth conflicts. When someone’s running torrent clients, streaming, or other bandwidth-intensive …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Managing Bandwidth Hogging Among Roommates">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-prevent-roommates-from-hogging-bandwidth/">
+  <meta property="og:description" content="Sharing a router with roommates means dealing with bandwidth conflicts. When someone’s running torrent clients, streaming, or other bandwidth-intensive …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/programming-academy/">Programming Academy</a>
+          
+          &rsaquo; <a href="/category/software-design/">Software Design</a>
+        </nav>
+        
+        <h1>Managing Bandwidth Hogging Among Roommates</h1>
+        <time class="post-date" datetime="2018-03-24T08:20:38Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 11, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>Sharing a router with roommates means dealing with bandwidth conflicts. When someone’s running torrent clients, streaming, or other bandwidth-intensive applications without limits, everyone else suffers. Here’s how to handle it systematically.</p>
+<h2 id="start-with-conversation">Start with conversation</h2>
+<p>Before implementing technical controls, talk to your roommates. Most P2P and download applications have built-in rate limiting. Asking someone to cap their upload/download speeds at reasonable levels (e.g., 1-2 Mbps upload) solves the problem for everyone without friction.</p>
+<p>If you’re on a 10 Mbps ADSL connection with 4 people, ask whoever’s downloading to keep it under 2-3 Mbps. Document the issue first—show them bandwidth usage graphs from your router so it’s not accusatory.</p>
+<h2 id="port-based-blocking-and-qos">Port-based blocking and QoS</h2>
+<p>When conversation fails, configure Quality of Service (QoS) and firewall rules on your router. Most modern routers—TP-Link, ASUS, Netgear, Ubiquiti—support this natively.</p>
+<p><strong>Block non-standard ports</strong>: P2P applications often communicate on high-numbered ports (6881-6999 for BitTorrent, random high ports for other protocols). Blocking everything except essential services can slow them down significantly.</p>
+<p>Access your router’s admin panel (typically <code>192.168.0.1</code> or <code>192.168.1.1</code> for most consumer routers):</p>
+<ol>
+<li>Log in with your credentials</li>
+<li>Navigate to <strong>Firewall</strong> or <strong>Port Forwarding</strong> section</li>
+<li>Add outbound rules blocking ports 1024-65535 except for common services:
+<ul>
+<li>Port 80 (HTTP)</li>
+<li>Port 443 (HTTPS)</li>
+<li>Port 22 (SSH)</li>
+<li>Port 53 (DNS)</li>
+<li>Port 25/587 (SMTP)</li>
+<li>Port 993 (IMAPS)</li>
+</ul>
+</li>
+</ol>
+<p>This approach is crude but effective for blocking most torrent and P2P activity. The downside: you’ll also block legitimate high-port services like some gaming protocols, VPNs, and SSH tunnels.</p>
+<h2 id="implement-qos-better-solution">Implement QoS (better solution)</h2>
+<p>QoS (Quality of Service) is more surgical. Instead of blocking, it deprioritizes bandwidth-heavy traffic. When someone torents, they still can, but their connection gets deprioritized when others need bandwidth.</p>
+<p>In your router’s admin panel, find <strong>QoS</strong> or <strong>Traffic Control</strong>:</p>
+<ol>
+<li>
+<p>Create a rule that identifies heavy downloaders by:</p>
+<ul>
+<li><strong>Protocol</strong>: TCP/UDP on high ports</li>
+<li><strong>Action</strong>: Lower priority queue</li>
+<li><strong>Bandwidth limit</strong>: Set per-device (e.g., max 2 Mbps sustained download)</li>
+</ul>
+</li>
+<li>
+<p>Alternatively, assign bandwidth caps per client MAC address:</p>
+<pre><code>Device MAC: aa:bb:cc:dd:ee:ff
+Max bandwidth: 2 Mbps
+</code></pre>
+</li>
+<li>
+<p>Leave HTTP/HTTPS traffic at normal priority</p>
+</li>
+</ol>
+<p>This way, casual browsing and video calls work fine, but someone seeding 10 torrents gets throttled automatically.</p>
+<h2 id="per-device-bandwidth-limiting">Per-device bandwidth limiting</h2>
+<p>Most modern routers support per-client bandwidth limits. Check your router’s admin interface for:</p>
+<ul>
+<li><strong>Access Control</strong> → <strong>Bandwidth Management</strong></li>
+<li><strong>QoS</strong> → <strong>Per-device limits</strong></li>
+<li><strong>Traffic Shaping</strong> → <strong>Client rate limiting</strong></li>
+</ul>
+<p>Set a rule like: “All devices max 5 Mbps” or “Device X max 2 Mbps”. This is the cleanest approach if your router supports it.</p>
+<h2 id="deep-packet-inspection-advanced">Deep packet inspection (advanced)</h2>
+<p>Some routers and third-party firmware (OpenWrt, Tomato, DD-WRT) support DPI to identify application types—not just port-based detection. This catches P2P even on obscured ports.</p>
+<p>If running OpenWrt on a compatible device:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">opkg install qos-scripts
+</span></span><span class="line"><span class="cl">uci <span class="nb">set</span> qos.default.enabled<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">uci commit
+</span></span><span class="line"><span class="cl">/etc/init.d/qos restart
+</span></span></code></pre></div><p>Then configure <code>/etc/config/qos</code> to identify and throttle P2P traffic by application signature rather than port.</p>
+<h2 id="when-nothing-else-works">When nothing else works</h2>
+<p>If your router is ancient or doesn’t support these features, consider:</p>
+<ul>
+<li><strong>Upgrading to a modern router</strong> (ASUS RT-AX88U, Netgear Nighthawk, UniFi Dream Machine)—good QoS is table stakes in 2026</li>
+<li><strong>Mesh systems with client management</strong> (Ubiquiti, Eero, TP-Link Deco) often have better QoS per-device</li>
+<li><strong>Wired connection for yourself</strong> while roommates use WiFi—wired gets priority on most routers</li>
+<li><strong>Network segregation</strong>—put roommates on a separate SSID with bandwidth caps</li>
+</ul>
+<h2 id="the-last-resort">The last resort</h2>
+<p>If your roommates refuse to cooperate and your router can’t enforce limits, you’ve got real problems. Consider whose name is on the internet bill. If it’s yours, you have leverage. If it’s theirs, you need a different living situation or a serious conversation about splitting bills fairly based on usage.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

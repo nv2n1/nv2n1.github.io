@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fsck-f2fs(8) · Linux Manual Pages</title>
+<meta name="description" content="fsck.f2fs – check a Linux F2FS file system">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-fsck-f2fs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>fsck-f2fs(8)</h1>
+
+
+
+
+
+<p>fsck.f2fs &#8211; check a Linux F2FS file system</p>
+<h2>Synopsis</h2>
+<p><code>fsck.f2fs</code> [ <code>-a</code> <i>enable auto fix</i> ] [ <code>-f</code> <i>enable force fix</i> ] [ <code>-p</code> <i>enable preen mode</i> ] [ <code>-t</code> <i>show stored directory tree</i> ] [ <code>-d</code> <i>debugging-level</i> ] <i>device</i></p>
+<h2>Description</h2>
+<p><code>fsck.f2fs</code> is used to check an f2fs file system (usually in a disk partition). <i>device</i> is the special file corresponding to the device (e.g. <i>/dev/sdXX</i>). </p>
+<p> The exit code returned by <code>fsck.f2fs</code> is 0 on success and -1 on failure.</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-a</code><i> enable auto fix</i></dt>
+<dd>Enable to run file system check only if a bug was reported by the F2FS kernel module. It is disabled by default.</dd>
+<dt><code>-f</code><i> enable force fix</i></dt>
+<dd>Enable to fix all the inconsistency in the partition.</dd>
+<dt><code>-p</code><i> enable preen mode</i></dt>
+<dd>Same as &quot;-a&quot; to support general fsck convention.</dd>
+<dt><code>-t</code><i> show stored directory tree</i></dt>
+<dd>Enable to show every directory entries in the partition.</dd>
+<dt><code>-d</code><i> debug-level</i></dt>
+<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</dd>
+<dt></dt></dl>
+<h2>Author</h2>
+<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;. Jaegeuk Kim &lt;jaegeuk [at] kernel.org&gt; reworked most parts of the codes to support fixing any corrupted images.</dd>
+<h2>Availability</h2>
+<p><code>fsck.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
+<h2>See Also</h2>
+<p><code>mkfs.f2fs(8),</code> <code><a href="/docs/linux/man/8-dump-f2fs/">dump.f2fs</a>(8),</code> <code><a href="/docs/linux/man/8-defrag-f2fs/">defrag.f2fs</a>(8),</code> <code>resize.f2fs(8),</code> <code>sload.f2fs(8).</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

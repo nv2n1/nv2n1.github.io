@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dislocker-fuse(1) · Linux Manual Pages</title>
+<meta name="description" content="Dislocker fuse – Read/write BitLocker encrypted volumes under Linux, OSX and FreeBSD.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-dislocker-fuse/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>dislocker-fuse(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2>NAME</h2>
+<p> Dislocker fuse &#8211; Read/write BitLocker encrypted volumes under Linux, OSX and FreeBSD.</p>
+<h2>SYNOPSIS</h2>
+<p> dislocker-fuse [-hqrsv] [-l <i>LOG_FILE</i>] [-O <i>OFFSET</i>] [-V <i>VOLUME</i> <i>DECRYPTMETHOD</i> -F[<i>N</i>]] [&#8211; <i>ARGS</i>&#8230;] </p>
+<p> Where DECRYPTMETHOD = {-p[<i>RECOVERY_PASSWORD</i>] | -f <i>BEK_FILE</i> | -u[<i>USER_PASSWORD</i>] | -k <i>FVEK_FILE</i> | -c}</p>
+<h2>DESCRIPTION</h2>
+<p> Given a decryption mean, the program is used to read or write BitLocker encrypted volumes. Technically, the program will create a virtual NTFS partition that you can mount as any other NTFS partition. </p>
+<p> The virtual partition is linked to the underlying BitLocker volume, so any write to this volume is put on the BitLocker volume as well. However, you can use <a href="/docs/linux/man/1-dd/">dd</a>(1) to get rid of this limitation &#8212; if it&#8217;s a limitation for you. An example is provided in the EXAMPLES section of this man page.</p>
+<h2>OPTIONS</h2>
+<p> Program&#8217;s options are described below: </p>
+<dl>
+<dt><code>-c, &#8211;clearkey</code></dt>
+<dd> decrypt volume using a clear key which is searched on the volume (default)</dd>
+<dt><code>-f, &#8211;bekfile </code><i>BEK_FILE</i></dt>
+<dd> decrypt volume using the bek file (present on a USB key)</dd>
+<dt><code>-F, &#8211;force-block=[</code><i>N</i><code>]</code></dt>
+<dd> force use of metadata block number <i>N</i> (1, 2 or 3). Without <i>N</i>, the first block is forced. Without this option, the program will try each block until a valid one is found</dd>
+<dt><code>-h</code></dt>
+<dd> print the help and exit</dd>
+<dt><code>-k, &#8211;fvek </code><i>FVEK_FILE</i></dt>
+<dd> decrypt volume using the FVEK directly. See the FVEK FILE section below to understand what is to be put into this <i>FVEK_FILE</i></dd>
+<dt><code>-l, &#8211;logfile </code><i>LOG_FILE</i></dt>
+<dd> put messages into this file (stdout by default)</dd>
+<dt><code>-O, &#8211;offset </code><i>OFFSET</i></dt>
+<dd> BitLocker partition offset, in bytes, in base 10 (default is 0). Protip: in your shell, you probably can pass <code>-O $((</code><i>0xdeadbeef</i><code>))</code> if you have a 16-based number and are too lazy to convert it in another way.</dd>
+<dt><code>-p, &#8211;recovery-password=[</code><i>RECOVERY_PASSWORD</i><code>]</code></dt>
+<dd> decrypt volume using the recovery password method. If no recovery-password is provided, it will be asked afterward; this has the advantage that the program will validate each block one by one, on the fly, as you type it and not to leak the password on the commandline</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> do NOT display any information. This option has priority on any previous `<code>-v</code>&#8216;. One probably wants to check the return value of the program when using this option</dd>
+<dt><code>-r, &#8211;readonly</code></dt>
+<dd> do not allow to write on the BitLocker volume (read only mode)</dd>
+<dt><code>-s, &#8211;stateok</code></dt>
+<dd> do not check the volume&#8217;s state, assume it&#8217;s ok to mount it. Do not use this if you don&#8217;t know what you&#8217;re doing</dd>
+<dt><code>-u, &#8211;user-password=[</code><i>USER_PASSWORD</i><code>]</code></dt>
+<dd> decrypt the volume using the user password method. If no user-password is provided, it will be asked afterward; this has the advantage not to leak the password on the commandline</dd>
+<dt><code>-v, &#8211;verbosity</code></dt>
+<dd> increase verbosity (CRITICAL level by default), see also `<code>-q</code>&#8216;</dd>
+<dt><code>-V, &#8211;volume </code><i>VOLUME</i></dt>
+<dd> volume to get metadata and encrypted keys from</dd>
+<dt><code>&#8212;</code></dt>
+<dd> mark the end of program&#8217;s options and the beginning of FUSE&#8217;s ones (useful if you want to pass something like -d to FUSE)</dd></dl>
+<p> <code>ARGS</code> are any arguments you want to pass to FUSE. Note that you need to pass at least the mount-point.</p>
+<h2>FVEK FILE</h2>
+<dl>
+<dt>The FVEK file option expects a specific format from the file. The file is split into two major parts:</dt>
+<dd> &#8211; 2 bytes describing the encryption in use, from 0x8000 to 0x8003 for AES 128 or 256 bits, with or without diffuser. </dd>
+<p> &#8211; 64 bytes (512 bits) which are the FVEK as in the FVEK key protector once decrypted.</dl>
+<p> The file is therefore 66 bytes long, not more nor less. Note that you may have to deal with endianness.</p>
+<h2>EXAMPLES</h2>
+<p> These are examples you can run directly. First, you may want to copy the BitLocker volume:</p>
+<dl>
+<dt>
+</dt><dd> <code>% dd if=/dev/sda2 of=encrypted.bitlocker</code></dd>
+<dt>
+</dt><dd> This will copy the entire volume located into <code>/dev/sda2</code> to <code>encrypted.bitlocker</code>. You&#8217;re not forced to do this step, but this will ensure no write whatsoever is performed on the BitLocker volume.</dd></dl>
+<p> Then dislock it:</p>
+<dl>
+<dt>
+</dt><dd> <code>% dislocker -V encrypted.bitlocker -f /path/to/usb/file.BEK &#8212; /mnt/ntfs</code></dd>
+<dt>
+</dt><dd> This will create a file into <code>/mnt/ntfs</code> named dislocker-file.</dd>
+<dt>To mount partitions once decrypted, use this sort of line:</dt>
+<dd> <code>% mount -o loop /mnt/ntfs/dislocker-file /mnt/clear</code></dd></dl>
+<p> &#8212;</p>
+<dl>
+<dt>It seems that you have to unmount the NTFS partition and the dislocker one before halting the system, or you will run into unexpected behaviour. In order to do so, you may run these commands (replacing your mount points):</dt>
+<dd> <code>% umount /mnt/clear &amp;&amp; umount /mnt/ntfs/dislocker-file</code></dd></dl>
+<p> &#8212; </p>
+<p> Note that these are <code>examples</code> and, as such, may need to be modified. For instance, you may want to change the decryption method used in them.</p>
+<h2>AUTHOR</h2>
+<p> This tool is developed by Romain Coltel on behalf of HSC (<code><a rel="nofollow" href="http://www.hsc.fr/">http://www.hsc.fr/</a></code>) </p>
+<p> Feel free to send bugs report to &lt;dislocker __AT__ hsc __DOT__ fr&gt; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

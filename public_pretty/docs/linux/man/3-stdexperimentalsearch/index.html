@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdexperimentalsearch(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdexperimentalsearch/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdexperimentalsearch(3)</h1>
+
+
+
+
+
+<p>std::experimental::search - std::experimental::search</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;experimental / algorithm&gt;
+    template &lt;class ForwardIterator, class Searcher&gt;
+    ForwardIterator search(ForwardIterator first, ForwardIterator last, (library fundamentals TS)
+                                                                            const Searcher &amp;searcher);</code></pre> 
+<p>Searches the sequence [first, last) for the pattern specified in the constructor of searcher.
+Effectively executes searcher(first, last). <i>(until C++17)</i>
+Effectively executes searcher(first, last).first. <i>(since C++17)</i>
+Searcher need not be CopyConstructible.
+The standard library provides the following searchers:
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> standard C++ library search algorithm implementation
+default_searcher <i>(class template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Boyer-Moore search algorithm implementation
+boyer_moore_searcher <i>(class template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> Boyer-Moore-Horspool search algorithm implementation
+boyer_moore_horspool_searcher <i>(class template)</i></p>
+<h2>Parameters</h2>
+<p> This section is incomplete</p>
+<h2>Return value</h2>
+<p>Returns the result of searcher.operator(), that is, an iterator to the location at which the substring is found or a copy of last if it was not found.</p>
+<h2>Complexity</h2>
+<p>Depends on the searcher</p>
+<h2>Example</h2>
+<p>// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;experimental/algorithm&gt;
+#include &lt;experimental/functional&gt;
+int main()
+{
+std::string in = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&quot;
+&quot; sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&quot;;
+std::string needle = &quot;pisci&quot;;
+auto it = std::experimental::search(in.begin(), in.end(),
+std::experimental::make_boyer_moore_searcher(
+needle.begin(), needle.end()));
+if (it != in.end())
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; found at offset &quot;
+&lt;&lt; it - in.begin() &lt;&lt; &lsquo;\n&rsquo;;
+else
+std::cout &lt;&lt; &quot;The string &quot; &lt;&lt; needle &lt;&lt; &quot; not found\n&quot;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> The string pisci found at offset 43</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> searches for a range of elements
+search <i>(function template)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

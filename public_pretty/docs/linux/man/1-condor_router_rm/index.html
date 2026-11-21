@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>condor_router_rm(1) · Linux Manual Pages</title>
+<meta name="description" content="condor_router_rm Remove jobs being managed by the HTCondor Job Router">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-condor_router_rm/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>condor_router_rm(1)</h1>
+
+
+
+
+
+<h2>Name</h2>
+<p> <i>condor_router_rm</i> Remove jobs being managed by the HTCondor Job Router </p>
+<h2>Synopsis</h2>
+<p> <i>condor_router_rm</i> [ <i>router_rm options</i> ] [ <i>condor_rm options</i> ] </p>
+<h2>Description</h2>
+<p> <i>condor_router_rm</i> is a script that provides additional features above those offered by <i>condor_rm</i> , for removing jobs being managed by the HTCondor Job Router. </p>
+<p> The options that may be supplied to <i>condor_router_rm</i> belong to two groups:</p>
+<dl>
+<dt>
+</dt><dd> * <code>router_rm options</code> provide the additional features</dd>
+<dt>
+</dt><dd> * <code>condor_rm options</code> are those options already offered by <i>condor_rm</i> . See the <i>condor_rm</i> manual page for specification of these options.</dd></dl>
+<h2>Options</h2>
+<p> <code>-constraint </code> <i>X</i></p>
+<dl>
+<dt>
+</dt><dd> (router_rm option) Remove jobs matching the constraint specified by <i>X</i></dd>
+</dl>
+<p> <code>-held</code></p>
+<dl>
+<dt>
+</dt><dd> (router_rm option) Remove only jobs in the hold state</dd>
+</dl>
+<p> <code>-idle</code></p>
+<dl>
+<dt>
+</dt><dd> (router_rm option) Remove only idle jobs</dd>
+</dl>
+<p> <code>-route </code> <i>name</i></p>
+<dl>
+<dt>
+</dt><dd> (router_rm option) Remove only jobs on specified route</dd>
+</dl>
+<h2>Exit Status</h2>
+<p> <i>condor_router_rm</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
+<h2>Author</h2>
+<p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
+<h2>Copyright</h2>
+<p> Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

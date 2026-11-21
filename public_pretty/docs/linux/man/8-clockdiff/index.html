@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clockdiff(8) · Linux Manual Pages</title>
+<meta name="description" content="clockdiff – measure clock difference between hosts">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-clockdiff/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>clockdiff(8)</h1>
+
+
+
+
+
+<p>clockdiff &#8211; measure clock difference between hosts</p>
+<h2>Synopsis</h2>
+<p><code>clockdiff</code> [<code>-o</code>] [<code>-o1</code>] <i>destination</i> </p>
+<h2>Description</h2>
+<p><code>clockdiff</code> Measures clock difference between us and <i>destination</i> with 1 msec resolution using ICMP TIMESTAMP [2] packets or, optionally, IP TIMESTAMP option [3] option added to ICMP ECHO. [1]</p>
+<h2>Options</h2>
+<dl>
+<dt><code>-o</code></dt>
+<dd>Use IP TIMESTAMP with ICMP ECHO instead of ICMP TIMESTAMP messages. It is useful with some destinations, which do not support ICMP TIMESTAMP (f.e. Solaris &lt;2.4).</dd>
+<dt><code>-o1</code></dt>
+<dd>Slightly different form of <code>-o</code>, namely it uses three-term IP TIMESTAMP with prespecified hop addresses instead of four term one. What flavor works better depends on target host. Particularly, <code>-o</code> is better for Linux.</dd></dl>
+<h2>Warnings</h2>
+<dl>
+<dt>&bull;</dt>
+<dd>Some nodes (Cisco) use non-standard timestamps, which is allowed by RFC, but makes timestamps mostly useless.</dd>
+<dt>&bull;</dt>
+<dd>Some nodes generate messed timestamps (Solaris&gt;2.4), when run <code>xntpd</code>. Seems, its IP stack uses a corrupted clock source, which is synchronized to time-of-day clock periodically and jumps randomly making timestamps mostly useless. Good news is that you can use NTP in this case, which is even better.</dd>
+<dt>&bull;</dt>
+<dd><code>clockdiff</code> shows difference in time modulo 24 days.</dd></dl>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-ping/">ping</a></code>(8), <code><a href="/docs/linux/man/8-arping/">arping</a></code>(8), <code><a href="/docs/linux/man/8-tracepath/">tracepath</a></code>(8).</p>
+<h2>References</h2>
+<p>[1] ICMP ECHO, RFC0792, page 14. </p>
+<p> [2] ICMP TIMESTAMP, RFC0792, page 16. </p>
+<p> [3] IP TIMESTAMP option, RFC0791, 3.1, page 16.</p>
+<h2>Author</h2>
+<p><code>clockdiff</code> was compiled by Alexey Kuznetsov &lt;kuznet [at] ms2.inr.ac.ru&gt;. It was based on code borrowed from BSD <code>timed</code> daemon. It is now maintained by YOSHIFUJI Hideaki &lt;yoshfuji [at] skbuff.net&gt;.</p>
+<h2>Security</h2>
+<p><code>clockdiff</code> requires CAP_NET_RAW capability to be executed. It is safe to be used as set-uid root.</p>
+<h2>Availability</h2>
+<p><code>clockdiff</code> is part of <i>iputils</i> package and the latest versions are available in source form at <a rel="nofollow" href="http://www.skbuff.net/iputils/iputils-current.tar.bz2.">http://www.skbuff.net/iputils/iputils-current.tar.bz2.</a></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

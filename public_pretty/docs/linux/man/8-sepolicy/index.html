@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sepolicy(8) · Linux Manual Pages</title>
+<meta name="description" content="sepolicy – SELinux Policy Inspection tool">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-sepolicy/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>sepolicy(8)</h1>
+
+
+
+
+
+<p>sepolicy &#8211; SELinux Policy Inspection tool </p>
+<h2>Synopsis</h2>
+<p><code>sepolicy [-h] [-P policy_path ] {booleans,communicate,generate,interface,manpage,network,transition} OPTIONS</code><br />
+ Arguments:<br />
+ <code>booleans</code><br />
+ Query SELinux policy to see description of booleans <code>sepolicy-boolean(8)</code><br />
+ <code>communicate</code><br />
+ Query SELinux policy to see if domains can communicate with each other <code><a href="/docs/linux/man/8-sepolicy-communicate/">sepolicy-communicate</a>(8)</code><br />
+ <code>generate</code> </p>
+<p> Generate SELinux Policy module template <code>gui</code> </p>
+<p> Launch Graphical User Interface for SELinux Policy, requires policycoreutils-gui package. <code><a href="/docs/linux/man/8-sepolicy-generate/">sepolicy-generate</a>(8)</code><br />
+ <code>interface</code> </p>
+<p> Print SELinux Policy interface information <code><a href="/docs/linux/man/8-sepolicy-interface/">sepolicy-interface</a>(8)</code><br />
+ <code>manpage</code><br />
+ Generate SELinux man pages <code><a href="/docs/linux/man/8-sepolicy-manpage/">sepolicy-manpage</a>(8)</code><br />
+ <code>network</code><br />
+ Query SELinux policy network information <code><a href="/docs/linux/man/8-sepolicy-network/">sepolicy-network</a>(8)</code><br />
+ <code>transition </code><br />
+ Query SELinux Policy to see how a source process domain can transition to the target process domain <code><a href="/docs/linux/man/8-sepolicy-transition/">sepolicy-transition</a>(8)</code> </p>
+<h2>Description</h2>
+<p>sepolicy is a tools set that will query the installed SELinux policy and generate useful reports, man pages, or even new policy modules. See the argument specific man pages for options and descriptions. </p>
+<h2>Options</h2>
+<dl>
+<dt><i>-P, &#8211;policy</i></dt>
+<dd>Alternate policy to analyze. (Defaults to currently installed policy /sys/fs/selinux/policy)</dd>
+<dt><i>-h, &#8211;help </i></dt>
+<dd>Display help message </dd>
+</dl>
+<h2>Author</h2>
+<p>This man page was written by Daniel Walsh &lt;dwalsh [at] redhat.com&gt;</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/8-selinux/">selinux</a>(8), <a href="/docs/linux/man/8-sepolicy-booleans/">sepolicy-booleans</a>(8), <a href="/docs/linux/man/8-sepolicy-communicate/">sepolicy-communicate</a>(8), <a href="/docs/linux/man/8-sepolicy-generate/">sepolicy-generate</a>(8),<a href="/docs/linux/man/8-sepolicy-gui/">sepolicy-gui</a>(8), <a href="/docs/linux/man/8-sepolicy-interface/">sepolicy-interface</a>(8), <a href="/docs/linux/man/8-sepolicy-network/">sepolicy-network</a>(8), <a href="/docs/linux/man/8-sepolicy-manpage/">sepolicy-manpage</a>(8), <a href="/docs/linux/man/8-sepolicy-transition/">sepolicy-transition</a>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

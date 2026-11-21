@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdtowupper(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdtowupper/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdtowupper(3)</h1>
+
+
+
+
+
+<p>std::towupper - std::towupper</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header &lt;cwctype&gt;
+std::wint_t towupper( std::wint_t ch );</code></pre> 
+<p>Converts the given wide character to uppercase, if possible.
+If the value of ch is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined.</p>
+<h2>Parameters</h2>
+<p>ch - wide character to be converted</p>
+<h2>Return value</h2>
+<p>Uppercase version of ch or unmodified ch if no uppercase version is listed in the current C locale.</p>
+<h2>Notes</h2>
+<p>Only 1:1 character mapping can be performed by this function, e.g. the uppercase form of &lsquo;ß&rsquo; is (with some exceptions) the two-character string &quot;SS&quot;, which cannot be obtained by std::towupper.
+ISO_30112 specifies which pairs of Unicode characters are included in this mapping.</p>
+<h2>Example</h2>
+<p>The latin letter_&lsquo;ſ&rsquo;_(U+017F) is the alternative lowercase form of &lsquo;S&rsquo; (U+0053)
+// Run this code <pre><code>#include &lt;iostream&gt;
+#include &lt;cwctype&gt;
+#include &lt;clocale&gt;
+int main()
+{
+wchar_t c = L&rsquo;\u017f&rsquo;; // Latin small letter Long S (&lsquo;ſ&rsquo;)
+std::cout &lt;&lt; std::hex &lt;&lt; std::showbase;
+std::cout &lt;&lt; &quot;in the default locale, towupper(&quot; &lt;&lt; (std::wint_t)c &lt;&lt; &quot;) = &quot;
+&lt;&lt; std::towupper(c) &lt;&lt; &lsquo;\n&rsquo;;
+std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);
+std::cout &lt;&lt; &quot;in Unicode locale, towupper(&quot; &lt;&lt; (std::wint_t)c &lt;&lt; &quot;) = &quot;
+&lt;&lt; std::towupper(c) &lt;&lt; &lsquo;\n&rsquo;;
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> in the default locale, towupper(0x17f) = 0x17f
+ <wbr> in Unicode locale, towupper(0x17f) = 0x53</p>
+<h2>See also</h2>
+<p> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a wide character to lowercase
+towlower <i>(function)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a character to uppercase using the ctype facet of a locale
+toupper(std::locale) <i>(function template)</i>
+ <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> <wbr> converts a character to uppercase
+toupper <i>(function)</i></p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

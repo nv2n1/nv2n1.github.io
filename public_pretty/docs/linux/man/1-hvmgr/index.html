@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hvmgr(1) · Linux Manual Pages</title>
+<meta name="description" content="hvmgr – administration utility for QDBM Hovel">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-hvmgr/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>hvmgr(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> hvmgr &#8211; administration utility for QDBM Hovel </p>
+<h2>SYNOPSIS</h2>
+<p> <code>hvmgr create</code> [-qdbm <i>bnum dnum </i>] [-s] <i>name</i><br />
+ <code>hvmgr store</code> [-qdbm] [-kx] [-vx|-vf] [-insert] <i>name</i> <i>key</i> <i>val</i><br />
+ <code>hvmgr delete</code> [-qdbm] [-kx] <i>name</i> <i>key</i><br />
+ <code>hvmgr fetch</code> [-qdbm] [-kx] [-ox] [-n] <i>name</i> <i>key</i><br />
+ <code>hvmgr list</code> [-qdbm] [-ox] <i>name</i><br />
+ <code>hvmgr optimize</code> [-qdbm] <i>name</i></p>
+<h2>DESCRIPTION</h2>
+<p> This manual page documents briefly the <code>hvmgr</code> commands. </p>
+<p> <code>hvmgr</code> is a utility for debugging Hovel and its applications. It features editing and checking of a database. It can be used for database applications with shell scripts. This command is used in the above format. <i>name</i> specifies a database name. <i>key</i> specifies the key of a record. <i>val</i> specifies the value of a record.</p>
+<h2>OPTIONS</h2>
+<p> A summary of options is included below. For a complete description, see the file:///usr/share/doc/qdbm-doc/spex.html#hovelcli.</p>
+<dl>
+<dt><code>-qdbm [</code><i>bnum</i><i>dnum</i><code>]</code></dt>
+<dd> use `gdbm_open2&#8242; to open the database. <i>bnum</i> specifies the number of the elements of the bucket array. <i>dnum</i> specifies the number of division of the database.</dd>
+<dt><code>-s</code></dt>
+<dd> make the file sparse.</dd>
+<dt><code>-kx</code></dt>
+<dd> treat <i>key</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-vx</code></dt>
+<dd> treat <i>val</i> as a binary expression of hexadecimal notation.</dd>
+<dt><code>-vf</code></dt>
+<dd> read the value from a file specified with <i>val</i>.</dd>
+<dt><code>-insert</code></dt>
+<dd> specify the storing mode for `GDBM_INSERT&#8217;.</dd>
+<dt><code>-ox</code></dt>
+<dd> treat the output as a binary expression of hexadecimal notation.</dd>
+<dt><code>-n</code></dt>
+<dd> do not output the trailing newline.</dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code>qdbm</code>(3), <code>hovel</code>(3).</p>
+<h2>AUTHOR</h2>
+<p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
+<p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian project (but may be used by others). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

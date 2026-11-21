@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rpl8(8) · Linux Manual Pages</title>
+<meta name="description" content="rpl8 – Firmware loader for DVD drives">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-rpl8/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>rpl8(8)</h1>
+
+
+
+
+
+<p>rpl8 &#8211; Firmware loader for DVD drives</p>
+<h2>Synopsis</h2>
+<p><code>rpl8</code> <i>/dev/cdrom</i> [-[<code>dump-only</code>]|<i>firmwarefile</i>]</p>
+<h2>Description</h2>
+<p><code>rpl8</code> is a program for Linux 2.4 and upwards that uploads firmware to DVD drives (mostly DVD+RW). </p>
+<p> <code>rpl8</code> stands for RICOH Program Loader 8, though it also supports Program Loader 9. </p>
+<p> The program never updates Program Loader code so that you should always be able to downgrade your firmware in case something goes wrong. </p>
+<p> So far <code>rpl8</code> has been tested with the following:<br />
+ * HP dvd100i<br />
+ * Ricoh MP5120A<br />
+ * Philips DVDRW208<br />
+ * HP dvd200i </p>
+<p> To run <code>rpl8</code> correctly, make sure you have no media in drive. Optionally go to single user mode and reboot after uploading the new firmware.</p>
+<h2>Options</h2>
+<dl>
+<dt>-[<code>dump-only</code>]</dt>
+<dd>Only backs up the firmware. Note that you might have to reboot even after this.</dd></dl>
+<h2>Bugs</h2>
+<p>Getting messages like this is &quot;normal&quot;</p>
+<dl>
+<dd>ide-scsi: Strange, packet command initiated yet DRQ isn&#8217;t asserted</dd></dl>
+<h2>Author</h2>
+<p><code>rpl8</code> is in public domain. </p>
+<p> This manual page was written by Elias Kunnas &lt;elias_kunnas [at] welho.com&gt;, for the Debian project (but may be used by others).</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

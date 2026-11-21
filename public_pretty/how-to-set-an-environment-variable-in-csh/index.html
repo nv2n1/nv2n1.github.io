@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Environment Variables in C Shell - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/how-to-set-an-environment-variable-in-csh/">
+  <meta name="description" content="[md] Use setenv to set an environment variable in csh:
+setenv VARIABLE value Replace VARIABLE with the name of the variable and value with its value. The …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Setting Environment Variables in C Shell">
+  <meta property="og:url" content="https://www.systutorials.com/how-to-set-an-environment-variable-in-csh/">
+  <meta property="og:description" content="[md] Use setenv to set an environment variable in csh:
+setenv VARIABLE value Replace VARIABLE with the name of the variable and value with its value. The …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/shell-scripting/">Shell &amp; Scripting</a>
+        </nav>
+        
+        <h1>Setting Environment Variables in C Shell</h1>
+        <time class="post-date" datetime="2018-03-24T08:18:35Z">March 24, 2018</time> <span class="post-author">&middot; <a href="/author/qa/">Q A</a> and Community</span> <span class="post-updated">&middot; updated April 12, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>[md]
+Use <code>setenv</code> to set an environment variable in csh:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">setenv VARIABLE value
+</code></pre><p>Replace <code>VARIABLE</code> with the name of the variable and <code>value</code> with its value. The variable is immediately available in the current shell and inherited by child processes.</p>
+<p>## Examples</p>
+<p>Set a simple variable:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">setenv PATH /usr/local/bin:/usr/bin:/bin
+setenv EDITOR vim
+setenv JAVA_HOME /usr/lib/jvm/java-17-openjdk
+</code></pre><p>Use quotes if the value contains spaces:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">setenv MY_MESSAGE &#34;Hello World&#34;
+</code></pre><p>Reference existing variables when building new ones:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">setenv LD_LIBRARY_PATH /opt/lib
+</code></pre><p>## Setting Shell Variables vs Environment Variables</p>
+<p>csh distinguishes between shell variables and environment variables:</p>
+<p>– <code>setenv</code> — creates an environment variable (inherited by child processes)
+– <code>set</code> — creates a shell variable (local to current shell only)</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Environment variable - child processes see this
+setenv DATABASE_HOST db.example.com
+
+# Shell variable - only current shell sees this
+set prompt = &#34;%n@%m:%~% &#34;
+</code></pre><p>Common shell variables you set with <code>set</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">set history = 1000
+set savehist = 1000
+set notify
+set filec
+</code></pre><p>## Displaying Variables</p>
+<p>View a specific variable:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">echo $VARIABLE
+printenv VARIABLE
+</code></pre><p>List all environment variables:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">printenv
+env
+</code></pre><p>List shell variables (shows both shell and env vars):</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">set
+</code></pre><p>## Making Changes Persistent</p>
+<p>Environment variables set with <code>setenv</code> only persist for the current shell session. To make them permanent, add the commands to your shell configuration file.</p>
+<p>For csh, edit <code>~/.cshrc</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">setenv PATH /usr/local/bin:/usr/bin:/bin
+setenv EDITOR vim
+setenv JAVA_HOME /usr/lib/jvm/java-17-openjdk
+</code></pre><p>For tcsh (a modern csh variant), use <code>~/.tcshrc</code>. Changes take effect on the next shell login or after running:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">source ~/.cshrc
+</code></pre><p>For system-wide environment variables, add them to <code>/etc/csh.cshrc</code> (affects all csh users).</p>
+<p>## Login vs Non-Login Shells</p>
+<p>The file loading order differs between login and non-login shells:</p>
+<p>**Login shell** reads: <code>/etc/csh.cshrc</code> → <code>/etc/csh.login</code> → <code>~/.cshrc</code> → <code>~/.login</code></p>
+<p>**Non-login shell** (e.g. script execution) reads: <code>/etc/csh.cshrc</code> → <code>~/.cshrc</code></p>
+<p>Put environment variables in <code>~/.cshrc</code> to ensure they’re available in all shell types. Put login-specific setup (like terminal configuration) in <code>~/.login</code>.</p>
+<p>## Unsetting Variables</p>
+<p>Remove an environment variable with <code>unsetenv</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">unsetenv VARIABLE
+</code></pre><p>Remove a shell variable with <code>unset</code>:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code">unset prompt
+</code></pre><p>## Important Differences from Bash</p>
+<p>If you’re coming from bash, these differences catch people out:</p>
+<p>– csh uses <code>setenv</code> instead of <code>export</code>
+– csh uses <code>unsetenv</code> instead of <code>unset</code> (for env vars)
+– csh syntax doesn’t support <code>VARIABLE=value</code> at the shell prompt (that’s a POSIX shell feature)
+– Variable references require <code>$</code> prefix
+– No <code>export</code> command — use <code>setenv</code> directly
+– No inline variable assignment like bash’s <code>VAR=val command</code></p>
+<p>Quick reference for common bash-to-csh translations:</p>
+<p>| Bash | csh/tcsh |
+|——|———-|
+| <code>export VAR=val</code> | <code>setenv VAR val</code> |
+| <code>VAR=val</code> | <code>set VAR = val</code> |
+| <code>unset VAR</code> | <code>unsetenv VAR</code> |
+| <code>echo $VAR</code> | <code>echo $VAR</code> |
+| <code>export -n VAR</code> | <code>unsetenv VAR</code> |</p>
+<p>## Common Setup Patterns</p>
+<p>A typical <code>~/.cshrc</code> for a developer:</p>
+<pre tabindex="0"><code class="language-wp-block-code" data-lang="wp-block-code"># Path
+setenv PATH /usr/local/bin:/usr/bin:/bin
+
+# Development
+setenv EDITOR vim
+setenv LANG en_US.UTF-8
+
+# History
+set history = 2000
+set savehist = 2000
+
+# Aliases
+alias ll &#39;ls -la&#39;
+alias gs &#39;git status&#39;
+</code></pre><p>## Why Still Use csh?</p>
+<p>While csh and tcsh are less common than bash in modern deployments, they’re still present on BSD systems (FreeBSD and OpenBSD default to csh/tcsh) and some legacy Unix environments. tcsh offers improved features like history expansion and command-line editing compared to original csh, making it a reasonable choice for interactive use despite its scripting limitations. For scripting, bash or sh is generally preferred due to better POSIX compliance.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

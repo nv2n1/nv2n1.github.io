@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdthreadnative_handle(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdthreadnative_handle/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdthreadnative_handle(3)</h1>
+
+
+
+
+
+<p>std::thread::native_handle - std::thread::native_handle</p>
+<h2>Synopsis</h2>
+<p>native_handle_type native_handle(); <i>(since C++11)</i>
+Returns the implementation defined underlying thread handle.</p>
+<h2>Parameters</h2>
+<p><i>(none)</i></p>
+<h2>Return value</h2>
+<p>implementation defined handle type representing the thread.</p>
+<h2>Exceptions</h2>
+<p><i>(none)</i></p>
+<h2>Example</h2>
+<p>Uses native_handle to enable realtime scheduling of C++ threads on a POSIX system
+// Run this code <pre><code>#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;cstring&gt;
+#include &lt;pthread.h&gt;
+std::mutex iomutex;
+void f(int num)
+{
+std::this_thread::sleep_for(std::chrono::seconds(1));
+sched_param sch;
+int policy;
+pthread_getschedparam(pthread_self(), &amp;policy, &amp;sch);
+std::lock_guard&lt;std::mutex&gt; lk(iomutex);
+std::cout &lt;&lt; &quot;Thread &quot; &lt;&lt; num &lt;&lt; &quot; is executing at priority &quot;
+&lt;&lt; sch.sched_priority &lt;&lt; &lsquo;\n&rsquo;;
+}
+int main()
+{
+std::thread t1(f, 1), t2(f, 2);
+sched_param sch;
+int policy;
+pthread_getschedparam(t1.native_handle(), &amp;policy, &amp;sch);
+sch.sched_priority = 20;
+if (pthread_setschedparam(t1.native_handle(), SCHED_FIFO, &amp;sch)) {
+std::cout &lt;&lt; &quot;Failed to setschedparam: &quot; &lt;&lt; std::strerror(errno) &lt;&lt; &lsquo;\n&rsquo;;
+}
+t1.join();
+t2.join();
+}
+</code></pre></p>
+<h2>Output:</h2>
+<p> <wbr> Thread 2 is executing at priority 0
+ <wbr> Thread 1 is executing at priority 20</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

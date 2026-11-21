@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sgbbrd(3) · Linux Manual Pages</title>
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-sgbbrd/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>sgbbrd(3)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p>sgbbrd.f -</p>
+<h2>SYNOPSIS</h2>
+<h3>Functions/Subroutines</h3>
+<p>subroutine <b>sgbbrd</b> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)
+<i></i><b>SGBBRD</b></p>
+<h2>Function/Subroutine Documentation</h2>
+<h3>subroutine sgbbrd (characterVECT, integerM, integerN, integerNCC, integerKL, integerKU, real, dimension( ldab, * )AB, integerLDAB, real, dimension( * )D, real, dimension( * )E, real, dimension( ldq, * )Q, integerLDQ, real, dimension( ldpt, * )PT, integerLDPT, real, dimension( ldc, * )C, integerLDC, real, dimension( * )WORK, integerINFO)</h3>
+<p><b>SGBBRD</b></p>
+<p><b>Purpose: </b></p>
+<dl>
+<dt>
+</dt><dd> 
+ <pre>
+ SGBBRD reduces a real general m-by-n band matrix A to upper
+ bidiagonal form B by an orthogonal transformation: Q**T * A * P = B.
+ The routine computes B, and optionally forms Q or P**T, or computes
+ Q**T*C for a given matrix C.
+</pre> 
+&nbsp;<wbr></dd></dl>
+<p><b>Parameters:</b></p>
+<dl>
+<dt>
+</dt><dd> <i>VECT</i> 
+ <pre>
+          VECT is CHARACTER*1
+          Specifies whether or not the matrices Q and P**T are to be
+          formed.
+          = 'N': do not form Q or P**T;
+          = 'Q': form Q only;
+          = 'P': form P**T only;
+          = 'B': form both.
+</pre> 
+ <i>M</i> 
+ <pre>
+          M is INTEGER
+          The number of rows of the matrix A.  M &gt;= 0.
+</pre> 
+ <i>N</i> 
+ <pre>
+          N is INTEGER
+          The number of columns of the matrix A.  N &gt;= 0.
+</pre> 
+ <i>NCC</i> 
+ <pre>
+          NCC is INTEGER
+          The number of columns of the matrix C.  NCC &gt;= 0.
+</pre> 
+ <i>KL</i> 
+ <pre>
+          KL is INTEGER
+          The number of subdiagonals of the matrix A. KL &gt;= 0.
+</pre> 
+ <i>KU</i> 
+ <pre>
+          KU is INTEGER
+          The number of superdiagonals of the matrix A. KU &gt;= 0.
+</pre> 
+ <i>AB</i> 
+ <pre>
+          AB is REAL array, dimension (LDAB,N)
+          On entry, the m-by-n band matrix A, stored in rows 1 to
+          KL+KU+1. The j-th column of A is stored in the j-th column of
+          the array AB as follows:
+          AB(ku+1+i-j,j) = A(i,j) for max(1,j-ku)&lt;=i&lt;=min(m,j+kl).
+          On exit, A is overwritten by values generated during the
+          reduction.
+</pre> 
+ <i>LDAB</i> 
+ <pre>
+          LDAB is INTEGER
+          The leading dimension of the array A. LDAB &gt;= KL+KU+1.
+</pre> 
+ <i>D</i> 
+ <pre>
+          D is REAL array, dimension (min(M,N))
+          The diagonal elements of the bidiagonal matrix B.
+</pre> 
+ <i>E</i> 
+ <pre>
+          E is REAL array, dimension (min(M,N)-1)
+          The superdiagonal elements of the bidiagonal matrix B.
+</pre> 
+ <i>Q</i> 
+ <pre>
+          Q is REAL array, dimension (LDQ,M)
+          If VECT = 'Q' or 'B', the m-by-m orthogonal matrix Q.
+          If VECT = 'N' or 'P', the array Q is not referenced.
+</pre> 
+ <i>LDQ</i> 
+ <pre><code>
+LDQ is INTEGER
+        The leading dimension of the array Q.LDQ &gt;= max(1, M) if VECT = 'Q' or 'B';
+LDQ &gt;= 1 otherwise.
+</code></pre> 
+ <i>PT</i> 
+ <pre>
+          PT is REAL array, dimension (LDPT,N)
+          If VECT = 'P' or 'B', the n-by-n orthogonal matrix P'.
+          If VECT = 'N' or 'Q', the array PT is not referenced.
+</pre> 
+ <i>LDPT</i> 
+LDPT is INTEGER
+        The leading dimension of the array PT.LDPT &gt;= max(1, N) if VECT = 'P' or 'B';
+LDPT &gt;= 1 otherwise.
+ <i>C</i> 
+ <pre>
+          C is REAL array, dimension (LDC,NCC)
+          On entry, an m-by-ncc matrix C.
+          On exit, C is overwritten by Q**T*C.
+          C is not referenced if NCC = 0.
+</pre> 
+ <i>LDC</i> 
+ <pre><code>
+LDC is INTEGER
+        The leading dimension of the array C.LDC &gt;= max(1, M) if NCC
+    &gt; 0;
+LDC &gt;= 1 if NCC = 0.
+</code></pre> 
+ <i>WORK</i> 
+ <pre>
+          WORK is REAL array, dimension (2*max(M,N))
+</pre> 
+ <i>INFO</i> 
+ <pre>
+          INFO is INTEGER
+          = 0:  successful exit.
+          &lt; 0:  if INFO = -i, the i-th argument had an illegal value.
+</pre> 
+&nbsp;<wbr></dd></dl>
+<p><b>Author:</b></p>
+<dl>
+<dt>
+</dt><dd> Univ. of Tennessee 
+ Univ. of California Berkeley 
+ Univ. of Colorado Denver 
+ NAG Ltd.</dd></dl>
+<p><b>Date:</b></p>
+<dl>
+<dt>
+</dt><dd> November 2011</dd></dl>
+<p>Definition at line 187 of file sgbbrd.f.</p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

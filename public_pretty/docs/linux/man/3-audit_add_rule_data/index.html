@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>audit_add_rule_data(3) · Linux Manual Pages</title>
+<meta name="description" content="audit_add_rule_data – Add new audit rule">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-audit_add_rule_data/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>audit_add_rule_data(3)</h1>
+
+
+
+
+
+<h2>NAME</h2>
+<p> audit_add_rule_data &#8211; Add new audit rule</p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;libaudit.h&gt;</code> </p>
+<p> int audit_add_rule_data (int fd, struct audit_rule_data *rule, int flags, int action); </p>
+<h2>DESCRIPTION</h2>
+<p> audit_add_rule adds an audit rule previously constructed with audit_rule_fieldpair_data(3) to one of several kernel event filters. The filter is specified by the flags argument. Possible values for flags are: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_USER &#8211; Apply rule to userspace generated messages.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_TASK &#8211; Apply rule at task creation (not syscall).</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_EXIT &#8211; Apply rule at syscall exit.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_FILTER_TYPE &#8211; Apply rule at audit_log_start.</dd></dl>
+<p> The rule&#8217;s action has two possible values: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> AUDIT_NEVER &#8211; Do not build context if rule matches.</dd>
+<dt>&bull;</dt>
+<dd> AUDIT_ALWAYS &#8211; Generate audit record if rule matches.</dd></dl>
+<h2>RETURN VALUE</h2>
+<p> The return value is &lt;= 0 on error, otherwise it is the netlink sequence id number. This function can have any error that sendto would encounter. </p>
+<h2>SEE ALSO</h2>
+<p> <code>audit_rule_fieldpair_data(3),</code> <code><a href="/docs/linux/man/3-audit_delete_rule_data/">audit_delete_rule_data</a></code>(3), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8). </p>
+<h2>AUTHOR</h2>
+<p> Steve Grubb. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

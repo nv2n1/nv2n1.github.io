@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mkinitramfs(8) · Linux Manual Pages</title>
+<meta name="description" content="mkinitramfs – low-level tool for generating an initramfs image">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-mkinitramfs/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>mkinitramfs(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>mkinitramfs &#8211; low-level tool for generating an initramfs image</p>
+<h2>Synopsis</h2>
+<p><code>mkinitramfs</code> [<i>option</i>]&#8230; <code>-o</code> <i>outfile</i> [<i>version</i>]<br />
+ <code>mkinitramfs</code> <code>-h</code> </p>
+<h2>Description</h2>
+<p>The <code>mkinitramfs</code> script generates an initramfs image. The initramfs is a compressed cpio archive. The archive can be used on a different box of the same arch with the corresponding Linux kernel. <code>mkinitramfs</code> is meant for advanced usage. On your local box <code>update-initramfs</code> calls <code>mkinitramfs</code> with the relevant parameters. <code>update-initramfs</code> keeps sha1sum of generated initramfs. It takes care to generate backups and eventually runs the bootloader. At boot time, the kernel unpacks that archive into RAM disk, mounts and uses it as initial root file system. All finding of the root device happens in this early userspace. </p>
+<h2>Options</h2>
+<dl>
+<dt><code>-c </code><i> compress</dt>
+<dd>Override the </i><code>COMPRESS</code> setting in <i>initramfs.conf</i>. </dd>
+<dt><code>-d </code><i> confdir</dt>
+<dd>Set an alternate configuration directory. </dd>
+<dt></i><code>-k</dt>
+<dd>Keep the temporary directory used to make the image. </dd>
+<dt>-o </code><i> outfile</dt>
+<dd>Write the image to outfile</i>. </dd>
+<dt><code>-r </code><i> root</dt>
+<dd>Override the </i><code>ROOT</code> setting in <i>initramfs.conf</i>. </dd>
+<dt><code>-v</dt>
+<dd>Set the verbose mode output. </dd>
+<dt></code><i>version</dt>
+<dd>Set the kernel version of the initramfs image (defaults to the running kernel). </dd>
+<dt></i><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display usage information and exit. </dd>
+</dl>
+<h2>Environment</h2>
+<p><code>mkinitramfs</code> honours the <code>TMPDIR</code> environment variable. If set, it uses subdirectories in the given directory to create its temporary working directories. Else it uses <i>/var/tmp</i> as default value for that purpose. The given directory should be on a filesystem which allows the execution of files stored there, i.e. should not be mounted with the <code>noexec</code> mount option. </p>
+<p> If <code>SOURCE_DATE_EPOCH</code> is set, <code>mkinitramfs</code> attempts to generate a reproducible initramfs image.</p>
+<h2>Files</h2>
+<dl>
+<dt><i>/etc/initramfs-tools/initramfs.conf</i></dt>
+<dd>The default configuration file for the script. See <code><a href="/docs/linux/man/5-initramfs-conf/">initramfs.conf</a></code>(5) for a description of the available configuration parameter. </dd>
+<dt><i>/etc/initramfs-tools/modules</i></dt>
+<dd>Specified modules will be put in the generated image and loaded when the system boots. The format &#8211; one per line &#8211; is identical to that of <i>/etc/modules,</i> which is described in <code><a href="/docs/linux/man/5-modules/">modules</a></code>(5). </dd>
+<dt><i>/etc/initramfs-tools/conf.d</i></dt>
+<dd>The conf.d directory allows one to hardcode bootargs at initramfs build time via config snippets. This allows one to set ROOT or RESUME. This is especially useful for bootloaders, which do not pass an root bootarg. </dd>
+<dt><i>/etc/initramfs-tools/DSDT.aml</i></dt>
+<dd>If this file exists, it will be appended to the initramfs in a way that causes it to be loaded by ACPI. </dd>
+</dl>
+<h2>Examples</h2>
+<p>Create an initramfs for current running kernel: <code>mkinitramfs -o ~/tmp/initramfs-$(uname -r)</code> Create an initramfs for specific kernel and keep builddirs: <code>mkinitramfs -k -o ~/tmp/initramfs-2.6.21-686 2.6.21-686</code> Debug initramfs creation (check out written logfile) <code>sh -x mkinitramfs -o ~/tmp/initramfs-$(uname -r) 2&gt; ~/tmp/log</code> </p>
+<h2>Author</h2>
+<p>The initramfs-tools are written by Maximilian Attems &lt;maks [at] debian.org&gt;, Jeff Bailey &lt;jbailey [at] raspberryginger.com&gt; and numerous others.</p>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/5-initramfs-conf/">initramfs.conf</a></i>(5), <i><a href="/docs/linux/man/7-initramfs-tools/">initramfs-tools</a></i>(7), <i><a href="/docs/linux/man/8-update-initramfs/">update-initramfs</a></i>(8), <i><a href="/docs/linux/man/8-lsinitramfs/">lsinitramfs</a></i>(8), <i><a href="/docs/linux/man/8-unmkinitramfs/">unmkinitramfs</a></i>(8). </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening XPS Files on Linux - SysTutorials</title>
+  <link rel="canonical" href="https://www.systutorials.com/view-xps-files-linux/">
+  <meta name="description" content="The mupdf package is available in most major Linux distributions. On RHEL/CentOS/Fedora:
+sudo dnf install mupdf mupdf-tools On Debian/Ubuntu:
+sudo apt install …">
+  <meta property="og:site_name" content="SysTutorials">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Opening XPS Files on Linux">
+  <meta property="og:url" content="https://www.systutorials.com/view-xps-files-linux/">
+  <meta property="og:description" content="The mupdf package is available in most major Linux distributions. On RHEL/CentOS/Fedora:
+sudo dnf install mupdf mupdf-tools On Debian/Ubuntu:
+sudo apt install …">
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+      padding: 1.5rem 1rem 3rem;
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    header.site .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+    header.site nav a {
+      margin-left: 1.2rem;
+    }
+    header.post-header {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .post-date, .post-author, .post-updated {
+      color: #888;
+      font-size: 0.95rem;
+    }
+    nav.crumbs {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    h2, h3, h4 {
+      line-height: 1.3;
+      margin: 1.8em 0 0.6em;
+    }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.2rem; }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #0a58ca;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    code, pre {
+      font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.92em;
+    }
+    :not(pre) > code {
+      background: #0000000f;
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #ececec;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .ad-above-fold {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: 801px) {
+      .ad-above-fold {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+    @media (max-width: 800px) {
+      .ad-above-fold {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .ad-after-content {
+      clear: both;
+      margin-top: 2rem;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 3rem;
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZEXV9L9E6P');
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <a class="site-name" href="/">SysTutorials</a>
+      <nav>
+        <a href="/#posts">All Posts</a>
+      </nav>
+    </header>
+    <article>
+      <header class="post-header">
+        
+        
+        
+        
+        
+        
+        
+        
+        <nav class="crumbs">
+          <a href="/linux-systems-administration-academy/">Linux &amp; Systems Administration Academy</a>
+           &rsaquo; <a href="/linux-essentials-path/">Linux Essentials Path</a>
+          &rsaquo; <a href="/category/files-storage/">Files &amp; Storage</a>
+        </nav>
+        
+        <h1>Opening XPS Files on Linux</h1>
+        <time class="post-date" datetime="2013-07-12T16:32:33Z">July 12, 2013</time> <span class="post-author">&middot; <a href="/author/zma/">Eric Ma</a> and Community</span> <span class="post-updated">&middot; updated April 13, 2026</span>
+      </header>
+      <div class="ad-above-fold">
+        
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="4315544630"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <p>The mupdf package is available in most major Linux distributions. On RHEL/CentOS/Fedora:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dnf install mupdf mupdf-tools
+</span></span></code></pre></div><p>On Debian/Ubuntu:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install mupdf
+</span></span></code></pre></div><p>On Arch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S mupdf
+</span></span></code></pre></div><p>mupdf is a lightweight, fast PDF and XPS viewer written in C. It’s significantly faster than heavier alternatives like Evince or Okular, making it ideal for quick document inspection.</p>
+<h2 id="viewing-xps-files">Viewing XPS files</h2>
+<p>Open an XPS file directly from the command line:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mupdf document.xps
+</span></span></code></pre></div><p>mupdf will launch a GUI window. Navigation is straightforward:</p>
+<ul>
+<li><strong>Arrow keys</strong> or <strong>mouse wheel</strong>: scroll through pages</li>
+<li><strong>+/-</strong>: zoom in and out</li>
+<li><strong>w</strong>: fit page width</li>
+<li><strong>h</strong>: fit page height</li>
+<li><strong>z</strong>: fit entire page</li>
+<li><strong>r</strong>: rotate page 90° clockwise</li>
+<li><strong>q</strong>: quit</li>
+</ul>
+<h2 id="why-mupdf-over-alternatives">Why mupdf over alternatives</h2>
+<p>Evince (the GNOME document viewer) has inconsistent XPS support. It frequently fails with:</p>
+<ul>
+<li>Complex embedded fonts</li>
+<li>Transparency effects</li>
+<li>Vector graphics rendering</li>
+<li>Large or multi-resource XPS files</li>
+</ul>
+<p>mupdf handles these cases reliably because it includes native XPS parsing and rendering. It’s also more responsive with large documents and uses significantly less memory.</p>
+<h2 id="batch-converting-xps-to-pdf">Batch converting XPS to PDF</h2>
+<p>If you need to convert XPS files to PDF for broader compatibility:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mupdf -o output.pdf input.xps
+</span></span></code></pre></div><p>Or use <code>mutool</code> (included with mupdf) for more advanced conversions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mutool convert -O pdf -o output.pdf input.xps
+</span></span></code></pre></div><p>For bulk conversion of multiple files:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> file in *.xps<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    mutool convert -O pdf -o <span class="s2">&#34;</span><span class="si">${</span><span class="nv">file</span><span class="p">%.xps</span><span class="si">}</span><span class="s2">.pdf&#34;</span> <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span></code></pre></div><h2 id="extracting-content-from-xps">Extracting content from XPS</h2>
+<p>To extract text from an XPS file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mutool extract input.xps
+</span></span></code></pre></div><p>This creates directories containing extracted images and other resources. For text extraction specifically:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mutool draw -F text input.xps &gt; output.txt
+</span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>mupdf won’t open the XPS file</strong>: Verify the file isn’t corrupted. Try converting it on Windows first, or check if it’s actually an XPS file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">file document.xps
+</span></span></code></pre></div><p><strong>XPS file displays incorrectly</strong>: Some XPS files created with Windows-specific tools may have rendering quirks. Converting to PDF through mupdf usually resolves display issues.</p>
+<p><strong>Performance issues with large files</strong>: mupdf is optimized for responsiveness over memory efficiency. For extremely large documents (over 1000 pages), consider splitting the file or converting to PDF first.</p>
+<h2 id="alternative-viewers">Alternative viewers</h2>
+<p>If mupdf doesn’t work for your use case:</p>
+<ul>
+<li><strong>Okular</strong> (KDE): Full-featured but heavier. Install with <code>sudo apt install okular</code> or equivalent.</li>
+<li><strong>qpdfview</strong>: Lightweight Qt-based viewer, good XPS support. Install with <code>sudo apt install qpdfview</code>.</li>
+<li><strong>LibreOffice Draw</strong>: Can import XPS, useful if you need editing capabilities.</li>
+</ul>
+<p>mupdf remains the best choice for quick, reliable XPS viewing on Linux.</p>
+<h2 id="2026-best-practices">2026 Best Practices</h2>
+<p>This article extends “Opening XPS Files on Linux” with practical guidance. Modern development practices emphasize security, performance, and maintainability. Follow these guidelines to build robust, production-ready systems.</p>
+<h2 id="2026-comprehensive-guide-for-linux">2026 Comprehensive Guide for Linux</h2>
+<p>This article extends “Opening XPS Files on Linux” with advanced techniques and best practices for 2026. Following modern guidelines ensures reliable, maintainable, and secure systems.</p>
+<h3 id="advanced-implementation-strategies">Advanced Implementation Strategies</h3>
+<p>For complex deployments involving linux, consider Infrastructure as Code for reproducible environments, container-based isolation for dependency management, and CI/CD pipelines for automated testing and deployment.</p>
+<h3 id="security-and-hardening">Security and Hardening</h3>
+<p>Security should be built into workflows from the start. Use strong authentication methods, encrypt sensitive data, and follow the principle of least privilege for access controls.</p>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li>Monitor system resources continuously with htop, vmstat, iotop</li>
+<li>Use caching strategies to optimize performance</li>
+<li>Profile application performance before and after optimizations</li>
+<li>Optimize database queries with proper indexing</li>
+</ul>
+<h3 id="troubleshooting-methodology">Troubleshooting Methodology</h3>
+<p>Follow a systematic approach to debugging: reproduce issues, isolate variables, check logs, test fixes. Keep detailed logs and document solutions found.</p>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>Write clean, self-documenting code with clear comments</li>
+<li>Use version control effectively with meaningful commit messages</li>
+<li>Implement proper testing before deployment</li>
+<li>Monitor production systems and set up alerts</li>
+</ul>
+<h3 id="resources-and-further-reading">Resources and Further Reading</h3>
+<p>For more information on linux, consult official documentation and community resources. Stay updated with the latest tools and frameworks.</p>
+
+      <div class="ad-after-content">
+        
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5988258742963952"
+             data-ad-slot="3544342269"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </article>
+    <footer class="post-footer">
+      <p>To leave comments or report issues, please create a PR or report an issue at <a href="https://github.com/nv2n1/nv2n1.github.io" target="_blank" rel="noopener">https://github.com/nv2n1/nv2n1.github.io</a>.</p>
+    </footer>
+    <a class="back" href="/">&larr; All posts</a>
+  </main>
+</body>
+</html>
+

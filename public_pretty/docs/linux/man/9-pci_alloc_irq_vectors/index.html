@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pci_alloc_irq_vectors(9) · Linux Manual Pages</title>
+<meta name="description" content="pci_alloc_irq_vectors – allocate multiple IRQs for a device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/9-pci_alloc_irq_vectors/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/9/">Section 9</a></p>
+<article>
+<h1>pci_alloc_irq_vectors(9)</h1>
+
+
+
+
+
+<p>pci_alloc_irq_vectors &#8211; allocate multiple IRQs for a device</p>
+<h2>Synopsis</h2>
+<pre><code>int pci_alloc_irq_vectors(struct pci_dev *dev, unsigned int min_vecs, unsigned int max_vecs, unsigned int flags);</code></pre>
+<h2>Arguments</h2>
+<p><i>dev</i></p>
+<dl>
+<dd>
+</dd><dd>PCI device to operate on</dd></dl>
+<p> <i>min_vecs</i></p>
+<dl>
+<dd>minimum number of vectors required (must be &gt;= 1)</dd></dl>
+<p> <i>max_vecs</i></p>
+<dl>
+<dd>maximum (desired) number of vectors</dd></dl>
+<p> <i>flags</i></p>
+<dl>
+<dd>flags or quirks for the allocation</dd></dl>
+<h2>Description</h2>
+<p>Allocate up to <i>max_vecs</i> interrupt vectors for <i>dev</i>, using MSI-X or MSI vectors if available, and fall back to a single legacy vector if neither is available. Return the number of vectors allocated, (which might be smaller than <i>max_vecs</i>) if successful, or a negative error code on error. If less than <i>min_vecs</i> interrupt vectors are available for <i>dev</i> the function will fail with -ENOSPC. </p>
+<p> To get the Linux IRQ number used for a vector that can be passed to <code>request_irq</code> use the <code>pci_irq_vector</code> helper.</p>
+<h2>Copyright</h2>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

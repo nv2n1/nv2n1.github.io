@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dsp56k(4) · Linux Manual Pages</title>
+<meta name="description" content="dsp56k – DSP56001 interface device">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/4-dsp56k/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/4/">Section 4</a></p>
+<article>
+<h1>dsp56k(4)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>dsp56k &#8211; DSP56001 interface device</p>
+<h2>Synopsis</h2>
+<pre><code>#include &lt;asm/dsp56k.h&gt;
+ssize_t read(int fd, void *data, size_t length);
+ssize_t write(int fd, void *data, size_t length);
+int ioctl(int fd, DSP56K_UPLOAD, struct dsp56k_upload *program);
+int ioctl(int fd, DSP56K_SET_TX_WSIZE, int wsize);
+int ioctl(int fd, DSP56K_SET_RX_WSIZE, int wsize);
+int ioctl(int fd, DSP56K_HOST_FLAGS, struct dsp56k_host_flags *flags);
+int ioctl(int fd, DSP56K_HOST_CMD, int cmd);</code></pre>
+<h2>Configuration</h2>
+<p>The <code>dsp56k</code> device is a character device with major number 55 and minor number 0.</p>
+<h2>Description</h2>
+<p>The Motorola DSP56001 is a fully programmable 24-bit digital signal processor found in Atari Falcon030-compatible computers. The <i>dsp56k</i> special file is used to control the DSP56001, and to send and receive data using the bidirectional handshaked host port. </p>
+<p> To send a data stream to the signal processor, use <code><a href="/docs/linux/man/2-write/">write</a></code>(2) to the device, and <code><a href="/docs/linux/man/2-read/">read</a></code>(2) to receive processed data. The data can be sent or received in 8, 16, 24, or 32-bit quantities on the host side, but will always be seen as 24-bit quantities in the DSP56001. </p>
+<p> The following <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) calls are used to control the <i>dsp56k</i> device:</p>
+<dl>
+<dt><code>DSP56K_UPLOAD</code></dt>
+<dd>resets the DSP56001 and uploads a program. The third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument must be a pointer to a <i>struct dsp56k_upload</i> with members <i>bin</i> pointing to a DSP56001 binary program, and <i>len</i> set to the length of the program, counted in 24-bit words.</dd>
+<dt><code>DSP56K_SET_TX_WSIZE</code></dt>
+<dd>sets the transmit word size. Allowed values are in the range 1 to 4, and is the number of bytes that will be sent at a time to the DSP56001. These data quantities will either be padded with bytes containing zero, or truncated to fit the native 24-bit data format of the DSP56001.</dd>
+<dt><code>DSP56K_SET_RX_WSIZE</code></dt>
+<dd>sets the receive word size. Allowed values are in the range 1 to 4, and is the number of bytes that will be received at a time from the DSP56001. These data quantities will either truncated, or padded with a null byte (&#8216;\0&#8217;) to fit the native 24-bit data format of the DSP56001.  </dd>
+<dt><code>DSP56K_HOST_FLAGS</code></dt>
+<dd>  read and write the host flags. The host flags are four general-purpose bits that can be read by both the hosting computer and the DSP56001. Bits 0 and 1 can be written by the host, and bits 2 and 3 can be written by the DSP56001.  </dd>
+<dd>  To access the host flags, the third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument must be a pointer to a <i>struct dsp56k_host_flags</i>. If bit 0 or 1 is set in the <i>dir</i> member, the corresponding bit in <i>out</i> will be written to the host flags. The state of all host flags will be returned in the lower four bits of the <i>status</i> member.  </dd>
+<dt><code>DSP56K_HOST_CMD</code></dt>
+<dd>  sends a host command. Allowed values are in the range 0 to 31, and is a user-defined command handled by the program running in the DSP56001.  </dd></dl>
+  <h2>FILES</h2>
+ <i>/dev/dsp56k</i>  <h2>SEE ALSO</h2>
+ <i>linux/include/asm-m68k/dsp56k.h</i>, <i>linux/drivers/char/dsp56k.c</i>, DSP56000/DSP56001 Digital Signal Processor User&#8217;s Manual  <h2>COLOPHON</h2>
+ This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> 
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

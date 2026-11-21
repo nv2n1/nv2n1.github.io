@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tpm_mkaik(8) · Linux Manual Pages</title>
+<meta name="description" content="tpm_mkaik">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-tpm_mkaik/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>tpm_mkaik(8)</h1>
+
+
+
+
+
+<p>tpm_mkaik</p>
+<h2>Synopsis</h2>
+<p><code>tpm_mkaik</code> [<code>-zuhv</code>] BLOB-FILE PUBKEY-FILE</p>
+<h2>Description</h2>
+<p>The program generates a TPM Attestation Identity Key and stores it in the file BLOB-FILE. The public key is stored in the file PUBKEY-FILE. The public key is DER encoded.</p>
+<dl>
+<dt>-z</dt>
+<dd>Use the well known secret used as the owner secret.</dd>
+<dt>-u</dt>
+<dd>Use TSS UNICODE encoding for passwords.</dd>
+<dt>-h</dt>
+<dd>Display command usage info.</dd>
+<dt>-v</dt>
+<dd>Display command version info.</dd></dl>
+<h2>Bugs</h2>
+<p>Sometimes, when <code>tpm_mkaik</code> is invoked without the -z option, no password prompt appears. As a work around, use <code>tpm_changeownerauth</code> to set the secret to the well known one, generate the key, and then use <code>tpm_changeownerauth</code> to set the secret to its original value.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/8-tpm_quote_tools/">tpm_quote_tools</a></code>(8), <code><a href="/docs/linux/man/8-tpm_changeownerauth/">tpm_changeownerauth</a></code>(8) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

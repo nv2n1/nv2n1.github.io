@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zmq_strerror(3) · Linux Manual Pages</title>
+<meta name="description" content="zmq_strerror – get 0MQ error message string">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-zmq_strerror/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>zmq_strerror(3)</h1>
+
+
+
+
+
+<p>zmq_strerror &#8211; get 0MQ error message string</p>
+<h2>Synopsis</h2>
+<pre><code>const char *zmq_strerror(int errnum);</code></pre>
+<h2>Description</h2>
+<p>The <i>zmq_strerror()</i> function shall return a pointer to an error message string corresponding to the error number specified by the <i>errnum</i> argument. As 0MQ defines additional error numbers over and above those defined by the operating system, applications should use <i>zmq_strerror()</i> in preference to the standard <i>strerror()</i> function.</p>
+<h2>Return Value</h2>
+<p>The <i>zmq_strerror()</i> function shall return a pointer to an error message string.</p>
+<h2>Errors</h2>
+<p>No errors are defined.</p>
+<h2>Example</h2>
+<p><code>Displaying an error message when a 0MQ context cannot be initialised</code>. </p>
+<pre><code>void *ctx = zmq_init(1, 1, 0);
+if (!ctx) {
+    printf(&quot;Error occurred during zmq_init(): %s
+&quot;, zmq_strerror(errno));
+    abort();
+}
+</code></pre>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
+<h2>Authors</h2>
+<p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[].</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

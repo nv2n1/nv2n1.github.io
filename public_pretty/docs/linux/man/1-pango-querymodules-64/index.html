@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pango-querymodules-64(1) · Linux Manual Pages</title>
+<meta name="description" content="pango-querymodules – Module registration utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-pango-querymodules-64/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>pango-querymodules-64(1)</h1>
+
+
+
+
+
+<h2 class="name">NAME</h2>
+<p> pango-querymodules &#8211; Module registration utility </p>
+<h2>SYNOPSIS</h2>
+<dl>
+<dt> <code>pango-querymodules</code> [OPTION&#8230;] [MODULE&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
+<p> <code>pango-querymodules</code></p>
+<dd>collects information about loadable modules for Pango and writes it to stdout. </dd>
+<p> If called without MODULE arguments, it looks for modules in the Pango module path, which is specified by the key Pango/ModulesPath in the Pango configuration database. </p>
+<p> If called with MODULE arguments, it looks for the specified modules. The arguments may be absolute or relative paths. </p>
+<p> At runtime, Pango looks for the loadable module information (i.e. the output of pango-querymodules) in <i>libdir</i>/pango/1.8.0/modules.cache.</p>
+<h2>OPTIONS</h2>
+<p> <code>-?</code>, <code>&#8211;help</code></p>
+<dl>
+<dt>
+</dt><dd> Prints a short help text and exits.</dd></dl>
+<p> <code>&#8211;version</code></p>
+<dl>
+<dt>
+</dt><dd> Prints version information.</dd></dl>
+<p> <code>&#8211;system</code></p>
+<dl>
+<dt>
+</dt><dd> Do not load user-specific configuration.</dd></dl>
+<p> <code>&#8211;update-cache</code></p>
+<dl>
+<dt>
+</dt><dd> Update the Pango module cache file directly, instead of writing the information to stdout.</dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> <code>PANGO_RC_FILE</code></p>
+<dl>
+<dt>
+</dt><dd> Specifies an additional rc file for the Pango configuration database, in addition to the system-wide and per-user files.</dd></dl>
+<h2>FILES</h2>
+<p> <i>sysconfdir</i>/pango/pangorc</p>
+<dl>
+<dt>
+</dt><dd> System-wide Pango configuration file.</dd></dl>
+<p> <code>$XDG_CONFIG_HOME</code>/pango/pangorc</p>
+<dl>
+<dt>
+</dt><dd> User-specific Pango configuration file.</dd></dl>
+<p> <i>libdir</i>/pango/1.8.0/modules.cache</p>
+<dl>
+<dt>
+</dt><dd> Location of the module cache file read by Pango.</dd></dl>
+<h2>BUGS</h2>
+<p> None known yet.</p>
+<h2>AUTHORS</h2>
+<p> <code>Owen Taylor</code></p>
+<dl>
+<dt>
+</dt><dd> Developer</dd></dl>
+<p> <code>Behdad Esfahbod</code></p>
+<dl>
+<dt>
+</dt><dd> Developer</dd></dl>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>systemd-snapshot(5) · Linux Manual Pages</title>
+<meta name="description" content="systemd.snapshot – Snapshot unit configuration">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/5-systemd-snapshot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/5/">Section 5</a></p>
+<article>
+<h1>systemd-snapshot(5)</h1>
+
+
+
+
+
+<p>systemd.snapshot &#8211; Snapshot unit configuration</p>
+<h2>Synopsis</h2>
+<p><i>snapshot</i>.snapshot</p>
+<h2>Description</h2>
+<p>Snapshot units are not configured via unit configuration files. Nonetheless they are named similar to filenames. A unit whose name ends in &quot;.snapshot&quot; refers to a dynamic snapshot of the systemd runtime state. </p>
+<p> Snapshots are not configured on disk but created dynamically via <code>systemctl snapshot</code> (see <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) for details) or an equivalent command. When created, they will automatically get dependencies on the currently activated units. They act as saved runtime state of the systemd manager. Later on, the user may choose to return to the saved state via <code>systemctl isolate</code>. They are useful to roll back to a defined state after temporarily starting/stopping services or similar.</p>
+<h2>See Also</h2>
+<p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5), <code><a href="/docs/linux/man/7-systemd-directives/">systemd.directives</a></code>(7) </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

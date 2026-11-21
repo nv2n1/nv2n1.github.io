@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aircrack-ng(1) · Linux Manual Pages</title>
+<meta name="description" content="aircrack-ng – a 802.11 WEP / WPA-PSK key cracker">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/1-aircrack-ng/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/1/">Section 1</a></p>
+<article>
+<h1>aircrack-ng(1)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h2 class="name">NAME</h2>
+<p> aircrack-ng &#8211; a 802.11 WEP / WPA-PSK key cracker </p>
+<h2>SYNOPSIS</h2>
+<p> <code>aircrack-ng</code> [options] &lt;.cap / .ivs file(s)&gt;</p>
+<h2>DESCRIPTION</h2>
+<p> <code>aircrack-ng</code> is an 802.11 WEP and WPA/WPA2-PSK key cracking program.<br />
+ It can recover the WEP key once enough encrypted packets have been captured with airodump-ng. This part of the aircrack-ng suite determines the WEP key using two fundamental methods. The first method is via the PTW approach (Pyshkin, Tews, Weinmann). The main advantage of the PTW approach is that very few data packets are required to crack the WEP key. The second method is the FMS/KoreK method. The FMS/KoreK method incorporates various statistical attacks to discover the WEP key and uses these in combination with brute forcing.<br />
+ Additionally, the program offers a dictionary method for determining the WEP key. For cracking WPA/WPA2 pre-shared keys, a wordlist (file or stdin) or an airolib-ng has to be used.</p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><code>Common options:</code></dt>
+<dd>
+</dd><dt><i>-a &lt;amode&gt;</i></dt>
+<dd> Force the attack mode, 1 or wep for WEP and 2 or wpa for WPA-PSK.</dd>
+<dt><i>-e &lt;essid&gt;</i></dt>
+<dd> Select the target network based on the ESSID. This option is also required for WPA cracking if the SSID is cloacked. For SSID containing special characters, see <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names">http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names</a></dd>
+<dt><i>-b &lt;bssid&gt; or &#8211;bssid &lt;bssid&gt;</i></dt>
+<dd> Select the target network based on the access point MAC address.</dd>
+<dt><i>-p &lt;nbcpu&gt;</i></dt>
+<dd> Set this option to the number of CPUs to use (only available on SMP systems). By default, it uses all available CPUs</dd>
+<dt><i>-q</i></dt>
+<dd> If set, no status information is displayed.</dd>
+<dt><i>-C &lt;macs&gt; or &#8211;combine &lt;macs&gt;</i></dt>
+<dd> Merges all those APs MAC (separated by a comma) into a virtual one.</dd>
+<dt><i>-l &lt;file&gt;</i></dt>
+<dd> Write the key into a file.</dd>
+<dt><i>-E &lt;file&gt;</i></dt>
+<dd> Create Elcomsoft Wireless Security Auditor (EWSA) Project file v3.02.</dd></dl>
+<dl>
+<dt><code>Static WEP cracking options:</code></dt>
+<dd>
+</dd><dt><i>-c</i></dt>
+<dd> Search alpha-numeric characters only.</dd>
+<dt><i>-t</i></dt>
+<dd> Search binary coded decimal characters only.</dd>
+<dt><i>-h </i></dt>
+<dd> Search the numeric key for Fritz!BOX</dd>
+<dt><i>-d &lt;mask&gt; or &#8211;debug &lt;mask&gt;</i></dt>
+<dd> Specify mask of the key. For example: A1:XX:CF</dd>
+<dt><i>-m &lt;maddr&gt;</i></dt>
+<dd> Only keep the IVs coming from packets that match this MAC address. Alternatively, use -m ff:ff:ff:ff:ff:ff to use all and every IVs, regardless of the network (this disables ESSID and BSSID filtering).</dd>
+<dt><i>-n &lt;nbits&gt;</i></dt>
+<dd> Specify the length of the key: 64 for 40-bit WEP, 128 for 104-bit WEP, etc., until 512 bits of length. The default value is 128.</dd>
+<dt><i>-i &lt;index&gt;</i></dt>
+<dd> Only keep the IVs that have this key index (1 to 4). The default behaviour is to ignore the key index in the packet, and use the IV regardless.</dd>
+<dt><i>-f &lt;fudge&gt;</i></dt>
+<dd> By default, this parameter is set to 2. Use a higher value to increase the bruteforce level: cracking will take more time, but with a higher likelihood of success.</dd>
+<dt><i>-k &lt;korek&gt;</i></dt>
+<dd> There are 17 KoreK attacks. Sometimes one attack creates a huge false positive that prevents the key from being found, even with lots of IVs. Try -k 1, -k 2, &#8230; -k 17 to disable each attack selectively.</dd>
+<dt><i>-x or -x0</i></dt>
+<dd> Disable last keybytes bruteforce (not advised).</dd>
+<dt><i>-x1</i></dt>
+<dd> Enable last keybyte bruteforcing (default)</dd>
+<dt><i>-x2</i></dt>
+<dd> Enable last two keybytes bruteforcing.</dd>
+<dt><i>-X</i></dt>
+<dd> Disable bruteforce multithreading (SMP only).</dd>
+<dt><i>-s</i></dt>
+<dd> Shows ASCII version of the key at the right of the screen.</dd>
+<dt><i>-y </i></dt>
+<dd> This is an experimental single brute-force attack which should only be used when the standard attack mode fails with more than one million IVs.</dd>
+<dt><i>-z </i></dt>
+<dd> Uses PTW (Andrei Pyshkin, Erik Tews and Ralf-Philipp Weinmann) attack (default attack).</dd>
+<dt><i>-P &lt;num&gt; or &#8211;ptw-debug &lt;num&gt;</i></dt>
+<dd> PTW debug: 1 Disable klein, 2 PTW.</dd>
+<dt><i>-K</i></dt>
+<dd> Use KoreK attacks instead of PTW.</dd>
+<dt><i>-D or &#8211;wep-decloak</i></dt>
+<dd> WEP decloak mode.</dd>
+<dt><i>-1 or &#8211;oneshot</i></dt>
+<dd> Run only 1 try to crack key with PTW.</dd>
+<dt><i>-M &lt;num&gt;</i></dt>
+<dd> Specify maximum number of IVs to use.</dd></dl>
+<dl>
+<dt><code>WEP and WPA-PSK cracking options</code></dt>
+<dd>
+</dd><dt><i>-w &lt;words&gt;</i></dt>
+<dd> Path to a dictionary file for wpa cracking. Specify &quot;-&quot; to use stdin. Here is a list of wordlists: <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists">http://www.aircrack-ng.org/doku.php?id=faq#where_can_i_find_good_wordlists</a></dd></dl>
+<dl>
+<dt><code>WPA-PSK cracking options:</code></dt>
+<dd>
+</dd><dt><i>-S</i></dt>
+<dd> WPA cracking speed test.</dd>
+<dt><i>-r &lt;database&gt;</i></dt>
+<dd> Path to the airolib-ng database. Cannot be used with &#8216;-w&#8217;.</dd></dl>
+<dl>
+<dt><code>Other options:</code></dt>
+<dd>
+</dd><dt><i>-H or &#8211;help</i></dt>
+<dd> Show help screen</dd>
+<dt><i>-u or &#8211;cpu-detect</i></dt>
+<dd> Provide information on the number of CPUs and MMX/SSE support</dd></dl>
+<h2>AUTHOR</h2>
+<p> This manual page was written by Adam Cecile &lt;gandalf [at] le-vert.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-airbase-ng/">airbase-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-aireplay-ng/">aireplay-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airmon-ng/">airmon-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng/">airodump-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airodump-ng-oui-update/">airodump-ng-oui-update</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airserv-ng/">airserv-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-airtun-ng/">airtun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-besside-ng/">besside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-easside-ng/">easside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-tkiptun-ng/">tkiptun-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/8-wesside-ng/">wesside-ng</a>(8)</code><br />
+ <code><a href="/docs/linux/man/1-airdecap-ng/">airdecap-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airdecloak-ng/">airdecloak-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-airolib-ng/">airolib-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-besside-ng-crawler/">besside-ng-crawler</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-buddy-ng/">buddy-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-ivstools/">ivstools</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
+ <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

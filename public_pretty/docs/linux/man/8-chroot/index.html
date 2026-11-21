@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chroot(8) · Linux Manual Pages</title>
+<meta name="description" content="chroot – run command or interactive shell with special root directory">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-chroot/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>chroot(8)</h1>
+
+
+
+
+
+<p>chroot &#8211; run command or interactive shell with special root directory</p>
+<h2>Synopsis</h2>
+<p><code>chroot</code> [<i>,OPTION/</i>] <i>,NEWROOT /</i>[<i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;]<br />
+ <code>chroot</code> <i>,OPTION/</i></p>
+<h2>Description</h2>
+<p>Run COMMAND with root directory set to NEWROOT.</p>
+<dl>
+<dt><code>&#8211;groups</code>=<i>,G_LIST/</i></dt>
+<dd>specify supplementary groups as g1,g2,..,gN</dd>
+<dt><code>&#8211;userspec</code>=<i>,USER/</i>:GROUP</dt>
+<dd>specify user and group (ID or name) to use</dd>
+<dt><code>&#8211;skip-chdir</code></dt>
+<dd>do not change working directory to &#8216;/&#8217;</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>output version information and exit</dd></dl>
+<p> If no command is given, run &#8216;&quot;$SHELL&quot; <code>-i</code>&#8216; (default: &#8216;/bin/sh <code>-i</code>&#8216;).</p>
+<h2>Author</h2>
+<p>Written by Roland McGrath.</p>
+<h2>Reporting Bugs</h2>
+<p>GNU coreutils online help: &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/">https://www.gnu.org/software/coreutils/</a>&gt;<br />
+ Report any translation bugs to &lt;<a rel="nofollow" href="https://translationproject.org/team/">https://translationproject.org/team/</a>&gt;</p>
+<h2>Copyright</h2>
+<p>Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;.<br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
+<h2>See Also</h2>
+<p><a href="/docs/linux/man/2-chroot/">chroot</a>(2)<br />
+ Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chroot">https://www.gnu.org/software/coreutils/chroot</a>&gt;<br />
+ or available locally via: info &#8216;(coreutils) chroot invocation&#8217; </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

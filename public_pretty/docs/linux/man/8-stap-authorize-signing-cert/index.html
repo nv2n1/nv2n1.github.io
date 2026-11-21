@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stap-authorize-signing-cert(8) · Linux Manual Pages</title>
+<meta name="description" content="stap-authorize-signing-cert – systemtap signing authorization utility">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/8-stap-authorize-signing-cert/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/8/">Section 8</a></p>
+<article>
+<h1>stap-authorize-signing-cert(8)</h1>
+
+
+
+
+
+<div class="ad-above-fold">
+
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="4315544630"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p>stap-authorize-signing-cert &#8211; systemtap signing authorization utility </p>
+<h2>Synopsis</h2>
+<p><code>stap-authorize-signing-cert </code><i>CERTFILE</i> [ <i>DIRNAME</i> ] </p>
+<h2>Description</h2>
+<p>The <i>staprun</i> program will load modules for members of the group <i>stapusr</i> if they are signed by a trusted signer. A trusted signer is usually a <i>systemtap</i> compile server which signs modules when the client (<i>stap-client</i>) specifies the <code>&#8211;unprivileged</code> option. The trustworthiness of a given signer can not be determined automatically without a trusted certificate authority issuing systemtap signing certificates. This is not practical in everyday use and so, <i>staprun</i> must authenticate servers against its own database of trusted signers. In this context, establishing a given signer as trusted means adding that signer[aq]s certificate to <i>staprun</i>[aq]s database of trusted signers. The <i>stap-authorize-signing-cert</i> program adds the given signing certificate to the given certificate database, making that signer a trusted server for <i>staprun</i> when using that database. </p>
+<h2>Arguments</h2>
+<p>The <i>stap-authorize-signing-cert</i> program accepts two arguments: </p>
+<dl>
+<dt><code>CERTFILE</code></dt>
+<dd>This is the name of the file containing the certificate of the new trusted signer. For systemtap compile servers, this is the file named <i>stap.cert</i> which can be found in the server[aq]s certificate database. On the server host, for servers started by the <i>stap-server</i> service, this database can be found in <i>/var/lib/stap-server/.systemtap/ssl/server/</i>. For servers run by other non-root users, this database can be found in <i>$HOME/.systemtap/ssl/server/</i>. For root users (EUID=0), it can be found in the stappaths (7) manual page. </dd>
+<dt><code>DIRNAME</code></dt>
+<dd>This optional argument is the name of the directory containing the certificate database to which the certificate is to be added. If not specified, the default can be found in the stappaths (7) manual page. That is, the default result is that all users on the local host will trust this signer. Note that this default directory is only writable by root. </dd>
+</dl>
+<h2>Safety And Security</h2>
+<p>Systemtap is an administrative tool. It exposes kernel internal data structures and potentially private user information. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for additional information on safety and security. </p>
+<p> <i>Systemtap</i> uses Network Security Services (NSS) for module signing and verification. The NSS tool <i>certutil</i> is used for the generation of certificates. The related certificate databases must be protected in order to maintain the security of the system. Use of the utilities provided will help to ensure that the proper protection is maintained. <i>staprun</i> will check for proper access permissions before making use of any certificate database.</p>
+<h2>Files</h2>
+<dl>
+<dt>/var/lib/stap-server/.systemtap/ssl/server/stap.cert</dt>
+<dd>Signing certificate for servers started by the <i>stap-server</i> service. </dd>
+</dl>
+<h2>See Also</h2>
+<p><i><a href="/docs/linux/man/1-stap/">stap</a></i>(1), <i>stappathss</i>(7), <i><a href="/docs/linux/man/8-staprun/">staprun</a></i>(8), <i><a href="/docs/linux/man/8-stap-server/">stap-server</a></i>(8), <i>stap-client</i>(8), <i>NSS</i>, <i>certutil</i> </p>
+<h2>Bugs</h2>
+<p>Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sources.redhat.com/systemtap/">http://sources.redhat.com/systemtap/</a></code>, <code>&lt;systemtap [at] sources.redhat.com&gt;</code>. </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

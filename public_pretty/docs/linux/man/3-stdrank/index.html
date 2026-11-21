@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stdrank(3) · Linux Manual Pages</title>
+<meta name="description" content="std::rank – std::rank">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-stdrank/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>stdrank(3)</h1>
+
+
+
+
+
+<p>std::rank &#8211; std::rank</p>
+<h2>Synopsis</h2>
+<pre><code>Defined in header&lt;type_traits&gt;
+    template &lt;class T&gt;
+    (since C++ 11)
+        struct rank;</code></pre>
+<p>If T is an array type, provides the member constant value equal to the number of dimensions of the array. For any other type, value is 0.<br />
+Helper variable template template&lt; class T &gt;                                    (since C++17)</p>
+<p>inline constexpr std::size_t rank_v = rank&lt;T&gt;::value;</p>
+<p>Inherited from std::integral_constant </p>
+<h2>Member constants</h2>
+<p>value the number of dimensions of T or zero<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public static member constant)</i><br />
+<code>[static]</code></p>
+<h2>Member functions</h2>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts the object to std::size_t, returns value<br />
+operator std::size_t <i>(public member function)</i> </p>
+<p>operator() returns value<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function)</i><br />
+<i>(C++14)</i></p>
+<h2>Member types</h2>
+<p>Type Definition<br />
+value_type std::size_t<br />
+type std::integral_constant&lt;std::size_t, value&gt;</p>
+<h2>Possible implementation</h2>
+<p>&nbsp;<wbr>&nbsp;template&lt;class T&gt;<br />
+&nbsp;<wbr>&nbsp;struct rank : public std::integral_constant&lt;std::size_t, 0&gt; {}; </p>
+<p>&nbsp;<wbr>&nbsp;template&lt;class T&gt;<br />
+&nbsp;<wbr>&nbsp;struct rank&lt;T[]&gt; : public std::integral_constant&lt;std::size_t, rank&lt;T&gt;::value + 1&gt; {}; </p>
+<p>&nbsp;<wbr>&nbsp;template&lt;class T, std::size_t N&gt;<br />
+&nbsp;<wbr>&nbsp;struct rank&lt;T[N]&gt; : public std::integral_constant&lt;std::size_t, rank&lt;T&gt;::value + 1&gt; {};</p>
+<h2>Example</h2>
+<p>// Run this code </p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+int main()
+{
+    std::cout &lt;&lt; std::rank&lt;int&gt;{} &lt;&lt; &quot;
+&quot;;
+    std::cout &lt;&lt; std::rank&lt;int[5]&gt;{} &lt;&lt; '
+';
+    std::cout &lt;&lt; std::rank&lt;int[5][5]&gt;{} &lt;&lt; '
+';
+    std::cout &lt;&lt; std::rank&lt;int[][5][5]&gt;{} &lt;&lt; '
+';
+}
+</code></pre>
+<h2>Output:</h2>
+<p>&nbsp;<wbr>&nbsp;0 </p>
+<p>&nbsp;<wbr>&nbsp;1<br />
+&nbsp;<wbr>&nbsp;2<br />
+&nbsp;<wbr>&nbsp;3</p>
+<h2>See also</h2>
+<p>is_array checks if a type is an array type<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i><br />
+extent obtains the size of an array type along a specified dimension<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i><br />
+remove_extent removes one extent from the given array type<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i><br />
+remove_all_extents removes all extents from the given array type<br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(class template)</i><br />
+<i>(C++11)</i> </p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>

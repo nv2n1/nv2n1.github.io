@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>quantlib_covariancedecomposition(3) · Linux Manual Pages</title>
+<meta name="description" content="QuantLib::CovarianceDecomposition – Covariance decomposition into correlation and variances.">
+<link rel="canonical" href="https://www.systutorials.com/docs/linux/man/3-quantlib_covariancedecomposition/">
+<link rel="stylesheet" href="/docs/linux/man/man.css?v=7">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEXV9L9E6P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZEXV9L9E6P');
+</script>
+</head>
+<body>
+<main>
+<header class="site">
+<a class="site-name" href="/">SysTutorials</a>
+<nav><a href="/docs/linux/man/">Linux Manual Pages</a><a href="/privacy-policy/">Privacy</a></nav>
+</header>
+
+<p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/3/">Section 3</a></p>
+<article>
+<h1>quantlib_covariancedecomposition(3)</h1>
+
+
+
+
+
+<p>QuantLib::CovarianceDecomposition &#8211; Covariance decomposition into correlation and variances. </p>
+<h2>Synopsis</h2>
+<p>#include &lt;ql/math/matrixutilities/getcovariance.hpp&gt; </p>
+<h3>Public Member Functions</h3>
+<p><code>CovarianceDecomposition</code> (const <code>Matrix</code> &amp;covarianceMatrix, <code>Real</code> tolerance=1.0e-12, SalvagingAlgorithm::Type sa=SalvagingAlgorithm::None) </p>
+<p> const <code>Array</code> &amp; <code>variances</code> () const </p>
+<p> const <code>Array</code> &amp; <code>standardDeviations</code> () const </p>
+<p> const <code>Matrix</code> &amp; <code>correlationMatrix</code> () const </p>
+<h2>Detailed Description</h2>
+<p>Covariance decomposition into correlation and variances. </p>
+<p> Extracts the correlation matrix and the vector of variances out of the input covariance matrix. </p>
+<p> Note that only the lower symmetric part of the covariance matrix is used. </p>
+<p> <code>Precondition:</code></p>
+<dl COMPACT>
+<dd>The covariance matrix must be symmetric.</dd></dl>
+<p> <code>Tests</code></p>
+<dl COMPACT>
+<dd>cross checked with getCovariance</dd></dl>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<h3><code>CovarianceDecomposition</code> (const <code>Matrix</code> &amp; covarianceMatrix, <code>Real</code> tolerance = 1.0e-12, SalvagingAlgorithm::Type sa = SalvagingAlgorithm::None)</h3>
+<p><code>Precondition:</code></p>
+<dl COMPACT>
+<dd>covarianceMatrix must be symmetric</dd></dl>
+<h2>Member Function Documentation</h2>
+<h3>const <code>Array</code>&amp; variances () const</h3>
+<p>returns the variances <code>Array</code></p>
+<h3>const <code>Array</code>&amp; standardDeviations () const</h3>
+<p>returns the standard deviations <code>Array</code></p>
+<h3>const <code>Matrix</code>&amp; correlationMatrix () const</h3>
+<p>returns the correlation matrix </p>
+<h2>Author</h2>
+<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+
+<div class="ad-after-content">
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5988258742963952"
+     data-ad-slot="3544342269"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</article>
+
+</main>
+</body>
+</html>
