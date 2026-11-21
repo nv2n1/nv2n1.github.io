@@ -7,11 +7,14 @@ letter: "o"
 url: "/docs/linux/man/7-ocf_heartbeat_icp/"
 ---
 
- </p>
+</p>
+
 <p> ocf_heartbeat_ICP &#8211; Manages an ICP Vortex clustered host drive </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ICP</code> [start | stop | status | monitor | meta-data | validate-all] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> Resource script for ICP. It Manages an ICP Vortex clustered host drive as an HA resource.  </p>
 <h2>SUPPORTED PARAMETERS</h2>
 <p> <code>driveid</code> </p>

@@ -1,27 +1,31 @@
 ---
 title: "Man Page Heading Cleanup Tracker"
 url: "/man-heading-cleanup/"
-description: "Tracks which man pages have had redundant NAME/SYNOPSIS/DESCRIPTION headings removed"
+description: "Tracks which man pages have had redundant first h2 heading removed"
 ---
 
 # Man Page Heading Cleanup Tracker
 
-This page tracks man pages that have been cleaned up by removing redundant `<h2 class="name">NAME</h2>`, `<h2>SYNOPSIS</h2>`, and `<h2>DESCRIPTION</h2>` headings. The page title and header block already identify the page, making these headings redundant.
+This page tracks man pages that have been cleaned up by removing the **first h2 heading** if it's one of: `NAME`, `INTRO`, `INTRODUCTION`, `DESCRIPTION`, or `SYNOPSIS`. The page title and header block already identify the page, making these first headings redundant.
 
 ## Cleanup Rules
 
-Remove the **first occurrence** of each of these headings (keep all content paragraphs):
-- `<h2 class="name">NAME</h2>`
-- `<h2>SYNOPSIS</h2>`
-- `<h2>DESCRIPTION</h2>`
+Remove the **first h2 heading only** if it matches one of:
+- `NAME`
+- `INTRO`
+- `INTRODUCTION`
+- `DESCRIPTION`
+- `SYNOPSIS`
+
+All content paragraphs are preserved. Subsequent headings (even if they match) are not removed.
 
 ## Cleaned Pages
 
-| Man Page | Section | Date Cleaned | Notes |
-|----------|---------|--------------|-------|
-| [repo(1)](/docs/linux/man/1-repo/) | 1 | 2024-11-21 | Sample 1 |
-| [user_namespaces(7)](/docs/linux/man/7-user_namespaces/) | 7 | 2024-11-21 | Sample 2 |
-| [ocf_heartbeat_icp(7)](/docs/linux/man/7-ocf_heartbeat_icp/) | 7 | 2024-11-21 | Sample 3 |
+| Man Page | Section | Date Cleaned | Removed Heading | Notes |
+|----------|---------|--------------|-----------------|-------|
+| [repo(1)](/docs/linux/man/1-repo/) | 1 | 2024-11-21 | NAME | Sample 1 |
+| [user_namespaces(7)](/docs/linux/man/7-user_namespaces/) | 7 | 2024-11-21 | NAME | Sample 2 |
+| [ocf_heartbeat_icp(7)](/docs/linux/man/7-ocf_heartbeat_icp/) | 7 | 2024-11-21 | NAME | Sample 3 |
 
 ## Future Use
 
