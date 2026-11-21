@@ -5,7 +5,9 @@ section: "1"
 letter: "n"
 url: "/docs/linux/man/1-nytprofcalls/"
 ---
-
-nytprofcalls - experimental 
-
- <hr>
+<p>nytprofcalls &#8211; experimental </p>
+<hr />
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd></dl>

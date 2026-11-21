@@ -6,24 +6,45 @@ letter: "v"
 url: "/docs/linux/man/9-vscnprintf/"
 description: "vscnprintf – Format a string and place it in a buffer"
 ---
-
-<p>vscnprintf &#8211; Format a string and place it in a buffer</p>
-<h2>Synopsis</h2>
-<pre><code>int vscnprintf(char *buf, size_t size, const char *fmt, va_list args);</code></pre>
-<h2>Arguments</h2>
-<p><i>buf</i></p>
+<p>vscnprintf &#8211; Format a string and place it in a buffer </p>
+<h2>SYNOPSIS</h2>
 <dl>
-<dd>
-</dd><dd>The buffer to place the result into</dd></dl>
-<p> <i>size</i></p>
+<dt><code>int vscnprintf(char&nbsp;<wbr>*&nbsp;<wbr></code><i>buf</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>, const char&nbsp;<wbr>*&nbsp;<wbr></code><i>fmt</i><code>, va_list&nbsp;<wbr></code><i>args</i><code>);</code></dt>
+</dl>
+<h2>ARGUMENTS</h2>
+<p> <i>buf</i> </p>
 <dl>
-<dd>The size of the buffer, including the trailing null space</dd></dl>
-<p> <i>fmt</i></p>
+<dd>  </dd>
+<dd> <p> The buffer to place the result into </p>
+ </dd></dl>
+<p> <i>size</i> </p>
 <dl>
-<dd>The format string to use</dd></dl>
-<p> <i>args</i></p>
+<dd> <p> The size of the buffer, including the trailing null space </p>
+ </dd></dl>
+<p> <i>fmt</i> </p>
 <dl>
-<dd>Arguments for the format string</dd></dl>
-<h2>Description</h2>
-<p>The return value is the number of characters which have been written into the <i>buf</i> not including the trailing &#8216;
-</p>
+<dd> <p> The format string to use </p>
+ </dd></dl>
+<p> <i>args</i> </p>
+<dl>
+<dd> <p> Arguments for the format string </p>
+ </dd></dl>
+<h2>DESCRIPTION</h2>
+<p>The return value is the number of characters which have been written into the <i>buf</i> not including the trailing &#8216;\0&#8217;. If <i>size</i> is == 0 the function returns 0. </p>
+<p>If you&#8217;re not already dealing with a va_list consider using <code>scnprintf</code>. </p>
+<p>See the <code>vsnprintf</code> documentation for format string extensions over C99.  </p>
+<h2>COPYRIGHT</h2>
+<p> <br />
+ </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">ARGUMENTS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">COPYRIGHT</a></dt>
+<dd>  </dd></dl>

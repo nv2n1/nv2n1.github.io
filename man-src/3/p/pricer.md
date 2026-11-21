@@ -6,49 +6,125 @@ letter: "p"
 url: "/docs/linux/man/3-pricer/"
 description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 ---
-
 <p>QuantLib::FloatingRateCoupon &#8211; base floating-rate coupon class </p>
-<h2>Synopsis</h2>
-<pre><code>void update ()</code></pre>
-<p> Inherits <code>QuantLib::Coupon</code>, and <code>QuantLib::Observer</code>. Inherited by <code>AverageBMACoupon</code>, <code>CappedFlooredCoupon</code>, <code>CmsCoupon</code>, <code>DigitalCoupon</code>, <code>IborCoupon</code>, RangeAccrualFloatersCoupon, and SubPeriodsCoupon.</p>
+<h2>SYNOPSIS</h2>
+<p> <br />
+ </p>
+<p>#include &lt;ql/cashflows/floatingratecoupon.hpp&gt; </p>
+<p>Inherits <code>QuantLib::Coupon</code>, and <code>QuantLib::Observer</code>. </p>
+<p>Inherited by <code>AverageBMACoupon</code>, <code>CappedFlooredCoupon</code>, <code>CmsCoupon</code>, <code>DigitalCoupon</code>, <code>IborCoupon</code>, RangeAccrualFloatersCoupon, and SubPeriodsCoupon. </p>
 <h3>Public Member Functions</h3>
-<p>void update () <code>CashFlow interface</code> </p>
-<p> <code>Real</code> <code>amount</code> () const<br />
- <i>returns the amount of the cash flow </i> <code>Coupon interface</code> </p>
-<p> <code>Rate</code> <code>rate</code> () const<br />
- <i>accrued rate </i><br />
- <code>Real</code> <code>price</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountingCurve) const </p>
-<p> <code>DayCounter</code> <code>dayCounter</code> () const<br />
- <i>day counter for accrual calculation </i><br />
- <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const<br />
- <i>accrued amount at the given date </i> <code>Inspectors</code><br />
- void update () <code>Observer interface</code> </p>
-<pre><code>void update ()</code></pre>
-<p> <code>Visitability</code> </p>
-<p> virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;)</p>
+<p> <br />
+ <code>FloatingRateCoupon</code> (const <code>Date</code> &amp;paymentDate, const <code>Real</code> nominal, const <code>Date</code> &amp;startDate, const <code>Date</code> &amp;endDate, const <code>Natural</code> fixingDays, const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp;index, const <code>Real</code> gearing=1.0, const <code>Spread</code> spread=0.0, const <code>Date</code> &amp;refPeriodStart=<code>Date</code>(), const <code>Date</code> &amp;refPeriodEnd=<code>Date</code>(), const <code>DayCounter</code> &amp;dayCounter=<code>DayCounter</code>(), bool isInArrears=false) <br />
+ <br />
+ void <code>setPricer</code> (const boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; &amp;) <br />
+ <br />
+ boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; <code>pricer</code> () const <br />
+ </p>
+<p> <code>CashFlow interface</code> <br />
+ </p>
+<p> <br />
+ <code>Real</code> <code>amount</code> () const <br />
+ <i>returns the amount of the cash flow </i> </p>
+<p> <code>Coupon interface</code> <br />
+ </p>
+<p> <br />
+ <code>Rate</code> <code>rate</code> () const <br />
+ <i>accrued rate </i> <br />
+ <code>Real</code> <code>price</code> (const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;discountingCurve) const <br />
+ <br />
+ <code>DayCounter</code> <code>dayCounter</code> () const <br />
+ <i>day counter for accrual calculation </i> <br />
+ <code>Real</code> <code>accruedAmount</code> (const <code>Date</code> &amp;) const <br />
+ <i>accrued amount at the given date </i> </p>
+<p> <code>Inspectors</code> <br />
+ </p>
+<p> <br />
+ const boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; &amp; <code>index</code> () const <br />
+ <i>floating index </i> <br />
+ <code>Natural</code> <code>fixingDays</code> () const <br />
+ <i>fixing days </i> <br />
+ virtual <code>Date</code> <code>fixingDate</code> () const <br />
+ <i>fixing date </i> <br />
+ <code>Real</code> <code>gearing</code> () const <br />
+ <i>index gearing, i.e. multiplicative coefficient for the index </i> <br />
+ <code>Spread</code> <code>spread</code> () const <br />
+ <i>spread paid over the fixing of the underlying index </i> <br />
+ virtual <code>Rate</code> <code>indexFixing</code> () const <br />
+ <i>fixing of the underlying index </i> <br />
+ virtual <code>Rate</code> <code>convexityAdjustment</code> () const <br />
+ <i>convexity adjustment </i> <br />
+ virtual <code>Rate</code> <code>adjustedFixing</code> () const <br />
+ <i>convexity-adjusted fixing </i> <br />
+ bool <code>isInArrears</code> () const <br />
+ <i>whether or not the coupon fixes in arrears </i> </p>
+<p> <code>Observer interface</code> <br />
+ </p>
+<p> <br />
+ void <code>update</code> () <br />
+ </p>
+<p> <code>Visitability</code> <br />
+ </p>
+<p> <br />
+ virtual void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br />
+  </p>
 <h3>Protected Member Functions</h3>
-<p><code>Rate</code> <code>convexityAdjustmentImpl</code> (<code>Rate</code> fixing) const<br />
- <i>convexity adjustment for the given index fixing </i></p>
+<p> <br />
+ <code>Rate</code> <code>convexityAdjustmentImpl</code> (<code>Rate</code> fixing) const <br />
+ <i>convexity adjustment for the given index fixing </i>  </p>
 <h3>Protected Attributes</h3>
-<p>boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; <code>index_</code> </p>
-<p> <code>DayCounter</code> <code>dayCounter_</code> </p>
-<p> <code>Natural</code> <code>fixingDays_</code> </p>
-<p> <code>Real</code> <code>gearing_</code> </p>
-<p> <code>Spread</code> <code>spread_</code> </p>
-<p> bool <code>isInArrears_</code> </p>
-<p> boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; <code>pricer_</code></p>
+<p> <br />
+ boost::shared_ptr&lt; <code>InterestRateIndex</code> &gt; <code>index_</code> <br />
+ <br />
+ <code>DayCounter</code> <code>dayCounter_</code> <br />
+ <br />
+ <code>Natural</code> <code>fixingDays_</code> <br />
+ <br />
+ <code>Real</code> <code>gearing_</code> <br />
+ <br />
+ <code>Spread</code> <code>spread_</code> <br />
+ <br />
+ bool <code>isInArrears_</code> <br />
+ <br />
+ boost::shared_ptr&lt; <code>FloatingRateCouponPricer</code> &gt; <code>pricer_</code> <br />
+  </p>
 <h2>Detailed Description</h2>
-<p>base floating-rate coupon class</p>
+<p>base floating-rate coupon class  </p>
 <h2>Member Function Documentation</h2>
-<h3><code>Real</code> amount () const [virtual]</h3>
+<code></code><h3>Real amount () const [virtual]</h3>
 <p>returns the amount of the cash flow </p>
-<p> <code>Note:</code></p>
+<p> <code>Note:</code> </p>
 <dl>
-<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
-<p> Implements <code>CashFlow</code>.</p>
+<dd> <p> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date. </p>
+ </dd></dl>
+<p>Implements <code>CashFlow</code>.  </p>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>
-<p> Implements <code>Observer</code>. </p>
-<p> Reimplemented in <code>CappedFlooredCoupon</code>, and <code>DigitalCoupon</code>.</p>
+<p>Implements <code>Observer</code>. </p>
+<p>Reimplemented in <code>CappedFlooredCoupon</code>, and <code>DigitalCoupon</code>. </p>
 <h2>Author</h2>
-<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+<p>Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAD">Public Member Functions</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">Protected Member Functions</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">Protected Attributes</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAG">Detailed Description</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">Member Function Documentation</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAI"><code>Real</code> amount () const [virtual]</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">void update () [virtual]</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd>  </dd></dl>

@@ -6,9 +6,8 @@ letter: "g"
 url: "/docs/linux/man/1-gpg-connect-agent/"
 description: "gpg-connect-agent – Communicate with a running agent"
 ---
-
 <h2 class="name">NAME</h2>
-<p> <code>gpg-connect-agent</code> &#8211; Communicate with a running agent </p>
+<p> <code>gpg-connect-agent</code> - Communicate with a running agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-connect-agent</code> [<i>options</i>]<i>[commands]</i> </p>
 <h2>DESCRIPTION</h2>
@@ -17,79 +16,209 @@ description: "gpg-connect-agent – Communicate with a running agent"
 <p> The following options may be used: </p>
 <dl>
 <dt><code>-v</code></dt>
-<dd> <code>&#8211;verbose</code> Output additional information while running. </dd>
+<dd> <p> <code>--verbose</code> Output additional information while running. </p>
+ </dd>
 <dt><code>-q</code></dt>
-<dd>
-</dd><dt><code>&#8211;quiet</code></dt>
-<dd> Try to be as quiet as possible. </dd>
-<dt><code>&#8211;homedir </code><i>dir</i></dt>
-<dd> Set the name of the home directory to <i>dir</i>. If this option is not used, the home directory defaults to &#8216;<i>~/.gnupg</i>&#8216;. It is only recognized when given on the command line. It also overrides any home directory stated through the environment variable &#8216;<i>GNUPGHOME</i>&#8216; or (on Windows systems) by means of the Registry entry <i>HKCU\Software\GNU\GnuPG:HomeDir</i>. </dd>
+<dd>  </dd>
+<dt><code>--quiet</code></dt>
+<dd> <p> Try to be as quiet as possible. </p>
+ </dd>
+<dt><code>--homedir </code><i>dir</i></dt>
+<dd> <p> Set the name of the home directory to <i>dir</i>. If this option is not used, the home directory defaults to &#8216;<i>~/.gnupg</i>&#8216;. It is only recognized when given on the command line. It also overrides any home directory stated through the environment variable &#8216;<i>GNUPGHOME</i>&#8216; or (on Windows systems) by means of the Registry entry <i>HKCU\Software\GNU\GnuPG:HomeDir</i>. </p>
 <p> On Windows systems it is possible to install GnuPG as a portable application. In this case only this command line option is considered, all other ways to set a home directory are ignored. </p>
 <p> To install GnuPG as a portable application under Windows, create an empty file named &#8216;<i>gpgconf.ctl</i>&#8216; in the same directory as the tool &#8216;<i>gpgconf.exe</i>&#8216;. The root of the installation is then that directory; or, if &#8216;<i>gpgconf.exe</i>&#8216; has been installed directly below a directory named &#8216;<i>bin</i>&#8216;, its parent directory. You also need to make sure that the following directories exist and are writable: &#8216;<i>ROOT/home</i>&#8216; for the GnuPG home and &#8216;<i>ROOT/var/cache/gnupg</i>&#8216; for internal cache files. </p>
-<dt><code>&#8211;agent-program </code><i>file</i></dt>
-<dd> Specify the agent program to be started if none is running. The default value is determined by running <code>gpgconf</code> with the option <code>&#8211;list-dirs</code>. Note that the pipe symbol (<code>|</code>) is used for a regression test suite hack and may thus not be used in the file name. </dd>
-<dt><code>&#8211;dirmngr-program </code><i>file</i></dt>
-<dd> Specify the directory manager (keyserver client) program to be started if none is running. This has only an effect if used together with the option <code>&#8211;dirmngr</code>. </dd>
-<dt><code>&#8211;dirmngr</code></dt>
-<dd> Connect to a running directory manager (keyserver client) instead of to the gpg-agent. If a dirmngr is not running, start it. </dd>
+ </dd>
+<dt><code>--agent-program </code><i>file</i></dt>
+<dd> <p> Specify the agent program to be started if none is running. The default value is determined by running <code>gpgconf</code> with the option <code>--list-dirs</code>. Note that the pipe symbol (<code>|</code>) is used for a regression test suite hack and may thus not be used in the file name. </p>
+ </dd>
+<dt><code>--dirmngr-program </code><i>file</i></dt>
+<dd> <p> Specify the directory manager (keyserver client) program to be started if none is running. This has only an effect if used together with the option <code>--dirmngr</code>. </p>
+ </dd>
+<dt><code>--dirmngr</code></dt>
+<dd> <p> Connect to a running directory manager (keyserver client) instead of to the gpg-agent. If a dirmngr is not running, start it. </p>
+ </dd>
 <dt><code>-S</code></dt>
-<dd> <code>&#8211;raw-socket </code><i>name</i> Connect to socket <i>name</i> assuming this is an Assuan style server. Do not run any special initializations or environment checks. This may be used to directly connect to any Assuan style socket server. </dd>
+<dd> <p> <code>--raw-socket </code><i>name</i> Connect to socket <i>name</i> assuming this is an Assuan style server. Do not run any special initializations or environment checks. This may be used to directly connect to any Assuan style socket server. </p>
+ </dd>
 <dt><code>-E</code></dt>
-<dd> <code>&#8211;exec</code> Take the rest of the command line as a program and it&#8217;s arguments and execute it as an Assuan server. Here is how you would run <code>gpgsm</code>:</dd>
+<dd> <p> <code>--exec</code> Take the rest of the command line as a program and it&#8217;s arguments and execute it as an Assuan server. Here is how you would run <code>gpgsm</code>: </p>
+ </dd>
 <dl>
-<dt>
-</dt><dd>
-<pre>
- gpg-connect-agent --exec gpgsm --server
-</pre>
-</dd></dl>
+<dd> <pre><code> gpg-connect-agent --exec gpgsm --server
+</code></pre>
+ </dd></dl>
 <p> Note that you may not use options on the command line in this case. </p>
-<dt><code>&#8211;no-ext-connect</code></dt>
-<dd> When using <code>-S</code> or <code>&#8211;exec</code>, <code>gpg-connect-agent</code> connects to the Assuan server in extended mode to allow descriptor passing. This option makes it use the old mode. </dd>
-<dt><code>&#8211;no-autostart</code></dt>
-<dd> Do not start the gpg-agent or the dirmngr if it has not yet been started. </dd>
+<dt><code>--no-ext-connect</code></dt>
+<dd> <p> When using <code>-S</code> or <code>--exec</code>, <code>gpg-connect-agent</code> connects to the Assuan server in extended mode to allow descriptor passing. This option makes it use the old mode. </p>
+ </dd>
+<dt><code>--no-autostart</code></dt>
+<dd> <p> Do not start the gpg-agent or the dirmngr if it has not yet been started. </p>
+ </dd>
 <dt><code>-r </code><i>file</i></dt>
-<dd> <code>&#8211;run </code><i>file</i> Run the commands from <i>file</i> at startup and then continue with the regular input method. Note, that commands given on the command line are executed after this file. </dd>
+<dd> <p> <code>--run </code><i>file</i> Run the commands from <i>file</i> at startup and then continue with the regular input method. Note, that commands given on the command line are executed after this file. </p>
+ </dd>
 <dt><code>-s</code></dt>
-<dd> <code>&#8211;subst</code> Run the command <code>/subst</code> at startup. </dd>
-<dt><code>&#8211;hex</code></dt>
-<dd> Print data lines in a hex format and the ASCII representation of non-control characters. </dd>
-<dt><code>&#8211;decode</code></dt>
-<dd> Decode data lines. That is to remove percent escapes but make sure that a new line always starts with a D and a space. </dd>
-</dl>
+<dd> <p> <code>--subst</code> Run the command <code>/subst</code> at startup. </p>
+ </dd>
+<dt><code>--hex</code></dt>
+<dd> <p> Print data lines in a hex format and the ASCII representation of non-control characters. </p>
+ </dd>
+<dt><code>--decode</code></dt>
+<dd> <p> Decode data lines. That is to remove percent escapes but make sure that a new line always starts with a D and a space. </p>
+ </dd></dl>
 <h2>CONTROL COMMANDS</h2>
 <p> While reading Assuan commands, gpg-agent also allows a few special commands to control its operation. These control commands all start with a slash (<code>/</code>). </p>
 <dl>
 <dt><code>/echo </code><i>args</i></dt>
-<dd> Just print <i>args</i>. </dd>
-<dt><code>/let </code><i>name</i> <i>value</i></dt>
-<dd> Set the variable <i>name</i> to <i>value</i>. Variables are only substituted on the input if the <code>/subst</code> has been used. Variables are referenced by prefixing the name with a dollar sign and optionally include the name in curly braces. The rules for a valid name are identically to those of the standard bourne shell. This is not yet enforced but may be in the future. When used with curly braces no leading or trailing white space is allowed. </dd>
+<dd> <p> Just print <i>args</i>. </p>
+ </dd>
+<dt><code>/let </code><i>name</i><i>value</i></dt>
+<dd> <p> Set the variable <i>name</i> to <i>value</i>. Variables are only substituted on the input if the <code>/subst</code> has been used. Variables are referenced by prefixing the name with a dollar sign and optionally include the name in curly braces. The rules for a valid name are identically to those of the standard bourne shell. This is not yet enforced but may be in the future. When used with curly braces no leading or trailing white space is allowed. </p>
 <p> If a variable is not found, it is searched in the environment and if found copied to the table of variables. </p>
 <p> Variable functions are available: The name of the function must be followed by at least one space and the at least one argument. The following functions are available: </p>
+ </dd>
 <dl>
+<dd>  </dd>
 <dl>
 <dt><code>get</code></dt>
-<dd> Return a value described by the argument. Available arguments are: </dd>
+<dd> <p> Return a value described by the argument. Available arguments are: </p>
+ </dd>
 <dl>
+<dd>  </dd>
 <dl>
 <dt><code>cwd</code></dt>
-<dd> The current working directory.</dd>
+<dd> <p> The current working directory. </p>
+ </dd>
 <dt><code>homedir</code></dt>
-<dd> The gnupg homedir.</dd>
+<dd> <p> The gnupg homedir. </p>
+ </dd>
 <dt><code>sysconfdir</code></dt>
-<dd> GnuPG&#8217;s system configuration directory.</dd>
+<dd> <p> GnuPG&#8217;s system configuration directory. </p>
+ </dd>
 <dt><code>bindir</code></dt>
-<dd> GnuPG&#8217;s binary directory.</dd>
+<dd> <p> GnuPG&#8217;s binary directory. </p>
+ </dd>
 <dt><code>libdir</code></dt>
-<dd> GnuPG&#8217;s library directory.</dd>
+<dd> <p> GnuPG&#8217;s library directory. </p>
+ </dd>
 <dt><code>libexecdir</code></dt>
-<dd> GnuPG&#8217;s library directory for executable files.</dd>
+<dd> <p> GnuPG&#8217;s library directory for executable files. </p>
+ </dd>
 <dt><code>datadir</code></dt>
-<dd> GnuPG&#8217;s data directory.</dd>
+<dd> <p> GnuPG&#8217;s data directory. </p>
+ </dd>
 <dt><code>serverpid</code></dt>
-<dd> The PID of the current server. Command <code>/serverpid</code> must have been given to return a useful value.</dd></dl>
+<dd> <p> The PID of the current server. Command <code>/serverpid</code> must have been given to return a useful value. </p>
+ </dd></dl>
 </dl>
 <dt><code>unescape </code><i>args</i></dt>
-<dd> Remove C-style escapes from <i>args</i>. Note that <code>
-</dd></dl></dl></dl>
-</code>
+<dd> <p> Remove C-style escapes from <i>args</i>. Note that <code>\0</code> and <code>\x00</code> terminate the returned string implicitly. The string to be converted are the entire arguments right behind the delimiting space of the function name. </p>
+ </dd>
+<dt><code>unpercent </code><i>args</i></dt>
+<dd> <p> <code>unpercent+ </code><i>args</i> Remove percent style escaping from <i>args</i>. Note that <code>%00</code> terminates the string implicitly. The string to be converted are the entire arguments right behind the delimiting space of the function name. <code>unpercent+</code> also maps plus signs to a spaces. </p>
+ </dd>
+<dt><code>percent </code><i>args</i></dt>
+<dd> <p> <code>percent+ </code><i>args</i> Escape the <i>args</i> using percent style escaping. Tabs, formfeeds, linefeeds, carriage returns and colons are escaped. <code>percent+</code> also maps spaces to plus signs. </p>
+ </dd>
+<dt><code>errcode </code><i>arg</i></dt>
+<dd> <p> <code>errsource </code><i>arg</i> <code>errstring </code><i>arg</i> Assume <i>arg</i> is an integer and evaluate it using <code>strtol</code>. Return the gpg-error error code, error source or a formatted string with the error code and error source. </p>
+ </dd>
+<dt><code>+</code></dt>
+<dd> <p> <code>-</code> <code>*</code> <code>/</code> <code>%</code> Evaluate all arguments as long integers using <code>strtol</code> and apply this operator. A division by zero yields an empty string. </p>
+ </dd>
+<dt><code>!</code></dt>
+<dd> <p> <code>|</code> <code>&amp;</code> Evaluate all arguments as long integers using <code>strtol</code> and apply the logical operators NOT, OR or AND. The NOT operator works on the last argument only. </p>
+ </dd></dl>
+</dl>
+<dt><code>/definq </code><i>name</i><i>var</i></dt>
+<dd> <p> Use content of the variable <i>var</i> for inquiries with <i>name</i>. <i>name</i> may be an asterisk (<code>*</code>) to match any inquiry. </p>
+ </dd>
+<dt><code>/definqfile </code><i>name</i><i>file</i></dt>
+<dd> <p> Use content of <i>file</i> for inquiries with <i>name</i>. <i>name</i> may be an asterisk (<code>*</code>) to match any inquiry. </p>
+ </dd>
+<dt><code>/definqprog </code><i>name</i><i>prog</i></dt>
+<dd> <p> Run <i>prog</i> for inquiries matching <i>name</i> and pass the entire line to it as command line arguments. </p>
+ </dd>
+<dt><code>/datafile </code><i>name</i></dt>
+<dd> <p> Write all data lines from the server to the file <i>name</i>. The file is opened for writing and created if it does not exists. An existing file is first truncated to 0. The data written to the file fully decoded. Using a single dash for <i>name</i> writes to stdout. The file is kept open until a new file is set using this command or this command is used without an argument. </p>
+ </dd>
+<dt><code>/showdef</code></dt>
+<dd> <p> Print all definitions </p>
+ </dd>
+<dt><code>/cleardef</code></dt>
+<dd> <p> Delete all definitions </p>
+ </dd>
+<dt><code>/sendfd </code><i>file</i><i>mode</i></dt>
+<dd> <p> Open <i>file</i> in <i>mode</i> (which needs to be a valid <code>fopen</code> mode string) and send the file descriptor to the server. This is usually followed by a command like <code>INPUT FD</code> to set the input source for other commands. </p>
+ </dd>
+<dt><code>/recvfd</code></dt>
+<dd> <p> Not yet implemented. </p>
+ </dd>
+<dt><code>/open </code><i>var</i><i>file</i> [<i>mode</i>] </dt>
+<dd> <p> Open <i>file</i> and assign the file descriptor to <i>var</i>. Warning: This command is experimental and might change in future versions. </p>
+ </dd>
+<dt><code>/close </code><i>fd</i></dt>
+<dd> <p> Close the file descriptor <i>fd</i>. Warning: This command is experimental and might change in future versions. </p>
+ </dd>
+<dt><code>/showopen</code></dt>
+<dd> <p> Show a list of open files. </p>
+ </dd>
+<dt><code>/serverpid</code></dt>
+<dd> <p> Send the Assuan command <code>GETINFO pid</code> to the server and store the returned PID for internal purposes. </p>
+ </dd>
+<dt><code>/sleep</code></dt>
+<dd> <p> Sleep for a second. </p>
+ </dd>
+<dt><code>/hex</code></dt>
+<dd> <p> <code>/nohex</code> Same as the command line option <code>--hex</code>. </p>
+ </dd>
+<dt><code>/decode</code></dt>
+<dd> <p> <code>/nodecode</code> Same as the command line option <code>--decode</code>. </p>
+ </dd>
+<dt><code>/subst</code></dt>
+<dd> <p> <code>/nosubst</code> Enable and disable variable substitution. It defaults to disabled unless the command line option <code>--subst</code> has been used. If /subst as been enabled once, leading whitespace is removed from input lines which makes scripts easier to read. </p>
+ </dd>
+<dt><code>/while </code><i>condition</i></dt>
+<dd> <p> <code>/end</code> These commands provide a way for executing loops. All lines between the <code>while</code> and the corresponding <code>end</code> are executed as long as the evaluation of <i>condition</i> yields a non-zero value or is the string <code>true</code> or <code>yes</code>. The evaluation is done by passing <i>condition</i> to the <code>strtol</code> function. Example: </p>
+ </dd>
+<dl>
+<dd> <pre><code>  /subst
+  /let i 3
+  /while $i
+    /echo loop counter is $i
+    /let i ${- $i 1}
+  /end
+</code></pre>
+ </dd></dl>
+<dt><code>/if </code><i>condition</i></dt>
+<dd> <p> <code>/end</code> These commands provide a way for conditional execution. All lines between the <code>if</code> and the corresponding <code>end</code> are executed only if the evaluation of <i>condition</i> yields a non-zero value or is the string <code>true</code> or <code>yes</code>. The evaluation is done by passing <i>condition</i> to the <code>strtol</code> function. </p>
+ </dd>
+<dt><code>/run </code><i>file</i></dt>
+<dd> <p> Run commands from <i>file</i>. </p>
+ </dd>
+<dt><code>/bye</code></dt>
+<dd> <p> Terminate the connection and the program. </p>
+ </dd>
+<dt><code>/help</code></dt>
+<dd> <p> Print a list of available control commands. </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1), <code><a href="/docs/linux/man/1-scdaemon/">scdaemon</a></code>(1) </p>
+<p> The full documentation for this tool is maintained as a Texinfo manual. If GnuPG and the info program are properly installed at your site, the command </p>
+<dl>
+<dd> <pre><code>info gnupg
+</code></pre>
+ </dd></dl>
+<p> should give you access to the complete manual including a menu structure and an index. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">CONTROL COMMANDS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">SEE ALSO</a></dt>
+<dd>  </dd></dl>

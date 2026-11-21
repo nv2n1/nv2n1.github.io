@@ -6,126 +6,312 @@ letter: "f"
 url: "/docs/linux/man/1-file/"
 description: "file – determine file type"
 ---
-
 <h2 class="name">NAME</h2>
-<p> <code>file</code> &#8211; determine file type </p>
+<p> <code>file</code> - determine file type </p>
 <h2>SYNOPSIS</h2>
-<p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file &#8230;</i><br />
-<code>file</code> &#8211;<code>C</code> [-<code>m </code><i>magicfiles</i> ]<br />
-<code>file</code> [-<code>-help</code> ]</p>
+<p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file ...</i> <br />
+<code>file</code> -<code>C</code> [-<code>m </code><i>magicfiles</i> ] <br />
+<code>file</code> [-<code>-help</code> ]  </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents version 5.41 of the <code>file</code> command. </p>
 <p> <code>file</code> tests each argument in an attempt to classify it. There are three sets of tests, performed in this order: filesystem tests, magic tests, and language tests. The <i>first</i> test that succeeds causes the file type to be printed. </p>
-<p> The type printed will usually contain one of the words <i>text</i> (the file contains only printing characters and a few common control characters and is probably safe to read on an <code>ASCII</code> terminal), <i>executable</i> (the file contains the result of compiling a program in a form understandable to some <code>UNIX</code> kernel or another), or <i>data</i> meaning anything else (data is usually &#8220;binary&#8221; or non-printable). Exceptions are well-known file formats (core files, tar archives) that are known to contain binary data. When modifying magic files or the program itself, make sure to <i>preserve these keywords</i> Users depend on knowing that all the readable files in a directory have the word &#8220;text&#8221; printed. Don&#8217;t do as Berkeley did and change &#8220;shell commands text&#8221; to &#8220;shell script&#8221; </p>
+<p> The type printed will usually contain one of the words <i>text</i> (the file contains only printing characters and a few common control characters and is probably safe to read on an <code>ASCII</code> terminal), <i>executable</i> (the file contains the result of compiling a program in a form understandable to some <code>UNIX</code> kernel or another), or <i>data</i> meaning anything else (data is usually ``binary&#8217;&#8216; or non-printable). Exceptions are well-known file formats (core files, tar archives) that are known to contain binary data. When modifying magic files or the program itself, make sure to <i>preserve these keywords</i> Users depend on knowing that all the readable files in a directory have the word ``text&#8217;&#8216; printed. Don&#8217;t do as Berkeley did and change ``shell commands text&#8217;&#8216; to ``shell script&#8217;&#8216; </p>
 <p> The filesystem tests are based on examining the return from a <a href="/docs/linux/man/2-stat/">stat</a>(2) system call. The program checks to see if the file is empty, or if it&#8217;s some sort of special file. Any known file types appropriate to the system you are running on (sockets, symbolic links, or named pipes (FIFOs) on those systems that implement them) are intuited if they are defined in the system header file In sys/stat.h . </p>
-<p> The magic tests are used to check for files with data in particular fixed formats. The canonical example of this is a binary executable (compiled program) <code>a.out</code> file, whose format is defined in In elf.h , In a.out.h and possibly In exec.h in the standard include directory. These files have a &#8220;magic number&#8221; stored in a particular place near the beginning of the file that tells the <code>UNIX</code> operating system that the file is a binary executable, and which of several types thereof. The concept of a &#8220;magic number&#8221; has been applied by extension to data files. Any file with some invariant identifier at a small fixed offset into the file can usually be described in this way. The information identifying these files is read from /etc/magic and the compiled magic file /usr/share/misc/magic.mgc or the files in the directory /usr/share/misc/magic if the compiled file does not exist. In addition, if $HOME/.magic.mgc or $HOME/.magic exists, it will be used in preference to the system magic files. </p>
-<p> If a file does not match any of the entries in the magic file, it is examined to see if it seems to be a text file. ASCII, ISO-8859-x, non-ISO 8-bit extended-ASCII character sets (such as those used on Macintosh and IBM PC systems), UTF-8-encoded Unicode, UTF-16-encoded Unicode, and EBCDIC character sets can be distinguished by the different ranges and sequences of bytes that constitute printable text in each set. If a file passes any of these tests, its character set is reported. ASCII, ISO-8859-x, UTF-8, and extended-ASCII files are identified as &#8220;text&#8221; because they will be mostly readable on nearly any terminal; UTF-16 and EBCDIC are only &#8220;character data&#8221; because, while they contain text, it is text that will require translation before it can be read. In addition, <code>file</code> will attempt to determine other characteristics of text-type files. If the lines of a file are terminated by CR, CRLF, or NEL, instead of the Unix-standard LF, this will be reported. Files that contain embedded escape sequences or overstriking will also be identified. </p>
+<p> The magic tests are used to check for files with data in particular fixed formats. The canonical example of this is a binary executable (compiled program) <code>a.out</code> file, whose format is defined in In elf.h , In a.out.h and possibly In exec.h in the standard include directory. These files have a ``magic number&#8217;&#8216; stored in a particular place near the beginning of the file that tells the <code>UNIX</code> operating system that the file is a binary executable, and which of several types thereof. The concept of a ``magic number&#8217;&#8216; has been applied by extension to data files. Any file with some invariant identifier at a small fixed offset into the file can usually be described in this way. The information identifying these files is read from /etc/magic and the compiled magic file /usr/share/misc/magic.mgc or the files in the directory /usr/share/misc/magic if the compiled file does not exist. In addition, if $HOME/.magic.mgc or $HOME/.magic exists, it will be used in preference to the system magic files. </p>
+<p> If a file does not match any of the entries in the magic file, it is examined to see if it seems to be a text file. ASCII, ISO-8859-x, non-ISO 8-bit extended-ASCII character sets (such as those used on Macintosh and IBM PC systems), UTF-8-encoded Unicode, UTF-16-encoded Unicode, and EBCDIC character sets can be distinguished by the different ranges and sequences of bytes that constitute printable text in each set. If a file passes any of these tests, its character set is reported. ASCII, ISO-8859-x, UTF-8, and extended-ASCII files are identified as ``text&#8217;&#8216; because they will be mostly readable on nearly any terminal; UTF-16 and EBCDIC are only ``character data&#8217;&#8216; because, while they contain text, it is text that will require translation before it can be read. In addition, <code>file</code> will attempt to determine other characteristics of text-type files. If the lines of a file are terminated by CR, CRLF, or NEL, instead of the Unix-standard LF, this will be reported. Files that contain embedded escape sequences or overstriking will also be identified. </p>
 <p> Once <code>file</code> has determined the character set used in a text-type file, it will attempt to determine in what language the file is written. The language tests look for particular strings (cf. In names.h ) that can appear anywhere in the first few blocks of a file. For example, the keyword <i>.br</i> indicates that the file is most likely a <a href="/docs/linux/man/1-troff/">troff</a>(1) input file, just as the keyword <i>struct</i> indicates a C program. These tests are less reliable than the previous two groups, so they are performed last. The language test routines also test for some miscellany (such as <a href="/docs/linux/man/1-tar/">tar</a>(1) archives, JSON files). </p>
-<p> Any file that cannot be identified as having been written in any of the character sets listed above is simply said to be &#8220;data&#8221;</p>
+<p> Any file that cannot be identified as having been written in any of the character sets listed above is simply said to be ``data&#8217;&#8216;  </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;apple</code></dt>
-<dd> Causes the <code>file</code> command to output the file type and creator code as used by older MacOS versions. The code consists of eight letters, the first describing the file type, the latter the creator. This option works properly only for file formats that have the apple-style output defined.</dd>
-<dt><code>-b , &#8211;brief</code></dt>
-<dd> Do not prepend filenames to output lines (brief mode).</dd>
-<dt><code>-C , &#8211;compile</code></dt>
-<dd> Write a magic.mgc output file that contains a pre-parsed version of the magic file or directory.</dd>
-<dt><code>-c , &#8211;checking-printout</code></dt>
-<dd> Cause a checking printout of the parsed form of the magic file. This is usually used in conjunction with the &#8211;<code>m</code> option to debug a new magic file before installing it.</dd>
+<dt><code>--apple</code></dt>
+<dd> <p> Causes the <code>file</code> command to output the file type and creator code as used by older MacOS versions. The code consists of eight letters, the first describing the file type, the latter the creator. This option works properly only for file formats that have the apple-style output defined. </p>
+ </dd>
+<dt><code>-b , --brief</code></dt>
+<dd> <p> Do not prepend filenames to output lines (brief mode). </p>
+ </dd>
+<dt><code>-C , --compile</code></dt>
+<dd> <p> Write a magic.mgc output file that contains a pre-parsed version of the magic file or directory. </p>
+ </dd>
+<dt><code>-c , --checking-printout</code></dt>
+<dd> <p> Cause a checking printout of the parsed form of the magic file. This is usually used in conjunction with the -<code>m</code> option to debug a new magic file before installing it. </p>
+ </dd>
 <dt><code>-d</code></dt>
-<dd> Prints internal debugging information to stderr.</dd>
+<dd> <p> Prints internal debugging information to stderr. </p>
+ </dd>
 <dt><code>-E</code></dt>
-<dd> On filesystem errors (file not found etc), instead of handling the error as regular output as POSIX mandates and keep going, issue an error message and exit.</dd>
-<dt><code>-e , &#8211;exclude </code><i>testname</i></dt>
-<dd> Exclude the test named in <i>testname</i> from the list of tests made to determine the file type. Valid test names are:</dd>
+<dd> <p> On filesystem errors (file not found etc), instead of handling the error as regular output as POSIX mandates and keep going, issue an error message and exit. </p>
+ </dd>
+<dt><code>-e , --exclude </code><i>testname</i></dt>
+<dd> <p> Exclude the test named in <i>testname</i> from the list of tests made to determine the file type. Valid test names are: </p>
+ </dd>
 <dl>
 <dt><code>apptype</code></dt>
-<dd> <code>EMX</code> application type (only on EMX).</dd>
+<dd> <p> <code>EMX</code> application type (only on EMX). </p>
+ </dd>
 <dt><code>ascii</code></dt>
-<dd> Various types of text files (this test will try to guess the text encoding, irrespective of the setting of the `encoding&#8217; option).</dd>
+<dd> <p> Various types of text files (this test will try to guess the text encoding, irrespective of the setting of the `encoding&#8217; option). </p>
+ </dd>
 <dt><code>encoding</code></dt>
-<dd> Different text encodings for soft magic tests.</dd>
+<dd> <p> Different text encodings for soft magic tests. </p>
+ </dd>
 <dt><code>tokens</code></dt>
-<dd> Ignored for backwards compatibility.</dd>
+<dd> <p> Ignored for backwards compatibility. </p>
+ </dd>
 <dt><code>cdf</code></dt>
-<dd> Prints details of Compound Document Files.</dd>
+<dd> <p> Prints details of Compound Document Files. </p>
+ </dd>
 <dt><code>compress</code></dt>
-<dd> Checks for, and looks inside, compressed files.</dd>
+<dd> <p> Checks for, and looks inside, compressed files. </p>
+ </dd>
 <dt><code>csv</code></dt>
-<dd> Checks Comma Separated Value files.</dd>
+<dd> <p> Checks Comma Separated Value files. </p>
+ </dd>
 <dt><code>elf</code></dt>
-<dd> Prints ELF file details, provided soft magic tests are enabled and the elf magic is found.</dd>
+<dd> <p> Prints ELF file details, provided soft magic tests are enabled and the elf magic is found. </p>
+ </dd>
 <dt><code>json</code></dt>
-<dd> Examines JSON (RFC-7159) files by parsing them for compliance.</dd>
+<dd> <p> Examines JSON (RFC-7159) files by parsing them for compliance. </p>
+ </dd>
 <dt><code>soft</code></dt>
-<dd> Consults magic files.</dd>
+<dd> <p> Consults magic files. </p>
+ </dd>
 <dt><code>tar</code></dt>
-<dd> Examines tar files by verifying the checksum of the 512 byte tar header. Excluding this test can provide more detailed content description by using the soft magic method.</dd>
+<dd> <p> Examines tar files by verifying the checksum of the 512 byte tar header. Excluding this test can provide more detailed content description by using the soft magic method. </p>
+ </dd>
 <dt><code>text</code></dt>
-<dd> A synonym for `ascii&#8217;</dd></dl>
-<dt><code>&#8211;exclude-quiet</code></dt>
-<dd> Like &#8211;<code>-exclude</code> but ignore tests that <code>file</code> does not know about. This is intended for compatibility with older versions of <code>file.</code></dd>
-<dt><code>&#8211;extension</code></dt>
-<dd> Print a slash-separated list of valid extensions for the file type found.</dd>
-<dt><code>-F , &#8211;separator </code><i>separator</i></dt>
-<dd> Use the specified string as the separator between the filename and the file result returned. Defaults to `:&#8217;</dd>
-<dt><code>-f , &#8211;files-from </code><i>namefile</i></dt>
-<dd> Read the names of the files to be examined from <i>namefile</i> (one per line) before the argument list. Either <i>namefile</i> or at least one filename argument must be present; to test the standard input, use `-&#8216; as a filename argument. Please note that <i>namefile</i> is unwrapped and the enclosed filenames are processed when this option is encountered and before any further options processing is done. This allows one to process multiple lists of files with different command line arguments on the same <code>file</code> invocation. Thus if you want to set the delimiter, you need to do it before you specify the list of files, like: &#8220;-<code>F </code><i>@ &#8211;</i><code>f </code><i>namefile</i> &#8221; instead of: &#8220;-<code>f </code><i>namefile &#8211;</i><code>F </code><i>file &#8230;</i> &#8221;</dd>
-<dt><code>-h , &#8211;no-dereference</code></dt>
-<dd> This option causes symlinks not to be followed (on systems that support symbolic links). This is the default if the environment variable <code>POSIXLY_CORRECT</code> is not defined.</dd>
-<dt><code>-i , &#8211;mime</code></dt>
-<dd> Causes the <code>file</code> command to output mime type strings rather than the more traditional human readable ones. Thus it may say `text/plain; charset=us-ascii&#8217; rather than &#8220;ASCII text&#8221;</dd>
-<dt><code>&#8211;mime-type , &#8211;mime-encoding</code></dt>
-<dd> Like &#8211;<code>i</code> but print only the specified element(s).</dd>
-<dt><code>-k , &#8211;keep-going</code></dt>
-<dd> Don&#8217;t stop at the first match, keep going. Subsequent matches will be have the string `
-- &#8216; prepended. (If you want a newline, see the &#8211;<code>r</code> option.) The magic pattern with the highest strength (see the &#8211;<code>l</code> option) comes first.</dd>
-<dt><code>-l , &#8211;list</code></dt>
-<dd> Shows a list of patterns and their strength sorted descending by <a href="/docs/linux/man/5-magic/">magic</a>(5) strength which is used for the matching (see also the &#8211;<code>k</code> option).</dd>
-<dt><code>-L , &#8211;dereference</code></dt>
-<dd> This option causes symlinks to be followed, as the like-named option in <a href="/docs/linux/man/1-ls/">ls</a>(1) (on systems that support symbolic links). This is the default if the environment variable <code>POSIXLY_CORRECT</code> is defined.</dd>
-<dt><code>-m , &#8211;magic-file </code><i>magicfiles</i></dt>
-<dd> Specify an alternate list of files and directories containing magic. This can be a single item, or a colon-separated list. If a compiled magic file is found alongside a file or directory, it will be used instead.</dd>
-<dt><code>-N , &#8211;no-pad</code></dt>
-<dd> Don&#8217;t pad filenames so that they align in the output.</dd>
-<dt><code>-n , &#8211;no-buffer</code></dt>
-<dd> Force stdout to be flushed after checking each file. This is only useful if checking a list of files. It is intended to be used by programs that want filetype output from a pipe.</dd>
-<dt><code>-p , &#8211;preserve-date</code></dt>
-<dd> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analyzed, to pretend that <code>file</code> never read them.</dd>
-<dt><code>-P , &#8211;parameter </code><i>name=value</i></dt>
-<dd> Set various parameter limits.</dd>
+<dd> <p> A synonym for `ascii&#8217; </p>
+ </dd></dl>
+<dt><code>--exclude-quiet</code></dt>
+<dd> <p> Like -<code>-exclude</code> but ignore tests that <code>file</code> does not know about. This is intended for compatibility with older versions of <code>file.</code> </p>
+ </dd>
+<dt><code>--extension</code></dt>
+<dd> <p> Print a slash-separated list of valid extensions for the file type found. </p>
+ </dd>
+<dt><code>-F , --separator </code><i>separator</i></dt>
+<dd> <p> Use the specified string as the separator between the filename and the file result returned. Defaults to `:&#8216; </p>
+ </dd>
+<dt><code>-f , --files-from </code><i>namefile</i></dt>
+<dd> <p> Read the names of the files to be examined from <i>namefile</i> (one per line) before the argument list. Either <i>namefile</i> or at least one filename argument must be present; to test the standard input, use `-&#8216; as a filename argument. Please note that <i>namefile</i> is unwrapped and the enclosed filenames are processed when this option is encountered and before any further options processing is done. This allows one to process multiple lists of files with different command line arguments on the same <code>file</code> invocation. Thus if you want to set the delimiter, you need to do it before you specify the list of files, like: ``-<code>F </code><i>@ -</i><code>f </code><i>namefile</i> &#8216;&#8216; instead of: ``-<code>f </code><i>namefile -</i><code>F </code><i>file ...</i> &#8216;&#8216; </p>
+ </dd>
+<dt><code>-h , --no-dereference</code></dt>
+<dd> <p> This option causes symlinks not to be followed (on systems that support symbolic links). This is the default if the environment variable <code>POSIXLY_CORRECT</code> is not defined. </p>
+ </dd>
+<dt><code>-i , --mime</code></dt>
+<dd> <p> Causes the <code>file</code> command to output mime type strings rather than the more traditional human readable ones. Thus it may say `text/plain; charset=us-ascii&#8217; rather than ``ASCII text&#8217;&#8216; </p>
+ </dd>
+<dt><code>--mime-type , --mime-encoding</code></dt>
+<dd> <p> Like -<code>i</code> but print only the specified element(s). </p>
+ </dd>
+<dt><code>-k , --keep-going</code></dt>
+<dd> <p> Don&#8217;t stop at the first match, keep going. Subsequent matches will be have the string `\012- &#8216; prepended. (If you want a newline, see the -<code>r</code> option.) The magic pattern with the highest strength (see the -<code>l</code> option) comes first. </p>
+ </dd>
+<dt><code>-l , --list</code></dt>
+<dd> <p> Shows a list of patterns and their strength sorted descending by <a href="/docs/linux/man/5-magic/">magic</a>(5) strength which is used for the matching (see also the -<code>k</code> option). </p>
+ </dd>
+<dt><code>-L , --dereference</code></dt>
+<dd> <p> This option causes symlinks to be followed, as the like-named option in <a href="/docs/linux/man/1-ls/">ls</a>(1) (on systems that support symbolic links). This is the default if the environment variable <code>POSIXLY_CORRECT</code> is defined. </p>
+ </dd>
+<dt><code>-m , --magic-file </code><i>magicfiles</i></dt>
+<dd> <p> Specify an alternate list of files and directories containing magic. This can be a single item, or a colon-separated list. If a compiled magic file is found alongside a file or directory, it will be used instead. </p>
+ </dd>
+<dt><code>-N , --no-pad</code></dt>
+<dd> <p> Don&#8217;t pad filenames so that they align in the output. </p>
+ </dd>
+<dt><code>-n , --no-buffer</code></dt>
+<dd> <p> Force stdout to be flushed after checking each file. This is only useful if checking a list of files. It is intended to be used by programs that want filetype output from a pipe. </p>
+ </dd>
+<dt><code>-p , --preserve-date</code></dt>
+<dd> <p> On systems that support utime(3) or <a href="/docs/linux/man/2-utimes/">utimes</a>(2), attempt to preserve the access time of files analyzed, to pretend that <code>file</code> never read them. </p>
+ </dd>
+<dt><code>-P , --parameter </code><i>name=value</i></dt>
+<dd> <p> Set various parameter limits. </p>
+ </dd>
 <dl>
 <dt><code>Name Ta </code><code>Default Ta </code><code>Explanation</code></dt>
-<dd>
-</dd><dt><code>bytes Ta </code>1048576 Ta max number of bytes to read from file</dt>
-<dd>
-</dd><dt><code>elf_notes Ta </code>256 Ta max ELF notes processed</dt>
-<dd>
-</dd><dt><code>elf_phnum Ta </code>2048 Ta max ELF program sections processed</dt>
-<dd>
-</dd><dt><code>elf_shnum Ta </code>32768 Ta max ELF sections processed</dt>
-<dd>
-</dd><dt><code>encoding Ta </code>65536 Ta max number of bytes to scan for encoding evaluation</dt>
-<dd>
-</dd><dt><code>indir Ta </code>50 Ta recursion limit for indirect magic</dt>
-<dd>
-</dd><dt><code>name Ta </code>50 Ta use count limit for name/use magic</dt>
-<dd>
-</dd><dt><code>regex Ta </code>8192 Ta length limit for regex searches</dt>
-<dd></dd></dl>
-<dt><code>-r , &#8211;raw</code></dt>
-<dd> Don&#8217;t translate unprintable characters to \ooo. Normally <code>file</code> translates unprintable characters to their octal representation.</dd>
-<dt><code>-s , &#8211;special-files</code></dt>
-<dd> Normally, <code>file</code> only attempts to read and determine the type of argument files which <a href="/docs/linux/man/2-stat/">stat</a>(2) reports are ordinary files. This prevents problems, because reading special files may have peculiar consequences. Specifying the &#8211;<code>s</code> option causes <code>file</code> to also read argument files which are block or character special files. This is useful for determining the filesystem types of the data in raw disk partitions, which are block special files. This option also causes <code>file</code> to disregard the file size as reported by <a href="/docs/linux/man/2-stat/">stat</a>(2) since on some systems it reports a zero size for raw disk partitions.</dd>
-<dt><code>-S , &#8211;no-sandbox</code></dt>
-<dd> On systems where libseccomp ( <a rel="nofollow" href="https://github.com/seccomp/libseccomp">https://github.com/seccomp/libseccomp</a> is available, the &#8211;<code>S</code> option disables sandboxing which is enabled by default. This option is needed for <code>file</code> to execute external decompressing programs, i.e. when the &#8211;<code>z</code> option is specified and the built-in decompressors are not available. On systems where sandboxing is not available, this option has no effect. </dd>
-<p> <i>Note:</i> This Debian version of file was built without seccomp support, so this option has no effect.</p>
-<dt><code>-v , &#8211;version</code></dt>
-<dd> Print the version of the program and exit.</dd>
-<dt><code>-z , &#8211;uncompress</code></dt>
-<dd> Try to look inside compressed files.</dd>
-<dt><code>-Z , &#8211;uncompress-noreport</code></dt>
-<dd> Try to look inside compressed files, but report information about the contents only not the compression.</dd>
-<dt><code>-0 , &#8211;print0</code></dt>
-<dd> Output a null character `
-</dd></dl>
+<dd>  </dd>
+<dt><code>bytes Ta </code>1048576 Ta max number of bytes to read from file </dt>
+<dd>  </dd>
+<dt><code>elf_notes Ta </code>256 Ta max ELF notes processed </dt>
+<dd>  </dd>
+<dt><code>elf_phnum Ta </code>2048 Ta max ELF program sections processed </dt>
+<dd>  </dd>
+<dt><code>elf_shnum Ta </code>32768 Ta max ELF sections processed </dt>
+<dd>  </dd>
+<dt><code>encoding Ta </code>65536 Ta max number of bytes to scan for encoding evaluation </dt>
+<dd>  </dd>
+<dt><code>indir Ta </code>50 Ta recursion limit for indirect magic </dt>
+<dd>  </dd>
+<dt><code>name Ta </code>50 Ta use count limit for name/use magic </dt>
+<dd>  </dd>
+<dt><code>regex Ta </code>8192 Ta length limit for regex searches </dt>
+<dd>  </dd></dl>
+<dt><code>-r , --raw</code></dt>
+<dd> <p> Don&#8217;t translate unprintable characters to \ooo. Normally <code>file</code> translates unprintable characters to their octal representation. </p>
+ </dd>
+<dt><code>-s , --special-files</code></dt>
+<dd> <p> Normally, <code>file</code> only attempts to read and determine the type of argument files which <a href="/docs/linux/man/2-stat/">stat</a>(2) reports are ordinary files. This prevents problems, because reading special files may have peculiar consequences. Specifying the -<code>s</code> option causes <code>file</code> to also read argument files which are block or character special files. This is useful for determining the filesystem types of the data in raw disk partitions, which are block special files. This option also causes <code>file</code> to disregard the file size as reported by <a href="/docs/linux/man/2-stat/">stat</a>(2) since on some systems it reports a zero size for raw disk partitions. </p>
+ </dd>
+<dt><code>-S , --no-sandbox</code></dt>
+<dd> <p> On systems where libseccomp ( <a rel="nofollow" href="https://github.com/seccomp/libseccomp">https://github.com/seccomp/libseccomp</a> is available, the -<code>S</code> option disables sandboxing which is enabled by default. This option is needed for <code>file</code> to execute external decompressing programs, i.e. when the -<code>z</code> option is specified and the built-in decompressors are not available. On systems where sandboxing is not available, this option has no effect. </p>
+<p> <i>Note:</i> This Debian version of file was built without seccomp support, so this option has no effect. </p>
+ </dd>
+<dt><code>-v , --version</code></dt>
+<dd> <p> Print the version of the program and exit. </p>
+ </dd>
+<dt><code>-z , --uncompress</code></dt>
+<dd> <p> Try to look inside compressed files. </p>
+ </dd>
+<dt><code>-Z , --uncompress-noreport</code></dt>
+<dd> <p> Try to look inside compressed files, but report information about the contents only not the compression. </p>
+ </dd>
+<dt><code>-0 , --print0</code></dt>
+<dd> <p> Output a null character `\0&#8217; after the end of the filename. Nice to <a href="/docs/linux/man/1-cut/">cut</a>(1) the output. This does not affect the separator, which is still printed. </p>
+<p> If this option is repeated more than once, then <code>file</code> prints just the filename followed by a NUL followed by the description (or ERROR: text) followed by a second NUL for each entry. </p>
+ </dd>
+<dt><code>--help</code></dt>
+<dd> <p> Print a help message and exit. </p>
+ </dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> The environment variable <code>MAGIC</code> can be used to set the default magic file name. If that variable is set, then <code>file</code> will not attempt to open $HOME/.magic <code>file</code> adds ``.mgc &#8216;&#8216; to the value of this variable as appropriate. The environment variable <code>POSIXLY_CORRECT</code> controls (on systems that support symbolic links), whether <code>file</code> will attempt to follow symlinks or not. If set, then <code>file</code> follows symlink, otherwise it does not. This is also controlled by the -<code>L</code> and -<code>h</code> options.  </p>
+<h2>FILES</h2>
+<dl>
+<dt><code>/usr/share/misc/magic.mgc </code></dt>
+<dd> <p> Default compiled list of magic. </p>
+ </dd>
+<dt><code>/usr/share/misc/magic </code></dt>
+<dd> <p> Directory containing default magic files. </p>
+ </dd></dl>
+<h2>EXIT STATUS</h2>
+<p> <code>file</code> will exit with <code>0</code> if the operation was successful or <code>&gt;0</code> if an error was encountered. The following errors cause diagnostic messages, but don&#8217;t affect the program exit code (as POSIX requires), unless -<code>E</code> is specified: </p>
+<ul>
+<li> <p> A file cannot be found  </li>
+<li>  There is no permission to read a file  </li>
+<li>  The file type cannot be determined  </li>
+</ul>
+ </p>
+<h2>EXAMPLES</h2>
+<blockquote><pre><code>$ file file.c file /dev/{wd0a,hda}
+file.c: C program text
+file: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV),
+          dynamically linked (uses shared libs), stripped
+/dev/wd0a: block special (0/0)
+/dev/hda: block special (3/0)
+$ file -s /dev/wd0{b,d}
+/dev/wd0b: data
+/dev/wd0d: x86 boot sector
+$ file -s /dev/hda{,1,2,3,4,5,6,7,8,9,10}
+/dev/hda: x86 boot sector
+/dev/hda1: Linux/i386 ext2 filesystem
+/dev/hda2: x86 boot sector
+/dev/hda3: x86 boot sector, extended partition table
+/dev/hda4: Linux/i386 ext2 filesystem
+/dev/hda5: Linux/i386 swap file
+/dev/hda6: Linux/i386 swap file
+/dev/hda7: Linux/i386 swap file
+/dev/hda8: Linux/i386 swap file
+/dev/hda9: empty
+/dev/hda10: empty
+$ file -i file.c file /dev/{wd0a,hda}
+file.c: text/x-c
+file: application/x-executable
+/dev/hda: application/x-not-regular-file
+/dev/wd0a: application/x-not-regular-file
+</code></pre>
+</blockquote>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-hexdump/">hexdump</a>(1), <a href="/docs/linux/man/1-od/">od</a>(1), <a href="/docs/linux/man/1-strings/">strings</a>(1), <a href="/docs/linux/man/5-magic/">magic</a>(5)  </p>
+<h2>STANDARDS CONFORMANCE</h2>
+<p> This program is believed to exceed the System V Interface Definition of FILE(CMD), as near as one can determine from the vague language contained therein. Its behavior is mostly compatible with the System V program of the same name. This version knows more magic, however, so it will produce different (albeit more accurate) output in many cases. </p>
+<p> The one significant difference between this version and System V is that this version treats any white space as a delimiter, so that spaces in pattern strings must be escaped. For example, </p>
+<blockquote><pre><code>&gt;10 string language impress (imPRESS data)
+</code></pre>
+</blockquote>
+<p> in an existing magic file would have to be changed to </p>
+<blockquote><pre><code>&gt;10 string language\ impress (imPRESS data)
+</code></pre>
+</blockquote>
+<p> In addition, in this version, if a pattern string contains a backslash, it must be escaped. For example </p>
+<blockquote><pre><code>0 string \begindata Andrew Toolkit document
+</code></pre>
+</blockquote>
+<p> in an existing magic file would have to be changed to </p>
+<blockquote><pre><code>0 string \\begindata Andrew Toolkit document
+</code></pre>
+</blockquote>
+<p> SunOS releases 3.2 and later from Sun Microsystems include a <code>file</code> command derived from the System V one, but with some extensions. This version differs from Sun&#8217;s only in minor ways. It includes the extension of the `&amp;&#8216; operator, used as, for example, </p>
+<blockquote><pre><code>&gt;16 long&amp;0x7fffffff &gt;0 not stripped
+</code></pre>
+</blockquote>
+<h2>SECURITY</h2>
+<p> On systems where libseccomp ( <a rel="nofollow" href="https://github.com/seccomp/libseccomp">https://github.com/seccomp/libseccomp</a> is available, <code>file</code> is enforces limiting system calls to only the ones necessary for the operation of the program. This enforcement does not provide any security benefit when <code>file</code> is asked to decompress input files running external programs with the -<code>z</code> option. To enable execution of external decompressors, one needs to disable sandboxing using the -<code>S</code> option.  </p>
+<h2>MAGIC DIRECTORY</h2>
+<p> The magic file entries have been collected from various sources, mainly USENET, and contributed by various authors. Christos Zoulas (address below) will collect additional or corrected magic file entries. A consolidation of magic file entries will be distributed periodically. </p>
+<p> The order of entries in the magic file is significant. Depending on what system you are using, the order that they are put together may be incorrect.  </p>
+<h2>HISTORY</h2>
+<p> There has been a <code>file</code> command in every <code>UNIX since at least Research Version 4</code> (man page dated November, 1973). The System V version introduced one significant major change: the external list of magic types. This slowed the program down slightly but made it a lot more flexible. </p>
+<p> This program, based on the System V version, was written by Ian Darwin Aq ian [at] darwinsys.com without looking at anybody else&#8217;s source code. </p>
+<p> John Gilmore revised the code extensively, making it better than the first version. Geoff Collyer found several inadequacies and provided some magic file entries. Contributions of the `&amp;&#8216; operator by Rob McMahon, Aq cudcv [at] warwick.ac.uk , 1989. </p>
+<p> Guy Harris, Aq guy [at] netapp.com , made many changes from 1993 to the present. </p>
+<p> Primary development and maintenance from 1990 to the present by Christos Zoulas Aq christos [at] astron.com . </p>
+<p> Altered by Chris Lowth Aq chris [at] lowth.com , 2000: handle the -<code>i</code> option to output mime type strings, using an alternative magic file and internal logic. </p>
+<p> Altered by Eric Fischer Aq enf [at] pobox.com , July, 2000, to identify character codes and attempt to identify the languages of non-ASCII files. </p>
+<p> Altered by Reuben Thomas Aq rrt [at] sc3d.org , 2007-2011, to improve MIME support, merge MIME and non-MIME magic, support directories as well as files of magic, apply many bug fixes, update and fix a lot of magic, improve the build system, improve the documentation, and rewrite the Python bindings in pure Python. </p>
+<p> The list of contributors to the `magic&#8217; directory (magic files) is too long to include here. You know who you are; thank you. Many contributors are listed in the source files.  </p>
+<h2>LEGAL NOTICE</h2>
+<p> Copyright (c) Ian F. Darwin, Toronto, Canada, 1986-1999. Covered by the standard Berkeley Software Distribution copyright; see the file COPYING in the source distribution. </p>
+<p> The files tar.h and is_tar.c were written by John Gilmore from his public-domain <a href="/docs/linux/man/1-tar/">tar</a>(1) program, and are not covered by the above license.  </p>
+<h2>BUGS</h2>
+<p> Please report bugs and send patches to the bug tracker at <a rel="nofollow" href="https://bugs.astron.com/">https://bugs.astron.com/</a> or the mailing list at Aq file [at] astron.com (visit <a rel="nofollow" href="https://mailman.astron.com/mailman/listinfo/file">https://mailman.astron.com/mailman/listinfo/file</a> first to subscribe).  </p>
+<h2>TODO</h2>
+<p> Fix output so that tests for MIME and APPLE flags are not needed all over the place, and actual output is only done in one place. This needs a design. Suggestion: push possible outputs on to a list, then pick the last-pushed (most specific, one hopes) value at the end, or use a default if the list is empty. This should not slow down evaluation. </p>
+<p> The handling of <code>MAGIC_CONTINUE</code> and printing \012- between entries is clumsy and complicated; refactor and centralize. </p>
+<p> Some of the encoding logic is hard-coded in encoding.c and can be moved to the magic files if we had a !:charset annotation. </p>
+<p> Continue to squash all magic bugs. See Debian BTS for a good source. </p>
+<p> Store arbitrarily long strings, for example for %s patterns, so that they can be printed out. Fixes Debian bug #271672. This can be done by allocating strings in a string pool, storing the string pool at the end of the magic file and converting all the string pointers to relative offsets from the string pool. </p>
+<p> Add syntax for relative offsets after current level (Debian bug #466037). </p>
+<p> Make file -ki work, i.e. give multiple MIME types. </p>
+<p> Add a zip library so we can peek inside Office2007 documents to print more details about their contents. </p>
+<p> Add an option to print URLs for the sources of the file descriptions. </p>
+<p> Combine script searches and add a way to map executable names to MIME types (e.g. have a magic value for !:mime which causes the resulting string to be looked up in a table). This would avoid adding the same magic repeatedly for each new hash-bang interpreter. </p>
+<p> When a file descriptor is available, we can skip and adjust the buffer instead of the hacky buffer management we do now. </p>
+<p> Fix ``name&#8217;&#8216; and ``use&#8217;&#8216; to check for consistency at compile time (duplicate ``name&#8217;&#8216; ``use&#8217;&#8216; pointing to undefined ``name&#8217;&#8216; ). Make ``name&#8217;&#8216; / ``use&#8217;&#8216; more efficient by keeping a sorted list of names. Special-case ^ to flip endianness in the parser so that it does not have to be escaped, and document it. </p>
+<p> If the offsets specified internally in the file exceed the buffer size ( <code>HOWMANY</code> variable in file.h), then we don&#8217;t seek to that offset, but we give up. It would be better if buffer managements was done when the file descriptor is available so we can seek around the file. One must be careful though because this has performance and thus security considerations, because one can slow down things by repeateadly seeking. </p>
+<p> There is support now for keeping separate buffers and having offsets from the end of the file, but the internal buffer management still needs an overhaul.  </p>
+<h2>AVAILABILITY</h2>
+<p> You can obtain the original author&#8217;s latest version by anonymous FTP on <a href="ftp://ftp.astron.com">ftp.astron.com</a> in the directory /pub/file/file-X.YZ.tar.gz </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">OPTIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">ENVIRONMENT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">FILES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">EXIT STATUS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">EXAMPLES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">SEE ALSO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAK">STANDARDS CONFORMANCE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAL">SECURITY</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAM">MAGIC DIRECTORY</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">HISTORY</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAO">LEGAL NOTICE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAP">BUGS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAQ">TODO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAR">AVAILABILITY</a></dt>
+<dd>  </dd></dl>

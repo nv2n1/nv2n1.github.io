@@ -6,16 +6,39 @@ letter: "s"
 url: "/docs/linux/man/3-solver1d/"
 description: "ql/math/solver1d.hpp – Abstract 1-D solver class."
 ---
-
 <p>ql/math/solver1d.hpp &#8211; Abstract 1-D solver class. </p>
-<h2>Synopsis</h2>
-<pre><code>#define MAX_FUNCTION_EVALUATIONS   100</code></pre>
+<h2>SYNOPSIS</h2>
+<p> <br />
+ </p>
+<p>#include &lt;ql/utilities/null.hpp&gt; <br />
+ #include &lt;ql/patterns/curiouslyrecurring.hpp&gt; <br />
+ #include &lt;ql/errors.hpp&gt; <br />
+ #include &lt;iomanip&gt; <br />
+ </p>
 <h3>Classes</h3>
-<p>class <code>Solver1D&lt; Impl &gt;</code><br />
- <i>Base class for 1-D solvers. </i></p>
+<p> <br />
+ class <code>Solver1D&lt; Impl &gt;</code> <br />
+ <i>Base class for 1-D solvers. </i>  </p>
 <h3>Defines</h3>
-<pre><code>#define MAX_FUNCTION_EVALUATIONS   100</code></pre>
+<p> <br />
+ #define <code>MAX_FUNCTION_EVALUATIONS</code> 100 <br />
+  </p>
 <h2>Detailed Description</h2>
-<p>Abstract 1-D solver class.</p>
+<p>Abstract 1-D solver class. </p>
 <h2>Author</h2>
-<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+<p>Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAD">Classes</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">Defines</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAF">Detailed Description</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">Author</a></dt>
+<dd>  </dd></dl>

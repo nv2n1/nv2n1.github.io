@@ -6,85 +6,175 @@ letter: "f"
 url: "/docs/linux/man/1-f2c/"
 description: "f2c – Convert Fortran 77 to C or C++"
 ---
-
 <h2 class="name">NAME</h2>
-<p> f2c &#8211; Convert Fortran 77 to C or C++ </p>
+<p> f2c - Convert Fortran 77 to C or C++ </p>
 <h2>SYNOPSIS</h2>
-<p> <code>f2c</code> [ <i>option &#8230;</i> ] <i>file &#8230;</i></p>
+<p> <code>f2c</code> [ <i>option ...</i> ] <i>file ...</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <i>F2c</i> converts Fortran 77 source code in <i>files</i> with names ending in or to C (or C++) source files in the current directory, with substituted for the final or `.F&#8217;. If no Fortran files are named, <i>f2c</i> reads Fortran from standard input and writes C on standard output. <i>File</i> names that end with or are taken to be prototype files, as produced by option `-P&#8217;, and are read first. </p>
-<p> The following options have the same meaning as in <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1).</p>
+<p> The following options have the same meaning as in <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1). </p>
 <dl>
 <dt><code>-C</code></dt>
-<dd> Compile code to check that subscripts are within declared array bounds.</dd>
+<dd> <p> Compile code to check that subscripts are within declared array bounds. </p>
+ </dd>
 <dt><code>-I2</code></dt>
-<dd> Render INTEGER and LOGICAL as short, INTEGER*4 as long int. Assume the default <i>libF77</i> and <i>libI77</i>: allow only INTEGER*4 (and no LOGICAL) variables in INQUIREs. Option confirms the default rendering of INTEGER as long int.</dd>
+<dd> <p> Render INTEGER and LOGICAL as short, INTEGER*4 as long int. Assume the default <i>libF77</i> and <i>libI77</i>: allow only INTEGER*4 (and no LOGICAL) variables in INQUIREs. Option confirms the default rendering of INTEGER as long int. </p>
+ </dd>
 <dt><code>-I</code><i>dir</i></dt>
-<dd> Look for a non-absolute include file first in the directory of the current input file, then in directories specified by <tt>-I</tt> options (one directory per option). Options <tt>-I2</tt> and <tt>-I4</tt> have precedence, so, e.g., a directory named <tt>2</tt> should be specified by <tt>-I./2</tt> .</dd>
+<dd> <p> Look for a non-absolute include file first in the directory of the current input file, then in directories specified by <code>-I</code> options (one directory per option). Options <code>-I2</code> and <code>-I4</code> have precedence, so, e.g., a directory named <code>2</code> should be specified by <code>-I./2</code> . </p>
+ </dd>
 <dt><code>-onetrip</code></dt>
-<dd> Compile DO loops that are performed at least once if reached. (Fortran 77 DO loops are not performed at all if the upper limit is smaller than the lower limit.)</dd>
+<dd> <p> Compile DO loops that are performed at least once if reached. (Fortran 77 DO loops are not performed at all if the upper limit is smaller than the lower limit.) </p>
+ </dd>
 <dt><code>-U</code></dt>
-<dd> Honor the case of variable and external names. Fortran keywords must be in <i>lower</i> case.</dd>
+<dd> <p> Honor the case of variable and external names. Fortran keywords must be in <i>lower</i> case. </p>
+ </dd>
 <dt><code>-u</code></dt>
-<dd> Make the default type of a variable `undefined&#8217; rather than using the default Fortran rules.</dd>
+<dd> <p> Make the default type of a variable `undefined&#8217; rather than using the default Fortran rules. </p>
+ </dd>
 <dt><code>-w</code></dt>
-<dd> Suppress all warning messages, or, if the option is `-w66&#8242;, just Fortran 66 compatibility warnings.</dd></dl>
-<p> The following options are peculiar to <i>f2c</i>.</p>
+<dd> <p> Suppress all warning messages, or, if the option is `-w66&#8217;, just Fortran 66 compatibility warnings. </p>
+ </dd></dl>
+<p> The following options are peculiar to <i>f2c</i>. </p>
 <dl>
 <dt><code>-A</code></dt>
-<dd> Produce <font SIZE="-1">ANSI</font> C (default, starting 20020621). For old-style C, use option <tt>-K</tt>.</dd>
+<dd> <p> Produce <font SIZE="-1">ANSI</font> C (default, starting 20020621). For old-style C, use option <code>-K</code>. </p>
+ </dd>
 <dt><code>-a</code></dt>
-<dd> Make local variables automatic rather than static unless they appear in a <font SIZE="-1">DATA, EQUIVALENCE, NAMELIST,</font> or <font SIZE="-1">SAVE</font> statement.</dd>
+<dd> <p> Make local variables automatic rather than static unless they appear in a <font SIZE="-1">DATA, EQUIVALENCE, NAMELIST,</font> or <font SIZE="-1">SAVE</font> statement. </p>
+ </dd>
 <dt><code>-C++</code></dt>
-<dd> Output C++ code.</dd>
+<dd> <p> Output C++ code. </p>
+ </dd>
 <dt><code>-c</code></dt>
-<dd> Include original Fortran source as comments.</dd>
+<dd> <p> Include original Fortran source as comments. </p>
+ </dd>
 <dt><code>-cd</code></dt>
-<dd> Do not recognize cdabs, cdcos, cdexp, cdlog, cdsin, and cdsqrt as synonyms for the double complex intrinsics zabs, zcos, zexp, zlog, zsin, and zsqrt, respectively, nor dreal as a synonym for dble.</dd>
+<dd> <p> Do not recognize cdabs, cdcos, cdexp, cdlog, cdsin, and cdsqrt as synonyms for the double complex intrinsics zabs, zcos, zexp, zlog, zsin, and zsqrt, respectively, nor dreal as a synonym for dble. </p>
+ </dd>
 <dt><code>-d</code><i>dir</i></dt>
-<dd> Write files in directory <i>dir</i> instead of the current directory.</dd>
+<dd> <p> Write files in directory <i>dir</i> instead of the current directory. </p>
+ </dd>
 <dt><code>-E</code></dt>
-<dd> Declare uninitialized <font SIZE="-1">COMMON</font> to be <code>Extern</code> (overridably defined in as <code>extern).</code></dd>
+<dd> <p> Declare uninitialized <font SIZE="-1">COMMON</font> to be <code>Extern</code> (overridably defined in as <code>extern).</code> </p>
+ </dd>
 <dt><code>-ec</code></dt>
-<dd> Place uninitialized <font SIZE="-1">COMMON</font> blocks in separate files: <code>COMMON /ABC/</code> appears in file <code>abc_com.c</code>. Option `-e1c&#8217; bundles the separate files into the output file, with comments that give an unbundling <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) script.</dd>
+<dd> <p> Place uninitialized <font SIZE="-1">COMMON</font> blocks in separate files: <code>COMMON /ABC/</code> appears in file <code>abc_com.c</code>. Option `-e1c&#8217; bundles the separate files into the output file, with comments that give an unbundling <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) script. </p>
+ </dd>
 <dt><code>-ext</code></dt>
-<dd> Complain about <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1) extensions.</dd>
+<dd> <p> Complain about <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1) extensions. </p>
+ </dd>
 <dt><code>-f</code></dt>
-<dd> Assume free-format input: accept text after column 72 and do not pad fixed-format lines shorter than 72 characters with blanks.</dd>
+<dd> <p> Assume free-format input: accept text after column 72 and do not pad fixed-format lines shorter than 72 characters with blanks. </p>
+ </dd>
 <dt><code>-72</code></dt>
-<dd> Treat text appearing after column 72 as an error.</dd>
+<dd> <p> Treat text appearing after column 72 as an error. </p>
+ </dd>
 <dt><code>-g</code></dt>
-<dd> Include original Fortran line numbers in <tt>#line</tt> lines.</dd>
+<dd> <p> Include original Fortran line numbers in <code>#line</code> lines. </p>
+ </dd>
 <dt><code>-h</code></dt>
-<dd> Emulate Fortran 66&#8217;s treatment of Hollerith: try to align character strings on word (or, if the option is `-hd&#8217;, on double-word) boundaries.</dd>
+<dd> <p> Emulate Fortran 66&#8217;s treatment of Hollerith: try to align character strings on word (or, if the option is `-hd&#8217;, on double-word) boundaries. </p>
+ </dd>
 <dt><code>-i2</code></dt>
-<dd> Similar to <code>-I2</code>, but assume a modified <i>libF77</i> and <i>libI77</i> (compiled with <code>-Df2c_i2</code>), so <font SIZE="-1">INTEGER</font> and <font SIZE="-1">LOGICAL</font> variables may be assigned by <font SIZE="-1">INQUIRE</font> and array lengths are stored in short ints.</dd>
+<dd> <p> Similar to <code>-I2</code>, but assume a modified <i>libF77</i> and <i>libI77</i> (compiled with <code>-Df2c_i2</code>), so <font SIZE="-1">INTEGER</font> and <font SIZE="-1">LOGICAL</font> variables may be assigned by <font SIZE="-1">INQUIRE</font> and array lengths are stored in short ints. </p>
+ </dd>
 <dt><code>-i90</code></dt>
-<dd> Do not recognize the Fortran 90 bit-manipulation intrinsics btest, iand, ibclr, ibits, ibset, ieor, ior, ishft, and ishftc.</dd>
+<dd> <p> Do not recognize the Fortran 90 bit-manipulation intrinsics btest, iand, ibclr, ibits, ibset, ieor, ior, ishft, and ishftc. </p>
+ </dd>
 <dt><code>-kr</code></dt>
-<dd> Use temporary values to enforce Fortran expression evaluation where K&amp;R (first edition) parenthesization rules allow rearrangement. If the option is `-krd&#8217;, use double precision temporaries even for single-precision operands.</dd>
+<dd> <p> Use temporary values to enforce Fortran expression evaluation where K&amp;R (first edition) parenthesization rules allow rearrangement. If the option is `-krd&#8217;, use double precision temporaries even for single-precision operands. </p>
+ </dd>
 <dt><code>-P</code></dt>
-<dd> Write a <i>file</i><code>.P</code> of ANSI (or C++) prototypes for definitions in each input <i>file</i><code>.f</code> or <i>file</i><code>.F</code><i>.</i> When reading Fortran from standard input, write prototypes at the beginning of standard output. Option <code>-Ps</code> implies <code>-P</code> and gives exit status 4 if rerunning <i>f2c</i> may change prototypes or declarations.</dd>
+<dd> <p> Write a <i>file</i><code>.P</code> of ANSI (or C++) prototypes for definitions in each input <i>file</i><code>.f</code> or <i>file</i><code>.F</code><i>.</i> When reading Fortran from standard input, write prototypes at the beginning of standard output. Option <code>-Ps</code> implies <code>-P</code> and gives exit status 4 if rerunning <i>f2c</i> may change prototypes or declarations. </p>
+ </dd>
 <dt><code>-p</code></dt>
-<dd> Supply preprocessor definitions to make common-block members look like local variables.</dd>
+<dd> <p> Supply preprocessor definitions to make common-block members look like local variables. </p>
+ </dd>
 <dt><code>-R</code></dt>
-<dd> Do not promote <font SIZE="-1">REAL</font> functions and operations to <font SIZE="-1">DOUBLE PRECISION.</font> Option confirms the default, which imitates <i>f77</i>.</dd>
+<dd> <p> Do not promote <font SIZE="-1">REAL</font> functions and operations to <font SIZE="-1">DOUBLE PRECISION.</font> Option confirms the default, which imitates <i>f77</i>. </p>
+ </dd>
 <dt><code>-r</code></dt>
-<dd> Cast REAL arguments of intrinsic functions and values of REAL functions (including intrinsics) to REAL.</dd>
+<dd> <p> Cast REAL arguments of intrinsic functions and values of REAL functions (including intrinsics) to REAL. </p>
+ </dd>
 <dt><code>-r8</code></dt>
-<dd> Promote <font SIZE="-1">REAL</font> to <font SIZE="-1">DOUBLE PRECISION, COMPLEX</font> to <font SIZE="-1">DOUBLE COMPLEX.</font></dd>
+<dd> <p> Promote <font SIZE="-1">REAL</font> to <font SIZE="-1">DOUBLE PRECISION, COMPLEX</font> to <font SIZE="-1">DOUBLE COMPLEX.</font> </p>
+ </dd>
 <dt><code>-s</code></dt>
-<dd> Preserve multidimensional subscripts. Suppressed by option .</dd>
+<dd> <p> Preserve multidimensional subscripts. Suppressed by option . </p>
+ </dd>
 <dt><code>-T</code><i>dir</i></dt>
-<dd> Put temporary files in directory <i>dir.</i></dd>
+<dd> <p> Put temporary files in directory <i>dir.</i> </p>
+ </dd>
 <dt><code>-trapuv</code></dt>
-<dd> Dynamically initialize local variables, except those appearing in <font SIZE="-1">SAVE</font> or <font SIZE="-1">DATA</font> statements, with values that may help find references to uninitialized variables. For example, with IEEE arithmetic, initialize local floating-point variables to signaling NaNs.</dd>
+<dd> <p> Dynamically initialize local variables, except those appearing in <font SIZE="-1">SAVE</font> or <font SIZE="-1">DATA</font> statements, with values that may help find references to uninitialized variables. For example, with IEEE arithmetic, initialize local floating-point variables to signaling NaNs. </p>
+ </dd>
 <dt><code>-w8</code></dt>
-<dd> Suppress warnings when <font SIZE="-1">COMMON</font> or <font SIZE="-1">EQUIVALENCE</font> forces odd-word alignment of doubles.</dd>
+<dd> <p> Suppress warnings when <font SIZE="-1">COMMON</font> or <font SIZE="-1">EQUIVALENCE</font> forces odd-word alignment of doubles. </p>
+ </dd>
 <dt><code>-W</code><i>n</i></dt>
-<dd> Assume <i>n</i> characters/word (default 4) when initializing numeric variables with character data.</dd>
+<dd> <p> Assume <i>n</i> characters/word (default 4) when initializing numeric variables with character data. </p>
+ </dd>
 <dt><code>-z</code></dt>
-<dd> Do not implicitly recognize <font SIZE="-1">DOUBLE COMPLEX.</font></dd>
+<dd> <p> Do not implicitly recognize <font SIZE="-1">DOUBLE COMPLEX.</font> </p>
+ </dd>
 <dt><code>-!bs</code></dt>
-<dd> Do not recognize <i>b</i>ack<i>s</i>lash escapes (\&quot;, \&#8217;, 
-</dd></dl>
+<dd> <p> Do not recognize <i>b</i>ack <i>s</i>lash escapes (\&quot;, \&#8216;, \0, \\, \b, \f, \n, \r, \t, \v) in character strings. </p>
+ </dd>
+<dt><code>-!c</code></dt>
+<dd> <p> Inhibit C output, but produce <code>-P</code> output. </p>
+ </dd>
+<dt><code>-!I</code></dt>
+<dd> <p> Reject <code>include</code> statements. </p>
+ </dd>
+<dt><code>-!i8</code></dt>
+<dd> <p> Disallow <font SIZE="-1">INTEGER*8 ,</font> or, if the option is `-!i8const&#8217;, permit <font SIZE="-1">INTEGER*8</font> but do not promote integer constants to <font SIZE="-1">INTEGER*8</font> when they involve more than 32 bits. </p>
+ </dd>
+<dt><code>-!it</code></dt>
+<dd> <p> Don&#8217;t infer types of untyped <font SIZE="-1">EXTERNAL</font> procedures from use as parameters to previously defined or prototyped procedures. </p>
+ </dd>
+<dt><code>-!P</code></dt>
+<dd> <p> Do not attempt to infer <font SIZE="-1">ANSI</font> or C++ prototypes from usage. </p>
+ </dd></dl>
+<p> The resulting C invokes the support routines of <i>f77</i>; object code should be loaded by <i>f77</i> or with <i><a href="/docs/linux/man/1-ld/">ld</a></i>(1) or <i><a href="/docs/linux/man/1-cc/">cc</a></i>(1) options <code>-lF77 -lI77 -lm</code>. Calling conventions are those of <i>f77</i>: see the reference below. <br />
+  </p>
+<h2>FILES</h2>
+<dl>
+<dd> <p> <i>file</i><code>.[fF]</code> input file </p>
+ </dd>
+<dt><code>*.c</code></dt>
+<dd> <p> output file </p>
+ </dd>
+<dd> <p> header file </p>
+ </dd>
+<dd> <p> intrinsic function library </p>
+ </dd>
+<dd> <p> Fortran I/O library </p>
+ </dd>
+<dd> <p> C library, see section 3 </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> S. I. Feldman and P. J. Weinberger, `A Portable Fortran 77 Compiler&#8217;, <i>UNIX Time Sharing System Programmer&#8217;s Manual</i>, Tenth Edition, Volume 2, AT&amp;T Bell Laboratories, 1990.  </p>
+<h2>DIAGNOSTICS</h2>
+<p> The diagnostics produced by <i>f2c</i> are intended to be self-explanatory.  </p>
+<h2>BUGS</h2>
+<p> Floating-point constant expressions are simplified in the floating-point arithmetic of the machine running <i>f2c</i>, so they are typically accurate to at most 16 or 17 decimal places. <br />
+ Untypable <font SIZE="-1">EXTERNAL</font> functions are declared <code>int</code>. <br />
+ There is no notation for <font SIZE="-1">INTEGER*8</font> constants. <br />
+ Some intrinsic functions do not yet work with <font SIZE="-1">INTEGER*8 .</font> </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">FILES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">SEE ALSO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">DIAGNOSTICS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">BUGS</a></dt>
+<dd>  </dd></dl>

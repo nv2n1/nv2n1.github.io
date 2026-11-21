@@ -6,130 +6,249 @@ letter: "s"
 url: "/docs/linux/man/1-sed/"
 description: "sed – stream editor for filtering and transforming text"
 ---
-
 <h2 class="name">NAME</h2>
-<p> sed &#8211; stream editor for filtering and transforming text </p>
+<p> sed - stream editor for filtering and transforming text </p>
 <h2>SYNOPSIS</h2>
-<p> <code>sed</code> [<i>OPTION</i>]&#8230; <i>{script-only-if-no-other-script} </i>[<i>input-file</i>]&#8230;</p>
+<p> <code>sed</code> [<i>OPTION</i>]... <i>{script-only-if-no-other-script} </i>[<i>input-file</i>]...  </p>
 <h2>DESCRIPTION</h2>
-<p> <i>Sed</i> is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline). While in some ways similar to an editor which permits scripted edits (such as <i>ed</i>), <i>sed</i> works by making only one pass over the input(s), and is consequently more efficient. But it is <i>sed</i>&#8216;s ability to filter text in a pipeline which particularly distinguishes it from other types of editors.</p>
+<p> <i>Sed</i> is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline). While in some ways similar to an editor which permits scripted edits (such as <i>ed</i>), <i>sed</i> works by making only one pass over the input(s), and is consequently more efficient. But it is <i>sed</i>&#8216;s ability to filter text in a pipeline which particularly distinguishes it from other types of editors. </p>
 <dl>
-<dt> <code>-n</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
-<dd>suppress automatic printing of pattern space</dd>
-<dt> <code>&#8211;debug</code></dt>
-<dd>annotate program execution</dd>
-<dt> <code>-e</code> script, <code>&#8211;expression</code>=<i>script</i></dt>
-<dd>add the script to the commands to be executed</dd>
-<dt> <code>-f</code> script-file, <code>&#8211;file</code>=<i>script-file</i></dt>
-<dd>add the contents of script-file to the commands to be executed</dd>
-<dt> <code>&#8211;follow-symlinks</code></dt>
-<dd>follow symlinks when processing in place</dd>
-<dt> <code>-i[SUFFIX]</code>, <code>&#8211;in-place</code>[=<i>SUFFIX</i>]</dt>
-<dd>edit files in place (makes backup if SUFFIX supplied)</dd>
-<dt> <code>-l</code> N, <code>&#8211;line-length</code>=<i>N</i></dt>
-<dd>specify the desired line-wrap length for the `l&#8217; command</dd>
-<dt> <code>&#8211;posix</code></dt>
-<dd>disable all GNU extensions.</dd>
-<dt> <code>-E</code>, <code>-r</code>, <code>&#8211;regexp-extended</code></dt>
-<dd>use extended regular expressions in the script (for portability use POSIX <code>-E</code>).</dd>
-<dt> <code>-s</code>, <code>&#8211;separate</code></dt>
-<dd>consider files as separate rather than as a single, continuous long stream.</dd>
-<dt> <code>&#8211;sandbox</code></dt>
-<dd>operate in sandbox mode (disable e/r/w commands).</dd>
-<dt> <code>-u</code>, <code>&#8211;unbuffered</code></dt>
-<dd>load minimal amounts of data from the input files and flush the output buffers more often</dd>
-<dt> <code>-z</code>, <code>&#8211;null-data</code></dt>
-<dd>separate lines by NUL characters</dd>
-<dt><code>&#8211;help</code></dt>
-<dd> display this help and exit</dd>
-<dt><code>&#8211;version</code></dt>
-<dd> output version information and exit</dd></dl>
-<p> If no <code>-e</code>, <code>&#8211;expression</code>, <code>-f</code>, or <code>&#8211;file</code> option is given, then the first non-option argument is taken as the sed script to interpret. All remaining arguments are names of input files; if no input files are specified, then the standard input is read. </p>
-<p> GNU sed home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/sed/">https://www.gnu.org/software/sed/</a>&gt;. General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;. E-mail bug reports to: &lt;bug-sed [at] gnu.org&gt;.</p>
+<dt><code>-n</code>, <code>--quiet</code>, <code>--silent</code></dt>
+<dd>  </dd>
+<dd> <p> suppress automatic printing of pattern space </p>
+ </dd>
+<dt><code>--debug</code></dt>
+<dd>  </dd>
+<dd> <p> annotate program execution </p>
+ </dd>
+<dt><code>-e</code> script, <code>--expression</code>=<i>script</i></dt>
+<dd>  </dd>
+<dd> <p> add the script to the commands to be executed </p>
+ </dd>
+<dt><code>-f</code> script-file, <code>--file</code>=<i>script-file</i></dt>
+<dd>  </dd>
+<dd> <p> add the contents of script-file to the commands to be executed </p>
+ </dd>
+<dt><code>--follow-symlinks</code></dt>
+<dd>  </dd>
+<dd> <p> follow symlinks when processing in place </p>
+ </dd>
+<dt><code>-i[SUFFIX]</code>, <code>--in-place</code>[=<i>SUFFIX</i>] </dt>
+<dd>  </dd>
+<dd> <p> edit files in place (makes backup if SUFFIX supplied) </p>
+ </dd>
+<dt><code>-l</code> N, <code>--line-length</code>=<i>N</i></dt>
+<dd>  </dd>
+<dd> <p> specify the desired line-wrap length for the `l&#8217; command </p>
+ </dd>
+<dt><code>--posix</code></dt>
+<dd>  </dd>
+<dd> <p> disable all GNU extensions. </p>
+ </dd>
+<dt><code>-E</code>, <code>-r</code>, <code>--regexp-extended</code></dt>
+<dd>  </dd>
+<dd> <p> use extended regular expressions in the script (for portability use POSIX <code>-E</code>). </p>
+ </dd>
+<dt><code>-s</code>, <code>--separate</code></dt>
+<dd>  </dd>
+<dd> <p> consider files as separate rather than as a single, continuous long stream. </p>
+ </dd>
+<dt><code>--sandbox</code></dt>
+<dd>  </dd>
+<dd> <p> operate in sandbox mode (disable e/r/w commands). </p>
+ </dd>
+<dt><code>-u</code>, <code>--unbuffered</code></dt>
+<dd>  </dd>
+<dd> <p> load minimal amounts of data from the input files and flush the output buffers more often </p>
+ </dd>
+<dt><code>-z</code>, <code>--null-data</code></dt>
+<dd>  </dd>
+<dd> <p> separate lines by NUL characters </p>
+ </dd>
+<dt><code>--help</code></dt>
+<dd> <p> display this help and exit </p>
+ </dd>
+<dt><code>--version</code></dt>
+<dd> <p> output version information and exit </p>
+ </dd></dl>
+<p> If no <code>-e</code>, <code>--expression</code>, <code>-f</code>, or <code>--file</code> option is given, then the first non-option argument is taken as the sed script to interpret. All remaining arguments are names of input files; if no input files are specified, then the standard input is read. </p>
+<p> GNU sed home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/sed/">https://www.gnu.org/software/sed/</a>&gt;. General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;. E-mail bug reports to: &lt;bug-sed [at] gnu.org&gt;.  </p>
 <h2>COMMAND SYNOPSIS</h2>
-<p> This is just a brief synopsis of <i>sed</i> commands to serve as a reminder to those who already know <i>sed</i>; other documentation (such as the texinfo document) must be consulted for fuller descriptions.</p>
-<h3>Zero-address &#8220;commands&#8221;</h3>
+<p> This is just a brief synopsis of <i>sed</i> commands to serve as a reminder to those who already know <i>sed</i>; other documentation (such as the texinfo document) must be consulted for fuller descriptions.  </p>
+<h3>Zero-address ``commands''</h3>
 <dl>
 <dt>:&nbsp;<i>label</i></dt>
-<dd> Label for <code>b</code> and <code>t</code> commands.</dd>
+<dd> <p> Label for <code>b</code> and <code>t</code> commands. </p>
+ </dd>
 <dt>#<i>comment</i></dt>
-<dd> The comment extends until the next newline (or the end of a <code>-e</code> script fragment).</dd>
+<dd> <p> The comment extends until the next newline (or the end of a <code>-e</code> script fragment). </p>
+ </dd>
 <dt>}</dt>
-<dd> The closing bracket of a { } block.</dd></dl>
+<dd> <p> The closing bracket of a { } block. </p>
+ </dd></dl>
 <h3>Zero- or One- address commands</h3>
 <dl>
 <dt>=</dt>
-<dd> Print the current line number.</dd>
+<dd> <p> Print the current line number. </p>
+ </dd>
 <dt>a \</dt>
-<dd>
-</dd><dt><i>text</i></dt>
-<dd> Append <i>text</i>, which has each embedded newline preceded by a backslash.</dd>
+<dd>  </dd>
+<dt><i>text</i></dt>
+<dd> <p> Append <i>text</i>, which has each embedded newline preceded by a backslash. </p>
+ </dd>
 <dt>i \</dt>
-<dd>
-</dd><dt><i>text</i></dt>
-<dd> Insert <i>text</i>, which has each embedded newline preceded by a backslash.</dd>
+<dd>  </dd>
+<dt><i>text</i></dt>
+<dd> <p> Insert <i>text</i>, which has each embedded newline preceded by a backslash. </p>
+ </dd>
 <dt>q [<i>exit-code</i>]</dt>
-<dd> Immediately quit the <i>sed</i> script without processing any more input, except that if auto-print is not disabled the current pattern space will be printed. The exit code argument is a GNU extension.</dd>
+<dd> <p> Immediately quit the <i>sed</i> script without processing any more input, except that if auto-print is not disabled the current pattern space will be printed. The exit code argument is a GNU extension. </p>
+ </dd>
 <dt>Q [<i>exit-code</i>]</dt>
-<dd> Immediately quit the <i>sed</i> script without processing any more input. This is a GNU extension.</dd>
+<dd> <p> Immediately quit the <i>sed</i> script without processing any more input. This is a GNU extension. </p>
+ </dd>
 <dt>r&nbsp;<i>filename</i></dt>
-<dd> Append text read from <i>filename</i>.</dd>
+<dd> <p> Append text read from <i>filename</i>. </p>
+ </dd>
 <dt>R&nbsp;<i>filename</i></dt>
-<dd> Append a line read from <i>filename</i>. Each invocation of the command reads a line from the file. This is a GNU extension.</dd></dl>
+<dd> <p> Append a line read from <i>filename</i>. Each invocation of the command reads a line from the file. This is a GNU extension. </p>
+ </dd></dl>
 <h3>Commands which accept address ranges</h3>
 <dl>
 <dt>{</dt>
-<dd> Begin a block of commands (end with a }).</dd>
+<dd> <p> Begin a block of commands (end with a }). </p>
+ </dd>
 <dt>b&nbsp;<i>label</i></dt>
-<dd> Branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script.</dd>
+<dd> <p> Branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script. </p>
+ </dd>
 <dt>c \</dt>
-<dd>
-</dd><dt><i>text</i></dt>
-<dd> Replace the selected lines with <i>text</i>, which has each embedded newline preceded by a backslash.</dd>
+<dd>  </dd>
+<dt><i>text</i></dt>
+<dd> <p> Replace the selected lines with <i>text</i>, which has each embedded newline preceded by a backslash. </p>
+ </dd>
 <dt>d</dt>
-<dd> Delete pattern space. Start next cycle.</dd>
+<dd> <p> Delete pattern space. Start next cycle. </p>
+ </dd>
 <dt>D</dt>
-<dd> If pattern space contains no newline, start a normal new cycle as if the d command was issued. Otherwise, delete text in the pattern space up to the first newline, and restart cycle with the resultant pattern space, without reading a new line of input.</dd>
+<dd> <p> If pattern space contains no newline, start a normal new cycle as if the d command was issued. Otherwise, delete text in the pattern space up to the first newline, and restart cycle with the resultant pattern space, without reading a new line of input. </p>
+ </dd>
 <dt>h H</dt>
-<dd> Copy/append pattern space to hold space.</dd>
+<dd> <p> Copy/append pattern space to hold space. </p>
+ </dd>
 <dt>g G</dt>
-<dd> Copy/append hold space to pattern space.</dd>
+<dd> <p> Copy/append hold space to pattern space. </p>
+ </dd>
 <dt>l</dt>
-<dd> List out the current line in a &#8220;visually unambiguous&#8221; form.</dd>
+<dd> <p> List out the current line in a ``visually unambiguous&#8217;&#8216; form. </p>
+ </dd>
 <dt>l&nbsp;<i>width</i></dt>
-<dd> List out the current line in a &#8220;visually unambiguous&#8221; form, breaking it at <i>width</i> characters. This is a GNU extension.</dd>
+<dd> <p> List out the current line in a ``visually unambiguous&#8217;&#8216; form, breaking it at <i>width</i> characters. This is a GNU extension. </p>
+ </dd>
 <dt>n N</dt>
-<dd> Read/append the next line of input into the pattern space.</dd>
+<dd> <p> Read/append the next line of input into the pattern space. </p>
+ </dd>
 <dt>p</dt>
-<dd> Print the current pattern space.</dd>
+<dd> <p> Print the current pattern space. </p>
+ </dd>
 <dt>P</dt>
-<dd> Print up to the first embedded newline of the current pattern space.</dd>
-<dt>s/<i>regexp</i>/<i>replacement</i>/</dt>
-<dd> Attempt to match <i>regexp</i> against the pattern space. If successful, replace that portion matched with <i>replacement</i>. The <i>replacement</i> may contain the special character <code>&amp;</code> to refer to that portion of the pattern space which matched, and the special escapes \1 through \9 to refer to the corresponding matching sub-expressions in the <i>regexp</i>.</dd>
+<dd> <p> Print up to the first embedded newline of the current pattern space. </p>
+ </dd>
+<dt>s/<i>regexp</i>/<i>replacement</i>/ </dt>
+<dd> <p> Attempt to match <i>regexp</i> against the pattern space. If successful, replace that portion matched with <i>replacement</i>. The <i>replacement</i> may contain the special character <code>&amp;</code> to refer to that portion of the pattern space which matched, and the special escapes \1 through \9 to refer to the corresponding matching sub-expressions in the <i>regexp</i>. </p>
+ </dd>
 <dt>t&nbsp;<i>label</i></dt>
-<dd> If a s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script.</dd>
+<dd> <p> If a s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script. </p>
+ </dd>
 <dt>T&nbsp;<i>label</i></dt>
-<dd> If no s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script. This is a GNU extension.</dd>
+<dd> <p> If no s/// has done a successful substitution since the last input line was read and since the last t or T command, then branch to <i>label</i>; if <i>label</i> is omitted, branch to end of script. This is a GNU extension. </p>
+ </dd>
 <dt>w&nbsp;<i>filename</i></dt>
-<dd> Write the current pattern space to <i>filename</i>.</dd>
+<dd> <p> Write the current pattern space to <i>filename</i>. </p>
+ </dd>
 <dt>W&nbsp;<i>filename</i></dt>
-<dd> Write the first line of the current pattern space to <i>filename</i>. This is a GNU extension.</dd>
+<dd> <p> Write the first line of the current pattern space to <i>filename</i>. This is a GNU extension. </p>
+ </dd>
 <dt>x</dt>
-<dd> Exchange the contents of the hold and pattern spaces.</dd>
-<dt>y/<i>source</i>/<i>dest</i>/</dt>
-<dd> Transliterate the characters in the pattern space which appear in <i>source</i> to the corresponding character in <i>dest</i>.</dd></dl>
+<dd> <p> Exchange the contents of the hold and pattern spaces. </p>
+ </dd>
+<dt>y/<i>source</i>/<i>dest</i>/ </dt>
+<dd> <p> Transliterate the characters in the pattern space which appear in <i>source</i> to the corresponding character in <i>dest</i>. </p>
+ </dd></dl>
 <h2>Addresses</h2>
 <p> <i>Sed</i> commands can be given with no addresses, in which case the command will be executed for all input lines; with one address, in which case the command will only be executed for input lines which match that address; or with two addresses, in which case the command will be executed for all input lines which match the inclusive range of lines starting from the first address and continuing to the second address. Three things to note about address ranges: the syntax is <i>addr1</i>,<i>addr2</i> (i.e., the addresses are separated by a comma); the line which <i>addr1</i> matched will always be accepted, even if <i>addr2</i> selects an earlier line; and if <i>addr2</i> is a <i>regexp</i>, it will not be tested against the line that <i>addr1</i> matched. </p>
 <p> After the address (or address-range), and before the command, a <code>!</code> may be inserted, which specifies that the command shall only be executed if the address (or address-range) does <code>not</code> match. </p>
-<p> The following address types are supported:</p>
+<p> The following address types are supported: </p>
 <dl>
 <dt><i>number</i></dt>
-<dd> Match only the specified line <i>number</i> (which increments cumulatively across files, unless the <code>-s</code> option is specified on the command line).</dd>
+<dd> <p> Match only the specified line <i>number</i> (which increments cumulatively across files, unless the <code>-s</code> option is specified on the command line). </p>
+ </dd>
 <dt><i>first</i>~<i>step</i></dt>
-<dd> Match every <i>step</i>&#8216;th line starting with line <i>first</i>. For example, &#8220;sed -n 1~2p&#8221; will print all the odd-numbered lines in the input stream, and the address 2~5 will match every fifth line, starting with the second. <i>first</i> can be zero; in this case, <i>sed</i> operates as if it were equal to <i>step</i>. (This is an extension.)</dd>
+<dd> <p> Match every <i>step</i>&#8216;th line starting with line <i>first</i>. For example, ``sed -n 1~2p&#8217;&#8216; will print all the odd-numbered lines in the input stream, and the address 2~5 will match every fifth line, starting with the second. <i>first</i> can be zero; in this case, <i>sed</i> operates as if it were equal to <i>step</i>. (This is an extension.) </p>
+ </dd>
 <dt>$</dt>
-<dd> Match the last line.</dd>
-<dt>/<i>regexp</i>/</dt>
-<dd> Match lines matching the regular expression <i>regexp</i>. Matching is performed on the current pattern space, which can be modified with commands such as &#8220;s///&#8221;.</dd>
-<dt>
-</dt></dl>
+<dd> <p> Match the last line. </p>
+ </dd>
+<dt>/<i>regexp</i>/ </dt>
+<dd> <p> Match lines matching the regular expression <i>regexp</i>. Matching is performed on the current pattern space, which can be modified with commands such as ``s///&#8216;&#8216;. </p>
+ </dd>
+<dt>\c <i>regexp</i><code>c</code></dt>
+<dd> <p> Match lines matching the regular expression <i>regexp</i>. The <code>c</code> may be any character. </p>
+ </dd></dl>
+<p> GNU <i>sed</i> also supports some special 2-address forms: </p>
+<dl>
+<dt>0,<i>addr2</i></dt>
+<dd> <p> Start out in &quot;matched first address&quot; state, until <i>addr2</i> is found. This is similar to 1,<i>addr2</i>, except that if <i>addr2</i> matches the very first line of input the 0,<i>addr2</i> form will be at the end of its range, whereas the 1,<i>addr2</i> form will still be at the beginning of its range. This works only when <i>addr2</i> is a regular expression. </p>
+ </dd>
+<dt><i>addr1</i>,+<i>N</i></dt>
+<dd> <p> Will match <i>addr1</i> and the <i>N</i> lines following <i>addr1</i>. </p>
+ </dd>
+<dt><i>addr1</i>,~<i>N</i></dt>
+<dd> <p> Will match <i>addr1</i> and the lines following <i>addr1</i> until the next line whose input line number is a multiple of <i>N</i>. </p>
+ </dd></dl>
+<h2>REGULAR EXPRESSIONS</h2>
+<p> POSIX.2 BREs <i>should</i> be supported, but they aren&#8217;t completely because of performance problems. The <code>\n</code> sequence in a regular expression matches the newline character, and similarly for <code>\a</code>, <code>\t</code>, and other sequences. The <i>-E</i> option switches to using extended regular expressions instead; it has been supported for years by GNU sed, and is now included in POSIX.  </p>
+<h2>BUGS</h2>
+<p> E-mail bug reports to <code>bug-sed [at] gnu.org</code>. Also, please include the output of ``sed --version&#8217;&#8216; in the body of your report if at all possible.  </p>
+<h2>AUTHOR</h2>
+<p> Written by Jay Fenlason, Tom Lord, Ken Pizzini, Paolo Bonzini, Jim Meyering, and Assaf Gordon. </p>
+<p> This sed program was built with SELinux support. SELinux is enabled on this system. </p>
+<p> GNU sed home page: &lt;<a rel="nofollow" href="https://www.gnu.org/software/sed/">https://www.gnu.org/software/sed/</a>&gt;. General help using GNU software: &lt;<a rel="nofollow" href="https://www.gnu.org/gethelp/">https://www.gnu.org/gethelp/</a>&gt;. E-mail bug reports to: &lt;bug-sed [at] gnu.org&gt;.  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2020 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt;. <br />
+ This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1), <code><a href="/docs/linux/man/1-ed/">ed</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-tr/">tr</a></code>(1), <code><a href="/docs/linux/man/1-perlre/">perlre</a></code>(1), sed.info, any of various books on <i>sed</i>, the <i>sed</i> FAQ (<a rel="nofollow" href="http://sed.sf.net/grabbag/tutorials/sedfaq.txt">http://sed.sf.net/grabbag/tutorials/sedfaq.txt</a>), <a rel="nofollow" href="http://sed.sf.net/grabbag/.">http://sed.sf.net/grabbag/.</a> </p>
+<p> The full documentation for <code>sed</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>sed</code> programs are properly installed at your site, the command </p>
+<dl>
+<dd> <p> <code>info sed</code> </p>
+ </dd></dl>
+<p> should give you access to the complete manual. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">COMMAND SYNOPSIS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAF">Zero-address ``commands&#8217;&#8216;</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">Zero- or One- address commands</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">Commands which accept address ranges</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAI">Addresses</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">REGULAR EXPRESSIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAK">BUGS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAL">AUTHOR</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAM">COPYRIGHT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">SEE ALSO</a></dt>
+<dd>  </dd></dl>

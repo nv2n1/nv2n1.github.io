@@ -6,235 +6,869 @@ letter: "g"
 url: "/docs/linux/man/7-groff_mom/"
 description: "groff_mom – groff “mom” macros; “mom” is a “roff” language, part of “groff”"
 ---
-
-<p>groff_mom &#8211; groff &#8220;mom&#8221; macros; &#8220;mom&#8221; is a &#8220;roff&#8221; language, part of &#8220;groff&#8221;</p>
-<h2>Synopsis</h2>
-<p>[<code>-Tps</code> [<i>pdfroff-option</i> ]] [<i>groff-option</i> ] <i>file</i> <code>-mom</code> [<i>option</i> ] <i>file</i> <code>-m mom</code> [<i>option</i> ] <i>file</i></p>
-<h2>Calling Mom</h2>
-<p><code>mom</code> is a macro set for <code>groff</code>, designed primarily to format documents for <i>PDF</i> and <i>PostScript</i> output. </p>
+<p>groff_mom &#8211; groff "mom" macros; "mom" is a "roff" language, part of "groff" </p>
+<h2>SYNOPSIS</h2>
+<p> [<code>-Tps</code> [<i>pdfroff-option</i> ]] [<i>groff-option</i> ] <i>file</i> <code>-mom</code> [<i>option</i> ] <i>file</i> <code>-m mom</code> [<i>option</i> ] <i>file</i>  </p>
+<h2>CALLING MOM</h2>
+<p> <code>mom</code> is a macro set for <code>groff</code>, designed primarily to format documents for <i>PDF</i> and <i>PostScript</i> output. </p>
 <p> <code>mom</code> provides two categories of macros: macros for typesetting, and macros for document processing. The typesetting macros provide access to groff&#8217;s typesetting capabilities in ways that are simpler to master than groff&#8217;s primitives. The document processing macros provide highly customizable markup tags that allow the user to design and output professional-looking documents with a minimum of typesetting intervention. </p>
-<p> Files processed with <code><a href="/docs/linux/man/1-pdfmom/">pdfmom</a></code>(1) with or without the -T<i>ps</i> option, produce <i>PDF</i> documents. The documents include a <i>PDF</i> outline that appears in the &#8216;Contents&#8217; panel of document viewers, and may contain clickable internal and external links. </p>
-<p> When -T<i>ps</i> is absent, <code>groff&#8217;s</code> native <i>PDF</i> driver, <code>gropdf</code>, is used to generate the output. When given, the output is still <i>PDF</i>, but processing is passed over to <code>pdfroff</code>, which uses <code>groff&#8217;s</code> PostScript driver, <code>grops</code>. Not all <i>PDF</i> features are available when -T<i>ps</i> is given; its primary use is to allow processing of files with embedded <i>PostScript</i> images. </p>
-<p> Files processed with <code>groff -mom</code> (or <code>-m </code><i>mom/</i>) produce <i>PostScript</i> output by default. </p>
-<p> <code>mom</code> comes with her own very complete documentation in <i>HTML</i> format. A separate <i>PDF manual</i>, <i>Producing PDFs</i> with groff and <code>mom</code>, covers full <code>mom</code> or <i>PDF</i> usage.</p>
-<h2>Files</h2>
+<p>Files processed with <code><a href="/docs/linux/man/1-pdfmom/">pdfmom</a></code>(1) with or without the -T <i>ps</i> option, produce <i>PDF</i> documents. The documents include a <i>PDF</i> outline that appears in the &#8216;Contents&#8217; panel of document viewers, and may contain clickable internal and external links. </p>
+<p>When -T <i>ps</i> is absent, <code>groff&#8217;s</code> native <i>PDF</i> driver, <code>gropdf</code>, is used to generate the output. When given, the output is still <i>PDF</i>, but processing is passed over to <code>pdfroff</code>, which uses <code>groff&#8217;s</code> PostScript driver, <code>grops</code>. Not all <i>PDF</i> features are available when -T <i>ps</i> is given; its primary use is to allow processing of files with embedded <i>PostScript</i> images. </p>
+<p>Files processed with <code>groff -mom</code> (or <code>-m </code><i>mom/</i>) produce <i>PostScript</i> output by default. </p>
+<p> <code>mom</code> comes with her own very complete documentation in <i>HTML</i> format. A separate <i>PDF manual</i>, <i>Producing PDFs</i> with groff and <code>mom</code>, covers full <code>mom</code> or <i>PDF</i> usage.  </p>
+<h2>FILES</h2>
 <dl>
 <dt><i>/usr/:share/:groff/:1.22.4/:tmac/:om.tmac</i></dt>
-<dd>&#8211; the main macro file <i>/usr/:share/:groff/:1.22.4/:tmac/:mom.tmac</i> &#8211; a wrapper file that calls om.tmac directly.</dd>
+<dd> <p> - the main macro file <i>/usr/:share/:groff/:1.22.4/:tmac/:mom.tmac</i> - a wrapper file that calls om.tmac directly. </p>
+ </dd>
 <dt><i>/usr/:share/:doc/:groff-base/:html/:mom/:toc.html</i></dt>
-<dd>&#8211; entry point to the HTML documentation</dd>
+<dd> <p> - entry point to the HTML documentation </p>
+ </dd>
 <dt><i>/usr/:share/:doc/:groff-base/:pdf/:mom-pdf.pdf</i></dt>
-<dd>&#8211; the PDF manual, <i>Producing PDFs with groff and mom</i></dd>
+<dd> <p> - the PDF manual, <i>Producing PDFs with groff and mom</i> </p>
+ </dd>
 <dt><i>/usr/:share/:doc/:groff-base/:examples/:mom/:</i>*<i>.mom</i></dt>
-<dd>&#8211; example files using mom</dd></dl>
-<h2>Documentation In Alphabetical Order</h2>
-<p>This part of the man page contains information just as in <a href="/docs/linux/man/7-groff/">groff</a>(7), <i>mom macros</i> and <i>mom escape sequences</i> in alphabetical order. </p>
-<p> The logical order of <i>mom macros</i> and <i>mom escape sequences</i> is very well documented in</p>
+<dd> <p> - example files using mom </p>
+ </dd></dl>
+<h2>DOCUMENTATION IN ALPHABETICAL ORDER</h2>
+<p> This part of the man page contains information just as in <a href="/docs/linux/man/7-groff/">groff</a>(7), <i>mom macros</i> and <i>mom escape sequences</i> in alphabetical order. </p>
+<p>The logical order of <i>mom macros</i> and <i>mom escape sequences</i> is very well documented in </p>
 <dl>
 <dt><i>/usr/:share/:doc/:groff-base/:html/:mom/:toc.html</i></dt>
-<dd>&#8211; entry point to the HTML documentation</dd></dl>
-<p> That document is quite good for beginners, but other users should be happy to have some documentation in reference style. </p>
-<p> So we restrict this part to the alphabetical order of macros and escape sequences. But, so far, we took all documentation details from the <i>toc.html</i> file, just in a more useful alphabetical order. So this part of the man page is nothing new, but only a logical arrangement.</p>
-<h2>Quick Reference</h2>
+<dd> <p> - entry point to the HTML documentation </p>
+ </dd></dl>
+<p>That document is quite good for beginners, but other users should be happy to have some documentation in reference style. </p>
+<p>So we restrict this part to the alphabetical order of macros and escape sequences. But, so far, we took all documentation details from the <i>toc.html</i> file, just in a more useful alphabetical order. So this part of the man page is nothing new, but only a logical arrangement.  </p>
+<h2>QUICK REFERENCE</h2>
 <h3>Quick Reference of Inline Escape Sequences in alphabetical Order</h3>
 <dl>
-<dd>begin using an initialized colour inline</dd>
-<dd>move backwards in a line</dd>
+<dd> <p> begin using an initialized colour inline </p>
+ </dd>
+<dd> <p> move backwards in a line </p>
+ </dd>
 <dt><code>\*[BOLDER]</code></dt>
-<dd>invoke pseudo bold inline (related to macro <code>.SETBOLDER</code>)</dd>
+<dd> <p> invoke pseudo bold inline (related to macro <code>.SETBOLDER</code>) </p>
+ </dd>
 <dt><code>\*[BOLDERX]</code></dt>
-<dd>off pseudo bold inline (related to macro <code>.SETBOLDER</code>)</dd>
-<dd>move characters pairs closer together inline (related to macro <code>.KERN</code>)</dd>
+<dd> <p> off pseudo bold inline (related to macro <code>.SETBOLDER</code>) </p>
+ </dd>
+<dd> <p> move characters pairs closer together inline (related to macro <code>.KERN</code>) </p>
+ </dd>
 <dt><code>\*[COND]</code></dt>
-<dd>invoke pseudo condensing inline (related to macro <code>.CONDENSE</code>)</dd>
+<dd> <p> invoke pseudo condensing inline (related to macro <code>.CONDENSE</code>) </p>
+ </dd>
 <dt><code>\*[CONDX]</code></dt>
-<dd>off pseudo condensing inline (related to macro <code>.CONDENSE</code>)</dd>
-<dd>pseudo-condensed superscript</dd>
-<dd>temporarily move downwards in a line</dd>
+<dd> <p> off pseudo condensing inline (related to macro <code>.CONDENSE</code>) </p>
+ </dd>
+<dd> <p> pseudo-condensed superscript </p>
+ </dd>
+<dd> <p> temporarily move downwards in a line </p>
+ </dd>
 <dt><code>\*[EN-MARK]</code></dt>
-<dd>mark initial line of a range of line numbers (for use with line numbered endnotes)</dd>
+<dd> <p> mark initial line of a range of line numbers (for use with line numbered endnotes) </p>
+ </dd>
 <dt><code>\*[EXT]</code></dt>
-<dd>invoke pseudo extending inline (related to macro <code>.EXTEND</code>)</dd>
+<dd> <p> invoke pseudo extending inline (related to macro <code>.EXTEND</code>) </p>
+ </dd>
 <dt><code>\*[EXTX]</code></dt>
-<dd>off pseudo condensing inline (related to macro <code>.EXTEND</code>)</dd>
-<dd>pseudo extended superscript</dd>
-<dd>move characters pairs further apart inline (related to macro <code>.KERN</code>)</dd>
-<dd>move forward in a line</dd>
+<dd> <p> off pseudo condensing inline (related to macro <code>.EXTEND</code>) </p>
+ </dd>
+<dd> <p> pseudo extended superscript </p>
+ </dd>
+<dd> <p> move characters pairs further apart inline (related to macro <code>.KERN</code>) </p>
+ </dd>
+<dd> <p> move forward in a line </p>
+ </dd>
 <dt><code>\*[LEADER]</code></dt>
-<dd>insert leaders at the end of a line</dd>
+<dd> <p> insert leaders at the end of a line </p>
+ </dd>
 <dt><code>\*[RULE]</code></dt>
-<dd>draw a full measure rule</dd>
-<dd>change the point size inline (related to macro <code>.PT_SIZE</code>)</dd>
+<dd> <p> draw a full measure rule </p>
+ </dd>
+<dd> <p> change the point size inline (related to macro <code>.PT_SIZE</code>) </p>
+ </dd>
 <dt><code>\*[SLANT]</code></dt>
-<dd>invoke pseudo italic inline (related to macro <code>.SETSLANT</code>)</dd>
+<dd> <p> invoke pseudo italic inline (related to macro <code>.SETSLANT</code>) </p>
+ </dd>
 <dt><code>\*[SLANTX]</code></dt>
-<dd>off pseudo italic inline (related to macro <code>.SETSLANT</code>)</dd>
-<dd>string tabs (mark tab positions inline)</dd>
-<dd>superscript</dd>
+<dd> <p> off pseudo italic inline (related to macro <code>.SETSLANT</code>) </p>
+ </dd>
+<dd> <p> string tabs (mark tab positions inline) </p>
+ </dd>
+<dd> <p> superscript </p>
+ </dd>
 <dt><code>\*[TB+]</code></dt>
-<dd>inline escape for <code>.TN</code> (<i>Tab Next</i>)</dd>
-<dd>invoke underlining inline (fixed width fonts only)</dd>
-<dd>temporarily move upwards in a line</dd></dl>
+<dd> <p> inline escape for <code>.TN</code> (<i>Tab Next</i>) </p>
+ </dd>
+<dd> <p> invoke underlining inline (fixed width fonts only) </p>
+ </dd>
+<dd> <p> temporarily move upwards in a line </p>
+ </dd></dl>
 <h3>Quick Reference of Macros in alphabetical Order</h3>
 <dl>
 <dt><code>.AUTOLEAD</code></dt>
-<dd>set the linespacing relative to the point size</dd>
+<dd> <p> set the linespacing relative to the point size </p>
+ </dd>
 <dt><code>.B_MARGIN</code></dt>
-<dd>set a bottom margin</dd>
+<dd> <p> set a bottom margin </p>
+ </dd>
 <dt><code>.BR</code></dt>
-<dd>break a justified line</dd>
+<dd> <p> break a justified line </p>
+ </dd>
 <dt><code>.CENTER</code></dt>
-<dd>set line-by-line quad centre</dd>
+<dd> <p> set line-by-line quad centre </p>
+ </dd>
 <dt><code>.CONDENSE</code></dt>
-<dd>set the amount to pseudo condense</dd>
+<dd> <p> set the amount to pseudo condense </p>
+ </dd>
 <dt><code>.EL</code></dt>
-<dd>break a line without advancing on the page</dd>
+<dd> <p> break a line without advancing on the page </p>
+ </dd>
 <dt><code>.EXTEND</code></dt>
-<dd>set the amount to pseudo extend</dd>
+<dd> <p> set the amount to pseudo extend </p>
+ </dd>
 <dt><code>.FALLBACK_FONT</code></dt>
-<dd>establish a fallback font (for missing fonts)</dd>
+<dd> <p> establish a fallback font (for missing fonts) </p>
+ </dd>
 <dt><code>.FAM</code></dt>
-<dd>alias to <code>.FAMILY</code></dd>
+<dd> <p> alias to <code>.FAMILY</code> </p>
+ </dd>
 <dt><code>.FAMILY </code><i>&lt;family&gt;</i></dt>
-<dd>set the <i>family type</i></dd>
+<dd> <p> set the <i>family type</i> </p>
+ </dd>
 <dt><code>.FT</code></dt>
-<dd>set the font style (roman, italic, etc.)</dd>
+<dd> <p> set the font style (roman, italic, etc.) </p>
+ </dd>
 <dt><code>.HI [</code><i> &lt;measure&gt; </i><code>]</code></dt>
-<dd>hanging indent</dd>
+<dd> <p> hanging indent </p>
+ </dd>
 <dt><code>.HY</code></dt>
-<dd>automatic hyphenation on/off</dd>
+<dd> <p> automatic hyphenation on/off </p>
+ </dd>
 <dt><code>.HY_SET</code></dt>
-<dd>set automatic hyphenation parameters</dd>
+<dd> <p> set automatic hyphenation parameters </p>
+ </dd>
 <dt><code>.IB [</code><i> &lt;left measure&gt; &lt;right measure&gt; </i><code>]</code></dt>
-<dd>indent both</dd>
+<dd> <p> indent both </p>
+ </dd>
 <dt><code>.IBX [ CLEAR ]</code></dt>
-<dd>exit indent both</dd>
+<dd> <p> exit indent both </p>
+ </dd>
 <dt><code>.IL [</code><i> &lt;measure&gt; </i><code>]</code></dt>
-<dd>indent left</dd>
+<dd> <p> indent left </p>
+ </dd>
 <dt><code>.ILX [ CLEAR ]</code></dt>
-<dd>exit indent left</dd>
+<dd> <p> exit indent left </p>
+ </dd>
 <dt><code>.IQ [ CLEAR ]</code></dt>
-<dd>quit any/all indents</dd>
+<dd> <p> quit any/all indents </p>
+ </dd>
 <dt><code>.IR [</code><i> &lt;measure&gt; </i><code>]</code></dt>
-<dd>indent right</dd>
+<dd> <p> indent right </p>
+ </dd>
 <dt><code>.IRX [ CLEAR ]</code></dt>
-<dd>exit indent right</dd>
+<dd> <p> exit indent right </p>
+ </dd>
 <dt><code>.JUSTIFY</code></dt>
-<dd>justify text to both margins</dd>
+<dd> <p> justify text to both margins </p>
+ </dd>
 <dt><code>.KERN</code></dt>
-<dd>automatic character pair kerning on/off</dd>
+<dd> <p> automatic character pair kerning on/off </p>
+ </dd>
 <dt><code>.L_MARGIN</code></dt>
-<dd>set a left margin (page offset)</dd>
+<dd> <p> set a left margin (page offset) </p>
+ </dd>
 <dt><code>.LEFT</code></dt>
-<dd>set line-by-line quad left</dd>
+<dd> <p> set line-by-line quad left </p>
+ </dd>
 <dt><code>.LL</code></dt>
-<dd>set a line length</dd>
+<dd> <p> set a line length </p>
+ </dd>
 <dt><code>.LS</code></dt>
-<dd>set a linespacing (leading)</dd>
+<dd> <p> set a linespacing (leading) </p>
+ </dd>
 <dt><code>.PAGE</code></dt>
-<dd>set explicit page dimensions and margins</dd>
+<dd> <p> set explicit page dimensions and margins </p>
+ </dd>
 <dt><code>.PAGEWIDTH</code></dt>
-<dd>set a custom page width</dd>
+<dd> <p> set a custom page width </p>
+ </dd>
 <dt><code>.PAGELENGTH</code></dt>
-<dd>set a custom page length</dd>
+<dd> <p> set a custom page length </p>
+ </dd>
 <dt><code>.PAPER</code><i> &lt;paper_type&gt;</i></dt>
-<dd>set common paper sizes (letter, A4, etc)</dd>
+<dd> <p> set common paper sizes (letter, A4, etc) </p>
+ </dd>
 <dt><code>.PT_SIZE</code></dt>
-<dd>set the point size</dd>
+<dd> <p> set the point size </p>
+ </dd>
 <dt><code>.QUAD</code></dt>
-<dd>&quot;justify&quot; text left, centre, or right</dd>
+<dd> <p> &quot;justify&quot; text left, centre, or right </p>
+ </dd>
 <dt><code>.R_MARGIN</code></dt>
-<dd>set a right margin</dd>
+<dd> <p> set a right margin </p>
+ </dd>
 <dt><code>.RIGHT</code></dt>
-<dd>set line-by-line quad right</dd>
+<dd> <p> set line-by-line quad right </p>
+ </dd>
 <dt><code>.SETBOLDER</code></dt>
-<dd>set the amount of emboldening</dd>
+<dd> <p> set the amount of emboldening </p>
+ </dd>
 <dt><code>.SETSLANT</code></dt>
-<dd>set the degree of slant</dd>
+<dd> <p> set the degree of slant </p>
+ </dd>
 <dt><code>.SPREAD</code></dt>
-<dd>force justify a line</dd>
+<dd> <p> force justify a line </p>
+ </dd>
 <dt><code>.SS</code></dt>
-<dd>set the sentence space size</dd>
+<dd> <p> set the sentence space size </p>
+ </dd>
 <dt><code>.T_MARGIN</code></dt>
-<dd>set a top margin</dd>
+<dd> <p> set a top margin </p>
+ </dd>
 <dt><code>.TI [</code><i> &lt;measure&gt; </i><code>]</code></dt>
-<dd>temporary left indent</dd>
+<dd> <p> temporary left indent </p>
+ </dd>
 <dt><code>.WS</code></dt>
-<dd>set the minimum word space size</dd></dl>
-<h2>Documentation Of Details</h2>
+<dd> <p> set the minimum word space size </p>
+ </dd></dl>
+<h2>DOCUMENTATION OF DETAILS</h2>
 <h3>Details of Inline Escape Sequences in alphabetical Order</h3>
 <dl>
-<dd>begin using an initialized colour inline</dd>
-<dd>move wards in a line</dd>
+<dd> <p> begin using an initialized colour inline </p>
+ </dd>
+<dd> <p> move wards in a line </p>
+ </dd>
 <dt><code>\*[BOLDER]</code></dt>
-<dd><code>\*[BOLDERX]</code> Emboldening on/off</dd>
+<dd> <p> <code>\*[BOLDERX]</code> Emboldening on/off </p>
+ </dd>
 <dl>
-<dd><code>\*[BOLDER]</code> begins emboldening type. <code>\*[BOLDERX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this:</dd>
+<dd> <p> <code>\*[BOLDER]</code> begins emboldening type. <code>\*[BOLDERX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this: </p>
+ </dd>
 <dl>
-<dd></dd></dl>
-<p> Alternatively, if you wanted the whole line emboldened, you should do</p>
+<dd>  </dd></dl>
+<p>Alternatively, if you wanted the whole line emboldened, you should do </p>
 <dl>
-<dd></dd></dl>
+<dd>  </dd></dl>
 <p> Once <code>\*[BOLDER]</code> is invoked, it remains in effect until turned off. </p>
-<p> Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[BOLDER]</code> requests.</dl>
-<dd>move characters pairs closer together inline (related to macro <code>.KERN</code>)</dd>
+<p>Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[BOLDER]</code> requests. </dl>
+ </p>
+<dd> <p> move characters pairs closer together inline (related to macro <code>.KERN</code>) </p>
+ </dd>
 <dt><code>\*[COND]</code></dt>
-<dd><code>\*[CONDX]</code> Pseudo-condensing on/off</dd>
+<dd> <p> <code>\*[CONDX]</code> Pseudo-condensing on/off </p>
+ </dd>
 <dl>
-<dd><code>\*[COND]</code> begins pseudo-condensing type. <code>\*[CONDX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this:</dd>
+<dd> <p> <code>\*[COND]</code> begins pseudo-condensing type. <code>\*[CONDX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this: </p>
+ </dd>
 <dl>
-<dd></dd></dl>
+<dd>  </dd></dl>
 <p> <code>\*[COND]</code> remains in effect until you turn it off with <code>\*[CONDX]</code>. </p>
-<p> IMPORTANT: You must turn <code>\*[COND]</code> off before making any changes to the point size of your type, either via the <code>.PT_SIZE</code> macro or with the <code>\s</code> inline escape. If you wish the new point size to be pseudo-condensed, simply reinvoke <code>\*[COND]</code> afterwards. Equally, <code>\*[COND]</code> must be turned off before changing the condense percentage with <code>.CONDENSE</code>. </p>
-<p> Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[COND]</code> requests.</dl>
-<dd>pseudo-condensed superscript</dd>
-<dd>temporarily move downwards in a line</dd>
+<p>IMPORTANT: You must turn <code>\*[COND]</code> off before making any changes to the point size of your type, either via the <code>.PT_SIZE</code> macro or with the <code>\s</code> inline escape. If you wish the new point size to be pseudo-condensed, simply reinvoke <code>\*[COND]</code> afterwards. Equally, <code>\*[COND]</code> must be turned off before changing the condense percentage with <code>.CONDENSE</code>. </p>
+<p>Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[COND]</code> requests. </dl>
+ </p>
+<dd> <p> pseudo-condensed superscript </p>
+ </dd>
+<dd> <p> temporarily move downwards in a line </p>
+ </dd>
 <dt><code>\*[EN-MARK]</code></dt>
-<dd>mark initial line of a range of line numbers (for use with line numbered endnotes)</dd>
+<dd> <p> mark initial line of a range of line numbers (for use with line numbered endnotes) </p>
+ </dd>
 <dt><code>\*[EXT]</code></dt>
-<dd><code>\*[EXTX]</code> Pseudo-extending on/off</dd>
+<dd> <p> <code>\*[EXTX]</code> Pseudo-extending on/off </p>
+ </dd>
 <dl>
-<dd><code>\*[EXT]</code> begins pseudo-extending type. <code>\*[EXTX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this:</dd>
+<dd> <p> <code>\*[EXT]</code> begins pseudo-extending type. <code>\*[EXTX]</code> turns the feature off. Both are inline escapes, therefore they should not appear as separate lines, but rather be embedded in text lines, like this: </p>
+ </dd>
 <dl>
-<dd></dd></dl>
+<dd>  </dd></dl>
 <p> <code>\*[EXT]</code> remains in effect until you turn it off with <code>\*[EXTX]</code>. </p>
-<p> IMPORTANT: You must turn <code>\*[EXT]</code> off before making any changes to the point size of your type, either via the <code>.PT_SIZE</code> macro or with the <code>\s</code> inline escape. If you wish the new point size to be <i>pseudo-extended</i>, simply reinvoke <code>\*[EXT]</code> afterwards. Equally, <code>\*[EXT]</code> must be turned off before changing the extend percentage with <code>.EXTEND</code>. </p>
-<p> Note: If you are using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[EXT]</code> requests.</dl>
-<dd>pseudo extended superscript</dd>
-<dd>move characters pairs further apart inline (related to macro <code>.KERN</code>)</dd>
-<dd>move forward in a line</dd>
+<p>IMPORTANT: You must turn <code>\*[EXT]</code> off before making any changes to the point size of your type, either via the <code>.PT_SIZE</code> macro or with the <code>\s</code> inline escape. If you wish the new point size to be <i>pseudo-extended</i>, simply reinvoke <code>\*[EXT]</code> afterwards. Equally, <code>\*[EXT]</code> must be turned off before changing the extend percentage with <code>.EXTEND</code>. </p>
+<p>Note: If you are using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> ignores <code>\*[EXT]</code> requests. </dl>
+ </p>
+<dd> <p> pseudo extended superscript </p>
+ </dd>
+<dd> <p> move characters pairs further apart inline (related to macro <code>.KERN</code>) </p>
+ </dd>
+<dd> <p> move forward in a line </p>
+ </dd>
 <dt><code>\*[LEADER]</code></dt>
-<dd>insert leaders at the end of a line</dd>
+<dd> <p> insert leaders at the end of a line </p>
+ </dd>
 <dt><code>\*[RULE]</code></dt>
-<dd>draw a full measure rule</dd>
-<dd>change the point size inline (related to macro <code>.PT_SIZE</code>)</dd>
+<dd> <p> draw a full measure rule </p>
+ </dd>
+<dd> <p> change the point size inline (related to macro <code>.PT_SIZE</code>) </p>
+ </dd>
 <dt><code>\*[SLANT]</code></dt>
-<dd><code>\*[SLANTX]</code> Pseudo italic on/off</dd>
+<dd> <p> <code>\*[SLANTX]</code> Pseudo italic on/off </p>
+ </dd>
 <dl>
-<dd><code>\*[SLANT]</code> begins <i>pseudo-italicizing</i> <i>type</i>. <code>\*[SLANTX]</code> turns the feature off. Both are <i>inline</i> <i>escapes</i>, therefore they should not appear as separate lines, but rather be embedded in text lines, like this:</dd>
+<dd> <p> <code>\*[SLANT]</code> begins <i>pseudo-italicizing</i> <i>type</i>. <code>\*[SLANTX]</code> turns the feature off. Both are <i>inline</i> <i>escapes</i>, therefore they should not appear as separate lines, but rather be embedded in text lines, like this: </p>
+ </dd>
 <dl>
-<dd></dd></dl>
-<p> Alternatively, if you wanted the whole line <i>pseudo-italicized</i>, you&#8217;d do</p>
+<dd>  </dd></dl>
+<p>Alternatively, if you wanted the whole line <i>pseudo-italicized</i>, you&#8217;d do </p>
 <dl>
-<dd></dd></dl>
-<p> Once <code>\*[SLANT]</code> is invoked, it remains in effect until turned off. </p>
-<p> Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> underlines pseudo-italics by default. To change this behaviour, use the special macro <code>.SLANT_MEANS_SLANT</code>.</dl>
-<dd>Mark positions of string tabs</dd>
+<dd>  </dd></dl>
+<p>Once <code>\*[SLANT]</code> is invoked, it remains in effect until turned off. </p>
+<p>Note: If you&#8217;re using the document processing macros with <code>.PRINTSTYLE TYPEWRITE</code>, <code>mom</code> underlines pseudo-italics by default. To change this behaviour, use the special macro <code>.SLANT_MEANS_SLANT</code>. </dl>
+ </p>
+<dd> <p> Mark positions of string tabs </p>
+ </dd>
 <dl>
-<dd>The <i>quad</i> direction must be <code>LEFT</code> or <code>JUSTIFY</code> (see <code>.QUAD</code> and <code>.JUSTIFY</code>) or the <i>no-fill mode</i> set to <code>LEFT</code> in order for these inlines to function properly. Please see <i>IMPORTANT</i>, below. </dd>
-<p> String tabs need to be marked off with inline escapes before being set up with the <code>.ST</code> macro. Any input line may contain string tab markers. <i>&lt;number&gt;</i>, above, means the numeric identifier of the tab. </p>
-<p> The following shows a sample input line with string tab markers.</p>
+<dd> <p>The <i>quad</i> direction must be <code>LEFT</code> or <code>JUSTIFY</code> (see <code>.QUAD</code> and <code>.JUSTIFY</code>) or the <i>no-fill mode</i> set to <code>LEFT</code> in order for these inlines to function properly. Please see <i>IMPORTANT</i>, below. </p>
+<p>String tabs need to be marked off with inline escapes before being set up with the <code>.ST</code> macro. Any input line may contain string tab markers. <i>&lt;number&gt;</i>, above, means the numeric identifier of the tab. </p>
+<p>The following shows a sample input line with string tab markers. </p>
+ </dd>
 <dl>
-<dd></dd></dl>
-<p> String <i>tab 1</i> begins at the start of the line and ends after the word <i>time</i>. String <i>tab 2</i> starts at <i>good</i> and ends after <i>men</i>. <i>Inline escapes</i> (e.g. <i>font</i> or <i>point size</i> <i>changes</i>, or horizontal movements, including padding) are taken into account when <code>mom</code> determines the <i>position</i> and <i>length</i> of <i>string</i> <i>tabs</i>. </p>
-<p> Up to nineteen string tabs may be marked (not necessarily all on the same line, of course), and they must be numbered between 1 and 19. </p>
-<p> Once string tabs have been marked in input lines, they have to be <i>set</i> with <code>.ST</code>, after which they may be called, by number, with <code>.TAB</code>. </p>
-<p> Note: Lines with string tabs marked off in them are normal input lines, i.e. they get printed, just like any input line. If you want to set up string tabs without the line printing, use the <code>.SILENT</code> macro. </p>
+<dd>  </dd></dl>
+<p>String <i>tab 1</i> begins at the start of the line and ends after the word <i>time</i>. String <i>tab 2</i> starts at <i>good</i> and ends after <i>men</i>. <i>Inline escapes</i> (e.g. <i>font</i> or <i>point size</i> <i>changes</i>, or horizontal movements, including padding) are taken into account when <code>mom</code> determines the <i>position</i> and <i>length</i> of <i>string</i> <i>tabs</i>. </p>
+<p>Up to nineteen string tabs may be marked (not necessarily all on the same line, of course), and they must be numbered between 1 and 19. </p>
+<p>Once string tabs have been marked in input lines, they have to be <i>set</i> with <code>.ST</code>, after which they may be called, by number, with <code>.TAB</code>. </p>
+<p>Note: Lines with string tabs marked off in them are normal input lines, i.e. they get printed, just like any input line. If you want to set up string tabs without the line printing, use the <code>.SILENT</code> macro. </p>
 <p> <i>IMPORTANT:</i> Owing to the way <code>groff</code> processes input lines and turns them into output lines, it is not possible for <code>mom</code> to <i>guess</i> the correct starting position of string tabs marked off in lines that are centered or set flush right. </p>
-<p> Equally, she cannot guess the starting position if a line is fully justified and broken with <code>.SPREAD</code>. </p>
-<p> In other words, in order to use string tabs, <code>LEFT</code> must be active, or, if <code>.QUAD LEFT</code> or <code>JUSTIFY</code> are active, the line on which the <i>string tabs</i> are marked must be broken <i>manually</i> with <code>.BR</code> (but not <code>.SPREAD</code>). </p>
-<p> To circumvent this behaviour, I recommend using the <code>PAD</code> to set up string tabs in centered or flush right lines. Say, for example, you want to use a <i>string tab</i> to <i>underscore</i> the text of a centered line with a rule. Rather than this,</p>
+<p>Equally, she cannot guess the starting position if a line is fully justified and broken with <code>.SPREAD</code>. </p>
+<p>In other words, in order to use string tabs, <code>LEFT</code> must be active, or, if <code>.QUAD LEFT</code> or <code>JUSTIFY</code> are active, the line on which the <i>string tabs</i> are marked must be broken <i>manually</i> with <code>.BR</code> (but not <code>.SPREAD</code>). </p>
+<p>To circumvent this behaviour, I recommend using the <code>PAD</code> to set up string tabs in centered or flush right lines. Say, for example, you want to use a <i>string tab</i> to <i>underscore</i> the text of a centered line with a rule. Rather than this, </p>
 <dl>
-<dd><code>.CENTER</code> <code>\*[ST1]A line of text\*[ST1X]
-</dd></dl></dl></dl>
-</code>
+<dd> <p> <code>.CENTER</code> <code>\*[ST1]A line of text\*[ST1X]\c</code> <code>.EL</code> <code>.ST 1</code> <code>.TAB 1</code> <code>.PT_SIZE 24</code> <code>.ALD 3p</code> <code>\*[RULE]</code> <code>.RLD 3p</code> <code>.TQ</code> </p>
+ </dd></dl>
+<p> you should do: </p>
+<dl>
+<dd> <p> <code>.QUAD CENTER</code> <code>.PAD #\*[ST1]A line of text\*[ST1X]#</code> <code>.EL</code> <code>.ST 1</code> <code>.TAB 1</code> <code>.PT_SIZE 24</code> <code>.ALD 3p</code> <code>\*[RULE] \ Note that you can&#8217;t use \*[UP] or \*[DOWN] with \*[RULE].RLD 3p</code> <code>.TQ</code> </p>
+ </dd></dl>
+</dl>
+<dd> <p> superscript </p>
+ </dd>
+<dt><code>\*[TB+]</code></dt>
+<dd> <p> Inline escape for <code>.TN</code> (<i>Tab Next</i>) </p>
+ </dd>
+<dd> <p> invoke underlining inline (fixed width fonts only) </p>
+ </dd>
+<dd> <p> temporarily move upwards in a line </p>
+ </dd></dl>
+<h3>Details of Macros in alphabetical Order</h3>
+<dl>
+<dt><code>.AUTOLEAD</code></dt>
+<dd> <p> set the linespacing relative to the point size </p>
+ </dd>
+<dt><code>.B_MARGIN</code><i> &lt;bottom margin&gt;</i></dt>
+<dd> <p> Bottom Margin </p>
+ </dd>
+<dl>
+<dd> <p>Requires a unit of measure </p>
+<p> <code>.B_MARGIN</code> sets a nominal position at the bottom of the page beyond which you don&#8217;t want your type to go. When the bottom margin is reached, <code>mom</code> starts a new page. <code>.B_MARGIN requires a unit of measure.</code> Decimal fractions are allowed. To set a nominal bottom margin of 3/4 inch, enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.B_MARGIN .75i</code> </p>
+ </dd></dl>
+<p>Obviously, if you haven&#8217;t spaced the type on your pages so that the last lines fall perfectly at the bottom margin, the margin will vary from page to page. Usually, but not always, the last line of type that fits on a page before the bottom margin causes mom to start a new page. </p>
+<p>Occasionally, owing to a peculiarity in <i>groff</i>, an extra line will fall below the nominal bottom margin. If you&#8217;re using the document processing macros, this is unlikely to happen; the document processing macros are very hard-nosed about aligning bottom margins. </p>
+<p>Note: The meaning of <code>.B_MARGIN</code> is slightly different when you&#8217;re using the document processing macros. </dl>
+ </p>
+<dt><code>.FALLBACK_FONT</code><i> &lt;fallback font&gt; </i><code>[ ABORT | WARN ]</code></dt>
+<dd> <p> Fallback Font </p>
+ </dd>
+<dl>
+<dd> <p>In the event that you pass an invalid argument to <code>.FAMILY</code> (i.e. a non-existent <i>family</i>), <code>mom</code>, by default, uses the <i>fallback font</i>, <code>Courier Medium Roman</code> (<code>CR</code>), in order to continue processing your file. </p>
+<p>If you&#8217;d prefer another <i>fallback font</i>, pass <code>.FALLBACK_FONT</code> the full <i>family+font name</i> of the <i>font</i> you&#8217;d like. For example, if you&#8217;d rather the <i>fallback font</i> were <code>Times Roman Medium Roman</code>, </p>
+ </dd>
+<dl>
+<dd> <p> <code>.FALLBACK_FONT TR</code> </p>
+ </dd></dl>
+<p> would do the trick. </p>
+<p> <code>Mom</code> issues a warning whenever a <i>font style set</i> with <code>.FT</code> does not exist, either because you haven&#8217;t registered the style or because the <i>font style</i> does not exist in the current <i>family set</i> with <code>.FAMILY</code>. By default, <code>mom</code> then aborts, which allows you to correct the problem. </p>
+<p>If you&#8217;d prefer that <code>mom</code> not abort on non-existent <i>fonts</i>, but rather continue processing using a <i>fallback font</i>, you can pass <code>.FALLBACK_FONT</code> the argument <code>WARN</code>, either by itself, or in conjunction with your chosen <i>fallback font</i><code>.</code> </p>
+<p>Some examples of invoking <code>.FALLBACK_FONT</code>: </p>
+<dl>
+<dt><code>.FALLBACK_FONT WARN</code></dt>
+<dd> <p> <code>mom</code> will issue a warning whenever you try to access a non-existent <i>font</i> but will continue processing your file with the default <i>fallback font</i>, <code>Courier Medium Roman</code>. </p>
+ </dd>
+<dt><code>.FALLBACK_FONT TR WARN</code></dt>
+<dd> <p> <code>mom</code> will issue a warning whenever you try to access a non-existent <i>font</i> but will continue processing your file with a <i>fallback font</i> of <code>Times Roman Medium Roman</code>; additionally, <code>TR</code> will be the <i>fallback font</i> whenever you try to access a <i>family</i> that does not exist. </p>
+ </dd>
+<dt><code>.FALLBACK_FONT TR ABORT</code></dt>
+<dd> <p> <code>mom</code> will abort whenever you try to access a non-existent <code>font</code>, and will use the <i>fallback font</i> <code>TR</code> whenever you try to access a <i>family</i> that does not exist. If, for some reason, you want to revert to <code>ABORT</code>, just enter <code>.FALLBACK_FONT ABORT</code> and <code>mom</code> will once again abort on <i>font errors</i>. </p>
+ </dd></dl>
+</dl>
+<dt><code>.FAM</code><i> &lt;family&gt;</i></dt>
+<dd> <p> Type Family, alias of <code>.FAMILY</code> </p>
+ </dd>
+<dt><code>.FAMILY</code><i> &lt;family&gt;</i></dt>
+<dd> <p> Type Family, alias <code>.FAM</code> </p>
+ </dd>
+<dl>
+<dd> <p> <code>.FAMILY</code> takes one argument: the name of the <i>family</i> you want. <i>Groff</i> comes with a small set of basic families, each identified by a 1-, 2- or 3-letter mnemonic. The standard families are: </p>
+ </dd>
+<dl>
+<dd> <p> <code>A = Avant Garde</code> <code>BM = Bookman</code> <code>H = Helvetica</code> <code>HN = Helvetica Narrow</code> <code>N = New Century Schoolbook</code> <code>P = Palatino</code> <code>T = Times Roman</code> <code>ZCM = Zapf Chancery</code> </p>
+ </dd></dl>
+<p>The argument you pass to <code>.FAMILY</code> is the identifier at left, above. For example, if you want <code>Helvetica</code>, enter </p>
+<dl>
+<dd> <p> <code>.FAMILY H</code> </p>
+ </dd></dl>
+<p>Note: The font macro (<code>.FT</code>) lets you specify both the type <i>family</i> and the desired font with a single macro. While this saves a few keystrokes, I recommend using <code>.FAMILY for</code> <i>family</i>, and <code>.FT for</code> <i>font</i>, except where doing so is genuinely inconvenient. <code>ZCM</code>, for example, only exists in one style: <code>Italic</code> (<code>I</code>). </p>
+<p>Therefore, </p>
+<dl>
+<dd> <p> <code>.FT ZCMI</code> </p>
+ </dd></dl>
+<p> makes more sense than setting the <i>family</i> to <code>ZCM</code>, then setting the <i>font</i> to <i>I</i>. </p>
+<p>Additional note: If you are running a version of groff lower than 1.19.2, you must follow all <code>.FAMILY</code> requests with a <code>.FT</code> request, otherwise <code>mom</code> will set all type up to the next <code>.FT</code> request in the fallback font. </p>
+<p>If you are running a version of groff greater than or equal to 1.19.2, when you invoke the <code>.FAMILY</code> macro, <code>mom</code> <i>remembers</i> the font style <code>(</code>Roman <code>,</code> <code>Italic</code>, etc) currently in use (if the font style exists in the new <i>family</i>) and will continue to use the same font style in the new family. For example: </p>
+<dl>
+<dd> <p> <code>.FAMILY BM </code><i>\&quot; Bookman family</i> <code>.FT I </code><i>\&quot; Medium Italic</i> <i>&lt;some text&gt; \ Bookman Medium Italic</i> <code>.FAMILY H </code><i>\&quot; Helvetica family</i> <i>&lt;more text&gt; \ Helvetica Medium Italic</i> </p>
+ </dd></dl>
+<p>However, if the font style does not exist in the new family, <code>mom</code> will set all subsequent type in the fallback font (by default, <code>Courier Medium</code> <code>Roman</code>) until she encounters a <code>.FT</code> request that&#8217;s valid for the <i>family</i>. </p>
+<p>For example, assuming you don&#8217;t have the font <code>Medium Condensed Roman</code> (<code>mom</code> extension <i>CD</i>) in the <i>Helvetica</i> <i>family</i>: </p>
+<dl>
+<dd> <p> <code>.FAMILY UN </code><i>\&quot; Univers family</i> <code>.FT CD </code><i>\&quot; Medium Condensed</i> <i>&lt;some text&gt; \ Univers Medium Condensed</i> <code>.FAMILY H </code><i>\&quot; Helvetica family</i> <i>&lt;more text&gt; \ Courier Medium Roman!</i> </p>
+ </dd></dl>
+<p>In the above example, you must follow <code>.FAMILY H</code> with a <code>.FT</code> request that&#8217;s valid for <code>Helvetica</code>. </p>
+<p>Please see the Appendices, <i>Adding fonts to</i> <i>groff</i>, for information on adding fonts and families to groff, as well as to see a list of the extensions <code>mom</code> provides to <i>groff</i>&#8216;s basic <code>R</code>, <code>I</code>, <code>B</code>, <code>BI</code> styles. </p>
+<p>Suggestion: When adding <i>families to</i> <i>groff</i>, I recommend following the established standard for the naming families and fonts. For example, if you add the <code>Garamond</code> family, name the font files </p>
+<dl>
+<dd> <p> <code>GARAMONDR</code> <code>GARAMONDI</code> <code>GARAMONDB</code> <code>GARAMONDBI</code> </p>
+ </dd></dl>
+<p> <code>GARAMOND then becomes a valid</code> <i>family name</i> you can pass to <code>.FAMILY</code>. (You could, of course, shorten <code>GARAMOND</code> to just <code>G</code>, or <code>GD</code>.) <code>R</code>, <code>I</code>, <code>B</code>, and <code>BI</code> after <code>GARAMOND</code> are the <i>roman</i>, <i>italic</i>, <i>bold</i> and <i>bold-italic</i> fonts respectively. </dl>
+ </p>
+<dt><code>.FONT R | B | BI | </code><i>&lt;any other valid font style&gt;</i></dt>
+<dd> <p> Alias to <code>.FT</code> </p>
+ </dd>
+<dt><code>.FT R | B | BI | </code><i>&lt;any other valid font style&gt;</i></dt>
+<dd> <p> Set font </p>
+ </dd>
+<dl>
+<dd> <p>By default, <i>groff</i> permits <code>.FT</code> to take one of four possible arguments specifying the desired font: </p>
+ </dd>
+<dl>
+<dd> <p> <code>R = (Medium) Roman</code> <code>I = (Medium) Italic</code> <code>B = Bold (Roman)</code> <code>BI = Bold Italic</code> </p>
+ </dd></dl>
+<p>For example, if your <i>family</i> is <code>Helvetica</code>, entering </p>
+<dl>
+<dd> <p> <code>.FT B</code> </p>
+ </dd></dl>
+<p> will give you the <i>Helvetica bold</i> <i>font</i>. If your <i>family</i> were <code>Palatino</code>, you&#8217;d get the <i>Palatino bold</i> <i>font</i>. </p>
+<p> <code>Mom</code> considerably extends the range of arguments you can pass to <code>.FT</code>, making it more convenient to add and access fonts of differing weights and shapes within the same family. </p>
+<p>Have a look here for a list of the weight/style arguments <code>mom</code> allows. Be aware, though, that you must have the fonts, correctly installed and named, in order to use the arguments. (See <i>Adding fonts to groff</i> for instructions and information.) Please also read the <i>ADDITIONAL NOTE</i> found in the description of the <code>.FAMILY</code> macro. </p>
+<p>How <code>mom</code> reacts to an invalid argument to <code>.FT</code> depends on which version of groff you&#8217;re using. If your <i>groff version</i> is greater than or equal to 1.19.2, <code>mom</code> will issue a warning and, depending on how you&#8217;ve set up the fallback font, either continue processing using the fallback font, or abort (allowing you to correct the problem). If your <i>groff version</i> is less than 1.19.2, <code>mom</code> will silently continue processing, using either the fallback font or the font that was in effect prior to the invalid <code>.FT</code> call. </p>
+<p> <code>.FT</code> will also accept, as an argument, a full <i>family</i> and <i>font</i> <i>name</i>. </p>
+<p>For example, </p>
+<dl>
+<dd> <p> <code>.FT HB</code> </p>
+ </dd></dl>
+<p> will set subsequent type in <i>Helvetica</i> <i>Bold</i>. </p>
+<p>However, I strongly recommend keeping <i>family</i> and <i>font</i> separate except where doing so is genuinely inconvenient. </p>
+<p>For inline control of <i>fonts</i>, see <i>Inline</i> <i>Escapes</i>, font control. </dl>
+ </p>
+<dt><code>.HI [</code><i> &lt;measure&gt; </i><code>]</code></dt>
+<dd> <p> Hanging indent --- the optional argument requires a unit of measure. </p>
+ </dd>
+<dl>
+<dd> <p>A hanging indent looks like this: </p>
+ </dd>
+<dl>
+<dd> <p> <code> The thousand injuries of Fortunato I had borne as best I <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;could, but when he ventured upon insult, I vowed <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;revenge.&nbsp;<wbr>&nbsp;You who so well know the nature of my soul <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;will not suppose, however, that I gave utterance to a <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;threat, at length I would be avenged </p>
+ </dd></dl>
+<p> The first line of text </code><i>hangs</i> outside the <i>left margin</i>. </p>
+<p>In order to use <i>hanging indents</i>, you must first have a <i>left indent</i> active (set with either <code>.IL</code> or <code>.IB</code>). <code>Mom</code> will not hang text outside the <i>left margin set</i> with <code>.L_MARGIN</code> or outside the <i>left margin</i> of a <i>tab</i>. </p>
+<p>The first time you invoke <code>.HI</code>, you must give it a <code>measure</code>. If you want the first line of a paragraph to <i>hang by</i>, say, <i>1 pica</i>, do </p>
+<dl>
+<dd> <p> <code>.IL 1P</code> <code>.HI 1P</code> </p>
+ </dd></dl>
+<p> Subsequent invocations of <code>.HI</code> do not require you to supply a <i>measure</i>; <code>mom</code> keeps track of the last measure you gave it. </p>
+<p>Generally speaking, you should invoke <code>.HI</code> immediately prior to the line you want hung (i.e. without any intervening control lines). And because <i>hanging indents</i> affect only one line, there&#8217;s no need to turn them off. </p>
+<p> <i>IMPORTANT:</i> Unlike <code>IL</code>, <code>IR</code> and <code>IB</code>, measures given to <code>.HI</code> are NOT additive. Each time you pass a measure to <code>.HI ,</code> the measure is treated literally. <i>Recipe:</i> A numbered list using <i>hanging indents</i> </p>
+<p> <i>Note:</i> <code>mom</code> has macros for setting lists. This recipe exists to demonstrate the use of <i>hanging indents</i> only. </p>
+<dl>
+<dd> <p> <code>.PAGE 8.5i 11i 1i 1i 1i 1i</code> <code>.FAMILY T</code> <code>.FT R</code> <code>.PT_SIZE 12</code> <code>.LS 14</code> <code>.JUSTIFY</code> <code>.KERN</code> <code>.SS 0</code> <code>.IL \w&#8217;\0\0.&#8216;</code> <code>.HI \w&#8217;\0\0.&#8216;</code> <code>1.\0The most important point to be considered is whether the answer to the meaning of Life, the Universe, and Everything really is 42. We have no-one&#8217;s word on the subject except Mr. Adams&#8217;. .HI</code> 2.\0If the answer to the meaning of Life, the Universe, and Everything is indeed 42, what impact does this have on the politics of representation? 42 is, after all not a prime number. Are we to infer that prime numbers don&#8217;t deserve equal rights and equal access in the universe? <code>.HI</code> 3.\0If 42 is deemed non-exclusionary, how do we present it as the answer and, at the same time, forestall debate on its exclusionary implications? </p>
+ </dd></dl>
+<p>First, we invoke a left indent with a measure equal to the width of 2 figures spaces plus a period (using the \w inline escape). At this point, the left indent is active; text afterwards would normally be indented. However, we invoke a hanging indent of exactly the same width, which hangs the first line (and first line only!) to the left of the indent by the same distance (in this case, that means "out to the left margin"). Because we begin the first line with a number, a period, and a figure space, the actual text (<i>The most important point</i>) starts at exactly the same spot as the indented lines that follow. </p>
+<p>Notice that subsequent invocations of <code>.HI</code> don&#8217;t require a <i>measure</i> to be given. </p>
+<p>Paste the example above into a file and preview it with </p>
+<dl>
+<dd> <p> <code>pdfmom filename.mom | ps2pdf - filename.pdf</code> </p>
+ </dd></dl>
+<p> to see hanging indents in action. </dl>
+ </p>
+<dt><code>.IB [</code><i> &lt;left measure&gt; &lt;right measure&gt; </i><code>]</code></dt>
+<dd> <p> Indent both --- the optional argument requires a unit of measure </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IB</code> allows you to set or invoke a left and a right indent at the same time. </p>
+<p>At its first invocation, you must supply a measure for both indents; at subsequent invocations when you wish to supply a measure, both must be given again. As with <code>.IL</code> and <code>.IR</code>, the measures are added to the values previously passed to the macro. Hence, if you wish to change just one of the values, you must give an argument of zero to the other. </p>
+<p> <i>A word of advice:</i> If you need to manipulate left and right indents separately, use a combination of <code>.IL</code> and <code>.IR</code> instead of <code>.IB</code>. You&#8217;ll save yourself a lot of grief. </p>
+<p>A <i>minus sign</i> may be prepended to the arguments to subtract from their current values. The \w inline escape may be used to specify text-dependent measures, in which case no unit of measure is required. For example, </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IB \w&#8217;margarine&#8217; \w&#8217;jello&#8217;</code> </p>
+ </dd></dl>
+<p> left indents text by the width of the word <i>margarine</i> and right indents by the width of <i>jello</i>. </p>
+<p>Like <code>.IL</code> and <code>.IR</code>, <code>.IB</code> with no argument indents by its last active values. See the brief explanation of how mom handles indents for more details. </p>
+<p> <i>Note:</i> Calling a <i>tab</i> (with <code>.TAB &lt;n&gt;</code>) automatically cancels any active indents. </p>
+<p> <i>Additional note:</i> Invoking <code>.IB</code> automatically turns off <code>.IL</code> and <code>.IR</code>. </dl>
+ </p>
+<dt><code>.IL [</code><i> &lt;measure&gt; </i><code>]</code></dt>
+<dd> <p> Indent left --- the optional argument requires a unit of measure </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IL</code> indents text from the left margin of the page, or if you&#8217;re in a <i>tab</i>, from the left edge of the <i>tab</i>. Once <i>IL</i> is on, the <i>left indent</i> is applied uniformly to every subsequent line of text, even if you change the line length. </p>
+<p>The first time you invoke <code>.IL</code>, you must give it a measure. Subsequent invocations with a measure add to the previous measure. A minus sign may be prepended to the argument to subtract from the current measure. The <code>\w</code> inline escape may be used to specify a text-dependent measure, in which case no unit of measure is required. For example, </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IL \w&#8217;margarine&#8217;</code> </p>
+ </dd></dl>
+<p> indents text by the width of the word <i>margarine</i>. </p>
+<p>With no argument, <code>.IL</code> indents by its last active value. See the brief explanation of how <code>mom</code> handles indents for more details. </p>
+<p> <i>Note:</i> Calling a <i>tab</i> (with <code>.TAB &lt;n&gt;</code>) automatically cancels any active indents. </p>
+<p> <i>Additional note:</i> Invoking <code>.IL</code> automatically turns off <code>IB</code>. </dl>
+ </p>
+<dt><code>.IQ [</code><i> &lt;measure&gt; </i><code>]</code></dt>
+<dd> <p> IQ --- quit any/all indents </p>
+ </dd>
+<dl>
+<dd> <p> <i>IMPORTANT NOTE:</i> The original macro for quitting all indents was <code>.IX</code>. This usage has been deprecated in favour of <code>IQ</code>. <code>.IX</code> will continue to behave as before, but <code>mom</code> will issue a warning to <i>stderr</i> indicating that you should update your documents. </p>
+<p>As a consequence of this change, <code>.ILX</code>, <code>.IRX</code> and <code>.IBX</code> may now also be invoked as <code>.ILQ</code>, <code>.IRQ</code> and <code>.IBQ</code>. Both forms are acceptable. </p>
+<p>Without an argument, the macros to quit indents merely restore your original margins and line length. The measures stored in the indent macros themselves are saved so you can call them again without having to supply a measure. </p>
+<p>If you pass these macros the optional argument <code>CLEAR</code>, they not only restore your original left margin and line length, but also clear any values associated with a particular indent style. The next time you need an indent of the same style, you have to supply a measure again. </p>
+<p> <code>.IQ CLEAR</code>, as you&#8217;d suspect, quits and clears the values for all indent styles at once. </p>
+ </dd></dl>
+<dt><code>.IR [</code><i> &lt;measure&gt; </i><code>]</code></dt>
+<dd> <p> Indent right --- the optional argument requires a unit of measure </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IR</code> indents text from the <i>right margin</i> of the page, or if you&#8217;re in a <i>tab</i>, from the end of the <i>tab</i>. </p>
+<p>The first time you invoke <code>.IR</code>, you must give it a measure. Subsequent invocations with a measure add to the previous indent measure. A <i>minus sign</i> may be prepended to the argument to subtract from the current indent measure. The \w inline escape may be used to specify a text-dependent measure, in which case no <i>unit of measure</i> is required. For example, </p>
+ </dd>
+<dl>
+<dd> <p> <code>.IR \w&#8217;jello&#8217;</code> </p>
+ </dd></dl>
+<p> indents text by the width of the word <i>jello</i>. </p>
+<p>With no argument, <code>.IR</code> indents by its last active value. See the brief explanation of how <code>mom</code> handles indents for more details. </p>
+<p> <i>Note:</i> Calling a <i>tab</i> (with <code>.TAB &lt;n&gt;</code>) automatically cancels any active indents. </p>
+<p> <i>Additional note:</i> Invoking <code>.IR</code> automatically turns off <code>IB</code>. </dl>
+ </p>
+<dt><code>.L_MARGIN</code><i> &lt;left margin&gt;</i></dt>
+<dd> <p> Left Margin </p>
+ </dd>
+<dl>
+<dd> <p>L_MARGIN establishes the distance from the left edge of the printer sheet at which you want your type to start. It may be used any time, and remains in effect until you enter a new value. </p>
+<p>Left indents and tabs are calculated from the value you pass to <code>.L_MARGIN</code>, hence it&#8217;s always a good idea to invoke it before starting any serious typesetting. A unit of measure is required. Decimal fractions are allowed. Therefore, to set the left margin at 3 picas (1/2 inch), you&#8217;d enter either </p>
+ </dd>
+<dl>
+<dd> <p> <code>.L_MARGIN 3P</code> </p>
+ </dd></dl>
+<p> or </p>
+<dl>
+<dd> <p> <code>.L_MARGIN .5i</code> </p>
+ </dd></dl>
+<p>If you use the macros <code>.PAGE</code>, <code>.PAGEWIDTH</code> or <code>.PAPER</code> without invoking <code>.L_MARGIN</code> (either before or afterwards), <code>mom</code> automatically sets <code>.L_MARGIN</code> to <i>1 inch</i>. </p>
+<p>Note: <code>.L_MARGIN</code> behaves in a special way when you&#8217;re using the document processing macros. </dl>
+ </p>
+<dt><code>.MCO</code></dt>
+<dd> <p> Begin multi-column setting. </p>
+ </dd>
+<dl>
+<dd> <p> <code>.MCO</code> (<i>Multi-Column On</i>) is the <i>macro</i> you use to begin <i>multi-column setting</i>. It marks the current baseline as the top of your columns, for use later with <code>.MCR</code>. See the introduction to columns for an explanation of <i>multi-columns</i> and some sample input. </p>
+<p> <i>Note:</i> Do not confuse <code>.MCO</code> with the <code>.COLUMNS</code> macro in the document processing macros. </p>
+ </dd></dl>
+<dt><code>.MCR</code></dt>
+<dd> <p> Once you&#8217;ve turned <i>multi-columns</i> on (with <code>.MCO</code>), <code>.MCR</code>, at any time, returns you to the <i>top of your columns.</i> </p>
+ </dd>
+<dt><code>.MCX [ </code><i>&lt;distance to advance below longest column&gt;</i><code> ]</code></dt>
+<dd> <p> Optional argument requires a unit of measure. </p>
+ </dd>
+<dl>
+<dd> <p> <code>.MCX</code> takes you out of any <i>tab</i> you were in (by silently invoking <code>.TQ</code>) and advances to the bottom of the longest column. </p>
+<p>Without an argument, <code>.MCX</code> advances <i>1 linespace</i> below the longest column. </p>
+<p>Linespace, in this instance, is the leading in effect at the moment <code>.MCX</code> is invoked. </p>
+<p>If you pass the <i>&lt;distance&gt;</i> argument to <code>.MCX</code>, it advances <i>1 linespace</i> below the longest column (see above) <i>PLUS</i> the distance specified by the argument. The argument requires a unit of measure; therefore, to advance an extra 6 points below where <code>.MCX</code> would normally place you, you&#8217;d enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.MCX 6p</code> </p>
+ </dd></dl>
+<p> <i>Note:</i> If you wish to advance a precise distance below the baseline of the longest column, use <code>.MCX</code> with an argument of <code>0</code> (zero; no <i>unit of measure</i> required) in conjunction with the <code>.ALD</code> macro, like this: </p>
+<dl>
+<dd> <p> <code>.MCX 0</code> <code>.ALD 24p</code> </p>
+ </dd></dl>
+<p> The above advances to precisely <i>24 points</i> below the baseline of the longest column. </dl>
+ </p>
+<dt><code>.NEWPAGE</code></dt>
+<dd>  </dd>
+<dl>
+<dd> <p>Whenever you want to start a new page, use <code>.NEWPAGE</code>, by itself with no argument. <code>Mom</code> will finish up processing the current page and move you to the top of a new one (subject to the top margin set with <code>.T_MARGIN</code>). </p>
+ </dd></dl>
+<dt><code>.PAGE </code><i>&lt;width&gt;</i><code> [ </code><i>&lt;length&gt;</i><code> [ </code><i>&lt;lm&gt;</i><code> [ </code><i>&lt;rm&gt;</i><code> [ </code><i></i><code>&lt;tm&gt;</code><i> [ </i><code>&lt;bm&gt;</code><i> ] ] ] ] ]</i></dt>
+<dd>  </dd>
+<dl>
+<dd> <p>All arguments require a unit of measure </p>
+<p> <i>IMPORTANT:</i> If you&#8217;re using the document processing macros, <code>.PAGE</code> must come after <code>.START</code>. Otherwise, it should go at the top of a document, prior to any text. And remember, when you&#8217;re using the document processing macros, top margin and bottom margin mean something slightly different than when you&#8217;re using just the typesetting macros (see Top and bottom margins in document processing). </p>
+<p> <code>.PAGE</code> lets you establish paper dimensions and page margins with a single macro. The only required argument is page width. The rest are optional, but they must appear in order and you can&#8217;t skip over any. <i>&lt;lm&gt;</i>, <i>&lt;rm&gt;</i>, <i>&lt;tm&gt;</i> and <i>&lt;bm&gt;</i> refer to the left, right, top and bottom margins respectively. </p>
+<p>Assuming your page dimensions are 11 inches by 17 inches, and that&#8217;s all you want to set, enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.PAGE 11i 17i</code> </p>
+ </dd></dl>
+<p> If you want to set the left margin as well, say, at 1 inch, <code>PAGE</code> would look like this: </p>
+<dl>
+<dd> <p> <code>.PAGE 11i 17i 1i</code> </p>
+ </dd></dl>
+<p>Now suppose you also want to set the top margin, say, at 1-1/2 inches. <i>&lt;tm&gt;</i> comes after <i>&lt;rm&gt;</i> in the optional arguments, but you can&#8217;t skip over any arguments, therefore to set the top margin, you must also give a right margin. The <code>.PAGE</code> macro would look like this: </p>
+<dl>
+<dd> <p> .PAGE 11i 17i 1i 1i 1.5i <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|&nbsp;<wbr>&nbsp;<wbr>&nbsp;| required right---+ +---top margin <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;margin </p>
+ </dd></dl>
+<p>Clearly, <code>.PAGE</code> is best used when you want a convenient way to tell <code>mom</code> just the dimensions of your printer sheet (width and length), or when you want to tell her everything about the page (dimensions and all the margins), for example </p>
+<dl>
+<dd> <p> <code>.PAGE 8.5i 11i 45p 45p 45p 45p</code> </p>
+ </dd></dl>
+<p> This sets up an 8&#189; by 11 inch page with margins of 45 points (5/8-inch) all around. </p>
+<p>Additionally, if you invoke <code>.PAGE</code> with a top margin argument, any macros you invoke after <code>.PAGE</code> will almost certainly move the baseline of the first line of text down by one linespace. To compensate, do </p>
+<dl>
+<dd> <p> <code>.RLD 1v</code> </p>
+ </dd></dl>
+<p> immediately before entering any text, or, if it&#8217;s feasible, make <code>.PAGE</code> the last macro you invoke prior to entering text. </p>
+<p>Please read the <i>Important note</i> on page dimensions and papersize for information on ensuring groff respects your <code>.PAGE</code> dimensions and margins. </dl>
+ </p>
+<dt><code>.PAGELENGTH</code><i> &lt;length of printer sheet&gt;</i></dt>
+<dd> <p> tells <code>mom</code> how long your printer sheet is. It works just like <code>.PAGEWIDTH</code>. </p>
+ </dd>
+<dl>
+<dd> <p>Therefore, to tell <code>mom</code> your printer sheet is 11 inches long, you enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.PAGELENGTH 11i</code> </p>
+ </dd></dl>
+<p> Please read the important note on page dimensions and papersize for information on ensuring groff respects your <i>PAGELENGTH</i>. </dl>
+ </p>
+<dt><code>.PAGEWIDTH</code><i> &lt;width of printer sheet&gt;</i></dt>
+<dd>  </dd>
+<dl>
+<dd> <p>The argument to <code>.PAGEWIDTH</code> is the width of your printer sheet. </p>
+<p> <code>.PAGEWIDTH</code> requires a unit of measure. Decimal fractions are allowed. Hence, to tell <code>mom</code> that the width of your printer sheet is 8&#189; inches, you enter </p>
+ </dd>
+<dl>
+<dd> <p> .PAGEWIDTH 8.5i </p>
+ </dd></dl>
+<p>Please read the Important note on page dimensions and papersize for information on ensuring groff respects your <i>PAGEWIDTH</i>. </dl>
+ </p>
+<dt><code>.PAPER</code><i> &lt;paper type&gt;</i></dt>
+<dd> <p> provides a convenient way to set the page dimensions for some common printer sheet sizes. The argument <i>&lt;paper type&gt;</i> can be one of: <code>LETTER</code>, <code>LEGAL</code>, <code>STATEMENT</code>, <code>TABLOID</code>, <code>LEDGER</code>, <code>FOLIO</code>, <code>QUARTO</code>, <code>EXECUTIVE</code>, <code>10x14</code>, <code>A3</code>, <code>A4</code>, <code>A5</code>, <code>B4</code>, <code>B5</code>. </p>
+ </dd>
+<dt><code>.PRINTSTYLE</code></dt>
+<dd>  </dd>
+<dt><code>.PT_SIZE</code><i> &lt;size of type in points&gt;</i></dt>
+<dd> <p> Point size of type, does not require a <i>unit of measure</i>. </p>
+ </dd>
+<dl>
+<dd> <p> <code>.PT_SIZE</code> (<i>Point Size</i>) takes one argument: the <i>size of type</i> in <i>points</i>. Unlike most other macros that establish the <i>size</i> or <i>measure</i> of something, <code>.PT_SIZE</code> does not require that you supply a <i>unit of measure</i> since it&#8217;s a near universal convention that <i>type size</i> is measured in <i>points</i>. Therefore, to change the <i>type size</i> to, say, <i>11 points</i>, enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.PT_SIZE 11</code> </p>
+ </dd></dl>
+<p> <i>Point sizes</i> may be <i>fractional</i> (e.g. <i>10.25</i> or <i>12.5</i>). </p>
+<p>You can prepend a <i>plus</i> or a <i>minus sign</i> to the argument to <code>.PT_SIZE</code>, in which case the <i>point size</i> will be changed by <i>+</i> or <i>-</i> the original value. For example, if the <i>point size</i> is <i>12 ,</i> and you want <i>14 ,</i> you can do </p>
+<dl>
+<dd> <p> <code>.PT_SIZE +2</code> </p>
+ </dd></dl>
+<p> then later reset it to <i>12</i> with </p>
+<dl>
+<dd> <p> <code>.PT_SIZE -2</code> </p>
+ </dd></dl>
+<p> The <i>size of type</i> can also be changed inline. </p>
+<p> <i>Note:</i> It is unfortunate that the <code>pic</code> preprocessor has already taken the name, PS, and thus <i>mom</i>&#8216;s macro for setting <i>point sizes</i> can&#8217;t use it. However, if you aren&#8217;t using <code>pic</code>, you might want to alias <code>.PT_SIZE</code> as <code>.PS</code>, since there&#8217;d be no conflict. For example </p>
+<dl>
+<dd> <p> <code>.ALIAS PS PT_SIZE</code> </p>
+ </dd></dl>
+<p> would allow you to set <i>point sizes</i> with <code>.PS</code>. </dl>
+ </p>
+<dt><code>.R_MARGIN</code><i> &lt;right margin&gt;</i></dt>
+<dd> <p> Right Margin </p>
+ </dd>
+<dl>
+<dd> <p>Requires a unit of measure. </p>
+<p>IMPORTANT: <code>.R_MARGIN</code>, if used, must come after <code>.PAPER</code>, <code>.PAGEWIDTH</code>, <code>.L_MARGIN</code>, and/or <code>.PAGE</code> (if a right margin isn&#8217;t given to PAGE). The reason is that <code>.R_MARGIN</code> calculates line length from the overall page dimensions and the left margin. </p>
+<p>Obviously, it can&#8217;t make the calculation if it doesn&#8217;t know the page width and the left margin. </p>
+<p> <code>.R_MARGIN</code> establishes the amount of space you want between the end of typeset lines and the right hand edge of the printer sheet. In other words, it sets the line length. <code>.R_MARGIN</code> requires a unit of measure. Decimal fractions are allowed. </p>
+<p>The line length macro (LL) can be used in place of <code>.R_MARGIN</code>. In either case, the last one invoked sets the line length. The choice of which to use is up to you. In some instances, you may find it easier to think of a section of type as having a right margin. In others, giving a line length may make more sense. </p>
+<p>For example, if you&#8217;re setting a page of type you know should have 6-pica margins left and right, it makes sense to enter a left and right margin, like this: </p>
+ </dd>
+<dl>
+<dd> <p> <code>.L_MARGIN 6P</code> <code>.R_MARGIN 6P</code> </p>
+ </dd></dl>
+<p>That way, you don&#8217;t have to worry about calculating the line length. On the other hand, if you know the line length for a patch of type should be 17 picas and 3 points, entering the line length with LL is much easier than calculating the right margin, e.g. </p>
+<dl>
+<dd> <p> <code>.LL 17P+3p</code> </p>
+ </dd></dl>
+<p>If you use the macros <code>.PAGE</code>, <code>.PAGEWIDTH</code> or <code>PAPER</code> without invoking <code>.R_MARGIN</code> afterwards, <code>mom</code> automatically sets <code>.R_MARGIN</code> to <i>1 inch</i>. If you set a line length after these macros (with <code>.LL</code>), the line length calculated by <code>.R_MARGIN</code> is, of course, overridden. </p>
+<p>Note: <code>.R_MARGIN</code> behaves in a special way when you&#8217;re using the document processing macros. </dl>
+ </p>
+<dd>  </dd>
+<dl>
+<dd> <p>After <i>string tabs</i> have been marked off on an input line (see <code>\*[ST]\*[STX]</code>), you need to <i>set</i> them by giving them a direction and, optionally, the <code>QUAD</code> argument. </p>
+<p>In this respect, <code>.ST</code> is like <code>.TAB_SET</code> except that you don&#8217;t have to give <code>.ST</code> an indent or a line length (that&#8217;s already taken care of, inline, by <code>\*[ST]\*[STX]</code>). </p>
+<p>If you want string <i>tab 1</i> to be <code>left</code>, enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.ST 1 L</code> </p>
+ </dd></dl>
+<p> If you want it to be <i>left</i> and <i>filled</i>, enter </p>
+<dl>
+<dd> <p> <code>.ST 1 L QUAD</code> </p>
+ </dd></dl>
+<p> If you want it to be justified, enter </p>
+<dl>
+<dd> <p> <code>.ST 1 J</code> </p>
+ </dd></dl>
+</dl>
+<dt><code>.TAB</code><i> &lt;tab number&gt;</i></dt>
+<dd> <p> After <i>tabs</i> have been defined (either with <code>.TAB_SET</code> or <code>.ST</code>), <code>.TAB</code> moves to whatever <i>tab number</i> you pass it as an argument. </p>
+ </dd>
+<dl>
+<dd> <p>For example, </p>
+ </dd>
+<dl>
+<dd> <p> <code>.TAB 3</code> </p>
+ </dd></dl>
+<p> moves you to <i>tab 3</i>. </p>
+<p>Note: <code>.TAB</code> breaks the line preceding it and advances 1 linespace. Hence, </p>
+<dl>
+<dd> <p> <code>.TAB 1</code> <code>A line of text in tab 1.</code> <code>.TAB 2</code> <code>A line of text in tab 2.</code> </p>
+ </dd></dl>
+<p> produces, on output </p>
+<dl>
+<dd> <p> <code>A line of text in tab 1.</code> <code> A line of text in tab 2.</code> </p>
+ </dd></dl>
+<p>If you want the tabs to line up, use <code>.TN</code> (<i>Tab Next</i>) or, more conveniently, the inline escape \*[TB+]: </p>
+<dl>
+<dd> <p> <code>.TAB 1 A line of text in tab 1.\*[TB+] A line of text in tab 2. </p>
+ </dd></dl>
+<p> which produces </p>
+<dl>
+<dd> <p> A line of text in tab 1. A line of text in tab 2.</code> </p>
+ </dd></dl>
+<p>If the text in your tabs runs to several lines, and you want the first lines of each tab to align, you must use the multi-column macros. </p>
+<p> <i>Additional note:</i> Any indents in effect prior to calling a tab are automatically turned off by <code>TAB</code>. If you were happily zipping down the page with a left indent of <i>2 picas</i> turned on, and you call a <i>tab</i> whose indent from the left margin is <i>6 picas</i>, your new distance from the <i>left margin</i> will be <i>6 picas</i>, not I 6 picas plus the 2 pica indent. </p>
+<p> <i>Tabs</i> are not by nature columnar, which is to say that if the text inside a <i>tab</i> runs to several lines, calling another <i>tab</i> does not automatically move to the baseline of the first line in the <i>previous tab</i>. To demonstrate: </p>
+<dl>
+<dd> <p> TAB 1 Carrots Potatoes Broccoli .TAB 2 $1.99/5 lbs $0.25/lb $0.99/bunch </p>
+ </dd></dl>
+<p> produces, on output </p>
+<dl>
+<dd> <p> <code>Carrots Potatoes Broccoli <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$1.99/5 lbs <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$0.25/lb <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;$0.99/bunch </p>
+ </dd></dl>
+</dl>
+<dt>.TB</code><i> &lt;tab number&gt;</i></dt>
+<dd> <p> Alias to <code>.TAB</code> </p>
+ </dd>
+<dt><code>.TI [</code><i> &lt;measure&gt; </i><code>]</code></dt>
+<dd> <p> Temporary left indent --- the optional argument requires a <i>unit of measure</i> </p>
+ </dd>
+<dl>
+<dd> <p>A temporary indent is one that applies only to the first line of text that comes after it. Its chief use is indenting the first line of paragraphs. (<code>Mom&#8217;s</code> <code>.PP</code> macro, for example, uses a <i>temporary indent</i>.) </p>
+<p>The first time you invoke <code>.TI</code>, you must give it a measure. If you want to <i>indent</i> the first line of a paragraph by, say, 2 ems, do </p>
+ </dd>
+<dl>
+<dd> <p> <code>.TI 2m</code> </p>
+ </dd></dl>
+<p>Subsequent invocations of <code>.TI</code> do not require you to supply a measure; <code>mom</code> keeps track of the last measure you gave it. </p>
+<p>Because <i>temporary indents</i> are temporary, there&#8217;s no need to turn them off. </p>
+<p> <i>IMPORTANT:</i> Unlike <code>.IL</code>, <code>.IR</code> and <code>IB</code>, measures given to <code>.TI</code> are NOT additive. In the following example, the second <code>.TI 2P</code> is exactly <i>2 picas</i>. </p>
+<dl>
+<dd> <p> <code>.TI 1P</code> <code>The beginning of a paragraph</code> <code>.TI 2P</code> <code>The beginning of another paragraph</code> </p>
+ </dd></dl>
+</dl>
+<dt><code>.TN</code></dt>
+<dd> <p> Tab Next </p>
+ </dd>
+<dl>
+<dd> <p>Inline escape <code>\*[TB+]</code> </p>
+<p> <code>TN</code> moves over to the <i>next tab</i> in numeric sequence (<i>tab n+1</i>) without advancing on the page. See the <i>NOTE</i> in the description of the <code>.TAB</code> macro for an example of how <code>TN</code> works. </p>
+<p>In <i>tabs</i> that aren&#8217;t given the <code>QUAD</code> argument when they&#8217;re set up with <code>.TAB_SET</code> or <code>ST</code>, you must terminate the line preceding <code>.TN</code> with the <code>\c</code> inline escape. Conversely, if you did give a <code>QUAD</code> argument to <code>.TAB_SET</code> or <code>ST</code>, the <code>\c must not be used.</code> </p>
+<p>If you find remembering whether to put in the <code>\c</code> bothersome, you may prefer to use the inline escape alternative to <code>.TN</code>, <code>\*[TB+]</code>, which works consistently regardless of the fill mode. </p>
+<p> <i>Note:</i> You must put text in the input line immediately after <code>.TN</code>. Stacking of <code>.TN</code>&#8216;s is not allowed. In other words, you cannot do </p>
+ </dd>
+<dl>
+<dd> <p> <code>.TAB 1 Some text\c .TN Some more text\c .TN .TN Yet more text</code> </p>
+ </dd></dl>
+<p> The above example, assuming <i>tabs</i> numbered from <i>1</i> to <i>4</i>, should be entered </p>
+<dl>
+<dd> <p> <code>.TAB 1 Some text\c .TN Some more text\c .TN \&amp;\c .TN Yet more text </p>
+ </dd></dl>
+<p> \&amp; is a zero-width, non-printing character that </code><i>groff</i> recognizes as valid input, hence meets the requirement for input text following <code>.TN</code>. </dl>
+ </p>
+<dt><code>.TQ</code></dt>
+<dd> <p> <code>TQ</code> takes you out of whatever <i>tab</i> you were in, advances <i>1 linespace</i>, and restores the <i>left margin</i>, <i>line length</i>, <i>quad direction</i> and <i>fill mode</i> that were in effect prior to invoking any <i>tabs</i>. </p>
+ </dd>
+<dt><code>.T_MARGIN</code><i> &lt;top margin&gt;</i></dt>
+<dd> <p> Top margin </p>
+ </dd>
+<dl>
+<dd> <p>Requires a unit of measure </p>
+<p> <code>.T_MARGIN</code> establishes the distance from the top of the printer sheet at which you want your type to start. It requires a unit of measure, and decimal fractions are allowed. To set a top margin of 2&#189; centimetres, you&#8217;d enter </p>
+ </dd>
+<dl>
+<dd> <p> <code>.T_MARGIN 2.5c</code> </p>
+ </dd></dl>
+<p> <code>.T_MARGIN</code> calculates the vertical position of the first line of type on a page by treating the top edge of the printer sheet as a baseline. Therefore, </p>
+<dl>
+<dd> <p> <code>.T_MARGIN 1.5i</code> </p>
+ </dd></dl>
+<p> puts the baseline of the first line of type 1&#189; inches beneath the top of the page. </p>
+<p>Note: <code>.T_MARGIN</code> means something slightly different when you&#8217;re using the document processing macros. See Top and bottom margins in document processing for an explanation. </p>
+<p>IMPORTANT: <code>.T_MARGIN</code> does two things: it establishes the top margin for pages that come after it and it moves to that position on the current page. Therefore, <code>.T_MARGIN</code> should only be used at the top of a file (prior to entering text) or after NEWPAGE, like this: </p>
+<dl>
+<dd> <p> <code>.NEWPAGE</code> <code>.T_MARGIN 6P</code> <i>&lt;text&gt;</i> </p>
+ </dd></dl>
+</dl>
+</dl>
+<h2>AUTHORS</h2>
+<p> <i>mom</i> was written by Peter Schaffter PDF support was provided by Deri James The alphabetical documentation of macros and escape sequences in this man page were written by the <i>mom</i> team.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/7-groff_mom/">groff_mom</a></code>(7), </p>
+<dl>
+<dt><i>/usr/:share/:doc/:groff-base/:html/:mom/:toc.html</i></dt>
+<dd> <p> - entry point to the HTML documentation </p>
+ </dd>
+<dd> <p> - HTML documentation online </p>
+ </dd>
+<dd> <p> - the mom macros homepage </p>
+ </dd></dl>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">CALLING MOM</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">FILES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">DOCUMENTATION IN ALPHABETICAL ORDER</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">QUICK REFERENCE</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAH">Quick Reference of Inline Escape Sequences in alphabetical Order</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">Quick Reference of Macros in alphabetical Order</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAJ">DOCUMENTATION OF DETAILS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAK">Details of Inline Escape Sequences in alphabetical Order</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAL">Details of Macros in alphabetical Order</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAM">AUTHORS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">SEE ALSO</a></dt>
+<dd>  </dd></dl>
