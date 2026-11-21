@@ -74,6 +74,7 @@ code, pre { font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", mon
 /* above-the-fold display ad */
 .ad-above-fold {
   width: 300px;
+  margin-top: 5px;
   margin-bottom: 50px;
 }
 @media (min-width: 801px) {
