@@ -7,8 +7,6 @@ letter: "o"
 url: "/docs/linux/man/7-ocf_heartbeat_icp/"
 ---
 
-</p>
-
 <p> ocf_heartbeat_ICP &#8211; Manages an ICP Vortex clustered host drive </p>
 <h2>SYNOPSIS</h2>
 <dl>
