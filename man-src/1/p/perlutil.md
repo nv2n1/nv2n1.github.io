@@ -85,4 +85,3 @@ description: "perlutil – utilities packaged with the Perl distribution"
 <dd> A little interface to ExtUtils::Installed to examine installed modules, validate your packlists and even create a tarball from an installed module.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> perldoc, pod2man, perlpod, pod2html, pod2usage, podselect, podchecker, splain, perldiag, <tt>&quot;roffitall|roffitall&quot;</tt>, File::Find, pl2pm, perlbug, h2ph, h2xs, enc2xs, xsubpp, cpan, instmodsh, piconv, prove, corelist, ptar, ptardiff, shasum, zipdetails </p>
-<h2>Index</h2>

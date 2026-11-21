@@ -94,4 +94,3 @@ description: "ssh-add – adds private key identities to the OpenSSH authenticat
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), ssh-agent1, ssh-askpass1, ssh-keygen1, <a href="/docs/linux/man/8-sshd/">sshd</a>(8)</p>
 <h2>AUTHORS</h2>
 <p> OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. </p>
-<h2>Index</h2>

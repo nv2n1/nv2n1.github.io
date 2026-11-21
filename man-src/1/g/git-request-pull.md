@@ -70,4 +70,3 @@ git request-pull v1.0 <a rel="nofollow" href="https://git.ko.xz/project">https:/
 </dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

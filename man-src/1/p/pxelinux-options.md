@@ -21,4 +21,3 @@ description: "pxelinux-options – utility to set PXELINUX hard-coded options."
 <h2>AUTHOR</h2>
 <p> pxelinux-options was written by H. Peter Anvin &lt;<i>hpa [at] zytor.com</i>&gt;. </p>
 <p> This manual page was written by Daniel Baumann &lt;<i>mail [at] daniel-baumann.ch</i>&gt;. </p>
-<h2>Index</h2>

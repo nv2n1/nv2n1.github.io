@@ -136,4 +136,3 @@ user [at] example.com
 <p> Brian May</p>
 <h2>COPYRIGHT</h2>
 <p> 2019, Brian May </p>
-<h2>Index</h2>

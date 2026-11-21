@@ -38,4 +38,3 @@ description: "bin2obj – The Free Pascal binary to pascal include file converte
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-data2inc/">data2inc</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

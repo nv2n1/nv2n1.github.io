@@ -21,4 +21,3 @@ do_uconvert(input_string, U_CURRENT, temp_string, U_ASCII, 256);
 <p> Note that, even for empty strings, your destination string must have at least enough bytes to store the terminating null character of the string, and your parameter size must reflect this. Otherwise, the debug version of Allegro will abort at an assertion, and the release version of Allegro will overrun the destination buffer. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-uconvert/">uconvert</a></code>(3) </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ $ radwho -ZRN 10.0.0.1 -u user -P 10 | radclient -f - radius.example.net acct te
 <p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/1-radclient/">radclient</a>(1), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "dfutool – Device Firmware Upgrade utility"
 <dd> Archive the current firmware of the device.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Marcel Holtmann &lt;marcel [at] holtmann.org&gt;. </p>
-<h2>Index</h2>

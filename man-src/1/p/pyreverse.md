@@ -71,4 +71,3 @@ description: "pyreverse – parse python sources files and extract diagrams from
 <h2>AUTHORS</h2>
 <p> Sylvain Thenault, Emile Anclin </p>
 <p> This manpage was written by Emile Anclin &lt;emile.anclin [at] logilab.fr&gt; </p>
-<h2>Index</h2>

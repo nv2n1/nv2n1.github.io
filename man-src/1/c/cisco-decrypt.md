@@ -20,4 +20,3 @@ description: "cisco-decrypt – decrypts an obfuscated Cisco vpn client pre-shar
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-vpnc/">vpnc</a>(8)</code> <code>pcf2vpnc(1)</code> </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ dblink_open-- -- -- -- -- -- -OK(1 row)
 dblink_close-- -- -- -- -- -- --OK(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

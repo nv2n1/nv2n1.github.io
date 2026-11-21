@@ -284,4 +284,3 @@ description: "sftp – secure file transfer program"
 <dl>
 <dt>
 </dt><dd> T. Ylonen S. Lehtinen <i>&quot;SSH File Transfer Protocol&quot;</i> draft-ietf-secsh-filexfer-00.txt January 2001 work in progress material</dd></dl>
-<h2>Index</h2>

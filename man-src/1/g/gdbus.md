@@ -253,4 +253,3 @@ $ gdbus wait --session --timeout 30 org.bar.SomeName
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/glib/issues/new">https://gitlab.gnome.org/GNOME/glib/issues/new</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dbus-send/">dbus-send</a></code>(1) </p>
-<h2>Index</h2>

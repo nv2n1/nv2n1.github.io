@@ -59,4 +59,3 @@ description: "globus-job-get-output – Retrieve the output and error streams fr
 </dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "xaumix – aumix wrapper for X"
 <p> Paul Slootman &lt;paul [at] debian.org&gt;, originally called aumix-X-wrapper. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aumix/">aumix</a></code>(1), <code>xterm</code>(1x), <code>rxvt</code>(1), <code><a href="/docs/linux/man/1-eterm/">eterm</a></code>(1), <code>kterm</code>(1), <code>wterm</code>(1), <code>xvt</code>(1) </p>
-<h2>Index</h2>

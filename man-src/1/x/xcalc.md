@@ -493,4 +493,3 @@ XCalc xcalc
 <p> John Bradley, University of Pennsylvania<br />
  Mark Rosenstein, MIT Project Athena<br />
  Donna Converse, MIT X Consortium </p>
-<h2>Index</h2>

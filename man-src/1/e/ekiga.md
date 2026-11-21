@@ -47,4 +47,3 @@ description: "Ekiga – SIP and H.323 Voice over IP and Videoconferencing for UN
  This is free software licensed under the GPLv2; see the LICENSE file in the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gconf-config</code>(1), <code>gconfd-1</code>(1), <code>gconfd-2</code>(1), <code>gconftool-1</code>(1), <code><a href="/docs/linux/man/1-gconftool-2/">gconftool-2</a></code>(1), <code>gconfigger</code>(1) </p>
-<h2>Index</h2>

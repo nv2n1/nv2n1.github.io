@@ -38,4 +38,3 @@ description: "makeconv – compile a converter table"
 <h2>SEE ALSO</h2>
 <p> <code>convrtrs.txt</code>(5)<br />
  <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "moggsplit – split Ogg logical streams"
 <dd> Generate an m3u playlist along with the newly generated files. Useful for large chained Oggs.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Joe Wreschnig </p>
-<h2>Index</h2>

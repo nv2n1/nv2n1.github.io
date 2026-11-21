@@ -20,4 +20,3 @@ description: "bipmkpw – Password hasher for BIP"
 <p> Arnaud &#8216;nohar&#8217; Cornet Loïc &#8216;Kyoshiro&#8217; Gomez </p>
 <p> Thanks to jj, YS and lafouine, for hanging around while we were coding. </p>
 <p> Crypto shamelessly taken from Christophe &#8216;sexy&#8217; Devine. </p>
-<h2>Index</h2>

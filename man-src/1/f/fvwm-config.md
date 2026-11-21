@@ -90,4 +90,3 @@ fvwm-config --info
 <p> <code>fvwm-config</code> is a part of fvwm package and distributed by the same terms, see GNU GPL.</p>
 <h2>AUTHOR</h2>
 <p> Mikhael Goikhman &lt;migo [at] homemail.com&gt; </p>
-<h2>Index</h2>

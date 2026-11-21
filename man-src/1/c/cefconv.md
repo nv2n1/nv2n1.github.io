@@ -20,4 +20,3 @@ description: "cefconv – convert a TeX document containing CEF macros into `pre
  the <code>CJK</code> documentation files.</p>
 <h2>AUTHOR</h2>
 <p> Werner Lemberg </p>
-<h2>Index</h2>

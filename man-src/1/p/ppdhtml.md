@@ -26,4 +26,3 @@ description: "ppdhtml – cups html summary generator (deprecated)"
 <p> <code><a href="/docs/linux/man/1-ppdc/">ppdc</a></code>(1), <code><a href="/docs/linux/man/5-ppdcfile/">ppdcfile</a></code>(5), <code><a href="/docs/linux/man/1-ppdi/">ppdi</a></code>(1), <code><a href="/docs/linux/man/1-ppdmerge/">ppdmerge</a></code>(1), <code><a href="/docs/linux/man/1-ppdpo/">ppdpo</a></code>(1), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help)">http://localhost:631/help)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

@@ -180,4 +180,3 @@ description: "ftrace – trace system calls, function calls and signals"
 </pre>
 </dd></dl>
 <p> Report bugs to m[blue]<code><a rel="nofollow" href="http://sourceware.org/frysk">http://sourceware.org/frysk</a></code>m[] </p>
-<h2>Index</h2>

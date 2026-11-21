@@ -62,4 +62,3 @@ atomic sign -d /tmp/signatures privateregistry.example.com
 <p> gnupg_homedir: /home/USER/.gnupg </p>
 <h2>HISTORY</h2>
 <p> Initial revision by Brent Baude (bbaude at redhat dot com) August 2016 Updated by Brent Baude (bbaude at redhat dot com) September 2016 Updated by Aaron Weitekamp (aweiteka at redhat dot com) September 2016 </p>
-<h2>Index</h2>

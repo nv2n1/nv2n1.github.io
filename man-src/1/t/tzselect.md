@@ -24,4 +24,3 @@ description: "tzselect – view timezones"
 <h2>AUTHOR</h2>
 <p> Copyright 1998 Marcus Brinkmann &lt;brinkmd [at] debian.org&gt; </p>
 <p> Please see nroff source for legal notice. </p>
-<h2>Index</h2>

@@ -97,4 +97,3 @@ description: "atomic-openshift-installer – Interactive OpenShift Container Pla
 <p> <code><a href="/docs/linux/man/1-ansible/">ansible</a></code>(1), <code><a href="/docs/linux/man/1-ansible-playbook/">ansible-playbook</a></code>(1) </p>
 <p> <code>The openshift-ansible GitHub Project</code> &#8212; <a rel="nofollow" href="https://github.com/openshift/openshift-ansible/">https://github.com/openshift/openshift-ansible/</a> </p>
 <p> <code>The atomic-openshift-installer Documentation</code> &#8212; <a rel="nofollow" href="https://docs.openshift.com/container-platform/3.3/install_config/install/quick_install.html">https://docs.openshift.com/container-platform/3.3/install_config/install/quick_install.html</a> </p>
-<h2>Index</h2>

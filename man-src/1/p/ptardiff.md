@@ -34,4 +34,3 @@ description: "ptardiff – program that diffs an extracted archive against an un
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), Archive::Tar. </p>
-<h2>Index</h2>

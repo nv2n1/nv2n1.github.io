@@ -114,4 +114,3 @@ description: "gajim-remote – a remote control utility for"
 <p> Please submit bugs at <a rel="nofollow" href="https://trac.gajim.org/">https://trac.gajim.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gajim/">gajim</a>(1) gajim-history-manager1 </p>
-<h2>Index</h2>

@@ -94,4 +94,3 @@ description: "gdl – GNU Data Language incremental compiler"
 <p> The original version of this manual page was written by Sergio Gelato &lt;Sergio.Gelato [at] astro.su.se&gt;. It is currently a part of the GDL package, and is maintained by the GDL Team.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), <a href="/docs/linux/man/1-hdf/">hdf</a>(1), <a href="/docs/linux/man/3-gsl/">gsl</a>(3) </p>
-<h2>Index</h2>

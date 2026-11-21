@@ -35,4 +35,3 @@ description: "tv_grab_pt – Grab TV listings for Portugal."
 <p> Bruno Tavares, gawen [at] users.sourceforge.net, based on tv_grab_es, from Ramon Roca. </p>
 <p> Grabber Site : <a rel="nofollow" href="http://bat.is-a-geek.com/XMLGrabPt">http://bat.is-a-geek.com/XMLGrabPt</a></p>
 <h2>BUGS</h2>
-<h2>Index</h2>

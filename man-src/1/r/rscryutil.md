@@ -68,4 +68,3 @@ rscryutil[OPTIONS][FILE]...
 <p> This page is part of the <i>rsyslog</i> project, and is available under LGPLv2.</p>
 <h2>AUTHOR</h2>
 <p> Rainer Gerhards &lt;rgerhards [at] adiscon.com&gt; </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "js-yaml.js – JavaScript YAML parser and dumper"
 <dd> Show stack trace on error</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>js-yaml</code> was primarily authored by Vladimir Zapparov with contributions from Aleksey V Zapparov, Vitaly Puzrin, and Martin Grenfell. </p>
-<h2>Index</h2>

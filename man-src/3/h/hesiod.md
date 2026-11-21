@@ -52,4 +52,3 @@ cc file.c -lhesiod
  Copyright 1987, 1988, 1995, 1996, 2000 by the Massachusetts Institute of Technology.</p>
 <h2>BUGS</h2>
 <p> The strings corresponding to the <i>errno</i> values set by the Hesiod functions are not particularly indicative of what went wrong, especially for <i>ENOEXEC</i> and <i>ENOENT</i>. </p>
-<h2>Index</h2>

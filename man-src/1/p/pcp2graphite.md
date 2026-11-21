@@ -61,4 +61,3 @@ description: "pcp2graphite – pcp-to-graphite metrics exporter"
 <dd> Relay all numeric metrics nested at or below the given name in the PMNS. This option may be repeated. This is a compulsory option, having no default.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/3-pmparseunitsstr/">pmParseUnitsStr</a></code>(3), <code><a rel="nofollow" href="http://graphite.wikidot.com/">http://graphite.wikidot.com/</a></code>, <code><a href="/docs/linux/man/1-pmmgr/">pmmgr</a></code>(1), <code>pmval</code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5). </p>
-<h2>Index</h2>

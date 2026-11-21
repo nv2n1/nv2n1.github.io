@@ -37,4 +37,3 @@ description: "globus_i_ftp_client_handleattr_t –"
 <p> This list is used to manage the URL cache which is manipulated by the user calling <code>globus_ftp_client_handle_cache_url_state()</code> and <code>globus_ftp_client_handle_flush_url_state()</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "patchelf – Modify ELF files"
 <p> Eelco Dolstra &lt;e.dolstra [at] tudelft.nl&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-elf/">elf</a></code>(5), <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) </p>
-<h2>Index</h2>

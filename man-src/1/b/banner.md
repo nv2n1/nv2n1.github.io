@@ -58,4 +58,3 @@ description: "banner – prints a short string to the console in very large lett
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2004.2007,2013,2014 Kenneth J. Pronovici.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

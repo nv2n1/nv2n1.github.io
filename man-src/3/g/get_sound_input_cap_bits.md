@@ -36,4 +36,3 @@ if (cap == 0) {
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-start_sound_input/">start_sound_input</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_parm/">get_sound_input_cap_parm</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_rate/">get_sound_input_cap_rate</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_stereo/">get_sound_input_cap_stereo</a></code>(3) </p>
-<h2>Index</h2>

@@ -1192,4 +1192,3 @@ description: "conky – A system monitor for X originally based on the torsmo co
 <p> Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. Any original torsmo code is licensed under the BSD license (see LICENSE.BSD for a copy). All code written since the fork of torsmo is licensed under the GPL (see LICENSE.GPL for a copy), except where noted differently (such as in portmon code, timed thread code, and audacious code which are LGPL, and prss which is an MIT-style license).</p>
 <h2>AUTHORS</h2>
 <p> The Conky dev team (see AUTHORS for a full list of contributors). </p>
-<h2>Index</h2>

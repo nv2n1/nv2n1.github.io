@@ -27,4 +27,3 @@ if (is_windowed_mode()) {
 <p> Returns true if the current graphics mode is a windowed mode, or zero if it is a fullscreen mode. You should not call this function if you are not in graphics mode. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3) </p>
-<h2>Index</h2>

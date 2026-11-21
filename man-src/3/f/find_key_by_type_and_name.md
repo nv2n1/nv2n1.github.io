@@ -34,4 +34,3 @@ key_serial_t find_key_by_type_and_name(const char *type,
 <p> When linking, <code>-lkeyutils</code> should be specified to the linker.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3), <code>request_key</code>(3) </p>
-<h2>Index</h2>

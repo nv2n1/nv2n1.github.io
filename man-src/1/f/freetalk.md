@@ -35,4 +35,3 @@ description: "freetalk – A console based Jabber client"
 <dt>
 </dt><dd> <code>info freetalk</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

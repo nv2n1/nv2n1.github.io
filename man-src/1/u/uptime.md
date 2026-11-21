@@ -37,4 +37,3 @@ description: "uptime – Tell how long the system has been running."
 <p> <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5), <code><a href="/docs/linux/man/1-w/">w</a></code>(1)</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

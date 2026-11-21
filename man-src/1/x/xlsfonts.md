@@ -57,4 +57,3 @@ description: "xlsfonts – server font list displayer for X"
 <p> Jim Fulton </p>
 <p> Phil Karlton </p>
 <p> Roland Mainz </p>
-<h2>Index</h2>

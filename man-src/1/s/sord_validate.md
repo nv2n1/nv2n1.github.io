@@ -35,4 +35,3 @@ description: "sord_validate – Validate RDF data"
  There is NO WARRANTY, to the extent permitted by law. </p>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="http://drobilla.net/software/sord">http://drobilla.net/software/sord</a>&gt; </p>
-<h2>Index</h2>

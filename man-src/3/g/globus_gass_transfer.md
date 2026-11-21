@@ -34,4 +34,3 @@ description: "GASS Transfer API –"
 <p> The <code>GLOBUS_GASS_TRANSFER_MODULE</code> must be activated before calling any functions in this API.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>

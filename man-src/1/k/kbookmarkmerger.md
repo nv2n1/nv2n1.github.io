@@ -56,4 +56,3 @@ joe [at] hal9000:~&gt; <code>kbookmarkmerger </code><code>/usr/local/extra-bookm
 <dt>
 </dt><dd> <a rel="nofollow" href="http://pyxml.sourceforge.net/topics/xbel/">http://pyxml.sourceforge.net/topics/xbel/</a></dd></dl>
 </dl>
-<h2>Index</h2>

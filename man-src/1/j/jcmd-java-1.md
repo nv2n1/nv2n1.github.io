@@ -55,4 +55,3 @@ jcmd[options] jcmd[pid | main - class] PerfCounter.print
 <dd> jps</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

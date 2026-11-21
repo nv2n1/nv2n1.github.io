@@ -161,4 +161,3 @@ description: "bti – send a tweet to twitter.com from the command line"
 <p> For example, command line options always override any config file option, or any environment variables. Unless a config file is specified by the command line. At that point, the new config file is read, and any previous options set by a command line option, would be overridden.</p>
 <h2>AUTHOR</h2>
 <p> Written by Greg Kroah-Hartman &lt;&lt;greg [at] kroah.com&gt;&gt; and Amir Mohammad Saied &lt;&lt;amirsaied [at] gmail.com&gt;&gt;. </p>
-<h2>Index</h2>

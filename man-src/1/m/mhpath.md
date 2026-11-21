@@ -107,4 +107,3 @@ mv `mhpath 501` `mhpath 500`
 </pre>
 <h2>CONTEXT</h2>
 <p> None </p>
-<h2>Index</h2>

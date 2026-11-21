@@ -95,4 +95,3 @@ $ pamtogif -comment &quot;this is a comment&quot; &lt;xxx.ppm &gt;xxx.gif
 <p> If you use <code>pamtogif</code> without the <code>-nolzw</code> option, you are using a patent on the LZW compression method which is owned by Unisys. The patent has expired (in 2003 in the US and in 2004 elsewhere), so it doesn&#8217;t matter. While the patent was in force, most people who used <code>pamtogif</code> and similar programs did so without a license from Unisys to do so. Unisys typically asked $5000 for a license for trivial use of the patent. Unisys never enforced the patent against trivial users. </p>
 <p> Rumor has it that IBM also owns or owned a patent covering <code>pamtogif</code>. </p>
 <p> A replacement for the GIF format that never required any patents to use is the PNG format. </p>
-<h2>Index</h2>

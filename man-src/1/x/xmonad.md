@@ -198,4 +198,3 @@ error &amp;nbsp;
 <p> Your xmonad.hs may then import XMonad.Stack.MyAdditions as if that module was contained within xmonad or xmonad-contrib.</p>
 <h2>Bugs</h2>
 <p> Probably. If you find any, please report them to the bugtracker (<a rel="nofollow" href="http://code.google.com/p/xmonad/issues/list)">http://code.google.com/p/xmonad/issues/list)</a> </p>
-<h2>Index</h2>

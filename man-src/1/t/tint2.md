@@ -24,4 +24,3 @@ description: "tint2 – lightweight panel/taskbar"
 <h2>AUTHOR</h2>
 <p> tint2 was written by Thierry Lorthiois &lt;lorthiois [at] bbsoft.fr&gt;. It is based on ttm, originally written by Pål Staurland &lt;staura [at] gmail.com&gt; </p>
 <p> This manual page was written by Daniel Moerner &lt;dmoerner [at] gmail.com&gt;, for the Debian project (but may be used by others). It was adopted from the tint2 docs. </p>
-<h2>Index</h2>

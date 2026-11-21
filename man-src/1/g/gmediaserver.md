@@ -93,4 +93,3 @@ description: "GMediaServer – A UPnP compatible media server"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005, 2006 Oskar Liljeblad </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

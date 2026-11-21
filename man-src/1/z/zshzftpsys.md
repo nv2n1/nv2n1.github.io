@@ -249,4 +249,3 @@ Last session:   <a href="ftp://ftp.bar.com">ftp.bar.com</a>:/pub/textfiles</code
 <p> Note that all the above is local to each session; if you return to a previous session, the connection for that session is the one which will be reopened. </p>
 <h3>Completion</h3>
 <p> Completion of local and remote files, directories, sessions and bookmarks is supported. The older, <code>compctl</code>-style completion is defined when <code>zfinit</code> is called; support for the new widget-based completion system is provided in the function <code>Completion/Zsh/Command/_zftp</code>, which should be installed with the other functions of the completion system and hence should automatically be available. </p>
-<h2>Index</h2>

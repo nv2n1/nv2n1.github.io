@@ -35,4 +35,3 @@ description: "ddbugtopbm – convert Diddle or DiddleBug sketches to PBM files"
 <p> Jens-Chr. Heyer&#8217;s `didcon&#8217; script does something similar. </p>
 <h2>HISTORY</h2>
 <p> <code>ddbugtopbm</code> was new in Netpbm 10.18 (August 2003). It was written and independently distributed in August 2002. </p>
-<h2>Index</h2>

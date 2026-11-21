@@ -87,4 +87,3 @@ tnef - decode Microsoft's Transport Neutral Encapsulation Format
 <a rel="nofollow" href="http://support.microsoft.com/support/kb/articles/Q136/2/04.asp">http://support.microsoft.com/support/kb/articles/Q136/2/04.asp</a>
 </pre>
 <p> describes how to configure Microsoft email clients so that the TNEF format is disabled when sending messages to non-TNEF-compatible clients. </p>
-<h2>Index</h2>

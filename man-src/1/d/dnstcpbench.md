@@ -68,4 +68,3 @@ description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 <dt>
 </dt><dd> mailto:bert.hubert [at] netherlabs.nl</dd></dl>
 </dl>
-<h2>Index</h2>

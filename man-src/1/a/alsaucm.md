@@ -155,4 +155,3 @@ EOM
 <p> Antonio Ospite &lt;ao2 [at] ao2.it&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> GPLv2+ </p>
-<h2>Index</h2>

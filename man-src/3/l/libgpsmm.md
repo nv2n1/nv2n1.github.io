@@ -28,4 +28,3 @@ C++:
 <p> <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3).</p>
 <h2>AUTHOR</h2>
 <p> Alfredo Pironti &lt;alfredio [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

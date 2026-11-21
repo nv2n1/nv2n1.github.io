@@ -38,4 +38,3 @@ description: "epub-meta – read and write metadata from an EPUB ebook file"
 <dd> Extract the cover</dd></dl>
 <h2>AUTHOR</h2>
 <p> Created by Kovid Goyal &lt;kovid [at] kovidgoyal.net&gt; </p>
-<h2>Index</h2>

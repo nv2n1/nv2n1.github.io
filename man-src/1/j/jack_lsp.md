@@ -43,4 +43,3 @@ description: "jack_lsp – JACK toolkit client to list informtion on ports"
 <dd>
  Output version information and exit </dd>
 </dl>
-<h2>Index</h2>

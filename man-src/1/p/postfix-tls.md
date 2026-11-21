@@ -100,4 +100,3 @@ TLS_README, Postfix TLS configuration and operation
 <pre>
 Viktor Dukhovni
 </pre>
-<h2>Index</h2>

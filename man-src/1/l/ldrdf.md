@@ -25,4 +25,3 @@ description: "ldrdf – link RDOFF objects and libraries produced by rdflib(1)"
 <h2>AUTHORS</h2>
 <p> Julian Hall &lt;jules [at] earthcorp.com&gt;. </p>
 <p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;. </p>
-<h2>Index</h2>

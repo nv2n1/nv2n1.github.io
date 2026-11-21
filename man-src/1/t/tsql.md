@@ -73,4 +73,3 @@ description: "tsql – utility to test FreeTDS connections and queries"
 <p> The utility was written by An Brian Bruns Ns .</p>
 <h2>BUGS</h2>
 <p> Several, to be sure, now that it&#8217;s documented. :) </p>
-<h2>Index</h2>

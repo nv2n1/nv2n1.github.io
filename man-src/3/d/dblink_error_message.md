@@ -30,4 +30,3 @@ dblink_error_message(text connname) returns text
 SELECT dblink_error_message('dtest1');
 </pre>
 </dd></dl>
-<h2>Index</h2>

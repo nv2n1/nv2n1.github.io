@@ -28,4 +28,3 @@ description: "globus-version – Display the Globus Toolkit version"
 </dt><dd> Show source code branch and timestamp</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
-<h2>Index</h2>

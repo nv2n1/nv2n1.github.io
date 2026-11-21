@@ -32,4 +32,3 @@ description: "lxsession-logout — program to logout from LXSession"
 &nbsp;<wbr> </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

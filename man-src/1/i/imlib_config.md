@@ -18,4 +18,3 @@ description: "imlib_config – Imlib Configuration Editor"
 <p> <code><a href="/docs/linux/man/1-imlib-config/">imlib-config</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Ossama Othman &lt;ossama [at] debian.org&gt; </p>
-<h2>Index</h2>

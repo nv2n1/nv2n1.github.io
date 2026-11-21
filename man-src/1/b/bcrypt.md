@@ -37,4 +37,3 @@ description: "bcrypt – blowfish file encryption"
 <dd> &lt;jshelley [at] cahaus.com&gt;, &lt;jshelley [at] ictransnet.com&gt;</dd></dl>
 <h2>DISTRIBUTION</h2>
 <p> <code>bcrypt</code> includes Paul Kocher&#8217;s implementation of the <i>blowfish</i> algorithm. The version distributed with <code>bcrypt</code> has been altered. Original sources are available from <a rel="nofollow" href="http://www.counterpane.com/bfsh-koc.zip">http://www.counterpane.com/bfsh-koc.zip</a> </p>
-<h2>Index</h2>

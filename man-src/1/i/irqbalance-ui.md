@@ -19,4 +19,3 @@ description: "irqbalance-ui – user interface for irqbalance"
 <p> <a rel="nofollow" href="https://github.com/Irqbalance/irqbalance">https://github.com/Irqbalance/irqbalance</a> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-irqbalance/">irqbalance</a>(1) </p>
-<h2>Index</h2>

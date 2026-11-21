@@ -40,4 +40,3 @@ description: "sylpheed – a GTK+ based, lightweight, and fast email client"
 <p> more documentations are available on /usr/share/sylpheed/manual/ and /usr/share/sylpheed/faq/. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Akira TAGOH &lt;tagoh [at] redhat.com&gt;. </p>
-<h2>Index</h2>

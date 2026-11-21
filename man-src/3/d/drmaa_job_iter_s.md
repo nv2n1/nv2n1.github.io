@@ -22,4 +22,3 @@ description: "drmaa_job_iter_s –"
 <p> Hash value of job identifier. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
-<h2>Index</h2>

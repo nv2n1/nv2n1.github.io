@@ -41,4 +41,3 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 <dt>
 </dt><dd> * mirror * repeat * clamp </dd>
 </dl>
-<h2>Index</h2>

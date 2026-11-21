@@ -24,4 +24,3 @@ description: "cgcc – Compiler wrapper to run Sparse after compiling"
 <dd> If set, <code>cgcc</code> will use this as the Sparse program to invoke, rather than the default <code>sparse</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sparse/">sparse</a></code>(1) </p>
-<h2>Index</h2>

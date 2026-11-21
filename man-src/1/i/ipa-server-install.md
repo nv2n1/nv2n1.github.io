@@ -129,4 +129,3 @@ description: "ipa-server-install – Configure an IPA server"
 <p> 1 if an error occurred </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipa-dns-install/">ipa-dns-install</a></code>(1) </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "pbmtomda – convert a portable bitmap to a Microdesign .mda"
 <p> <a href="/docs/linux/man/1-mdatopbm/">mdatopbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1999 John Elliott &lt;jce [at] seasip.demon.co.uk&gt;. </p>
-<h2>Index</h2>

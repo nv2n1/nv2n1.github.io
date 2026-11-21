@@ -116,4 +116,3 @@ description: "spline – interpolate datasets using splines under tension"
 <p> &quot;The GNU Plotting Utilities Manual&quot;.</p>
 <h2>BUGS</h2>
 <p> Email bug reports to <code>bug-gnu-utils [at] gnu.org</code>. </p>
-<h2>Index</h2>

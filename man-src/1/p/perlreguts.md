@@ -407,4 +407,3 @@ U32 classflags;
 <h2>REFERENCES</h2>
 <p> [1] &lt;<a rel="nofollow" href="http://perl.plover.com/Rx/paper/">http://perl.plover.com/Rx/paper/</a>&gt; </p>
 <p> [2] &lt;<a rel="nofollow" href="http://www.unicode.org">http://www.unicode.org</a>&gt; </p>
-<h2>Index</h2>

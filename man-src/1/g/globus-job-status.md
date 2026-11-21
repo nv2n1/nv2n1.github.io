@@ -76,4 +76,3 @@ description: "globus-job-status – Check the status of a GRAM5 job"
 <p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

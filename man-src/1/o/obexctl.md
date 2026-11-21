@@ -22,4 +22,3 @@ description: "obexctl – A command-line interface of BlueZ for OBEX (file trans
 <dt><code>&#8211;help</code></dt>
 <dd> Display help </dd>
 </dl>
-<h2>Index</h2>

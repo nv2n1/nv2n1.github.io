@@ -51,4 +51,3 @@ XConsole  xconsole
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), Athena Text widget</p>
 <h2>AUTHOR</h2>
 <p> Keith Packard (MIT X Consortium) </p>
-<h2>Index</h2>

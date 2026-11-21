@@ -30,4 +30,3 @@ description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecad
 <p> Fatal errors in the address-supplying functions are: unknown address family.</p>
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer. </p>
-<h2>Index</h2>

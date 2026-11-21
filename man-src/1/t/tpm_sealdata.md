@@ -37,4 +37,3 @@ description: "tpm_sealdata – seal input data to the system’s TPM"
 <p> <code><a href="/docs/linux/man/8-tpm_takeownership/">tpm_takeownership</a></code>(8), <code><a href="/docs/linux/man/3-tpmunsealfile/">tpmUnsealFile</a></code>(3) </p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt; </p>
-<h2>Index</h2>

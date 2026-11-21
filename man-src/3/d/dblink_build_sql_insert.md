@@ -53,4 +53,3 @@ SELECT dblink_build_sql_insert('foo', '1 2', 2, '{"1", "a"}', '{"1", "b' 'a"}');
 dblink_build_sql_insert-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --INSERT INTO foo(f1, f2, f3) VALUES('1', 'b' 'a', '1')(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

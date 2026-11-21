@@ -40,4 +40,3 @@ description: "nemiver – graphical debugger for GNOME"
 <h2>AUTHOR</h2>
 <p> nemiver was written by Dodji Seketeli &lt;dodji [at] gnome.org&gt; and Jonathon Jongsma &lt;jjongsma [at] gnome.org&gt;. </p>
 <p> This manual page was written by Luca Bruno &lt;lucab [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

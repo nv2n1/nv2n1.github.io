@@ -2228,4 +2228,3 @@ nn. If the tty is not in 8 bit mode, other 8 bit characters are printed by conve
 <p> Bryan Dunlap, Clayton Elwell, Karl Kleinpaste, Bob Manson, Steve Romig, Diana Smetters, Bob Sutterfield, Mark Verber, Elizabeth Zwicky and all the other people at Ohio State for suggestions and encouragement </p>
 <p> All the people on the net, for putting up with, reporting bugs in, and suggesting new additions to each and every version </p>
 <p> Richard M. Alderson III, for writing the `T in tcsh&#8217; section </p>
-<h2>Index</h2>

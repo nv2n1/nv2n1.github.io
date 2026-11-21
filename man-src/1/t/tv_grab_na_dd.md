@@ -174,4 +174,3 @@ tv_grab_na_dd-- config - file = lineup1.dat-- output = lineup1.xml-- dd - data =
 <dt>Around line 340:</dt>
 <dd> =over without closing =back </dd>
 </dl>
-<h2>Index</h2>

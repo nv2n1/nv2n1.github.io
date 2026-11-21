@@ -89,4 +89,3 @@ if (bereq.url == "/foo") {
 <dt>&bull;</dt>
 <dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
 </dl>
-<h2>Index</h2>

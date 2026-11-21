@@ -20,4 +20,3 @@ description: "sf2cfg – construct gt cfg files for SoundFonts"
 <h2>AUTHORS</h2>
 <p> Greg Lee &lt;lee [at] hawaii.edu&gt;<br />
  adapted from a program by Takashi Iwai. </p>
-<h2>Index</h2>

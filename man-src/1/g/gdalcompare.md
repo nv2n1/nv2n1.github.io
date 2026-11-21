@@ -28,4 +28,3 @@ gdalcompare.py [-sds] golden_file new_file
 <p> Note that the gdalcompare.py script can also be called as a library from python code though it is not typically in the python path for including. The primary entry point is gdalcompare.compare() which takes a golden gdal.Dataset and a new gdal.Dataset as arguments and returns a difference count (excluding the binary comparison). The gdalcompare.compare_sds() entry point can be used to compare subdatasets.</p>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

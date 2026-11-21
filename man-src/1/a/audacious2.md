@@ -142,4 +142,3 @@ description: "audacious2 – an advanced audio player."
 <p> <code><a href="/docs/linux/man/1-audtool2/">audtool2</a></code>(1) </p>
 <h2>WEBSITE</h2>
 <p> <i><a rel="nofollow" href="http://audacious-media-player.org">http://audacious-media-player.org</a></i> </p>
-<h2>Index</h2>

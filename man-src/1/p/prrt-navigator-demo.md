@@ -24,4 +24,3 @@ description: "prrt-navigator-demo – Mobile robot navigation simulator"
 <h2>COPYRIGHT</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 3, or (at your option) any later version. </p>
 <p> On Debian GNU/Linux systems, the complete text of the <font SIZE="-1">GNU</font> General Public License can be found in `/usr/share/common-licenses/GPL&#8217;. </p>
-<h2>Index</h2>

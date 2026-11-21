@@ -30,4 +30,3 @@ git mktree[-z][--missing][--batch]
 </dt><dd> Allow building of more than one tree object before exiting. Each tree is separated by as single blank line. The final new-line is optional. Note &#8211; if the <code>-z</code> option is used, lines are terminated with NUL.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

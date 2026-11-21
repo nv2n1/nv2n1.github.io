@@ -62,4 +62,3 @@ struct ibv_mw_bind_info {
 </dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

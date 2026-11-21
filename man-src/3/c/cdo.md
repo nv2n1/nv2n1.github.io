@@ -23,4 +23,3 @@ description: "ql/experimental/credit/cdo.hpp – collateralized debt obligation"
 <p> collateralized debt obligation </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

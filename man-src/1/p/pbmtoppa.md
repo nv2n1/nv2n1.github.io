@@ -101,4 +101,3 @@ description: "pbmtoppa – convert PBM image to HP Printer Performance Architect
 <h2>AUTHOR</h2>
 <p> Tim Norman. Copyright (C) 1998. Licensed under GNU Public License </p>
 <p> Manual page by Bryan Henderson, May 2000. </p>
-<h2>Index</h2>

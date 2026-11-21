@@ -19,4 +19,3 @@ description: "ql/termstructures/volatility/equityfx/localconstantvol.hpp – Loc
 <p> Local constant volatility, no time dependence, no asset dependence. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

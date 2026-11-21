@@ -125,4 +125,3 @@ description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 <p>&nbsp;<wbr><i><a rel="nofollow" href="http://mjpeg.sourceforge.net/">http://mjpeg.sourceforge.net/</a></i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavplay/">lavplay</a></code>(1) </p>
-<h2>Index</h2>

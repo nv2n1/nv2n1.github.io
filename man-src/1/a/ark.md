@@ -84,4 +84,3 @@ description: "ark – KDE archiving tool"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

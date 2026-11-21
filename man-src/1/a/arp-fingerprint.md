@@ -50,4 +50,3 @@ $ arp-fingerprint -o &quot;-N -I eth1&quot; 192.168.0.202
 <dt><code><a href="/docs/linux/man/1-arp-scan/">arp-scan</a></code>(1)</dt>
 <dd></dd></dl>
 <p> <i><a rel="nofollow" href="http://www.nta-monitor.com/wiki/">http://www.nta-monitor.com/wiki/</a></i> The arp-scan wiki page. </p>
-<h2>Index</h2>

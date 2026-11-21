@@ -86,4 +86,3 @@ K;
 <p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/1-gribtonc/">gribtonc</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), udunits(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and log messages are written to stderr. </p>
-<h2>Index</h2>

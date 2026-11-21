@@ -42,4 +42,3 @@ description: "markdown_py – a Python implementation of John Gruber’s Markdow
 <dt><code>-n</code>, <code>&#8211;no_lazy_ol</code></dt>
 <dd> Observe number of first item of ordered lists. </dd>
 </dl>
-<h2>Index</h2>

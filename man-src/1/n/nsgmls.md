@@ -196,4 +196,3 @@ description: "onsgmls – An SGML/XML parser and validator"
 <dt>
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
-<h2>Index</h2>

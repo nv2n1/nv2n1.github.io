@@ -106,4 +106,3 @@ See /usr/share/doc/audtty/copyright for the list of authors.
 <h2>RESOURCES</h2>
 <p> The audtty website can be found at &lt;<a rel="nofollow" href="http://audacious-media-player.org/Audtty">http://audacious-media-player.org/Audtty</a>&gt; </p>
 <p> This man page was originally written by Knut Auvor Grythe &lt;audtty [at] auvor.no&gt;. Updated by Chris Taylor &lt;chris [at] code-monkeys.org&gt;. </p>
-<h2>Index</h2>

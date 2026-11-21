@@ -103,4 +103,3 @@ enum mlx4dv_obj_type {
 <dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

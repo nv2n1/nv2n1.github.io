@@ -20,4 +20,3 @@ description: "ivykis – library for asynchronous I/O readiness notification"
 <p> In case of an internal error, ivykis will use <code>iv_fatal</code>(3) to report the error. The application can provide a custom fatal error handler by calling <code>iv_set_fatal_msg_handler</code>(3).</p>
 <h2>SEE ALSO</h2>
 <p> <code>iv_examples</code>(3), <code>iv_fatal</code>(3), <code>iv_fd</code>(3), <code>iv_timer</code>(3), <code>iv_task</code>(3), <code>iv_init</code>(3), <code>iv_main</code>(3), <code>iv_time</code>(3) </p>
-<h2>Index</h2>

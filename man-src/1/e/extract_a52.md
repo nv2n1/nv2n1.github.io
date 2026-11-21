@@ -32,4 +32,3 @@ description: "extract_a52 – extract ATSC A/52 audio from a MPEG stream."
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-a52dec/">a52dec</a></code>(1) </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "wrmsr – tool for writing CPU machine specific registers (MSR)"
 <h2>AUTHOR</h2>
 <p> <code>wrmsr </code> was written by Transmeta Corporation </p>
 <p> This man page was contributed by Andres Salomon &lt;dilinger [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

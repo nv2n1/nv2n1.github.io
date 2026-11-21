@@ -21,4 +21,3 @@ description: "gpk-application – GNOME PackageKit Package Application"
 <p> gpk-update-viewer (1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

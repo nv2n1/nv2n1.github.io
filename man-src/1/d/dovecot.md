@@ -81,4 +81,3 @@ description: "dovecot – a secure and highly configurable IMAP and POP3 server"
 <p> Dovecot &lt;<a rel="nofollow" href="http://dovecot.org">http://dovecot.org</a>&gt; and its manual pages were written by the Dovecot authors &lt;<a rel="nofollow" href="http://dovecot.org/doc/AUTHORS">http://dovecot.org/doc/AUTHORS</a>&gt;, mainly Timo Sirainen &lt;tss at iki.fi&gt;, and are licensed under the terms of the MIT and LGPLv2.1 licenses, see &lt;<a rel="nofollow" href="http://dovecot.org/doc/COPYING">http://dovecot.org/doc/COPYING</a>&gt; for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-doveconf/">doveconf</a></code>(1), <code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1), <code><a href="/docs/linux/man/1-dsync/">dsync</a></code>(1) </p>
-<h2>Index</h2>

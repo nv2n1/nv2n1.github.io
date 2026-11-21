@@ -213,4 +213,3 @@ dteam
 </dd></dl>
 <h2>AUTHORS</h2>
 <p> fts-devel [at] cern.ch. </p>
-<h2>Index</h2>

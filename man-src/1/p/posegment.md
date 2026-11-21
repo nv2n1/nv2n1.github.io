@@ -44,4 +44,3 @@ description: "posegment – Segment Gettext PO, XLIFF and TMX localization files
 <dt>&#8211;only-aligned</dt>
 <dd> Removes units where sentence number does not correspond </dd>
 </dl>
-<h2>Index</h2>

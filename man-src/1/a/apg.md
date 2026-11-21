@@ -140,4 +140,3 @@ description: "apg – generates several random passwords"
 <h2>AUTHOR</h2>
 <p> Adel I. Mirzazhanov, &lt;a-del [at] iname.com&gt;<br />
  Project home page: <a rel="nofollow" href="http://www.adel.nursat.kz/apg/">http://www.adel.nursat.kz/apg/</a> </p>
-<h2>Index</h2>

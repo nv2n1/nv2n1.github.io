@@ -154,4 +154,3 @@ description: "pg_top – display and update information about the top cpu Postgr
 <p> The Linux port was written by Richard Henderson &lt;rth [at] tamu.edu&gt;. The CPU% calculation was brazenly stolen from the Solaris 2 port and should be attributed to one of the many names listed in its man page. </p>
 <p> The order support was stolen from SUNOS 5 port by Alexey Klimkin &lt;kad [at] klon.tme.mcst.ru&gt; </p>
 <p> Made to work under 2.4 by William LeFebvre. </p>
-<h2>Index</h2>

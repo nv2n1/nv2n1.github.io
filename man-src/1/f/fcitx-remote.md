@@ -31,4 +31,3 @@ description: "fcitx-remote – Tool for control fcitx state via console"
 <p> fcitx will create socket at <i>/tmp/fcitx-socket-&lt;displayname&gt;</i>, so user must have permission to access <i>/tmp</i> folder.</p>
 <h2>SEE ALSO</h2>
 <p> Please see the homepage at <code><a rel="nofollow" href="https://fcitx-im.org/">https://fcitx-im.org/</a></code> </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "ql/termstructures/volatility/equityfx/localvolcurve.hpp – Local 
 <p> Local volatility curve derived from a Black curve. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

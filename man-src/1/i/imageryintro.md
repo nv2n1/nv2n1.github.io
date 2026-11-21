@@ -77,4 +77,3 @@ url: "/docs/linux/man/1-imageryintro/"
 </dt><dd> Introduction to GRASS vector map processing</dd></dl>
 </dl>
 <p> imagery index &#8211; full index </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "dwp – The DWARF packaging utility"
 <p> Report bugs to &lt;<a rel="nofollow" href="https://sourceware.org/bugzilla/">https://sourceware.org/bugzilla/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2022 Free Software Foundation, Inc. This program is free software; you may redistribute it under the terms of the GNU General Public License version 3 or (at your option) any later version. This program has absolutely no warranty. </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ CONTAINER           CPU %               MEM USAGE/LIMIT     MEM %               
 fervent_panini      0.02%               11.08 MiB/1.045 GiB   1.06%               648 B/648 B
 </pre>
 </dd></dl>
-<h2>Index</h2>

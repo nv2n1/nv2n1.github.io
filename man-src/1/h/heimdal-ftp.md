@@ -252,4 +252,3 @@ nmap $1.$2.$3[$1, $2].[$2, file]
 <h2>BUGS</h2>
 <p> Correct execution of many commands depends upon proper behavior by the remote server. </p>
 <p> An error in the treatment of carriage returns in the BSD 4.2 ascii-mode transfer code has been corrected. This correction may result in incorrect transfers of binary files to and from BSD 4.2 servers using the ascii type. Avoid this problem by using the binary image type. </p>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ description: "qdel – delete xxQS_NAMExx jobs from queues"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>

@@ -219,4 +219,3 @@ description: "ocamlc – The OCaml bytecode compiler"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1),<code>&nbsp;<wbr><a href="/docs/linux/man/1-ocamlrun/">ocamlrun</a></code>(1),<code>&nbsp;<wbr><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Batch compilation&quot;. </p>
-<h2>Index</h2>

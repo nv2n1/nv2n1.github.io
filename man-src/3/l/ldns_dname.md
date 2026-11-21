@@ -28,4 +28,3 @@ description: "ldns_dname"
 <p> <i>ldns_dname_left_chop</i>, <i>ldns_dname_label_count</i>, <i>ldns_dname2canonical</i>, <i>ldns_dname_cat</i>, <i>ldns_dname_cat_clone</i>, <i>ldns_dname_new</i>, <i>ldns_dname_new_frm_str</i>, <i>ldns_dname_new_frm_data</i>, <i>ldns_dname_is_subdomain</i>, <i>ldns_dname_str_absolute</i>, <i>ldns_dname_label</i>, <i>ldns_dname_compare</i>, <i>ldns_dname_interval</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>

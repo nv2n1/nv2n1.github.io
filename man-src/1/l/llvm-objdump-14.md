@@ -205,4 +205,3 @@ description: "llvm-objdump – manual page for llvm-objdump 14"
 <dt><code>&#8211;weak-bind</code></dt>
 <dd> Display mach-o weak binding info</dd></dl>
 <p> Pass @FILE as argument to read options from FILE. </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "wrjpgcom – insert text comments into a JPEG file"
 <p> <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-rdjpgcom/">rdjpgcom</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Independent JPEG Group </p>
-<h2>Index</h2>

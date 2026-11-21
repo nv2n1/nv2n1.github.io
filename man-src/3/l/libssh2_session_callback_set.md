@@ -40,4 +40,3 @@ void *libssh2_session_callback_set(LIBSSH2_SESSION *session,
 <p> Pointer to previous callback handler. Returns NULL if no prior callback handler was set or the callback type was unknown.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

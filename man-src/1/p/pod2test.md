@@ -37,4 +37,3 @@ pod2test[-Mmodule][input[output]]
 <p> Copyright 2001 &#8211; 2003 Michael G Schwern. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> The full text of the license can be found in the <font SIZE="-1">LICENSE</font> file included with this module. </p>
-<h2>Index</h2>

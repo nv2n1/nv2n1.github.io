@@ -22,4 +22,3 @@ description: "audit_getloginuid – Get a program’s loginuid value"
 <p> <code><a href="/docs/linux/man/3-audit_setloginuid/">audit_setloginuid</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

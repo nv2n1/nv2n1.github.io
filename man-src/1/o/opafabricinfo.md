@@ -96,4 +96,3 @@ description: "opafabricinfo"
  Number of ISLs: 0 (Internal: 0 External: 0)<br />
  Number of Degraded Links: 0 (HFI Links: 0 ISLs: 0)<br />
  Number of Omitted Links: 0 (HFI Links: 0 ISLs: 0) </p>
-<h2>Index</h2>

@@ -441,4 +441,3 @@ set | add | del key[[type] value]
 <h2>AUTHORS</h2>
 <p> <code>exiv2 </code> was written by Andreas Huggel &lt;ahuggel [at] gmx.net&gt;. </p>
 <p> This manual page was originally written by KELEMEN Peter &lt;fuji [at] debian.org&gt;, for the Debian project. </p>
-<h2>Index</h2>

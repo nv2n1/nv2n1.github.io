@@ -35,4 +35,3 @@ int ares_parse_a_reply(const unsigned char *abuf, int alen,
 <h2>AUTHOR</h2>
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

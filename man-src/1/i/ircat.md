@@ -37,4 +37,3 @@ $ ircat myprog
 <p> will print &quot;next_file&quot; (followed by newline) every time the button bound to KEY_CHANNELUP is pressed.</p>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>

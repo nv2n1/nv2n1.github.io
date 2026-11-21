@@ -46,4 +46,3 @@ fhpd 1234
 <p> High Performance Debugging Forum Version 1 Standard</p>
 <h2>BUGS</h2>
 <p> Report bugs to m[blue]<code><a rel="nofollow" href="http://sourceware.org/frysk">http://sourceware.org/frysk</a></code>m[] </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "libinput-list-devices – list local devices as recognized by libi
 <p> An <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) configuration entry or Wayland compositor setting may have changed configurations on a device. The <code>libinput list-devices</code> tool only shows the device&#8217;s default configuration, not the current configuration.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

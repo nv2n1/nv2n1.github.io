@@ -29,4 +29,3 @@ description: "session-installer – allows applications to easily install and re
 <p> Sebastian Heinlein &lt;devel at glatzor dot de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aptd/">aptd</a>(1)</code> <code><a rel="nofollow" href="http://www.packagekit.org/pk-faq.html#session-methods">http://www.packagekit.org/pk-faq.html#session-methods</a></code> </p>
-<h2>Index</h2>

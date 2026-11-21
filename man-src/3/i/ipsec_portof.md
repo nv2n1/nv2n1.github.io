@@ -28,4 +28,3 @@ description: "ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlen
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
 <p> These functions all depend on low-level details of the <i>ip_address</i> type, which are in principle subject to change. Avoid using them unless really necessary. </p>
-<h2>Index</h2>

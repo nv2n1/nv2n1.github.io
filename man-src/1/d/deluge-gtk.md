@@ -49,4 +49,3 @@ description: "deluge-gtk – a bittorrent client gtk interface"
 <p> <code><a href="/docs/linux/man/1-deluged/">deluged</a>(1),</code> <code><a href="/docs/linux/man/1-deluge-web/">deluge-web</a>(1),</code> <code><a href="/docs/linux/man/1-deluge-console/">deluge-console</a>(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> <code>Deluge Team: <a rel="nofollow" href="http://www.deluge-torrent.org">http://www.deluge-torrent.org</a></code> </p>
-<h2>Index</h2>

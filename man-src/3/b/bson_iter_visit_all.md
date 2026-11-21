@@ -31,4 +31,3 @@ bool bson_iter_visit_all(bson_iter_t *iter,
 <p> true if visitation was pre-maturely stopped by a callback function. Otherwise false. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

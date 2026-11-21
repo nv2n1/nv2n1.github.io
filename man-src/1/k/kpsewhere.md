@@ -28,4 +28,3 @@ description: "kpsewhere – Expanding kpsewhich to separately iterate over each 
 <h2>AUTHOR</h2>
 <p> <code>kpsewhere</code> was written by Hans Fredrik Nordhaug &lt;hans.fredrik [at] nordhaug.no&gt;, additions by Thomas Esser &lt;te [at] dbs.uni-hannover.de&gt;, in 2003 and 2004. <code>kpsewhere</code> is in the public domain. </p>
 <p> This manual page was written by Frank Küster &lt;frank [at] kuesterei.ch&gt;, for the Debian GNU/Linux system. It is also in the public domain and may be used and changed by others without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

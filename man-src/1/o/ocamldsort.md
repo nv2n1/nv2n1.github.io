@@ -92,4 +92,3 @@ clean:
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1). </p>
-<h2>Index</h2>

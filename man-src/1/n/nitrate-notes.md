@@ -102,4 +102,3 @@ description: "Release Notes – python-nitrate release notes"
 color(&quot;txt&quot;, color=&quot;red&quot;, enabled=config.Coloring().enabled())
 </pre>
 </dl>
-<h2>Index</h2>

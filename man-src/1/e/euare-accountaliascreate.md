@@ -41,4 +41,3 @@ description: "euare-accountaliascreate – Create an alias for an account, a.k.a
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

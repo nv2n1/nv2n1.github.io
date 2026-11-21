@@ -116,4 +116,3 @@ url: "/docs/linux/man/1-vectorintro/"
 </dt><dd> Introduction to GRASS 3D raster map (voxel) processing</dd></dl>
 </dl>
 <p> full index </p>
-<h2>Index</h2>

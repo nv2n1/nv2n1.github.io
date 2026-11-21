@@ -26,4 +26,3 @@ description: "ql/instruments/callabilityschedule.hpp – Schedule of put/call da
 <p> Schedule of put/call dates. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

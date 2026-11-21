@@ -16,4 +16,3 @@ description: "install_param_int_ex – Adds or modifies a timer with a customiza
 <p> Like install_int_ex(), but the callback routine will be passed a copy of the specified void pointer parameter. To disable the handler, use remove_param_int() instead of remove_int(). </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_timer</code>(3), <code><a href="/docs/linux/man/3-remove_param_int/">remove_param_int</a></code>(3), <code>install_param_int</code>(3), <code>install_int_ex</code>(3) </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "expectk – Expect with Tk support"
 <p> Scripts may be invoked implicitly on systems which support the #! notation by marking the script executable, and making the first line in your script: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>#!/usr/local/bin/expectk -f</p>
 <p> Of course, the path must accurately describe where <code>Expectk</code> lives. /usr/local/bin is just an example. </p>
-<h2>Index</h2>

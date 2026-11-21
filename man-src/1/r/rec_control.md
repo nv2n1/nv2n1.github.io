@@ -133,4 +133,3 @@ description: "rec_control – control pdns_recursor"
 <p> <a href="/docs/linux/man/1-pdns_recursor/">pdns_recursor</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> PowerDNS.COM BV. </p>
-<h2>Index</h2>

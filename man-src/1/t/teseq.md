@@ -46,4 +46,3 @@ description: "teseq – manual page for teseq 1.0.0"
 <dt>
 </dt><dd> <code>info teseq</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

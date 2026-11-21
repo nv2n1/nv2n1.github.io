@@ -34,4 +34,3 @@ description: "snmpbulkget – communicates with a network entity using SNMP GETB
 <p> As the name implies, <code>snmpbulkget</code> utilizes the SNMP GETBULK message, which is not available in SNMPv1.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5), RFC 1905. </p>
-<h2>Index</h2>

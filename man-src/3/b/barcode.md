@@ -37,4 +37,3 @@ description: "barcode – a library to create and print bar codes"
 <dt>int Barcode_Version(char *versionname);</dt>
 <dd> Returns the current version as an integer number of the form major * 10000 + minor * 100 + release. Therefore, version 1.03.5 will be returned as 10305 and version 0.53 as 5300. If the argument is non-null, it will be used to return the version number as a string. Note that the same information is available from two preprocessor macros: BARCODE_VERSION (the string) and BARCODE_VERSION_INT (the integer number). </dd>
 </dl>
-<h2>Index</h2>

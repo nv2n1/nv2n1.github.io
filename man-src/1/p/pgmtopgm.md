@@ -20,4 +20,3 @@ description: "pgmtopgm – copy PGM image"
 <p> <code><a href="/docs/linux/man/1-ppmtoppm/">ppmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopam/">pamtopam</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code>pbm</code>(1) , <code>pgm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.9 (September 2002). </p>
-<h2>Index</h2>

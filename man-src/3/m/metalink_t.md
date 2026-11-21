@@ -25,4 +25,3 @@ description: "metalink_t – Metalink top level structure."
 <p> Null terminated string which corresponds to tags element in Metalink XML file. </p>
 <h2>SEE ALSO</h2>
 <p> <code>metalink_delete_t</code>(3), <code><a href="/docs/linux/man/3-metalink_file_t/">metalink_file_t</a></code>(3), <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3) </p>
-<h2>Index</h2>

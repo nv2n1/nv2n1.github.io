@@ -28,4 +28,3 @@ git write - tree[--missing - ok][--prefix = &lt;prefix&gt; / ]
 </dt><dd> Writes a tree object that represents a subdirectory <code>&lt;prefix&gt;</code>. This can be used to write the tree object for a subproject that is in the named subdirectory.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

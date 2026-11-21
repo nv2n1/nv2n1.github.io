@@ -80,4 +80,3 @@ description: "rcsclean – clean up working files"
 <p> has news and links to the latest release, development site, etc.</p>
 <h2>BUGS</h2>
 <p> At least one <i>file</i> must be given in older Unix versions that do not provide the needed directory scanning operations. </p>
-<h2>Index</h2>

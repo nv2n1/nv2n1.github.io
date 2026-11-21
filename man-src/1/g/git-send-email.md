@@ -282,4 +282,3 @@ $ git send-email outgoing/*
 <p> <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1), <code><a href="/docs/linux/man/1-git-imap-send/">git-imap-send</a></code>(1), <a href="/docs/linux/man/5-mbox/">mbox</a>(5)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "pamtohdiff – convert PAM image to horizontal difference image"
 <p> <code><a href="/docs/linux/man/1-hdifftopam/">hdifftopam</a></code>(1) , <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , </p>
 <h2>AUTHOR</h2>
 <p> Bryan Henderson </p>
-<h2>Index</h2>

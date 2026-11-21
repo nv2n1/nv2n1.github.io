@@ -20,4 +20,3 @@ description: "libssh2_channel_request_pty_size – convenience macro for libssh2
 <p> See <i><a href="/docs/linux/man/3-libssh2_channel_request_pty_size_ex/">libssh2_channel_request_pty_size_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_request_pty_size_ex/">libssh2_channel_request_pty_size_ex</a>(3)</code> </p>
-<h2>Index</h2>

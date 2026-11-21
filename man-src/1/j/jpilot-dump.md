@@ -42,4 +42,3 @@ description: "jpilot-dump – A command line tool for dumping jpilot databases."
 <h2>AUTHOR</h2>
 <p> September 2001 jpilot-dump 0.98-1 Copyright (C) hvrietsc [at] yahoo.com. </p>
 <p> Manpage by Pablo Averbuj &lt;pablo [at] debian.org&gt;, updated Ludovic Rousseau &lt;rousseau [at] debian.org&gt; </p>
-<h2>Index</h2>

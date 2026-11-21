@@ -47,4 +47,3 @@ description: "fpm2 – Figaro’s Password Manager 2"
 <p> John Conneely &lt;jconneely [at] figaro.org&gt;<br />
  Aleš Koval &lt;als [at] regnet.cz&gt; </p>
 <p> This manual page was written by Lars Bahner &lt;bahner [at] debian.org&gt; for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

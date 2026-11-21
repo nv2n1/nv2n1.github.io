@@ -189,4 +189,3 @@ would print the line &quot;    Text 1 Item&quot; in a monospaced bold font.
      lines to spread out input items into columns]
  ** Ability to select or specify fonts for the text/items
 </code></pre>
-<h2>Index</h2>

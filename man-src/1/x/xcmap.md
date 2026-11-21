@@ -19,4 +19,3 @@ description: "xcmap – displays the default colormap on X11 displays"
 <p> Also, this program only works on 4, 6, and 8-bit displays. Period. </p>
 <h2>AUTHOR</h2>
 <p> John Bradley &#8211; bradley [at] dccs.upenn.edu </p>
-<h2>Index</h2>

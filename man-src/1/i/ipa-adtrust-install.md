@@ -94,4 +94,3 @@ description: "ipa-adtrust-install – Prepare an IPA server to be able to establ
 <h2>EXIT STATUS</h2>
 <dd> 0 if the installation was successful </dd>
 <p> 1 if an error occurred </p>
-<h2>Index</h2>

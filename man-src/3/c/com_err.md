@@ -26,4 +26,3 @@ void initialize_XXXX_error_table();
 <h2>SEE ALSO</h2>
 <p> compile_et (1), syslog (3). </p>
 <p> Ken Raeburn, &quot;A Common Error Description Library for UNIX&quot;. </p>
-<h2>Index</h2>

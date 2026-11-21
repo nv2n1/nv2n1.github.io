@@ -17,4 +17,3 @@ description: "mftext – Dump a MIDI file as text"
 <p> <i>abcmtex</i>(1), <i><a href="/docs/linux/man/1-abc2abc/">abc2abc</a></i>(1), <i><a href="/docs/linux/man/1-abc2midi/">abc2midi</a></i>(1), <i><a href="/docs/linux/man/1-midi2abc/">midi2abc</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Anselm Lingnau &lt;lingnau [at] tm.informatik.uni-frankfurt.de&gt;, for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

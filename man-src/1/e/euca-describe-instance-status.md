@@ -56,4 +56,3 @@ description: "euca-describe-instance-status – Show information about instance 
 <dt>system-status.reachability</dt>
 <dd> instance&#8217;s system reachability status </dd>
 </dl>
-<h2>Index</h2>

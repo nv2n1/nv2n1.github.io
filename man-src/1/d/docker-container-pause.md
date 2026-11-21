@@ -19,4 +19,3 @@ description: "docker-container-pause – Pause all processes within one or more 
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for pause</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

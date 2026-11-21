@@ -122,4 +122,3 @@ description: "RAND crypto functions –"
 </dt><dd> 1 on success and non-one on failure.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdal crypto library from the source code. </p>
-<h2>Index</h2>

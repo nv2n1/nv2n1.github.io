@@ -50,4 +50,3 @@ description: "llvm-size – manual page for llvm-size 10"
 <dt> <code>-d</code> &#8211; Print size in decimal</dt>
 <dt> <code>-x</code> &#8211; Print size in hexadecimal</dt></dl>
 <dd>Pass @FILE as argument to read options from FILE. </dd>
-<h2>Index</h2>

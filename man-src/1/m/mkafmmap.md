@@ -25,4 +25,3 @@ description: "mkafmmap – creates font map for AFM files"
 <p> <code><a href="/docs/linux/man/1-enscript/">enscript</a></code>(1), <code><a href="/docs/linux/man/1-states/">states</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Lucas Wall &lt;kthulhu [at] usa.net&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

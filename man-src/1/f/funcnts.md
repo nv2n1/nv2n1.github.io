@@ -289,4 +289,3 @@ funcnts - i "pha=1:5&amp;&amp;pi=4;pha=6:10&amp;&amp;pi=5;pha=11:15&amp;&amp;pi=
 <p> Finally, note that <code>funcnts</code> is an image program, even though it can be run directly on <font SIZE="-1">FITS</font> binary tables. This means that image filtering is applied to the rows in order to ensure that the same results are obtained regardless of whether a table or the equivalent binned image is used. Because of this, however, the number of counts found using <code>funcnts</code> can differ from the number of events found using row-filter programs such as <code>fundisp</code> or <code>funtable</code> For more information about these difference, see the discussion of Region Boundaries.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

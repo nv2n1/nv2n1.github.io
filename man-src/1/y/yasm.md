@@ -156,4 +156,3 @@ yasm -f bin -r raw -o y.com y.asm
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004, 2005, 2006, 2007 Peter Johnson </p>
-<h2>Index</h2>

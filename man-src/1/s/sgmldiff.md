@@ -73,4 +73,3 @@ description: "sgmldiff – Find differences in the markup of two SGML files"
 <dt><code> <a rel="nofollow" href="http://sources.redhat.com/docbook-tools/">http://sources.redhat.com/docbook-tools/</a> &lt;URL:<a href="http://sources.redhat.com/docbook-tools/">http://sources.redhat.com/docbook-tools/</a>&gt; </code></dt>
 <dd> the home page of the DocBook tools, a compendium of all tools necessary to process DocBook files, including the DocBook-utils </dd>
 </dl>
-<h2>Index</h2>

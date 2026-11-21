@@ -47,4 +47,3 @@ description: "lightdm – a display manager"
 <dd> XDMCP keys</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dm-tool/">dm-tool</a></code>(1) </p>
-<h2>Index</h2>

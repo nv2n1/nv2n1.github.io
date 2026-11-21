@@ -18,4 +18,3 @@ description: "fixup_datafile – Fixes truecolor images in compiled datafiles. A
 <p> If your program supports changing resolution and/or color depth during runtime, you have two choices: either call fixup_datafile() just once and hope that the component ordering and bit depth doesn&#8217;t change when the screen mode changes (unlikely). Or, you can reload your datafiles when the screen mode changes. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3) </p>
-<h2>Index</h2>

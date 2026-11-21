@@ -21,4 +21,3 @@ description: "vptovf – convert virtual property lists to virtual font metrics"
 <p> <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1), <code><a href="/docs/linux/man/1-tftopl/">tftopl</a></code>(1), <code><a href="/docs/linux/man/1-vftovp/">vftovp</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program, based in part on an idea of David Fuchs, starting with the code for <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1). Karl Berry adapted it for compilation with <code>web2c</code>. </p>
-<h2>Index</h2>

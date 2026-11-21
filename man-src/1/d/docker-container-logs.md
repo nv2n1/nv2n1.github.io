@@ -38,4 +38,3 @@ $ docker run-- name test - d busybox sh - c "while true; do $(echo date); sleep 
 <p> <code>&#8211;until</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show logs before a timestamp (e.g. 2013-01-02T13:23:37Z) or relative (e.g. 42m for 42 minutes)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

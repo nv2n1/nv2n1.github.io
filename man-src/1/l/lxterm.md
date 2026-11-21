@@ -18,4 +18,3 @@ description: "lxterm – locale-sensitive wrapper for xterm"
 <p> Branden Robinson</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/1-koi8rxterm/">koi8rxterm</a></code>(1), <code><a href="/docs/linux/man/1-uxterm/">uxterm</a></code>(1), <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1) </p>
-<h2>Index</h2>

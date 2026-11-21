@@ -17,4 +17,3 @@ description: "revpath – generate a relative path that can be used to undo a ch
 <p> There are no diagnostics. Error conditions are silently ignored, and the exit status is always 0.</p>
 <h2>BUGS</h2>
 <p> It isn&#8217;t possible to reverse arbitrary relative paths. If any path element between the two end points of <i>path</i> is a symbolic link, the results will probably be incorrect. </p>
-<h2>Index</h2>

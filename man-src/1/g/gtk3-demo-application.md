@@ -15,4 +15,3 @@ description: "gtk3-demo-application – Demonstrate GtkApplication"
 <h2>DESCRIPTION</h2>
 <p> <code>gtk3-demo-application</code></p>
 <dd>is an example application used by <code>gtk3-demo</code>. There is no need to call it manually. </dd>
-<h2>Index</h2>

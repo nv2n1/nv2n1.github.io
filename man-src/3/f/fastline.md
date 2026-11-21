@@ -16,4 +16,3 @@ description: "fastline – Faster version of line(). Allegro game programming li
 <p> Faster version of the previous function. Note that pixel correctness is not guaranteed for this function. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-line/">line</a></code>(3), <code><a href="/docs/linux/man/3-hline/">hline</a></code>(3), <code><a href="/docs/linux/man/3-vline/">vline</a></code>(3), <code><a href="/docs/linux/man/3-do_line/">do_line</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3) </p>
-<h2>Index</h2>

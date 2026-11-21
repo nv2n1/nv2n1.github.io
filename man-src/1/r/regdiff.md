@@ -51,4 +51,3 @@ description: "regdiff – Diff program for Windows registry files"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
-<h2>Index</h2>

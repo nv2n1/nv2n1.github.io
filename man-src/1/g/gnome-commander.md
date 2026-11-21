@@ -74,4 +74,3 @@ description: "gnome-commander – a GNOME file manager"
 <p> <code>GNOME Commander</code> was originally developed by Marcus Bjurman from 2001 till 2004. Assaf Gordon added the internal viewer code and other features. Piotr Eljasiak was the project manager from 2006 until 2012. Since 2013 till now, Uwe Scholz &lt;u.scholz83 [at] gmx.de&gt; is the current project manager.<br />
  Translations and other contributions where made by numerous people. See the <code>AUTHORS</code> file in the source tarball for the detailed list. </p>
 <p> The original manual page was written by Michael Vogt &lt;mvo [at] debian.org&gt;, for the Debian GNU/Linux system. Current manual page is maintained as the part of the <code>GNOME Commander</code> project. </p>
-<h2>Index</h2>

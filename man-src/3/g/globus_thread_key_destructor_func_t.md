@@ -120,4 +120,3 @@ description: "globus_thread.h –"
 <p> Globus threads package which can work with either pthreads or without threads, depending on runtime configuration</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

@@ -98,4 +98,3 @@ description: "kf5-config – Prints Qt(TM) and Frameworks installation paths"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "iceboxnet.exe – CLI implementation of icebox"
 <p> The text of GPLv3 is also available in /usr/share/common-licenses/GPL-3</p>
 <h2>SEE ALSO</h2>
 <p> Please, for further information refer to <i>Distributed Programming with Ice</i> by Michi Henning, Mark Spruiell, et al. available online at <i><a rel="nofollow" href="http://www.zeroc.com/doc/Ice-3.3.0/manual/">http://www.zeroc.com/doc/Ice-3.3.0/manual/</a></i> </p>
-<h2>Index</h2>

@@ -524,4 +524,3 @@ $ lttng start
 <p> Special thanks to Michel Dagenais and the DORSAL laboratory at Polytechnique de Montreal for the LTTng journey. </p>
 <h2>AUTHORS</h2>
 <p> lttng-tools was originally written by Mathieu Desnoyers, Julien Desfossez and David Goulet. More people have since contributed to it. It is currently maintained by David Goulet &lt;dgoulet [at] efficios.com&gt;. </p>
-<h2>Index</h2>

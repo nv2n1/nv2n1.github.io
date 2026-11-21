@@ -16,4 +16,3 @@ description: "d_keyboard_proc – Invisible dialog procedure for implementing ke
 <p> This is an invisible object for implementing keyboard shortcuts. You can put an ASCII code in the key field of the dialog object (a character such as &#8216;a&#8217; to respond to a simple keypress, or a number 1-26 to respond to a control key a-z), or you can put a keyboard scancode in the d1 and/or d2 fields. When one of these keys is pressed, the object will call the function pointed to by dp. This should return an int, which will be passed back to the dialog manager, so it can return D_O_K, D_REDRAW, D_CLOSE, etc. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "rancid-cvs – initialize CVS, Subversion or git and rancid group 
 <p> <code><a href="/docs/linux/man/1-cvs/">cvs</a></code>(1), <code><a href="/docs/linux/man/1-git/">git</a></code>(1), <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5), <code><a href="/docs/linux/man/1-svn/">svn</a></code>(1)</p>
 <h2>CAVEATS</h2>
 <p> In the case of git, the groups are not exactly imported into the repository, rather a new repository is created for it, due to the way that git handles, what it calls, sparse checkouts. Instead, each group is a separate repository under the <code>CVSROOT</code> directory. </p>
-<h2>Index</h2>

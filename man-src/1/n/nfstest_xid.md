@@ -45,4 +45,3 @@ description: "nfstest_xid – Verify packets are matched correctly by their XID"
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Jorge Mora (mora [at] netapp.com) </p>
-<h2>Index</h2>

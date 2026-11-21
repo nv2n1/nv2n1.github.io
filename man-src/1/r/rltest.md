@@ -24,4 +24,3 @@ description: "rltest – test cases for QDBM Relic"
 <p> <code>qdbm</code>(3), <code>relic</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
-<h2>Index</h2>

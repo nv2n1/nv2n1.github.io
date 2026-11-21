@@ -21,4 +21,3 @@ description: "publictoip6 — Derive cjdns IP6 address from a public key"
 <p> Get a cjdns IPv6 address from a public key and write to stdout. The key should be in Base32 and end in &#8216;.k&#8217;.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-randombytes/">randombytes</a>(1) </p>
-<h2>Index</h2>

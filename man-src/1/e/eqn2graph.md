@@ -32,4 +32,3 @@ description: "eqn2graph – convert an EQN equation into a cropped image"
 <p> <i>eqn2graph</i> was written by Eric S. Raymond based on a recipe for <i><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></i>(1), by W. Richard Stevens.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pic2graph/">pic2graph</a></i>(1), <i><a href="/docs/linux/man/1-grap2graph/">grap2graph</a></i>(1), <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1) </p>
-<h2>Index</h2>

@@ -169,4 +169,3 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
  <a href="/docs/linux/man/1-ocamlc/">ocamlc</a>(1), <a href="/docs/linux/man/1-ocaml/">ocaml</a>(1), <a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a>(1). </p>
 <h2>AUTHOR</h2>
 <p> Daniel de Rauglaudre, INRIA Rocquencourt. </p>
-<h2>Index</h2>

@@ -135,4 +135,3 @@ description: "systemd-cgtop – Show top control groups by their resource usage"
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-systemd-cgls/">systemd-cgls</a></code>(1), <code><a href="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></code>(5), <code><a href="/docs/linux/man/1-top/">top</a></code>(1) </p>
-<h2>Index</h2>

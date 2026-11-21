@@ -35,4 +35,3 @@ description: "ocamlyacc – The OCaml parser generator"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Lexer and parser generators&quot;. </p>
-<h2>Index</h2>

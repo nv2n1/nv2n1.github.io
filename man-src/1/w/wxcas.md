@@ -21,4 +21,3 @@ description: "wxcas – wx c aMule statistics"
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> This manpage was written by Vollstrecker &lt;amule [at] vollstreckernet.de&gt; </p>
-<h2>Index</h2>

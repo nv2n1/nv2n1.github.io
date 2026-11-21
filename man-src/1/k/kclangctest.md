@@ -47,4 +47,3 @@ description: "kclangctest – command line interface to test the C language bind
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcpolymgr/">kcpolymgr</a></code>(1), <code><a href="/docs/linux/man/1-kcpolytest/">kcpolytest</a></code>(1) </p>
-<h2>Index</h2>

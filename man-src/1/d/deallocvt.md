@@ -22,4 +22,3 @@ description: "deallocvt – deallocate unused virtual consoles"
 <dd> show this text and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1), <code><a href="/docs/linux/man/1-openvt/">openvt</a></code>(1) </p>
-<h2>Index</h2>

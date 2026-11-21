@@ -43,4 +43,3 @@ description: "kateenc – create Kate streams from text input"
 <p>&nbsp;<wbr>kateenc -t srt -l cy -c SUB -o output.ogg input.srt </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-katedec/">katedec</a></code>(1), <code><a href="/docs/linux/man/1-katalyzer/">katalyzer</a></code>(1) </p>
-<h2>Index</h2>

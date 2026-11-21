@@ -32,4 +32,3 @@ description: "metapixel – generator for photomosaics"
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
 <h2>AUTHOR</h2>
 <p> Chris Vanden Berghe. </p>
-<h2>Index</h2>

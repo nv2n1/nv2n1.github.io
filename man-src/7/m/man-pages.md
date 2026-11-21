@@ -705,4 +705,3 @@ description: "man-pages – conventions for writing Linux man pages"
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-man2html/">man2html</a></code>(1), <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7), <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7), <code><a href="/docs/linux/man/7-groff_man/">groff_man</a></code>(7), <code><a href="/docs/linux/man/7-man/">man</a></code>(7), <code><a href="/docs/linux/man/7-mdoc/">mdoc</a></code>(7)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

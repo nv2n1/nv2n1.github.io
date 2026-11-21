@@ -43,4 +43,3 @@ description: "packf – pack messages in nmh folder into a single file"
 </pre>
 <h2>CONTEXT</h2>
 <p> If a folder is given, it will become the current folder. The first message packed will become the current message. </p>
-<h2>Index</h2>

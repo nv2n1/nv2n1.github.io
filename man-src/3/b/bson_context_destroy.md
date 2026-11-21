@@ -22,4 +22,3 @@ void bson_context_destroy(bson_context_t *context);
 <p> This should be called when you are no longer using a <code>bson_context_t</code> that you have allocated with <code><a href="/docs/linux/man/3-bson_context_new/">bson_context_new</a>(3)</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

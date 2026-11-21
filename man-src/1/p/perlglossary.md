@@ -1181,4 +1181,3 @@ description: "perlglossary – Perl Glossary"
 <dd> A process that has died (exited) but whose parent has not yet received proper notification of its demise by virtue of having called <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>. If you <tt>&quot;fork&quot;</tt>, you must clean up after your child processes when they exit; otherwise, the process table will fill up and your system administrator will Not Be Happy with you.</dd></dl>
 <h2>AUTHOR AND COPYRIGHT</h2>
 <p> Based on the Glossary of <i>Programming Perl</i>, Fourth Edition, by Tom Christiansen, brian d foy, Larry Wall, &amp; Jon Orwant. Copyright (c) 2000, 1996, 1991, 2012 O&#8217;Reilly Media, Inc. This document may be distributed under the same terms as Perl itself. </p>
-<h2>Index</h2>

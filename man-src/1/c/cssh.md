@@ -423,4 +423,3 @@ clusters = &lt;tag1&gt;&lt;tag2&gt;&lt;tag3&gt;
 <p> Copyright 1999-2010 Duncan Ferguson. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of either: the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; or the Artistic License. </p>
 <p> See <a rel="nofollow" href="http://dev.perl.org/licenses/">http://dev.perl.org/licenses/</a> for more information. </p>
-<h2>Index</h2>

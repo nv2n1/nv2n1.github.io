@@ -26,4 +26,3 @@ description: "passenger-config – Show configuration settings for Phusion Passe
 <p> Phusion Passenger is written by Phusion (<a rel="nofollow" href="http://www.phusion.nl)">http://www.phusion.nl)</a> </p>
 <p> &quot;Phusion&quot; and &quot;Phusion Passenger&quot; are trademarks of Hongli Lai &amp; Ninh Bui. </p>
 <p> This manual page was written by Neil Wilson &lt;neil [at] brightbox.co.uk&gt; for the Ubuntu project (but may be used by others). </p>
-<h2>Index</h2>

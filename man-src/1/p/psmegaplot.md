@@ -30,4 +30,3 @@ description: "psmegaplot – To create poster-size PostScript plots from page-si
 <p> This program is unlikely to work on non-<code>GMT</code>-produced <i>PostScript</i> files since it anticipates the structure of the file. It also assumes that the output media is Letter size.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1) </p>
-<h2>Index</h2>

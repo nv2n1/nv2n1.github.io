@@ -34,4 +34,3 @@ description: "proxytrack – proxy to serve content archived by httrack website 
 <p> Xavier Roche &lt;roche [at] httrack.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> The <code>HTML </code> documentation (available online at <code><a rel="nofollow" href="http://www.httrack.com/html/">http://www.httrack.com/html/</a></code> ) contains more detailed information. Please also refer to the <code>httrack FAQ</code> (available online at <code><a rel="nofollow" href="http://www.httrack.com/html/faq.html">http://www.httrack.com/html/faq.html</a></code> ) </p>
-<h2>Index</h2>

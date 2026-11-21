@@ -36,4 +36,3 @@ password
 <p> How the <i>,SERVICE/</i> and <i>,USERNAME/</i> parameters are handled depends on the backend, with the default Secret Service backend they are stored as item lookup attributes. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-secret-tool/">secret-tool</a></code>(1) </p>
-<h2>Index</h2>

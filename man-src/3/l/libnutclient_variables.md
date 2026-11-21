@@ -40,4 +40,3 @@ void nutclient_set_device_variable_values(NUTCLIENT_t client, const char *dev, c
 <p> <i>values</i> is the variable array of values.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_devices/">libnutclient_devices</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) </p>
-<h2>Index</h2>

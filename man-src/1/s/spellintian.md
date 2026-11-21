@@ -28,4 +28,3 @@ description: "spellintian – simple spellchecker based on Lintian’s data file
 <h2>AUTHORS</h2>
 <p> Niels Thykier &lt;niels [at] thykier.net&gt; (wrote the manpage) </p>
 <p> Jakub Wilk &lt;jwilk [at] jwilk.net&gt; (wrote the program) </p>
-<h2>Index</h2>

@@ -182,4 +182,3 @@ description: "hugs, runhugs, ffihugs – Hugs 98, functional programming system"
 <h2>AUTHOR</h2>
 <p> Hugs 98: Mark Jones and others, June 1999. </p>
 <p> Manual page: Jonathan Bowen, modified by Gary Leavens, and then (with apologies to the original authors) by Mark Jones. Updated for Hugs 98 by Antti-Juhani Kaijanaho and Ross Paterson. Updated for the March 2005 ffihugs changes by Joseph P. Skudlarek. </p>
-<h2>Index</h2>

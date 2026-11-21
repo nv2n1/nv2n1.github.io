@@ -50,4 +50,3 @@ description: "krb5_auth_con_addflags krb5_auth_con_free krb5_auth_con_genaddrs k
 <p> Fn krb5_free_authenticator free the content of Fa authenticator and Fa authenticator itself.</p>
 <h2>SEE ALSO</h2>
 <p> krb5_context3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

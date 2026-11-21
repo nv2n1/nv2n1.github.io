@@ -127,4 +127,3 @@ description: "msort – sort records in complex ways"
 <p> Bill Poser (billposer [at] alum.mit.edu)</p>
 <h2>LICENSE</h2>
 <p> GNU General Public License (<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>), version 3. </p>
-<h2>Index</h2>

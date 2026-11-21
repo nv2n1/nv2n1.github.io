@@ -34,4 +34,3 @@ description: "globus-sh-exec – Run a shell script"
 </dt><dd> Run the command <i>EXEC</i> instead of executing a separate script.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
-<h2>Index</h2>

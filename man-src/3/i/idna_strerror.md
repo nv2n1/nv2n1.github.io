@@ -55,4 +55,3 @@ description: "idna_strerror – API function"
 <dt>
 </dt><dd> <code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

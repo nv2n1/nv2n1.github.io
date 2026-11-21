@@ -124,4 +124,3 @@ description: "frama-c[.byte] – a static analyzer for C programs frama-c-gui[.b
 <dd> The default font for pretty-printing code in the GUI.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>Frama-C homepage</i>, <a rel="nofollow" href="http://frama-c.cea.fr">http://frama-c.cea.fr</a> </p>
-<h2>Index</h2>

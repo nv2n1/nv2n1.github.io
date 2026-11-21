@@ -124,4 +124,3 @@ void writeChtypeAttrib(
 </dt><dd> Finally, only a subset of the string is written. The function starts with the data from the <i>start</i> item of <i>string</i>, and ends before the <i>end</i> item. If <i>start</i> is greater than, or equal to <i>end</i>, no data is written.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_util/">cdk_util</a></code>(3) </p>
-<h2>Index</h2>

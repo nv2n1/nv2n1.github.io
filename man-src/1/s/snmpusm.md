@@ -115,4 +115,3 @@ createUser initial MD5 setup_passphrase DES
 <p> Manipulating the usmUserTable using this command can <i>only</i> be done using SNMPv3. This command will not work with the community-based versions, even if they have write access to the table. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5), <a href="/docs/linux/man/5-snmp-conf/">snmp.conf</a>(5), RFC 3414 </p>
-<h2>Index</h2>

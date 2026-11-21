@@ -135,4 +135,3 @@ description: "bindfs – mount –bind in user-space"
 <p> Martin P[:a]rtel &lt;martin dot partel at gmail dot com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-fusermount/">fusermount</a></code>(1) </p>
-<h2>Index</h2>

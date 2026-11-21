@@ -62,4 +62,3 @@ description: "pap – client interface to remote printers using Printer Access P
 </dt><dd> file read to obtain printer name if not specified on command line</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code>lpd</code>(8), <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8). </p>
-<h2>Index</h2>

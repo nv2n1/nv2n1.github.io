@@ -38,4 +38,3 @@ description: "marco-message – A command to send messages to Marco."
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
 <p> <code><a href="/docs/linux/man/1-marco/">marco</a></code>(1), <code><a href="/docs/linux/man/1-marco-theme-viewer/">marco-theme-viewer</a></code>(1), <code><a href="/docs/linux/man/1-marco-window-demo/">marco-window-demo</a></code>(1) </p>
-<h2>Index</h2>

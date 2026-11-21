@@ -112,4 +112,3 @@ description: "dla_porcond.f –"
 <p> Definition at line 141 of file dla_porcond.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

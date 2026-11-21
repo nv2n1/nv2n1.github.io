@@ -59,4 +59,3 @@ description: "Message Framing –"
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_INVALID_JOB_CONTACT</i> Invalid job contact</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>

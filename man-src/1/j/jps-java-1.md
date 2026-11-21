@@ -111,4 +111,3 @@ lvmid [[classname | JARfilename | "Unknown"] [arg * ] [jvmarg * ]]
 <dd> <a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) &#8211; the Java Remote Object Registry</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

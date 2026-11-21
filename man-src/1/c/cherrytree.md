@@ -16,4 +16,3 @@ description: "cherrytree – a hierarchical note taking application"
 <h2>AUTHOR</h2>
 <p> <code>cherrytree</code> was written by Giuseppe Penone &lt;giuspen [at] gmail.com&gt;. </p>
 <p> This manual page was written by Vincent Cheng &lt;Vincentc1208 [at] gmail.com&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "pgmslice – extract one line of pixel values out of a portable gr
 <p> <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> pgmslice was written by Jos Dingjan &lt;jos [at] tuatha.org&gt; after being unable to find the source code to Marco Beijersbergen&#8217;s program with the same name. </p>
-<h2>Index</h2>

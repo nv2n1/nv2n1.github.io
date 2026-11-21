@@ -64,4 +64,3 @@ description: "dpkg-gencontrol – generate Debian control files"
 <dd> The list of generated files which are part of the upload being prepared. <code>dpkg-gencontrol</code> adds the presumed filenames of binary packages whose control files it generates here.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-substvars/">deb-substvars</a></code>(5), <code><a href="/docs/linux/man/5-deb-src-control/">deb-src-control</a></code>(5), <code><a href="/docs/linux/man/5-deb-changelog/">deb-changelog</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5). </p>
-<h2>Index</h2>

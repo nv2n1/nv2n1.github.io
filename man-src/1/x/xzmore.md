@@ -23,4 +23,3 @@ description: "xzmore, lzmore – view xz or lzma compressed (text) files"
 <p> For list of keyboard commands supported while actually viewing the content of a file, refer to manual of the pager you use, usually <code><a href="/docs/linux/man/1-more/">more</a></code>(1).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-more/">more</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-xzless/">xzless</a></code>(1), <code><a href="/docs/linux/man/1-zmore/">zmore</a></code>(1) </p>
-<h2>Index</h2>

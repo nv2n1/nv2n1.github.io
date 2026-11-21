@@ -33,4 +33,3 @@ description: "lttng-ust-dl — LTTng UST 2.x Dynamic Linker Tracing"
 <p> You can find us on IRC server irc.oftc.net (OFTC) in #lttng. </p>
 <h2>AUTHORS</h2>
 <p> liblttng-ust was originally written by Mathieu Desnoyers, with additional contributions from various other people. It is currently maintained by Mathieu Desnoyers &lt;mathieu.desnoyers [at] efficios.com&gt;. </p>
-<h2>Index</h2>

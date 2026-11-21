@@ -64,4 +64,3 @@ description: "lockmail – create mail lock files"
 <dt>
 </dt><dd> [set $man.base.url.for.relative.links]/maildrop.html</dd></dl>
 </dl>
-<h2>Index</h2>

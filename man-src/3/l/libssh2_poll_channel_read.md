@@ -19,4 +19,3 @@ description: "libssh2_poll_channel_read – check if data is available"
 <p> Returns 1 when data is available and 0 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_poll/">libssh2_poll</a>(3)</code> </p>
-<h2>Index</h2>

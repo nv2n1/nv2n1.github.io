@@ -18,4 +18,3 @@ description: "get_config_argv – Reads a token list from the configuration file
 <p> Returns an argv style argument list and sets `argc&#8217; to the number of retrieved tokens. If the variable is not present, returns NULL and sets argc to zero. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3), <code><a href="/docs/linux/man/3-get_config_string/">get_config_string</a></code>(3), <code><a href="/docs/linux/man/3-get_config_float/">get_config_float</a></code>(3), <code><a href="/docs/linux/man/3-get_config_hex/">get_config_hex</a></code>(3), <code><a href="/docs/linux/man/3-get_config_int/">get_config_int</a></code>(3), <code><a href="/docs/linux/man/3-get_config_id/">get_config_id</a></code>(3), <code><a href="/docs/linux/man/3-exconfig/">exconfig</a></code>(3) </p>
-<h2>Index</h2>

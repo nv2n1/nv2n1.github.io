@@ -67,4 +67,3 @@ description: "owncloud – File synchronisation desktop utility."
 <p> The ownCloud developers</p>
 <h2>COPYRIGHT</h2>
 <p> 2013-2016, The ownCloud developers </p>
-<h2>Index</h2>

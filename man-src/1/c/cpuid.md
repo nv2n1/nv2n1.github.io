@@ -235,4 +235,3 @@ description: "cpuid – Dump CPUID information for each CPU"
  &lt;<a rel="nofollow" href="http://en.wikipedia.org/wiki/Category:X86_microprocessors">http://en.wikipedia.org/wiki/Category:X86_microprocessors</a>&gt;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Todd Allen &lt;cpuid [at] etallen.com&gt; </p>
-<h2>Index</h2>

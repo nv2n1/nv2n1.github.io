@@ -33,4 +33,3 @@ description: "gnutls_register_md5_handler – API function"
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

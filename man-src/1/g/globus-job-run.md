@@ -103,4 +103,3 @@ description: "globus-job-run – Execute a job using GRAM"
 <p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1), <a href="/docs/linux/man/1-globus-job-submit/">globus-job-submit</a>(1), <a href="/docs/linux/man/1-globus-job-clean/">globus-job-clean</a>(1), <a href="/docs/linux/man/1-globus-job-get-output/">globus-job-get-output</a>(1), <a href="/docs/linux/man/1-globus-job-cancel/">globus-job-cancel</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

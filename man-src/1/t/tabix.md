@@ -72,4 +72,3 @@ description: "tabix – Generic indexer for TAB-delimited genome position files"
 <p> Tabix was written by Heng Li. The BGZF library was originally implemented by Bob Handsaker and modified by Heng Li for remote file access and in-memory caching. </p>
 <h2>SEE ALSO</h2>
 <p> <i>bgzip</i>(1), <i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1) </p>
-<h2>Index</h2>

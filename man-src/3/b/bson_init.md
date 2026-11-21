@@ -21,4 +21,3 @@ void bson_init(bson_t *b);
 <p> The <code><a href="/docs/linux/man/3-bson_init/">bson_init</a>(3)</code> function shall initialize a <code>bson_t</code> that is placed on the stack. This is equivalent to initializing a <code>bson_t</code> to <code>BSON_INITIALIZER</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

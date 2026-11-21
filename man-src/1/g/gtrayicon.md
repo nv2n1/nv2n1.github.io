@@ -44,4 +44,3 @@ description: "gtrayicon – Generic tray icon for GNOME"
 <p> Website: <a rel="nofollow" href="http://gtrayicon.sourceforge.net/">http://gtrayicon.sourceforge.net/</a> </p>
 <h2>AUTHOR</h2>
 <p> Gtrayicon was written by Javier Valencia (javiervalencia80 at gmail.com) This Man page was written by Taylor LeMasurier-Wren &lt;ripps818 [at] gmail.com&gt; </p>
-<h2>Index</h2>

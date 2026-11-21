@@ -56,4 +56,3 @@ description: "texfont – font installation tool for ConTeXt"
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Frank K&uuml;ster &lt;frank [at] kuesterei.ch&gt;, for the Debian GNU/Linux system, and modified by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt;. It may be used and modified by others without contacting the authors. </p>
-<h2>Index</h2>

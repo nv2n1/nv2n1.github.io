@@ -54,4 +54,3 @@ description: "rmm – remove messages"
 <p> If a folder is given, it will become the current folder.</p>
 <h2>BUGS</h2>
 <p> Since <code>rmm</code> and <code>refile</code> use your <i>rmmproc</i> to delete the message, the <i>rmmproc</i> must <code>NOT</code> call <code>rmm</code> or <code>refile</code> without specifying <code>-normmproc</code>, or you will create an infinite loop. </p>
-<h2>Index</h2>

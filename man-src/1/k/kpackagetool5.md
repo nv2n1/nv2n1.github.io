@@ -72,4 +72,3 @@ description: "kpackagetool5 – Install, list, remove Plasma packages"
 <p> More detailed user documentation is available from m[blue]<code>help:/plasma-desktop</code>m[] (either enter this URL into Konqueror, or run <code>khelpcenter</code><i>help:/plasma-desktop</i>).</p>
 <h2>AUTHORS</h2>
 <p> <code>kpackagetool5</code> was written by Aaron Seigo&lt;aseigo [at] kde.org&gt;. </p>
-<h2>Index</h2>

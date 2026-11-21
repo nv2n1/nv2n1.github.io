@@ -32,4 +32,3 @@ description: "cpg_iteration_initialize – Initialize iterator for members of CP
 <p> <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cpg_iteration_next/">cpg_iteration_next</a></code>(3), <code><a href="/docs/linux/man/3-cpg_iteration_finalize/">cpg_iteration_finalize</a></code>(3), <code><a href="/docs/linux/man/3-cpg_initialize/">cpg_initialize</a></code>(3), <code><a href="/docs/linux/man/8-cpg_overview/">cpg_overview</a></code>(8) </p>
-<h2>Index</h2>

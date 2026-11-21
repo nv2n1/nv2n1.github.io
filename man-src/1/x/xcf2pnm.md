@@ -135,4 +135,3 @@ description: "xcf2pnm – convert from GIMP xcf files to ppm/pgm/pbm format"
 <p> <code>xcf2pnm</code> was written by Henning Makholm &lt;henning [at] makholm.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xcfinfo/">xcfinfo</a></code>(1), <code><a href="/docs/linux/man/1-xcf2png/">xcf2png</a></code>(1) </p>
-<h2>Index</h2>

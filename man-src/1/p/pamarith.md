@@ -57,4 +57,3 @@ description: "pamarith – perform arithmetic on two Netpbm images"
 <p> The <code>-compare</code> option was added in Netpbm 10.13 (December 2002). </p>
 <p> The bit string operations were added in Netpbm 10.27 (March 2005). </p>
 <p> The <code>-divide</code> option was added in Netpbm 10.30 (October 2005). </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – ob
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-avc_init/">avc_init</a></code>(3), <code><a href="/docs/linux/man/3-avc_has_perm/">avc_has_perm</a></code>(3), <code><a href="/docs/linux/man/3-avc_cache_stats/">avc_cache_stats</a></code>(3), <code><a href="/docs/linux/man/3-avc_add_callback/">avc_add_callback</a></code>(3), <code><a href="/docs/linux/man/3-getcon/">getcon</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

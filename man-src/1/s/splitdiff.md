@@ -52,4 +52,3 @@ description: "splitdiff – separate out incremental patches"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

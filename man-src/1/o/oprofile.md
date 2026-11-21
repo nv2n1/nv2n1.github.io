@@ -86,4 +86,3 @@ description: "oprofile – a system-wide profiler"
 <p> oprofile is Copyright (C) 1998-2004 University of Manchester, UK, John Levon, and others. OProfile is released under the GNU General Public License, Version 2, or (at your option) any later version.</p>
 <h2>AUTHORS</h2>
 <p> John Levon &lt;levon [at] movementarian.org&gt; is the primary author. See the documentation for other contributors. </p>
-<h2>Index</h2>

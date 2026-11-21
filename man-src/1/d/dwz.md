@@ -61,4 +61,3 @@ description: "dwz – DWARF optimization and duplicate removal tool"
 <p> <code><a rel="nofollow" href="http://dwarfstd.org/doc/DWARF4.pdf">http://dwarfstd.org/doc/DWARF4.pdf</a></code> , <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Jakub Jelinek &lt;jakub [at] redhat.com&gt;. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "libipmidetect – a library of functions to determine if a node is
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-ipmidetect/">ipmidetect</a>(8), <a href="/docs/linux/man/8-ipmidetectd/">ipmidetectd</a>(8) </p>
 <p> <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
-<h2>Index</h2>

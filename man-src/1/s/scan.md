@@ -82,4 +82,3 @@ folder    string   the name of the current folder
 <p> Prior to using the format string mechanism, <code>-header</code> used to generate a heading saying what each column in the listing was. Format strings prevent this from happening.</p>
 <h2>BUGS</h2>
 <p> The value of each <i>component</i> escape is set by <code>scan</code> to the contents of the first message header <code>scan</code> encounters with the corresponding component name; any following headers with the same component name are ignored. </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "netreport – request notification of network interface changes"
 <dd> Remove the current request (if any) for the calling process.</dd></dl>
 <h2>NOTES</h2>
 <p> If a program does not call netreport with the <code>-r</code> option before it exits, and another process is created with the same PID before any changes take place in interface status, it is possible that the new process will receive a spurious SIGIO. </p>
-<h2>Index</h2>

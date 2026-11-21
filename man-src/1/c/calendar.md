@@ -127,4 +127,3 @@ LANG = C
 <p> A <code>calendar</code> command appeared in AT&amp;T System v7 .</p>
 <h2>BUGS</h2>
 <p> <code>calendar</code> doesn&#8217;t handle all Jewish holidays or moon phases. </p>
-<h2>Index</h2>

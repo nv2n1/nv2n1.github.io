@@ -88,4 +88,3 @@ description: "autoreconf – Update generated configuration files"
 <dt>
 </dt><dd> <code>info autoreconf</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

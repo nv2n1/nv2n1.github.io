@@ -203,4 +203,3 @@ description: "clush – execute shell commands on a cluster"
 <p> Stephane Thiell &lt;sthiell [at] stanford.edu&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> GNU Lesser General Public License version 2.1 or later (LGPLv2.1+) </p>
-<h2>Index</h2>

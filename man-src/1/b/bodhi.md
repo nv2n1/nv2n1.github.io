@@ -79,4 +79,3 @@ description: "bodhi – manage Fedora updates"
 <p> Randy Barlow, Luke Macken</p>
 <h2>COPYRIGHT</h2>
 <p> 2007-2017, Red Hat, Inc. </p>
-<h2>Index</h2>

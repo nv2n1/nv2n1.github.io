@@ -117,4 +117,3 @@ show fear
 <h2>BUGS</h2>
 <p> Any occurrence of <code>-datefield</code> must occur prior to the <code>-after</code> or <code>-before</code> switch it applies to. </p>
 <p> The pattern syntax &#8220;[l-r]&#8221; is not supported; each letter to be matched must be included within the square brackets. </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ bson_string_append_unichar (bson_string_t *string,
 <p> Appends a unicode character to string. The character will be encoded into its multi-byte UTF-8 representation. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

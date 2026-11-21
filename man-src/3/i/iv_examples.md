@@ -277,4 +277,3 @@ int main()
 <p> This program will abort immediately, with the error message printed to the standard error stream.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_fatal</code>(3), <code>iv_fd</code>(3), <code>iv_timer</code>(3), <code>iv_task</code>(3), <code>iv_init</code>(3), <code>iv_time</code>(3) </p>
-<h2>Index</h2>

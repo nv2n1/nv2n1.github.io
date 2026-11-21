@@ -18,4 +18,3 @@ description: "docker-plugin-disable – Disable a plugin"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for disable</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-plugin/">docker-plugin</a>(1)</code> </p>
-<h2>Index</h2>

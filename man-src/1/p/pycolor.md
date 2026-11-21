@@ -21,4 +21,3 @@ description: "pycolor – Colorize a python file or stdin using ANSI and print t
 <dd> Give the color scheme to use. Currently only Linux (default), LightBG, and NOColor are implemented.</dd></dl>
 <h2>AUTHOR</h2>
 <p> pycolor was written by Fernando Perez &lt;fperez [at] colorado.edu&gt;. This manual page was written by Jack Moffitt &lt;jack [at] xiph.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

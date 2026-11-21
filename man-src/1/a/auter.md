@@ -108,4 +108,3 @@ description: "auter – manual page for auter 0.8"
 <p> 6 = auter is already running / PIDFILE exists </p>
 <p> 7 = neither yum nor dnf is available </p>
 <p> 8 = a pre/post hook exited with a non-zero error code </p>
-<h2>Index</h2>

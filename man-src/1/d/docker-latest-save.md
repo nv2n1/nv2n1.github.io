@@ -37,4 +37,3 @@ $ ls -sh fedora-latest.tar
 <p> <code><a href="/docs/linux/man/1-docker-load/">docker-load</a>(1)</code> to load an image from a tar archive on STDIN. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; November 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

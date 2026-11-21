@@ -45,4 +45,3 @@ description: "sge_share_mon – print xxQS_NAMExx live share tree"
 <dd> Don&#8217;t print non-leaf nodes.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-fopen/">fopen</a></i>(3), <i><a href="/docs/linux/man/3-printf/">printf</a></i>(3), </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "mbrowse – SNMP MIB browser and query tool"
 <p> This manual page was written by Clément Stenac &lt;zorglub [at] via.ecp.fr&gt;, for the Debian GNU/Linux project (but may be used by others). </p>
 <p> Added comment on MIB path for Fedora and removed two typos &#8212; Volker Fröhlich &lt;volker27 [at] gmx.at&gt; </p>
 <p> mbrowse was written by Aaron Hodgen </p>
-<h2>Index</h2>

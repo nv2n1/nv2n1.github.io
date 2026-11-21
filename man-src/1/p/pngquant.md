@@ -53,4 +53,3 @@ description: "pngquant – PNG converter and lossy image compressor"
 <h2>AUTHOR</h2>
 <p> <code>pngquant</code> is developed by Kornel Lesinski Aq Mt kornel [at] pngquant.org based on code by Greg Roelofs Aq Mt newt [at] pobox.com . </p>
 <p> Lk <a rel="nofollow" href="https://pngquant.org">https://pngquant.org</a> pngquant homepage . </p>
-<h2>Index</h2>

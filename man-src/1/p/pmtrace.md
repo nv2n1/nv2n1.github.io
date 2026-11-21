@@ -32,4 +32,3 @@ description: "pmtrace – command line performance instrumentation"
 <h2>DIAGNOSTICS</h2>
 <p> All are generated on standard error and are intended to be self-explanatory. </p>
 <p> The <code>pmtrace</code> exit status is always zero except when the <code>-e</code> option is in use, in which case the exit status of <i>command</i> is returned. </p>
-<h2>Index</h2>

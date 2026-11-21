@@ -23,4 +23,3 @@ description: "ql/indexes/ibor/chflibor.hpp – CHF LIBOR rate"
 <p> CHF LIBOR rate </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -129,4 +129,3 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
  Used by <code>init_mib</code> only.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3), <code>output_api</code>(3) </p>
-<h2>Index</h2>

@@ -105,4 +105,3 @@ VARIABLE2=VALUE2
 <dl>
 <dt>
 </dt><dd> &bull; <i>LPASS_CLIPBOARD_COMMAND</i></dd></dl>
-<h2>Index</h2>

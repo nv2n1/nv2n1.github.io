@@ -167,4 +167,3 @@ size_t&amp;nbsp;error_diag_len
 <dt><code>DRMAA_ERRNO_RELEASE_INCONSISTENT_STATE</code></dt>
 <dd> The job is not in a hold state.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

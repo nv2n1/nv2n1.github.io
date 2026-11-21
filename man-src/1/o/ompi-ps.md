@@ -35,4 +35,3 @@ description: "ompi-ps, orte-ps – Displays information about the active jobs an
 <p> <i>ompi-ps</i> displays the state of jobs running inside an Open RTE universe.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-orterun/">orterun</a>(1), <a href="/docs/linux/man/1-orte-clean/">orte-clean</a>(1) </p>
-<h2>Index</h2>

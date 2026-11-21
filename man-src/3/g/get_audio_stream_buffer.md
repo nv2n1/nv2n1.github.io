@@ -28,4 +28,3 @@ void *mem_chunk;
 <p> If it returns NULL, the stream is still playing the previous lot of data, so you don&#8217;t need to do anything. If it returns a value, that is the location of the next buffer to be played, and you should load the appropriate number of samples (however many you specified when creating the stream) to that address, for example using an fread() from a disk file. After filling the buffer with data, call free_audio_stream_buffer() to indicate that the new data is now valid. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_audio_stream/">play_audio_stream</a></code>(3), <code><a href="/docs/linux/man/3-free_audio_stream_buffer/">free_audio_stream_buffer</a></code>(3), <code><a href="/docs/linux/man/3-exstream/">exstream</a></code>(3) </p>
-<h2>Index</h2>

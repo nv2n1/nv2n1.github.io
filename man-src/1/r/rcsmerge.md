@@ -77,4 +77,3 @@ description: "rcsmerge – merge RCS revisions"
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dd></dl>
 <p> has news and links to the latest release, development site, etc. </p>
-<h2>Index</h2>

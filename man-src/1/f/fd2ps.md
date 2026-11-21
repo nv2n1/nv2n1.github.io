@@ -55,4 +55,3 @@ description: "fd2ps – Translates fdesign output to PostScript"
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br />
  <a rel="nofollow" href="http://world.std.com/~xforms">http://world.std.com/~xforms</a> </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ npm unpublish [&lt;@scope&gt;/]&lt;pkg&gt; --force
 <dd> npm help owner </dd>
 </dl>
 </dl>
-<h2>Index</h2>

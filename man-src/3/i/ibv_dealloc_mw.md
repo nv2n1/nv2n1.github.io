@@ -34,4 +34,3 @@ int ibv_dealloc_mw(struct ibv_mw *mw);
 </dd><dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

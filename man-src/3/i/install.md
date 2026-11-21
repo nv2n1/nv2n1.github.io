@@ -26,4 +26,3 @@ description: "install – Installation Before installing QuantLib, make sure tha
 <p>&nbsp;<wbr><a rel="nofollow" href="http://quantlib.org/download.shtml">http://quantlib.org/download.shtml</a> </p>
 <p> Before compiling the library, you might want to edit the file &#8216;ql/userconfig.hpp&#8217;; see the <code>User configuration</code> section for details. </p>
 <p> Projects files are supplied for building the library with Microsoft Visual C++ 7.1, 8.0 and 9.0 and with Dev-C++. </p>
-<h2>Index</h2>

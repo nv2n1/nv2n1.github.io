@@ -87,4 +87,3 @@ info gnupg
 </pre>
 </dd></dl>
 <p> should give you access to the complete manual including a menu structure and an index. </p>
-<h2>Index</h2>

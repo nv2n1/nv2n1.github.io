@@ -112,4 +112,3 @@ description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 <p> The program could be much faster. </p>
 <h2>AUTHOR</h2>
 <p> <code>pnmtojpeg</code> and this man page were derived in large part from <code>cjpeg</code>, by the Independent JPEG Group. The program is otherwise by Bryan Henderson on March 07, 2000. </p>
-<h2>Index</h2>

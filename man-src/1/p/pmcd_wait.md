@@ -40,4 +40,3 @@ description: "pmcd_wait – wait for PMCD to accept client connections"
 <dt><code>4</code></dt>
 <dd> A PCP error occurred, use <code>-v</code> for more details. </dd>
 </dl>
-<h2>Index</h2>

@@ -64,4 +64,4 @@ authenticate {
  <code>authorization,</code> <code>authentication</code> <h2>FILES</h2>
  <i>/etc/raddb/radiusd.conf</i> <h2>SEE ALSO</h2>
  <code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd.conf/">radiusd.conf</a></code>(5)  <h2>AUTHOR</h2>
- Chris Parker, cparker [at] segv.org <h2>Index</h2>
+ Chris Parker, cparker [at] segv.org 

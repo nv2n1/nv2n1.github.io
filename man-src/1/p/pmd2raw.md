@@ -23,4 +23,3 @@ description: "pmd2raw – manual page for pmd2raw 0.0.3"
 <dd> show version information and exit</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="https://bugs.documentfoundation.org/">https://bugs.documentfoundation.org/</a>&gt;. </p>
-<h2>Index</h2>

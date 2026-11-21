@@ -22,4 +22,3 @@ description: "gtk3-widget-factory – Demonstrate GTK+ widgets"
 <dl>
 <dt>
 </dt><dd> Show help options</dd></dl>
-<h2>Index</h2>

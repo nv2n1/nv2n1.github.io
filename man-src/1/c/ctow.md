@@ -28,4 +28,3 @@ description: "ctow – Convert Canna text-form dictionary into Wnn text-form dic
 <dt><a href="/docs/linux/man/1-wtoc/">wtoc</a>(1)</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

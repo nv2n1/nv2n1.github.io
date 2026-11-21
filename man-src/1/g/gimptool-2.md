@@ -124,4 +124,3 @@ description: "gimptool-2.0 – script to perform various GIMPy functions"
 <h2>AUTHORS</h2>
 <p> gimptool was written by Manish Singh (yosh [at] gimp.org) and is based on gtk-config by Owen Taylor (owen [at] gtk.org). </p>
 <p> This man page was written by Ben Gertzfield (che [at] debian.org), and tweaked by Manish Singh (yosh [at] gimp.org), Adrian Likins (adrian [at] gimp.org) and Marc Lehmann (pcg [at] goof.com&gt;). </p>
-<h2>Index</h2>

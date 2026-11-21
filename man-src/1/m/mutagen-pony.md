@@ -16,4 +16,3 @@ description: "mutagen-pony – scan a collection of MP3 files"
 <p> It is primarily intended as a debugging tool for Mutagen.</p>
 <h2>AUTHORS</h2>
 <p> Michael Urman and Joe Wreschnig </p>
-<h2>Index</h2>

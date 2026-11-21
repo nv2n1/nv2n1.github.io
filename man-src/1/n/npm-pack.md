@@ -35,4 +35,3 @@ npm pack[[&lt;@scope&gt; / ]&lt;pkg&gt;...][--dry - run]
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

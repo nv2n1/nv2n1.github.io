@@ -24,4 +24,3 @@ description: "afpgetstatus – Get simple status information from an AFP server 
 <p> Report bugs to the afpfs-ng-devel [at] sf.net mailing list.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afpcmd/">afpcmd</a></code>(1) </p>
-<h2>Index</h2>

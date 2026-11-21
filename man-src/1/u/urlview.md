@@ -49,4 +49,3 @@ description: "urlview – URL extractor/launcher"
 <p> Modified for Debian by Luis Francisco Gonzalez &lt;luisgh [at] debian.org&gt; and Emanuele Rocca &lt;ema [at] debian.org&gt;. </p>
 <p> Modified for SuSE by Dr. Werner Fink &lt;werner [at] suse.de&gt; and Stepan Kasal &lt;kasal [at] suse.cz&gt;. </p>
 <p> Changes put together by Thomas Roessler &lt;roessler [at] does-not-exist.org&gt;. </p>
-<h2>Index</h2>

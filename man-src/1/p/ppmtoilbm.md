@@ -83,4 +83,3 @@ description: "ppmtoilbm – convert a portable pixmap into an ILBM file"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer.<br />
  Modified October 1993 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de) </p>
-<h2>Index</h2>

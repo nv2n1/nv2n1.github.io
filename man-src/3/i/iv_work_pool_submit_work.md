@@ -44,4 +44,3 @@ struct iv_work_item {
 <p> Internally, <code>iv_work</code> uses <code>iv_thread</code>(3) for its thread management. </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_thread</code>(3) </p>
-<h2>Index</h2>

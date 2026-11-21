@@ -84,4 +84,3 @@ description: "grdreformat – Converting between different grid file formats."
 <p> <code>grdreformat</code> etopo2.grd etopo2.i2=bs <code>-N</code> <code>-V</code></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-grdmath/">grdmath</a></i>(1) </p>
-<h2>Index</h2>

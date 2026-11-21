@@ -208,4 +208,3 @@ Endif
 <p> was written by: </p>
 <p> An Ed Zaleski Aq oddsock [at] oddsock.org An Moritz Grimm Aq mgrimm [at] mrsserver.net </p>
 <p> An -nosplit This manual was written by An Moritz Grimm . </p>
-<h2>Index</h2>

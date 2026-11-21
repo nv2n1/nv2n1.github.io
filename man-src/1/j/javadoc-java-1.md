@@ -1755,4 +1755,3 @@ SRCDIR = '/java/jdk/1.7.0/src/share/classes'</code>
 <dd> <i>How Javac and Javadoc Find Classes</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/findingclasses.html#srcfiles">http://docs.oracle.com/javase/7/docs/technotes/tools/findingclasses.html#srcfiles</a> (tools.jar)</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

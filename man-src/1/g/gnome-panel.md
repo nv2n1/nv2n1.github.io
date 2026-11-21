@@ -21,4 +21,3 @@ description: "gnome-panel – Display the GNOME panel"
 <dd> Replace an already running panel.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>gnome-panel</i> program, please report these on <a rel="nofollow" href="https://bugzilla.gnome.org.">https://bugzilla.gnome.org.</a> </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ pct2rgb.py[-of format][-b band][-rgba] source_file dest_file
 <p> The new &#8216;-expand rgb|rgba&#8217; option of gdal_translate obsoletes that utility.</p>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

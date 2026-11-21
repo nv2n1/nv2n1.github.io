@@ -126,4 +126,3 @@ description: "rrdcgi – Create web pages containing RRD graphs based on templat
 <p> Note 2: The SRC=/&#8230;/pngs should be paths from the view of the webserver/browser</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

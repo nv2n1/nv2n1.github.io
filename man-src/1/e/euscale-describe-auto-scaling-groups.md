@@ -43,4 +43,3 @@ description: "euscale-describe-auto-scaling-groups – Describe auto-scaling gro
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

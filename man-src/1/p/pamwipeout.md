@@ -34,4 +34,3 @@ description: "pamwipeout – replace detail with smooth gradient from one edge t
 <p> <code>pamwipeout</code> was new in Netpbm 10.54 (March 2011). </p>
 <h2>AUTHORS</h2>
 <p> <i>Willem van Schaik</i> wrote this program in January 2011 and contributed it to Netpbm. </p>
-<h2>Index</h2>

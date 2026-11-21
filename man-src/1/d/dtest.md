@@ -52,4 +52,3 @@ description: "dtest – simple uDAPL send/receive and RDMA test"
 <dd> &lt;<i>ardavis [at] ichips.intel.com</i>&gt; </dd>
 </dl>
 <h2>BUGS</h2>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "cilc – Mono CIL-to-C binding generator"
 <p> Written by Alp Toker &lt;alp [at] atoker.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1) </p>
-<h2>Index</h2>

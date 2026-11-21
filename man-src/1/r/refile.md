@@ -63,4 +63,3 @@ description: "refile – file message in other folders"
 <p> If the &#8220;Previous-Sequence&#8221; profile entry is set, in addition to defining the named sequences from the source folder, <code>refile</code> will also define those sequences for the destination folders. See <code>mh-sequence (5)</code> for information concerning the previous sequence.</p>
 <h2>BUGS</h2>
 <p> Since <code>refile</code> and <code>rmm</code> use your <i>rmmproc</i> to delete the message, the <i>rmmproc</i> must <code>NOT</code> call <code>refile</code> or <code>rmm</code> without specifying <code>-normmproc</code>, or you will create an infinite loop. </p>
-<h2>Index</h2>

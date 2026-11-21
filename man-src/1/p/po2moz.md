@@ -46,4 +46,3 @@ description: "po2moz – Convert Gettext PO localization files to Mozilla .dtd a
 <dt>&#8211;nofuzzy</dt>
 <dd> don&#8217;t use translations marked fuzzy (default) </dd>
 </dl>
-<h2>Index</h2>

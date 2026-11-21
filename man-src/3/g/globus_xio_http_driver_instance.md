@@ -13,4 +13,3 @@ description: "Opening/Closing – An XIO handle with the http driver can be crea
 <p> If the handle is created with <code>globus_xio_handle_create()</code>, then an HTTP client handle will be created when <code>globus_xio_register_open()</code> is called. HTTP request headers, version and method may be chosen by setting attributes. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

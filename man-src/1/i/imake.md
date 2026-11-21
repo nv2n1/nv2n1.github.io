@@ -103,4 +103,3 @@ description: "imake – C preprocessor interface to the make utility"
 <dd> If defined, this should be a valid path to a make program, such as &#8220;/usr/local/make&#8221;. By default, <i>imake</i> will use whatever <i>make</i> program is found using <i><a href="/docs/linux/man/3-execvp/">execvp</a>(3).</i> This variable is only used if the &#8220;-e&#8221; option is specified.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Todd Brunhoff, Tektronix and MIT Project Athena; Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

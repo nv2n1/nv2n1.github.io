@@ -104,4 +104,3 @@ Character Replacement-- -- -- -- -- -- -- -- -- -- -
 <p> Please send bug reports to the OpenPrinting bug tracker: </p>
 <p> <a rel="nofollow" href="http://bugs.linuxfoundation.org/">http://bugs.linuxfoundation.org/</a> </p>
 <p> Use &quot;OpenPrinting&quot; as the product and &quot;cups-filters&quot; as the component. </p>
-<h2>Index</h2>

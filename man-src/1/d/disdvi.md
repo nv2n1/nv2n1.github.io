@@ -20,4 +20,3 @@ description: "disdvi – `disassemble’ a (p)TeX or XeTeX DVI file"
 <h2>AUTHOR</h2>
 <p> Marcel J.E. Mol, Delft University of Technology, The Netherlands<br />
  marcel [at] mesa.nl, MESA Consulting </p>
-<h2>Index</h2>

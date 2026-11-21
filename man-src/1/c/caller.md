@@ -12,4 +12,3 @@ description: "bash, :, ., [, alias, bg, bind, break, builtin, caller, cd, comman
 <h2>BASH BUILTIN COMMANDS</h2>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-bash/">bash</a>(1), <a href="/docs/linux/man/1-sh/">sh</a>(1) </p>
-<h2>Index</h2>

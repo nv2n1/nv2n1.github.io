@@ -31,4 +31,3 @@ description: "create_makefiles – Recreates all Makefiles beneath a directory"
 <h2>AUTHORS</h2>
 <p> <code>create_makefiles</code> was written by David Faure &lt;faure [at] kde.org&gt;. </p>
 <p> This manual page was prepared by Ben Burton &lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

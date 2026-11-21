@@ -61,4 +61,3 @@ description: "NFORenum – A tool for checking NFO code for errors, and for beau
 <h2>AUTHOR</h2>
 <p> nforenum was written by Dale McCoy, with portions by Dan Masek, Thijs Marinussen, Remko Bijker and Christoph Elsenhans. </p>
 <p> This manual page was written by Remko Bijker. </p>
-<h2>Index</h2>

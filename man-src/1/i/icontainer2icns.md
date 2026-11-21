@@ -20,4 +20,3 @@ description: "icontainer2icns – extract icns files from icontainers"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005-2007 Thomas Lübking<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

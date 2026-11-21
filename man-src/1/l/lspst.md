@@ -34,4 +34,3 @@ description: "lspst – list PST (MS Outlook Personal Folders) file data"
 <p> You should have received a copy of the GNU General Public License along with this program; see the file COPYING. If not, please write to the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.</p>
 <h2>VERSION</h2>
 <p> 0.6.59 </p>
-<h2>Index</h2>

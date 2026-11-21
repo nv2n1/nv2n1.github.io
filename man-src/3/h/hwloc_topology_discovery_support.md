@@ -20,4 +20,3 @@ description: "hwloc_topology_discovery_support –"
 <p> Detecting the number of PU objects is supported. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

@@ -99,4 +99,3 @@ description: "mateconftool-2 – MATE configuration tool"
 <h2>SEE ALSO</h2>
 <p> The MateConf web site, <i><a rel="nofollow" href="http://www.gnome.org/projects/mateconf/.">http://www.gnome.org/projects/mateconf/.</a> </p>
 <p> </i></p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "euca-describe-keypairs – Display information about available key
 <dt>key-name</dt>
 <dd> name of the key pair </dd>
 </dl>
-<h2>Index</h2>

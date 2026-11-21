@@ -333,4 +333,3 @@ description: "htmldoc – convert html source files into html, postscript, or pd
 <p> This software is based in part on the work of the Independent JPEG Group and FLTK project.</p>
 <h2>NO WARRANTY</h2>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

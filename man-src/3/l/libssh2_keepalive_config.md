@@ -25,4 +25,3 @@ void libssh2_keepalive_config(LIBSSH2_SESSION *session,
 <p> Added in libssh2 1.2.5</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_keepalive_send/">libssh2_keepalive_send</a>(3)</code> </p>
-<h2>Index</h2>

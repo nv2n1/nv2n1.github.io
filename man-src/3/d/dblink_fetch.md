@@ -53,4 +53,3 @@ funcname | source-- -- -- -- -- --+-- -- -- -- -- --byteanlike | byteanlike byte
 funcname | source-- -- -- -- --+-- -- -- --(0 rows)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

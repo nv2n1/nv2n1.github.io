@@ -78,4 +78,3 @@ description: "prelude-admin – Manage agents accounts"
 </dl>
 <h2>AUTHOR</h2>
 <p> This man page has been written by Frederic Motte </p>
-<h2>Index</h2>

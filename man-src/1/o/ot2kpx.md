@@ -60,4 +60,3 @@ description: "ot2kpx – extract kerning information from OpenType fonts"
 <dt><i>2019-04-15</i></dt>
 <dd> Added the <i>-lua</i> command-line option to get output in Luatex&#8217;s custom feature format. </dd>
 </dl>
-<h2>Index</h2>

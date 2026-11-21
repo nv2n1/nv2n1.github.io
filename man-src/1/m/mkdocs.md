@@ -27,4 +27,3 @@ description: "mkdocs – Create HTML documentation from markdown sources"
 <dd> commit changes to a GitHub Page</dd></dl>
 <h2>AUTHOR</h2>
 <p> MkDocs by Tom Christie and Dougal Matthews This manpage was written for William Moreno Reyes for the Fedora Project and be used under a CC-By License. </p>
-<h2>Index</h2>

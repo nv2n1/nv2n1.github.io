@@ -92,4 +92,3 @@ description: "nip2 – image processing with the VIPS library"
 <p> Invert the 2&#215;2 matrix and write the result to poop.mat. </p>
 <h2>COPYRIGHT</h2>
 <p> 2008 (c) Imperial College, London </p>
-<h2>Index</h2>

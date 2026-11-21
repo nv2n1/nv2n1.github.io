@@ -57,4 +57,3 @@ description: "pmap – report memory map of a process"
 <p> No standards apply, but <code>pmap</code> looks an awful lot like a SunOS command.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

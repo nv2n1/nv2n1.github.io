@@ -24,4 +24,3 @@ ibnd_node_t *ibnd_find_node_guid(ibnd_fabric_t *fabric, uint64_t guid)
 <dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "euca-describe-vpc-peering-connections – Show information about V
 <dt>vpc-peering-connection-id</dt>
 <dd> the peering connection&#8217;s ID </dd>
 </dl>
-<h2>Index</h2>

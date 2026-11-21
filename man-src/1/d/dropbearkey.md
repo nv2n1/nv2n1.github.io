@@ -37,4 +37,3 @@ description: "dropbearkey – create private keys for the use with dropbear(8) o
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-dropbear/">dropbear</a>(8), <a href="/docs/linux/man/1-dbclient/">dbclient</a>(1), <a href="/docs/linux/man/1-dropbearconvert/">dropbearconvert</a>(1) </p>
 <p> <a rel="nofollow" href="https://matt.ucc.asn.au/dropbear/dropbear.html">https://matt.ucc.asn.au/dropbear/dropbear.html</a> </p>
-<h2>Index</h2>

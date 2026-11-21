@@ -383,4 +383,3 @@ philnelson [at] acm.org
 </pre>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> The author would like to thank Steve Sommars (Steve.Sommars [at] att.com) for his extensive help in testing the implementation. Many great suggestions were given. This is a much better product due to his involvement. </p>
-<h2>Index</h2>

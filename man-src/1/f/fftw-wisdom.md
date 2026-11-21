@@ -58,4 +58,3 @@ description: "fftw-wisdom – create wisdom (pre-optimized FFTs)"
  Copyright (c) 2003, 2007-11 Massachusetts Institute of Technology</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fftw-wisdom-to-conf/">fftw-wisdom-to-conf</a>(1) </p>
-<h2>Index</h2>

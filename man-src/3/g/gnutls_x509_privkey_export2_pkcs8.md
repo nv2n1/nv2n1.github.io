@@ -43,4 +43,3 @@ description: "gnutls_x509_privkey_export2_pkcs8 – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

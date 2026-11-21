@@ -135,4 +135,3 @@ description: "mutt – The Mutt Mail User Agent"
 <p> The Mutt manual</p>
 <h2>AUTHOR</h2>
 <p> Michael Elkins, and others. Use &lt;mutt-dev [at] mutt.org&gt; to contact the developers. </p>
-<h2>Index</h2>

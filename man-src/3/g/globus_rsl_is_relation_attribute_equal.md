@@ -225,4 +225,3 @@ $( &quot;GLOBUSRUN_GASS_URL&quot; )
 </dt><dd> The <code>globus_rsl_value_is_sequence()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value sequnce; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

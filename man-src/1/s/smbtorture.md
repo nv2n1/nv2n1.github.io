@@ -192,4 +192,3 @@ description: "smbtorture – Run a series of tests against a SMB server"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
-<h2>Index</h2>

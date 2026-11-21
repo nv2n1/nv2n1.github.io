@@ -108,4 +108,3 @@ yarn install
 <p> The Yarn Contributors</p>
 <h2>COPYRIGHT</h2>
 <p> This manual page was written by Paolo Greppi <code>&lt;paolo.greppi [at] libpf.com&gt;</code> for the Debian project (and may be used by others), based on material from the yarnpkg project itself. </p>
-<h2>Index</h2>

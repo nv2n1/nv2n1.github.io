@@ -31,4 +31,3 @@ struct iv_event {
 <p> Internally, <code>iv_event</code> is implemented as a wrapper around <code>iv_event_raw</code>(3), and multiplexes multiple <code>struct iv_event</code> objects over per-thread <code>struct iv_event_raw</code> objects, to save file descriptors and kernel resources. </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_event_raw</code>(3) </p>
-<h2>Index</h2>

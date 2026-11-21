@@ -30,4 +30,3 @@ description: "puddletag – puddletag"
 <dd> Show (useless) debug messages. Do not use.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The puddletag website ( <code><a rel="nofollow" href="http://puddletag.sourceforge.net">http://puddletag.sourceforge.net</a></code> ) contains more info. It is also the best place to get help. </p>
-<h2>Index</h2>

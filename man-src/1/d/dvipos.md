@@ -76,4 +76,3 @@ dvipos -b /tmp/debug.pos notes.dvi
 <p> does not. </p>
 <h2>AUTHOR</h2>
 <p> <code>dvipos</code> is written by Jin-Hwan Cho &lt;chofchof [at] ktug.or.kr&gt;. It is free software (GPLv2 or later). This manpage was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt; and is in the public domain. </p>
-<h2>Index</h2>

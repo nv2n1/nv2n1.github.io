@@ -755,4 +755,3 @@ $is_ebcdic = $Config{&#8216;ebcdic&#8217;} eq &#8216;define&#8217;;</p>
 <h2>AUTHOR</h2>
 <p> Peter Prymmer pvhp [at] best.com wrote this in 1999 and 2000 with <font SIZE="-1">CCSID 0819</font> and 0037 help from Chris Leach and André Pirard A.Pirard [at] ulg.ac.be as well as POSIX-BC help from Thomas Dorner Thomas.Dorner [at] start.de. Thanks also to Vickie Cooper, Philip Newton, William Raffloer, and Joe Smith. Trademarks, registered trademarks, service marks and registered service marks used in this document are the property of their respective owners. </p>
 <p> Now maintained by Perl5 Porters. </p>
-<h2>Index</h2>

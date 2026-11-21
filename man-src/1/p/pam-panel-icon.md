@@ -23,4 +23,3 @@ description: "pam-panel-icon – A notification area indicator of pam_timestamp 
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pam_timestamp/">pam_timestamp</a></code>(8), <code><a href="/docs/linux/man/8-pam_timestamp_check/">pam_timestamp_check</a></code>(8) </p>
-<h2>Index</h2>

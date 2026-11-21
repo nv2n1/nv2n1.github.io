@@ -26,4 +26,3 @@ bson_reader_set_destroy_func (bson_reader_t             *reader,
 <p> Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "dconf-editor – Graphical editor for gsettings and dconf"
 <dd> Launchs application without showing initial warning.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7) <code><a href="/docs/linux/man/1-dconf/">dconf</a></code>(1) <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1) </p>
-<h2>Index</h2>

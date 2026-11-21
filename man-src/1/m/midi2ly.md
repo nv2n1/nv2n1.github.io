@@ -51,4 +51,3 @@ description: "midi2ly – manual page for midi2ly (LilyPond) 2.12.2"
 <dt>
 </dt><dd> <code>info midi2ly</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

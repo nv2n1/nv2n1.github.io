@@ -55,4 +55,3 @@ description: "mateconf-gsettings-schema-convert – MateConf to GSettings schema
 </dt><dd> Keep underscores in key names instead of replacing them with dashes. GSettings keys should not contain any underscore.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mateconf-gsettings-data-convert/">mateconf-gsettings-data-convert</a></code>(1) a related command to migrate user settings from MateConf to GSettings. </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "gnubiff – a mail notification program supporting GTK+ and GNOME"
 <p> None known.</p>
 <h2>AUTHORS</h2>
 <p> gnubiff was developed by Nicolas Rougier &lt;Nicolas.Rougier [at] loria.fr&gt; and is currently maintained by Robert Sowada &lt;sowadart [at] gmx.de&gt;. This manpage was written by Roland Stigge &lt;stigge [at] antcom.de&gt; for Debian. It can be used elsewhere, of course. </p>
-<h2>Index</h2>

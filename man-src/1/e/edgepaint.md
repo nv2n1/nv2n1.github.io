@@ -41,4 +41,3 @@ description: "edgepaint – edge coloring to disambiguate crossing edges"
 <p> Yifan Hu &lt;yifanhu [at] yahoo.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvmap/">gvmap</a>(1), <a href="/docs/linux/man/1-sfdp/">sfdp</a>(1), neato (1), <a href="/docs/linux/man/1-dot/">dot</a>(1) </p>
-<h2>Index</h2>

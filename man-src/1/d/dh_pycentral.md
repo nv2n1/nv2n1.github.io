@@ -39,4 +39,3 @@ description: "dh_pycentral – use the python-central framework to handle Python
 <h2>AUTHORS</h2>
 <p> Raphael Hertzog &lt;hertzog [at] debian.org&gt; </p>
 <p> Also includes bits of the old dh_python written by Josselin Mouette &lt;joss [at] debian.org&gt; who used many ideas from Brendan O&#8217;Dea &lt;bod [at] debian.org&gt;. </p>
-<h2>Index</h2>

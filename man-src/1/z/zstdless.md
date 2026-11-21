@@ -15,4 +15,3 @@ description: "zstdless – view zstandard-compressed files"
 <p> <code>zstdless</code> runs <code>less (1)</code> on files or stdin, if no files argument is given, after decompressing them with <code>zstdcat (1)</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code>zstd (1)</code> </p>
-<h2>Index</h2>

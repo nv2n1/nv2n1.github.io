@@ -72,4 +72,3 @@ description: "IBDM – Network Checker and Attributes Analyzer"
 <dd> Verify not only CA-CA paths but also <font SIZE="-1">SW-SW</font>, CA-SW and <font SIZE="-1">SW-CA</font>. Both check for <font SIZE="-1">FDB</font> path connectivity and also for credit loops.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
-<h2>Index</h2>

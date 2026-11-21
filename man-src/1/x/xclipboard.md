@@ -85,4 +85,3 @@ XClipboard  xclipboard
 <p> Ralph R. Swick, DEC/MIT Project Athena<br />
  Chris D. Peterson, MIT X Consortium<br />
  Keith Packard, MIT X Consortium </p>
-<h2>Index</h2>

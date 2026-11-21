@@ -22,4 +22,3 @@ if (fli_pal_dirty_from &lt;= fli_pal_dirty_to)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>fli_palette</code>(3), <code>reset_fli_variables</code>(3) </p>
-<h2>Index</h2>

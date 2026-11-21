@@ -261,4 +261,3 @@ typedef struct _hist_state {
 <p> If you find a bug in the <code>history</code> library, you should report it. But first, you should make sure that it really is a bug, and that it appears in the latest version of the <code>history</code> library that you have. </p>
 <p> Once you have determined that a bug actually exists, mail a bug report to <i>bug-readline</i>@<i>gnu.org</i>. If you have a fix, you are welcome to mail that as well! Suggestions and `philosophical&#8217; bug reports may be mailed to bug-readline@<i>gnu.org</i> or posted to the Usenet newsgroup <code>gnu.bash.bug</code>. </p>
 <p> Comments and bug reports concerning this manual page should be directed to <i>chet [at] ins.CWRU.Edu</i>. </p>
-<h2>Index</h2>

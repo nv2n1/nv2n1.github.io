@@ -107,4 +107,3 @@ description: "Galeon – gecko-based GNOME web browser"
 <p> The webpage for Galeon is at <a rel="nofollow" href="http://galeon.sourceforge.net.">http://galeon.sourceforge.net.</a> Here you can find info about Galeon and download the latest version.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gtm</code>(1) </p>
-<h2>Index</h2>

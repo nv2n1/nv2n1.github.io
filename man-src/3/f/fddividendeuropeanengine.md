@@ -21,4 +21,3 @@ description: "ql/pricingengines/vanilla/fddividendeuropeanengine.hpp – finite-
 <p> finite-differences engine for European option with dividends </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

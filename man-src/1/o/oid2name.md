@@ -201,4 +201,3 @@ From database "alvherre":
 </dd></dl>
 <h2>AUTHOR</h2>
 <p> B. Palmer &lt;bpalmer [at] crimelabs.net&gt; </p>
-<h2>Index</h2>

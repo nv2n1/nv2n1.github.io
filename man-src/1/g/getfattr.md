@@ -61,4 +61,3 @@ getfattr[-hRLP] - n name[-e en] pathname... getfattr[-hRLP] - d[-e en][-m patter
 <p> Please send your bug reports or comments to &lt;<i><a rel="nofollow" href="https://savannah.nongnu.org/bugs/?group=attr">https://savannah.nongnu.org/bugs/?group=attr</a></i>&gt; or &lt;<i>acl-devel [at] nongnu.org</i>&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-setfattr/">setfattr</a></code>(1), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5) </p>
-<h2>Index</h2>

@@ -118,4 +118,3 @@ description: "dla_syrcond.f –"
 <p> Definition at line 147 of file dla_syrcond.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

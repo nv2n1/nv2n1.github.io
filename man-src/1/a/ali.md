@@ -43,4 +43,3 @@ description: "ali – list mail aliases"
 <p> None</p>
 <h2>BUGS</h2>
 <p> The <code>-user</code> option with <code>-nonormalize</code> is not entirely accurate, as it does not replace local nicknames for hosts with their official site names. </p>
-<h2>Index</h2>

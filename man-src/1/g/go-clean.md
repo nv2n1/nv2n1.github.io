@@ -56,4 +56,3 @@ description: "go-clean – remove object files and cached files"
 <p> For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help clean&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

@@ -547,4 +547,3 @@ $feature{&#8216;pathinfo&#8217;} {&#8216;default&#8217;} = [1];
 <dt>
 </dt><dd> mailto:git [at] vger.kernel.org</dd></dl>
 </dl>
-<h2>Index</h2>

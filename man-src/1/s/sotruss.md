@@ -38,4 +38,3 @@ description: "sotruss – trace shared library calls through PLT"
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ld-so/">ld.so</a>(8).</code> </p>
-<h2>Index</h2>

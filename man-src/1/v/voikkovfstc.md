@@ -21,4 +21,3 @@ description: "voikkovfstc – compiler for Varissuo finite state transducers"
 <dd> Specify format for output file. Possible formats are &#8216;be&#8217; (big endian), &#8216;le&#8217; (little endian) or &#8216;native&#8217; (use the endianess of the host). Default is &#8216;le&#8217;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> voikkovfstc and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
-<h2>Index</h2>

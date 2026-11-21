@@ -23,4 +23,3 @@ description: "kpseaccess – determine whether a file can be accessed"
 <dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-access/">access</a></code>(2) </p>
-<h2>Index</h2>

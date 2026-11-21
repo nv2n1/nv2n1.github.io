@@ -42,4 +42,3 @@ description: "bsetroot – blackbox utility to change root window appearance"
 <p> Bsetroot was written and maintained by Brad Hughes (blackbox [at] alug.org) and Jeff Raven (jraven [at] psu.edu).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-blackbox/">blackbox</a></i>(1) </p>
-<h2>Index</h2>

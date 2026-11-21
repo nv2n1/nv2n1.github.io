@@ -49,4 +49,3 @@ description: "ibus – command line utility for ibus"
 <p> If you find a bug, please report it at <a rel="nofollow" href="https://github.com/ibus/ibus/issues">https://github.com/ibus/ibus/issues</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-ibus-emoji/">ibus-emoji</a></code>(7) </p>
-<h2>Index</h2>

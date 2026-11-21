@@ -198,4 +198,3 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 <dt>&bull;</dt>
 <dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; </dd>
 </dl>
-<h2>Index</h2>

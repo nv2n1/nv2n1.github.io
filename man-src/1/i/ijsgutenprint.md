@@ -38,4 +38,3 @@ description: "ijsgutenprint – Ghostscript driver for Gutenprint"
 <p> This manual page was written by Robert Krawitz (rlk [at] alum.mit.edu) and Roger Leigh (rleigh [at] debian.org).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) </p>
-<h2>Index</h2>

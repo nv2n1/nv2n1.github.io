@@ -20,4 +20,3 @@ description: "xqodem – Qodem Terminal Emulator"
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-qodem/">qodem</a>(1) </p>
-<h2>Index</h2>

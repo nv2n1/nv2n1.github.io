@@ -42,4 +42,3 @@ description: "iso-read – reads portions of an ISO 9660 image"
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Have driver: GNU/Linux ioctl and MMC driver Have driver: cdrdao (TOC) disk image driver Have driver: bin/cuesheet disk image driver Have driver: Nero NRG disk image driver Default CD-ROM device: /dev/sr0</p>
 <h2>SEE ALSO</h2>
 <p> <tt><a href="/docs/linux/man/1-iso-info/">iso-info</a>(1)</tt> for information about an ISO-9660 image. <tt><a href="/docs/linux/man/1-cd-read/">cd-read</a>(1)</tt> to read portions of an ISO 9660 image. </p>
-<h2>Index</h2>

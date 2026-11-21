@@ -17,4 +17,3 @@ description: "usb_modeswitch_dispatcher – Linux wrapper for usb_modeswitch (no
 <p> This program is called by udev and is not supposed to be called directly by the user.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-usb_modeswitch/">usb_modeswitch</a>(1).</code> </p>
-<h2>Index</h2>

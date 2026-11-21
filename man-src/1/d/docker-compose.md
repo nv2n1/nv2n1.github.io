@@ -145,4 +145,3 @@ description: "docker-compose – Define and run multi-container applications wit
 <p> Full documentation for docker-compose at: &lt;<a rel="nofollow" href="http://docs.docker.com/compose/">http://docs.docker.com/compose/</a>&gt;</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Dariusz Dwornikowski &lt;dariusz.dwornikowski [at] cs.put.poznan.pl&gt; based on the official docker compose documentation. </p>
-<h2>Index</h2>

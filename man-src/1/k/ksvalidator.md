@@ -28,4 +28,3 @@ description: "ksvalidator — verify the syntax of a kickstart file"
 <dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksflatten (1), ksverdiff (1) </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "llvm-size – manual page for llvm-size 9"
 <dd> &#8211; Print size in hexadecimal</dd>
 <dt> <code>&#8211;totals</code> &#8211; Print totals of all objects &#8211; Berkeley format only</dt></dl>
 <dd>Pass @FILE as argument to read options from FILE. </dd>
-<h2>Index</h2>

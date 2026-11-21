@@ -64,4 +64,3 @@ description: "bglmake – create or update Bigloo makefiles"
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-bglafile/">bglafile</a>(1), <a href="/docs/linux/man/1-bgldepend/">bgldepend</a>(1), <a href="/docs/linux/man/1-bgltags/">bgltags</a>(1), <a href="/docs/linux/man/1-make/">make</a>(1), <a href="/docs/linux/man/1-bglmco/">bglmco</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
-<h2>Index</h2>

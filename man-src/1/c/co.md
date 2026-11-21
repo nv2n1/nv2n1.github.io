@@ -195,4 +195,3 @@ $        $
 <h2>LIMITS</h2>
 <p> Links to the <font SIZE="-1">RCS</font> and working files are not preserved. </p>
 <p> There is no way to selectively suppress the expansion of keywords, except by writing them differently. In nroff and troff, this is done by embedding the null-character <code>\&amp;</code> into the keyword. </p>
-<h2>Index</h2>

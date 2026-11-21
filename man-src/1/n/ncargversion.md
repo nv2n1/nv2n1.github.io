@@ -17,4 +17,3 @@ description: "ncargversion – Display NCAR Graphics Version number"
 <p> Copyright (C) 1987-2011<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

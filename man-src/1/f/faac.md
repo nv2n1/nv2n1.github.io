@@ -91,4 +91,3 @@ description: "faac – open source MPEG-4 and MPEG-2 AAC encoder"
 <h2>AUTHORS</h2>
 <p> <code>FAAC</code> was written by M. Bakker &lt;menno [at] audiocoding.com&gt;. </p>
 <p> This manpage was written by Fabian Greffrath &lt;fabian [at] debian-unofficial.org&gt; for the Debian Unofficial project (but may be used by others, of course). </p>
-<h2>Index</h2>

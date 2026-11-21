@@ -230,4 +230,3 @@ then
 <dt>
 </dt><dd> <a rel="nofollow" href="http://seclists.org/nmap-hackers/2000/315">http://seclists.org/nmap-hackers/2000/315</a></dd></dl>
 </dl>
-<h2>Index</h2>

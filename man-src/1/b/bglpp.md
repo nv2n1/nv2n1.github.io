@@ -35,4 +35,3 @@ description: "bglpp – a Scheme Pretty Printer"
 <p> <a href="/docs/linux/man/1-bigloo/">bigloo</a>(1), <a href="/docs/linux/man/1-indent/">indent</a>(1), cb(1) </p>
 <h2>AUTHOR</h2>
 <p> Manuel SERRANO, Manuel.Serrano [at] inria.fr </p>
-<h2>Index</h2>

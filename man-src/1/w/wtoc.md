@@ -37,4 +37,3 @@ description: "wtoc – Convert a Wnn text-form dictionary (or dictionaries) into
 <dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

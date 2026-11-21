@@ -39,4 +39,3 @@ description: "audio2tape – Sinclair ZX Spectrum audio to tape file converter"
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Fredrick Meunier (fredm [at] spamcop.net). </p>
-<h2>Index</h2>

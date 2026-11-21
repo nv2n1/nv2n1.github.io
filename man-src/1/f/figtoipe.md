@@ -35,4 +35,3 @@ Alexander B[:u]rger &lt;acfb [at] users.sf.net&gt; (image handling)
 <h2>LICENSE & WARRANTY</h2>
 <p> <code>figtoipe</code> comes with ABSOLUTELY NO WARRANTY. It is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <p> See the file <code>GPL-2</code> accompanying the source for details. </p>
-<h2>Index</h2>

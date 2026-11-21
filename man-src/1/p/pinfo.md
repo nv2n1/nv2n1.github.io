@@ -329,4 +329,3 @@ SAFE-GROUP=nobody
 <p> There was also a lot of other people, who contributed to this code. See the AUTHORS file. </p>
 <h2>COMMENTS</h2>
 <p> The author would like to read some comments and suggestions from you, if any. </p>
-<h2>Index</h2>

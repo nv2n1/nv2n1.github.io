@@ -277,4 +277,3 @@ table:xxx block_allocation=first table:xxx prefix_compress=false
 <dl>
 <dt>
 </dt><dd> By default, attempting to overwrite an already existing record will fail. The -o option changes write to overwrite previously existing records.</dd></dl>
-<h2>Index</h2>

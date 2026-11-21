@@ -190,4 +190,3 @@ $ docker network inspect-- verbose ov1
 <p> <code>-v</code>, <code>&#8211;verbose</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Verbose output for diagnostics</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-network/">docker-network</a>(1)</code> </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "getdns_list_set, getdns_list_set_bindata, getdns_list_set_dict, ge
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_address/">getdns_address</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list/">getdns_list</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list_get/">getdns_list_get</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ Seth Vidal &lt;skvidal [at] fedoraproject.org&gt;
 </pre>
 <h2>BUGS</h2>
 <p> Any bugs which are found should be emailed to the mailing list: rpm-metadata [at] lists.baseurl.org or filed as tickets at: <a rel="nofollow" href="http://createrepo.baseurl.org/">http://createrepo.baseurl.org/</a> </p>
-<h2>Index</h2>

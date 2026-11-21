@@ -22,4 +22,3 @@ description: "ql/experimental/volatility/extendedblackvariancesurface.hpp – Bl
 <p> Black volatility surface modelled as variance surface. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

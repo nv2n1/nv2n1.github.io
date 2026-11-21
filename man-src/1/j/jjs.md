@@ -139,4 +139,3 @@ jjs[options][script - files][--arguments]
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>jrunscript</code> </p>
-<h2>Index</h2>

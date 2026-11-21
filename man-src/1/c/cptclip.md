@@ -62,4 +62,3 @@ description: "cptclip – extract a sub-table from a GMT colour palette table (c
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1), <code><a href="/docs/linux/man/1-makecpt/">makecpt</a></code>(1). </p>
-<h2>Index</h2>

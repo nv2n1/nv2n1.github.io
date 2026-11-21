@@ -27,4 +27,3 @@ description: "mdconvert – Maildir mailbox UID storage scheme converter"
 <p> <a href="/docs/linux/man/1-mbsync/">mbsync</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Written and maintained by Oswald Buddenhagen &lt;ossi [at] users.sf.net&gt;. </p>
-<h2>Index</h2>

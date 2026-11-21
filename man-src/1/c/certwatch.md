@@ -49,4 +49,3 @@ description: "certwatch – generate SSL certificate expiry warnings"
 <p> /etc/cron.daily/certwatch, /etc/sysconfig/httpd</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-genkey/">genkey</a>(1) </p>
-<h2>Index</h2>

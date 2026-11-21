@@ -30,4 +30,3 @@ description: "keyhead – Change FITS or IRAF header keyword names"
 <p> <a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/keyhead.html">http://tdc-www.harvard.edu/software/wcstools/keyhead.html</a> </p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

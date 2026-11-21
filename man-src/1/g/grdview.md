@@ -127,4 +127,3 @@ gmt grdview topo.nc -JM6i -Qi -p140/30 -Itopo_intens.nc \
 <p> <code>gmt</code>, <code>grd2rgb</code>, <code>gmtcolors</code>, <code>grdcontour</code>, <code>grdimage</code>, <code>nearneighbor</code>, <code>psbasemap</code>, <code>pscontour</code>, <code>pstext</code>, <code>surface</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

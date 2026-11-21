@@ -68,4 +68,3 @@ git check - ignore[&lt;options&gt;]&lt;pathname&gt;... git check - ignore[&lt;op
 <p> <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5) <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) <code><a href="/docs/linux/man/1-git-ls-files/">git-ls-files</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

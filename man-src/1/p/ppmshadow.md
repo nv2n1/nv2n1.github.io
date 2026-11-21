@@ -79,4 +79,3 @@ description: "ppmshadow – add simulated shadows to a portable pixmap image"
 <p> John Walker &lt;<a rel="nofollow" href="http://www.fourmilab.ch">http://www.fourmilab.ch</a>&gt; August 8, 1997</p>
 <h2>COPYRIGHT</h2>
 <p> This software is in the public domain. Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, without any conditions or restrictions. </p>
-<h2>Index</h2>

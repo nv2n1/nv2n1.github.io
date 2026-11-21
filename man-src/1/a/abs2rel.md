@@ -18,4 +18,3 @@ description: "abs2rel – convert absolute path to relative path"
 <p> <code>abs2rel foo/bar foo/baz</code> will print <code>../bar</code> on standard output.</p>
 <h2>REPORTING BUGS</h2>
 <p> Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[]. </p>
-<h2>Index</h2>

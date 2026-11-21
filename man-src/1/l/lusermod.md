@@ -54,4 +54,3 @@ description: "lusermod – Modify an user"
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
-<h2>Index</h2>

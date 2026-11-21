@@ -38,4 +38,3 @@ description: "synce-remove-program – removes a program from your device"
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> synce(1) <a href="/docs/linux/man/1-synce-list-programs/">synce-list-programs</a>(1) <a href="/docs/linux/man/1-synce-install-cab/">synce-install-cab</a>(1) <a href="/docs/linux/man/1-prun/">prun</a>(1) </p>
-<h2>Index</h2>

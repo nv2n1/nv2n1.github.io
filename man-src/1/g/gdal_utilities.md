@@ -127,4 +127,3 @@ description: "gdal_utilities – GDAL Utilities The following utility programs a
 <dt><code>&#8211;help-general</code></dt>
 <dd> Gives a brief usage message for the generic GDAL commandline options and exit.</dd></dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

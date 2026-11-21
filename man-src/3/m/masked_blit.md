@@ -25,4 +25,3 @@ BITMAP *hud_overlay;
 <p> Warning: if the hardware acceleration flag is not set, masked_blit() will not work correctly when used with a source image in system or video memory so the latter must be a memory bitmap. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-blit/">blit</a></code>(3), <code><a href="/docs/linux/man/3-masked_stretch_blit/">masked_stretch_blit</a></code>(3), <code><a href="/docs/linux/man/3-draw_sprite/">draw_sprite</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_mask_color/">bitmap_mask_color</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-expat/">expat</a></code>(3) </p>
-<h2>Index</h2>

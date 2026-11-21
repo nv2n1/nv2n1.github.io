@@ -33,4 +33,3 @@ description: "pamtohtmltbl – convert pnm/pam visual image to an HTML table"
 <p> <code>pamtohtmltbl</code> was new in Netpbm 10.15 (April 2003). </p>
 <h2>AUTHORS</h2>
 <p> Alexander B. Ivanov (SSH) wrote a program he called <code>pnm2html</code>. Bryan Henderson adapted it to use the Netpbm libraries and handle PAM images and follow Netpbm conventions, and named it <code>pamtohtmltbl</code>. </p>
-<h2>Index</h2>

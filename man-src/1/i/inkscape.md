@@ -265,4 +265,3 @@ inkscape-- actions = "export-id:MyTriangle; export-id-only; export-background:pu
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 1999-2020 by Authors. </p>
 <p> <code>Inkscape</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> version 3 or later. </p>
-<h2>Index</h2>

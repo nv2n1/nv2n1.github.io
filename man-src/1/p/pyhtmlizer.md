@@ -22,4 +22,3 @@ description: "pyhtmlizer – pretty-print Python source as HTML"
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> Output version information and exit. </dd>
 </dl>
-<h2>Index</h2>

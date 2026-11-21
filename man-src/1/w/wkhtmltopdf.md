@@ -282,4 +282,3 @@ description: "wkhtmltopdf – html to pdf converter"
 &nbsp;<wbr>&nbsp;Lyes Amazouz<br />
 &nbsp;<wbr>&nbsp;Pascal Bach<br />
 &nbsp;<wbr>&nbsp;Mário Silva </p>
-<h2>Index</h2>

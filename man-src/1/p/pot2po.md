@@ -44,4 +44,3 @@ description: "pot2po – Convert template files (like .pot or template .xlf file
 <dt>&#8211;nofuzzymatching</dt>
 <dd> Disable fuzzy matching </dd>
 </dl>
-<h2>Index</h2>

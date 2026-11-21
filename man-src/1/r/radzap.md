@@ -39,4 +39,3 @@ description: "radzap – remove rogue entries from the active sessions database"
 <p> <a href="/docs/linux/man/1-radwho/">radwho</a>(1), <a href="/docs/linux/man/1-radclient/">radclient</a>(1), <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> Alan DeKok &lt;aland [at] ox.org&gt; </p>
-<h2>Index</h2>

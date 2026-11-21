@@ -35,4 +35,3 @@ description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm form
 <p> <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pfmtopam</code> was added to Netpbm in Release 10.22 (April 2004). </p>
-<h2>Index</h2>

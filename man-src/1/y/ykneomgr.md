@@ -80,4 +80,3 @@ description: "ykneomgr – YubiKey NEO management tool"
 <p> The error &quot;No device found&quot; can be because a number of reasons. The simplest, of course, is that the device really is not connected to the machine (USB or NFC). Another reason may be that it is in a mode where &quot;ykneomgr&quot; cannot talk to it. This can happen if the device is in OTP-only mode (mode 0), where you must use the &quot;ykpersonalize&quot; tool to mode switch it from the OTP-only mode. It can also happen if the device is in a MODE_FLAG_EJECT mode (i.e., 81 or 82). If that is the case, you must touch the button in order to &quot;insert&quot; the virtual smartcard before you can invoke &quot;ykneomgr&quot;.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;yubico-devel [at] googlegroups.com&gt;. </p>
-<h2>Index</h2>

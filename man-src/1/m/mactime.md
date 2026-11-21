@@ -47,4 +47,3 @@ description: "mactime – Create an ASCII time line of file activity"
 <h2>AUTHOR</h2>
 <p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
 <p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

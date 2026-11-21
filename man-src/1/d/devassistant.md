@@ -59,4 +59,3 @@ description: "devassistant – setup development environment and create basic pr
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-da/">da</a></code>(1) <code>da-gui</code>(1) </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "xetex-unsafe, xelatex-unsafe – run xe(la)latex unsafely"
 <p> For more about XeTeX: <a rel="nofollow" href="https://tug.org/xetex">https://tug.org/xetex</a> </p>
 <p> For more about PSTricks: <a rel="nofollow" href="https://tug.org/PSTricks">https://tug.org/PSTricks</a> </p>
 <p> Email for xe(la)tex-unsafe specifically: <a rel="nofollow" href="https://lists.tug.org/dvipdfmx">https://lists.tug.org/dvipdfmx</a> </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "ninja – small build system closest in spirit to Make"
 <dd> adjust warnings (use &#8216;-w list&#8217; to list warnings)</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Gary Kramlich &lt;grim [at] reaperworld.com&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

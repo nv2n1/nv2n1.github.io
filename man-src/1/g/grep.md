@@ -250,4 +250,3 @@ description: "grep, egrep, fgrep, rgrep – print lines that match patterns"
 <dt>
 </dt><dd> <code>info grep</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -109,4 +109,3 @@ to inbox:
 }
 </code></pre>
 <p> So, if both options are specified, messages are retrieved multiple times. </p>
-<h2>Index</h2>

@@ -164,4 +164,3 @@ Seattle, Washington. The Alpine community extends its most sincere
 thanks to all contributors and invites everyone to join in and
 contribute to this project.
 </code></pre>
-<h2>Index</h2>

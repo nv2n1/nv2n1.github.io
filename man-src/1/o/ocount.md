@@ -77,4 +77,3 @@ description: "ocount – Event counting tool for Linux"
 <p> This man page is current for oprofile-0.9.9. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-operf/">operf</a>(1). </p>
-<h2>Index</h2>

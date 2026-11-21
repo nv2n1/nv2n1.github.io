@@ -53,4 +53,3 @@ description: "crypt_checksalt – validate a crypt setting string"
 </table>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-crypt/">crypt</a>(3), crypt_gensalt3, <a href="/docs/linux/man/5-crypt/">crypt</a>(5) </p>
-<h2>Index</h2>

@@ -54,4 +54,3 @@ description: "fparseln – return the next logical line from a stream"
 <p> <a href="/docs/linux/man/3-fgetln/">fgetln</a>(3)</p>
 <h2>HISTORY</h2>
 <p> The Fn fparseln function first appeared in Nx 1.4 . </p>
-<h2>Index</h2>

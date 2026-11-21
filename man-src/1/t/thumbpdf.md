@@ -60,4 +60,3 @@ description: "thumbpdf – generate thumbnail images for a PDF file created with
 <h2>AUTHOR</h2>
 <p> <code>thumbpdf</code> was written by Heiko Oberdiek &lt;oberdiek [at] ruf.uni-freiburg.de&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;c@eskimo.com&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

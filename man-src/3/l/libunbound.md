@@ -138,4 +138,3 @@ struct ub_result {
 <p> <i><a href="/docs/linux/man/5-unbound-conf/">unbound.conf</a></i>(5), <i><a href="/docs/linux/man/8-unbound/">unbound</a></i>(8).</p>
 <h2>AUTHORS</h2>
 <p> <code>Unbound</code> developers are mentioned in the CREDITS file in the distribution. </p>
-<h2>Index</h2>

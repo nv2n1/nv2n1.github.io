@@ -20,4 +20,3 @@ description: "gtk4-encode-symbolic-svg – Symbolic icon conversion utility"
 <h2>OPTIONS</h2>
 <p> <code>-o, &#8211;output DIRECTORY</code> Write png files to <code>DIRECTORY</code> instead of the current working directory. </p>
 <p> <code>&#8211;debug</code> Generate PNG files of the various channels during the conversion. If these files are not monochrome green, they are often helpful in pinpointing the problematic parts of the source SVG. </p>
-<h2>Index</h2>

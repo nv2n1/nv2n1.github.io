@@ -90,4 +90,3 @@ description: "whiptail – display dialog boxes from shell scripts"
 <p> Modifications for whiptail by: </p>
 <p> Enrique Zanardi (ezanard [at] debian.org) </p>
 <p> Alastair McKinstry (mckinstry [at] debian.org) </p>
-<h2>Index</h2>

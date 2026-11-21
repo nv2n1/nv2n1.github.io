@@ -26,4 +26,3 @@ description: "write – send a message to another user"
 <p> A command appeared in AT&amp;T System v1 .</p>
 <h2>BUGS</h2>
 <p> The sender&#8217;s <code>LC_CTYPE</code> setting is used to determine which characters are safe to write to a terminal, not the receiver&#8217;s (which has no way of knowing). </p>
-<h2>Index</h2>

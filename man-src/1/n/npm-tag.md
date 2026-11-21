@@ -60,4 +60,3 @@ npm install --tag &lt;tag&gt;
 <dt>&bull;</dt>
 <dd> npm help 5 npmrc</dd>
 </dl>
-<h2>Index</h2>

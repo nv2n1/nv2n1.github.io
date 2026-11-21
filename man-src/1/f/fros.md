@@ -25,4 +25,3 @@ description: "fros – universal screencasting frontend with pluggable support f
 <p> Jiri Moskovc &lt;jmoskovc at redhat dot com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-recordmydesktop/">recordmydesktop</a></code>(1) </p>
-<h2>Index</h2>

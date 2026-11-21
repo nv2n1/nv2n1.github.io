@@ -24,4 +24,3 @@ description: "ql/methods/montecarlo/longstaffschwartzpathpricer.hpp – Longstaf
 <p> Longstaff-Schwarz path pricer for early exercise options. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

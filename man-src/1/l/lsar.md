@@ -39,4 +39,3 @@ description: "lsar – list archive file contents"
 <dd> Display help information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-unar/">unar</a></code>(1) </p>
-<h2>Index</h2>

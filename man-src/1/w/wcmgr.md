@@ -52,4 +52,3 @@ description: "wcmgr – Webalizer (DNS) Cache file Manager"
 <p> Copyright (C) 1997-2013 by Bradford L. Barrett. Distributed under the GNU GPL. See the files &quot;<i>COPYING</i>&quot; and &quot;<i>Copyright</i>&quot;, supplied with all distributions for additional information.</p>
 <h2>AUTHOR</h2>
 <p> Bradford L. Barrett &lt;<i>brad at mrunix dot net</i>&gt; </p>
-<h2>Index</h2>

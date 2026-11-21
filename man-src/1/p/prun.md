@@ -41,4 +41,3 @@ description: "prun – run program"
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> synce(1) <a href="/docs/linux/man/1-pstatus/">pstatus</a>(1) </p>
-<h2>Index</h2>

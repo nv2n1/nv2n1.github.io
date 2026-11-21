@@ -19,4 +19,3 @@ description: "xmbind — Configures virtual key bindings"
 <dd> This option specifies the display to use; see X(1).</dd></dl>
 <h2>RELATED</h2>
 <p> <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3) and <code>X</code>(1). </p>
-<h2>Index</h2>

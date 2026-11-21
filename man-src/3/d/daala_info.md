@@ -47,4 +47,3 @@ description: "daala_info –"
 <p> key frame rate defined how often a key frame is emitted by encoder in number of frames. So 10 means every 10th frame is a keyframe. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

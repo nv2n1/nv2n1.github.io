@@ -20,4 +20,3 @@ description: "rtmsrv – a stub server"
 <h2>AUTHORS</h2>
 <p> Andrej Stepanchuk, Howard Chu<br />
  &lt;<a rel="nofollow" href="http://rtmpdump.mplayerhq.hu">http://rtmpdump.mplayerhq.hu</a>&gt; </p>
-<h2>Index</h2>

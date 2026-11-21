@@ -40,4 +40,3 @@ description: "obspectrophore – SPECTROPHORE calculator"
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 2 of the License. </p>
 <p> The algorithm in this software has been covered by patent WO2009146735. However, Silicos NV and the inventors of the above mentioned patent assure that no patent infringment claims will be issued against individuals or institutions that use this software under the GNU General Public License. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
-<h2>Index</h2>

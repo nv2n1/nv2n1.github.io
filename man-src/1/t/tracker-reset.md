@@ -28,4 +28,3 @@ description: "tracker-reset – Reset the index and configuration"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-daemon/">tracker-daemon</a></code>(1). <code>tracker</code>(1). </p>
-<h2>Index</h2>

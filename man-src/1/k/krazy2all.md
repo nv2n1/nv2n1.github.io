@@ -96,4 +96,3 @@ description: "krazy2all – Sanity checks KDE source code."
 <p> <i>krazyrc</i>(5), <i><a href="/docs/linux/man/1-krazy2/">krazy2</a></i>(1), <i><a href="/docs/linux/man/1-krazy2xml/">krazy2xml</a></i>(1)</p>
 <h2>AUTHORS</h2>
 <p> Allen Winter, &lt;winter [at] kde.org&gt; </p>
-<h2>Index</h2>

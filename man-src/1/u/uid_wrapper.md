@@ -87,4 +87,3 @@ bool uid_wrapper_enabled(void)
 </code></pre>
 </dd></dl>
 <p> Since uid_wrapper overloads this function if enabled, you can use it in your code to detect uid_wrapper. </p>
-<h2>Index</h2>

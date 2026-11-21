@@ -85,4 +85,3 @@ description: "proj – forward cartographic projection filter invproj – invers
  <i>An Album of Map Projections</i> (Snyder &amp; Voxland, 1989, USGS Prof. Paper 1453).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>
-<h2>Index</h2>

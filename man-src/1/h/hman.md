@@ -32,4 +32,3 @@ description: "hman – browse the on-line manual pages"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-man2html/">man2html</a></code>(1), <code>arena</code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-sensible-browser/">sensible-browser</a></code>(1), <code>netscape</code>(1), <code>xmosaic</code>(1), <code>glimpse</code>(1) </p>
 <p> <a rel="nofollow" href="http://www.mcom.com/newsref/std/x-remote.html">http://www.mcom.com/newsref/std/x-remote.html</a> </p>
-<h2>Index</h2>

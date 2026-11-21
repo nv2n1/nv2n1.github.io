@@ -127,4 +127,3 @@ eval ./configure `pg_config --configure`
 </pre>
 </dd></dl>
 <p> The output of pg_config &#8211;configure contains shell quotation marks so arguments with spaces are represented correctly. Therefore, using eval is required for proper results. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "lxqt-leave – Dialog to easily select logout, reboot, shutdown, s
 <p> <code>lxqt-config.1</code> LXQt settings Configuration Center interface </p>
 <h2>AUTHOR</h2>
 <p> This manual page was created by <code>Paulo Lieuthier</code> <i>&lt;paulolieuthier [at] gmail.com&gt;</i> for the <code>LXQt</code> project. </p>
-<h2>Index</h2>

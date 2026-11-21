@@ -18,4 +18,3 @@ description: "docker-trust-signer-add – Add a signer"
 <p> <code>&#8211;key</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Path to the signer&#8217;s public key file</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-trust-signer/">docker-trust-signer</a>(1)</code> </p>
-<h2>Index</h2>

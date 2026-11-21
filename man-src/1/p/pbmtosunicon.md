@@ -18,4 +18,3 @@ description: "pbmtosunicon – convert a PBM image into a Sun icon"
 <p> <code><a href="/docs/linux/man/1-sunicontopnm/">sunicontopnm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtowinicon/">ppmtowinicon</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtozinc/">pbmtozinc</a></code>(1) , <code>ppmotuil</code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Jef Poskanzer. </p>
-<h2>Index</h2>

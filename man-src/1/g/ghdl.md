@@ -63,4 +63,3 @@ description: "ghdl – VHDL compiler/simulator"
 <p> The texinfo manual fully documents GHDL. You may also browse it at <code>&lt;<a rel="nofollow" href="http://ghdl.free.fr/ghdl/index.html">http://ghdl.free.fr/ghdl/index.html</a>&gt;</code>.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Wesley J. Landaker &lt;wjl [at] icecavern.net&gt;, for the Debian project (but may be used by others). It is released under the same terms as GHDL, i.e. the GNU General Public License. It was modified by Tristan Gingold to include it in the GHDL sources. </p>
-<h2>Index</h2>

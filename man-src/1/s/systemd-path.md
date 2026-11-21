@@ -34,4 +34,3 @@ description: "systemd-path – List and query system and user paths"
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></code>(7) </p>
-<h2>Index</h2>

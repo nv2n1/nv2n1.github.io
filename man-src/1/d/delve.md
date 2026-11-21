@@ -46,4 +46,3 @@ description: "delve – Inspect the contents of a Xapian database"
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

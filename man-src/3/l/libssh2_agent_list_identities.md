@@ -20,4 +20,3 @@ description: "libssh2_agent_list_identities – request an ssh-agent to list of 
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_agent_connect/">libssh2_agent_connect</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_agent_get_identity/">libssh2_agent_get_identity</a>(3)</code> </p>
-<h2>Index</h2>

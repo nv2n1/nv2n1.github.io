@@ -17,4 +17,3 @@ description: "draw_compiled_sprite – Draws a compiled sprite. Allegro game pro
 <p> Hint: if not being able to clip compiled sprites is a problem, a neat trick is to set up a work surface (memory bitmap, mode-X virtual screen, or whatever) a bit bigger than you really need, and use the middle of it as your screen. That way you can draw slightly off the edge without any trouble&#8230; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_compiled_sprite/">get_compiled_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_sprite/">draw_sprite</a></code>(3), <code><a href="/docs/linux/man/3-draw_rle_sprite/">draw_rle_sprite</a></code>(3), <code><a href="/docs/linux/man/3-bitmap_mask_color/">bitmap_mask_color</a></code>(3) </p>
-<h2>Index</h2>

@@ -88,4 +88,3 @@ description: "slowhttptest – Denial Of Service attacks simulator"
 <h2>AUTHOR</h2>
 <p> Sergey Shekyan Aq shekyan [at] gmail.com . </p>
 <p> Project page Aq <a rel="nofollow" href="http://code.google.com/p/slowhttptest/">http://code.google.com/p/slowhttptest/</a> . </p>
-<h2>Index</h2>

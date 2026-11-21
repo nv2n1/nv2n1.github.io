@@ -140,4 +140,3 @@ description: "md5deep – Compute and compare MD5 message digests sha1deep – C
  <a rel="nofollow" href="http://www.cs.technion.ac.il/~biham/Reports/Tiger/">http://www.cs.technion.ac.il/~biham/Reports/Tiger/</a> </p>
 <p> The Whirlpool specification is available at<br />
  <a rel="nofollow" href="http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html">http://planeta.terra.com.br/informatica/paulobarreto/WhirlpoolPage.html</a> </p>
-<h2>Index</h2>

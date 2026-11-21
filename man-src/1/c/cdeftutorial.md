@@ -422,4 +422,3 @@ then a else b<br />
 <p> The RRDtool manpages  </p>
 <h2>AUTHOR</h2>
 <p> Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; </p>
-<h2>Index</h2>

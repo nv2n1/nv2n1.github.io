@@ -595,4 +595,3 @@ description: "collectl – Collects data that describes the current system statu
 <p> This program was written by Mark Seger (mjseger [at] gmail.com).<br />
  Copyright 2003-2015 Hewlett-Packard Development Company, LP<br />
  collectl may be copied only under the terms of either the Artistic License or the GNU General Public License, which may be found in the source kit </p>
-<h2>Index</h2>

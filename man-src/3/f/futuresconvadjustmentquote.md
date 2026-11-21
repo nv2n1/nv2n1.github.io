@@ -21,4 +21,3 @@ description: "ql/quotes/futuresconvadjustmentquote.hpp – quote for the futures
 <p> quote for the futures-convexity adjustment of an index </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

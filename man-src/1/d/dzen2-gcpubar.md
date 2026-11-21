@@ -34,4 +34,3 @@ description: "dzen2-gcpubar – graphical CPU usage meter"
 <dd> No new line, don&#8217;t put &#8216; at the end of the bar (default: do print &#8216;)</dd></dl>
 <p> gcpubar was written by Robert Manea. </p>
 <p> This manual page was written by bertagaz &lt;bertagaz [at] ptitcanardnoir.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

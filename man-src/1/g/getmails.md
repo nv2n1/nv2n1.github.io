@@ -24,4 +24,3 @@ description: "getmails – wrapper for getmail to access multiple mailboxes"
 <h2>COPYRIGHT</h2>
 <p> Copyright 2011-2017 Osamu Aoki<br />
  This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "perf-evlist – List the event names in a perf.data file"
 </dt><dd> Show event group information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-list/">perf-list</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
-<h2>Index</h2>

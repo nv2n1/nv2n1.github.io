@@ -102,4 +102,3 @@ EVENT=post-create reporter-upload
 <dt>
 </dt><dd> file:///dir/</dd></dl>
 </dl>
-<h2>Index</h2>

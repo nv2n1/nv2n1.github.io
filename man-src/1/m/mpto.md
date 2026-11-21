@@ -28,4 +28,3 @@ description: "mpto – extract labels in MetaPost pictures for typesetting"
 <dd> Print version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpost/">mpost</a></code>(1), <code><a href="/docs/linux/man/1-makempx/">makempx</a></code>(1). </p>
-<h2>Index</h2>

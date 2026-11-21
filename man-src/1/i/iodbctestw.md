@@ -86,4 +86,3 @@ $ iodbctest "DSN=ora9;UID=scott;PWD=tiger" iODBC Demonstration program
 <p> Copyright &#169; 1996-2009 by OpenLink Software </p>
 <h2>AUTHOR</h2>
 <p> iODBC Administrator &lt;iodbc [at] openlinksw.com&gt; </p>
-<h2>Index</h2>

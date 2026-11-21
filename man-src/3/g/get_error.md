@@ -21,4 +21,3 @@ description: "get_error — report a getdata library error"
 <p> The <code>get_error</code>() function always returns the dirfile error corresponding to the error state of the last library call on the supplied DIRFILE object.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3) </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "empathy – GNOME multi-protocol chat and call client"
 <p> This manual page was written by Laurent Bigonville for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-empathy-accounts/">empathy-accounts</a></code>(1), The Telepathy project The Empathy project </p>
-<h2>Index</h2>

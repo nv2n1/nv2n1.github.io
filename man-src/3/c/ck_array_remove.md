@@ -20,4 +20,3 @@ description: "ck_array_remove – attempt immediate or deferred removal of a poi
 <h2>SEE ALSO</h2>
 <p> ck_array_init3, ck_array_commit3, ck_array_remove3, ck_array_put_unique3, ck_array_deinit3 ck_array_length3, ck_array_buffer3, ck_array_initialized3, CK_ARRAY_FOREACH3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
-<h2>Index</h2>

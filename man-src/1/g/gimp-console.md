@@ -150,4 +150,3 @@ description: "gimp – an image manipulation and paint program."
 <p> With patches, fixes, plug-ins, extensions, scripts, translations, documentation and more from lots and lots of people all over the world. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-gimprc/">gimprc</a></code>(5), <code>gimptool</code>(1), </p>
-<h2>Index</h2>

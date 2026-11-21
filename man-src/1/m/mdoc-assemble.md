@@ -109,4 +109,3 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 <dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> See also: <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdoc/">http://www.mono-project.com/docs/tools+libraries/tools/mdoc/</a> </p>
-<h2>Index</h2>

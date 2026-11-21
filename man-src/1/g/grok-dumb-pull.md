@@ -59,4 +59,3 @@ MAILTO=root
 <p> License: GPLv3+</p>
 <h2>COPYRIGHT</h2>
 <p> The Linux Foundation and contributors </p>
-<h2>Index</h2>

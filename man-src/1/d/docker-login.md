@@ -41,4 +41,3 @@ description: "docker-login – Log in to a Docker registry"
 <p> <code>-u</code>, <code>&#8211;username</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Username</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

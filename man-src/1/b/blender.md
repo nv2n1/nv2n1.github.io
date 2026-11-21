@@ -244,4 +244,3 @@ description: "blender – a 3D modelling and rendering package"
 <p> <code>yafaray(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> This manpage was written for a Debian GNU/Linux system by Daniel Mester &lt;mester [at] uni-bremen.de&gt; and updated by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and Dan Eicher &lt;dan [at] trollwerks.org&gt;. </p>
-<h2>Index</h2>

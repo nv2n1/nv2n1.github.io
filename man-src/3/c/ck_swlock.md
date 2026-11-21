@@ -62,4 +62,3 @@ writer(void)
 <h2>SEE ALSO</h2>
 <p> ck_brlock3, ck_elide3, ck_pflock3, ck_rwlock3, ck_tflock3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
-<h2>Index</h2>

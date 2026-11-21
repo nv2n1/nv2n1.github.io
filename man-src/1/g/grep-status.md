@@ -235,4 +235,3 @@ description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debta
 <h2>SEE ALSO</h2>
 <p> Debian Policy Manual. Published as the Debian package <code>debian-policy</code>. Also available in the Debian website. </p>
 <p> <code>apt-cache</code>(1), <code>ara</code>(1), <code>dpkg-awk</code>(1), <code>sgrep</code>(1), <code>dpkg</code>(8) </p>
-<h2>Index</h2>

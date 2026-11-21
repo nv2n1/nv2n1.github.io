@@ -1266,4 +1266,3 @@ Comment: This is a sample mmd title block, with
 <p> This feature is not yet implemented for RTF, OpenDocument, or ODT. In those formats, you&#8217;ll just get an image in a paragraph by itself, with no caption.  </p>
 <h2>SEE ALSO</h2>
 <p> pandoc (1). </p>
-<h2>Index</h2>

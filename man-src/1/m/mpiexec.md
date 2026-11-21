@@ -533,4 +533,3 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> If the <code>&#8211;timeout</code> command line option is used and the timeout expires before the job completes (thereby forcing <i>mpirun</i> to kill the job) <i>mpirun</i> will return an exit status equivalent to the value of <code>ETIMEDOUT</code> (which is typically 110 on Linux and OS X systems). </p>
 <h2>SEE ALSO</h2>
 <p> MPI_Init_thread(3) </p>
-<h2>Index</h2>

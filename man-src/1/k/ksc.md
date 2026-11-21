@@ -50,4 +50,3 @@ description: "ksc – Linux kernel module source checker"
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> Prints KSC version number </dd>
 </dl>
-<h2>Index</h2>

@@ -115,4 +115,3 @@ int main(int argc, char **argv)
 <p> omapi(3), <a href="/docs/linux/man/1-omshell/">omshell</a>(1), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5), <a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> <i>dhcpctl</i> was written by Ted Lemon of Nominum, Inc. This preliminary documentation was written by James Brister of Nominum, Inc. </p>
-<h2>Index</h2>

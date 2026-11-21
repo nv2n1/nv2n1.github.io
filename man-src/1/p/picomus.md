@@ -30,4 +30,3 @@ description: "picomus – Minimal Unsatisfiable Core (MUS) generator"
 <p> This man page was written by Jerry James. It is released to the public domain; you may use it in any way you wish. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-picosat/">picosat</a></i>(1), <i>minisat2</i>(1). </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "lftpget – get a file with lftp(1)"
 <h2>AUTHOR</h2>
 <p> <code>lftpget</code> is Copyright (c) 1999-2000 Alexander V. Lukyanov &lt;lav [at] yars.free.net&gt;. </p>
 <p> This manual page was initially written by Francois Wendling &lt;frwendling [at] free.fr&gt; and later updated by Alexander V. Lukyanov. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "irexec – run programs with one button press"
 <p> irexec should run as a service. The contrib directory contains a .desktop file which could be dropped in ~/.local/autostart. Doing so creates a service which can be handled by regular desktop tools on all major desktops. If you need to run run restricted commands such as powering off the machine, you can use sudo to allow regular users to run specific commands. See the Configuration Guide in the html documentation.</p>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>

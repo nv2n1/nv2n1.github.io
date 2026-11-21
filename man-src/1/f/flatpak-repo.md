@@ -49,4 +49,3 @@ description: "flatpak-repo – Show information about a local repository"
 <p> <code>$ flatpak repo &#8211;info ~/my-repo</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-info/">flatpak-info</a></code>(1) <code><a href="/docs/linux/man/1-flatpak-build-update-repo/">flatpak-build-update-repo</a></code>(1) <code>ostree</code>(1) </p>
-<h2>Index</h2>

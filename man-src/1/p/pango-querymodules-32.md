@@ -64,4 +64,3 @@ description: "pango-querymodules – Module registration utility"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

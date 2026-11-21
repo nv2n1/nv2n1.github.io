@@ -31,4 +31,3 @@ description: "ogginfo – gives information about Ogg files, and does extensive 
 <p> Michael Smith &lt;msmith [at] xiph.org&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code>(1), <code><a href="/docs/linux/man/1-ogg123/">ogg123</a></code>(1), <code><a href="/docs/linux/man/1-oggdec/">oggdec</a></code>(1), <code><a href="/docs/linux/man/1-oggenc/">oggenc</a></code>(1) </p>
-<h2>Index</h2>

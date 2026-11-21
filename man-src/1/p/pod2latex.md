@@ -60,4 +60,3 @@ description: "pod2latex – convert pod documentation to latex format"
 <p> Tim Jenness &lt;tjenness [at] cpan.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> Copyright (C) 2000, 2003, 2004 Tim Jenness. All Rights Reserved. </p>
-<h2>Index</h2>

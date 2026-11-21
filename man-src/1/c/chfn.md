@@ -63,4 +63,3 @@ description: "chfn – change real user name and information"
 </dt><dd> User account information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1), <code><a href="/docs/linux/man/5-login-defs/">login.defs</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5). </p>
-<h2>Index</h2>

@@ -138,4 +138,3 @@ description: "dprofpp – display perl profile data"
 </pre>
 <h2>SEE ALSO</h2>
 <p> perl, Devel::DProf, <i><a href="/docs/linux/man/2-times/">times</a></i>(2) </p>
-<h2>Index</h2>

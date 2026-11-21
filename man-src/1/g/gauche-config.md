@@ -66,4 +66,3 @@ description: "gauche-config – retrieve configuration parameters of Gauche"
 <p> <a href="/docs/linux/man/1-gosh/">gosh</a>(1) </p>
 <p> Gauche Scheme interpreter:<br />
  <a rel="nofollow" href="http://practical-scheme.net/gauche/">http://practical-scheme.net/gauche/</a> </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "transxx – Create a pseudo translated PO file from a PO template 
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

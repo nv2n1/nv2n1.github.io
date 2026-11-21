@@ -84,4 +84,3 @@ description: "bjavaloader – Barry Project’s program to manage BlackBerry app
 <p> <code>bjavaloader</code> was initially written for the Barry project by Nicolas Vivien, with additional contributions from others over time. This manual page was written by Chris Frey.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

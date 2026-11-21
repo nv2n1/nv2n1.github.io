@@ -34,4 +34,3 @@ description: "libnetpbm – general introduction to the netpbm library"
 &nbsp;<wbr>for the basics on using <code>libnetpbm</code> in a program. </p>
 <p> You can look up the reference information for a particular function in <code>The</code>libnetpbm<code>Directory</code>(1) </p>
 <p> Before Netpbm release 10 (June 2002), this library was split into four: libpbm, libpgm, libppm, and libpnm. That&#8217;s largely the reason for the multiple sets of functions and scattered documentation. </p>
-<h2>Index</h2>

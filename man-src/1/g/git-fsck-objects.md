@@ -17,4 +17,3 @@ description: "git-fsck-objects – Verifies the connectivity and validity of the
 <p> This is a synonym for <code><a href="/docs/linux/man/1-git-fsck/">git-fsck</a></code>(1). Please refer to the documentation of that command.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

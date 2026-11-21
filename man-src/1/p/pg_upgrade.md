@@ -246,4 +246,3 @@ psql --username postgres --file script.sql postgres
 <p> For Windows users, note that due to different integer datetimes settings used by the graphical installer and the MSI installer, it is only possible to upgrade from version 8.3 of the installer distribution to version 8.4 or later of the installer distribution. It is not possible to upgrade from the MSI installer to the new graphical installer.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-initdb/">initdb</a></code>(1), <code><a href="/docs/linux/man/1-pg_ctl/">pg_ctl</a></code>(1), <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1), <code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1) </p>
-<h2>Index</h2>

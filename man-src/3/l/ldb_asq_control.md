@@ -17,4 +17,3 @@ description: "ldb_asq_control –"
 <p> int <code>result</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

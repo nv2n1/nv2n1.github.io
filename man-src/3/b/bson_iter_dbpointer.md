@@ -37,4 +37,3 @@ void bson_iter_dbpointer(const bson_iter_t *iter,
 </dt><dd> The BSON_TYPE_DBPOINTER field type is deprecated by the BSON spec and should not be used in new code.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

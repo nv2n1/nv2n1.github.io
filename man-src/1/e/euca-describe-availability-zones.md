@@ -53,4 +53,3 @@ description: "euca-describe-availability-zones – Display availability zones wi
 <dt>zone-name</dt>
 <dd> name of the availability zone </dd>
 </dl>
-<h2>Index</h2>

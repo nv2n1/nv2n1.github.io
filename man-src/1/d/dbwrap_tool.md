@@ -159,4 +159,3 @@ description: "dbwrap_tool – low level TDB/CTDB manipulation tool using the dbw
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> The dbwrap_tool manpage was written by Bjoern Baumbach. </p>
-<h2>Index</h2>

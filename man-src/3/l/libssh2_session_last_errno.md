@@ -19,4 +19,3 @@ description: "libssh2_session_last_errno – get the most recent error number"
 <p> Numeric error code corresponding to the the Error Code constants. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_last_error/">libssh2_session_last_error</a>(3)</code> </p>
-<h2>Index</h2>

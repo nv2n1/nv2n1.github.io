@@ -514,4 +514,3 @@ compadd - M 'r:[^[:upper:]0-9]||[[:upper:]0-9]=** r:|=*' \
 </pre>
 </dd></dl>
 <p> This function will complete files in the current directory matching the current word. </p>
-<h2>Index</h2>

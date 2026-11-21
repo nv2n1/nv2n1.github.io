@@ -124,4 +124,3 @@ ar ru libx.a x.o
 <h2>COPYRIGHT</h2>
 <p> <i>Qmake</i> Is based on GNU Make (<i>gmake</i>), which is copyright by the Free Software Foundation, Inc., Boston, MA, and is protected by the GNU General Public License.<br />
  See and the information provided in <i>&lt;xxqs_name_sxx_root&gt;/doc/LICENCES</i> for a statement of further rights and permissions. </p>
-<h2>Index</h2>

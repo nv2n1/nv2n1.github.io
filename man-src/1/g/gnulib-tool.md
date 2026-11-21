@@ -104,4 +104,3 @@ description: "gnulib-tool – program for authors or maintainers which want to i
 <h2>AUTHOR</h2>
 <p> gnulib was written by the Free Software Foundation and others (sources of various origins). </p>
 <p> This manual page was written by Daniel Baumann &lt;daniel [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

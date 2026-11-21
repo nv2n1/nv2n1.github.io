@@ -25,4 +25,3 @@ description: "fgetwln – get a line of wide characters from a stream"
 <p> The Fn fgetwln function may also fail and set <i>errno</i> for any of the errors specified for the routines <a href="/docs/linux/man/3-mbrtowc/">mbrtowc</a>(3), <a href="/docs/linux/man/3-realloc/">realloc</a>(3), or <a href="/docs/linux/man/2-read/">read</a>(2).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-ferror/">ferror</a>(3), <a href="/docs/linux/man/3-fgetln/">fgetln</a>(3), <a href="/docs/linux/man/3-fgetws/">fgetws</a>(3), <a href="/docs/linux/man/3-fopen/">fopen</a>(3) </p>
-<h2>Index</h2>

@@ -1054,4 +1054,3 @@ option docsis.tftp-servers ::1;
 <p> <a href="/docs/linux/man/5-dhcpd.conf/">dhcpd.conf</a>(5), <a href="/docs/linux/man/5-dhcpd.leases/">dhcpd.leases</a>(5), <a href="/docs/linux/man/5-dhclient.conf/">dhclient.conf</a>(5), <a href="/docs/linux/man/5-dhcp-eval/">dhcp-eval</a>(5), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), RFC2132, RFC2131, RFC3046, RFC3315.  </p>
 <h2>AUTHOR</h2>
 <p> Information about Internet Systems Consortium can be found at <code><a rel="nofollow" href="https://www.isc.org.">https://www.isc.org.</a></code> </p>
-<h2>Index</h2>

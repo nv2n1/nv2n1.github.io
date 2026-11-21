@@ -18,4 +18,3 @@ url: "/docs/linux/man/1-cshost/"
 <dt>-cs <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</dt>
 <dd> Specifies the name of the host under which the Kana-Kanji conversion server is in operation. </dd>
 </dl>
-<h2>Index</h2>

@@ -73,4 +73,3 @@ description: "mh-chart – Chart of nmh Commands"
 </dl>
 <h2>SEE ALSO</h2>
 <dd><a href="/docs/linux/man/1-nmh/">nmh</a>(1) </dd>
-<h2>Index</h2>

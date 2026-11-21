@@ -47,4 +47,3 @@ Germany
 <p> <code>submit [at] bugs.debian.org</code> </p>
 <p> writing at least a short description into the Subject and &quot;Package: cdrkit&quot; into the first line of the mail body. </p>
 <p> [1] Cdrtools 2.01.01a08 from May 2006, <a rel="nofollow" href="http://cdrecord.berlios.de">http://cdrecord.berlios.de</a> </p>
-<h2>Index</h2>

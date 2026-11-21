@@ -16,4 +16,3 @@ description: "activate-devpay – create the token and certificate files for Ama
 <p> This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Bdale Garbee &lt;bdale [at] gag.com&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "markdown-calibre – markdown tool for calibre"
 <dt><code>&#8211;noisy</code></dt>
 <dd> print debug messages <code>-x</code> EXTENSION, <code>&#8211;extension</code>=EXTENSION load extension EXTENSION </dd>
 </dl>
-<h2>Index</h2>

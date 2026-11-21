@@ -146,4 +146,3 @@ v2;
 <p> <code>$ flatpak override &#8211;filesystem=home org.mozilla.Firefox</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-run/">flatpak-run</a></code>(1) </p>
-<h2>Index</h2>

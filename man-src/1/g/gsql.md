@@ -49,4 +49,3 @@ description: "GSQL – an integrated database development environment for GNOME"
 <p> <code>GSQL</code>&#8216;s active developers are: </p>
 <p>&nbsp;<wbr>Taras Halturin&nbsp;<wbr>(lead developer)&nbsp;<wbr>&lt;<i>halturin [at] gmail.com</i>&gt; </p>
 <p> This manpage was originally written by Taras Halturin. </p>
-<h2>Index</h2>

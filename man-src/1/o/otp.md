@@ -32,4 +32,3 @@ description: "otp – manages one-time passwords"
 <dd> To choose a different <i>user</i> to set one-time passwords for. This only works when running <code>otp</code> as root.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-otpprint/">otpprint</a>(1) </p>
-<h2>Index</h2>

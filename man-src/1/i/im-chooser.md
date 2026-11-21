@@ -17,4 +17,3 @@ description: "im-chooser – GUI Application to switch Input Method"
 <p> <code><a href="/docs/linux/man/1-imsettings-switch/">imsettings-switch</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Akira TAGOH &lt;akira [at] tagoh.org&gt; </p>
-<h2>Index</h2>

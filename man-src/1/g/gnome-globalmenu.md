@@ -28,4 +28,3 @@ description: "gnome-globalmenu – Global Menu for GNOME"
 <h2>SEE ALSO</h2>
 <p> For the complete and up-to-date documentation, please visit <i><a rel="nofollow" href="http://code.google.com/p/gnome2-globalmenu">http://code.google.com/p/gnome2-globalmenu</a></i>. </p>
 <p> This manual page was origninal written by Benjamin Marwell &lt;b.marwell [at] gmx.de&gt;, for the Debian project (but may be used by others). Rewritten by Yu Feng &lt;rainwoodman [at] gmail.com&gt; on Feb 22 2009, before integrated into the project. </p>
-<h2>Index</h2>

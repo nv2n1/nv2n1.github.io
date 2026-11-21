@@ -36,4 +36,3 @@ description: "desktop_palette – The palette used by the Atari ST low resolutio
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-default_palette/">default_palette</a></code>(3), <code>black_palette</code>(3) </p>
-<h2>Index</h2>

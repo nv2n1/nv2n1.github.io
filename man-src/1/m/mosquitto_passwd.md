@@ -62,4 +62,3 @@ description: "mosquitto_passwd – manage password files for mosquitto"
 <p> <code><a href="/docs/linux/man/8-mosquitto/">mosquitto</a></code>(8), <code><a href="/docs/linux/man/5-mosquitto-conf/">mosquitto.conf</a></code>(5), <code><a href="/docs/linux/man/7-mqtt/">mqtt</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> Roger Light &lt;roger [at] atchoo.org&gt; </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "ql/math/interpolations/interpolation2d.hpp – abstract base class
 <p> abstract base classes for 2-D interpolations </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

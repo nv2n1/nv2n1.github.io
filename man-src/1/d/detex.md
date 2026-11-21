@@ -34,4 +34,3 @@ description: "detex – a filter to strip TeX commands from a .tex file."
 <p> <i>Detex</i> is not a complete <i>TeX</i> interpreter, so it can be confused by some constructs. Most errors result in too much rather than too little output. </p>
 <p> Running <i>LaTeX</i> source without a ``\begin{document}&#8216;&#8216; through <i>detex</i> may produce errors. </p>
 <p> Suggestions for improvements are (mildly) encouraged. </p>
-<h2>Index</h2>

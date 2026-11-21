@@ -28,4 +28,3 @@ description: "grub-mklayout — Generate a GRUB keyboard layout file."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

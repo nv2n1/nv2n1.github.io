@@ -48,4 +48,3 @@ description: "vtysh – a integrated shell for Quagga routing software"
 <p> <code>vtysh</code> eats bugs for breakfast. If you have food for the maintainers try <code><a rel="nofollow" href="http://bugzilla.quagga.net">http://bugzilla.quagga.net</a></code></p>
 <h2>AUTHORS</h2>
 <p> See <code><a rel="nofollow" href="http://www.zebra.org">http://www.zebra.org</a></code> and <code><a rel="nofollow" href="http://www.quagga.net">http://www.quagga.net</a></code> or the Info file for an accurate list of authors. </p>
-<h2>Index</h2>

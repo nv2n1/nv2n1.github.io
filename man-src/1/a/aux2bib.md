@@ -19,4 +19,3 @@ description: "AUX2BIB – Extracts a BibTeX database according to an aux file."
  <i>/usr/share/doc/bibtex2html</i> </p>
 <h2>AUTHOR</h2>
 <p> Ralf Treinen &lt;treinen [at] debian.org&gt; </p>
-<h2>Index</h2>

@@ -102,4 +102,3 @@ description: "mupdf – MuPDF is a lightweight PDF viewer written in portable C"
 <p> <code><a href="/docs/linux/man/1-mudraw/">mudraw</a></code>(1), <code><a href="/docs/linux/man/1-mutool/">mutool</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> MuPDF is Copyright 2006-2014 Artifex Software, Inc. </p>
-<h2>Index</h2>

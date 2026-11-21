@@ -30,4 +30,3 @@ description: "boolstuff – Disjunctive Normal Form boolean expression C++ libra
 <p> Version 0.1.x is an unstable development version. The programming interface of the library and the command-line options of the accompanying commands are not necessarily fixed. The documentation has not been reviewed for completeness.</p>
 <h2>HISTORY</h2>
 <p> George Boole (1815-1864) is an English mathematician who helped establish modern symbolic logic and whose algebra of logic, now called Boolean algebra, is basic to the design of digital computer circuits. </p>
-<h2>Index</h2>

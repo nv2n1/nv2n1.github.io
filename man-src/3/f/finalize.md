@@ -50,4 +50,3 @@ description: "QuantLib::MarketModelComposite – Composition of two or more mark
 </dt><dd> All subproducts must have the same rate times.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -337,4 +337,3 @@ description: "opasmaquery"
  # get sl2sc table entries from lid 3 </p>
 <p> opasmaquery -o scsl -l 3<br />
  # get sc2sl table entries from lid 3 </p>
-<h2>Index</h2>

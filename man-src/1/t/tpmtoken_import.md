@@ -42,4 +42,3 @@ description: "tpmtoken_import – import an X.509 certficate and/or an RSA key p
 <p> <code><a href="/docs/linux/man/1-tpmtoken_init/">tpmtoken_init</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_setpasswd/">tpmtoken_setpasswd</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_objects/">tpmtoken_objects</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_protect/">tpmtoken_protect</a></code>(1) </p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt; </p>
-<h2>Index</h2>

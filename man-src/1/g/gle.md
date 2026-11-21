@@ -79,4 +79,3 @@ description: "gle – Graphics Layout Engine"
 <dt>GLE_TOP</dt>
 <dd> The location of the fonts and other resources. </dd>
 </dl>
-<h2>Index</h2>

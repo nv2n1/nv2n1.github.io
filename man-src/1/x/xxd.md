@@ -152,4 +152,3 @@ description: "xxd – make a hexdump or do the reverse."
 <p> Manual page started by Tony Nugent<br />
  &lt;tony [at] sctnugen.ppp.gu.edu.au&gt; &lt;T.Nugent [at] sct.gu.edu.au&gt;<br />
  Small changes by Bram Moolenaar. Edited by Juergen Weigert. </p>
-<h2>Index</h2>

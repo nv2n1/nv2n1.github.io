@@ -1517,4 +1517,3 @@ arch/{i386 =&gt; x86}/Makefile    |   4 +--
 <p> The extra <code>NUL</code> before the preimage path in renamed case is to allow scripts that read the output to tell if the current record being read is a single-path record or a rename/copy record without reading ahead. After reading added and deleted lines, reading up to <code>NUL</code> would yield the pathname, but if that is <code>NUL</code>, the record will show two paths.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

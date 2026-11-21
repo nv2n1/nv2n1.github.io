@@ -16,4 +16,3 @@ description: "installcheck – find out which packages cannot be installed"
 <p> A Repository can be a solv file, a rpmmd <code>primary.xml.gz</code> file, a SUSE <code>packages</code> or <code>packages.gz</code> file, or a Debian <code>Packages</code> or <code>Packages.gz</code> file.</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

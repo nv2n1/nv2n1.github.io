@@ -177,4 +177,3 @@ cfgmaker-- global 'WorkDir: /home/httpd/mrtg' --global 'Options[_]: bits,growrig
 <p> Note that this will only work with <code>RunAsDaemon: Yes</code> in your mrtg.cfg file.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ int ibv_destroy_comp_channel(struct ibv_comp_channel *channel);
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

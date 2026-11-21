@@ -154,4 +154,3 @@ description: "dia – a diagram drawing program"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.pango.org/">http://www.pango.org/</a></dd></dl>
 </dl>
-<h2>Index</h2>

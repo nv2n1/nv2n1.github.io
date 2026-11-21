@@ -54,4 +54,3 @@ description: "zarafa-stats – Dump zarafa statistics tables."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa-admin/">zarafa-admin</a></code>(1) </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "pmdasnmp – Gateway from SNMP to PCP (PMDA)"
 <dd> default log file for error and <i>warn()</i> messages from <code>pmdasnmp</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1) and <font SIZE="-1">SNMP</font> </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "hpmount — change directory on an HFS+ volume"
 <h2>Author</h2>
 <p> This manual page was written by Jens Schmalzing &lt;jensen [at] debian.org&gt; for <code>Debian GNU/Linux</code> using the manual page by Klaus Halfmann &lt;halfmann [at] libra.de&gt; that comes with the source code and documentation from the <code>Tech Info Library</code>.<br />
 &nbsp; </p>
-<h2>Index</h2>

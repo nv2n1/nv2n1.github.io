@@ -686,4 +686,3 @@ description: "fedpkg – RPM Packaging utility"
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="https://fedorahosted.org/fedora-packager/">https://fedorahosted.org/fedora-packager/</a></code> </p>
-<h2>Index</h2>

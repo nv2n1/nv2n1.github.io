@@ -60,4 +60,3 @@ wait $XBOXPID
 <p> That way you can individually configure every game and still not have to worry about launching xboxdrv manually.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xboxdrv/">xboxdrv</a>(1) </p>
-<h2>Index</h2>

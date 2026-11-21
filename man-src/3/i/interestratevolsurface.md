@@ -20,4 +20,3 @@ description: "ql/experimental/volatility/interestratevolsurface.hpp – Interest
 <p> Interest rate volatility (smile) surface. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

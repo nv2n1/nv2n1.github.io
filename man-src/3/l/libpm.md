@@ -148,4 +148,3 @@ pm_message('Message for the message log');
 <p> <code>Description</code> </p>
 <p> This subroutine is obsolete. It used to be used for command line option processing. Today, you can do better option processing more easily with the shhopt facility. See any recent program in the Netpbm package for an example. </p>
 <p> <code>pm_keymatch()</code> does a case-insensitive match of <code>str</code> against <code>keyword</code>. <code>str</code> can be a leading substring of <code>keyword</code>, but at least <code>minchars</code> must be present. </p>
-<h2>Index</h2>

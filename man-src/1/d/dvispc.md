@@ -58,4 +58,3 @@ description: "dvispc – Modify a DVI file to be page-independent in specials"
 <h2>AUTHOR</h2>
 <p> The program <code>dvispc</code> is derived from the DVIOUT package (DVI previewer for Windows) by Toshio OSHIMA (&quot;SHIMA&quot;), Yoshiki OTOBE, and Kazunori ASAYAMA. Current version is maintained by Japanese TeX Development Community &lt;<a rel="nofollow" href="https://texjp.org">https://texjp.org</a>&gt;.<br />
  For more information, please refer to dvispc-en.txt (in English) and dvispc-ja.txt (in Japanese) on our GitHub repository, &lt;<a rel="nofollow" href="https://github.com/texjporg/tex-jp-build">https://github.com/texjporg/tex-jp-build</a>&gt; (under source/texk/dviout-util directory). </p>
-<h2>Index</h2>

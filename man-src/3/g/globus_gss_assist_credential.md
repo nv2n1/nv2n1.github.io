@@ -41,4 +41,3 @@ description: "Credential Management –"
 </dt><dd> globus_gss_acquire_cred</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

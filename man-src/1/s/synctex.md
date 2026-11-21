@@ -29,4 +29,3 @@ description: "synctex – command line client tool to support the Synchronize Te
 <h2>AUTHOR</h2>
 <p> The Synchronize TeXnology is essentially due to Jerome Laurens, with useful suggestions by some well known actors of the TeX world.</p>
 <h2>HISTORY Revised on Sun Apr 23 09:54:20 UTC 2017.</h2>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "wps2html – convert Works document into HTML"
 <dt><code>-v</code>:</dt>
 <dd> Output wps2html version </dd>
 </dl>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "edid-decode – Decode EDID data in human-readable format"
 <p> <a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/1-xrandr/">xrandr</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> edid-decode was written by Adam Jackson, with contributions from Eric Anholt, Damien Lespiau, and others. For complete history and the latest version, see <code><a rel="nofollow" href="http://cgit.freedesktop.org/xorg/app/edid-decode/">http://cgit.freedesktop.org/xorg/app/edid-decode/</a></code> </p>
-<h2>Index</h2>

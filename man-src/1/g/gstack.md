@@ -19,4 +19,3 @@ description: "gstack – print a stack trace of a running process"
 <h2>AUTHORS</h2>
 <p> Ross Thompson &lt;ross [at] whatsis.com&gt; </p>
 <p> Red Hat, Inc. &lt;<a rel="nofollow" href="http://bugzilla.redhat.com/bugzilla">http://bugzilla.redhat.com/bugzilla</a>&gt; </p>
-<h2>Index</h2>

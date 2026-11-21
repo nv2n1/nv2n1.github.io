@@ -42,4 +42,3 @@ description: "pamseq – generate PAM image of all possible tuple values, in seq
 <p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamseq</code> was added to Netpbm in June 2002. </p>
-<h2>Index</h2>

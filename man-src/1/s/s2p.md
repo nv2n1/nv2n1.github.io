@@ -266,4 +266,3 @@ psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-a
 <p> This Perl implementation of <i>sed</i> was written by Wolfgang Laun, <i>Wolfgang.Laun [at] alcatel.at</i>.</p>
 <h2>COPYRIGHT and LICENSE</h2>
 <p> This program is free and open software. You may use, modify, distribute, and sell this program (and any modified variants) in any way you wish, provided you do not restrict others from doing the same. </p>
-<h2>Index</h2>

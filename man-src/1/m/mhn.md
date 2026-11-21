@@ -20,4 +20,3 @@ description: "mhn – display/list/store/cache MIME messages"
 <p> You should migrate to using the commands <code>mhlist</code>, <code>mhshow</code>, and <code>mhstore</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-mhlist/">mhlist</a></i>(1), <i><a href="/docs/linux/man/1-mhshow/">mhshow</a></i>(1), <i><a href="/docs/linux/man/1-mhstore/">mhstore</a></i>(1) </p>
-<h2>Index</h2>

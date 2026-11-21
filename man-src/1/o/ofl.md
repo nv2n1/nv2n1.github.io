@@ -27,4 +27,3 @@ description: "ofl — open file lister"
 <dd> `fuser -m /home/subdir` would automatically go down to the root of a vfsmount (e.g. /home) and list all processes, instead of limiting to /home/subdir.</dd></dl>
 <h2>See also</h2>
 <p> <code>hxtools</code>(7) </p>
-<h2>Index</h2>

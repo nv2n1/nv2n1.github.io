@@ -87,4 +87,3 @@ description: "pamcomp – composite (overlay) two Netpbm images together"
 <p> <code>pamcomp</code> was new in Netpbm 10.21 (March 2004). Its predecessor, <code>pnmcomp</code>, was one of the first programs added to Netpbm when the project went global in 1993. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1992 by David Koblas (<i>koblas [at] mips.com</i>). </p>
-<h2>Index</h2>

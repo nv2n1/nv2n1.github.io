@@ -23,4 +23,3 @@ int attrib;
 <p> Read the description of al_findfirst for a description on how to obtain/use this structure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-al_findfirst/">al_findfirst</a></code>(3), <code>al_ffblk_get_size</code>(3) </p>
-<h2>Index</h2>

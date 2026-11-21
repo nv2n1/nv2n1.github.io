@@ -34,4 +34,3 @@ description: "mkstemp – create a temporary file"
 <dt>-suffix</dt>
 <dd> none </dd>
 </dl>
-<h2>Index</h2>

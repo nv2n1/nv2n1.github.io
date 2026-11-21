@@ -75,4 +75,3 @@ description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 <p> Nuauth was designed and coded by Eric Leblond, aka Regit (&lt;eric [at] regit.org&gt;) , and Vincent Deffontaines, aka gryzor (&lt;vincent [at] gryzor.com&gt;). Original idea in 2001, while working on NSM Ldap support. </p>
 <p> This manual page was written by Eric Leblond. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 2 as published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. </p>
-<h2>Index</h2>

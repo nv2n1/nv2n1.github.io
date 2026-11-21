@@ -53,4 +53,3 @@ description: "mutt_dotlock – Lock mail spool files."
 <p> <code>mutt_dotlock</code> is part of the Mutt mail user agent package. It has been created to avoid running mutt with group mail privileges.</p>
 <h2>AUTHOR</h2>
 <p> Thomas Roessler &lt;roessler [at] does-not-exist.org&gt; </p>
-<h2>Index</h2>

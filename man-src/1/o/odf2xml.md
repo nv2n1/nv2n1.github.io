@@ -41,4 +41,3 @@ odf2xml -o file.xml  testdocument.odt
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "getdns_root_trust_anchor — return the getdns list of default roo
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-getdns_validate_dnssec/">getdns_validate_dnssec</a></code>(3) <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3) </p>
-<h2>Index</h2>

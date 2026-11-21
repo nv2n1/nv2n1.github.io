@@ -114,4 +114,3 @@ description: "db5.3_load – Load data from standard input"
  </dd></dl>
 <h2>AUTHORS</h2>
 <p> Sleepycat Software, Inc. This manual page was created based on the HTML documentation for db_load from Sleepycat, by Thijs Kinkhorst &lt;thijs [at] kinkhorst.com&gt;, for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

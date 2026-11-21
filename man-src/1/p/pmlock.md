@@ -16,4 +16,3 @@ description: "pmlock – simple file-based mutex"
 <p> The exit status is 0 for success, 1 for failure. </p>
 <p> To release the lock, unlink <i>file</i>. </p>
 <p> In the event of a failure, the <code>-v</code> option produces an explanatory message on <i>stdout</i>. </p>
-<h2>Index</h2>

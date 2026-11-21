@@ -36,4 +36,3 @@ description: "tracker3-info – Retrieve all information available for a certain
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1). </p>
 <p> <code><a rel="nofollow" href="http://nepomuk.semanticdesktop.org/">http://nepomuk.semanticdesktop.org/</a></code> <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code> </p>
-<h2>Index</h2>

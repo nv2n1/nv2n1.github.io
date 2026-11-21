@@ -60,4 +60,3 @@ description: "flock – apply or remove an advisory lock on an open file"
 <p> <i>Documentation/filesystems/locks.txt</i> in the Linux kernel source tree (<i>Documentation/locks.txt</i> in older kernels)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

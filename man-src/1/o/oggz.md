@@ -57,4 +57,3 @@ description: "oggz — inspect and manipulate Ogg multimedia files"
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code> <code>hogg</code><code>(1)</code> </p>
-<h2>Index</h2>

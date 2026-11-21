@@ -767,4 +767,3 @@ otftotfm - a - e texnansx MinionPro - Regular.otf - fkern - fliga LY1-- MinionPr
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
 <p> Thanks to Karl Berry, Marco Kuhlmann, Adam Lindsay, Bruce D&#8217;Arcus, Thomas Esser, Claire Connelly, Nelson H.F. Beebe, and Ryuji Suzuki for suggestions, bug reports, and help. Particular thanks to Achim Blumensath and Michael Zedler for suggestions and patches, some of them extensive. </p>
-<h2>Index</h2>

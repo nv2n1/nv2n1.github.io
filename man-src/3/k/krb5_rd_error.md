@@ -21,4 +21,3 @@ description: "krb5_rd_error krb5_free_error krb5_free_error_contents krb5_error_
 <p> Fn krb5_error_from_rd_error will parse the error message and set the error buffer in krb5_context to the error string passed back or the matching error code in the KRB-ERROR message. Caller should pick up the message with Fn krb5_get_error_string 3 (don&#8217;t forget to free the returned string with Fn krb5_free_error_string ) .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_set_error_string3, krb5_get_error_string3, krb5.conf5 </p>
-<h2>Index</h2>

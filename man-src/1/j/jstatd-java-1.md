@@ -102,4 +102,3 @@ jstatd -J-Djava.security.policy=all.policy -p 2020 -n AlternateJstatdServerName<
 <dd> <i>rmiregistry</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi">http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi</a> &#8211; the Java Remote Object Registry</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ struct iv_signal {
 <p> Internally, <code>iv_signal</code> is implemented using <code>iv_event_raw</code>(3). </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_event_raw</code>(3), <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "bwx-console – Bacula’s management Console"
 <p> <code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code><a href="/docs/linux/man/1-bacula-bgnome-console/">bacula-bgnome-console</a></code>(1) <code>bls</code>(1), <code>bextract</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;. </p>
-<h2>Index</h2>

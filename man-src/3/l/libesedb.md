@@ -54,4 +54,3 @@ description: "libesedb.h – Library to support the Extensible Storage Engine (E
 <p> Copyright 2009-2012 Joachim Metz &lt;jbmetz [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> the libesedb.h include file </p>
-<h2>Index</h2>

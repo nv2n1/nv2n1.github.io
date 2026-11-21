@@ -32,4 +32,3 @@ description: "lockdev, liblockdev, dev_testlock, dev_lock, dev_relock, dev_unloc
 <h2>HISTORY</h2>
 <p> (c) 1997 by Fabrizio Polacco &lt;fab [at] prosa.it&gt;.<br />
  This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; version 2 dated June, 1991. </p>
-<h2>Index</h2>

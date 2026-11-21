@@ -25,4 +25,3 @@ description: "ppmtopjxl – convert a PPM image to an HP PaintJet XL PCL file"
 <p> <code>ppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Angus Duggan </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ globus_module_deactivate(GLOBUS_GSI_OPENSSL_ERROR_MODULE)
 <p> The functions in the <code>Error Object Helper Functions </code> section deal with Globus error objects constructed with OpenSSL error data. These functions manipulate the generic globus_object_t representation of an OpenSSL error.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_openssl_error from the source code. </p>
-<h2>Index</h2>

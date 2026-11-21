@@ -45,4 +45,3 @@ description: "acl_to_any_text – convert an ACL to text"
 <p> acl_from_text3, acl_to_text3, acl_free3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

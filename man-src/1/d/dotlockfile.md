@@ -46,4 +46,3 @@ description: "dotlockfile – Utility to manage lockfiles"
 <p> lockfile_create(3), maillock(3) </p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl </p>
-<h2>Index</h2>

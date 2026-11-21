@@ -40,4 +40,3 @@ description: "get_auditfail_action – Get failure_action tunable value"
 <p> <code><a href="/docs/linux/man/3-audit_open/">audit_open</a></code>(3), <code><a href="/docs/linux/man/8-auditd/">auditd</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Lisa M. Smith. </p>
-<h2>Index</h2>

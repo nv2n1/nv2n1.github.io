@@ -30,4 +30,3 @@ description: "gnotime – GnoTime – a time tracker"
 <h2>AUTHOR</h2>
 <p>&nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>1997,1998 Eckehard Berns<br />
 &nbsp;<wbr>Copyright&nbsp;<wbr>(C)&nbsp;<wbr>2001 Linas Vepstas&nbsp;<wbr>&lt;linas [at] linas.org&gt; </p>
-<h2>Index</h2>

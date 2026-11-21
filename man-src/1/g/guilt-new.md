@@ -73,4 +73,3 @@ $ guilt-new -s -m patch-fu bar
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "docker-events – Get real time events from the server"
 <p> <code>&#8211;until</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Stream events until this timestamp</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

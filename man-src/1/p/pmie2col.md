@@ -55,4 +55,3 @@ $ pmie -v -t 5 &lt;config | pmie2col -w 8
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1). </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "jadmaker – JAD File Generator"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008-2009 Michal Cihar and other authors. License GPLv2: GNU GPL version 2 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</a>&gt;<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>

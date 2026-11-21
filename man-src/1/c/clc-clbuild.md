@@ -25,4 +25,3 @@ description: "clc-clbuild – clc enabled clbuild wrapper"
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Peter Van Eynde (pvaneynd [at] debian.org) </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ ogrtindex[-lnum n]...[-lname name]...[-f output_format]
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

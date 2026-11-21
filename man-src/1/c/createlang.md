@@ -92,4 +92,3 @@ $ <code>createlang pltcl template1</code>
 <p> Note that installing the language into template1 will cause it to be automatically installed into subsequently-created databases as well.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-droplang/">droplang</a></code>(1), CREATE EXTENSION (<code><a href="/docs/linux/man/7-create_extension/">CREATE_EXTENSION</a></code>(7)), CREATE LANGUAGE (<code><a href="/docs/linux/man/7-create_language/">CREATE_LANGUAGE</a></code>(7)) </p>
-<h2>Index</h2>

@@ -85,4 +85,3 @@ description: "blenderplayer – a utility for previewing .blend files"
 <dt>
 </dt><dd> &#8211; : all arguments after this are ignored, allowing python to access them from sys.argv</dd></dl>
 <p> example: blenderplayer <code>-w</code> 320 200 10 10 <code>-g</code> noaudio//home//user//filename.blend example: blenderplayer <code>-g</code> show_framerate = 0 //home//user//filename.blend </p>
-<h2>Index</h2>

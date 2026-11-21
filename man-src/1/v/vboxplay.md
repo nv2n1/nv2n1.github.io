@@ -17,4 +17,3 @@ description: "vboxplay – play vbox sound files"
 <p> <code><a href="/docs/linux/man/1-sox/">sox</a>(1)</code> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Paul Slootman &lt;paul [at] debian.org&gt;, for Debian GNU/Linux and isdn4linux. </p>
-<h2>Index</h2>

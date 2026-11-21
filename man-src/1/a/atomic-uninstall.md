@@ -36,4 +36,3 @@ description: "atomic-uninstall – Remove/Uninstall container/container image fr
 If name is specified atomic uninstall will uninstall the named container from the system, otherwise it will uninstall the container images. </p>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) </p>
-<h2>Index</h2>

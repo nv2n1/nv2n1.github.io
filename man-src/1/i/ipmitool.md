@@ -2398,4 +2398,3 @@ Matching Result<br />
 <dt>FreeIPMI Homepage</dt>
 <dd> <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </dd>
 </dl>
-<h2>Index</h2>

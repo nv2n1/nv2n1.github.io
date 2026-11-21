@@ -52,4 +52,3 @@ description: "doveadm-dump – Dump the content of Dovecot’s binary mailbox in
 <p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) </p>
-<h2>Index</h2>

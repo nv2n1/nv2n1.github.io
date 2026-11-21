@@ -65,4 +65,3 @@ description: "tomboy – A simple note-taking application for Gnome"
 <h2>AUTHOR</h2>
 <p> Alex Graveley &lt;alex [at] beatniksoftware.com&gt; </p>
 <p> This manual page was originally written by Luca Capello &lt;luca [at] pca.it&gt;. </p>
-<h2>Index</h2>

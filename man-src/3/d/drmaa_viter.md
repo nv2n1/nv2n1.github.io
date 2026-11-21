@@ -15,4 +15,3 @@ description: "Vector iteration functions. –"
 <p> The drmaa_release_<i>X</i>() functions free the memory used by the <i>values</i> opaque string vector. All memory used by strings contained therein is also freed. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
-<h2>Index</h2>

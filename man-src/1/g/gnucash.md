@@ -54,4 +54,3 @@ description: "gnucash – personal finance manager"
 <h2>AUTHOR</h2>
 <p> Robert Merkel &lt;rgmerk [at] mira.net&gt; wrote this manpage. </p>
 <p> <code>GnuCash</code> was written by Robin Clark, Linas Vepstas, and a cast of thousands. </p>
-<h2>Index</h2>

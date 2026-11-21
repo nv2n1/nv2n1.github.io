@@ -34,4 +34,3 @@ description: "catdic – Download a dictionary"
 <p> Downloads dictionary file &#8220;test&#8221; on the remote host to current directory file &#8220;test2.t&#8221;.</p>
 <h2>SEE ALSO</h2>
 <p> cannaserver(1M), <a href="/docs/linux/man/1-lsdic/">lsdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1) </p>
-<h2>Index</h2>

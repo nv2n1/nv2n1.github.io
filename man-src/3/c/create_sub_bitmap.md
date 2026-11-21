@@ -18,4 +18,3 @@ description: "create_sub_bitmap – Creates a memory sub bitmap. Allegro game pr
 <p> Returns a pointer to the created sub bitmap, or NULL if the sub bitmap could not be created. Remember to free the sub bitmap before freeing the parent bitmap to avoid memory leaks and potential crashes accessing memory which has been freed. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-create_bitmap/">create_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_bitmap_ex/">create_bitmap_ex</a></code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code>is_sub_bitmap</code>(3), <code>clear_bitmap</code>(3), <code>clear_to_color</code>(3), <code><a href="/docs/linux/man/3-expat/">expat</a></code>(3), <code><a href="/docs/linux/man/3-exscroll/">exscroll</a></code>(3), <code><a href="/docs/linux/man/3-exswitch/">exswitch</a></code>(3) </p>
-<h2>Index</h2>

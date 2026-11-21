@@ -116,4 +116,3 @@ ndctl create-namespace -f -e namespace0.0 --mode=sector
 <dt>
 </dt><dd> <a rel="nofollow" href="http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf">http://pmem.io/documents/NVDIMM_Namespace_Spec.pdf</a></dd></dl>
 </dl>
-<h2>Index</h2>

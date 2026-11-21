@@ -50,4 +50,3 @@ $(SRCS)
 <h2>AUTHOR</h2>
 <p> <code>ccmakedep</code> was written by the X Consortium. </p>
 <p> Colin Watson wrote this manual page, originally for the Debian Project, based partly on the manual page for <code><a href="/docs/linux/man/1-makedepend/">makedepend</a></code>(1). </p>
-<h2>Index</h2>

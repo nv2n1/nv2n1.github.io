@@ -31,4 +31,3 @@ description: "lou_allround – Test every capability of the liblouis library"
 <dt>
 </dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

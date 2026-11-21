@@ -53,4 +53,3 @@ description: "foomatic-printjob – manage printer jobs in a spooler-independent
 <p> Manfred Wassmann &lt;<i>manolo [at] NCC-1701.B.Shuttle.de</i>&gt; and Chris Lawrence &lt;<i>lawrencc [at] debian.org</i>&gt; for the foomatic project using output from the associated binary. </p>
 <h2>BUGS</h2>
 <p> This manpage still needs some editing. </p>
-<h2>Index</h2>

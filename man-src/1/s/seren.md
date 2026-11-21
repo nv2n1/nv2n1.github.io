@@ -59,4 +59,3 @@ description: "Seren – A simple VoIP program to create conferences from the ter
 <dd> Output fifo: provides raw audio in 48000Hz/2ch/s16_le format. When fifos are enabled (using the /f command), reading from this fifo will allow you to get the pcm audio signal of the conference and pipe it to another process.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Giorgio Vazzana &lt;mywing81 [at] gmail.com&gt;. </p>
-<h2>Index</h2>

@@ -64,4 +64,3 @@ reg counts pixels sumcnts sumpix-- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- -
 </pre>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

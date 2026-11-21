@@ -32,4 +32,3 @@ description: "csscombine – Utility to combine several stylesheets into one."
 <dt>/usr/share/doc/python-cssutils-doc/docs/html/docs/index.html</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

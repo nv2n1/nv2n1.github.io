@@ -110,4 +110,3 @@ description: "Status Codes –"
 <p> Attribute in use by some object, can&#8217;t be deleted.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>

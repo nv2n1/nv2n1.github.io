@@ -26,4 +26,3 @@ description: "pybabelfish – convert Python objects into human-readable strings
 <p> Copyright &#169; 2007-2008 REvolution Computing, Inc.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pybabelfishd/">pybabelfishd</a>(1) </p>
-<h2>Index</h2>

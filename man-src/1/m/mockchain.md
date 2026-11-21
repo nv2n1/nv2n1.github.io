@@ -37,4 +37,3 @@ description: "mockchain – chain package builder."
 </dl>
 <h2>AUTHORS</h2>
 <p> Seth Vidal &lt;skvidal1.3.3&quot;fedoraproject.org&gt; </p>
-<h2>Index</h2>

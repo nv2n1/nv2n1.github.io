@@ -208,4 +208,3 @@ description: "rst2s5 – convert reST documents to S5 slides"
 <dt><code>&#8211;no-current-slide</code></dt>
 <dd> Disable the current slide indicator. This is the default. </dd>
 </dl>
-<h2>Index</h2>

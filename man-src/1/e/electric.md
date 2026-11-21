@@ -199,4 +199,3 @@ Also a cast of thousands:
 </td>
 </tr>
 </table>
-<h2>Index</h2>

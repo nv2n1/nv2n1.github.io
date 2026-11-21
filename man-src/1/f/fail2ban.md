@@ -30,4 +30,3 @@ description: "fail2ban – a set of server and client programs to limit brute fo
  Copyright of modifications held by their respective authors. Licensed under the GNU General Public License v2 (GPL).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fail2ban-server/">fail2ban-server</a>(1) <a href="/docs/linux/man/1-fail2ban-client/">fail2ban-client</a>(1) <a href="/docs/linux/man/1-fail2ban-regex/">fail2ban-regex</a>(1) <a href="/docs/linux/man/5-jail-conf/">jail.conf</a>(5) </p>
-<h2>Index</h2>

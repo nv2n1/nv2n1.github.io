@@ -2109,4 +2109,3 @@ $ python pycodestyle.py --verbose pycodestyle.py
 <p> Johann C. Rocholl, Florent Xicluna, Ian Lee</p>
 <h2>COPYRIGHT</h2>
 <p> 2006-2016, Johann C. Rocholl, Florent Xicluna, Ian Lee </p>
-<h2>Index</h2>

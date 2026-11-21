@@ -34,4 +34,3 @@ description: "dmail – procmail Mail Delivery Module"
 <h2>SEE ALSO</h2>
 <p> binmail(1)<br />
  <a href="/docs/linux/man/1-procmail/">procmail</a>(1) </p>
-<h2>Index</h2>

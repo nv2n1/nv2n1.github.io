@@ -36,4 +36,3 @@ description: "collectdmon – Monitoring daemon for collectd"
 <h2>AUTHOR</h2>
 <p> collectd has been written by Florian Forster &lt;octo at collectd.org&gt; and many contributors (see `<font SIZE="-1">AUTHORS</font>&#8216;). </p>
 <p> collectdmon has been written by Sebastian Harl &lt;sh [at] tokkee.org&gt;. </p>
-<h2>Index</h2>

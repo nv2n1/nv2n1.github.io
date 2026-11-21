@@ -22,4 +22,3 @@ description: "gvfs-less – Execute less on the output of gvfs-cat"
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-less/">less</a></code>(1), <code><a href="/docs/linux/man/1-gvfs-cat/">gvfs-cat</a></code>(1) </p>
-<h2>Index</h2>

@@ -801,4 +801,3 @@ plan ${start : % d.% m.% Y} ${start : % H : % M} $
 <p> Additional copyrights apply to portions of the code herein. Please see file <font SIZE="-1">COPYRIGHT</font> and source file headers for details. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License Version 2 as published by the Free Software Foundation, e.g. at &lt;<a rel="nofollow" href="http://www.fsf.org/">http://www.fsf.org/</a>&gt; </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1"><code>WITHOUT</code></font><font SIZE="-1"><code>ANY</code></font><font SIZE="-1"><code>WARRANTY</code></font>; without even the implied warranty of merchantability or fitness for a particular purpose. See the file <i></i><font SIZE="-1"><i>COPYRIGHT</i></font><i></i> for more details. </p>
-<h2>Index</h2>

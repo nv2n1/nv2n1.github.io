@@ -196,4 +196,3 @@ operon[--version][--help][-v | --verbose]&lt;command&gt;[&lt;argument&gt;...] op
 <code><a href="//www.systutorials.com/docs/linux/man/1-exfalso/">exfalso</a></code>(1)
 <code><a href="//www.systutorials.com/docs/linux/man/1-quodlibet/">quodlibet</a></code>(1)
 </pre>
-<h2>Index</h2>

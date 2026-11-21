@@ -14,4 +14,3 @@ description: "gfal2_version – Version tool for gfal2"
 <p> <code>gfal2_version</code></p>
 <h2>DESCRIPTION</h2>
 <p> Simple utility printing the current version of the gfal2 library. </p>
-<h2>Index</h2>

@@ -85,4 +85,3 @@ description: "digitaglinktree – Export tag structure of photos in digikam to t
 <p> same starting with /Place &#8230; same starting with /People &#8230; </p>
 <h2>AUTHORS</h2>
 <p> <code>digitaglinktree</code> was written by Rainer Krienke &lt;krienke at uni-koblenz.de&gt; </p>
-<h2>Index</h2>

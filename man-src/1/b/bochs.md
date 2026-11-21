@@ -47,4 +47,3 @@ Online Bochs Documentation
 <h2>BUGS</h2>
 <p> Please report all bugs to the bug tracker on our web site. Just go to <a rel="nofollow" href="http://bochs.sourceforge.net,">http://bochs.sourceforge.net,</a> and click &quot;Bug Reports&quot; on the sidebar under &quot;Feedback&quot;. </p>
 <p> Provide a detailed description of the bug, the version of the program you are running, the operating system you are running the program on and the operating system you are running in the emulator. </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "hciemu – HCI emulator"
 </dl>
 <h2>AUTHORS</h2>
 <p> Written by Marcel Holtmann &lt;marcel [at] holtmann.org&gt; and Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt;, man page by Filippo Giunchedi &lt;filippo [at] debian.org&gt; </p>
-<h2>Index</h2>

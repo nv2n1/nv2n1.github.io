@@ -49,4 +49,3 @@ description: "urxvt256c-mld – urxvt256c-ml terminal daemon"
 <dd> Only used when the <tt>&quot;--opendisplay&quot;</tt> option is specified. Must contain a valid X display name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-urxvt256c-ml/">urxvt256c-ml</a>(7), <a href="/docs/linux/man/1-urxvt256c-mlc/">urxvt256c-mlc</a>(1) </p>
-<h2>Index</h2>

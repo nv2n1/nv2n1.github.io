@@ -40,4 +40,3 @@ description: "HLint – haskell source code suggestions"
 <p> The full documentation for <code>HLint</code> is available in <i>/usr/share/doc/hlint/hlint.html. </i></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Joachim Breitner &lt;nomeata [at] debian.org&gt; for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

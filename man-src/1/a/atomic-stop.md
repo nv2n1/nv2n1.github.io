@@ -24,4 +24,3 @@ description: "atomic-stop – Execute container image stop method"
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> March 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) </p>
-<h2>Index</h2>

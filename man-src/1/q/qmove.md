@@ -31,4 +31,3 @@ description: "qmove – move pbs batch job"
 <p> If the qmove command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), pbs_movejob(3B) </p>
-<h2>Index</h2>

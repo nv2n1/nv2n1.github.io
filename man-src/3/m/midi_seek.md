@@ -18,4 +18,3 @@ description: "midi_seek – Seeks to the given midi_pos in the current MIDI file
 <p> Returns zero if it could successfully seek to the requested position. Otherwise, a return value of 1 means it stopped playing, and midi_pos is set to the negative length of the MIDI file (so you can use this function to determine the length of a MIDI file). A return value of 2 means the MIDI file looped back to the start. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_midi/">play_midi</a></code>(3), <code><a href="/docs/linux/man/3-midi_pos/">midi_pos</a></code>(3) </p>
-<h2>Index</h2>

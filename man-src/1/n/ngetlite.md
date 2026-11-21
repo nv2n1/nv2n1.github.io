@@ -30,4 +30,3 @@ description: "ngetlite – retrieve files from NNTP hosts"
 <p> Matthew Mueller &lt;donut AT dakotacom.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nget/">nget</a></code>(1) </p>
-<h2>Index</h2>

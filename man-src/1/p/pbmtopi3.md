@@ -17,4 +17,3 @@ description: "pbmtopi3 – convert a portable bitmap into an Atari Degas .pi3 fi
 <p> <a href="/docs/linux/man/1-pi3topbm/">pi3topbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/1-ppmtopi1/">ppmtopi1</a>(1), <a href="/docs/linux/man/1-pi1toppm/">pi1toppm</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by David Beckemeyer (bdt!david) and Jef Poskanzer. </p>
-<h2>Index</h2>

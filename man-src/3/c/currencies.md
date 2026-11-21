@@ -144,4 +144,3 @@ description: "Currencies and FX rates –"
  <i>New Zealand dollar. </i></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

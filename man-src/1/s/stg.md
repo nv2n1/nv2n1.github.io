@@ -258,4 +258,3 @@ stg[--version | --help] stg[--help&lt;command&gt; | &lt;command&gt; --help] stg&
 <dt>
 </dt><dd> [set $man.base.url.for.relative.links]/tutorial.html</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ ptr = strnstr(largestring, smallstring, 4);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-strstr/">strstr</a>(3), <a href="/docs/linux/man/3-strcasestr/">strcasestr</a>(3), <a href="/docs/linux/man/3-memchr/">memchr</a>(3), <a href="/docs/linux/man/3-memmem/">memmem</a>(3), <a href="/docs/linux/man/3-strchr/">strchr</a>(3), <a href="/docs/linux/man/3-strcspn/">strcspn</a>(3), <a href="/docs/linux/man/3-strpbrk/">strpbrk</a>(3), <a href="/docs/linux/man/3-strrchr/">strrchr</a>(3), <a href="/docs/linux/man/3-strsep/">strsep</a>(3), <a href="/docs/linux/man/3-strspn/">strspn</a>(3), <a href="/docs/linux/man/3-strtok/">strtok</a>(3), <a href="/docs/linux/man/3-wcsstr/">wcsstr</a>(3) </p>
-<h2>Index</h2>

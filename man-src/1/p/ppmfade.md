@@ -52,4 +52,3 @@ description: "ppmfade – generate a transition between two image files using sp
 <p> Wesley C. Barris (wesb [at] msc.edu)<br />
  Army High Performance Computing Research Center (AHPCRC)<br />
  Minnesota Supercomputer Center, Inc. </p>
-<h2>Index</h2>

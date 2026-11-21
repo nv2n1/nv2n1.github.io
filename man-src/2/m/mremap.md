@@ -101,4 +101,3 @@ void *mremap(void *old_address, size_t old_size,
 <p> Your favorite text book on operating systems for more information on paged memory (e.g., <i>Modern Operating Systems</i> by Andrew S. Tanenbaum, <i>Inside Linux</i> by Randolph Bentson, <i>The Design of the UNIX Operating System</i> by Maurice J. Bach)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

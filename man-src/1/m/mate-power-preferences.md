@@ -26,4 +26,3 @@ description: "mate-power-preferences – mate power preferences gui"
 <p> The programs are documented fully on <a rel="nofollow" href="http://mate.org/projects/mate-power-manager/">http://mate.org/projects/mate-power-manager/</a> .</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Oliver Grawert &lt;ogra [at] ubuntu.com&gt; for the Debian system. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ aliases: t, tst
 <dd> npm help stop </dd>
 </dl>
 </dl>
-<h2>Index</h2>

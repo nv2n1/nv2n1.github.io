@@ -36,4 +36,3 @@ description: "po2csv – Convert Gettext PO localization files to Comma-Separate
 <dt>&#8211;columnorder</dt>
 <dd> specify the order and position of columns (location,source,target) </dd>
 </dl>
-<h2>Index</h2>

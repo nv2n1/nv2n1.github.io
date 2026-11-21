@@ -36,4 +36,3 @@ description: "fcaps – report available fontcaps"
 <p> Copyright (C) 1987-2009<br />
  University Corporation for Atmospheric Research </p>
 <p> The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

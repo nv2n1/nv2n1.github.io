@@ -52,4 +52,3 @@ docbook2pdf gjotsfile.xml
  This is free software; see the source for copying condi­ tions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>gjots</code>(1), <code><a href="/docs/linux/man/1-gjots2html/">gjots2html</a></code>(1), <code><a href="/docs/linux/man/1-docbook2gjots/">docbook2gjots</a></code>(1)</p>
-<h2>Index</h2>

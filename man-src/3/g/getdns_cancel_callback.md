@@ -38,4 +38,3 @@ description: "getdns_cancel_callback — cancel an outstanding asyn getdns reque
  /etc/resolv.conf </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_context/">getdns_context</a></code>(3), <code><a href="/docs/linux/man/3-getdns_general/">getdns_general</a></code>(3), <code><a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a></code>(3), <code><a href="/docs/linux/man/3-getdns_service/">getdns_service</a></code>(3), </p>
-<h2>Index</h2>

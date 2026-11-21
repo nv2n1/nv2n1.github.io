@@ -43,4 +43,3 @@ description: "cgclear – unload the cgroup filesystem"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgconfigparser(1), <a href="/docs/linux/man/5-cgconfig-conf/">cgconfig.conf</a>(5) </p>
-<h2>Index</h2>

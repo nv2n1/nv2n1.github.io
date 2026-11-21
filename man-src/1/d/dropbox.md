@@ -105,4 +105,3 @@ Rian Hunter&lt;rian[at] dropbox.com&gt;
 </code></pre>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2008-2011 Evenflow, Inc. Free use of this software is granted under the terms of the GNU General Public License (GPL). </p>
-<h2>Index</h2>

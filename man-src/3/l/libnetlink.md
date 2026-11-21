@@ -65,4 +65,3 @@ int rtnl_open(struct rtnl_handle *rth, unsigned subscriptions) int rtnl_wilddump
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7), <code><a href="/docs/linux/man/7-rtnetlink/">rtnetlink</a></code>(7)<br />
  /usr/include/linux/rtnetlink.h </p>
-<h2>Index</h2>

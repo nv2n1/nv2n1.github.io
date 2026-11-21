@@ -30,4 +30,3 @@ description: "lookbib – search bibliographic databases"
 <dd> Index files.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-refer/">refer</a></i>(1), <i><a href="/docs/linux/man/1-lkbib/">lkbib</a></i>(1), <i><a href="/docs/linux/man/1-indxbib/">indxbib</a></i>(1) </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "scandeps.pl – Scan file prerequisites"
 <p> Copyright 2003, 2004, 2005, 2006 by Audrey Tang &lt;autrijus [at] autrijus.org&gt;. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
 <p> See &lt;<a rel="nofollow" href="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a>&gt; </p>
-<h2>Index</h2>

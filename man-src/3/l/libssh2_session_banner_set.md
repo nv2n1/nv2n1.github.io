@@ -25,4 +25,3 @@ description: "libssh2_session_banner_set – set the SSH prococol banner for the
 <p> Before 1.4.0 this function was known as <a href="/docs/linux/man/3-libssh2_banner_set/">libssh2_banner_set</a>(3)</p>
 <h2>SEE ALSO</h2>
 <p> <code>libssh2_session_handshake(3),</code> <code><a href="/docs/linux/man/3-libssh2_session_banner_get/">libssh2_session_banner_get</a>(3)</code> </p>
-<h2>Index</h2>

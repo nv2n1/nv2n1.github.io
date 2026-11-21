@@ -26,4 +26,3 @@ description: "xml-config – script to get information about the installed versi
 <dd> If specified, use PREFIX instead of the installation prefix that <i>GNOME-XML</i> was built with when computing the output for the &#8211;cflags and &#8211;libs options. This option must be specified before any &#8211;libs or &#8211;cflags options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Fredrik Hallenberg &lt;hallon [at] lysator.liu.se&gt;, for the Debian GNU/linux system (but may be used by others). </p>
-<h2>Index</h2>

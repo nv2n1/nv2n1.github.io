@@ -21,4 +21,3 @@ description: "splitfont – extract characters from an ISO-type font."
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-setfont/">setfont</a></code>(8) </p>
-<h2>Index</h2>

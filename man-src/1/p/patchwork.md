@@ -51,7 +51,8 @@ description: "patchwork – filter for drawing clustered graphs as treemaps"
 <p> <code>shape=record polygon epsf </code><i>builtin_polygon</i><br />
  <i>builtin_polygon</i> is one of: <code>plaintext ellipse oval circle egg triangle box diamond trapezium parallelogram house hexagon octagon note tab box3d component.</code> (Polygons are defined or modified by the following node attributes: <code>regular</code>, <code>peripheries</code>, <code>sides</code>, <code>orientation</code>, <code>distortion</code> and <code>skew</code>.) <code>epsf</code> uses the node&#8217;s <code>shapefile</code> attribute as the path name of an external EPSF file to be automatically loaded for the node shape. </p>
 <p> <code>label=</code><i>text</i> where <i>text</i> may include escaped newlines 
-, \l, or  for center, left, and right justified lines. The string &#8216;\N&#8217; value will be replaced by the node name. The string &#8216;\G&#8217; value will be replaced by the graph name. Record labels may contain recursive box lists delimited by { | }. Port identifiers in labels are set off by angle brackets &lt; &gt;. In the graph file, use colon (such as, <code>node0:port28</code>). </p>
+, \l, or 
+ for center, left, and right justified lines. The string &#8216;\N&#8217; value will be replaced by the node name. The string &#8216;\G&#8217; value will be replaced by the graph name. Record labels may contain recursive box lists delimited by { | }. Port identifiers in labels are set off by angle brackets &lt; &gt;. In the graph file, use colon (such as, <code>node0:port28</code>). </p>
 <p> <code>fontsize=</code><i>n</i> sets the label type size to <i>n</i> points. </p>
 <p> <code>fontname=</code><i>name</i> sets the label font family name. </p>
 <p> <code>color=</code><i>colorvalue</i> sets the outline color, and the default fill color if style=filled and <code>fillcolor</code> is not specified. </p>
@@ -73,7 +74,8 @@ description: "patchwork – filter for drawing clustered graphs as treemaps"
 <p> <code>tooltip=</code><i>&quot;tooltip&quot;</i> is a tooltip string for client-side imagemaps and SVG, effective when nodes have a URL. The tooltip string defaults to be the same as the label string, but this attribute permits nodes without labels to still have tooltips thus permitting denser graphs. The substrings &#8216;\N&#8217; and &#8216;\G&#8217; are substituted in the same manner as for the node label attribute. Additionally the substring &#8216;\L&#8217; is substituted with the node label string. </p>
 <h2>EDGE ATTRIBUTES</h2>
 <p> <code>label=</code><i>text</i> where <i>text</i> may include escaped newlines 
-, \l, or  for centered, left, or right justified lines. If the substring &#8216;\T&#8217; is found in a label it will be replaced by the tail_node name. If the substring &#8216;\H&#8217; is found in a label it will be replaced by the head_node name. If the substring &#8216;\E&#8217; value is found in a label it will be replaced by: tail_node_name-&gt;head_node_name If the substring &#8216;\G&#8217; is found in a label it will be replaced by the graph name. or by: tail_node_name&#8211;head_node_name for undirected graphs. </p>
+, \l, or 
+ for centered, left, or right justified lines. If the substring &#8216;\T&#8217; is found in a label it will be replaced by the tail_node name. If the substring &#8216;\H&#8217; is found in a label it will be replaced by the head_node name. If the substring &#8216;\E&#8217; value is found in a label it will be replaced by: tail_node_name-&gt;head_node_name If the substring &#8216;\G&#8217; is found in a label it will be replaced by the graph name. or by: tail_node_name&#8211;head_node_name for undirected graphs. </p>
 <p> <code>fontsize=</code><i>n</i> sets the label type size to <i>n</i> points. </p>
 <p> <code>fontname=</code><i>name</i> sets the label font family name. </p>
 <p> <code>fontcolor=</code><i>colorvalue</i> sets the label text color. </p>
@@ -140,4 +142,3 @@ graph G
 <p> This man page contains only a small amount of the information related to the Graphviz layout programs. The most complete information can be found at <a rel="nofollow" href="http://www.graphviz.org/Documentation.php,">http://www.graphviz.org/Documentation.php,</a> especially in the on-line reference pages. Most of these documents are also available in the <i>doc</i> and <i>doc/info</i> subtrees in the source and binary distributions. </p>
 <p> <a href="/docs/linux/man/1-dot/">dot</a>(1) </p>
 <p> M. Bruls, K. Huizing and J. van Wijk, &quot;Squarified Treemaps&quot;, Proc. Eurographics and IEEE TVCG Symposium on Visualization, 1999, pp. 33-42. </p>
-<h2>Index</h2>

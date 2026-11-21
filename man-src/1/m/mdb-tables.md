@@ -66,4 +66,3 @@ mdb - tables[-S][-1 | -d delimiter] database
 <dt><code>Access allows for tables to have spaces embeded in the table name.</code></dt>
 <dd> You must specify a <i>delimiter</i> (<code>-d</code>) if you intend on piping the output of <code>mdb-tables</code> to a program such as awk or cut. </dd>
 </dl>
-<h2>Index</h2>

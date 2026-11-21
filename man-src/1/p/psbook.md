@@ -23,4 +23,3 @@ description: "psbook – rearrange pages in PostScript file into signatures"
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>Psbook</i> does not accept all DSC comments. </p>
-<h2>Index</h2>

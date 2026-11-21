@@ -95,4 +95,3 @@ $ riemann-client query 'host = &quot;my-host&quot;'
 </pre>
 <h2>AUTHOR</h2>
 <p> Gergely Nagy <i>algernon [at] madhouse-project.org</i> </p>
-<h2>Index</h2>

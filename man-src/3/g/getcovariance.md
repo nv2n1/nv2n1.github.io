@@ -23,4 +23,3 @@ description: "ql/math/matrixutilities/getcovariance.hpp – Covariance matrix ca
 <p> Covariance matrix calculation. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

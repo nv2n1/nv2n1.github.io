@@ -30,4 +30,3 @@ description: "git-verify-commit – Check the GPG signature of commits"
 </dt><dd> SHA-1 identifiers of Git commit objects.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

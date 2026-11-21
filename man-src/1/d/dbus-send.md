@@ -91,4 +91,3 @@ description: "dbus-send – Send a message to a message bus"
 <p> dbus-send was written by Philip Blundell.</p>
 <h2>BUGS</h2>
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] </p>
-<h2>Index</h2>

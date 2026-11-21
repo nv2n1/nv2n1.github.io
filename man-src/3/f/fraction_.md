@@ -35,4 +35,3 @@ description: "QuantLib::PagodaOption – Roofed Asian option on a number of asse
 <p> Reimplemented from <code>MultiAssetOption</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

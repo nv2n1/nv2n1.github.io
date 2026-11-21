@@ -210,4 +210,3 @@ description: "unison-2.40.102 – a file-synchronization tool for Unix and Windo
 <p> The program is documented fully in the in-built documentation and the manual, available as text in /usr/share/doc/unison/.</p>
 <h2>AUTHOR</h2>
 <p> Options are automatically extracted from `unison -help&#8217;. The rest of this manual page was written by Robert McQueen &lt;robot101 [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

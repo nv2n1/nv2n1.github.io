@@ -29,4 +29,3 @@ case U_UTF8:
 <p> Returns the currently selected text encoding format. See the documentation of set_uformat() for a list of encoding formats. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_uformat/">set_uformat</a></code>(3) </p>
-<h2>Index</h2>

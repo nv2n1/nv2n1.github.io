@@ -29,4 +29,3 @@ description: "dh_usrlocal – migrate usr/local directories to maintainer script
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Andrew Stribblehill &lt;ads [at] debian.org&gt; </p>
-<h2>Index</h2>

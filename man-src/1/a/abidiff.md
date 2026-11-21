@@ -245,4 +245,3 @@ $ cat - n test - v0.cc 1 // Compile this with:
 <p> Dodji Seketeli</p>
 <h2>COPYRIGHT</h2>
 <p> 2014-2016, Red Hat, Inc. </p>
-<h2>Index</h2>

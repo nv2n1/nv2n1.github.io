@@ -133,4 +133,3 @@ $ git merge origin
 <p> <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) <code><a href="/docs/linux/man/1-git-branch/">git-branch</a></code>(1) <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

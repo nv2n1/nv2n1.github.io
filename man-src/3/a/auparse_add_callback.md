@@ -46,4 +46,3 @@ void destroy(void *user_data);
 <p> <code><a href="/docs/linux/man/3-auparse_feed/">auparse_feed</a></code>(3), <code><a href="/docs/linux/man/3-auparse_flush_feed/">auparse_flush_feed</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> John Dennis </p>
-<h2>Index</h2>

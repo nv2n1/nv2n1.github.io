@@ -30,4 +30,3 @@ description: "fusesmb – Mount network neighbourhood"
 <p> <code>fusesmb.conf</code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Vincent Wagelaar &lt;vincent [at] ricardis.tudelft.nl&gt;. </p>
-<h2>Index</h2>

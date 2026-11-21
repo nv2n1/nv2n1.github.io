@@ -138,4 +138,3 @@ description: "clamdtop – monitor the Clam AntiVirus Daemon"
 <p> Török Edvin &lt;edwin [at] clamav.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-clamd/">clamd</a>(8), <a href="/docs/linux/man/5-clamd-conf/">clamd.conf</a>(5) </p>
-<h2>Index</h2>

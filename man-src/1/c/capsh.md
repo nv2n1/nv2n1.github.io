@@ -101,4 +101,3 @@ $ <code>capsh --decode=3</code>
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libcap/">libcap</a></code>(3), <code><a href="/docs/linux/man/8-getcap/">getcap</a></code>(8), <code><a href="/docs/linux/man/8-setcap/">setcap</a></code>(8) and <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7). </p>
-<h2>Index</h2>

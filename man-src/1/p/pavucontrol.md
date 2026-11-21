@@ -29,4 +29,3 @@ description: "pavucontrol – A volume control for the PulseAudio sound server"
 <p> Documentation by CJ van den Berg &lt;cj [at] vdbonline.com&gt;.</p>
 <h2>COPYING</h2>
 <p> Copyright (C) 2006 Lennart Poettering. Free use of this software is granted under the terms of the GNU General Public License (GPL). </p>
-<h2>Index</h2>

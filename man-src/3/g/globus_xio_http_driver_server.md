@@ -12,4 +12,3 @@ description: "Server – The globus_xio_server_create() causes a new transport-s
 <p> Multiple HTTP requests may be read in sequence from an HTTP server. After each request is processed and the response is sent (either by writing the entire entity body as specified by the Content-Length header or by using the GLOBUS_XIO_HTTP_HANDLE_SET_END_OF_ENTITY handle cntl), the next read will contain the metadata related to the next operation. Only one request will be in process at once&#8211;the previous request must have sent or received and EOF (whichever is applicable to the request type). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

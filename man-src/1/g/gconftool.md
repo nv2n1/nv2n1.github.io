@@ -97,4 +97,3 @@ description: "gconftool-2 – GNOME configuration tool"
 <h2>SEE ALSO</h2>
 <p> The GConf web site, <i><a rel="nofollow" href="http://www.gnome.org/projects/gconf/.">http://www.gnome.org/projects/gconf/.</a> </p>
 <p> </i></p>
-<h2>Index</h2>

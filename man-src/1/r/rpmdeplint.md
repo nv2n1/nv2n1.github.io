@@ -83,4 +83,3 @@ rpmdeplint list-deps --repo beaker,<a rel="nofollow" href="https://beaker-projec
 <p> rpmdeplint contributors</p>
 <h2>COPYRIGHT</h2>
 <p> 2016, Red Hat </p>
-<h2>Index</h2>

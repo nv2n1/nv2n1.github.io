@@ -26,4 +26,3 @@ description: "checkisomd5 — check an MD5 checksum implanted by implantisomd5"
 <dd> Display a series of numbers from 0 to 100, corresponding to check progress. This output can be piped to <code>dialog &#8211;gauge</code> for a user-friendly progress bar.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> implantisomd5 (1). </p>
-<h2>Index</h2>

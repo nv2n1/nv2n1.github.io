@@ -21,4 +21,3 @@ description: "xmlmantohtml – xml to html converter"
 <p> <code><a href="/docs/linux/man/1-xmlmantohtml/">xmlmantohtml</a>(1)</code></p>
 <h2>COMMENTS</h2>
 <p> This man page was written using <code><a href="/docs/linux/man/1-xmltoman/">xmltoman</a>(1)</code> by the same author. </p>
-<h2>Index</h2>

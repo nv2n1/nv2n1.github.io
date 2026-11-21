@@ -20,4 +20,3 @@ description: "ql/legacy/pricers/discretegeometricaso.hpp – Discrete geometric 
 <p> Discrete geometric average-strike Asian option. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

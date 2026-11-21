@@ -81,4 +81,3 @@ archive_cleanup_command = 'pg_archivecleanup -d /mnt/standby/archive %r 2&gt;&gt
 <p> Simon Riggs &lt;simon [at] 2ndquadrant.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_standby/">pg_standby</a></code>(1) </p>
-<h2>Index</h2>

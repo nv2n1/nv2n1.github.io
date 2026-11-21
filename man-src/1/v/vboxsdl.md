@@ -78,4 +78,3 @@ description: "VBoxSDL – x86 virtualization solution"
 <dt>&lt;F1&gt;&#8230;&lt;F12&gt;</dt>
 <dd> Send &lt;ctrl&gt;&lt;alt&gt;&lt;Fx&gt; </dd>
 </dl>
-<h2>Index</h2>

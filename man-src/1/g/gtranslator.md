@@ -92,4 +92,3 @@ description: "gtranslator — a comfortable gettext po file editor with many bel
 <p> You can deliver bug reports to the gtranslator development team to our bug base via <code><a rel="nofollow" href="http://bugzilla.gnome.org/enter_bug.cgi?product=gtranslator">http://bugzilla.gnome.org/enter_bug.cgi?product=gtranslator</a></code> </p>
 <h2>VERSION</h2>
 <p> gtranslator 1.9.6 man-page </p>
-<h2>Index</h2>

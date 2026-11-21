@@ -184,4 +184,3 @@ description: "Security Context Management –"
 </dt><dd> the major status from setting the context</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

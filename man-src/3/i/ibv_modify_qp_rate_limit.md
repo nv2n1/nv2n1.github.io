@@ -42,4 +42,3 @@ struct ibv_qp_rate_limit_attr {
 </dd><dt>Bodong Wang &lt;bodong [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

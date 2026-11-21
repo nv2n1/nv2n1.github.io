@@ -156,4 +156,3 @@ description: "hhvm – Execute PHP and Hack files"
 <h2>SEE ALSO</h2>
 <p> <code>hphpize</code>(1)<br />
  <i><a rel="nofollow" href="http://docs.hhvm.com">http://docs.hhvm.com</a></i> </p>
-<h2>Index</h2>

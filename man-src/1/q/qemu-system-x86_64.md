@@ -2220,4 +2220,3 @@ description: "qemu-doc – QEMU version 4.2.0 User Documentation"
 <p> The <font SIZE="-1">HTML</font> documentation of <font SIZE="-1">QEMU</font> for more precise information and Linux user mode emulator invocation.</p>
 <h2>AUTHOR</h2>
 <p> Fabrice Bellard </p>
-<h2>Index</h2>

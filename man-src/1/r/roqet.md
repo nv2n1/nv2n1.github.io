@@ -89,4 +89,3 @@ description: "roqet – Rasqal RDF query utility"
 <h2>CHANGES</h2>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://www.dajobe.org/">http://www.dajobe.org/</a> </p>
-<h2>Index</h2>

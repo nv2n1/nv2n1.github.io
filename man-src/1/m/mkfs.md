@@ -86,4 +86,3 @@ description: "mkfs.jffs2 – Create a JFFS2 file system image from directory"
  Manual page written by David Schleef &lt;ds [at] schleef.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code>mkfs.jffs</code>(1), <code><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></code>(1) </p>
-<h2>Index</h2>

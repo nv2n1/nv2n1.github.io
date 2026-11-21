@@ -21,4 +21,3 @@ description: "pg_controldata – display control information of a PostgreSQL dat
 <dl>
 <dt>
 </dt><dd> Default data directory location</dd></dl>
-<h2>Index</h2>

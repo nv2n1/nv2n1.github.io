@@ -106,4 +106,3 @@ description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, 
 <dd> A colon separated list of MIB modules to load. Default: IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:SNMPv2-MIB:RFC1213-MIB:UCD-SNMP-MIB.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-snmp_api/">snmp_api</a></code>(3) </p>
-<h2>Index</h2>

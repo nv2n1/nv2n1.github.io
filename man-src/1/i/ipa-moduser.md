@@ -35,4 +35,3 @@ description: "ipa-moduser – Modify a user"
 <dd> Set an attribute to a new value, removing all old ones</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
-<h2>Index</h2>

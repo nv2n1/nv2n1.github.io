@@ -19,4 +19,3 @@ description: "nomacs – is a fast and small image viewer with the capability of
 <p> Markus Diem &lt;markus [at] nomacs.org&gt; </p>
 <p> Stefan Fiel &lt;stefan [at] nomacs.org&gt; </p>
 <p> Florian Kleber &lt;florian [at] nomacs.org&gt; </p>
-<h2>Index</h2>

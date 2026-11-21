@@ -222,4 +222,3 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
  See the file COPYING for details. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild_plugins/">rpmrebuild_plugins</a>(1), &#8216;man -k rrp&#8217; for plugins specific manpages. </p>
-<h2>Index</h2>

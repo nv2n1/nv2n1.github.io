@@ -23,4 +23,3 @@ description: "addwords – Adding words to specified dictionary collectively"
   % addwords mydic &lt; newwords
 </pre>
 <p> Adds words defined in <i>newwords</i> to <i>mydic</i>. </p>
-<h2>Index</h2>

@@ -239,4 +239,3 @@ Erven Rohou&nbsp;<wbr>&lt;erven.rohou [at] inria.fr&gt; </p>
 /usr/include/linux/perf_counter.h (Linux 2.6.31)
 /usr/include/linux/event_counter.h (Linux 2.6.32+)
 </pre>
-<h2>Index</h2>

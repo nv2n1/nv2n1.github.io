@@ -183,4 +183,3 @@ description: "cd-paranoia – 9.8 (Paranoia release III via libcdio) – an audi
 <p> Cdparanoia&#8217;s homepage may be found at: <a rel="nofollow" href="http://www.xiph.org/paranoia/">http://www.xiph.org/paranoia/</a> </p>
 <p> Revised for use with libcdio by Rocky &lt;rocky [at] gnu.org&gt; </p>
 <p> The libcdio homepage may be found at: <a rel="nofollow" href="http://www.gnu.org/software/libcdio">http://www.gnu.org/software/libcdio</a> </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "ipa-rmkeytab – Remove a kerberos principal from a keytab"
 <p> 4 Unable to parse the principal name </p>
 <p> 5 Principal name or realm not found in keytab </p>
 <p> 6 Unable to remove principal from keytab </p>
-<h2>Index</h2>

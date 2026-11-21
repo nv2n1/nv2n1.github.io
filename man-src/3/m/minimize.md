@@ -22,4 +22,3 @@ description: "QuantLib::ConjugateGradient – Multi-dimensional Conjugate Gradie
 <p> User has to provide line-search method and optimization end criteria. Search direction $ d_i = &#8211; f'(x_i) + c_i*d_{i-1} $ where $ c_i = ||f'(x_i)||^2/||f'(x_{i-1})||^2 $ and $ d_1 = &#8211; f'(x_1) $ </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

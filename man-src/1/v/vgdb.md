@@ -121,4 +121,3 @@ vgdb v.set log_output -c leak_check any
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.valgrind.org/docs/manual/manual-core-adv.html#manual-core-adv.valgrind-monitor-commands">http://www.valgrind.org/docs/manual/manual-core-adv.html#manual-core-adv.valgrind-monitor-commands</a></dd></dl>
 </dl>
-<h2>Index</h2>

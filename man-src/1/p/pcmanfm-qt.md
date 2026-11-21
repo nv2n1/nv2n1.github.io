@@ -44,4 +44,3 @@ description: "PCManFM-Qt – A lightweight Qt-based file manager for X Window."
 <dd> Open Find Files utility</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>pcmanfm-qt</code> was primarily written by Hong Jen Yee (PCMan) &lt;pcman.tw [at] gmail.com&gt;. </p>
-<h2>Index</h2>

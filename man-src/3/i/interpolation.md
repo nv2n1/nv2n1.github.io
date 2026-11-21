@@ -25,4 +25,3 @@ description: "ql/math/interpolation.hpp – base class for 1-D interpolations"
 <p> base class for 1-D interpolations </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

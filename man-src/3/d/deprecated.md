@@ -15,4 +15,3 @@ description: "deprecated – Deprecated List"
 <dt><code>Global dmlite_any_new_string_array</code> (unsigned n, const char **strv)</dt>
 <dd> Use dmlite_set_array instead.</dd></dl>
 <hr>
-<h2>Index</h2>

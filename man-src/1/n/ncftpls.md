@@ -111,4 +111,3 @@ description: "ncftpls – Internet file transfer program for scripts"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ncftpput/">ncftpput</a></i>(1), <i><a href="/docs/linux/man/1-ncftpget/">ncftpget</a>(1),</i> <i><a href="/docs/linux/man/1-ncftp/">ncftp</a></i>(1), <i><a href="/docs/linux/man/1-ftp/">ftp</a></i>(1), <i><a href="/docs/linux/man/1-rcp/">rcp</a></i>(1), <i><a href="/docs/linux/man/1-tftp/">tftp</a></i>(1). </p>
 <p> <i>LibNcFTP</i> (<a rel="nofollow" href="http://www.ncftp.com/libncftp/">http://www.ncftp.com/libncftp/</a>). </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ description: "euca-describe-vpcs – Show information about VPCs"
 <dt>isDefault</dt>
 <dd> whether the VPC is a default VPC state tag-key key of a tag assigned to the VPC tag-value value of a tag assigned to the VPC tag:KEY specific tag key/value combination vpc-id the VPC&#8217;s ID </dd>
 </dl>
-<h2>Index</h2>

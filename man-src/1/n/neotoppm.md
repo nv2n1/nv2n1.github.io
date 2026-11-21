@@ -18,4 +18,3 @@ url: "/docs/linux/man/1-neotoppm/"
 <p> <a href="/docs/linux/man/1-ppmtoneo/">ppmtoneo</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)  </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2001 by Teemu Hukkanen &lt;tjhukkan [at] iki.fi&gt;, based on pi1toppm by Steve Belczyk (seb3 [at] gte.com) and Jef Poskanzer. </p>
-<h2>Index</h2>

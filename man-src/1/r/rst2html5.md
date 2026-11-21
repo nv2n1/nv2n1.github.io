@@ -185,4 +185,3 @@ description: "rst2html5 – convert reST documents to HTML 5"
 <dt><code>&#8211;cloak-email-addresses</code></dt>
 <dd> Obfuscate email addresses to confuse harvesters while still keeping email links usable with standards- compliant browsers. </dd>
 </dl>
-<h2>Index</h2>

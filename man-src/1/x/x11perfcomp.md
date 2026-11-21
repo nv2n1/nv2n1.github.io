@@ -31,4 +31,3 @@ description: "x11perfcomp – X11 server performance comparison program"
 <h2>AUTHORS</h2>
 <p> Mark Moraes wrote the original scripts to compare servers.<br />
  Joel McCormack just munged them together a bit. </p>
-<h2>Index</h2>

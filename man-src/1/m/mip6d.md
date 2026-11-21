@@ -49,4 +49,3 @@ description: "mip6d – UMIP Mobile IPv6 and NEMO Basic Support protocol impleme
 <p> RFC3776: Using IPsec to Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents </p>
 <p> RFC4877: Mobile IPv6 Operation with IKEv2 and the Revised IPsec Architecture </p>
 <p> RFC3963: Network Mobility (NEMO) Basic Support Protocol </p>
-<h2>Index</h2>

@@ -115,4 +115,3 @@ description: "test – check file types and compare values"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/[">https://www.gnu.org/software/coreutils/[</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) test invocation&#8217; </p>
-<h2>Index</h2>

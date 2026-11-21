@@ -13,4 +13,3 @@ description: "pages2html – convert Pages document into HTML"
 <p> <code>pages2html</code> [<i>OPTION</i>] <i>&lt;Pages Document&gt; | &lt;Pages Directory&gt;</i></p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> Shows this help message <code>&#8211;version</code> Output pages2html version </p>
-<h2>Index</h2>

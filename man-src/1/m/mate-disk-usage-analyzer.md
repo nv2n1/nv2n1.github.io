@@ -16,4 +16,3 @@ description: "Baobab – A graphical tool to analyse disk usage"
 <p> A detailed documentation on the program could be read at: <a rel="nofollow" href="http://www.mate.org/projects/baobab">http://www.mate.org/projects/baobab</a></p>
 <h2>AUTHOR</h2>
 <p> Fabio <font SIZE="-1">MARZOCCA</font> &lt;thesaltydog [at] gmail.com&gt; </p>
-<h2>Index</h2>

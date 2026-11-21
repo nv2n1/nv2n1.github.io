@@ -73,4 +73,3 @@ description: "scat – Find catalog stars in a square or circle on the sky"
 <p> <a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/scat/">http://tdc-www.harvard.edu/software/wcstools/scat/</a> </p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

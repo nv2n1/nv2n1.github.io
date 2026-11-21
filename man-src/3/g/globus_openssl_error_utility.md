@@ -52,4 +52,3 @@ description: "Error Object Helper Functions –"
 </dt><dd> globus_error_put()</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_openssl_error from the source code. </p>
-<h2>Index</h2>

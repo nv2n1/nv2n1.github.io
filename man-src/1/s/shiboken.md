@@ -62,4 +62,3 @@ description: "shiboken – CPython bindings generator for C++ libraries"
 <p> Copyright &#169; 2009-2010 Nokia Corporation and/or its subsidiary(<code>-ies</code>)</p>
 <h2>AUTHOR</h2>
 <p> This manpage was written for Debian, starting with a help2man output, by Didier Raboud &lt;didier [at] raboud.com&gt;, on the 26. March 2010. </p>
-<h2>Index</h2>

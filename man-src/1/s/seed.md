@@ -31,4 +31,3 @@ description: "seed – libseed JavaScript REPL/Interpreter."
 <h2>AUTHORS</h2>
 <p> Robert Carr &lt;racarr [at] svn.gnome.org&gt; </p>
 <p> Tim Horton &lt;hortont [at] svn.gnome.org&gt; </p>
-<h2>Index</h2>

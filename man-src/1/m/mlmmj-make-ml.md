@@ -30,4 +30,3 @@ description: "mlmmj-make-ml – create a mailing list for mlmmj"
 <dt>
 </dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
-<h2>Index</h2>

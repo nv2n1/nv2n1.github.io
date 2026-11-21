@@ -33,4 +33,3 @@ description: "flatpak-kill – Stop a running application"
 <p> <code>$ flatpak kill org.gnome.Todo</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-run/">flatpak-run</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-ps/">flatpak-ps</a></code>(1) </p>
-<h2>Index</h2>

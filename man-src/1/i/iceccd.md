@@ -50,4 +50,3 @@ description: "iceccd – Icecream daemon"
 <p> icecream, scheduler, iceccd, icemon </p>
 <h2>AUTHOR</h2>
 <p> Cornelius Schumacher </p>
-<h2>Index</h2>

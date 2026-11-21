@@ -38,4 +38,3 @@ notify_name | be_pid | extra-- -- -- -- -- -- -+-- -- -- --+-- -- -- -virtual | 
     (1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

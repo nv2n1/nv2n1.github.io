@@ -443,4 +443,3 @@ if (!g_dbus_interface_skeleton_export(G_DBUS_INTERFACE_SKELETON(interface),
 <dt>
 </dt><dd> <a rel="nofollow" href="https://wiki.gnome.org/Projects/GObjectIntrospection">https://wiki.gnome.org/Projects/GObjectIntrospection</a></dd></dl>
 </dl>
-<h2>Index</h2>

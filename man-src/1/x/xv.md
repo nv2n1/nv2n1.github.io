@@ -18,4 +18,3 @@ description: "xv – interactive image display for the X Window System"
 <p> This version has been patched with the XV Jumbo Patches, available from <i><a rel="nofollow" href="http://pobox.com/~newt/greg_xv.html">http://pobox.com/~newt/greg_xv.html</a></i>. </p>
 <h2>AUTHOR</h2>
 <p> John Bradley (and many contributors) </p>
-<h2>Index</h2>

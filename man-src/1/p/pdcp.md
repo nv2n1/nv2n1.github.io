@@ -92,4 +92,3 @@ Copy / etc / hosts to foo01, foo02, ..., foo05 pdcp - w foo[01 - 05] / etc / hos
 <p> When using <code>ssh </code> for remote execution, stderr of ssh to be folded in with that of the remote command. When invoked by pdcp, it is not possible for ssh to prompt for confirmation if a host key changes, prompt for passwords if RSA keys are not configured properly, etc.. Finally, the connect timeout is only adjustable with ssh when the underlying ssh implementation supports it, and pdsh has been built to use the correct option. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pdsh/">pdsh</a>(1) </p>
-<h2>Index</h2>

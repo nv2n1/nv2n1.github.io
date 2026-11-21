@@ -285,4 +285,3 @@ $ ls
 <h2>AUTHORS</h2>
 <p> Archivemount is written and maintained by Andre Landwehr &lt;andrel [at] cybernoia.de&gt;. </p>
 <p> This man page was written by Tom Duck &lt;tom.duck [at] dal.ca&gt; with material drawn from the page for <code>libarchive</code>(3). </p>
-<h2>Index</h2>

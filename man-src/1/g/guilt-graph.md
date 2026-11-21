@@ -32,4 +32,3 @@ description: "guilt-graph – Create a patch dependency graph"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

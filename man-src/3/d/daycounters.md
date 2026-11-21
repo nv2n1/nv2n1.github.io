@@ -28,4 +28,3 @@ description: "Day counters –"
 <p> The class <code>QuantLib::DayCounter</code> provides more advanced means of measuring the distance between two dates according to a given market convention, both as number of days of fraction of year. A number of such conventions is contained in the ql/DayCounters directory.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

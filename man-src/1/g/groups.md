@@ -30,4 +30,3 @@ description: "groups – print the groups a user is in"
 <p> <a href="/docs/linux/man/1-getent/">getent</a>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/groups">https://www.gnu.org/software/coreutils/groups</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) groups invocation&#8217; </p>
-<h2>Index</h2>

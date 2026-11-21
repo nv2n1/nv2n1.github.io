@@ -50,4 +50,3 @@ description: "dbus-uuidgen – Utility to generate UUIDs"
 <p> See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/doc/AUTHORS">http://www.freedesktop.org/software/dbus/doc/AUTHORS</a></code>m[]</p>
 <h2>BUGS</h2>
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] </p>
-<h2>Index</h2>

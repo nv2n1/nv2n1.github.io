@@ -26,4 +26,3 @@ description: "docker-service-logs – Fetch the logs of a service or task"
 <p> <code>-t</code>, <code>&#8211;timestamps</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show timestamps</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-service/">docker-service</a>(1)</code> </p>
-<h2>Index</h2>

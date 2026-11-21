@@ -32,4 +32,3 @@ description: "plugctl – a program to get or set any MPR or PCR register value"
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
 <h2>AUTHOR</h2>
 <p> Marcio Teixeira. </p>
-<h2>Index</h2>

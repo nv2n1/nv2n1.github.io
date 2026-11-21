@@ -66,4 +66,3 @@ description: "shtoolize – Build individual GNU shtool scripts"
  rse [at] engelschall.com
  <a rel="nofollow" href="http://www.engelschall.com">www.engelschall.com</a>
 </pre>
-<h2>Index</h2>

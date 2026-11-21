@@ -45,4 +45,3 @@ description: "rletopnm – convert a Utah Raster Tools RLE image file into a PNM
  Minnesota Supercomputer Center, Inc. </p>
 <p> Modifications by Eric Haines to support raw and plain formats. </p>
 <p> Modifications by Bryan Henderson to create alpha files and use mnemonic options. </p>
-<h2>Index</h2>

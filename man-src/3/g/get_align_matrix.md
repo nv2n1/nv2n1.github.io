@@ -16,4 +16,3 @@ description: "get_align_matrix – Rotates a matrix to align it along specified 
 <p> Rotates a matrix so that it is aligned along the specified coordinate vectors (they need not be normalized or perpendicular, but the up and front must not be equal). A front vector of 0,0,-1 and up vector of 0,1,0 will return the identity matrix. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_camera_matrix/">get_camera_matrix</a></code>(3) </p>
-<h2>Index</h2>

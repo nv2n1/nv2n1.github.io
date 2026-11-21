@@ -26,4 +26,3 @@ void ares_set_socket_callback(ares_channel channel,
 <p> <a href="/docs/linux/man/3-ares_set_socket_callback/">ares_set_socket_callback</a>(3) was added in c-ares 1.6.0</p>
 <h2>AUTHOR</h2>
 <p> Gregor Jasny </p>
-<h2>Index</h2>

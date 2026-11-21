@@ -50,4 +50,3 @@ $ git psykorebase --continue
 <h2>SEE ALSO</h2>
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
 <p> &lt;<i><a rel="nofollow" href="https://github.com/benoitbryon/psykorebase">https://github.com/benoitbryon/psykorebase</a></i>&gt; </p>
-<h2>Index</h2>

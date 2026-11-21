@@ -41,4 +41,3 @@ description: "atomic-cluster – Manage cluster hosts"
 &nbsp;<wbr>&nbsp;<wbr>Report status of an upgrade operation on the specified cluster. </p>
 <h2>HISTORY</h2>
 <p> Initial revision by Matthew Barnes (mbarnes at redhat dot com) May 2016 </p>
-<h2>Index</h2>

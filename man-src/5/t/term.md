@@ -173,4 +173,3 @@ and a hexadecimal dump of the compiled terminal description:
  extended number support for ncurses 6.1 </p>
 <p> Eric S. Raymond <br />
  documented legacy terminfo format, e.g., from pcurses. </p>
-<h2>Index</h2>

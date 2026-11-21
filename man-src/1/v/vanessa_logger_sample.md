@@ -17,4 +17,3 @@ description: "vanessa_logger_sample – demonstrate some of the functionality of
 <p> None</p>
 <h2>AUTHORS</h2>
 <p> Simon Horman &lt;horms [at] verge.net.au&gt; </p>
-<h2>Index</h2>

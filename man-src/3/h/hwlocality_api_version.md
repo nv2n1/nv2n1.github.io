@@ -25,4 +25,3 @@ description: "hwlocality_api_version – API version"
 <p> Indicate at runtime which hwloc API version was used at build time. Should be <code>HWLOC_API_VERSION</code> if running on the same version.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

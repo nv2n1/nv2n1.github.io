@@ -38,4 +38,3 @@ description: "trace-cmd-hist – show histogram of events in trace.dat file"
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

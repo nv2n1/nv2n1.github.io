@@ -33,4 +33,3 @@ description: "ipa-addservice – Add a service principal"
 <dd> Add a service principal for the host (for ssh, for example)</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
-<h2>Index</h2>

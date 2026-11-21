@@ -31,4 +31,3 @@ description: "Graphical Disk Map"
 <dt>Markus Lausser (sgop [at] users.sourceforge.net)</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

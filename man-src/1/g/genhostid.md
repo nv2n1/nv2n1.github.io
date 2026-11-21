@@ -15,4 +15,3 @@ description: "genhostid – generate and set a hostid for the current host"
 <p> <code>genhostid</code> generates a random hostid and stores it in /etc/hostid, if /etc/hostid does not already exist. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-hostid/">hostid</a>(1), <a href="/docs/linux/man/2-gethostid/">gethostid</a>(2), <a href="/docs/linux/man/2-sethostid/">sethostid</a>(2) </p>
-<h2>Index</h2>

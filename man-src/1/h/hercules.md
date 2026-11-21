@@ -39,4 +39,3 @@ description: "Hercules – IBM System/370, ESA/390, and z/Architecture Emulator"
 <p> This manual page was written by Dan Horák using text snippets from the <code>Hercules</code> web site.</p>
 <h2>SEE ALSO</h2>
 <p> <code>Hercules</code> Homepage: <code><a rel="nofollow" href="http://www.hercules-s390.eu">http://www.hercules-s390.eu</a></code> </p>
-<h2>Index</h2>

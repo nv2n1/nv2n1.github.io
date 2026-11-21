@@ -67,4 +67,3 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 <h2>AUTHORS</h2>
 <p> Alexander Galanin &lt;gaa.nnov [at] mail.ru&gt;.<br />
  This manual page was originally written by Kirill Zaitsev &lt;teferiincub [at] gmail.com&gt;. Updated by Alexander Galanin. </p>
-<h2>Index</h2>

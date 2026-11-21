@@ -57,4 +57,3 @@ description: "guilt-patchbomb – Email a series of commits interactively"
 <dt>
 </dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
-<h2>Index</h2>

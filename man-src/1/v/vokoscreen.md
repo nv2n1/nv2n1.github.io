@@ -22,4 +22,3 @@ description: "vokoscreen – simple screencast creator"
 <dd> Log file stores information of last successful recording.</dd></dl>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;tux [at] vodafone.de&gt;. </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ example%
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
-<h2>Index</h2>

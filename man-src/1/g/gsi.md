@@ -49,4 +49,3 @@ description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 <h2>AUTHOR</h2>
 <p> Gambit-C was written by Marc Feeley &lt;gambit [at] iro.umontreal.ca&gt;. </p>
 <p> Homepage: <a rel="nofollow" href="http://gambit.iro.umontreal.ca">http://gambit.iro.umontreal.ca</a> </p>
-<h2>Index</h2>

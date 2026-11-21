@@ -69,4 +69,3 @@ description: "rifle – ranger’s file opener"
 <pre>
  $ rifle -p 1 -f tr helloworld.py
 </pre>
-<h2>Index</h2>

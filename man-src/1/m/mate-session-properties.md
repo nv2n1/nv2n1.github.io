@@ -37,4 +37,3 @@ Vincent Untz &lt;vuntz [at] gnome.org&gt; (2009-2010)
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
 <p> <code><a href="/docs/linux/man/1-mate-session/">mate-session</a>(1),</code> <code><a href="/docs/linux/man/1-mate-session-save/">mate-session-save</a>(1),</code> <code><a href="/docs/linux/man/1-mate-wm/">mate-wm</a>(1)</code> </p>
-<h2>Index</h2>

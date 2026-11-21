@@ -31,4 +31,3 @@ description: "globus_gram_client_job_info_s –"
 <p> GRAM Error Code </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_client from the source code. </p>
-<h2>Index</h2>

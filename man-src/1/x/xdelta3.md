@@ -108,4 +108,3 @@ description: "xdelta3 – VCDIFF (RFC 3284) binary diff tool"
 <h2>AUTHOR</h2>
 <p> xdelta3 was written by Josh MacDonald &lt;josh.macdonald [at] gmail.com&gt;. </p>
 <p> This manual page was written by Leo &#8216;costela&#8217; Antunes &lt;costela [at] debian.org&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

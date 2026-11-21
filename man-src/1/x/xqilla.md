@@ -56,4 +56,3 @@ description: "xqilla – run XQuery and XPath 2 expressions"
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for the <code>XQilla library</code> is available at &lt;<a rel="nofollow" href="http://xqilla.sourceforge.net/Documentation">http://xqilla.sourceforge.net/Documentation</a>&gt;. </p>
-<h2>Index</h2>

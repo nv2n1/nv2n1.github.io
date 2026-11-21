@@ -22,4 +22,3 @@ description: "libinput-replay – replay kernel events from a recording"
 <p> This tool replays events from a recording through the the kernel and is independent of libinput. In other words, updating or otherwise changing libinput will not alter the output from this tool. libinput itself does not need to be in use to replay events.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

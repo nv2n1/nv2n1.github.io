@@ -1019,4 +1019,3 @@ keygen 73 SHA1 256
 <p> For instructions on how to report bugs, please visit &lt;URL: <a rel="nofollow" href="https://chrony.tuxfamily.org/">https://chrony.tuxfamily.org/</a> &gt;.</p>
 <h2>AUTHORS</h2>
 <p> chrony was written by Richard Curnow, Miroslav Lichvar, and others. </p>
-<h2>Index</h2>

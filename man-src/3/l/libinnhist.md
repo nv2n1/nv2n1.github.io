@@ -103,4 +103,3 @@ bool HISctl(struct history *history, int request, void *val);
 <h2>HISTORY</h2>
 <p> Written by Alex Kiernan &lt;alexk [at] demon.net&gt; for InterNetNews 2.4.0. </p>
 <p> <tt>$Id:</tt> libinnhist.pod 9074 2010-05-31 19:01:32Z iulius $ </p>
-<h2>Index</h2>

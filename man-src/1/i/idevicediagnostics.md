@@ -40,4 +40,3 @@ description: "idevicediagnostics – Interact with the diagnostics interface of 
 </dl>
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>
-<h2>Index</h2>

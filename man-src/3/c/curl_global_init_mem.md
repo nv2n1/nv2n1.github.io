@@ -38,4 +38,3 @@ description: "curl_global_init_mem – Global libcurl initialisation with memory
 <p> Manipulating these gives considerable powers to the application to severely screw things up for libcurl. Take care!</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_global_cleanup/">curl_global_cleanup</a></code>(3), </p>
-<h2>Index</h2>

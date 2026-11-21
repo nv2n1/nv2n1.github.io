@@ -96,4 +96,3 @@ lp\
  :rw:lp=/dev/lp:mx#100:
 </pre>
 <p> This manpage may be out of date. </p>
-<h2>Index</h2>

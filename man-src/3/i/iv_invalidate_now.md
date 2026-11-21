@@ -20,4 +20,3 @@ description: "iv_now, iv_validate_now, iv_invalidate_now – ivykis time handlin
 <p> The function <code>iv_invalidate_now</code> is called to invalidate the currently cached time-of-day. This function should be called after any operation that takes a significant amount of wall clock time.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "ql/methods/finitedifferences/onefactoroperator.hpp – general dif
 <p> general differential operator for one-factor interest rate models </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "tv_grab_na_dtv – Grab TV listings from DirecTV."
 <p> Grabber written Rod Roark (<a rel="nofollow" href="http://www.sunsetsystems.com/">http://www.sunsetsystems.com/</a>), modified by Adam Lewandowski (adam [at] alewando.com) in January 2011 to account for DirecTV site changes.</p>
 <h2>BUGS</h2>
 <p> Like any screen-scraping grabber, this one will break regularly as the web site changes, and you should try to fetch a new one from the project&#8217;s repository. At some point the breakage might not be fixable or it may be that nobody wants to fix it. Sane people should use Schedules Direct instead. </p>
-<h2>Index</h2>

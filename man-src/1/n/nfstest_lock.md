@@ -307,4 +307,3 @@ Locking overlapping range from a second client where start2 == end1
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Jorge Mora (mora [at] netapp.com) </p>
-<h2>Index</h2>

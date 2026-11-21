@@ -37,4 +37,3 @@ gmt get MAP_GRID_CROSS_SIZE_PRIMARY MAP_GRID_CROSS_SIZE_SECONDARY
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtdefaults</code>, <code>gmtset</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

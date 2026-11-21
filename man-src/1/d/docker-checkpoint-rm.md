@@ -18,4 +18,3 @@ description: "docker-checkpoint-rm – Remove a checkpoint"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for rm</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-checkpoint/">docker-checkpoint</a>(1)</code> </p>
-<h2>Index</h2>

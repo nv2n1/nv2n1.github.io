@@ -59,4 +59,3 @@ description: "ndisasm – the Netwide Disassembler, an 80×86 binary file disass
 <p> Auto-sync mode won&#8217;t necessarily cure all your synchronisation problems: a sync marker can only be placed automatically if a jump or call instruction is found to refer to it <i>before</i> <code>ndisasm</code> actually disassembles that part of the code. Also, if spurious jumps or calls result from disassembling non-machine-code data, sync markers may get placed in strange places. Feel free to turn auto-sync off and go back to doing it manually if necessary.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1) </p>
-<h2>Index</h2>

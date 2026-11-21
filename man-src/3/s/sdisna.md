@@ -90,4 +90,3 @@ D is REAL array, dimension(M) if JOB = 'E' dimension(min(M, N)) if JOB = 'L' or 
 <p> Definition at line 118 of file sdisna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

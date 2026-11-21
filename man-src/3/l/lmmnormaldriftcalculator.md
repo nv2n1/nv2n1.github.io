@@ -20,4 +20,3 @@ description: "ql/models/marketmodels/driftcomputation/lmmnormaldriftcalculator.h
 <p> Drift computation for normal Libor market model. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "acpi – Shows battery status and other ACPI information"
 </dl>
 <h2>AUTHOR</h2>
 <p> The original version of this manual page was written by Paul Telford &lt;pxt [at] debian.org&gt; for the <code>Debian</code> system. Newer additions were done my Michael Meskes &lt;meskes [at] debian.org&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU GPL. </p>
-<h2>Index</h2>

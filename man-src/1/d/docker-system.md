@@ -17,4 +17,3 @@ description: "docker-system – Manage Docker"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for system</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-system-df/">docker-system-df</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-system-events/">docker-system-events</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-system-info/">docker-system-info</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-system-prune/">docker-system-prune</a>(1)</code> </p>
-<h2>Index</h2>

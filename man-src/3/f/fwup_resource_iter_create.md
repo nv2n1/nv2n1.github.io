@@ -94,4 +94,3 @@ Peter Jones &lt;pjones [at] redhat.com&gt;
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3), <code><a href="/docs/linux/man/3-strerror/">strerror</a></code>(3), <code><a href="/docs/linux/man/3-strerror_r/">strerror_r</a></code>(3) </p>
-<h2>Index</h2>

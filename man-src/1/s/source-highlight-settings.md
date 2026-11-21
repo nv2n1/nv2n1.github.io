@@ -28,4 +28,3 @@ description: "Source-highlight-settings – utility that can be used to write a 
 <dt>
 </dt><dd> <code>info source-highlight</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

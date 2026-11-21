@@ -43,4 +43,3 @@ size_t print_httppost(struct curl_httppost *post)
 <p> This function was added in libcurl 7.15.5</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a></code>(3) </p>
-<h2>Index</h2>

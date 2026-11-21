@@ -23,4 +23,3 @@ description: "pamdepth – change the maxval in a Netpbm image"
 <p> <code><a href="/docs/linux/man/1-pamfunc/">pamfunc</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamdepth</code> was new in Netpbm 10.32 (February 2006). It replaced <code>pnmdepth</code>, by Jef Poskanzer. <code>pamdepth</code> is backward compatible with <code>pnmdepth</code> and adds the ability to process arbitrary PAM images and the ability to process multi-image input streams. <code>pnmdepth</code> handled only PNM images and ignored all but the first in any stream. </p>
-<h2>Index</h2>

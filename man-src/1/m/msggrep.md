@@ -123,4 +123,3 @@ description: "msggrep – pattern matching on message catalog"
 <dt>
 </dt><dd> <code>info msggrep</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

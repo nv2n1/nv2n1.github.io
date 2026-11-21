@@ -56,4 +56,3 @@ description: "ice-gdb – JTAG ICE frontend for avr-gdb ice-insight – JTAG ICE
 <p> <a href="/docs/linux/man/1-gdb/">gdb</a>(1), <a href="/docs/linux/man/1-insight/">insight</a>(1).</p>
 <h2>BUGS</h2>
 <p> On Windows, the <code>ice-gdb</code> and <code>ice-insight</code> commands only work in the <code>cygwin</code> environment. They do not work with the <code>mingw</code> environment. </p>
-<h2>Index</h2>

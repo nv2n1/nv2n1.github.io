@@ -19,4 +19,3 @@ description: "onboard-settings – On-screen Keyboard (configuration dialog)"
 <p> <code>/usr/share/doc/onboard</code></p>
 <h2>AUTHOR</h2>
 <p> This manual has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; and is distributed under the GPL-3+ license. </p>
-<h2>Index</h2>

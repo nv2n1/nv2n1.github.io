@@ -50,4 +50,3 @@ url: "/docs/linux/man/8-basic_msnt_multi_domain_auth/"
 <p> squid (8), <font SIZE="-1">GPL \<a href="/docs/linux/man/7-fIs0/">fIs0</a>(7), </p>
 <p> The Squid </font><font SIZE="-2">FAQ</font> wiki <a rel="nofollow" href="http://wiki.squid-cache.org/SquidFaq">http://wiki.squid-cache.org/SquidFaq</a> </p>
 <p> The Squid Configuration Manual <a rel="nofollow" href="http://www.squid-cache.org/Doc/config/">http://www.squid-cache.org/Doc/config/</a> </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "tarsnap-recrypt – re-encrypts data stored using tarsnap(1)."
 <blockquote><p><tt></tt><code>mv /usr/local/tarsnap-cache.new /usr/local/tarsnap-cache </code> </p></blockquote>
 <blockquote><p><tt></tt><code>rm /root/tarsnap.key </code> </p></blockquote>
 <blockquote><p><tt></tt><code>mv /root/tarsnap.key.new /root/tarsnap.key </code> </p></blockquote>
-<h2>Index</h2>

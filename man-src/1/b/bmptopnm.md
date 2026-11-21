@@ -19,4 +19,3 @@ description: "bmptopnm – convert a BMP file into a portable anymap"
 <p> <code><a href="/docs/linux/man/1-ppmtobmp/">ppmtobmp</a></code>(1), <code><a href="/docs/linux/man/1-ppmtowinicon/">ppmtowinicon</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1992 by David W. Sanderson. </p>
-<h2>Index</h2>

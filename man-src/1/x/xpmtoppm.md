@@ -31,4 +31,3 @@ description: "xpmtoppm – convert an X11 pixmap into a portable pixmap"
 <p> Upgraded to support XPM version 3 by<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Arnaud Le Hors&nbsp;(lehors [at] mirsa.inria.fr)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Tue Apr 9 1991 </p>
-<h2>Index</h2>

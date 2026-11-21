@@ -15,4 +15,3 @@ description: "jack_transport – JACK toolkit client for transport control"
 <p> <code>jack_transport</code> is a toolkit client for the JACK Audio Connection Kit. It provides command-line control over the JACK transport system. Type help at jack_transport&#8217;s command prompt to see the available commands.</p>
 <h2>AUTHOR</h2>
 <p> Jeremy Hall </p>
-<h2>Index</h2>

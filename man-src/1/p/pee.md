@@ -29,4 +29,3 @@ description: "pee – tee standard input to pipes"
 <p> <code><a href="/docs/linux/man/1-tee/">tee</a></code>(1), <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> Miek Gieben </p>
-<h2>Index</h2>

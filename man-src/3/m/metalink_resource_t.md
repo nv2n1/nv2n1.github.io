@@ -31,4 +31,3 @@ description: "metalink_resource_t – The structure that holds an URL of a resou
 <p> Max connections that a client can establish to this resource simultaneously. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3) </p>
-<h2>Index</h2>

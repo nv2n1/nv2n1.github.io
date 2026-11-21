@@ -78,4 +78,3 @@ description: "smilint – syntax and semantic checks of SMIv1/v2 and SPPI module
  (C) 2001-2002 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 2002 M. Bunkus, TU Braunschweig, Germany &lt;bunkus [at] ibr.cs.tu-bs.de&gt;<br />
  and contributions by many other people. </p>
-<h2>Index</h2>

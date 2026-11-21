@@ -50,4 +50,3 @@ int main(int argc, char **argv)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> krb5_cc_gen_new3, krb5_cc_initialize3, krb5_cc_resolve3, krb5_err3, krb5_free_principal3, krb5_init_context3, krb5_kt_default3, krb5.conf5 </p>
-<h2>Index</h2>

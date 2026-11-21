@@ -70,4 +70,3 @@ To convert from CIELab TIFF to sRGB
 <p> <code><a href="/docs/linux/man/1-jpegicc/">jpegicc</a></code>(1), <code><a href="/docs/linux/man/1-icc2ps/">icc2ps</a></code>(1), <code><a href="/docs/linux/man/1-icclink/">icclink</a></code>(1), <code>icctrans</code>(1), <code><a href="/docs/linux/man/1-wtpt/">wtpt</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Shiju p. Nair &lt;shiju.p [at] gmail.com&gt;, for the Debian project. Modified by Marti Maria to reflect further changes. </p>
-<h2>Index</h2>

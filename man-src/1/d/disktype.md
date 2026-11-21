@@ -42,4 +42,3 @@ description: "disktype – disk format detector"
 <p> Christoph Pfisterer &lt;chrisp [at] users.sourceforge.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-file/">file</a>(1), gpart(8) </p>
-<h2>Index</h2>

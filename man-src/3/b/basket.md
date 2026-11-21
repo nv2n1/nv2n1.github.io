@@ -21,4 +21,3 @@ description: "ql/experimental/credit/basket.hpp – basket of issuers and relate
 <p> basket of issuers and related notionals </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

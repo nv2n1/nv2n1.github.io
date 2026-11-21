@@ -17,4 +17,3 @@ description: "fix-qdf – repair PDF files in QDF form after editing"
 <p> For details about fix-qdf and about PDF files in QDF mode, please see the qpdf manual, which can be found at <a rel="nofollow" href="https://qpdf.readthedocs.io.">https://qpdf.readthedocs.io.</a></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-qpdf/">qpdf</a>(1) </p>
-<h2>Index</h2>

@@ -990,4 +990,3 @@ description: "nycli – New Korving CLI"
 <p> See the <code>AUTHORS</code> file in the XMMS2 source distribution for more info. </p>
 <p> The blame for this man page is on Anthony. </p>
 <p> If you contributed and feel you should be listed here please send me a mail. </p>
-<h2>Index</h2>

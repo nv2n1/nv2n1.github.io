@@ -24,4 +24,3 @@ description: "satyr – create and manipulate problem reports"
 <dd>
 <p> Creates stacktrace from ABRT problem directory <i>directory</i> that contains a core dump. </p>
 </dd></dl>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "gnome-session-properties – Configure applications to start on lo
 <p> If you find bugs in the <i>gnome-session-properties</i> program, please report these on <a rel="nofollow" href="https://bugzilla.gnome.org.">https://bugzilla.gnome.org.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-session/">gnome-session</a>(1)</code> <code><a href="/docs/linux/man/1-gnome-session-quit/">gnome-session-quit</a>(1)</code> </p>
-<h2>Index</h2>

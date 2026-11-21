@@ -44,4 +44,3 @@ description: "h2paspp – Free Pascal h2pas preprocessor program."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-h2pas/">h2pas</a></code>(1) <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

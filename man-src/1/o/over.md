@@ -22,4 +22,3 @@ description: "over – pretty print and scroll source code on terminal"
 <p> <a href="/docs/linux/man/1-enscript/">enscript</a>(1), <a href="/docs/linux/man/1-states/">states</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Markku Rossi &lt;mtr [at] iki.fi&gt; &lt;<a rel="nofollow" href="http://www.iki.fr/~mtr">http://www.iki.fr/~mtr</a>&gt; </p>
-<h2>Index</h2>

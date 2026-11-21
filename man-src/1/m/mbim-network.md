@@ -66,4 +66,3 @@ description: "mbim-network – Simple network management of MBIM devices"
 <dt>
 </dt><dd> <code>info mbim-network</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ int name(LIBSSH2_SESSION *session, unsigned char **sig, size_t *sig_len,
 <p> Return 0 on success or negative on failure.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_userauth_publickey_fromfile_ex/">libssh2_userauth_publickey_fromfile_ex</a>(3)</code> </p>
-<h2>Index</h2>

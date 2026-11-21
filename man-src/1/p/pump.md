@@ -66,4 +66,3 @@ description: "pump – accelerate remote compilation with distcc"
 <p> <code>pump</code> is part of distcc. You are free to use distcc. distcc (including this manual) may be copied, modified or distributed only under the terms of the GNU General Public Licence version 2 or later. distcc comes with absolutely no warranty. A copy of the GPL is included in the file COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-distcc/">distcc</a></code>(1), <code><a href="/docs/linux/man/1-distccd/">distccd</a></code>(1), <code><a href="/docs/linux/man/1-include_server/">include_server</a></code>(1), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), and <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </p>
-<h2>Index</h2>

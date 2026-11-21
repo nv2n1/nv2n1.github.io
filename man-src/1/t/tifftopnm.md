@@ -44,4 +44,3 @@ description: "tifftopnm – convert a TIFF file into a portable anymap"
 <p> <code><a href="/docs/linux/man/1-pnmtotiff/">pnmtotiff</a></code>(1), <code><a href="/docs/linux/man/1-pnmtotiffcmyk/">pnmtotiffcmyk</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Derived by Jef Poskanzer from tif2ras.c, which is Copyright (c) 1990 by Sun Microsystems, Inc. Author: Patrick J. Naughton (naughton [at] wind.sun.com). </p>
-<h2>Index</h2>

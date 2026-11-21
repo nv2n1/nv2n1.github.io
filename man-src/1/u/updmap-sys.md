@@ -293,4 +293,3 @@ TEXMFDIST      <i>,/usr/share/texlive/texmf/web2c/updmap.cfg/</i>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to: tex-live [at] tug.org<br />
  TeX Live home page: &lt;<a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a>&gt; </p>
-<h2>Index</h2>

@@ -97,4 +97,3 @@ description: "ProZilla – a download accelerator for GNU/Linux"
 <dd> A file which can be used to provide ProZilla with hosts, accounts and passwords</dd></dl>
 <h2>BUGS</h2>
 <p> Please report bugs to our mailinglist via the website <a rel="nofollow" href="http://prozilla.genesys.ro/">http://prozilla.genesys.ro/</a> </p>
-<h2>Index</h2>

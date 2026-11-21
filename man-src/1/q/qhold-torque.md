@@ -49,4 +49,3 @@ description: "qhold – hold pbs batch jobs"
 <p> If the qhold command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qrls(1B), qalter(1B), qsub(1B), pbs_alterjob(3B), pbs_holdjob(3B), pbs_rlsjob(3B), pbs_job_attributes(7B), pbs_resources_unicos8(7B) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ bson_reader_set_read_func (bson_reader_t          *reader,
 <p> Sets the function to read more data from the underlying stream in a custom bson_reader_t. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

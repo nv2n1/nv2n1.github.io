@@ -38,4 +38,3 @@ description: "idevicepair – Manage pairings with devices and this host."
 <h2>AUTHORS</h2>
 <p> Nikias Bassen </p>
 <p> Man page written to conform with Debian by Julien Lavergne. </p>
-<h2>Index</h2>

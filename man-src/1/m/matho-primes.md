@@ -22,4 +22,3 @@ description: "matho-primes – generate consecutive prime numbers"
 <p> <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1), <code><a href="/docs/linux/man/1-primorial/">primorial</a></code>(1), <code><a href="/docs/linux/man/1-matho-mult/">matho-mult</a></code>(1), <code><a href="/docs/linux/man/1-matho-sum/">matho-sum</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> George Gesslein II (gesslein [at] linux.com) </p>
-<h2>Index</h2>

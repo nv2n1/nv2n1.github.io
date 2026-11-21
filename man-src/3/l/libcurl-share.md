@@ -25,4 +25,3 @@ description: "libcurl-share – how to use the share interface"
 <p> When you&#8217;re done using the share, make sure that no easy handle is still using it, and call <i><a href="/docs/linux/man/3-curl_share_cleanup/">curl_share_cleanup</a>(3)</i> on the handle.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_share_init/">curl_share_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_cleanup/">curl_share_cleanup</a></code>(3) </p>
-<h2>Index</h2>

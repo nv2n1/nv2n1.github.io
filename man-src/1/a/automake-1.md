@@ -119,4 +119,3 @@ description: "automake – manual page for automake 1.13.4"
 <dt>
 </dt><dd> <code>info automake</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

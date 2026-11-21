@@ -32,4 +32,3 @@ description: "fluxbox-remote – command line access to key commands for"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

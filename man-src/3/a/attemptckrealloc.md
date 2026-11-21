@@ -41,4 +41,3 @@ attemptckrealloc(ptr, size)
 <p> The procedures <code>ckalloc</code>, <code>ckfree</code>, <code>ckrealloc</code>, <code>attemptckalloc</code>, and <code>attemptckrealloc</code> are implemented as macros. Normally, they are synonyms for the corresponding procedures documented on this page. When Tcl and all modules calling Tcl are compiled with <code>TCL_MEM_DEBUG</code> defined, however, these macros are redefined to be special debugging versions of these procedures. To support Tcl&#8217;s memory debugging within a module, use the macros rather than direct calls to <code>Tcl_Alloc</code>, etc. </p>
 <h2>KEYWORDS</h2>
 <p> alloc, allocation, free, malloc, memory, realloc, TCL_MEM_DEBUG </p>
-<h2>Index</h2>

@@ -165,4 +165,3 @@ Copyright (c) 2007 Google Inc.
 <h2>REVISION</h2>
 <pre><code>Last updated: 08 January 2012
 </code></pre>
-<h2>Index</h2>

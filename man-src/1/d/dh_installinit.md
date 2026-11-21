@@ -79,4 +79,3 @@ description: "dh_installinit – install service init files into package build d
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
 <p> Steve Langasek &lt;steve.langasek [at] canonical.com&gt; </p>
 <p> Michael Stapelberg &lt;stapelberg [at] debian.org&gt; </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "lircrcd – daemon to handle consistent .lircrc state among client
 <dd> With the &#8211;output option you can select the Unix domain socket, which lircrcd will create. The default is to append a &quot;d&quot; character to the config filename given.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>

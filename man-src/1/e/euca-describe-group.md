@@ -71,4 +71,3 @@ description: "euca-describe-group – Show information about security groups"
 <dt>vpc-id</dt>
 <dd> [VPC only] ID of a VPC the group belongs to </dd>
 </dl>
-<h2>Index</h2>

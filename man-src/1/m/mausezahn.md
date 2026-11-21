@@ -74,4 +74,3 @@ description: "mausezahn – a fast versatile packet generator"
 <p> Herbert Haas<br />
  Visit <a rel="nofollow" href="http://www.perihel.at">www.perihel.at</a>/sec/mz/ for Mausezahn news and additional information. </p>
 <p> This manual page has been written by Vivek Shah &lt;boni.vivek at gmail.com&gt; for the Fedora project. </p>
-<h2>Index</h2>

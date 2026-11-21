@@ -29,4 +29,3 @@ description: "totem-audio-preview – play audio files"
 <p> This manual page was written by Milan Kupcevic for the Debian Project.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-totem-video-thumbnailer/">totem-video-thumbnailer</a></code>(1), <code><a href="/docs/linux/man/1-totem/">totem</a></code>(1), <code><a href="/docs/linux/man/1-nautilus/">nautilus</a></code>(1) </p>
-<h2>Index</h2>

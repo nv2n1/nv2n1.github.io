@@ -20,4 +20,3 @@ description: "audit_update_watch_perms – update permissions field of watch com
 <p> <code><a href="/docs/linux/man/3-audit_add_rule_data/">audit_add_rule_data</a></code>(3), <code><a href="/docs/linux/man/3-audit_add_watch/">audit_add_watch</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

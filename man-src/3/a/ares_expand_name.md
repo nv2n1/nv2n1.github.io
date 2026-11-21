@@ -33,4 +33,3 @@ int ares_expand_name(const unsigned char *encoded,
 <h2>AUTHOR</h2>
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

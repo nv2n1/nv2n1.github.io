@@ -60,4 +60,3 @@ description: "img2mercgrd – Extract region of img, preserving Mercator, save a
 <p> Suppose you want to obtain only the constrained data values from an img file, in lat/lon coordinates. Then run <code>img2mercgrd</code> with the <code>-T</code>2 option, use <code>grd2xyz</code> to dump the values, pipe through grep -v NaN to eliminate NaNs, and pipe through <code>mapproject</code> with the inverse projection as above.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-grdproject/">grdproject</a></i>(1), <i><a href="/docs/linux/man/1-mapproject/">mapproject</a></i>(1) </p>
-<h2>Index</h2>

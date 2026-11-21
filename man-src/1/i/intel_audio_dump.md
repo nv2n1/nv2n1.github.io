@@ -13,4 +13,3 @@ description: "intel_audio_dump – Dumps the Intel GPU registers for HDMI audio 
 <p> <code>intel_audio_dump</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>intel_audio_dump</code> dumps and decodes registers containing the configuration of HDMI audio handling on Intel GPUs. </p>
-<h2>Index</h2>

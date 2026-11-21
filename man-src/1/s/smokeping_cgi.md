@@ -25,4 +25,3 @@ description: "smokeping_cgi – SmokePing webfrontend"
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font></p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

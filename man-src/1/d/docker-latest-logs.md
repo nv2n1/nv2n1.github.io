@@ -32,4 +32,3 @@ Output the specified number of lines at the end of logs&nbsp;<wbr>(defaults to a
 <p> The docker logs &#8211;details command will add on extra attributes, such as environment variables and labels, provided to &#8211;log-opt when creating the container. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Ahmet Alp Balkan &lt;ahmetalpbalkan [at] gmail.com&gt; October 2015, updated by Mike Brown &lt;mikebrow [at] gmail.com&gt; </p>
-<h2>Index</h2>

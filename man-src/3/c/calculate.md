@@ -20,4 +20,3 @@ description: "QuantLib::PerturbativeBarrierOptionEngine – perturbative barrier
 <p> This engine implements the approach described in &lt;<a rel="nofollow" href="http://www.econ.univpm.it/recchioni/finance/w3/">http://www.econ.univpm.it/recchioni/finance/w3/</a>&gt;. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

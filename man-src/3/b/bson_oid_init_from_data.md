@@ -25,4 +25,3 @@ void bson_oid_init_from_data(bson_oid_t *oid,
 <p> Initializes a <code>bson_oid_t</code> using the raw buffer provided. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

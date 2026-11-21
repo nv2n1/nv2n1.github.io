@@ -68,4 +68,3 @@ description: "db2x_texixml – Make Texinfo files from Texi-XML"
 <p> The docbook2X manual (in Texinfo or HTML format) fully describes how to convert DocBook to man pages and Texinfo. </p>
 <p> Up-to-date information about this program can be found at the docbook2X Web site &lt;<a rel="nofollow" href="http://docbook2x.sourceforge.net/">http://docbook2x.sourceforge.net/</a>&gt; . </p>
 <p> The input to <code>db2x_texixml</code> is defined by the XML DTD present at <i>dtd/Texi-XML</i> in the docbook2X distribution. </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "fd2pascal – Free Pascal forms description to pascal program conv
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

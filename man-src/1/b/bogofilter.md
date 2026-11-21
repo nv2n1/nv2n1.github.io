@@ -308,4 +308,3 @@ Eric S.Raymond esr[at] thyrsus.com.David Relson relson[at] osagesoftware.com.Mat
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
-<h2>Index</h2>

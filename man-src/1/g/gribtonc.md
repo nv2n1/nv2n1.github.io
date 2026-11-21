@@ -126,4 +126,3 @@ gribtonc -v -l- -q &quot;lin,dlat=2.5,dlon=5.0&quot; avn-x.cdl avn-x.nc &lt; avn
 <p> <a href="/docs/linux/man/1-gribdump/">gribdump</a>(1), <a href="/docs/linux/man/3-netcdf/">netcdf</a>(3), pqact(1), udunits(3), ulog(3)</p>
 <h2>DIAGNOSTICS</h2>
 <p> Error messages and log messages are written to the log file. </p>
-<h2>Index</h2>

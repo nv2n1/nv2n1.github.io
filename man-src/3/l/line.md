@@ -16,4 +16,3 @@ description: "line – Draws a line onto the bitmap. Allegro game programming li
 <p> Draws a line onto the bitmap, from point (x1, y1) to (x2, y2). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fastline/">fastline</a></code>(3), <code><a href="/docs/linux/man/3-hline/">hline</a></code>(3), <code><a href="/docs/linux/man/3-vline/">vline</a></code>(3), <code><a href="/docs/linux/man/3-do_line/">do_line</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3) </p>
-<h2>Index</h2>

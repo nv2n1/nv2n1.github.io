@@ -15,4 +15,3 @@ description: "mkdirhier – makes a directory hierarchy"
 <p> The <i>mkdirhier</i> command creates the specified directories. Unlike <i>mkdir</i> if any of the parent directories of the specified directory do not exist, it creates them as well.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mkdir/">mkdir</a>(1) </p>
-<h2>Index</h2>

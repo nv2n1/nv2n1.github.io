@@ -33,4 +33,3 @@ struct iv_event_raw {
 <p> If <code><a href="/docs/linux/man/2-eventfd/">eventfd</a></code>(2) is available, it will be used to procure the abovementioned file descriptor. If not, <code>iv_event_raw</code> will fall back to <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) as the source of its file descriptors. <code><a href="/docs/linux/man/2-eventfd/">eventfd</a></code>(2) is preferred as it requires only one file descriptor table entry (while <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) requires two), and has much less kernel overhead than <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) has.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_event</code>(3), <code><a href="/docs/linux/man/2-eventfd/">eventfd</a></code>(2), <code><a href="/docs/linux/man/2-pipe/">pipe</a></code>(2) </p>
-<h2>Index</h2>

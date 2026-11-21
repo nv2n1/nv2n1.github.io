@@ -45,4 +45,3 @@ description: "pogrep – Grep XLIFF, Gettext PO and TMX localization files."
 <dt>-k/&#8211;keep-translations</dt>
 <dd> always extract units with translations </dd>
 </dl>
-<h2>Index</h2>

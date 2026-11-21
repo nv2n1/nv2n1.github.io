@@ -165,4 +165,3 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 <p> <i>gtk-gnutella</i> is Copyright (c) 2000, Yann Grossel, with additional copyrights held by other contributors 2000-2014. </p>
 <p> License to use and copy <i>gtk-gnutella</i> is given under the terms of the GNU General Public License (GPL), version 2. Please see the file COPYING in the distribution for complete information. </p>
 <p> This manual page can also be redistributed under the same conditions as <i>gtk-gnutella</i> itself. </p>
-<h2>Index</h2>

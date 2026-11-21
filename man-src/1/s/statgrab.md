@@ -50,4 +50,3 @@ description: "statgrab – sysctl-style interface to system statistics"
 <p> This man page was derived from the man page written by Bartosz Fenski for the Debian GNU/Linux distribution.</p>
 <h2>WEBSITE</h2>
 <p> &lt;<a rel="nofollow" href="http://www.i-scream.org/libstatgrab/">http://www.i-scream.org/libstatgrab/</a>&gt; </p>
-<h2>Index</h2>

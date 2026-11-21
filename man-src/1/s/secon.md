@@ -76,4 +76,3 @@ description: "secon – See an SELinux context, from a file, program or user inp
 <pre>
 James Antill (james.antill [at] redhat.com) 
 </pre>
-<h2>Index</h2>

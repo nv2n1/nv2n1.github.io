@@ -46,4 +46,3 @@ git hash - object[-t&lt;type&gt;][-w][--path = &lt;file&gt; | --no - filters][--
 </dt><dd> Allow <code>&#8211;stdin</code> to hash any garbage into a loose object which might not otherwise pass standard object parsing or git-fsck checks. Useful for stress-testing Git itself or reproducing characteristics of corrupt or bogus objects encountered in the wild.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

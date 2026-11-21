@@ -20,4 +20,3 @@ description: "nagi – Sierra Online ™ AGI game interpreter"
 <p> sarien (1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by elonen &lt;elonen [at] iki.fi&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. </p>
-<h2>Index</h2>

@@ -111,4 +111,3 @@ description: "Date and time calculations –"
 <p> Day&#8217;s serial number MOD 7; WEEKDAY Excel function is the same except for Sunday = 7.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

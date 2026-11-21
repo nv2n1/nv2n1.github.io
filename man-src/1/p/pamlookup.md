@@ -169,4 +169,3 @@ description: "pamlookup – map an image to a new image by using it as indices i
 <p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) , <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamlookup</code> was new in Netpbm 10.13 (December 2002). </p>
-<h2>Index</h2>

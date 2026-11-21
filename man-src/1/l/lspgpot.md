@@ -16,4 +16,3 @@ description: "lspgpot – extracts the ownertrust values from PGP keyrings and l
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2002 Free Software Foundation, Inc. Please report bugs to &lt;bug-gnupg [at] gnu.org&gt;. </p>
 <p> This manpage was written by Francois Wendling &lt;frwendling [at] free.fr&gt;. </p>
-<h2>Index</h2>

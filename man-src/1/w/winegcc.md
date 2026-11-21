@@ -53,4 +53,3 @@ description: "winegcc – Wine C and C++ MinGW Compatible Compiler"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-winebuild/">winebuild</a></code>(1), <code><a href="/docs/linux/man/1-wrc/">wrc</a></code>(1), <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br />
  <code>Wine documentation and support</code> </p>
-<h2>Index</h2>

@@ -123,4 +123,3 @@ description: "kmymoney – the personal finances manager for KDE"
 <dl>
 <dt>
 </dt><dd> Initial investment support.</dd></dl>
-<h2>Index</h2>

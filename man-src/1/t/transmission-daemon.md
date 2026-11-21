@@ -111,4 +111,3 @@ description: "transmission-daemon – a bittorrent client"
 <h2>SEE ALSO</h2>
 <p> transmission-create1, transmission-daemon1, transmission-edit1, transmission-gtk1, transmission-qt1, transmission-remote1, transmission-show1 </p>
 <p> <a rel="nofollow" href="http://www.transmissionbt.com/">http://www.transmissionbt.com/</a> </p>
-<h2>Index</h2>

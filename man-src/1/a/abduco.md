@@ -62,4 +62,3 @@ description: "abduco – terminal session manager"
 </pre>
 <h2>AUTHOR</h2>
 <p> abduco is written by Marc André Tanner &lt;mat at brain-dump.org&gt; </p>
-<h2>Index</h2>

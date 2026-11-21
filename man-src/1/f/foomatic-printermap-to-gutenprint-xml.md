@@ -16,4 +16,3 @@ description: "foomatic-printermap-to-gutenprint-xml – Updates Gutenprint drive
 <h2>DESCRIPTION</h2>
 <dd>This command updates the driver XML file for the Gutenprint driver to the state of the foomatic-printermap file in the Gutenprint source tree. Used to update the driver XML file for Gutenprint in the OpenPrinting database. </dd>
 <p> It is very unlikely you need to do this. </p>
-<h2>Index</h2>

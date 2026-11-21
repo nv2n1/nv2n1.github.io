@@ -22,4 +22,3 @@ int green_15bit = makecol_depth(15, 0, 255, 0);
 <p> Returns the requested RGB triplet in the specified color depth. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-makeacol/">makeacol</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-makecol8/">makecol8</a></code>(3), <code><a href="/docs/linux/man/3-makecol15_dither/">makecol15_dither</a></code>(3), <code><a href="/docs/linux/man/3-rgb_map/">rgb_map</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3) </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ class Foo : public Singleton&lt;Foo&gt;
 <p>&nbsp;<wbr>which, albeit sub-optimal, frees one from the concerns of creating and managing the unique instance and can serve later as a single implemementation point should synchronization features be added.&nbsp;<wbr> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

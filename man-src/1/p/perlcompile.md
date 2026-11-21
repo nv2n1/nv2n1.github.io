@@ -147,4 +147,3 @@ $ perl - MO = Deparse, -p - e 'print "Hello, world
 <p> BEGIN{} blocks are executed while compiling your code. Any external state that is initialized in BEGIN{}, such as opening files, initiating database connections etc., do not behave properly. To work around this, Perl has an INIT{} block that corresponds to code being executed before your program begins running but after your program has finished being compiled. Execution order: BEGIN{}, (possible save of state through compiler back-end), INIT{}, program runs, END{}.</p>
 <h2>AUTHOR</h2>
 <p> This document was originally written by Nathan Torkington, and is now maintained by the perl5-porters mailing list <i>perl5-porters [at] perl.org</i>. </p>
-<h2>Index</h2>

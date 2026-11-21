@@ -85,4 +85,3 @@ description: "swift – OpenStack Swift client tool"
 </dl>
 <h2>DOCUMENTATION</h2>
 <p> More in depth documentation about OpenStack Swift as a whole can be found at <code><a rel="nofollow" href="http://swift.openstack.org">http://swift.openstack.org</a></code> </p>
-<h2>Index</h2>

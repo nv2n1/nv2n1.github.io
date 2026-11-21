@@ -40,4 +40,3 @@ description: "gnome-disks – the GNOME Disks application"
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/gnome-disk-utility/-/issues/">https://gitlab.gnome.org/GNOME/gnome-disk-utility/-/issues/</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-disk-image-mounter/">gnome-disk-image-mounter</a></code>(1), <code><a href="/docs/linux/man/8-udisks/">udisks</a></code>(8) </p>
-<h2>Index</h2>

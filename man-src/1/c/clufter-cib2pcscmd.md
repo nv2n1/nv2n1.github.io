@@ -81,4 +81,3 @@ description: "clufter – cib2pcscmd"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-pcs/">pcs</a></i>(8), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> and perhaps more </p>
-<h2>Index</h2>

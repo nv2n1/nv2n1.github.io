@@ -95,4 +95,3 @@ description: "dnsdist – tool to balance DNS queries over downstream servers"
 <p> Website: <a rel="nofollow" href="http://dnsdist.org">http://dnsdist.org</a></p>
 <h2>AUTHORS</h2>
 <p> PowerDNS.com BV. </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "clufter – cib-revitalize"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> and perhaps more </p>
-<h2>Index</h2>

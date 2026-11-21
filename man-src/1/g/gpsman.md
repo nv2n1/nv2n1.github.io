@@ -84,4 +84,3 @@ description: "gpsman – a (graphical) manager of GPS data"
 <h2>SEE ALSO</h2>
 <p> Miguel Filgueiras, <code>GPSMan User Manual</code>, Version 6.4, September 2008<br />
  This manual, in both PDF and HTML, is part of the distribution of GPSMan and can be retrieved from the GPSMan site at <code><a rel="nofollow" href="http://www.ncc.up.pt/gpsman">http://www.ncc.up.pt/gpsman</a></code>. </p>
-<h2>Index</h2>

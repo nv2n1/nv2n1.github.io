@@ -42,4 +42,3 @@ description: "sgepasswd – Modify the xxQS_NAMExx password file of xxQS_NAMExx"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>

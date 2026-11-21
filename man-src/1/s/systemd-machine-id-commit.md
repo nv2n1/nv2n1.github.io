@@ -35,4 +35,3 @@ description: "systemd-machine-id-commit – Commit transient machine ID to /etc/
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-machine-id-commit-service/">systemd-machine-id-commit.service</a></code>(8), <code><a href="/docs/linux/man/1-systemd-machine-id-setup/">systemd-machine-id-setup</a></code>(1), <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5), <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) </p>
-<h2>Index</h2>

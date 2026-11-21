@@ -35,4 +35,3 @@ description: "rpmdev-diff – manual page for rpmdev-diff version 1.4"
 <p> Report bugs to &lt;<a rel="nofollow" href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a>&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004-2010 Ville Skyttä &lt;ville.skytta [at] iki.fi&gt; This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "is_trans_font – Returns TRUE if a font uses transparency. Allegr
 <p> Returns TRUE if the font uses transparency, FALSE if it does not. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-make_trans_font/">make_trans_font</a></code>(3), <code>is_color_font</code>(3), <code>is_mono_font</code>(3) </p>
-<h2>Index</h2>

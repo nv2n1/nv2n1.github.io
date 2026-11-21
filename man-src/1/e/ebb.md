@@ -35,4 +35,3 @@ description: "extractbb, ebb – extract bounding box information from graphics 
 <h2>AUTHOR</h2>
 <p> <code>extractbb</code> was written by the DVIPDFMx project team &lt;dvipdfmx [at] ktug.or.kr&gt;, based on the program <code>ebb</code> by Mark A. Wicks. </p>
 <p> This manual page was also written by the DVIPDFMx project team, based on a manual page Frank K&uuml;ster &lt;frank [at] kuesterei.ch&gt; wrote for the Debian GNU/Linux system. It may be used, modified, and/or redistributed by others without contacting the authors. </p>
-<h2>Index</h2>

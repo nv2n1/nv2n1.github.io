@@ -39,4 +39,3 @@ description: "appres – list X application resource database"
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), <a href="/docs/linux/man/1-listres/">listres</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

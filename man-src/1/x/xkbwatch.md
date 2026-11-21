@@ -18,4 +18,3 @@ description: "xkbwatch – XKB extension user utility"
 <dd> This option indicates that the program version should be printed, after which the program exits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7) </p>
-<h2>Index</h2>

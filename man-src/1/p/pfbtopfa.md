@@ -19,4 +19,3 @@ description: "pfbtopfa – Convert Postscript .pfb fonts to .pfa format using gh
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. This manpage by George Ferguson. </p>
-<h2>Index</h2>

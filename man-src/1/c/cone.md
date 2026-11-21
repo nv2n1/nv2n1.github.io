@@ -91,4 +91,3 @@ TYPE.SUBTYPE.filter filter <i>type/subtype</i> <i>filename</i>
 <p> <code>Sam Varshavchik</code></p>
 <dl>
 </dl>
-<h2>Index</h2>

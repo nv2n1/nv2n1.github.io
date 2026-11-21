@@ -53,4 +53,3 @@ description: "pmempool – Persistent Memory Pool Management Tool"
 <p> In order to get more information about specific <i>command</i> you can use <code>pmempool help &lt;command&gt;.</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>libpmemlog(3) libpmemblk(3) libpmemobj(3)</code> </p>
-<h2>Index</h2>

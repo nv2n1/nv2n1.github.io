@@ -62,4 +62,3 @@ Type Subtypes-- -- -- -- -- --text plain, enriched multipart mixed, alternative,
 </pre>
 <h2>CONTEXT</h2>
 <p> If a folder is given, it will become the current folder. The last message selected will become the current message, unless the <code>-nochangecur</code> option is specified. </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "ldbadd – Command-line utility for adding records to an LDB"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://samba.org/~tridge/">http://samba.org/~tridge/</a></dd></dl>
 </dl>
-<h2>Index</h2>

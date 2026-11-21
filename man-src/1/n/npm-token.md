@@ -62,4 +62,3 @@ npm token list[--json | --parseable] npm token create[--read - only][--cidr = 1.
 <dd> <code>npm token revoke &lt;token|id&gt;</code>: This removes an authentication token, making it immediately unusable. This can accept both complete tokens (as you get back from <code>npm token create</code> and will find in your <code>.npmrc</code>) and ids as seen in the <code>npm token list</code> output. This will NOT accept the truncated token found in <code>npm token list</code> output. </dd>
 </dl>
 </dl>
-<h2>Index</h2>

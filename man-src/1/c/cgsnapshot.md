@@ -53,4 +53,3 @@ description: "cgsnapshot – generate the configuration file for given controlle
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgconfig.conf (5) </p>
-<h2>Index</h2>

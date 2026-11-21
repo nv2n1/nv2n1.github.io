@@ -22,4 +22,3 @@ description: "tfdocgen – Tilp Framework Doc Generator"
 <dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Romain LIEVIN &lt;roms [at] tilp.info&gt;. </p>
-<h2>Index</h2>

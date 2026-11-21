@@ -169,4 +169,3 @@ edac_for_each_mc_info(ctx-&gt;edac, mc, mci)
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>edac-util</code>(8), <code><a href="/docs/linux/man/8-edac-ctl/">edac-ctl</a></code>(8) </p>
-<h2>Index</h2>

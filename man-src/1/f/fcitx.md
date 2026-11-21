@@ -40,4 +40,3 @@ description: "fcitx – Free Chinese Input Toy of X – a Chinese IME for XIM"
 <dd> If $<code>XMODIFIERS</code> is set, fcitx will run with the name that specified in $<code>XMODIFIERS</code> , otherwise it will run with im name fcitx.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Please see the homepage at <code><a rel="nofollow" href="https://fcitx-im.org/">https://fcitx-im.org/</a></code> </p>
-<h2>Index</h2>

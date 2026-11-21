@@ -117,4 +117,3 @@ description: "flatpak-install – Install an application or runtime"
 <p> <code>$ flatpak &#8211;system install org.gnome.gedit.flatpakref</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-update/">flatpak-update</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-build-bundle/">flatpak-build-bundle</a></code>(1), <code>flatpak-flatpakref</code>(1), <code><a href="/docs/linux/man/1-flatpak-make-current/">flatpak-make-current</a></code>(1), <code>ostree-find-remotes</code>(1) </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "arara – a TeX automation tool based on rules and directives."
 <dd> Show a help message and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Issue tracker at </p>
-<h2>Index</h2>

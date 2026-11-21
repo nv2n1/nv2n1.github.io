@@ -24,4 +24,3 @@ Carter Bullard (carter [at] qosient.com).
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code>ragator</code>(5) <code><a href="/docs/linux/man/1-ra/">ra</a></code>(1), <code><a href="/docs/linux/man/5-rarc/">rarc</a></code>(5), <code><a href="/docs/linux/man/8-argus/">argus</a></code>(8) <code>tcpdump</code>(1), </p>
-<h2>Index</h2>

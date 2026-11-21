@@ -105,4 +105,3 @@ description: "knockd – port-knock server"
 <pre>
 Judd Vinet &lt;jvinet [at] zeroflux.org&gt;
 </pre>
-<h2>Index</h2>

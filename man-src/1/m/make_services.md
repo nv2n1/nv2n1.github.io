@@ -38,4 +38,3 @@ description: "make_services – generate GNUstep services info"
 <p> Work on <code>make_services</code> started November 1998. This manual page was first written October 2003.</p>
 <h2>AUTHORS</h2>
 <p> make_services was written by Richard Frith-Macdonald &lt;richard [at] brainstorm.co.uk&gt;. This man page was written by Martin Brecher &lt;martin [at] mb-itconsulting.com&gt;. </p>
-<h2>Index</h2>

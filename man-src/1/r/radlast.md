@@ -19,4 +19,3 @@ description: "radlast – show \"last\" info from the radwtmp file"
 <p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/5-radiusd-conf/">radiusd.conf</a>(5), <a href="/docs/linux/man/5-wtmp/">wtmp</a>(5), <a href="/docs/linux/man/1-last/">last</a>(1).</p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl. </p>
-<h2>Index</h2>

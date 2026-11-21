@@ -26,4 +26,3 @@ allegro_init();
 <p> Returns the color depth or zero on platforms where this information is not available or does not apply. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_desktop_resolution/">get_desktop_resolution</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3) </p>
-<h2>Index</h2>

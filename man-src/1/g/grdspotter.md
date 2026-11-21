@@ -83,4 +83,3 @@ gmt grdspotter Pac_res_topo.nc -EDC85.d -GCVA.nc -R190/220/15/25 -I2m -N145 -Tt 
 <p> Wessel, P., 2008, Hotspotting: Principles and properties of a plate tectonic Hough transform, Geochem. Geophys. Geosyst. 9(Q08004): doi:10.1029/2008GC002058.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

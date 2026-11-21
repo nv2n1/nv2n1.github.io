@@ -82,4 +82,3 @@ description: "balance 3.42 – A simple TCP proxy with load balancing and failov
 <p> Thomas Obermair, Inlab Software GmbH (obermair [at] acm.org) </p>
 <p> Copyright (c) 2000-2007,2008 by Thomas Obermair (obermair [at] acm.org) and Inlab Software GmbH (<a rel="nofollow" href="http://www.inlab.de">http://www.inlab.de</a>), Gruenwald, Germany. All rights reserved. </p>
 <p> Balance is released under the GNU GENERAL PUBLIC LICENSE, see the file COPYING in the source code distribution. </p>
-<h2>Index</h2>

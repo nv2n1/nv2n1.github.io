@@ -105,4 +105,3 @@ description: "smidump – dump SMI or SPPI modules in various formats"
  (C) 2001-2002 T. Klie, TU Braunschweig, Germany &lt;tklie [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 2002 M. Bunkus, TU Braunschweig, Germany &lt;bunkus [at] ibr.cs.tu-bs.de&gt;<br />
  and contributions by many other people. </p>
-<h2>Index</h2>

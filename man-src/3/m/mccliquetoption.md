@@ -22,4 +22,3 @@ description: "ql/legacy/pricers/mccliquetoption.hpp – Cliquet option priced wi
 <p> Cliquet option priced with Monte Carlo simulation. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

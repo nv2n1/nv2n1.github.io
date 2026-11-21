@@ -37,4 +37,3 @@ description: "gnustep-tests – script to run a GNUstep testsuite"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2014 Free Software Foundation, Inc. </p>
 <p> Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. </p>
-<h2>Index</h2>

@@ -64,4 +64,3 @@ description: "grub-mkstandalone — Generate a standalone image in the selected 
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

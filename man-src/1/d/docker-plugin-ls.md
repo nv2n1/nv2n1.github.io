@@ -70,4 +70,3 @@ $ docker plugin ls-- filter capability = volumedriver-- format "table &#123;&#12
 <p> <code>-q</code>, <code>&#8211;quiet</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Only display plugin IDs</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-plugin/">docker-plugin</a>(1)</code> </p>
-<h2>Index</h2>

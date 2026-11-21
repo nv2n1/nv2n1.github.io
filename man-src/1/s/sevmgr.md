@@ -34,4 +34,3 @@ description: "sevmgr –"
 <p> Copyright © 2009-2012 Denis Arnaud </p>
 <p> See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet: </p>
 <p>&nbsp;<wbr><a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</a>&nbsp;<wbr> </p>
-<h2>Index</h2>

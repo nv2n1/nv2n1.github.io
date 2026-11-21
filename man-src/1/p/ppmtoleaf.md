@@ -18,4 +18,3 @@ description: "ppmtoleaf – convert portable pixmap to Interleaf image format"
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> The program is copyright (C) 1994 by Bill O&#8217;Donnell. </p>
-<h2>Index</h2>

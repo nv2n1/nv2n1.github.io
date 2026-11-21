@@ -56,4 +56,3 @@ free(dbuf);
 <p> When you are finished writing the image, you should call <i>FunFlush()</i> to write out the <font SIZE="-1">FITS</font> image padding. However, this is not necessary if you subsequently call <i>FunClose()</i> without doing any other I/O to the <font SIZE="-1">FITS</font> file.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

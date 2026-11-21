@@ -71,4 +71,3 @@ description: "libinput-debug-events – debug helper for libinput"
 <p> Events shown by this tool may not correspond to the events seen by a different user of libinput. This tool initializes a separate context.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

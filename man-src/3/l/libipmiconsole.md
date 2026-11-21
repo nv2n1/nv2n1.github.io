@@ -35,4 +35,3 @@ description: "libipmiconsole – IPMI SOL library"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-ipmiconsole/">ipmiconsole</a>(8) </p>
 <p> <a rel="nofollow" href="http://www.gnu.org/software/freeipmi/">http://www.gnu.org/software/freeipmi/</a> </p>
-<h2>Index</h2>

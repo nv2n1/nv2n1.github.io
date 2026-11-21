@@ -65,4 +65,3 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <h2>AUTHOR</h2>
 <p> Shirish Pargaonkar wrote the setcifsacl program. </p>
 <p> The Linux CIFS Mailing list is the preferred place to ask questions regarding these programs. </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "nbd-trdump – translate an nbd transaction log into human readabl
 <p> The NBD kernel module and the NBD tools have been written by Pavel Macheck (pavel [at] ucw.cz). </p>
 <p> The kernel module is now maintained by Paul Clements (Paul.Clements [at] steeleye.com), while the userland tools are maintained by Wouter Verhelst (wouter [at] debian.org) </p>
 <p> This manual page was written by Wouter Verhelst (&lt;wouter [at] debian.org&gt;) for the Debian GNU/Linux system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation. </p>
-<h2>Index</h2>

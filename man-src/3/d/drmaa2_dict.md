@@ -39,4 +39,3 @@ drmaa2_error drmaa2_dict_set(drmaa2_dict d, const char *key, const char *val);
 <dt><code>drmaa2_dict_set</code>()</dt>
 <dd> sets the specified dictionary key to the specified value. Key and value strings MUST be stored as the provided character pointers. If the dictionary already has an entry for this name, the value is replaced and the old value is removed. If a callback was provided on dictionary creation, it SHALL be called with a NULL pointer for the key and the pointer of the previous value.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

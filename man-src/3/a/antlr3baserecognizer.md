@@ -39,4 +39,3 @@ description: "include/antlr3baserecognizer.h –"
 <p> Defines the basic structure to support recognizing by either a lexer, parser, or tree parser. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>

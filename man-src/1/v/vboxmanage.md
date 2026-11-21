@@ -338,4 +338,3 @@ description: "VBoxManage – x86 virtualization solution"
 <dt>
 </dt><dd> [&#8211;no-install-additions] [&#8211;additions-iso=add-iso] [&#8211;install-txs] [&#8211;no-install-txs] [&#8211;validation-kit-iso=testing-iso] [&#8211;locale=ll_CC] [&#8211;country=CC] [&#8211;time-zone=tz] [&#8211;hostname=fqdn] [&#8211;package-selection-adjustment=keyword] [&#8211;dry-run] [&#8211;auxiliary-base-path=path] [&#8211;image-index=number] [&#8211;script-template=file] [&#8211;post-install-template=file] [&#8211;post-install-command=command] [&#8211;extra-install-kernel-parameters=params] [&#8211;language=lang] [&#8211;start-vm=session-type] </dd>
 </dl>
-<h2>Index</h2>

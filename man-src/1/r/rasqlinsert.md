@@ -61,4 +61,3 @@ description: "rasqlinsert – write argus(8) data into mysql database tables."
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

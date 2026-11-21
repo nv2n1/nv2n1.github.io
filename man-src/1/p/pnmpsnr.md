@@ -20,4 +20,3 @@ description: "pnmpsnr – compute the difference between two portable anymaps"
 <p> So the higher the PSNR, the closer the images are. A luminance PSNR of 20 means the mean square difference of the luminances of the pixels is 100 times less than the maximum possible difference, i.e. 0.01. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
-<h2>Index</h2>

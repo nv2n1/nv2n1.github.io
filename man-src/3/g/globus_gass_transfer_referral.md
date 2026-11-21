@@ -57,4 +57,3 @@ description: "Referrals –"
 </dt><dd> This function returns a string pointer containing the URL, or NULL if the index or referral were invalid.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>

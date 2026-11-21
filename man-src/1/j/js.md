@@ -179,4 +179,3 @@ description: "node – server-side JavaScript runtime"
 <p> IRC (Node.js core development): <code>chat.freenode.net #node-dev</code></p>
 <h2>AUTHORS</h2>
 <p> Written and maintained by 1000+ contributors: <code><a rel="nofollow" href="https://github.com/nodejs/node/blob/master/AUTHORS">https://github.com/nodejs/node/blob/master/AUTHORS</a></code> </p>
-<h2>Index</h2>

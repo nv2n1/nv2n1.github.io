@@ -63,4 +63,3 @@ TIMESTAMP=`sleepenh&nbsp;<wbr>$TIMESTAMP 4.0`;<br />
 <p> <code><a href="/docs/linux/man/1-date/">date</a></code>(1), <code><a href="/docs/linux/man/1-sleep/">sleep</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Pedro Zorzenon Neto. </p>
-<h2>Index</h2>

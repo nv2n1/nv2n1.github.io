@@ -22,4 +22,3 @@ description: "citeproc – make CSL citations and bibliography for LaTeX"
 <h2>AUTHOR</h2>
 <p> Zeping Lee &lt;zepinglee [at] gmail.com&gt; </p>
 <p> Please log issues on the GitHub homepage: <a rel="nofollow" href="https://github.com/zepinglee/citeproc-lua/issues.">https://github.com/zepinglee/citeproc-lua/issues.</a> </p>
-<h2>Index</h2>

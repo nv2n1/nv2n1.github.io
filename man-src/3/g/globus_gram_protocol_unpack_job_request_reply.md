@@ -201,4 +201,3 @@ description: "Message Unpacking –"
  <i>GLOBUS_GRAM_PROTOCOL_ERROR_VERSION_MISMATCH</i> Version mismatch</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>

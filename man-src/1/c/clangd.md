@@ -86,4 +86,3 @@ description: "clangd – manual page for clangd 14"
 <dt> <code>&#8211;path-mappings=</code>&lt;string&gt; &#8211; Translates between client paths (as seen by a remote editor) and server paths (where clangd sees files on disk). Comma separated list of &#8216;&lt;client_path&gt;=&lt;server_path&gt;&#8217; pairs, the first entry matching a given path is used. e.g. /home/project/incl=/opt/include,/home/project=/workarea/project</dt>
 <dt> <code>&#8211;pretty</code> &#8211; Pretty-print JSON output </dt>
 </dl>
-<h2>Index</h2>

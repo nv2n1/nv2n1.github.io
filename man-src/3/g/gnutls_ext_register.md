@@ -41,4 +41,3 @@ description: "gnutls_ext_register – Register a handler for a TLS extension"
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

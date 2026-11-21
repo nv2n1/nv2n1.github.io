@@ -35,4 +35,3 @@ description: "GRAM Protocol –"
 <dd> <code>GRAM Protocol Message Format</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>

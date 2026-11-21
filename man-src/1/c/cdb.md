@@ -112,4 +112,3 @@ description: "cdb – Constant DataBase manipulation tool"
 <p> <a href="/docs/linux/man/5-cdb/">cdb</a>(5), <a href="/docs/linux/man/3-cdb/">cdb</a>(3). </p>
 <h2>LICENCE</h2>
 <p> Public domain. </p>
-<h2>Index</h2>

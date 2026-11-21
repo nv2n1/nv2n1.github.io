@@ -38,4 +38,3 @@ description: "incrontab – table manipulator for inotify cron (incron)"
 <p> Lukas Jelinek &lt;lukas [at] aiken.cz&gt; (please report bugs to <a rel="nofollow" href="http://bts.aiken.cz">http://bts.aiken.cz</a> or &lt;bugs [at] aiken.cz&gt;).</p>
 <h2>COPYING</h2>
 <p> This program is free software. It can be used, redistributed and/or modified under the terms of the GNU General Public License, version 2. </p>
-<h2>Index</h2>

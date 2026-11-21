@@ -51,4 +51,3 @@ description: "repoclosure – display a list of unresolved dependencies for a yu
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

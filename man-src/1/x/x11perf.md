@@ -610,4 +610,3 @@ description: "x11perf – X11 server performance test program"
  Chris Kent<br />
  Keith Packard<br />
  Graeme Gill </p>
-<h2>Index</h2>

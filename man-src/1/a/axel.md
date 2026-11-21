@@ -68,4 +68,3 @@ axel -S4 <a href="ftp://ftp.kernel.org/pub/linux/kernel/v2.4/linux-2.4.17.tar.bz
 <p> Please report bugs at <a rel="nofollow" href="https://alioth.debian.org/tracker/?group_id=100070">https://alioth.debian.org/tracker/?group_id=100070</a>&amp;atid=413085. </p>
 <h2>AUTHORS</h2>
 <p> Wilmer van der Gaast. &lt;wilmer [at] gaast.net&gt; </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "telegram-desktop – official telegram messaging application"
 </dl>
 <h2>SEE ALSO</h2>
 <p> Wiki on GitHub </p>
-<h2>Index</h2>

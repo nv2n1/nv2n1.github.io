@@ -72,4 +72,3 @@ description: "kde4-config – Prints KDE installation paths"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

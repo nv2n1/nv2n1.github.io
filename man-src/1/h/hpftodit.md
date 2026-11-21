@@ -69,4 +69,3 @@ description: "hpftodit – create font description files for use with groff -Tlj
 <dd> symbol mapping files</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code>groff_diff</code>(1), <code><a href="/docs/linux/man/1-grolj4/">grolj4</a></code>(1), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/5-lj4_font/">lj4_font</a></code>(5) </p>
-<h2>Index</h2>

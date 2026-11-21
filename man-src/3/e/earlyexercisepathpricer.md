@@ -21,4 +21,3 @@ description: "ql/methods/montecarlo/earlyexercisepathpricer.hpp – base class f
 <p> base class for early exercise single-path pricers </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

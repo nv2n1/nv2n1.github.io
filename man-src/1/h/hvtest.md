@@ -29,4 +29,3 @@ description: "hvtest – test cases for QDBM Hovel"
 <p> <code>qdbm</code>(3), <code>hovel</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> QDBM was written by Mikio Hirabayashi &lt;mikio [at] fallabs.com&gt;. </p>
-<h2>Index</h2>

@@ -14,4 +14,3 @@ description: "ldb_extended_dn_control –"
 <p> int <code>type</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

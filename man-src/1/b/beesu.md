@@ -51,4 +51,3 @@ description: "beesu – A wrapper for \"su\" that provides a graphical interface
 <p> Bee &lt;<a rel="nofollow" href="http://honeybeenet.altervista.org">http://honeybeenet.altervista.org</a>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-su/">su</a></code>(1) </p>
-<h2>Index</h2>

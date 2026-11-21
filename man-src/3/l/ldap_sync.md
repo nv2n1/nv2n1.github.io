@@ -79,4 +79,3 @@ typedef int (*ldap_sync_search_result_f)(ldap_sync_t *ls,
 <p> Designed and implemented by Pierangelo Masarati, based on RFC 4533 and loosely inspired by syncrepl code in <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8).</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Initially developed by <code>SysNet s.n.c.</code> <code>OpenLDAP</code> is developed and maintained by The OpenLDAP Project (<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>). <code>OpenLDAP</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

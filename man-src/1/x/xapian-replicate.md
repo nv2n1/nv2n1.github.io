@@ -40,4 +40,3 @@ description: "xapian-replicate – Replicate a database from a master server to 
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

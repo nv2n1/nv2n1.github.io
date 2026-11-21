@@ -253,4 +253,3 @@ description: "autogsdoc – GNUstep API documentation generator and XML->HTML co
 <h2>AUTHORS</h2>
 <p> <code>autogsdoc</code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt; </p>
 <p> This manual page added by Adrian Robert &lt;arobert [at] cogsci.ucsd.edu&gt;. </p>
-<h2>Index</h2>

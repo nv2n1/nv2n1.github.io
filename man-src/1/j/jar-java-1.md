@@ -249,4 +249,3 @@ images/at_work.gif</code>
 <p> <i>Jar Tutorial</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/deployment/jar/index.html">http://docs.oracle.com/javase/tutorial/deployment/jar/index.html</a> </p>
 <p> <a href="/docs/linux/man/1-pack200/">pack200</a>(1) </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

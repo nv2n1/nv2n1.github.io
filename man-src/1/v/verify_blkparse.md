@@ -24,4 +24,3 @@ description: "verify_blkparse – verifies an output file produced by blkparse"
  On Debian systems, the text of the GNU General Public License can be found in /usr/share/common-licenses/GPL-2. </p>
 <h2>SEE ALSO</h2>
 <p> btrace (8), blktrace (8), blkparse (1), blkrawverify (1), btt (1) </p>
-<h2>Index</h2>

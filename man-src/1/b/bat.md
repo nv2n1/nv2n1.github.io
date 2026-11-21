@@ -30,4 +30,3 @@ description: "bat – Bacula Administration Tool Console"
 <p> <code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8), <code>bls</code>(1), <code>bextract</code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Kern Sibbald. </p>
-<h2>Index</h2>

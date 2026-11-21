@@ -58,4 +58,3 @@ description: "dund – BlueZ Bluetooth dial-up networking daemon"
 <dt><code>&#8211;cache</code> <code>-C</code> [valid]</dt>
 <dd> Enable address cache </dd>
 </dl>
-<h2>Index</h2>

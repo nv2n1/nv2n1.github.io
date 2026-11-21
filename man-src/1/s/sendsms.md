@@ -44,4 +44,3 @@ description: "sendsms – command line tool to send SMSes using gnokii"
 <p> This program is distributed under the GNU Public License. </p>
 <h2>SEE ALSO</h2>
 <p> gnokii </p>
-<h2>Index</h2>

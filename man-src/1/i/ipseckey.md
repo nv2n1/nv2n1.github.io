@@ -37,4 +37,3 @@ description: "ipseckey – Generate IPSECKEY records on libreswan IPsec servers"
 <p> Copyright 2015 Paul Wouters </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See &lt;m[blue]<code><a rel="nofollow" href="http://www.fsf.org/copyleft/gpl.txt">http://www.fsf.org/copyleft/gpl.txt</a></code>m[]&gt;. </p>
 <p> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (file COPYING in the distribution) for more details. </p>
-<h2>Index</h2>

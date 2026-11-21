@@ -69,4 +69,3 @@ description: "amidi – read from and write to ALSA RawMIDI ports"
  <a href="/docs/linux/man/1-arecordmidi/">arecordmidi</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Clemens Ladisch &lt;clemens [at] ladisch.de&gt; </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "convdate – Convert to/from RFC 5322 dates and seconds since epoc
 <p> <tt>$Id:</tt> convdate.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-active-times/">active.times</a></i>(5). </p>
-<h2>Index</h2>

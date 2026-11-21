@@ -165,4 +165,3 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 </dt><dd> <code>cimsub -c s -F filteraa -H handler01 </code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> cimserver(1), cimconfig(1M). </p>
-<h2>Index</h2>

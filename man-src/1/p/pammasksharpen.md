@@ -46,4 +46,3 @@ description: "pammasksharpen – Sharpen an image via an unsharp mask"
 <p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pamsharpmap/">pamsharpmap</a></code>(1) , <code><a href="/docs/linux/man/1-pamarith/">pamarith</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pammasksharpen</code> was new in Netpbm 10.23 (July 2004). </p>
-<h2>Index</h2>

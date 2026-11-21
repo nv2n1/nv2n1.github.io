@@ -47,4 +47,3 @@ description: "GSSAPI Result Status Strings –"
 </dt><dd> 0</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

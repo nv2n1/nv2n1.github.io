@@ -103,4 +103,3 @@ $ gdalsrsinfo - o wkt_all "EPSG:4618" OGC WKT : GEOGCS["SAD69",
 </code></pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Etienne Tourigny &lt;etourigny.dev-at-gmail-dot-com&gt; </p>
-<h2>Index</h2>

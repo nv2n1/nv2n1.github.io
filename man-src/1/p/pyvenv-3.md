@@ -32,4 +32,3 @@ description: "pyvenv-3.3 – create virtual python environments"
 <dt><code>&#8211;upgrade</code></dt>
 <dd> Upgrade the environment directory to use this version of Python, assuming Python has been upgraded in-place. </dd>
 </dl>
-<h2>Index</h2>

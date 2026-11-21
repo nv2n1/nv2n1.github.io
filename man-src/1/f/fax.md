@@ -71,4 +71,3 @@ description: "fax – make, send, receive, view or print a fax"
 <p> <code><a href="/docs/linux/man/1-efax/">efax</a>(1),</code> <code><a href="/docs/linux/man/1-efix/">efix</a>(1),</code> <code><a href="/docs/linux/man/1-ghostscript/">ghostscript</a>(1).</code> </p>
 <h2>BUGS</h2>
 <p> See <a href="/docs/linux/man/1-efax/">efax</a>(1). </p>
-<h2>Index</h2>

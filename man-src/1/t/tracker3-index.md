@@ -19,4 +19,3 @@ tracker3 index
 <p> If invoked without arguments, the currently indexed locations will be listed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1). </p>
-<h2>Index</h2>

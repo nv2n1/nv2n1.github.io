@@ -57,4 +57,3 @@ description: "cat – concatenate files and print on the standard output"
 <p> <code><a href="/docs/linux/man/1-tac/">tac</a></code>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/cat">https://www.gnu.org/software/coreutils/cat</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) cat invocation&#8217; </p>
-<h2>Index</h2>

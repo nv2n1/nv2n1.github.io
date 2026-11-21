@@ -29,4 +29,3 @@ description: "mkd2html – markdown to html converter"
 <p> <a href="/docs/linux/man/1-markdown/">markdown</a>(1), markdown(3), <a href="/docs/linux/man/7-markdown/">markdown</a>(7), mkd-extensions7.</p>
 <h2>AUTHOR</h2>
 <p> An David Parsons (<code>orc [at] pell.portland.or.us</code> ) </p>
-<h2>Index</h2>

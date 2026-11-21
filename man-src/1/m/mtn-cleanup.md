@@ -19,4 +19,3 @@ description: "mtn-cleanup – generate shell variables from monotone workspace o
 <p> <code><a href="/docs/linux/man/1-mtn/">mtn</a></code>(1),</p>
 <h2>AUTHOR</h2>
 <p> Written by Anthony Edward Cooper &lt;aecooper [at] coosoft.plus.com&gt;. </p>
-<h2>Index</h2>

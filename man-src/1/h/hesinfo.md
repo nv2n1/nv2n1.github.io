@@ -91,4 +91,3 @@ hesinfo <i>[-bl]</i> <i>HesiodName</i> <i>HesiodNameType</i>
 <h2>AUTHOR</h2>
 <p> Steve Dyer, IBM/Project Athena<br />
  Copyright 1987, 1988, 1996 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

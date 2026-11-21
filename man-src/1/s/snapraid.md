@@ -657,4 +657,3 @@ description: "snapraid – SnapRAID Backup For Disk Arrays"
 <p> This file is Copyright (C) 2011 Andrea Mazzoleni</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rsync/">rsync</a>(1) </p>
-<h2>Index</h2>

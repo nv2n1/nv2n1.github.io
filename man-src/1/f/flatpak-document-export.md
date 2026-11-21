@@ -88,4 +88,3 @@ description: "flatpak-document-export – Export a file to a sandboxed applicati
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-unexport/">flatpak-document-unexport</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-info/">flatpak-document-info</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-documents/">flatpak-documents</a></code>(1) </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "gencnval – compile the converters aliases file"
 <p> Copyright (C) 2000-2004 IBM, Inc. and others.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) </p>
-<h2>Index</h2>

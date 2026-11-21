@@ -40,4 +40,3 @@ description: "ffado-dice-firmware – firmware download application for DICE-bas
 </dl>
 <h2>NOTES</h2>
 <p> Manipulating firmware can cause your device to stop working. The FFADO project accepts no responsibility if this occurs as a result of using this tool. </p>
-<h2>Index</h2>

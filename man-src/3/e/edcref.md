@@ -653,4 +653,3 @@ group
 <p>&nbsp;<wbr> </p>
 <p> after [after] Specifies a program to run after the current program completes. The source and signal parameters of a program run as an &#8216;after&#8217; are ignored. Multiple &#8216;after&#8217; statements can be specified per program. </p>
 <hr>
-<h2>Index</h2>

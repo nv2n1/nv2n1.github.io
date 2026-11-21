@@ -49,4 +49,3 @@ description: "nwvolinfo – Diplay info on NetWare Volumes"
 </dt><dd> Display the information in numeric-only format for use in a pipe.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwvolinfo was written by Jacek Stepniewski &lt;cunio [at] gazeta.pl&gt; based on utilities by Volker Lendecke.</p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "psnup – multiple pages per sheet"
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>Psnup</i> does not accept all DSC comments. </p>
-<h2>Index</h2>

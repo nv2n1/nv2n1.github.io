@@ -279,4 +279,3 @@ rlReport name result[score][log]
 <dt>&bull;</dt>
 <dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt; </dd>
 </dl>
-<h2>Index</h2>

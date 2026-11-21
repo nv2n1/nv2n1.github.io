@@ -107,4 +107,3 @@ description: "jamin – JACK Audio Mastering interface"
 <p> Please send bug reports to &lt;<code>jamin-devel [at] lists.sourceforge.net</code>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> Steve Harris is the principal JAMin author and team leader. Other developers include: Jan Depner, Jack O&#8217;Quin, Ron Parker, Emmanuel Saracco, and Patrick Shirkey. Alexandre Prokoudine and Yuri N. Sedunov developed the translation infrastructure. Alexandre also translated JAMin into Russian and is our (really good) web engineer. </p>
-<h2>Index</h2>

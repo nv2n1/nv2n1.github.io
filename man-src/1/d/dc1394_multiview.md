@@ -45,4 +45,3 @@ description: "dc1394_multiview – display format0 camera video"
 <dd> set framerate to 30 fps</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Peter De Schrijver &lt;p2 [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others) and added to upstream by Peter Antoniac &lt;theseinfeld [at] users.sf.net&gt;. </p>
-<h2>Index</h2>

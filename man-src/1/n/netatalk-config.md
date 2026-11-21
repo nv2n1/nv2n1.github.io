@@ -57,4 +57,3 @@ description: "netatalk-config – script to get information about the installed 
 <p> Copyright &#169; 1998 Owen Taylor </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>
 <p> Man page adapted for <code>netatalk-config</code> by Sebastian Rittau in 2001. </p>
-<h2>Index</h2>

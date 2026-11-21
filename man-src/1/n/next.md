@@ -38,4 +38,3 @@ description: "next – show the next message"
 <p> If a folder is specified, it will become the current folder. The message that is shown (i.e., the next message in sequence) will become the current message.</p>
 <h2>BUGS</h2>
 <p> <code>next</code> is really a link to the <code>show</code> program. As a result, if you make a link to <code>next</code> and that link is not called <code>next</code>, your link will act like <code>show</code> instead. To circumvent this, add a profile-entry for the link to your <code>nmh</code> profile and add the argument <i>next</i> to the entry. </p>
-<h2>Index</h2>

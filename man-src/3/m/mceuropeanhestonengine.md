@@ -21,4 +21,3 @@ description: "ql/pricingengines/vanilla/mceuropeanhestonengine.hpp – Monte Car
 <p> Monte Carlo Heston-model engine for European options. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

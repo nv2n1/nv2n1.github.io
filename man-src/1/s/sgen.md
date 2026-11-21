@@ -56,4 +56,3 @@ description: "sgen – Mono XML Serializer GENerator"
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xsd/">xsd</a>(1),<a href="/docs/linux/man/1-wsdl/">wsdl</a>(1),<a href="/docs/linux/man/1-genxs/">genxs</a>(1)</code> </p>
-<h2>Index</h2>

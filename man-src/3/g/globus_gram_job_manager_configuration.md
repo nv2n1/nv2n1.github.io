@@ -107,4 +107,3 @@ description: "globus_gram_job_manager_configuration – Job Manager Configuratio
 <dl>
 <dt>
 </dt><dd> Use the single job manager per user/jobmanager type feature</dd></dl>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "fstobdf – generate BDF font from X font server"
 <p> Olaf Brandt, Network Computing Devices<br />
  Dave Lemke, Network Computing Devices </p>
 <p> Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

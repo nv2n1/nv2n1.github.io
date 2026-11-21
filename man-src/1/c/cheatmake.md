@@ -43,4 +43,3 @@ description: "cheatmake – fool make into not rebuilding certain files"
 <p> <a href="/docs/linux/man/1-make/">make</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> <code>cheatmake</code> was written by David Faure&lt;faure [at] kde.org&gt;. This manual page was prepared by Ben Burton&lt;bab [at] debian.org&gt; for the Debian GNU/Linux&#174; system (but may be used by others). </p>
-<h2>Index</h2>

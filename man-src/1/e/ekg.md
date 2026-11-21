@@ -40,4 +40,3 @@ description: "ekg – A Gadu-Gadu compatible client."
 <dt><code>-f name&nbsp;<wbr>[&#8211;frontend name]</code></dt>
 <dd> Selects given user interface. </dd>
 </dl>
-<h2>Index</h2>

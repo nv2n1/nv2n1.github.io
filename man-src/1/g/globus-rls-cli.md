@@ -120,4 +120,3 @@ description: "globus-rls-cli – Globus Replica Location Service Command Line In
 <dd> Show version and exit.</dd></dl>
 <h2>SEEL ALSO</h2>
 <p> <a href="/docs/linux/man/8-globus-rls-server/">globus-rls-server</a>(8), globus_rls_client man pages </p>
-<h2>Index</h2>

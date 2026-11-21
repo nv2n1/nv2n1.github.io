@@ -116,4 +116,3 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 </dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wbemcat/">wbemcat</a></code>(1) </p>
-<h2>Index</h2>

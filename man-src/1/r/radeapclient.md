@@ -70,4 +70,3 @@ description: "radeapclient – send EAP packets to a RADIUS server, calculate re
 <p> <a href="/docs/linux/man/1-radclient/">radclient</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Michael Richardson, &lt;mcr [at] sandelman.ottawa.on.ca&gt; </p>
-<h2>Index</h2>

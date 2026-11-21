@@ -32,4 +32,3 @@ description: "booldnf – converts a boolean expression to the DNF"
 <p> See the <a href="/docs/linux/man/3-boolstuff/">boolstuff</a>(3) manual page.</p>
 <h2>BUGS</h2>
 <p> See the <a href="/docs/linux/man/3-boolstuff/">boolstuff</a>(3) manual page. </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "gnome-calculator – a desktop calculator"
 <dt><code>gcalccmd</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

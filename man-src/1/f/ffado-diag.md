@@ -15,4 +15,3 @@ description: "ffado-diag – print system diagnostic information related to FFAD
 <p> <code>ffado-diag</code> prints out an extensive collection of diagnostic information about the computer it is run on. Information included is the FFADO version number, the version number of libraries which FFADO depends on, the firewire interface card, interrupt usage, and so on. This is useful for developers to know when giving support via the FFADO mailing lists. For anything other than trivial issues, the output of <code>ffado-diag</code> will be one of the first things asked fro when debugging a problem.</p>
 <h2>OPTIONS</h2>
 <p> <code>ffado-diag</code> does not presently have any command line options. </p>
-<h2>Index</h2>

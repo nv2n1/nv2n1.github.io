@@ -154,4 +154,3 @@ description: "msgfmt – compile message catalog to binary format"
 <dt>
 </dt><dd> <code>info msgfmt</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

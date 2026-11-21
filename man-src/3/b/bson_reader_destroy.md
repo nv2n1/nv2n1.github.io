@@ -21,4 +21,3 @@ void bson_reader_destroy(bson_reader_t *reader);
 <p> Destroys and releases all resources associated with <code>reader</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

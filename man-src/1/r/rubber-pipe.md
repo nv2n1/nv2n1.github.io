@@ -205,4 +205,3 @@ description: "rubber – a building system for LaTeX documents"
 <dt>
 </dt><dd> <code>info rubber</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

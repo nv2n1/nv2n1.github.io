@@ -69,4 +69,3 @@ description: "curator – manual page for curator, version 3.0.3"
 <dt>snapshot</dt>
 <dd> Take snapshots of indices (Backup) </dd>
 </dl>
-<h2>Index</h2>

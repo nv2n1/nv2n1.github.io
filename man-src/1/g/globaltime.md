@@ -24,4 +24,3 @@ description: "globaltime – International multiclock timeconverter for the Xfce
 <h2>AUTHOR</h2>
 <p> <code>globaltime</code> was written by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
 <p> This manual page was written by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
-<h2>Index</h2>

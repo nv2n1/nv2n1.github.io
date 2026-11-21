@@ -62,4 +62,3 @@ description: "iecset – Set or dump IEC958 status bits"
 </dl>
 <h2>AUTHOR</h2>
 <p> Takashi Iwai &lt;tiwai [at] suse.de&gt; </p>
-<h2>Index</h2>

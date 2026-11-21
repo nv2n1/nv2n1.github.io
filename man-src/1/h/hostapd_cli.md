@@ -56,4 +56,3 @@ description: "hostapd_cli – hostapd command-line interface"
 <h2>AUTHOR</h2>
 <p> hostapd_cli was written by Jouni Malinen &lt;j@w1.fi&gt;. </p>
 <p> This manual page was written by Faidon Liambotis &lt;faidon [at] cube.gr&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

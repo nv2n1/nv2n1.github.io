@@ -30,4 +30,3 @@ description: "mid3iconv – convert ID3 tag encodings"
 <h2>AUTHOR</h2>
 <p> Emfox Zhou. </p>
 <p> Based on id3iconv (<i><a rel="nofollow" href="http://www.cs.berkeley.edu/~zf/id3iconv/">http://www.cs.berkeley.edu/~zf/id3iconv/</a></i>) by Feng Zhou. </p>
-<h2>Index</h2>

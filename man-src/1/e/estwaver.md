@@ -44,4 +44,3 @@ description: "estwaver – command line interface of web crawler"
 <p> When crawling finishes, there is a directory <code>_index</code> in the crawler root directory. It is an index available by <code>estcmd</code> and so on. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estmaster/">estmaster</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "avstopam – convert an AVS X image to a Netpbm image"
 <p> Copyright&nbsp;<wbr>&#169; 2010 Scott Pakin, <i>scott+pbm [at] pakin.org.</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamtoavs/">pamtoavs</a></code>(1) , <code>pam</code>(1) </p>
-<h2>Index</h2>

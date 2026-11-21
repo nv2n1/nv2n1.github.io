@@ -40,4 +40,3 @@ description: "nessus-fetch – A simple utility to retrieve plugins from www.nes
 </dl>
 <h2>AUTHORS</h2>
 <p> nessus-fetch is (C) 2004 Tenable Network Security </p>
-<h2>Index</h2>

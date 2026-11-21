@@ -100,4 +100,3 @@ $ shigofumi -e 'convert /etc/passwd'
 <dt>
 </dt><dd> <a rel="nofollow" href="https://www.czechpoint.cz/">https://www.czechpoint.cz/</a></dd></dl>
 </dl>
-<h2>Index</h2>

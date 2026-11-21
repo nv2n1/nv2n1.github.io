@@ -38,4 +38,3 @@ description: "g.version – Displays version and copyright information."
 <p> <i>Last changed: $Date: 2006-01-27 11:59:11 +0100 (Fri, 27 Jan 2006) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

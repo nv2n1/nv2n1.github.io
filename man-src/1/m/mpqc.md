@@ -1807,4 +1807,3 @@ mpqc: (
 <h2>MPQC Warranty</h2>
 <p> MPQC is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

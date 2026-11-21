@@ -69,4 +69,3 @@ npm access public[&lt;package&gt;] npm access restricted[&lt;package&gt;] npm ac
 <dd> npm help registry </dd>
 </dl>
 </dl>
-<h2>Index</h2>

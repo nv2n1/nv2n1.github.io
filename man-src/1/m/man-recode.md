@@ -55,4 +55,3 @@ description: "man-recode – convert manual pages to another encoding"
 <pre>
 Colin Watson (cjwatson [at] debian.org).
 </pre>
-<h2>Index</h2>

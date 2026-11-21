@@ -58,4 +58,3 @@ description: "gjarsigner – Java ARchive (JAR) file signing and verification to
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

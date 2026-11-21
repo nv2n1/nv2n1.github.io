@@ -138,4 +138,3 @@ $ docker events-- filter 'event=stop' 2014 - 05 - 10T17 : 42 : 14.999999999Z07 :
 <p> <code>&#8211;until</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Stream events until this timestamp</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-system/">docker-system</a>(1)</code> </p>
-<h2>Index</h2>

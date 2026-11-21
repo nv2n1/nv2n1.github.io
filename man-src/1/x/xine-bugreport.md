@@ -41,4 +41,3 @@ description: "xine-check – a checker for the xine video player"
 <p> This manual page was written by Philipp Hahn &lt;pmhahn [at] users.sf.net&gt; for the xine project. </p>
 <h2>COPYRIGHT NOTICE</h2>
 <p> Copyright &#169; 2002 Siggi Langauf </p>
-<h2>Index</h2>

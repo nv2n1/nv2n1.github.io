@@ -41,4 +41,3 @@ description: "fpcmake – The Free Pascal makefile constructor program."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/5-fpcmake/">fpcmake</a></code>(5) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

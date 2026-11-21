@@ -52,4 +52,3 @@ description: "dvihp – convert a TeX DVI file to Hewlett-Packard PCL"
 <p> Email bug reports to tex-k [at] tug.org.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></code>(1), <code><a href="/docs/linux/man/1-dvilj4/">dvilj4</a></code>(1). </p>
-<h2>Index</h2>

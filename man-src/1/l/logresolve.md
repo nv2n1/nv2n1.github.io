@@ -29,4 +29,3 @@ description: "logresolve – Resolve IP-addresses to hostnames in Apache log fil
 <dd> This causes <code>logresolve</code> to apply some DNS checks: after finding the hostname from the IP address, it looks up the IP addresses for the hostname and checks that one of these matches the original address.<br />
 &nbsp; </dd>
 </dl>
-<h2>Index</h2>

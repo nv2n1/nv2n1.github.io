@@ -44,4 +44,3 @@ description: "opapacketcapture"
  opapacketcapture: Triggered<br />
  Number of packets stored is 100 </p>
 <p> In the example above, opapacketcapture operates until <code>CTRL+C</code> is entered. </p>
-<h2>Index</h2>

@@ -152,4 +152,3 @@ npm[at] 6.14.4 / path / to / npm
 <dd> npm help update </dd>
 </dl>
 </dl>
-<h2>Index</h2>

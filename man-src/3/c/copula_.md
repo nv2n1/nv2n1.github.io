@@ -22,4 +22,3 @@ description: "QuantLib::HomogeneousPoolCDOEngine – CDO engine, loss distributi
 <p> <code>CDO</code> engine, loss distribution convolution for finite homogeneous pool. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

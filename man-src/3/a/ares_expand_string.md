@@ -31,4 +31,3 @@ int ares_expand_string(const unsigned char *encoded,
 <p> <code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>
 <p> Dominick Meglio </p>
-<h2>Index</h2>

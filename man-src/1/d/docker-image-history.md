@@ -96,4 +96,3 @@ $ docker images-- format "&#123;&#123;.ID}}: &#123;&#123;.CreatedSince}} ago" cc
 <p> <code>-q</code>, <code>&#8211;quiet</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Only show image IDs</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-image/">docker-image</a>(1)</code> </p>
-<h2>Index</h2>

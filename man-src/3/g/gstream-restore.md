@@ -18,4 +18,3 @@ description: "restore"
 &#8217;) is encountered, and in a few other situations. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gstream-set_tab/">gstream-set_tab</a></code>(3), <code>gstream-remove_tab</code>(3), <code>gstream-remove_all_tabs</code>(3) </p>
-<h2>Index</h2>

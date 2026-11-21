@@ -22,4 +22,3 @@ description: "bzgrep, bzfgrep, bzegrep – search possibly bzip2 compressed file
 <p> Charles Levert (charles [at] comm.polymtl.ca). Adapted to bzip2 by Philippe Troin &lt;phil [at] fifi.org&gt; for Debian GNU/Linux.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/1-egrep/">egrep</a>(1), <a href="/docs/linux/man/1-fgrep/">fgrep</a>(1), <a href="/docs/linux/man/1-bzdiff/">bzdiff</a>(1), <a href="/docs/linux/man/1-bzmore/">bzmore</a>(1), <a href="/docs/linux/man/1-bzless/">bzless</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1) </p>
-<h2>Index</h2>

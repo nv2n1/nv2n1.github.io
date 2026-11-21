@@ -29,4 +29,3 @@ description: "ipa-nis-manage – Enables or disables the NIS listener plugin"
 <p> 2 if the plugin is already in the required status (enabled or disabled) </p>
 <p> 3 if RPC services cannot be enabled. </p>
 <p> 4 if status command detected plugin in disabled state. </p>
-<h2>Index</h2>

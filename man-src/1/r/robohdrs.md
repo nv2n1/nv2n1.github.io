@@ -45,4 +45,3 @@ robohdrs -s -p myproj -l script test.tcl
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-robodoc/">robodoc</a>(1)</code> </p>
-<h2>Index</h2>

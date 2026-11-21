@@ -34,4 +34,3 @@ description: "e2pall – convert all EPS files in a LaTeX document to PDF"
 <h2>AUTHOR</h2>
 <p> <code>e2pall</code> was written by Jody Klymak &lt;jklymak [at] apl.washington.edu&gt; and published in a posting to the &lt;pdftex [at] tug.org&gt; (mailing list). </p>
 <p> This manual page was written by C.M. Connelly &lt;c@eskimo.com&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

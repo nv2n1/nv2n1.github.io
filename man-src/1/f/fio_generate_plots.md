@@ -19,4 +19,3 @@ description: "fio_generate_plots – Generate plots for Flexible I/O Tester"
 <h2>AUTHOR</h2>
 <p> fio_generate_plots was written by Jens Axboe &lt;jens.axboe [at] oracle.com&gt;, now Jens Axboe &lt;jaxboe [at] fusionio.com&gt;. </p>
 <p> This manual page was written by Martin Steigerwald &lt;ms [at] teamix.de&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

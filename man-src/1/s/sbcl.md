@@ -168,4 +168,3 @@ description: "SBCL — Steel Bank Common Lisp"
 <dt>
 </dt><dd> &lt;<a rel="nofollow" href="http://www.sbcl.org/">http://www.sbcl.org/</a>&gt;</dd></dl>
 <p> for more information, including directions on how to subscribe to the sbcl-devel and sbcl-help mailing-lists. </p>
-<h2>Index</h2>

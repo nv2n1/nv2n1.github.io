@@ -65,4 +65,3 @@ description: "nwuserlist – List Users logged in at a NetWare server"
 </dt><dd> Show raw hexadecimal values in addition to human readable conversions.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwuserlist was written by Volker Lendecke. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

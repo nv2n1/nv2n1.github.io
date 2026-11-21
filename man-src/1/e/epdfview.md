@@ -46,4 +46,3 @@ description: "epdfview – view PDF documents"
 <h2>AUTHOR</h2>
 <p> <code>epdfview</code> is &#169; 2006, 2007, 2009 Jordi Fita &lt;jordi [at] emma-soft.com&gt; </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -156,4 +156,3 @@ description: "localectl – Control the system locale and keyboard layout settin
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.x.org/releases/current/doc/xorg-docs/input/XKB-Config.html">http://www.x.org/releases/current/doc/xorg-docs/input/XKB-Config.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

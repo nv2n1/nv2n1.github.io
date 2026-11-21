@@ -37,4 +37,3 @@ description: "reseq – manual page for reseq 1.0.0"
 <dt>
 </dt><dd> <code>info reseq</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

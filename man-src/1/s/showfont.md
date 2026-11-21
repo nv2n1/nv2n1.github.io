@@ -53,4 +53,3 @@ description: "showfont – font dumper for X font server"
  See <i><a href="/docs/linux/man/7-x/">X</a></i>(7) for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Dave Lemke, Network Computing Devices, Inc. </p>
-<h2>Index</h2>

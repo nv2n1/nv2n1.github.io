@@ -54,4 +54,3 @@ description: "sha384sum – compute and check SHA384 message digest"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/sha384sum">https://www.gnu.org/software/coreutils/sha384sum</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) sha2 utilities&#8217; </p>
-<h2>Index</h2>

@@ -130,4 +130,3 @@ description: "ldclt – load test program for LDAP"
  Copyright &#169; 2008 Red Hat, Inc.<br />
  This manual page was written by Michele Baldessari &lt;michele [at] pupazzo.org&gt;, for the Debian project (but may be used by others).<br />
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution. </p>
-<h2>Index</h2>

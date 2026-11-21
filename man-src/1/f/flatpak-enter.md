@@ -36,4 +36,3 @@ description: "flatpak-enter – Enter an application or runtime’s sandbox"
 <p> <code>$ flatpak enter 15345 sh</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-run/">flatpak-run</a></code>(1) <code><a href="/docs/linux/man/1-flatpak-ps/">flatpak-ps</a></code>(1) </p>
-<h2>Index</h2>

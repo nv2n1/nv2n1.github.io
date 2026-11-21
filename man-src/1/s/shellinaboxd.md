@@ -196,4 +196,3 @@ description: "shellinaboxd – publish command line shell through AJAX interface
 <p> Access to the native clipboard is typically not possible. Instead, an internal clipboard accessible from the right-button context menu is used for all but IE. </p>
 <p> Some browsers restrict the number of concurrent connections to a server. This restricts how many AJAX terminals can be opened simultaneously. If this becomes a problem, users can typically reconfigure their browsers to raise the limit. </p>
 <p> There have been reports of the VLC plugin on Linux/x86_64 crashing Firefox when the browser page gets reloaded. Setting the <code>&#8211;no-beep</code> option eliminates all references to VLC and thus appears to work around this crash. </p>
-<h2>Index</h2>

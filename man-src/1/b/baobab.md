@@ -26,4 +26,3 @@ description: "baobab – A graphical disk usage analyzer for the GNOME desktop"
 <p> Bugs should be reported to the GNOME issue tracker at m[blue]<code><a rel="nofollow" href="http://gitlab.gnome.org/GNOME/baobab/issues">http://gitlab.gnome.org/GNOME/baobab/issues</a></code>m[]. </p>
 <h2>ADDITIONAL INFORMATION</h2>
 <p> For further information visit m[blue]<code><a rel="nofollow" href="https://wiki.gnome.org/Apps/DiskUsageAnalyzer">https://wiki.gnome.org/Apps/DiskUsageAnalyzer</a></code>m[]. </p>
-<h2>Index</h2>

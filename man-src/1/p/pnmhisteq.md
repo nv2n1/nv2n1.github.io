@@ -48,4 +48,3 @@ description: "pnmhisteq – histogram equalise a portable anymap"
  WWW home page: <a rel="nofollow" href="http://www.fourmilab.ch/">http://www.fourmilab.ch/</a><br />
  </center> </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, without any conditions or restrictions. This software is provided &#8220;as is&#8221; without express or implied warranty. </p>
-<h2>Index</h2>

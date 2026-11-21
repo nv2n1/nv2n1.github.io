@@ -37,4 +37,3 @@ description: "pbmtonokia – convert a portable bitmap to Nokia Smart Messaging 
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code>Nokia Smart Messaging Specification (<a rel="nofollow" href="http://forum.nokia.com)">http://forum.nokia.com)</a></code></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2001 Tim Ruehsen &lt;tim.ruehsen [at] openmediasystem.de&gt;. </p>
-<h2>Index</h2>

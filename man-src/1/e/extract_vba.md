@@ -36,4 +36,3 @@ description: "extract_vba – A utility to extract a VBA project from an Excel 2
 <h2>COPYRIGHT</h2>
 <p> (c) <font SIZE="-1">MMXV,</font> John McNamara. </p>
 <p> All Rights Reserved. This program is free software. It may be used, redistributed and/or modified under the same terms as Perl itself. </p>
-<h2>Index</h2>

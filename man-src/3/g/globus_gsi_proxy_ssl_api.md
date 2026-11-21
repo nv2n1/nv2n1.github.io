@@ -22,4 +22,3 @@ description: "Globus GSI Proxy SSL API –"
 <p> Further Information about proxy policies is available in the X.509 Proxy Certificate Profile document. For more information, see the documentation in <code>ProxyPolicy </code></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_ssl from the source code. </p>
-<h2>Index</h2>

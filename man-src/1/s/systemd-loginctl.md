@@ -148,4 +148,3 @@ description: "loginctl, systemd-loginctl – Control the systemd login manager"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

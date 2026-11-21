@@ -31,4 +31,3 @@ description: "wcsware – Extract WCS keywords for an image"
 <dt><code>-w</code></dt>
 <dd> Convert world coordinates, obtained from stdin, to pixel coordinates using wcss2p(). </dd>
 </dl>
-<h2>Index</h2>

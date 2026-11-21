@@ -24,4 +24,3 @@ char buf[200] = "c:/dos\backup/weirdo\test";
 <p> Returns a copy of the `path&#8217; parameter. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fix_filename_case/">fix_filename_case</a></code>(3), <code><a href="/docs/linux/man/3-canonicalize_filename/">canonicalize_filename</a></code>(3) </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ void ares_destroy_options(struct ares_options *options)
 <h2>AUTHOR</h2>
 <p> Brad House<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

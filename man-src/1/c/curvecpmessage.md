@@ -39,4 +39,3 @@ description: "CurveCP — Message-handling programs"
 <p> This manual page was written by Sergiusz Pawlowicz debian [at] pawlowicz.name for the <code>Debian</code> system (and may be used by others). The source of this page is a webpage <a rel="nofollow" href="http://curvecp.org/messageapi.html">http://curvecp.org/messageapi.html</a> . Permission is granted to copy, distribute and/or modify this document under public domain.<br />
 &nbsp;<wbr> </p>
 <p> This manual page was rewritten for the <code>Debian</code> distribution because the original program does not have a manual page. </p>
-<h2>Index</h2>

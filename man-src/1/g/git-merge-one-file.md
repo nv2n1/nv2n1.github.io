@@ -17,4 +17,3 @@ description: "git-merge-one-file – The standard helper program to use with git
 <p> This is the standard helper program to use with <i>git merge-index</i> to resolve a merge after the trivial merge done with <i>git read-tree -m</i>.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

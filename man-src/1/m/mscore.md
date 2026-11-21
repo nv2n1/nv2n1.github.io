@@ -42,4 +42,3 @@ description: "mscore – Full featured WYSIWYG score editor"
 <h2>AUTHOR</h2>
 <p> mscore was written by Werner Schweer &lt;ws [at] seh.de&gt;. </p>
 <p> This manual page was written by Toby Smithe &lt;tsmithe [at] ubuntu.com&gt;, for the Ubuntu project (but may be used by others). </p>
-<h2>Index</h2>

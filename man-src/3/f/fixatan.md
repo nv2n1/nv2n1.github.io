@@ -22,4 +22,3 @@ description: "fixatan – Fixed point inverse tangent lookup table. Allegro game
 <h2>RETURN VALUE</h2>
 <p> Returns the inverse tangent of a fixed point value, measured as a fixed point binary format angle. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

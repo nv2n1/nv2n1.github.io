@@ -541,4 +541,3 @@ description: "irsim – An event-driven logic-level simulator for MOS circuits"
 <p> irsim-analyzer(3) </p>
 <p> <a href="/docs/linux/man/5-sim/">sim</a>(5) </p>
 <p> <a href="/docs/linux/man/5-netchange/">netchange</a>(5) </p>
-<h2>Index</h2>

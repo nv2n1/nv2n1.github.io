@@ -16,4 +16,3 @@ description: "get_clip_rect – Returns the clipping rectangle of a bitmap. Alle
 <p> Returns the clipping rectangle for the specified bitmap. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_clip_rect/">set_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-add_clip_rect/">add_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-set_clip_state/">set_clip_state</a></code>(3), <code><a href="/docs/linux/man/3-get_clip_state/">get_clip_state</a></code>(3) </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "toshsat1800-irdasetup – IrDA setup utility for Toshiba Satellite
 <h2>AUTHOR</h2>
 <p> toshsat1800-irdasetup was written by Daniele Peri &lt;peri [at] csai.unipa.it&gt;. </p>
 <p> This manual page was written by Roberto C. Sanchez &lt;roberto [at] connexer.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

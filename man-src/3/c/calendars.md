@@ -86,4 +86,3 @@ description: "Calendars –"
 <p> The class <code>QuantLib::Calendar</code> provides the interface for determining whether a date is a business day or a holiday for a given exchange or a given country, and for incrementing/decrementing a date of a given number of business days. A number of calendars is contained in the ql/Calendars directory.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

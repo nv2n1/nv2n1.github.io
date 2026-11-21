@@ -113,4 +113,3 @@ description: "euca-describe-network-interfaces – Show information about VPC ne
 <dt>vpc-id</dt>
 <dd> ID of the VPC in which the network interface resides </dd>
 </dl>
-<h2>Index</h2>

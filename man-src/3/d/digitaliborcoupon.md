@@ -22,4 +22,3 @@ description: "ql/cashflows/digitaliborcoupon.hpp – Ibor-rate coupon with digit
 <p> Ibor-rate coupon with digital call/put option. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

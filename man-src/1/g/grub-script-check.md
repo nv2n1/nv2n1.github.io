@@ -31,4 +31,3 @@ description: "grub-script-check – check grub.cfg for syntax errors"
 <dt>
 </dt><dd> <code>info grub-script-check</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

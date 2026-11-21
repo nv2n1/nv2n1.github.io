@@ -38,4 +38,3 @@ description: "sassc: – Sass compiles CSS from SASS or SCSS files"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display this help message.</dd></dl>
 <p> libsass: 3.6.5 sass2scss: 1.1.1 sass: 3.5 </p>
-<h2>Index</h2>

@@ -53,4 +53,3 @@ description: "mate-calc – (mate-calculator) – The MATE Desktop Environment C
 <h3>mate-calc documentation can be found from the Help menu, or by pressing the F1 key.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
 <p> <code><a href="/docs/linux/man/1-mate-calc-cmd/">mate-calc-cmd</a></code>(1) </p>
-<h2>Index</h2>

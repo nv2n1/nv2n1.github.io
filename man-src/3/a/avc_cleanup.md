@@ -35,4 +35,3 @@ description: "avc_open, avc_destroy, avc_reset, avc_cleanup – userspace SELinu
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-avc_has_perm/">avc_has_perm</a></code>(3), <code><a href="/docs/linux/man/3-avc_context_to_sid/">avc_context_to_sid</a></code>(3), <code><a href="/docs/linux/man/3-avc_cache_stats/">avc_cache_stats</a></code>(3), <code><a href="/docs/linux/man/3-avc_add_callback/">avc_add_callback</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/3-security_compute_av/">security_compute_av</a></code>(3) </p>
-<h2>Index</h2>

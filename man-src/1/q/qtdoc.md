@@ -39,4 +39,3 @@ description: "qtdoc – Open a Qt(TM) help page in Konqueror"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

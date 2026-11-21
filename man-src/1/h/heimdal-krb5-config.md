@@ -37,4 +37,3 @@ description: "krb5-config – give information on how to link code against Heimd
 <p> <a href="/docs/linux/man/1-cc/">cc</a>(1)</p>
 <h2>HISTORY</h2>
 <p> appeared in Heimdal 0.3d. </p>
-<h2>Index</h2>

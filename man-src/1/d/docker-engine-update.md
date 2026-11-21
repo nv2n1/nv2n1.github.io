@@ -26,4 +26,3 @@ description: "docker-engine-update – Update a local engine"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Specify engine version </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-engine/">docker-engine</a>(1)</code> </p>
-<h2>Index</h2>

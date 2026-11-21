@@ -605,4 +605,3 @@ enhancers&quot;,
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.sourceforge.net/p/bibutils/home/Bibutils">http://www.sourceforge.net/p/bibutils/home/Bibutils</a></dd></dl>
 </dl>
-<h2>Index</h2>

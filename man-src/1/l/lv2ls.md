@@ -25,4 +25,3 @@ description: "lv2ls – List all installed LV2 plugins."
 <h2>AUTHOR</h2>
 <p> lv2ls was written by David Robillard &lt;d@drobilla.net&gt; </p>
 <p> This manual page was written by Jaromír Mikes &lt;mira.mikes [at] seznam.cz&gt; and David Robillard &lt;d@drobilla.net&gt; </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ serialver[options][classnames]
 <dt>&bull;</dt>
 <dd> The <code>java.io.ObjectStream</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/io/ObjectStreamClass.html">http://docs.oracle.com/javase/8/docs/api/java/io/ObjectStreamClass.html</a> </dd>
 </dl>
-<h2>Index</h2>

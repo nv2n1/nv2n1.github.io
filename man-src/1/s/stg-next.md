@@ -22,4 +22,3 @@ description: "stg-next – Print the name of the next patch"
 </dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

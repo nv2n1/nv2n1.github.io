@@ -56,4 +56,3 @@ description: "gajim-history-manager – a tool to manage"
 <p> Please submit bugs at <a rel="nofollow" href="https://trac.gajim.org/">https://trac.gajim.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gajim/">gajim</a>(1) gajim-remote1 </p>
-<h2>Index</h2>

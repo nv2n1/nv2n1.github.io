@@ -112,4 +112,3 @@ talloc_free(tmp_ctx);
 <dd> <code>The talloc array functions</code></dd>
 <dt>&bull;</dt>
 <dd> <code>The talloc string functions.</code></dd></dl>
-<h2>Index</h2>

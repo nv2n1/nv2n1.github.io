@@ -62,4 +62,3 @@ description: "xmms2-et – transmits an anonymous informative packet to the XMMS
 <p> The <code>XMMS2</code> Project was started by Tobias Rundström and Anders Gustafsson. It is developed with their lead by a small group of contributers from all over the world.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Alexander Botero-Lowry &lt;alex [at] foxybanana.com&gt; </p>
-<h2>Index</h2>

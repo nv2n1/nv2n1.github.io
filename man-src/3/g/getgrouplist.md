@@ -97,4 +97,3 @@ description: "getgrouplist – get list of groups to which a user belongs"
 <p> <code><a href="/docs/linux/man/2-getgroups/">getgroups</a></code>(2), <code><a href="/docs/linux/man/2-setgroups/">setgroups</a></code>(2), <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3), <code><a href="/docs/linux/man/3-group_member/">group_member</a></code>(3), <code><a href="/docs/linux/man/5-group/">group</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

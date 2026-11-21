@@ -61,4 +61,3 @@ description: "yum-changelog"
  James Antill &lt;james [at] and.org&gt;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>yum(1)</code> </p>
-<h2>Index</h2>

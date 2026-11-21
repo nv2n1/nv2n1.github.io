@@ -64,4 +64,3 @@ description: "derrick — a simple network stream recorder"
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2011-2012 Konrad Rieck (konrad [at] mlsec.org) </p>
 <p> Derrick is licensed under the new <font SIZE="-1">BSD</font> License. See the file <i></i><font SIZE="-1"><i>COPYING</i></font><i></i> in the source distribution for more information. </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ void response(const char *name,
 <p> <tt>IBSSH2_ERROR_AUTHENTICATION_FAILED</tt> &#8211; failed, invalid username/password or public/private key.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "docker-export – Export the contents of a container’s filesyste
 <p> <code><a href="/docs/linux/man/1-docker-import/">docker-import</a>(1)</code> to create an empty filesystem image and import the contents of the tarball into it, then optionally tag it. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; January 2015, updated by Joseph Kern (josephakern at gmail dot com) </p>
-<h2>Index</h2>

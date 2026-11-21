@@ -80,4 +80,3 @@ full talloc report on 'talloc_new: ../src/main.c:82' (total 46 bytes in 5 blocks
 <dd> <code>talloc_enable_leak_report()</code></dd>
 <dt>&bull;</dt>
 <dd> <code>talloc_enable_leak_report_full()</code></dd></dl>
-<h2>Index</h2>

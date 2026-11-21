@@ -18,4 +18,3 @@ description: "mou2gmn – convert MapsOnUS files into GPSManager files"
 <p> To comunicate with the GPS device the user must have granted read/write permissions for the respective port. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Rogerio Reis &lt;rvr [at] ncc.up.pt&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

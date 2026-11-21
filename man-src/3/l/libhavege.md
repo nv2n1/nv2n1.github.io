@@ -256,4 +256,3 @@ int main(void)
 </dl>
 <h2>AUTHORS</h2>
 <p> Gary Wuertz &lt;gary [at] issiweb.com&gt; and Jirka Hladky &lt;hladky jiri AT gmail DOT com&gt; </p>
-<h2>Index</h2>

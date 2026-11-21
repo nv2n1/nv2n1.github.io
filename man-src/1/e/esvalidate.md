@@ -21,4 +21,3 @@ description: "esvalidate – ECMAScript Validator using Esprima"
 <dt><code>-v</code>, <code>&#8211;version</code></dt>
 <dd> Print program version </dd>
 </dl>
-<h2>Index</h2>

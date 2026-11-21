@@ -29,4 +29,3 @@ description: "ldns_update_pkt_new"
 <p> <i>ldns_update_pkt_tsig_add</i>, <i>ldns_update_pkt_tsig_add</i>, <i>ldns_update_zocount</i>, <i>ldns_update_prcount</i>, <i>ldns_update_upcount</i>, <i>ldns_update_adcount</i>, <i>ldns_update_set_zocount</i>, <i>ldns_update_set_prcount</i>, <i>ldns_update_set_upcount</i>, <i>ldns_update_set_adcount</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>

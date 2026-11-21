@@ -55,4 +55,3 @@ description: "xgamma – Alter a monitor’s gamma correction through the X serv
 <h2>AUTHORS</h2>
 <p> Kaleb S. Keithley, X Consortium.<br />
  David Dawes, David Bateman </p>
-<h2>Index</h2>

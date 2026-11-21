@@ -63,4 +63,3 @@ description: "strfile – create a random access file for storing strings unstr 
 <p> <code><a href="/docs/linux/man/3-byteorder/">byteorder</a></code>(3), <code>fortune</code>(6)</p>
 <h2>HISTORY</h2>
 <p> The <code>strfile</code> utility first appeared in 4.4BSD. This version was heavily modified, much of it in ways peculiar to Linux. Work has since been done to make the code more generic, and has so far been tested to work with SunOS 4.x. More platforms are expected to be supported as work continues. </p>
-<h2>Index</h2>

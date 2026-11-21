@@ -52,4 +52,3 @@ description: "euca-describe-subnets – Show information about one or more VPC s
 <dt>default-for-az</dt>
 <dd> whether this is the default subnet for the availability zone state subnet-id tag-key key of a tag assigned to the subnet tag-value value of a tag assigned to the subnet tag:KEY specific tag key/value combination vpc-id the associated VPC&#8217;s ID </dd>
 </dl>
-<h2>Index</h2>

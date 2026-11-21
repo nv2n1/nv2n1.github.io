@@ -76,4 +76,3 @@ csv2ods -i /etc/passwd -o accounts.odt -d:
 <dl>
 <dt>
 </dt><dd> Original author of csv-ods.py</dd></dl>
-<h2>Index</h2>

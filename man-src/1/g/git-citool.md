@@ -18,4 +18,3 @@ description: "git-citool – Graphical alternative to git-commit"
 <p> <i>git citool</i> is actually a standard alias for git gui citool. See <code><a href="/docs/linux/man/1-git-gui/">git-gui</a></code>(1) for more details.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

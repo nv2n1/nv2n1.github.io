@@ -88,4 +88,3 @@ description: "vnstati – png image output support for vnStat"
 <p> Teemu Toivola &lt;tst at iki dot fi&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1), <code><a href="/docs/linux/man/1-vnstatd/">vnstatd</a></code>(1), <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5), <code><a href="/docs/linux/man/7-units/">units</a></code>(7) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "libxml – library used to parse XML files"
 <p> Daniel Veillard (daniel [at] veillard.com). Red Hat Inc. Manual page by Ziying Sherwin (sherwin [at] nlm.nih.gov), Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-xmllint/">xmllint</a></i>(1), <i><a href="/docs/linux/man/3-libxslt/">libxslt</a></i>(3), <i><a href="/docs/linux/man/3-libexslt/">libexslt</a></i>(3), <i><a href="/docs/linux/man/1-xsltproc/">xsltproc</a></i>(1) </p>
-<h2>Index</h2>

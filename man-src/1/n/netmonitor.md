@@ -41,4 +41,3 @@ description: "netmonitor – Network Bandwidth Monitor"
 <p> Forcing a data rate that is to low for the data values will cause destortion to the display. </p>
 <h2>AUTHOR</h2>
 <p> Dwayne Hoy &lt;hellcat82 at iprimus dot com dot au&gt; </p>
-<h2>Index</h2>

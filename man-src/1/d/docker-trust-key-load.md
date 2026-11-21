@@ -18,4 +18,3 @@ description: "docker-trust-key-load – Load a private key file for signing"
 <p> <code>&#8211;name</code>=&quot;signer&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Name for the loaded key</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-trust-key/">docker-trust-key</a>(1)</code> </p>
-<h2>Index</h2>

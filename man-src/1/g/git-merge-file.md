@@ -64,4 +64,3 @@ lines in file B
 </dt><dd> merges tmp/a123 and tmp/c345 with the base tmp/b234, but uses labels <code>a</code> and <code>c</code> instead of <code>tmp/a123</code> and <code>tmp/c345</code>.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

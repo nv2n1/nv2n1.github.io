@@ -26,4 +26,3 @@ description: "session-migration – Migrate in user session settings."
 <dt><code>&#8211;verbose</code></dt>
 <dd> Show a lot of verbose information. It can be used by the user to debug configuration issues; </dd>
 </dl>
-<h2>Index</h2>

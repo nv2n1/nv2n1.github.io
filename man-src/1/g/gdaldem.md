@@ -162,4 +162,3 @@ nv     0   0   0   0
 <p> <a rel="nofollow" href="http://grass.osgeo.org/grass64/manuals/html64_user/r.slope.aspect.html">http://grass.osgeo.org/grass64/manuals/html64_user/r.slope.aspect.html</a> </p>
 <p> <a rel="nofollow" href="http://grass.osgeo.org/grass64/manuals/html64_user/r.shaded.relief.html">http://grass.osgeo.org/grass64/manuals/html64_user/r.shaded.relief.html</a> </p>
 <p> <a rel="nofollow" href="http://grass.osgeo.org/grass64/manuals/html64_user/r.colors.html">http://grass.osgeo.org/grass64/manuals/html64_user/r.colors.html</a> </p>
-<h2>Index</h2>

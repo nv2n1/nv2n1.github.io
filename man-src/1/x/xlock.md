@@ -963,4 +963,3 @@ description: "xlock – Locks the local X display until a password is entered."
 &nbsp;<wbr>other special, indirect and consequential damages.<br />
  The original BSD daemon is Copyright (c) 1988 Marshall Kirk McKusick. All Rights Reserved.<br />
  DEC, HP, IBM, Linux, SCO, SGI, and Sun icons have their respective copyrights. </p>
-<h2>Index</h2>

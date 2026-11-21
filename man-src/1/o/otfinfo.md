@@ -114,4 +114,3 @@ MinionPro - Regular
 <p> <i>OpenType Specification</i>, Version 1.4</p>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

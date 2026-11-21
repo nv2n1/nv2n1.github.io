@@ -59,4 +59,3 @@ git http - fetch[-c][-t][-a][-d][-v][-w filename][--recover][--stdin | --packfil
 </dt><dd> Verify that everything reachable from target is fetched. Used after an earlier fetch is interrupted.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

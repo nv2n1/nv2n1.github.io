@@ -50,4 +50,3 @@ description: "cddb-tool – Get CDDB information"
 <p> Prints usage information. </p>
 <h2>AUTHOR</h2>
 <p> Nathaniel Smith &lt;njs [at] uclink4.berkeley.edu&gt;, maintained as part of abcde by Robert Woodcock &lt;rcw [at] debian.org&gt;. Manual page compiled from help information by Robert Woodcock. </p>
-<h2>Index</h2>

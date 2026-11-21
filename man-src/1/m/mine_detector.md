@@ -15,4 +15,3 @@ description: "mine_detector – a mine-finding game"
 <h2>AUTHORS</h2>
 <p> Mine Detector was written by Jeffrey Carter. </p>
 <p> This manual page was written by Björn Persson &lt;Bjorn [at] Rombobjörn.se&gt;. </p>
-<h2>Index</h2>

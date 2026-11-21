@@ -20,4 +20,3 @@ description: "audit_get_reply – Get the audit system’s reply"
 <p> <code><a href="/docs/linux/man/3-audit_open/">audit_open</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

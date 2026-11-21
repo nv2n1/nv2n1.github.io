@@ -26,4 +26,3 @@ description: "lxappearance – GTK+ theme switcher"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> CopyrightCopyright &#169; 2008 paulliu </p>
-<h2>Index</h2>

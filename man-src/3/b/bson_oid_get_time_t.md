@@ -24,4 +24,3 @@ bson_oid_get_time_t(const bson_oid_t *oid);
 <p> A time_t containing the seconds since the UNIX epoch of <code>oid</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

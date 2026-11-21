@@ -270,4 +270,3 @@ description: "perl – The Perl 5 language interpreter"
 <h2>NOTES</h2>
 <p> The Perl motto is &#8220;There&#8217;s more than one way to do it.&#8221; Divining how many more is left as an exercise to the reader. </p>
 <p> The three principal virtues of a programmer are Laziness, Impatience, and Hubris. See the Camel Book for why. </p>
-<h2>Index</h2>

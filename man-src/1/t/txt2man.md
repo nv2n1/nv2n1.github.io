@@ -86,4 +86,3 @@ txt2man[-hpTX][-t mytitle][-P pname][-r rel][-s sect]
 <dd> Automatic probe (<code>-p</code> option) works only if input is a regular file (i.e. not stdin).</dd></dl>
 <h2>AUTHOR</h2>
 <p> Marc Vertes &lt;mvertes [at] free.fr&gt; </p>
-<h2>Index</h2>

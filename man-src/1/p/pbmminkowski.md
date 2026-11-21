@@ -15,4 +15,3 @@ description: "pbmminkowski – compute Minkowski integral"
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmminkowski</code> computes the 3 Minkowski integrals of a PBM image. </p>
 <p> It is similar to <code><a href="/docs/linux/man/1-pgmminkowski/">pgmminkowski</a></code>(1) </p>
-<h2>Index</h2>

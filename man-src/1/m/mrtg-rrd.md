@@ -62,4 +62,3 @@ rdtoolin\lib\perl
 <p> Just as a side note: <font SIZE="-1">MRTG-3</font> will be based entirely on rrdtool technology. But don&#8217;t wait for it &#8230; get going <code>now</code>!</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

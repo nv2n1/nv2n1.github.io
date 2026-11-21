@@ -161,4 +161,3 @@ send
 <p> Nominum, Inc.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-resperf/">resperf</a></code>(1) </p>
-<h2>Index</h2>

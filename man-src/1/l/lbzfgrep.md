@@ -22,4 +22,3 @@ description: "lbzgrep – search possibly compressed files for a regular express
 <p> Charles Levert (charles [at] comm.polymtl.ca)</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/1-lbzexe/">lbzexe</a>(1), <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzdiff/">lbzdiff</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1), <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1) </p>
-<h2>Index</h2>

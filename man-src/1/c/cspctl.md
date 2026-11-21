@@ -88,4 +88,3 @@ Creative Signal Processor[v1 .0] State : -x-- L
 </dl>
 <h2>AUTHOR</h2>
 <p> Uros Bizjak &lt;uros [at] kss-loka.si&gt;. </p>
-<h2>Index</h2>

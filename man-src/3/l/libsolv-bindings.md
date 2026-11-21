@@ -3648,4 +3648,3 @@ di = datapos.Dataiterator(keyname, match, flags)
 <p> Iterate over the matching data elements. See the Dataiterator class for more information.</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

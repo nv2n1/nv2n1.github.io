@@ -26,4 +26,3 @@ description: "ql/math/array.hpp – 1-D array used in linear algebra."
 <p> 1-D array used in linear algebra. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

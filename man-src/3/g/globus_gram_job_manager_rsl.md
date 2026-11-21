@@ -190,4 +190,3 @@ description: "globus_gram_job_manager_rsl – RSL Attributes This page contains 
 <dt>
 </dt><dd> Verify that the job is running as this user.</dd></dl>
 <hr>
-<h2>Index</h2>

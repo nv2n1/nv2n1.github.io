@@ -49,4 +49,3 @@ M ",/^_[`jpqy| M
 <p> <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1), <code><a href="/docs/linux/man/1-pnmcrop/">pnmcrop</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/1-ppmchange/">ppmchange</a></code>(1), <code><a href="/docs/linux/man/1-pnmrotate/">pnmrotate</a></code>(1), <code><a href="/docs/linux/man/1-pbmtextps/">pbmtextps</a></code>(1), <code><a href="/docs/linux/man/1-ppmlabel/">ppmlabel</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Jef Poskanzer and George Phillips </p>
-<h2>Index</h2>

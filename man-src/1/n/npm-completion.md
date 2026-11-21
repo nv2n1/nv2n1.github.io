@@ -39,4 +39,3 @@ npm completion &gt;&gt; ~/.zshrc
 <dd> npm help npm </dd>
 </dl>
 </dl>
-<h2>Index</h2>

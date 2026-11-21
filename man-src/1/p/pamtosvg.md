@@ -71,4 +71,3 @@ description: "pamtosvg – convert a Netpbm image to a SVG (Scalable Vector Grap
 <p> Bryan Henderson created <code>pamtosvg</code>, basically just by adapting Autotrace to Netpbm. </p>
 <p> Autotrace was first released in 2000 and updates were released through 2002. A number of people wrote the code in it, but Masatake Yamato and Martin Weber appear to be the principal creators of it. </p>
 <p> As of June 2006, there was a Sourceforge project for it. </p>
-<h2>Index</h2>

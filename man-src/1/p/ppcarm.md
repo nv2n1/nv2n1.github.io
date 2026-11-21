@@ -18,4 +18,3 @@ description: "ppcarm – Free Pascal Compiler (FPC) binary, name derived from Po
 <p> For a complete list of all supported command-line options, see the <code><a href="/docs/linux/man/1-fpc/">fpc</a></code>(1) manual page. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fpc/">fpc</a></code>(1) </p>
-<h2>Index</h2>

@@ -97,4 +97,3 @@ description: "CVSps – create patchset information from CVS"
 <p> Report bugs to &quot;David Mansfield &lt;cvsps [at] dm.cobite.com&gt;&quot;</p>
 <h2>BUGS</h2>
 <p> No known bugs. </p>
-<h2>Index</h2>

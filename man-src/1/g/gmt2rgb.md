@@ -41,4 +41,3 @@ description: "gmt2rgb – Converting a grid file, a raw, or a Sun raster file to
 <p> <code>gmt2rgb</code> radiation.ras <code>-L</code>r <code>-G</code>comp_%c.grd</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmtdefaults/">gmtdefaults</a></i>(1), <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-grdedit/">grdedit</a></i>(1), <i><a href="/docs/linux/man/1-grdimage/">grdimage</a></i>(1), <i><a href="/docs/linux/man/1-grdmath/">grdmath</a></i>(1), <i><a href="/docs/linux/man/1-grdview/">grdview</a></i>(1) </p>
-<h2>Index</h2>

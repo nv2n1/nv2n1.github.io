@@ -18,4 +18,3 @@ description: "atril-thumbnailer – create png thumbnails from atril supported d
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-atril/">atril</a></code>(1), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7). </p>
 <p> <a rel="nofollow" href="http://www.mate-desktop.org//">http://www.mate-desktop.org//</a> </p>
-<h2>Index</h2>

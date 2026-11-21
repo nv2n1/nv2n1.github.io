@@ -22,4 +22,3 @@ description: "gst-visualise – Run a GStreamer pipeline to display an audio vis
 <p> <code>gst-launch-ext</code>(1), <code>gst-inspect</code>(1), <code>gst-launch</code>(1),</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.net/">http://gstreamer.net/</a> </p>
-<h2>Index</h2>

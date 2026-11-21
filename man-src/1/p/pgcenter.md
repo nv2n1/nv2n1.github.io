@@ -1461,4 +1461,3 @@ Used condition: WHERE state IN ('fastpath function call', 'disabled') AND (
 <h2>AUTHOR</h2>
 <p> Alexey Lesovsky, &lt;lesovsky [at] gmail.com&gt; </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

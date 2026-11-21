@@ -48,4 +48,3 @@ gmt set FONT_ANNOT_PRIMARY 12p,Helvetica \
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtdefaults</code>, <code>gmtget</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

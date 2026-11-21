@@ -48,4 +48,3 @@ description: "pg_resetxlog – reset the write-ahead log and other control infor
 <p> The <code>-V</code> and <code>&#8211;version</code> options print the pg_resetxlog version and exit. The options <code>-?</code> and <code>&#8211;help</code> show supported arguments, and exit.</p>
 <h2>NOTES</h2>
 <p> This command must not be used when the server is running. <code>pg_resetxlog</code> will refuse to start up if it finds a server lock file in the data directory. If the server crashed then a lock file might have been left behind; in that case you can remove the lock file to allow <code>pg_resetxlog</code> to run. But before you do so, make doubly certain that there is no server process still alive. </p>
-<h2>Index</h2>

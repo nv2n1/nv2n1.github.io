@@ -23,4 +23,3 @@ do_circle(screen, SCREEN_W / 2, SCREEN_H / 2,
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-do_ellipse/">do_ellipse</a></code>(3), <code><a href="/docs/linux/man/3-do_arc/">do_arc</a></code>(3), <code><a href="/docs/linux/man/3-do_line/">do_line</a></code>(3), <code><a href="/docs/linux/man/3-circle/">circle</a></code>(3), <code><a href="/docs/linux/man/3-circlefill/">circlefill</a></code>(3) </p>
-<h2>Index</h2>

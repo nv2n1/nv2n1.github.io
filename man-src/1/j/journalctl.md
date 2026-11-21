@@ -529,4 +529,3 @@ journalctl -f -u apache
 <dt>
 </dt><dd> <a rel="nofollow" href="https://systemd.io/DISCOVERABLE_PARTITIONS">https://systemd.io/DISCOVERABLE_PARTITIONS</a></dd></dl>
 </dl>
-<h2>Index</h2>

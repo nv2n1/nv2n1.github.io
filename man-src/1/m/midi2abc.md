@@ -108,4 +108,3 @@ description: "midi2abc – program to convert MIDI format files to abc notation"
 <h2>COPYRIGHT</h2>
 <p> Copyright 1999 James Allwright </p>
 <p> midi2abc is supplied &quot;as is&quot; without any warranty. It is free software and can be used, copied, modified and distributed without fee under the terms of the GNU General Public License. </p>
-<h2>Index</h2>

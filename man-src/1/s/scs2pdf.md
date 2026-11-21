@@ -22,4 +22,3 @@ description: "scs2pdf – convert IBM SCS printer data into PDF"
 <p> You should have received a copy of the GNU Lesser General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
 <h2>AUTHORS</h2>
 <p> <code>scs2pdf</code> was written by Michael Madore and James Rich. This manual page was written by Carey Evans. </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "GBall – The Console Ball and Racket Game"
 <p> info gball </p>
 <h2>AUTHOR</h2>
 <p> Mohammed Isam &lt;mohammed_isam1984 [at] yahoo.com&gt; </p>
-<h2>Index</h2>

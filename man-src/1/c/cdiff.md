@@ -33,4 +33,3 @@ cdiff <a rel="nofollow" href="http://some.url.com/foo/thing.patch">http://some.u
 <dl>
 <dt>
 </dt><dd> colordiff author, packager for colordiff/cdiff</dd></dl>
-<h2>Index</h2>

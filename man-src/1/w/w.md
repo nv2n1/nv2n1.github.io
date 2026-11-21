@@ -54,4 +54,3 @@ description: "w – Show who is logged on and what they are doing."
 <p> <code>w</code> was re-written almost entirely by Charles Blake, based on the version by Larry Greenfield and Michael K. Johnson</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

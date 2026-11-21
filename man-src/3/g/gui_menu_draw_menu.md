@@ -19,4 +19,3 @@ description: "gui_menu_draw_menu, gui_menu_draw_menu_item – Hooks to modify th
 <p> gui_menu_draw_menu() is passed the position and size of the menu. It should draw the background of the menu onto screen. </p>
 <p> gui_menu_draw_menu_item() is called once for each menu item that is to be drawn. bar will be set if the item is part of a top-level horizontal menu bar, and sel will be set if the menu item is selected. It should also draw onto screen. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

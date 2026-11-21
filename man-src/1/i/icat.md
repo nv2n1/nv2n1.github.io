@@ -46,4 +46,3 @@ description: "icat – Output the contents of a file based on its inode number."
 <p> Wietse Venema IBM T.J. Watson Research P.O. Box 704 Yorktown Heights, NY 10598, USA </p>
 <p> This version is maintained by Brian Carrier (carrier at sleuthkit at org). </p>
 <p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "elog – utility program for Electronic Logbook ELOG"
 <h2>AUTHOR</h2>
 <p> Written by Stefan Ritt &lt;stefan.ritt [at] psi.ch&gt;. </p>
 <p> This manual page was written by Recai Oktas &lt;roktas [at] omu.edu.tr&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -145,4 +145,3 @@ description: "ioping – simple disk I/O latency monitoring tool"
 <h2>AUTHORS</h2>
 <p> This program was written by Konstantin Khlebnikov<br />
  Man-page was written by Kir Kolyshkin </p>
-<h2>Index</h2>

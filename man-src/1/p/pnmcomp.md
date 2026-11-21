@@ -41,4 +41,3 @@ description: "pnmcomp – composite (overlay) two portable anymap files together
 <p> <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/1-pbmmask/">pbmmask</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1992 by David Koblas (koblas [at] mips.com). </p>
-<h2>Index</h2>

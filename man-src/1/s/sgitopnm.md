@@ -27,4 +27,3 @@ description: "sgitopnm – convert a SGI image file to a portable anymap"
 <p> <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/1-pnmtosgi/">pnmtosgi</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de) </p>
-<h2>Index</h2>

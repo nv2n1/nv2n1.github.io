@@ -100,4 +100,3 @@ gmt grdfilter ripples.nc -Ffgfilter.nc -D0 -Gsmooth.nc -V
 <p> <code>gmt</code>, <code>grdfft</code> <code>img2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -55,4 +55,3 @@ description: "nm-online – ask NetworkManager whether the network is connected"
 </dt><dd> Unknown or unspecified error.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nmcli/">nmcli</a></code>(1), <code><a href="/docs/linux/man/8-networkmanager/">NetworkManager</a></code>(8). </p>
-<h2>Index</h2>

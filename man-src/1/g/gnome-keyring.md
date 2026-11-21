@@ -34,4 +34,3 @@ description: "gnome-keyring – The gnome-keyring commandline tool"
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-keyring">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-keyring</a></code>m[]</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-secret-tool/">secret-tool</a></code>(1), <code><a href="/docs/linux/man/1-seahorse/">seahorse</a></code>(1), <code><a href="/docs/linux/man/1-gnome-keyring-daemon/">gnome-keyring-daemon</a></code>(1) </p>
-<h2>Index</h2>

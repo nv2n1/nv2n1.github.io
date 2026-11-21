@@ -92,4 +92,3 @@ opostdesc&quot;</tt> or <tt>&quot;\glsxtrnopostpunc&quot;</tt> (default).</dd>
 </pre>
 <h2>AUTHOR</h2>
 <p> Nicola L. C. Talbot, &lt;<a rel="nofollow" href="http://www.dickimaw-books.com/">http://www.dickimaw-books.com/</a>&gt; </p>
-<h2>Index</h2>

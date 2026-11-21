@@ -15,4 +15,3 @@ description: "jack_connect, jack_disconnect – JACK toolkit clients for connect
 <p> <code>jack_connect</code> connects the two named ports. <code>jack_disconnect</code> disconnects the two named ports.</p>
 <h2>RETURNS</h2>
 <p> The exit status is zero if successful, 1 otherwise </p>
-<h2>Index</h2>

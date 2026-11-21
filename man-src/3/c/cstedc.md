@@ -175,4 +175,3 @@ Z is COMPLEX array, dimension(LDZ, N) On entry, if COMPZ = 'V', then Z contains 
 <p> Definition at line 212 of file cstedc.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

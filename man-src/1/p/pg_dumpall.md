@@ -185,4 +185,3 @@ $ <code>psql -f db.out postgres</code>
 <p> (It is not important to which database you connect here since the script file created by pg_dumpall will contain the appropriate commands to create and connect to the saved databases.)</p>
 <h2>SEE ALSO</h2>
 <p> Check <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1) for details on possible error conditions. </p>
-<h2>Index</h2>

@@ -78,4 +78,3 @@ description: "dbus-update-activation-environment – update environment used for
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2015 Collabora Ltd. </p>
 <p> This man page is distributed under the same terms as dbus-update-activation-environment (MIT/X11). There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>

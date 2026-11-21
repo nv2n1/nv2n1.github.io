@@ -37,4 +37,3 @@ description: "wpaclean – clean wpa capture files"
  <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code> </p>
-<h2>Index</h2>

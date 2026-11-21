@@ -24,4 +24,3 @@ description: "ps2frag – obsolete shell script for the PSfrag system."
 <dt>psfrag [at] rascals.stanford.edu</dt>
 <dd> <p> The PSfrag maintainer&#8217;s mailing list. </p>
  </dd></dl>
-<h2>Index</h2>

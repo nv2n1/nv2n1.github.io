@@ -35,4 +35,3 @@ description: "llvm-extract – extract a function from an LLVM module"
 <p> bugpoint</p>
 <h2>AUTHORS</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

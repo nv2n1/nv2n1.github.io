@@ -41,4 +41,3 @@ description: "epiphany – simple to use web browser for GNOME"
 <p> Epiphany has a comprehensive help system. Run the browser and select <code>Help</code> from the menu.</p>
 <h2>AUTHOR</h2>
 <p> Written by Marco Pesenti Gritti, Christian Persch and others. </p>
-<h2>Index</h2>

@@ -101,4 +101,3 @@ description: "pango-view (pango) – Pango text viewer"
 <dt><code>&#8211;wrap</code>=<i>,word/</i>/char/word-char</dt>
 <dd> Text wrapping mode (needs a width to be set) </dd>
 </dl>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ npm cache verify
 <dd> <a rel="nofollow" href="https://npm.im/pacote">https://npm.im/pacote</a> </dd>
 </dl>
 </dl>
-<h2>Index</h2>

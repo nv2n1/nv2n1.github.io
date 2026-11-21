@@ -102,4 +102,3 @@ C2 is REAL array, dimension(LDC, N) if SIDE = 'L'(LDC, N - 1) if SIDE = 'R' On e
 <p> Definition at line 152 of file slatzm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

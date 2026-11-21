@@ -54,4 +54,3 @@ description: "eom – The Eye of MATE Image Viewer"
 <h2>SEE ALSO</h2>
 <h3>Eye of MATE documentation can be found from the Help menu, or by pressing the F1 key.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
-<h2>Index</h2>

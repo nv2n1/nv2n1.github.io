@@ -743,4 +743,3 @@ $ wmctrl -i -r 0x4a0000b -e 0,100,50,640,480
 <dd>
 </dd><dt><code>David Hill Aq </code>dhill [at] mindcry.org</dt>
 <dd></dd></dl>
-<h2>Index</h2>

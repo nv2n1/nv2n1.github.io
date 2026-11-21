@@ -32,4 +32,3 @@ description: "bluez-simple-agent – A PIN management and agent program for pair
 <dl>
 <dt>
 </dt><dd> Wrote this manpage for the Debian system.</dd></dl>
-<h2>Index</h2>

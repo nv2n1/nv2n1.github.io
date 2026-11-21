@@ -94,4 +94,3 @@ description: "pg – browse pagewise through text files"
 <p> Files that include <font SIZE="-1">NUL</font> characters cannot be displayed by <code>pg</code>.</p>
 <h2>AVAILABILITY</h2>
 <p> The pg command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>
-<h2>Index</h2>

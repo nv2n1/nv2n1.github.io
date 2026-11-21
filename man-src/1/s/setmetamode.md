@@ -34,4 +34,3 @@ description: "setmetamode – define the keyboard meta key handling"
 <dd> print this usage message.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-kbdinfo/">kbdinfo</a></code>(1) </p>
-<h2>Index</h2>

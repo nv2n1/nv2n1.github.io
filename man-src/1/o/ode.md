@@ -109,4 +109,3 @@ description: "ode – numerical solution of ordinary differential equations"
 <p> &quot;The GNU Plotting Utilities Manual&quot;.</p>
 <h2>BUGS</h2>
 <p> Email bug reports to <code>bug-gnu-utils [at] gnu.org</code>. </p>
-<h2>Index</h2>

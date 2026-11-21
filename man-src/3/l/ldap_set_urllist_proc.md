@@ -54,4 +54,3 @@ LDAP **ldp;
 <p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_bind/">ldap_bind</a></code>(3), <code><a href="/docs/linux/man/3-ldap_get_option/">ldap_get_option</a></code>(3), <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3), <code><a href="/docs/linux/man/3-lber-sockbuf/">lber-sockbuf</a></code>(3), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "pdldoc – shell interface to PDL documentation"
 <p> This is pdldoc version 0.3.</p>
 <h2>AUTHOR</h2>
 <p> Doug Burke &lt;burke at ifa dot hawaii dot edu&gt;. Chris Marshall &lt;chm at cpan dot org&gt;. </p>
-<h2>Index</h2>

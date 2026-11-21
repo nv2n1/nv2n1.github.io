@@ -46,4 +46,3 @@ description: "ucfr – Update Configuration File Registry: associate packages wi
 <p> <a href="/docs/linux/man/1-ucf/">ucf</a>(1), <a href="/docs/linux/man/5-ucf-conf/">ucf.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written Manoj Srivastava &lt;srivasta [at] debian.org&gt;, for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

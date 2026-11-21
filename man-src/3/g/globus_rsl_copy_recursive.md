@@ -127,4 +127,3 @@ description: "RSL Memory Management –"
 </dt><dd> Upon success, <code>globus_rsl_value_list_literal_replace()</code> returns <i>GLOBUS_SUCCESS</i>, frees the current first value of <i>value_list</i> and replaces it with a new literal string node pointing to the value of the <i>string_value</i> parameter. If an error occurs, <code>globus_rsl_value_list_literal_replace()</code> returns 1.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

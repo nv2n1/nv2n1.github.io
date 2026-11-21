@@ -16,4 +16,3 @@ description: "pcap-config – write libpcap compiler and linker flags to standar
 <p> By default, it writes flags appropriate for compiling with a dynamically-linked version of libpcap; the <code>&#8211;static</code> flag causes it to write flags appropriate for compiling with a statically-linked version of libpcap.</p>
 <h2>SEE ALSO</h2>
 <p> pcap(3PCAP) </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "bro-cut – parse Bro logs"
 <p> <a href="/docs/linux/man/3-strftime/">strftime</a>(3)</p>
 <h2>AUTHOR</h2>
 <p> <code>bro-cut</code> was written by The Bro Project &lt;info [at] bro.org&gt;. </p>
-<h2>Index</h2>

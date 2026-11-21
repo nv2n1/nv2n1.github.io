@@ -91,4 +91,3 @@ description: "sys_basher – manual page for sys_basher version 2.0.2"
 <dt>
 </dt><dd> You can disable the OOM killer for sys_basher by running (as root) sys_basher_disable_oom after starting sys_basher </dd>
 </dl>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "ksshell — an interactive kickstart shell"
 <dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksvalidator (1), ksverdiff (1) </p>
-<h2>Index</h2>

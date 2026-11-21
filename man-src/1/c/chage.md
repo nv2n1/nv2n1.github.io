@@ -94,4 +94,3 @@ description: "chage – change user password expiry information"
 </dt><dd> can&#8217;t find the shadow password file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5). </p>
-<h2>Index</h2>

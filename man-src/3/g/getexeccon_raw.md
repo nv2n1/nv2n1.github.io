@@ -31,4 +31,3 @@ description: "getexeccon, setexeccon – get or set the SELinux security context
 <p> On success <code>getexeccon</code>(), <code>setexeccon</code>() and <code>setexecfilecon</code>() return 0. <code>rpm_execcon</code>() only returns upon errors, as it calls <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-getcon/">getcon</a></code>(3) </p>
-<h2>Index</h2>

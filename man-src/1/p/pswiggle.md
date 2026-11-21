@@ -105,4 +105,3 @@ awk '{ print NR, $0 }' yourdata.xyz | filter1d -Fb5 -N4/0 \
 <p> <code>gmt</code>, <code>gmtcolors</code>, <code>filter1d</code>, <code>psbasemap</code>, <code>splitxyz</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

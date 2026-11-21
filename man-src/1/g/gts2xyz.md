@@ -16,4 +16,3 @@ description: "gts2xyz – samples a GTS file on a regular grid at intervals DX."
 <h2>AUTHOR</h2>
 <p> gts2xyz was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Ruben Molina &lt;rmolina [at] udea.edu.co&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

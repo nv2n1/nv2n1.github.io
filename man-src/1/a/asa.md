@@ -35,4 +35,3 @@ description: "asa – convert ASA (Fortran) carriage control charachters"
 <p> POSIX.2</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-f2c/">f2c</a>(1), <a href="/docs/linux/man/1-f77/">f77</a>(1), <a href="/docs/linux/man/1-col/">col</a>(1), <a href="/docs/linux/man/1-less/">less</a>(1), <a href="/docs/linux/man/1-a2ps/">a2ps</a>(1) </p>
-<h2>Index</h2>

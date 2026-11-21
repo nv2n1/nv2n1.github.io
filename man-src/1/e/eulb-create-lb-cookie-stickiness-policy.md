@@ -43,4 +43,3 @@ description: "eulb-create-lb-cookie-stickiness-policy – Create a new stickines
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

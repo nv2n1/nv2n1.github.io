@@ -75,4 +75,3 @@ description: "playdv – display digital video streams on screen"
 <h2>AUTHORS</h2>
 <p> <code>playdv</code> was written by Charles &#8216;Buck&#8217; Krasic &lt;krasic [at] acm.org&gt; and Erik Walthinsen &lt;omega [at] cse.ogi.edu&gt;. </p>
 <p> This manual page is based on playdv&#8217;s help message and was written by Daniel Kobras &lt;kobras [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

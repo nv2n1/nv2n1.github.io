@@ -44,4 +44,3 @@ description: "csv2po – Convert Comma-Separated Value (.csv) files to Gettext P
 <dt>&#8211;duplicates</dt>
 <dd> what to do with duplicate strings (identical source text): merge, msgctxt (default: &#8216;msgctxt&#8217;) </dd>
 </dl>
-<h2>Index</h2>

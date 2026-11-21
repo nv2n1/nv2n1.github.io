@@ -50,4 +50,3 @@ description: "fastautils – FASTA format file manipulation utilities"
 <p> This package has been developed as part of the ensembl project. Please see <a rel="nofollow" href="http://www.ensembl.org/">http://www.ensembl.org/</a> for more information.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-exonerate/">exonerate</a></code>(1),<code>e-PCR</code> </p>
-<h2>Index</h2>

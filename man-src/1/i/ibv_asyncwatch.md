@@ -27,4 +27,3 @@ description: "ibv_asyncwatch – display asynchronous events"
 <dt>Eran Ben Elisha</dt>
 <dd> &lt;<i>eranbe [at] mellanox.com</i>&gt; </dd>
 </dl>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "grephistory – Query the INN history database"
 <p> <tt>$Id:</tt> grephistory.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/1-sm/">sm</a></i>(1). </p>
-<h2>Index</h2>

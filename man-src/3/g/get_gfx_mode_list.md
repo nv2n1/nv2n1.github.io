@@ -32,4 +32,3 @@ typedef struct GFX_MODE {
 <p> Returns a pointer to a list structure of the type GFX_MODE_LIST or NULL if the request could not be satisfied. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-destroy_gfx_mode_list/">destroy_gfx_mode_list</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3) </p>
-<h2>Index</h2>

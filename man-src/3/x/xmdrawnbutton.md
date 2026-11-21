@@ -1637,4 +1637,3 @@ description: "XmDrawnButton — The DrawnButton widget class"
 <p> The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-VirtualBindings/">VirtualBindings</a></code>(3).  </p>
 <h2>RELATED</h2>
 <p> <code><a href="/docs/linux/man/3-Core/">Core</a></code>(3), <code>XmCreateDrawnButton</code>, <code><a href="/docs/linux/man/3-XmLabel/">XmLabel</a></code>(3), <code><a href="/docs/linux/man/3-XmPrimitive/">XmPrimitive</a></code>(3), <code>XmPushButton</code>, <code><a href="/docs/linux/man/3-XmSeparator/">XmSeparator</a></code>(3), <code>XmVaCreateDrawnButton</code>, <code>XmVaCreateManagedDrawnButton</code>. </p>
-<h2>Index</h2>

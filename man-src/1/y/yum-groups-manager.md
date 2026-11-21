@@ -107,4 +107,3 @@ in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.o
 To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos
 related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs.
 </pre>
-<h2>Index</h2>

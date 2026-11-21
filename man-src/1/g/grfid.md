@@ -26,4 +26,3 @@ description: "GRFID – A tool to extract the (New)GRF ID from a (New)GRF"
 <p> This manual page was written by Remko Bijker.</p>
 <h2>COPYRIGHT</h2>
 <p> GRFID is Copyright (C) 2009 by Peter Nelson. </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "exo-preferred-applications – Select preferred applications for X
 <dt>
 </dt><dd> TerminalEmulator &#8211; The preferred Terminal Emulator. </dd>
 </dl>
-<h2>Index</h2>

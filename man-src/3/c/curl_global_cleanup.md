@@ -19,4 +19,3 @@ description: "curl_global_cleanup – global libcurl cleanup"
 <p> See the description in <code><a href="/docs/linux/man/3-libcurl/">libcurl</a>(3)</code> of global environment requirements for details of how to use this function. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a></code>(3), <code><a href="/docs/linux/man/3-libcurl/">libcurl</a></code>(3), </p>
-<h2>Index</h2>

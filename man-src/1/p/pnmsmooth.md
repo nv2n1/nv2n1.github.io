@@ -24,4 +24,3 @@ description: "pnmsmooth – smooth out an image"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
  Converted from script to C program December 1994 by Mike Burns (burns [at] chem.psu.edu). </p>
-<h2>Index</h2>

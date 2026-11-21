@@ -68,4 +68,3 @@ description: "dbcolsregression – compute linear regression between two columns
 <h2>AUTHOR and COPYRIGHT</h2>
 <p> Copyright (C) 1997-2015 by John Heidemann &lt;johnh [at] isi.edu&gt; </p>
 <p> This program is distributed under terms of the <font SIZE="-1">GNU</font> general public license, version 2. See the file <font SIZE="-1">COPYING</font> with the distribution for details. </p>
-<h2>Index</h2>

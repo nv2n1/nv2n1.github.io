@@ -50,4 +50,3 @@ ykgenerate ecde18dbe76fbd0c33330f1c354871db 8792ebfe26cc 0013 c0a8 00 10
 <p> Use <a href="/docs/linux/man/1-ykparse/">ykparse</a>(1) to decode the resulting OTP.</p>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
-<h2>Index</h2>

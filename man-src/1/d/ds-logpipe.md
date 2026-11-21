@@ -66,4 +66,3 @@ description: "ds-logpipe.py – Create and read from a named pipe instead of a l
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009 Red Hat, Inc.<br />
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. This license is essentially the GNU General Public License version 2 with an exception for plug-in distribution. </p>
-<h2>Index</h2>

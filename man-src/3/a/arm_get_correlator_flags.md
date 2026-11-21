@@ -42,4 +42,3 @@ description: "arm_get_correlator_flags – get value of flag"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_generate_correlator/">arm_generate_correlator</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3) </p>
-<h2>Index</h2>

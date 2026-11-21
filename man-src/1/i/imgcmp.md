@@ -17,4 +17,3 @@ description: "imgcmp – Image comparison utility"
 <p> <i><a href="/docs/linux/man/1-jasper/">jasper</a></i>(1) </p>
 <h2>AUTHOR</h2>
 <p> Michael D. Adams &lt;mdadams [at] ieee.org&gt; This manpage was initially written by Roland Stigge &lt;stigge [at] antcom.de&gt; for the Debian Project. </p>
-<h2>Index</h2>

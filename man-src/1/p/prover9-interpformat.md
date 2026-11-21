@@ -44,4 +44,3 @@ description: "interpformat – tool for transforming mace4(1) models"
 <h2>AUTHOR</h2>
 <p> <code>interpformat</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>
 <p> This manual page was written by Peter Collingbourne &lt;pcc03 [at] doc.ic.ac.uk&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

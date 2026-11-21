@@ -78,4 +78,3 @@ d
 <dt>Ishai Rabinovitz</dt>
 <dd> &lt;<i>ishai [at] mellanox.co.il</i>&gt; </dd>
 </dl>
-<h2>Index</h2>

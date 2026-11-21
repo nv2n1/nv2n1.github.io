@@ -31,4 +31,3 @@ description: "testsolv – run a libsolv testcase through the solver"
 </dt><dd> This is used in the solver test suite to test the calculated solutions to encountered problems.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

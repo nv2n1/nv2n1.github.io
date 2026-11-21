@@ -84,4 +84,3 @@ description: "wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 </pre>
 <p> Will generate a SOAP 1.2 WSDL. </p>
 <p> Note that you do not have to generate WSDL at the development time as JAXWS runtime will automatically generate a WSDL for you when you deploy your service. </p>
-<h2>Index</h2>

@@ -156,4 +156,3 @@ url: "/docs/linux/man/1-duply/"
 <p> Repeat this step after _all_ configuration changes. Some configuration options are crucial for restoration.</p>
 <h2>SEE ALSO</h2>
 <p> duplicity man page: <code><a href="/docs/linux/man/1-duplicity/">duplicity</a></code>(1) or <a rel="nofollow" href="http://duplicity.nongnu.org/duplicity.1.html">http://duplicity.nongnu.org/duplicity.1.html</a> </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "lzss_write – Compresses data using LZSS. Allegro game programmin
 <p> Returns 0 on success, or EOF if there was an error. </p>
 <h2>SEE ALSO</h2>
 <p> <code>create_lzss_pack_data</code>(3), <code>free_lzss_pack_data</code>(3) </p>
-<h2>Index</h2>

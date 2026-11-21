@@ -24,4 +24,3 @@ description: "dh_gtkmodules – create Gtk module files for Gtk modules"
 <p> This program relies on Debhelper, but is shipped with the Gtk development files.</p>
 <h2>AUTHOR</h2>
 <p> Loic Minier &lt;lool [at] dooz.org&gt; </p>
-<h2>Index</h2>

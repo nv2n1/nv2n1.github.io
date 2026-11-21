@@ -63,4 +63,3 @@ description: "speexdec – The reference implementation speex decoder."
 <p> Please report bugs to the mailing list `speex-dev [at] xiph.org&#8217;.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002 Jean-Marc Valin </p>
-<h2>Index</h2>

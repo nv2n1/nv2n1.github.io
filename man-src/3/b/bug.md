@@ -67,4 +67,3 @@ description: "bug – Known Bugs"
 <dt><code>Member FDDividendShoutEngine</code></dt>
 <dd> results are not overly reliable.</dd></dl>
 <hr>
-<h2>Index</h2>

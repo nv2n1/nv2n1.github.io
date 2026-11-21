@@ -39,4 +39,3 @@ ndctl[--version][--help][OPTIONS] COMMAND[ARGS]
 <dt>
 </dt><dd> <a rel="nofollow" href="http://pmem.io/documents/NVDIMM_Driver_Writers_Guide.pdf">http://pmem.io/documents/NVDIMM_Driver_Writers_Guide.pdf</a></dd></dl>
 </dl>
-<h2>Index</h2>

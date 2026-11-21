@@ -189,4 +189,3 @@ zathura[OPTION]... zathura[OPTION]... FILE[FILE...] zathura-- syntex - forward I
 <p> <a href="/docs/linux/man/5-zathurarc/">zathurarc</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> pwmt.org </p>
-<h2>Index</h2>

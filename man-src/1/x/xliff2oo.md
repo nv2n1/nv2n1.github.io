@@ -56,4 +56,3 @@ description: "xliff2oo – Convert XLIFF localization files to an OpenOffice.org
 <dt>&#8211;multifile</dt>
 <dd> how to split po/pot files (single, toplevel or onefile) </dd>
 </dl>
-<h2>Index</h2>

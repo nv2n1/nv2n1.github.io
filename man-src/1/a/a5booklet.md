@@ -26,4 +26,3 @@ description: "a5booklet – copy two A5 pages from a .dvi file to one A4 page in
 <p> Page number 1 is always the first page in the original .dvi file, not the page numbered 1 by TeX&#8217;s numbering scheme. </p>
 <h2>AUTHOR</h2>
 <p> <code>A5booklet</code> is written by David A. van Leeuwen (david [at] ElseWare.cistron.nl), but is is not original in any way. The main two lines that do the work are inspired from the man page of <code>dvidvi</code>. <code>A5booklet</code> is available under the conditions of the Gnu Public Licence. </p>
-<h2>Index</h2>

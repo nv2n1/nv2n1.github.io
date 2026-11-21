@@ -31,4 +31,3 @@ description: "false – do nothing, unsuccessfully"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/false">https://www.gnu.org/software/coreutils/false</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) false invocation&#8217; </p>
-<h2>Index</h2>

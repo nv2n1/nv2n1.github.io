@@ -174,4 +174,3 @@ panotools optimizer, it tends to shrink the fov to 0. </p>
 <dd> Displays usage information and exits.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Anael Orlinski, Pablo d&#8217;Angelo, Antoine Deleforge, Thomas Modes </p>
-<h2>Index</h2>

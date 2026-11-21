@@ -229,4 +229,3 @@ dblatex -O /path/to/chunk/dir -Pset.book.num=all myfile.xml
 <p> This manual page was written for the Debian(TM) system (but it may be used by others). </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian(TM) systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>

@@ -94,4 +94,3 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 <p> <code>The Spirit of TIFF Class F,</code> an appendix to the TIFF 5.0 specification prepared by Cygnet Technologies. </p>
 <p> <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffdither/">tiffdither</a></code>(1), <code>tiffgt</code>(1), <code>libtiff</code>(3) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
-<h2>Index</h2>

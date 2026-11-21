@@ -20,4 +20,3 @@ description: "libssh2_session_set_blocking – set or clear blocking mode on ses
 <p> None </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

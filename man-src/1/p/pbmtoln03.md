@@ -31,4 +31,3 @@ description: "pbmtoln03 – convert PBM image to DEC LN03+ Sixel output"
 <p> <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Tim Cook, 26 Feb 1992 </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ description: "xine-remote – a small tool to connect xine remote control server
 <p> <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Daniel Caujolle-Bert &lt;f1rmb [at] users.sourceforge.net&gt; for the xine project. </p>
-<h2>Index</h2>

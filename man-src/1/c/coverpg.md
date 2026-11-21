@@ -36,4 +36,3 @@ description: "make.coverpg – create a fax coverpg on stdout"
 <p> <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/1-ghostscript/">ghostscript</a>(1) </p>
 <h2>AUTHORS</h2>
 <p> The idea behind <i>make.coverpg</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;, the implementation will most likely have yours&#8230; </p>
-<h2>Index</h2>

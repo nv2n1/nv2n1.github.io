@@ -43,4 +43,3 @@ git quiltimport[--dry - run | -n][--author&lt;author&gt;][--patches&lt;dir&gt;]
 </dt><dd> Pass <code>-b</code> flag to <i>git mailinfo</i> (see <code><a href="/docs/linux/man/1-git-mailinfo/">git-mailinfo</a></code>(1)).</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

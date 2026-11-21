@@ -20,4 +20,3 @@ description: "audit_delete_rule_data – Delete audit rule"
 <p> <code><a href="/docs/linux/man/3-audit_add_rule_data/">audit_add_rule_data</a></code>(3), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

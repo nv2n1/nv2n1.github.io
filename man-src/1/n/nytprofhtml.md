@@ -83,4 +83,3 @@ $ nytprofhtml[-h][-d][-m][-o&lt;output directory&gt;][-f&lt;input file&gt;][--op
 <p> <code>Adam Kaplan</code>, <tt>&quot;&lt;akaplan at nytimes.com&gt;&quot;</tt>. <code>Tim Bunce</code>, &lt;<a rel="nofollow" href="http://www.tim.bunce.name">http://www.tim.bunce.name</a>&gt; and &lt;<a href="http://blog.timbunce.org">http://blog.timbunce.org</a>&gt;. <code>Steve Peters</code>, <tt>&quot;&lt;steve at fisharerojo.org&gt;&quot;</tt>.</p>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.8.8 or, at your option, any later version of Perl 5 you may have available. </p>
-<h2>Index</h2>

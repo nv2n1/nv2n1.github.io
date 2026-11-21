@@ -175,4 +175,3 @@ description: "scp – secure copy (remote file copy program)"
 <p> <code>scp</code> is based on the <a href="/docs/linux/man/1-rcp/">rcp</a>(1) program in BSD source code from the Regents of the University of California.</p>
 <h2>AUTHORS</h2>
 <p> An Timo Rinne Aq Mt tri [at] iki.fi An Tatu Ylonen Aq Mt ylo [at] cs.hut.fi </p>
-<h2>Index</h2>

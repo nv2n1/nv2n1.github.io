@@ -48,4 +48,3 @@ description: "zone2ldap – convert zonefiles to ldif"
 <p> <code>pdns_server</code>(8) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Matthijs Möhlmann &lt;matthijs [at] cacholong.nl&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

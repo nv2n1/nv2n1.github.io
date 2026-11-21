@@ -51,4 +51,3 @@ description: "collectd – System statistics collection daemon"
 <p> <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5), <i><a href="/docs/linux/man/5-collectd-email/">collectd-email</a></i>(5), <i><a href="/docs/linux/man/5-collectd-exec/">collectd-exec</a></i>(5), <i><a href="/docs/linux/man/5-collectd-perl/">collectd-perl</a></i>(5), <i><a href="/docs/linux/man/5-collectd-snmp/">collectd-snmp</a></i>(5), <i><a href="/docs/linux/man/5-collectd-unixsock/">collectd-unixsock</a></i>(5), <i><a href="/docs/linux/man/5-types-db/">types.db</a></i>(5), &lt;<a rel="nofollow" href="http://collectd.org/">http://collectd.org/</a>&gt;</p>
 <h2>AUTHOR</h2>
 <p> Florian Forster &lt;octo [at] collectd.org&gt; </p>
-<h2>Index</h2>

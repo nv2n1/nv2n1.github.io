@@ -20,4 +20,3 @@ description: "daala_plane_info –"
 <p> 4:2:0 would have {0, 0} for Y and {1, 1} for Cb and Cr. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

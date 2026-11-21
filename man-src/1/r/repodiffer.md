@@ -69,4 +69,3 @@ description: "repodiffer – report differences between repository histories"
 <p> For scripting use, this program returns 0 unless content (tree) differences were found in matching commits, in which case it returns 1. Right-side-only or left-side-only commits do not cause a return of 1, nor do differences in change comments only.</p>
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt;. This tool is distributed with reposurgeon; see the project page at m[blue]<code><a rel="nofollow" href="http://www.catb.org/~esr/reposurgeon">http://www.catb.org/~esr/reposurgeon</a></code>m[]. </p>
-<h2>Index</h2>

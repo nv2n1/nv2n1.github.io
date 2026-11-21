@@ -33,4 +33,3 @@ description: "software-properties-gtk – Software Sources List editor"
 <dt><code>&#8211;help </code></dt>
 <dd> Show help about options </dd>
 </dl>
-<h2>Index</h2>

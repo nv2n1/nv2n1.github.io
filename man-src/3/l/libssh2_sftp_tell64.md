@@ -21,4 +21,3 @@ description: "libssh2_sftp_tell64 – get the current read/write position indica
 <p> Added in libssh2 1.0</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3),</code> <code><a href="/docs/linux/man/3-libssh2_sftp_tell/">libssh2_sftp_tell</a>(3)</code> </p>
-<h2>Index</h2>

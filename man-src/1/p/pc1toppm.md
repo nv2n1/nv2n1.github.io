@@ -20,4 +20,3 @@ description: "pc1toppm – convert an Atari Degas .pc1 into a PPM image"
 <p> <code>pc1toppm</code> was new in Netpbm 10.22 (April 2004) </p>
 <h2>SEE ALSO</h2>
 <p> <code>ppm</code>(1) , <code><a href="/docs/linux/man/1-pi1toppm/">pi1toppm</a></code>(1) , <code><a href="/docs/linux/man/1-pi3topbm/">pi3topbm</a></code>(1) , <code><a href="/docs/linux/man/1-pbmtopi3/">pbmtopi3</a></code>(1) </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ description: "wvdial – PPP dialer with built-in intelligence."
 <p> Dave Coombs and Avery Pennarun for Net Integration Technologies. We would also like to thank SuSE and RedHat for adding a number of various cool features to <code>wvdial</code>. Thanks guys!</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-wvdial-conf/">wvdial.conf</a></code>(5), <code><a href="/docs/linux/man/1-wvdialconf/">wvdialconf</a></code>(1), <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-chat/">chat</a></code>(8). </p>
-<h2>Index</h2>

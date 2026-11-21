@@ -66,4 +66,3 @@ description: "gcl – GCL Common Lisp interpreter/compiler"
 <p> <i>Common LISPcraft</i>, Robert Wilensky, W. W. Norton &amp; Co., New York, 1984.</p>
 <h2>AUTHORS</h2>
 <p> The GCL system contains C and Lisp source files to build a Common Lisp sytem. CGL is derived from Kyoto Common LISP (<i>kcl</i>), which was written in 1984 by T. Yuasa and M. Hagiya (working under Professor R. Nakajima at the Research Institute for Mathematical Sciences, Kyoto University). The AKCL system work was begun in 1987 by William Schelter at the University of Texas, Austin, and continued through 1994. In 1994 AKCL was released as GCL (GNU Common Lisp) under the GNU public library license. </p>
-<h2>Index</h2>

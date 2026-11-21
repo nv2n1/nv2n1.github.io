@@ -23,4 +23,3 @@ description: "blueproximity – locks/unlocks your desktop tracking a bluetooth 
 <h2>AUTHOR</h2>
 <p> blueproximity was written by Lars Friedrichs &lt;larsfriedrichs [at] gmx.de&gt;. </p>
 <p> This manual page was written by Francesco Namuri &lt;francesco [at] namuri.it&gt; and Lars Friedrichs for the Debian project and Ubuntu (but may be used by others). </p>
-<h2>Index</h2>

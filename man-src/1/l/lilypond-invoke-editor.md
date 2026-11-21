@@ -26,4 +26,3 @@ description: "lilypond-invoke-editor – manual page for lilypond-invoke-editor 
 <dt>
 </dt><dd> <code>info lilypond-invoke-editor</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

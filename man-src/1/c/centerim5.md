@@ -30,4 +30,3 @@ description: "centerim5 – a text-mode IM client for Linux, *BSD, Solaris and o
 <p> Report any bugs at our Bugzilla site at <a rel="nofollow" href="http://bugzilla.centerim.org/">http://bugzilla.centerim.org/</a> </p>
 <h2>WEB</h2>
 <p> <a rel="nofollow" href="http://www.centerim.org/">http://www.centerim.org/</a> </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "ieee1284_read_data, ieee1284_write_data, ieee1284_data_dir, ieee12
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
-<h2>Index</h2>

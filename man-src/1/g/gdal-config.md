@@ -33,4 +33,3 @@ gdal - config[OPTIONS] Options : [--prefix[= DIR]]
 <dd> Reports &#8216;yes&#8217; or &#8216;no&#8217; to standard output depending on whether OGR is built into GDAL.</dd>
 <dt><code>&#8211;formats</code>:</dt>
 <dd> Reports which formats are configured into GDAL to stdout.</dd></dl>
-<h2>Index</h2>

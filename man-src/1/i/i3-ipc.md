@@ -63,4 +63,3 @@ $ i3-ipc &quot;exec xterm&quot;
 <p> Jan-Erik Rediger:: badboy [at] archlinux.us</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-i3/">i3</a>(1), <a href="/docs/linux/man/1-i3-msg/">i3-msg</a>(1), <i><a rel="nofollow" href="http://i3.zekjur.net/">http://i3.zekjur.net/</a></i>, <i><a href="http://github.com/badboy/i3-ipc">http://github.com/badboy/i3-ipc</a></i> </p>
-<h2>Index</h2>

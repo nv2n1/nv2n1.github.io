@@ -25,4 +25,3 @@ description: "pktogf – convert packed font files to generic font files"
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki wrote the program. Pierre MacKay adapted it for compilation with <code>web2c</code>. </p>
-<h2>Index</h2>

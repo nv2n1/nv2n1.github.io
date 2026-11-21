@@ -20,4 +20,3 @@ description: "ck_bitmap_reset – resets the bit at the specified index"
 <h2>SEE ALSO</h2>
 <p> ck_bitmap_base3, ck_bitmap_size3, ck_bitmap_init3, ck_bitmap_set3, ck_bitmap_clear3, ck_bitmap_test3, ck_bitmap_bits3, ck_bitmap_buffer3 </p>
 <p> Additional information available at <a rel="nofollow" href="http://concurrencykit.org/">http://concurrencykit.org/</a> </p>
-<h2>Index</h2>

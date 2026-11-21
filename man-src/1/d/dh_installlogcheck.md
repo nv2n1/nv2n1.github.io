@@ -36,4 +36,3 @@ description: "dh_installlogcheck – install logcheck rulefiles into etc/logchec
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Jon Middleton &lt;jjm [at] debian.org&gt; </p>
-<h2>Index</h2>

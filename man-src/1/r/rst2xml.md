@@ -157,4 +157,3 @@ description: "rst2xml – convert reST documents to XML"
 <dt><code>&#8211;no-doctype</code></dt>
 <dd> Omit the DOCTYPE declaration. </dd>
 </dl>
-<h2>Index</h2>

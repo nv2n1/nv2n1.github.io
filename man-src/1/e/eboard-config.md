@@ -26,4 +26,3 @@ description: "eboard-config – program to get information about the installed e
 <dd> Outputs the current eboard version to stdout.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Daniel Burrows &lt;dburrows [at] debian.org&gt;, for the Debian GNU/Linux system, but may be used by others. </p>
-<h2>Index</h2>

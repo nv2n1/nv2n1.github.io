@@ -38,4 +38,3 @@ description: "QLandkarteGT – GPS mapping (GeoTiff and vector) and GPSr managem
 <p> <i>QLandkarteGT</i> Homepage: <code><a rel="nofollow" href="http://www.qlandkarte.org">http://www.qlandkarte.org</a></code></p>
 <h2>AUTHOR</h2>
 <p> <i>QLandkarteGT</i> was written and is currently maintained by Oliver Eichler <code>&lt;oliver.eichler [at] gmx.de&gt;</code>. </p>
-<h2>Index</h2>

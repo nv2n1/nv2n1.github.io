@@ -79,4 +79,3 @@ description: "manedit – UNIX Manual Page IDE"
 <dd> Programmer</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1) <code>manview</code>(1) </p>
-<h2>Index</h2>

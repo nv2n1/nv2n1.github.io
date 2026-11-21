@@ -74,4 +74,3 @@ description: "pon, poff, plog – starts up, shuts down or lists the log of PPP 
  This manual was written by Othmar Pasteka &lt;othmar [at] tron.at&gt;. Modified by Rob Levin &lt;lilo [at] openprojects.net&gt;, with some extensions taken from the old p-commands manual written by John Hasler &lt;jhasler [at] debian.org&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8), <code><a href="/docs/linux/man/8-chat/">chat</a></code>(8), <code><a href="/docs/linux/man/1-tail/">tail</a></code>(1). </p>
-<h2>Index</h2>

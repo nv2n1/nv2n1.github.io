@@ -46,4 +46,3 @@ description: "oo2po – Convert an OpenOffice.org (SDF) localization file to Get
 <dt>&#8211;multifile</dt>
 <dd> how to split po/pot files (single, toplevel or onefile) </dd>
 </dl>
-<h2>Index</h2>

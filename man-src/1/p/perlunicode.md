@@ -909,4 +909,3 @@ description: "perlunicode – Unicode support in Perl"
 <p> In Perl 5.8.0 the slowness was often quite spectacular; in Perl 5.8.1 a caching scheme was introduced which improved the situation. In general, operations with <font SIZE="-1">UTF-8</font> encoded strings are still slower. As an example, the Unicode properties (character classes) like <code>&quot;\p{Nd}&quot;</code> are known to be quite a bit slower (5-20 times) than their simpler counterparts like <code>&quot;[0-9]&quot;</code> (then again, there are hundreds of Unicode characters matching <code>&quot;Nd&quot;</code> compared with the 10 <font SIZE="-1">ASCII</font> characters matching <code>&quot;[0-9]&quot;</code>).  </p>
 <h2>SEE ALSO</h2>
 <p> perlunitut, perluniintro, perluniprops, Encode, open, utf8, bytes, perlretut, ``${^UNICODE}&#8216;&#8216; in perlvar, &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr44">http://www.unicode.org/reports/tr44</a>&gt;). </p>
-<h2>Index</h2>

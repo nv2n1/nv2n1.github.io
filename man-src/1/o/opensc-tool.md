@@ -56,4 +56,3 @@ description: "opensc-tool – generic smart card utility"
 </dt><dd> Causes <code>opensc-tool</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7), <a href="/docs/linux/man/1-opensc-explorer/">opensc-explorer</a>(1) </p>
-<h2>Index</h2>

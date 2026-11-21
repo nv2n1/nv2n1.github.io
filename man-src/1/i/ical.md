@@ -45,4 +45,3 @@ description: "ical – A Hijri/Islamic calendar (and converter)"
  Copyright &#169; 2005, Arabeyes, Nadim Shaikli.</p>
 <h2>SEE ALSO</h2>
 <p> The ITL (Islamic Tools Library). It is the underlying requirement for <code>ical</code> to function. The ITL library was created and is hosted at <code><a rel="nofollow" href="http://www.arabeyes.org">www.arabeyes.org</a></code>. </p>
-<h2>Index</h2>

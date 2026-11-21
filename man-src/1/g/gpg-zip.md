@@ -63,4 +63,3 @@ description: "gpg-zip – encrypt or sign files into an archive"
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2005 Free Software Foundation, Inc. Please report bugs to &lt;bug-gnupg [at] gnu.org&gt;. </p>
 <p> This manpage was written by <code>Colin Tuckley</code> &lt;colin [at] tuckley.org&gt; and <code>Daniel Leidert</code> &lt;daniel.leidert [at] wgdd.de&gt; for the Debian distribution (but may be used by others). </p>
-<h2>Index</h2>

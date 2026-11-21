@@ -29,4 +29,3 @@ description: "rtas – Allows userspace to call RTAS (Run Time Abstraction Servi
 </dl>
 <h2>AUTHOR</h2>
 <p> Niki Rahimi. </p>
-<h2>Index</h2>

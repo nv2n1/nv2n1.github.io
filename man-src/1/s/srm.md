@@ -74,4 +74,3 @@ description: "srm – securely remove files or directories"
 <dt><code><a href="/docs/linux/man/1-scrub/">scrub</a>(1)</code></dt>
 <dd> <a rel="nofollow" href="http://code.google.com/p/diskscrub/">http://code.google.com/p/diskscrub/</a> </dd>
 </dl>
-<h2>Index</h2>

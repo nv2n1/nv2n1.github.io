@@ -84,4 +84,3 @@ description: "aggregate – optimise a list of route prefixes to help make nice 
 <h2>BUGS</h2>
 <p> Common unix parsing of IPv4 addresses understands the representation of individual octets in octal or hexadecimal, following a &quot;0&quot; or &quot;0x&quot; prefix, respectively. That convention has been deliberately disabled here, since resources such as the IRR do not follow the convention, and confusion can result. </p>
 <p> For extremely sensitive applications, judicious use of the <i>-v</i> option together with a pencil and paper is probably advisable. </p>
-<h2>Index</h2>

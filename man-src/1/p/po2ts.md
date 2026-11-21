@@ -38,4 +38,3 @@ description: "po2ts – Convert Gettext PO localization files to Qt Linguist (.t
 <dt>-c/&#8211;context</dt>
 <dd> use supplied context instead of the one in the .po file comment </dd>
 </dl>
-<h2>Index</h2>

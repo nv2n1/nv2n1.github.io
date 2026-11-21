@@ -47,4 +47,3 @@ description: "encode_keychange – produce the KeyChange string for SNMPv3"
 <dt>
 </dt><dd> U. Blumenthal, N. C. Hien, B. Wijnen, &quot;Key Derivation for Network Management Applications&quot;, IEEE Network Magazine, April/May issue, 1997. </dd>
 </dl>
-<h2>Index</h2>

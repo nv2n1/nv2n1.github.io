@@ -128,4 +128,3 @@ description: "mpc – Program for controlling Music Player Daemon (MPD)"
 <p> <a href="/docs/linux/man/1-mpd/">mpd</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>See &lt;<a rel="nofollow" href="https://svn.musicpd.org/mpc/trunk/AUTHORS">https://svn.musicpd.org/mpc/trunk/AUTHORS</a>&gt;, for contributors to mpc</p>
-<h2>Index</h2>

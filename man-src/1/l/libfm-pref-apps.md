@@ -20,4 +20,3 @@ description: "libfm-pref-apps – sets preferred applications for programs based
 <h2>AUTHOR</h2>
 <p> libfm-pref-apps was written by Hong Jen Yee &lt;pcman.tw [at] gmail.com&gt;. </p>
 <p> This manual page was written by Sergey Slipchenko &lt;faergeek [at] gmail.com&gt;, for the Debian project (and may be used by others). Updated by Andriy Grytsenko &lt;andrej [at] rep.kiev.ua&gt;. </p>
-<h2>Index</h2>

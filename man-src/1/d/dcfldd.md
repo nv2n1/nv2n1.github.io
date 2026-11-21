@@ -171,4 +171,3 @@ description: "dcfldd – manual page for dcfldd (dcfldd) 1.3.4"
 <dt>
 </dt><dd> <code>info dcfldd</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

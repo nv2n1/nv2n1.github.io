@@ -37,4 +37,3 @@ description: "QuantLib::TransformedGrid – transformed grid"
 <p> This package encapuslates an array of grid points. It is used primarily in PDE calculations. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

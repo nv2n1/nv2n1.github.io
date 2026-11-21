@@ -54,4 +54,3 @@ description: "prezip-bin – prefix zip delta word list compressor/decompressor"
 <p> For help, see the Aspell homepage at &lt;<a rel="nofollow" href="http://aspell.net">http://aspell.net</a>&gt;. Send bug reports/comments to the Aspell user list at the above address.</p>
 <h2>AUTHOR</h2>
 <p> This info page was written by Jose Da Silva &lt;digital [at] joescat.com&gt;. </p>
-<h2>Index</h2>

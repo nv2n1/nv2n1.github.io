@@ -19,4 +19,3 @@ description: "libssh2_session_abstract – return a pointer to a session’s abs
 <p> A pointer to session internal storage whos contents point to previously provided abstract data. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

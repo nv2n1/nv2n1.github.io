@@ -17,4 +17,3 @@ description: "pl2pm – Rough tool to translate Perl4 .pl files to Perl5 .pm mod
 <p> It&#8217;s just a first step, but it&#8217;s usually a good first step.</p>
 <h2>AUTHOR</h2>
 <p> Larry Wall &lt;larry [at] wall.org&gt; </p>
-<h2>Index</h2>

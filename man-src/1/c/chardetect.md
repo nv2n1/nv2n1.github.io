@@ -19,4 +19,3 @@ description: "chardet – universal character encoding detector"
 <h2>AUTHOR</h2>
 <p> chardet module was written by Mark Pilgrim &lt;mark [at] diveintomark.org&gt; </p>
 <p> This manual page was written by Piotr Ożarowski &lt;piotr [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -999,4 +999,3 @@ description: "firewall-offline-cmd – firewalld offline command line client"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

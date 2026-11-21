@@ -25,4 +25,3 @@ description: "ctie – merge or apply CWEB change files"
 <p> <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1), <i>ctiedoc.tex</i>, <code><a href="/docs/linux/man/1-tie/">tie</a></code>(1), <code>web</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Julian Gilbey, jdg [at] debian.org. The original TIE program was by Klaus Guntermann, TH Darmstadt, Institut f. Theoretische Informatik. The TIE man page was by Joachim Schnitter, TH Darmstadt, Phys. Chemie I, and was modified for CTIE by Julian Gilbey. </p>
-<h2>Index</h2>

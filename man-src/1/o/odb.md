@@ -306,4 +306,3 @@ description: "odb – object-relational mapping (ORM) compiler for C++"
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2009-2013 Code Synthesis Tools CC. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, version 1.2; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. Copy of the license can be obtained from <a rel="nofollow" href="http://www.codesynthesis.com/licenses/fdl-1.3.txt">http://www.codesynthesis.com/licenses/fdl-1.3.txt</a> </p>
-<h2>Index</h2>

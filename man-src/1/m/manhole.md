@@ -20,4 +20,3 @@ description: "manhole – Connect to a Twisted Manhole service"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2000-2008 Twisted Matrix Laboratories.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

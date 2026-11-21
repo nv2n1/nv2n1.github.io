@@ -189,4 +189,3 @@ otf lmsansdemicond10-oblique.otf  2.004
 <p> This manual page was written by Philipp Gesang &lt;<i>phg [at] phi-gamma.net</i>&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> GPL v2.0 </p>
-<h2>Index</h2>

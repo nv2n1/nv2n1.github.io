@@ -42,4 +42,3 @@ description: "icegridregistry – The IceGrid registry server."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icegridadmin/">icegridadmin</a></code>(1), <code><a href="/docs/linux/man/1-icegridnode/">icegridnode</a></code>(1) </p>
-<h2>Index</h2>

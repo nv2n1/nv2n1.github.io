@@ -35,4 +35,3 @@ description: "xfce4-popup-whiskermenu – shows Whisker Menu"
 <h2>AUTHOR</h2>
 <p> Graeme Gott &lt;graeme [at] gottcode.org&gt;. </p>
 <p> This manual page was derived from the manual page for the Xfce window list written by Francois Wendling &lt;frwendling [at] free.fr&gt;. </p>
-<h2>Index</h2>

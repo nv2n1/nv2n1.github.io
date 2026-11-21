@@ -51,4 +51,3 @@ description: "pxz – Parallel LZMA compressor compatible with XZ."
 <p> Jindrich Novy &lt;jnovy [at] users.sourceforge.net&gt;</p>
 <h2>BUGS</h2>
 <p> Report bugs via <a rel="nofollow" href="http://bugzilla.redhat.com/bugzilla/">http://bugzilla.redhat.com/bugzilla/</a> </p>
-<h2>Index</h2>

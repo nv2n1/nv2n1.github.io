@@ -43,4 +43,3 @@ description: "grub-render-label – generate a .disk_label for Apple Macs."
 <dt>
 </dt><dd> <code>info grub-render-label</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

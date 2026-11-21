@@ -24,4 +24,3 @@ description: "nacl-sha512 — program to calculate the sha512 hash"
 &nbsp;<wbr> </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "ppmtosixel – convert a portable pixmap into DEC sixel format"
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Rick Vinci. </p>
-<h2>Index</h2>

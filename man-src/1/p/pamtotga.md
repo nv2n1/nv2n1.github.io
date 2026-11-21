@@ -40,4 +40,3 @@ description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 <p> In Netpbm 10.15 (April 2003), the program became the first in the Netpbm package to recognize an alpha channel in a PAM. It recognized tuple type &#8216;RGBA&#8217;. But when this kind of PAM image was later added to the PAM specification, it was specified with tuple type &#8216;RGB_ALPHA&#8217;. So in Netpbm 10-26 (January 2005), <code>pamtotga</code> changed to recognize &#8216;RGB_ALPHA&#8217; instead of &#8216;RGBA&#8217;. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Mark Shand and Jef Poskanzer. </p>
-<h2>Index</h2>

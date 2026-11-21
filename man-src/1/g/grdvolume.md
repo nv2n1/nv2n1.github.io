@@ -80,4 +80,3 @@ gmt grdvolume lake.nc -Cr-300/0
 <p> Wessel, P., 1998, An empirical method for optimal robust regional-residual separation of geophysical data, <i>Math. Geol.</i>, <code>30</code>(4), 391-408.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ $ tracker3-tag -s -t sliff sloff
 <p> Should show files in the database that have both the <i>sliff</i> and <i>sloff</i> tags.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-search/">tracker3-search</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
-<h2>Index</h2>

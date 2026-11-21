@@ -42,4 +42,3 @@ description: "mate-volume-control – The MATE Volume Control application"
 <h2>SEE ALSO</h2>
 <h3>MATE Volume Control documentation can be found by clicking the Help button, or by pressing the F1 key.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
-<h2>Index</h2>

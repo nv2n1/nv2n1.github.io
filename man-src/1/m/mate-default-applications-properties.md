@@ -21,4 +21,3 @@ description: "mate-default-applications-properties — is a control center apple
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>
-<h2>Index</h2>

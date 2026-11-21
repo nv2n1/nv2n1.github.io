@@ -31,4 +31,3 @@ description: "ql/instruments/bonds/convertiblebond.hpp – convertible bond clas
 <p> convertible bond class </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

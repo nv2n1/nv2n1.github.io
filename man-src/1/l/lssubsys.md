@@ -67,4 +67,3 @@ net_cls /cgroup/net_cls
 </dl>
 <h2>SEE ALSO</h2>
 <p> lscgroup (1), cgcreate (1), cgdelete (1), cgconfig.conf (5) </p>
-<h2>Index</h2>

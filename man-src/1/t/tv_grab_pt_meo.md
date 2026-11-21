@@ -43,4 +43,3 @@ description: "tv_grab_pt_meo – Grab TV listings for MEO from SAPO in Portugal.
 <p> Data provided via web service from <font SIZE="-1">SAPO</font> accompanying their <font SIZE="-1">MEO TV</font> service. Check their terms of usage!</p>
 <h2>BUGS</h2>
 <p> None known. </p>
-<h2>Index</h2>

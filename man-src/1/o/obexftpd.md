@@ -49,4 +49,3 @@ description: "obexftpd – Mobile Equipment file transfer server"
 <p> The software has been tested and reported working on at least Siemens, Ericsson, and Nokia phones.</p>
 <h2>AUTHOR</h2>
 <p> Christian W. Zuckschwerdt &lt;zany [at] triq.net&gt; Alan Zhang &lt;vibra [at] tom.com&gt; </p>
-<h2>Index</h2>

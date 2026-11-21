@@ -41,4 +41,3 @@ EOF
 <p> <i>Effective AWK Programming</i>, Edition 1.0, published by the Free Software Foundation, 1995.</p>
 <h2>AUTHOR</h2>
 <p> Arnold Robbins (<code>arnold [at] skeeve.com</code>). </p>
-<h2>Index</h2>

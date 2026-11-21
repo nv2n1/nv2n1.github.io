@@ -61,4 +61,3 @@ description: "ecvt, fcvt – convert a floating-point number to a string"
 <p> <code><a href="/docs/linux/man/3-ecvt_r/">ecvt_r</a></code>(3), <code><a href="/docs/linux/man/3-gcvt/">gcvt</a></code>(3), <code><a href="/docs/linux/man/3-qecvt/">qecvt</a></code>(3), <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

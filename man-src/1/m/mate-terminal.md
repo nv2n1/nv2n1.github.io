@@ -110,4 +110,3 @@ description: "mate-terminal – manual page for MATE Terminal Emulator"
 <p> should give you access to the complete manual. </p>
 <p> More <code>MATE Terminal</code> documentation can be found from the <code>Help</code> menu, or by pressing the <code>F1</code> key. </p>
 <p> Further information may also be available at: <code><a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></code> </p>
-<h2>Index</h2>

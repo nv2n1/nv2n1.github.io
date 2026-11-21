@@ -28,4 +28,3 @@ description: "dftest – Shows display filter byte-code, for debugging dfilter r
 </pre>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/4-wireshark-filter/">wireshark-filter</a></i>(4) </p>
-<h2>Index</h2>

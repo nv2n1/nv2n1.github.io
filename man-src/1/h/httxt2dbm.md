@@ -39,4 +39,3 @@ description: "httxt2dbm – Generate dbm files for use with RewriteMap"
       httxt2dbm -f SDBM -i rewritemap.txt -o rewritemap.dbm 
 </pre>
 <p>&nbsp; </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "docker-manifest-create – Create a local manifest list for annota
 <p> <code>&#8211;insecure</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Allow communication with an insecure registry</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-manifest/">docker-manifest</a>(1)</code> </p>
-<h2>Index</h2>

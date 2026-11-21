@@ -66,4 +66,3 @@ description: "git-annex-shell – Restricted login shell for git-annex only SSH 
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joey [at] kitenet.net&gt; </p>
 <p> &lt;<a rel="nofollow" href="http://git-annex.branchable.com/">http://git-annex.branchable.com/</a>&gt; </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "libssh2_scp_send – convenience macro for libssh2_scp_send_ex(3) 
 <p> See <i><a href="/docs/linux/man/3-libssh2_scp_send_ex/">libssh2_scp_send_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_scp_send_ex/">libssh2_scp_send_ex</a>(3)</code> </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "gtg – Getting Things Gnome!, an organizer for the GNOME desktop"
 <p> GTG uses a very handy system for creating and editing tasks. The task editor can automatically recognize metadata such as tags and subtasks only by the use of a very simple syntax.</p>
 <h2>COPYRIGHT</h2>
 <p> This manual page is Copyright 2009 Luca Falavigna &lt;dktrkranz [at] debian.org&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

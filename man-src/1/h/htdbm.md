@@ -122,4 +122,3 @@ description: "htdbm – Manipulate DBM password databases"
 &nbsp; </p>
 <p> Usernames are limited to <code>255</code> bytes and may not include the character <code>:</code>.<br />
 &nbsp; </p>
-<h2>Index</h2>

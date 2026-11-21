@@ -20,4 +20,3 @@ description: "mkhtmlindex – generate index files for HTML man pages"
 <h2>AUTHOR</h2>
 <p> The version of the <i>mkhtmlindex</i> included in this X.Org Foundation release was originally written by David Dawes wrote as a part of XFree86. </p>
 <p> Colin Watson wrote this manual page, originally for the Debian Project. </p>
-<h2>Index</h2>

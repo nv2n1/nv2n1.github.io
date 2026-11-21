@@ -96,4 +96,3 @@ description: "Kayac – Compiler for the kaya language"
 <p> <code>kayac</code> is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License (version 2 or any later version) as published by the Free Software Foundation. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-darcs/">darcs</a>(1)</code> <code><a href="/docs/linux/man/1-gcc/">gcc</a>(1)</code> <code><a href="/docs/linux/man/1-gprof/">gprof</a>(1)</code> <code>rekey(1)</code> <code>xml2man(1)</code> </p>
-<h2>Index</h2>

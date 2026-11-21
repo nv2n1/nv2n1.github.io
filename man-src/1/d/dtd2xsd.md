@@ -18,4 +18,3 @@ description: "dtd2xsd – XML Schema generator from XML document that contains D
 <p> Atsushi Enomoto &lt;atsushi [at] ximian.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1) </p>
-<h2>Index</h2>

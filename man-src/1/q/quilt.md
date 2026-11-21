@@ -476,4 +476,3 @@ QUILT_COLORS='diff_hdr=35;44'
 <h2>SEE ALSO</h2>
 <p> The pdf documentation, which should be under /usr/share/doc/quilt-0.63/quilt.pdf. Note that some distributors compress this file. <code>zxpdf</code>(<code>1</code>) can be used to display compressed pdf files. </p>
 <p> <code>diff</code>(<code>1</code>), <code>patch</code>(<code>1</code>). </p>
-<h2>Index</h2>

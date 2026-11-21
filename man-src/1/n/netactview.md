@@ -15,4 +15,3 @@ description: "Net Activity Viewer – a graphical network connections viewer"
 <p> With <i>netactview</i> you can view the active network connections using a graphical interface. </p>
 <h2>AUTHORS</h2>
 <p> Written by Mihai Varzaru &lt;mihaiv [at] gmail.com&gt;. </p>
-<h2>Index</h2>

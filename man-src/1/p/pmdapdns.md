@@ -33,4 +33,3 @@ description: "pmdapdns – PowerDNS performance metrics domain agent (PMDA)"
 <dd> default log file for error messages from <code>pmdapdns</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1), <i>pdns_control</i>(8), and <i><a href="/docs/linux/man/1-rec_control/">rec_control</a></i>(1). </p>
-<h2>Index</h2>

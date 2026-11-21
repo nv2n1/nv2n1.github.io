@@ -135,4 +135,3 @@ Denis Corbin
 France
 Europe
 </pre>
-<h2>Index</h2>

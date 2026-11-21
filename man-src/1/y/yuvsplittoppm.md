@@ -22,4 +22,3 @@ description: "yuvsplittoppm – convert a Y- and a U- and a V-file into a portab
 <p> <a href="/docs/linux/man/1-ppmtoyuvsplit/">ppmtoyuvsplit</a>(1), <a href="/docs/linux/man/1-yuvtoppm/">yuvtoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Marcel Wijkstra &lt;wijkstra [at] fwi.uva.nl&gt;, based on <i>ppmtoyuvsplit.</i> </p>
-<h2>Index</h2>

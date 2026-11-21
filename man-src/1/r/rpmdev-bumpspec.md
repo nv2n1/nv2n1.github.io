@@ -31,4 +31,3 @@ description: "rpmdev-bumpspec – manual page for rpmdev-bumpspec version 1.0.11
 <dd> output version number and exit</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005-2010 Fedora Project This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

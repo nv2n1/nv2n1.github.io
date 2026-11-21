@@ -36,4 +36,3 @@ description: "g3data – A tool for extracting data from graphs."
 <p> None known.</p>
 <h2>AUTHOR</h2>
 <p> Jonas Frantz &lt;jonas.frantz [at] welho.com&gt; </p>
-<h2>Index</h2>

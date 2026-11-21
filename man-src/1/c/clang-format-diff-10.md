@@ -39,4 +39,3 @@ description: "clang-format-diff.py – manual page for clang-format-diff.py 10"
 <dt><code>-binary</code> BINARY</dt>
 <dd> location of binary to use for clang-format </dd>
 </dl>
-<h2>Index</h2>

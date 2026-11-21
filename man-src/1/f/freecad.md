@@ -45,4 +45,3 @@ description: "freecad – An extensible Open Source CAx program for Unix/X11"
 <p> To report a bug, please visit <i><a rel="nofollow" href="http://free-cad.sf.net/">http://free-cad.sf.net/</a></i></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Werner Mayer. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "ccls – C/C++/Objective-C language server"
 <p> This command is not intended for direct use. You should have an LSP(Language Server Protocol) client for your editors. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Shengjing Zhu &lt;zhsj [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

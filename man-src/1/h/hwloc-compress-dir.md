@@ -31,4 +31,3 @@ description: "hwloc-compress-dir – Compress a directory of XML topologies"
 <p> hwloc-compress-dir will return nonzero if any kind of error occurs, such as (but not limited to) failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-diff/">hwloc-diff</a>(1), <a href="/docs/linux/man/1-hwloc-patch/">hwloc-patch</a>(1) </p>
-<h2>Index</h2>

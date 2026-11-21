@@ -34,4 +34,3 @@ description: "pidof — find the process ID of a running program."
 <p> <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1), <code><a href="/docs/linux/man/1-pkill/">pkill</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jaromir Capik &lt;jcapik [at] redhat.com&gt; </p>
-<h2>Index</h2>

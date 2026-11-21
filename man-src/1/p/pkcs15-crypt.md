@@ -62,4 +62,3 @@ description: "pkcs15-crypt – perform crypto operations using pkcs15 smart card
 </dt><dd> Causes <code>pkcs15-crypt</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pkcs15-init/">pkcs15-init</a>(1), <a href="/docs/linux/man/1-pkcs15-tool/">pkcs15-tool</a>(1) </p>
-<h2>Index</h2>

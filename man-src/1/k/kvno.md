@@ -44,4 +44,3 @@ description: "kvno – print key version numbers of Kerberos principals"
 <p> MIT</p>
 <h2>COPYRIGHT</h2>
 <p> 1985-2017, MIT </p>
-<h2>Index</h2>

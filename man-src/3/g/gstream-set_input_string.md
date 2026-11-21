@@ -32,4 +32,3 @@ gs.getline(buf, 100);
    I think it is superior, fantastic and| wonderful!
 </pre>
 <p> resulting in &#8216;buf&#8217; containing the string &quot;I think it is superior, fantastic and wonderful!&quot; </p>
-<h2>Index</h2>

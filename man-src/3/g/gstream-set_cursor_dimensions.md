@@ -23,4 +23,3 @@ description: "set_cursor_dimensions"
 <p> The default dimensions are the dimensions that are suited for the default cursor. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gstream-get_cursor_w</code>(3), <code>gstream-get_cursor_h</code>(3), <code><a href="/docs/linux/man/3-gstream-set_cursor_drawer/">gstream-set_cursor_drawer</a></code>(3) </p>
-<h2>Index</h2>

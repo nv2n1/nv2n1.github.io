@@ -267,4 +267,3 @@ v2;
 <p> <code>$ flatpak run &#8211;command=bash org.gnome.Sdk</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-override/">flatpak-override</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-enter/">flatpak-enter</a></code>(1) </p>
-<h2>Index</h2>

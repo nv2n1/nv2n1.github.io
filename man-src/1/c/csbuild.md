@@ -63,4 +63,3 @@ description: "csbuild – tool for plugging static analyzers into the build proc
 <dt><code>&#8211;version</code></dt>
 <dd> print the version of csbuild and exit </dd>
 </dl>
-<h2>Index</h2>

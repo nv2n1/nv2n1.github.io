@@ -63,4 +63,3 @@ $ akmodsbuild /usr/src/akmods/ndiswrapper-kmod-1.52-1.lvn9.1.src.rpm /usr/src/ak
 <p> Thorsten Leemhuis &lt;fedora [AT] leemhuis [DOT] info&gt;</p>
 <h2>MAINTAINER</h2>
 <p> Richard Shaw &lt;hobbes1069 [AT] gmail [DOT] com&gt; </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "bssh/bvnc/bshell – Browse for SSH/VNC servers on the local netwo
 <p> <code><a href="/docs/linux/man/1-avahi-browse/">avahi-browse</a>(1)</code>, <code><a href="/docs/linux/man/1-ssh/">ssh</a>(1)</code>, <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a>(1)</code></p>
 <h2>COMMENTS</h2>
 <p> This man page was written using <code>xml2man(1)</code> by Oliver Kurth. </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "scor2prt – source-parts separation program for pmx, a MusiXTeX p
 <p> pmx(1), <a href="/docs/linux/man/1-pmxab/">pmxab</a>(1), <a href="/docs/linux/man/1-musixtex/">musixtex</a>(1), PMX Manual</p>
 <h2>AUTHORS</h2>
 <p> PMX was written by Don Simons &lt;dsimons [at] roadrunner.com&gt;. This manual page was written by Roland Stigge &lt;stigge [at] antcom.de&gt; for the Debian project and revised by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

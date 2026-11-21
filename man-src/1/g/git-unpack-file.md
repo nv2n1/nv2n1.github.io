@@ -22,4 +22,3 @@ description: "git-unpack-file – Creates a temporary file with a blob’s conte
 </dt><dd> Must be a blob id</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

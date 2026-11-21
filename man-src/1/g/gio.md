@@ -454,4 +454,3 @@ description: "gio – GIO commandline tool"
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-mkdir/">mkdir</a></code>(1), <code><a href="/docs/linux/man/1-mv/">mv</a></code>(1), <code><a href="/docs/linux/man/1-rm/">rm</a></code>(1), <code><a href="/docs/linux/man/1-tree/">tree</a></code>(1). </p>
-<h2>Index</h2>

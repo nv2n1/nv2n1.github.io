@@ -99,4 +99,3 @@ description: "make-redir – run \"make\" but automatically redirect its results
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-run-redir/">run-redir</a>(1) </p>
-<h2>Index</h2>

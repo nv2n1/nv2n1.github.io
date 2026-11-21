@@ -115,4 +115,3 @@ description: "pkcs15-init – smart card personalization utility"
 </dt><dd> Causes <code>pkcs15-init</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pkcs15-profile/">pkcs15-profile</a>(5) </p>
-<h2>Index</h2>

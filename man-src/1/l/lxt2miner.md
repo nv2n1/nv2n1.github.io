@@ -38,4 +38,3 @@ description: "lxt2miner – Data mining of LXT2 files"
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-vztminer/">vztminer</a></i>(1) <i><a href="/docs/linux/man/1-vzt2vcd/">vzt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-lxt2vcd/">lxt2vcd</a></i>(1) <i><a href="/docs/linux/man/1-vcd2lxt2/">vcd2lxt2</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

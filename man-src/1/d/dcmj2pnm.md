@@ -313,4 +313,3 @@ RLELosslessTransferSyntax                      1.2.840.10008.1.2.5
 <p> <code><a href="/docs/linux/man/1-dcm2pnm/">dcm2pnm</a></code>(1), <code><a href="/docs/linux/man/1-img2dcm/">img2dcm</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2001-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "nomarch – extract `.arc’ archives"
 <p> <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1), <i><a href="/docs/linux/man/1-gzip/">gzip</a></i>(1), <i><a href="/docs/linux/man/1-bzip2/">bzip2</a></i>(1), <i>lbrate</i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Russell Marks (rus [at] svgalib.org). </p>
-<h2>Index</h2>

@@ -152,4 +152,3 @@ with the -v flag:
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1999-2008 Ales Hvezda </p>
 <p> This document can be freely redistributed according to the terms of the GNU General Public License version 2.0. </p>
-<h2>Index</h2>

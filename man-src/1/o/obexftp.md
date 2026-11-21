@@ -100,4 +100,3 @@ description: "obexftp – Mobile Equipment file transfer tool"
 <p> The software has been tested and reported working on at least Siemens, Ericsson, and Nokia phones.</p>
 <h2>AUTHOR</h2>
 <p> Christian W. Zuckschwerdt &lt;zany [at] triq.net&gt; </p>
-<h2>Index</h2>

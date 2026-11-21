@@ -26,4 +26,3 @@ description: "xzgrep – search compressed files for a regular expression"
 <dd> If the <code>GREP</code> environment variable is set, <code>xzgrep</code> uses it instead of <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), or <code><a href="/docs/linux/man/1-fgrep/">fgrep</a></code>(1).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), <code><a href="/docs/linux/man/1-zstd/">zstd</a></code>(1), <code><a href="/docs/linux/man/1-zgrep/">zgrep</a></code>(1) </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "shtool table – GNU shtool pretty-print a field-separated list"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>table</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1999 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-tr/">tr</a></i>(1), <i><a href="/docs/linux/man/1-fmt/">fmt</a></i>(1), <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-awk/">awk</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1). </p>
-<h2>Index</h2>

@@ -99,4 +99,3 @@ adime_dialogf("Fill in personal data",
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>adime_init</code>(3), <code>adime_vdialogf</code>(3), <code><a href="/docs/linux/man/3-adime_bmp/">adime_bmp</a></code>(3), <code>adime_font</code>(3), <code><a href="/docs/linux/man/3-adime_va_list/">adime_va_list</a></code>(3) </p>
-<h2>Index</h2>

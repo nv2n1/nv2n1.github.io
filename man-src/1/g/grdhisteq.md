@@ -63,4 +63,3 @@ gmt grdhisteq raw_intens.nc -Gsmooth_intens.nc -N -V
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>grd2cpt</code>, <code>grdgradient</code>, <code>grdimage</code>, <code>grdmath</code>, <code>grdview</code>, <code>makecpt</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

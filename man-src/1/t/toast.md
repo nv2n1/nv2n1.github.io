@@ -59,4 +59,3 @@ description: "toast — GSM 06.10 lossy sound compression"
 <p> Please direct bug reports to jutta [at] cs.tu-berlin.de.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-gsm/">gsm</a>(3) </p>
-<h2>Index</h2>

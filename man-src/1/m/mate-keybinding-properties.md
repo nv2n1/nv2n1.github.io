@@ -22,4 +22,3 @@ description: "mate-keybinding-properties – configure MATE keybindings"
 <h2>SEE ALSO</h2>
 <p> Latest version of the MATE Desktop User Guide for your platform. </p>
 <p> <code><a href="/docs/linux/man/1-mate-control-center/">mate-control-center</a></code>(1), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7) </p>
-<h2>Index</h2>

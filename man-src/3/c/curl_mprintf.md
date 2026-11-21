@@ -55,4 +55,3 @@ description: "curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_m
 <p> All other functions return the number of characters they actually outputted.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3), <code><a href="/docs/linux/man/3-vprintf/">vprintf</a></code>(3) </p>
-<h2>Index</h2>

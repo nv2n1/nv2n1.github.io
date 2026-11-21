@@ -204,4 +204,3 @@ $&nbsp;<wbr>lstopo &#8211;input file.xml &#8211;thissystem </p>
 <p>lstopo &#8211;append-legend&nbsp;<wbr>&quot;Kernel release:&nbsp;<wbr>$(uname -r)&quot;&nbsp;<wbr>&#8211;append-legend&nbsp;<wbr>&quot;Kernel version:&nbsp;<wbr>$(uname -v)&quot; </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-hwloc-info/">hwloc-info</a>(1), <a href="/docs/linux/man/1-hwloc-bind/">hwloc-bind</a>(1), <a href="/docs/linux/man/1-hwloc-annotate/">hwloc-annotate</a>(1), <a href="/docs/linux/man/1-hwloc-ps/">hwloc-ps</a>(1), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>
-<h2>Index</h2>

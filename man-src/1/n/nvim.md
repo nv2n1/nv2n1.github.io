@@ -143,4 +143,3 @@ description: "nvim – edit text"
 <dd> System-global <code>nvim</code> runtime directory.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Nvim was started by An Thiago de Arruda . Most of Vim was written by An -nosplit An Bram Moolenaar . Vim is based on Stevie, worked on by An Tim Thompson , An Tony Andrews , and An G.R. (Fred) Walter . <code>:help credits</code> </p>
-<h2>Index</h2>

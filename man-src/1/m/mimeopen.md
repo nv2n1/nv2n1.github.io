@@ -48,4 +48,3 @@ description: "mimeopen – Open files by mimetype"
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-mimetype/">mimetype</a></i>(1), <i><a href="/docs/linux/man/1-update-mime-database/">update-mime-database</a></i>(1), <i><a href="/docs/linux/man/1-update-desktop-database/">update-desktop-database</a></i>(1), <i>File::MimeInfo</i>(3), <i>File::MimeInfo::Applications</i>(3) </p>
-<h2>Index</h2>

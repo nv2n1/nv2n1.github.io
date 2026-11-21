@@ -16,4 +16,3 @@ description: "ellipse – Draws an ellipse. Allegro game programming library."
 <p> Draws an ellipse with the specified centre and radius. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-circle/">circle</a></code>(3), <code><a href="/docs/linux/man/3-arc/">arc</a></code>(3), <code><a href="/docs/linux/man/3-ellipsefill/">ellipsefill</a></code>(3), <code><a href="/docs/linux/man/3-do_ellipse/">do_ellipse</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3) </p>
-<h2>Index</h2>

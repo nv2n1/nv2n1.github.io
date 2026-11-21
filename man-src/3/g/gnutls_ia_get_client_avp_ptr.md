@@ -31,4 +31,3 @@ description: "gnutls_ia_get_client_avp_ptr – Returns the pointer which is sent
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

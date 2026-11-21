@@ -26,4 +26,3 @@ description: "net-snmp-create-v3-user – create a SNMPv3 user in net-snmp confi
 <dt><code>-X DES|AES</code></dt>
 <dd> specify encryption algorithm </dd>
 </dl>
-<h2>Index</h2>

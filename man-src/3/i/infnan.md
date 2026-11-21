@@ -33,4 +33,3 @@ double infnan(int error);
 <p> This obsolete function was provided in libc4 and libc5, but is not available in glibc2.</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 3.53 of the Linux <i>man-pages</i> project. A description of the project, and information about reporting bugs, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

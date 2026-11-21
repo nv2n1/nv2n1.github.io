@@ -21,4 +21,3 @@ description: "pano_trafo – Transform image coordinates."
 <dd> shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Pablo d&#8217;Angelo </p>
-<h2>Index</h2>

@@ -75,4 +75,3 @@ description: "backintime – a simple backup tool for Linux."
 <p> Back In Time also has a website: <a rel="nofollow" href="http://backintime.le-web.org">http://backintime.le-web.org</a></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Oprea Dan (&lt;dan [at] le-web.org&gt;). </p>
-<h2>Index</h2>

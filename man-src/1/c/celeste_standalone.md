@@ -39,4 +39,3 @@ description: "celeste_standalone – Cloud identification"
 <dd> Print usage.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Tim Nugent. </p>
-<h2>Index</h2>

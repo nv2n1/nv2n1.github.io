@@ -310,4 +310,3 @@ description: "tar – manipulate tape archives"
 <p> There needs to be better support for file selection on both create and extract. </p>
 <p> There is not yet any support for multi-volume archives or for archiving sparse files. </p>
 <p> Converting between dissimilar archive formats (such as tar and cpio) using the <code>@ &#8211; </code> convention can cause hard link information to be lost. (This is a consequence of the incompatible ways that different archive formats store hardlink information.) </p>
-<h2>Index</h2>

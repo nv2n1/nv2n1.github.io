@@ -58,4 +58,3 @@ NOT OK
 <p> <a href="/docs/linux/man/1-sshpk-sign/">sshpk-sign</a>(1)</p>
 <h2>BUGS</h2>
 <p> Report bugs at Github <i><a rel="nofollow" href="https://github.com/arekinath/node-sshpk/issues">https://github.com/arekinath/node-sshpk/issues</a></i> </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "dssi_osc_send – send OSC messages to DSSI applications."
 <p> <code><a href="/docs/linux/man/1-dssi_osc_update/">dssi_osc_update</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally created by Mark Hymers from the help text of the application, for the Debian project (but may be freely used by others). </p>
-<h2>Index</h2>

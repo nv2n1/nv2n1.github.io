@@ -71,4 +71,3 @@ description: "llvm-mc – manual page for llvm-mc 14"
 <dt> <code>&#8211;split-dwarf-file=</code>&lt;filename&gt; &#8211; DWO output filename</dt>
 <dt> <code>&#8211;triple=</code>&lt;string&gt; &#8211; Target triple to assemble for, see <code>-version</code> for available targets </dt>
 </dl>
-<h2>Index</h2>

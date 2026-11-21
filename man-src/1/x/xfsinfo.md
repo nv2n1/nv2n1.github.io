@@ -43,4 +43,3 @@ number of extensions:   0
 <p> xfs(1), <a href="/docs/linux/man/1-fslsfonts/">fslsfonts</a>(1), <a href="/docs/linux/man/7-x/">X</a>(7).</p>
 <h2>AUTHOR</h2>
 <p> Dave Lemke, Network Computing Devices, Inc </p>
-<h2>Index</h2>

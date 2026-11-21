@@ -188,4 +188,3 @@ description: "opapmaquery"
  # for device at LID 6, on port 1, clear only error counters </p>
 <p> opapmaquery -o clearerrorinfo -l 6 -n 0x2 -e 0x04000000<br />
  # for device at LID 6, on ports 1, clear uncorrectable error info </p>
-<h2>Index</h2>

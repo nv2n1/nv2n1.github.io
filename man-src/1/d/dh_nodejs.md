@@ -19,4 +19,3 @@ description: "dh_nodejs – set nodejs dependencies"
 <p> This program is a part of nodejs-dev.</p>
 <h2>AUTHOR</h2>
 <p> Jonas Smedegaard &lt;dr [at] jones.dk&gt; </p>
-<h2>Index</h2>

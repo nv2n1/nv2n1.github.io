@@ -116,4 +116,3 @@ description: "xinput – utility to configure and test X input devices"
 Peter Hutterer&lt;peter.hutterer[at] who - t.net&gt;
     Philip Langdale, &lt;philipl[at] alumni.utexas.net&gt; Frederic Lepied, France&lt;Frederic.Lepied[at] sugix.frmug.org&gt; Julien Cristau&lt;jcristau[at] debian.org&gt; Thomas Jaeger&lt;ThJaeger[at] gmail.com&gt; and more.
 </code></pre>
-<h2>Index</h2>

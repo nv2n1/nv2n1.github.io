@@ -36,4 +36,3 @@ description: "afile – display type and creator of Apple Macintosh files (netat
 <p> 9 bad magic in AppleDouble</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-achfile/">achfile</a></code>(1), <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>
-<h2>Index</h2>

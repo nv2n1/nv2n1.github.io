@@ -25,4 +25,3 @@ description: "usleep – sleep some number of microseconds"
 <h2>AUTHOR</h2>
 <p> Donald Barnes &lt;djb [at] redhat.com&gt;<br />
  Erik Troan &lt;ewt [at] redhat.com&gt; </p>
-<h2>Index</h2>

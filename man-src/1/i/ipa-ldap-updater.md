@@ -62,4 +62,3 @@ description: "ipa-ldap-updater – Update the IPA LDAP configuration"
 <h2>EXIT STATUS</h2>
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>
-<h2>Index</h2>

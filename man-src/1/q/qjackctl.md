@@ -35,4 +35,3 @@ description: "qjackctl – User interface for controlling JACK (Jack Audio Conne
 <p> Settings for the JACK system are stored in ~/.config/rncbc.org/QjackCtl.conf and optionally in ~/.jackdrc. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Guenter Geiger &lt;geiger [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

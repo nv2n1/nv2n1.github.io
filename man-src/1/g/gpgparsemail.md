@@ -13,4 +13,3 @@ description: "gpgparsemail – Parse a mail message into an annotated format"
 <p> <code>gpgparsemail</code> [<i>options</i>] [<i>file</i>] </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>gpgparsemail</code> is a utility currently only useful for debugging. Run it with <code>&#8211;help</code> for usage information. </p>
-<h2>Index</h2>

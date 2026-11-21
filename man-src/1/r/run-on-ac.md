@@ -15,4 +15,3 @@ description: "run-on-ac – run command when on ac power"
 <p> <code><a href="/docs/linux/man/1-run-on-bat/">run-on-bat</a></code>(1), <code><a href="/docs/linux/man/8-tlp/">tlp</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Thomas Koch &lt;linrunner at gmx.net&gt; </p>
-<h2>Index</h2>

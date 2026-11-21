@@ -27,4 +27,3 @@ description: "certmaster-sync — synchronize client certificates with Func."
 <p> See <a rel="nofollow" href="https://fedorahosted.org/certmaster.">https://fedorahosted.org/certmaster.</a> It&#8217;s a Wiki. See also <a rel="nofollow" href="https://fedorahosted.org/func">https://fedorahosted.org/func</a></p>
 <h2>AUTHOR</h2>
 <p> John Eckersberg &lt;jeckersb [at] redhat.com&gt; </p>
-<h2>Index</h2>

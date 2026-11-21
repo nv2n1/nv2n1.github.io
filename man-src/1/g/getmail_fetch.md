@@ -49,4 +49,3 @@ description: "getmail_fetch – retrieve messages from one or more POP3 or POP3-
  This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>getmail</code> is maintained in HTML and plaintext formats. See the included files for details. </p>
-<h2>Index</h2>

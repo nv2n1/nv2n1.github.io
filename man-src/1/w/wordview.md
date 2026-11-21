@@ -46,4 +46,3 @@ description: "wordview – displays text contained in MS-Word file in X window"
 <p> <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1),<code><a href="/docs/linux/man/1-wish/">wish</a></code>(1),<code>options</code>(n) </p>
 <h2>AUTHOR</h2>
 <p> Victor Wagner &lt;vitus [at] 45.free.net&gt;. </p>
-<h2>Index</h2>

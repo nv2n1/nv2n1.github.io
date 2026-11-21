@@ -56,4 +56,3 @@ logger -p local0.notice -t HOSTIDM -f /dev/idmc
 <p> <a href="/docs/linux/man/3-syslog/">syslog</a>(3), syslogd(8).</p>
 <h2>STANDARDS</h2>
 <p> The <code>logger</code> command is expected to be St -p1003.2 compatible. </p>
-<h2>Index</h2>

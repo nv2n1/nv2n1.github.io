@@ -682,4 +682,3 @@ constbool:
 ident: IDENT ;
 </code></pre>
  </dd></dl>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ description: "po2txt – Convert Gettext PO localization files to plain text (.t
 <dt>&#8211;nofuzzy</dt>
 <dd> don&#8217;t use translations marked fuzzy (default) </dd>
 </dl>
-<h2>Index</h2>

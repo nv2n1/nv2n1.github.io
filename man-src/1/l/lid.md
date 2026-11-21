@@ -25,4 +25,3 @@ description: "lid – Display user’s groups or group’s users"
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, 1 on error. </p>
-<h2>Index</h2>

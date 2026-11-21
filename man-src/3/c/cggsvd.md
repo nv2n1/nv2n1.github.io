@@ -271,4 +271,3 @@ LDQ &gt;= 1 otherwise.</p>
 <p> Definition at line 335 of file cggsvd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

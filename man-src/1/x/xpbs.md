@@ -372,4 +372,3 @@ description: "xpbs – GUI front end to PBS commands"
 <p> If the xpbs command fails, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qalter(1B), qdel(1B), qhold(1B), qmove(1B), qmsg(1B), qrerun(1B), qrls(1B), qselect(1B), qsig(1B), qstat(1B), qorder(1B), qsub(1B), qdisable(8B), qenable(8B), qrun(8B), qstart(8B), qstop(8B), qterm(8B). </p>
-<h2>Index</h2>

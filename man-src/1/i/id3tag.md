@@ -46,4 +46,3 @@ description: "id3tag – Tags an mp3 file with id3v1 and/or id3v2 tags."
 <p> <a href="/docs/linux/man/1-id3convert/">id3convert</a>(1), <a href="/docs/linux/man/1-id3info/">id3info</a>(1), <a href="/docs/linux/man/1-id3v2/">id3v2</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>id3lib</code> was originally designed and implemented by Dirk Mahoney and is maintained by Scott Thomas Haug &lt;sth2 [at] cs.wustl.edu&gt;. Manual page written for Debian GNU/Linux by Robert Woodcock &lt;rcw [at] debian.org&gt;. </p>
-<h2>Index</h2>

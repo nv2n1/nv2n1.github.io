@@ -69,4 +69,3 @@ lttng-gen-tp [OPTIONS] TEMPLATE_FILE
 <p> You can find us on IRC server irc.oftc.net (OFTC) in #lttng. </p>
 <h2>AUTHORS</h2>
 <p> lttng-gen-tp is written by Yannick Brosseau &lt;yannick.brosseau [at] gmail.com&gt;. </p>
-<h2>Index</h2>

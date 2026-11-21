@@ -30,4 +30,3 @@ description: "tracker3-reset – Reset the index and configuration"
 </dt><dd> Resets all indexed information about <i>FILE</i>, works recursively for directories. Nothing will be done if <i>FILE</i> is not currently indexed. After deletion, a request to reindex this data will be immediately issued.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-daemon/">tracker3-daemon</a></code>(1). <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1), <code>tracker-miner-rss-3</code>(1). </p>
-<h2>Index</h2>

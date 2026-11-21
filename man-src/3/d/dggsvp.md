@@ -192,4 +192,3 @@ LDQ &gt;= 1 otherwise.
 <p> Definition at line 253 of file dggsvp.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

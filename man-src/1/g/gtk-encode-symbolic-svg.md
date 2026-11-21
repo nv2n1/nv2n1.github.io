@@ -22,4 +22,3 @@ description: "gtk-encode-symbolic-svg – Symbolic icon conversion utility"
 <dl>
 <dt>
 </dt><dd> Write png files to <i>DIRECTORY</i> instead of the current working directory.</dd></dl>
-<h2>Index</h2>

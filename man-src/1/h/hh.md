@@ -155,4 +155,3 @@ bindkey -s &quot;\C-r&quot; &quot;qhh
 <p> Report bugs to <a rel="nofollow" href="https://github.com/dvorka/hstr/issues">https://github.com/dvorka/hstr/issues</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-history/">history</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code><a href="/docs/linux/man/1-zsh/">zsh</a></code>(1) </p>
-<h2>Index</h2>

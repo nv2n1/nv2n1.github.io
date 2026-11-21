@@ -376,4 +376,3 @@ user_string : string(addr
 </pre>
 <h2>BUGS</h2>
 <p> Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sourceware.org/systemtap/">http://sourceware.org/systemtap/</a></code>,<code>&lt;systemtap [at] sourceware.org&gt;</code>. </p>
-<h2>Index</h2>

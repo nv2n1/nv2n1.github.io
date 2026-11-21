@@ -102,4 +102,3 @@ description: "enfuse – manual page for enfuse 4.1.1"
 <dt>
 </dt><dd> <code>info enfuse</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

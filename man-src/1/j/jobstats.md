@@ -49,4 +49,3 @@ description: "jobstats – print historic job information or timeline view"
 &nbsp;<wbr>&nbsp;jobstats -tformat&nbsp;&#8216;%b_%e_%H:%M:%S&#8217;</p>
 <h2>FILES</h2>
 <p> <i>$SGE_ROOT/$SGE_CELL/common/accounting</i> </p>
-<h2>Index</h2>

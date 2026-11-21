@@ -44,4 +44,3 @@ description: "gpspipe – tool to connect to gpsd and retrieve sentences"
 <p> <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3), <code><a href="/docs/linux/man/3-libgpsd/">libgpsd</a></code>(3), <code><a href="/docs/linux/man/1-gpsprof/">gpsprof</a></code>(1), <code><a href="/docs/linux/man/1-gpsfake/">gpsfake</a></code>(1), <code><a href="/docs/linux/man/1-gpsctl/">gpsctl</a></code>(1), <code><a href="/docs/linux/man/1-gpscat/">gpscat</a></code>(1). <code><a href="/docs/linux/man/1-gpsmon/">gpsmon</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Gary E. Miller &lt;gem [at] rellim.com&gt;. </p>
-<h2>Index</h2>

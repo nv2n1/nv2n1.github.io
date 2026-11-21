@@ -43,4 +43,3 @@ description: "glib-compile-schemas – GSettings schema compiler"
 <dl>
 <dt>
 </dt><dd> Do not enforce restrictions on key names. Note that this option is purely to facility the transition from GConf, and will be removed at some time in the future.</dd></dl>
-<h2>Index</h2>

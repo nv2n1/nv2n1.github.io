@@ -45,4 +45,3 @@ description: "addftinfo – add information to troff font files for use with gro
 <dt>
 </dt><dd> <code>groffer</code><i> n name</i></dd></dl>
 <p> in graphical mode (PDF, etc.). </p>
-<h2>Index</h2>

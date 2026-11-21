@@ -37,4 +37,3 @@ description: "podchecker – check the syntax of POD format documentation files"
 <p> Please report bugs using &lt;<a rel="nofollow" href="http://rt.cpan.org">http://rt.cpan.org</a>&gt;. </p>
 <p> Brad Appleton &lt;bradapp [at] enteract.com&gt;, Marek Rouchal &lt;marekr [at] cpan.org&gt; </p>
 <p> Based on code for <code>Pod::Text::pod2text(1)</code> written by Tom Christiansen &lt;tchrist [at] mox.perl.com&gt; </p>
-<h2>Index</h2>

@@ -106,4 +106,3 @@ description: "kcpolymgr – command line interface to manage the polymorphic dat
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcpolytest/">kcpolytest</a></code>(1), <code><a href="/docs/linux/man/1-kclangctest/">kclangctest</a></code>(1) </p>
-<h2>Index</h2>

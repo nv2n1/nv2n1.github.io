@@ -60,4 +60,3 @@ mhmail - from sender[at] example.com - headerfield 'MIME-Version:1.0' - headerfi
 </pre>
 <h2>CONTEXT</h2>
 <p> If <code>inc</code> is invoked, then <code>inc</code>&#8216;s context changes occur. With the <code>-profile</code> switch, the context of <code>send</code> is used. <code>mhmail</code> does not read the context file itself, so an entry for it will be ignored. </p>
-<h2>Index</h2>

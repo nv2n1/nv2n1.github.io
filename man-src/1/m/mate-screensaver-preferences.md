@@ -35,4 +35,3 @@ Perberos&lt;perberos[at] gmail.com&gt;
 <h3>The documentation available through the program&#8217;s menu.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
 <p> <code><a href="/docs/linux/man/1-mate-screensaver/">mate-screensaver</a></code>(1), <code><a href="/docs/linux/man/1-mate-screensaver-command/">mate-screensaver-command</a></code>(1), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7) </p>
-<h2>Index</h2>

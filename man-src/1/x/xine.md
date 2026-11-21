@@ -513,4 +513,3 @@ xinectl    7890/tcp        # xine control
 <p> The programs are documented fully on the xine home page: <i><a rel="nofollow" href="http://www.xine-project.org/">http://www.xine-project.org/</a></i></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Siggi Langauf &lt;siggi [at] debian.org&gt;, for the xine project. Lots of additions by Guenter Bartsch &lt;guenter [at] users.sourceforge.net&gt;, Daniel Caujolle-Bert &lt;f1rmb [at] users.sourceforge.net&gt;, Rocky Bernstein &lt;rocky [at] panix.com&gt;, and Philipp Hahn &lt;pmhahn [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

@@ -93,4 +93,3 @@ description: "libtoolize – Prepare a package to use libtool"
 <dt>
 </dt><dd> <code>info libtoolize</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

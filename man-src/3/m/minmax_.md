@@ -30,4 +30,3 @@ description: "QuantLib::ContinuousFloatingLookbackOption – Continuous-floating
 <p> Reimplemented from <code>Option</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

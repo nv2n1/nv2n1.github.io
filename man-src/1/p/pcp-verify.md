@@ -23,4 +23,3 @@ description: "pcp-verify – verify aspects of a PCP installation"
 <p> <code>pcp-verify</code> will exit with a non-zero status if it finds anything worth reporting, otherwise it is silent and returns zero.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
-<h2>Index</h2>

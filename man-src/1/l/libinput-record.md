@@ -131,4 +131,3 @@ version : 1 ndevices : 2 libinput : version : 1.10.0 system : os : "fedora:26" k
 <p> This tool records events from the kernel and is independent of libinput. In other words, updating or otherwise changing libinput will not alter the output from this tool. libinput itself does not need to be in use to record events.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

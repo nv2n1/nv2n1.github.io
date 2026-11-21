@@ -31,4 +31,3 @@ description: "gst-discoverer-1.0 – Display file metadata and stream informatio
 <p> <code><a href="/docs/linux/man/1-gst-inspect-1-0/">gst-inspect-1.0</a></code>(1), <code><a href="/docs/linux/man/1-gst-launch-1-0/">gst-launch-1.0</a></code>(1),</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
-<h2>Index</h2>

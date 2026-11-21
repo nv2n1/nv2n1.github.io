@@ -83,4 +83,3 @@ description: "RSL Value Accessors –"
 </dt><dd> Upon success, the <code>globus_rsl_value_list_param_get()</code> function returns GLOBUS_SUCCESS and modifies the values pointed to by the <i>value</i> and <i>value_ctr</i> prameters as described above. If an error occurs, <code>globus_rsl_value_list_param_get()</code> returns a non-zero value.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

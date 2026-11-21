@@ -13,4 +13,3 @@ description: "jack_samplerate – JACK toolkit client to print current samplerat
 <p> <code>jack_samplerate</code></p>
 <h2>DESCRIPTION</h2>
 <p> <code>jack_samplerate prints the current samplerate, and exits.</code> </p>
-<h2>Index</h2>

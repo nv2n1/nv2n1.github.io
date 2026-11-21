@@ -26,4 +26,3 @@ description: "List Functions –"
 </dt><dd> Upon success, <code>globus_list_copy_reverse()</code> returns a new list containing the same elements as the list pointed to by <i>orig</i> in reverse order. If an error occurs, <code>globus_list_copy_reverse()</code> returns NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

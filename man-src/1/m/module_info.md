@@ -29,4 +29,3 @@ module_info[B&lt;-a&gt;][B&lt;-s&gt;][B&lt;-p&gt;][B&lt;-m&gt;] MODULE | FILE...
 <p> Mattia Barbon &lt;mbarbon [at] cpan.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> Module::Info </p>
-<h2>Index</h2>

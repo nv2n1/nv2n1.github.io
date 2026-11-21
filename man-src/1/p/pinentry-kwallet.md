@@ -35,4 +35,3 @@ description: "pinentry-kwallet – kwallet-based pass-phrase dialog for use with
 <h2>CAVEATS</h2>
 <p> Some newer pinentry features, such as three-button operation, are not supported yet. </p>
 <p> Some commands, such as version inquiry, as passed through to the pinentry coprocess indiscriminately, which may lead to strange results, should the protocol change or extend. </p>
-<h2>Index</h2>

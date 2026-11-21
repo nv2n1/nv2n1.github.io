@@ -20,4 +20,3 @@ description: "ql/legacy/libormarketmodels/lfmcovarproxy.hpp – proxy for libor 
 <p> proxy for libor forward covariance parameterization </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

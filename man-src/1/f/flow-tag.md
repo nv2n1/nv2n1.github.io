@@ -194,4 +194,3 @@ PART 15923156 663289954569 981163979 SEGP 4995795 135525076170 196534917 MULTICA
 <p> Mark Fullmer &lt;maf [at] splintered.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
-<h2>Index</h2>

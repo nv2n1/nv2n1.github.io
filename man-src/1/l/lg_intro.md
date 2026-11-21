@@ -23,4 +23,3 @@ description: "lg_intro – introduction to the looking glass"
 <p> <code><a href="/docs/linux/man/5-cloginrc/">cloginrc</a></code>(5), <code><a href="/docs/linux/man/1-clogin/">clogin</a></code>(1), <code><a href="/docs/linux/man/5-lg-conf/">lg.conf</a></code>(5)</p>
 <h2>HISTORY</h2>
 <p> Rancid&#8217;s looking glass is based on Ed Kern&#8217;s (included by permission, thanks Ed!), which could once be found on <a rel="nofollow" href="http://nitrous.digex.net/">http://nitrous.digex.net/</a> but has apparently been removed. Support for Juniper and Foundry devices, use of rancid&#8217;s device login scripts, and additional commands and checks have been added to the original. </p>
-<h2>Index</h2>

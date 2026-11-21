@@ -96,4 +96,3 @@ gmt grdmath 1 rot_gridA.nc ISNAN SUB 1 rot_gridB.nc ISNAN SUB 2 EQ = overlap.nc
 <p> <code>backtracker</code>, <code>grdspotter</code>, <code>hotspotter</code>, <code>originator</code>, <code>rotconverter</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

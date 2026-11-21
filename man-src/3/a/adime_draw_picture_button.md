@@ -16,4 +16,3 @@ description: "adime_draw_picture_button"
 <p> Draws a button with a sprite on it at the given position of the bitmap and using the given colors and sprite. </p>
 <h2>SEE ALSO</h2>
 <p> <code>adime_draw_picture_button_down</code>(3), <code>adime_draw_empty_button</code>(3), <code><a href="/docs/linux/man/3-adime_draw_text_button/">adime_draw_text_button</a></code>(3) </p>
-<h2>Index</h2>

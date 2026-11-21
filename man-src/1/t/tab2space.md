@@ -32,4 +32,3 @@ description: "tab2space [options] [infile [outfile]] …"
 </dd></dl>
 <h2>VERSION</h2>
 <p> <code>tab2space</code> for 6th February 2003 </p>
-<h2>Index</h2>

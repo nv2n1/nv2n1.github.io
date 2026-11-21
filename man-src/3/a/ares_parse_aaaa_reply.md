@@ -35,4 +35,3 @@ int ares_parse_aaaa_reply(const unsigned char *abuf, int alen,
 <h2>AUTHOR</h2>
 <p> Dominick Meglio<br />
  Copyright 2005 by Dominick Meglio. </p>
-<h2>Index</h2>

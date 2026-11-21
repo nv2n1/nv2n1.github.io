@@ -103,4 +103,3 @@ description: "llvm-objdump – manual page for llvm-objdump 10"
 <dt> <code>-x</code> &#8211; Alias for <code>&#8211;all-headers</code></dt>
 <dt> <code>-z</code> &#8211; Alias for <code>&#8211;disassemble-zeroes</code></dt></dl>
 <dd>Pass @FILE as argument to read options from FILE. </dd>
-<h2>Index</h2>

@@ -104,4 +104,3 @@ description: "SIMPLE-MTPFS – filesystem driver for MTP based devices"
 <dd> perform reads synchronously</dd></dl>
 <h2>AUTHORS</h2>
 <p> SIMPLE-MTPFS has been written by Peter Hatina &lt;phatina [at] gmail.com&gt;. </p>
-<h2>Index</h2>

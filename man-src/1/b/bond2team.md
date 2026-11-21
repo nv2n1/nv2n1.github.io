@@ -67,4 +67,3 @@ description: "bond2team — Converts bonding configuration to team"
 <p> Flavio Leitner is the original author of the tool. Jiri Pirko is the original author and current maintainer of libteam.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-teamd/">teamd</a></code>(8), <code><a href="/docs/linux/man/8-teamdctl/">teamdctl</a></code>(8), <code><a href="/docs/linux/man/5-teamd-conf/">teamd.conf</a></code>(5), <code><a href="/docs/linux/man/8-teamnl/">teamnl</a></code>(8) </p>
-<h2>Index</h2>

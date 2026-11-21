@@ -410,4 +410,3 @@ If JOBV = &#8216;W&#8217;, AND(JOBU.EQ.&#8217;U&#8217; AND JOBT.EQ.&#8217;T&#821
 <p> Definition at line 473 of file sgejsv.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

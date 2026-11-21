@@ -28,4 +28,3 @@ if (!bmp)
 <p> Returns a pointer to the created bitmap, or NULL if the bitmap could not be created. Remember to free this bitmap later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-create_bitmap_ex/">create_bitmap_ex</a></code>(3), <code><a href="/docs/linux/man/3-create_sub_bitmap/">create_sub_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_video_bitmap/">create_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-create_system_bitmap/">create_system_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-destroy_bitmap/">destroy_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code>is_memory_bitmap</code>(3), <code>clear_bitmap</code>(3), <code>clear_to_color</code>(3) </p>
-<h2>Index</h2>

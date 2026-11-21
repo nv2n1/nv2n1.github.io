@@ -34,4 +34,3 @@ description: "lrfviewer – view LRF ebook"
 <dd> Profile the LRF renderer</dd></dl>
 <h2>AUTHOR</h2>
 <p> Created by Kovid Goyal &lt;kovid [at] kovidgoyal.net&gt; </p>
-<h2>Index</h2>

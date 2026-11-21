@@ -31,4 +31,3 @@ description: "xapian-config – report information about the installed version o
 <dd> output version information and exit</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://xapian.org/bugs">http://xapian.org/bugs</a>&gt;. </p>
-<h2>Index</h2>

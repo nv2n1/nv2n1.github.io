@@ -154,4 +154,3 @@ description: "gtklp – print files via CUPS"
  <a rel="nofollow" href="http://gtklp.sourceforge.net/">http://gtklp.sourceforge.net/</a> </p>
 <p> Feel also free to contact me.<br />
  Please mail also, if you like the software !!! ;-) </p>
-<h2>Index</h2>

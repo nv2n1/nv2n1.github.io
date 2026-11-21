@@ -113,4 +113,3 @@ description: "pstoimg – Convert a PostScript file to a bitmap image using Ghos
 <p> Marek Rouchal &lt;marek [at] saftsack.fs.uni-bayreuth.de&gt;</p>
 <h2>HISTORY</h2>
 <p> This script went through a long evolution, beginning with a modification of Doug Crabill&#8217;s &lt;dgc [at] cs.purdue.edu&gt; ps2epsi script. The first perl version was done by Nikos Drakos &lt;nikos [at] cbl.leeds.ac.uk&gt;. It was gradually improved by numerous LaTeX2HTML developers: Ross Moore &lt;ross [at] maths.mq.edu.au&gt;, Jens Lippmann &lt;lippmann [at] rbg.informatik.tu-darmstadt.de&gt; and others (sorry for not mentioning everyone and thanks for your contributions). </p>
-<h2>Index</h2>

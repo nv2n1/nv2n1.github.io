@@ -37,4 +37,3 @@ To configure : tv_grab_fr-- configure[--config - file FILE][--gui OPTION] To con
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Zubrick, zubrick at number6 dot ch<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; Nick Morrott, knowledgejunkie at gmail dot com </p>
 <p> The application is currently maintained by Nick Morrott (knowledgejunkie at gmail dot com). </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "pamrgbatopng – convert PAM color/transparency image to PNG"
 <p> <code><a href="/docs/linux/man/1-pngtopam/">pngtopam</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamrgbatopng</code> was new in Netpbm 10.30 (October 2005). </p>
-<h2>Index</h2>

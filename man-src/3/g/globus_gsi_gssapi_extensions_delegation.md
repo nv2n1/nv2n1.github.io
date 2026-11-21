@@ -64,4 +64,3 @@ description: "Delegation –"
  <i>GSS_S_FAILURE</i> upon failure</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
-<h2>Index</h2>

@@ -155,4 +155,3 @@ description: "h2load – HTTP/2 benchmarking tool"
 <p> Tatsuhiro Tsujikawa</p>
 <h2>COPYRIGHT</h2>
 <p> 2012, 2015, 2016, Tatsuhiro Tsujikawa </p>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ gmt logo -O -K -R -J -DjTR+o0.1i/0.1i+w3i &gt;&gt; bigmap.ps
 <p> <code>gmt</code>, <code>pslegend</code>, <code>psimage</code>, <code>psscale</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

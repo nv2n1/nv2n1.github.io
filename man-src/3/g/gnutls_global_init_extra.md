@@ -33,4 +33,3 @@ description: "gnutls_global_init_extra – initializes the global state of gnutl
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ description: "pamexec – Execute a shell command on each image in a Netpbm imag
 <p> Michael Pot wrote it, borrowing from <code>pamsplit</code>. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code><a href="/docs/linux/man/1-pampick/">pampick</a></code>(1) , <code>pnm</code>(1) , <code>pam</code>(1) , <code>cat</code> man page </p>
-<h2>Index</h2>

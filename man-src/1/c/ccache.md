@@ -561,4 +561,3 @@ max_size = 10G
 <p> Credits, mailing list information, bug reporting instructions, source code, etc, can be found on ccache&#8217;s web site: <a rel="nofollow" href="http://ccache.samba.org.">http://ccache.samba.org.</a></p>
 <h2>AUTHOR</h2>
 <p> ccache was originally written by Andrew Tridgell and is currently developed and maintained by Joel Rosdahl. See AUTHORS.txt or AUTHORS.html and <a rel="nofollow" href="http://ccache.samba.org/credits.html">http://ccache.samba.org/credits.html</a> for a list of contributors. </p>
-<h2>Index</h2>

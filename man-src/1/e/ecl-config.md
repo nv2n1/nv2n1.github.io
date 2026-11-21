@@ -25,4 +25,3 @@ description: "ecl-config – Embeddable Common LISP configuration query"
 <dd> When also using <code>-ldflags</code> also add the cmp (compiler) library.</dd></dl>
 <h2>BUGS</h2>
 <p> Probably some. Report them! </p>
-<h2>Index</h2>

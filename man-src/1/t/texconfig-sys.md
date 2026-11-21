@@ -74,4 +74,3 @@ description: "texconfig – configures teTeX or TeX Live"
 <p> <i><a href="/docs/linux/man/1-whiptail/">whiptail</a></i>(1), <i><a href="/docs/linux/man/1-dialog/">dialog</a></i>(1), <i><a href="/docs/linux/man/1-tlmgr/">tlmgr</a></i>(1), <i><a href="/docs/linux/man/1-tex/">tex</a></i>(1), <i><a href="/docs/linux/man/1-mf/">mf</a></i>(1), <i><a href="/docs/linux/man/1-vi/">vi</a></i>(1), <i>EDITOR</i> environment variable.</p>
 <h2>AUTHOR</h2>
 <p> Thomas Esser </p>
-<h2>Index</h2>

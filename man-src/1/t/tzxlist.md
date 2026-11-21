@@ -26,4 +26,3 @@ description: "tzxlist – Sinclair ZX Spectrum \"real\" tape file lister"
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
 <p> Darren Salt wrote this man page. </p>
-<h2>Index</h2>

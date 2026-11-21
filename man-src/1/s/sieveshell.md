@@ -37,4 +37,3 @@ description: "sieveshell – remotely manipulate sieve scripts"
 <p> [<font SIZE="-1">MANAGESIEVE</font>] Martin, T.; &#8220;A Protocol for Remotely Managing Sieve Scripts&#8221;, draft-ietf-managesieve-03.txt, Mirapoint, Inc.; May 2001, work in progress.</p>
 <h2>AUTHOR</h2>
 <p> Tim Martin &lt;tmartin [at] mirapoint.com&gt;, and the rest of the Cyrus team &lt;cyrus-bugs [at] andrew.cmu.edu&gt;. </p>
-<h2>Index</h2>

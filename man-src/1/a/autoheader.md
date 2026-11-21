@@ -76,4 +76,3 @@ description: "autoheader – Create a template header for configure"
 <dt>
 </dt><dd> <code>info autoheader</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

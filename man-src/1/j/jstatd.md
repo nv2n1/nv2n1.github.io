@@ -126,4 +126,3 @@ description: "jstatd – Monitors Java Virtual Machines (JVMs) and enables remot
 <dt>&bull;</dt>
 <dd> <a href="/docs/linux/man/1-rmiregistry/">rmiregistry</a>(1) </dd>
 </dl>
-<h2>Index</h2>

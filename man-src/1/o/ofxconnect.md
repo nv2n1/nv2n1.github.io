@@ -62,4 +62,3 @@ description: "ofxconnect – Create a statement request file"
 <dt><code>&#8211;allsupport</code></dt>
 <dd> List all banks which support online banking </dd>
 </dl>
-<h2>Index</h2>

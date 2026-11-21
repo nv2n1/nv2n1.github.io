@@ -287,4 +287,3 @@ description: "mrtg-nw-guide – MRTG for NetWare"
 <p> The <font SIZE="-1">MRTG</font> for NetWare exists largely through the efforts of Guenter Knauf and feedback from beta testers.  </p>
 <h2>AUTHOR</h2>
 <p> Norm W.. </p>
-<h2>Index</h2>

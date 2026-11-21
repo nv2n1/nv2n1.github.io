@@ -53,4 +53,3 @@ description: "fprintd – Fingerprint management daemon, and test applications"
 <dt><code>gnome-control-center</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

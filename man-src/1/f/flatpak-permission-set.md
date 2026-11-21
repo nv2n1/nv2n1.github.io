@@ -37,4 +37,3 @@ description: "flatpak-permission-set – Set permissions"
 <p> <code>$ flatpak permission-set &#8211;data &quot;{&#8216;always-ask&#8217;:&lt;true&gt;}&quot; desktop-used-apps text/plain org.mozilla.Firefox org.gnome.gedit 0 3</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-permissions/">flatpak-permissions</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-permission-remove/">flatpak-permission-remove</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-permission-reset/">flatpak-permission-reset</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-permission-show/">flatpak-permission-show</a></code>(1) </p>
-<h2>Index</h2>

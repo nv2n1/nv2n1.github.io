@@ -90,4 +90,3 @@ auth  optional        pam_ecryptfs.so unwrap
 <p> <code><a href="/docs/linux/man/8-pam_yubico/">pam_yubico</a></code>(8) </p>
 <p> The yubico-pam home page: <a rel="nofollow" href="https://developers.yubico.com/yubico-pam/">https://developers.yubico.com/yubico-pam/</a> </p>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
-<h2>Index</h2>

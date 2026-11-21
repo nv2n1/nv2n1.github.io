@@ -41,4 +41,3 @@ description: "exo-open – Open URLs and launch preferred applications"
 <h2>AUTHOR</h2>
 <p> <code>exo-open</code> was written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
 <p> This manual page was provided by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "cht – chemtool drawings analyzer"
 <p> <code><a href="/docs/linux/man/1-chemtool/">chemtool</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> <code>Radek Liboska</code> </p>
-<h2>Index</h2>

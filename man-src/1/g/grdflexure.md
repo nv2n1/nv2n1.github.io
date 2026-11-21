@@ -99,4 +99,3 @@ gmt grdflexure -T1M =l.lis -D3300/2800/2800/1000 -E5k -Gflx/smt_fv_%03.1f_%s.nc 
 <p> <code>gmt</code>, <code>grdfft</code>, <code>gravfft</code> <code>grdmath</code>, <code>grdproject</code>, <code>grdseamount</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -277,4 +277,3 @@ description: "ibdiagnet – IB diagnostic net"
 </dd><dt>6 &#8211; Failed to load requierd Package</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

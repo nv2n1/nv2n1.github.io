@@ -49,4 +49,3 @@ description: "sane-find-scanner – find SCSI and USB scanners and their device 
 <h2>BUGS</h2>
 <p> No support for most parallel port scanners yet.<br />
  Detection of USB chipsets is limited to a few chipsets. </p>
-<h2>Index</h2>

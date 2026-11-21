@@ -87,4 +87,3 @@ description: "kdesu – Runs a program with elevated privileges"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ example% <code>esdsample -e</code> esdctl:generic.wav
 <p> <code>&gt;0</code> Application exited with failure </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-esd/">esd</a></i>(1), <i><a href="/docs/linux/man/1-esdcat/">esdcat</a></i>(1), <i><a href="/docs/linux/man/1-esddsp/">esddsp</a></i>(1), <i><a href="/docs/linux/man/1-esdloop/">esdloop</a></i>(1), <i><a href="/docs/linux/man/1-esdplay/">esdplay</a></i>(1), <i><a href="/docs/linux/man/1-esd-config/">esd-config</a></i>(1), <i><a href="/docs/linux/man/1-esdctl/">esdctl</a></i>(1), <i><a href="/docs/linux/man/1-esdfilt/">esdfilt</a></i>(1), <i><a href="/docs/linux/man/1-esdmon/">esdmon</a></i>(1), <i><a href="/docs/linux/man/1-esdrec/">esdrec</a></i>(1) </p>
-<h2>Index</h2>

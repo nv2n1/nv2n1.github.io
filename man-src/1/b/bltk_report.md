@@ -124,4 +124,3 @@ description: "bltk_report – automated report creation bltk_report_table – su
 Konstantin Karasyov&lt;konstantin.a.karasyov[at] intel.com&gt;
     Vladimir Lebedev&lt;vladimir.p.lebedev[at] intel.com&gt;
 </code></pre>
-<h2>Index</h2>

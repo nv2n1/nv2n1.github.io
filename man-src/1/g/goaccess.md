@@ -592,4 +592,3 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 <p> If you think you have found a bug, please send me an email to <i>goaccess [at] prosoftcorp.com</i> or use the issue tracker in <a rel="nofollow" href="https://github.com/allinurl/goaccess/issues">https://github.com/allinurl/goaccess/issues</a></p>
 <h2>AUTHOR</h2>
 <p> Gerardo Orellana &lt;goaccess [at] prosoftcorp.com&gt; For more details about it, or new releases, please visit <a rel="nofollow" href="http://goaccess.io">http://goaccess.io</a> </p>
-<h2>Index</h2>

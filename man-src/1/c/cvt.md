@@ -27,4 +27,3 @@ description: "cvt – calculate VESA CVT mode lines"
 <h2>AUTHOR</h2>
 <p> Luc Verhaegen. </p>
 <p> This program is based on the Coordinated Video Timing sample implementation written by Graham Loveridge. This file is publicly available at &lt;<a rel="nofollow" href="http://www.vesa.org/Public/CVT/CVTd6r1.xls">http://www.vesa.org/Public/CVT/CVTd6r1.xls</a>&gt;. CVT is a VESA trademark. </p>
-<h2>Index</h2>

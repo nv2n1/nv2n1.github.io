@@ -37,4 +37,3 @@ y4munsharp -L 5.0,0.5,0
 <h2>BUGS</h2>
 <p> Only the 3 plane YUV4MPEG2 formats are supported. </p>
 <p> Only progressive, top field first or bottom field first interlaced streams are handled. The mixed interlaced stream format is not supported. </p>
-<h2>Index</h2>

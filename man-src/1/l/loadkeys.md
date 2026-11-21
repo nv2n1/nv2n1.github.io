@@ -64,4 +64,3 @@ description: "loadkeys – load keyboard translation tables"
 <dd> default kernel keymap.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1), <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) </p>
-<h2>Index</h2>

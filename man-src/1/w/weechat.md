@@ -153,4 +153,3 @@ irc[6][s]: //[[nickname][:password]@]server[:port][/#channel1[,#channel2...]]
 <p> Web: <a rel="nofollow" href="https://weechat.org/">https://weechat.org/</a></p>
 <h2>SUPPORT / REPORTING BUGS</h2>
 <p> For help or a bug report: <a rel="nofollow" href="https://weechat.org/dev/support">https://weechat.org/dev/support</a> </p>
-<h2>Index</h2>

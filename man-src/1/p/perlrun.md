@@ -617,4 +617,3 @@ or
     $ENV{SHELL} = &quot;/bin/sh&quot; if exists $ENV{SHELL};
     delete @ENV{qw(IFS CDPATH ENV BASH_ENV)};
 </code></pre>
-<h2>Index</h2>

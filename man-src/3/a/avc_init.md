@@ -82,4 +82,3 @@ struct avc_lock_callback {
 <p> Eamon Walsh &lt;ewalsh [at] tycho.nsa.gov&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-avc_open/">avc_open</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

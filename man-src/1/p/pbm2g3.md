@@ -38,4 +38,3 @@ description: "pbm2g3 – convert portable bitmaps (PBM) into G3 fax files"
 <p> <a href="/docs/linux/man/1-g32pbm/">g32pbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> <i>pbm2g3</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. It is similar to the <i>pbmtog3</i> program in Jef Poskanzers <i>pbmplus</i> package, but it&#8217;s a complete re-write. No code is copied. </p>
-<h2>Index</h2>

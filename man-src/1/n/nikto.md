@@ -234,4 +234,3 @@ description: "nikto – Scan web server for known vulnerabilities"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.cirt.net/">http://www.cirt.net/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "tracker3-extract – Extract metadata from a file."
 <dl>
 <dt>
 </dt><dd> &bull; <code>/usr/share/tracker/extract-rules/</code></dd></dl>
-<h2>Index</h2>

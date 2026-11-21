@@ -82,4 +82,3 @@ char a_name[];        /* attr name (NULL terminated) */
 <p> Upon successful completion, a value of 0 is returned. Otherwise, a value of -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-attr/">attr</a></code>(1), <code><a href="/docs/linux/man/3-attr_multi/">attr_multi</a></code>(3), <code><a href="/docs/linux/man/3-attr_remove/">attr_remove</a></code>(3), and <code><a href="/docs/linux/man/3-attr_set/">attr_set</a></code>(3). </p>
-<h2>Index</h2>

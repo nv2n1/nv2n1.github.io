@@ -76,4 +76,3 @@ description: "pbmtojbg – portable bitmap to JBIG1 file converter"
 <p> The <i>pbmtojbg</i> program is part of the <i>JBIG-KIT</i> package, which has been developed by Markus Kuhn. The most recent version of this portable <i>JBIG1</i> library and tools set is available from &lt;<a rel="nofollow" href="http://www.cl.cam.ac.uk/~mgk25/jbigkit/">http://www.cl.cam.ac.uk/~mgk25/jbigkit/</a>&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-pbm/">pbm</a>(5), <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/1-jbgtopbm/">jbgtopbm</a>(1) </p>
-<h2>Index</h2>

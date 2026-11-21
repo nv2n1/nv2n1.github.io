@@ -84,4 +84,3 @@ description: "gnome-open – Open files and URLs using the GNOME file handlers"
 <p> Please report bugs at <a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jonathan Carter &lt;jonathan [at] ubuntu.com&gt; </p>
-<h2>Index</h2>

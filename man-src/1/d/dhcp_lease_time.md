@@ -22,4 +22,3 @@ description: "dhcp_lease_time – Query remaining time of a lease on a the local
 <p> <code><a href="/docs/linux/man/8-dnsmasq/">dnsmasq</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Simon Kelley &lt;simon [at] thekelleys.org.uk&gt;. </p>
-<h2>Index</h2>

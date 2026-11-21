@@ -23,4 +23,3 @@ description: "ideviceenterrecovery – Make a device enter recovery mode."
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>
 <p> Man page written to conform with Debian by Julien Lavergne. </p>
-<h2>Index</h2>

@@ -54,4 +54,3 @@ description: "virt-xml-validate – validate libvirt XML files against a schema"
 <p> virt-xml-validate is distributed under the terms of the <font SIZE="-1">GNU GPL</font> v2+. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virsh/">virsh</a></i>(1), online <font SIZE="-1">XML</font> format descriptions &lt;<a rel="nofollow" href="http://libvirt.org/format.html">http://libvirt.org/format.html</a>&gt; </p>
-<h2>Index</h2>

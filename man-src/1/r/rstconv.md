@@ -35,4 +35,3 @@ description: "rstconv – The Free Pascal resource string converter tool."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-gettext/">gettext</a></code>(1) <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

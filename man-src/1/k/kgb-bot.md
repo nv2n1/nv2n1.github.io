@@ -32,4 +32,3 @@ description: "kgb-bot – an IRC bot helping collaborative work"
 <dt>&#8211;debug</dt>
 <dd> Log additional debugging information </dd>
 </dl>
-<h2>Index</h2>

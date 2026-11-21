@@ -32,4 +32,3 @@ description: "xbacklight – adjust backlight brightness using RandR extension"
 <p> <a href="/docs/linux/man/3-xrandr/">Xrandr</a>(3)</p>
 <h2>AUTHORS</h2>
 <p> Keith Packard, Open Source Technology Center, Intel Corporation. </p>
-<h2>Index</h2>

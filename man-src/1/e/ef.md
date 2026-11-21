@@ -18,4 +18,3 @@ description: "ef – Utility to run a program under the Electric Fence memory de
 <h2>AUTHORS</h2>
 <p> Electric Fence was written by Bruce Perens<br />
  This manual page was written by Petr Machata &lt;pmachata [at] redhat.com&gt; </p>
-<h2>Index</h2>

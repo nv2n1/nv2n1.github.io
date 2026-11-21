@@ -26,4 +26,3 @@ description: "rpmargs – process RPM packages"
 <h2>COPYING</h2>
 <p> Copyright (c) 2005 Alexey Tourbin, <font SIZE="-1">ALT</font> Linux Team. </p>
 <p> This is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

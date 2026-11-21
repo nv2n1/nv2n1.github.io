@@ -24,4 +24,3 @@ description: "nessus-mkcert-client – Creates a client certificate"
  <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>nessus-mkcert-client </code> was written by Michel Arboi &lt;arboi [at] bigfoot.com&gt; based on <code>nessus-mkcert</code> </p>
-<h2>Index</h2>

@@ -92,4 +92,3 @@ description: "wsdl2h – the gSOAP WSDL parser for C and C++"
 <p> <code><a href="/docs/linux/man/1-soapcpp2/">soapcpp2</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Wana &lt;greuff [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -58,4 +58,3 @@ description: "hwloc-ps – List currently-running processes or threads that are 
 &nbsp;<wbr>cat&nbsp;<wbr>/proc/$1/environ 2&gt;/dev/null | xargs &#8211;null &#8211;max-args=1 echo | grep OMPI_COMM_WORLD_RANK </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-distrib/">hwloc-distrib</a>(1) </p>
-<h2>Index</h2>

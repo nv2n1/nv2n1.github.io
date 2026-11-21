@@ -201,4 +201,3 @@ perl -e '$pw = crypt(&quot;&lt;secretpasswd&gt;&quot;,&quot;salt&quot;); print &
 <p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Christian Holm Christensen &lt;cholm [at] nbi.dk&gt;, for the Debian GNU/Linux system and ROOT version 3. It has been modified by G. Ganis &lt;g.ganis [at] cern.ch&gt; to document new features included in ROOT version 4. </p>
-<h2>Index</h2>

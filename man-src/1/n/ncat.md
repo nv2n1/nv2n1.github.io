@@ -400,4 +400,3 @@ See the ncat(1) manpage for full options, descriptions and usage examples
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.openssl.org">http://www.openssl.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

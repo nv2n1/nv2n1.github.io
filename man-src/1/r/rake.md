@@ -91,4 +91,3 @@ description: "rake – make-like build utility for Ruby"
 <h2>AUTHORS</h2>
 <p> An -nosplit <code>rake</code> was written by An Jim Weirich Aq Mt jim [at] weirichhouse.org . </p>
 <p> This manual was created by An Caitlin Matos Aq Mt caitlin.matos [at] zoho.com for the Debian project (but may be used by others). It was inspired by the manual by An Jani Monoses Aq Mt jani [at] iv.ro for the Ubuntu project. </p>
-<h2>Index</h2>

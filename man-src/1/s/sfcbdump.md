@@ -27,4 +27,3 @@ description: "sfcbdump – sfcBroker repository dumper"
 </dd><dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

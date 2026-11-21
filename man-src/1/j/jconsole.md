@@ -52,4 +52,3 @@ jconsole[options][connection...]
 <dt>&bull;</dt>
 <dd> The <code>JMXServiceURL</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/javax/management/remote/JMXServiceURL.html">http://docs.oracle.com/javase/8/docs/api/javax/management/remote/JMXServiceURL.html</a> </dd>
 </dl>
-<h2>Index</h2>

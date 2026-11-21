@@ -134,4 +134,3 @@ root volume would be 2.4G&nbsp;<wbr>(40%&nbsp;<wbr>of 6G). </p>
 <p> November 2014, originally compiled by Joe Brockmeier &lt;jzb [at] redhat.com&gt; based on comments in Andy Grimm&#8217;s &lt;agrimm [at] redhat.com&gt; script.</p>
 <h2>AUTHORS</h2>
 <p> Joe Brockmeier Andy Grimm </p>
-<h2>Index</h2>

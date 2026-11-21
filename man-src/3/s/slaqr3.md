@@ -225,4 +225,3 @@ description: "slaqr3.f –"
 <p> Definition at line 274 of file slaqr3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

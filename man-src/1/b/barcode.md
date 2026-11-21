@@ -129,4 +129,3 @@ description: "barcode – a stand alone program to run the barcode library"
 <p> Alessandro Rubini &lt;rubini [at] gnu.org&gt; (maintainer) </p>
 <p> Leonid A. Broukhis &lt;leob [at] mailcom.com&gt; (several encodings) </p>
 <p> Andrea Scopece &lt;a.scopece [at] tin.it&gt; (PCL output) </p>
-<h2>Index</h2>

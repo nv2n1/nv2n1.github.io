@@ -16,4 +16,3 @@ description: "adime_bmp"
 <p> If you want the dialog to be displayed on a certain video bitmap other than `screen&#8217;, set this to point to that bitmap. This is particulary useful if you for some reason have scrolled away from the top left area of the video memory and want the dialog to be displayed on currently visible video memory rather than on the default location. If this is NULL (it is by default), `adime_dialogf()&#8217; &amp; co will scroll to the top left corner of screen and use that part to display the dialog on. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-adime_dialogf/">adime_dialogf</a></code>(3), <code>adime_font</code>(3) </p>
-<h2>Index</h2>

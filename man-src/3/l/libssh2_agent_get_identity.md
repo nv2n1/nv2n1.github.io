@@ -26,4 +26,3 @@ description: "libssh2_agent_get_identity – get a public key off the collection
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_agent_list_identities/">libssh2_agent_list_identities</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_agent_userauth/">libssh2_agent_userauth</a>(3)</code> </p>
-<h2>Index</h2>

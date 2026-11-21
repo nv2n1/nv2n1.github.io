@@ -18,4 +18,3 @@ description: "curl_version – returns the libcurl version string"
 <p> A pointer to a zero terminated string.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_version_info/">curl_version_info</a></code>(3) </p>
-<h2>Index</h2>

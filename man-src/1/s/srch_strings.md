@@ -36,4 +36,3 @@ srch_strings[options][files]
 <h2>AUTHOR</h2>
 <p> The SleuthKit is copyright (c) Brian Carrier. </p>
 <p> This manual page was written by Martin A. Godisch for Debian GNU/Linux, but may be used by others. </p>
-<h2>Index</h2>

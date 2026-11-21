@@ -31,4 +31,3 @@ description: "mutter-theme-viewer – view mutter themes"
 <p> This manual page was written by Jose M. Moya &lt;josem [at] die.upm.es&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mutter/">mutter</a></code>(1), <code><a href="/docs/linux/man/1-mutter-window-demo/">mutter-window-demo</a></code>(1). </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "acl_from_mode – create an ACL from file permission bits"
 <p> acl_equiv_mode3, acl_get_file3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

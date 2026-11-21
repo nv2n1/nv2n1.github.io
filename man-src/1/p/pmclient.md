@@ -52,4 +52,3 @@ description: "pmclient, pmclient_fg – a simple performance metrics client"
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmdumptext/">pmdumptext</a></code>(1), <code><a href="/docs/linux/man/1-pmgenmap/">pmgenmap</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmrep/">pmrep</a></code>(1), <code>pmstat</code>(1), <code>pmval</code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code>pmFetchGroup</code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5).</p>
 <h2>DIAGNOSTICS</h2>
 <p> All are generated on standard error, and are intended to be self-explanatory. </p>
-<h2>Index</h2>

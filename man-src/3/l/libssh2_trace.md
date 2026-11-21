@@ -36,4 +36,3 @@ description: "libssh2_trace – enable debug info from inside libssh2"
 <dt>LIBSSH2_TRACE_PUBLICKEY</dt>
 <dd> Public Key debugging</dd></dl>
 </dl>
-<h2>Index</h2>

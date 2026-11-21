@@ -17,4 +17,3 @@ description: "udav – program for data visualization based on MathGL library"
 <p> mglview was written by Alexey Balakin, <a rel="nofollow" href="http://mathgl.sourceforge.net/">http://mathgl.sourceforge.net/</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mglview/">mglview</a></code>(1), <code><a href="/docs/linux/man/1-mglconv/">mglconv</a></code>(1), <code><a href="/docs/linux/man/5-mgl/">mgl</a></code>(5) </p>
-<h2>Index</h2>

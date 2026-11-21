@@ -27,4 +27,3 @@ description: "guilt-unapplied – List all unapplied patches"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

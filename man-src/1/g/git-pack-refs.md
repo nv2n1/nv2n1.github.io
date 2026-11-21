@@ -31,4 +31,3 @@ git pack - refs[--all][--no - prune]
 <p> Older documentation written before the packed-refs mechanism was introduced may still say things like &quot;.git/refs/heads/&lt;branch&gt; file exists&quot; when it means &quot;branch &lt;branch&gt; exists&quot;.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

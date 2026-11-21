@@ -27,4 +27,3 @@ description: "fgetln – get a line from a stream"
 <p> <a href="/docs/linux/man/3-ferror/">ferror</a>(3), <a href="/docs/linux/man/3-fgets/">fgets</a>(3), <a href="/docs/linux/man/3-fgetwln/">fgetwln</a>(3), <a href="/docs/linux/man/3-fopen/">fopen</a>(3), <a href="/docs/linux/man/3-putc/">putc</a>(3)</p>
 <h2>HISTORY</h2>
 <p> The Fn fgetln function first appeared in BSD 4.4 </p>
-<h2>Index</h2>

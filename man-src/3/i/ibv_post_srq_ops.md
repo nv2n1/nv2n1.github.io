@@ -58,4 +58,3 @@ struct ibv_ops_wr {
 <dt>Artemy Kovalyov &lt;artemyko [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

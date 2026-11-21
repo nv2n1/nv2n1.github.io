@@ -86,4 +86,3 @@ $ru = &#8220;\0&quot; x &amp;rusage&#8217;sizeof(); syscall(&amp;SYS_getrusage, 
 <p> Anyway, here it is. Should run on perl v4 or greater. Maybe less. </p>
 <pre><code> --tom
 </code></pre>
-<h2>Index</h2>

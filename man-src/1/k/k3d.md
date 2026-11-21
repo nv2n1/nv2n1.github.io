@@ -145,4 +145,3 @@ description: "k3d – 3D modeling and animation system"
 <p> This software is licensed under the GNU General Public License; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for K-3D is maintained as an online wiki at <a rel="nofollow" href="http://www.k-3d.org/wiki">http://www.k-3d.org/wiki</a> </p>
-<h2>Index</h2>

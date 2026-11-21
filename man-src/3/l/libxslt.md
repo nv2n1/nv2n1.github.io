@@ -23,4 +23,3 @@ description: "libxslt – library used to do XSL transformations on XML document
 <p> Daniel Veillard (daniel [at] veillard.com). If you download and install this package look at instructions on the Web site <a rel="nofollow" href="http://xmlsoft.org/XSLT/">http://xmlsoft.org/XSLT/</a> . Manual page by Heiko W. Rupp (hwr [at] pilhuhn.de)</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-libexslt/">libexslt</a></i>(3), <i><a href="/docs/linux/man/3-libxml/">libxml</a></i>(3), <i><a href="/docs/linux/man/1-xsltproc/">xsltproc</a></i>(1), <i><a href="/docs/linux/man/1-xmllint/">xmllint</a></i>(1) </p>
-<h2>Index</h2>

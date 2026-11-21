@@ -65,4 +65,3 @@ ohparam[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] get
 Ulrich Kleber(ulikleber[at] users.sourceforge.net)
     Anton Pak(avpak[at] users.sourceforge.net)
 </code></pre>
-<h2>Index</h2>

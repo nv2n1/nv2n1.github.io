@@ -31,4 +31,3 @@ description: "pdftools – analyze PDF files, change image colors"
 <p> <a rel="nofollow" href="http://www.adobe.com/devnet/pdf/pdf_reference.html">http://www.adobe.com/devnet/pdf/pdf_reference.html</a> laURL: L raThe PDF specification </p>
 <h2>AUTHOR</h2>
 <p> This (incomplete) manual page was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt;. It is in the public domain. </p>
-<h2>Index</h2>

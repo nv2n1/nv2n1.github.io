@@ -53,4 +53,3 @@ description: "libnodeupdown – a library of functions to determine if a node is
 <p> /usr/include/nodeupdown.h</p>
 <h2>SEE ALSO</h2>
 <p> nodeupdown_handle_create(3), nodeupdown_load_data(3), nodeupdown_handle_destroy(3), nodeupdown_errnum(3), nodeupdown_strerror(3), nodeupdown_errormsg(3), nodeupdown_perror(3), nodeupdown_get_up_nodes_string(3), nodeupdown_get_down_nodes_string(3), nodeupdown_get_up_nodes_list(3), nodeupdown_get_down_nodes_list(3), nodeupdown_is_node_up(3), nodeupdown_is_node_down(3), nodeupdown_up_count(3), nodeupdown_down_count(3), nodeupdown_last_up_time(3), nodeupdown_nodelist_create(3), nodeupdown_nodelist_clear(3), nodeupdown_nodelist_destroy(3), <a href="/docs/linux/man/5-nodeupdown-conf/">nodeupdown.conf</a>(5) </p>
-<h2>Index</h2>

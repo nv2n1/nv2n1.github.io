@@ -35,4 +35,3 @@ description: "mktextfm – create a TFM file for a font"
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to: tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k)">https://lists.tug.org/tex-k)</a><br />
  TeX Live home page: <a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a> </p>
-<h2>Index</h2>

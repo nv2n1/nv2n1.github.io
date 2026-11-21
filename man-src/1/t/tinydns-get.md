@@ -26,4 +26,3 @@ description: "tinydns-get – get the tinydns server records"
 <p> Report bugs to &lt;pj.pandit [at] yahoo.co.in&gt; </p>
 <h2>AUTHOR</h2>
 <p> Prasad J Pandit </p>
-<h2>Index</h2>

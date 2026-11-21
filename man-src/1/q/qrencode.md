@@ -73,4 +73,3 @@ description: "qrencode – Encode input data in a QR Code and save as a PNG or E
 </dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2006-2012 Kentaro Fukuchi. </p>
-<h2>Index</h2>

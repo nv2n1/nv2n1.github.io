@@ -48,4 +48,3 @@ n = list_config_entries(NULL, &amp;entries);
 <p> Returns the number of valid strings in the names array. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3), <code><a href="/docs/linux/man/3-get_config_string/">get_config_string</a></code>(3), <code><a href="/docs/linux/man/3-list_config_sections/">list_config_sections</a></code>(3), <code><a href="/docs/linux/man/3-free_config_entries/">free_config_entries</a></code>(3) </p>
-<h2>Index</h2>

@@ -62,4 +62,3 @@ description: "ifconfig – configure network interfaces"
 <dl>
 <dt><code>-T , -txqlen </code><i>n</i></dt>
 <dd> Set the transmit queue length to <i>n</i></dd></dl>
-<h2>Index</h2>

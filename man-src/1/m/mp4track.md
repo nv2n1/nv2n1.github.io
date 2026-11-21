@@ -118,4 +118,3 @@ description: "mp4track – manual page for mp4track – MP4v2 2.0.0"
 <dt>3</dt>
 <dd> everything </dd>
 </dl>
-<h2>Index</h2>

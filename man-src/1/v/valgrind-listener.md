@@ -32,4 +32,3 @@ description: "valgrind-listener – listens on a socket for Valgrind commentary"
 <p> <a href="/docs/linux/man/1-valgrind/">valgrind</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html.">http://www.valgrind.org/docs/manual/index.html.</a></p>
 <h2>AUTHOR</h2>
 <p> Julian Seward. </p>
-<h2>Index</h2>

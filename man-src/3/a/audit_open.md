@@ -22,4 +22,3 @@ description: "audit_open – Open a audit netlink socket connection"
 <p> <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

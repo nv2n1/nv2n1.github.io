@@ -39,4 +39,3 @@ EDG_WL_SEQUENCE_CODE =`glite - lb - logevent - s Application - e UserTag - j $ED
 <p> <code><a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a></code>(8), <a href="/docs/linux/man/8-glite-lb-interlogd/">glite-lb-interlogd</a>(8), <a href="/docs/linux/man/8-glite-lb-logd/">glite-lb-logd</a>(8) </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE, JRA1. </p>
-<h2>Index</h2>

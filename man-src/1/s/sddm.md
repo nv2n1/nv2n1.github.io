@@ -32,4 +32,3 @@ description: "sddm – the simple desktop display manager"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-sddm-conf/">sddm.conf</a></code>(5) </p>
 <p> The full documentation for sddm is available at <i><a rel="nofollow" href="https://github.com/sddm/sddm">https://github.com/sddm/sddm</a></i> </p>
-<h2>Index</h2>

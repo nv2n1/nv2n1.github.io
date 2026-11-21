@@ -31,4 +31,3 @@ description: "Devilspie2 – perform scripted actions on windows as they are cre
 </dl>
 <h2>Author</h2>
 <p> <code>Devilspie2</code> was written by Andreas Rönnquist &lt;devilspie2 [at] gusnan.se&gt;, and is based on Devilspie by Ross Burton. </p>
-<h2>Index</h2>

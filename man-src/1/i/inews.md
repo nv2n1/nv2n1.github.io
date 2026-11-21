@@ -59,4 +59,3 @@ description: "inews – Post a Usenet article to the local news server"
 <p> <tt>$Id:</tt> inews.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a></i>(5), <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1). </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ bson_realloc_ctx(void *mem,
 <p> This function is identical to <code><a href="/docs/linux/man/3-bson_realloc/">bson_realloc</a>(3)</code> except it takes a context parameter. This is useful when working with pooled or specific memory allocators. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

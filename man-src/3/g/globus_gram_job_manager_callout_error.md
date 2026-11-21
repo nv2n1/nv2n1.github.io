@@ -16,4 +16,3 @@ description: "Globus GRAM Job Manager Callout Error –"
 <p> The globus_gram_jobmanager_callout_error API defines error object types to return error conditions from GRAM authorization callouts.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_job_manager_callout_error from the source code. </p>
-<h2>Index</h2>

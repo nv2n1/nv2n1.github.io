@@ -371,4 +371,3 @@ Andreas Mueller mueller[at] daneb.ping.de[DEFUNCT] Denis Leroy&lt;denis[at] pool
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcdmaster/">gcdmaster</a></code>(1), cdrecord<code>(1), cdda2wav</code>(1), <a href="/docs/linux/man/1-cdparanoia/">cdparanoia</a><code>(1), </code><a href="/docs/linux/man/1-sox/">sox</a><code>(1), ipcs</code>(8), <code>ipcrm</code>(8) </p>
-<h2>Index</h2>

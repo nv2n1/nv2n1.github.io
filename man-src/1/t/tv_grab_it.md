@@ -71,4 +71,3 @@ description: "tv_grab_it – Grab TV listings for Italy."
 <h2>AUTHOR</h2>
 <p> Davide Chiarini, davide.chiarini [at] gmail.com </p>
 <p> you can find some more help at <a rel="nofollow" href="http://www.htpcpoint.it/forum/">http://www.htpcpoint.it/forum/</a> </p>
-<h2>Index</h2>

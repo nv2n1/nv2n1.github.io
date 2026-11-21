@@ -47,4 +47,3 @@ description: "onboard – On-screen Keyboard"
 <p> <code>/usr/share/doc/onboard</code></p>
 <h2>AUTHOR</h2>
 <p> This manual has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; by using the options from Config.py (see COPYING file for authors of options). It is distributed under the GPL-3+ license. </p>
-<h2>Index</h2>

@@ -160,4 +160,3 @@ description: "ncmpc – curses Music Player Daemon (MPD) client."
 <p> Since MPD uses UTF-8, ncmpc needs to convert characters to the charset used by the local system. If you get character conversion errors when your running ncmpc you probably need to set up your locale. This is done by setting any of the LC_CTYPE, LANG or LC_ALL enviroment variables (LC_CTYPE only affects character handling). </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mpc/">mpc</a>(1), <a href="/docs/linux/man/1-mpd/">mpd</a>(1), <a href="/docs/linux/man/5-locale/">locale</a>(5), <a href="/docs/linux/man/7-locale/">locale</a>(7) </p>
-<h2>Index</h2>

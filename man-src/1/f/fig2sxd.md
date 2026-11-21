@@ -38,4 +38,3 @@ description: "fig2sxd – utility to convert .fig to .sxd"
 <p> <code><a href="/docs/linux/man/1-pstoedit/">pstoedit</a></code>(1), <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) and <code><a rel="nofollow" href="http://fig2sxd.sourceforge.net/">http://fig2sxd.sourceforge.net/</a></code> (for updates).</p>
 <h2>AUTHOR</h2>
 <p> Program and manual page were written by Alexander B[:u]rger &lt;acfb [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

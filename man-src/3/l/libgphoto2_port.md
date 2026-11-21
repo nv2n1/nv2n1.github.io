@@ -37,4 +37,3 @@ description: "libgphoto2_port – cross-platform port access library"
 <dt>2. libusb website</dt>
 <dd> <a rel="nofollow" href="http://libusb.sourceforge.net/">http://libusb.sourceforge.net/</a> </dd>
 </dl>
-<h2>Index</h2>

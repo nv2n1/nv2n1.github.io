@@ -48,4 +48,3 @@ description: "tee – read from standard input and write to standard output and 
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/tee">https://www.gnu.org/software/coreutils/tee</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) tee invocation&#8217; </p>
-<h2>Index</h2>

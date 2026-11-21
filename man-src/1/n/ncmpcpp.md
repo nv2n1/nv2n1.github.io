@@ -308,4 +308,3 @@ description: "ncmpcpp – An ncurses Music Player Daemon (MPD) client."
 <p> -&gt; <a rel="nofollow" href="http://unkart.ovh.org/ncmpcpp">http://unkart.ovh.org/ncmpcpp</a> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mpc/">mpc</a>(1), <a href="/docs/linux/man/1-mpd/">mpd</a>(1) </p>
-<h2>Index</h2>

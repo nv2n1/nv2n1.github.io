@@ -66,4 +66,3 @@ description: "Irssi – a modular IRC client for UNIX"
 <h2>AUTHORS/CREDITS</h2>
 <p> <code>Irssi</code> was written by Timo Sirainen <code>&lt;cras [at] irssi.org&gt;</code> </p>
 <p> This manpage was written by Istvan Sebestyen <code>&lt;stevee [at] alphanet.ch&gt;</code> and Stefan Tomanek <code>&lt;stefan [at] pico.ruhr.de&gt;</code> </p>
-<h2>Index</h2>

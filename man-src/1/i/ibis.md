@@ -1564,4 +1564,3 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "ardour – a digital audio workstation"
 <h2>AUTHOR</h2>
 <p> Paul Davis. Do <i>not</i> contact him directly. Instead, contact him at &lt;ardour-dev [at] lists.ardour.org&gt;. You can subscribe here:<br />
  <a rel="nofollow" href="http://lists.ardour.org/listinfo.cgi/ardour-dev-ardour.org">http://lists.ardour.org/listinfo.cgi/ardour-dev-ardour.org</a> </p>
-<h2>Index</h2>

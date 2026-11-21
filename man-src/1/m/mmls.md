@@ -52,4 +52,3 @@ description: "mmls – Display the partition layout of a volume system (partitio
 <p> # mmls -t bsd -o 12345 -i split disk-1.dd disk-2.dd </p>
 <h2>AUTHOR</h2>
 <p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

@@ -123,4 +123,3 @@ git clone <a href="git://github.com/davvid/git-cola.git">git://github.com/davvid
 <dt>
 </dt><dd> mailto:davvid [at] gmail.com</dd></dl>
 </dl>
-<h2>Index</h2>

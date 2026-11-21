@@ -73,4 +73,3 @@ description: "masktest â€“ Find differences in wildcard matching between Sambaâ€
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
-<h2>Index</h2>

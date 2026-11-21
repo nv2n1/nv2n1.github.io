@@ -118,4 +118,3 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 <dl>
 <dd> <p> <a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a> </p>
  </dd></dl>
-<h2>Index</h2>

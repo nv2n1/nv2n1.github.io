@@ -35,4 +35,3 @@ description: "mybashburn – it can burn data cds/dvds and create mp3/ogg/flac."
 <h2>SEE ALSO</h2>
 <p> mybashburnrc(5) &#8211; FIXME: Document this. </p>
 <p> mybashburn homepage: <code>(<a rel="nofollow" href="http://mybashburn.sf.net/)">http://mybashburn.sf.net/)</a></code> </p>
-<h2>Index</h2>

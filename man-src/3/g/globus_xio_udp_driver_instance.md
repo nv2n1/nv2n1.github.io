@@ -13,4 +13,3 @@ description: "Opening/Closing – An XIO handle with the udp driver can be creat
 <p> When the XIO handle is closed, the udp driver will destroy its internal resources and close the socket (unless this socket was set on the attr to <code>globus_xio_register_open()</code>). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

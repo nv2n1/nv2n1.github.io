@@ -60,4 +60,3 @@ gdal_contour -a elev dem.tif contour.shp -i 10.0
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

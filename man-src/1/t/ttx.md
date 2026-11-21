@@ -69,4 +69,3 @@ description: "ttx – tool for manipulating TrueType and OpenType fonts"
 <h2>AUTHORS</h2>
 <p> was written by An -nosplit An Just van Rossum Aq just [at] letterror.com . </p>
 <p> This manual page was written by An Florent Rougon Aq f.rougon [at] free.fr for the Debian GNU/Linux system based on the existing FontTools documentation. It may be freely used, modified and distributed without restrictions. </p>
-<h2>Index</h2>

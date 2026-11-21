@@ -133,4 +133,3 @@ description: "autotrace – converts bitmap image data into vector graphics"
 <h2>AUTHORS</h2>
 <p> Martin Weber (martweb [at] gmx.net) </p>
 <p> Manual page by R. P. C. Rodgers, Lister Hill National Center for Biomedical Communications, U.S. National Library of Medicine (rodgers [at] nlm.nih.gov). </p>
-<h2>Index</h2>

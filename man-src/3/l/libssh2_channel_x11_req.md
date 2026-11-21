@@ -20,4 +20,3 @@ description: "libssh2_channel_x11_req – convenience macro for libssh2_channel_
 <p> See <i><a href="/docs/linux/man/3-libssh2_channel_x11_req_ex/">libssh2_channel_x11_req_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_x11_req_ex/">libssh2_channel_x11_req_ex</a>(3)</code> </p>
-<h2>Index</h2>

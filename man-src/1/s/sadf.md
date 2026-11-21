@@ -168,4 +168,3 @@ description: "sadf – Display data collected by sar in multiple formats."
 <p> <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1), <code><a href="/docs/linux/man/8-sadc/">sadc</a></code>(8), <code><a href="/docs/linux/man/8-sa1/">sa1</a></code>(8), <code><a href="/docs/linux/man/8-sa2/">sa2</a></code>(8), <code><a href="/docs/linux/man/5-sysstat/">sysstat</a></code>(5) </p>
 <p> <i><a rel="nofollow" href="https://github.com/sysstat/sysstat">https://github.com/sysstat/sysstat</a></i><br />
  <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/">http://pagesperso-orange.fr/sebastien.godard/</a></i> </p>
-<h2>Index</h2>

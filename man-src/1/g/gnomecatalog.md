@@ -20,4 +20,3 @@ description: "gnomecatalog – Cd cataloguing"
 <p> <code>gnomecatalog</code> is a catalog software</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jose Sanchez Moreno &lt;jose [at] o2w.es&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

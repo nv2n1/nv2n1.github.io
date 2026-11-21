@@ -147,4 +147,3 @@ description: "cpio – copy files to and from archives"
 <p> This is a complete re-implementation based on the libarchive(3) library.</p>
 <h2>BUGS</h2>
 <p> The cpio archive format has several basic limitations: It does not store user and group names, only numbers. As a result, it cannot be reliably used to transfer files between systems with dissimilar user and group numbering. Older cpio formats limit the user and group numbers to 16 or 18 bits, which is insufficient for modern systems. The cpio archive formats cannot support files over 4 gigabytes, except for the &#8220;odc&#8221; variant, which can support files up to 8 gigabytes. </p>
-<h2>Index</h2>

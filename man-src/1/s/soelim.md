@@ -62,4 +62,3 @@ description: "soelim – interpret .so requests in groff input"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) </p>
-<h2>Index</h2>

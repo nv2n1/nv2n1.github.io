@@ -39,4 +39,3 @@ description: "hwloc_obj_attr_u::hwloc_pcidev_attr_s –"
 <h3>unsigned short hwloc_obj_attr_u::hwloc_pcidev_attr_s::vendor_id</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

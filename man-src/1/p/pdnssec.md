@@ -78,4 +78,3 @@ description: "pdnssec – PowerDNSSEC command and control"
 <p> This manual page was written by Matthijs Möhlmann &lt;matthijs [at] cacholong.nl&gt; for the Debian Project (but may be used by others)</p>
 <h2>SEE ALSO</h2>
 <p> <code>pdns_server</code>(8),<code>pdns_control</code>(8) </p>
-<h2>Index</h2>

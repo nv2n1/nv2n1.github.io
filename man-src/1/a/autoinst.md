@@ -331,4 +331,3 @@ description: "autoinst – wrapper around the LCDF TypeTools, for installing and
 <dt><i>2020-01-29</i></dt>
 <dd> <p> Don&#8217;t create empty subdirectories in the target <font SIZE="-1">TEXMF</font> tree. </p>
  </dd></dl>
-<h2>Index</h2>

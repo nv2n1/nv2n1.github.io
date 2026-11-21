@@ -147,4 +147,3 @@ description: "asl – cross assembler for microprocessors and -controllers"
 <p> Command line interpreters of some operating systems reserve some characters for their own use, so it might be necessary to give command line parameters with certain tricks (e.g., with the help of escape characters). </p>
 <h2>AUTHOR(S)</h2>
 <p> Alfred Arnold (alfred [at] ccac.rwth-aachen.de), and a few others&#8230; </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ struct ibv_wq_attr {
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

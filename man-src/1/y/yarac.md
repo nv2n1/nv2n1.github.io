@@ -34,4 +34,3 @@ yarac[OPTION]...[RULE_FILE]... OUTPUT_FILE
 <p> <code><a href="/docs/linux/man/1-yara/">yara</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>yarac</code> was written by Victor M. Alvarez &lt;vmalvarez [at] virustotal.com&gt;. This manual page was written by Joao Eriberto Mota Filho &lt;eriberto [at] eriberto.pro.br&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

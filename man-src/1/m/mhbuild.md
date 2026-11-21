@@ -345,4 +345,3 @@ body :: = 1 * (content | EOL)
 `<code>-autoheaderencoding</code>'
 `<code>-maxunencoded 78'</code>
 </pre>
-<h2>Index</h2>

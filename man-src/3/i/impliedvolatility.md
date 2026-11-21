@@ -20,4 +20,3 @@ description: "ql/instruments/impliedvolatility.hpp – Utilities for implied-vol
 <p> Utilities for implied-volatility calculation. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

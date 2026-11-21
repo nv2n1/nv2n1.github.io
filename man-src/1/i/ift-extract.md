@@ -29,4 +29,3 @@ description: "ift-extract.info – ift-extract.info"
 <p> isight-firmware-tools is a project developped by Étienne Bersac based on the work of Ronald S. Bultje, Johannes Berg and Ivan N. Zlatev. </p>
 <p> This manual has been written by Étienne Bersac. </p>
 <p> Copyright (C) 2007 Étienne Bersac &lt;bersace [at] gmail.com&gt; </p>
-<h2>Index</h2>

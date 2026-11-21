@@ -30,4 +30,3 @@ description: "write-mime-multipart – utilty for creating mime-multipart files,
 <h2>AUTHOR</h2>
 <p> This manpage and the utility was written by Scott Moser &lt;scott.moser [at] canonical.com&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>

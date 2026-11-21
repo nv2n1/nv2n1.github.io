@@ -147,4 +147,3 @@ description: "scanimage – scan an image"
 <p> David Mosberger, Andreas Beck, Gordon Matzigkeit, Caskey Dickson, and many others. For questions and comments contact the sane-devel mailinglist (see <i><a rel="nofollow" href="http://www.sane-project.org/mailing-lists.html">http://www.sane-project.org/mailing-lists.html</a></i>). </p>
 <h2>BUGS</h2>
 <p> For vector options, the help output currently has no indication as to how many elements a vector-value should have. </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "tangerine – Perl dependency metadata tool"
 <h2>AUTHOR AND LICENSE</h2>
 <p> Copyright (c) 2014-2015 Petr Xabata &lt;contyk [at] redhat.com&gt; </p>
 <p> See the <font SIZE="-1">LICENSE</font> files for licensing details. </p>
-<h2>Index</h2>

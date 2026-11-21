@@ -82,4 +82,3 @@ description: "cvsgraph – A CVS/RCS repository grapher"
  <i><a rel="nofollow" href="http://www.akhphd.au.dk/~bertho/cvsgraph/">http://www.akhphd.au.dk/~bertho/cvsgraph/</a></i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-cvsgraph-conf/">cvsgraph.conf</a>(5)</code> </p>
-<h2>Index</h2>

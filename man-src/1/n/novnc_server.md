@@ -22,4 +22,3 @@ description: "novnc_server | noVNC proxy server"
 <p> Joel Martin (github [at] martintribe.org) </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-websockify/">websockify</a>(1) </p>
-<h2>Index</h2>

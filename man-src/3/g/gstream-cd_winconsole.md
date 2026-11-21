@@ -17,4 +17,3 @@ description: "cd_winconsole"
 <p> The preferred dimensions for this cursor (you have to set them manually) are: (1, gbuf::DYNAMIC_CURSOR_SIZE, gbuf::DYNAMIC_CURSOR_SIZE, gbuf::DYNAMIC_CURSOR_SIZE) but the first argument can be bigger for a broader cursor. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gstream-set_cursor_drawer/">gstream-set_cursor_drawer</a></code>(3), <code><a href="/docs/linux/man/3-gstream-cd_console/">gstream-cd_console</a></code>(3) </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "stoken-gui – GTK+ software token"
 <dd> Default configuration file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Kevin Cernekee &lt;cernekee [at] gmail.com&gt; </p>
-<h2>Index</h2>

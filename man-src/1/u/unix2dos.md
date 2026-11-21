@@ -421,4 +421,3 @@ dos2unix[options][FILE...][-n INFILE OUTFILE...] unix2dos[options][FILE...][-n I
 <p> SourceForge page: &lt;<a rel="nofollow" href="http://sourceforge.net/projects/dos2unix/">http://sourceforge.net/projects/dos2unix/</a>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-file/">file</a></code>(1) <code><a href="/docs/linux/man/1-find/">find</a></code>(1) <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1) <code><a href="/docs/linux/man/1-xargs/">xargs</a></code>(1) </p>
-<h2>Index</h2>

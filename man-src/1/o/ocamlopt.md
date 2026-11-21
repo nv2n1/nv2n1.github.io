@@ -161,4 +161,3 @@ description: "ocamlopt – The OCaml native-code compiler"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Native-code compilation&quot;. </p>
-<h2>Index</h2>

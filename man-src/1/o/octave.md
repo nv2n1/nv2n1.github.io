@@ -40,4 +40,3 @@ description: "octave – A high-level interactive language for numerical computa
 <dd> Project-specific initialization file located in the current directory.</dd></dl>
 <h2>AUTHOR</h2>
 <p> John W. Eaton &lt;jwe [at] octave.org&gt; </p>
-<h2>Index</h2>

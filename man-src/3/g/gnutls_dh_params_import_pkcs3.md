@@ -36,4 +36,3 @@ description: "gnutls_dh_params_import_pkcs3 – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

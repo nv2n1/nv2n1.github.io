@@ -536,4 +536,3 @@ my($foo, \@bar, \% baz);
 <h2>SEE ALSO</h2>
 <p> Besides the obvious documents, source code can be instructive. Some pathological examples of the use of references can be found in the <i>t/op/ref.t</i> regression test in the Perl source directory. </p>
 <p> See also perldsc and perllol for how to use references to create complex data structures, and perlootut and perlobj for how to use them to create objects. </p>
-<h2>Index</h2>

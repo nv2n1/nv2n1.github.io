@@ -70,4 +70,3 @@ description: "sslscan – Fast SSL/TLS scanner"
 <h2>AUTHOR</h2>
 <p> sslscan was originally written by Ian Ventura-Whiting &lt;fizz [at] titania.co.uk&gt;. sslscan was extended by Jacob Appelbaum &lt;jacob [at] appelbaum.net&gt;.<br />
  This manual page was originally written by Marvin Stark &lt;marv [at] der-marv.de&gt;. </p>
-<h2>Index</h2>

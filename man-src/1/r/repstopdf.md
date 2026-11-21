@@ -102,4 +102,3 @@ $program --nogs test.ps &gt;testcorr.ps
 <p> Man page originally written by Jim Van Zandt. </p>
 <p> epstopdf home page: <a rel="nofollow" href="http://tug.org/epstopdf.">http://tug.org/epstopdf.</a> </p>
 <p> You may freely use, modify and/or distribute this man page. </p>
-<h2>Index</h2>

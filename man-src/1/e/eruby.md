@@ -36,4 +36,3 @@ description: "eruby – Embedded Ruby Language"
 </dt><dd> <code>&#8211;version </code> print version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Shugo Maeda &lt;shugo [at] ruby-lang.org&gt; </p>
-<h2>Index</h2>

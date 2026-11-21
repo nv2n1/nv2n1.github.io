@@ -54,4 +54,3 @@ description: "Error Messages –"
 </dt><dd> The <code>globus_gram_protocol_error_string()</code> function returns a static string containing an explanation of the error.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>

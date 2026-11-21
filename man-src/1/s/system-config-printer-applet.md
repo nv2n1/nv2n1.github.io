@@ -35,4 +35,3 @@ description: "system-config-printer-applet – print job manager"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

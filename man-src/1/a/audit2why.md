@@ -116,4 +116,3 @@ files_read_etc_files(myapp_t)&lt;review local.te and customize as desired&gt; Bu
 <h2>AUTHOR</h2>
 <p> This manual page was written by <i>Manoj Srivastava &lt;srivasta [at] debian.org&gt;,</i> for the Debian GNU/Linux system. It was updated by Dan Walsh &lt;dwalsh [at] redhat.com&gt; </p>
 <p> The <code>audit2allow</code> utility has contributions from several people, including <i>Justin R. Smith </i> and <i>Yuichi Nakamura.</i> and <i>Dan Walsh</i> </p>
-<h2>Index</h2>

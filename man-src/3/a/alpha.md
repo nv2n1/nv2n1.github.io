@@ -24,4 +24,3 @@ description: "QuantLib::GaussianOrthogonalPolynomial – orthogonal polynomial f
 <p> References: Gauss quadratures and orthogonal polynomials </p>
 <p> G.H. Gloub and J.H. Welsch: Calculation of Gauss quadrature rule. Math. Comput. 23 (1986), 221-230 </p>
 <p> The polynomials are defined by the three-term recurrence relation [ P_{k+1}(x)=(x-lpha_k) P_k(x) &#8211; nerated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

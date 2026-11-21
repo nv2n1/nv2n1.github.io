@@ -62,4 +62,3 @@ description: "poterminology – Create a terminology file by reading a set of .p
 <dt>-v/&#8211;invert</dt>
 <dd> invert the source and target languages for terminology </dd>
 </dl>
-<h2>Index</h2>

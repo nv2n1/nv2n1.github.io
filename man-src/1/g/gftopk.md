@@ -25,4 +25,3 @@ description: "gftopk – convert generic font files to packed font files"
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki wrote the program. It was published as part of the <i>Metafontware</i> technical report, available from the TeX Users Group. Paul Richards originally ported it to Unix. </p>
-<h2>Index</h2>

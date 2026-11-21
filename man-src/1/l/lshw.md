@@ -101,4 +101,3 @@ description: "lshw – list hardware"
 <h2>OTHER INFO</h2>
 <p> The webpage for <code>lshw</code> is at<br />
 &nbsp;&lt;URL:<a rel="nofollow" href="http://lshw.ezix.org/">http://lshw.ezix.org/</a>&gt; </p>
-<h2>Index</h2>

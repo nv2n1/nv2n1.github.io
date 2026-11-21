@@ -42,4 +42,3 @@ description: "defncopy – extract procedures and views from a Microsoft server.
 <p> The utility was written by An James K. Lowden Aq jklowden [at] schemamania.org.</p>
 <h2>BUGS</h2>
 <p> Works only with Microsoft servers and ancient Sybase servers. Does not create primary keys. Many options are defined by Sybase that this version does not implement. Feel free to correct this situation. In theory, could apply/produce DDL for any system object, but at present only tables, procedures and views are supported, and only for extraction. </p>
-<h2>Index</h2>

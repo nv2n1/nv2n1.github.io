@@ -31,4 +31,3 @@ description: "sshmenu – GNOME applet for connecting to hosts using SSH."
 <dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> sshmenu-applet was written by Grant McLean &lt;grant [at] mclean.net.nz&gt; </p>
-<h2>Index</h2>

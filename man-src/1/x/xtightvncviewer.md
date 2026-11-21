@@ -156,4 +156,3 @@ description: "vncviewer – an X viewer client for VNC"
  Terran Melconian &lt;terran [at] consistent.org&gt;,<br />
  Tim Waugh &lt;twaugh [at] redhat.com&gt;,<br />
  Constantin Kaplinsky &lt;const [at] tightvnc.com&gt; </p>
-<h2>Index</h2>

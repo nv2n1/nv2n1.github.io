@@ -85,4 +85,3 @@ mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[-
 </pre>
 <h2>AUTHOR</h2>
 <p> Written by Rob Browning &lt;rlb [at] defaultvalue.org&gt; </p>
-<h2>Index</h2>

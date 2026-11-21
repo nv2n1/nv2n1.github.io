@@ -69,4 +69,3 @@ libhsm.c:1210: var_deref_op: Dereferencing null pointer key_handles.
 <p> <code>grouped</code> &#8211; print matched defects, grouped by error files they originate from </p>
 <p> <code>json</code> &#8211; print matched defects in a JSON format </p>
 <p> <code>stat</code> &#8211; print overall statistics of the matched defects in given error files </p>
-<h2>Index</h2>

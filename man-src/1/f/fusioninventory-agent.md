@@ -317,4 +317,3 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
 <dt><code>&#8211;version</code></dt>
 <dd> Print the version and exit. </dd>
 </dl>
-<h2>Index</h2>

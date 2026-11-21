@@ -24,4 +24,3 @@ description: "pgmkernel – generate a convolution kernel"
 <p> <a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a>(1), <a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Alberto Accomazzi (alberto [at] cfa.harvard.edu). </p>
-<h2>Index</h2>

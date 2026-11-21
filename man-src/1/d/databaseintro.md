@@ -61,4 +61,3 @@ url: "/docs/linux/man/1-databaseintro/"
 </dl>
 <p> Main index &#8211; database index &#8211; full index </p>
 <p> <i>Last changed: $Date: 2008-02-10 18:09:01 +0100 (Sun, 10 Feb 2008) $</i> </p>
-<h2>Index</h2>

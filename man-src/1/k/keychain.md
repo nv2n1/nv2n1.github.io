@@ -120,4 +120,3 @@ keychain id_rsa id_dsa 0123ABCD
 <h2>NOTES</h2>
 <p> Keychain is maintained by Aron Griffis &lt;agriffis [at] gentoo.org&gt;. If you need to report a bug or request an enhancement, please do so at &lt;<a rel="nofollow" href="http://bugs.gentoo.org/">http://bugs.gentoo.org/</a>&gt; and assign to agriffis [at] gentoo.org </p>
 <p> Keychain was originally written by Daniel Robbins &lt;drobbins [at] gentoo.org&gt;, who has also written a series of three articles about it. The articles can be found starting at &lt;<a rel="nofollow" href="http://www-106.ibm.com/developerworks/library/l-keyc.html">http://www-106.ibm.com/developerworks/library/l-keyc.html</a>&gt; </p>
-<h2>Index</h2>

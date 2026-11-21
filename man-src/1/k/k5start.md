@@ -145,4 +145,3 @@ start - stop - daemon-- start-- pidfile / var / run / k5start.pid-- exec / usr /
 <h2>AUTHORS</h2>
 <p> <code>k5start</code> was based on the k4start code written by Robert Morgan. It was ported to Kerberos v5 by Booker C. Bense. Additional cleanup and current maintenance are done by Russ Allbery &lt;rra [at] stanford.edu&gt;. </p>
 <p> Implementations of <code>-b</code> and <code>-p</code> and the example for a Debian init script are based on code contributed by Navid Golpayegani. </p>
-<h2>Index</h2>

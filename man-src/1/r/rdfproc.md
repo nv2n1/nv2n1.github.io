@@ -108,4 +108,3 @@ description: "rdfproc – Redland RDF processor utility"
 <p> <a href="/docs/linux/man/3-redland/">redland</a>(3), <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3), <a href="/docs/linux/man/1-rapper/">rapper</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://www.dajobe.org/">http://www.dajobe.org/</a> </p>
-<h2>Index</h2>

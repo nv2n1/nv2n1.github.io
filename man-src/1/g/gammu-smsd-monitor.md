@@ -43,4 +43,3 @@ description: "gammu-smsd-monitor – Monitor state of SMS daemon for Gammu"
 <p>&nbsp;<wbr>[gammu]<br />
 &nbsp;<wbr>logformat&nbsp;<wbr>=&nbsp;<wbr>textall </p>
 <p> and include this verbose log within bug report. </p>
-<h2>Index</h2>

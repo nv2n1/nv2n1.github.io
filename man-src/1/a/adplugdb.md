@@ -54,4 +54,3 @@ description: "adplugdb – AdPlug database maintenance utility"
 <dd> Show version and author information of the program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Simon Peter &lt;dn.tlp [at] gmx.net&gt; </p>
-<h2>Index</h2>

@@ -122,4 +122,3 @@ description: "list_intro – a library providing generic list functionality and 
 <dd> The lSortOrder pointer is used to specify sorting criteria for a generic list. It is possible to declare combined sorting keys.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>

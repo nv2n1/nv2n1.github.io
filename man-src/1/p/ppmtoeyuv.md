@@ -17,4 +17,3 @@ description: "ppmtoeyuv – convert a portable pixmap into a Berkeley YUV file"
 <p> <code>ppmtoeyuv</code> handles multi-image PPM input streams, outputting consecutive eyuv images. There must be at least one image, though. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-eyuvtoppm/">eyuvtoppm</a></code>(1), <code><a href="/docs/linux/man/1-ppmtoyuv/">ppmtoyuv</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
-<h2>Index</h2>

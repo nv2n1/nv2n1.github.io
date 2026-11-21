@@ -41,4 +41,3 @@ description: "bogolexer – Utility program for separating email messages into t
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
-<h2>Index</h2>

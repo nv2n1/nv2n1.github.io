@@ -49,4 +49,3 @@ enum ibv_wq_flags {
 <dt>Yishai Hadas &lt;yishaih [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

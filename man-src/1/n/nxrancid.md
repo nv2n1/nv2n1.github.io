@@ -105,4 +105,3 @@ Password:
 cat5k&gt; (enable) 
 </pre>
 <p> <code>rancid</code> works on Cisco Catalyst 1900 series switches that are running Enterprise Edition software. This software provides a menu at connection time that allows a command line interface to be used by entering &#8216;K&#8217; at the prompt. </p>
-<h2>Index</h2>

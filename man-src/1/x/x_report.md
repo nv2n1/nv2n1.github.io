@@ -28,4 +28,3 @@ description: "x_report – Report Cross-Over Error Statistics for Cruises"
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-x_system/">x_system</a></i>(1)</p>
 <h2>REFERENCES</h2>
 <p> Wessel, P. XOVER: A Cross-over Error Detector for Track Data, <i>Computers &amp; Geosciences, 15</i>, 333-346. </p>
-<h2>Index</h2>

@@ -86,4 +86,3 @@ exec wish &quot;$0&quot; ${1+&quot;$@&quot;}</code>
 <p> <a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), toplevel(n), <a href="/docs/linux/man/3-tk_main/">Tk_Main</a>(3), <a href="/docs/linux/man/3-tk_mainloop/">Tk_MainLoop</a>(3), <a href="/docs/linux/man/3-tk_mainwindow/">Tk_MainWindow</a>(3)</p>
 <h2>KEYWORDS</h2>
 <p> application, argument, interpreter, prompt, script file, shell, toolkit, toplevel </p>
-<h2>Index</h2>

@@ -95,4 +95,3 @@ description: "gifview – displays GIF images and animations on the X window sys
  <a rel="nofollow" href="http://www.read.seas.harvard.edu/~kohler/">http://www.read.seas.harvard.edu/~kohler/</a> </p>
 <p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br />
  The <code>gifsicle</code> home page. </p>
-<h2>Index</h2>

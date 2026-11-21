@@ -73,4 +73,3 @@ debconf - apt - progress[--] command[args...] debconf - apt - progress-- config 
 <h2>AUTHORS</h2>
 <p> Colin Watson &lt;cjwatson [at] debian.org&gt; </p>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

@@ -83,4 +83,3 @@ io, tput, latency, queue_depth, iops, cpu-sys, cpu-io, cpu-irq, cpu-user, cpu-so
 <dl>
 <dt>
 </dt><dd> iowatcher -t trace &#8211;movie -o trace.mp4</dd></dl>
-<h2>Index</h2>

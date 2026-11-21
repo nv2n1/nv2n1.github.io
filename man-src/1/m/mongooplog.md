@@ -135,4 +135,3 @@ mongooplog  --from mongodb0.example.net --dbpath /srv/mongodb --journal
 <p> MongoDB Documentation Project</p>
 <h2>COPYRIGHT</h2>
 <p> 2011-2014, MongoDB, Inc. </p>
-<h2>Index</h2>

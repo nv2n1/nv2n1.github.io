@@ -45,4 +45,3 @@ description: "sound-juicer – GNOME-desktop CD ripper and player using GStreame
 <p> <code>sound-juicer</code> was written by Ross Burton &lt;ross [at] burtonini.com&gt;. This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> The online documentation available through the program&#8217;s <i>Help</i> menu. </p>
-<h2>Index</h2>

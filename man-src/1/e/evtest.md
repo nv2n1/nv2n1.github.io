@@ -56,4 +56,3 @@ fuser -v /dev/input/eventX
 <dt>
 </dt><dd> mailto:steve [at] sk2.org</dd></dl>
 </dl>
-<h2>Index</h2>

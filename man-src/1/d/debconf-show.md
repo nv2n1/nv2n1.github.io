@@ -27,4 +27,3 @@ debconf - show packagename[...][--db = dbname] debconf - show-- listowners[--db 
 <dd> Lists all available databases.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; and Sylvain Ferriol </p>
-<h2>Index</h2>

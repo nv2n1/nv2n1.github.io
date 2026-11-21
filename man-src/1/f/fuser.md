@@ -103,4 +103,3 @@ description: "fuser – identify processes using files or sockets"
 <p> The mount <code>-m</code> option will match any file within the same device as the specified file, use the <code>-M</code> option as well if you mean to specify only the mount point.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-killall/">killall</a></code>(1), <code><a href="/docs/linux/man/8-lsof/">lsof</a></code>(8), <code><a href="/docs/linux/man/1-pkill/">pkill</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2). </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "Caja-file-management-properties – Caja File Management Preferenc
 <h3>Caja documentation can be found from the Help menu, or by pressing the F1 key.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
 <p> <code><a href="/docs/linux/man/1-caja/">caja</a></code>(1), <code><a href="/docs/linux/man/1-caja-autorun-software/">caja-autorun-software</a></code>(1), <code><a href="/docs/linux/man/1-caja-connect-server/">caja-connect-server</a></code>(1) </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "gnutls_db_set_store_function – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

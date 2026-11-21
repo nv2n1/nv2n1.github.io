@@ -114,4 +114,3 @@ agent = some_agent / 1.0 #--agent
 <dd> % git clone <a href="git://repo.or.cz/quvi.git">git://repo.or.cz/quvi.git</a></dd></dl>
 <h2>AUTHOR</h2>
 <p> Toni Gundogdu. </p>
-<h2>Index</h2>

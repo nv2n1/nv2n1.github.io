@@ -94,4 +94,3 @@ echo &quot;1.55 -8.43 52.3&quot; | gmt originator -F+ONeill_2005_hotspots.txt \
 <p> Wessel, P., 1999, &quot;Hotspotting&quot; tools released, EOS Trans. AGU, 80 (29), p. 319.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

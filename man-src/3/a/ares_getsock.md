@@ -30,4 +30,3 @@ int ares_getsock(ares_channel channel, ares_socket_t *socks,
 <p> This function was added in c-ares 1.3.1</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_timeout/">ares_timeout</a></code>(3), <code><a href="/docs/linux/man/3-ares_fds/">ares_fds</a></code>(3), <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3) </p>
-<h2>Index</h2>

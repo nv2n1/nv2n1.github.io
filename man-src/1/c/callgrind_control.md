@@ -64,4 +64,3 @@ description: "callgrind_control – observe and control programs being run by Ca
 <p> <a href="/docs/linux/man/1-valgrind/">valgrind</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html.">http://www.valgrind.org/docs/manual/index.html.</a></p>
 <h2>AUTHOR</h2>
 <p> Josef Weidendorfer &lt;Josef.Weidendorfer [at] gmx.de&gt;. </p>
-<h2>Index</h2>

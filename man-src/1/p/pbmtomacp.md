@@ -22,4 +22,3 @@ description: "pbmtomacp – convert a portable bitmap into a MacPaint file"
 <p> <a href="/docs/linux/man/1-ppmtopict/">ppmtopict</a>(1), <a href="/docs/linux/man/1-macptopbm/">macptopbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5), mcvert(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Douwe van der Schaaf (&#8230;!mcvax!uvapsy!vdschaaf). </p>
-<h2>Index</h2>

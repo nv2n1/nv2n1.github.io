@@ -40,4 +40,3 @@ $ annotate-output make
 <p> This program is community-supported (meaning: you&#8217;ll need to fix it yourself). Patches are however appreciated, as is any feedback (positive or negative). </p>
 <h2>AUTHOR</h2>
 <p> <code>annotate-output</code> was written by Jeroen van Wolffelaar &lt;jeroen [at] wolffelaar.nl&gt; This manpage comes under the same copyright as annotate-output itself, read /usr/bin/annotate-output (or wherever you install it) for the details. </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ description: "Geany — a small and lightweight IDE"
 <h2>AUTHOR</h2>
 <p> This manual page was written by the Geany developer team. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2. </p>
 <p> The complete text of the GNU General Public License can be found in /usr/share/geany/GPL-2. </p>
-<h2>Index</h2>

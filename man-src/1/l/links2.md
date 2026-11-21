@@ -365,4 +365,3 @@ description: "links – lynx-like alternative character mode WWW browser"
 <p> This manual page was written by Peter Gervai &lt;grin [at] tolna.net&gt;, using excerpts from a (yet?) unknown <i>links</i> fan for the Debian GNU/Linux system (but may be used by others). Updated by Karel Kulhavy. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-w3m/">w3m</a></code>(1) </p>
-<h2>Index</h2>

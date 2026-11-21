@@ -249,4 +249,3 @@ description: "matedialog – display GTK+ dialogs"
 <p> This manual page was written by Ross Burton &lt;ross [at] burtonini.com&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gdialog</code>(1), <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1) </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "vboxbeep – isdn voice box (beeper)"
 <p> vboxbeep will only work if it is installed suid root. This may be a security hole, so many distributions do not install it suid root, and thus it&#8217;s useless. If you want to enable vboxbeep, please read the distribution-specific documentation how to do that (e.g. with debian gnu/linux read /usr/doc/isdnutils/README.debian).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Andreas Jellinghaus &lt;aj [at] dungeon.inka.de&gt;, for Debian GNU/Linux and isdn4linux. </p>
-<h2>Index</h2>

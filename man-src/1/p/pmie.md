@@ -733,4 +733,3 @@ topic=PMIE              # JMS topic for pmie messages (optional)
 <pre>
 <a rel="nofollow" href="http://www.pcp.io/doc/pcp-users-and-administrators-guide.pdf">http://www.pcp.io/doc/pcp-users-and-administrators-guide.pdf</a>
 </pre>
-<h2>Index</h2>

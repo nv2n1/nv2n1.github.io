@@ -57,4 +57,3 @@ description: "pamslice – extract one line of values out of a Netpbm image"
 <p> <code>pamslice</code> replaced <code>pgmslice</code> in Netpbm 10.3 (June 2002). It was backward compatible, but worked on Netpbm images other than PGM and PBM and added the <code>-plane</code> and <code>-xmgr</code> options. </p>
 <h2>AUTHOR</h2>
 <p> Jos Dingjan &lt;<i>jos [at] tuatha.org</i>&gt; wrote <code>pgmslice</code> after being unable to find the source code to Marco Beijersbergen&#8217;s program with the same name. Bryan Henderson converted it to <code>pamslice</code>. </p>
-<h2>Index</h2>

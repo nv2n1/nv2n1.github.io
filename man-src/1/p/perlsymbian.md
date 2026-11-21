@@ -210,4 +210,3 @@ description: "perlsymbian – Perl version 5 on Symbian OS"
 </code></pre>
 <p> We maintain the binary incompatibility. </p>
  </dd></dl>
-<h2>Index</h2>

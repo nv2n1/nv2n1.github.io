@@ -62,4 +62,3 @@ description: "tilix – Tiling GTK3 terminal emulator for GNOME"
 <p> See bugs at <a rel="nofollow" href="https://github.com/gnunn1/tilix/issues">https://github.com/gnunn1/tilix/issues</a></p>
 <h2>AUTHOR</h2>
 <p> Gerald Nunn and other contributors. </p>
-<h2>Index</h2>

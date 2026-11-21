@@ -18,4 +18,3 @@ description: "curl_multi_init – create a multi handle"
 <p> If this function returns NULL, something went wrong and you cannot use the other curl functions.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3),<code><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a></code>(3),<code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3) </p>
-<h2>Index</h2>

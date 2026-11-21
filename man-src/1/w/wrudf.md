@@ -42,4 +42,3 @@ description: "wrudf – Maintain an UDF filesystem."
 <p> <code>wrudf</code> is part of the udftools package and is available from <a rel="nofollow" href="http://linux-udf.sourceforge.net.">http://linux-udf.sourceforge.net.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cdrwtool/">cdrwtool</a></code>(1), <code><a href="/docs/linux/man/8-mkudffs/">mkudffs</a></code>(8), <code><a href="/docs/linux/man/8-pktsetup/">pktsetup</a></code>(8) </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "pmtime – time control server for Performance Co-Pilot"
 <p> The default starting port number is 43334.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), and <code>pmval</code>(1). </p>
-<h2>Index</h2>

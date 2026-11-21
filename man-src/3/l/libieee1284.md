@@ -64,4 +64,3 @@ cc files... - lieee1284
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ description: "beagle-config – command-line interface to Beagle configuration"
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1) </p>
-<h2>Index</h2>

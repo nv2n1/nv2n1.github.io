@@ -27,4 +27,3 @@ description: "gconf-editor – an editor for the GConf configuration system"
 <h2>SEE ALSO</h2>
 <p> <code>gconfd-2</code>(1), <code><a href="/docs/linux/man/1-gconftool-2/">gconftool-2</a></code>(1). </p>
 <p> <i><a rel="nofollow" href="http://www.gnome.org/projects/gconf/">http://www.gnome.org/projects/gconf/</a></i> </p>
-<h2>Index</h2>

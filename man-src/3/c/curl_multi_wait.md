@@ -45,4 +45,3 @@ struct curl_waitfd {
 <p> This function was added in libcurl 7.28.0.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_fdset/">curl_multi_fdset</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_perform/">curl_multi_perform</a></code>(3) </p>
-<h2>Index</h2>

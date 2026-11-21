@@ -59,4 +59,3 @@ $ ssh-keyscan -t rsa,dsa,ecdsa,ed25519 -f ssh_hosts | \
 </dt><dd> 2006 <i>RFC 4255</i> <i>Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints</i></dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit An David Mazieres Aq Mt dm [at] lcs.mit.edu wrote the initial version, and An Wayne Davison Aq Mt wayned [at] users.sourceforge.net added support for protocol version 2. </p>
-<h2>Index</h2>

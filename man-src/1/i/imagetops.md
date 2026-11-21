@@ -43,4 +43,3 @@ The KDE project
 <p> Please use <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a> to report bugs. </p>
 <p> This manual page was written by Holger Hartmann &lt;Holger_Hartmann [at] gmx.de&gt; for the <code>Debian</code> Project (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On <code>Debian</code> systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>

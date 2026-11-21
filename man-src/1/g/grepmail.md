@@ -221,4 +221,3 @@ greater than, or greater than or equal to 12345<br />
 <p> David Coppit &lt;david [at] coppit.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i>elm</i>(1), <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1), <i><a href="/docs/linux/man/1-grep/">grep</a></i>(1), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>printmail</i>(1), <i>Mail::Internet</i>(3), <i><a href="/docs/linux/man/5-procmailrc/">procmailrc</a></i>(5). Crocker, D. H., Standard for the Format of Arpa Internet Text Messages, <font SIZE="-1">RFC</font> 822. </p>
-<h2>Index</h2>

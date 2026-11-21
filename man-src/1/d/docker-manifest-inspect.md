@@ -19,4 +19,3 @@ description: "docker-manifest-inspect – Display an image manifest, or manifest
 <p> <code>-v</code>, <code>&#8211;verbose</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Output additional info including layers and platform</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-manifest/">docker-manifest</a>(1)</code> </p>
-<h2>Index</h2>

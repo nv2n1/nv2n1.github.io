@@ -22,4 +22,3 @@ description: "asciitopgm – convert ASCII graphics into a portable graymap"
 <p> <a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Wilson H. Bent. Jr. (whb [at] usc.edu) </p>
-<h2>Index</h2>

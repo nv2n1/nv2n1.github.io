@@ -44,4 +44,3 @@ description: "glite-lb-mon-db – program for monitoring the number of jobs in t
 <p> <code><a href="/docs/linux/man/1-glite-lb-mon/">glite-lb-mon</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE JRA1, CESNET group. </p>
-<h2>Index</h2>

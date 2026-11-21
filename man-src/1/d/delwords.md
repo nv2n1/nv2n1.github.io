@@ -27,4 +27,3 @@ description: "delwords – Deleting words from specified dictionary collectively
   % catdic mydic | delwords mydic
 </pre>
 <p> Clears the contents of <i>mydic</i>. </p>
-<h2>Index</h2>

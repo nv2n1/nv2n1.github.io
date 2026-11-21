@@ -19,4 +19,3 @@ description: "djvuextract – Extract chunks from DjVu image files."
 <p> This program was written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was then improved by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt;, Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvumake/">djvumake</a></code>(1) </p>
-<h2>Index</h2>

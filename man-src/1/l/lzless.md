@@ -24,4 +24,3 @@ description: "xzless, lzless – view xz or lzma compressed (text) files"
 <dd> Set to a command line to invoke the <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) decompressor for preprocessing the input files to <code><a href="/docs/linux/man/1-less/">less</a></code>(1).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-less/">less</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-xzmore/">xzmore</a></code>(1), <code><a href="/docs/linux/man/1-zless/">zless</a></code>(1) </p>
-<h2>Index</h2>

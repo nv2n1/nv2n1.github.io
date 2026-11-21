@@ -24,4 +24,3 @@ description: "gtorrentviewer – BitTorrent metainfo viewer/editor."
 <h2>AUTHOR</h2>
 <p> GTorrentViewer was written by Alejandro Claro &lt;ap0lly0n [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Alejandro Claro &lt;ap0lly0n [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "ql/time/date.hpp – date- and time-related classes, typedefs and 
 <p> date- and time-related classes, typedefs and enumerations </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

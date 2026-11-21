@@ -237,4 +237,3 @@ cmark_parser_free(parser);</dd>
 <p> The library version string for runtime checks. Also available as macro CMARK_VERSION_STRING for compile time checks. </p>
 <h2>AUTHORS</h2>
 <p> John MacFarlane, Vicent Marti, Kārlis Gaņģis, Nick Wellnhofer. </p>
-<h2>Index</h2>

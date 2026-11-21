@@ -43,4 +43,3 @@ description: "whereami-1.0 – displays work location"
 <p> Report bugs to &lt;pj.pandit [at] yahoo.co.in&gt; </p>
 <h2>AUTHOR</h2>
 <p> written by Prasad J Pandit </p>
-<h2>Index</h2>

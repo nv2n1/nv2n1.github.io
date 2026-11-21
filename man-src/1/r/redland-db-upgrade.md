@@ -20,4 +20,3 @@ description: "redland-db-upgrade – upgrade older Redland databases to 0.9.12 f
 <p> <code><a href="/docs/linux/man/3-redland/">redland</a></code>(3),</p>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://purl.org/net/dajobe/">http://purl.org/net/dajobe/</a> </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "ldb_dn_extended_syntax –"
 <p> ldb_attr_handler_t <code>write_hex_fn</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

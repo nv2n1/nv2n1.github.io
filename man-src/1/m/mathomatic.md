@@ -65,4 +65,3 @@ description: "mathomatic – a computer algebra system rmath – a computer alge
 <p> The command to take the limit of an expression is partially functional and experimental. All else should work perfectly; if not, report it as a bug on the Launchpad website: &quot;<a rel="nofollow" href="http://launchpad.net/mathomatic">http://launchpad.net/mathomatic</a>&quot;. Please include version information, which you can find by running <code>mathomatic -v</code> or by entering the version command. </p>
 <h2>AUTHOR</h2>
 <p> Mathomatic has been written by George Gesslein II (gesslein [at] linux.com) with help from John Blommers (<a rel="nofollow" href="http://www.blommers.org">www.blommers.org</a>). It is free software, available under the terms and conditions of the GNU Lesser General Public License from &quot;<a rel="nofollow" href="http://mathomatic.org">http://mathomatic.org</a>&quot;. </p>
-<h2>Index</h2>

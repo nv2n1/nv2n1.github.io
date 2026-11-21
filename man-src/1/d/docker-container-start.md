@@ -22,4 +22,3 @@ description: "docker-container-start – Start one or more stopped containers"
 <p> <code>-i</code>, <code>&#8211;interactive</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Attach container&#8217;s STDIN</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

@@ -54,4 +54,3 @@ description: "indxbib – make inverted index for bibliographic databases"
 <dd> Temporary file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), <code><a href="/docs/linux/man/1-lkbib/">lkbib</a></code>(1), <code><a href="/docs/linux/man/1-lookbib/">lookbib</a></code>(1) </p>
-<h2>Index</h2>

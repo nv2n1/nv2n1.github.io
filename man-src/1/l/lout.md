@@ -99,4 +99,3 @@ Default locales directory:        <i>LOUTLIB</i>/locale
 <p> Jeffrey H. Kingston, <i>&#8220;A User&#8217;s Guide to the Lout Document Formatting System&#8221;</i>, and <i>&#8220;An Expert&#8217;s Guide to the Lout Document Formatting System&#8221;</i>.</p>
 <h2>AUTHOR</h2>
 <p> Jeffrey H. Kingston </p>
-<h2>Index</h2>

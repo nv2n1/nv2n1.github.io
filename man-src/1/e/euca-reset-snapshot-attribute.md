@@ -43,4 +43,3 @@ description: "euca-reset-snapshot-attribute – Reset an attribute of a snapshot
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

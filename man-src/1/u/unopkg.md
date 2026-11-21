@@ -56,4 +56,3 @@ description: "unopkg – LibreOffice Extension Manager"
 <p> <code><a rel="nofollow" href="http://www.documentfoundation.org/">http://www.documentfoundation.org/</a></code></p>
 <h2>AUTHOR</h2>
 <p> This manual page was created by Petr Mladek &lt;pmladek [at] suse.cz&gt;. </p>
-<h2>Index</h2>

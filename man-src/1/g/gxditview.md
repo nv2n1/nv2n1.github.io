@@ -143,4 +143,3 @@ SS      -adobe-symbol-medium-r-normal--*-100-*-*-*-*-adobe-fontspecific
 <p> <code><a href="/docs/linux/man/7-x/">X</a></code>(7), <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1), <code><a href="/docs/linux/man/1-xditview/">xditview</a></code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5)</p>
 <h2>ORIGIN</h2>
 <p> This program is derived from <code>xditview</code>; portions of <code>xditview</code> originated in <code>xtroff</code> which was derived from <code>suntroff</code>. </p>
-<h2>Index</h2>

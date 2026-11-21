@@ -581,4 +581,3 @@ tshark - o tcp.desegment_tcp_streams : FALSE - n - q - r smb_reads.cap - z io, s
 <p> <font SIZE="-1">HTML</font> versions of the Wireshark project man pages are available at: &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages">http://www.wireshark.org/docs/man-pages</a>&gt;.</p>
 <h2>AUTHORS</h2>
 <p> <code>TShark</code> uses the same packet dissection code that <code>Wireshark</code> does, as well as using many other modules from <code>Wireshark</code>; see the list of authors in the <code>Wireshark</code> man page for a list of authors of that code. </p>
-<h2>Index</h2>

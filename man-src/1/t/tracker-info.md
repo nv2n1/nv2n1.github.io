@@ -43,4 +43,3 @@ description: "tracker-info – Retrieve all information available for a certain 
 </dd><dt><code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

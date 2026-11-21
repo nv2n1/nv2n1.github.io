@@ -34,4 +34,3 @@ stg uncommit[--]&lt;patch - name - 1&gt;[&lt;patch - name - 2&gt;...] stg uncomm
 </dt><dd> Exclude the commit specified by the &#8211;to option.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

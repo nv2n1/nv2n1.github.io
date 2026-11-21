@@ -32,4 +32,3 @@ description: "Gigolo — a simple frontend to easily connect to remote filesyste
 <p> Gigolo supports all generic GTK options, a list is available on the help screen.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Enrico Troeger. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2. A copy of this license can be found in the file COPYING included with the source code of this program. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "get_config_text – Returns a string translated to the current lan
 <p> Returns a suitable translation if one can be found or a copy of the parameter if nothing else is available. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_config_string/">get_config_string</a></code>(3), <code><a href="/docs/linux/man/3-reload_config_texts/">reload_config_texts</a></code>(3) </p>
-<h2>Index</h2>

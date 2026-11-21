@@ -69,4 +69,3 @@ gdaltindex -t_srs EPSG:4326 -src_srs_name src_srs tile_index_mixed_srs.shp *.tif
 </pre>
 <h2>AUTHOR</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

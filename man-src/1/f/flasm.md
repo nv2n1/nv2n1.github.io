@@ -51,4 +51,3 @@ description: "flasm – A swf bytecode assembler/disassembler"
 <p> Copyright (c) 2001 Opaque Industries<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>(c)&nbsp;<wbr>2002-2004 Igor Kogan </p>
 <p> All rights reserved. See <font SIZE="-1">LICENSE</font>.TXT for terms of use. </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ construction vtable for KMainWindow-in-Kolf
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

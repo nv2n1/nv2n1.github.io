@@ -215,4 +215,3 @@ void OVclose(void);
 <p> <tt>$Id:</tt> libstorage.pod 9074 2010-05-31 19:01:32Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-expire/">expire</a></i>(8), <i>fastrm</i>(8), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). </p>
-<h2>Index</h2>

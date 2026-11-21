@@ -45,4 +45,3 @@ description: "t1asm – assemble PostScript Type 1 font"
 <h2>AUTHORS</h2>
 <p> Lee Hetherington (ilh [at] lcs.mit.edu)<br />
  Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ $ afslog /afs/openafs.org/some/file
 </blockquote>
 <h2>SEE ALSO</h2>
 <p> krb_afslog3 </p>
-<h2>Index</h2>

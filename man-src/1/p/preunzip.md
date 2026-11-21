@@ -41,4 +41,3 @@ description: "prezip, preunzip, precat – prefix delta compressor for Aspell"
 <dd> suppress all warnings</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Brian Nelson &lt;pyro [at] debian.org&gt; based on the output of help2man. Aspell is Copyright &#169; 2002 Kevin Atkinson. </p>
-<h2>Index</h2>

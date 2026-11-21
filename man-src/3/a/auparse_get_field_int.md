@@ -20,4 +20,3 @@ description: "auparse_get_field_int – get current field’s value as an int"
 <p> <code><a href="/docs/linux/man/3-auparse_get_field_str/">auparse_get_field_str</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

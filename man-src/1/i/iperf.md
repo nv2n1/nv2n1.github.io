@@ -106,4 +106,3 @@ description: "iperf – perform network throughput tests"
 <p> Iperf was originally written by Mark Gates and Alex Warshavsky. Man page and maintence by Jon Dugan &lt;jdugan at x1024 dot net&gt;. Other contributions from Ajay Tirumala, Jim Ferguson, Feng Qin, Kevin Gibbs, John Estabrook &lt;jestabro at ncsa.uiuc.edu&gt;, Andrew Gallatin &lt;gallatin at gmail.com&gt;, Stephen Hemminger &lt;shemminger at linux-foundation.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://iperf.sourceforge.net/">http://iperf.sourceforge.net/</a> </p>
-<h2>Index</h2>

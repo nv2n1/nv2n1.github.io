@@ -25,4 +25,3 @@ description: "t1lint – check a PostScript Type 1 font for correctness"
 <p> <i>Adobe Type 1 Font Format</i></p>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

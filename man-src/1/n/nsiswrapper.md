@@ -102,4 +102,3 @@ nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / 
 <p> Note that since this string will contain backslashes and spaces, you should single-quote it to protect it from the shell. </p>
 <p> This is the same as the <tt>&quot;InstallDirRegKey&quot;</tt> option to <font SIZE="-1">NSIS</font>. </p>
 </dl>
-<h2>Index</h2>

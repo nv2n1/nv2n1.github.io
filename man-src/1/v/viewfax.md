@@ -134,4 +134,3 @@ description: "viewfax – display fax files in an X11 window"
  The program does not refer to the X resources database.</p>
 <h2>AUTHOR</h2>
 <p> Frank D. Cringle (fdc [at] cliwe.ping.de). </p>
-<h2>Index</h2>

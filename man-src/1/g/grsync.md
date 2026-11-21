@@ -22,4 +22,3 @@ description: "GRSYNC – GTK+ frontend for rsync"
 <h2>AUTHOR</h2>
 <p> GRSYNC was written by Piero Orsoni &lt;info [at] opbyte.it&gt;. </p>
 <p> This manual page was written by Daniel Baumann &lt;daniel.baumann [at] panthera-systems.net&gt;, for the Debian project (but may be used by others). Updated by Piero Orsoni. </p>
-<h2>Index</h2>

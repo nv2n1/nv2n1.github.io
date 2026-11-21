@@ -44,4 +44,3 @@ description: "clambc – Bytecode Analysis and Testing Tool"
 <p> Clam AntiVirus Bytecode Analysis and Testing Tool 0.98 By The ClamAV Team: <a rel="nofollow" href="http://www.clamav.net/about.html#credits">http://www.clamav.net/about.html#credits</a> </p>
 <p> (C) 2009-2013 Sourcefire, Inc. </p>
 <p> (C) 2014 Cisco Systems, Inc. All Rights Reserved </p>
-<h2>Index</h2>

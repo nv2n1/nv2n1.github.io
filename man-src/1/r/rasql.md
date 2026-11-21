@@ -33,4 +33,3 @@ description: "rasql – read argus(8) data from mysql database."
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

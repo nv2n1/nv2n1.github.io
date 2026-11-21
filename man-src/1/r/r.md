@@ -71,4 +71,3 @@ description: "r.what.color – Queries colors for a raster map layer."
 <p> Glynn Clements </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

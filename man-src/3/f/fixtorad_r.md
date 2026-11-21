@@ -23,4 +23,3 @@ rad_angle = fixmul(binary_angle, fixtorad_r);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fixmul/">fixmul</a></code>(3), <code>radtofix_r</code>(3) </p>
-<h2>Index</h2>

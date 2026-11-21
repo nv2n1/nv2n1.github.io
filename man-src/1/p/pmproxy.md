@@ -75,4 +75,3 @@ description: "pmproxy – proxy for performance metrics collector daemon"
 <h2>DIAGNOSTICS</h2>
 <p> If <code>pmproxy</code> is already running the message &quot;Error: OpenRequestSocket bind: Address already in use&quot; will appear. This may also appear if <code>pmproxy</code> was shutdown with an outstanding request from a client. In this case, a request socket has been left in the TIME_WAIT state and until the system closes it down (after some timeout period) it will not be possible to run <code>pmproxy</code>. </p>
 <p> In addition to the standard <code>PCP</code> debugging flags, see <code><a href="/docs/linux/man/1-pmdbg/">pmdbg</a></code>(1), <code>pmproxy</code> currently uses <code>DBG_TRACE_CONTEXT</code> for tracing client connections and disconnections </p>
-<h2>Index</h2>

@@ -395,4 +395,3 @@ SystemDictionary&gt;&gt;getSystemAttribute:
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://squeak.hpl.hp.com/~piumarta/squeak">http://squeak.hpl.hp.com/~piumarta/squeak</a></code></dd></dl>
-<h2>Index</h2>

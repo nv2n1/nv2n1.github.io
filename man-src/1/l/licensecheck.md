@@ -46,4 +46,3 @@ description: "licensecheck – simple license checker for source files"
 <p> This code is copyright by Adam D. Barratt &lt;<i>adam [at] adam-barratt.org.uk</i>&gt;, all rights reserved; based on a script of the same name from the <font SIZE="-1">KDE SDK,</font> which is copyright by &lt;<i>dfaure [at] kde.org</i>&gt;. This program comes with <font SIZE="-1">ABSOLUTELY NO WARRANTY.</font> You are free to redistribute this code under the terms of the <font SIZE="-1">GNU</font> General Public License, version 2 or later.</p>
 <h2>AUTHOR</h2>
 <p> Adam D. Barratt &lt;adam [at] adam-barratt.org.uk&gt; </p>
-<h2>Index</h2>

@@ -84,4 +84,3 @@ description: "ipa-restore – Restore an IPA master"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ipa-backup/">ipa-backup</a>(1). </p>
-<h2>Index</h2>

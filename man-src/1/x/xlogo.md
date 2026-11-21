@@ -49,4 +49,3 @@ XLogo  xlogo
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> Ollie Jones of Apollo Computer and Jim Fulton of the MIT X Consortium wrote the logo graphics routine, based on a graphic design by Danny Chong and Ross Chapman of Apollo Computer. </p>
-<h2>Index</h2>

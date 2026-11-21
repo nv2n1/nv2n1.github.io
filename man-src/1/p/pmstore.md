@@ -42,4 +42,3 @@ description: "pmstore – modify performance metric values"
 <p> Two messages indicate a mismatch between the internal data type for <i>metricname</i> and the <i>value</i> provided. </p>
 <p> The value &quot;???&quot; is out of range for the data type (PM_TYPE_&#8230;) </p>
 <p> The value &quot;???&quot; is incompatible with the data type (PM_TYPE_&#8230;) </p>
-<h2>Index</h2>

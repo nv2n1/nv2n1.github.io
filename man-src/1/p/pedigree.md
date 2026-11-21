@@ -38,4 +38,3 @@ description: "pedigree – create a TeX file for pedigree from a csv file"
 <p> The library functions are described in <code>Pedigree::Language</code>(3), <code>Pedigree::Parser</code>(3), <code>Pedigree::Node</code>(3), <code>Pedigree::PersonNode</code>(3), <code>Pedigree::MarriageNode</code>(3), <code>Pedigree::Area</code>(3).</p>
 <h2>AUTHOR</h2>
 <p> Boris Veytsman, Leila Akhmadeeva, 2006-2021 </p>
-<h2>Index</h2>

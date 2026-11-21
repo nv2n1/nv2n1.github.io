@@ -38,4 +38,3 @@ description: "libssh2_knownhost_checkp – check a host+key against the list of 
 <p> See the ssh2_exec.c example as provided in the tarball.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_knownhost_init/">libssh2_knownhost_init</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_free/">libssh2_knownhost_free</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_add/">libssh2_knownhost_add</a>(3)</code> </p>
-<h2>Index</h2>

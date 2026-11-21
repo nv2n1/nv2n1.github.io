@@ -36,4 +36,3 @@ description: "grub-mkpasswd-pbkdf2 – generate hashed password for GRUB"
 <dt>
 </dt><dd> <code>info grub-mkpasswd-pbkdf2</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

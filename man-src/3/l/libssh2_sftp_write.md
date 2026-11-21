@@ -39,4 +39,3 @@ ssize_t libssh2_sftp_write(LIBSSH2_SFTP_HANDLE *handle,
 <p> <i>LIBSSH2_ERROR_SFTP_PROTOCOL</i> &#8211; An invalid SFTP protocol response was received on the socket, or an SFTP operation caused an errorcode to be returned by the server.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

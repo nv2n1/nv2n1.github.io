@@ -166,4 +166,3 @@ description: "nano – Nano’s ANOther editor, inspired by Pico"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-nanorc/">nanorc</a></code>(5) </p>
 <p> <i>/usr/share/doc/nano/</i> (or equivalent on your system) </p>
-<h2>Index</h2>

@@ -123,4 +123,3 @@ description: "esmtp – libESMTP to Sendmail compatibility interface"
 <p> <a href="/docs/linux/man/5-esmtprc/">esmtprc</a>(5), <a href="/docs/linux/man/1-fetchmail/">fetchmail</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Jos&eacute; Fonseca </p>
-<h2>Index</h2>

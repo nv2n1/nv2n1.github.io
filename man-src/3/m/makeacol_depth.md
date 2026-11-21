@@ -19,4 +19,3 @@ description: "makeacol, makeacol_depth – Converts RGBA colors into display dep
 <p> Returns the requested RGBA quadruplet. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-makecol_depth/">makecol_depth</a></code>(3), <code><a href="/docs/linux/man/3-set_alpha_blender/">set_alpha_blender</a></code>(3), <code><a href="/docs/linux/man/3-set_write_alpha_blender/">set_write_alpha_blender</a></code>(3) </p>
-<h2>Index</h2>

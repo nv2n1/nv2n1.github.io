@@ -35,4 +35,3 @@ description: "dpkg-distaddfile – add entries to debian/files"
 <dd> The list of generated files which are part of the upload being prepared. <code>dpkg-distaddfile</code> can be used to add additional files.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-src-files/">deb-src-files</a></code>(5). </p>
-<h2>Index</h2>

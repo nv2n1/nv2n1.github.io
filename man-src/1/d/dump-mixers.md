@@ -15,4 +15,3 @@ description: "dump-mixers – dump OSS mixer settings to standard output"
 <p> <code>dump-mixers</code> just does what the name suggests: it dumps the current (oss) mixer settings to stdout.</p>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt; </p>
-<h2>Index</h2>

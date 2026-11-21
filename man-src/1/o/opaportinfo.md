@@ -46,4 +46,3 @@ description: "opaportinfo"
  opaportinfo -p 2 -h 2 -l 5 -m 18</p>
 <h2>Description</h2>
 <p> To access switch ports using this command, the -l and -m options must be given. The -l option specifies the LID of switch port 0 (the logical management port for the switch) and -m specifies the actual switch port to access. If SMA mkeys are used, the -K option is also needed. However, the Intel(R) Omni-Path Fabric Suite Fabric Manager does not use SMA mkeys by default, therefore this option may not be required. </p>
-<h2>Index</h2>

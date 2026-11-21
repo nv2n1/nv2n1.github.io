@@ -36,4 +36,3 @@ int libssh2_userauth_publickey_fromfile_ex(LIBSSH2_SESSION *session,
 <p> <i>LIBSSH2_ERROR_AUTHENTICATION_FAILED</i> &#8211; Authentication using the supplied public key was not accepted. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

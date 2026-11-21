@@ -29,4 +29,3 @@ description: "generate_randfile – a program to generate a file of random data"
 <h2>AVAILABILITY</h2>
 <p> The source is available from <a rel="nofollow" href="http://www.coker.com.au/bonnie++">http://www.coker.com.au/bonnie++</a> . </p>
 <p> See <a rel="nofollow" href="http://etbe.coker.com.au/category/benchmark">http://etbe.coker.com.au/category/benchmark</a> for further information. </p>
-<h2>Index</h2>

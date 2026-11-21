@@ -24,4 +24,3 @@ ares_inet_ntop(int af, const void *src, char *dst, ares_socklen_t size);
 <p> made properly publicly available in c-ares for real in version 1.10.0</p>
 <h2>AUTHOR</h2>
 <p> Daniel Stenberg </p>
-<h2>Index</h2>

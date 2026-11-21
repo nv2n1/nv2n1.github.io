@@ -164,4 +164,3 @@ slsh_append_semicolon(1);<br />
 <p> This manual page was originally written by Rafael Laboissiere for the Debian system (but may be used by others). </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in <i>/usr/share/common-licenses/GPL</i> </p>
-<h2>Index</h2>

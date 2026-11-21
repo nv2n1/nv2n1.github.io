@@ -250,4 +250,3 @@ pterm.Colour21: 255,255,255
 <dd> This option should be set to either 0 or 1; the default is 1. When set to 1, <code>pterm</code> will execute your shell as a login shell. This resource is equivalent to the <code>-ls</code> command-line option.</dd></dl>
 <h2>BUGS</h2>
 <p> Most of the X resources have silly names. (Historical reasons from PuTTY, mostly.) </p>
-<h2>Index</h2>

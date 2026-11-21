@@ -99,4 +99,3 @@ description: "pure – the Pure interpreter"
 <p> Albert Graef &lt;Dr.Graef [at] t-online.de&gt;, Dept. of Computer Music, Johannes Gutenberg University of Mainz, Germany.</p>
 <h2>SEE ALSO</h2>
 <p> You can find the latest releases and the mailing list at the Pure website, <i><a rel="nofollow" href="http://pure-lang.googlecode.com">http://pure-lang.googlecode.com</a></i>. </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "happrox – returns a simplified triangulation of a set of points 
 <h2>AUTHOR</h2>
 <p> happrox was written by Stephane Popinet &lt;popinet [at] users.sourceforge.net&gt;. </p>
 <p> This manual page was written by Ruben Molina &lt;rmolina [at] udea.edu.co&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

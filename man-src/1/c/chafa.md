@@ -128,4 +128,3 @@ description: "chafa – Character art facsimile generator"
 </dt><dd> Generate uncolored output using block and border symbols, but avoid the solid block symbol.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Hans Petter Jansson &lt;hpj [at] copyleft.no&gt;. </p>
-<h2>Index</h2>

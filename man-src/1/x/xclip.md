@@ -66,4 +66,3 @@ description: "xclip – command line interface to X selections (clipboard)"
 <p> Please report any bugs, problems, queries, experiences, etc. directly to the author. </p>
 <h2>AUTHORS</h2>
 <p> Kim Saunders &lt;kims [at] debian.org&gt; Peter Åstrand &lt;astrand [at] lysator.liu.se&gt; </p>
-<h2>Index</h2>

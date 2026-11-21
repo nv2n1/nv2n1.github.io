@@ -83,4 +83,3 @@ $ npm init -y
 <dd> npm help scope </dd>
 </dl>
 </dl>
-<h2>Index</h2>

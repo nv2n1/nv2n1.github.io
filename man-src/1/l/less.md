@@ -840,4 +840,3 @@ description: "less – opposite of more"
  Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a><br />
  For more information, see the less homepage at<br />
  <a rel="nofollow" href="https://greenwoodsoftware.com/less">https://greenwoodsoftware.com/less</a> </p>
-<h2>Index</h2>

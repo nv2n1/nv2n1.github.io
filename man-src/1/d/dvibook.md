@@ -23,4 +23,3 @@ description: "dvibook – rearrange pages in DVI file into signatures"
  <i>MC-TeX User&#8217;s Guide</i></p>
 <h2>BUGS</h2>
 <p> <i>Dvibook</i> does not adjust the parameters in the postamble; however, since these values are normally used only to size certain structures in the output conversion programs, and the parameters never need to be adjusted upward, this has not proven to be a problem. </p>
-<h2>Index</h2>

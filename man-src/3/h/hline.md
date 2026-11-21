@@ -17,4 +17,3 @@ description: "hline – Draws a horizontal line onto the bitmap. Allegro game pr
 <p> Note: hline() is implemented as an alias to another function. See ALLEGRO_NO_VHLINE_ALIAS in the `Differences between platforms&#8217; section for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-vline/">vline</a></code>(3), <code><a href="/docs/linux/man/3-line/">line</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-exsprite/">exsprite</a></code>(3) </p>
-<h2>Index</h2>

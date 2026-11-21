@@ -162,4 +162,3 @@ description: "httpie – CLI, cURL-like tool for humans"
 <h2>AUTHOR</h2>
 <p> httpie was written by Jakub Roztocil &lt;jakub [at] roztocil.name&gt;. </p>
 <p> This manual page was written for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

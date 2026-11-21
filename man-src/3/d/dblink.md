@@ -77,4 +77,3 @@ dblink_connect-- -- -- -- -- -- -- --OK(1 row)
 proname | prosrc-- -- -- -- -- --+-- -- -- -- -- --bytearecv | bytearecv byteasend | byteasend byteale | byteale byteagt | byteagt byteage | byteage byteane | byteane byteacmp | byteacmp bytealike | bytealike byteanlike | byteanlike byteacat | byteacat byteaeq | byteaeq bytealt | bytealt byteain | byteain byteaout | byteaout(14 rows)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

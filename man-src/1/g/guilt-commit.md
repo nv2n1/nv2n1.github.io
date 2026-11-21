@@ -35,4 +35,3 @@ description: "guilt-commit – Commit specified number of patches"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

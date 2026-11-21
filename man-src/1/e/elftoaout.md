@@ -33,4 +33,3 @@ description: "elftoaout – ELF to a.out convertor"
 <p> <code>elftoaout</code> is available for anonymous ftp from sunsite.mff.cuni.cz in /OS/Linux/Sparc/local/elftoaout/.</p>
 <h2>SEE ALSO</h2>
 <p> <code>silo</code>(8) </p>
-<h2>Index</h2>

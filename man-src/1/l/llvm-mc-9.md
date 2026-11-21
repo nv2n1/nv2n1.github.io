@@ -196,4 +196,3 @@ description: "llvm-mc – manual page for llvm-mc 9"
 <dt> <code>&#8211;help-list</code> &#8211; Display list of available options (<code>&#8211;help-list-hidden</code> for more)</dt>
 <dt> <code>&#8211;version</code> &#8211; Display the version of this program </dt>
 </dl>
-<h2>Index</h2>
