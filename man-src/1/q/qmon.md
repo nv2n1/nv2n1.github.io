@@ -132,16 +132,3 @@ Definition of <code>User</code> accounts.
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See and the information provided in &lt;xxqs_name_sxx_root&gt;/3rd_party/qmon for a statement of further rights and permissions and for credits to be given to public domain and freeware widget developers. </p>
-<h2>Index</h2>
-<dt><a href="#lbAV">RESOURCES</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">RESTRICTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">COPYRIGHT</a></dt>
-<dd></dd></dl>

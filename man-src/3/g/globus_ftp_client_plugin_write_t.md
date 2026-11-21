@@ -1457,8 +1457,6 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
 
  Generated automatically by Doxygen for globus_ftp_client from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbBS">Enumeration Type Documentation</a>

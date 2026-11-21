@@ -204,21 +204,3 @@ fully-qualified-names = no
 <dl>
 <dd> <p> <a rel="nofollow" href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/winbind.html">http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/winbind.html</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">CONFIGURATION FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">ACTIVE-DIRECTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SERVICE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">USERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">REALM SPECIFIC SETTINGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">NOTES</a></dt>
-<dd>  </dd></dl>

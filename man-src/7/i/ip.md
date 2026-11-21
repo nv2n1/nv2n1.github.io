@@ -426,33 +426,3 @@ description: "ip – Linux IPv4 protocol implementation"
 <p>RFC 791 for the original IP specification. RFC 1122 for the IPv4 host requirements. RFC 1812 for the IPv4 router requirements.  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Address format</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Socket options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">/proc interfaces</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Ioctls</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">ERRORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">NOTES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">Compatibility</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">COLOPHON</a></dt>
-<dd>  </dd></dl>

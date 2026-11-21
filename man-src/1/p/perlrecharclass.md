@@ -580,17 +580,3 @@ description: "perlrecharclass – Perl Regular Expression Character Classes"
 <p> matches upper case things. So just, compile the subcomponents, as illustrated above. </p>
 <p> Due to the way that Perl parses things, your parentheses and brackets may need to be balanced, even including comments. If you run into any examples, please send them to <code>&quot;perlbug [at] perl.org&quot;</code>, so that we can have a concrete example for this man page. </p>
 <p> We may change it so that things that remain legal uses in normal bracketed character classes might become illegal within this experimental construct. One proposal, for example, is to forbid adjacent uses of the same character, as in <code>&quot;(?[ [aa] ])&quot;</code>. The motivation for such a change is that this usage is likely a typo, as the second ``a&#8217;&#8216; adds nothing. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">The dot</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Backslash sequences</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Bracketed Character Classes</a></dt>
-<dd>  </dd></dl>
-</dl>

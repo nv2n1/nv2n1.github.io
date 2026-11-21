@@ -83,11 +83,3 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_BADMODE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the pattern was compiled in the wrong mode <br />
 &nbsp;<wbr>&nbsp;PCRE2_ERROR_UNSET&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the requested information is not set </p>
 <p>There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd></dl>

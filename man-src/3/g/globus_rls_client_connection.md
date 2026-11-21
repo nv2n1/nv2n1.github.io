@@ -78,6 +78,3 @@ description: "Connection Management –"
 </dt><dd> <i>seconds</i> Seconds to wait before timing out an IO operation. If 0 IO calls do not timeout. The default is 30 seconds.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAR">Author</a></dt>
-<dd></dd></dl>

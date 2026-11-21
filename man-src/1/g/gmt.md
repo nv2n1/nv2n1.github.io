@@ -1672,12 +1672,3 @@ description: "gmt – The Generic Mapping Tools data processing and display soft
 <p> Look up the individual man pages for more details and full syntax. Run <code>gmt &#8211;help</code> to list all GMT programs and to show all installation directories. For an explanation of the various GMT settings in this man page (like <i>FORMAT_FLOAT_OUT</i>), see the man page of the GMT configuration file <code>gmt.conf</code>. Information is also available on the GMT home page <i><a rel="nofollow" href="http://gmt.soest.hawaii.edu/">http://gmt.soest.hawaii.edu/</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">ASCII FORMAT PRECISION</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">GRID FILE FORMATS</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd></dd></dl>

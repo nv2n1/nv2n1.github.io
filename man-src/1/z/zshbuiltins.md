@@ -1404,9 +1404,3 @@ typeset var1 &amp;&amp; var1=$(exit 1) || echo &quot;Trouble with var1&quot;
 <dt><code>ztcp</code></dt>
 <dd> <p> See the section `The zsh/net/tcp Module&#8217; in <i><a href="/docs/linux/man/1-zshmodules/">zshmodules</a></i>(1). </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SHELL BUILTIN COMMANDS</a></dt>
-<dd>  </dd></dl>

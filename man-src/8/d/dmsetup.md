@@ -445,29 +445,3 @@ description: "dmsetup — low level logical volume management"
 <p> <code><a href="/docs/linux/man/8-dmstats/">dmstats</a></code>(8), <code><a href="/docs/linux/man/7-udev/">udev</a></code>(7), <code><a href="/docs/linux/man/8-udevadm/">udevadm</a></code>(8) </p>
 <p>LVM2 resource page: <a rel="nofollow" href="https://www.sourceware.org/lvm2/">https://www.sourceware.org/lvm2/</a> <br />
  Device-mapper resource page: <a rel="nofollow" href="http://sources.redhat.com/dm/">http://sources.redhat.com/dm/</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COMMANDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">TABLE FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">CONCISE FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd></dl>

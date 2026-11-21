@@ -252,22 +252,3 @@ description: "sss-certmap – SSSD Certificate Matching and Mapping Rules"
 <p>If the domain list is not empty users mapped to a given certificate are not only searched in the local domain but in the listed domains as well as long as they are know by SSSD. Domains not know to SSSD will be ignored.  </p>
 <h2>AUTHORS</h2>
 <p> <code>The SSSD upstream - <a rel="nofollow" href="https://pagure.io/SSSD/sssd/">https://pagure.io/SSSD/sssd/</a></code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">RULE COMPONENTS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">PRIORITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">MATCHING RULE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">MAPPING RULE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">DOMAIN LIST</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">AUTHORS</a></dt>
-<dd>  </dd></dl>

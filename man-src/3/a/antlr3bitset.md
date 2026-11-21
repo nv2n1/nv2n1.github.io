@@ -54,6 +54,3 @@ description: "include/antlr3bitset.h –"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>ANTLR3_BITSET_LIST</code>&quot;</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Author</a></dt>
-<dd></dd></dl>

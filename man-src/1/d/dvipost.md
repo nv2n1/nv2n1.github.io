@@ -137,24 +137,3 @@ description: "dvipost, pptex, pplatex – post processing of dvi files"
 <p> If the macro <code>\footnoterule</code> is redefined, it should start with the command <code>\dvipost{footnote}</code> for a correct handling of overstrike mode and change bars. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2002 Erich Fruehstueck </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Basics</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Change bars</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Overstrike mode</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Layout parameters</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

@@ -188,22 +188,3 @@ int pselect(int nfds, fd_set *readfds, fd_set *writefds,
 <p> For a tutorial with discussion and examples, see <code><a href="/docs/linux/man/2-select_tut/">select_tut</a></code>(2).</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">RETURN VALUE</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">ERRORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">VERSIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">CONFORMING TO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">COLOPHON</a></dt>
-<dd></dd></dl>

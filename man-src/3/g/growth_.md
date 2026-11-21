@@ -37,6 +37,3 @@ description: "QuantLib::BlackScholesCalculator – Black-Scholes 1973 calculator
 <p> Sensitivity to time to maturity per day (assuming 365 day in a year). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

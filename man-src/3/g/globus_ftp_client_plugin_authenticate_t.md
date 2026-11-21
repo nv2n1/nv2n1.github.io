@@ -855,10 +855,3 @@ description: "Plugins –"
  <i>when</i> Absolute time for when to restart the list. The current control and data connections will be stopped immediately. If this completes before <code>when</code>, then the restart will be delayed until that time. Otherwise, it will be immediately restarted.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBS">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCU">Author</a></dt>
-<dd></dd></dl>

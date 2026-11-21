@@ -314,30 +314,3 @@ eval{die bless[]};
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Deprecations</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">Configuration and Compilation</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Testing</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Platform Support</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">Internal Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">SEE ALSO</a></dt>
-<dd></dd></dl>

@@ -158,6 +158,3 @@ description: "src/antlr3debughandlers.c –"
 <p> Referenced by consumeHiddenToken(), consumeToken(), enterAlt(), enterDecision(), enterRule(), enterSubRule(), exitDecision(), exitRule(), and exitSubRule().</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBU">Author</a></dt>
-<dd></dd></dl>

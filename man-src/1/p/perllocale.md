@@ -858,8 +858,6 @@ print "\n";
 
  Jarkko Hietaniemi's original <i>perli18n.pod</i> heavily hacked by Dominic Dunlop, assisted by the perl5-porters. Prose worked over a bit by Tom Christiansen, and now maintained by Perl 5 porters. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAS">LOCALE CATEGORIES</a>

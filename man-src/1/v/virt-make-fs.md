@@ -127,16 +127,3 @@ virt - make - fs[--options] input.tar output.img virt - make - fs[--options] inp
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAH">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">BUGS</a></dt>
-<dd></dd></dl>

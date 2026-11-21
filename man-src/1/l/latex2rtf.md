@@ -126,21 +126,3 @@ description: "latex2rtf – Convert a LaTeX file to an RTF file"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-latex/">latex</a>(1), rtf2LaTeX2e(1), LaTeX User&#8217;s Guide &amp; Reference Manual by Leslie Lamport </p>
 <p> For complete, current documentation, refer to the Info file <code>latex2rtf.info,</code> the PDF file <code>latex2rtf.pdf</code> or the HTML file <code>latex2rtf.html</code> which are made from the TeXInfo source file <code>latex2rtf.texi.</code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNTAX</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">CONFIGURATION FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">CAUTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd></dl>

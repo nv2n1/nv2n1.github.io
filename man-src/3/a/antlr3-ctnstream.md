@@ -48,6 +48,3 @@ description: "ANTLR3_TREE_PARSER_struct –"
 <p> Pointer to any super class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

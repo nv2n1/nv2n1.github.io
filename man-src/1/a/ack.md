@@ -501,24 +501,3 @@ ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 <p> Copyright 2005-2013 Andy Lester. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the Artistic License v2.0. </p>
 <p> See <a rel="nofollow" href="http://www.perlfoundation.org/artistic_license_2_0">http://www.perlfoundation.org/artistic_license_2_0</a> or the <font SIZE="-1">LICENSE</font>.md file that comes with the ack distribution. </p>
-<h2>Index</h2>
-<dt><a href="#lbAU">TIPS</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">FAQ</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">ACKRC LOCATION SEMANTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">DIFFERENCES BETWEEN ACK 1.X AND ACK 2.X</a></dt>
-<dd>
-</dd><dt><a href="#lbBR">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBS">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBT">ENHANCEMENTS</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">SUPPORT</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">ACKNOWLEDGEMENTS</a></dt>
-<dd>
-</dd><dt><a href="#lbBW">COPYRIGHT &amp; LICENSE</a></dt>
-<dd></dd></dl>

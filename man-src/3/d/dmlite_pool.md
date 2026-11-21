@@ -24,6 +24,3 @@ description: "dmlite_pool –"
 <h3>char pool_type[<code>POOL_TYPE_MAX</code>]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

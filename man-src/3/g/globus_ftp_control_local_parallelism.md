@@ -340,6 +340,3 @@ description: "GridFTP Data Connections –"
  <i>data_info</i> An opaque structure that is passed into the enqueue function and contains reference count and state information. The same data_info pointer that is passed into the enqueue function must be used for this parameter.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_control from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBJ">Author</a></dt>
-<dd></dd></dl>

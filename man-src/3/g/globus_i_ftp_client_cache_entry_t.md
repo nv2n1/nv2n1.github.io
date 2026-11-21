@@ -27,6 +27,3 @@ description: "globus_i_ftp_client_cache_entry_t –"
 <p> URL which the user has requested to be cached. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

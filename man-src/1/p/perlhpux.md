@@ -507,8 +507,6 @@ HP - UX version Kernel Architecture End - of - factory support-- -- -- -- -- -- 
 
  With much assistance regarding shared libraries from Marc Sabatella. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAZ">nss_delete core dump from op/pwent or op/grent</a>

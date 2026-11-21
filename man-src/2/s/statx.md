@@ -258,16 +258,3 @@ int statx(int dirfd, const char *pathname, int flags,
 <p> <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-stat/">stat</a></code>(1), <code><a href="/docs/linux/man/2-access/">access</a></code>(2), <code><a href="/docs/linux/man/2-chmod/">chmod</a></code>(2), <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code><a href="/docs/linux/man/2-readlink/">readlink</a></code>(2), <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2), <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7), <code><a href="/docs/linux/man/7-symlink/">symlink</a></code>(7)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">RETURN VALUE</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">ERRORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">VERSIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">CONFORMING TO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">COLOPHON</a></dt>
-<dd></dd></dl>

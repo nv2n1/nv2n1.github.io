@@ -96,6 +96,3 @@ description: "Globus GSI Certificate Handling Utilities –"
 </dt><dd> GLOBUS_SUCCESS or an error captured in a globus_result_t</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_cert_utils from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

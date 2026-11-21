@@ -34,6 +34,3 @@ description: "One-time execution –"
 </dt><dd> On success, <code>globus_thread_once()</code> guarantees that the function pointed to by <i>init_routine</i> has run, and that subsequent calls to <code>globus_thread_once()</code> with the same value of <i>once</i> will not execute that function, and returns GLOBUS_SUCCESS. If an error occurs, <code>globus_thread_once()</code> returns an implementation-specific non-zero error value.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

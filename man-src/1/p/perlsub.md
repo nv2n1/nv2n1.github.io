@@ -1141,6 +1141,3 @@ ls &#8216;-l&#8217;;</p>
 <p> For further details on attribute lists and their manipulation, see attributes and Attribute::Handlers.</p>
 <h2>SEE ALSO</h2>
 <p> See &#8220;Function Templates&#8221; in perlref for more about references and closures. See perlxs if you&#8217;d like to learn about calling C subroutines from Perl. See perlembed if you&#8217;d like to learn about calling Perl subroutines from C. See perlmod to learn about bundling up your functions in separate files. See perlmodlib to learn what library modules come standard on your system. See perlootut to learn how to make object method calls. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">SEE ALSO</a></dt>
-<dd></dd></dl>

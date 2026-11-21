@@ -433,33 +433,3 @@ description: "rdiff-backup – local/remote mirror and incremental backup"
 <p> Feel free to ask me questions or send me bug reports, but you may want to see the web page, mentioned below, first. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-python/">python</a></code>(1), <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1), <code><a href="/docs/linux/man/1-rsync/">rsync</a></code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1). The main rdiff-backup web page is at <i><a rel="nofollow" href="http://rdiff-backup.nongnu.org/">http://rdiff-backup.nongnu.org/</a></i>. It has more information, links to the mailing list and CVS, etc. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RESTORING</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">TIME FORMATS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">REMOTE OPERATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">FILE SELECTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">USERS AND GROUPS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">STATISTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -31,8 +31,3 @@ description: "BrlAPI handles –"
 <p> Returns the size of an object of type brlapi_handle_t in bytes</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

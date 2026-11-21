@@ -512,6 +512,3 @@ description: "GridFTP Control Client –"
 </dt><dd> Any defined in RFC 959, 2228, 2389, draft-ietf-ftpext-mlst-10, or the <code>protocol extensions</code> document.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_control from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

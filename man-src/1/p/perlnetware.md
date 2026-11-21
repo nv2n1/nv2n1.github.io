@@ -139,8 +139,6 @@ url: "/docs/linux/man/1-perlnetware/"
 </dt><dd> Modified - 28 May 2002 
 </dd></dl>
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">INSTALL</a>

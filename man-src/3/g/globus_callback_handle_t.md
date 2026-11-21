@@ -72,8 +72,3 @@ description: "Globus Callback –"
 <dd> Attempt to retrieve info about a callback not in callers&#8217;s stack</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Author</a></dt>
-<dd></dd></dl>

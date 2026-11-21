@@ -92,19 +92,3 @@ description: "gpsctl – control the modes of a GPS"
 <p> <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/8-gpsdctl/">gpsdctl</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3), <code><a href="/docs/linux/man/3-libgpsd/">libgpsd</a></code>(3), <code><a href="/docs/linux/man/1-gpsprof/">gpsprof</a></code>(1), <code><a href="/docs/linux/man/1-gpsfake/">gpsfake</a></code>(1).  </p>
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>  </dd></dl>

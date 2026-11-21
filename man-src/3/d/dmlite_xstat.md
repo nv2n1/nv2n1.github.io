@@ -37,6 +37,3 @@ description: "dmlite_xstat –"
 <h3>enum <code>dmlite_file_status</code> status</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Author</a></dt>
-<dd></dd></dl>

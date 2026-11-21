@@ -1343,8 +1343,6 @@ tests:
 
  Chris Dent 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAG">FIXTURES</a>

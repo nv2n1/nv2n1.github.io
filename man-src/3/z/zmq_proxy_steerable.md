@@ -57,19 +57,3 @@ SEE ALSO
 <p> <code><a href="/docs/linux/man/3-zmq_proxy/">zmq_proxy</a></code>(3) <code><a href="/docs/linux/man/3-zmq_bind/">zmq_bind</a></code>(3) <code><a href="/docs/linux/man/3-zmq_connect/">zmq_connect</a></code>(3) <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)  </p>
 <h2>AUTHORS</h2>
 <p>This page was written by the 0MQ community. To make a change please read the 0MQ Contribution Policy at m[blue]<code><a rel="nofollow" href="http://www.zeromq.org/docs:contributing">http://www.zeromq.org/docs:contributing</a></code>m[]. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">EXAMPLE USAGE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHORS</a></dt>
-<dd>  </dd></dl>

@@ -76,6 +76,3 @@ git reflog[show][log - options][&lt;ref&gt;] git reflog expire[--expire = &lt;ti
 <p> <code>git reflog delete</code> accepts options <code>&#8211;updateref</code>, <code>&#8211;rewrite</code>, <code>-n</code>, <code>&#8211;dry-run</code>, and <code>&#8211;verbose</code>, with the same meanings as when they are used with <code>expire</code>.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">GIT</a></dt>
-<dd></dd></dl>

@@ -41,6 +41,3 @@ description: "ANTLR3_PARSE_TREE_struct –"
 <p> Return the string representation of the payload (must be installed when the payload is added and point to a function that knwos how to manifest a pANTLR3_STRING from a node. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

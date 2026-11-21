@@ -79,23 +79,3 @@ description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – fo
 <p> <code><a href="/docs/linux/man/3-fprintf/">fprintf</a></code>(3), <code><a href="/docs/linux/man/3-fputwc/">fputwc</a></code>(3), <code><a href="/docs/linux/man/3-fwide/">fwide</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/3-snprintf/">snprintf</a></code>(3)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ATTRIBUTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CONFORMING TO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">COLOPHON</a></dt>
-<dd>  </dd></dl>

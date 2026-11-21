@@ -93,10 +93,3 @@ either version 2 of the License, or
 if
 not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 - 1307 USA
 </code></pre>
-<h2>Index</h2>
-<dt><a href="#lbAE">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAG">COPYRIGHT</a></dt>
-<dd></dd></dl>

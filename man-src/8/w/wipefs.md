@@ -105,25 +105,3 @@ description: "wipefs – wipe a signature from a device"
 <p>For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.  </p>
 <h2>AVAILABILITY</h2>
 <p>The <code>wipefs</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AVAILABILITY</a></dt>
-<dd>  </dd></dl>

@@ -42,6 +42,3 @@ description: "globus_rls_attribute_t –"
 <p> Value of attribute (depends on type). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

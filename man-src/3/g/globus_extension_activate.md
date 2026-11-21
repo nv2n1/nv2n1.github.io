@@ -63,8 +63,3 @@ description: "globus_extension.h –"
 <p> hopefully in the future, these functions will only be needed by generated code</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

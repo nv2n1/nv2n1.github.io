@@ -791,8 +791,6 @@ rrdtool graph seconds1.png-- start 920804700 --end 920806200 --height 200 --uppe
 
  Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAY">WRAPUP</a>

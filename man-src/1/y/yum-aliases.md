@@ -45,19 +45,3 @@ description: "yum aliases plugin"
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-yum-utils/">yum-utils</a>(1)</code> <code>yum(1)</code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Explanation of alias to final result conversion</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd></dl>

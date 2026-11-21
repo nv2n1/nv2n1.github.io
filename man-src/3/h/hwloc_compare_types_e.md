@@ -113,10 +113,3 @@ description: "hwlocality_object_types – Object Types"
 <p> This does not mean that the actual topology will respect that order: e.g. as of today cores may also contain caches, and packages may also contain nodes. This is thus just to be seen as a fallback comparison method.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

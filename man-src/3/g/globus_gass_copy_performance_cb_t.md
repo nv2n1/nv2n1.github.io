@@ -403,10 +403,3 @@ globus_module_deactivate(GLOBUS_GASS_COPY_MODULE)
 </dt><dd> This function returns GLOBUS_SUCCESS if successful, or a globus_result_t indicating the error that occurred.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_copy from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">Author</a></dt>
-<dd></dd></dl>

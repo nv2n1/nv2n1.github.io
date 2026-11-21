@@ -309,23 +309,3 @@ url: "/docs/linux/man/8-debugfs/"
 <p> <code>debugfs</code> was written by Theodore Ts&#8217;o &lt;tytso [at] mit.edu&gt;.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-dumpe2fs/">dumpe2fs</a></code>(8), <code><a href="/docs/linux/man/8-tune2fs/">tune2fs</a></code>(8), <code><a href="/docs/linux/man/8-e2fsck/">e2fsck</a></code>(8), <code><a href="/docs/linux/man/8-mke2fs/">mke2fs</a></code>(8), <code><a href="/docs/linux/man/5-ext4/">ext4</a></code>(5) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SPECIFYING FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COMMANDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd></dl>

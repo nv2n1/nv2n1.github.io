@@ -101,6 +101,3 @@ description: "globus_gram_protocol.h – GRAM Protocol API."
 </dt><dd> <i>A</i> new GRAM5 extension structure, or NULL if a malloc error occurred.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

@@ -395,24 +395,3 @@ Name Type Size Parent / dev / sda1 partition 101M / dev / sda / dev / sda2 parti
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAL">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">MACHINE READABLE OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">ALTERNATIVE TOOLS</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">BUGS</a></dt>
-<dd></dd></dl>

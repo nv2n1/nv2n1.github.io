@@ -24,6 +24,3 @@ description: "globus_rls_string2_t –"
 <p> Second string in pair (eg PFN or LRC). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

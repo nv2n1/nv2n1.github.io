@@ -140,6 +140,3 @@ description: "ANTLR3_STRING_struct –"
 <p> Referenced by serializeNode(), serializeToken(), stringInit16(), and stringInit8(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBG">Author</a></dt>
-<dd></dd></dl>

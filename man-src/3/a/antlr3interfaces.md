@@ -112,6 +112,3 @@ description: "include/antlr3interfaces.h –"
 <p> Pointer to an instantiation of &#8216;class&#8217; <code>ANTLR3_TOPO</code>.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

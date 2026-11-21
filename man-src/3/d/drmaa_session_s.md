@@ -67,6 +67,3 @@ description: "drmaa_session_s –"
 <p>&nbsp;<wbr>and&nbsp;<wbr><code>next_time_label</code>.&nbsp;<wbr> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

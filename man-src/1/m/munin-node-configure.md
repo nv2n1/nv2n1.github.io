@@ -107,14 +107,3 @@ description: "munin-node-configure – View and modify which plugins are enabled
 <p> Copyright (C) 2009-2010 Matthew Boyle </p>
 <p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
 <p> This program is released under the <font SIZE="-1">GNU</font> General Public License </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">VERSION</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">COPYRIGHT</a></dt>
-<dd></dd></dl>

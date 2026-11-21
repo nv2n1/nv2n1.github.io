@@ -43,21 +43,3 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_verify/"
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> <p> </code> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">ARGUMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RETURNS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -169,6 +169,3 @@ exit(n) my_exit(n)
 <p> For <tt>&quot;signal&quot;</tt>/<tt>&quot;sigaction&quot;</tt>, use <tt>&quot;rsignal(signo, handler)&quot;</tt>.</p>
 <h2>SEE ALSO</h2>
 <p> perlapi, perlapio, perlguts </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd></dd></dl>

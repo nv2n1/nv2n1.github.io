@@ -647,8 +647,3 @@ description: "Types and Defines fore BrlAPI Key Codes –"
 <h3>typedef uint64_t <code>brlapi_keyCode_t</code></h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbHZ">Typedef Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbIB">Author</a></dt>
-<dd></dd></dl>

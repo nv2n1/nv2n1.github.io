@@ -272,32 +272,3 @@ pltotf ptmup8y
 <dl>
 <dd> <p> <a rel="nofollow" href="http://www.tug.org/TUGboat/">http://www.tug.org/TUGboat/</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">MAPFILE ENTRIES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXTRA LIGKERN INFO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">LETTERSPACING AND EXTRA LIGKERN INFO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">FONT-BASED UPPER- AND LOWERCASING</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">The sz ligature &szlig;</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">AFM2PL, FONTINST AND ARTIFICIAL SMALLCAPS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">CHANGED IN VERSION 0.7.1</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">URLS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">NOTES</a></dt>
-<dd>  </dd></dl>

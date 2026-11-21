@@ -314,34 +314,3 @@ description: "tput, reset – initialize a terminal or query terminfo database"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-clear/">clear</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/1-tabs/">tabs</a></code>(1), <code><a href="/docs/linux/man/1-tset/">tset</a></code>(1), <code>termcap</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5). </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Options</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Aliases</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Terminal Size</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXIT CODES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">PORTABILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>  </dd></dl>

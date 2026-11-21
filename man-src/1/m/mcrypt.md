@@ -139,25 +139,3 @@ description: "mcrypt, mdecrypt – encrypt or decrypt files"
 <h2>AUTHORS</h2>
 <p> Version 2.6.0 Copyright (C) 1998,1999,2000,2001,2002 Nikos Mavroyanopoulos (nmav [at] gnutls.org). </p>
 <p> Thanks to all the people who reported problems and suggested various improvements for mcrypt; who are too numerous to cite here. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">HINTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>  </dd></dl>

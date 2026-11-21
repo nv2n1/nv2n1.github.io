@@ -1037,20 +1037,3 @@ virt - builder fedora - 20 --edit '/etc/yum.repos.d/fedora.repo: s{.*baseurl =.*
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbBI">MACHINE READABLE OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBN">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBO">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbBP">BUGS</a></dt>
-<dd></dd></dl>

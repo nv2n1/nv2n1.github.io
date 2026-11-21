@@ -28,6 +28,3 @@ description: "include/antlr3recognizersharedstate.h –"
 <p> All the data elements required to track the current state of any recognizer (lexer, parser, tree parser). May be share between multiple recognizers such that grammar inheritance is easily supported.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

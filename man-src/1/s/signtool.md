@@ -449,29 +449,3 @@ token: Communicator Certificate DB
 <dl>
 <dd> <p> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">THE COMMAND FILE FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXTENDED EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">ADDITIONAL RESOURCES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">LICENSE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">NOTES</a></dt>
-<dd>  </dd></dl>

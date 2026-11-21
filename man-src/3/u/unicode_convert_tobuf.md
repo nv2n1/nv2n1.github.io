@@ -75,24 +75,3 @@ description: "unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init
 <dl>
 <dd> <p> <a rel="nofollow" href="http://manpages.courier-mta.org/htmlman3/iconv.3.html">http://manpages.courier-mta.org/htmlman3/iconv.3.html</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Collecting converted text into a buffer</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Converting between character sets and unicode</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">One-shot conversions</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">NOTES</a></dt>
-<dd>  </dd></dl>

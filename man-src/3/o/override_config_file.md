@@ -33,13 +33,3 @@ description: "override_config_file – Specifies a file containing config overri
 <p>Note that this function and override_config_data() are mutually exclusive, i.e. calling one will cancel the effects of the other. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-override_config_data/">override_config_data</a></code>(3), <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd></dl>

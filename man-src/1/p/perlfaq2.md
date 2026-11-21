@@ -162,8 +162,6 @@ url: "/docs/linux/man/1-perlfaq2/"
 
  Irrespective of its distribution, all code examples here are in the public domain. You are permitted and encouraged to use this code and any derivatives thereof in your own programs for fun or for profit as you see fit. A simple comment in the code giving credit to the <font SIZE="-1">FAQ</font> would be courteous but is not required. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAT">AUTHOR AND COPYRIGHT</a>

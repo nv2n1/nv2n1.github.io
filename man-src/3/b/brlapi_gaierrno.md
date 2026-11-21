@@ -177,12 +177,3 @@ description: "Error handling –"
 <p> Number of error messages</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBG">Typedef Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">Variable Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCD">Author</a></dt>
-<dd></dd></dl>

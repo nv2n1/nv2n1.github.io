@@ -61,15 +61,3 @@ description: "runc-checkpoint – checkpoint a running container"
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-criu/">criu</a></code>(8), <code><a href="/docs/linux/man/8-runc-restore/">runc-restore</a></code>(8), <code><a href="/docs/linux/man/8-runc/">runc</a></code>(8), <code><a href="/docs/linux/man/8-criu/">criu</a></code>(8). </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd></dl>

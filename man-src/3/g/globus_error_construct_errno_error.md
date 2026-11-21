@@ -49,6 +49,3 @@ description: "Error Construction –"
 </dt><dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

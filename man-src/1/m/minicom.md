@@ -469,33 +469,3 @@ $HOME/minicom.log
  Jork Loeser (jork.loeser [at] inf.tu-dresden.de) provided the socket extension. </p>
 <p> Most of this man page is copied, with corrections, from the original minicom README, but some pieces and the corrections are by Michael K. Johnson. </p>
 <p> Jukka Lahtinen (walker [at] netsonic.fi) has added some information of the changes made after version 1.75. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">COMMAND-LINE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">USE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">DIALING DIRECTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">CONFIGURATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">STATUS LINE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">LOCALES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">MISC</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AUTHORS</a></dt>
-<dd>  </dd></dl>

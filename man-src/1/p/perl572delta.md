@@ -322,30 +322,3 @@ tie my % tie_hash = &gt; 'Tie::StdHash';
 <h2>HISTORY</h2>
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Core Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">New Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Installation and Configuration Improvements</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">New or Changed Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Source Code Enhancements</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">New Tests</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Known Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbBX">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBY">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBZ">HISTORY</a></dt>
-<dd></dd></dl>

@@ -24,6 +24,3 @@ description: "hwloc_topology_support –"
 <h3>struct <code>hwloc_topology_membind_support</code>* hwloc_topology_support::membind</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

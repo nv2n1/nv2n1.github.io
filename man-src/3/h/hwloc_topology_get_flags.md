@@ -163,8 +163,3 @@ description: "hwlocality_configuration – Topology Detection Configuration and 
 <p> On success, the XML component replaces the previously enabled component (if any), but the topology is not actually modified until <code>hwloc_topology_load()</code>.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">Author</a></dt>
-<dd></dd></dl>

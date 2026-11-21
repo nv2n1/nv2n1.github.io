@@ -447,38 +447,3 @@ description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcfl
 <p> <code><a href="/docs/linux/man/1-reset/">reset</a></code>(1), <code><a href="/docs/linux/man/1-setterm/">setterm</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/1-tput/">tput</a></code>(1), <code><a href="/docs/linux/man/1-tset/">tset</a></code>(1), <code><a href="/docs/linux/man/1-tty/">tty</a></code>(1), <code><a href="/docs/linux/man/2-ioctl_console/">ioctl_console</a></code>(2), <code><a href="/docs/linux/man/2-ioctl_tty/">ioctl_tty</a></code>(2), <code><a href="/docs/linux/man/8-setserial/">setserial</a></code>(8)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">The termios structure</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Retrieving and changing terminal settings</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Canonical and noncanonical mode</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Raw mode</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Line control</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Line speed</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">ATTRIBUTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">CONFORMING TO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">COLOPHON</a></dt>
-<dd>  </dd></dl>

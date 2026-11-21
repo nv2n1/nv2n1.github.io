@@ -108,14 +108,3 @@ $ osinfo - query-- fields = short - id, version os vendor = "Fedora Project" Sho
 <p> Copyright (C) 2012, 2014 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
 <p> <tt>&quot;osinfo-query&quot;</tt> is distributed under the termsof the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">LICENSE</a></dt>
-<dd></dd></dl>

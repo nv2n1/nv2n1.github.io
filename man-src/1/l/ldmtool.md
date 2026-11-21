@@ -307,8 +307,3 @@ ldm&gt; remove all
 <p> <code>Matthew Booth</code> &lt;mbooth [at] redhat.com&gt;</p>
 <dl>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAR">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">AUTHOR</a></dt>
-<dd></dd></dl>

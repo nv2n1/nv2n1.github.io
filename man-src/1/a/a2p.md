@@ -75,16 +75,3 @@ description: "a2p – Awk to Perl translator"
 <h2>BUGS</h2>
 <p> It would be possible to emulate awk&#8217;s behavior in selecting string versus numeric operations at run time by inspection of the operands, but it would be gross and inefficient. Besides, a2p almost always guesses right. </p>
 <p> Storage for the awk syntax tree is currently static, and can run out. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">DIAGNOSTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">BUGS</a></dt>
-<dd></dd></dl>

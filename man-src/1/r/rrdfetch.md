@@ -111,8 +111,3 @@ perl - e '$ctime = time; $rrdres = 900; \
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">AUTHOR</a></dt>
-<dd></dd></dl>

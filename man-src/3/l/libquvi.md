@@ -63,8 +63,6 @@ url: "/docs/linux/man/3-libquvi/"
 
  Thanks to all those who have contributed to the project by sending patches, reporting bugs and writing feedback. You know who you are. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAF">ENVIRONMENT</a>

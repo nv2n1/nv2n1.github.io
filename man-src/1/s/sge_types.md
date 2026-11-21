@@ -252,10 +252,3 @@ seconds  is a number of seconds (is used for duration values)
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> Copyright: 2004-2007 by Sun Microsystems, Inc. </p>
-<h2>Index</h2>
-<dt><a href="#lbAT">MATCHING TYPES</a></dt>
-<dd>
-</dd><dt><a href="#lbBS">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBT">COPYRIGHT</a></dt>
-<dd></dd></dl>

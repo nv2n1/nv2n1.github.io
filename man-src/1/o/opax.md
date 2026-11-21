@@ -246,23 +246,3 @@ description: "opax – read and write file archives and copy directory hierarchi
 <p> The utility is a superset of the St -p1003.2 standard. The options -<code>B</code> -<code>D</code> -<code>E</code> -<code>G</code> -<code>H</code> -<code>L</code> -<code>O</code> -<code>P</code> -<code>T</code> -<code>U</code> -<code>Y</code> -<code>Z</code> the archive formats <i>bcpio</i> <i>sv4cpio</i> <i>sv4crc</i> <i>tar</i> and the flawed archive handling during <i>list</i> and <i>read</i> operations are extensions to the <code>POSIX</code> standard.  </p>
 <h2>AUTHORS</h2>
 <p> Keith Muller at the University of California, San Diego. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">STANDARDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd>  </dd></dl>

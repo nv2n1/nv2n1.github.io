@@ -49,6 +49,3 @@ description: "hwlocality_advanced_io – Finding I/O objects"
 <p> Find the PCI device object matching the PCI bus id given as a string xxxx:yy:zz.t or yy:zz.t.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

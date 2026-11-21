@@ -211,22 +211,3 @@ description: "spamassassin – extensible email filter used to identify spam"
 <p> The SpamAssassin(tm) Project &lt;<a rel="nofollow" href="http://spamassassin.apache.org/">http://spamassassin.apache.org/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> SpamAssassin is distributed under the Apache License, Version 2.0, as described in the file <tt>&quot;LICENSE&quot;</tt> included with the distribution. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">WEB SITES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">USER MAILING LIST</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">CONFIGURATION FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">TAGGING</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">INSTALLATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">DEVELOPER DOCUMENTATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">COPYRIGHT</a></dt>
-<dd></dd></dl>

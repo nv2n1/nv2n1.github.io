@@ -165,6 +165,3 @@ description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 <h3>void(* <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct::walkBackToMostRecentNodeWithUnvisitedChildren</code>)(struct <code>ANTLR3_COMMON_TREE_NODE_STREAM_struct</code> *ctns)</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBS">Author</a></dt>
-<dd></dd></dl>

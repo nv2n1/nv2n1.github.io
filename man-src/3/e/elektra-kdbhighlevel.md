@@ -172,6 +172,3 @@ kdbClose(handle);
 </dt><dd> <code>kdbGetString()</code>, <code>keySetString()</code>, <code>kdbSetKey()</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

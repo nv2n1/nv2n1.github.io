@@ -100,23 +100,3 @@ description: "QuantLib::SwaptionVolatilityStructure – Swaption-volatility stru
  </dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Member Functions</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Constructor &amp; Destructor Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH"><code>SwaptionVolatilityStructure</code> (const <code>Calendar</code> &amp; calendar, <code>BusinessDayConvention</code> bdc, const <code>DayCounter</code> &amp; dc = <code>DayCounter</code>())</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">Author</a></dt>
-<dd>  </dd></dl>

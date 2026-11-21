@@ -72,10 +72,3 @@ description: "bcp – extract subsets of Boost"
 <h2>AUTHORS</h2>
 <p> Author of bcp is John Maddock. </p>
 <p> Author of this manpage is Domenico Andreoli, who copied stuff from bcp &#8211;help and the HTML documentation. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd></dd></dl>

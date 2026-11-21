@@ -33,6 +33,3 @@ description: "brlapi_packet_t –"
 <h3><code>brlapi_writeArgumentsPacket_t</code> brlapi_packet_t::writeArguments</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

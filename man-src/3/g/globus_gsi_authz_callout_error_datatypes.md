@@ -30,6 +30,3 @@ description: "Datatypes –"
 <dd> A invalid paramater was detected.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus authz callout error from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAF">Author</a></dt>
-<dd></dd></dl>

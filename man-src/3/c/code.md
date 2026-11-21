@@ -60,10 +60,3 @@ description: "QuantLib::Currency – Currency specification"
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const <code>Currency</code> &amp;) [related]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Member Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Friends And Related Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Author</a></dt>
-<dd></dd></dl>

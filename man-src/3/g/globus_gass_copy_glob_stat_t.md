@@ -36,6 +36,3 @@ description: "globus_gass_copy_glob_stat_t –"
 <p> A string that uniquely identifies the data that the entry refers to. A file and a symlink to that file will have the same unique_id. It is NULL for when not available. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_copy from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

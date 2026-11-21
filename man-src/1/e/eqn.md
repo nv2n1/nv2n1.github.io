@@ -452,38 +452,3 @@ description: "eqn – format equations for troff or MathML"
 <p> In MathML mode, each digit of a numeric literal gets a separate &#8216;&lt;mn&gt;&lt;/mn&gt;&#8216; pair, and decimal points are tagged with &#8216;&lt;mo&gt;&lt;/mo&gt;&#8216;. This is allowed by the specification, but inefficient.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <i>The TeXbook</i> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">USAGE</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAG">Controlling delimiters</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Automatic spacing</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">New primitives</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Extended primitives</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Customization</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Macros</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">Fonts</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAN">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">MATHML MODE LIMITATIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd>  </dd></dl>

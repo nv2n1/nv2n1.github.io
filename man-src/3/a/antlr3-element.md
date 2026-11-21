@@ -22,6 +22,3 @@ description: "ANTLR3_VECTOR_ELEMENT_struct –"
 <p> Referenced by antlr3VectorAdd(), antlr3VectorClear(), antlr3VectorDel(), antlr3VectorFree(), antlr3VectorGet(), antlr3VectorSet(), antlr3VectorSwap(), antrl3VectorRemove(), destroy(), freeNodeRS(), LB(), and tokLT(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

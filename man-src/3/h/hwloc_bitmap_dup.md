@@ -652,8 +652,6 @@ url: "/docs/linux/man/3-hwloc_bitmap_dup/"
 
  Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAM">Function Documentation</a>

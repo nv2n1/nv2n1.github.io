@@ -105,26 +105,3 @@ description: "QuantLib::TridiagonalOperator – Base implementation for tridiago
  </dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Classes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Public Types</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Protected Attributes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Friends</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Operator interface</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Author</a></dt>
-<dd>  </dd></dl>

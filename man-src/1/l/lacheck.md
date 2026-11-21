@@ -47,23 +47,3 @@ description: "lacheck – A consistency checker for LaTeX documents."
 <p> Ideas for improvements and bug reports are very welcome. Such should be directed to the maintainers, their email address is &lt;auc-tex_mgr [at] sunsite.auc.dk&gt;.  </p>
 <h2>AUTHOR</h2>
 <p> Kresten Krab Thorup with modifications by Per Abrahamsen. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OUTPUT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

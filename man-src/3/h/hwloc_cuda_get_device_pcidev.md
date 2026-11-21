@@ -45,6 +45,3 @@ description: "hwlocality_cuda – Interoperability with the CUDA Driver API"
 <p> Topology topology and device cudevice must match the local machine. I/O devices detection must be enabled in topology topology. The CUDA component is not needed in the topology.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

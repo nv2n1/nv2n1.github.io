@@ -660,32 +660,3 @@ description: "perldebguts – Guts of Perl debugging"
  </dd></dl>
 <h2>SEE ALSO</h2>
 <p> perldebug, perlguts, perlrun re, and Devel::DProf. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">Debugger Internals</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Writing Your Own Debugger</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">Frame Listing Output Examples</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Debugging Regular Expressions</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">Compile-time Output</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Types of Nodes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Run-time Output</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">Debugging Perl Memory Usage</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAL">Using $ENV{PERL_DEBUG_MSTATS}</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd></dl>

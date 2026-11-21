@@ -756,8 +756,6 @@ print $time-&gt;epoch;
 
  A kinder, gentler tutorial on object-oriented programming in Perl can be found in perlootut. You should also check out perlmodlib for some style guides on constructing both modules and classes. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAU">SEE ALSO</a>

@@ -256,8 +256,6 @@ url: "/docs/linux/man/3-antlr3collections/"
 
  Generated automatically by Doxygen for ANTLR3C from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbBE">Author</a>

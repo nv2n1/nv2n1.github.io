@@ -48,8 +48,3 @@ description: "QuantLib::BoundaryCondition – Abstract boundary condition class 
 <p> Implemented in <code>NeumannBC</code>, and <code>DirichletBC</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Member Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Author</a></dt>
-<dd></dd></dl>

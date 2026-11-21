@@ -172,17 +172,3 @@ description: "dvipng – A DVI-to-PNG translator"
 <h2>COPYRIGHT</h2>
 <p> This program is released under the <font SIZE="-1">GNU</font> Lesser General Public License version 3, see the <font SIZE="-1">COPYING</font> file in the dvipng distribution or &lt;<code><a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a></code>&gt;. </p>
 <p> Copyright (c) 2002-2015 Jan-AAke Larsson </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

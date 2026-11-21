@@ -174,12 +174,3 @@ info:                     ok
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>
-<dt><a href="#lbAT">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">COPYRIGHT</a></dt>
-<dd></dd></dl>

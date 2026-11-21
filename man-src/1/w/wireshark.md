@@ -1490,18 +1490,3 @@ snax &lt;snax[AT]shmoo.com&gt; gave permission to use his(?) weak key
 detection code from Airsnort.
 IANA gave permission for their port-numbers file to be used.
 </code></pre>
-<h2>Index</h2>
-<dt><a href="#lbAI">CAPTURE FILTER SYNTAX</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">DISPLAY FILTER SYNTAX</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHORS</a></dt>
-<dd></dd></dl>

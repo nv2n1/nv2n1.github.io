@@ -87,8 +87,6 @@ url: "/docs/linux/man/1-perl5244delta/"
 
  The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAI">Incompatible Changes</a>

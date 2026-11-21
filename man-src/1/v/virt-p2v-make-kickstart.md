@@ -200,24 +200,3 @@ description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAN">ADDING EXTRA PACKAGES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">ADDING AN SSH IDENTITY</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">BUGS</a></dt>
-<dd></dd></dl>

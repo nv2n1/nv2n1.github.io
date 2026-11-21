@@ -66,10 +66,3 @@ description: "pcsc-spy – A PC/SC spy command"
 <p> <i><a href="/docs/linux/man/8-pcscd/">pcscd</a></i>(8)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ludovic Rousseau &lt;rousseau [at] free.fr&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHOR</a></dt>
-<dd></dd></dl>

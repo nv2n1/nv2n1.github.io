@@ -82,8 +82,6 @@ url: "/docs/linux/man/1-perldgux/"
 
  <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1). 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">AUTHOR</a>

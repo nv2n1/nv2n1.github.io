@@ -778,18 +778,3 @@ No options-&gt;ftp.xemacs.org / pub / xemacs /
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1996&#8211;2011, 2015, 2018&#8211;2021 Free Software Foundation, Inc. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
-<h2>Index</h2>
-<dt><a href="#lbAQ">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">COPYRIGHT</a></dt>
-<dd></dd></dl>

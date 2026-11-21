@@ -94,21 +94,3 @@ description: "autosp – preprocessor to generate note-spacing commands for Musi
 <p> musixdoc.pdf </p>
 <h2>AUTHOR</h2>
 <p> This program and manual page were written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPERATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">LIMITATIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR </a></dt>
-<dd>  </dd></dl>

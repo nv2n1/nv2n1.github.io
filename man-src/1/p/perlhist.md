@@ -694,8 +694,6 @@ Pump - Release Date diff lines kB
 
  Thanks to the collective memory of the Perlfolk. In addition to the Keepers of the Pumpkin also Alan Champion, Mark Dominus, Andreas König, John Macdonald, Matthias Neeracher, Jeff Okamoto, Michael Peppler, Randal Schwartz, and Paul D. Smith sent corrections and additions. Abigail added file and patch size data for the 5.6.0 - 5.10 era. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAG">THE RECORDS</a>

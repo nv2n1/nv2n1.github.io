@@ -33,17 +33,3 @@ bson_iter_utf8 (const bson_iter_t *iter,
 <p> Note that not all drivers use multi-byte representation for <code>\0</code> in UTF-8 encodings (commonly referred to as modified-UTF8). You probably want to take a look at the length field when marshaling to other runtimes. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RETURNS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COLOPHON</a></dt>
-<dd>  </dd></dl>

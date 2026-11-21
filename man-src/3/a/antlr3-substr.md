@@ -178,6 +178,3 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 <p> Whatever super structure is providing the INPUT stream needs a pointer to itself so that this can be passed back to it whenever the api functions are called back from this interface. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBJ">Author</a></dt>
-<dd></dd></dl>

@@ -392,6 +392,3 @@ description: "Globus XIO Driver –"
  <i>GLOBUS_XIO_ERROR_PARAMETER</i> Invalid parameter</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBV">Author</a></dt>
-<dd></dd></dl>

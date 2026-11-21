@@ -253,14 +253,3 @@ foo(sv)
 SV *sv
 </code></pre>
 <p> See perlxs and perlxstut for additional details. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">DIAGNOSTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">LIMITATIONS of <code>-x</code></a></dt>
-<dd></dd></dl>

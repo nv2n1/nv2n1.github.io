@@ -162,19 +162,3 @@ description: "f2c – Convert Fortran 77 to C or C++"
  Untypable <font SIZE="-1">EXTERNAL</font> functions are declared <code>int</code>. <br />
  There is no notation for <font SIZE="-1">INTEGER*8</font> constants. <br />
  Some intrinsic functions do not yet work with <font SIZE="-1">INTEGER*8 .</font> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BUGS</a></dt>
-<dd>  </dd></dl>

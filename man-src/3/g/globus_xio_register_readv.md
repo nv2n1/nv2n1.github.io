@@ -354,10 +354,3 @@ description: "Globus XIO API –"
 <p> Write data to a handle from a globus_xio_iovec_t (struct iovec)</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCI">Author</a></dt>
-<dd></dd></dl>

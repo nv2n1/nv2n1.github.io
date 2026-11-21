@@ -51,6 +51,3 @@ description: "hwlocality_helper_find_misc – Finding objects, miscellaneous hel
 <p> Returns the object of type <code>HWLOC_OBJ_PU</code> with os_index. This function is useful for converting a CPU set into the PU objects it contains. When retrieving the current binding (e.g. with <code>hwloc_get_cpubind()</code>), one may iterate over the bits of the resulting CPU set with <code>hwloc_bitmap_foreach_begin()</code>, and find the corresponding PUs with this function.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

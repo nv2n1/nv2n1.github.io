@@ -51,6 +51,3 @@ description: "hwlocality_helper_find_covering – Finding Objects covering at le
 </dt><dd> This function cannot work if the root object does not have a CPU set, e.g. if the topology is made of different machines.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

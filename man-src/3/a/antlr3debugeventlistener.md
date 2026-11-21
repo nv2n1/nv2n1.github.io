@@ -39,6 +39,3 @@ description: "include/antlr3debugeventlistener.h –"
 <p> The ANTLR3 debugging interface for communicating with ANLTR Works. Function comments mostly taken from the Java version.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

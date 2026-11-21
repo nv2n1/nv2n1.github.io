@@ -343,6 +343,3 @@ description: "Heimdal Kerberos 5 error reporting functions –"
  <i>fmt</i> message to print</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBI">Author</a></dt>
-<dd></dd></dl>

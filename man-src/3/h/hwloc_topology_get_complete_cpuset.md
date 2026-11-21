@@ -91,6 +91,3 @@ description: "hwlocality_helper_topology_sets – CPU and node sets of entire to
 </dt><dd> The returned nodeset is not newly allocated and should thus not be changed or freed; <code>hwloc_bitmap_dup()</code> must be used to obtain a local copy.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

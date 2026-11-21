@@ -268,6 +268,3 @@ description: "Heimdal NTLM library –"
 <p> <code>Examples: </code> <code>test_ntlm.c</code>.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalntlmlibrary from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAY">Author</a></dt>
-<dd></dd></dl>

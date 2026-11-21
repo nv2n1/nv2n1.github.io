@@ -810,31 +810,3 @@ typedef union hblock {
 <h2>NOTES</h2>
 <h2>BUGS</h2>
 <h2>AUTHOR</h2>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">BASIC TAR HEADER DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">EXTENDED TAR (PAX) HEADER STRUCTURE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">EXTENDED TAR (PAX) HEADER FORMAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXTENDED TAR (PAX) HEADER KEYWORDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SCHILY PAX EXTENSION KEYWORDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SCHILY &#8216;G&#8217;LOBAL PAX EXTENSION KEYWORDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">MULTI VOLUME ARCHIVE HANDLING</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AUTHOR</a></dt>
-<dd>  </dd></dl>

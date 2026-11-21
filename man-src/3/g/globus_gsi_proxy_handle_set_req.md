@@ -192,6 +192,3 @@ handle.
 </dt><dd> GLOBUS_SUCCESS unless an error occurred, in which case, a globus error object ID is returned</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Author</a></dt>
-<dd></dd></dl>

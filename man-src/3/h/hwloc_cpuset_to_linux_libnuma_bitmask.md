@@ -43,6 +43,3 @@ description: "hwlocality_linux_libnuma_bitmask – Interoperability with Linux l
 </dt><dd> newly allocated struct bitmask.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

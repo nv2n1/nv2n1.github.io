@@ -279,39 +279,3 @@ file: application/x-executable
 <p> There is support now for keeping separate buffers and having offsets from the end of the file, but the internal buffer management still needs an overhaul.  </p>
 <h2>AVAILABILITY</h2>
 <p> You can obtain the original author&#8217;s latest version by anonymous FTP on <a href="ftp://ftp.astron.com">ftp.astron.com</a> in the directory /pub/file/file-X.YZ.tar.gz </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">STANDARDS CONFORMANCE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">SECURITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">MAGIC DIRECTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">LEGAL NOTICE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAQ">TODO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAR">AVAILABILITY</a></dt>
-<dd>  </dd></dl>

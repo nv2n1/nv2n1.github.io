@@ -2235,8 +2235,6 @@ or
 
  The module and its user have a contract, part of which is common law, and part of which is ``written''. Part of the common law contract is that a module doesn't pollute any namespace it wasn't asked to. The written contract for the module (A.K.A. documentation) may make other provisions. But then you know when you <tt>&quot;use RedefineTheWorld&quot;</tt> that you're redefining the world and willing to take the consequences. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAO">Modules: Creation, Use, and Abuse</a>

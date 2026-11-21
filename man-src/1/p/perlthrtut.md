@@ -541,28 +541,3 @@ foreach<br />
 <p> Rearranged slightly by Elizabeth Mattijsen &lt;liz [at] dijkmat.nl&gt; to put less emphasis on <code>yield()</code>.</p>
 <h2>Copyrights</h2>
 <p> The original version of this article originally appeared in The Perl Journal #10, and is copyright 1998 The Perl Journal. It appears courtesy of Jon Orwant and The Perl Journal. This document may be distributed under the same terms as Perl itself. </p>
-<h2>Index</h2>
-<dt><a href="#lbBD">General Thread Utility Routines</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">A Complete Example</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">Different implementations of threads</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">Performance considerations</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">Process-scope Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">Thread-Safety of System Libraries</a></dt>
-<dd>
-</dd><dt><a href="#lbBN">Conclusion</a></dt>
-<dd>
-</dd><dt><a href="#lbBO">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBP">Bibliography</a></dt>
-<dd>
-</dd><dt><a href="#lbBT">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbBU">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbBV">Copyrights</a></dt>
-<dd></dd></dl>

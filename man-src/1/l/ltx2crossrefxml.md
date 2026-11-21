@@ -96,12 +96,3 @@ $registrant = 'Registrant';
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright (C) 2012-2021 Boris Veytsman </p>
 <p> This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License &lt;<a rel="nofollow" href="https://www.gnu.org/licenses/gpl.html">https://www.gnu.org/licenses/gpl.html</a>&gt;. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">CITATIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">COPYRIGHT AND LICENSE</a></dt>
-<dd></dd></dl>

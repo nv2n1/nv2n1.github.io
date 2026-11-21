@@ -288,32 +288,3 @@ description: "hexdump – display file contents in hexadecimal, decimal, octal, 
 <p> For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.  </p>
 <h2>AVAILABILITY</h2>
 <p> The <code>hexdump</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FORMATS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Conversion strings</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Colors</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Counters</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">CONFORMING TO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">COLORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AVAILABILITY</a></dt>
-<dd>  </dd></dl>

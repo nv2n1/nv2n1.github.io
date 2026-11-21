@@ -78,6 +78,3 @@ description: "ANTLR3_TOPO_struct –"
 <p> Referenced by antlr3TopoNew(), DFS(), freeTopo(), and sortToArray(). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAR">Author</a></dt>
-<dd></dd></dl>

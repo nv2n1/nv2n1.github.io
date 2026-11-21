@@ -144,6 +144,3 @@ description: "hwloc_obj –"
 <p> Application-given private data pointer, initialized to NULL, use it as you wish. See <code>hwloc_topology_set_userdata_export_callback()</code> if you wish to export this field to XML. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBL">Author</a></dt>
-<dd></dd></dl>

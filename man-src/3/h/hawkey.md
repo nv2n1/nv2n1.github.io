@@ -878,16 +878,3 @@ hy_goal_install_query(q)
 <p> Aleš Kozumplík</p>
 <h2>COPYRIGHT</h2>
 <p> 2012-2015, Red Hat, Licensed under GPLv2+ </p>
-<h2>Index</h2>
-<dt><a href="#lbDS">FAQ</a></dt>
-<dd>
-</dd><dt><a href="#lbEA">PYTHON-HAWKEY TUTORIAL</a></dt>
-<dd>
-</dd><dt><a href="#lbEL">PYTHON-HAWKEY REFERENCE MANUAL</a></dt>
-<dd>
-</dd><dt><a href="#lbET">DESIGN RATIONALE</a></dt>
-<dd>
-</dd><dt><a href="#lbEV">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbEW">COPYRIGHT</a></dt>
-<dd></dd></dl>

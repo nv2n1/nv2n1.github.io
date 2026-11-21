@@ -29,6 +29,3 @@ description: "globus_error_string.h –"
  <i>&#8230;</i></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

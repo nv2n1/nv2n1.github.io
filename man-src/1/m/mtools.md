@@ -184,6 +184,3 @@ ab:c            ab_c-1          illegal character
 <p> The fat checking code chokes on 1.72 Mb disks mformatted with pre-2.0.7 mtools. Set the environmental variable MTOOLS_FAT_COMPATIBILITY (or the corresponding configuration file variable, &infin;global variablesIntegral) to bypass the fat checking. </p>
 <h2>See also</h2>
 <p> floppyd_installtest mattrib mbadblocks mcd mclasserase mcopy mdel mdeltree mdir mdu mformat minfo mkmanifest mlabel mmd mmount mmove mrd mren mshortname mshowfat mtoolstest mtype </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">See also</a></dt>
-<dd></dd></dl>

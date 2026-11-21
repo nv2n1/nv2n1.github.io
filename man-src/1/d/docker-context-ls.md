@@ -20,15 +20,3 @@ url: "/docs/linux/man/1-docker-context-ls/"
  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-context/">docker-context</a>(1)</code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd></dl>

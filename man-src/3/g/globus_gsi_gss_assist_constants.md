@@ -56,6 +56,3 @@ description: "GSI GSS Assist Constants –"
 <dd> Failed to obtain canonical host name.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus gss assist from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAF">Author</a></dt>
-<dd></dd></dl>

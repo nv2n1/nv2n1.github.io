@@ -1058,12 +1058,3 @@ print &#8220;netconf = $netconf
 <h2>AUTHOR</h2>
 <p> Originally written by Dean Roehrich &lt;<i>roehrich [at] cray.com</i>&gt;. </p>
 <p> Maintained since 1996 by The Perl Porters &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
-<h2>Index</h2>
-<dt><a href="#lbCA">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbCB">CAVEATS</a></dt>
-<dd>
-</dd><dt><a href="#lbCC">XS VERSION</a></dt>
-<dd>
-</dd><dt><a href="#lbCD">AUTHOR</a></dt>
-<dd></dd></dl>

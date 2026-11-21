@@ -102,23 +102,3 @@ description: "pdfjadetex – PDF output from JadeTeX"
 <h2>AUTHORS</h2>
 <p> The author of pdfjadeTeX is Sebastian Rahtz. </p>
 <p> This manual page was derived by Marcus Brinkmann for the Debian distribution from the pdfTeX manual page from the teTeX distribution by Thomas Esser. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd>  </dd></dl>

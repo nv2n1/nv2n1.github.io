@@ -2244,32 +2244,3 @@ lav [at] yars.free.net
 </code></pre>
 <h2>ACKNOWLEDGMENTS</h2>
 <p> This manual page was originally written by Christoph Lameter &lt;clameter [at] debian.org&gt;, for the Debian GNU/Linux system. The page was improved and updated later by Nicolas Lichtmaier &lt;nick [at] Feedback.com.ar&gt;, James Troup &lt;J.J.Troup [at] comp.brad.ac.uk&gt; and Alexander V. Lukyanov &lt;lav [at] yars.free.net&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNTAX</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">VERSION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Settings</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">FTP asynchronous mode (pipelining)</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">ACKNOWLEDGMENTS</a></dt>
-<dd>  </dd></dl>

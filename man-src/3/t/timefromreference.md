@@ -74,30 +74,3 @@ description: "QuantLib::TermStructure – Basic term-structure functionality."
 <p>Reimplemented in <code>AbcdAtmVolCurve</code>, <code>ExtendedBlackVarianceCurve</code>, <code>ExtendedBlackVarianceSurface</code>, <code>SabrVolSurface</code>, <code>ExtendedDiscountCurve</code>, <code>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, <code>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, <code>CapFloorTermVolCurve</code>, <code>CapFloorTermVolSurface</code>, <code>StrippedOptionletAdapter</code>, <code>FittedBondDiscountCurve</code>, <code>FlatForward</code>, and <code>PiecewiseZeroSpreadedTermStructure</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Public Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Protected Member Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Protected Attributes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Constructor &amp; Destructor Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAI"><code>TermStructure</code> (const <code>DayCounter</code> &amp; dc = <code>DayCounter</code>())</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">Member Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">void update () [virtual]</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">Author</a></dt>
-<dd>  </dd></dl>

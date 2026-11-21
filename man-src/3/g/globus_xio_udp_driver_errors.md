@@ -29,6 +29,3 @@ description: "Error Types –"
 <dd> Indicates that a write of the full buffer failed. Possibly need to increase the send buffer size.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

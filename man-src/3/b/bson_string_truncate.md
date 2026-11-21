@@ -27,15 +27,3 @@ bson_string_truncate (bson_string_t *string,
 <p> A <code>\0</code> byte will be placed where the end of the string occurrs. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">PARAMETERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COLOPHON</a></dt>
-<dd>  </dd></dl>

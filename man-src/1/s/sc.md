@@ -51,10 +51,3 @@ description: "sc – Splunk Client"
 <h2>AUTHORS</h2>
 <p> Lubomir Rintel, &lt;lkundrak [at] v3.sk&gt; </p>
 <p> The code is hosted on GitHub &lt;<a rel="nofollow" href="http://github.com/lkundrak/perl-WWW-Splunk">http://github.com/lkundrak/perl-WWW-Splunk</a>&gt;. Bug fixes and feature enhancements are always welcome. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHORS</a></dt>
-<dd></dd></dl>

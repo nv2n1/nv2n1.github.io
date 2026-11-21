@@ -245,26 +245,3 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAG">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">OLD-STYLE COMMAND LINE ARGUMENTS</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">NETWORK</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">CAPTURING CORE DUMPS</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">BUGS</a></dt>
-<dd></dd></dl>

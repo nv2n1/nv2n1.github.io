@@ -203,30 +203,3 @@ critter phk&gt; openssl dgst -sha256 &lt; _
 <dt>&bull;</dt>
 <dd> <p> Copyright (c) 2011-2014 Varnish Software AS </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Syntax</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Commands</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Backend Expression</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Ban Expressions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Scripting</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">How -S/PSK Authentication Works</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

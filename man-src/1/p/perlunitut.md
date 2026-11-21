@@ -91,26 +91,3 @@ description: "perlunitut – Perl Unicode Tutorial"
 <p> Juerd Waalboer &lt;#####@juerd.nl&gt;  </p>
 <h2>SEE ALSO</h2>
 <p> perlunifaq, perlunicode, perluniintro, Encode </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Definitions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Your new toolkit</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">I/O flow (the actual 5 minute tutorial)</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">SUMMARY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Q and A (or FAQ)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">ACKNOWLEDGEMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>  </dd></dl>

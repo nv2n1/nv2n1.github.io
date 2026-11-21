@@ -4294,19 +4294,3 @@ description: "perlfunc – Perl builtin functions"
 <dt>when</dt>
 <dd> <p> These flow-control keywords related to the experimental switch feature are documented in ``Switch Statements&#8217;&#8216; in perlsyn. </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAD">Perl Functions by Category</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Portability</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Alphabetical Listing of Perl Functions</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Non-function Keywords by Cross-reference</a></dt>
-<dd>  </dd></dl>
-</dl>

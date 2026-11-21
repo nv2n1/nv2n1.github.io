@@ -74,6 +74,3 @@ description: "globus_url_t –"
 <p> The username portion of the URL. [ftp, gsiftp] </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

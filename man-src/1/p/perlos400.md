@@ -83,8 +83,6 @@ url: "/docs/linux/man/1-perlos400/"
 
  Jarkko Hietaniemi &lt;jhi [at] iki.fi&gt; Bryan Logan &lt;bryanlog [at] us.ibm.com&gt; David Larson &lt;larson1 [at] us.ibm.com&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAI">AUTHORS</a>

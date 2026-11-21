@@ -82,8 +82,6 @@ url: "/docs/linux/man/1-rrdthreads/"
 
  Peter Stamfest &lt;peter [at] stamfest.at&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAG">AUTHOR</a>

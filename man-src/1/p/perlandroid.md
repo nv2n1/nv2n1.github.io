@@ -94,8 +94,3 @@ $ export ANDROID_TOOLCHAIN = / tmp / my - toolchain - $TARGETARCH $ export SYSRO
 </pre>
 <h2>AUTHOR</h2>
 <p> Brian Fraser &lt;fraserbn [at] gmail.com&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Native Builds</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">AUTHOR</a></dt>
-<dd></dd></dl>

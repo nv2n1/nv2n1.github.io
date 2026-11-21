@@ -692,12 +692,3 @@ description: "perlfaq – Frequently asked questions about Perl"
 <h2>AUTHOR AND COPYRIGHT</h2>
 <p> Tom Christiansen wrote the original version of this document. brian d foy <tt>&quot;&lt;bdfoy [at] cpan.org&gt;&quot;</tt> wrote this version. See the individual perlfaq documents for additional copyright information. </p>
 <p> This document is available under the same terms as Perl itself. Code examples in all the perlfaq documents are in the public domain. Use them as you see fit (and at your own risk with no warranty from anyone). </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">TABLE OF CONTENTS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">THE QUESTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">CREDITS</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">AUTHOR AND COPYRIGHT</a></dt>
-<dd></dd></dl>

@@ -36,6 +36,3 @@ description: "Module Activation Management –"
  <i>failed_module</i> Pointer to set to the first module whose activation function failed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

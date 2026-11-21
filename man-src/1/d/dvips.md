@@ -173,21 +173,3 @@ description: "dvips – convert a TeX DVI file to PostScript"
 <h2>AUTHOR</h2>
 <p> Tomas Rokicki; extended to virtual fonts by Don Knuth. Path searching and configuration modifications by Karl Berry. </p>
 <p> Maintained in TeX Live; please send bug reports or other correspondence to tex-k [at] tug.org (<a rel="nofollow" href="http://lists.tug.org/tex-k">http://lists.tug.org/tex-k</a>). </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd></dl>

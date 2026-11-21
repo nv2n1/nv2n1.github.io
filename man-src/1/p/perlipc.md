@@ -1328,8 +1328,6 @@ msgctl($id, IPC_RMID, 0) || die "msgctl failed: $!\n";
 
  Section 5 of <font SIZE="-1">CPAN</font>'s <i>modules</i> file is devoted to ``Networking, Device Control (modems), and Interprocess Communication'', and contains numerous unbundled modules numerous networking modules, Chat and Expect operations, <font SIZE="-1">CGI</font> programming, <font SIZE="-1">DCE, FTP, IPC, NNTP,</font> Proxy, Ptty, <font SIZE="-1">RPC, SNMP, SMTP,</font> Telnet, Threads, and ToolTalk---to name just a few. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAG">Named Pipes</a>

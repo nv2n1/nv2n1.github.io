@@ -367,33 +367,3 @@ description: "agetty – alternative Linux getty"
 <p>For bug reports, use the issue tracker at <i></i> &lt;<a rel="nofollow" href="https://github.com/karelzak/util-linux/issues">https://github.com/karelzak/util-linux/issues</a>&gt;.  </p>
 <h2>AVAILABILITY</h2>
 <p>The <code>agetty</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">ARGUMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SECURITY NOTICE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">ISSUE FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AVAILABILITY</a></dt>
-<dd>  </dd></dl>

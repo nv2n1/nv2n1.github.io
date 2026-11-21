@@ -152,36 +152,3 @@ description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a>  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ntfsresize/">ntfsresize</a></code>(8) <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8) <code><a href="/docs/linux/man/8-xfs_copy/">xfs_copy</a></code>(8) <code><a href="/docs/linux/man/8-debugreiserfs/">debugreiserfs</a></code>(8) <code><a href="/docs/linux/man/8-e2image/">e2image</a></code>(8) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Windows Cloning</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Sparse Files</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Handling Large Sparse Files</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">The Special Image Format</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Metadata-only Cloning</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXIT CODES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">KNOWN ISSUES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">AVAILABILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>  </dd></dl>

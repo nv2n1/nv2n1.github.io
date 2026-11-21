@@ -98,8 +98,3 @@ description: "Cert Utils Constants –"
 <dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_cert_utils from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

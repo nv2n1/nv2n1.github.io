@@ -82,6 +82,3 @@ description: "QuantLib::Instrument – Abstract instrument class."
 <p> Reimplemented in <code>EnergyBasisSwap</code>, <code>EnergyFuture</code>, <code>EnergyVanillaSwap</code>, <code>ConvertibleBond</code>, <code>CompositeInstrument</code>, <code>FixedRateBondForward</code>, <code>Forward</code>, <code>Stock</code>, <code>YearOnYearInflationSwap</code>, and <code>ZeroCouponInflationSwap</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

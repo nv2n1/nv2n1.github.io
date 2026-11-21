@@ -47,11 +47,3 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 &nbsp;<wbr>&nbsp;PCRE2_CONFIG_VERSION&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The PCRE2 version&nbsp;(a string) </p>
 <p>The function yields a non-negative value on success or the negative value PCRE2_ERROR_BADOPTION otherwise. This is also the result for the PCRE2_CONFIG_JITTARGET code if JIT support is not available. When a string is requested, the function returns the number of code units used, including the terminating zero. </p>
 <p>There is a complete description of the PCRE2 native API in the <code>pcre2api</code> page and a description of the POSIX API in the <code>pcre2posix</code> page. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd></dl>

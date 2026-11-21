@@ -77,21 +77,3 @@ description: "WildMidi_GetInfo – get information on a midi"
 <p>WildMIDI is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License and the GNU Lesser General Public License for more details. </p>
 <p>You should have received a copy of the GNU General Public License and the GNU Lesser General Public License along with WildMIDI. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
 <p>This manpage is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported License. To view a copy of this license, visit <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">LIBRARY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

@@ -43,15 +43,3 @@ description: "systemd-cryptsetup [at] .service, systemd-cryptsetup – Full disk
 <dl>
 <dd> <p> <a rel="nofollow" href="https://systemd.io/PASSWORD_AGENTS/">https://systemd.io/PASSWORD_AGENTS/</a> </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">NOTES</a></dt>
-<dd>  </dd></dl>

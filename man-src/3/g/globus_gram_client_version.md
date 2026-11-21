@@ -92,6 +92,3 @@ description: "GRAM Client API –"
 </dt><dd> The integer protocol revision.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

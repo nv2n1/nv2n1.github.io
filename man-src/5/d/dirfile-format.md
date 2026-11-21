@@ -445,33 +445,3 @@ description: "dirfile-format — the dirfile database format specification file"
 <p>Since Standards Version 3, the dirfile specification has been maintained by D. V. Wiebe &lt;dwiebe [at] physics.utoronto.ca&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-encoding/">dirfile-encoding</a></code>(5) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">SYNTAX</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Tokens</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">DIRECTIVES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FIELD SPECIFICATION LINES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">Field Names</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Field Types</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Field Parameters</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Field Codes</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">STANDARDS VERSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd></dl>

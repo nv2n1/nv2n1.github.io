@@ -43,8 +43,3 @@ description: "insync – command line interface for the Insync process"
  Support forums: &lt;<a rel="nofollow" href="https://forums.insynchq.com">https://forums.insynchq.com</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Created by the Insync team. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd></dd></dl>

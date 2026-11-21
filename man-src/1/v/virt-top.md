@@ -305,12 +305,3 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 <dt>5. Assign the bug to rjones @ redhat.com</dt>
 <dd> Assign or reassign the bug to <code>rjones @ redhat.com</code> (without the spaces). You can also send me an email with the bug number if you want a faster response. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">REPORTING BUGS</a></dt>
-<dd></dd></dl>

@@ -254,8 +254,6 @@ $./ pidl-- ws - parser-- atsvc.idl
 
  This manpage was written by Jelmer Vernooij, partially based on the original pidl <font SIZE="-1">README</font> by Andrew Tridgell. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">COMPATIBILITY WITH MIDL</a>

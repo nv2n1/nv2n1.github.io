@@ -118,25 +118,3 @@ description: "texlogsieve – filter and summarize LaTeX log files"
 <p> Copyright &#169; 2021, 2022 Nelson Lago &lt;lago [at] ime.usp.br&gt; <br />
  License GPLv3+: GNU GPL version 3 or later </p>
 <p> This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">UNRECOGNIZED MESSAGES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CONFIGURATION FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">LIMITATIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">BUGS AND DEVELOPMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

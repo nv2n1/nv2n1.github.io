@@ -30,6 +30,3 @@ description: "QuantLib::SymmetricSchurDecomposition – symmetric threshold Jaco
 </dt><dd> s must be symmetric</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

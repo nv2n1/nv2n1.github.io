@@ -46,6 +46,3 @@ asset-&gt;preAdjustValues();
 <p> Reimplemented from <code>TreeLattice&lt; BlackScholesLattice&lt; T &gt; &gt;</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

@@ -55,15 +55,3 @@ description: "struct_usb_os_desc_ext_prop – describes one “Extended Property
 <h2>COPYRIGHT</h2>
 <p> <br />
  </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">MEMBERS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

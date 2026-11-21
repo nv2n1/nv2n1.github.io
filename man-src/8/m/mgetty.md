@@ -95,23 +95,3 @@ description: "mgetty – smart modem getty"
 <p> <a href="/docs/linux/man/1-g32pbm/">g32pbm</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), <a href="/docs/linux/man/8-getty/">getty</a>(8), <a href="/docs/linux/man/4-mgettydefs/">mgettydefs</a>(4), mgetty.info  </p>
 <h2>AUTHOR</h2>
 <p> <i>mgetty</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">AUTHOR</a></dt>
-<dd>  </dd></dl>

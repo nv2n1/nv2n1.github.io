@@ -61,6 +61,3 @@ description: "QuantLib::Index – purely virtual base class for indexes"
 <p> the dates passed as arguments must be the actual calendar dates of the fixings; no settlement days must be used. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

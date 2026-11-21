@@ -252,28 +252,3 @@ virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - plac
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">IN-PLACE SPARSIFICATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">MACHINE READABLE OUTPUT</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">WINDOWS 8</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">BUGS</a></dt>
-<dd></dd></dl>

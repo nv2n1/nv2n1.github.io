@@ -112,8 +112,6 @@ zipdetails[-v][--scan] zipfile.zip
 
  This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">LIMITATIONS</a>

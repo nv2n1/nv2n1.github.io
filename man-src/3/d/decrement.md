@@ -33,6 +33,3 @@ description: "QuantLib::step_iterator – Iterator advancing in constant steps."
 <p> helper function to create step iterators </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

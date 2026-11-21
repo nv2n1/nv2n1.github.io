@@ -91,19 +91,3 @@ description: "printf – format and print data"
 <p> <br />
  Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/printf">https://www.gnu.org/software/coreutils/printf</a>&gt; <br />
  or available locally via: info &#8216;(coreutils) printf invocation&#8217; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd></dl>

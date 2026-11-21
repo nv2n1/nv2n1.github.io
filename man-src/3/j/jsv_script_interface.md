@@ -433,14 +433,3 @@ Example files:
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>
-<dt><a href="#lbBH">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbBI">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbBJ">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">COPYRIGHT</a></dt>
-<dd></dd></dl>

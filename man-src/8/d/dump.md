@@ -197,33 +197,3 @@ description: "dump – ext2/3/4 filesystem backup"
 <p> The <code>dump/restore</code> backup suite is available from &lt;<a rel="nofollow" href="http://dump.sourceforge.net">http://dump.sourceforge.net</a>&gt;  </p>
 <h2>HISTORY</h2>
 <p> A <code>dump</code> command appeared in <code>Version 6 AT&amp;T UNIX.</code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">COMPATIBILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AVAILABILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">HISTORY</a></dt>
-<dd>  </dd></dl>

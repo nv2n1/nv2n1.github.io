@@ -411,8 +411,6 @@ require Cwd;
 
  See perlmodlib for general style issues related to building Perl modules and classes, as well as descriptions of the standard library and <font SIZE="-1">CPAN,</font> Exporter for how Perl's standard import/export mechanism works, perlootut and perlobj for in-depth information on creating classes, perlobj for a hard-core reference document on objects, perlsub for an explanation of functions and scoping, and perlxstut and perlguts for more information on writing extension modules. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAK">SEE ALSO</a>

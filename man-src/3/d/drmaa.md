@@ -43,6 +43,3 @@ description: "DRMAA interface. –"
 <p> The function <code>drmaa_get_vector_attribute_names()</code> SHALL return the set of supported vector attribute names in an opaque names string vector stored in <i>values</i>. This vector SHALL include all required vector attributes, all supported optional vector attributes, all DRM-specific vector attributes, and no unsupported optional attributes.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

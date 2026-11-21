@@ -137,32 +137,3 @@ description: "update-binfmts – maintain registry of executable binary formats"
 <p>Richard Guenther wrote the binfmt_misc kernel module.  </p>
 <h2>THANKS</h2>
 <p> Ian Jackson wrote <code>update-alternatives</code> and <code>dpkg-divert</code> from which this program borrows heavily. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">COMMON OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ACTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">BINARY FORMAT SPECIFICATIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">FORMAT FILES</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">THANKS</a></dt>
-<dd>  </dd></dl>

@@ -331,8 +331,3 @@ EOF
 <h2>AUTHOR</h2>
 <p> Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt; </p>
 <p> Copyright (C) <font SIZE="-1">CERN 2012-2016</font> </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">AUTHOR</a></dt>
-<dd></dd></dl>

@@ -27,6 +27,3 @@ description: "GSI Credential Constants –"
 <dd> Callout returned an error</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_authz from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

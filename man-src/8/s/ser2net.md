@@ -209,36 +209,3 @@ description: "ser2net – Serial to network proxy"
 <p> None. </p>
 <h2>AUTHOR</h2>
 <p>Corey Minyard &lt;minyard [at] acm.org&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">CONTROL PORT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CONFIGURATION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">FIELDS</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAI">FILENAME, BANNER, AND STRING FORMATTING</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SECURITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">SIGNALS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Error</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">KNOWN PROBLEMS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">AUTHOR</a></dt>
-<dd>  </dd></dl>

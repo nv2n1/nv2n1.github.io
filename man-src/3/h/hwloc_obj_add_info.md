@@ -78,31 +78,3 @@ description: "hwlocality_object_strings – Manipulating Object Type, Sets and A
 <p> Return a stringified topology object type.  </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAC">Functions</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAD">Detailed Description</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Function Documentation</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">void hwloc_obj_add_info (<code>hwloc_obj_t</code> obj, const char * name, const char * value)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">int hwloc_obj_attr_snprintf (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, const char *restrict separator, int verbose)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">int hwloc_obj_cpuset_snprintf (char *restrict str, size_t size, size_t nobj, const <code>hwloc_obj_t</code> *restrict objs)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">static const char* hwloc_obj_get_info_by_name (<code>hwloc_obj_t</code> obj, const char * name) [inline], [static]</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">int hwloc_obj_type_snprintf (char *restrict string, size_t size, <code>hwloc_obj_t</code> obj, int verbose)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">int hwloc_obj_type_sscanf (const char * string, <code>hwloc_obj_type_t</code> * typep, int * depthattrp, void * typeattrp, size_t typeattrsize)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">const char* hwloc_obj_type_string (<code>hwloc_obj_type_t</code> type)</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAM">Author</a></dt>
-<dd>  </dd></dl>

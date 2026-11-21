@@ -256,25 +256,3 @@ add + subtract - divide / multiply * modulus % bitwise and &amp; bitwise or | bi
 <p> dhcpd.conf(5), dhcpd.leases(5), dhclient.conf(5), <a href="/docs/linux/man/5-dhcp-options/">dhcp-options</a>(5), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), RFC2132, RFC2131.  </p>
 <h2>AUTHOR</h2>
 <p> Information about Internet Systems Consortium can be found at <code><a rel="nofollow" href="https://www.isc.org.">https://www.isc.org.</a></code> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">REFERENCE: CONDITIONAL BEHAVIOUR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">BOOLEAN EXPRESSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">DATA EXPRESSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">NUMERIC EXPRESSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">REFERENCE: ACTION EXPRESSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">REFERENCE: DYNAMIC DNS UPDATES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>  </dd></dl>

@@ -305,22 +305,3 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAO">XPATH QUERIES</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">GETTING INSPECTION DATA FROM THE LIBGUESTFS API</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">OLD VERSIONS OF VIRT-INSPECTOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">EXIT STATUS</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">BUGS</a></dt>
-<dd></dd></dl>

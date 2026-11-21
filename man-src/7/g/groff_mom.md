@@ -842,33 +842,3 @@ description: "groff_mom – groff “mom” macros; “mom” is a “roff” la
  </dd>
 <dd> <p> - the mom macros homepage </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">CALLING MOM</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">FILES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">DOCUMENTATION IN ALPHABETICAL ORDER</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">QUICK REFERENCE</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">Quick Reference of Inline Escape Sequences in alphabetical Order</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Quick Reference of Macros in alphabetical Order</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">DOCUMENTATION OF DETAILS</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">Details of Inline Escape Sequences in alphabetical Order</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Details of Macros in alphabetical Order</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAM">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd></dl>

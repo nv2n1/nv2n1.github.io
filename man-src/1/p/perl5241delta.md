@@ -145,20 +145,3 @@ my $can_foo = eval
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Incompatible Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Testing</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd></dd></dl>

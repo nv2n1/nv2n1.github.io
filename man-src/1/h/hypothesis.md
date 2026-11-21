@@ -4404,8 +4404,6 @@ python -m pytest tests/cover
 
  2013-2017, David R. MacIver 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAI">DETAILS AND ADVANCED FEATURES</a>

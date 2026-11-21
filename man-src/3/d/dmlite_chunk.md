@@ -24,6 +24,3 @@ description: "dmlite_chunk –"
 <h3><code>dmlite_url</code> url</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for dmlite from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

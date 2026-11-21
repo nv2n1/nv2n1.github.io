@@ -228,8 +228,6 @@ print{$barfh} $_ while&lt;$foofh&gt;;
 
  perlunicode, perluniintro, Encode 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAU">INTERNALS</a>

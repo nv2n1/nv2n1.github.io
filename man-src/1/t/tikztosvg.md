@@ -96,23 +96,3 @@ description: "tikztosvg – Render TikZ diagrams to SVG."
 <p> <code>pdfTeX</code> <i></i> &lt;<a rel="nofollow" href="https://www.tug.org/applications/pdftex/">https://www.tug.org/applications/pdftex/</a>&gt;  </p>
 <h2>COPYING</h2>
 <p> Copyright (C) 2021 Pablo. Free use of this software is granted under the terms of the GPL-3.0 License. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">ENVIRONMENT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXIT STATUS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">RESOURCES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">COPYING</a></dt>
-<dd>  </dd></dl>

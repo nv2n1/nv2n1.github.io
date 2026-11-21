@@ -41,6 +41,3 @@ description: "QuantLib::FiniteDifferenceModel – Generic finite difference mode
 </dt><dd> being this a rollback, from must be a later time than to.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

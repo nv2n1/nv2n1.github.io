@@ -133,8 +133,6 @@ url: "/docs/linux/man/1-perlqnx/"
 
  Norton T. Allen (allen [at] huarp.harvard.edu) 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAI">AUTHOR</a>

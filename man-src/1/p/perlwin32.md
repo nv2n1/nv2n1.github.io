@@ -383,36 +383,3 @@ description: "perlwin32 – Perl under Windows"
 <p> Win9x support was added in 5.6 (Benjamin Stuhl). </p>
 <p> Support for 64-bit Windows added in 5.8 (ActiveState Corp). </p>
 <p> Last updated: 30 April 2019 </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Setting Up Perl on Windows</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Building</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Testing Perl on Windows</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Installation of Perl on Windows</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Usage Hints for Perl on Windows</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Running Perl Scripts</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Miscellaneous Things</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">BUGS AND CAVEATS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">ACKNOWLEDGEMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAP">HISTORY</a></dt>
-<dd>  </dd></dl>

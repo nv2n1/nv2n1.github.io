@@ -93,6 +93,3 @@ description: "include/antlr3exception.h –"
 <p> Base structure for an ANTLR3 exception tracker.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBE">Author</a></dt>
-<dd></dd></dl>

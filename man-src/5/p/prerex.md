@@ -85,28 +85,3 @@ description: "prerex_format — a format for prerequisite-chart descriptions"
 <p> R. D. Tennent (rdt [at] cs.queensu.ca)  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1), <code>prerex.sty</code>(7). </p>
-<h2>Index</h2>
- </dd>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">TERMINOLOGY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">STRUCTURE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COURSE BOXES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">MINI COURSE BOXES AND TEXT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ARROWS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">COORDINATE GRID</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">WEB LINKS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>  </dd></dl>

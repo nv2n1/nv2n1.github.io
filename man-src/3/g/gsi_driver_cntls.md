@@ -325,8 +325,3 @@ description: "Attributes and Cntls –"
 </dt><dd> <i>server_mode</i> The server mode.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBN">Author</a></dt>
-<dd></dd></dl>

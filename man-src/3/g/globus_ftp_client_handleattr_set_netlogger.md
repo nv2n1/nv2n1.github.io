@@ -169,8 +169,3 @@ description: "Handle Attributes –"
  <i>rfc1738_url</i> Set to GLOBUS_TRUE to enable non-root relative URLs. Default of GLOBUS_FALSE specifies root-relative URLs.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAS">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">Author</a></dt>
-<dd></dd></dl>

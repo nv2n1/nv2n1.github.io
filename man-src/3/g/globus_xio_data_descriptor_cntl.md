@@ -61,6 +61,3 @@ description: "builtins/http/globus_xio_http.h –"
  <i>headers</i> Pointer to be set to point to a hashtable of <code>globus_xio_http_header_t</code> values, keyed by the HTTP header names. The caller must not access this value outside of the lifetime of the data descriptor nor free it or any values in it.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Author</a></dt>
-<dd></dd></dl>

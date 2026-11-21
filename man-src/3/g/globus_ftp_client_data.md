@@ -115,8 +115,6 @@ url: "/docs/linux/man/3-globus_ftp_client_data/"
 
  Generated automatically by Doxygen for globus_ftp_client from the source code. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAH">Function Documentation</a>

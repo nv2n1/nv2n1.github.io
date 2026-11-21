@@ -325,8 +325,3 @@ description: "Globus GASS Cache –"
 </dt><dd> The <code>globus_gass_cache_query()</code> function returns GLOBUS_SUCCESS, GLOBUS_GASS_CACHE_URL_NOT_FOUND, or any of the defined gass error code.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_cache from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">Author</a></dt>
-<dd></dd></dl>

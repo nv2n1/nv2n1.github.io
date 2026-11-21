@@ -626,11 +626,3 @@ OUTPUT : RETVAL
 <p> Changes for h2xs as of Perl 5.8.x by Renee Baecker</p>
 <h3>Last Changed</h3>
 <p> 2012-01-20 </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">TUTORIAL</a></dt>
-<dd>
-</dd><dt><a href="#lbBK">See also</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">Author</a></dt>
-<dd>
-</dd></dl>

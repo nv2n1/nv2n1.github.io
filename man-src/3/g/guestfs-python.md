@@ -149,18 +149,3 @@ import sys import guestfs
 <dt>&bull;</dt>
 <dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAI">EXAMPLE 1: CREATE A DISK IMAGE</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">BUGS</a></dt>
-<dd></dd></dl>

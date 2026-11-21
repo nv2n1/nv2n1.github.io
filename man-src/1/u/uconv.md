@@ -166,27 +166,3 @@ description: "uconv – convert data from one encoding to another"
 <p> Copyright (C) 2000-2005 IBM, Inc. and others.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">CALLBACKS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">CAVEATS AND BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">VERSION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>  </dd></dl>

@@ -306,8 +306,3 @@ description: "Driver Programming –"
 <p> (result is always success in this case.. if there is an error, use the other finish() call)</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAX">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBN">Author</a></dt>
-<dd></dd></dl>

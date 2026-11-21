@@ -105,28 +105,3 @@ description: "convmv – converts filenames from one encoding to another"
 <h2>AUTHOR</h2>
 <p> Bjoern <font SIZE="-1">JACKE</font> </p>
 <p> Send mail to bjoern [at] j3e.de for bug reports and suggestions. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAF">Filesystem issues</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">How to undo double <font SIZE="-1">UTF-8 </font>(or other) encoded filenames</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">How to repair Samba files</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Netatalk interoperability issues</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">AUTHOR</a></dt>
-<dd>  </dd></dl>

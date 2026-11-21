@@ -94,8 +94,6 @@ url: "/docs/linux/man/1-perlcommunity/"
 
  Edgar ``Trizor'' Bering &lt;trizor [at] gmail.com&gt; 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAM">AUTHOR</a>

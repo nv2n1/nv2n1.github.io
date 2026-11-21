@@ -114,6 +114,3 @@ description: "Hash Table –"
 <p> Void pointer hash function. A decent hash function for void pointers. This routine goes to some effort to distribute the information from the address into the hash index by XORing the upper and lower halves of the pointer into one accumulator and calculating the index as the remainder of dividing the accumulator by the table size.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAX">Author</a></dt>
-<dd></dd></dl>

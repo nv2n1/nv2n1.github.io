@@ -92,22 +92,3 @@ description: "perl5262delta – what is new for perl v5.26.2"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Incompatible Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">Platform Support</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Give Thanks</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">SEE ALSO</a></dt>
-<dd></dd></dl>

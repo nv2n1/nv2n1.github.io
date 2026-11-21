@@ -65,6 +65,3 @@ description: "Thread-Specific Storage –"
 </dt><dd> On success, <code>globus_thread_setspecific()</code> stores value in the thread-specific data for the specified key and returns GLOBUS_SUCCESS. If an error occurs, <code>globus_thread_setspecific()</code> returns an implementation-specific non-zero error code and does not modify the key&#8217;s value for this thread.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Author</a></dt>
-<dd></dd></dl>

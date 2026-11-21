@@ -448,31 +448,3 @@ description: "latex2html – translate LaTeX files to HTML (HyperText Markup Lan
 <p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1)  </p>
 <h2>AUTHOR</h2>
 <p> Nikos Drakos, Computer Based Learning Unit, University of Leeds &lt;nikos [at] cbl.leeds.ac.uk&gt;. Several people have contributed suggestions, ideas, solutions, support and encouragement. The current maintainer is Ross Moore. This manual page was written by Manoj Srivastava &lt;srivasta [at] debian.org&gt;, for the Debian GNU/Linux system, based on the LaTeX documentation accompanying the program. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">CAVEAT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">Options controlling Titles, File-Names and Sectioning</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">Options controlling Extensions and Special Features</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">Switches controlling Image Generation</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">Switches controlling Navigation Panels</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">Switches for Linking to other documents</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">Switches for Help and Tracing</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">Other Configuration Variables, without switches</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">AUTHOR</a></dt>
-<dd>  </dd></dl>

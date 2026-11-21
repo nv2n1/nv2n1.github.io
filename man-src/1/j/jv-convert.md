@@ -50,17 +50,3 @@ description: "jv-convert – Convert file from one encoding to another"
      software. Copies published by the Free Software Foundation raise
      funds for GNU development.
 </code></pre>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

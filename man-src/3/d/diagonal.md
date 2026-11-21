@@ -158,8 +158,3 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 </dt><dd> the given matrix must be symmetric.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">Friends And Related Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">Author</a></dt>
-<dd></dd></dl>

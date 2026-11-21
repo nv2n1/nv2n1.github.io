@@ -76,8 +76,3 @@ description: "hwlocality_levels – Object levels, depths and types"
 <p> Get the depth of the hierarchical tree of objects. This is the depth of <code>HWLOC_OBJ_PU</code> objects plus one.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Author</a></dt>
-<dd></dd></dl>

@@ -208,8 +208,3 @@ description: "Handle Attributes –"
 </dt><dd> Returns GLOBUS_SUCCESS if the handle is valid, otherwise an error object is returned.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">Author</a></dt>
-<dd></dd></dl>

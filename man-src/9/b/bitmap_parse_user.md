@@ -35,15 +35,3 @@ description: "bitmap_parse_user – convert an ASCII hex string in a user buffer
 <h2>COPYRIGHT</h2>
 <p> <br />
  </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">ARGUMENTS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COPYRIGHT</a></dt>
-<dd>  </dd></dl>

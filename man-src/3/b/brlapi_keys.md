@@ -184,10 +184,3 @@ description: "Reading key presses –"
 </dt><dd> If the read is interrupted by a signal, <code>brlapi_readKey()</code> will return -1, brlapi_errno will be BRLAPI_ERROR_LIBCERR and errno will be EINTR.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">Author</a></dt>
-<dd></dd></dl>

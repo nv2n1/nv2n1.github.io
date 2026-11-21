@@ -617,10 +617,3 @@ description: "include/antlr3defs.h –"
 <h3>ANTLR3_API void fillBufferExt (<code>pANTLR3_COMMON_TOKEN_STREAM</code> tokenStream)</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbBN">Typedef Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCV">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbFK">Author</a></dt>
-<dd></dd></dl>

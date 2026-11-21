@@ -126,16 +126,3 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 <p> Definitely yes. Sometimes more then one daemon can be started, sometimes the socket is not removed, when the daemon terminates. if this happens (&#8216;socket in use&#8217;), do a <i>rm /tmp/isdnrate</i> and try again.</p>
 <h2>AUTHORS</h2>
 <p> Andreas Kool &lt;akool [at] isdn4linux.de&gt; started this program. Leopold Toetsch &lt;lt [at] toetsch.at&gt; continued the work and brought this man page to you. Michael Reinelt &lt;reinelt [at] eunet.at&gt; did the calculation engine and various tools for it. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAI">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">SIGNALS</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">AUTHORS</a></dt>
-<dd></dd></dl>

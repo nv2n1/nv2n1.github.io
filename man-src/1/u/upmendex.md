@@ -534,29 +534,3 @@ description: "upmendex – Multilingual index processor"
  International Components for Unicode (ICU): &lt;<a rel="nofollow" href="http://icu.unicode.org/">http://icu.unicode.org/</a>&gt;, &lt;<a rel="nofollow" href="https://unicode-org.github.io/icu/">https://unicode-org.github.io/icu/</a>&gt;  </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Takuji Tanaka based on the mendex manual page written by Japanese TeX Development Community. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">STYLE FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ABOUT JAPANESE PROCESSING</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ABOUT SORTING PROCEDURE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">ENVIRONMENT VARIABLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">DETAIL</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">KNOWN ISSUES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHOR</a></dt>
-<dd>  </dd></dl>

@@ -1034,8 +1034,3 @@ ctest -SP &lt;script&gt;
 <p> : <i><a rel="nofollow" href="https://cdash.org">https://cdash.org</a></i></dl>
 <h2>COPYRIGHT</h2>
 <p> 2000-2022 Kitware, Inc. and Contributors </p>
-<h2>Index</h2>
-<dt><a href="#lbBC">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">COPYRIGHT</a></dt>
-<dd></dd></dl>

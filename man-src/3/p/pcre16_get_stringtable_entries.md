@@ -26,11 +26,3 @@ description: "PCRE – Perl-compatible regular expressions"
 &nbsp;<wbr>&nbsp;<i>last</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Where to return a pointer to the last entry </p>
 <p>The yield of the function is the length of each entry, or PCRE_ERROR_NOSUBSTRING if none are found. </p>
 <p>There is a complete description of the PCRE native API, including the format of the table entries, in the <code>pcreapi</code> page, and a description of the POSIX API in the <code>pcreposix</code> page. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd></dl>

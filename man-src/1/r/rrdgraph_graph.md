@@ -273,27 +273,3 @@ description: "rrdgraph_graph – rrdtool graph command reference"
 <h2>AUTHOR</h2>
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE"><font SIZE="-1">PRINT</font></a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF"><font SIZE="-1">GRAPH</font></a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAG">NOTES on legend arguments</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAH">Escaping the colon</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">String Formatting</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>  </dd></dl>

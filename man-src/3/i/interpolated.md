@@ -70,6 +70,3 @@ description: "QuantLib::InflationIndex – Base class for inflation-rate indexes
 <p> The availability lag describes when the index is <i>available</i>, not how it is used. Specifically the fixing for, say, January, may only be available in April but the index will always return the index value applicable for January as its January fixing (independent of the lag in availability). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAO">Author</a></dt>
-<dd></dd></dl>

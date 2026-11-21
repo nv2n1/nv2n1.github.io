@@ -58,21 +58,3 @@ description: "latexrevise – selectively remove markup and text from latexdiff 
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2004 Frederik Tilmann </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License Version 3 </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">PORTABILITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd></dl>

@@ -107,21 +107,3 @@ description: "gliv – An OpenGL Image Viewer"
 <h2>AUTHOR</h2>
 <p> Guillaume Chazarain &lt;guichaz [at] yahoo.fr&gt; <br />
  See <a rel="nofollow" href="http://guichaz.free.fr/gliv">http://guichaz.free.fr/gliv</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COLLECTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CONTROLS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">FILE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">AUTHOR</a></dt>
-<dd>  </dd></dl>

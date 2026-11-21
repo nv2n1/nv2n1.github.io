@@ -117,10 +117,3 @@ description: "kdenlive – An open source non-linear video editor."
 Jean - Baptiste Mardelle&lt;jb[at] kdenlive.org&gt;
            Marco Gittler&lt;g.marco[at] freenet.de&gt;
 </code></pre>
-<h2>Index</h2>
-<dt><a href="#lbAT">ENVIRONMENT</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">AUTHORS</a></dt>
-<dd></dd></dl>

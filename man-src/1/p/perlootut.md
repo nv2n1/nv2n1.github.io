@@ -450,8 +450,6 @@ sub print_info
 
  We encourage you to play with and evaluate Moose, Moo, Class::Accessor, and Class::Tiny to see which <font SIZE="-1">OO</font> system is right for you. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAP">PERL OO SYSTEMS</a>

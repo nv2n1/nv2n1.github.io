@@ -179,12 +179,3 @@ delete --recursive /Users/Me/Documents/Junk
 </dt><dd> $ wimlib-imagex update boot.wim 2 &#8211;check &lt; update_commands.txt</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-capture/">wimlib-imagex-capture</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-mountrw/">wimlib-imagex-mountrw</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">OPTIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">NOTES</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
-<dd></dd></dl>

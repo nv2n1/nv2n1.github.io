@@ -105,10 +105,3 @@ description: "QuantLib::Calendar – calendar class"
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, const <code>Calendar</code> &amp;) [related]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAL">Member Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">Friends And Related Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">Author</a></dt>
-<dd></dd></dl>

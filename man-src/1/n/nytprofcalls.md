@@ -7,7 +7,3 @@ url: "/docs/linux/man/1-nytprofcalls/"
 ---
 <p>nytprofcalls &#8211; experimental </p>
 <hr />
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd></dl>

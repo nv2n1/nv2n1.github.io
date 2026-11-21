@@ -1674,10 +1674,3 @@ description: "ggzcore.h – The interface for the ggzcore library used by GGZ cl
 </dt><dd> How do we stop the GGZ client from fiddling with random tables?</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for GGZCore from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Enumeration Type Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbDO">Author</a></dt>
-<dd></dd></dl>

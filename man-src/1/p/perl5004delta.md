@@ -710,24 +710,3 @@ sub outermost
 <h2>HISTORY</h2>
 <p> Constructed by Tom Christiansen, grabbing material with permission from innumerable contributors, with kibitzing by more than a few Perl porters. </p>
 <p> Last update: Wed May 14 11:14:09 <font SIZE="-1">EDT 1997</font> </p>
-<h2>Index</h2>
-<dt><a href="#lbBH">Support for More Operating Systems</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbBN">Modules</a></dt>
-<dd>
-</dd><dt><a href="#lbBY">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCB">C Language API Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCC">Documentation Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCD">New Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbCE">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbCF">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbCG">HISTORY</a></dt>
-<dd></dd></dl>

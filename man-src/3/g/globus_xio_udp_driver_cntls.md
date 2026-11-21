@@ -348,8 +348,3 @@ description: "Attributes and Cntls –"
 </dt><dd> <i>contact_string</i> A pointer to a contact string of the format &lt;hostname/ip&gt;:&lt;port/service&gt;</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBO">Author</a></dt>
-<dd></dd></dl>

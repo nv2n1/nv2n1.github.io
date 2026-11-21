@@ -82,15 +82,3 @@ description: "jinfo – Generates configuration information. This command is exp
 <dd> <p> jsadebugd(1) <br />
  </p>
  </dd></dl>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO </a></dt>
-<dd>  </dd></dl>

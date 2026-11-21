@@ -1054,22 +1054,3 @@ Private | Shared 1 | 2 Anonymous.stack |
 <p>&nbsp;</p>
 <h2>9. SEE Also</h2>
 <p> <code><a href="/docs/linux/man/1-free/">free</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-uptime/">uptime</a></code>(1), <code><a href="/docs/linux/man/1-atop/">atop</a></code>(1), <code><a href="/docs/linux/man/1-slabtop/">slabtop</a></code>(1), <code><a href="/docs/linux/man/8-vmstat/">vmstat</a></code>(8), <code><a href="/docs/linux/man/1-w/">w</a></code>(1) </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">1. COMMAND-LINE Options</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">2. SUMMARY Display</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">3. FIELDS / Columns</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">4. INTERACTIVE Commands</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">5. ALTERNATE-DISPLAY Provisions</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">6. FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">7. STUPID TRICKS Sampler</a></dt>
-<dd>
-</dd><dt><a href="#lbBL">8. BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbBM">9. SEE Also</a></dt>
-<dd></dd></dl>

@@ -114,8 +114,3 @@ description: "rcsintro – introduction to RCS commands"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ci/">ci</a>(1), <a href="/docs/linux/man/1-co/">co</a>(1), <a href="/docs/linux/man/1-ident/">ident</a>(1), <a href="/docs/linux/man/1-rcs/">rcs</a>(1), <a href="/docs/linux/man/1-rcsdiff/">rcsdiff</a>(1), <a href="/docs/linux/man/1-rcsintro/">rcsintro</a>(1), <a href="/docs/linux/man/1-rcsmerge/">rcsmerge</a>(1), <a href="/docs/linux/man/1-rlog/">rlog</a>(1)<br />
  Walter F. Tichy, <font SIZE="-1">RCS</font>&#8211;A System for Version Control, <i>Software&#8211;Practice &amp; Experience</i> <code>15</code>, 7 (July 1985), 637-654. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">IDENTIFICATION</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">SEE ALSO</a></dt>
-<dd></dd></dl>

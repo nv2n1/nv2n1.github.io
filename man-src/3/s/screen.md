@@ -28,13 +28,3 @@ description: "screen – Global pointer to the screen hardware video memory. All
 <p>Warning: be very careful when using this pointer at the same time as any bitmaps created by the create_video_bitmap() function (see the description of this function for more detailed information). And never try to destroy it with destroy_bitmap(). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code>is_screen_bitmap</code>(3), <code><a href="/docs/linux/man/3-create_video_bitmap/">create_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-scroll_screen/">scroll_screen</a></code>(3) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd></dl>

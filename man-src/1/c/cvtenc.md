@@ -34,17 +34,3 @@ description: "cvtenc – file encoding converter"
  </dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>cvtenc</code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">HISTORY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">AUTHORS</a></dt>
-<dd>  </dd></dl>

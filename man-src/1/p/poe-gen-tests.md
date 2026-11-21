@@ -329,8 +329,6 @@ print "\n";
 
  Thanks to Martijn van Beers for beta testing and suggestions. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAO">SEE ALSO</a>

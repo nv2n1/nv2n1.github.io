@@ -402,26 +402,3 @@ $BADREF-&gt;process(1, 2, 3);</p>
 <h2>HISTORY</h2>
 <p> Written by Gurusamy Sarathy &lt;<i>gsar [at] activestate.com</i>&gt;, with many contributions from The Perl Porters. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.com</i>&gt;. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Core Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbBX">Supported Platforms</a></dt>
-<dd>
-</dd><dt><a href="#lbCA">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbCD">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCE">Documentation Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCF">New Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbCG">Obsolete Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbCH">Configuration Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbCI">BUGS</a></dt>
-<dd>
-</dd><dt><a href="#lbCJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbCK">HISTORY</a></dt>
-<dd></dd></dl>

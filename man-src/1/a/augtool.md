@@ -159,18 +159,3 @@ augtool print / files / etc / hosts /
 <h2>SEE ALSO</h2>
 <p> <code>Augeas</code> project homepage &lt;<a rel="nofollow" href="http://www.augeas.net/">http://www.augeas.net/</a>&gt; </p>
 <p> augparse </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">DIAGNOSTICS</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">EXAMPLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">COPYRIGHT AND LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">SEE ALSO</a></dt>
-<dd></dd></dl>

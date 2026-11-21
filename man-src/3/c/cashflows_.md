@@ -179,8 +179,3 @@ description: "QuantLib::Bond – Base bond class."
 <p> This method can be called by derived classes in order to build a bond with a single redemption payment. It will fill the notionalSchedule_, notionals_, and redemptions_ data members. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Member Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">Author</a></dt>
-<dd></dd></dl>

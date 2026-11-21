@@ -29,6 +29,3 @@ description: "globus_rls_rli_info_t –"
 <p> Time of last softstate update. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

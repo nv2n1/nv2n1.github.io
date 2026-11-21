@@ -64,8 +64,3 @@ description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting 
 <p> The idea is to use a previous solution as a guess solution to the discount curve, in an attempt to speed up calculations. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAK">Member Data Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">Author</a></dt>
-<dd></dd></dl>

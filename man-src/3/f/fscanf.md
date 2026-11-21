@@ -223,35 +223,3 @@ description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format c
 <p> <code><a href="/docs/linux/man/3-getc/">getc</a></code>(3), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3), <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3), <code><a href="/docs/linux/man/3-strtol/">strtol</a></code>(3), <code><a href="/docs/linux/man/3-strtoul/">strtoul</a></code>(3)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAE">Conversions</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAF">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ERRORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">ATTRIBUTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">CONFORMING TO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">NOTES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAK">The &#8216;a&#8217; assignment-allocation modifier</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAL">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">COLOPHON</a></dt>
-<dd>  </dd></dl>

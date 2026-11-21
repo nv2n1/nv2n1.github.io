@@ -127,10 +127,3 @@ description: "perl5122delta – what is new for perl v5.12.2"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAT">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">SEE ALSO</a></dt>
-<dd></dd></dl>

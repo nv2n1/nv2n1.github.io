@@ -270,6 +270,3 @@ Perl | AIX Level | Compiler Level | w th | w / o th-- -- -- -+-- -- -- -- -- -- 
 <p> In <font SIZE="-1">AIX 4.2</font> Perl extensions that use C<font SIZE="-2">++</font> functions that use statics may have problems in that the statics are not getting initialized. In newer <font SIZE="-1">AIX</font> releases this has been solved by linking Perl with the libC_r library, but unfortunately in <font SIZE="-1">AIX 4.2</font> the said library has an obscure bug where the various functions related to time (such as <code>time()</code> and <code>gettimeofday()</code>) return broken values, and therefore in <font SIZE="-1">AIX 4.2</font> Perl is not linked against the libC_r.</p>
 <h2>AUTHORS</h2>
 <p> Rainer Tammer &lt;tammer [at] tammer.net&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbBB">AUTHORS</a></dt>
-<dd></dd></dl>

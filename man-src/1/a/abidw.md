@@ -66,8 +66,3 @@ abidw[options][&lt;path - to - elf - file&gt;]
 <p> Dodji Seketeli</p>
 <h2>COPYRIGHT</h2>
 <p> 2014-2016, Red Hat, Inc. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbAH">COPYRIGHT</a></dt>
-<dd></dd></dl>

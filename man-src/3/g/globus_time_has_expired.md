@@ -175,6 +175,3 @@ description: "globus_time.h –"
 <p> Returns a boolean that reflects whether or not reltime is infinity.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAZ">Author</a></dt>
-<dd></dd></dl>

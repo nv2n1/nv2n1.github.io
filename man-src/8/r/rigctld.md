@@ -414,33 +414,3 @@ description: "rigctld – Hamlib TCP rig control daemon"
 <p>This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1), <code>hamlib</code>(3) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">COMMANDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">PROTOCOL</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">DIAGNOSTICS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SECURITY</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">REPORTING BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">AUTHORS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAN">COPYRIGHT</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">SEE ALSO</a></dt>
-<dd>  </dd></dl>

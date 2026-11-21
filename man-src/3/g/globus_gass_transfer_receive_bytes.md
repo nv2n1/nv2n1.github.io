@@ -79,8 +79,3 @@ description: "Sending and Receiving Data –"
  <i>GLOBUS_GASS_TRANSFER_ERROR_DONE</i> The <i>request</i> has already been completed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">Author</a></dt>
-<dd></dd></dl>

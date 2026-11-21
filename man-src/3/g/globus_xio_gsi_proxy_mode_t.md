@@ -483,8 +483,3 @@ description: "Globus XIO GSI Driver –"
  <i>callback_arg</i> The arguments to pass to the callback</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio_gsi_driver from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAW">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbCE">Author</a></dt>
-<dd></dd></dl>

@@ -100,30 +100,3 @@ description: "perl5144delta – what is new for perl v5.14.4"
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>
-<dt><a href="#lbAN">Incompatible Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAO">Deprecations</a></dt>
-<dd>
-</dd><dt><a href="#lbAP">Modules and Pragmata</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAW">Diagnostics</a></dt>
-<dd>
-</dd><dt><a href="#lbAX">Utility Changes</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">Configuration and Compilation</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">Platform Support</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">Selected Bug Fixes</a></dt>
-<dd>
-</dd><dt><a href="#lbBE">Known Problems</a></dt>
-<dd>
-</dd><dt><a href="#lbBF">Acknowledgements</a></dt>
-<dd>
-</dd><dt><a href="#lbBG">Reporting Bugs</a></dt>
-<dd>
-</dd><dt><a href="#lbBH">SEE ALSO</a></dt>
-<dd></dd></dl>

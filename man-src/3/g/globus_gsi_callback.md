@@ -29,6 +29,3 @@ description: "Globus GSI Callback –"
 <p> Typedef for a callback that may be registered for dealing with unhandled X.509 extension</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_callback from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Author</a></dt>
-<dd></dd></dl>

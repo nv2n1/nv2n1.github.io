@@ -84,12 +84,3 @@ description: "qrstat – show the status of xxQS_NAMExx Advance Reservations (AR
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">ENVIRONMENT VARIABLES</a></dt>
-<dd>
-</dd><dt><a href="#lbAJ">FILES</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
-<dd></dd></dl>

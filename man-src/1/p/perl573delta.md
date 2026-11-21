@@ -160,17 +160,3 @@ description: "perl573delta – what’s new for perl v5.7.3"
 <h2>HISTORY</h2>
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">Changes</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">Reporting Bugs</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">HISTORY</a></dt>
-<dd>  </dd></dl>

@@ -126,20 +126,3 @@ INTERESTINGIPS /(
 <p> If you&#8217;d like to get involved with development in any way, please feel free to contact the author.</p>
 <h2>AUTHOR</h2>
 <p> clide was written by Mark Krenz &lt;mark [at] suso.com&gt; </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">EXPRESSIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">FILE FORMATS</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">BUGS AND LIMITATIONS</a></dt>
-<dd>
-</dd><dt><a href="#lbAR">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">WARMFUZZY</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAU">MORE INFO</a></dt>
-<dd>
-</dd><dt><a href="#lbAV">AUTHOR</a></dt>
-<dd></dd></dl>

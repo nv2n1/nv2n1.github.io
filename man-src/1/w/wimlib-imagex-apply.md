@@ -235,29 +235,3 @@ mywim5.swm
 <p> An example of applying a pipable WIM from a pipe can be found in <code>PIPABLE WIMS</code>, and an example of applying a split WIM can be found in <code>SPLIT WIMS</code>.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-capture/">wimlib-imagex-capture</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-extract/">wimlib-imagex-extract</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">DIRECTORY EXTRACTION (UNIX)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">NTFS VOLUME EXTRACTION (UNIX)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">DIRECTORY EXTRACTION (WINDOWS)</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">SPLIT WIMS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">PIPABLE WIMS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">EXAMPLES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAM">SEE ALSO</a></dt>
-<dd>  </dd></dl>

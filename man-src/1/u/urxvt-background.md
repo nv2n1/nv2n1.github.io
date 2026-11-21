@@ -476,8 +476,6 @@ FOCUS ? keep{load "has_focus.jpg"} : keep
  This leaves the question of how to force reevaluation of the block, in case the root background changes: If expression inside the block is sensitive to some event (root background changes, window geometry changes), then it will be reevaluated automatically as needed. 
 </dd></dl>
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAJ">REFERENCE</a>

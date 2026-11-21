@@ -222,14 +222,3 @@ description: "guestfs-internals – architecture and internals of libguestfs"
 <dt>&bull;</dt>
 <dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAK">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbAM">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbAN">BUGS</a></dt>
-<dd></dd></dl>

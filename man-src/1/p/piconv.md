@@ -82,13 +82,3 @@ description: "piconv —"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) <code>locale</code>(3) Encode Encode::Supported Encode::Alias PerlIO </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">SEE ALSO</a></dt>
-<dd>  </dd></dl>

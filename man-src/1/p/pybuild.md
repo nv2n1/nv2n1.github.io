@@ -191,8 +191,3 @@ export PYBUILD_NAME=foo
 <dd> <i><a rel="nofollow" href="http://deb.li/pybuild">http://deb.li/pybuild</a></i> &#8211; most recent version of this document</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbAQ">AUTHOR</a></dt>
-<dd></dd></dl>

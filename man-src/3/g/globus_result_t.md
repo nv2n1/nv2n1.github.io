@@ -154,8 +154,3 @@ description: "Globus Common API –"
  <i>outpath</i> Output string; Need to be freed when not used anymore.</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAP">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAS">Author</a></dt>
-<dd></dd></dl>

@@ -39,6 +39,3 @@ description: "Error Types –"
 <dd> Indicates the the token being read is too big. Usually happens when someone tries to establish a non secure session with a endpoint that expects security</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAG">Author</a></dt>
-<dd></dd></dl>

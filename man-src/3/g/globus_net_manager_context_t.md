@@ -203,8 +203,3 @@ description: "Context –"
 </dt><dd> On success, this function returns GLOBUS_SUCCESS. If any manager returns an error, the pre_listen() calls stop and the error is returned to the caller.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAH">Function Documentation</a></dt>
-<dd>
-</dd><dt><a href="#lbAT">Author</a></dt>
-<dd></dd></dl>

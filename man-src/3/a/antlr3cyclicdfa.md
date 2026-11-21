@@ -26,6 +26,3 @@ description: "include/antlr3cyclicdfa.h –"
 <h3>typedef <code>ANTLR3_INT32</code>(* <code>CDFA_SPECIAL_FUNC</code>)(void *, <code>pANTLR3_BASE_RECOGNIZER</code>, <code>pANTLR3_INT_STREAM</code>, struct <code>ANTLR3_CYCLIC_DFA_struct</code> *, <code>ANTLR3_INT32</code>)</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

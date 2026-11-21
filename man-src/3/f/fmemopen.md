@@ -139,35 +139,3 @@ description: "fmemopen – open memory as stream"
 <p> <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3), <code><a href="/docs/linux/man/3-fopencookie/">fopencookie</a></code>(3), <code>open_memstream</code>(3)  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">RETURN VALUE</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">VERSIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">ATTRIBUTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">CONFORMING TO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">NOTES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAJ">Binary mode</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAK">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAL">EXAMPLES</a></dt>
-<dd>  </dd>
-<dl>
-<dt><a href="#lbAM">Program source</a></dt>
-<dd>  </dd></dl>
-<dt><a href="#lbAN">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAO">COLOPHON</a></dt>
-<dd>  </dd></dl>

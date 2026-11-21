@@ -336,8 +336,6 @@ main()
 
  Updated 12 March 2001 to mention //'<font SIZE="-1">SYS1.TCPPARMS</font>(<font SIZE="-1">TCPDATA</font>)'. 
 
-<h2>Index</h2>
-
 
 
 <dt><a HREF="#lbAP">AUTHORS</a>

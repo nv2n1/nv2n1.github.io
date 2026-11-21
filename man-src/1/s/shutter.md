@@ -96,6 +96,3 @@ description: "Shutter – Feature-rich Screenshot Tool"
 <p> If you find a bug in Shutter, you should report it. But first, you should make sure that it really is a bug, and that it appears in the latest version of Shutter. </p>
 <p> The latest version is always available from: <code><a rel="nofollow" href="https://launchpad.net/shutter">https://launchpad.net/shutter</a></code> </p>
 <p> Once you have determined that a bug actually exists, please report it at launchpad: <code><a rel="nofollow" href="https://bugs.launchpad.net/shutter/+filebug">https://bugs.launchpad.net/shutter/+filebug</a></code> </p>
-<h2>Index</h2>
-<dt><a href="#lbAJ">BUG REPORTS</a></dt>
-<dd></dd></dl>

@@ -32,6 +32,3 @@ description: "include/antlr3commontree.h –"
 <p> Interface for an ANTLR3 common tree which is what gets passed around by the AST producing parser.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>
-<dt><a href="#lbAI">Author</a></dt>
-<dd></dd></dl>

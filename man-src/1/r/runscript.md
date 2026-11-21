@@ -120,25 +120,3 @@ timeout verbose sleep break call log
 <p> Runscript should be built in to minicom.  </p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, &lt;miquels [at] drinkel.ow.org&gt; Jukka Lahtinen, &lt;walker [at] netsonic.fi&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">INVOCATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">KEYWORDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">OVERVIEW OF KEYWORDS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">NOTES</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>  </dd></dl>

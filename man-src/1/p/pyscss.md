@@ -829,10 +829,3 @@ py.test scss/tests/files/general/000-smoketest.scss
 <p> German M. Bravo (Kronuz)</p>
 <h2>COPYRIGHT</h2>
 <p> 2013, German M. Bravo (Kronuz) </p>
-<h2>Index</h2>
-<dt><a href="#lbBX">BACK MATTER</a></dt>
-<dd>
-</dd><dt><a href="#lbDB">AUTHOR</a></dt>
-<dd>
-</dd><dt><a href="#lbDC">COPYRIGHT</a></dt>
-<dd></dd></dl>

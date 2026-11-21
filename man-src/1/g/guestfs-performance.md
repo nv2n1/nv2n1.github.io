@@ -346,18 +346,3 @@ then
 <dt>&bull;</dt>
 <dd> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
-<h2>Index</h2>
-<dt><a href="#lbAT">DETAILED ANALYSIS</a></dt>
-<dd>
-</dd><dt><a href="#lbAY">PERFORMANCE REGRESSIONS IN OTHER PROGRAMS</a></dt>
-<dd>
-</dd><dt><a href="#lbAZ">SEE ALSO</a></dt>
-<dd>
-</dd><dt><a href="#lbBA">AUTHORS</a></dt>
-<dd>
-</dd><dt><a href="#lbBB">COPYRIGHT</a></dt>
-<dd>
-</dd><dt><a href="#lbBC">LICENSE</a></dt>
-<dd>
-</dd><dt><a href="#lbBD">BUGS</a></dt>
-<dd></dd></dl>

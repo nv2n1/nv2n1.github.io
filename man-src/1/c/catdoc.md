@@ -130,25 +130,3 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 <p> <code><a href="/docs/linux/man/1-xls2csv/">xls2csv</a></code>(1), <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1), <code>utf</code>(4), <code>unicode</code>(4) </p>
 <h2>AUTHOR</h2>
 <p> V.B.Wagner &lt;vitus [at] 45.free.net&gt; </p>
-<h2>Index</h2>
-<dl>
-<dt><a href="#lbAB">NAME</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAC">SYNOPSIS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAD">DESCRIPTION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAE">OPTIONS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAF">CHARACTER SETS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAG">CHARACTER SUBSTITUTION </a></dt>
-<dd>  </dd>
-<dt><a href="#lbAH">RUNTIME CONFIGURATION</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAI">BUGS</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAJ">SEE ALSO</a></dt>
-<dd>  </dd>
-<dt><a href="#lbAK">AUTHOR</a></dt>
-<dd>  </dd></dl>
