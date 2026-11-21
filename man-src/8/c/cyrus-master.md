@@ -1,4 +1,5 @@
 ---
+
 title: "cyrus-master(8)"
 name: "cyrus-master"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyrus-master – cyrus-master Cyrus process"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyrus-master &#8211; cyrus-master Cyrus process</p>
 <h2>Synopsis</h2>
 <p><code>cyrus-master</code> [ <code>-C</code> <i>alternate imapd.conf</i> ] [ <code>-M</code> <i>alternate cyrus.conf</i> ] [ <code>-l</code> <i>listen queue</i> ] [ <code>-p</code> <i>pidfile</i> ] [ <code>-P</code> <i>snmp agentx ping interval</i> ] [ <code>-j</code> <i>janitor period</i> ] [ <code>-d</code> ] [ <code>-D</code> ] [ <code>-x</code> <i>snmp agentx socket</i> ]</p>

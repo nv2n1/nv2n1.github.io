@@ -1,4 +1,5 @@
 ---
+
 title: "condor_update_machine_ad(1)"
 name: "condor_update_machine_ad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_update_machine_ad/"
 description: "condor_update_machine_ad update a machine ClassAd"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_update_machine_ad</i> update a machine ClassAd </p>
 <h2>Synopsis</h2>
 <p> <i>condor_update_machine_ad</i> [ <code>-help -version</code> ] </p>

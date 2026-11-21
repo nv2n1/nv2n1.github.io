@@ -1,4 +1,5 @@
 ---
+
 title: "condor_vacate(1)"
 name: "condor_vacate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_vacate/"
 description: "condor_vacate Vacate jobs that are running on the specified hosts"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_vacate</i> Vacate jobs that are running on the specified hosts </p>
 <h2>Synopsis</h2>
 <p> <i>condor_vacate</i> [ <code>-help -version</code> ] </p>

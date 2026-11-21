@@ -1,4 +1,5 @@
 ---
+
 title: "mpartition(1)"
 name: "mpartition"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpartition/"
 description: "mpartition – partition an MSDOS hard disk"
 ---
 
-<h2>Name</h2>
 <p> mpartition &#8211; partition an MSDOS hard disk </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

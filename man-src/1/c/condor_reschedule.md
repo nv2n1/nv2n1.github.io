@@ -1,4 +1,5 @@
 ---
+
 title: "condor_reschedule(1)"
 name: "condor_reschedule"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_reschedule/"
 description: "condor_reschedule Update scheduling information to the central manager"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_reschedule</i> Update scheduling information to the central manager </p>
 <h2>Synopsis</h2>
 <p> <i>condor_reschedule</i> [ <code>-help -version</code> ] </p>

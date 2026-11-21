@@ -1,4 +1,5 @@
 ---
+
 title: "ctl_cyrusdb(8)"
 name: "ctl_cyrusdb"
 section: "8"
@@ -8,7 +9,7 @@ description: "ctl_cyrusdb – perform operations common to all Cyrus databases"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>ctl_cyrusdb &#8211; perform operations common to all Cyrus databases</p>
 <h2>Synopsis</h2>
 <p><code>ctl_cyrusdb</code> [ <code>-C</code> <i>config-file</i> ] <code>-r</code> [ <code>-x</code> ]<br />

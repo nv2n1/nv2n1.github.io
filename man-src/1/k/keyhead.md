@@ -1,4 +1,5 @@
 ---
+
 title: "keyhead(1)"
 name: "keyhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keyhead/"
 description: "keyhead – Change FITS or IRAF header keyword names"
 ---
 
-<h2>Name</h2>
 <p> keyhead &#8211; Change FITS or IRAF header keyword names</p>
 <h2>Synopsis</h2>
 <p> sethead [-hknv] &lt;FITS or IRAF file&gt; kw1=kw1a kw2=kwd2a &#8230; kwn=kwdna</p>

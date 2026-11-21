@@ -1,4 +1,5 @@
 ---
+
 title: "imhead(1)"
 name: "imhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imhead/"
 description: "imhead – Print FITS or IRAF image header"
 ---
 
-<h2>Name</h2>
 <p> imhead &#8211; Print FITS or IRAF image header</p>
 <h2>Synopsis</h2>
 <p> imhead [options] FITS or IRAF filename</p>

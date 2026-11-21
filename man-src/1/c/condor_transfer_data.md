@@ -1,4 +1,5 @@
 ---
+
 title: "condor_transfer_data(1)"
 name: "condor_transfer_data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_transfer_data/"
 description: "condor_transfer_data transfer spooled data"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_transfer_data</i> transfer spooled data </p>
 <h2>Synopsis</h2>
 <p> <i>condor_transfer_data</i> [ <code>-help -version</code> ] </p>

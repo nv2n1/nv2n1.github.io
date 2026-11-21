@@ -1,4 +1,5 @@
 ---
+
 title: "mbexamine(8)"
 name: "mbexamine"
 section: "8"
@@ -8,7 +9,7 @@ description: "mbexamine – examine a cyrus-format mailbox"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>mbexamine &#8211; examine a cyrus-format mailbox</p>
 <h2>Synopsis</h2>
 <p><code>mbexamine</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-u uid</code> ] <i>mailbox</i>&#8230;<br />

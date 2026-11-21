@@ -1,4 +1,5 @@
 ---
+
 title: "condor_userprio(1)"
 name: "condor_userprio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_userprio/"
 description: "condor_userprio Manage user priorities"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_userprio</i> Manage user priorities </p>
 <h2>Synopsis</h2>
 <p> <i>condor_userprio</i> <code>-help</code> </p>

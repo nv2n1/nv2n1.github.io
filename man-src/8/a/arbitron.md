@@ -1,4 +1,5 @@
 ---
+
 title: "arbitron(8)"
 name: "arbitron"
 section: "8"
@@ -8,7 +9,7 @@ description: "arbitron – arbitron mailboxes"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>arbitron &#8211; arbitron mailboxes</p>
 <h2>Synopsis</h2>
 <p><code>arbitron</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-o</code> ] [ <code>-u</code> ] [ <code>-l</code> ] [ <code>-p</code> <i>months</i> ] </p>

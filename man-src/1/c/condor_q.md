@@ -1,4 +1,5 @@
 ---
+
 title: "condor_q(1)"
 name: "condor_q"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_q/"
 description: "condor_q Display information about jobs in queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_q</i> Display information about jobs in queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_q</i> [ <code>-help [Universe | State]</code> ] </p>

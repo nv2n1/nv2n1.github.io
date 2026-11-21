@@ -1,4 +1,5 @@
 ---
+
 title: "imapd-conf(5)"
 name: "imapd-conf"
 section: "5"
@@ -8,7 +9,7 @@ description: "imapd.conf – IMAP configuration file"
 ---
 
 <p>*</p>
-<h2>Name</h2>
+
 <p>imapd.conf &#8211; IMAP configuration file</p>
 <h2>Description</h2>
 <p><code>/etc/imapd.conf</code> is the configuration file for the Cyrus IMAP server. It defines local parameters for IMAP. </p>

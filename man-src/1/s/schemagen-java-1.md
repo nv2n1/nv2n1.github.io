@@ -1,4 +1,5 @@
 ---
+
 title: "schemagen-java-1(1)"
 name: "schemagen-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-schemagen-java-1/"
 description: "schemagen – Java(TM) Architecture for XML Binding Schema Generator"
 ---
 
-<h2>Name</h2>
 <p> schemagen &#8211; Java(TM) Architecture for XML Binding Schema Generator </p>
 <p> <code>Specification Version:</code> 2.1<br />
  <code>Implementation Version:</code> 2.1.3 </p>

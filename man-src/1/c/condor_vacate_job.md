@@ -1,4 +1,5 @@
 ---
+
 title: "condor_vacate_job(1)"
 name: "condor_vacate_job"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_vacate_job/"
 description: "condor_vacate_job vacate jobs in the HTCondor queue from the hosts where they are running"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_vacate_job</i> vacate jobs in the HTCondor queue from the hosts where they are running </p>
 <h2>Synopsis</h2>
 <p> <i>condor_vacate_job</i> [ <code>-help -version</code> ] </p>

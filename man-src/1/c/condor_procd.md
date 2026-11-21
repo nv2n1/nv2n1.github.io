@@ -1,4 +1,5 @@
 ---
+
 title: "condor_procd(1)"
 name: "condor_procd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_procd/"
 description: "condor_procd Track and manage process families"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_procd</i> Track and manage process families </p>
 <h2>Synopsis</h2>
 <p> <i>condor_procd</i> <code>-h</code> </p>

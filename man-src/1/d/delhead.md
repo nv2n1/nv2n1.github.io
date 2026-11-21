@@ -1,4 +1,5 @@
 ---
+
 title: "delhead(1)"
 name: "delhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-delhead/"
 description: "delhead – Set FITS or IRAF header keyword values"
 ---
 
-<h2>Name</h2>
 <p> delhead &#8211; Set FITS or IRAF header keyword values</p>
 <h2>Synopsis</h2>
 <p> delhead [-nv] &lt;FITS or IRAF file[s]&gt; kw1 kw2 &#8230; kwn</p>

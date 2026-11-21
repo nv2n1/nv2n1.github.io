@@ -1,4 +1,5 @@
 ---
+
 title: "quota(8)"
 name: "quota"
 section: "8"
@@ -8,7 +9,7 @@ description: "quota – report and optionally fix quota usage"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>quota &#8211; report and optionally fix quota usage</p>
 <h2>Synopsis</h2>
 <p><code>quota</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-d</code> <i>domain</i> ] [ <code>-f</code> ] [ <i>mailbox-prefix</i>&#8230; ]</p>

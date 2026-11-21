@@ -1,4 +1,5 @@
 ---
+
 title: "jrunscript-java-1(1)"
 name: "jrunscript-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jrunscript-java-1/"
 description: "jrunscript – command line script shell"
 ---
 
-<h2>Name</h2>
 <p> jrunscript &#8211; command line script shell </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

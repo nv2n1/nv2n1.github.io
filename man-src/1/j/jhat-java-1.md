@@ -1,4 +1,5 @@
 ---
+
 title: "jhat-java-1(1)"
 name: "jhat-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jhat-java-1/"
 description: "jhat – Java Heap Analysis Tool"
 ---
 
-<h2>Name</h2>
 <p> jhat &#8211; Java Heap Analysis Tool </p>
 <h2>SYNOPSIS</h2>
 <pre>

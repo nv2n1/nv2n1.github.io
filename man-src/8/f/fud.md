@@ -1,4 +1,5 @@
 ---
+
 title: "fud(8)"
 name: "fud"
 section: "8"
@@ -8,7 +9,7 @@ description: "FUD – provide information about user mailboxes"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>FUD &#8211; provide information about user mailboxes</p>
 <h2>Synopsis</h2>
 <p><code>fud</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] [ <code>-D</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wcstools(1)"
 name: "wcstools"
 section: "1"
@@ -6,9 +7,7 @@ letter: "w"
 url: "/docs/linux/man/1-wcstools/"
 ---
 
-<h2>Name</h2>
-
- wcstools - Programs to access image world coordinate systems and catalogs
+wcstools - Programs to access image world coordinate systems and catalogs
 
 <h2>Setting an Image World Coordinate System</h2>
 

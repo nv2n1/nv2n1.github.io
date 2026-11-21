@@ -1,4 +1,5 @@
 ---
+
 title: "pilot(1)"
 name: "pilot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot/"
 description: "pilot – simple file system browser in the style of the Alpine Composer"
 ---
 
-<h2>Name</h2>
 <p> pilot &#8211; simple file system browser in the style of the Alpine Composer</p>
 <h2>Syntax</h2>
 <p> <code>pilot</code> [ <i>options</i> ] [ <i>directory</i> ]</p>

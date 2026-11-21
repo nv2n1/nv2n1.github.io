@@ -1,4 +1,5 @@
 ---
+
 title: "cyrfetchnews(8)"
 name: "cyrfetchnews"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyrfetchnews – retrieve new articles from peer and feed to Cyrus
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyrfetchnews &#8211; retrieve new articles from peer and feed to Cyrus</p>
 <h2>Synopsis</h2>
 <p><code>cyrfetchnews</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-s</code> <i>servername[:port]</i> ] </p>

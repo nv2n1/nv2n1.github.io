@@ -1,4 +1,5 @@
 ---
+
 title: "condor_tail(1)"
 name: "condor_tail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_tail/"
 description: "condor_tail Display the last contents of a running job’s standard output or file"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_tail</i> Display the last contents of a running job&#8217;s standard output or file </p>
 <h2>Synopsis</h2>
 <p> <i>condor_tail</i> [ <code>-help</code> ] | [ <code>-version</code> ] </p>

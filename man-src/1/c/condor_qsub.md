@@ -1,4 +1,5 @@
 ---
+
 title: "condor_qsub(1)"
 name: "condor_qsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_qsub/"
 description: "condor_qsub Queue jobs that use PBS/SGE-style submission"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_qsub</i> Queue jobs that use PBS/SGE-style submission </p>
 <h2>Synopsis</h2>
 <p> <i>condor_qsub</i> [ &#8212; <code>version</code> ] </p>

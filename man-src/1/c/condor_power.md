@@ -1,4 +1,5 @@
 ---
+
 title: "condor_power(1)"
 name: "condor_power"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_power/"
 description: "condor_power send packet intended to wake a machine from a low power state"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_power</i> send packet intended to wake a machine from a low power state </p>
 <h2>Synopsis</h2>
 <p> <i>condor_power</i> [ <code>-h</code> ] </p>

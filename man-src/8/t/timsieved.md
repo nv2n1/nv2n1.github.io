@@ -1,4 +1,5 @@
 ---
+
 title: "timsieved(8)"
 name: "timsieved"
 section: "8"
@@ -8,7 +9,7 @@ description: "timsieved – CMU hack for getting sieve scripts onto the server"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>timsieved &#8211; CMU hack for getting sieve scripts onto the server</p>
 <h2>Synopsis</h2>
 <p><code>timsieved</code> [ <code>-C</code> <i>config-file</i> ]</p>

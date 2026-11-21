@@ -1,4 +1,5 @@
 ---
+
 title: "deliver(8)"
 name: "deliver"
 section: "8"
@@ -8,7 +9,7 @@ description: "deliver – deliver mail to an IMAP mailbox"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>deliver &#8211; deliver mail to an IMAP mailbox</p>
 <h2>Synopsis</h2>
 <p><code>deliver</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-d</code> ] [ <code>-r</code> <i>address</i> ] </p>

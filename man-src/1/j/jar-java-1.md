@@ -1,4 +1,5 @@
 ---
+
 title: "jar-java-1(1)"
 name: "jar-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jar-java-1/"
 description: "jar-The Java Archive Tool"
 ---
 
-<h2>Name</h2>
 <p> jar-The Java Archive Tool </p>
 <p> <code>jar</code> combines multiple files into a single JAR archive file.</p>
 <h2>SYNOPSIS</h2>

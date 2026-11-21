@@ -1,4 +1,5 @@
 ---
+
 title: "condor_chirp(1)"
 name: "condor_chirp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_chirp/"
 description: "condor_chirp Access files or job ClassAd from an executing job"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_chirp</i> Access files or job ClassAd from an executing job </p>
 <h2>Synopsis</h2>
 <p> <i>condor_chirp</i> <code>&lt;Chirp-Command&gt;</code> </p>

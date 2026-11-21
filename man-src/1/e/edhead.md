@@ -1,4 +1,5 @@
 ---
+
 title: "edhead(1)"
 name: "edhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edhead/"
 description: "edhead – Edit header of FITS or IRAF image file"
 ---
 
-<h2>Name</h2>
 <p> edhead &#8211; Edit header of FITS or IRAF image file</p>
 <h2>Synopsis</h2>
 <p> edhead [options] FITS or IRAF file(s)</p>

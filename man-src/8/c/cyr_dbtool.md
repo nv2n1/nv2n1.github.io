@@ -1,4 +1,5 @@
 ---
+
 title: "cyr_dbtool(8)"
 name: "cyr_dbtool"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyr_dbtool – manage Cyrus databases"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyr_dbtool &#8211; manage Cyrus databases</p>
 <h2>Synopsis</h2>
 <p><code>cyr_dbtool</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-n</code> ] &lt;db file&gt; &lt;db backend&gt; &lt;action&gt; [ &lt;key&gt; ] [ &lt;value&gt; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_findhost(1)"
 name: "condor_findhost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_findhost/"
 description: "condor_findhost find machine(s) in the pool that can be used with minimal impact on currently running HTCondor jobs and best meet any specified constraints"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_findhost</i> find machine(s) in the pool that can be used with minimal impact on currently running HTCondor jobs and best meet any specified constraints </p>
 <h2>Synopsis</h2>
 <p> <i>condor_findhost</i> [ <code>-help</code> ] [ <code>-m</code> ] [ <code>-n </code> <i>num</i> ] [ <code>-c </code> <i>c_expr</i> ] [ <code>-r </code> <i>r_expr</i> ] [ <code>-p </code> <i>centralmanagerhostname</i> ] </p>

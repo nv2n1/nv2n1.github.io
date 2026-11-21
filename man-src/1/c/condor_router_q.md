@@ -1,4 +1,5 @@
 ---
+
 title: "condor_router_q(1)"
 name: "condor_router_q"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_router_q/"
 description: "condor_router_q Display information about routed jobs in the queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_router_q</i> Display information about routed jobs in the queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_router_q</i> [ <code>-S</code> ] [ <code>-R</code> ] [ <code>-I</code> ] [ <code>-H</code> ] [ <code>-route </code> <i>name</i> ] [ <code>-idle</code> ] [ <code>-held</code> ] [ <code>-constraint </code> <i>X</i> ] [ <code>condor_q options</code> ] </p>

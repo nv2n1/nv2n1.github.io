@@ -1,4 +1,5 @@
 ---
+
 title: "condor_status(1)"
 name: "condor_status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_status/"
 description: "condor_status Display status of the HTCondor pool"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_status</i> Display status of the HTCondor pool </p>
 <h2>Synopsis</h2>
 <p> <i>condor_status</i> [ <code>-debug</code> ] [ <i>help options</i> ] [ <i>query options</i> ] [ <i>display options</i> ] [ <i>custom options</i> ] [ <i>name &#8230; </i> ] </p>

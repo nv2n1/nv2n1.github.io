@@ -1,4 +1,5 @@
 ---
+
 title: "simpos(1)"
 name: "simpos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simpos/"
 description: "simpos – Find position of a named object in the sky"
 ---
 
-<h2>Name</h2>
 <p> simpos &#8211; Find position of a named object in the sky</p>
 <h2>Synopsis</h2>
 <p> simpos [options] [object name]</p>

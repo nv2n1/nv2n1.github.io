@@ -1,4 +1,5 @@
 ---
+
 title: "jstatd-java-1(1)"
 name: "jstatd-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstatd-java-1/"
 description: "jstatd – Virtual Machine jstat Daemon"
 ---
 
-<h2>Name</h2>
 <p> jstatd &#8211; Virtual Machine jstat Daemon </p>
 <h2>SYNOPSIS</h2>
 <pre>

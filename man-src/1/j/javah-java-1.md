@@ -1,4 +1,5 @@
 ---
+
 title: "javah-java-1(1)"
 name: "javah-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javah-java-1/"
 description: "javah – C Header and Stub File Generator"
 ---
 
-<h2>Name</h2>
 <p> javah &#8211; C Header and Stub File Generator </p>
 <p> <code>javah</code> produces C header files and C source files from a Java class. These files provide the connective glue that allow your Java and C code to interact. </p>
 <h2>SYNOPSIS</h2>

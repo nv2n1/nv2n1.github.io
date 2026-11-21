@@ -1,4 +1,5 @@
 ---
+
 title: "hdb(3)"
 name: "hdb"
 section: "3"
@@ -8,7 +9,7 @@ description: "HDB –"
 ---
 
 <p>HDB &#8211; </p>
-<h2>Synopsis</h2>
+
 <p>#include &lt;hdb.h&gt;</p>
 <h3>Data Fields</h3>
 <p>char * <code>hdb_name</code> </p>

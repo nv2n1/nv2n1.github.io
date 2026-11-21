@@ -1,4 +1,5 @@
 ---
+
 title: "imgsc(1)"
 name: "imgsc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imgsc/"
 description: "imgsc – Find HST GSC stars in FITS or IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imgsc &#8211; Find HST GSC stars in FITS or IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imgsc [options] FITS or IRAF file(s)</p>

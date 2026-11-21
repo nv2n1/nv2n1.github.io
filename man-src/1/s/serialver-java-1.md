@@ -1,4 +1,5 @@
 ---
+
 title: "serialver-java-1(1)"
 name: "serialver-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-serialver-java-1/"
 description: "serialver – The Serial Version Command"
 ---
 
-<h2>Name</h2>
 <p> serialver &#8211; The Serial Version Command </p>
 <p> The <code>serialver</code> command returns the <i>serialVersionUID</i>. </p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "rmic-java-1(1)"
 name: "rmic-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmic-java-1/"
 description: "rmic – The Java RMI Compiler"
 ---
 
-<h2>Name</h2>
 <p> rmic &#8211; The Java RMI Compiler </p>
 <p> <code>rmic</code> generates stub, skeleton, and tie classes for remote objects using either the JRMP or IIOP protocols. Also generates OMG IDL. </p>
 <h2>SYNOPSIS</h2>

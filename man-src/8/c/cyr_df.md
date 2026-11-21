@@ -1,4 +1,5 @@
 ---
+
 title: "cyr_df(8)"
 name: "cyr_df"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyr_df – report Cyrus spool partition disk space usage"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyr_df &#8211; report Cyrus spool partition disk space usage</p>
 <h2>Synopsis</h2>
 <p><code>cyr_df</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-m</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_drain(1)"
 name: "condor_drain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_drain/"
 description: "condor_drain Control draining of an execute machine"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_drain</i> Control draining of an execute machine </p>
 <h2>Synopsis</h2>
 <p> <i>condor_drain</i> [ <code>-help</code> ] </p>

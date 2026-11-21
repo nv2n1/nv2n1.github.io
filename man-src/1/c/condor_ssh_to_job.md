@@ -1,4 +1,5 @@
 ---
+
 title: "condor_ssh_to_job(1)"
 name: "condor_ssh_to_job"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_ssh_to_job/"
 description: "condor_ssh_to_job create an ssh session to a running job"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_ssh_to_job</i> create an ssh session to a running job </p>
 <h2>Synopsis</h2>
 <p> <i>condor_ssh_to_job</i> [ <code>-help</code> ] </p>

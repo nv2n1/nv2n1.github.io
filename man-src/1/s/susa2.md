@@ -1,4 +1,5 @@
 ---
+
 title: "susa2(1)"
 name: "susa2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-susa2/"
 description: "Find USNO-SA2.0 Catalog stars in a square on the sky"
 ---
 
-<h2>Name</h2>
 <p> Find USNO-SA2.0 Catalog stars in a square on the sky</p>
 <h2>Synopsis</h2>
 <p> susac [options] [-b or -j] ra dec</p>

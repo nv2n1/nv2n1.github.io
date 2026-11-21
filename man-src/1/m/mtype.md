@@ -1,4 +1,5 @@
 ---
+
 title: "mtype(1)"
 name: "mtype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtype/"
 description: "mtype – display contents of an MSDOS file"
 ---
 
-<h2>Name</h2>
 <p> mtype &#8211; display contents of an MSDOS file </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rmnews(8)"
 name: "rmnews"
 section: "8"
@@ -8,7 +9,7 @@ description: "rmnews – expunge and remove news articles"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>rmnews &#8211; expunge and remove news articles</p>
 <h2>Synopsis</h2>
 <p><code>rmnews</code></p>

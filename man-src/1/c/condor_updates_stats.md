@@ -1,4 +1,5 @@
 ---
+
 title: "condor_updates_stats(1)"
 name: "condor_updates_stats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_updates_stats/"
 description: "condor_updates_stats Display output from condor_status"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_updates_stats</i> Display output from <i>condor_status</i> </p>
 <h2>Synopsis</h2>
 <p> <i>condor_updates_stats</i> [ &#8212; <code>help</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "unexpunge(8)"
 name: "unexpunge"
 section: "8"
@@ -8,7 +9,7 @@ description: "unexpunge – restore expunged (but yet unremoved) messages"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>unexpunge &#8211; restore expunged (but yet unremoved) messages</p>
 <h2>Synopsis</h2>
 <p><code>unexpunge</code> [ <code>-C</code> <i>config-file</i> ] <code>-l</code> <i>mailbox</i><br />

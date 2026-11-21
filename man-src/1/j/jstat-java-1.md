@@ -1,4 +1,5 @@
 ---
+
 title: "jstat-java-1(1)"
 name: "jstat-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstat-java-1/"
 description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 ---
 
-<h2>Name</h2>
 <p> jstat &#8211; Java Virtual Machine Statistics Monitoring Tool </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

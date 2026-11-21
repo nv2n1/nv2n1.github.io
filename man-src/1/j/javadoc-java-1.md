@@ -1,4 +1,5 @@
 ---
+
 title: "javadoc-java-1(1)"
 name: "javadoc-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javadoc-java-1/"
 description: "javadoc – The Java API Documentation Generator"
 ---
 
-<h2>Name</h2>
 <p> javadoc &#8211; The Java API Documentation Generator </p>
 <p> Generates HTML pages of API documentation from Java source files. This document contains Javadoc examples for Solaris.</p>
 <h2>SYNOPSIS</h2>

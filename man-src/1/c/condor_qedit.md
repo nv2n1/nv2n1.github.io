@@ -1,4 +1,5 @@
 ---
+
 title: "condor_qedit(1)"
 name: "condor_qedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_qedit/"
 description: "condor_qedit modify job attributes"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_qedit</i> modify job attributes </p>
 <h2>Synopsis</h2>
 <p> <i>condor_qedit</i> [ <code>-debug</code> ] [ <code>-n </code> <i>schedd-name</i> ] [ <code>-pool </code> <i>pool-name</i> ] <i>{cluster | cluster.proc | owner | -constraint constraint}</i> <i>attribute-name</i> <i>attribute-value</i> <i>&#8230; </i> </p>

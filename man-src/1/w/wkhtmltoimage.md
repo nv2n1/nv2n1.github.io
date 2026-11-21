@@ -1,4 +1,5 @@
 ---
+
 title: "wkhtmltoimage(1)"
 name: "wkhtmltoimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wkhtmltoimage/"
 description: "wkhtmltoimage – html to image converter"
 ---
 
-<h2>Name</h2>
 <p> wkhtmltoimage &#8211; html to image converter </p>
 <h2>Synopsis</h2>
 <p>&nbsp;<wbr>&nbsp;wkhtmltoimage&nbsp;[OPTIONS]&#8230;&nbsp;&lt;input file&gt;&nbsp;&lt;output file&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "loweb(1)"
 name: "loweb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-loweb/"
 description: "libreoffice – LibreOffice office suite"
 ---
 
-<h2>Name</h2>
 <p> libreoffice &#8211; LibreOffice office suite </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libreoffice</code> [<code>&#8211;accept=</code><i>accept-string</i>] [<code>&#8211;base</code>] [<code>&#8211;calc</code>] [<code>&#8211;convert-to</code> output_file_extension[:output_filter_name] [&#8211;outdir output_dir] <i>file</i>]&#8230; [<code>&#8211;display </code><i>display</i>] [<code>&#8211;draw</code>] [<code>&#8211;global</code>] [<code>&#8211;headless</code>] [<code>&#8211;help</code>|<code>-h</code>|<code>-?</code>] [<code>&#8211;impress</code>] [<code>&#8211;invisible</code>] [<code>&#8211;infilter=&quot;&lt;filter&gt;&quot;</code>] [<code>&#8211;math</code>] [<code>&#8211;minimized</code>] [<code>-n </code><i>file</i>]&#8230; [<code>&#8211;nodefault</code>] [<code>&#8211;nolockcheck</code>] [<code>&#8211;nologo</code>] [<code>&#8211;norestore</code>] [<code>-o </code><i>file</i>]&#8230; [<code>-p </code><i>file</i>&#8230;] [<code>&#8211;print-to-file [&#8211;printer-name printer_name] [&#8211;outdir output_dir] file]&#8230; [&#8211;pt </code><i>printername</i> <i>file</i>&#8230;] [<code>&#8211;show </code><i>Impress file</i>]&#8230; [<code>&#8211;unaccept=</code><i>accept-string</i>] [<code>&#8211;terminate_after_init</code>] [<code>&#8211;view </code><i>file</i>]&#8230; [<code>&#8211;web</code>] [<code>&#8211;writer</code>] [<i>file</i>&#8230;]<br />

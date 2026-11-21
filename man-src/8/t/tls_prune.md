@@ -1,4 +1,5 @@
 ---
+
 title: "tls_prune(8)"
 name: "tls_prune"
 section: "8"
@@ -8,7 +9,7 @@ description: "tls_prune – prune expired sessions from the TLS sessions databas
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>tls_prune &#8211; prune expired sessions from the TLS sessions database</p>
 <h2>Synopsis</h2>
 <p><code>tls_prune</code> [ <code>-C</code> <i>config-file</i> ]</p>

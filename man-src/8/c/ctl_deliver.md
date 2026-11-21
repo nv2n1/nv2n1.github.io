@@ -1,4 +1,5 @@
 ---
+
 title: "ctl_deliver(8)"
 name: "ctl_deliver"
 section: "8"
@@ -8,7 +9,7 @@ description: "ctl_deliver – perform operations on the duplicate delivery datab
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>ctl_deliver &#8211; perform operations on the duplicate delivery database</p>
 <h2>Synopsis</h2>
 <p><code>ctl_deliver</code> [ <code>-C</code> <i>config-file</i> ] <code>-d</code> [ <code>-f </code><i>filename</i> ]</p>

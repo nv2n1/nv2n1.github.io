@@ -1,4 +1,5 @@
 ---
+
 title: "cyr_expire(8)"
 name: "cyr_expire"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyr_expire – expire messages and duplicate delivery database ent
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyr_expire &#8211; expire messages and duplicate delivery database entries</p>
 <h2>Synopsis</h2>
 <p><code>cyr_expire</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-D</code><i> delete-days</i> ] <code>-E</code><i> expire-duration</i> [ <code>-X</code><i> expunge-days</i> ] [ <code>-p mailbox-prefix</code> ] [ <code>-v</code> ]</p>

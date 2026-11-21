@@ -1,4 +1,5 @@
 ---
+
 title: "fd0ssh(1)"
 name: "fd0ssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fd0ssh/"
 description: "fd0ssh — pipe for password-over-stdin support to ssh"
 ---
 
-<h2>Name</h2>
 <p> fd0ssh &#8212; pipe for password-over-stdin support to ssh</p>
 <h2>Syntax</h2>
 <p> <code>fd0ssh</code> <i>mount_command</i></p>

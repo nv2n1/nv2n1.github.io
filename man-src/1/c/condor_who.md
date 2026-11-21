@@ -1,4 +1,5 @@
 ---
+
 title: "condor_who(1)"
 name: "condor_who"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_who/"
 description: "condor_who Display information about owners of jobs and jobs running on an execute machine"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_who</i> Display information about owners of jobs and jobs running on an execute machine </p>
 <h2>Synopsis</h2>
 <p> <i>condor_who</i> [ <i>help options</i> ] [ <i>address options</i> ] [ <i>display options</i> ] </p>

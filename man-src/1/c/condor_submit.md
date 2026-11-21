@@ -1,4 +1,5 @@
 ---
+
 title: "condor_submit(1)"
 name: "condor_submit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_submit/"
 description: "condor_submit Queue jobs for execution under HTCondor"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_submit</i> Queue jobs for execution under HTCondor </p>
 <h2>Synopsis</h2>
 <p> <i>condor_submit</i> [ <code>-verbose</code> ] [ <code>-unused</code> ] [ <code>-name </code> <i>schedd_name</i> ] [ <code>-remote </code> <i>schedd_name</i> ] [ <code>-addr </code> <i>&lt;ip:port&gt;</i> ] [ <code>-pool </code> <i>pool_name</i> ] [ <code>-disable</code> ] [ <code>-password </code> <i>passphrase</i> ] [ <code>-debug</code> ] [ <code>-append</code> <i>command</i> <code>&#8230; </code> ] [ <code>-spool</code> ] [ <code>-dump </code> <i>filename</i> ] [ <code>-interactive</code> ] [ <code>-dry-run</code> ] [ <code>-maxjobs </code> <i>&lt;number-of-jobs&gt;</i> ] [ <code>-single-cluster</code> ] [ <code>&lt;submit-variable&gt;=&lt;value&gt;</code> ] [ <i>submit description file</i> ] [ <code>-queue </code> <i>queue_arguments</i> ] </p>

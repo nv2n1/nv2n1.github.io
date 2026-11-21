@@ -1,4 +1,5 @@
 ---
+
 title: "imsize(1)"
 name: "imsize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imsize/"
 description: "imsize – Print size of image in WCS and pixels"
 ---
 
-<h2>Name</h2>
 <p> imsize &#8211; Print size of image in WCS and pixels</p>
 <h2>Synopsis</h2>
 <p> imsize [-vcd] [-p scale] [-b ra dec] [-j ra dec] FITS or IRAF file(s)</p>

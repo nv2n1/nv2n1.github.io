@@ -1,4 +1,5 @@
 ---
+
 title: "mbpath(8)"
 name: "mbpath"
 section: "8"
@@ -8,7 +9,7 @@ description: "mbpath – translate mailbox names to filesystem paths"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>mbpath &#8211; translate mailbox names to filesystem paths</p>
 <h2>Synopsis</h2>
 <p><code>mbpath</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-q</code> ] [ <code>-s</code> ] [ <code>-m</code> ] [ <i>mailbox-names</i>&#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_cod(1)"
 name: "condor_cod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_cod/"
 description: "condor_cod manage COD machines and jobs"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_cod</i> manage COD machines and jobs </p>
 <h2>Synopsis</h2>
 <p> <i>condor_cod</i> [ <code>-help -version</code> ] </p>

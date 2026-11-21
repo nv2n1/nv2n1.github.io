@@ -1,4 +1,5 @@
 ---
+
 title: "i2f(1)"
 name: "i2f"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i2f/"
 description: "i2f – Write FITS files from IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> i2f &#8211; Write FITS files from IRAF image files</p>
 <h2>Synopsis</h2>
 <p> i2f [options] file.imh &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "idlj-java-1(1)"
 name: "idlj-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idlj-java-1/"
 description: "idlj – The IDL-to-Java Compiler"
 ---
 
-<h2>Name</h2>
 <p> idlj &#8211; The IDL-to-Java Compiler </p>
 <p> <code>idlj</code> generates Java bindings from a given IDL file.</p>
 <h2>Synopsis</h2>

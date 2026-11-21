@@ -1,4 +1,5 @@
 ---
+
 title: "mshowfat(1)"
 name: "mshowfat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mshowfat/"
 description: "mshowfat – shows FAT clusters allocated to file"
 ---
 
-<h2>Name</h2>
 <p> mshowfat &#8211; shows FAT clusters allocated to file </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

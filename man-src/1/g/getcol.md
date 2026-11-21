@@ -1,4 +1,5 @@
 ---
+
 title: "getcol(1)"
 name: "getcol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getcol/"
 description: "getcol – Extract specified columns from an ASCII table file"
 ---
 
-<h2>Name</h2>
 <p> getcol &#8211; Extract specified columns from an ASCII table file</p>
 <h2>Synopsis</h2>
 <p> getcol [-amv][-n num][-r lines][-s num] filename [column number range]</p>

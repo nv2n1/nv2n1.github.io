@@ -1,4 +1,5 @@
 ---
+
 title: "jconsole-java-1(1)"
 name: "jconsole-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jconsole-java-1/"
 description: "jconsole – Java Monitoring and Management Console"
 ---
 
-<h2>Name</h2>
 <p> jconsole &#8211; Java Monitoring and Management Console </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

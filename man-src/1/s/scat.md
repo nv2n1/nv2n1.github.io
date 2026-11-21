@@ -1,4 +1,5 @@
 ---
+
 title: "scat(1)"
 name: "scat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scat/"
 description: "scat – Find catalog stars in a square or circle on the sky"
 ---
 
-<h2>Name</h2>
 <p> scat &#8211; Find catalog stars in a square or circle on the sky</p>
 <h2>Synopsis</h2>
 <p> scat [options] [-b or -j] ra dec [equinox]</p>

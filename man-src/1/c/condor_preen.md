@@ -1,4 +1,5 @@
 ---
+
 title: "condor_preen(1)"
 name: "condor_preen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_preen/"
 description: "condor_preen remove extraneous files from HTCondor directories"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_preen</i> remove extraneous files from HTCondor directories </p>
 <h2>Synopsis</h2>
 <p> <i>condor_preen</i> [ <code>-mail</code> ] [ <code>-remove</code> ] [ <code>-verbose</code> ] [ <code>-debug</code> ] </p>

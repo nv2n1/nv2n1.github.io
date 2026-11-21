@@ -1,4 +1,5 @@
 ---
+
 title: "condor_check_userlogs(1)"
 name: "condor_check_userlogs"
 section: "1"
@@ -6,11 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-condor_check_userlogs/"
 ---
 
-<h2>Name</h2>
-
- 
-
- <i>condor_check_userlogs</i> Check job event log files for errors 
+<i>condor_check_userlogs</i> Check job event log files for errors 
 
  
 

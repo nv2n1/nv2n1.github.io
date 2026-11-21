@@ -1,4 +1,5 @@
 ---
+
 title: "condor_restart(1)"
 name: "condor_restart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_restart/"
 description: "condor_restart Restart a set of HTCondor daemons"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_restart</i> Restart a set of HTCondor daemons </p>
 <h2>Synopsis</h2>
 <p> <i>condor_restart</i> [ <code>-help -version</code> ] </p>

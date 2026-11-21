@@ -1,4 +1,5 @@
 ---
+
 title: "sgsc(1)"
 name: "sgsc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgsc/"
 description: "sgsc – Find HST GSC stars in a square on the sky"
 ---
 
-<h2>Name</h2>
 <p> sgsc &#8211; Find HST GSC stars in a square on the sky</p>
 <h2>Synopsis</h2>
 <p> sgsc [options] [-b or -j] ra dec [equinox]</p>

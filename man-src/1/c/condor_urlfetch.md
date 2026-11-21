@@ -1,4 +1,5 @@
 ---
+
 title: "condor_urlfetch(1)"
 name: "condor_urlfetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_urlfetch/"
 description: "condor_urlfetch fetch configuration given a URL"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_urlfetch</i> fetch configuration given a URL </p>
 <h2>Synopsis</h2>
 <p> <i>condor_urlfetch</i> [ <code>-&lt;daemon&gt;</code> ] <i>url</i> <i>local-url-cache-file</i> </p>

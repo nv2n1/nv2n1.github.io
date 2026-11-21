@@ -1,4 +1,5 @@
 ---
+
 title: "condor_advertise(1)"
 name: "condor_advertise"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_advertise/"
 description: "condor_advertise Send a ClassAd to the condor_collector daemon"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_advertise</i> Send a ClassAd to the <i>condor_collector</i> daemon </p>
 <h2>Synopsis</h2>
 <p> <i>condor_advertise</i> [ <code>-help -version</code> ] </p>

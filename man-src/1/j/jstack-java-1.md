@@ -1,4 +1,5 @@
 ---
+
 title: "jstack-java-1(1)"
 name: "jstack-java-1"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jstack-java-1/"
 description: "jstack – Stack Trace"
 ---
-<h2>Name</h2>
+
 <p> jstack - Stack Trace <br />
  </p>
 <h2>SYNOPSIS</h2>

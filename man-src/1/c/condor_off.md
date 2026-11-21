@@ -1,4 +1,5 @@
 ---
+
 title: "condor_off(1)"
 name: "condor_off"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_off/"
 description: "condor_off Shutdown HTCondor daemons"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_off</i> Shutdown HTCondor daemons </p>
 <h2>Synopsis</h2>
 <p> <i>condor_off</i> [ <code>-help -version</code> ] </p>

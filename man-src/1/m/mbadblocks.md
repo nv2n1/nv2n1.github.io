@@ -1,4 +1,5 @@
 ---
+
 title: "mbadblocks(1)"
 name: "mbadblocks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mbadblocks/"
 description: "mbadblocks – tests a floppy disk, and marks the bad blocks in the FAT"
 ---
 
-<h2>Name</h2>
 <p> mbadblocks &#8211; tests a floppy disk, and marks the bad blocks in the FAT </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

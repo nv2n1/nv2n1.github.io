@@ -1,4 +1,5 @@
 ---
+
 title: "puppetdoc(8)"
 name: "puppetdoc"
 section: "8"
@@ -8,7 +9,7 @@ description: "–"
 ---
 
 <p>&nbsp;<wbr>&#8211;&nbsp;<wbr></p>
-<h2>Synopsis</h2>
+
 <p>Generate a reference for all Puppet types. Largely meant for internal Puppet Labs use.</p>
 <h2>Usage</h2>
 <dl>

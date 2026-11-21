@@ -1,4 +1,5 @@
 ---
+
 title: "nntpd(8)"
 name: "nntpd"
 section: "8"
@@ -8,7 +9,7 @@ description: "nntpd – NNTP server process"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>nntpd &#8211; NNTP server process</p>
 <h2>Synopsis</h2>
 <p><code>nntpd</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] [ <code>-D</code> ] </p>

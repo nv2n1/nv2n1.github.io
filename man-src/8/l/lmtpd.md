@@ -1,4 +1,5 @@
 ---
+
 title: "lmtpd(8)"
 name: "lmtpd"
 section: "8"
@@ -8,7 +9,7 @@ description: "lmtpd – LMTP server process"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>lmtpd &#8211; LMTP server process</p>
 <h2>Synopsis</h2>
 <p><code>lmtpd</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] [ <code>-D</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_gather_info(1)"
 name: "condor_gather_info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_gather_info/"
 description: "condor_gather_info Gather information about an HTCondor installation and a queued job"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_gather_info</i> Gather information about an HTCondor installation and a queued job </p>
 <h2>Synopsis</h2>
 <p> <i>condor_gather_info</i> [ &#8212; <code>jobid</code> <i>ClusterId.ProcId</i> ] [ &#8212; <code>scratch</code> <i>/path/to/directory</i> ] </p>

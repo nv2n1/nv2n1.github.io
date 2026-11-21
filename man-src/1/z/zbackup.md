@@ -1,4 +1,5 @@
 ---
+
 title: "zbackup(1)"
 name: "zbackup"
 section: "1"
@@ -6,11 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zbackup/"
 ---
 
-<h2>Introduction</h2>
-
- 
-
- zbackup is a globally-deduplicating backup tool, based on the ideas found in rsync (<a rel="nofollow" HREF="http://rsync.samba.org/">http://rsync.samba.org/</a>). Feed a large .tar into it, and it will store duplicate regions of it only once, then compress and optionally encrypt the result. Feed another .tar file, and it will also re-use any data found in any previous backups. This way only new changes are stored, and as long as the files are not very different, the amount of storage required is very low. Any of the backup files stored previously can be read back in full at any time. The program is format-agnostic, so you can feed virtually any files to it (any types of archives, proprietary formats, even raw disk images -- but see Caveats (#caveats)). 
+zbackup is a globally-deduplicating backup tool, based on the ideas found in rsync (<a rel="nofollow" HREF="http://rsync.samba.org/">http://rsync.samba.org/</a>). Feed a large .tar into it, and it will store duplicate regions of it only once, then compress and optionally encrypt the result. Feed another .tar file, and it will also re-use any data found in any previous backups. This way only new changes are stored, and as long as the files are not very different, the amount of storage required is very low. Any of the backup files stored previously can be read back in full at any time. The program is format-agnostic, so you can feed virtually any files to it (any types of archives, proprietary formats, even raw disk images -- but see Caveats (#caveats)). 
 
  This is achieved by sliding a window with a rolling hash over the input at a byte granularity and checking whether the block in focus was ever met already. If a rolling hash matches, an additional full cryptographic hash is calculated to ensure the block is indeed the same. The deduplication happens then.
 

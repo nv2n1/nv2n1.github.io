@@ -1,4 +1,5 @@
 ---
+
 title: "idled(8)"
 name: "idled"
 section: "8"
@@ -8,7 +9,7 @@ description: "idled – provide near real-time updates for IMAP IDLE"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>idled &#8211; provide near real-time updates for IMAP IDLE</p>
 <h2>Synopsis</h2>
 <p><code>idled</code> [ <code>-C</code> <i>config-file</i> ]</p>

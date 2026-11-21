@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtoddif(1)"
 name: "pnmtoddif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtoddif/"
 description: "pnmtoddif – Convert a portable anymap to DDIF format"
 ---
 
-<h2>Name</h2>
 <p> pnmtoddif &#8211; Convert a portable anymap to DDIF format</p>
 <h2>Syntax</h2>
 <p> <code>pnmtoddif </code> pnmtoddif [-resolution x y] [pnmfile [ddiffile]]</p>

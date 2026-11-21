@@ -1,4 +1,5 @@
 ---
+
 title: "mdeltree(1)"
 name: "mdeltree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdeltree/"
 description: "mdeltree – recursively delete an MSDOS directory and its contents"
 ---
 
-<h2>Name</h2>
 <p> mdeltree &#8211; recursively delete an MSDOS directory and its contents </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

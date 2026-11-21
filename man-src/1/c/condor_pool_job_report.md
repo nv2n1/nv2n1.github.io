@@ -1,4 +1,5 @@
 ---
+
 title: "condor_pool_job_report(1)"
 name: "condor_pool_job_report"
 section: "1"
@@ -6,11 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-condor_pool_job_report/"
 ---
 
-<h2>Name</h2>
-
- 
-
- <i>condor_pool_job_report</i> generate report about all jobs that have run in the last 24 hours on all execute hosts 
+<i>condor_pool_job_report</i> generate report about all jobs that have run in the last 24 hours on all execute hosts 
 
  
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ipurge(8)"
 name: "ipurge"
 section: "8"
@@ -8,7 +9,7 @@ description: "ipurge – delete mail from IMAP mailbox or partition based on age
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>ipurge &#8211; delete mail from IMAP mailbox or partition based on age or size</p>
 <h2>Synopsis</h2>
 <p><code>ipurge</code> [ <code>-f</code> ] [ <code>-C</code> <i>config-file</i> ] [ <code>-x</code> ] [ <code>-X</code> ] [ <code>-i</code> ] [ <code>-s</code> ] [ <code>-o</code> ] </p>
