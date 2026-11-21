@@ -23,6 +23,9 @@ def fix_man_page(filepath):
 
     original_body = body
 
+    # Remove stray </p> at the beginning of body (after front matter)
+    body = re.sub(r'^\s*</p>\s*', '', body, count=1)
+
     # Find the first h2 heading in the body
     # Pattern matches <h2 ...>NAME</h2> or <h2>SYNOPSIS</h2> etc.
     h2_pattern = r'(<h2[^>]*>\s*(NAME|INTRO|INTRODUCTION|DESCRIPTION|SYNOPSIS)\s*</h2>)'
