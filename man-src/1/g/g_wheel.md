@@ -1,4 +1,5 @@
 ---
+
 title: "g_wheel(1)"
 name: "g_wheel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_wheel/"
 description: "wheel – plots helical wheels"
 ---
 
-<h2>NAME</h2>
 <p> wheel &#8211; plots helical wheels </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

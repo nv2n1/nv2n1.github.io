@@ -1,4 +1,5 @@
 ---
+
 title: "pscoast(1)"
 name: "pscoast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pscoast/"
 description: "pscoast – Plot continents, shorelines, rivers, and borders on maps"
 ---
 
-<h2>NAME</h2>
 <p> pscoast &#8211; Plot continents, shorelines, rivers, and borders on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pscoast</code> <i>parameters</i> <i>region</i> [ <i>area</i> ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<code>l</code>|<code>r</code>/]<i>fill</i> ] [ <i>resolution</i>[<code>+</code>] ] [ <i>dcw</i> ] [ <i>box</i> ] [ <i>fill</i>|<code>c</code> ] [ <i>river</i>[/<i>pen</i>] ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ <i>ruler</i> ] [ ] [ <i>border</i>[/<i>pen</i>] ] [ ] [ ] [ ] [ <i>fill</i>|<code>c</code> ] [ <i>rose</i> ] [ <i>mag_rose</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<i>level</i>/]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

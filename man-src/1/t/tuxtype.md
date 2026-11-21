@@ -1,4 +1,5 @@
 ---
+
 title: "tuxtype(1)"
 name: "tuxtype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tuxtype/"
 description: "tuxtype – TuxTyping typing tutor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tuxtype &#8211; TuxTyping typing tutor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tuxtype</code><i> [OPTION] &#8230;</i></p>

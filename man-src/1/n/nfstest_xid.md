@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_xid(1)"
 name: "nfstest_xid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_xid/"
 description: "nfstest_xid – Verify packets are matched correctly by their XID"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_xid &#8211; Verify packets are matched correctly by their XID</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_xid &lt;trace1&gt; [&lt;trace2&gt; &#8230;]</p>

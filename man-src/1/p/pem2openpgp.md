@@ -1,4 +1,5 @@
 ---
+
 title: "pem2openpgp(1)"
 name: "pem2openpgp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pem2openpgp/"
 description: "pem2openpgp – translate PEM-encoded RSA keys to OpenPGP certificates"
 ---
 
-<h2>NAME</h2>
 <p> pem2openpgp &#8211; translate PEM-encoded RSA keys to OpenPGP certificates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pem2openpgp $USERID &lt; mykey.pem | gpg &#8211;import</code> </p>

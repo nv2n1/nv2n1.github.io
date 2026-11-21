@@ -1,4 +1,5 @@
 ---
+
 title: "lnav(1)"
 name: "lnav"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lnav/"
 description: "lnav – ncurses-based log file viewer"
 ---
 
-<h2>NAME</h2>
 <p> lnav &#8211; ncurses-based log file viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lnav </code> [-hVsar] [logfile1 logfile2 &#8230;]</p>

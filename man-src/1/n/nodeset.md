@@ -1,4 +1,5 @@
 ---
+
 title: "nodeset(1)"
 name: "nodeset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nodeset/"
 description: "nodeset – compute advanced nodeset operations"
 ---
 
-<h2>NAME</h2>
 <p> nodeset &#8211; compute advanced nodeset operations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nodeset</code> [OPTIONS] [COMMAND] [nodeset1 [OPERATION] nodeset2|&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-push(1)"
 name: "git-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-push/"
 description: "git-push – Update remote refs along with associated objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-push &#8211; Update remote refs along with associated objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

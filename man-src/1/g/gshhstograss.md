@@ -1,4 +1,5 @@
 ---
+
 title: "gshhstograss(1)"
 name: "gshhstograss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gshhstograss/"
 description: "gshhs2grass – Extracting GSHHS and WDBII data in GRASS-compatible ASCII format"
 ---
 
-<h2>NAME</h2>
 <p> gshhs2grass &#8211; Extracting GSHHS and WDBII data in GRASS-compatible ASCII format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gshhs2grass</code> <code>-i</code> gshhs_[f|h|i|l|c].b [ <code>-x</code><i>minx</i> ] [<code>-X</code><i>maxx</i> ] [ <code>-y</code><i>miny</i> ] [ <code>-Y</code><i>maxy</i> ]</p>

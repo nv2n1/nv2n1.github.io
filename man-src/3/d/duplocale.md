@@ -1,4 +1,5 @@
 ---
+
 title: "duplocale(3)"
 name: "duplocale"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-duplocale/"
 description: "duplocale – duplicate a locale object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> duplocale &#8211; duplicate a locale object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

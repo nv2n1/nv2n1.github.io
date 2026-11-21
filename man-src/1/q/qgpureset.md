@@ -1,4 +1,5 @@
 ---
+
 title: "qgpureset(1)"
 name: "qgpureset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qgpureset/"
 description: "qgpureset – reset GPU error counts"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>qgpureset &#8211; reset GPU error counts </p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>qgpureset -H host -g gpuid -p -v</p>

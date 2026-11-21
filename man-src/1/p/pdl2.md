@@ -1,4 +1,5 @@
 ---
+
 title: "pdl2(1)"
 name: "pdl2"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pdl2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pdl2 - Simple shell (version 2) for PDL 
+pdl2 - Simple shell (version 2) for PDL 
 
 <h2>SYNOPSIS</h2>
 

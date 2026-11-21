@@ -1,4 +1,5 @@
 ---
+
 title: "gtf(1)"
 name: "gtf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtf/"
 description: "gtf – calculate VESA GTF mode lines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtf &#8211; calculate VESA GTF mode lines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtf</code> <i>h-resolution</i> <i>v-resolution</i> <i>refresh</i> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-f</code>|<code>&#8211;fbmode</code>] [<code>-x</code>|<code>&#8211;xorgmode</code>]</p>

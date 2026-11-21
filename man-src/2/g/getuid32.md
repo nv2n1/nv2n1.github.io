@@ -1,4 +1,5 @@
 ---
+
 title: "getuid32(2)"
 name: "getuid32"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getuid32/"
 description: "getuid, geteuid – get user identity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getuid, geteuid &#8211; get user identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />

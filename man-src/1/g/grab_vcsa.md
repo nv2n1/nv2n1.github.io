@@ -1,4 +1,5 @@
 ---
+
 title: "grab_vcsa(1)"
 name: "grab_vcsa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grab_vcsa/"
 description: "grab_vcsa – Linux console vcsa grabber"
 ---
 
-<h2>NAME</h2>
 <p> grab_vcsa &#8211; Linux console vcsa grabber </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grab_vcsa</code></p>

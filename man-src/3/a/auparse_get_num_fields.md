@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_num_fields(3)"
 name: "auparse_get_num_fields"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_num_fields/"
 description: "auparse_get_num_fields – get the number of fields"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_num_fields &#8211; get the number of fields</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

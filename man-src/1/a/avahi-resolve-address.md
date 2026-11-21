@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-resolve-address(1)"
 name: "avahi-resolve-address"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avahi-resolve-address/"
 description: "avahi-resolve – Resolve one or more mDNS/DNS host name(s) to IP address(es) (and vice versa) using the Avahi daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avahi-resolve &#8211; Resolve one or more mDNS/DNS host name(s) to IP address(es) (and vice versa) using the Avahi daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-resolve &#8211;name </code><i>host-name &#8230;</i><code> </p>

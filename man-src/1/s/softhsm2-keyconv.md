@@ -1,4 +1,5 @@
 ---
+
 title: "softhsm2-keyconv(1)"
 name: "softhsm2-keyconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-softhsm2-keyconv/"
 description: "softhsm2-keyconv – converting from BIND to PKCS#8 key file format"
 ---
 
-<h2>NAME</h2>
 <p> softhsm2-keyconv &#8211; converting from BIND to PKCS#8 key file format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>softhsm2-keyconv</code> <code>&#8211;in</code> <i>path</i> <code>&#8211;out</code> <i>path</i> [<code>&#8211;pin</code> <i>PIN</i>]</p>

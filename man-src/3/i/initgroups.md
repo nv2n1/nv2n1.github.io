@@ -1,4 +1,5 @@
 ---
+
 title: "initgroups(3)"
 name: "initgroups"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-initgroups/"
 description: "initgroups – initialize the supplementary group access list"
 ---
 
-<h2 class="name">NAME</h2>
 <p> initgroups &#8211; initialize the supplementary group access list </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

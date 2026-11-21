@@ -1,4 +1,5 @@
 ---
+
 title: "gifdiff(1)"
 name: "gifdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gifdiff/"
 description: "gifdiff – compares GIF images"
 ---
 
-<h2>NAME</h2>
 <p> gifdiff &#8211; compares GIF images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gifdiff</code> [options] GIF-file-1 GIF-file-2</p>

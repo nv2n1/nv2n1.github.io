@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_ra(3)"
 name: "crypt_ra"
 section: "3"
@@ -8,7 +9,7 @@ description: "crypt , crypt_r , crypt_rn , crypt_ra – passphrase hashing"
 ---
 
 <p>Openwall Project</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>crypt , crypt_r , crypt_rn , crypt_ra</code> &#8211; passphrase hashing </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>

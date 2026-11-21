@@ -1,4 +1,5 @@
 ---
+
 title: "ttree(1)"
 name: "ttree"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-ttree/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- Template::Tools::ttree - Process entire directory trees of templates 
+Template::Tools::ttree - Process entire directory trees of templates 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "perlsub(1)"
 name: "perlsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsub/"
 description: "perlsub – Perl subroutines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlsub &#8211; Perl subroutines </p>
 <h2>SYNOPSIS</h2>
 <p> To declare subroutines: </p>

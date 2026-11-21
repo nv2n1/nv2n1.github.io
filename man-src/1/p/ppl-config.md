@@ -1,4 +1,5 @@
 ---
+
 title: "ppl-config(1)"
 name: "ppl-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppl-config/"
 description: "ppl-config – obtain information about an installation of the Parma Polyhedra Library"
 ---
 
-<h2>NAME</h2>
 <p> ppl-config &#8211; obtain information about an installation of the Parma Polyhedra Library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppl-config</code> [<i>OPTION</i>]&#8230;</p>

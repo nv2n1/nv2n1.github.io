@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_c_get_checksum(3)"
 name: "krb5_c_get_checksum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_c_get_checksum/"
 description: "krb5_c_block_size krb5_c_decrypt krb5_c_encrypt krb5_c_encrypt_length krb5_c_enctype_compare krb5_c_get_checksum krb5_c_is_coll_proof_cksum krb5_c_is_keyed_cksum krb5_c_keylength krb5_c_make_checks..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_c_block_size</code> <code>krb5_c_decrypt</code> <code>krb5_c_encrypt</code> <code>krb5_c_encrypt_length</code> <code>krb5_c_enctype_compare</code> <code>krb5_c_get_checksum</code> <code>krb5_c_is_coll_proof_cksum</code> <code>krb5_c_is_keyed_cksum</code> <code>krb5_c_keylength</code> <code>krb5_c_make_checksum</code> <code>krb5_c_make_random_key</code> <code>krb5_c_set_checksum</code> <code>krb5_c_valid_cksumtype</code> <code>krb5_c_valid_enctype</code> <code>krb5_c_verify_checksum</code> <code>krb5_c_checksum_length</code> &#8211; Kerberos 5 crypto API </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

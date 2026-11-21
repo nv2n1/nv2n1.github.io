@@ -1,4 +1,5 @@
 ---
+
 title: "ttx2xgf(1)"
 name: "ttx2xgf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttx2xgf/"
 description: "ttx2xgf – extracts instructions from a TTX file and creates an Xgridfit program."
 ---
 
-<h2>NAME</h2>
 <p> <code>ttx2xgf</code> &#8211; extracts instructions from a TTX file and creates an Xgridfit program.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttx2xgf</code> <i>infile[.ttx]</i> <i>[outfile]</i></p>

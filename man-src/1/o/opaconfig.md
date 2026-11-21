@@ -1,4 +1,5 @@
 ---
+
 title: "opaconfig(1)"
 name: "opaconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opaconfig/"
 description: "opaconfig"
 ---
 
-<h2>NAME</h2>
 <p> opaconfig </p>
 <p> <code>(Switch and Host)</code> Configures the Intel(R) Omni-Path Fabric Suite FastFabric.</p>
 <h2>Syntax</h2>

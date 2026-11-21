@@ -1,4 +1,5 @@
 ---
+
 title: "readlink(1)"
 name: "readlink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-readlink/"
 description: "readlink – print resolved symbolic links or canonical file names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readlink &#8211; print resolved symbolic links or canonical file names </p>
 <h2>SYNOPSIS</h2>
 <p> <code>readlink</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>

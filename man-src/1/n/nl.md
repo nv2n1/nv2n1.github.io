@@ -1,4 +1,5 @@
 ---
+
 title: "nl(1)"
 name: "nl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nl/"
 description: "nl – number lines of files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nl &#8211; number lines of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nl</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

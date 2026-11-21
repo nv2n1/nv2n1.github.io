@@ -1,4 +1,5 @@
 ---
+
 title: "destroy_font(3)"
 name: "destroy_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-destroy_font/"
 description: "destroy_font – Frees the memory being used by a font structure. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> destroy_font &#8211; Frees the memory being used by a font structure. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

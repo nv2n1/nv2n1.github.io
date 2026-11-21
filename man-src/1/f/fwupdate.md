@@ -1,4 +1,5 @@
 ---
+
 title: "fwupdate(1)"
 name: "fwupdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwupdate/"
 description: "fwupdate -debugging utility for UEFI firmware updates"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fwupdate -debugging utility for UEFI firmware updates </p>
 <h2>SYNOPSIS</h2>
 <p> fwupdate [CMD]</p>

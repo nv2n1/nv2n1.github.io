@@ -1,4 +1,5 @@
 ---
+
 title: "parcellite(1)"
 name: "parcellite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-parcellite/"
 description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 ---
 
-<h2>NAME</h2>
 <p> Parcellite &#8211; Lightweight GTK+ Clipboard Manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>parcellite</code> [<i>OPTION</i>]</p>

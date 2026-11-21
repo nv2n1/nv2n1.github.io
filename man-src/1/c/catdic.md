@@ -1,4 +1,5 @@
 ---
+
 title: "catdic(1)"
 name: "catdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-catdic/"
 description: "catdic – Download a dictionary"
 ---
 
-<h2>NAME</h2>
 <p> catdic &#8211; Download a dictionary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>catdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-i|-u <i>user-name</i>] <i>remote-dic</i> [-l <i>local-file</i>]</p>

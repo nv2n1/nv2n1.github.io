@@ -1,4 +1,5 @@
 ---
+
 title: "beesu(1)"
 name: "beesu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beesu/"
 description: "beesu – A wrapper for \"su\" that provides a graphical interface in Fedora."
 ---
 
-<h2>NAME</h2>
 <p> beesu &#8211; A wrapper for &quot;su&quot; that provides a graphical interface in Fedora.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beesu [-P] [-v] [-l] [-m] [-f] [-s] [-c]</code> <i>COMMAND</i> <i>ARGs</i> <code>&#8230;</code></p>

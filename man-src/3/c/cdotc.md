@@ -1,4 +1,5 @@
 ---
+
 title: "cdotc(3)"
 name: "cdotc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdotc/"
 description: "cdotc.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cdotc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

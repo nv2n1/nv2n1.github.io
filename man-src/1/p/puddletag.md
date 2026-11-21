@@ -1,4 +1,5 @@
 ---
+
 title: "puddletag(1)"
 name: "puddletag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-puddletag/"
 description: "puddletag – puddletag"
 ---
 
-<h2>NAME</h2>
 <p> puddletag &#8211; puddletag</p>
 <h2>SYNOPSIS</h2>
 <p> <code>puddletag</code> [<i>options</i>] [<i>directory path</i>]</p>

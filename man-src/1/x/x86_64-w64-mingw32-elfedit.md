@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-w64-mingw32-elfedit(1)"
 name: "x86_64-w64-mingw32-elfedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-elfedit/"
 description: "elfedit – Update the ELF header of ELF files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> elfedit &#8211; Update the ELF header of ELF files. </p>
 <h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />

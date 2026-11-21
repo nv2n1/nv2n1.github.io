@@ -1,4 +1,5 @@
 ---
+
 title: "use-devel-checklib(1)"
 name: "use-devel-checklib"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-use-devel-checklib/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- use-devel-checklib - a script to package Devel::CheckLib with your code. 
+use-devel-checklib - a script to package Devel::CheckLib with your code. 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "nona(1)"
 name: "nona"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nona/"
 description: "nona – Stitch a panorama image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nona &#8211; Stitch a panorama image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nona</code> [options] <code>-o</code> <i>output</i> <i>project_file</i> (image files)</p>

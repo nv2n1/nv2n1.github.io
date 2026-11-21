@@ -1,4 +1,5 @@
 ---
+
 title: "dsecnd(3)"
 name: "dsecnd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsecnd/"
 description: "dsecnd_EXT_ETIME.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsecnd_EXT_ETIME.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

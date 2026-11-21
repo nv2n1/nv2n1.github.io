@@ -1,4 +1,5 @@
 ---
+
 title: "psfstriptable(1)"
 name: "psfstriptable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psfstriptable/"
 description: "psfstriptable – remove the embedded Unicode character table from a console font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psfstriptable &#8211; remove the embedded Unicode character table from a console font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psfstriptable</code> <i>fontfile outfile</i></p>

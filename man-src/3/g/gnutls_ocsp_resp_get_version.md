@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_version(3)"
 name: "gnutls_ocsp_resp_get_version"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_resp_get_version/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_ocsp_resp_get_version - API function
+gnutls_ocsp_resp_get_version - API function
 
 <h2>SYNOPSIS</h2>
 

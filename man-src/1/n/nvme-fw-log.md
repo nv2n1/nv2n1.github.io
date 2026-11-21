@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-fw-log(1)"
 name: "nvme-fw-log"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-fw-log - Send NVMe Firmware log page request, returns result and log 
+nvme-fw-log - Send NVMe Firmware log page request, returns result and log 
 
 <h2>SYNOPSIS</h2>
 

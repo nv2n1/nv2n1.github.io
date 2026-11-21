@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-ical(1)"
 name: "zarafa-ical"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-ical/"
 description: "zarafa-ical – Start the Zarafa ICal/CalDAV gateway."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-ical &#8211; Start the Zarafa ICal/CalDAV gateway. </p>
 <h2>SYNOPSIS</h2>
 <dl>

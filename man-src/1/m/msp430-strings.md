@@ -1,4 +1,5 @@
 ---
+
 title: "msp430-strings(1)"
 name: "msp430-strings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msp430-strings/"
 description: "strings – print the strings of printable characters in files."
 ---
 
-<h2>NAME</h2>
 <p> strings &#8211; print the strings of printable characters in files.</p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afov</code>] [<code>&#8211;</code><i>min-len</i>]<br />

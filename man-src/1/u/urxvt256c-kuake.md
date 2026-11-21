@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-kuake(1)"
 name: "urxvt256c-kuake"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-kuake/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- kuake - kuake-like hotkey terminal 
+kuake - kuake-like hotkey terminal 
 
 <h2>EXAMPLES</h2>
 

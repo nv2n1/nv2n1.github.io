@@ -1,4 +1,5 @@
 ---
+
 title: "psk-crack(1)"
 name: "psk-crack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psk-crack/"
 description: "psk-crack – Crack IKE Aggressive Mode Pre-Shared Keys"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psk-crack &#8211; Crack IKE Aggressive Mode Pre-Shared Keys </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psk-crack</code> [<i>options</i>]<i> </i>&lt;<i>psk-parameters-file</i>&gt; </p>

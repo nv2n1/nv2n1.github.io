@@ -1,4 +1,5 @@
 ---
+
 title: "stg-commit(1)"
 name: "stg-commit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-commit/"
 description: "stg-commit – Permanently store the applied patches into the stack base"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-commit &#8211; Permanently store the applied patches into the stack base </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

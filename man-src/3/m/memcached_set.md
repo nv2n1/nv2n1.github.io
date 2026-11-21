@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_set(3)"
 name: "memcached_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_set/"
 description: "memcached_set – Storing and Replacing Data"
 ---
 
-<h2>NAME</h2>
 <p> memcached_set &#8211; Storing and Replacing Data</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

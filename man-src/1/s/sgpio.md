@@ -1,4 +1,5 @@
 ---
+
 title: "sgpio(1)"
 name: "sgpio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgpio/"
 description: "sgpio – captive backplane LED control utility"
 ---
 
-<h2>NAME</h2>
 <p> sgpio &#8211; captive backplane LED control utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgpio</code> [-h] [-V] [[-d|&#8211;disk &lt;device&gt;[,&lt;device&gt;&#8230;]] | [-p|&#8211;port &lt;port&gt;[,&lt;port&gt;&#8230;]]] [-s|&#8211;status &lt;status&gt;] [-f|&#8211;freq &lt;frequency&gt;]</p>

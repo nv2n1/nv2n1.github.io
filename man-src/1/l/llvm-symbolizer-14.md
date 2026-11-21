@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-symbolizer-14(1)"
 name: "llvm-symbolizer-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-symbolizer-14/"
 description: "llvm-symbolizer – convert addresses into source code locations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-symbolizer &#8211; convert addresses into source code locations </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-symbolizer</code> [<i>options</i>] [<i>addresses…</i>]</p>

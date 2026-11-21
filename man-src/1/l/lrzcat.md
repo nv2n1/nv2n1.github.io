@@ -1,4 +1,5 @@
 ---
+
 title: "lrzcat(1)"
 name: "lrzcat"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lrzcat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lrzcat - Uncompress LRZ files to STDOUT 
+lrzcat - Uncompress LRZ files to STDOUT 
 
 <h2>SYNOPSIS</h2>
 

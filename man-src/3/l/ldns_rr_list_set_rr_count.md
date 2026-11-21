@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_set_rr_count(3)"
 name: "ldns_rr_list_set_rr_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_list_set_rr_count/"
 description: "ldns_rr_list_rr_count, ldns_rr_list_set_rr_count"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_list_rr_count, ldns_rr_list_set_rr_count </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

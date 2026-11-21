@@ -1,4 +1,5 @@
 ---
+
 title: "exifautotran(1)"
 name: "exifautotran"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-exifautotran/"
 description: "exifautotran – Transforms Exif files so that Orientation becomes 1"
 ---
 
-<h2 class="name">NAME</h2>
 <p> exifautotran &#8211; Transforms Exif files so that Orientation becomes 1 </p>
 <h2>DESCRIPTION</h2>
 <p> exifautotran [list of files] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_domain_x500_encode(3)"
 name: "krb5_domain_x500_encode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_domain_x500_encode/"
 description: "krb5_check_transited krb5_check_transited_realms krb5_domain_x500_decode krb5_domain_x500_encode – realm transit verification and encoding/decoding functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_check_transited</code> <code>krb5_check_transited_realms</code> <code>krb5_domain_x500_decode</code> <code>krb5_domain_x500_encode</code> &#8211; realm transit verification and encoding/decoding functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

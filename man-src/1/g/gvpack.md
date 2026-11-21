@@ -1,4 +1,5 @@
 ---
+
 title: "gvpack(1)"
 name: "gvpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvpack/"
 description: "gvpack – merge and pack disjoint graphs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvpack &#8211; merge and pack disjoint graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gvpack</code> [ <code>-nguv?</code> ] [ <code>-m</code><i>margin</i> ] [ <code>-array</code><i>opts</i> ] [ <code>-o</code><i>outfile</i> ] [ <code>-s</code><i>graph_name</i> ] [ <code>-G</code><i>name</i><code>=</code>value ] [ <i>files</i> ]</p>

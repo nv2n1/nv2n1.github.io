@@ -1,4 +1,5 @@
 ---
+
 title: "icepatch2server(1)"
 name: "icepatch2server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icepatch2server/"
 description: "icepatch2server – The IcePatch2 server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> icepatch2server &#8211; The IcePatch2 server.</p>
 <h2>SYNOPSIS</h2>
 <p> icepatch2server &lt;data directory&gt; </p>

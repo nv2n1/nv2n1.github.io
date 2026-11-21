@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mkfont(1)"
 name: "grub2-mkfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-mkfont/"
 description: "grub-mkfont — Convert common font file formats into the PF2 format."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-mkfont</code> &#8212; Convert common font file formats into the PF2 format. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkfont</code> [&#8211;ascii-bitmaps] [-a | &#8211;force-autohint]</p>

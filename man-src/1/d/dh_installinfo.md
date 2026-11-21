@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installinfo(1)"
 name: "dh_installinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installinfo/"
 description: "dh_installinfo – install info files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installinfo &#8211; install info files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installinfo</code> [<i>debhelper options</i>] [<code>-A</code>] [<i>file</i> &#8230;]</p>

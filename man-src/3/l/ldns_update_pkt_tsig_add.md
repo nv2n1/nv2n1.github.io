@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_update_pkt_tsig_add(3)"
 name: "ldns_update_pkt_tsig_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_update_pkt_tsig_add/"
 description: "ldns_update_pkt_tsig_add"
 ---
 
-<h2>NAME</h2>
 <p> ldns_update_pkt_tsig_add </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

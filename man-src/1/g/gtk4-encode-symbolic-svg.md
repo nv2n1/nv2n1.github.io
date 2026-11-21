@@ -1,4 +1,5 @@
 ---
+
 title: "gtk4-encode-symbolic-svg(1)"
 name: "gtk4-encode-symbolic-svg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk4-encode-symbolic-svg/"
 description: "gtk4-encode-symbolic-svg – Symbolic icon conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk4-encode-symbolic-svg &#8211; Symbolic icon conversion utility </p>
 <h2>SYNOPSIS</h2>
 <pre>

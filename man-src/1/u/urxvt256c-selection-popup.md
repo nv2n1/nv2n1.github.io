@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-selection-popup(1)"
 name: "urxvt256c-selection-popup"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-selection-popup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- selection-popup (enabled by default) 
+selection-popup (enabled by default) 
 
 <h2>DESCRIPTION</h2>
 

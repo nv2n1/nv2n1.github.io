@@ -1,4 +1,5 @@
 ---
+
 title: "bacula-tray-monitor(1)"
 name: "bacula-tray-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bacula-tray-monitor/"
 description: "bacula-tray-monitor – Bacula’s ‘System Tray’ monitor"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bacula-tray-monitor &#8211; Bacula&#8217;s&nbsp;<wbr>&#8216;System Tray&#8217;&nbsp;<wbr>monitor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bacula-tray-monitor</code> [options] </p>

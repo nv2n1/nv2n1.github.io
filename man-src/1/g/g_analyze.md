@@ -1,4 +1,5 @@
 ---
+
 title: "g_analyze(1)"
 name: "g_analyze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_analyze/"
 description: "g_analyze – analyzes data sets"
 ---
 
-<h2>NAME</h2>
 <p> g_analyze &#8211; analyzes data sets </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

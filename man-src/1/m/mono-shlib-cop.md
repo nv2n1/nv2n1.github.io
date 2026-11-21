@@ -1,4 +1,5 @@
 ---
+
 title: "mono-shlib-cop(1)"
 name: "mono-shlib-cop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-shlib-cop/"
 description: "mono-shlib-cop – Shared Library Usage Checker"
 ---
 
-<h2>NAME</h2>
 <p> mono-shlib-cop &#8211; Shared Library Usage Checker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-shlib-cop</code> [OPTIONS]* [ASSEMBLY-FILE-NAME]*</p>

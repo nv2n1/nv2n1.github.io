@@ -1,4 +1,5 @@
 ---
+
 title: "perror(1)"
 name: "perror"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perror/"
 description: "perror – display MySQL error message information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perror &#8211; display MySQL error message information </p>
 <h2>SYNOPSIS</h2>
 <dl>

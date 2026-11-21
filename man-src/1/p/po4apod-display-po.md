@@ -1,4 +1,5 @@
 ---
+
 title: "po4apod-display-po(1)"
 name: "po4apod-display-po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po4apod-display-po/"
 description: "po4apod-display-po – man display of a translated POD file according to a PO"
 ---
 
-<h2 class="name">NAME</h2>
 <p> po4apod-display-po &#8211; man display of a translated POD file according to a PO </p>
 <h2>SYNOPSIS</h2>
 <dl>

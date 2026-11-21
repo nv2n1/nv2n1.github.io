@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-keybindings(1)"
 name: "byobu-keybindings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-keybindings/"
 description: "byobu-keybindings – toggle on/off Byobu’s keybindings"
 ---
 
-<h2>NAME</h2>
 <p> byobu-keybindings &#8211; toggle on/off Byobu&#8217;s keybindings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-keybindings</code> </p>

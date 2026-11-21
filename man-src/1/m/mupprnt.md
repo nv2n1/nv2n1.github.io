@@ -1,4 +1,5 @@
 ---
+
 title: "mupprnt(1)"
 name: "mupprnt"
 section: "1"
@@ -6,11 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mupprnt/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- mupprnt - print output from Mup music publisher
+mupprnt - print output from Mup music publisher
 
 <h2>SYNOPSIS</h2>
 

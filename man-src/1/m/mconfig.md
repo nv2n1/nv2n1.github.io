@@ -1,4 +1,5 @@
 ---
+
 title: "mconfig(1)"
 name: "mconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mconfig/"
 description: "mconfig, – Utility for modifying .NET configuration files"
 ---
 
-<h2>NAME</h2>
 <p> mconfig, &#8211; Utility for modifying .NET configuration files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mconfig [options] command [command_parameters]</code></p>

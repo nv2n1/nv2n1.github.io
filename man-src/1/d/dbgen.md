@@ -1,4 +1,5 @@
 ---
+
 title: "dbgen(1)"
 name: "dbgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbgen/"
 description: "dbgen.pl – Random LDIF database creator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbgen.pl &#8211; Random LDIF database creator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbgen.pl</code> [<i>OPTIONS</i>] -o output_file -n number</p>

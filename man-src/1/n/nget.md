@@ -1,4 +1,5 @@
 ---
+
 title: "nget(1)"
 name: "nget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nget/"
 description: "nget – retrieve files from NNTP (usenet news) hosts"
 ---
 
-<h2>NAME</h2>
 <p> nget &#8211; retrieve files from NNTP (usenet news) hosts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nget [&#8230;]</code></p>

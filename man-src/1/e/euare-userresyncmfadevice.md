@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userresyncmfadevice(1)"
 name: "euare-userresyncmfadevice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userresyncmfadevice/"
 description: "euare-userresyncmfadevice – Re-synchronize an MFA device with the server"
 ---
 
-<h2>NAME</h2>
 <p> euare-userresyncmfadevice &#8211; Re-synchronize an MFA device with the server</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userresyncmfadevice <code>-s</code> SERIAL <code>-c1</code> CODE <code>-c2</code> CODE</p>

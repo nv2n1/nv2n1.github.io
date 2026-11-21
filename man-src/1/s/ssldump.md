@@ -1,4 +1,5 @@
 ---
+
 title: "ssldump(1)"
 name: "ssldump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssldump/"
 description: "ssldump – dump SSL traffic on a network"
 ---
 
-<h2>NAME</h2>
 <p> ssldump &#8211; dump SSL traffic on a network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssldump</code> [ <code>-vTshVq</code> <code>-aAdeHnNqTxXvy</code> ] [ <code>-i</code> <i>interface</i> ] </p>

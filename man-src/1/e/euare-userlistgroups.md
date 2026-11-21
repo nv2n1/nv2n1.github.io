@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistgroups(1)"
 name: "euare-userlistgroups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistgroups/"
 description: "euare-userlistgroups – List all groups a user is a member of"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistgroups &#8211; List all groups a user is a member of</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistgroups [&#8211;as-account ACCOUNT] [-U URL]</p>

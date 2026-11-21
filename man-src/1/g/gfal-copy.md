@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-copy(1)"
 name: "gfal-copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-copy/"
 description: "gfal-copy – Copy files"
 ---
 
-<h2>NAME</h2>
 <p> gfal-copy &#8211; Copy files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-copy</code> [ <i>OPTION</i> ]&#8230; <i>SOURCE</i> <i>DEST1 [ DEST2 &#8230; ]</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "irb(1)"
 name: "irb"
 section: "1"
@@ -8,7 +9,7 @@ description: "irb – Interactive Ruby Shell"
 ---
 
 <p>UNIX</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>irb</code> &#8211; Interactive Ruby Shell </p>
 <h2>SYNOPSIS</h2>
 <p> <code>irb</code> [-<code>-version</code> ] [-<code>dfUw </code>[-<code>I </code><i>directory</i> ] ] [-<code>r </code><i>library</i> ] [-<code>E </code><i>external </i>[: <i>internal</i> ] ] [-<code>W </code>[<i>level</i> ] ] [-<code>&#8211; </code>[no <code>inspect</code> ] ] [-<code>&#8211; </code>[no <code>multiline</code> ] ] [-<code>&#8211; </code>[no <code>singleline</code> ] ] [-<code>&#8211; </code>[no <code>echo</code> ] ] [-<code>&#8211; </code>[no <code>colorize</code> ] ] [-<code>&#8211; </code>[no <code>verbose</code> ] ] [-<code>-prompt </code><i>mode</i> ] [-<code>-prompt-mode </code><i>mode</i> ] [-<code>-inf-ruby-mode</code> ] [-<code>-simple-prompt</code> ] [-<code>-noprompt</code> ] [-<code>-tracer</code> ] [-<code>-back-trace-limit </code><i>n</i> ] [- ] [program_file] [argument &#8230;] </p>

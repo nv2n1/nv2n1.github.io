@@ -1,4 +1,5 @@
 ---
+
 title: "ed(1)"
 name: "ed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ed/"
 description: "ed – line-oriented text editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ed &#8211; line-oriented text editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ed</code> [<i>,options/</i>] [<i>,file/</i>]</p>

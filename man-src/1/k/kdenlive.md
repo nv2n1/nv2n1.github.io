@@ -1,4 +1,5 @@
 ---
+
 title: "kdenlive(1)"
 name: "kdenlive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kdenlive/"
 description: "kdenlive – An open source non-linear video editor."
 ---
 
-<h2>NAME</h2>
 <p> kdenlive &#8211; An open source non-linear video editor.</p>
 <h2>SYNOPSIS</h2>
 <p> kdenlive [Qt-options] [KDE-options] [options] [file]</p>

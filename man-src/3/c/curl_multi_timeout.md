@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_timeout(3)"
 name: "curl_multi_timeout"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_timeout/"
 description: "curl_multi_timeout – how long to wait for action before proceeding"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_timeout &#8211; how long to wait for action before proceeding</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

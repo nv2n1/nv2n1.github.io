@@ -1,4 +1,5 @@
 ---
+
 title: "shorewall6-nesting(5)"
 name: "shorewall6-nesting"
 section: "5"
@@ -6,9 +7,6 @@ letter: "s"
 url: "/docs/linux/man/5-shorewall6-nesting/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> nesting &#8211; shorewall6 Nested Zones </p>
 <h2>SYNOPSIS</h2>
 <dl>

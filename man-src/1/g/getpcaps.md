@@ -1,4 +1,5 @@
 ---
+
 title: "getpcaps(1)"
 name: "getpcaps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getpcaps/"
 description: "getpcaps – List Process Capabilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpcaps &#8211; List Process Capabilities </p>
 <h2>SYNOPSIS</h2>
 <dl>

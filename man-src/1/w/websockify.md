@@ -1,4 +1,5 @@
 ---
+
 title: "websockify(1)"
 name: "websockify"
 section: "1"
@@ -6,12 +7,7 @@ letter: "w"
 url: "/docs/linux/man/1-websockify/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- websockify - WebSockets to TCP socket bridge
+websockify - WebSockets to TCP socket bridge
 
 <h2>SYNOPSIS</h2>
 

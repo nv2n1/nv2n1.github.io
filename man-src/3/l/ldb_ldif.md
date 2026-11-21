@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_ldif(3)"
 name: "ldb_ldif"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_ldif/"
 description: "ldb_ldif –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldb_ldif &#8211; </p>
 <p> LDIF record.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "distccd(1)"
 name: "distccd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-distccd/"
 description: "distccd – distributed C/C++ compiler server"
 ---
 
-<h2>NAME</h2>
 <p> distccd &#8211; distributed C/C++ compiler server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>distccd &#8211;daemon </code> <i>[OPTIONS]</i></p>

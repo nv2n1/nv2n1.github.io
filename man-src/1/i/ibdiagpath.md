@@ -1,4 +1,5 @@
 ---
+
 title: "ibdiagpath(1)"
 name: "ibdiagpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdiagpath/"
 description: "ibdiagpath – IB diagnostic path"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibdiagpath &#8211; IB diagnostic path </p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagpath<br />

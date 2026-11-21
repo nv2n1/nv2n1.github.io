@@ -1,4 +1,5 @@
 ---
+
 title: "snmpinform(1)"
 name: "snmpinform"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpinform/"
 description: "snmptrap, snmpinform – sends an SNMP notification to a manager"
 ---
 
-<h2>NAME</h2>
 <p> snmptrap, snmpinform &#8211; sends an SNMP notification to a manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmptrap -v 1</code> [COMMON OPTIONS] AGENT enterprise-oid agent generic-trap specific-trap uptime [OID TYPE VALUE]&#8230; </p>

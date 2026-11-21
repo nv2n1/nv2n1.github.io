@@ -1,4 +1,5 @@
 ---
+
 title: "odt2sxw(1)"
 name: "odt2sxw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-odt2sxw/"
 description: "unoconv – convert any document from and to any LibreOffice supported format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unoconv &#8211; convert any document from and to any LibreOffice supported format </p>
 <h2>SYNOPSIS</h2>
 <p> <i>unoconv</i> [options] file [file2 ..] </p>

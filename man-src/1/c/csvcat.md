@@ -1,4 +1,5 @@
 ---
+
 title: "csvcat(1)"
 name: "csvcat"
 section: "1"
@@ -6,9 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-csvcat/"
 ---
 
-<h2>NAME</h2>
-
- csvcat - Efficiently concatenate CSV
+csvcat - Efficiently concatenate CSV
 
 <h2>SYNOPSIS</h2>
 

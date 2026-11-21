@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_passwd_result_to_string(3)"
 name: "krb5_passwd_result_to_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_passwd_result_to_string/"
 description: "krb5_change_password krb5_set_password krb5_set_password_using_ccache krb5_passwd_result_to_string – change password functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_change_password</code> <code>krb5_set_password</code> <code>krb5_set_password_using_ccache</code> <code>krb5_passwd_result_to_string</code> &#8211; change password functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

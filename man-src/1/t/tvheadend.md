@@ -1,4 +1,5 @@
 ---
+
 title: "tvheadend(1)"
 name: "tvheadend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tvheadend/"
 description: "tvheadend – Advanced TV streaming server/relay"
 ---
 
-<h2>NAME</h2>
 <p> tvheadend &nbsp;<wbr>&#8211; Advanced TV streaming server/relay</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tvheadend</code> [<i>OPTIONS</i>]</p>

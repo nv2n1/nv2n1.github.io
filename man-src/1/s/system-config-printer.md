@@ -1,4 +1,5 @@
 ---
+
 title: "system-config-printer(1)"
 name: "system-config-printer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-system-config-printer/"
 description: "system-config-printer – configure a CUPS server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> system-config-printer &#8211; configure a CUPS server </p>
 <h2>SYNOPSIS</h2>
 <dl>

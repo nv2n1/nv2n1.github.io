@@ -1,4 +1,5 @@
 ---
+
 title: "boinccmd(1)"
 name: "boinccmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-boinccmd/"
 description: "boinccmd – The command line interface to the BOINC client."
 ---
 
-<h2>NAME</h2>
 <p> boinccmd &#8211; The command line interface to the BOINC client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>boinccmd</code> [<code>&#8211;host</code> <i>hostname</i>[:<i>port</i>]] [<code>&#8211;passwd</code> <i>passwd</i>] {<i>command</i>} <code>boinccmd</code> [<code>-hV</code>] </p>

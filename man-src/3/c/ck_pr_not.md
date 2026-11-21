@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_not(3)"
 name: "ck_pr_not"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_not/"
 description: "ck_pr_not_ptr ck_pr_not_double ck_pr_not_char ck_pr_not_uint ck_pr_not_int ck_pr_not_64 ck_pr_not_32 ck_pr_not_16 ck_pr_not_8 – atomic complement operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_not_ptr</code> <code>ck_pr_not_double</code> <code>ck_pr_not_char</code> <code>ck_pr_not_uint</code> <code>ck_pr_not_int</code> <code>ck_pr_not_64</code> <code>ck_pr_not_32</code> <code>ck_pr_not_16</code> <code>ck_pr_not_8</code> &#8211; atomic complement operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

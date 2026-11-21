@@ -1,4 +1,5 @@
 ---
+
 title: "bs11nread(1)"
 name: "bs11nread"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bs11nread/"
 description: "bs11nread – Barry Project’s program to read database serialization files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bs11nread</code> &#8211; Barry Project&#8217;s program to read database serialization files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bs11nread</code> [-f file][-h][-S]</p>

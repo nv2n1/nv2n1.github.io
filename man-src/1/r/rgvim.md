@@ -1,4 +1,5 @@
 ---
+
 title: "rgvim(1)"
 name: "rgvim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rgvim/"
 description: "vim – Vi IMproved, a programmer’s text editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vim &#8211; Vi IMproved, a programmer&#8217;s text editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vim</code> [options] [file ..]<br />

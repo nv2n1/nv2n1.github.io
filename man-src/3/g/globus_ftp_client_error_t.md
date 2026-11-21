@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_error_t(3)"
 name: "globus_ftp_client_error_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_error_t/"
 description: "globus_ftp_client.h – GridFTP Client."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_ftp_client.h &#8211; GridFTP Client.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_ftp_control.h&#8217;<br />

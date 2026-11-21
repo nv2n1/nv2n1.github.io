@@ -1,4 +1,5 @@
 ---
+
 title: "pamrecolor(1)"
 name: "pamrecolor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamrecolor/"
 description: "pamrecolor – alter colors without affecting luminance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamrecolor &#8211; alter colors without affecting luminance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamrecolor</code> [<code>&#8211;colorspace</code>=<i>name</i>] [<code>&#8211;rmult</code>=<i>fraction</i>] [<code>&#8211;gmult</code>=<i>fraction</i>] [<code>&#8211;bmult</code>=<i>fraction</i>] [<code>&#8211;targetcolor</code>=<i>color</i>] [<code>&#8211;colorfile</code>=<i>file</i>] [<code>-randomseed=</code><i>integer</i>] </p>

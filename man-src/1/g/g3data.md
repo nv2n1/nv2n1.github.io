@@ -1,4 +1,5 @@
 ---
+
 title: "g3data(1)"
 name: "g3data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g3data/"
 description: "g3data – A tool for extracting data from graphs."
 ---
 
-<h2>NAME</h2>
 <p> g3data &#8211; A tool for extracting data from graphs.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>g3data</code> [ <code>-max</code><i> x y</i> ] [ <code>-scale</code><i> factor</i> ] [ <code>-coords</code><i> llx lly rux ruy</i> ] [ <code>-errors</code> ] [ <code>-lnx</code> ] [ <code>-lny</code> ] [ <i>filename(s) &#8230;</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_sign_algorithm_get_name(3)"
 name: "gnutls_sign_algorithm_get_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_sign_algorithm_get_name/"
 description: "gnutls_sign_algorithm_get_name – Returns a string with the name of the specified sign algorithm"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_sign_algorithm_get_name &#8211; Returns a string with the name of the specified sign algorithm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

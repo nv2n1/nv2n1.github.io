@@ -1,4 +1,5 @@
 ---
+
 title: "reposync(1)"
 name: "reposync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reposync/"
 description: "reposync – synchronize yum repositories to a local directory"
 ---
 
-<h2>NAME</h2>
 <p> reposync &#8211; synchronize yum repositories to a local directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>reposync</code> [options]</p>

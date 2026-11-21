@@ -1,4 +1,5 @@
 ---
+
 title: "ofxconnect(1)"
 name: "ofxconnect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ofxconnect/"
 description: "ofxconnect – Create a statement request file"
 ---
 
-<h2>NAME</h2>
 <p> ofxconnect &#8211; Create a statement request file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ofxconnect</code> [<i>OPTIONS</i>]&#8230; [<i>FILES</i>]&#8230;</p>

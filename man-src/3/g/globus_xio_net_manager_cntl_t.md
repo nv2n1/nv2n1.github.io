@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_net_manager_cntl_t(3)"
 name: "globus_xio_net_manager_cntl_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_net_manager_cntl_t/"
 description: "Globus XIO Net Manager Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO Net Manager Driver &#8211; </p>
 <p> Net Manager XIO Driver.</p>
 <h3>Enumerations</h3>

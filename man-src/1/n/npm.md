@@ -1,4 +1,5 @@
 ---
+
 title: "npm(1)"
 name: "npm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm/"
 description: "npm – javascript package manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm</code> &#8211; javascript package manager </p>
 <h3>Synopsis</h3>
 <dl>

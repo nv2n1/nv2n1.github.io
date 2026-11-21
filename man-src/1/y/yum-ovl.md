@@ -1,4 +1,5 @@
 ---
+
 title: "yum-ovl(1)"
 name: "yum-ovl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-ovl/"
 description: "yum-ovl – Performs an initial copy-up of yum(8) package database."
 ---
 
-<h2>NAME</h2>
 <p> yum-ovl &#8211; Performs an initial copy-up of <a href="/docs/linux/man/8-yum/">yum</a>(8) package database.</p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code> <i>debug-level</i> If debug level is <i>2</i> and more, print out the number of files copied up from the lower layer</p>

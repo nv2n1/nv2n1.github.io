@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_bracket_types(3)"
 name: "fribidi_get_bracket_types"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bracket_types/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_bracket_types - get bracketed characters 
+fribidi_get_bracket_types - get bracketed characters 
 
 <h2>SYNOPSIS</h2>
 

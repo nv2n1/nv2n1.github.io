@@ -1,4 +1,5 @@
 ---
+
 title: "rtmpdump(1)"
 name: "rtmpdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rtmpdump/"
 description: "rtmpdump – RTMP streaming media client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rtmpdump &#8211; RTMP streaming media client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rtmpdump</code> <code>-r</code><i>&nbsp;url</i> [<code>-n</code><i>&nbsp;hostname</i>] [<code>-c</code><i>&nbsp;port</i>] [<code>-l</code><i>&nbsp;protocol</i>] [<code>-S</code><i>&nbsp;host:port</i>] [<code>-a</code><i>&nbsp;app</i>] [<code>-t</code><i>&nbsp;tcUrl</i>] [<code>-p</code><i>&nbsp;pageUrl</i>] [<code>-s</code><i>&nbsp;swfUrl</i>] [<code>-f</code><i>&nbsp;flashVer</i>] [<code>-u</code><i>&nbsp;auth</i>] [<code>-C</code><i>&nbsp;conndata</i>] [<code>-y</code><i>&nbsp;playpath</i>] [<code>-Y</code>] [<code>-v</code>] [<code>-d</code><i>&nbsp;subscription</i>] [<code>-e</code>] [<code>-k</code><i>&nbsp;skip</i>] [<code>-A</code><i>&nbsp;start</i>] [<code>-B</code><i>&nbsp;stop</i>] [<code>-b</code><i>&nbsp;buffer</i>] [<code>-m</code><i>&nbsp;timeout</i>] [<code>-T</code><i>&nbsp;key</i>] [<code>-j</code><i>&nbsp;JSON</i>] [<code>-w</code><i>&nbsp;swfHash</i>] [<code>-x</code><i>&nbsp;swfSize</i>] [<code>-W</code><i>&nbsp;swfUrl</i>] [<code>-X</code><i>&nbsp;swfAge</i>] [<code>-o</code><i>&nbsp;output</i>] [<code>-#</code>] [<code>-q</code>] [<code>-V</code>] [<code>-z</code>]<br />

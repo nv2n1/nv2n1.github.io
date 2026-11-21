@@ -1,4 +1,5 @@
 ---
+
 title: "isgreater(3)"
 name: "isgreater"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isgreater/"
 description: "isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered – floating-point relational tests without exception for NaN"
 ---
 
-<h2 class="name">NAME</h2>
 <p> isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered &#8211; floating-point relational tests without exception for NaN </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

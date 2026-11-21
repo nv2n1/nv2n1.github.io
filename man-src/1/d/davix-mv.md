@@ -1,4 +1,5 @@
 ---
+
 title: "davix-mv(1)"
 name: "davix-mv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-mv/"
 description: "davix-mv – Rename tool based on libdavix"
 ---
 
-<h2>NAME</h2>
 <p> davix-mv &#8211; Rename tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>davix-mv&nbsp;<wbr>[options]&#8230; original-url new-url </p>

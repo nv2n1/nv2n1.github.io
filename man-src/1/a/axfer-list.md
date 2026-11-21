@@ -1,4 +1,5 @@
 ---
+
 title: "axfer-list(1)"
 name: "axfer-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axfer-list/"
 description: "axfer-list – dump lists of available sound devices and nodes to transfer audio data frame."
 ---
 
-<h2 class="name">NAME</h2>
 <p> axfer-list &#8211; dump lists of available sound devices and nodes to transfer audio data frame.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>axfer list</code> <i>direction target</i> </p>

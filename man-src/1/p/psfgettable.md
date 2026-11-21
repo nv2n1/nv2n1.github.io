@@ -1,4 +1,5 @@
 ---
+
 title: "psfgettable(1)"
 name: "psfgettable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psfgettable/"
 description: "psfgettable – extract the embedded Unicode character table from a console font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psfgettable &#8211; extract the embedded Unicode character table from a console font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psfgettable</code> <i>fontfile</i> [<i>outfile</i>]</p>

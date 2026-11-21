@@ -1,4 +1,5 @@
 ---
+
 title: "gerbv(1)"
 name: "gerbv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gerbv/"
 description: "gerbv – Gerber Viewer"
 ---
 
-<h2>NAME</h2>
 <p> gerbv &#8211; Gerber Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gerbv [OPTIONS] [gerberfile[s]]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aria_read_log(1)"
 name: "aria_read_log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aria_read_log/"
 description: "aria_read_log – display Aria log file contents"
 ---
 
-<h2>NAME</h2>
 <p> aria_read_log &#8211; display Aria log file contents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aria_read_log</code> <i>OPTIONS</i></p>

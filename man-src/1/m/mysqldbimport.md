@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldbimport(1)"
 name: "mysqldbimport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldbimport/"
 description: "mysqldbimport – Import Object Definitions or Data into a Databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldbimport &#8211; Import Object Definitions or Data into a Databases </p>
 <h2>SYNOPSIS</h2>
 <dl>

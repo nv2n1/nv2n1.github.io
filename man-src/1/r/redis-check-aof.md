@@ -1,4 +1,5 @@
 ---
+
 title: "redis-check-aof(1)"
 name: "redis-check-aof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-redis-check-aof/"
 description: "redis-check-aof – Redis AOF file checker and repairer"
 ---
 
-<h2>NAME</h2>
 <p> redis-check-aof &#8211; Redis AOF file checker and repairer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redis-check-aof</code> [&#8211;fix] <i>file.aof</i> </p>

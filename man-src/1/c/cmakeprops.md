@@ -1,4 +1,5 @@
 ---
+
 title: "cmakeprops(1)"
 name: "cmakeprops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmakeprops/"
 description: "cmakeprops – Reference of CMake properties."
 ---
 
-<h2>NAME</h2>
 <p> cmakeprops &#8211; Reference of CMake properties. </p>
 <h2>PROPERTIES</h2>
 <pre>

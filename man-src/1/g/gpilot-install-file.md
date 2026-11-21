@@ -1,4 +1,5 @@
 ---
+
 title: "gpilot-install-file(1)"
 name: "gpilot-install-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpilot-install-file/"
 description: "gpilot-install-file – gnome-pilot file conduit scheduler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpilot-install-file &#8211; gnome-pilot file conduit scheduler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpilot-install-file</code> [<i>&#8211;now|&#8211;later</i>]<i> files</i>&#8230;</p>

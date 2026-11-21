@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlrplshow(1)"
 name: "mysqlrplshow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlrplshow/"
 description: "mysqlrplshow – Show Slaves for Master Server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlrplshow &#8211; Show Slaves for Master Server </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "admesh(1)"
 name: "admesh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-admesh/"
 description: "ADMesh – a program for processing triangulated solid meshes"
 ---
 
-<h2>NAME</h2>
 <p> ADMesh &#8211; a program for processing triangulated solid meshes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>admesh</code> [<i>OPTION</i>]&#8230; <i>file</i></p>

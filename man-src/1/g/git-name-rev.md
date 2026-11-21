@@ -1,4 +1,5 @@
 ---
+
 title: "git-name-rev(1)"
 name: "git-name-rev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-name-rev/"
 description: "git-name-rev – Find symbolic names for given revs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-name-rev &#8211; Find symbolic names for given revs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

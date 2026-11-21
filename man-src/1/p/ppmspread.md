@@ -1,4 +1,5 @@
 ---
+
 title: "ppmspread(1)"
 name: "ppmspread"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmspread/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmspread - displace a portable pixmap's pixels by a random amount 
+ppmspread - displace a portable pixmap's pixels by a random amount 
 
 <h2>SYNOPSIS</h2>
 

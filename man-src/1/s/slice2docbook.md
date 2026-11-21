@@ -1,4 +1,5 @@
 ---
+
 title: "slice2docbook(1)"
 name: "slice2docbook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slice2docbook/"
 description: "slice2docbook – translate Slice to DocBook"
 ---
 
-<h2>NAME</h2>
 <p> slice2docbook &#8211; translate Slice to DocBook</p>
 <h2>SYNOPSIS</h2>
 <p> <code>slice2docbook [OPTIONS]&#8230; FILES&#8230;</code></p>

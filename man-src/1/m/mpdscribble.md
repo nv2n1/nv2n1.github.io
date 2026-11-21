@@ -1,4 +1,5 @@
 ---
+
 title: "mpdscribble(1)"
 name: "mpdscribble"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpdscribble/"
 description: "mpdscribble – A Music Player Daemon (MPD) client which submits information about tracks being played to a scrobbler (e.g. last.fm)."
 ---
 
-<h2>NAME</h2>
 <p> mpdscribble &#8211; A Music Player Daemon (MPD) client which submits information about tracks being played to a scrobbler (e.g. last.fm).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpdscribble [options] </code></p>

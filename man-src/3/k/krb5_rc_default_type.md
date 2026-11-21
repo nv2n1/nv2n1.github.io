@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_rc_default_type(3)"
 name: "krb5_rc_default_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_rc_default_type/"
 description: "krb5_rcache krb5_rc_close krb5_rc_default krb5_rc_default_name krb5_rc_default_type krb5_rc_destroy krb5_rc_expunge krb5_rc_get_lifespan krb5_rc_get_name krb5_rc_get_type krb5_rc_initialize krb5_rc..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_rcache</code> <code>krb5_rc_close</code> <code>krb5_rc_default</code> <code>krb5_rc_default_name</code> <code>krb5_rc_default_type</code> <code>krb5_rc_destroy</code> <code>krb5_rc_expunge</code> <code>krb5_rc_get_lifespan</code> <code>krb5_rc_get_name</code> <code>krb5_rc_get_type</code> <code>krb5_rc_initialize</code> <code>krb5_rc_recover</code> <code>krb5_rc_resolve</code> <code>krb5_rc_resolve_full</code> <code>krb5_rc_resolve_type</code> <code>krb5_rc_store</code> <code>krb5_get_server_rcache</code> &#8211; Kerberos 5 replay cache </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

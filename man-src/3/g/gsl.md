@@ -1,4 +1,5 @@
 ---
+
 title: "gsl(3)"
 name: "gsl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gsl/"
 description: "gsl – GNU Scientific Library"
 ---
 
-<h2>NAME</h2>
 <p> gsl &#8211; GNU Scientific Library</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;gsl/&#8230;&gt;</p>

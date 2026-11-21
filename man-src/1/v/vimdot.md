@@ -1,4 +1,5 @@
 ---
+
 title: "vimdot(1)"
 name: "vimdot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vimdot/"
 description: "vimdot – Combined text editor and dot viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vimdot &#8211; Combined text editor and dot viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vimdot</code> [<i>file</i>]</p>

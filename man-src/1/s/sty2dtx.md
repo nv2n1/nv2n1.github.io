@@ -1,4 +1,5 @@
 ---
+
 title: "sty2dtx(1)"
 name: "sty2dtx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sty2dtx/"
 description: "sty2dtx — Converts a LaTeX .sty file to a documented .dtx file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sty2dtx &#8212; Converts a LaTeX .sty file to a documented .dtx file </p>
 <h2>VERSION</h2>
 <p> Version: v2.3</p>

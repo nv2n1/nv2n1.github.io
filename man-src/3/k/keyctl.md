@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl(3)"
 name: "keyctl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl/"
 description: "keyctl_*() – Key management function wrappers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_*() &#8211; Key management function wrappers </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>keyctl</code>() system call is a multiplexor for a number of key management functions. These should be called via the wrappers in the libkeyutils library. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hexedit(1)"
 name: "hexedit"
 section: "1"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-hexedit/"
 ---
 
-<h2>NAME</h2>
-
- hexedit - view and edit files in hexadecimal or in ASCII
+hexedit - view and edit files in hexadecimal or in ASCII
 
 <h2>SYNOPSIS</h2>
 

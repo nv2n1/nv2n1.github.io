@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi__write(3)"
 name: "brlapi__write"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi__write/"
 description: "Writing on the braille display –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Writing on the braille display &#8211; </p>
 <p> Write text to the braille display.</p>
 <h3>Data Structures</h3>

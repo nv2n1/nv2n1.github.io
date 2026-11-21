@@ -1,4 +1,5 @@
 ---
+
 title: "pamarith(1)"
 name: "pamarith"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamarith/"
 description: "pamarith – perform arithmetic on two Netpbm images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamarith &#8211; perform arithmetic on two Netpbm images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamarith</code> <code>-add</code> | <code>-subtract</code> | <code>-multiply</code> | <code>-divide</code> | <code>-difference</code> | <code>-minimum</code> | <code>-maximum</code> | <code>-mean</code> | <code>-compare</code> | <code>-and</code> | <code>-or</code> | <code>-nand</code> | <code>-nor</code> | <code>-xor</code> | <code>-shiftleft</code> | <code>-shiftright</code> <i>pamfile1</i> <i>pamfile2</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clamconf(1)"
 name: "clamconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clamconf/"
 description: "clamconf – Clam AntiVirus configuration utility"
 ---
 
-<h2>NAME</h2>
 <p> clamconf &#8211; Clam AntiVirus configuration utility</p>
 <h2>SYNOPSIS</h2>
 <p> clamconf [options]</p>

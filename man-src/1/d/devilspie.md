@@ -1,4 +1,5 @@
 ---
+
 title: "devilspie(1)"
 name: "devilspie"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devilspie/"
 description: "devilspie – perform actions on windows as they are created"
 ---
 
-<h2>NAME</h2>
 <p> devilspie &#8211; perform actions on windows as they are created </p>
 <h2>SYNOPSIS</h2>
 <p> <code>devilspie</code> <i>[OPTION</i>]&#8230; <i>configuration-files&#8230;</i> </p>

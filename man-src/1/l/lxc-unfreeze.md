@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-unfreeze(1)"
 name: "lxc-unfreeze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-unfreeze/"
 description: "lxc-unfreeze – thaw all the container’s processes"
 ---
 
-<h2>NAME</h2>
 <p> lxc-unfreeze &#8211; thaw all the container&#8217;s processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-unfreeze</code> {-n <i>name</i>}</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libtasn1_perror(3)"
 name: "libtasn1_perror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtasn1_perror/"
 description: "libtasn1_perror – prints a string to stderr with a description of an error"
 ---
 
-<h2>NAME</h2>
 <p> libtasn1_perror &#8211; prints a string to stderr with a description of an error</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/libtasn1.h">libtasn1.h</a>&gt;</code> </p>

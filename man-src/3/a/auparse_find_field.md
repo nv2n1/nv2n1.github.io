@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_find_field(3)"
 name: "auparse_find_field"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_find_field/"
 description: "auparse_find_field – search for field name"
 ---
 
-<h2>NAME</h2>
 <p> auparse_find_field &#8211; search for field name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

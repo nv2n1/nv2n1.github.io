@@ -1,4 +1,5 @@
 ---
+
 title: "insight(1)"
 name: "insight"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-insight/"
 description: "insight – GDB/Insight graphical debugger"
 ---
 
-<h2>NAME</h2>
 <p> insight &#8211; GDB/Insight graphical debugger</p>
 <h2>DESCRIPTION</h2>
 <p> This is the GNU debugger. Usage:</p>

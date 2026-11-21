@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-sum(1)"
 name: "gfal-sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-sum/"
 description: "gfal-sum – Calculate checksum of a file"
 ---
 
-<h2>NAME</h2>
 <p> gfal-sum &#8211; Calculate checksum of a file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-sum</code> [ <i>OPTIONS</i> ] <i>FILE CHECKSUM_TYPE</i> </p>

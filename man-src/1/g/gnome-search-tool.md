@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-search-tool(1)"
 name: "gnome-search-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-search-tool/"
 description: "gnome-search-tool – the GNOME Search Tool"
 ---
 
-<h2>NAME</h2>
 <p> gnome-search-tool &#8211; the GNOME Search Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-search-tool</code> [<i>options</i>] </p>

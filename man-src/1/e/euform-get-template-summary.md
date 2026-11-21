@@ -1,4 +1,5 @@
 ---
+
 title: "euform-get-template-summary(1)"
 name: "euform-get-template-summary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-get-template-summary/"
 description: "euform-get-template-summary – Summarize a template"
 ---
 
-<h2>NAME</h2>
 <p> euform-get-template-summary &#8211; Summarize a template</p>
 <h2>SYNOPSIS</h2>
 <p> euform-get-template-summary [&#8211;template-file FILE] [&#8211;template-url URL]</p>

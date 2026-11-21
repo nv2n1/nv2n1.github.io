@@ -1,4 +1,5 @@
 ---
+
 title: "wmfmio(1)"
 name: "wmfmio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wmfmio/"
 description: "wmfmio – WindowMaker dockable application to manipulate fm radio card"
 ---
 
-<h2>NAME</h2>
 <p> <code>wmfmio</code> &#8211; WindowMaker dockable application to manipulate fm radio card</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmfmio</code> [-<code>n</code> ] [-<code>t </code><i>&lt;##:##&gt;</i> ] [-<code>p </code><i>&lt;##&gt;</i> ] [-<code>h</code> ]</p>

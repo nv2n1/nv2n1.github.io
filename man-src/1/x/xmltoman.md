@@ -1,4 +1,5 @@
 ---
+
 title: "xmltoman(1)"
 name: "xmltoman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmltoman/"
 description: "xmltoman – xml to man converter"
 ---
 
-<h2>NAME</h2>
 <p> xmltoman &#8211; xml to man converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmltoman </code><i>file.1.xml</i><code> &gt; file.1 </code></p>

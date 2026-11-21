@@ -1,4 +1,5 @@
 ---
+
 title: "asciinema(1)"
 name: "asciinema"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-asciinema/"
 description: "asciinema – terminal session recorder"
 ---
 
-<h2>NAME</h2>
 <p> asciinema &#8211; terminal session recorder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>asciinema</code> <i>[-h] [&#8211;version] command [&lt;args&gt;]</i></p>

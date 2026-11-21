@@ -1,4 +1,5 @@
 ---
+
 title: "dmesg(1)"
 name: "dmesg"
 section: "1"
@@ -6,7 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dmesg/"
 description: "dmesg – print or control the kernel ring buffer"
 ---
-<h2 class="name">NAME</h2>
+
 <p> dmesg - print or control the kernel ring buffer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmesg</code> [options] </p>

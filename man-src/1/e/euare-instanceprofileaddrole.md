@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofileaddrole(1)"
 name: "euare-instanceprofileaddrole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofileaddrole/"
 description: "euare-instanceprofileaddrole – Add a role to an instance profile"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofileaddrole &#8211; Add a role to an instance profile</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofileaddrole <code>-r</code> ROLENAME [&#8211;as-account ACCOUNT]</p>

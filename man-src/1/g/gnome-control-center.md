@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-control-center(1)"
 name: "gnome-control-center"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-control-center/"
 description: "gnome-control-center – Configure GNOME settings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-control-center &#8211; Configure GNOME settings </p>
 <h2>SYNOPSIS</h2>
 <dl>

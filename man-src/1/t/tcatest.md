@@ -1,4 +1,5 @@
 ---
+
 title: "tcatest(1)"
 name: "tcatest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcatest/"
 description: "tcatest – test cases of the abstract database API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tcatest &#8211; test cases of the abstract database API</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>tcatest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>name</i>&#8216; specifies the database name. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>tnum</i>&#8216; specifies the number of transactions. </p>

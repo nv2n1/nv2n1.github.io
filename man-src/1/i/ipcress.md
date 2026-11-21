@@ -1,4 +1,5 @@
 ---
+
 title: "ipcress(1)"
 name: "ipcress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcress/"
 description: "ipcress – In-silico PCR experiment simulation system"
 ---
 
-<h2>NAME</h2>
 <p> ipcress &#8211; In-silico PCR experiment simulation system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcress [ options ] &lt;primer file&gt; &lt;sequence paths&gt;</code> </p>

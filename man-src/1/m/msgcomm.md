@@ -1,4 +1,5 @@
 ---
+
 title: "msgcomm(1)"
 name: "msgcomm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgcomm/"
 description: "msgcomm – match two message catalogs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgcomm &#8211; match two message catalogs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgcomm</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>

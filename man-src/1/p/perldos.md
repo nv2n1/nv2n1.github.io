@@ -1,4 +1,5 @@
 ---
+
 title: "perldos(1)"
 name: "perldos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldos/"
 description: "perldos – Perl under DOS, W31, W95."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perldos &#8211; Perl under DOS, W31, W95. </p>
 <h2>SYNOPSIS</h2>
 <p> These are instructions for building Perl under <font SIZE="-1">DOS</font> (or w??), using <font SIZE="-1">DJGPP</font> v2.03 or later. Under w95 long filenames are supported.</p>

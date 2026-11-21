@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-activity-journal(1)"
 name: "gnome-activity-journal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-activity-journal/"
 description: "gnome-activity-journal – browse and search a chronological log of your activities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-activity-journal &#8211; browse and search a chronological log of your activities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-activity-journal</code> <i>[OPTIONS]</i> </p>

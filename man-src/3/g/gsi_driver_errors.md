@@ -1,4 +1,5 @@
 ---
+
 title: "gsi_driver_errors(3)"
 name: "gsi_driver_errors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gsi_driver_errors/"
 description: "Error Types –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Types &#8211; </p>
 <p> The GSI driver uses mostly GSSAPI calls, so it generally just wraps the underlying GSSAPI errors or uses generic xio errors.</p>
 <h3>Enumerations</h3>

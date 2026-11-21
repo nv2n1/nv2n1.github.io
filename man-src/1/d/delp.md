@@ -1,4 +1,5 @@
 ---
+
 title: "delp(1)"
 name: "delp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-delp/"
 description: "delp – The Free Pascal file deletion tool."
 ---
 
-<h2>NAME</h2>
 <p> delp &#8211; The Free Pascal file deletion tool. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>delp [options] directory</code> </p>

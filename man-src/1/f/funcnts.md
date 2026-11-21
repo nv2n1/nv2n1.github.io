@@ -1,4 +1,5 @@
 ---
+
 title: "funcnts(1)"
 name: "funcnts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funcnts/"
 description: "funcnts – count photons in specified regions, with bkgd subtraction"
 ---
 
-<h2>NAME</h2>
 <p> <code>funcnts &#8211; count photons in specified regions, with bkgd subtraction</code></p>
 <h2>SYNOPSIS</h2>
 <p> funcnts [switches] &lt;source_file&gt; [source_region] [bkgd_file] [bkgd_region|bkgd_value]</p>

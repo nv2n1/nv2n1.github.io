@@ -1,4 +1,5 @@
 ---
+
 title: "lprm-cups(1)"
 name: "lprm-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lprm-cups/"
 description: "lprm – cancel print jobs"
 ---
 
-<h2>NAME</h2>
 <p> lprm &#8211; cancel print jobs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lprm</code> [ -E ] [ -U <i>username</i> ] [ -h <i>server[:port]</i> ] [ -P <i>destination[/instance]</i> ] [ &#8211; ] [ <i>job ID(s)</i> ]</p>

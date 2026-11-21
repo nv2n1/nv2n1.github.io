@@ -1,4 +1,5 @@
 ---
+
 title: "git-archimport(1)"
 name: "git-archimport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-archimport/"
 description: "git-archimport – Import an Arch repository into git"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-archimport &#8211; Import an Arch repository into git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

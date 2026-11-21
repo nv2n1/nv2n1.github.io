@@ -1,4 +1,5 @@
 ---
+
 title: "cblrpm(1)"
 name: "cblrpm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cblrpm/"
 description: "cblrpm – a RPM packaging tool for Haskell Cabal packages"
 ---
 
-<h2>NAME</h2>
 <p> cblrpm &#8211; a RPM packaging tool for Haskell Cabal packages</p>
 <h2>SYNOPSIS</h2>
 <p> cblrpm [options] spec [path-or-pkg] cblrpm [options] local [path-or-pkg] cblrpm [options] srpm [path-or-pkg] cblrpm [options] prep [path-or-pkg] cblrpm [options] builddep [path-or-pkg] cblrpm [options] install [path-or-pkg] cblrpm [options] depends [path-or-pkg] cblrpm [options] requires [path-or-pkg] cblrpm [options] missingdeps [path-or-pkg] cblrpm [options] diff [path-or-pkg] cblrpm [options] update [path-or-pkg]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "obgen(1)"
 name: "obgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obgen/"
 description: "obgen – generate 3D coordinates for a molecule"
 ---
 
-<h2>NAME</h2>
 <p> <code>obgen</code> &#8211; generate 3D coordinates for a molecule</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>

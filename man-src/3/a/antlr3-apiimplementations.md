@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-apiimplementations(3)"
 name: "antlr3-apiimplementations"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-apiimplementations/"
 description: "API Implementation functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> API Implementation functions &#8211; </p>
 <p> API implementation functions are the default implementation of each of the methods in a particular typedef structure.</p>
 <h3>Modules</h3>

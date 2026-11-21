@@ -1,4 +1,5 @@
 ---
+
 title: "tsk_gettimes(1)"
 name: "tsk_gettimes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsk_gettimes/"
 description: "tsk_gettimes – Collect MAC times from a disk image into a body file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tsk_gettimes &#8211; Collect MAC times from a disk image into a body file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsk_gettimes [-vV] [ -f</code> <i>fstype</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -z</code> <i>zone</i> <code>] [ -s</code> <i>seconds</i> <code>] </code> <i>image [images]</i></p>

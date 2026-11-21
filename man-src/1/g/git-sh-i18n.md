@@ -1,4 +1,5 @@
 ---
+
 title: "git-sh-i18n(1)"
 name: "git-sh-i18n"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-sh-i18n/"
 description: "git-sh-i18n – Git’s i18n setup code for shell scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-sh-i18n &#8211; Git&#8217;s i18n setup code for shell scripts </p>
 <h2>SYNOPSIS</h2>
 <pre>

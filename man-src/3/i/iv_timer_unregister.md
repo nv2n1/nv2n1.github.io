@@ -1,4 +1,5 @@
 ---
+
 title: "iv_timer_unregister(3)"
 name: "iv_timer_unregister"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_timer_unregister/"
 description: "iv_timer_register, iv_timer_unregister, iv_timer_registered – deal with ivykis timers"
 ---
 
-<h2>NAME</h2>
 <p> iv_timer_register, iv_timer_unregister, iv_timer_registered &#8211; deal with ivykis timers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

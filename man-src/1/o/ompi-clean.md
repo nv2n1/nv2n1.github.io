@@ -1,4 +1,5 @@
 ---
+
 title: "ompi-clean(1)"
 name: "ompi-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ompi-clean/"
 description: "orte-clean – Cleans up any stale processes and files leftover from Open MPI jobs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>orte-clean</code> &#8211; Cleans up any stale processes and files leftover from Open MPI jobs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

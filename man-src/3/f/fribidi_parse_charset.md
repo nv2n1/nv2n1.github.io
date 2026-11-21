@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_parse_charset(3)"
 name: "fribidi_parse_charset"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_parse_charset/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_parse_charset - parse character set name 
+fribidi_parse_charset - parse character set name 
 
 <h2>SYNOPSIS</h2>
 

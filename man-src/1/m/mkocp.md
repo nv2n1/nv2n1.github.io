@@ -1,4 +1,5 @@
 ---
+
 title: "mkocp(1)"
 name: "mkocp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkocp/"
 description: "mkocp – frontend to otp2ocp(1)"
 ---
 
-<h2>NAME</h2>
 <p> mkocp &#8211; frontend to <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkocp</code> <i>OTPFILE</i></p>

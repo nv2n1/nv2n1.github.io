@@ -1,4 +1,5 @@
 ---
+
 title: "chcon(1)"
 name: "chcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chcon/"
 description: "chcon – change file security context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chcon &#8211; change file security context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chcon</code> [<i>,OPTION/</i>]&#8230; <i>,CONTEXT FILE/</i>&#8230;<br />

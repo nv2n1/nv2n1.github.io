@@ -1,4 +1,5 @@
 ---
+
 title: "ontap_lsmplugin(1)"
 name: "ontap_lsmplugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ontap_lsmplugin/"
 description: "ontap_lsmplugin — LibstorageMgmt ONTAP Plugin"
 ---
 
-<h2>NAME</h2>
 <p> ontap_lsmplugin &#8212; LibstorageMgmt ONTAP Plugin </p>
 <h2>DESCRIPTION</h2>
 <p> LibstorageMgmt ontap plugin allows user to manage NetApp ONTAP storage arrays. The &#8216;ontap_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client specifies ontap plugin in the URI </p>

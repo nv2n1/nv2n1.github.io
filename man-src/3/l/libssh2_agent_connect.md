@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_connect(3)"
 name: "libssh2_agent_connect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_agent_connect/"
 description: "libssh2_agent_connect – connect to an ssh-agent"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_agent_connect &#8211; connect to an ssh-agent</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tic(1)"
 name: "tic"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tic/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>tic</b> - the <i>terminfo</i> entry-description compiler 
+<b>tic</b> - the <i>terminfo</i> entry-description compiler 
 
 <h2>SYNOPSIS</h2>
 

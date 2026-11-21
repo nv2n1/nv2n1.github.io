@@ -1,4 +1,5 @@
 ---
+
 title: "acpihelp(1)"
 name: "acpihelp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpihelp/"
 description: "acpihelp – ACPI help utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpihelp &#8211; ACPI help utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpihelp</code> &lt;option&gt;<i>&#8230;</i> [&lt;name-prefix&gt;|&lt;hex-value&gt;] </p>

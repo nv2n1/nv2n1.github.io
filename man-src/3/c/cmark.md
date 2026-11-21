@@ -1,4 +1,5 @@
 ---
+
 title: "cmark(3)"
 name: "cmark"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmark/"
 description: "cmark – CommonMark parsing, manipulating, and rendering"
 ---
 
-<h2>NAME</h2>
 <p> cmark &#8211; CommonMark parsing, manipulating, and rendering </p>
 <h2>DESCRIPTION</h2>
 <h3>Simple Interface</h3>

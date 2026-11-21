@@ -1,4 +1,5 @@
 ---
+
 title: "icegridgui(1)"
 name: "icegridgui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icegridgui/"
 description: "icegrid-gui – graphical user interface to IceGrid"
 ---
 
-<h2>NAME</h2>
 <p> icegrid-gui &#8211; graphical user interface to IceGrid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>icegrid-gui [OPTIONS]&#8230;</code></p>

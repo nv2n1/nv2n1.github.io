@@ -1,4 +1,5 @@
 ---
+
 title: "pmafm(1)"
 name: "pmafm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmafm/"
 description: "pmafm – Performance Co-Pilot archive folio manager"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmafm</code> &#8211; Performance Co-Pilot archive folio manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmafm</code> <i>folioname</i> [<i>command</i> [<i>arg</i> &#8230;]]</p>

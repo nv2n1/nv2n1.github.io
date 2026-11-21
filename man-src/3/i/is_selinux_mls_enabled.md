@@ -1,4 +1,5 @@
 ---
+
 title: "is_selinux_mls_enabled(3)"
 name: "is_selinux_mls_enabled"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_selinux_mls_enabled/"
 description: "is_selinux_enabled – check whether SELinux is enabled"
 ---
 
-<h2 class="name">NAME</h2>
 <p> is_selinux_enabled &#8211; check whether SELinux is enabled </p>
 <h2 class="name">NAME</h2>
 <p> is_selinux_mls_enabled &#8211; check whether SELinux is enabled for (Multi Level Security) MLS </p>

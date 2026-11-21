@@ -1,4 +1,5 @@
 ---
+
 title: "head(1)"
 name: "head"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-head/"
 description: "head – output the first part of files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> head &#8211; output the first part of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>head</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

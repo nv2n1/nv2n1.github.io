@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_digest(3)"
 name: "krb5_digest"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_digest/"
 description: "Heimdal Kerberos 5 digest service –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 digest service &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

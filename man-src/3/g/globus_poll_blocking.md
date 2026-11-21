@@ -1,4 +1,5 @@
 ---
+
 title: "globus_poll_blocking(3)"
 name: "globus_poll_blocking"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_poll_blocking/"
 description: "Globus Callback API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus Callback API &#8211; </p>
 <h3>Convenience Macros</h3>
 <p> #define <code>globus_callback_poll</code>(a)<br />

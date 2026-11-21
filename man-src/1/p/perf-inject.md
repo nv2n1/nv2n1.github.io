@@ -1,4 +1,5 @@
 ---
+
 title: "perf-inject(1)"
 name: "perf-inject"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-inject/"
 description: "perf-inject – Filter to augment the events stream with additional information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-inject &#8211; Filter to augment the events stream with additional information </p>
 <h2>SYNOPSIS</h2>
 <pre>

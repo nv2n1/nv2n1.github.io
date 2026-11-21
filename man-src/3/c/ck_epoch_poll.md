@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_poll(3)"
 name: "ck_epoch_poll"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_poll/"
 description: "ck_epoch_poll – non-blocking poll of epoch object for dispatch cycles"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_poll</code> &#8211; non-blocking poll of epoch object for dispatch cycles</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

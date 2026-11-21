@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-ppd-options(1)"
 name: "foomatic-ppd-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-ppd-options/"
 description: "foomatic-ppd-options – show the PPD options"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-ppd-options &#8211; show the PPD options</p>
 <h2>SYNOPSIS</h2>
 <p> <code>foomatic-ppd-options [-d=debuglevel] [ ppdfiles ]</code> </p>

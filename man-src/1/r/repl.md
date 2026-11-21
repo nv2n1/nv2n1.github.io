@@ -1,4 +1,5 @@
 ---
+
 title: "repl(1)"
 name: "repl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repl/"
 description: "repl – reply to a message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> repl &#8211; reply to a message </p>
 <h2>SYNOPSIS</h2>
 <dl>

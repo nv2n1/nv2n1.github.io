@@ -1,4 +1,5 @@
 ---
+
 title: "dbpmda(1)"
 name: "dbpmda"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbpmda/"
 description: "dbpmda – debugger for Performance Co-Pilot PMDAs"
 ---
 
-<h2>NAME</h2>
 <p> <code>dbpmda</code> &#8211; debugger for Performance Co-Pilot PMDAs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbpmda</code> [<code>-efi</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-q</code> <i>timeout</i>] [<code>-U</code> <i>username</i>]</p>

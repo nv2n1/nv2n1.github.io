@@ -1,4 +1,5 @@
 ---
+
 title: "wpd2raw(1)"
 name: "wpd2raw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wpd2raw/"
 description: "wpd2raw – debug the conversion library"
 ---
 
-<h2>NAME</h2>
 <p> wpd2raw &#8211; debug the conversion library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wpd2raw</code> [<i>OPTION</i>] <i>&lt;WordPerfect Document&gt;</i></p>

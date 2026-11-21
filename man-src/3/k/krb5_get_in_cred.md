@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_in_cred(3)"
 name: "krb5_get_in_cred"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_in_cred/"
 description: "krb5_get_in_tkt krb5_get_in_cred krb5_get_in_tkt_with_password krb5_get_in_tkt_with_keytab krb5_get_in_tkt_with_skey krb5_free_kdc_rep krb5_password_key_proc – deprecated initial authentication fun..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_in_tkt</code> <code>krb5_get_in_cred</code> <code>krb5_get_in_tkt_with_password</code> <code>krb5_get_in_tkt_with_keytab</code> <code>krb5_get_in_tkt_with_skey</code> <code>krb5_free_kdc_rep</code> <code>krb5_password_key_proc</code> &#8211; deprecated initial authentication functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

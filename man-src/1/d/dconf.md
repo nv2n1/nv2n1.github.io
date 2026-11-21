@@ -1,4 +1,5 @@
 ---
+
 title: "dconf(1)"
 name: "dconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dconf/"
 description: "dconf – Simple tool for manipulating a dconf database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dconf &#8211; Simple tool for manipulating a dconf database </p>
 <h2>SYNOPSIS</h2>
 <dl>

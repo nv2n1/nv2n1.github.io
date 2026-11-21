@@ -1,4 +1,5 @@
 ---
+
 title: "ykinfo(1)"
 name: "ykinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ykinfo/"
 description: "ykinfo – Get basic information from a YubiKey"
 ---
 
-<h2>NAME</h2>
 <p> ykinfo &#8211; Get basic information from a YubiKey</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykinfo</code> [<i>-s</i>] [<i>-m</i>] [<i>-H</i>] [<i>-v</i>] [<i>-t</i>] [<i>-p</i>] [<i>-1</i>] [<i>-2</i>] [<i>-q</i>] [<i>-V</i>] [<i>-h</i>]</p>

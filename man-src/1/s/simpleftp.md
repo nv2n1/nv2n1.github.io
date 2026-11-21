@@ -1,4 +1,5 @@
 ---
+
 title: "simpleftp(1)"
 name: "simpleftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simpleftp/"
 description: "simpleftp – Rudimentary FTP client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simpleftp &#8211; Rudimentary FTP client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>simpleftp</code> <i>url</i> [&#8230;]</p>

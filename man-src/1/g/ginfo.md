@@ -1,4 +1,5 @@
 ---
+
 title: "ginfo(1)"
 name: "ginfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ginfo/"
 description: "ginfo – fetch service information"
 ---
 
-<h2>NAME</h2>
 <p> ginfo &#8211; fetch service information</p>
 <h2>SYNOPSIS</h2>
 <p> ginfo [options] Object [attribute_to_filter=&#8217;value of the attribute&#8217;] [attribute_to_display]</p>

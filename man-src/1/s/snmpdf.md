@@ -1,4 +1,5 @@
 ---
+
 title: "snmpdf(1)"
 name: "snmpdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpdf/"
 description: "snmpdf – display disk space usage on a network entity via SNMP"
 ---
 
-<h2>NAME</h2>
 <p> snmpdf &#8211; display disk space usage on a network entity via SNMP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpdf</code> [COMMON OPTIONS] [-Cu] AGENT</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-vscode(1)"
 name: "mtx-vscode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-vscode/"
 description: "mtx-vscode – vscode extension generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-vscode &#8211; vscode extension generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script vscode [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

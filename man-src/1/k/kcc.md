@@ -1,4 +1,5 @@
 ---
+
 title: "kcc(1)"
 name: "kcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kcc/"
 description: "kcc – Kanji code coverter with encoding auto detection"
 ---
 
-<h2>NAME</h2>
 <p> kcc &#8211; Kanji code coverter with encoding auto detection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kcc</code> [ <code>&#8211;</code><i>IO</i><code>chnvxz</code> ] [ <code>-b</code><i> bufsize</i> ] [<i> file </i>] &#8230;</p>

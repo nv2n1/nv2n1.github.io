@@ -1,4 +1,5 @@
 ---
+
 title: "gcin-setup(1)"
 name: "gcin-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcin-setup/"
 description: "gcin-setup – configuration tools of gcin"
 ---
 
-<h2>NAME</h2>
 <p> gcin-setup &#8211; configuration tools of gcin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcin-setup</code></p>

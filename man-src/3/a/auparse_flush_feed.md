@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_flush_feed(3)"
 name: "auparse_flush_feed"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_flush_feed/"
 description: "auparse_flush_feed – flush any unconsumed feed data through parser."
 ---
 
-<h2>NAME</h2>
 <p> auparse_flush_feed &#8211; flush any unconsumed feed data through parser.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_utf8(3)"
 name: "bson_iter_utf8"
 section: "3"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_iter_utf8/"
 description: "bson_iter_utf8() – The bson_iter_utf8() function shall retrieve the contents of a BSON_TYPE_UTF8 element currently observed by iter."
 ---
-<h2>NAME</h2>
+
 <p> bson_iter_utf8() - The bson_iter_utf8() function shall retrieve the contents of a BSON_TYPE_UTF8 element currently observed by iter.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>#define BSON_ITER_HOLDS_UTF8(iter) \

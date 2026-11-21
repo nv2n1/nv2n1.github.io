@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-ppdfile(1)"
 name: "foomatic-ppdfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-ppdfile/"
 description: "foomatic-ppdfile – Generate a PPD file for a given printer/driver combo"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-ppdfile &#8211; Generate a PPD file for a given printer/driver combo</p>
 <h2>SYNOPSIS</h2>
 <p> <code>foomatic-ppdfile [-w] [-d &lt;driver&gt;] -p &lt;printerid&gt;</code><br />

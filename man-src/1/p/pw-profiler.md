@@ -1,4 +1,5 @@
 ---
+
 title: "pw-profiler(1)"
 name: "pw-profiler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pw-profiler/"
 description: "pw-profiler – The PipeWire profiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pw-profiler &#8211; The PipeWire profiler </p>
 <h2>SYNOPSIS</h2>
 <pre>

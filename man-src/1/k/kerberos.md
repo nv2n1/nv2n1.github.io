@@ -1,4 +1,5 @@
 ---
+
 title: "kerberos(1)"
 name: "kerberos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kerberos/"
 description: "kerberos – introduction to the Kerberos system"
 ---
 
-<h2>NAME</h2>
 <p> kerberos &#8211; introduction to the Kerberos system</p>
 <h2>DESCRIPTION</h2>
 <p> The Kerberos system authenticates individual users in a network environment. After authenticating yourself to Kerberos, you can use Kerberos-enabled programs without having to present passwords. </p>

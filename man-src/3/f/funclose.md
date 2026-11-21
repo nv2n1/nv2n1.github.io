@@ -1,4 +1,5 @@
 ---
+
 title: "funclose(3)"
 name: "funclose"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funclose/"
 description: "FunClose – close a Funtools data file"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunClose &#8211; close a Funtools data file</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

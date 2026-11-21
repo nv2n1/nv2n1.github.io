@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-refresh-ca(1)"
 name: "getcert-refresh-ca"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getcert-refresh-ca/"
 description: "getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcert</p>
 <h2>SYNOPSIS</h2>
 <p> getcert refresh-ca [options] </p>

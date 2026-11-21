@@ -1,4 +1,5 @@
 ---
+
 title: "afpgetstatus(1)"
 name: "afpgetstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afpgetstatus/"
 description: "afpgetstatus – Get simple status information from an AFP server without logging into it."
 ---
 
-<h2>NAME</h2>
 <p> afpgetstatus &#8211; Get simple status information from an AFP server without logging into it.</p>
 <h2>SYNOPSIS</h2>
 <p> <i>afpgetstatus [afp_url|ipaddress[:port]]R </p>

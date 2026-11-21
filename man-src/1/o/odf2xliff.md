@@ -1,4 +1,5 @@
 ---
+
 title: "odf2xliff(1)"
 name: "odf2xliff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-odf2xliff/"
 description: "odf2xliff – Convert OpenDocument (ODF) files to XLIFF localization files."
 ---
 
-<h2>NAME</h2>
 <p> odf2xliff &#8211; Convert OpenDocument (ODF) files to XLIFF localization files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>odf2xliff </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [&#8211;engine]</p>

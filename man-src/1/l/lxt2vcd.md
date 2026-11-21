@@ -1,4 +1,5 @@
 ---
+
 title: "lxt2vcd(1)"
 name: "lxt2vcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxt2vcd/"
 description: "lxt2vcd – Converts LXT2 files to VCD"
 ---
 
-<h2>NAME</h2>
 <p> lxt2vcd &#8211; Converts LXT2 files to VCD</p>
 <h2>SYNTAX</h2>
 <p> lxt2vcd [<i>option</i>]&#8230; [<i>LXT2FILE</i>]</p>

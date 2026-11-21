@@ -1,4 +1,5 @@
 ---
+
 title: "mongorestore(1)"
 name: "mongorestore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongorestore/"
 description: "mongorestore – MongoDB Data Restoration Tool"
 ---
 
-<h2>NAME</h2>
 <p> mongorestore &#8211; MongoDB Data Restoration Tool</p>
 <h2>SYNOPSIS</h2>
 <p> The <code>mongorestore</code> program writes data from a binary database dump created by <code>mongodump</code> to a MongoDB instance. <code>mongorestore</code> can create a new database or add data to an existing database. </p>

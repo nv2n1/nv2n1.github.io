@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-cli(1)"
 name: "transmission-cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-cli/"
 description: "transmission-cli – a bittorrent client"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-cli</code> &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>transmission-cli</code> -words &#8211;<code>h</code><br />

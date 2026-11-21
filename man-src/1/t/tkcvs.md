@@ -1,4 +1,5 @@
 ---
+
 title: "tkcvs(1)"
 name: "tkcvs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tkcvs/"
 description: "TkCVS – a Tk/Tcl Graphical Interface to CVS and Subversion"
 ---
 
-<h2>NAME</h2>
 <p> TkCVS &#8211; a Tk/Tcl Graphical Interface to CVS and Subversion</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tkcvs</code> [-dir directory] [-root cvsroot] [-win workdir|module|merge] [-log file]</p>

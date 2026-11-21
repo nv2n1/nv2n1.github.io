@@ -1,4 +1,5 @@
 ---
+
 title: "hesiod_getmailhost(3)"
 name: "hesiod_getmailhost"
 section: "3"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hesiod_getmailhost/"
 ---
 
-<h2>NAME</h2>
-
- hesiod_getmailhost, hesiod_free_postoffice - Hesiod functions for retrieving user to postoffice mappings
+hesiod_getmailhost, hesiod_free_postoffice - Hesiod functions for retrieving user to postoffice mappings
 
 <h2>SYNOPSIS</h2>
 

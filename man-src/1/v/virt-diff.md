@@ -1,4 +1,5 @@
 ---
+
 title: "virt-diff(1)"
 name: "virt-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-diff/"
 description: "virt-diff – Differences between files in two virtual machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-diff &#8211; Differences between files in two virtual machines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

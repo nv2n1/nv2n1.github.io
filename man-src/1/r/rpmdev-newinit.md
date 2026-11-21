@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-newinit(1)"
 name: "rpmdev-newinit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmdev-newinit/"
 description: "rpmdev-newinit – manual page for rpmdev-newinit version 1.1"
 ---
 
-<h2>NAME</h2>
 <p> rpmdev-newinit &#8211; manual page for rpmdev-newinit version 1.1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmdev-newinit</code> [<i>option</i>]&#8230; [<i>appname</i>[<i>.init</i>]]</p>

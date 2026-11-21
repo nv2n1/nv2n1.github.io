@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_first_field(3)"
 name: "auparse_first_field"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_first_field/"
 description: "auparse_first_field – reposition field cursor"
 ---
 
-<h2>NAME</h2>
 <p> auparse_first_field &#8211; reposition field cursor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

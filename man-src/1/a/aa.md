@@ -1,4 +1,5 @@
 ---
+
 title: "aa(1)"
 name: "aa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aa/"
 description: "aa, autoarchive – simple backup utility"
 ---
 
-<h2>NAME</h2>
 <p> aa, autoarchive &#8211; simple backup utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aa/autoarchive</code> &nbsp;<wbr>[<i>options</i>] <i>AA_SPEC</i>&#8230;</p>

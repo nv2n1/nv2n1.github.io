@@ -1,4 +1,5 @@
 ---
+
 title: "perlmodinstall(1)"
 name: "perlmodinstall"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmodinstall/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlmodinstall - Installing CPAN Modules 
+perlmodinstall - Installing CPAN Modules 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-terminate-instance-in-auto-scaling-group(1)"
 name: "euscale-terminate-instance-in-auto-scaling-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-terminate-instance-in-auto-scaling-group/"
 description: "euscale-terminate-instance-in-auto-scaling-group – Manually terminate an auto-scaling instance"
 ---
 
-<h2>NAME</h2>
 <p> euscale-terminate-instance-in-auto-scaling-group &#8211; Manually terminate an auto-scaling instance</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-terminate-instance-in-auto-scaling-group (<code>-d</code> | <code>-D</code>)</p>

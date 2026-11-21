@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_move(3)"
 name: "ck_rhs_move"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_move/"
 description: "ck_rhs_move – move one from hash set to another"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_move</code> &#8211; move one from hash set to another</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

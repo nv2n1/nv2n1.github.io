@@ -1,4 +1,5 @@
 ---
+
 title: "audit_update_watch_perms(3)"
 name: "audit_update_watch_perms"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_update_watch_perms/"
 description: "audit_update_watch_perms – update permissions field of watch command"
 ---
 
-<h2>NAME</h2>
 <p> audit_update_watch_perms &#8211; update permissions field of watch command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

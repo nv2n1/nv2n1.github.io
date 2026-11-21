@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_mirror_char(3)"
 name: "fribidi_get_mirror_char"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_mirror_char/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_mirror_char - get mirrored character 
+fribidi_get_mirror_char - get mirrored character 
 
 <h2>SYNOPSIS</h2>
 

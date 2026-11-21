@@ -1,4 +1,5 @@
 ---
+
 title: "perl5004delta(1)"
 name: "perl5004delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5004delta/"
 description: "perl5004delta – what’s new for perl5.004"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl5004delta &#8211; what&#8217;s new for perl5.004 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.003 release (as documented in <i>Programming Perl</i>, second edition&#8212;the Camel Book) and this one.</p>

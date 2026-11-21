@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_store_atomic(3)"
 name: "ck_pr_fence_store_atomic"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_store_atomic/"
 description: "ck_pr_fence_store_atomic – enforce ordering of store operations to load operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_store_atomic</code> &#8211; enforce ordering of store operations to load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

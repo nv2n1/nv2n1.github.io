@@ -1,4 +1,5 @@
 ---
+
 title: "zvbid(1)"
 name: "zvbid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zvbid/"
 description: "zvbid – VBI proxy daemon"
 ---
 
-<h2>NAME</h2>
 <p> zvbid &#8211; VBI proxy daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zvbid [ options ]</code></p>

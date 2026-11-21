@@ -1,4 +1,5 @@
 ---
+
 title: "hp-print(1)"
 name: "hp-print"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-print/"
 description: "hp-print – Print Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-print &#8211; Print Utility </p>
 <h2>DESCRIPTION</h2>
 <p> A simple print UI front-end to lp/lpr.</p>

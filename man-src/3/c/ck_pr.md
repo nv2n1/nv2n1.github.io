@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr(3)"
 name: "ck_pr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr/"
 description: "ck_pr – concurrency primitives interface"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr</code> &#8211; concurrency primitives interface</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_writefile(3)"
 name: "libssh2_knownhost_writefile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_writefile/"
 description: "libssh2_knownhost_writefile – write a collection of known hosts to a file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_writefile &#8211; write a collection of known hosts to a file</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

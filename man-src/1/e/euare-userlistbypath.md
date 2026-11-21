@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistbypath(1)"
 name: "euare-userlistbypath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistbypath/"
 description: "euare-userlistbypath – List your account’s users"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistbypath &#8211; List your account&#8217;s users</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistbypath [-p PREFIX] [&#8211;as-account ACCOUNT] [-U URL]</p>

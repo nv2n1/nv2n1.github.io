@@ -1,4 +1,5 @@
 ---
+
 title: "bson_md5_init(3)"
 name: "bson_md5_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_md5_init/"
 description: "bson_md5_init() – Initialize a new instance of the MD5 algorithm."
 ---
 
-<h2>NAME</h2>
 <p> bson_md5_init() &#8211; Initialize a new instance of the MD5 algorithm.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

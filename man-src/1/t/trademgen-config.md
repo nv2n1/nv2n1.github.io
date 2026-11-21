@@ -1,4 +1,5 @@
 ---
+
 title: "trademgen-config(1)"
 name: "trademgen-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trademgen-config/"
 description: "trademgen-config –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trademgen-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Simulated Travel Demand Generation Library

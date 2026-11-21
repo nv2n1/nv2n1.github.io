@@ -1,4 +1,5 @@
 ---
+
 title: "pdftohtml(1)"
 name: "pdftohtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdftohtml/"
 description: "pdftohtml – program to convert PDF files into HTML, XML and PNG images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdftohtml &#8211; program to convert PDF files into HTML, XML and PNG images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftohtml</code> <i>[options] &lt;PDF-file&gt; [&lt;HTML-file&gt; &lt;XML-file&gt;]</i></p>

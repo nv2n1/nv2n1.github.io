@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_set_real_time(3)"
 name: "krb5_set_real_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_set_real_time/"
 description: "Heimdal Kerberos 5 library –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 library &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

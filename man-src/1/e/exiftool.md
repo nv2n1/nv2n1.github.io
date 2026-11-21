@@ -1,4 +1,5 @@
 ---
+
 title: "exiftool(1)"
 name: "exiftool"
 section: "1"
@@ -6,7 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-exiftool/"
 description: "exiftool – Read and write meta information in files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> exiftool - Read and write meta information in files </p>
 <h2>SYNOPSIS</h2>
 <h3>Reading</h3>

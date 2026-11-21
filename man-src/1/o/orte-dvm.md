@@ -1,4 +1,5 @@
 ---
+
 title: "orte-dvm(1)"
 name: "orte-dvm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-orte-dvm/"
 description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DVM)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> orte-dvm, ompi_dvm &#8211; Establish a Distributed Virtual Machine (DVM). </p>
 <p> <code>Note:</code> <i>orte-dvm</i> and <i>ompi-dvm</i> are synonyms for each other. Using either of the names will produce the same behavior. </p>
 <h2>SYNOPSIS</h2>

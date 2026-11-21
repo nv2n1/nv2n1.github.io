@@ -1,4 +1,5 @@
 ---
+
 title: "perlivp(1)"
 name: "perlivp"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlivp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlivp - Perl Installation Verification Procedure 
+perlivp - Perl Installation Verification Procedure 
 
 <h2>SYNOPSIS</h2>
 

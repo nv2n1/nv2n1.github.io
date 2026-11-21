@@ -1,4 +1,5 @@
 ---
+
 title: "stg-uncommit(1)"
 name: "stg-uncommit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-uncommit/"
 description: "stg-uncommit – Turn regular git commits into StGit patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-uncommit &#8211; Turn regular git commits into StGit patches </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

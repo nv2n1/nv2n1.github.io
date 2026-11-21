@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcoll(3)"
 name: "fstrcoll"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fstrcoll/"
 ---
 
-<h2>NAME</h2>
-
- fstrcoll - fuzzy comparison of two strings using the current locale
+fstrcoll - fuzzy comparison of two strings using the current locale
 
 <h2>SYNOPSIS</h2>
 

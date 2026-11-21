@@ -1,4 +1,5 @@
 ---
+
 title: "nessus-config(1)"
 name: "nessus-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nessus-config/"
 description: "nessus-config – displays compiler/linker flags for the Nessus libraries"
 ---
 
-<h2>NAME</h2>
 <p> nessus-config &#8211; displays compiler/linker flags for the Nessus libraries</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nessus-config</code> <i>&lt;[&#8211;cflags] [&#8211;ldflags] [&#8211;libs]&gt;</i></p>

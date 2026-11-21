@@ -1,4 +1,5 @@
 ---
+
 title: "pciconfig_read(2)"
 name: "pciconfig_read"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pciconfig_read/"
 description: "pciconfig_read, pciconfig_write, pciconfig_iobase – pci device information handling"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pciconfig_read, pciconfig_write, pciconfig_iobase &#8211; pci device information handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

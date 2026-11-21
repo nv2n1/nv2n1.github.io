@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-create-ns(1)"
 name: "nvme-create-ns"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-create-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-create-ns - Send NVMe Namespace management command to create namespace, returns results. 
+nvme-create-ns - Send NVMe Namespace management command to create namespace, returns results. 
 
 <h2>SYNOPSIS</h2>
 

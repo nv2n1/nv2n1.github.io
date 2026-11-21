@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-control(1)"
 name: "tracker-control"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-control/"
 description: "tracker-control – Manage Tracker processes and data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-control &#8211; Manage Tracker processes and data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-control</code> [<i>OPTION</i>&#8230;] </p>

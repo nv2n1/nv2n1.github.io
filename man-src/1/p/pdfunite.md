@@ -1,4 +1,5 @@
 ---
+
 title: "pdfunite(1)"
 name: "pdfunite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfunite/"
 description: "pdfunite – Portable Document Format (PDF) page merger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdfunite &#8211; Portable Document Format (PDF) page merger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfunite</code> [options] <i>PDF-sourcefile1..PDF-sourcefilen PDF-destfile</i></p>

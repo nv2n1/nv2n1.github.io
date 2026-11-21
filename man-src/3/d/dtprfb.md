@@ -1,4 +1,5 @@
 ---
+
 title: "dtprfb(3)"
 name: "dtprfb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtprfb/"
 description: "dtprfb.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtprfb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

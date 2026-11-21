@@ -1,4 +1,5 @@
 ---
+
 title: "makecol8(3)"
 name: "makecol8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-makecol8/"
 description: "makecol8, makecol15, makecol16, makecol24, makecol32 – Converts an RGB value into a display dependent pixel format. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> makecol8, makecol15, makecol16, makecol24, makecol32 &#8211; Converts an RGB value into a display dependent pixel format. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

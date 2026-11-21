@@ -1,4 +1,5 @@
 ---
+
 title: "svgx(1)"
 name: "svgx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svgx/"
 description: "svgx – extract gradients from SVG files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> svgx &#8211; extract gradients from SVG files. </p>
 <h2>SYNOPSIS</h2>
 <dl>

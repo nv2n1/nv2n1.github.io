@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-bookmarks(1)"
 name: "avahi-bookmarks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avahi-bookmarks/"
 description: "avahi-bookmarks – Web service showing mDNS/DNS-SD announced HTTP services using the Avahi daemon"
 ---
 
-<h2>NAME</h2>
 <p> avahi-bookmarks &#8211; Web service showing mDNS/DNS-SD announced HTTP services using the Avahi daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-bookmarks </code></p>

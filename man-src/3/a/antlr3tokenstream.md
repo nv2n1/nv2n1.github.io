@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3tokenstream(3)"
 name: "antlr3tokenstream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3tokenstream/"
 description: "include/antlr3tokenstream.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3tokenstream.h &#8211; </p>
 <p> Defines the interface for an ANTLR3 common token stream.</p>
 <h2>SYNOPSIS</h2>

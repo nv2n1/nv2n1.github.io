@@ -1,4 +1,5 @@
 ---
+
 title: "git-hash-object(1)"
 name: "git-hash-object"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-hash-object/"
 description: "git-hash-object – Compute object ID and optionally creates a blob from a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-hash-object &#8211; Compute object ID and optionally creates a blob from a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

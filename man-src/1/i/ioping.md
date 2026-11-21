@@ -1,4 +1,5 @@
 ---
+
 title: "ioping(1)"
 name: "ioping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ioping/"
 description: "ioping – simple disk I/O latency monitoring tool"
 ---
 
-<h2>NAME</h2>
 <p> ioping &#8211; simple disk I/O latency monitoring tool</p>
 <h2>SYNOPSYS</h2>
 <p> [ <code>-ABCDLRWGYykq</code> ] [ <code>-c </code><i>count</i> ] [ <code>-i </code><i>interval</i> ] [ <code>-l </code><i>speed</i> ] [ <code>-t </code><i>time</i> ] [ <code>-T </code><i>time</i> ] [ <code>-s </code><i>size</i> ] [ <code>-S </code><i>wsize</i> ] [ <code>-o </code><i>offset</i> ] [ <code>-w </code><i>deadline</i> ] [ <code>-p </code><i>period</i> ] [ <code>-P </code><i>period</i> ] <i>directory</i>|<i>file</i>|<i>device</i><br />

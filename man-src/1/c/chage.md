@@ -1,4 +1,5 @@
 ---
+
 title: "chage(1)"
 name: "chage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chage/"
 description: "chage – change user password expiry information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chage &#8211; change user password expiry information </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "lockfile-progs(1)"
 name: "lockfile-progs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lockfile-progs/"
 description: "lockfile-progs – command-line programs to safely lock and unlock files and mailboxes (via liblockfile)."
 ---
 
-<h2>NAME</h2>
 <p> lockfile-progs &#8211; command-line programs to safely lock and unlock files and mailboxes (via liblockfile).</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

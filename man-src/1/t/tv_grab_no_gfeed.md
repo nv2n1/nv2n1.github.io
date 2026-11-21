@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_no_gfeed(1)"
 name: "tv_grab_no_gfeed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_no_gfeed/"
 description: "tv_grab_no_gfeed – Grab TV listings for Norway."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_no_gfeed &#8211; Grab TV listings for Norway. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_no_gfeed &#8211;help </p>

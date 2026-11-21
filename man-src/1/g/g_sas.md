@@ -1,4 +1,5 @@
 ---
+
 title: "g_sas(1)"
 name: "g_sas"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sas/"
 description: "g_sas – computes solvent accessible surface area"
 ---
 
-<h2>NAME</h2>
 <p> g_sas &#8211; computes solvent accessible surface area </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

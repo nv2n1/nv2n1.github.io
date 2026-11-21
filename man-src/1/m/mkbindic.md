@@ -1,4 +1,5 @@
 ---
+
 title: "mkbindic(1)"
 name: "mkbindic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkbindic/"
 description: "mkbindic – Convert a text-form dictionary into a binary-form dictionary"
 ---
 
-<h2>NAME</h2>
 <p> mkbindic &#8211; Convert a text-form dictionary into a binary-form dictionary </p>
 <h2>SYNOPSYS</h2>
 <p> <code>mkbindic [-m | -s] [-name </code><i>dicname</i>] [-c <i>version</i>] <i>textfile</i> </p>

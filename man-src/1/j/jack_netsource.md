@@ -1,4 +1,5 @@
 ---
+
 title: "jack_netsource(1)"
 name: "jack_netsource"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_netsource/"
 description: "jack_netsource – Netjack Master client for one slave"
 ---
 
-<h2>NAME</h2>
 <p> jack_netsource &#8211; Netjack Master client for one slave</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_netsource</code> [ <i>-H</i> hostname ] [ <i>options</i> ] </p>

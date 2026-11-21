@@ -1,4 +1,5 @@
 ---
+
 title: "gvfsd-fuse(1)"
 name: "gvfsd-fuse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfsd-fuse/"
 description: "gvfsd-fuse – Fuse daemon for gvfs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfsd-fuse &#8211; Fuse daemon for gvfs </p>
 <h2>SYNOPSIS</h2>
 <dl>

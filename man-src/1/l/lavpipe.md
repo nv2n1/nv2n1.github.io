@@ -1,4 +1,5 @@
 ---
+
 title: "lavpipe(1)"
 name: "lavpipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lavpipe/"
 description: "lavpipe – creates raw YUV streams from pipe list scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lavpipe &#8211; creates raw YUV streams from pipe list scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lavpipe</code> [<code>-o</code> <i>num</i>] [<code>-n</code> <i>num</i>] <i>pipe-list</i> </p>

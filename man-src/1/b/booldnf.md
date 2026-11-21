@@ -1,4 +1,5 @@
 ---
+
 title: "booldnf(1)"
 name: "booldnf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-booldnf/"
 description: "booldnf – converts a boolean expression to the DNF"
 ---
 
-<h2>NAME</h2>
 <p> booldnf &#8211; converts a boolean expression to the DNF</p>
 <h2>SYNOPSIS</h2>
 <p> <code>echo &#8216;a&amp;(!b|c&amp;!d)&#8217; | booldnf &gt; result.txt</code></p>

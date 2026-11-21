@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_fd_get(3)"
 name: "cmap_fd_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_fd_get/"
 description: "cmap_fd_get – Dispatches callbacks from the CMAP service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_fd_get &#8211; Dispatches callbacks from the CMAP service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

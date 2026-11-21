@@ -1,4 +1,5 @@
 ---
+
 title: "netactview(1)"
 name: "netactview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netactview/"
 description: "Net Activity Viewer – a graphical network connections viewer"
 ---
 
-<h2>NAME</h2>
 <p> Net Activity Viewer &#8211; a graphical network connections viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>netactview </code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_create(3)"
 name: "getdns_context_create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_context_create/"
 description: "getdns_context, getdns_context_create, getdns_context_create_with_memory_functions, getdns_context_create_with_extended_memory_functions, getdns_context_destroy, getdns_context_get_api_information ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_context, </code> <code>getdns_context_create, </code> <code>getdns_context_create_with_memory_functions, </code> <code>getdns_context_create_with_extended_memory_functions, </code> <code>getdns_context_destroy, </code> <code>getdns_context_get_api_information </code> &#8212; getdns context create and destroy routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

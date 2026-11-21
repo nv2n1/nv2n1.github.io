@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_reader_new(3)"
 name: "bson_json_reader_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_reader_new/"
 description: "bson_json_reader_new() – Creates a new bson_json_reader_t that can read from an arbitrary data source in a streaming fashion."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_reader_new() &#8211; Creates a new bson_json_reader_t that can read from an arbitrary data source in a streaming fashion.</p>
 <h2>SYNOPSIS</h2>
 <pre>

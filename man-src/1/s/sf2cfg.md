@@ -1,4 +1,5 @@
 ---
+
 title: "sf2cfg(1)"
 name: "sf2cfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sf2cfg/"
 description: "sf2cfg – construct gt cfg files for SoundFonts"
 ---
 
-<h2>NAME</h2>
 <p> sf2cfg &#8211; construct gt cfg files for SoundFonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sf2cfg</code> sffilename [&gt; cfgname] </p>

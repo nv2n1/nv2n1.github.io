@@ -1,4 +1,5 @@
 ---
+
 title: "sfconvert(1)"
 name: "sfconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfconvert/"
 description: "sfconvert – convert audio files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sfconvert &#8211; convert audio files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfconvert</code> <i>infile</i> <i>outfile</i> [<i>output options</i>]</p>

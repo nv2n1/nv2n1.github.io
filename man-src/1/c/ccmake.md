@@ -1,4 +1,5 @@
 ---
+
 title: "ccmake(1)"
 name: "ccmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccmake/"
 description: "ccmake - Curses Interface for CMake. USAGE ccmake <path-to-source> ccmake <path-to-existing-build> DESCRIPTION The \"ccmake\" executable is the CMake curses interface. Project configuration settings ..."
 ---
 
-<h2>NAME</h2>
 <pre>
   ccmake - Curses Interface for CMake.
 </pre>

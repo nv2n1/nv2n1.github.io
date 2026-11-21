@@ -1,4 +1,5 @@
 ---
+
 title: "ods-kaspcheck(1)"
 name: "ods-kaspcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ods-kaspcheck/"
 description: "ods-kaspcheck – Performs a sanity check of the policy for OpenDNSSEC"
 ---
 
-<h2>NAME</h2>
 <p> <code>ods-kaspcheck</code> &#8211; Performs a sanity check of the policy for OpenDNSSEC</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ods-kaspcheck</code> [<code>-c</code> <i>path</i> <code>-k</code> <i>path</i>]</p>

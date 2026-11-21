@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_rtm(3)"
 name: "ck_pr_rtm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_rtm/"
 description: "ck_pr_rtm_begin ck_pr_rtm_end ck_pr_rtm_abort ck_pr_rtm_test – restricted transactional memory"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_rtm_begin</code> <code>ck_pr_rtm_end</code> <code>ck_pr_rtm_abort</code> <code>ck_pr_rtm_test</code> &#8211; restricted transactional memory</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

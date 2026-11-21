@@ -1,4 +1,5 @@
 ---
+
 title: "db_log_verify(1)"
 name: "db_log_verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_log_verify/"
 description: "db_log_verify – Verify log files of a database environment"
 ---
 
-<h2>NAME</h2>
 <p> db_log_verify &#8211; Verify log files of a database environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>db_log_verify</code> [-cNvV] [-h <i>home-to-verify</i>] [-H <i>temporary-home</i>] [-P <i>password</i>] [-C <i>cache-size</i>] [-b <i>start-lsn</i>] [-e <i>end-lsn</i>] [-s <i>start-time</i>] [-z <i>end-time</i>] [-d <i>database-filename</i>] [-D <i>database-name</i>]</p>

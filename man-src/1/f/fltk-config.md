@@ -1,4 +1,5 @@
 ---
+
 title: "fltk-config(1)"
 name: "fltk-config"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fltk-config/"
 ---
 
-<h2>NAME</h2>
-
- fltk-config - script to get information about the installed version of fltk. 
+fltk-config - script to get information about the installed version of fltk. 
 
 <h2>SYNOPSIS</h2>
 

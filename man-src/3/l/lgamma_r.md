@@ -1,4 +1,5 @@
 ---
+
 title: "lgamma_r(3)"
 name: "lgamma_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lgamma_r/"
 description: "lgamma, lgammaf, lgammal, lgamma_r, lgammaf_r, lgammal_r, signgam – log gamma function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lgamma, lgammaf, lgammal, lgamma_r, lgammaf_r, lgammal_r, signgam &#8211; log gamma function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

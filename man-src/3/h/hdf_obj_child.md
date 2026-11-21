@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_obj_child(3)"
 name: "hdf_obj_child"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_obj_child/"
 description: "hdf_obj_child – Return the first child of a dataset node"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_obj_child &#8211; Return the first child of a dataset node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

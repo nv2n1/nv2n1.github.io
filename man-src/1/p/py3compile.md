@@ -1,4 +1,5 @@
 ---
+
 title: "py3compile(1)"
 name: "py3compile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-py3compile/"
 description: "py3compile – byte compile Python 3 source files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> py3compile &#8211; byte compile Python 3 source files </p>
 <h2>SYNOPSIS</h2>
 <p> py3compile [-V [X.Y][-][A.B]] DIR_OR_FILE [-X REGEXPR] </p>

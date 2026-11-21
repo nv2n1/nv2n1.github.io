@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_custom(3)"
 name: "hwlocality_custom"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_custom/"
 description: "hwlocality_custom – Building Custom Topologies"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_custom &#8211; Building Custom Topologies </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_custom_insert_topology</code> (<code>hwloc_topology_t</code> newtopology, <code>hwloc_obj_t</code> newparent, <code>hwloc_topology_t</code> oldtopology, <code>hwloc_obj_t</code> oldroot) </p>

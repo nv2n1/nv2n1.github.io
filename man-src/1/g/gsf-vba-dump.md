@@ -1,4 +1,5 @@
 ---
+
 title: "gsf-vba-dump(1)"
 name: "gsf-vba-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsf-vba-dump/"
 description: "gsf-vba-dump – extract Visual Basic for Applications macros"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gsf-vba-dump &#8211; extract Visual Basic for Applications macros</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsf-vba-dump</code> [<i>FILE</i>]&#8230; </p>

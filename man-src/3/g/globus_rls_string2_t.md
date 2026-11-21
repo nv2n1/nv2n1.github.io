@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_string2_t(3)"
 name: "globus_rls_string2_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_string2_t/"
 description: "globus_rls_string2_t –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_rls_string2_t &#8211; </p>
 <p> String pair result.</p>
 <h2>SYNOPSIS</h2>

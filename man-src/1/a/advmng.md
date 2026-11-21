@@ -1,4 +1,5 @@
 ---
+
 title: "advmng(1)"
 name: "advmng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-advmng/"
 description: "advmng – AdvanceCOMP MNG Compression Utility"
 ---
 
-<h2>NAME</h2>
 <p> advmng &#8211; AdvanceCOMP MNG Compression Utility</p>
 <h2>SYNOPSIS</h2>
 <p> advmng [-l, &#8211;list] [-z, &#8211;recompress] </p>

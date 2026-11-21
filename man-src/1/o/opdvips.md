@@ -1,4 +1,5 @@
 ---
+
 title: "opdvips(1)"
 name: "opdvips"
 section: "1"
@@ -6,7 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opdvips/"
 description: "dvips – convert a TeX DVI file to PostScript"
 ---
-<h2>NAME</h2>
+
 <p> dvips - convert a TeX DVI file to PostScript  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvips</code> [ <i>options</i> ] <i>file</i>[<code>.dvi</code>]  </p>

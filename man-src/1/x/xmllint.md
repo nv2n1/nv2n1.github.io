@@ -1,4 +1,5 @@
 ---
+
 title: "xmllint(1)"
 name: "xmllint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmllint/"
 description: "xmllint – command line XML tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmllint &#8211; command line XML tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

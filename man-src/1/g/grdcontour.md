@@ -1,4 +1,5 @@
 ---
+
 title: "grdcontour(1)"
 name: "grdcontour"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdcontour/"
 description: "grdcontour – Make contour map using a grid"
 ---
 
-<h2>NAME</h2>
 <p> grdcontour &#8211; Make contour map using a grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdcontour</code> <i>grid</i> [+]<i>cont_int</i>|<i>cpt</i> <i>parameters</i> [ [<code>&#8211;</code>|[+]<i>annot_int</i>][<i>labelinfo</i>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>&lt;template&gt;</i> ] [ [<code>l</code>|<code>r</code>] ] [ [<code>d</code>|<code>f</code>|<code>n</code>|<code>l</code>|<code>L</code>|<code>x</code>|<code>X</code>]<i>params</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ <i>low/high</i> ] [ ] [ ] [ <i>cut</i> ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ <i>smoothfactor</i> ] [ [<code>+|-</code>][<code>+d</code><i>gap</i>[/<i>length</i>]][<code>+l</code>[<i>labels</i>]] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>+</code>][<i>type</i>]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ [<i>factor</i>[/<i>shift</i>]][<code>p</code>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-ho</code>[<i>n</i>] ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

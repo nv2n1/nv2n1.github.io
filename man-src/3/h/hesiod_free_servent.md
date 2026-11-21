@@ -1,4 +1,5 @@
 ---
+
 title: "hesiod_free_servent(3)"
 name: "hesiod_free_servent"
 section: "3"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hesiod_free_servent/"
 ---
 
-<h2>NAME</h2>
-
- hesiod_getservbyname, hesiod_free_servent - Hesiod functions for retrieving service information
+hesiod_getservbyname, hesiod_free_servent - Hesiod functions for retrieving service information
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "fuse-utils(1)"
 name: "fuse-utils"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fuse-utils/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fuse-utils - various ZX Spectrum related utilities 
+fuse-utils - various ZX Spectrum related utilities 
 
 <h2>DESCRIPTION</h2>
 

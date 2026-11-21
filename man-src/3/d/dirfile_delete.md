@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_delete(3)"
 name: "dirfile_delete"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_delete/"
 description: "dirfile_delete — remove a field from a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_delete &#8212; remove a field from a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

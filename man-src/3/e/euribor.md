@@ -1,4 +1,5 @@
 ---
+
 title: "euribor(3)"
 name: "euribor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-euribor/"
 description: "ql/indexes/ibor/euribor.hpp – Euribor index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/indexes/ibor/euribor.hpp &#8211; Euribor index </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/iborindex.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "preparetips5(1)"
 name: "preparetips5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-preparetips5/"
 description: "preparetips5 – extract text from tips file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> preparetips5<br />
 &nbsp;<wbr>&#8211; extract text from tips file </p>
 <h2>SYNOPSIS</h2>

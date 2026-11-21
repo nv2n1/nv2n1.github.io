@@ -1,4 +1,5 @@
 ---
+
 title: "rrdbuild(1)"
 name: "rrdbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdbuild/"
 description: "rrdbuild – Instructions for building RRDtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdbuild &#8211; Instructions for building RRDtool </p>
 <h2>OVERVIEW</h2>
 <p> If you downloaded the source of RRDtool you have to compile it. This document will give some information on how this is done. </p>

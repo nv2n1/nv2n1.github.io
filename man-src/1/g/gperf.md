@@ -1,4 +1,5 @@
 ---
+
 title: "gperf(1)"
 name: "gperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gperf/"
 description: "gperf – generate a perfect hash function from a key set"
 ---
 
-<h2>NAME</h2>
 <p> gperf &#8211; generate a perfect hash function from a key set</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gperf</code> [<i>OPTION</i>]&#8230; [<i>INPUT-FILE</i>]</p>

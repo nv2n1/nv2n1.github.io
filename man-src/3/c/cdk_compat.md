@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_compat(3)"
 name: "cdk_compat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_compat/"
 description: "cdk_compat – Cdk4 compatibility functions"
 ---
 
-<h2>NAME</h2>
 <p> cdk_compat &#8211; Cdk4 compatibility functions</p>
 <h2>SYNOPSIS</h2>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "dla_porfsx_extended(3)"
 name: "dla_porfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_porfsx_extended/"
 description: "dla_porfsx_extended.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dla_porfsx_extended.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

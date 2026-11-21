@@ -1,4 +1,5 @@
 ---
+
 title: "dt2dv(1)"
 name: "dt2dv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dt2dv/"
 description: "dt2dv – convert a DTL text representation of a TeX DVI file to a binary DVI file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dt2dv &#8211; convert a DTL text representation of a TeX DVI file to a binary DVI file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dt2dv</code> [<code>-debug</code>] [<code>-group</code>] [<code>-si</code>] [<code>-so</code>] [<i>input-DTL-file</i>] [<i>output-DVI-file</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-mount(1)"
 name: "atomic-mount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-mount/"
 description: "atomic-mount – Mount Images/Containers to Filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-mount &#8211; Mount Images/Containers to Filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic mount</code> [<code>&#8211;live</code> | <code>&#8211;shared</code> | <code>&#8211;storage=[ostree|docker]</code> | [<code>-o</code>|<code>&#8211;options</code> <i>OPTIONS</i>]] [REGISTRY/]REPO[:TAG]|UUID|NAME DIRECTORY </p>

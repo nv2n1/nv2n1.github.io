@@ -1,4 +1,5 @@
 ---
+
 title: "wpd2html(1)"
 name: "wpd2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wpd2html/"
 description: "wpd2html – convert WordPerfect document into HTML"
 ---
 
-<h2>NAME</h2>
 <p> wpd2html &#8211; convert WordPerfect document into HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wpd2html</code> [<i>OPTION</i>] <i>&lt;WordPerfect Document&gt;</i></p>

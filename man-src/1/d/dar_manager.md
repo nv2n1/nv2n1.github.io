@@ -1,4 +1,5 @@
 ---
+
 title: "dar_manager(1)"
 name: "dar_manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dar_manager/"
 description: "dar_manager – compiles several archives contents in a database to ease file restoration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dar_manager &#8211; compiles several archives contents in a database to ease file restoration </p>
 <h2>SYNOPSIS</h2>
 <p> dar_manager [-v] -C [&lt;path&gt;/]&lt;database&gt; </p>

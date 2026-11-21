@@ -1,4 +1,5 @@
 ---
+
 title: "msgen(1)"
 name: "msgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgen/"
 description: "msgen – create English message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgen &#8211; create English message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgen</code> [<i>OPTION</i>] <i>INPUTFILE</i></p>

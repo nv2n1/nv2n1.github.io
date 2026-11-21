@@ -1,4 +1,5 @@
 ---
+
 title: "mosh(1)"
 name: "mosh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mosh/"
 description: "mosh – mobile shell with roaming and intelligent local echo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mosh &#8211; mobile shell with roaming and intelligent local echo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mosh</code> [<i>options</i>] [&#8211;] [user@]host [command&#8230;] </p>

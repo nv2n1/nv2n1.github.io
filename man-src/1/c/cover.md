@@ -1,4 +1,5 @@
 ---
+
 title: "cover(1)"
 name: "cover"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cover/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cover - report coverage statistics 
+cover - report coverage statistics 
 
 <h2>VERSION</h2>
 

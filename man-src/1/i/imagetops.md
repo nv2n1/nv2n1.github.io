@@ -1,4 +1,5 @@
 ---
+
 title: "imagetops(1)"
 name: "imagetops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imagetops/"
 description: "imagetops – generic image to ps filter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> imagetops &#8211; generic image to ps filter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>imagetops</code>&nbsp;[<code>-gray</code>]&nbsp;[<code>arguments for pnmtops</code>] [<i>filename</i>]</p>

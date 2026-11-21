@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtospu(1)"
 name: "ppmtospu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtospu/"
 description: "ppmtospu – convert a PPM image to an Atari Spectrum 512 image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtospu &#8211; convert a PPM image to an Atari Spectrum 512 image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtospu</code> </p>

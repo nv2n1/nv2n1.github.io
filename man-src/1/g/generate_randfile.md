@@ -1,4 +1,5 @@
 ---
+
 title: "generate_randfile(1)"
 name: "generate_randfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-generate_randfile/"
 description: "generate_randfile – a program to generate a file of random data"
 ---
 
-<h2>NAME</h2>
 <p> <code>generate_randfile</code> &#8211; a program to generate a file of random data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>generate_randfile</code> [ <code>-s</code> seed] [ <code>-f</code> file] <code>count</code> </p>

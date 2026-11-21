@@ -1,4 +1,5 @@
 ---
+
 title: "icecc-scheduler(1)"
 name: "icecc-scheduler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icecc-scheduler/"
 description: "scheduler – Icecream scheduler"
 ---
 
-<h2>NAME</h2>
 <p> scheduler &#8211; Icecream scheduler</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "kfind(1)"
 name: "kfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kfind/"
 description: "kfind – file find utility for KDE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kfind &#8211; file find utility for KDE </p>
 <h2>SYNOPSIS</h2>
 <dl>

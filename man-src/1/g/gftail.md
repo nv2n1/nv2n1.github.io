@@ -1,4 +1,5 @@
 ---
+
 title: "gftail(1)"
 name: "gftail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gftail/"
 description: "gftail – manual page for gftail (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gftail &#8211; manual page for gftail (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gftail</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

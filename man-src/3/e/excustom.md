@@ -1,4 +1,5 @@
 ---
+
 title: "excustom(3)"
 name: "excustom"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-excustom/"
 description: "excustom – Creating custom GUI objects. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> excustom &#8211; Creating custom GUI objects. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

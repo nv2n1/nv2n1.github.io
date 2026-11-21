@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_set_read_func(3)"
 name: "bson_reader_set_read_func"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_set_read_func/"
 description: "bson_reader_set_read_func() – Sets the function to read more data from the underlying stream in a custom bson_reader_t."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_set_read_func() &#8211; Sets the function to read more data from the underlying stream in a custom bson_reader_t.</p>
 <h2>SYNOPSIS</h2>
 <pre>

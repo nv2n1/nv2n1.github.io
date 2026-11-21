@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_rrs_free(3)"
 name: "ldns_dnssec_rrs_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_rrs_free/"
 description: "ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr, ldns_dnssec_rrs_print"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr, ldns_dnssec_rrs_print </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

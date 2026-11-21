@@ -1,4 +1,5 @@
 ---
+
 title: "dh_gencontrol(1)"
 name: "dh_gencontrol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_gencontrol/"
 description: "dh_gencontrol – generate and install control file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_gencontrol &#8211; generate and install control file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_gencontrol</code> [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>

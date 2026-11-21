@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoarbtxt(1)"
 name: "ppmtoarbtxt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoarbtxt/"
 description: "ppmtoarbtxt – generate image in arbitrary text format from PPM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoarbtxt &#8211; generate image in arbitrary text format from PPM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoarbtxt</code> <i>bodyskl</i> [<code>-hd</code> <i>headskl</i>] [<code>-tl</code> <i>tailskl</i>] [<i>ppmfile</i>] </p>

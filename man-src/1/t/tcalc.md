@@ -1,4 +1,5 @@
 ---
+
 title: "tcalc(1)"
 name: "tcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcalc/"
 description: "tcalc – The terminal calculator"
 ---
 
-<h2>NAME</h2>
 <p> tcalc &#8211; The terminal calculator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcalc [OPTIONS] [file-name]</code></p>

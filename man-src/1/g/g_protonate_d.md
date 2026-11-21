@@ -1,4 +1,5 @@
 ---
+
 title: "g_protonate_d(1)"
 name: "g_protonate_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_protonate_d/"
 description: "protonate – protonates structures"
 ---
 
-<h2>NAME</h2>
 <p> protonate &#8211; protonates structures </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

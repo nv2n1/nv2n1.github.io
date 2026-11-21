@@ -1,4 +1,5 @@
 ---
+
 title: "xvpictoppm(1)"
 name: "xvpictoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvpictoppm/"
 description: "xvpictoppm – converts XV ‘thumbnail’ files to standard PPM format"
 ---
 
-<h2>NAME</h2>
 <p> xvpictoppm &#8211; converts XV &#8216;thumbnail&#8217; files to standard PPM format</p>
 <h2>SYNTAX</h2>
 <p> <code>xvpictoppm</code></p>

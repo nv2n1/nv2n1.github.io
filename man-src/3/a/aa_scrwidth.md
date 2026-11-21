@@ -1,4 +1,5 @@
 ---
+
 title: "aa_scrwidth(3)"
 name: "aa_scrwidth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_scrwidth/"
 description: "aa_scrwidth – returns width of the output screen in characters."
 ---
 
-<h2>NAME</h2>
 <p> aa_scrwidth &#8211; returns width of the output screen in characters.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

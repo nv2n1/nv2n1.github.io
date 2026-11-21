@@ -1,4 +1,5 @@
 ---
+
 title: "pam_wrapper(1)"
 name: "pam_wrapper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pam_wrapper/"
 description: "pam_wrapper – A preloadable wrapper to test PAM applications and PAM Modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pam_wrapper &#8211; A preloadable wrapper to test PAM applications and PAM Modules </p>
 <h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libpam_wrapper.so PAM_WRAPPER=1 PAM_WRAPPER_SERVICE_DIR=/path_to_config <code>./myapplication</code></p>

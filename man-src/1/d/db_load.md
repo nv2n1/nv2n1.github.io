@@ -1,4 +1,5 @@
 ---
+
 title: "db_load(1)"
 name: "db_load"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_load/"
 description: "db5.3_load – Load data from standard input"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_load &#8211; Load data from standard input </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_load</code> [-nTV] [-c name=value] [-f file] [-h home] [-P password] [-t btree | hash | queue | recno] file </p>

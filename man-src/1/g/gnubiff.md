@@ -1,4 +1,5 @@
 ---
+
 title: "gnubiff(1)"
 name: "gnubiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnubiff/"
 description: "gnubiff – a mail notification program supporting GTK+ and GNOME"
 ---
 
-<h2>NAME</h2>
 <p> gnubiff &#8211; a mail notification program supporting GTK+ and GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnubiff</code> [<i>options</i>]</p>

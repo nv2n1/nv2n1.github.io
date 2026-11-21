@@ -1,4 +1,5 @@
 ---
+
 title: "loaderinfo(1)"
 name: "loaderinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-loaderinfo/"
 description: "loaderinfo – report SCSI tape device info"
 ---
 
-<h2>NAME</h2>
 <p> loaderinfo &#8211; report SCSI tape device info</p>
 <h2>SYNOPSIS</h2>
 <p> loaderinfo -f &lt;scsi-generic-device&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogrewrite(1)"
 name: "pmlogrewrite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogrewrite/"
 description: "pmlogrewrite – rewrite Performance Co-Pilot archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogrewrite</code> &#8211; rewrite Performance Co-Pilot archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogrewrite</code> [<code>-Cdiqsvw </code>] [<code>-c</code> <i>config</i>] <i>inlog</i> [<i>outlog</i>]</p>

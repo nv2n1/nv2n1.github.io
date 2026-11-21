@@ -1,4 +1,5 @@
 ---
+
 title: "tpm_sealdata(1)"
 name: "tpm_sealdata"
 section: "1"
@@ -9,7 +10,7 @@ description: "tpm_sealdata – seal input data to the system’s TPM"
 
 <p>TPM Management &#8211; tpm_sealdata<br />
  </center></p>
-<h2 class="name">NAME</h2>
+
 <p> tpm_sealdata &#8211; seal input data to the system&#8217;s TPM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpm_sealdata</code> [<code>OPTION</code>] </p>

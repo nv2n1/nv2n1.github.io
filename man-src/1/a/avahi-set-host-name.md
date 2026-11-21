@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-set-host-name(1)"
 name: "avahi-set-host-name"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avahi-set-host-name/"
 description: "avahi-set-host-name – Change mDNS host name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avahi-set-host-name &#8211; Change mDNS host name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-set-host-name </code><i>host-name</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "genhostid(1)"
 name: "genhostid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genhostid/"
 description: "genhostid – generate and set a hostid for the current host"
 ---
 
-<h2>NAME</h2>
 <p> genhostid &#8211; generate and set a hostid for the current host</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genhostid</code> </p>

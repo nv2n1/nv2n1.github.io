@@ -1,4 +1,5 @@
 ---
+
 title: "gtkada-config(1)"
 name: "gtkada-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtkada-config/"
 description: "gtkada-config – script to get information about the installed version of GTKADA"
 ---
 
-<h2>NAME</h2>
 <p> gtkada-config &#8211; script to get information about the installed version of GTKADA</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtkada-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags] [&#8211;static]</p>

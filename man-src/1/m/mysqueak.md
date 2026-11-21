@@ -1,4 +1,5 @@
 ---
+
 title: "mysqueak(1)"
 name: "mysqueak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqueak/"
 description: "mysqueak – desktop frontend to Squeak"
 ---
 
-<h2>NAME</h2>
 <p> mysqueak &#8211; desktop frontend to Squeak</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mysqueak</code></p>

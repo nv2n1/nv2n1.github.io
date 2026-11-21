@@ -1,4 +1,5 @@
 ---
+
 title: "xmag(1)"
 name: "xmag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmag/"
 description: "xmag – magnify parts of the screen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmag &#8211; magnify parts of the screen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmag</code> [ <code>-mag</code> <i>magfactor</i> ] [ <code>-source</code> <i>geom</i> ] [ <i>-toolkitoption</i> &#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "timedatectl(1)"
 name: "timedatectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-timedatectl/"
 description: "timedatectl – Control the system time and date"
 ---
 
-<h2 class="name">NAME</h2>
 <p> timedatectl &#8211; Control the system time and date </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "xpr(1)"
 name: "xpr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpr/"
 description: "xpr – print an X window dump"
 ---
 
-<h2>NAME</h2>
 <p> xpr &#8211; print an X window dump</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xpr</code> [ <code>-device</code> <i>devtype</i> ] [ <code>-scale</code> <i>scale</i> ] [ <code>-height</code> <i>inches</i> ] [ <code>-width</code> <i>inches</i> ] [ <code>-left</code> <i>inches</i> ] [ <code>-top</code> <i>inches</i> ] [ <code>-header</code> <i>string</i> ] [ <code>-trailer</code> <i>string</i> ] [ <code>-landscape</code> ] [ <code>-portrait</code> ] [ <code>-plane</code> <i>number</i> ] [ <code>-gray</code> ] [ <code>-rv</code> ] [ <code>-compact</code> ] [ <code>-output</code> <i>filename</i> ] [ <code>-append</code> <i>filename</i> ] [ <code>-noff</code> ] [ <code>-split</code> <i>n</i> ] [ <code>-psfig</code> ] [ <code>-density</code> <i>dpi</i> ] [ <code>-cutoff</code> <i>level</i> ] [ <code>-noposition</code> ] [ <code>-gamma</code> <i>correction</i> ] [ <code>-render</code> <i>algorithm</i> ] [ <code>-slide</code> ] [ <i>filename</i> ]</p>

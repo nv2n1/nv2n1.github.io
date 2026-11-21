@@ -1,4 +1,5 @@
 ---
+
 title: "dm-tool(1)"
 name: "dm-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dm-tool/"
 description: "dm-tool – a tool to control the display manager"
 ---
 
-<h2>NAME</h2>
 <p> dm-tool &#8211; a tool to control the display manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dm-tool</code> [ <i>OPTIONS</i> ] <i>COMMAND</i> [ <i>ARGS</i> ]</p>

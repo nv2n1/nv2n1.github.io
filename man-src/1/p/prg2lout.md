@@ -1,4 +1,5 @@
 ---
+
 title: "prg2lout(1)"
 name: "prg2lout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prg2lout/"
 description: "prg2lout – convert computer program text into Lout"
 ---
 
-<h2>NAME</h2>
 <p> prg2lout &#8211; convert computer program text into Lout</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prg2lout</code> -l <i>language</i> [ <i>options</i> ] <i>files</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "halog(1)"
 name: "halog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-halog/"
 description: "halog – HAProxy log statistics reporter"
 ---
 
-<h2>NAME</h2>
 <p> halog &#8211; HAProxy log statistics reporter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>halog</code> [<i>-h|&#8211;help</i>]<br />

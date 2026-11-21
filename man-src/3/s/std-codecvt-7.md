@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-7(3)"
 name: "std-codecvt-7"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-std-codecvt-7/"
 description: "std::wcstombs – std::wcstombs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> std::wcstombs &#8211; std::wcstombs</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;cstdlib&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "dgbtf2(3)"
 name: "dgbtf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbtf2/"
 description: "dgbtf2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

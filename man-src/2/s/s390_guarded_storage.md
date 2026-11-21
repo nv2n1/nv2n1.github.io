@@ -1,4 +1,5 @@
 ---
+
 title: "s390_guarded_storage(2)"
 name: "s390_guarded_storage"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-s390_guarded_storage/"
 description: "s390_guarded_storage – operations with z/Architecture guarded storage facility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> s390_guarded_storage &#8211; operations with z/Architecture guarded storage facility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

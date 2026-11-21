@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-substr(3)"
 name: "antlr3-substr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-substr/"
 description: "ANTLR3_INPUT_STREAM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_INPUT_STREAM_struct &#8211; </p>
 <p> Master context structure for an ANTLR3 C runtime based input stream.</p>
 <h2>SYNOPSIS</h2>

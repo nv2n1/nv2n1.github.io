@@ -1,4 +1,5 @@
 ---
+
 title: "apt-java-1(1)"
 name: "apt-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-java-1/"
 description: "apt – annotation processing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <i>apt</i> &#8211; annotation processing tool</p>
 <h2>SYNOPSIS</h2>
 <p> <i>apt [-classpath </i><i>classpath</i>] [-sourcepath <i>sourcepath</i>] [-d <i>directory</i>] [-s <i>directory</i>] [-factorypath <i>path</i>] [-factory <i>class</i>] [-print] [-nocompile] [-A<i>key</i>[<i>=val</i>] &#8230;] [<i>javac option</i>] sourcefiles [@files] </p>

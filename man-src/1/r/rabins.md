@@ -1,4 +1,5 @@
 ---
+
 title: "rabins(1)"
 name: "rabins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rabins/"
 description: "rabins – process argus(8) data within specified bins."
 ---
 
-<h2>NAME</h2>
 <p> <code>rabins</code> &#8211; process <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data within specified bins.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rabins</code> <code>[-B </code><i>secs</i><code>] -M</code> <i>splitmode</i> [<i>options</i>]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

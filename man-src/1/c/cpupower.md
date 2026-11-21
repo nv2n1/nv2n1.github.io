@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower(1)"
 name: "cpupower"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower/"
 description: "cpupower – Shows and sets processor power related values"
 ---
 
-<h2>NAME</h2>
 <p> cpupower &#8211; Shows and sets processor power related values</p>
 <h2>SYNOPSIS</h2>
 <p> <code> cpupower [ -c cpulist ] &lt;command&gt; [ARGS]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "animate-im6(1)"
 name: "animate-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-animate-im6/"
 description: "animate – animates an image or image sequence on any X server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> animate &#8211; animates an image or image sequence on any X server. </p>
 <h2>SYNOPSIS</h2>
 <dl>

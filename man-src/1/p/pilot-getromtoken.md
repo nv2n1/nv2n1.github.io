@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-getromtoken(1)"
 name: "pilot-getromtoken"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-getromtoken/"
 description: "pilot-getromtoken – Reads a ROM token from a Palm Handheld device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-getromtoken &#8211; Reads a ROM token from a Palm Handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

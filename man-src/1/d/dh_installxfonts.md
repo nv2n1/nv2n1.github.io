@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installxfonts(1)"
 name: "dh_installxfonts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installxfonts/"
 description: "dh_installxfonts – register X fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installxfonts &#8211; register X fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installxfonts</code> [<i>debhelper options</i>]</p>

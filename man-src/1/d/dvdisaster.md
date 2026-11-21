@@ -1,4 +1,5 @@
 ---
+
 title: "dvdisaster(1)"
 name: "dvdisaster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvdisaster/"
 description: "DVDISASTER – data loss/scratch/aging protection for optical media"
 ---
 
-<h2 class="name">NAME</h2>
 <p> DVDISASTER &#8211; data loss/scratch/aging protection for optical media</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvdisaster</code> [<code>-r</code>|<code>-c</code>|<code>-f</code>|<code>-s</code>|<code>-t[q]</code>|<code>-u</code>] [<code>-d</code> <i>device</i>] [<code>-p</code> <i>prefix</i>] [<code>-i</code> <i>image</i>] [<code>-e</code> <i>eccfile</i>] [<code>-o</code> <i>file|image</i>] [<code>-a</code> <i>method-list</i>] [<code>-j</code> <i>n</i>] [<code>-n</code> <i>n%</i>] [<code>-m</code> <i>n</i>] [<code>-v</code>] [<code>-x</code> <i>n</i>] [<code>&#8211;adaptive-read</code>] [<code>&#8211;auto-suffix</code>] [<code>&#8211;cache-size</code> <i>n</i>] [<code>&#8211;dao</code>] [<code>&#8211;defective-dump</code> <i>d</i>] [<code>&#8211;driver</code> <i>d</i>] [<code>&#8211;eject</code>] [<code>&#8211;encoding-algorithm</code> <i>n</i>] [<code>&#8211;encoding-io-strategy</code> <i>n</i>] [<code>&#8211;fill-unreadable</code> <i>n</i>] [<code>&#8211;ignore-fatal-sense</code>] [<code>&#8211;ignore-iso-size</code>] [<code>&#8211;internal-rereads</code> <i>n</i>] [<code>&#8211;medium-info</code>] [<code>&#8211;old-ds-marker</code>] [<code>&#8211;prefetch-sectors</code> <i>n</i>] [<code>&#8211;raw-mode</code> <i>n</i>] [<code>&#8211;read-attempts</code> <i>n-m</i>] [<code>&#8211;read-medium</code> <i>n</i>] [<code>&#8211;read-raw</code>] [<code>&#8211;resource-file</code> <i>n</i>] [<code>&#8211;speed-warning</code> <i>n</i>] [<code>&#8211;spinup-delay</code> <i>n</i>] </p>

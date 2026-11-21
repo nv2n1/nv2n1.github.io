@@ -1,4 +1,5 @@
 ---
+
 title: "dot(1)"
 name: "dot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dot/"
 description: "dot – filter for drawing directed graphs neato – filter for drawing undirected graphs twopi – filter for radial layouts of graphs circo – filter for circular layout of graphs fdp – filter for drawi..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> dot &#8211; filter for drawing directed graphs<br />
  neato &#8211; filter for drawing undirected graphs<br />
  twopi &#8211; filter for radial layouts of graphs<br />

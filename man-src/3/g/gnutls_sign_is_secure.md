@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_sign_is_secure(3)"
 name: "gnutls_sign_is_secure"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_sign_is_secure/"
 description: "gnutls_sign_is_secure – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_sign_is_secure &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

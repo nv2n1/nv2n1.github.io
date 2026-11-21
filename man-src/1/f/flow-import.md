@@ -1,4 +1,5 @@
 ---
+
 title: "flow-import(1)"
 name: "flow-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-import/"
 description: "flow-import – Import flows into flow-tools from other NetFlow packages."
 ---
 
-<h2>NAME</h2>
 <p> flow-import &#8211; Import flows into flow-tools from other NetFlow packages.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-import</code> [ <code>-h</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> format</i> ] [ <code>-m</code><i> mask_fields</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "captoinfo(1)"
 name: "captoinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-captoinfo/"
 description: "captoinfo – convert a termcap description into a terminfo description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>captoinfo</code> &#8211; convert a <i>termcap</i> description into a <i>terminfo</i> description </p>
 <h2>SYNOPSIS</h2>
 <p> <code>captoinfo</code> [<code>-v</code><i>n</i> <i>width</i>] [<code>-V</code>] [<code>-1</code>] [<code>-w</code> <i>width</i>] <i>file</i> &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-start(1)"
 name: "lxc-start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-start/"
 description: "lxc-start – run an application inside a container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-start &#8211; run an application inside a container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-start</code> {-n <i>name</i>} [-f <i>config_file</i>] [-c <i>console_device</i>] [-L <i>console_logfile</i>] [-d] [-F] [-p <i>pid_file</i>] [-s KEY=VAL] [-C] [&#8211;share-[net|ipc|uts] <i>name|pid</i>] [command]</p>

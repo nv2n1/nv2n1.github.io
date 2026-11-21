@@ -1,4 +1,5 @@
 ---
+
 title: "timidity(1)"
 name: "timidity"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-timidity/"
 description: "TiMidity++ – MIDI-to-WAVE converter and player"
 ---
-<h2>NAME</h2>
+
 <p> TiMidity++ - MIDI-to-WAVE converter and player  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>timidity</code> [options] filename [...]  </p>

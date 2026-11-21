@@ -1,4 +1,5 @@
 ---
+
 title: "fusioninventory-netinventory(1)"
 name: "fusioninventory-netinventory"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-netinventory/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fusioninventory-netinventory - Standalone network inventory 
+fusioninventory-netinventory - Standalone network inventory 
 
 <h2>SYNOPSIS</h2>
 

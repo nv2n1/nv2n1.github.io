@@ -1,4 +1,5 @@
 ---
+
 title: "rustdoc(1)"
 name: "rustdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rustdoc/"
 description: "rustdoc – generate documentation from Rust source code"
 ---
 
-<h2>NAME</h2>
 <p> rustdoc &#8211; generate documentation from Rust source code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rustdoc</code> [<i>OPTIONS</i>] <i>INPUT</i> </p>

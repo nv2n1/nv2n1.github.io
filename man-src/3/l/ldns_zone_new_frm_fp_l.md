@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_zone_new_frm_fp_l(3)"
 name: "ldns_zone_new_frm_fp_l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_zone_new_frm_fp_l/"
 description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zone_new_frm_fp_l"
 ---
 
-<h2>NAME</h2>
 <p> ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zone_new_frm_fp_l </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

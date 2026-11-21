@@ -1,4 +1,5 @@
 ---
+
 title: "gfortran44(1)"
 name: "gfortran44"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gfortran44/"
 description: "gfortran – GNU Fortran compiler"
 ---
-<h2 class="name">NAME</h2>
+
 <p> gfortran - GNU Fortran compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br />

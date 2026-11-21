@@ -1,4 +1,5 @@
 ---
+
 title: "bodhi(1)"
 name: "bodhi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bodhi/"
 description: "bodhi – manage Fedora updates"
 ---
 
-<h2>NAME</h2>
 <p> bodhi &#8211; manage Fedora updates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bodhi</code> COMMAND SUBCOMMAND [OPTIONS] [ARGS]&#8230;</p>

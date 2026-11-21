@@ -1,4 +1,5 @@
 ---
+
 title: "sort-dctrl(1)"
 name: "sort-dctrl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sort-dctrl/"
 description: "sort-dctrl – sort Debian control files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sort-dctrl &#8211; sort Debian control files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sort-dctrl</code> [options] [ <i>file</i> &#8230; ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fotowall(1)"
 name: "fotowall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fotowall/"
 description: "fotowall – wallpaper generator for high resolution composition."
 ---
 
-<h2>NAME</h2>
 <p> fotowall &#8211; wallpaper generator for high resolution composition.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fotowall</code> [project] [images]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "uselib(2)"
 name: "uselib"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-uselib/"
 description: "uselib – load shared library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uselib &#8211; load shared library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

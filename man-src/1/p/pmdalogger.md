@@ -1,4 +1,5 @@
 ---
+
 title: "pmdalogger(1)"
 name: "pmdalogger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdalogger/"
 description: "pmdalogger – log file performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdalogger</code> &#8211; log file performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/logger/pmdalogger</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>] [<code>-s</code> <i>interval</i>] [<code>-U</code> <i>username</i>] [<i>configfile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gengetopt(1)"
 name: "gengetopt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gengetopt/"
 description: "gengetopt – manual page for gengetopt 2.22.6"
 ---
 
-<h2>NAME</h2>
 <p> gengetopt &#8211; manual page for gengetopt 2.22.6</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gengetopt</code> [<i>OPTIONS</i>]&#8230;</p>

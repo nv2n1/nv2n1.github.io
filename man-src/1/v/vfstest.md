@@ -1,4 +1,5 @@
 ---
+
 title: "vfstest(1)"
 name: "vfstest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vfstest/"
 description: "vfstest – tool for testing samba VFS modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vfstest &#8211; tool for testing samba VFS modules </p>
 <h2>SYNOPSIS</h2>
 <dl>

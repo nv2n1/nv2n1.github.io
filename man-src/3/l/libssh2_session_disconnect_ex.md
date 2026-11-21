@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_disconnect_ex(3)"
 name: "libssh2_session_disconnect_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_disconnect_ex/"
 description: "libssh2_session_disconnect_ex – terminate transport layer"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_disconnect_ex &#8211; terminate transport layer</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

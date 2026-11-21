@@ -1,4 +1,5 @@
 ---
+
 title: "ldbmodify(1)"
 name: "ldbmodify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldbmodify/"
 description: "ldbmodify – Modify records in a LDB database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldbmodify &#8211; Modify records in a LDB database </p>
 <h2>SYNOPSIS</h2>
 <dl>

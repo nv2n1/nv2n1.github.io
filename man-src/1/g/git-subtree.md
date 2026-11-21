@@ -1,4 +1,5 @@
 ---
+
 title: "git-subtree(1)"
 name: "git-subtree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-subtree/"
 description: "git-subtree – Merge subtrees together and split repository into subtrees"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-subtree &#8211; Merge subtrees together and split repository into subtrees </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

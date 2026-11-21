@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_h_addr2sockaddr(3)"
 name: "krb5_h_addr2sockaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_h_addr2sockaddr/"
 description: "Heimdal Kerberos 5 address functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 address functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

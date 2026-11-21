@@ -1,4 +1,5 @@
 ---
+
 title: "virt-viewer(1)"
 name: "virt-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-viewer/"
 description: "virt-viewer – display the graphical console for a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-viewer &#8211; display the graphical console for a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-viewer</code> [<font SIZE="-1">OPTIONS</font>] &#8212; DOMAIN-NAME|ID|UUID</p>

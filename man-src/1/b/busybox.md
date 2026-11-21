@@ -1,4 +1,5 @@
 ---
+
 title: "busybox(1)"
 name: "busybox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-busybox/"
 description: "BusyBox – The Swiss Army Knife of Embedded Linux"
 ---
 
-<h2 class="name">NAME</h2>
 <p> BusyBox &#8211; The Swiss Army Knife of Embedded Linux </p>
 <h2>SYNTAX</h2>
 <pre><code>

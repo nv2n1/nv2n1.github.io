@@ -1,4 +1,5 @@
 ---
+
 title: "globus_socklen_t(3)"
 name: "globus_socklen_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_socklen_t/"
 description: "Globus Common API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus Common API &#8211; </p>
 <p> Common Data Structures and Functions.</p>
 <h3>Modules</h3>

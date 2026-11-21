@@ -1,4 +1,5 @@
 ---
+
 title: "ogmsplit(1)"
 name: "ogmsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogmsplit/"
 description: "ogmsplit – Split OGG/OGM files into sevaral smaller OGG/OGM files"
 ---
 
-<h2>NAME</h2>
 <p> ogmsplit &#8211; Split OGG/OGM files into sevaral smaller OGG/OGM files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogmsplit</code> [<i>options</i>] <i>inname</i></p>

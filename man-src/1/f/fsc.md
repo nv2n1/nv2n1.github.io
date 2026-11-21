@@ -1,4 +1,5 @@
 ---
+
 title: "fsc(1)"
 name: "fsc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fsc/"
 description: "fsc – Fast offline compiler for the Scala 2 language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fsc</code> &#8211; Fast offline compiler for the Scala 2 language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fsc</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>

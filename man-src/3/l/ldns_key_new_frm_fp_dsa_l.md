@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_new_frm_fp_dsa_l(3)"
 name: "ldns_key_new_frm_fp_dsa_l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_new_frm_fp_dsa_l/"
 description: "ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l"
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

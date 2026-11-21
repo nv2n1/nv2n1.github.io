@@ -1,4 +1,5 @@
 ---
+
 title: "xgfupdate(1)"
 name: "xgfupdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgfupdate/"
 description: "xgfupdate – updates an Xgridfit program file to the latest version."
 ---
 
-<h2>NAME</h2>
 <p> <code>xgfupdate </code> &#8211; updates an Xgridfit program file to the latest version.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgfupdate</code> <i>file</i></p>

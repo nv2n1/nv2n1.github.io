@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-statistics(1)"
 name: "glite-lb-statistics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glite-lb-statistics/"
 description: "glite-lb-statistics – tool for converting L&B job dump to Job History Record in XML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glite-lb-statistics &#8211; tool for converting L&amp;B job dump to Job History Record in XML </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-statistics</code> [<i>OPTIONS</i>] </p>

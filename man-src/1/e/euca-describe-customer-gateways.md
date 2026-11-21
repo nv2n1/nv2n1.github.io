@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-customer-gateways(1)"
 name: "euca-describe-customer-gateways"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-customer-gateways/"
 description: "euca-describe-customer-gateways – Show information about VPN customer gateways"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-customer-gateways &#8211; Show information about VPN customer gateways</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-customer-gateways [&#8211;show-empty-fields] [-U URL]</p>

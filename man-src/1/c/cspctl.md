@@ -1,4 +1,5 @@
 ---
+
 title: "cspctl(1)"
 name: "cspctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cspctl/"
 description: "cspctl – Sound Blaster 16 ASP/CSP control program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cspctl &#8211; Sound Blaster 16 ASP/CSP control program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cspctl</code> command [-options] &lt;filename&gt; </p>

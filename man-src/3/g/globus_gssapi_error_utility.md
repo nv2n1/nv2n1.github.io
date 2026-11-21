@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gssapi_error_utility(3)"
 name: "globus_gssapi_error_utility"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gssapi_error_utility/"
 description: "Error Handling Helpers –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error Handling Helpers &#8211; </p>
 <h3>Functions</h3>
 <p> globus_bool_t <code>globus_error_gssapi_match</code> (globus_object_t *error, globus_module_descriptor_t *module, const OM_uint32 major_status)<br />

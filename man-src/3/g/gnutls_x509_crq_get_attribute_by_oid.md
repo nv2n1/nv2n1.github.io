@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_get_attribute_by_oid(3)"
 name: "gnutls_x509_crq_get_attribute_by_oid"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_x509_crq_get_attribute_by_oid/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_x509_crq_get_attribute_by_oid - API function
+gnutls_x509_crq_get_attribute_by_oid - API function
 
 <h2>SYNOPSIS</h2>
 

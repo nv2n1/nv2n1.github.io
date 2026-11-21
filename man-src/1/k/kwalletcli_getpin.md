@@ -1,4 +1,5 @@
 ---
+
 title: "kwalletcli_getpin(1)"
 name: "kwalletcli_getpin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kwalletcli_getpin/"
 description: "kwalletcli_getpin – command line interface to pinentry"
 ---
 
-<h2>NAME</h2>
 <p> <code>kwalletcli_getpin</code> &#8211; command line interface to pinentry</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] [-<code>b | m | p </code><i>prompt</i> ] [-<code>E | e </code><i>errortext</i> ]<br />

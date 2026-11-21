@@ -1,4 +1,5 @@
 ---
+
 title: "editline(3)"
 name: "editline"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-editline/"
 description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el_parse, el_set, el_get, el_source, el_resize, el_line, el_insertstr, el_deletestr, history_init, history_end, history, tok_init, to..."
 ---
 
-<h2>NAME</h2>
 <p> <code>editline</code>, <code>el_init</code>, <code>el_end</code>, <code>el_reset</code>, <code>el_gets</code>, <code>el_getc</code>, <code>el_push</code>, <code>el_parse</code>, <code>el_set</code>, <code>el_get</code>, <code>el_source</code>, <code>el_resize</code>, <code>el_line</code>, <code>el_insertstr</code>, <code>el_deletestr</code>, <code>history_init</code>, <code>history_end</code>, <code>history</code>, <code>tok_init</code>, <code>tok_end</code>, <code>tok_reset</code>, <code>tok_line</code>, <code>tok_str</code> &#8211; line editor, history and tokenization functions</p>
 <h2>LIBRARY</h2>
 <p> Command Line Editor Library (libedit, -ledit)</p>

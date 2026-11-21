@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-internet-gateway(1)"
 name: "euca-delete-internet-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-internet-gateway/"
 description: "euca-delete-internet-gateway – Delete a VPC Internet gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-internet-gateway &#8211; Delete a VPC Internet gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-internet-gateway [&#8211;show-empty-fields] [-U URL]</p>

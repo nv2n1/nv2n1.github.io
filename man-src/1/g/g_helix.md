@@ -1,4 +1,5 @@
 ---
+
 title: "g_helix(1)"
 name: "g_helix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_helix/"
 description: "g_helix – calculates basic properties of alpha helices"
 ---
 
-<h2>NAME</h2>
 <p> g_helix &#8211; calculates basic properties of alpha helices </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

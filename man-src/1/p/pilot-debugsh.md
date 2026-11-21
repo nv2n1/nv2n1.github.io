@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-debugsh(1)"
 name: "pilot-debugsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-debugsh/"
 description: "pilot-debugsh – Simple debugging console for a Palm Handheld device [deprecated]."
 ---
 
-<h2>NAME</h2>
 <p> pilot-debugsh &#8211; Simple debugging console for a Palm Handheld device [deprecated].</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

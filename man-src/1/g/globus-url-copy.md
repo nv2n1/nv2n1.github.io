@@ -1,4 +1,5 @@
 ---
+
 title: "globus-url-copy(1)"
 name: "globus-url-copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-url-copy/"
 description: "globus-url-copy – globus-url-copy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-url-copy &#8211; globus-url-copy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-url-copy</code> [options] SOURCE-URL DESTINATION-URL</p>

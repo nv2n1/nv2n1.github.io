@@ -1,4 +1,5 @@
 ---
+
 title: "podofoxmp(1)"
 name: "podofoxmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podofoxmp/"
 description: "podofoxmp – Modify or extract XMP information from a PDF file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podofoxmp &#8211; Modify or extract XMP information from a PDF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoxmp</code> [inputfile] [xmpfile outputfile] </p>

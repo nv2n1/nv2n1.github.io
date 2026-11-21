@@ -1,4 +1,5 @@
 ---
+
 title: "eiciel(1)"
 name: "eiciel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eiciel/"
 description: "eiciel – GNOME ACL file permissions editor"
 ---
 
-<h2>NAME</h2>
 <p> eiciel &#8211; GNOME ACL file permissions editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>eiciel</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psftp(1)"
 name: "psftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psftp/"
 description: "psftp – interactive SFTP (secure file transfer protocol) client"
 ---
 
-<h2>NAME</h2>
 <p> <code>psftp</code> &#8211; interactive SFTP (secure file transfer protocol) client</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

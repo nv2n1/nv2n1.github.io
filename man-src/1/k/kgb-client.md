@@ -1,4 +1,5 @@
 ---
+
 title: "kgb-client(1)"
 name: "kgb-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kgb-client/"
 description: "kgb-client – relay commits to KGB servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kgb-client &#8211; relay commits to KGB servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncargversion(1)"
 name: "ncargversion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargversion/"
 description: "ncargversion – Display NCAR Graphics Version number"
 ---
 
-<h2>NAME</h2>
 <p> ncargversion &#8211; Display NCAR Graphics Version number</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargversion</code></p>

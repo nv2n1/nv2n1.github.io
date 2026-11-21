@@ -1,4 +1,5 @@
 ---
+
 title: "pidof(1)"
 name: "pidof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pidof/"
 description: "pidof — find the process ID of a running program."
 ---
 
-<h2>NAME</h2>
 <p> pidof &#8212; find the process ID of a running program.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pidof</code> [<code>-s</code>] [<code>-c</code>] [<code>-x</code>] [<code>-o</code> <i>omitpid[,omitpid..]</i>] [<code>-o</code> <i>omitpid[,omitpid..]..</i>] <code>program</code> [<code>program..</code>]</p>

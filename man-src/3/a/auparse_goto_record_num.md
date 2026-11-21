@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_goto_record_num(3)"
 name: "auparse_goto_record_num"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_goto_record_num/"
 description: "auparse_goto_record_num – move record cursor to specific record"
 ---
 
-<h2>NAME</h2>
 <p> auparse_goto_record_num &#8211; move record cursor to specific record</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perf-kvm(1)"
 name: "perf-kvm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-kvm/"
 description: "perf-kvm – Tool to trace/measure kvm guest os"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-kvm &#8211; Tool to trace/measure kvm guest os </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

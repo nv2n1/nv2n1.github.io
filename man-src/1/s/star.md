@@ -1,4 +1,5 @@
 ---
+
 title: "star(1)"
 name: "star"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-star/"
 description: "star – unique standard tape archiver"
 ---
-<h2>NAME</h2>
+
 <p> star - unique standard tape archiver  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>star&nbsp;<wbr></code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br />

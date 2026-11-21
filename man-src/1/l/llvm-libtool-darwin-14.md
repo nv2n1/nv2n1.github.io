@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-libtool-darwin-14(1)"
 name: "llvm-libtool-darwin-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-libtool-darwin-14/"
 description: "llvm-libtool-darwin – LLVM tool for creating libraries for Darwin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-libtool-darwin &#8211; LLVM tool for creating libraries for Darwin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-libtool-darwin</code> [<i>options</i>] <i>&lt;input files&gt;</i></p>

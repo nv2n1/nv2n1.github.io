@@ -1,4 +1,5 @@
 ---
+
 title: "scpr(1)"
 name: "scpr"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-scpr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- scpr - The scpr program is used to print out objects in checkpoint files.
+scpr - The scpr program is used to print out objects in checkpoint files.
 
 <h2>Running scpr</h2>
 

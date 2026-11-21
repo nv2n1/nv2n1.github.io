@@ -1,4 +1,5 @@
 ---
+
 title: "cpufreq-set(1)"
 name: "cpufreq-set"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpufreq-set/"
 description: "cpufreq-set – A small tool which allows to modify cpufreq settings."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpufreq-set &#8211; A small tool which allows to modify cpufreq settings. </p>
 <h2>SYNTAX</h2>
 <p> cpufreq-set [<i>options</i>]</p>

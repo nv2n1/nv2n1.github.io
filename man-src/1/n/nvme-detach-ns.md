@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-detach-ns(1)"
 name: "nvme-detach-ns"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-detach-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-detach-ns - Send NVMe detach namespace, return result. 
+nvme-detach-ns - Send NVMe detach namespace, return result. 
 
 <h2>SYNOPSIS</h2>
 

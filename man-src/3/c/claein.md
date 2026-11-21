@@ -1,4 +1,5 @@
 ---
+
 title: "claein(3)"
 name: "claein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claein/"
 description: "claein.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

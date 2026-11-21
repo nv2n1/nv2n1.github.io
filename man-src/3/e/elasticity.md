@@ -1,4 +1,5 @@
 ---
+
 title: "elasticity(3)"
 name: "elasticity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elasticity/"
 description: "QuantLib::OneAssetOption – Base class for options on a single asset."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::OneAssetOption &#8211; Base class for options on a single asset. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt; </p>

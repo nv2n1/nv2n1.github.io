@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbstage(1)"
 name: "sfcbstage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbstage/"
 description: "sfcbstage – Script to copy provider MOF and registration files to the Small-Footprint CIM Broker (sfcb) staging area"
 ---
 
-<h2>NAME</h2>
 <p> sfcbstage &#8211; Script to copy provider MOF and registration files to the Small-Footprint CIM Broker (sfcb) staging area</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbstage</code> [<i>options</i>] [<i>mof&#8230;</i>]</p>

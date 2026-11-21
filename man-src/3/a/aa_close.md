@@ -1,4 +1,5 @@
 ---
+
 title: "aa_close(3)"
 name: "aa_close"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_close/"
 description: "aa_close – close the AA-lib context."
 ---
 
-<h2>NAME</h2>
 <p> aa_close &#8211; close the AA-lib context.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

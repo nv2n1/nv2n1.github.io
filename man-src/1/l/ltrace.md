@@ -1,4 +1,5 @@
 ---
+
 title: "ltrace(1)"
 name: "ltrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ltrace/"
 description: "ltrace – A library call tracer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ltrace &#8211; A library call tracer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ltrace</code> [-e <i>filter</i>|-L] [-l|&#8211;library=<i>library_pattern</i>] [-x <i>filter</i>] [-S] [-b|&#8211;no-signals] [-i] [-w|&#8211;where=<i>nr</i>] [-r|-t|-tt|-ttt] [-T] [-F <i>filename</i>] [-A <i>maxelts</i>] [-s <i>strsize</i>] [-C|&#8211;demangle] [-a|&#8211;align <i>column</i>] [-n|&#8211;indent <i>nr</i>] [-o|&#8211;output <i>filename</i>] [-D|&#8211;debug <i>mask</i>] [-u <i>username</i>] [-f] [-p <i>pid</i>] [[&#8211;] <i>command [arg &#8230;]</i>] </p>

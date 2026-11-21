@@ -1,4 +1,5 @@
 ---
+
 title: "pmdapipe(1)"
 name: "pmdapipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdapipe/"
 description: "pmdapipe – command output capture performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdapipe</code> &#8211; command output capture performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pipe/pmdapipe</code> [<code>-c</code> <i>configfile</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "g(1)"
 name: "g"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g/"
 description: "g.version – Displays version and copyright information."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>g.version</code> &#8211; Displays version and copyright information.</p>
 <h2>KEYWORDS</h2>
 <p> general</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "argz_delete(3)"
 name: "argz_delete"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-argz_delete/"
 description: "argz_add, argz_add_sep, argz_append, argz_count, argz_create, argz_create_sep, argz_delete, argz_extract, argz_insert, argz_next, argz_replace, argz_stringify – functions to handle an argz list"
 ---
 
-<h2 class="name">NAME</h2>
 <p> argz_add, argz_add_sep, argz_append, argz_count, argz_create, argz_create_sep, argz_delete, argz_extract, argz_insert, argz_next, argz_replace, argz_stringify &#8211; functions to handle an argz list </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

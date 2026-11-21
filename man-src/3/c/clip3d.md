@@ -1,4 +1,5 @@
 ---
+
 title: "clip3d(3)"
 name: "clip3d"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clip3d/"
 description: "clip3d – Clips the polygon given in vtx using fixed point math. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> clip3d &#8211; Clips the polygon given in vtx using fixed point math. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

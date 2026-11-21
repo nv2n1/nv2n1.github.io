@@ -1,4 +1,5 @@
 ---
+
 title: "bmake(1)"
 name: "bmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bmake/"
 description: "bmake – maintain program dependencies"
 ---
 
-<h2>NAME</h2>
 <p> <code>bmake</code> &#8211; maintain program dependencies</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>BeikNnqrstWX</code> ] -words [-<code>D </code><i>variable</i> ] -words [-<code>d </code><i>flags</i> ] -words [-<code>f </code><i>makefile</i> ] -words [-<code>I </code><i>directory</i> ] -words [-<code>J </code><i>private</i> ] -words [-<code>j </code><i>max_jobs</i> ] -words [-<code>m </code><i>directory</i> ] -words [-<code>T </code><i>file</i> ] -words [-<code>V </code><i>variable</i> ] [<i>variable=value</i> ] -words [<i>target &#8230;</i> ]</p>

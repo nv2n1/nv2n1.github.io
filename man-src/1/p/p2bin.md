@@ -1,4 +1,5 @@
 ---
+
 title: "p2bin(1)"
 name: "p2bin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-p2bin/"
 description: "p2bin – convert code files into hex files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>p2bin &#8211; convert code files into hex files</code></p>
 <h2>SYNTAX</h2>
 <p> <code>p2bin</code> [ option(s) ] &lt;name(s)&gt; [ further options/names ] </p>

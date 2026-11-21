@@ -1,4 +1,5 @@
 ---
+
 title: "alevt-date(1)"
 name: "alevt-date"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alevt-date/"
 description: "alevt-date – display/set time received via Teletext"
 ---
 
-<h2>NAME</h2>
 <p> alevt-date &#8211; display/set time received via Teletext </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alevt-date</code> [<i>options</i>] </p>

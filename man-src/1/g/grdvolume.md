@@ -1,4 +1,5 @@
 ---
+
 title: "grdvolume(1)"
 name: "grdvolume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdvolume/"
 description: "grdvolume – Calculate grid volume and area constrained by a contour"
 ---
 
-<h2>NAME</h2>
 <p> grdvolume &#8211; Calculate grid volume and area constrained by a contour</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdvolume</code> <i>grdfile</i> [ <i>cval</i> or <i>low/high/delta</i> or <code>r</code><i>low/high</i> ] [ <i>base</i> ] [ <i>region</i> ] [ [<i>unit</i>] ] [ [<code>c</code>|<code>h</code>] ] [ [<i>level</i>] ] [ <i>fact</i>[/<i>shift</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>

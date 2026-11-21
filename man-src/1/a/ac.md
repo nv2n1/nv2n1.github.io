@@ -1,4 +1,5 @@
 ---
+
 title: "ac(1)"
 name: "ac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ac/"
 description: "ac – print statistics about users’ connect time"
 ---
 
-<h2>NAME</h2>
 <p> ac &#8211; print statistics about users&#8217; connect time</p>
 <h2>SYNOPSIS</h2>
 <dl>

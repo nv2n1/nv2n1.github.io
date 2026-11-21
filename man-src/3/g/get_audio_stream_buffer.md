@@ -1,4 +1,5 @@
 ---
+
 title: "get_audio_stream_buffer(3)"
 name: "get_audio_stream_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_audio_stream_buffer/"
 description: "get_audio_stream_buffer – Tells you if you need to fill the audiostream or not. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_audio_stream_buffer &#8211; Tells you if you need to fill the audiostream or not. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

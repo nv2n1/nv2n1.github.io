@@ -1,4 +1,5 @@
 ---
+
 title: "gcov-tool-7(1)"
 name: "gcov-tool-7"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcov-tool-7/"
 description: "gcov-tool – offline gcda profile processing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcov-tool &#8211; offline gcda profile processing tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov-tool [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-bundle(1)"
 name: "euca-delete-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-bundle/"
 description: "euca-delete-bundle – Delete a previously-uploaded bundle"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-bundle &#8211; Delete a previously-uploaded bundle</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-bundle [&#8211;clear] <code>-b</code> BUCKET[/PREFIX]</p>

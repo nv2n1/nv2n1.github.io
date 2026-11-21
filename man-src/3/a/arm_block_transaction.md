@@ -1,4 +1,5 @@
 ---
+
 title: "arm_block_transaction(3)"
 name: "arm_block_transaction"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_block_transaction/"
 description: "arm_block_transaction – mark a transaction as blocked"
 ---
 
-<h2>NAME</h2>
 <p> arm_block_transaction &#8211; mark a transaction as blocked</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

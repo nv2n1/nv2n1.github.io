@@ -1,4 +1,5 @@
 ---
+
 title: "cups-config(1)"
 name: "cups-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cups-config/"
 description: "cups-config – get cups api, compiler, directory, and link information."
 ---
 
-<h2>NAME</h2>
 <p> cups-config &#8211; get cups api, compiler, directory, and link information.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cups-config</code> &#8211;api-version<br />

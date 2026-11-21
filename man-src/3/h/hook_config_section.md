@@ -1,4 +1,5 @@
 ---
+
 title: "hook_config_section(3)"
 name: "hook_config_section"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hook_config_section/"
 description: "hook_config_section – Hooks a configuration file section with custom handlers. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> hook_config_section &#8211; Hooks a configuration file section with custom handlers. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

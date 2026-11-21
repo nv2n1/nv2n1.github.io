@@ -1,4 +1,5 @@
 ---
+
 title: "cpttext(1)"
 name: "cpttext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpttext/"
 description: "cpttext – print text coloured by a GMT colour palette table (cpt) file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpttext &#8211; print text coloured by a GMT colour palette table (cpt) file. </p>
 <h2>SYNOPSIS</h2>
 <dl>

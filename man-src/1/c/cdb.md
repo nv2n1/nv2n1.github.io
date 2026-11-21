@@ -1,4 +1,5 @@
 ---
+
 title: "cdb(1)"
 name: "cdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cdb/"
 description: "cdb – Constant DataBase manipulation tool"
 ---
 
-<h2>NAME</h2>
 <p> cdb &#8211; Constant DataBase manipulation tool</p>
 <h2>SYNOPSYS</h2>
 <p> <code>cdb</code> -q [-m] [-n <i>num</i>] <i>dbname</i> <i>key</i><br />

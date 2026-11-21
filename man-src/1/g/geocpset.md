@@ -1,4 +1,5 @@
 ---
+
 title: "geocpset(1)"
 name: "geocpset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geocpset/"
 description: "geocpset – adds control points based on geometric position"
 ---
 
-<h2 class="name">NAME</h2>
 <p> geocpset &#8211; adds control points based on geometric position </p>
 <h2>SYNOPSIS</h2>
 <p> <code>geocpset</code> [<i>-o output.pto</i>] <i>input.pto</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-smsd-monitor(1)"
 name: "gammu-smsd-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gammu-smsd-monitor/"
 description: "gammu-smsd-monitor – Monitor state of SMS daemon for Gammu"
 ---
 
-<h2>NAME</h2>
 <p> gammu-smsd-monitor &#8211; Monitor state of SMS daemon for Gammu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd-monitor</code> [<i>OPTION</i>]&#8230;</p>

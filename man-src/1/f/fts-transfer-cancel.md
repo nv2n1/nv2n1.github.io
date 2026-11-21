@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-cancel(1)"
 name: "fts-transfer-cancel"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-transfer-cancel/"
 ---
 
-<h2>NAME</h2>
-
- fts-transfer-cancel
+fts-transfer-cancel
 
 <h2>SYNOPSIS</h2>
 

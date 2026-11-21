@@ -1,4 +1,5 @@
 ---
+
 title: "gcstar(1)"
 name: "gcstar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcstar/"
 description: "GCstar – Personal collection manager"
 ---
 
-<h2>NAME</h2>
 <p> GCstar &#8211; Personal collection manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcstar</code> [-u UPDATE-OPTIONS] [-x EXECUTE-OPTIONS] [FILENAME]</p>

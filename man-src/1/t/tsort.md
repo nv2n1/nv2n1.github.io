@@ -1,4 +1,5 @@
 ---
+
 title: "tsort(1)"
 name: "tsort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsort/"
 description: "tsort – perform topological sort"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tsort &#8211; perform topological sort </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsort</code> [<i>,OPTION/</i>] [<i>,FILE/</i>]</p>

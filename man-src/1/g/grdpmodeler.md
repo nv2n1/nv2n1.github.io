@@ -1,4 +1,5 @@
 ---
+
 title: "grdpmodeler(1)"
 name: "grdpmodeler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdpmodeler/"
 description: "grdpmodeler – Evaluate a plate model on a geographic grid"
 ---
 
-<h2>NAME</h2>
 <p> grdpmodeler &#8211; Evaluate a plate model on a geographic grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdpmodeler</code> <i>agegrdfile</i> <i>rot_file</i> <code>-S</code><i>flags</i> [ <i>polygonfile</i> ] [ <i>outgrdfile</i> ] [ <i>age</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

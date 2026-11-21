@@ -1,4 +1,5 @@
 ---
+
 title: "dlacpy(3)"
 name: "dlacpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlacpy/"
 description: "dlacpy.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlacpy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

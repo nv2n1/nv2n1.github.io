@@ -1,4 +1,5 @@
 ---
+
 title: "euca-detach-volume(1)"
 name: "euca-detach-volume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-detach-volume/"
 description: "euca-detach-volume – Detach a volume from an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-detach-volume &#8211; Detach a volume from an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-detach-volume [-i INSTANCE] [-d DEVICE] [-f] [&#8211;show-empty-fields]</p>

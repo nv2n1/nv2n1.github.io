@@ -1,4 +1,5 @@
 ---
+
 title: "mhmail(1)"
 name: "mhmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhmail/"
 description: "mhmail – send or read mail"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhmail &#8211; send or read mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-whoami(1)"
 name: "fts-rest-whoami"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-whoami/"
 description: "fts-rest-whoami"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-whoami</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-whoami [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_phys_pages(3)"
 name: "get_phys_pages"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_phys_pages/"
 description: "get_phys_pages, get_avphys_pages – get total and available physical page counts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_phys_pages, get_avphys_pages &#8211; get total and available physical page counts </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

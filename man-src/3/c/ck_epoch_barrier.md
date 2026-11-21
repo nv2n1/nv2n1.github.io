@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_barrier(3)"
 name: "ck_epoch_barrier"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_barrier/"
 description: "ck_epoch_barrier – block until a grace period and all callbacks have been dispatched"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_barrier</code> &#8211; block until a grace period and all callbacks have been dispatched</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

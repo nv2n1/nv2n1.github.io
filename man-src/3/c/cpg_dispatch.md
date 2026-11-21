@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_dispatch(3)"
 name: "cpg_dispatch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_dispatch/"
 description: "cpg_dispatch – Dispatches callbacks from the CPG service"
 ---
 
-<h2>NAME</h2>
 <p> cpg_dispatch &#8211; Dispatches callbacks from the CPG service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

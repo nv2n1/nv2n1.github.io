@@ -1,4 +1,5 @@
 ---
+
 title: "perlcommunity(1)"
 name: "perlcommunity"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlcommunity/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlcommunity - a brief overview of the Perl community 
+perlcommunity - a brief overview of the Perl community 
 
 <h2>DESCRIPTION</h2>
 

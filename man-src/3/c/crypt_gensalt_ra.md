@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_gensalt_ra(3)"
 name: "crypt_gensalt_ra"
 section: "3"
@@ -8,7 +9,7 @@ description: "crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra – encode set
 ---
 
 <p>Openwall Project</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra</code> &#8211; encode settings for passphrase hashing </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qmqp-source(1)"
 name: "qmqp-source"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmqp-source/"
 description: "qmqp-source – parallelized QMQP test generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qmqp-source &#8211; parallelized QMQP test generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qmqp-source</code> [<i>options</i>] [<code>inet:</code>]<i>host</i>[:<i>port</i>] </p>

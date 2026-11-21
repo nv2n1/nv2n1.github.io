@@ -1,4 +1,5 @@
 ---
+
 title: "funcalc(1)"
 name: "funcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funcalc/"
 description: "funcalc – Funtools calculator (for binary tables)"
 ---
 
-<h2>NAME</h2>
 <p> <code>funcalc &#8211; Funtools calculator (for binary tables)</code></p>
 <h2>SYNOPSIS</h2>
 <p> funcalc [-n] [-a argstr] [-e expr] [-f file] [-l link] [-p prog] &lt;iname&gt; [oname [columns]]</p>

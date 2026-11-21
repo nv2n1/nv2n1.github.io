@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-4(3)"
 name: "std-codecvt-4"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-std-codecvt-4/"
 description: "std::mbtowc – std::mbtowc"
 ---
 
-<h2 class="name">NAME</h2>
 <p> std::mbtowc &#8211; std::mbtowc</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;cstdlib&gt;<br />

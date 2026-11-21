@@ -1,4 +1,5 @@
 ---
+
 title: "vvp(1)"
 name: "vvp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vvp/"
 description: "vvp – Icarus Verilog vvp runtime engine"
 ---
 
-<h2>NAME</h2>
 <p> vvp &#8211; Icarus Verilog vvp runtime engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vvp</code> [-sv] [-Mpath] [-mmodule] [-llogfile] inputfile [extended-args&#8230;] </p>

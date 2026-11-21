@@ -1,4 +1,5 @@
 ---
+
 title: "avr-gdbtui(1)"
 name: "avr-gdbtui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avr-gdbtui/"
 description: "gdb – The GNU Debugger"
 ---
 
-<h2>NAME</h2>
 <p> gdb &#8211; The GNU Debugger</p>
 <h2>SYNOPSIS</h2>
 <dl>

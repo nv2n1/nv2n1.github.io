@@ -1,4 +1,5 @@
 ---
+
 title: "hosts_access(3)"
 name: "hosts_access"
 section: "3"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hosts_access/"
 ---
 
-<h2>NAME</h2>
-
- hosts_access, hosts_ctl, request_init, request_set - access control library
+hosts_access, hosts_ctl, request_init, request_set - access control library
 
 <h2>SYNOPSIS</h2>
 

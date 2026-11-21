@@ -1,4 +1,5 @@
 ---
+
 title: "dvilualatex-dev(1)"
 name: "dvilualatex-dev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvilualatex-dev/"
 description: "latex-dev, pdflatex-dev, xelatex-dev, lualatex-dev, dvilualatex-dev, platex-dev, uplatex-dev – release candidate LaTeX testing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> latex-dev, pdflatex-dev, xelatex-dev, lualatex-dev, dvilualatex-dev, platex-dev, uplatex-dev &#8211; release candidate LaTeX testing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latex-dev</code> [<i>first-line</i>]</p>

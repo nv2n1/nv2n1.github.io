@@ -1,4 +1,5 @@
 ---
+
 title: "mkfontscale(1)"
 name: "mkfontscale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkfontscale/"
 description: "mkfontscale – create an index of scalable font files for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mkfontscale &#8211; create an index of scalable font files for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkfontscale</code> [ <code>-b</code> ] [ <code>-s</code> ] [ <code>-o</code> <i>filename</i> ] [ <code>-x</code> <i>suffix</i> ] [ <code>-a</code> <i>encoding</i> ] &#8230; [ <code>-f</code> <i>fuzz</i> ] [ <code>-l</code> ] [ <code>-e</code> <i>directory</i> ] [ <code>-p</code> <i>prefix</i> ] [ <code>-r</code> <i>prefix</i> ] [ <code>-n</code> <i>prefix</i> ] [ <code>-u | -U</code> ] [ <code>-v</code> ] [ <code>&#8212;</code> ] [ <i>directory</i> ] &#8230;</p>

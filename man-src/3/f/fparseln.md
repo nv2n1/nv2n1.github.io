@@ -1,4 +1,5 @@
 ---
+
 title: "fparseln(3)"
 name: "fparseln"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fparseln/"
 description: "fparseln – return the next logical line from a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fparseln</code> &#8211; return the next logical line from a stream </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

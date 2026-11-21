@@ -1,4 +1,5 @@
 ---
+
 title: "cmsutil(1)"
 name: "cmsutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmsutil/"
 description: "cmsutil – Performs basic cryptograpic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmsutil &#8211; Performs basic cryptograpic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages. </p>
 <h2>SYNOPSIS</h2>
 <dl>

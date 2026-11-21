@@ -1,4 +1,5 @@
 ---
+
 title: "alpine(1)"
 name: "alpine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alpine/"
 description: "alpine – an Alternatively Licensed Program for Internet News and Email"
 ---
 
-<h2>NAME</h2>
 <p> alpine &#8211; an Alternatively Licensed Program for Internet News and Email</p>
 <h2>SYNTAX</h2>
 <p> <code>alpine</code> [ <i>options</i> ] [ <i>address</i> , <i>address</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "yapp(1)"
 name: "yapp"
 section: "1"
@@ -6,10 +7,7 @@ letter: "y"
 url: "/docs/linux/man/1-yapp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- yapp - A perl frontend to the Parse::Yapp module 
+yapp - A perl frontend to the Parse::Yapp module 
 
 <h2>SYNOPSYS</h2>
 

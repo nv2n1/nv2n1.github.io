@@ -1,4 +1,5 @@
 ---
+
 title: "sched_getaffinity(2)"
 name: "sched_getaffinity"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_getaffinity/"
 description: "sched_setaffinity, sched_getaffinity – set and get a thread’s CPU affinity mask"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_setaffinity, sched_getaffinity &#8211; set and get a thread&#8217;s CPU affinity mask </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

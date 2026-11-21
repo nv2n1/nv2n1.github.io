@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_method_pref(3)"
 name: "libssh2_session_method_pref"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_method_pref/"
 description: "libssh2_session_method_pref – set preferred key exchange method"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_method_pref &#8211; set preferred key exchange method</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

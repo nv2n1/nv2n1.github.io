@@ -1,4 +1,5 @@
 ---
+
 title: "cleanlinks(1)"
 name: "cleanlinks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cleanlinks/"
 description: "cleanlinks – remove dangling symbolic links and empty directories"
 ---
 
-<h2>NAME</h2>
 <p> cleanlinks &#8211; remove dangling symbolic links and empty directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cleanlinks</code></p>

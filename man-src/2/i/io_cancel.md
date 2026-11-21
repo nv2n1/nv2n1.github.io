@@ -1,4 +1,5 @@
 ---
+
 title: "io_cancel(2)"
 name: "io_cancel"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-io_cancel/"
 description: "io_cancel – cancel an outstanding asynchronous I/O operation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> io_cancel &#8211; cancel an outstanding asynchronous I/O operation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

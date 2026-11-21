@@ -1,4 +1,5 @@
 ---
+
 title: "aa_parseoptions(3)"
 name: "aa_parseoptions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_parseoptions/"
 description: "aa_parseoptions – parse the standard command line options used by AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_parseoptions &#8211; parse the standard command line options used by AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

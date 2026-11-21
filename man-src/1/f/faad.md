@@ -1,4 +1,5 @@
 ---
+
 title: "faad(1)"
 name: "faad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faad/"
 description: "faad — Process an Advanced Audio Codec stream"
 ---
 
-<h2>NAME</h2>
 <p> faad &#8212; Process an Advanced Audio Codec stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>faad </code> [options] [-w | -o &lt;output_filename&gt; | -a &lt;output_filename&gt;] input_filename </p>

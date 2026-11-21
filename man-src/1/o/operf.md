@@ -1,4 +1,5 @@
 ---
+
 title: "operf(1)"
 name: "operf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-operf/"
 description: "operf – Performance profiler tool for Linux"
 ---
 
-<h2>NAME</h2>
 <p> operf &#8211; Performance profiler tool for Linux </p>
 <h2>SYNOPSIS</h2>
 <p> <code>operf</code> [ <i>options</i> ] [ &#8211;system-wide | &#8211;pid &lt;pid&gt; | [ command [ args ] ] ] </p>

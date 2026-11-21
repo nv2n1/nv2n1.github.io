@@ -1,4 +1,5 @@
 ---
+
 title: "funjoin(1)"
 name: "funjoin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funjoin/"
 description: "funjoin – join two or more FITS binary tables on specified columns"
 ---
 
-<h2>NAME</h2>
 <p> <code>funjoin &#8211; join two or more FITS binary tables on specified columns</code></p>
 <h2>SYNOPSIS</h2>
 <p> funjoin [switches] &lt;ifile1&gt; &lt;ifile2&gt; &#8230; &lt;ifilen&gt; &lt;ofile&gt;</p>

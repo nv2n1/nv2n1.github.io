@@ -1,4 +1,5 @@
 ---
+
 title: "oparesolvehfiport(1)"
 name: "oparesolvehfiport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oparesolvehfiport/"
 description: "oparesolvehfiport"
 ---
 
-<h2>NAME</h2>
 <p> oparesolvehfiport </p>
 <p> <code>(Host)</code> Permits the Intel(R) Omni-Path Fabric Host Software style Intel(R) Omni-Path Host Fabric Interface (HFI) number and port number arguments to be converted to a Host Software style HFI name and physical port number.</p>
 <h2>Syntax</h2>

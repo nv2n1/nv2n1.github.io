@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_cq_ex(3)"
 name: "ibv_create_cq_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_create_cq_ex/"
 description: "ibv_create_cq_ex – create a completion queue (CQ)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_create_cq_ex &#8211; create a completion queue (CQ) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

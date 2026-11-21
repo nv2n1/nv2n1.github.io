@@ -1,4 +1,5 @@
 ---
+
 title: "getservbyport_r(3)"
 name: "getservbyport_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getservbyport_r/"
 description: "getservent_r, getservbyname_r, getservbyport_r – get service entry (reentrant)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getservent_r, getservbyname_r, getservbyport_r &#8211; get service entry (reentrant) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

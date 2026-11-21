@@ -1,4 +1,5 @@
 ---
+
 title: "expect_cryptdir(1)"
 name: "expect_cryptdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_cryptdir/"
 description: "cryptdir – encrypt/decrypt all files in a directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cryptdir &#8211; encrypt/decrypt all files in a directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cryptdir</code> [ <i>dir</i> ]<br />

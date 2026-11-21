@@ -1,4 +1,5 @@
 ---
+
 title: "latexdiff-fast(1)"
 name: "latexdiff-fast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-latexdiff-fast/"
 description: "latexdiff – determine and markup differences between two latex files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> latexdiff &#8211; determine and markup differences between two latex files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latexdiff</code> [ <font SIZE="-1"><code>OPTIONS</code></font> ] <i>old.tex</i> <i>new.tex</i> &gt; <i>diff.tex</i></p>

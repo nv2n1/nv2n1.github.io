@@ -1,4 +1,5 @@
 ---
+
 title: "amstex(1)"
 name: "amstex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amstex/"
 description: "amstex – structured text formatting and typesetting"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amstex &#8211; structured text formatting and typesetting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>amstex</code> [<i>first-line</i>]</p>

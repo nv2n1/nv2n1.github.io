@@ -1,4 +1,5 @@
 ---
+
 title: "nss_wrapper(1)"
 name: "nss_wrapper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nss_wrapper/"
 description: "nss_wrapper – A wrapper for the user, group and hosts NSS API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nss_wrapper &#8211; A wrapper for the user, group and hosts NSS API </p>
 <h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libnss_wrapper.so NSS_WRAPPER_PASSWD=/path/to/passwd NSS_WRAPPER_GROUP=/path/to/group NSS_WRAPPER_HOSTS=/path/to/host <code>./myapplication</code></p>

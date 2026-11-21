@@ -1,4 +1,5 @@
 ---
+
 title: "g_msd_d(1)"
 name: "g_msd_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_msd_d/"
 description: "g_msd – calculates mean square displacements"
 ---
 
-<h2>NAME</h2>
 <p> g_msd &#8211; calculates mean square displacements </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

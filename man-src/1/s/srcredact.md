@@ -1,4 +1,5 @@
 ---
+
 title: "srcredact(1)"
 name: "srcredact"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-srcredact/"
 description: "srcredact – a program for redaction of text files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> srcredact &#8211; a program for redaction of text files </p>
 <h2>SYNOPSIS</h2>
 <p> srcredact [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <code>-e</code> <i>audience</i> [<i>full_file</i>] </p>

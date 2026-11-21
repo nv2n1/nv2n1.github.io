@@ -1,4 +1,5 @@
 ---
+
 title: "pdfatfi(1)"
 name: "pdfatfi"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pdfatfi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pdfatfi - Help program for the LaTeX package attachfile2. 
+pdfatfi - Help program for the LaTeX package attachfile2. 
 
 <h2>SYNOPSIS</h2>
 

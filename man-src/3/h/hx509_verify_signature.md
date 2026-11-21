@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_verify_signature(3)"
 name: "hx509_verify_signature"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_verify_signature/"
 description: "hx509 crypto functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 crypto functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_verify_signature</code> (hx509_context context, const hx509_cert signer, const AlgorithmIdentifier *alg, const heim_octet_string *data, const heim_octet_string *sig) </p>

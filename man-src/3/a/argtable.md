@@ -1,4 +1,5 @@
 ---
+
 title: "argtable(3)"
 name: "argtable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-argtable/"
 description: "argtable2 – an ANSI C library for parsing GNU style command line options"
 ---
 
-<h2>NAME</h2>
 <p> argtable2 &#8211; an ANSI C library for parsing GNU style command line options</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

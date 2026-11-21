@@ -1,4 +1,5 @@
 ---
+
 title: "sgbtf2(3)"
 name: "sgbtf2"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sgbtf2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sgbtf2.f - 
+sgbtf2.f - 
 
 <h2>SYNOPSIS</h2>
 

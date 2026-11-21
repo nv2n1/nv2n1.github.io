@@ -1,4 +1,5 @@
 ---
+
 title: "addwords(1)"
 name: "addwords"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-addwords/"
 description: "addwords – Adding words to specified dictionary collectively"
 ---
 
-<h2>NAME</h2>
 <p> addwords &#8211; Adding words to specified dictionary collectively</p>
 <h2>SYNOPSIS</h2>
 <p> <code>addwords [{-cs|-cannaserver} </code><i>cannaserver</i>][-l <i>file</i>] dicname</p>

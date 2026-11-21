@@ -1,4 +1,5 @@
 ---
+
 title: "sshfs(1)"
 name: "sshfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sshfs/"
 description: "SSHFS – filesystem client based on ssh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> SSHFS &#8211; filesystem client based on ssh </p>
 <h2>SYNOPSIS</h2>
 <h3>mounting</h3>

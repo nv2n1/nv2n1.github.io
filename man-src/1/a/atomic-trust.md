@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-trust(1)"
 name: "atomic-trust"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-trust/"
 description: "atomic-trust – Manage system container trust policy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-trust &#8211; Manage system container trust policy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic trust add|delete|default|reset|show</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-j</code>|<code>&#8211;json</code>] [<code>&#8211;raw</code>] [<code>-k</code>|<code>&#8211;pubkeys</code> KEY1 [<code>-k</code>|<code>&#8211;pubkeys</code> KEY2,&#8230;]] [<code>-f</code>|<code>&#8211;pubkeysfile</code> KEY1 [<code>f</code>|<code>&#8211;pubkeysfile</code> KEY2,&#8230;]] [<code>&#8211;keytype</code> GPGKeys] [<code>-t</code>|<code>&#8211;type</code> signedBy|insecureAcceptAnything|reject] [<code>-s</code>|<code>&#8211;sigstore</code> &lt;<a rel="nofollow" href="https://URL[:PORT][/PATH]|file:///PATH">https://URL[:PORT][/PATH]|file:///PATH</a>&gt;] [<code>&#8211;sigstoretype</code> web|atomic|local] REGISTRY[/REPOSITORY] </p>

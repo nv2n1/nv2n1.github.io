@@ -1,4 +1,5 @@
 ---
+
 title: "expand_number(3)"
 name: "expand_number"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expand_number/"
 description: "expand_number – format a number from human readable form"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>expand_number</code> &#8211; format a number from human readable form </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

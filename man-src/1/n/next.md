@@ -1,4 +1,5 @@
 ---
+
 title: "next(1)"
 name: "next"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-next/"
 description: "next – show the next message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> next &#8211; show the next message </p>
 <h2>SYNOPSIS</h2>
 <dl>

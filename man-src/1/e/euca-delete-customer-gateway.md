@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-customer-gateway(1)"
 name: "euca-delete-customer-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-customer-gateway/"
 description: "euca-delete-customer-gateway – Delete a VPN customer gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-customer-gateway &#8211; Delete a VPN customer gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-customer-gateway [&#8211;show-empty-fields] [-U URL]</p>

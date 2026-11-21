@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_last_error(3)"
 name: "libssh2_sftp_last_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_last_error/"
 description: "libssh2_sftp_last_error – return the last SFTP-specific error code"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_last_error &#8211; return the last SFTP-specific error code</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "razor-admin(1)"
 name: "razor-admin"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-razor-admin/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- &quot;razor-admin&quot; - Razor Registering Agent 
+&quot;razor-admin&quot; - Razor Registering Agent 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "acl_dup(3)"
 name: "acl_dup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_dup/"
 description: "acl_dup – duplicate an ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_dup</code> &#8211; duplicate an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

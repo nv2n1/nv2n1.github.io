@@ -1,4 +1,5 @@
 ---
+
 title: "caveats(3)"
 name: "caveats"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-caveats/"
 description: "caveats – Caveats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> caveats &#8211; Caveats<br />
 &nbsp;<wbr></p>
 <dl>

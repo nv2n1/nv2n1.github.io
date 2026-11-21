@@ -1,4 +1,5 @@
 ---
+
 title: "geta(3)"
 name: "geta"
 section: "3"
@@ -6,9 +7,6 @@ letter: "g"
 url: "/docs/linux/man/3-geta/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> getr, getg, getb, geta &#8211; Extract a color component from the current pixel format. Allegro game programming library.  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

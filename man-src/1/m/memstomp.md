@@ -1,4 +1,5 @@
 ---
+
 title: "memstomp(1)"
 name: "memstomp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memstomp/"
 description: "memstomp – detect function calls with overlapping memory regions"
 ---
 
-<h2>NAME</h2>
 <p> memstomp &#8211; detect function calls with overlapping memory regions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>memstomp</code> [<code>-dk</code>] <i>application</i> [<i>argument</i>&#8230;] </p>

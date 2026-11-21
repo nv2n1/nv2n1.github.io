@@ -1,4 +1,5 @@
 ---
+
 title: "ppdep(1)"
 name: "ppdep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppdep/"
 description: "ppdep – The FPC Pascal unit dependency tracking program."
 ---
 
-<h2>NAME</h2>
 <p> ppdep &#8211; The FPC Pascal unit dependency tracking program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppdep</code> [-DDefine] [-oFile] [-eext] [-V] [-h] [A[call]] file </p>

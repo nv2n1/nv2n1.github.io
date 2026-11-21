@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_int64(3)"
 name: "bson_append_int64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_int64/"
 description: "bson_append_int64() – The bson_append_int64() function shall append a new element to bson containing a 64-bit signed integer."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_int64() &#8211; The bson_append_int64() function shall append a new element to bson containing a 64-bit signed integer.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

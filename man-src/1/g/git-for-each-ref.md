@@ -1,4 +1,5 @@
 ---
+
 title: "git-for-each-ref(1)"
 name: "git-for-each-ref"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-for-each-ref/"
 description: "git-for-each-ref – Output information on each ref"
 ---
-<h2 class="name">NAME</h2>
+
 <p> git-for-each-ref - Output information on each ref </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

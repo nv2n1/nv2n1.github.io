@@ -1,4 +1,5 @@
 ---
+
 title: "gcdmaster(1)"
 name: "gcdmaster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcdmaster/"
 description: "gcdmaster – Graphical front end to cdrdao for composing audio CDs"
 ---
 
-<h2>NAME</h2>
 <p> gcdmaster &#8211; Graphical front end to cdrdao for composing audio CDs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcdmaster</code> [<i>toc-file</i>]</p>

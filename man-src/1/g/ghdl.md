@@ -1,4 +1,5 @@
 ---
+
 title: "ghdl(1)"
 name: "ghdl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ghdl/"
 description: "ghdl – VHDL compiler/simulator"
 ---
 
-<h2>NAME</h2>
 <p> ghdl &#8211; VHDL compiler/simulator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ghdl</code> [<i>command</i>]<i> </i>[<i>options</i>]<i> files</i>&#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fltk(3)"
 name: "fltk"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fltk/"
 ---
 
-<h2>NAME</h2>
-
- fltk - the fast light tool kit 
+fltk - the fast light tool kit 
 
 <h2>SYNOPSIS</h2>
 

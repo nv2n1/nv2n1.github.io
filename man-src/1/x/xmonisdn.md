@@ -1,4 +1,5 @@
 ---
+
 title: "xmonisdn(1)"
 name: "xmonisdn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmonisdn/"
 description: "xmonisdn – monitor for ISDN network"
 ---
 
-<h2>NAME</h2>
 <p> xmonisdn &#8211; monitor for ISDN network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmonisdn</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ <i>-option</i> &#8230; ]</p>

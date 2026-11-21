@@ -1,4 +1,5 @@
 ---
+
 title: "funcen(1)"
 name: "funcen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funcen/"
 description: "funcen – find centroid (for binary tables)"
 ---
 
-<h2>NAME</h2>
 <p> <code>funcen &#8211; find centroid (for binary tables)</code></p>
 <h2>SYNOPSIS</h2>
 <p> funcen [-i] [-n iter] [-t tol] [-v lev] &lt;iname&gt; &lt;region&gt;</p>

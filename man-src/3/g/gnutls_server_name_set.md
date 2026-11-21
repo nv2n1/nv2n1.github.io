@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_server_name_set(3)"
 name: "gnutls_server_name_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_server_name_set/"
 description: "gnutls_server_name_set – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_server_name_set &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tarsnap-recrypt(1)"
 name: "tarsnap-recrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tarsnap-recrypt/"
 description: "tarsnap-recrypt – re-encrypts data stored using tarsnap(1)."
 ---
 
-<h2>NAME</h2>
 <p> <code>tarsnap-recrypt</code> &#8211; re-encrypts data stored using <a href="/docs/linux/man/1-tarsnap/">tarsnap</a>(1).</p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>-oldkey </code><i>old-key-file</i> &#8211;<code>-oldcachedir </code><i>old-cache-dir</i> &#8211;<code>-newkey </code><i>new-key-file</i> &#8211;<code>-newcachedir </code><i>new-cache-dir</i></p>

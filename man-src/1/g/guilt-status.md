@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-status(1)"
 name: "guilt-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-status/"
 description: "guilt-status – Print the status of files since the last refresh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-status &#8211; Print the status of files since the last refresh </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-status</i> [-a|-A] [-c|-C] [-d|-D] [-m|-M] [-r|-R] [-t|-T] [-u|-U] [-x|-X] [-n]</p>

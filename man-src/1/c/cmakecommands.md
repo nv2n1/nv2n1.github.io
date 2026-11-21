@@ -1,4 +1,5 @@
 ---
+
 title: "cmakecommands(1)"
 name: "cmakecommands"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmakecommands/"
 description: "cmakecommands – Reference of available CMake commands."
 ---
 
-<h2>NAME</h2>
 <p> cmakecommands &#8211; Reference of available CMake commands. </p>
 <h2>COMMANDS</h2>
 <dl>

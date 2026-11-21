@@ -1,4 +1,5 @@
 ---
+
 title: "dmp(1)"
 name: "dmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmp/"
 description: "dmp – translate Troff output to low-level MetaPost input"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dmp &#8211; translate Troff output to low-level MetaPost input </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmp</code> [<i>option</i>] <i>ditrofffile</i> [<i>mpxfile</i>]</p>

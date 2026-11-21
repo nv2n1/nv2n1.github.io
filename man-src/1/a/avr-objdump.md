@@ -1,4 +1,5 @@
 ---
+
 title: "avr-objdump(1)"
 name: "avr-objdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avr-objdump/"
 description: "objdump – display information from object files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> objdump &#8211; display information from object files. </p>
 <h2>SYNOPSIS</h2>
 <p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />

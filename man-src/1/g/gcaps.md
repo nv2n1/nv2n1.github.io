@@ -1,4 +1,5 @@
 ---
+
 title: "gcaps(1)"
 name: "gcaps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcaps/"
 description: "gcaps – report available graphcaps"
 ---
 
-<h2>NAME</h2>
 <p> gcaps &#8211; report available graphcaps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcaps</code> [ <code>-V</code> ]</p>

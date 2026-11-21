@@ -1,4 +1,5 @@
 ---
+
 title: "anxinfo(1)"
 name: "anxinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anxinfo/"
 description: "anxinfo — Display information about annodexed media"
 ---
 
-<h2>NAME</h2>
 <p> anxinfo &#8212; Display information about annodexed media<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

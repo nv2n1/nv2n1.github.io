@@ -1,4 +1,5 @@
 ---
+
 title: "smokeping_cgi(1)"
 name: "smokeping_cgi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smokeping_cgi/"
 description: "smokeping_cgi – SmokePing webfrontend"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smokeping_cgi &#8211; SmokePing webfrontend </p>
 <h2>OVERVIEW</h2>
 <p> This script acts as a &#8216;website&#8217; for your SmokePing monitoring operation. It presents the targets you are looking at in a tree structure and draws graphs as they are required by people looking at the pages.</p>

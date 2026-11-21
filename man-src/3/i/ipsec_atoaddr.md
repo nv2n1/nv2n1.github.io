@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_atoaddr(3)"
 name: "ipsec_atoaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_atoaddr/"
 description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa – convert Internet addresses and Subnet masks to and from ASCII"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa &#8211; convert Internet addresses and Subnet masks to and from ASCII</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

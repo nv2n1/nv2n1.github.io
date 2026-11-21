@@ -1,4 +1,5 @@
 ---
+
 title: "claqhe(3)"
 name: "claqhe"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqhe/"
 description: "claqhe.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claqhe.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

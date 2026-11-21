@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-delete(1)"
 name: "wimlib-imagex-delete"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-delete/"
 description: "wimlib-imagex-delete – Delete an image from a WIM archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-delete &#8211; Delete an image from a WIM archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex delete</code> <i>WIMFILE</i> <i>IMAGE</i> [<i>OPTION</i>&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-all(1)"
 name: "sphinx-all"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphinx-all/"
 description: "sphinx-all – Sphinx documentation generator system manual"
 ---
 
-<h2>NAME</h2>
 <p> sphinx-all &#8211; Sphinx documentation generator system manual</p>
 <h2>INTRODUCTION</h2>
 <p> This is the documentation for the Sphinx documentation builder. Sphinx is a tool that translates a set of <i>reStructuredText</i> source files into various output formats, automatically producing cross-references, indices etc. That is, if you have a directory containing a bunch of reST-formatted documents (and possibly subdirectories of docs in there as well), Sphinx can generate a nicely-organized arrangement of HTML files (in some other directory) for easy browsing and navigation. But from the same source, it can also generate a LaTeX file that you can compile into a PDF version of the documents, or a PDF file directly using <i>rst2pdf</i>. </p>

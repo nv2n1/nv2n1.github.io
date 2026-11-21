@@ -1,4 +1,5 @@
 ---
+
 title: "nessus(1)"
 name: "nessus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nessus/"
 description: "nessus – The client part of the Nessus Security Scanner"
 ---
 
-<h2>NAME</h2>
 <p> nessus &#8211; The client part of the Nessus Security Scanner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nessus [-v] [-h] [-n] [-T</code> <i>&lt;type&gt;</i><code>]&nbsp;<wbr>[-q&nbsp;<wbr>[-pPS]&nbsp;<wbr></code><i>host port user password targets results</i><code>]</code> <code>nessus -i in.[nsr|nbe] -o out.[html|xml|nsr|nbe]</code> </p>

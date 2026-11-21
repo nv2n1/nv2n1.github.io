@@ -1,4 +1,5 @@
 ---
+
 title: "acroread(1)"
 name: "acroread"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acroread/"
 description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window System."
 ---
 
-<h2>NAME</h2>
 <p> acroread &#8211; Adobe PDF Viewer for viewing PDF files on X Window System. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acroread</code> [<i>OPTIONS</i>] [<i>file</i>] </p>

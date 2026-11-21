@@ -1,4 +1,5 @@
 ---
+
 title: "minmax(1)"
 name: "minmax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-minmax/"
 description: "minmax – Find extreme values in data tables"
 ---
 
-<h2>NAME</h2>
 <p> minmax &#8211; Find extreme values in data tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>minmax</code> [ <i>files</i>] [ <code>-C</code> ] [ <code>-EL</code>|<code>l</code>|<code>H</code>|<code>h</code><i>col</i> ] [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-I</code>[<code>p</code>]<i>dx</i>[/<i>dy</i>[/<i>dz</i>&#8230;] ] [ <code>-S</code>[<code>x</code>][<code>y</code>] ] [ <code>-T</code><i>dz</i>[/<i>col</i>] ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ <code>-bi</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> ] [ <code>-m</code>[<code>i</code>|<code>o</code>][<i>flag</i>] ]</p>

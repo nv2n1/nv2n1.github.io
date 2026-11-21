@@ -1,4 +1,5 @@
 ---
+
 title: "setpriv(1)"
 name: "setpriv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setpriv/"
 description: "setpriv – run a program with different Linux privilege settings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setpriv &#8211; run a program with different Linux privilege settings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setpriv</code> [options] <i>program</i> [<i>arguments</i>]</p>

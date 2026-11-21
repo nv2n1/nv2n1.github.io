@@ -1,4 +1,5 @@
 ---
+
 title: "pmdajbd2(1)"
 name: "pmdajbd2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdajbd2/"
 description: "pmdajbd2 – journal block device (JBD) performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdajbd2</code> &#8211; journal block device (JBD) performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/jbd2/pmdajbd2</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-j</code> <i>path</i>] [<code>-U</code> <i>username</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "source-highlight-settings(1)"
 name: "source-highlight-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-source-highlight-settings/"
 description: "Source-highlight-settings – utility that can be used to write a configuration file for GNU Source-highlight (and its library)"
 ---
 
-<h2>NAME</h2>
 <p> Source-highlight-settings &#8211; utility that can be used to write a configuration file for GNU Source-highlight (and its library)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>source-highlight-settings</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_set_mode(3)"
 name: "ipq_set_mode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipq_set_mode/"
 description: "ipq_set_mode — set the ip_queue queuing mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipq_set_mode &#8212; set the ip_queue queuing mode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "sox(1)"
 name: "sox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sox/"
 description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation"
 ---
 
-<h2>NAME</h2>
 <p> SoX &#8211; Sound eXchange, the Swiss Army knife of audio manipulation</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

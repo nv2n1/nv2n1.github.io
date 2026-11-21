@@ -1,4 +1,5 @@
 ---
+
 title: "memmove(3)"
 name: "memmove"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memmove/"
 description: "memmove – copy memory area"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memmove &#8211; copy memory area </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

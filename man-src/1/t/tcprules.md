@@ -1,4 +1,5 @@
 ---
+
 title: "tcprules(1)"
 name: "tcprules"
 section: "1"
@@ -6,7 +7,6 @@ letter: "t"
 url: "/docs/linux/man/1-tcprules/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcprules</code> [<code>OPTIONS</code>] &lt;rules.cdb&gt; &lt;rules.tmp&gt;</dt>
 <dd>

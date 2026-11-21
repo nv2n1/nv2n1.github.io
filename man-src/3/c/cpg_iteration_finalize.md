@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_iteration_finalize(3)"
 name: "cpg_iteration_finalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_iteration_finalize/"
 description: "cpg_iteration_finalize – Finalize iterator for members of CPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpg_iteration_finalize &#8211; Finalize iterator for members of CPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

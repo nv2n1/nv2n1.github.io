@@ -1,4 +1,5 @@
 ---
+
 title: "jove(1)"
 name: "jove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jove/"
 description: "jove – an interactive display-oriented text editor"
 ---
 
-<h2>NAME</h2>
 <p> jove &#8211; an interactive display-oriented text editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jove</code> [ <code>-d</code><i>&nbsp;<wbr>directory</i> ] [ <code>-l</code><i>&nbsp;<wbr>libdir</i> ] [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ] [ <code>-ls</code><i>&nbsp;<wbr>bothdir</i> ] [ <code>-J</code> ] [ <code>-j</code> ] [ <code>-w</code><i>n</i> ] [ <code>-t</code><i>&nbsp;<wbr>tag</i> ] [ <code>+</code><i>n file</i> ] [ <code>+/</code><i>pattern file</i> ] [ <code>-p</code><i>&nbsp;<wbr>file</i> ] [ <i>file</i>&#8230; ]<br />

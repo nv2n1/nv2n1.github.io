@@ -1,4 +1,5 @@
 ---
+
 title: "exmouse(3)"
 name: "exmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exmouse/"
 description: "exmouse – Getting input from the mouse. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exmouse &#8211; Getting input from the mouse. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

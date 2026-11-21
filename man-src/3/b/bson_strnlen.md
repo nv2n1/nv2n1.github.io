@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strnlen(3)"
 name: "bson_strnlen"
 section: "3"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_strnlen/"
 description: "bson_strnlen() – A portable version of strnlen()."
 ---
-<h2>NAME</h2>
+
 <p> bson_strnlen() - A portable version of strnlen().  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>size_t

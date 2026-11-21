@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-addresses(1)"
 name: "pilot-addresses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-addresses/"
 description: "pilot-addresses – Read and write address book databases to and from a Palm handheld."
 ---
 
-<h2>NAME</h2>
 <p> pilot-addresses &#8211; Read and write address book databases to and from a Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

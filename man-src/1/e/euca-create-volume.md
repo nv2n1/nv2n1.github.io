@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-volume(1)"
 name: "euca-create-volume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-volume/"
 description: "euca-create-volume – Create a new volume"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-volume &#8211; Create a new volume</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-volume <code>-z</code> ZONE [-s GiB] [&#8211;snapshot SNAPSHOT] [-t VOLTYPE]</p>

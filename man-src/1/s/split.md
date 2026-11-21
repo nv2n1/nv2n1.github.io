@@ -1,4 +1,5 @@
 ---
+
 title: "split(1)"
 name: "split"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-split/"
 description: "split – split a file into pieces"
 ---
-<h2 class="name">NAME</h2>
+
 <p> split - split a file into pieces </p>
 <h2>SYNOPSIS</h2>
 <p> <code>split</code> [<i>,OPTION/</i>]... [<i>,FILE /</i>[<i>,PREFIX/</i>]]  </p>

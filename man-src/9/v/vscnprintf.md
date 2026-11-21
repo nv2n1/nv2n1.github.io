@@ -1,4 +1,5 @@
 ---
+
 title: "vscnprintf(9)"
 name: "vscnprintf"
 section: "9"
@@ -6,8 +7,9 @@ letter: "v"
 url: "/docs/linux/man/9-vscnprintf/"
 description: "vscnprintf – Format a string and place it in a buffer"
 ---
+
 <p>vscnprintf &#8211; Format a string and place it in a buffer </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>int vscnprintf(char&nbsp;<wbr>*&nbsp;<wbr></code><i>buf</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>, const char&nbsp;<wbr>*&nbsp;<wbr></code><i>fmt</i><code>, va_list&nbsp;<wbr></code><i>args</i><code>);</code></dt>
 </dl>

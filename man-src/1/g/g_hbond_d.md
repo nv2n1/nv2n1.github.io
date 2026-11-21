@@ -1,4 +1,5 @@
 ---
+
 title: "g_hbond_d(1)"
 name: "g_hbond_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_hbond_d/"
 description: "g_hbond – computes and analyzes hydrogen bonds"
 ---
 
-<h2>NAME</h2>
 <p> g_hbond &#8211; computes and analyzes hydrogen bonds </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

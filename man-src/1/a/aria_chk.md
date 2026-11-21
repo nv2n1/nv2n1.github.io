@@ -1,4 +1,5 @@
 ---
+
 title: "aria_chk(1)"
 name: "aria_chk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aria_chk/"
 description: "aria_chk – Aria table-maintenance utility"
 ---
 
-<h2>NAME</h2>
 <p> aria_chk &#8211; Aria table-maintenance utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aria_chk</code> [<i>OPTIONS</i>] <i>tables</i>[<i>.MAI</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_rollback(3)"
 name: "bson_writer_rollback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_rollback/"
 description: "bson_writer_rollback() – Abort the appending of the current bson_t to the memory region managed by writer. This is useful if you detected that you went past a particular memory limit. For example, ..."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_rollback() &#8211; Abort the appending of the current bson_t to the memory region managed by writer. This is useful if you detected that you went past a particular memory limit. For example, MongoDB has 48MB message limits.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

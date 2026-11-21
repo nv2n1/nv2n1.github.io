@@ -1,4 +1,5 @@
 ---
+
 title: "wxcas(1)"
 name: "wxcas"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wxcas/"
 description: "wxcas – wx c aMule statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wxcas &#8211; wx c aMule statistics </p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>

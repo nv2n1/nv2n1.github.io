@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_local_get(3)"
 name: "cpg_local_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_local_get/"
 description: "cpg_local_get – Returns the local node id"
 ---
 
-<h2>NAME</h2>
 <p> cpg_local_get &#8211; Returns the local node id</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

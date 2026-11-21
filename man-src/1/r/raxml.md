@@ -1,4 +1,5 @@
 ---
+
 title: "raxml(1)"
 name: "raxml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-raxml/"
 description: "raxml – convert argus(8) data to XML."
 ---
 
-<h2>NAME</h2>
 <p> <code>raxml</code> &#8211; convert <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data to XML.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>

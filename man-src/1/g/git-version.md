@@ -1,4 +1,5 @@
 ---
+
 title: "git-version(1)"
 name: "git-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-version/"
 description: "git-version – Display version information about Git"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-version &#8211; Display version information about Git </p>
 <h2>SYNOPSIS</h2>
 <pre>

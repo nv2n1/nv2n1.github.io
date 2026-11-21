@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_trust_list(3)"
 name: "gnutls_certificate_set_trust_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_set_trust_list/"
 description: "gnutls_certificate_set_trust_list – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_set_trust_list &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>

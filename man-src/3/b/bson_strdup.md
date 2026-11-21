@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strdup(3)"
 name: "bson_strdup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_strdup/"
 description: "bson_strdup() – Copies str into a new string. If str is NULL, then NULL is returned."
 ---
 
-<h2>NAME</h2>
 <p> bson_strdup() &#8211; Copies str into a new string. If str is NULL, then NULL is returned.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

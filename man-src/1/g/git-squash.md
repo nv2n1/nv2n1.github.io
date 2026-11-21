@@ -1,4 +1,5 @@
 ---
+
 title: "git-squash(1)"
 name: "git-squash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-squash/"
 description: "git-squash – Import changes from a branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-squash</code> &#8211; Import changes from a branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-squash</code> &lt;source-branch|commit ref&gt; [&lt;commit-message&gt;]</p>

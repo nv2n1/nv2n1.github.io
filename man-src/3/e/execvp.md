@@ -1,4 +1,5 @@
 ---
+
 title: "execvp(3)"
 name: "execvp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-execvp/"
 description: "execl, execlp, execle, execv, execvp, execvpe – execute a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> execl, execlp, execle, execv, execvp, execvpe &#8211; execute a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "destroy_scene(3)"
 name: "destroy_scene"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-destroy_scene/"
 description: "destroy_scene – Deallocates the memory used by a scene. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> destroy_scene &#8211; Deallocates the memory used by a scene. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

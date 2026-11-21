@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_unlink_ex(3)"
 name: "libssh2_sftp_unlink_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_unlink_ex/"
 description: "libssh2_sftp_unlink_ex – unlink an SFTP file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_unlink_ex &#8211; unlink an SFTP file</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>

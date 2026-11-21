@@ -1,4 +1,5 @@
 ---
+
 title: "rst2s5(1)"
 name: "rst2s5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rst2s5/"
 description: "rst2s5 – convert reST documents to S5 slides"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rst2s5 &#8211; convert reST documents to S5 slides </p>
 <h2>SYNOPSIS</h2>
 <p> rst2s5 [options] [&lt;source&gt; [&lt;destination&gt;]]</p>

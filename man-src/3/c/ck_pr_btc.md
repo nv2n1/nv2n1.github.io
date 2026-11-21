@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_btc(3)"
 name: "ck_pr_btc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_btc/"
 description: "ck_pr_btc_ptr ck_pr_btc_uint ck_pr_btc_int ck_pr_btc_64 ck_pr_btc_32 ck_pr_btc_16 – atomic bit test-and-complement operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_btc_ptr</code> <code>ck_pr_btc_uint</code> <code>ck_pr_btc_int</code> <code>ck_pr_btc_64</code> <code>ck_pr_btc_32</code> <code>ck_pr_btc_16</code> &#8211; atomic bit test-and-complement operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

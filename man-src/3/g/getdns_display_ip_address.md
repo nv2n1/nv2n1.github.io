@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_display_ip_address(3)"
 name: "getdns_display_ip_address"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_display_ip_address/"
 description: "getdns_display_ip_address — convert an getdns ip address to string"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_display_ip_address</code> &#8212; convert an getdns ip address to string </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

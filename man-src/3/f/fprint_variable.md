@@ -1,4 +1,5 @@
 ---
+
 title: "fprint_variable(3)"
 name: "fprint_variable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fprint_variable/"
 description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_var, snmp_clone_varbind, snmp_set_var_objid, snmp_set_var_value, snmp_set_var_typed_value, snmp_set_var_typed_integer, print_variable..."
 ---
 
-<h2>NAME</h2>
 <p> snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_var, snmp_clone_varbind, snmp_set_var_objid, snmp_set_var_value, snmp_set_var_typed_value, snmp_set_var_typed_integer, print_variable, fprint_variable, snprint_variable, print_value, fprint_value, snprint_value, snmp_free_var, snmp_free_varbind &#8211; netsnmp_varbind_api functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/varbind_api.h&gt;</code></p>

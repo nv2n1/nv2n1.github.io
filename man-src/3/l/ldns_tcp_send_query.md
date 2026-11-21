@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_tcp_send_query(3)"
 name: "ldns_tcp_send_query"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_tcp_send_query/"
 description: "ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect"
 ---
 
-<h2>NAME</h2>
 <p> ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

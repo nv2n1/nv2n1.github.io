@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-auto-scaling-groups(1)"
 name: "euscale-describe-auto-scaling-groups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-auto-scaling-groups/"
 description: "euscale-describe-auto-scaling-groups – Describe auto-scaling groups"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-auto-scaling-groups &#8211; Describe auto-scaling groups</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-auto-scaling-groups [&#8211;show-long]</p>

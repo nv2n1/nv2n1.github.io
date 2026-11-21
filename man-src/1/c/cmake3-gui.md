@@ -1,4 +1,5 @@
 ---
+
 title: "cmake3-gui(1)"
 name: "cmake3-gui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmake3-gui/"
 description: "cmake-gui – CMake GUI Command-Line Reference"
 ---
 
-<h2>NAME</h2>
 <p> cmake-gui &#8211; CMake GUI Command-Line Reference</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

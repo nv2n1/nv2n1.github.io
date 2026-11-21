@@ -1,4 +1,5 @@
 ---
+
 title: "g_sgangle(1)"
 name: "g_sgangle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sgangle/"
 description: "g_sgangle – computes the angle and distance between two groups"
 ---
 
-<h2>NAME</h2>
 <p> g_sgangle &#8211; computes the angle and distance between two groups </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

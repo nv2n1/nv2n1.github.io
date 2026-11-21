@@ -1,4 +1,5 @@
 ---
+
 title: "dtrace(1)"
 name: "dtrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dtrace/"
 description: "dtrace – Dtrace compatible user application static probe generation tool."
 ---
 
-<h2>NAME</h2>
 <p> dtrace &#8211; Dtrace compatible user application static probe generation tool. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dtrace -s </code><i>file</i> [<code>OPTIONS</code>] </p>

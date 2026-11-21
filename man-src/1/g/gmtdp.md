@@ -1,4 +1,5 @@
 ---
+
 title: "gmtdp(1)"
 name: "gmtdp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtdp/"
 description: "gmtdp – Line reduction using the Douglas-Peucker algorithm"
 ---
 
-<h2>NAME</h2>
 <p> gmtdp &#8211; Line reduction using the Douglas-Peucker algorithm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtdp</code> <i>infiles</i> <code>-T</code><i>tolerance</i> [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-V</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ <code>-b</code>[<code>i</code>|<code>o</code>][<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-m</code>[<code>i</code>|<code>o</code>][<i>flag</i>] ]</p>

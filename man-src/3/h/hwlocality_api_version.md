@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_api_version(3)"
 name: "hwlocality_api_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_api_version/"
 description: "hwlocality_api_version – API version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_api_version &#8211; API version </p>
 <h3>Macros</h3>
 <p> #define <code>HWLOC_API_VERSION</code> 0x00010b00 </p>

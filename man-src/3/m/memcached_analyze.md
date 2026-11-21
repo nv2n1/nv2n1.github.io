@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_analyze(3)"
 name: "memcached_analyze"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_analyze/"
 description: "memcached_analyze – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_analyze &#8211; libmemcached Documentation </p>
 <p> Analyze server information</p>
 <h2>SYNOPSIS</h2>

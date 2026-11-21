@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_cs_init(3)"
 name: "cgi_cs_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_cs_init/"
 description: "cgi_cs_init – initialize CS parser with the CGI defaults"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_cs_init &#8211; initialize CS parser with the CGI defaults </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

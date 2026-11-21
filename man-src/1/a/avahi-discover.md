@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-discover(1)"
 name: "avahi-discover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avahi-discover/"
 description: "avahi-discover – Browse for mDNS/DNS-SD services using the Avahi daemon"
 ---
 
-<h2>NAME</h2>
 <p> avahi-discover &#8211; Browse for mDNS/DNS-SD services using the Avahi daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-discover </code></p>

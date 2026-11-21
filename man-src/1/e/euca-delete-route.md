@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-route(1)"
 name: "euca-delete-route"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-route/"
 description: "euca-delete-route – Delete a route from a VPC route table"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-route &#8211; Delete a route from a VPC route table</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-route <code>-r</code> DESTINATIONCIDRBLOCK [&#8211;show-empty-fields]</p>

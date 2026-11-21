@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupdelpolicy(1)"
 name: "euare-groupdelpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupdelpolicy/"
 description: "euare-groupdelpolicy – Remove a policy from a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupdelpolicy &#8211; Remove a policy from a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupdelpolicy <code>-p</code> POLICY [&#8211;as-account ACCOUNT] [-U URL]</p>

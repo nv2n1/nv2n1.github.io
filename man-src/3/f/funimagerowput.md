@@ -1,4 +1,5 @@
 ---
+
 title: "funimagerowput(3)"
 name: "funimagerowput"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funimagerowput/"
 description: "FunImageRowPut – put row(s) of an image"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunImageRowPut &#8211; put row(s) of an image</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "riostream(1)"
 name: "riostream"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-riostream/"
 ---
 
-<h2>NAME</h2>
-
- riostream - zero-copy streaming over RDMA ping-pong test.
+riostream - zero-copy streaming over RDMA ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

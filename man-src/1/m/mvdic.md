@@ -1,4 +1,5 @@
 ---
+
 title: "mvdic(1)"
 name: "mvdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mvdic/"
 description: "mvdic – Tool for renaming a user dictionary"
 ---
 
-<h2>NAME</h2>
 <p> mvdic &#8211; Tool for renaming a user dictionary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mvdic [{-cs|-cannaserver} </code><i>canna-server</i>] <i>from-dic</i> <i>to-dic</i></p>

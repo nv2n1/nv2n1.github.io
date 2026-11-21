@@ -1,4 +1,5 @@
 ---
+
 title: "needs-restarting(1)"
 name: "needs-restarting"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-needs-restarting/"
 description: "needs-restarting – report running processes that have been updated"
 ---
 
-<h2>NAME</h2>
 <p> needs-restarting &#8211; report running processes that have been updated</p>
 <h2>SYNOPSIS</h2>
 <p> <code>needs-restarting</code> [options]</p>

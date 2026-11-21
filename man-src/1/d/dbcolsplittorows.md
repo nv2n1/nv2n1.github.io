@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolsplittorows(1)"
 name: "dbcolsplittorows"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolsplittorows/"
 description: "dbcolsplittorows – split an existing column into multiple new rows"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolsplittorows &#8211; split an existing column into multiple new rows </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolsplittorows [-C ElementSeperator] [-e null] [-E] [-N enumerated-name] column [column&#8230;]</p>

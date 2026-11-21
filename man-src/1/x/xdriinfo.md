@@ -1,4 +1,5 @@
 ---
+
 title: "xdriinfo(1)"
 name: "xdriinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdriinfo/"
 description: "xdriinfo – query configuration information of DRI drivers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdriinfo &#8211; query configuration information of DRI drivers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdriinfo</code> [-display <i>displayname</i>] [-version] [command]</p>

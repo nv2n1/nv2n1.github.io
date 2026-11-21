@@ -1,4 +1,5 @@
 ---
+
 title: "drawtiming(1)"
 name: "drawtiming"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-drawtiming/"
 description: "drawtiming – generate timing diagram from signal description"
 ---
 
-<h2>NAME</h2>
 <p> <code>drawtiming</code> &#8211; generate timing diagram from signal description</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>-verbose</code> ] [-<code>-scale </code><i>factor</i> ] [-<code>-pagesize </code><i>WxH</i> ] [-<code>-aspect</code> ] [-<code>-cell-height </code><i>H</i> ] [-<code>-cell-width </code><i>W</i> ] [-<code>-font-size </code><i>pts</i> ] [-<code>-line-width </code><i>W</i> ] &#8211;<code>-output </code><i>target</i> <i>file &#8230;</i></p>

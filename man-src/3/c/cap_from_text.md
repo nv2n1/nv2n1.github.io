@@ -1,4 +1,5 @@
 ---
+
 title: "cap_from_text(3)"
 name: "cap_from_text"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_from_text/"
 description: "cap_from_text, cap_to_text, cap_to_name, cap_from_name – capability state textual representation translation"
 ---
 
-<h2>NAME</h2>
 <p> cap_from_text, cap_to_text, cap_to_name, cap_from_name &#8211; capability state textual representation translation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>

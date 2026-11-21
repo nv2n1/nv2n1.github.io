@@ -1,4 +1,5 @@
 ---
+
 title: "fixnt(1)"
 name: "fixnt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixnt/"
 description: "fixnt – Filter for the Windows NT postscript printer driver."
 ---
 
-<h2 class="name">NAME</h2>
 <p> fixnt &#8211; Filter for the Windows NT postscript printer driver. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixnt </code> &lt; <i>BADFILE.ps </i> &gt; <i>GOODFILE.ps</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncks(1)"
 name: "ncks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncks/"
 description: "ncks – netCDF Kitchen Sink"
 ---
 
-<h2>NAME</h2>
 <p> ncks &#8211; netCDF Kitchen Sink</p>
 <h2>SYNTAX</h2>
 <p> ncks [-3] [-4] [-5] [-6] [-7] [-A] [-a] [-b <i>bnr_fl]</i> [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c] [&#8211;cdl] [&#8211;cnk_byt <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>] [-D dbg_lvl] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>]]] [-F] [&#8211;fix_rec_dmn <i>dim</i>] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-H] [-h] [&#8211;hdn] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [-M] [-m] [&#8211;md5] [&#8211;mk_rec_dmn <i>dim</i>]<i>[&#8211;msa]</i>[&#8211;no_blank]<i>[&#8211;no_tmp_fl]</i>[-O]<i>[-o</i> <i>output-file</i>] [-P] [-p <i>path</i>] [-Q] [-q] [-R] [-r] [&#8211;rad] [&#8211;ram_all] [-s <i>format</i>] [-u] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] [&#8211;xml] <i>input-file</i> [ <i>output-file</i>]</p>

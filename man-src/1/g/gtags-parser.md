@@ -1,4 +1,5 @@
 ---
+
 title: "gtags-parser(1)"
 name: "gtags-parser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtags-parser/"
 description: "gtags-parser – print cross reference list for gtags."
 ---
 
-<h2>NAME</h2>
 <p> gtags-parser &#8211; print cross reference list for gtags.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtags-parser</code> [-bdenqrstvw] <i>file</i> &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psmeca(1)"
 name: "psmeca"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psmeca/"
 description: "psmeca – Plot focal mechanisms on maps"
 ---
 
-<h2>NAME</h2>
 <p> psmeca &#8211; Plot focal mechanisms on maps</p>
 <h2>SYNOPSIS</h2>
 <p> psmeca [ <i>table</i> ] <i>parameters</i> <i>region</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>pen</i>][<code>P</code><i>pointsize</i>] ] [ <i>depmin</i>/<i>depmax</i> ] [ <i>fill</i>] [ <i>mode</i>[<i>args</i>] ] [ <i>fill</i>] [ ] [ [<i>pen</i>] ] [ ] [ ] [ ] [ ] [ <i>&lt;format&gt;&lt;scale&gt;</i>[/<code>d</code>]] [ <i>num_of_plane</i>[<i>pen</i>] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>cpt</i>] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

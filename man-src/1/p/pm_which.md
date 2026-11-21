@@ -1,4 +1,5 @@
 ---
+
 title: "pm_which(1)"
 name: "pm_which"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pm_which/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pm_which - find installed modules 
+pm_which - find installed modules 
 
 <h2>SYNOPSIS</h2>
 

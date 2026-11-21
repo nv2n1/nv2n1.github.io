@@ -1,4 +1,5 @@
 ---
+
 title: "inotify_add_watch(2)"
 name: "inotify_add_watch"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-inotify_add_watch/"
 description: "inotify_add_watch – add a watch to an initialized inotify instance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inotify_add_watch &#8211; add a watch to an initialized inotify instance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/inotify.h&gt;</code> </p>

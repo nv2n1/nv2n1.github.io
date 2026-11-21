@@ -1,4 +1,5 @@
 ---
+
 title: "zvbi-chains(1)"
 name: "zvbi-chains"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zvbi-chains/"
 description: "zvbi-chains – VBI proxy wrapper"
 ---
 
-<h2>NAME</h2>
 <p> zvbi-chains &#8211; VBI proxy wrapper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zvbi-chains [ options ]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hist2workspace(1)"
 name: "hist2workspace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hist2workspace/"
 description: "hist2workspace – utility to create RooFit/RooStats workspace from histograms"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hist2workspace &#8211; utility to create RooFit/RooStats workspace from histograms </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hist2workspace [option] input.xml</code></p>

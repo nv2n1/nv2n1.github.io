@@ -1,4 +1,5 @@
 ---
+
 title: "rasqal-config(1)"
 name: "rasqal-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasqal-config/"
 description: "rasqal-config – script to get information about the installed version of the RDF query library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rasqal-config &#8211; script to get information about the installed version of the RDF query library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasqal-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;libs] [&#8211;libtool-libs] [&#8211;cflags] [&#8211;version] [&#8211;version-decimal] [&#8211;help]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fbrun(1)"
 name: "fbrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fbrun/"
 description: "fbrun – display run dialog window"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fbrun &#8211; display run dialog window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbrun</code> [<i>options</i>]</p>

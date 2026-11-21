@@ -1,4 +1,5 @@
 ---
+
 title: "nxagent(1)"
 name: "nxagent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nxagent/"
 description: "nxagent – NoMachine’s NX Agent."
 ---
 
-<h2>NAME</h2>
 <p> nxagent &#8211; NoMachine&#8217;s NX Agent.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nxagent</code> <i>[options]</i> </p>

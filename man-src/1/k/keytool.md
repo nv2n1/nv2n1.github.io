@@ -1,4 +1,5 @@
 ---
+
 title: "keytool(1)"
 name: "keytool"
 section: "1"
@@ -6,7 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-keytool/"
 description: "keytool – Manages a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates."
 ---
-<h2>NAME</h2>
+
 <p> keytool - Manages a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

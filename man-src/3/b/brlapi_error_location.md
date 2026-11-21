@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_error_location(3)"
 name: "brlapi_error_location"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_error_location/"
 description: "Error handling –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Error handling &#8211; </p>
 <p> How to handle errors.</p>
 <h3>Data Structures</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "pki-ca-kraconnector(1)"
 name: "pki-ca-kraconnector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-ca-kraconnector/"
 description: "pki-ca-kraconnector – Command-Line Interface for managing CA-KRA connectors."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-ca-kraconnector &#8211; Command-Line Interface for managing CA-KRA connectors.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

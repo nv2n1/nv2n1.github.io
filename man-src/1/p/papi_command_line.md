@@ -1,4 +1,5 @@
 ---
+
 title: "papi_command_line(1)"
 name: "papi_command_line"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-papi_command_line/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- papi_command_line - executes PAPI preset or native events from the command line. 
+papi_command_line - executes PAPI preset or native events from the command line. 
 
 <h2>Synopsis</h2>
 

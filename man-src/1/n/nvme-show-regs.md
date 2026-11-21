@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-show-regs(1)"
 name: "nvme-show-regs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-show-regs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-show-regs - Reads and shows the defined NVMe controller registers. 
+nvme-show-regs - Reads and shows the defined NVMe controller registers. 
 
 <h2>SYNOPSIS</h2>
 

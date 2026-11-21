@@ -1,4 +1,5 @@
 ---
+
 title: "pki-group-member(1)"
 name: "pki-group-member"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-group-member/"
 description: "pki-group-member – Command-Line Interface for managing Certificate System group members."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-group-member &#8211; Command-Line Interface for managing Certificate System group members.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

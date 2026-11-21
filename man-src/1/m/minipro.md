@@ -1,4 +1,5 @@
 ---
+
 title: "minipro(1)"
 name: "minipro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-minipro/"
 description: "minipro – flash various chips with Minipro TL866XX series of programmers from autoelectric.cn."
 ---
 
-<h2>NAME</h2>
 <p> minipro &#8211; flash various chips with Minipro TL866XX series of programmers from autoelectric.cn.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>minipro</code> [-p<code> device]</code> [-c<code> code|data|config]</code> [-r|-w<code> filename]</code> [-e]<code>[-u]</code>[-P]<code>[-i|-I]</code> </p>

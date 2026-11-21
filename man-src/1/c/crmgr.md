@@ -1,4 +1,5 @@
 ---
+
 title: "crmgr(1)"
 name: "crmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crmgr/"
 description: "crmgr – administration utility for QDBM Curia"
 ---
 
-<h2 class="name">NAME</h2>
 <p> crmgr &#8211; administration utility for QDBM Curia </p>
 <h2>SYNOPSIS</h2>
 <p> <code>crmgr create</code> [-s] [-bnum <i>num</i> ] [-dnum <i>num</i>] <i>name</i><br />

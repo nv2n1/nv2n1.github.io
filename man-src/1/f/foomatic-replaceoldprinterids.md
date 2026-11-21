@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-replaceoldprinterids(1)"
 name: "foomatic-replaceoldprinterids"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-replaceoldprinterids/"
 description: "foomatic-replaceoldprinterids – Replace references to old printer IDs"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-replaceoldprinterids &#8211; Replace references to old printer IDs</p>
 <h2>SYNOPSIS</h2>
 <dl>

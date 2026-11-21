@@ -1,4 +1,5 @@
 ---
+
 title: "ftrace(1)"
 name: "ftrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ftrace/"
 description: "ftrace – trace system calls, function calls and signals"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ftrace &#8211; trace system calls, function calls and signals </p>
 <h2>SYNOPSIS</h2>
 <dl>

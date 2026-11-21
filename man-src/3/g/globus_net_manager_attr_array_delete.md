@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_attr_array_delete(3)"
 name: "globus_net_manager_attr_array_delete"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_net_manager_attr_array_delete/"
 description: "Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Attributes &#8211; </p>
 <p> Net Manager Attribute Management Functions.</p>
 <h3>Data Structures</h3>

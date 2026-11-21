@@ -1,4 +1,5 @@
 ---
+
 title: "slist(1)"
 name: "slist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slist/"
 description: "slist – Lists available NetWare Servers"
 ---
 
-<h2>NAME</h2>
 <p> slist &#8211; Lists available NetWare Servers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>slist</code> [ <i>pattern</i> ]</p>

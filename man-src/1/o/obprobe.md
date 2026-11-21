@@ -1,4 +1,5 @@
 ---
+
 title: "obprobe(1)"
 name: "obprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obprobe/"
 description: "obprobe – create electrostatic probe grid"
 ---
 
-<h2>NAME</h2>
 <p> <code>obprobe</code> &#8211; create electrostatic probe grid</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>type</i> <i>pchg</i> <i>filename</i></p>

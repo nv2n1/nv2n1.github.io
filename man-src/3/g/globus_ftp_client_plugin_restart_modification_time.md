@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_plugin_restart_modification_time(3)"
 name: "globus_ftp_client_plugin_restart_modification_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_plugin_restart_modification_time/"
 description: "Plugins –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Plugins &#8211; </p>
 <p> Plugin API.</p>
 <h3>Modules</h3>

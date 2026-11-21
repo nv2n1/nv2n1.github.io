@@ -1,4 +1,5 @@
 ---
+
 title: "sched_getattr(2)"
 name: "sched_getattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_getattr/"
 description: "sched_setattr, sched_getattr – set and get scheduling policy and attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_setattr, sched_getattr &#8211; set and get scheduling policy and attributes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

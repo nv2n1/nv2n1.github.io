@@ -1,4 +1,5 @@
 ---
+
 title: "sed(1)"
 name: "sed"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sed/"
 description: "sed – stream editor for filtering and transforming text"
 ---
-<h2 class="name">NAME</h2>
+
 <p> sed - stream editor for filtering and transforming text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sed</code> [<i>OPTION</i>]... <i>{script-only-if-no-other-script} </i>[<i>input-file</i>]...  </p>

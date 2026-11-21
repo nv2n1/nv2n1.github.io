@@ -1,4 +1,5 @@
 ---
+
 title: "ods-hsmutil(1)"
 name: "ods-hsmutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ods-hsmutil/"
 description: "ods-hsmutil – OpenDNSSEC HSM utility"
 ---
 
-<h2>NAME</h2>
 <p> <code>ods-hsmutil</code> &#8211; OpenDNSSEC HSM utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ods-hsmutil</code> [<code>-c</code> <i>config</i>] [<code>-v</code>] <code>command </code> [<code>options</code>]</p>

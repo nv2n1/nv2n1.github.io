@@ -1,4 +1,5 @@
 ---
+
 title: "g_xrama(1)"
 name: "g_xrama"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_xrama/"
 description: "xrama – shows animated Ramachandran plots"
 ---
 
-<h2>NAME</h2>
 <p> xrama &#8211; shows animated Ramachandran plots </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

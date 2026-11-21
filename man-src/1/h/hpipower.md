@@ -1,4 +1,5 @@
 ---
+
 title: "hpipower(1)"
 name: "hpipower"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpipower/"
 description: "hpipower – This sample openhpi application exercises HPI Power Management APIs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpipower &#8211; This sample openhpi application exercises HPI Power Management APIs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

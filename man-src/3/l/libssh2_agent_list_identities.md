@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_list_identities(3)"
 name: "libssh2_agent_list_identities"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_agent_list_identities/"
 description: "libssh2_agent_list_identities – request an ssh-agent to list of public keys."
 ---
 
-<h2>NAME</h2>
 <p> libssh2_agent_list_identities &#8211; request an ssh-agent to list of public keys.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

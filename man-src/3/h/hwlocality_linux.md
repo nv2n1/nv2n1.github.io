@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_linux(3)"
 name: "hwlocality_linux"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_linux/"
 description: "hwlocality_linux – Linux-specific helpers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_linux &#8211; Linux-specific helpers </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_linux_parse_cpumap_file</code> (FILE *file, <code>hwloc_cpuset_t</code> set) </p>

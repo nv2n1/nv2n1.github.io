@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-import-bundle(1)"
 name: "flatpak-build-import-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-import-bundle/"
 description: "flatpak-build-import-bundle – Import a file bundle into a local repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-import-bundle &#8211; Import a file bundle into a local repository </p>
 <h2>SYNOPSIS</h2>
 <dl>

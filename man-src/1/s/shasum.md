@@ -1,4 +1,5 @@
 ---
+
 title: "shasum(1)"
 name: "shasum"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-shasum/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- shasum - Print or Check SHA Checksums 
+shasum - Print or Check SHA Checksums 
 
 <h2>SYNOPSIS</h2>
 

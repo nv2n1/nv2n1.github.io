@@ -1,4 +1,5 @@
 ---
+
 title: "tmux(1)"
 name: "tmux"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tmux/"
 description: "tmux – terminal multiplexer"
 ---
-<h2>NAME</h2>
+
 <p> <code>tmux</code> - terminal multiplexer  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tmux</code> -words [-<code>28lCquvV</code> ] [-<code>c </code><i>shell-command</i> ] [-<code>f </code><i>file</i> ] [-<code>L </code><i>socket-name</i> ] [-<code>S </code><i>socket-path</i> ] [<i>command </i>[<i>flags</i> ] ]  </p>

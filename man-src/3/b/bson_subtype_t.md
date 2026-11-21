@@ -1,4 +1,5 @@
 ---
+
 title: "bson_subtype_t(3)"
 name: "bson_subtype_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_subtype_t/"
 description: "bson_subtype_t – Binary Field Subtype"
 ---
 
-<h2>NAME</h2>
 <p> bson_subtype_t &#8211; Binary Field Subtype</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-monitor(1)"
 name: "dbus-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-monitor/"
 description: "dbus-monitor – debug probe to print message bus messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-monitor &#8211; debug probe to print message bus messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

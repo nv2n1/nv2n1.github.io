@@ -1,4 +1,5 @@
 ---
+
 title: "dmtxwrite(1)"
 name: "dmtxwrite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmtxwrite/"
 description: "dmtxwrite – create Data Matrix barcodes"
 ---
 
-<h2>NAME</h2>
 <p> dmtxwrite &#8211; create Data Matrix barcodes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmtxwrite</code> [<i>OPTION</i>]&#8230; [FILE]</p>

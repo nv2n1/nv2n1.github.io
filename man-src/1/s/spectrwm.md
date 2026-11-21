@@ -1,4 +1,5 @@
 ---
+
 title: "spectrwm(1)"
 name: "spectrwm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spectrwm/"
 description: "spectrwm – window manager for X11"
 ---
 
-<h2>NAME</h2>
 <p> <code>spectrwm</code> &#8211; window manager for X11</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spectrwm</code></p>

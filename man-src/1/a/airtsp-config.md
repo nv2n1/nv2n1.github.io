@@ -1,4 +1,5 @@
 ---
+
 title: "airtsp-config(1)"
 name: "airtsp-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-airtsp-config/"
 description: "airtsp-config –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> airtsp-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Simulated Airline Schedule Manager Library

@@ -1,4 +1,5 @@
 ---
+
 title: "kde4-config(1)"
 name: "kde4-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kde4-config/"
 description: "kde4-config – Prints KDE installation paths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kde4-config &#8211; Prints KDE installation paths </p>
 <h2>SYNOPSIS</h2>
 <dl>

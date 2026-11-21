@@ -1,4 +1,5 @@
 ---
+
 title: "x_solve_dc_drift(1)"
 name: "x_solve_dc_drift"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_solve_dc_drift/"
 description: "x_solve_dc_drift – Find Best-fitting D.C.-shift and Drift Estimates"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_solve_dc_drift</code> &#8211; Find Best-fitting D.C.-shift and Drift Estimates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_solve_dc_drift</code> [ <code>-X</code><i>xbase</i> ] [ <code>-L</code><i>lbase</i> ] [ <code>-I</code><i>ignorefile</i> ] [ <code>-S</code> ] [ <code>-C</code><i>iteration</i> ] [ <code>-M</code><i>min_nx</i> ] [ <code>-R</code><i>west/east/south/north</i> ] [ <code>-U</code><i>uselegsfile</i> ] [ <code>-V</code> ] [ <code>-B</code><i>binfile</i> ] [ <code>-A</code><i>ASCIIfile</i> ]</p>

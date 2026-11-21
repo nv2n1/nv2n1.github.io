@@ -1,4 +1,5 @@
 ---
+
 title: "lscgroup(1)"
 name: "lscgroup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lscgroup/"
 description: "lscgroup – list all cgroups"
 ---
 
-<h2>NAME</h2>
 <p> lscgroup &#8211; list all cgroups </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lscgroup</code> [[<code>-g</code>] &lt;<i>controllers&gt;:&lt;path</i>&gt;] [&#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ares_expand_name(3)"
 name: "ares_expand_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_expand_name/"
 description: "ares_expand_name – Expand a DNS-encoded domain name"
 ---
 
-<h2>NAME</h2>
 <p> ares_expand_name &#8211; Expand a DNS-encoded domain name</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

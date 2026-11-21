@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-matchc(3)"
 name: "antlr3-matchc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-matchc/"
 description: "src/antlr3lexer.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3lexer.c &#8211; </p>
 <p> Base implementation of an antlr 3 lexer.</p>
 <h2>SYNOPSIS</h2>

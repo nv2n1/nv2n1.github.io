@@ -1,4 +1,5 @@
 ---
+
 title: "clip3d_f(3)"
 name: "clip3d_f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clip3d_f/"
 description: "clip3d_f – Clips the polygon given in vtx using floating point math, Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> clip3d_f &#8211; Clips the polygon given in vtx using floating point math, Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

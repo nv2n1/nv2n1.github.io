@@ -1,4 +1,5 @@
 ---
+
 title: "lyxclient(1)"
 name: "lyxclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lyxclient/"
 description: "lyxclient – send commands to a running LyX editor"
 ---
 
-<h2>NAME</h2>
 <p> lyxclient &#8211; send commands to a running LyX editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lyxclient</code> [ <i>options</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cloud-publish-tarball(1)"
 name: "cloud-publish-tarball"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cloud-publish-tarball/"
 description: "cloud-publish-tarball – publish a cloud archive"
 ---
 
-<h2>NAME</h2>
 <p> cloud-publish-tarball &#8211; publish a cloud archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cloud-publish-tarball [OPTIONS] TARFILE BUCKET [ARCH]</code> </p>

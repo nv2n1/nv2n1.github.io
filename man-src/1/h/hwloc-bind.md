@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-bind(1)"
 name: "hwloc-bind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-bind/"
 description: "hwloc-bind – Launch a command that is bound to specific processors and/or memory, or consult the binding of an existing program"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-bind &#8211; Launch a command that is bound to specific processors and/or memory, or consult the binding of an existing program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-bind</code> [<i>options</i>] <i>&lt;location1&gt; [&lt;location2&gt; [&#8230;] ] [&#8211;] &lt;command&gt; </i>&#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rcopy(1)"
 name: "rcopy"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rcopy/"
 ---
 
-<h2>NAME</h2>
-
- rcopy - simple file copy over RDMA.
+rcopy - simple file copy over RDMA.
 
 <h2>SYNOPSIS</h2>
 

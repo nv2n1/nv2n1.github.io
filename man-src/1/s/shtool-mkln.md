@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mkln(1)"
 name: "shtool-mkln"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-mkln/"
 description: "shtool mkln – GNU shtool enhanced"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool mkln &#8211; GNU shtool enhanced </p>
 <p><a href="/docs/linux/man/1-ln/">ln</a>(1) replacement</p>
 <h2>SYNOPSIS</h2>

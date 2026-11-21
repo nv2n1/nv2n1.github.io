@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_find_case(3)"
 name: "bson_iter_find_case"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_find_case/"
 description: "bson_iter_find_case() – Advances iter until it is observing an element matching the name of key or exhausting all elements."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_find_case() &#8211; Advances iter until it is observing an element matching the name of key or exhausting all elements.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

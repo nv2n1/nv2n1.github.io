@@ -1,4 +1,5 @@
 ---
+
 title: "greylist(1)"
 name: "greylist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-greylist/"
 description: "greylist – command line interface to greylistd(8)"
 ---
 
-<h2>NAME</h2>
 <p> greylist &#8211; command line interface to <code><a href="/docs/linux/man/8-greylistd/">greylistd</a>(8)</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>greylist </code>{<code> -h </code>|<code> &#8211;help </code>|<code> help </code>}<br />

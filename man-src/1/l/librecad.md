@@ -1,4 +1,5 @@
 ---
+
 title: "librecad(1)"
 name: "librecad"
 section: "1"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-librecad/"
 ---
 
-<h2>NAME</h2>
-
- LIBRECAD - A professional CAD System.
+LIBRECAD - A professional CAD System.
 
 <h2>DESCRIPTION</h2>
 

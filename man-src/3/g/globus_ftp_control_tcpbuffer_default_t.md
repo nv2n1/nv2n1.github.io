@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_tcpbuffer_default_t(3)"
 name: "globus_ftp_control_tcpbuffer_default_t"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_control_tcpbuffer_default_t/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_ftp_control_tcpbuffer_default_t - 
+globus_ftp_control_tcpbuffer_default_t - 
 
  Don't change the TCP buffer/window size from the system default.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-email(1)"
 name: "xdg-email"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-email/"
 description: "xdg-email – command line tool for sending mail using the user’s preferred e-mail composer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-email &#8211; command line tool for sending mail using the user&#8217;s preferred e-mail composer </p>
 <h2>SYNOPSIS</h2>
 <dl>

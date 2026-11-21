@@ -1,4 +1,5 @@
 ---
+
 title: "freehdl-config(1)"
 name: "freehdl-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freehdl-config/"
 description: "FreeHDL-CONFIG – The FreeHDL configuration script."
 ---
 
-<h2>NAME</h2>
 <p> FreeHDL-CONFIG &#8211; The FreeHDL configuration script.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freehdl-config</code> [<i>OPTION</i>] &#8230;</p>

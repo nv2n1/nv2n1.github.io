@@ -1,4 +1,5 @@
 ---
+
 title: "opacapture(1)"
 name: "opacapture"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opacapture/"
 description: "opacapture"
 ---
 
-<h2>NAME</h2>
 <p> opacapture </p>
 <p> <code>(Host)</code> Captures critical system information into a zipped tar file. The resulting tar file should be sent to Customer Support along with any Intel(R) Omni-Path Fabric problem report regarding this system. </p>
 <p> <code>NOTE:</code> The resulting host capture file can require significant amounts of space on the host. The actual size varies, but sizes can be multiple megabytes. Intel recommends ensuring that adequate disk space is available on the host system. </p>

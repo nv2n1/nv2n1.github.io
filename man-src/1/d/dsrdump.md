@@ -1,4 +1,5 @@
 ---
+
 title: "dsrdump(1)"
 name: "dsrdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dsrdump/"
 description: "dsrdump – Dump DICOM SR file and data set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsrdump &#8211; Dump DICOM SR file and data set </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "getdate_r(3)"
 name: "getdate_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdate_r/"
 description: "getdate, getdate_r – convert a date-plus-time string to broken-down time"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getdate, getdate_r &#8211; convert a date-plus-time string to broken-down time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>

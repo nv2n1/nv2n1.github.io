@@ -1,4 +1,5 @@
 ---
+
 title: "myisamchk(1)"
 name: "myisamchk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myisamchk/"
 description: "myisamchk – MyISAM table-maintenance utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> myisamchk &#8211; MyISAM table-maintenance utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

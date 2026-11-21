@@ -1,4 +1,5 @@
 ---
+
 title: "pfcat(1)"
 name: "pfcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pfcat/"
 description: "pfcat – grep out function definitions from perlfunc"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pfcat &#8211; grep out function definitions from perlfunc </p>
 <h2>DESCRIPTION</h2>
 <p> This program uses <i>podgrep</i> program to search your configuration&#8217;s perlfunc for function definitions. It honors a <code>-f</code> flag to format through <i>pod2text</i> and a <code>-p</code> flag to send the output through the pager. (Actually, it just passes these to <i>podgrep</i>.)</p>

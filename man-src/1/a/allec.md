@@ -1,4 +1,5 @@
 ---
+
 title: "allec(1)"
 name: "allec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-allec/"
 description: "allec – force the most important ec-fonts to be calculated"
 ---
 
-<h2 class="name">NAME</h2>
 <p> allec &#8211; force the most important ec-fonts to be calculated </p>
 <h2>SYNOPSIS</h2>
 <p> <code>allec [-r]</code></p>

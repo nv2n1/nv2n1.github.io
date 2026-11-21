@@ -1,4 +1,5 @@
 ---
+
 title: "load_grx_or_bios_font(3)"
 name: "load_grx_or_bios_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_grx_or_bios_font/"
 description: "load_grx_or_bios_font – Loads either a BIOS or GRX format font. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_grx_or_bios_font &#8211; Loads either a BIOS or GRX format font. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

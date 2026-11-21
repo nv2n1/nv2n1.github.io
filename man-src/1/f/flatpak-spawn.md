@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-spawn(1)"
 name: "flatpak-spawn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-spawn/"
 description: "flatpak-spawn – Run commands in a sandbox"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-spawn &#8211; Run commands in a sandbox </p>
 <h2>SYNOPSIS</h2>
 <dl>

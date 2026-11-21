@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-perform-ccpp-analysis(1)"
 name: "abrt-action-perform-ccpp-analysis"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-perform-ccpp-analysis/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-perform-ccpp-analysis - Allows users to select acceptable way of core dump analysis 
+abrt-action-perform-ccpp-analysis - Allows users to select acceptable way of core dump analysis 
 
 <h2>SYNOPSIS</h2>
 

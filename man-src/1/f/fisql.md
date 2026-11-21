@@ -1,4 +1,5 @@
 ---
+
 title: "fisql(1)"
 name: "fisql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fisql/"
 description: "fisql – interactive SQL shell"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fisql</code> &#8211; interactive SQL shell </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>eFgpnvXY</code> ] [-<code>a </code><i>display_charset</i> ] [-<code>A </code><i>packet_size</i> ] [-<code>c </code><i>cmdend</i> ] [-<code>D </code><i>database</i> ] [-<code>E </code><i>editor</i> ] [-<code>h </code><i>headers</i> ] [-<code>H </code><i>hostname</i> ] [-<code>i </code><i>inputfile</i> ] [-<code>I </code><i>interfaces_file</i> ] [-<code>J </code><i>client_charset</i> ] [-<code>l </code><i>login_timeout</i> ] [-<code>m </code><i>errorlevel</i> ] [-<code>o </code><i>outputfile</i> ] [-<code>P </code><i>password</i> ] [-<code>s </code><i>colseparator</i> ] [-<code>S </code><i>server</i> ] [-<code>t </code><i>timeout</i> ] [-<code>U </code><i>username</i> ] [-<code>w </code><i>width</i> ] [-<code>y </code><i>sybase_dir</i> ] [-<code>z </code><i>language</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-commit-tree(1)"
 name: "git-commit-tree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-commit-tree/"
 description: "git-commit-tree – Create a new commit object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-commit-tree &#8211; Create a new commit object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

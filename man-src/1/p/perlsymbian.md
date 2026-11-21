@@ -1,4 +1,5 @@
 ---
+
 title: "perlsymbian(1)"
 name: "perlsymbian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsymbian/"
 description: "perlsymbian – Perl version 5 on Symbian OS"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlsymbian &#8211; Perl version 5 on Symbian OS </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes various features of the Symbian operating system that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs. </p>

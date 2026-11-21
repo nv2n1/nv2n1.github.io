@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lb-policies(1)"
 name: "eulb-describe-lb-policies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-lb-policies/"
 description: "eulb-describe-lb-policies – Show information about load balancer policies"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-lb-policies &#8211; Show information about load balancer policies</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-lb-policies [-p POLICY1,POLICY2,&#8230;] [&#8211;show-long]</p>

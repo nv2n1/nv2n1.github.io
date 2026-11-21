@@ -1,4 +1,5 @@
 ---
+
 title: "smicache(1)"
 name: "smicache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smicache/"
 description: "smicache – caching method for use with libsmi"
 ---
 
-<h2>NAME</h2>
 <p> smicache &#8211; caching method for use with libsmi</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smicache</code> [ <code>-Vh</code> ] [ <code>-d </code><i>dir</i> ] [ <code>-p </code><i>prefix</i> ] [ <i>mib</i> ]</p>

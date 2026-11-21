@@ -1,4 +1,5 @@
 ---
+
 title: "screen(3)"
 name: "screen"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-screen/"
 description: "screen – Global pointer to the screen hardware video memory. Allegro game programming library."
 ---
+
 <p> screen - Global pointer to the screen hardware video memory. Allegro game programming library.  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern BITMAP *screen;</code>  </p>
 <h2>DESCRIPTION</h2>

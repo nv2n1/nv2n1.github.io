@@ -1,4 +1,5 @@
 ---
+
 title: "wmxmms(1)"
 name: "wmxmms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wmxmms/"
 description: "WMXMMS – a dockable XMMS control applet."
 ---
 
-<h2>NAME</h2>
 <p> WMXMMS &#8211; a dockable XMMS control applet.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmxmms</code> [-h] [&#8211;help] [-s <i>&lt;session&gt;</i>] [&#8211;session=<i>&lt;session&gt;</i>] [-c <i>&lt;command&gt;</i>] [&#8211;command=<i>&lt;command&gt;</i>] [-i <i>&lt;icon&gt;</i>] [&#8211;icon=<i>&lt;icon&gt;</i>] [-n] [&#8211;single] [-t] [&#8211;title] [&#8211;version]</p>

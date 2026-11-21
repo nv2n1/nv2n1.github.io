@@ -1,4 +1,5 @@
 ---
+
 title: "libnutclient_variables(3)"
 name: "libnutclient_variables"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnutclient_variables/"
 description: "libnutclient_variables, nutclient_get_device_variables, nutclient_get_device_rw_variables, nutclient_has_device_variable, nutclient_get_device_variable_description, nutclient_get_device_variable_va..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> libnutclient_variables, nutclient_get_device_variables, nutclient_get_device_rw_variables, nutclient_has_device_variable, nutclient_get_device_variable_description, nutclient_get_device_variable_values, nutclient_set_device_variable_value, nutclient_set_device_variable_values &#8211; Variable related functions in Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

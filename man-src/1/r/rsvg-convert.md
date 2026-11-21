@@ -1,4 +1,5 @@
 ---
+
 title: "rsvg-convert(1)"
 name: "rsvg-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rsvg-convert/"
 description: "rsvg-convert – turn SVG files into raster images."
 ---
 
-<h2>NAME</h2>
 <p> rsvg-convert &#8211; turn SVG files into raster images.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rsvg-convert</code> [options] in.svg &gt; out.png <i></i></p>

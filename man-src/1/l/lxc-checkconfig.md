@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-checkconfig(1)"
 name: "lxc-checkconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-checkconfig/"
 description: "lxc-checkconfig – check the current kernel for lxc support"
 ---
 
-<h2>NAME</h2>
 <p> lxc-checkconfig &#8211; check the current kernel for lxc support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-checkconfig</code></p>

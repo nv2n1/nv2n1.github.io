@@ -1,4 +1,5 @@
 ---
+
 title: "findproxyfile(1)"
 name: "findproxyfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-findproxyfile/"
 description: "findproxyfile – returns full path to GSI Proxy file"
 ---
 
-<h2>NAME</h2>
 <p> <code>findproxyfile</code> &#8211; returns full path to GSI Proxy file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>findproxyfile </code> [&#8211;proxycache=PATH] [&#8211;delegation-id=ID] [&#8211;user-dn=DN] [&#8211;outsidecache]</p>

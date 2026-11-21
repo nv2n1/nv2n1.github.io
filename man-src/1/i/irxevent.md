@@ -1,4 +1,5 @@
 ---
+
 title: "irxevent(1)"
 name: "irxevent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irxevent/"
 description: "irxevent – infrared X-event sender"
 ---
 
-<h2>NAME</h2>
 <p> irxevent &#8211; infrared X-event sender</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irxevent</code> [<i>option</i>]&#8230; [<i>config file</i>]</p>

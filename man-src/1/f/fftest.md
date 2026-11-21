@@ -1,4 +1,5 @@
 ---
+
 title: "fftest(1)"
 name: "fftest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fftest/"
 description: "fftest – tests force-feedback devices."
 ---
 
-<h2>NAME</h2>
 <p> fftest &#8211; tests force-feedback devices.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fftest</code> &lt;<i>device</i>&gt;</p>

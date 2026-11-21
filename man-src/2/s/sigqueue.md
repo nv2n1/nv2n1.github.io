@@ -1,4 +1,5 @@
 ---
+
 title: "sigqueue(2)"
 name: "sigqueue"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sigqueue/"
 description: "sigqueue – queue a signal and data to a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigqueue &#8211; queue a signal and data to a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>

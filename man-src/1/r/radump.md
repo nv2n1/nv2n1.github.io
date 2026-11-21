@@ -1,4 +1,5 @@
 ---
+
 title: "radump(1)"
 name: "radump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radump/"
 description: "radump – tcpdump processing of the user data buffers from an argus(8) data file/stream."
 ---
 
-<h2>NAME</h2>
 <p> <code>radump</code> &#8211; tcpdump processing of the user data buffers from an <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>radump</code> <code>-r</code> <i>argus-file [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>

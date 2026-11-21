@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-update-repo(1)"
 name: "flatpak-build-update-repo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-update-repo/"
 description: "flatpak-build-update-repo – Create a repository from a build directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-update-repo &#8211; Create a repository from a build directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

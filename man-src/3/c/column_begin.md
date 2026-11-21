@@ -1,4 +1,5 @@
 ---
+
 title: "column_begin(3)"
 name: "column_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-column_begin/"
 description: "QuantLib::Matrix – Matrix used in linear algebra."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Matrix &#8211; Matrix used in linear algebra. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt; </p>

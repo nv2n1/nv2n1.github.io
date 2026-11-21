@@ -1,4 +1,5 @@
 ---
+
 title: "extend_dmalloc(1)"
 name: "extend_dmalloc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extend_dmalloc/"
 description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles."
 ---
 
-<h2 class="name">NAME</h2>
 <p> extend_dmalloc &#8211; Analyze return-addresses from dmalloc logfiles. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_get_errorstr_by_id(3)"
 name: "ldns_get_errorstr_by_id"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_get_errorstr_by_id/"
 description: "ldns_get_errorstr_by_id"
 ---
 
-<h2>NAME</h2>
 <p> ldns_get_errorstr_by_id </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cd-drive(1)"
 name: "cd-drive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-drive/"
 description: "cd-drive – show CD-ROM drive characteristics"
 ---
 
-<h2>NAME</h2>
 <p> cd-drive &#8211; show CD-ROM drive characteristics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cd-drive</code> [<i>OPTION</i>&#8230;]</p>

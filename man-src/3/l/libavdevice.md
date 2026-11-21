@@ -1,4 +1,5 @@
 ---
+
 title: "libavdevice(3)"
 name: "libavdevice"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libavdevice/"
 description: "libavdevice – multimedia device handling library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libavdevice &#8211; multimedia device handling library </p>
 <h2>DESCRIPTION</h2>
 <p> The libavdevice library provides a generic framework for grabbing from and rendering to many common multimedia input/output devices, and supports several input and output devices, including Video4Linux2, VfW, DShow, and <font SIZE="-1">ALSA.</font></p>

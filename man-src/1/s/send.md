@@ -1,4 +1,5 @@
 ---
+
 title: "send(1)"
 name: "send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-send/"
 description: "send – send a message"
 ---
 
-<h2>NAME</h2>
 <p> send &#8211; send a message</p>
 <h2>SYNOPSIS</h2>
 <dl>

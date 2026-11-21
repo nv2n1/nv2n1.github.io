@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_scp_send_ex(3)"
 name: "libssh2_scp_send_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_scp_send_ex/"
 description: "libssh2_scp_send_ex – Send a file via SCP"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_scp_send_ex &#8211; Send a file via SCP</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

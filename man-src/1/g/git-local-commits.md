@@ -1,4 +1,5 @@
 ---
+
 title: "git-local-commits(1)"
 name: "git-local-commits"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-local-commits/"
 description: "git-local-commits – List local commits"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-local-commits</code> &#8211; List local commits</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-local-commits</code> &lt;args&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-cat(1)"
 name: "gfal-cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-cat/"
 description: "gfal-cat – concatenate a file and print on the standard output"
 ---
 
-<h2>NAME</h2>
 <p> gfal-cat &#8211; concatenate a file and print on the standard output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-cat</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] [ <code>-p</code> ] <i>FILE</i> </p>

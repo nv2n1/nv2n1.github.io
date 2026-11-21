@@ -1,4 +1,5 @@
 ---
+
 title: "jcat(1)"
 name: "jcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jcat/"
 description: "jcat – Show the contents of a block in the file system journal."
 ---
 
-<h2 class="name">NAME</h2>
 <p> jcat &#8211; Show the contents of a block in the file system journal. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jcat [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images]</i> <code>] [</code> <i>inode</i> <code>]</code> <i>jblk</i> </p>

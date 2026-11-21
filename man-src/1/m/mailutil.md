@@ -1,4 +1,5 @@
 ---
+
 title: "mailutil(1)"
 name: "mailutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailutil/"
 description: "mailutil – mail utility program"
 ---
 
-<h2>NAME</h2>
 <p> mailutil &#8211; mail utility program</p>
 <h2>SYNTAX</h2>
 <p> <code>mailutil command [switches] [arguments]</code> </p>

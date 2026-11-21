@@ -1,4 +1,5 @@
 ---
+
 title: "xpstops(1)"
 name: "xpstops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpstops/"
 description: "xpstops – XPS to PostScript converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xpstops &#8211; XPS to PostScript converter </p>
 <h2>SYNOPSIS</h2>
 <dl>

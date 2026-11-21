@@ -1,4 +1,5 @@
 ---
+
 title: "close(2)"
 name: "close"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-close/"
 description: "close – close a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> close &#8211; close a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "lbzexe(1)"
 name: "lbzexe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzexe/"
 description: "lbzexe – compress executable files in place"
 ---
 
-<h2>NAME</h2>
 <p> lbzexe &#8211; compress executable files in place</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzexe</code> <i>name &#8230;</i></p>

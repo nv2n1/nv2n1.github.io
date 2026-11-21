@@ -1,4 +1,5 @@
 ---
+
 title: "inxi(1)"
 name: "inxi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inxi/"
 description: "inxi – Command line system information script for console and IRC"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inxi &#8211; Command line system information script for console and IRC </p>
 <h2>SYNOPSIS</h2>
 <p> <code>inxi</code> </p>

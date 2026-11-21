@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_data_write(3)"
 name: "globus_ftp_control_data_write"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_data_write/"
 description: "GridFTP Data Connections –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GridFTP Data Connections &#8211; </p>
 <p> Data Connections.</p>
 <h3>Functions</h3>

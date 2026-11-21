@@ -1,4 +1,5 @@
 ---
+
 title: "func(1)"
 name: "func"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-func/"
 ---
 
-<h2>NAME</h2>
-
- Func -- Fedora Unified Network Controller.
+Func -- Fedora Unified Network Controller.
 
 <h2>SYNOPSIS</h2>
 

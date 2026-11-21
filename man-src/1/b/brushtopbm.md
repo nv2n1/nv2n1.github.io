@@ -1,4 +1,5 @@
 ---
+
 title: "brushtopbm(1)"
 name: "brushtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-brushtopbm/"
 description: "brushtopbm – convert a doodle brush file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> brushtopbm &#8211; convert a doodle brush file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>brushtopbm</code> [<i>brushfile</i>]</p>

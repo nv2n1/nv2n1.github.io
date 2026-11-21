@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-network-interface(1)"
 name: "euca-attach-network-interface"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-attach-network-interface/"
 description: "euca-attach-network-interface – Attach a VPC network interface to an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-attach-network-interface &#8211; Attach a VPC network interface to an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-attach-network-interface <code>-i</code> INSTANCE <code>-d</code> INT [&#8211;show-empty-fields]</p>

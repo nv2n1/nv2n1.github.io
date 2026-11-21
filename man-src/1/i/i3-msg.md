@@ -1,4 +1,5 @@
 ---
+
 title: "i3-msg(1)"
 name: "i3-msg"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-i3-msg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- i3-msg - send messages to i3 window manager 
+i3-msg - send messages to i3 window manager 
 
 <h2>SYNOPSIS</h2>
 

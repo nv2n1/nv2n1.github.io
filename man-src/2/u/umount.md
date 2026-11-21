@@ -1,4 +1,5 @@
 ---
+
 title: "umount(2)"
 name: "umount"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-umount/"
 description: "umount, umount2 – unmount filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> umount, umount2 &#8211; unmount filesystem </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

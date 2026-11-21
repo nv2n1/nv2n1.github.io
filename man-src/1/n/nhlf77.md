@@ -1,4 +1,5 @@
 ---
+
 title: "nhlf77(1)"
 name: "nhlf77"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nhlf77/"
 description: "nhlf77 – Command for compiling Fortran code that uses the NCAR Graphics high-level utilities."
 ---
 
-<h2>NAME</h2>
 <p> nhlf77 &#8211; Command for compiling Fortran code that uses the NCAR Graphics high-level utilities.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nhlf77</code> [<code>-ngmath</code>] [<code>-ncarbd</code>] [<code>-ngmathbd</code>] [<code>-netcdf</code>] [<code>-hdf</code>] &#8230;</p>

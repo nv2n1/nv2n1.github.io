@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_status_request_enable_client(3)"
 name: "gnutls_ocsp_status_request_enable_client"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_ocsp_status_request_enable_client - API function
+gnutls_ocsp_status_request_enable_client - API function
 
 <h2>SYNOPSIS</h2>
 

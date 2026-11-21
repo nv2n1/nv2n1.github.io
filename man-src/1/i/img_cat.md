@@ -1,4 +1,5 @@
 ---
+
 title: "img_cat(1)"
 name: "img_cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img_cat/"
 description: "img_cat – Output contents of an image file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> img_cat &#8211; Output contents of an image file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>img_cat [-i imgtype] [-b dev_sector_size] [-s start_sector] [-e stop_sector] [-vV] </code> <i>image [images] </i></p>

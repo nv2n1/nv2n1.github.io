@@ -1,4 +1,5 @@
 ---
+
 title: "gifview(1)"
 name: "gifview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gifview/"
 description: "gifview – displays GIF images and animations on the X window system"
 ---
 
-<h2>NAME</h2>
 <p> gifview &#8211; displays GIF images and animations on the X window system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gifview</code> [<code>&#8211;display</code> <i>display</i>] [options] [filenames and frames]&#8230;</p>

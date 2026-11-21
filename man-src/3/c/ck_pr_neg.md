@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_neg(3)"
 name: "ck_pr_neg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_neg/"
 description: "ck_pr_neg_ptr ck_pr_neg_ptr_zero ck_pr_neg_double ck_pr_neg_double_zero ck_pr_neg_char ck_pr_neg_char_zero ck_pr_neg_uint ck_pr_neg_uint_zero ck_pr_neg_int ck_pr_neg_int_zero ck_pr_neg_64 ck_pr_neg..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_neg_ptr</code> <code>ck_pr_neg_ptr_zero</code> <code>ck_pr_neg_double</code> <code>ck_pr_neg_double_zero</code> <code>ck_pr_neg_char</code> <code>ck_pr_neg_char_zero</code> <code>ck_pr_neg_uint</code> <code>ck_pr_neg_uint_zero</code> <code>ck_pr_neg_int</code> <code>ck_pr_neg_int_zero</code> <code>ck_pr_neg_64</code> <code>ck_pr_neg_64_zero</code> <code>ck_pr_neg_32</code> <code>ck_pr_neg_32_zero</code> <code>ck_pr_neg_16</code> <code>ck_pr_neg_16_zero</code> <code>ck_pr_neg_8</code> <code>ck_pr_neg_8_zero</code> &#8211; atomic negation operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

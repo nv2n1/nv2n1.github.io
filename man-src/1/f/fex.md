@@ -1,4 +1,5 @@
 ---
+
 title: "fex(1)"
 name: "fex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fex/"
 description: "fex – simple and powerful field extraction"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fex &#8211; simple and powerful field extraction </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fex</code> <i>selector &#8230;</i></p>

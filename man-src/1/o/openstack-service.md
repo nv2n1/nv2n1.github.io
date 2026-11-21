@@ -1,4 +1,5 @@
 ---
+
 title: "openstack-service(1)"
 name: "openstack-service"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openstack-service/"
 description: "openstack-service – Control enabled openstack services"
 ---
 
-<h2>NAME</h2>
 <p> openstack-service &#8211; Control enabled openstack services</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openstack-service</code> <i>&lt;action&gt; </i>[<i>service</i>]&#8230;</p>

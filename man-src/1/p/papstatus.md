@@ -1,4 +1,5 @@
 ---
+
 title: "papstatus(1)"
 name: "papstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-papstatus/"
 description: "pap – client interface to remote printers using Printer Access Protocol"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pap &#8211; client interface to remote printers using Printer Access Protocol </p>
 <h2>SYNOPSIS</h2>
 <dl>

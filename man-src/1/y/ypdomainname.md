@@ -1,4 +1,5 @@
 ---
+
 title: "ypdomainname(1)"
 name: "ypdomainname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ypdomainname/"
 description: "hostname – show or set the system’s host name domainname – show or set the system’s NIS/YP domain name ypdomainname – show or set the system’s NIS/YP domain name nisdomainname – show or set the sys..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hostname &#8211; show or set the system&#8217;s host name<br />
  domainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
  ypdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />

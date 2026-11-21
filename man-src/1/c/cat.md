@@ -1,4 +1,5 @@
 ---
+
 title: "cat(1)"
 name: "cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cat/"
 description: "cat – concatenate files and print on the standard output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cat &#8211; concatenate files and print on the standard output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cat</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

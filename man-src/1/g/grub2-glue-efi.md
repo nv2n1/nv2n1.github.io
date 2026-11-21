@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-glue-efi(1)"
 name: "grub2-glue-efi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-glue-efi/"
 description: "grub-glue-efi — Create an Apple fat EFI binary."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-glue-efi</code> &#8212; Create an Apple fat EFI binary. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-glue-efi</code> &lt;-3 | &#8211;input32=<i>FILE</i>&gt; &lt;-6 | &#8211;input64=<i>FILE</i>&gt;</p>

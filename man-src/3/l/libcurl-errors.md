@@ -1,4 +1,5 @@
 ---
+
 title: "libcurl-errors(3)"
 name: "libcurl-errors"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libcurl-errors/"
 ---
 
-<h2>NAME</h2>
-
- libcurl-errors - error codes in libcurl
+libcurl-errors - error codes in libcurl
 
 <h2>DESCRIPTION</h2>
 

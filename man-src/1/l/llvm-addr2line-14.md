@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-addr2line-14(1)"
 name: "llvm-addr2line-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-addr2line-14/"
 description: "llvm-addr2line – a drop-in replacement for addr2line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-addr2line &#8211; a drop-in replacement for addr2line </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-addr2line</code> [<i>options</i>]</p>

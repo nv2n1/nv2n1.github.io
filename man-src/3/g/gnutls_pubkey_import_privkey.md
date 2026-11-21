@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_privkey(3)"
 name: "gnutls_pubkey_import_privkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pubkey_import_privkey/"
 description: "gnutls_pubkey_import_privkey – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pubkey_import_privkey &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>

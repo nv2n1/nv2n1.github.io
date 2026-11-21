@@ -1,4 +1,5 @@
 ---
+
 title: "fabs(3)"
 name: "fabs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fabs/"
 description: "fabs, fabsf, fabsl – absolute value of floating-point number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fabs, fabsf, fabsl &#8211; absolute value of floating-point number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmtinfo(1)"
 name: "gmtinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtinfo/"
 description: "gmtinfo – Return information about data tables"
 ---
 
-<h2>NAME</h2>
 <p> gmtinfo &#8211; Return information about data tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtinfo</code> [ <i>table</i> ] [ <code>a</code>|<code>f</code>|<code>s</code> ] [ ] [ [<i>dx</i>[/<i>dy</i>]] ] [ <code>L</code>|<code>l</code>|<code>H</code>|<code>h</code><i>col</i> ] [ [<code>p</code>|<code>f</code>|<code>s</code>]<i>dx</i>[/<i>dy</i>[/<i>dz</i>&#8230;] ] [ [<code>x</code>][<code>y</code>] ] [ <i>dz</i>[/<i>col</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

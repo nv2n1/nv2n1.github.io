@@ -1,4 +1,5 @@
 ---
+
 title: "oci-systemd-hook(1)"
 name: "oci-systemd-hook"
 section: "1"
@@ -6,11 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-oci-systemd-hook/"
 ---
 
-<h2>SYNOPSIS</h2>
-
- 
-
- oci-systemd-hook prestart [container.json] 
+oci-systemd-hook prestart [container.json] 
 
  
 

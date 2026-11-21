@@ -1,4 +1,5 @@
 ---
+
 title: "abort(3)"
 name: "abort"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-abort/"
 description: "abort – cause abnormal process termination"
 ---
 
-<h2 class="name">NAME</h2>
 <p> abort &#8211; cause abnormal process termination </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

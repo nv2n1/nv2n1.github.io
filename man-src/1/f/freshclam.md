@@ -1,4 +1,5 @@
 ---
+
 title: "freshclam(1)"
 name: "freshclam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freshclam/"
 description: "freshclam – update virus databases"
 ---
 
-<h2>NAME</h2>
 <p> freshclam &#8211; update virus databases</p>
 <h2>SYNOPSIS</h2>
 <p> freshclam [options]</p>

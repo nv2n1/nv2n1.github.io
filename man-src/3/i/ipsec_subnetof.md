@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_subnetof(3)"
 name: "ipsec_subnetof"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_subnetof/"
 description: "ipsec_subnetof, ipsec_hostof, ipsec_broadcastof – given Internet address and subnet mask return subnet number, host part, broadcast address"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_subnetof, ipsec_hostof, ipsec_broadcastof &#8211; given Internet address and subnet mask return subnet number, host part, broadcast address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

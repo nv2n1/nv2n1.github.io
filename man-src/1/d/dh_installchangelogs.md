@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installchangelogs(1)"
 name: "dh_installchangelogs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installchangelogs/"
 description: "dh_installchangelogs – install changelogs into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installchangelogs &#8211; install changelogs into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installchangelogs</code> [<i>debhelper options</i>] [<code>-k</code>] [<code>-X</code><i>item</i>] [<i>upstream</i>]</p>

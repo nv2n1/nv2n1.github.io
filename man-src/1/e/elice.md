@@ -1,4 +1,5 @@
 ---
+
 title: "elice(1)"
 name: "elice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elice/"
 description: "elice – compiler for programs written in PureBasic"
 ---
 
-<h2>NAME</h2>
 <p> elice &#8211; compiler for programs written in PureBasic</p>
 <h2>SYNOPSIS</h2>
 <p> <code>elice</code> [<i>options&#8230;</i>] [<code>-o</code> <i>outfile</i>] <i>sourcefile&#8230;</i></p>

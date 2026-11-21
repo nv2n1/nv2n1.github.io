@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaelasticsearch(1)"
 name: "pmdaelasticsearch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaelasticsearch/"
 description: "pmdaelasticsearch – elasticsearch performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaelasticsearch</code> &#8211; elasticsearch performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdaelasticsearch</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from elasticsearch.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-ls(1)"
 name: "flatpak-remote-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-remote-ls/"
 description: "flatpak-remote-ls – Show available runtimes and applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-remote-ls &#8211; Show available runtimes and applications </p>
 <h2>SYNOPSIS</h2>
 <dl>

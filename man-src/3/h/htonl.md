@@ -1,4 +1,5 @@
 ---
+
 title: "htonl(3)"
 name: "htonl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-htonl/"
 description: "htonl, htons, ntohl, ntohs – convert values between host and network byte order"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htonl, htons, ntohl, ntohs &#8211; convert values between host and network byte order </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

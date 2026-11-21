@@ -1,4 +1,5 @@
 ---
+
 title: "helpztags(1)"
 name: "helpztags"
 section: "1"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-helpztags/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- helpztags - generate the help tags file for directory 
+helpztags - generate the help tags file for directory 
 
 <h2>SYNOPSIS</h2>
 

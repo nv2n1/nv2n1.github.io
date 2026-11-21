@@ -1,4 +1,5 @@
 ---
+
 title: "ntlm_auth(1)"
 name: "ntlm_auth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ntlm_auth/"
 description: "ntlm_auth – tool to allow external access to Winbind’s NTLM authentication function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ntlm_auth &#8211; tool to allow external access to Winbind&#8217;s NTLM authentication function </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "rgb3toppm(1)"
 name: "rgb3toppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rgb3toppm/"
 description: "rgb3toppm – combine three portable graymaps into one portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rgb3toppm &#8211; combine three portable graymaps into one portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rgb3toppm</code> <i>redpgmfile greenpgmfile bluepgmfile</i></p>

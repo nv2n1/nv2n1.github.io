@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpspooler(1)"
 name: "ncftpspooler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftpspooler/"
 description: "ncftpspooler – Global batch FTP job processor daemon"
 ---
 
-<h2>NAME</h2>
 <p> ncftpspooler &#8211; Global batch FTP job processor daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftpspooler</code> -d [<i>options</i>] </p>

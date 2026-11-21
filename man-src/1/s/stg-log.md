@@ -1,4 +1,5 @@
 ---
+
 title: "stg-log(1)"
 name: "stg-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-log/"
 description: "stg-log – Display the patch changelog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-log &#8211; Display the patch changelog </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

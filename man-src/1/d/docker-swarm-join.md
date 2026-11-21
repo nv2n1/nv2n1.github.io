@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-join(1)"
 name: "docker-swarm-join"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-swarm-join/"
 description: "docker-swarm-join – Join a swarm as a node and/or manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-swarm-join &#8211; Join a swarm as a node and/or manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm join [OPTIONS] HOST:PORT</code> </p>

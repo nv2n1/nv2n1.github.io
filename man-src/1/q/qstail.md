@@ -1,4 +1,5 @@
 ---
+
 title: "qstail(1)"
 name: "qstail"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qstail/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qstail - an utility printing the end of a log file starting at the specified pattern. 
+qstail - an utility printing the end of a log file starting at the specified pattern. 
 
 <h2>SYNOPSIS</h2>
 

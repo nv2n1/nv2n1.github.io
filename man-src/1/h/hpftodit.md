@@ -1,4 +1,5 @@
 ---
+
 title: "hpftodit(1)"
 name: "hpftodit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpftodit/"
 description: "hpftodit – create font description files for use with groff -Tlj4"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpftodit &#8211; create font description files for use with groff -Tlj4 </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-aqs</code> ] [ <code>-i </code><i>n</i> ] <i>tfm-file</i> <i>map-file</i> <i>output-font</i> <code>-d</code> <i>tfm-file</i> [<i>map-file</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

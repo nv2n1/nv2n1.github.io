@@ -1,4 +1,5 @@
 ---
+
 title: "g_nmtraj(1)"
 name: "g_nmtraj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_nmtraj/"
 description: "g_nmtraj – generate oscillating trajectory of an eigenmode"
 ---
 
-<h2>NAME</h2>
 <p> g_nmtraj &#8211; generate oscillating trajectory of an eigenmode </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

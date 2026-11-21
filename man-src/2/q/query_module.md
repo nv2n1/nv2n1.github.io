@@ -1,4 +1,5 @@
 ---
+
 title: "query_module(2)"
 name: "query_module"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-query_module/"
 description: "query_module – query the kernel for various bits pertaining to modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> query_module &#8211; query the kernel for various bits pertaining to modules </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

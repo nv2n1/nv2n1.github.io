@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_init(3)"
 name: "bson_iter_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_init/"
 description: "bson_iter_init() – The bson_iter_init() function shall initialize iter to iterate upon the BSON document bson. Upon initialization, iter is placed before the first element. Callers must call bson_i..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_init() &#8211; The bson_iter_init() function shall initialize iter to iterate upon the BSON document bson. Upon initialization, iter is placed before the first element. Callers must call bson_iter_next(), bson_iter_find(), or bson_iter_find_case() to advance to an element.</p>
 <h2>SYNOPSIS</h2>
 <pre>

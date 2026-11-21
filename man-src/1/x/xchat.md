@@ -1,4 +1,5 @@
 ---
+
 title: "xchat(1)"
 name: "xchat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xchat/"
 description: "xchat – manual page for xchat 2.8.8"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xchat &#8211; manual page for xchat 2.8.8 </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

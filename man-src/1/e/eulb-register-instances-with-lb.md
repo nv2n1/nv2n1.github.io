@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-register-instances-with-lb(1)"
 name: "eulb-register-instances-with-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-register-instances-with-lb/"
 description: "eulb-register-instances-with-lb – Add one or more instances to a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-register-instances-with-lb &#8211; Add one or more instances to a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-register-instances-with-lb <code>&#8211;instances</code> INSTANCE1,INSTANCE2,&#8230;</p>

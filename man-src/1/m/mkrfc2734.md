@@ -1,4 +1,5 @@
 ---
+
 title: "mkrfc2734(1)"
 name: "mkrfc2734"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkrfc2734/"
 description: "mkrfc2734 – Make Linux 2.4 IP over IEEE 1394 capable."
 ---
 
-<h2>NAME</h2>
 <p> mkrfc2734 &#8211; Make Linux 2.4 IP over IEEE 1394 capable.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkrfc2734</code></p>

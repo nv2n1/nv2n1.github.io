@@ -1,4 +1,5 @@
 ---
+
 title: "knock(1)"
 name: "knock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-knock/"
 description: "knock – port-knock client"
 ---
 
-<h2>NAME</h2>
 <p> knock &#8211; port-knock client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>knock [options] &lt;host&gt; &lt;port[:proto]&gt; [port[:proto]] &#8230;</code></p>

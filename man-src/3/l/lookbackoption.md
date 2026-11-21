@@ -1,4 +1,5 @@
 ---
+
 title: "lookbackoption(3)"
 name: "lookbackoption"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lookbackoption/"
 description: "ql/instruments/lookbackoption.hpp – Lookback option on a single asset."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/instruments/lookbackoption.hpp &#8211; Lookback option on a single asset. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />

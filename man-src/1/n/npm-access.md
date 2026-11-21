@@ -1,4 +1,5 @@
 ---
+
 title: "npm-access(1)"
 name: "npm-access"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-access/"
 description: "npm-access – Set access level on published packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-access</code> &#8211; Set access level on published packages </p>
 <h3>Synopsis</h3>
 <dl>

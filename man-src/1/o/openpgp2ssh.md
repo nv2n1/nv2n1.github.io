@@ -1,4 +1,5 @@
 ---
+
 title: "openpgp2ssh(1)"
 name: "openpgp2ssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openpgp2ssh/"
 description: "openpgp2ssh – translate OpenPGP keys to SSH keys"
 ---
 
-<h2>NAME</h2>
 <p> openpgp2ssh &#8211; translate OpenPGP keys to SSH keys</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openpgp2ssh &lt; mykey.gpg </code> </p>

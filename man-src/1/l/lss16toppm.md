@@ -1,4 +1,5 @@
 ---
+
 title: "lss16toppm(1)"
 name: "lss16toppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lss16toppm/"
 description: "lss16toppm — Convert an LSS-16 image to PPM"
 ---
 
-<h2>NAME</h2>
 <p> lss16toppm &#8212; Convert an LSS-16 image to PPM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lss16toppm</code> [<code>-map</code>] [&lt; file.lss] [&gt; file.ppm]</p>

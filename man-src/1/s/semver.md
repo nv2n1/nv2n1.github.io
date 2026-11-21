@@ -1,4 +1,5 @@
 ---
+
 title: "semver(1)"
 name: "semver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-semver/"
 description: "semver – The semantic versioner for npm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>semver</code> &#8211; The semantic versioner for npm </p>
 <h2>Install</h2>
 <dl>

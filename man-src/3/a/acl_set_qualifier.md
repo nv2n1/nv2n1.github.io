@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_qualifier(3)"
 name: "acl_set_qualifier"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_set_qualifier/"
 description: "acl_set_qualifier – set the qualifier of an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_qualifier</code> &#8211; set the qualifier of an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

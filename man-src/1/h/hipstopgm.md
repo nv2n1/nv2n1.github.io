@@ -1,4 +1,5 @@
 ---
+
 title: "hipstopgm(1)"
 name: "hipstopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hipstopgm/"
 description: "hipstopgm – convert a HIPS file into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hipstopgm &#8211; convert a HIPS file into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hipstopgm</code> [<i>hipsfile</i>]</p>

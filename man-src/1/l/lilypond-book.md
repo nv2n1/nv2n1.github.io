@@ -1,4 +1,5 @@
 ---
+
 title: "lilypond-book(1)"
 name: "lilypond-book"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lilypond-book/"
 description: "lilypond-book – manual page for lilypond-book 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> lilypond-book &#8211; manual page for lilypond-book 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lilypond-book</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>

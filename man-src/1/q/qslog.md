@@ -1,4 +1,5 @@
 ---
+
 title: "qslog(1)"
 name: "qslog"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qslog/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qslog - collects request statistics from access log data. 
+qslog - collects request statistics from access log data. 
 
 <h2>SYNOPSIS</h2>
 

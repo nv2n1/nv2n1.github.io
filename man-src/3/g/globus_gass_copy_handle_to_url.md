@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_handle_to_url(3)"
 name: "globus_gass_copy_handle_to_url"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_copy_handle_to_url/"
 description: "globus_gass_copy.h – GASS Copy Library."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gass_copy.h &#8211; GASS Copy Library.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_gass_transfer.h&#8217;<br />

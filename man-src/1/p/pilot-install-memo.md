@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-memo(1)"
 name: "pilot-install-memo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-memo/"
 description: "pilot-install-memo – Installs a new Memo Pad entry onto your Palm handheld."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-memo &#8211; Installs a new Memo Pad entry onto your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-subtitles(1)"
 name: "gnome-subtitles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-subtitles/"
 description: "gnome-subtitles – video subtitling for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-subtitles &#8211; video subtitling for the GNOME desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-subtitles</code> [<i>options</i>] </p>

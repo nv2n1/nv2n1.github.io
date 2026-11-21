@@ -1,4 +1,5 @@
 ---
+
 title: "make-redir(1)"
 name: "make-redir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-make-redir/"
 description: "make-redir – run \"make\" but automatically redirect its results to DESTDIR"
 ---
 
-<h2>NAME</h2>
 <p> make-redir &#8211; run &quot;make&quot; but automatically redirect its results to DESTDIR</p>
 <h2>SYNOPSIS</h2>
 <p> <code>make-redir</code> [<i>MAKE_ARGUMENT*</i>]&#8230;[<i>install</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "idevicescreenshot(1)"
 name: "idevicescreenshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicescreenshot/"
 description: "idevicescreenshot – Gets a screenshot from the connected device."
 ---
 
-<h2>NAME</h2>
 <p> idevicescreenshot &#8211; Gets a screenshot from the connected device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicescreenshot</code> [OPTIONS] </p>

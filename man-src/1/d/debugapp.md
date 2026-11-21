@@ -1,4 +1,5 @@
 ---
+
 title: "debugapp(1)"
 name: "debugapp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debugapp/"
 description: "debugapp – A wrapper for openapp."
 ---
 
-<h2>NAME</h2>
 <p> debugapp &#8211; A wrapper for openapp.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>debugapp</code> [<code>&#8211;find</code>] [<code>&#8211;gdb=&#8230;</code>] <i>application</i> [<i>arguments&#8230;</i>] </p>

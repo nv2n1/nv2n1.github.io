@@ -1,4 +1,5 @@
 ---
+
 title: "dlanst(3)"
 name: "dlanst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlanst/"
 description: "dlanst.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlanst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "dtpmqrt(3)"
 name: "dtpmqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtpmqrt/"
 description: "dtpmqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtpmqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

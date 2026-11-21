@@ -1,4 +1,5 @@
 ---
+
 title: "gcm-calibrate(1)"
 name: "gcm-calibrate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcm-calibrate/"
 description: "gcm-calibrate – GNOME Color Manager Calibrator Tool"
 ---
 
-<h2>NAME</h2>
 <p> gcm-calibrate &#8211; GNOME Color Manager Calibrator Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcm-calibrate</code> [ <code>&#8211;verbose</code> ]</p>

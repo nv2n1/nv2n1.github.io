@@ -1,4 +1,5 @@
 ---
+
 title: "freehoo(1)"
 name: "freehoo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freehoo/"
 description: "freehoo – manual page for freehoo messenger"
 ---
 
-<h2>NAME</h2>
 <p> freehoo &#8211; manual page for freehoo messenger</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freehoo</code> [<i>OPTION</i>&#8230;]</p>

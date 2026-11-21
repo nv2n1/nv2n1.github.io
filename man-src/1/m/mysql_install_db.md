@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_install_db(1)"
 name: "mysql_install_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_install_db/"
 description: "mysql_install_db – initialize MySQL data directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_install_db &#8211; initialize MySQL data directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

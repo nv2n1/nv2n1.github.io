@@ -1,4 +1,5 @@
 ---
+
 title: "svnrdump(1)"
 name: "svnrdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svnrdump/"
 description: "svnrdump – Subversion remote repository dumper and loader"
 ---
 
-<h2>NAME</h2>
 <p> svnrdump &#8211; Subversion remote repository dumper and loader</p>
 <h2>SYNOPSIS</h2>
 <dl>

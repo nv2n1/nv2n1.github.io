@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_list(1)"
 name: "x2sys_list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_list/"
 description: "x2sys_list – Extract subset from crossover data base"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_list &#8211; Extract subset from crossover data base</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_list</code> <i>column</i> <i>TAG</i> [ <i>coedbase.txt</i> ] [ <i>asymm_max</i> ] [ ] [ <i>acdhiInNtTvwxyz</i> ] [ [<i>list</i>] ] [ [<i>corrtable</i>] ] [ <i>nx_min</i> ] [ <code>e</code>|<code>i</code> ] [ <i>region</i> ] [ <i>track</i> ] [ [<i>level</i>] ] [ [<i>list</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] </p>

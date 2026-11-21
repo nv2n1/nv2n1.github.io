@@ -1,4 +1,5 @@
 ---
+
 title: "dfutool(1)"
 name: "dfutool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dfutool/"
 description: "dfutool – Device Firmware Upgrade utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dfutool &#8211; Device Firmware Upgrade utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dfutool</code> [ <i>options</i> ] &lt; <i>command</i> &gt;</p>

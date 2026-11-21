@@ -1,4 +1,5 @@
 ---
+
 title: "dsktune(1)"
 name: "dsktune"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dsktune/"
 description: "dsktune – reports memory, network, and file system tuning settings which can affect the performance of the Directory Server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsktune &#8211; reports memory, network, and file system tuning settings which can affect the performance of the Directory Server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dsktune</code> [<i>-q</i>] [<i>-c</i>] [<i>-D</i>] [<i>-v</i>] [<i>-i installdir</i>]</p>

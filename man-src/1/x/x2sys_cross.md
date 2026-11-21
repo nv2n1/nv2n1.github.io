@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_cross(1)"
 name: "x2sys_cross"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_cross/"
 description: "x2sys_cross – Calculate crossovers between track data files"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_cross &#8211; Calculate crossovers between track data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_cross</code> <i>track(s)</i> <i>TAG</i> [ <i>combi.lis</i> ] [ [<i>runtimes</i>] ] [ <code>l</code>|<code>a</code>|<code>c</code> ] [ <i>parameters</i> ] [ <code>e</code>|<code>i</code> ] [ <code>l</code>|<code>u</code>|<code>h</code><i>speed</i> ] [ [<i>level</i>] ] [ <i>size</i> ] [ ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "impressive(1)"
 name: "impressive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-impressive/"
 description: "Impressive – presentation tool with eye candy"
 ---
 
-<h2>NAME</h2>
 <p> Impressive &#8211; presentation tool with eye candy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>impressive</code> [OPTIONS&#8230;] FILES&#8230;</p>

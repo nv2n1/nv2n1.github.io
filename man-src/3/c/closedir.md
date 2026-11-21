@@ -1,4 +1,5 @@
 ---
+
 title: "closedir(3)"
 name: "closedir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-closedir/"
 description: "closedir – close a directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> closedir &#8211; close a directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

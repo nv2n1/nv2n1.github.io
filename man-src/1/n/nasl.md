@@ -1,4 +1,5 @@
 ---
+
 title: "nasl(1)"
 name: "nasl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nasl/"
 description: "nasl – Nessus Attack Scripting Language"
 ---
 
-<h2>NAME</h2>
 <p> nasl &#8211; Nessus Attack Scripting Language</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nasl</code> <i>&lt;[-vh] [-T tracefile] [-s] [-t target] [-sX] &gt; files&#8230;</i></p>

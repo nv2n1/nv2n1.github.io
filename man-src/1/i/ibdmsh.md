@@ -1,4 +1,5 @@
 ---
+
 title: "ibdmsh(1)"
 name: "ibdmsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdmsh/"
 description: "ibdmsh IB DATA MODEL – Extentended TCL shell"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibdmsh</code> IB DATA MODEL &#8211; Extentended TCL shell</p>
 <h2>DESCRIPTION</h2>
 <p> <code>ibdmsh</code> is a <font SIZE="-1">TCL</font> shell extended with interface for the <font SIZE="-1">IB</font> data model. To use this shell you will write <font SIZE="-1">TCL</font> code that directly access the <font SIZE="-1">IB</font> data model objects and functions. </p>

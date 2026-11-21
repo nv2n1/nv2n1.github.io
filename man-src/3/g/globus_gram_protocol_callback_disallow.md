@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_callback_disallow(3)"
 name: "globus_gram_protocol_callback_disallow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_callback_disallow/"
 description: "Message I/O –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Message I/O &#8211; </p>
 <p> Mesage I/O.</p>
 <h3>Typedefs</h3>

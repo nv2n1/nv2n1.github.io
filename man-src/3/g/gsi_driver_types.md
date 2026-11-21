@@ -1,4 +1,5 @@
 ---
+
 title: "gsi_driver_types(3)"
 name: "gsi_driver_types"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gsi_driver_types/"
 description: "Types –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Types &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_xio_gsi_delegation_init_callback_t</code> )(globus_result_t result, void *user_arg) </p>

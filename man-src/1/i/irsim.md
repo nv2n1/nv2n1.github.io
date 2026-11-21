@@ -1,4 +1,5 @@
 ---
+
 title: "irsim(1)"
 name: "irsim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irsim/"
 description: "irsim – An event-driven logic-level simulator for MOS circuits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> irsim &#8211; An event-driven logic-level simulator for MOS circuits </p>
 <h2>SYNOPSIS</h2>
 <p> <code>irsim </code><i>[-s] prm_file sim_file &#8230; [+hist_file] [-cmd_file &#8230;] </i></p>

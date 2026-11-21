@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_open(3)"
 name: "ldap_open"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_open/"
 description: "ldap_init, ldap_initialize, ldap_open – Initialize the LDAP library and open a connection to an LDAP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_init, ldap_initialize, ldap_open &#8211; Initialize the LDAP library and open a connection to an LDAP server </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

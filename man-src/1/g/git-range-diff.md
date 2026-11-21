@@ -1,4 +1,5 @@
 ---
+
 title: "git-range-diff(1)"
 name: "git-range-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-range-diff/"
 description: "git-range-diff – Compare two commit ranges (e.g. two versions of a branch)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-range-diff &#8211; Compare two commit ranges (e.g. two versions of a branch) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

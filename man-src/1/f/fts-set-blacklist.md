@@ -1,4 +1,5 @@
 ---
+
 title: "fts-set-blacklist(1)"
 name: "fts-set-blacklist"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-set-blacklist/"
 ---
 
-<h2>NAME</h2>
-
- fts-set-blacklist
+fts-set-blacklist
 
 <h2>SYNOPSIS</h2>
 

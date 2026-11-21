@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_list_key_count(3)"
 name: "ldns_key_list_key_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_list_key_count/"
 description: "ldns_key_list_key_count, ldns_key_list_key, ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key, ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_key_keytag, ld..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_list_key_count, ldns_key_list_key, ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key, ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_key_keytag, ldns_key_pubkey_owner, ldns_key_flags </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

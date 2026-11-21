@@ -1,4 +1,5 @@
 ---
+
 title: "ift-export(1)"
 name: "ift-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ift-export/"
 description: "ift-export.info – ift-export.info"
 ---
 
-<h2>NAME</h2>
 <p> ift-export.info &#8211; ift-export.info</p>
 <h2>Built-in iSight firmware export</h2>
 <p> ift-export export a Built-in iSight firmware produced by ift-extract and convert it to Intel <font SIZE="-1">HEX</font> file. Note that Apple Built-in iSight seems to have extende on-chip memory. This case is not handled by fxload and thus, not allowing to load the Intel <font SIZE="-1">HEX</font> file into the chip. Use ift-load to load directly the binary firmware on-chip. </p>

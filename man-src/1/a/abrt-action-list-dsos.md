@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-list-dsos(1)"
 name: "abrt-action-list-dsos"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-list-dsos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-list-dsos - Prints out DSO from mapped memory regions. 
+abrt-action-list-dsos - Prints out DSO from mapped memory regions. 
 
 <h2>SYNOPSIS</h2>
 

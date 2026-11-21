@@ -1,4 +1,5 @@
 ---
+
 title: "epub-meta(1)"
 name: "epub-meta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epub-meta/"
 description: "epub-meta – read and write metadata from an EPUB ebook file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code> epub-meta </code>&#8211; read and write metadata from an EPUB ebook file </p>
 <h2>USAGE</h2>
 <p> epub-meta [options] myfile.epub</p>

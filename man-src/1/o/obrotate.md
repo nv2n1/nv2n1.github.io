@@ -1,4 +1,5 @@
 ---
+
 title: "obrotate(1)"
 name: "obrotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obrotate/"
 description: "obrotate – batch-rotate dihedral angles matching SMARTS patterns"
 ---
 
-<h2>NAME</h2>
 <p> <code>obrotate</code> &#8211; batch-rotate dihedral angles matching SMARTS patterns</p>
 <h2>SYNOPSIS</h2>
 <p> <i>&#8216;SMARTS-pattern&#8217;</i> <i>filename</i> <i>atom1</i> <i>atom2</i> <i>atom3</i> <i>atom4</i> <i>angle</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mikmod(1)"
 name: "mikmod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mikmod/"
 description: "mikmod – play soundtracker etc. modules on a Unix machine."
 ---
 
-<h2>NAME</h2>
 <p> mikmod &#8211; play soundtracker etc. modules on a Unix machine. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mikmod [-options</code>]&#8230; [<code>module</code>|<code>playlist</code>]&#8230; </p>

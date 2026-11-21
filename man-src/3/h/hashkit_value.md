@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_value(3)"
 name: "hashkit_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_value/"
 description: "hashkit_value – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_value &#8211; libhashkit Documentation </p>
 <p> Generate a value for the given key</p>
 <h2>SYNOPSIS</h2>

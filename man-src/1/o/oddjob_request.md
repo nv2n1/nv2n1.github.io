@@ -1,4 +1,5 @@
 ---
+
 title: "oddjob_request(1)"
 name: "oddjob_request"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oddjob_request/"
 description: "oddjob_request – send requests to oddjobd from the command line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oddjob_request &#8211; send requests to oddjobd from the command line</p>
 <h2>SYNOPSIS</h2>
 <p> oddjob_request [-s service] [-o object] [-i interface] [-S] [ [request [arg1 &#8230;]] | -I ] </p>

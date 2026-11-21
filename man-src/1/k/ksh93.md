@@ -1,4 +1,5 @@
 ---
+
 title: "ksh93(1)"
 name: "ksh93"
 section: "1"
@@ -6,7 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-ksh93/"
 description: "ksh, rksh, pfksh – KornShell, a standard/restricted command and programming language"
 ---
-<h2 class="name">NAME</h2>
+
 <p> ksh, rksh, pfksh - KornShell, a standard/restricted command and programming language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksh</code> [ <code>&plusmn;abcefhiknoprstuvxBCDP</code> ] [ <code>-R</code> file ] [ <code>&plusmn;o</code> option ] ... [ <code>-</code> ] [ arg ... ]  </p>

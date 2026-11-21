@@ -1,4 +1,5 @@
 ---
+
 title: "ksvalidator(1)"
 name: "ksvalidator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksvalidator/"
 description: "ksvalidator — verify the syntax of a kickstart file"
 ---
 
-<h2>NAME</h2>
 <p> ksvalidator &#8212; verify the syntax of a kickstart file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksvalidator</code> [<code>-e</code> | <code>&#8211;firsterror</code>] [<code>-i</code> | <code>&#8211;followincludes</code>] [<code>-l</code> | <code>&#8211;listversions</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>] INFILE</p>

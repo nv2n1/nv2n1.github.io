@@ -1,4 +1,5 @@
 ---
+
 title: "jadmaker(1)"
 name: "jadmaker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jadmaker/"
 description: "jadmaker – JAD File Generator"
 ---
 
-<h2>NAME</h2>
 <p> jadmaker &#8211; JAD File Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jadmaker</code> [<i>-f|&#8211;force</i>] [<i>-u|&#8211;url URL</i>] &lt;filename.jar&gt;&#8230;</p>

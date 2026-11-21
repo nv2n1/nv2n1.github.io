@@ -1,4 +1,5 @@
 ---
+
 title: "grfdiff(1)"
 name: "grfdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grfdiff/"
 description: "GRFDiff – A tool to create a binary GRF diff from to GRFs."
 ---
 
-<h2>NAME</h2>
 <p> <code>GRFDiff</code> &#8211; A tool to create a binary GRF diff from to GRFs.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grfdiff</code> [-<code>hnxyv</code> ] [-<code>l </code><i>numbers</i> ] [-<code>o </code><i>GRF-File</i> ] <i>Original-GRF-file</i> <i>New-GRF-file</i> </p>

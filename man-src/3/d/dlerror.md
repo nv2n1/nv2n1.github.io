@@ -1,4 +1,5 @@
 ---
+
 title: "dlerror(3)"
 name: "dlerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlerror/"
 description: "dlerror – obtain error diagnostic for functions in the dlopen API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlerror &#8211; obtain error diagnostic for functions in the dlopen API </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>

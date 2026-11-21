@@ -1,4 +1,5 @@
 ---
+
 title: "regtree(1)"
 name: "regtree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-regtree/"
 description: "regtree – Text-mode registry viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> regtree &#8211; Text-mode registry viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>

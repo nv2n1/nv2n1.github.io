@@ -1,4 +1,5 @@
 ---
+
 title: "bakefilize(1)"
 name: "bakefilize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bakefilize/"
 description: "bakefilize – prepare Bakefile project for use with Autoconf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bakefilize &#8211; prepare Bakefile project for use with Autoconf </p>
 <h2>SYNOPSIS</h2>
 <dl>

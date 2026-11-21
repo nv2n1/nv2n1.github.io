@@ -1,4 +1,5 @@
 ---
+
 title: "h2load(1)"
 name: "h2load"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h2load/"
 description: "h2load – HTTP/2 benchmarking tool"
 ---
 
-<h2>NAME</h2>
 <p> h2load &#8211; HTTP/2 benchmarking tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2load</code> [OPTIONS]&#8230; [URI]&#8230;</p>

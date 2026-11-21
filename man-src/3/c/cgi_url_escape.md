@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_url_escape(3)"
 name: "cgi_url_escape"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_url_escape/"
 description: "cgi_url_escape – url escape a string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_url_escape &#8211; url escape a string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

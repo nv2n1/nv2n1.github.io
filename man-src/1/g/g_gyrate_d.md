@@ -1,4 +1,5 @@
 ---
+
 title: "g_gyrate_d(1)"
 name: "g_gyrate_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_gyrate_d/"
 description: "g_gyrate – calculates the radius of gyration"
 ---
 
-<h2>NAME</h2>
 <p> g_gyrate &#8211; calculates the radius of gyration </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

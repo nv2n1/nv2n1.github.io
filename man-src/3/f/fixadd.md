@@ -1,4 +1,5 @@
 ---
+
 title: "fixadd(3)"
 name: "fixadd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixadd/"
 description: "fixadd – Safe function to add fixed point numbers clamping overflow. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixadd &#8211; Safe function to add fixed point numbers clamping overflow. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

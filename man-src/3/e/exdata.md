@@ -1,4 +1,5 @@
 ---
+
 title: "exdata(3)"
 name: "exdata"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exdata/"
 description: "exdata – Accessing the contents of datafiles. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exdata &#8211; Accessing the contents of datafiles. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

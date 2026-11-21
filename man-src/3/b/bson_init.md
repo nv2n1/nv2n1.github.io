@@ -1,4 +1,5 @@
 ---
+
 title: "bson_init(3)"
 name: "bson_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_init/"
 description: "bson_init() – The bson_init() function shall initialize a bson_t that is placed on the stack. This is equivalent to initializing a bson_t to BSON_INITIALIZER."
 ---
 
-<h2>NAME</h2>
 <p> bson_init() &#8211; The bson_init() function shall initialize a bson_t that is placed on the stack. This is equivalent to initializing a bson_t to BSON_INITIALIZER.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

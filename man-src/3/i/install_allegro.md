@@ -1,4 +1,5 @@
 ---
+
 title: "install_allegro(3)"
 name: "install_allegro"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_allegro/"
 description: "install_allegro – Initialise the Allegro library."
 ---
 
-<h2>NAME</h2>
 <p> install_allegro &#8211; Initialise the Allegro library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

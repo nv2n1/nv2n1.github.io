@@ -1,4 +1,5 @@
 ---
+
 title: "git-annex(1)"
 name: "git-annex"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-annex/"
 description: "git-annex – manage files with git, without checking their contents in"
 ---
-<h2>NAME</h2>
+
 <p> git-annex - manage files with git, without checking their contents in </p>
 <h2>SYNOPSIS</h2>
 <p> git annex command [params ...] </p>

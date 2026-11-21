@@ -1,4 +1,5 @@
 ---
+
 title: "exxfade(3)"
 name: "exxfade"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exxfade/"
 description: "exxfade – Truecolor image loading and fades. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exxfade &#8211; Truecolor image loading and fades. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

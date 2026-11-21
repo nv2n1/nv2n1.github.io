@@ -1,4 +1,5 @@
 ---
+
 title: "iterator(3)"
 name: "iterator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iterator/"
 description: "QuantLib::TimeBasket – Distribution over a number of dates."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::TimeBasket &#8211; Distribution over a number of dates. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/timebasket.hpp&gt; </p>

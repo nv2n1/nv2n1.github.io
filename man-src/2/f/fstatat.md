@@ -1,4 +1,5 @@
 ---
+
 title: "fstatat(2)"
 name: "fstatat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fstatat/"
 description: "stat, fstat, lstat, fstatat – get file status"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stat, fstat, lstat, fstatat &#8211; get file status </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

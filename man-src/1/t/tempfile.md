@@ -1,4 +1,5 @@
 ---
+
 title: "tempfile(1)"
 name: "tempfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tempfile/"
 description: "tempfile – create a temporary file in a safe manner"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tempfile &#8211; create a temporary file in a safe manner </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tempfile</code> [-d DIR] [-p STRING] [-s STRING] [-m MODE] [-n FILE] [&#8211;directory=DIR] [&#8211;prefix=STRING] [&#8211;suffix=STRING] [&#8211;mode=MODE] [&#8211;name=FILE] [&#8211;help] [&#8211;version]</p>

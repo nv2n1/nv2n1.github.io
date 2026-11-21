@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_rd_req_with_keyblock(3)"
 name: "krb5_rd_req_with_keyblock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_rd_req_with_keyblock/"
 description: "krb5_mk_req krb5_mk_req_exact krb5_mk_req_extended krb5_rd_req krb5_rd_req_with_keyblock krb5_mk_rep krb5_mk_rep_exact krb5_mk_rep_extended krb5_rd_rep krb5_build_ap_req krb5_verify_ap_req – create..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_mk_req</code> <code>krb5_mk_req_exact</code> <code>krb5_mk_req_extended</code> <code>krb5_rd_req</code> <code>krb5_rd_req_with_keyblock</code> <code>krb5_mk_rep</code> <code>krb5_mk_rep_exact</code> <code>krb5_mk_rep_extended</code> <code>krb5_rd_rep</code> <code>krb5_build_ap_req</code> <code>krb5_verify_ap_req</code> &#8211; create and read application authentication request </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

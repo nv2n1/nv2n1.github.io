@@ -1,4 +1,5 @@
 ---
+
 title: "create_color_table(3)"
 name: "create_color_table"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_color_table/"
 description: "create_color_table – Fills a color mapping table for customised effects. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_color_table &#8211; Fills a color mapping table for customised effects. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbs(1)"
 name: "pbs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pbs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pbs - general information on pbs 
+pbs - general information on pbs 
 
 <h2>DESCRIPTION</h2>
 

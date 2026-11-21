@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoyuv(1)"
 name: "ppmtoyuv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoyuv/"
 description: "ppmtoyuv – convert a portable pixmap into an Abekas YUV file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoyuv &#8211; convert a portable pixmap into an Abekas YUV file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoyuv</code> [<i>ppmfile</i>]</p>

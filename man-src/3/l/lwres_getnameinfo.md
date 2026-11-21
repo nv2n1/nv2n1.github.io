@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_getnameinfo(3)"
 name: "lwres_getnameinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_getnameinfo/"
 description: "lwres_getnameinfo – lightweight resolver socket address structure to hostname and service name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_getnameinfo &#8211; lightweight resolver socket address structure to hostname and service name </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

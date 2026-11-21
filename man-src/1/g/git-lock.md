@@ -1,4 +1,5 @@
 ---
+
 title: "git-lock(1)"
 name: "git-lock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-lock/"
 description: "git-lock – Lock a file excluded from version control"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-lock</code> &#8211; Lock a file excluded from version control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-lock</code> &lt;filename&gt;</p>

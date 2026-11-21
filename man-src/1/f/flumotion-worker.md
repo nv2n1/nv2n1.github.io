@@ -1,4 +1,5 @@
 ---
+
 title: "flumotion-worker(1)"
 name: "flumotion-worker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flumotion-worker/"
 description: "flumotion-worker – streaming media server worker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flumotion-worker &#8211; streaming media server worker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flumotion-worker</code> [ <code>&#8211;</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-L</code> <i>logdir</i> ] [ <code>-R</code> <i>rundir</i> ] [ <code>-H</code> <i>host</i> ] [ <code>-P</code> <i>port</i> ] [ <code>-T</code> <i>protocol</i> ] [ <code>-n</code> <i>name</i> ] [ <code>-D</code> ] [ <code>&#8211;daemonize-to=</code> <i>directory</i> ] [ <code>-F</code> <i>ports</i> | <code>&#8211;random-feederports</code> ] <code>-u username</code> <code>-p password</code> </p>

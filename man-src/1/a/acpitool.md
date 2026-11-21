@@ -1,4 +1,5 @@
 ---
+
 title: "acpitool(1)"
 name: "acpitool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpitool/"
 description: "acpitool – a Linux ACPI client, allowing you to query or set ACPI values"
 ---
 
-<h2>NAME</h2>
 <p> acpitool &#8211; a Linux ACPI client, allowing you to query or set ACPI values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpitool [ -aAbBcefFhjlmnosStTvVwWz ]</code></p>

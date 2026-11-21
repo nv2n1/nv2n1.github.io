@@ -1,4 +1,5 @@
 ---
+
 title: "resize-part-image(1)"
 name: "resize-part-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-resize-part-image/"
 description: "resize-part-image – resize a partition image"
 ---
 
-<h2>NAME</h2>
 <p> resize-part-image &#8211; resize a partition image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>resize-part-image [ options ] IMAGE SIZE [OUTPUT]</code> </p>

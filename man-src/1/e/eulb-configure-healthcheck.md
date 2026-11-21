@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-configure-healthcheck(1)"
 name: "eulb-configure-healthcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-configure-healthcheck/"
 description: "eulb-configure-healthcheck – Configure health checking for instance registerd with a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-configure-healthcheck &#8211; Configure health checking for instance registerd with a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-configure-healthcheck <code>&#8211;healthy-threshold</code> COUNT <code>&#8211;interval</code> SECONDS</p>

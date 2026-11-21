@@ -1,4 +1,5 @@
 ---
+
 title: "ncidmodules(1)"
 name: "ncidmodules"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncidmodules/"
 description: "ncid-kpopup – Popup Caller ID using KDE"
 ---
 
-<h2>NAME</h2>
 <p> <code>ncid-kpopup</code> &#8211; Popup Caller ID using KDE </p>
 <p> <code>ncid-page</code> &#8211; send Caller ID to a pager or cell phone </p>
 <p> <code>ncid-samba</code> &#8211; send Caller ID to samba to create a popup </p>

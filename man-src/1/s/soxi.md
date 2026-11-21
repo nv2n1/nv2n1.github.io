@@ -1,4 +1,5 @@
 ---
+
 title: "soxi(1)"
 name: "soxi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-soxi/"
 description: "SoXI – Sound eXchange Information, display sound file metadata"
 ---
 
-<h2>NAME</h2>
 <p> SoXI &#8211; Sound eXchange Information, display sound file metadata</p>
 <h2>SYNOPSIS</h2>
 <p> <code>soxi</code> [<code>-V</code>[<i>level</i>]] [<code>-T</code>] [<code>-t</code>|<code>-r</code>|<code>-c</code>|<code>-s</code>|<code>-d</code>|<code>-D</code>|<code>-b</code>|<code>-B</code>|<code>-e</code>|<code>-a</code>] <i>infile1</i> &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "putty(1)"
 name: "putty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-putty/"
 description: "putty – GUI SSH, Telnet and Rlogin client for X"
 ---
 
-<h2>NAME</h2>
 <p> <code>putty</code> &#8211; GUI SSH, Telnet and Rlogin client for X</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

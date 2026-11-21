@@ -1,4 +1,5 @@
 ---
+
 title: "bti(1)"
 name: "bti"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bti/"
 description: "bti – send a tweet to twitter.com from the command line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bti &#8211; send a tweet to twitter.com from the command line </p>
 <h2>SYNOPSIS</h2>
 <dl>

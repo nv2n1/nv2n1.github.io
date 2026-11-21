@@ -1,4 +1,5 @@
 ---
+
 title: "generatorrunner(1)"
 name: "generatorrunner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-generatorrunner/"
 description: "generatorrunner – plugin-based binding source code generator"
 ---
 
-<h2>NAME</h2>
 <p> generatorrunner &#8211; plugin-based binding source code generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>generatorrunner &#8211;generator-set=&lt;plugin name&gt; [options] header-file typesystem-file</code></p>

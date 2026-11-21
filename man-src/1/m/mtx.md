@@ -1,4 +1,5 @@
 ---
+
 title: "mtx(1)"
 name: "mtx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx/"
 description: "mtx – control SCSI media changer devices"
 ---
 
-<h2>NAME</h2>
 <p> mtx &#8211; control SCSI media changer devices</p>
 <h2>SYNOPSIS</h2>
 <p> mtx [-f &lt;scsi-generic-device&gt;] [nobarcode] [invert] [noattach] command [ command &#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "check-regexp(1)"
 name: "check-regexp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-check-regexp/"
 description: "check-regexp – test regular expressions from the command line"
 ---
 
-<h2>NAME</h2>
 <p> check-regexp &#8211; test regular expressions from the command line</p>
 <h2>SYNOPSIS</h2>
 <p> <code>check-regexp</code> <i>&#8216;regular expression&#8217; &#8216;string1&#8217; &#8216;string2&#8217; </i>&#8230;</p>

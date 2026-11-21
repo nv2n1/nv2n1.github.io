@@ -1,4 +1,5 @@
 ---
+
 title: "tblgen-14(1)"
 name: "tblgen-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tblgen-14/"
 description: "tblgen – Description to C++ Code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tblgen &#8211; Description to C++ Code </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clang-tblgen</code> [<i>options</i>] [<i>filename</i>] </p>

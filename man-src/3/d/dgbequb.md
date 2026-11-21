@@ -1,4 +1,5 @@
 ---
+
 title: "dgbequb(3)"
 name: "dgbequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbequb/"
 description: "dgbequb.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgbequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

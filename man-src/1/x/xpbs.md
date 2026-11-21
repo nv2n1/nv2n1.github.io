@@ -1,4 +1,5 @@
 ---
+
 title: "xpbs(1)"
 name: "xpbs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpbs/"
 description: "xpbs – GUI front end to PBS commands"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xpbs &#8211; GUI front end to PBS commands </p>
 <h2>SYNOPSIS</h2>
 <p> xpbs [-admin]</p>

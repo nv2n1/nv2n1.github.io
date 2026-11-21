@@ -1,4 +1,5 @@
 ---
+
 title: "engine_(3)"
 name: "engine_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-engine_/"
 description: "QuantLib::Instrument – Abstract instrument class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Instrument &#8211; Abstract instrument class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt; </p>

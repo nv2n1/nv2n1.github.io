@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermodcert(1)"
 name: "euare-usermodcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usermodcert/"
 description: "euare-usermodcert – Change the status of a signing certificate from Active to Inactive, or vice versa"
 ---
 
-<h2>NAME</h2>
 <p> euare-usermodcert &#8211; Change the status of a signing certificate from Active to Inactive, or vice versa</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usermodcert [-u USER] <code>-s</code> {Active,Inactive} [&#8211;as-account ACCOUNT]</p>

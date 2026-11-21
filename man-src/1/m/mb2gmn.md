@@ -1,4 +1,5 @@
 ---
+
 title: "mb2gmn(1)"
 name: "mb2gmn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mb2gmn/"
 description: "mou2gmn – convert MapsOnUS files into GPSManager files"
 ---
 
-<h2>NAME</h2>
 <p> mou2gmn &#8211; convert MapsOnUS files into GPSManager files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mou2gmn</code> <i>[port]</i> </p>

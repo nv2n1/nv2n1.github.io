@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-agent(1)"
 name: "gpg-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpg-agent/"
 description: "gpg-agent – Secret key management for GnuPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-agent</code> &#8211; Secret key management for GnuPG </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>]<br />

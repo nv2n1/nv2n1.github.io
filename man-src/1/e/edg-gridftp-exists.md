@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-exists(1)"
 name: "edg-gridftp-exists"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edg-gridftp-exists/"
 description: "edg-gridftp-exists – Determine if file/directory exists on GridFTP server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edg-gridftp-exists &#8211; Determine if file/directory exists on GridFTP server. </p>
 <h2>SYNOPSIS</h2>
 <p> edg-gridftp-exists [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;noauth</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>

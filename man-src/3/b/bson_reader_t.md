@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_t(3)"
 name: "bson_reader_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_t/"
 description: "bson_reader_t – Streaming BSON Document Reader"
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_t &#8211; Streaming BSON Document Reader</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "arm_generate_correlator(3)"
 name: "arm_generate_correlator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_generate_correlator/"
 description: "arm_generate_correlator – generate a correlator"
 ---
 
-<h2>NAME</h2>
 <p> arm_generate_correlator &#8211; generate a correlator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

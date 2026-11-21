@@ -1,4 +1,5 @@
 ---
+
 title: "db_to_html_table(1)"
 name: "db_to_html_table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_to_html_table/"
 description: "db_to_html_table – convert db to an HTML table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db_to_html_table &#8211; convert db to an HTML table </p>
 <h2>SYNOPSIS</h2>
 <pre>

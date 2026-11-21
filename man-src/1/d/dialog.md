@@ -1,4 +1,5 @@
 ---
+
 title: "dialog(1)"
 name: "dialog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dialog/"
 description: "dialog – display dialog boxes from shell scripts"
 ---
 
-<h2>NAME</h2>
 <p> dialog &#8211; display dialog boxes from shell scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dialog &#8211;clear</code><br />

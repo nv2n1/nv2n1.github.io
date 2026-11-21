@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-as(1)"
 name: "arm-gp2x-linux-as"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-as/"
 description: "AS – the portable GNU assembler."
 ---
 
-<h2>NAME</h2>
 <p> AS &#8211; the portable GNU assembler.</p>
 <h2>SYNOPSIS</h2>
 <p> as [<code>-a</code>[<code>cdhlns</code>][=<i>file</i>]] [<code>&#8211;alternate</code>] [<code>-D</code>]<br />

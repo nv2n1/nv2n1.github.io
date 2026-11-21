@@ -1,4 +1,5 @@
 ---
+
 title: "toast(1)"
 name: "toast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-toast/"
 description: "toast — GSM 06.10 lossy sound compression"
 ---
 
-<h2>NAME</h2>
 <p> toast &#8212; GSM 06.10 lossy sound compression</p>
 <h2>SYNOPSIS</h2>
 <p> <code>toast</code> [ <code>-cdfpvhualsFC</code> ] [ <i>filename&#8230;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_get_rr_list_hosts_frm_fp(3)"
 name: "ldns_get_rr_list_hosts_frm_fp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_get_rr_list_hosts_frm_fp/"
 description: "ldns_get_rr_list_hosts_frm_fp, ldns_get_rr_list_hosts_frm_file"
 ---
 
-<h2>NAME</h2>
 <p> ldns_get_rr_list_hosts_frm_fp, ldns_get_rr_list_hosts_frm_file </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

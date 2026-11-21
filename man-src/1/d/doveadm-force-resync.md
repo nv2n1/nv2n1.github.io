@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-force-resync(1)"
 name: "doveadm-force-resync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-force-resync/"
 description: "doveadm-force-resync – Repair broken mailboxes"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-force-resync &#8211; Repair broken mailboxes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>force-resync</code> [<code>-S</code> <i>socket_path</i>] <i>mailbox</i><br />

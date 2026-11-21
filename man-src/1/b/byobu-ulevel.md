@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-ulevel(1)"
 name: "byobu-ulevel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-ulevel/"
 description: "byobu-ulevel – helper script for notification level indicators"
 ---
 
-<h2>NAME</h2>
 <p> <code>byobu-ulevel </code> &#8211; helper script for notification level indicators </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-ulevel</code> is a helper script that can be used to create history graphs with UTF8 characters </p>

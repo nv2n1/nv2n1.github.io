@@ -1,4 +1,5 @@
 ---
+
 title: "erb(1)"
 name: "erb"
 section: "1"
@@ -8,7 +9,7 @@ description: "erb – Ruby Templating"
 ---
 
 <p>UNIX</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>erb</code> &#8211; Ruby Templating </p>
 <h2>SYNOPSIS</h2>
 <p> <code>erb</code> [-<code>-version</code> ] [-<code>UPdnvx</code> ] [-<code>E </code><i>ext </i>[<code>: int</code> ] ] [-<code>S </code><i>level</i> ] [-<code>T </code><i>mode</i> ] [-<code>r </code><i>library</i> ] [- ] [file &#8230;] </p>

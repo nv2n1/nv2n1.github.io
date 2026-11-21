@@ -1,4 +1,5 @@
 ---
+
 title: "wrc(1)"
 name: "wrc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wrc/"
 description: "wrc – Wine Resource Compiler"
 ---
 
-<h2>NAME</h2>
 <p> wrc &#8211; Wine Resource Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wrc</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>&#8230;]</p>

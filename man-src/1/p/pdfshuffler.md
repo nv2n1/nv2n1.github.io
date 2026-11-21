@@ -1,4 +1,5 @@
 ---
+
 title: "pdfshuffler(1)"
 name: "pdfshuffler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfshuffler/"
 description: "PDF-Shuffler – Application for PDF Merging, Rearranging, and Splitting"
 ---
 
-<h2 class="name">NAME</h2>
 <p> PDF-Shuffler &#8211; Application for PDF Merging, Rearranging, and Splitting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfshuffler [file1] [file2] &#8230;</code></p>

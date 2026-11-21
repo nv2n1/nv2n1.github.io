@@ -1,4 +1,5 @@
 ---
+
 title: "pp(1)"
 name: "pp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pp/"
 description: "pp – Prints certificates, keys, crls, and pkcs7 files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pp &#8211; Prints certificates, keys, crls, and pkcs7 files </p>
 <h2>SYNOPSIS</h2>
 <dl>

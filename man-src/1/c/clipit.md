@@ -1,4 +1,5 @@
 ---
+
 title: "clipit(1)"
 name: "clipit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clipit/"
 description: "ClipIt – Lightweight GTK+ Clipboard Manager"
 ---
 
-<h2>NAME</h2>
 <p> ClipIt &#8211; Lightweight GTK+ Clipboard Manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clipit</code> [<i>OPTION</i>]</p>

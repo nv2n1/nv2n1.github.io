@@ -1,4 +1,5 @@
 ---
+
 title: "aa_getmouse(3)"
 name: "aa_getmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_getmouse/"
 description: "aa_getmouse – Get mouse position as specified by last mouse event read by aa_getevent."
 ---
 
-<h2>NAME</h2>
 <p> aa_getmouse &#8211; Get mouse position as specified by last mouse event read by aa_getevent.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

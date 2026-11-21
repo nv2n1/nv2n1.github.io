@@ -1,4 +1,5 @@
 ---
+
 title: "publictoip6(1)"
 name: "publictoip6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-publictoip6/"
 description: "publictoip6 — Derive cjdns IP6 address from a public key"
 ---
 
-<h2>NAME</h2>
 <p> <code>publictoip6</code> &#8212; Derive cjdns IP6 address from a public key</p>
 <h2>SYNOPSIS</h2>
 <p> <code>publictoip6</code> &lt;public key&gt;</p>

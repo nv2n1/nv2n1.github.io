@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-delete-queue(1)"
 name: "amqp-delete-queue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amqp-delete-queue/"
 description: "amqp-delete-queue – Delete a queue from an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amqp-delete-queue &#8211; Delete a queue from an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

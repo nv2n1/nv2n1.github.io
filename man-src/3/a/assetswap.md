@@ -1,4 +1,5 @@
 ---
+
 title: "assetswap(3)"
 name: "assetswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-assetswap/"
 description: "ql/instruments/assetswap.hpp – Bullet bond vs Libor swap."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/instruments/assetswap.hpp &#8211; Bullet bond vs Libor swap. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/swap.hpp&gt;<br />

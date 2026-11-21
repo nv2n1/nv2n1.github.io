@@ -1,4 +1,5 @@
 ---
+
 title: "fig2dev(1)"
 name: "fig2dev"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fig2dev/"
 description: "fig2dev – translates Fig code to various graphics languages"
 ---
-<h2 class="name">NAME</h2>
+
 <p> fig2dev - translates Fig code to various graphics languages  </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mkbitmap(1)"
 name: "mkbitmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkbitmap/"
 description: "mkbitmap – transform images into bitmaps with scaling and filtering"
 ---
 
-<h2>NAME</h2>
 <p> mkbitmap &#8211; transform images into bitmaps with scaling and filtering</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

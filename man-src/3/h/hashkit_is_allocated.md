@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_is_allocated(3)"
 name: "hashkit_is_allocated"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_is_allocated/"
 description: "hashkit_is_allocated – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_is_allocated &#8211; libhashkit Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>

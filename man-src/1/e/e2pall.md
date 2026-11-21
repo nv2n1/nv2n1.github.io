@@ -1,4 +1,5 @@
 ---
+
 title: "e2pall(1)"
 name: "e2pall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-e2pall/"
 description: "e2pall – convert all EPS files in a LaTeX document to PDF"
 ---
 
-<h2>NAME</h2>
 <p> e2pall &#8211; convert all EPS files in a LaTeX document to PDF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2pall</code> <i>TEXFILE</i> </p>

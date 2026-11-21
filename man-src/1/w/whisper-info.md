@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-info(1)"
 name: "whisper-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-info/"
 description: "whisper-info – show information about a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> whisper-info &#8211; show information about a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre>

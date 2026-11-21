@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs-revitalize(1)"
 name: "clufter-ccs-revitalize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter-ccs-revitalize/"
 description: "clufter – ccs-revitalize"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; ccs-revitalize</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs-revitalize </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nacl-sha256(1)"
 name: "nacl-sha256"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nacl-sha256/"
 description: "nacl-sha256 — program to calculate the sha256 hash"
 ---
 
-<h2>NAME</h2>
 <p> nacl-sha256 &#8212; program to calculate the sha256 hash</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nacl-sha256</code></p>

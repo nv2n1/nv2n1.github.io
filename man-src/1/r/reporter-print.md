@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-print(1)"
 name: "reporter-print"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-print/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- reporter-print - Prints problem information to standard output or FILE. 
+reporter-print - Prints problem information to standard output or FILE. 
 
 <h2>SYNOPSIS</h2>
 

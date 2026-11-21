@@ -1,4 +1,5 @@
 ---
+
 title: "pki-user-cert(1)"
 name: "pki-user-cert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-user-cert/"
 description: "pki-user-cert – Command-Line Interface for managing Certificate System user certificates."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-user-cert &#8211; Command-Line Interface for managing Certificate System user certificates.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

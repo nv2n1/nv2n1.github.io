@@ -1,4 +1,5 @@
 ---
+
 title: "aa_help(3)"
 name: "aa_help"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_help/"
 description: "aa_help – AA-lib help string for the default command line parser."
 ---
 
-<h2>NAME</h2>
 <p> aa_help &#8211; AA-lib help string for the default command line parser.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

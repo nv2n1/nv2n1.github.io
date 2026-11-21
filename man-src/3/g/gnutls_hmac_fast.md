@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hmac_fast(3)"
 name: "gnutls_hmac_fast"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_hmac_fast/"
 description: "gnutls_hmac_fast – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_hmac_fast &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

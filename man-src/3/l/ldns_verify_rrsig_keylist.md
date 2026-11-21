@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_verify_rrsig_keylist(3)"
 name: "ldns_verify_rrsig_keylist"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_verify_rrsig_keylist/"
 description: "ldns_verify, ldns_verify_rrsig, ldns_verify_rrsig_keylist, ldns_verify_rrsig_keylist_notime, ldns_verify_notime"
 ---
 
-<h2>NAME</h2>
 <p> ldns_verify, ldns_verify_rrsig, ldns_verify_rrsig_keylist, ldns_verify_rrsig_keylist_notime, ldns_verify_notime </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

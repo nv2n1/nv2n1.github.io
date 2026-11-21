@@ -1,4 +1,5 @@
 ---
+
 title: "bson_new_from_data(3)"
 name: "bson_new_from_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_new_from_data/"
 description: "bson_new_from_data() – The bson_new_from_data() function shall create a new bson_t on the heap and copy the contents of data. This may be helpful when working with language bindings but is generall..."
 ---
 
-<h2>NAME</h2>
 <p> bson_new_from_data() &#8211; The bson_new_from_data() function shall create a new bson_t on the heap and copy the contents of data. This may be helpful when working with language bindings but is generally expected to be slower.</p>
 <h2>SYNOPSIS</h2>
 <pre>

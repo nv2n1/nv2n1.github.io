@@ -1,4 +1,5 @@
 ---
+
 title: "memflush(1)"
 name: "memflush"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memflush/"
 description: "memflush – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memflush &#8211; libmemcached Documentation </p>
 <p> Reset a server or list of servers</p>
 <h2>SYNOPSIS</h2>

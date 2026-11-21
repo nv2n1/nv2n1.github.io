@@ -1,4 +1,5 @@
 ---
+
 title: "luajit(1)"
 name: "luajit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-luajit/"
 description: "luajit – Just-In-Time Compiler for the Lua Language"
 ---
 
-<h2>NAME</h2>
 <p> luajit &#8211; Just-In-Time Compiler for the Lua Language</p>
 <h2>SYNOPSIS</h2>
 <p> <code>luajit</code> [<i>options</i>]&#8230; [<i>script</i> [<i>args</i>]&#8230;]</p>

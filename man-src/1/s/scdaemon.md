@@ -1,4 +1,5 @@
 ---
+
 title: "scdaemon(1)"
 name: "scdaemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scdaemon/"
 description: "scdaemon – Smartcard daemon for the GnuPG system"
 ---
 
-<h2>NAME</h2>
 <p> <code>scdaemon</code> &#8211; Smartcard daemon for the GnuPG system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scdaemon</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;server</code><br />

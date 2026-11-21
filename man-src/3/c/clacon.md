@@ -1,4 +1,5 @@
 ---
+
 title: "clacon(3)"
 name: "clacon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clacon/"
 description: "clacon.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clacon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

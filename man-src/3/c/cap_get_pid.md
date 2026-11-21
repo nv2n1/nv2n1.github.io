@@ -1,4 +1,5 @@
 ---
+
 title: "cap_get_pid(3)"
 name: "cap_get_pid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_get_pid/"
 description: "cap_get_proc, cap_set_proc, capgetp, cap_get_bound, cap_drop_bound – capability manipulation on processes"
 ---
 
-<h2>NAME</h2>
 <p> cap_get_proc, cap_set_proc, capgetp, cap_get_bound, cap_drop_bound &#8211; capability manipulation on processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>

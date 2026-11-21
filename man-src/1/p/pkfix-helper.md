@@ -1,4 +1,5 @@
 ---
+
 title: "pkfix-helper(1)"
 name: "pkfix-helper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkfix-helper/"
 description: "pkfix-helper – preprocess dvips-produced PostScript documents before passing them to pkfix"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkfix-helper &#8211; preprocess dvips-produced PostScript documents before passing them to pkfix </p>
 <h2>SYNOPSIS</h2>
 <p> pkfix-helper [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;force</code>=<i>name</i>=<i>fontspec</i>] [<code>&#8211;ps</code>=<i>filename.ps</i>] [<code>&#8211;tex</code>=<i>filename.tex</i>] [<code>&#8211;cache</code>=<i>filename</i>] [<code>&#8211;include</code>=<i>fontspec</i>] [<code>&#8211;exclude</code>=<i>regexp</i>] [<code>&#8211;keep</code>=<i>fontspec</i>] [<code>&#8211;quiet</code>] [<code>&#8211;no-repeats</code>] [<code>&#8211;spp</code>=<i>number</i>] [<i>input.ps</i> [<i>output.ps</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gocr(1)"
 name: "gocr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gocr/"
 description: "gocr – command line text recognition tool"
 ---
 
-<h2>NAME</h2>
 <p> gocr &#8211; command line text recognition tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gocr</code> [<i>OPTION</i>] [<code>-i</code>] <i>pnm-file</i></p>

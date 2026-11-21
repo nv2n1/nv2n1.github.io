@@ -1,4 +1,5 @@
 ---
+
 title: "update-inetd(1)"
 name: "update-inetd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-update-inetd/"
 description: "update-inetd – create, remove, enable or disable entry /etc/inetd.conf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> update-inetd &#8211; create, remove, enable or disable entry /etc/inetd.conf </p>
 <h2>SYNOPSIS</h2>
 <p> <code>update-inetd</code> [<i>option</i>&#8230;] <i>command</i> <i>argument</i></p>

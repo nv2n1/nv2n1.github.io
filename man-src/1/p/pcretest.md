@@ -1,4 +1,5 @@
 ---
+
 title: "pcretest(1)"
 name: "pcretest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcretest/"
 description: "pcretest – a program for testing Perl-compatible regular expressions."
 ---
 
-<h2>NAME</h2>
 <p> pcretest &#8211; a program for testing Perl-compatible regular expressions.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcretest [options] [input file [output file]]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pwqcheck(1)"
 name: "pwqcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwqcheck/"
 description: "pwqcheck – Check passphrase quality"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pwqcheck</code> &#8211; Check passphrase quality </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>options</i> ]</p>

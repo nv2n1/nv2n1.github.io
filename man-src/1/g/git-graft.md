@@ -1,4 +1,5 @@
 ---
+
 title: "git-graft(1)"
 name: "git-graft"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-graft/"
 description: "git-graft – Merge and destroy a given branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-graft</code> &#8211; Merge and destroy a given branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-graft</code> &lt;src-branch&gt; &lt;dest-branch&gt;</p>

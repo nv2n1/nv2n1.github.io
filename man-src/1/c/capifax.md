@@ -1,4 +1,5 @@
 ---
+
 title: "capifax(1)"
 name: "capifax"
 section: "1"
@@ -6,9 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-capifax/"
 ---
 
-<h2>NAME</h2>
-
- capifax - a FAX send application for CAPI
+capifax - a FAX send application for CAPI
 
 <h2>SYNOPSIS</h2>
 

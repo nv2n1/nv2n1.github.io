@@ -1,4 +1,5 @@
 ---
+
 title: "trafshow(1)"
 name: "trafshow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trafshow/"
 description: "trafshow – full screen show network traffic"
 ---
 
-<h2>NAME</h2>
 <p> trafshow &#8211; full screen show network traffic</p>
 <h2>SYNOPSIS</h2>
 <p> <code>trafshow</code> [<code>-vpnb</code>] [<code>-a</code> <i>len</i>] [<code>-c</code> <i>conf</i>] [<code>-i</code> <i>name</i>] [<code>-s</code> <i>str</i>] [<code>-u</code> <i>port</i>] [<code>-R</code> <i>refresh</i>] [<code>-P</code> <i>purge</i>] [<code>-F</code> <i>file</i> | <i>expr</i>]</p>

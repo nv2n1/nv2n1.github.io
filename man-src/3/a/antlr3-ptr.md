@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-ptr(3)"
 name: "antlr3-ptr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-ptr/"
 description: "ANTLR3_TRIE_ENTRY_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_TRIE_ENTRY_struct &#8211; </p>
 <p> Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE.</p>
 <h2>SYNOPSIS</h2>

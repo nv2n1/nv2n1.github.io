@@ -1,4 +1,5 @@
 ---
+
 title: "icestormmigrate(1)"
 name: "icestormmigrate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icestormmigrate/"
 description: "icestormmigrate – Utility for migration of IceStorm database."
 ---
 
-<h2 class="name">NAME</h2>
 <p> icestormmigrate &#8211; Utility for migration of IceStorm database.</p>
 <h2>SYNOPSIS</h2>
 <p> icestormmigrate &lt;path-to-recovered.db&gt; db </p>

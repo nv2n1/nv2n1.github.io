@@ -1,4 +1,5 @@
 ---
+
 title: "g_h2order(1)"
 name: "g_h2order"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_h2order/"
 description: "g_h2order – computes the orientation of water molecules"
 ---
 
-<h2>NAME</h2>
 <p> g_h2order &#8211; computes the orientation of water molecules </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

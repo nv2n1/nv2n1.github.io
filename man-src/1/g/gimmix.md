@@ -1,4 +1,5 @@
 ---
+
 title: "gimmix(1)"
 name: "gimmix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gimmix/"
 description: "Gimmix – a graphical music player daemon (MPD) client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Gimmix &#8211; a graphical music player daemon (MPD) client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gimmix</code></p>

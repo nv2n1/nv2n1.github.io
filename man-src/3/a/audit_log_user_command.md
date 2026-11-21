@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_user_command(3)"
 name: "audit_log_user_command"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_log_user_command/"
 description: "audit_log_user_command – log a user command"
 ---
 
-<h2>NAME</h2>
 <p> audit_log_user_command &#8211; log a user command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

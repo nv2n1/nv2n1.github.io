@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-tty-ask-password-agent(1)"
 name: "systemd-tty-ask-password-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-tty-ask-password-agent/"
 description: "systemd-tty-ask-password-agent – List or process pending systemd password requests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-tty-ask-password-agent &#8211; List or process pending systemd password requests </p>
 <h2>SYNOPSIS</h2>
 <dl>

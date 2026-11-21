@@ -1,4 +1,5 @@
 ---
+
 title: "git-obliterate(1)"
 name: "git-obliterate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-obliterate/"
 description: "git-obliterate – rewrite past commits to remove some files"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-obliterate</code> &#8211; rewrite past commits to remove some files</p>
 <h2>SYNOPSIS</h2>
 <p> git obliterate &lt;files&#8230;&gt; [&#8211; &lt;rev-list options&#8230;&gt;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euform-update-stack(1)"
 name: "euform-update-stack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-update-stack/"
 description: "euform-update-stack – Update a stack’s template, parameters, or capabilities"
 ---
 
-<h2>NAME</h2>
 <p> euform-update-stack &#8211; Update a stack&#8217;s template, parameters, or capabilities</p>
 <h2>SYNOPSIS</h2>
 <p> euform-update-stack [&#8211;template-file FILE | <code>&#8211;template-url</code> URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "atanhl(3)"
 name: "atanhl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-atanhl/"
 description: "atanh, atanhf, atanhl – inverse hyperbolic tangent function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atanh, atanhf, atanhl &#8211; inverse hyperbolic tangent function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

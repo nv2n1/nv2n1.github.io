@@ -1,4 +1,5 @@
 ---
+
 title: "xrdfs(1)"
 name: "xrdfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdfs/"
 description: "xrdfs – xrootd file and directory meta-data utility"
 ---
 
-<h2>NAME</h2>
 <p> xrdfs &#8211; xrootd file and directory meta-data utility</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

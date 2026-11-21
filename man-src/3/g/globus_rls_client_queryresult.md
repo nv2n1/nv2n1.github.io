@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_queryresult(3)"
 name: "globus_rls_client_queryresult"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_queryresult/"
 description: "Query Results –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Query Results &#8211; </p>
 <p> List results are returned as globus_list_t&#8217;s, list datums depend on the type of query (eg <code>globus_rls_string2_t</code>, <code>globus_rls_attribute_t</code>, etc).</p>
 <h3>Data Structures</h3>

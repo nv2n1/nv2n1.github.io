@@ -1,4 +1,5 @@
 ---
+
 title: "extract_vba(1)"
 name: "extract_vba"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extract_vba/"
 description: "extract_vba – A utility to extract a VBA project from an Excel 2007+ xlsm file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> extract_vba &#8211; A utility to extract a VBA project from an Excel 2007+ xlsm file. </p>
 <h2>DESCRIPTION</h2>
 <p> This utility is used to extract the <font SIZE="-1">VBA</font> project binary from an Excel 2007+ xlsm file. The <font SIZE="-1">VBA</font> project can then be added to an Excel::Writer::XLSX file to enable it to have macros. </p>

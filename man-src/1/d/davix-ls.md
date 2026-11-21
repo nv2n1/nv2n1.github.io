@@ -1,4 +1,5 @@
 ---
+
 title: "davix-ls(1)"
 name: "davix-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-ls/"
 description: "davix-ls – Listing tool based on libdavix"
 ---
 
-<h2>NAME</h2>
 <p> davix-ls &#8211; Listing tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-ls [options]&#8230; url</p>

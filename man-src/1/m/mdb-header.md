@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-header(1)"
 name: "mdb-header"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-header/"
 description: "mdb-header – Write header file from an MDB database"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-header </code>&#8211; Write header file from an MDB database</p>
 <h2>SYNOPSIS</h2>
 <pre>

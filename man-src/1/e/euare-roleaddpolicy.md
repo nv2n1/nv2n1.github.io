@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roleaddpolicy(1)"
 name: "euare-roleaddpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-roleaddpolicy/"
 description: "euare-roleaddpolicy – Add a new policy to a role. To add more complex policies than this tool supports, see euare-roleuploadpolicy(1)."
 ---
 
-<h2>NAME</h2>
 <p> euare-roleaddpolicy &#8211; Add a new policy to a role. To add more complex policies than this tool supports, see <a href="/docs/linux/man/1-euare-roleuploadpolicy/">euare-roleuploadpolicy</a>(1).</p>
 <h2>SYNOPSIS</h2>
 <p> euare-roleaddpolicy <code>-p</code> POLICY <code>-e</code> {Allow,Deny} <code>-a</code> ACTIONS <code>-c</code> RESOURCES</p>

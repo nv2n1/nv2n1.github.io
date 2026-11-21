@@ -1,4 +1,5 @@
 ---
+
 title: "getsubopt(3)"
 name: "getsubopt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getsubopt/"
 description: "getsubopt – parse suboption arguments from a string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getsubopt &#8211; parse suboption arguments from a string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>

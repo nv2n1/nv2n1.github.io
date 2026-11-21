@@ -1,4 +1,5 @@
 ---
+
 title: "getdents64(2)"
 name: "getdents64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getdents64/"
 description: "getdents, getdents64 – get directory entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getdents, getdents64 &#8211; get directory entries </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

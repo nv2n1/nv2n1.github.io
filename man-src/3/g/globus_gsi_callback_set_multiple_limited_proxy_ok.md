@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_callback_set_multiple_limited_proxy_ok(3)"
 name: "globus_gsi_callback_set_multiple_limited_proxy_ok"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_callback_set_multiple_limited_proxy_ok/"
 description: "Callback Data Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Callback Data Functions &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

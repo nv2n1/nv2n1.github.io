@@ -1,4 +1,5 @@
 ---
+
 title: "perf-buildid-cache(1)"
 name: "perf-buildid-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-buildid-cache/"
 description: "perf-buildid-cache – Manage build-id cache."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-buildid-cache &#8211; Manage build-id cache. </p>
 <h2>SYNOPSIS</h2>
 <pre>

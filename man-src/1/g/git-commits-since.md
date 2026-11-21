@@ -1,4 +1,5 @@
 ---
+
 title: "git-commits-since(1)"
 name: "git-commits-since"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-commits-since/"
 description: "git-commits-since – Show commit logs since some date"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-commits-since</code> &#8211; Show commit logs since some date</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-commits-since</code> [&lt;date&gt;]</p>

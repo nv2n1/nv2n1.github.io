@@ -1,4 +1,5 @@
 ---
+
 title: "hvmgr(1)"
 name: "hvmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hvmgr/"
 description: "hvmgr – administration utility for QDBM Hovel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hvmgr &#8211; administration utility for QDBM Hovel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hvmgr create</code> [-qdbm <i>bnum dnum </i>] [-s] <i>name</i><br />

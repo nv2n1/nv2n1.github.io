@@ -1,4 +1,5 @@
 ---
+
 title: "git-locked(1)"
 name: "git-locked"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-locked/"
 description: "git-locked – ls files that have been locked"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-locked</code> &#8211; ls files that have been locked</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-locked</code></p>

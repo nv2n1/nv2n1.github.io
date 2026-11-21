@@ -1,4 +1,5 @@
 ---
+
 title: "speexdec(1)"
 name: "speexdec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-speexdec/"
 description: "speexdec – The reference implementation speex decoder."
 ---
 
-<h2>NAME</h2>
 <p> speexdec &#8211; The reference implementation speex decoder.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>speexdec</code> [<i>options</i>] <i>input_file.spx </i>[<i>output_file</i>]</p>

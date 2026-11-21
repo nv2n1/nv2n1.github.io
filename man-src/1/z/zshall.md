@@ -1,4 +1,5 @@
 ---
+
 title: "zshall(1)"
 name: "zshall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshall/"
 description: "zshall – the Z shell meta-man page"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshall &#8211; the Z shell meta-man page </p>
 <h2>OVERVIEW</h2>
 <p> Because zsh contains many features, the zsh manual has been split into a number of sections. This manual page includes all the separate manual pages in the following order: </p>

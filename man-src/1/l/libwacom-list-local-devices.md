@@ -1,4 +1,5 @@
 ---
+
 title: "libwacom-list-local-devices(1)"
 name: "libwacom-list-local-devices"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libwacom-list-local-devices/"
 description: "libwacom-list-local-devices – utility to list tablet devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libwacom-list-local-devices &#8211; utility to list tablet devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>libwacom-list-local-devices [&#8211;format=oneline|datafile] [&#8211;database /path/to/datadir]</code> </p>

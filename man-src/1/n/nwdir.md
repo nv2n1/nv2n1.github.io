@@ -1,4 +1,5 @@
 ---
+
 title: "nwdir(1)"
 name: "nwdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwdir/"
 description: "nwdir – Lists files in directory"
 ---
 
-<h2>NAME</h2>
 <p> nwdir &#8211; Lists files in directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwdir</code> [<code>-h</code>] [<code>-v</code>] [<code>-l</code>] [<code>-t</code>] [<code>-d</code>] [<code>-e</code>] [<code>-f</code>] [<code>directory</code>] </p>

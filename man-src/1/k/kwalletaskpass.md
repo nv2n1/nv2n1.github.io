@@ -1,4 +1,5 @@
 ---
+
 title: "kwalletaskpass(1)"
 name: "kwalletaskpass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kwalletaskpass/"
 description: "kwalletaskpass – kwallet-based pass-phrase dialog for use with OpenSSH"
 ---
 
-<h2>NAME</h2>
 <p> <code>kwalletaskpass</code> &#8211; kwallet-based pass-phrase dialog for use with OpenSSH</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>options</i> ] <i>label</i></p>

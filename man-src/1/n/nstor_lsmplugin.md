@@ -1,4 +1,5 @@
 ---
+
 title: "nstor_lsmplugin(1)"
 name: "nstor_lsmplugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nstor_lsmplugin/"
 description: "nstor_lsmplugin — LibstorageMgmt nstor plugin"
 ---
 
-<h2>NAME</h2>
 <p> nstor_lsmplugin &#8212; LibstorageMgmt nstor plugin </p>
 <h2>DESCRIPTION</h2>
 <p> LibstorageMgmt nstor plugin allows user to manage NexentaStor 3.x storage software [1]. The &#8216;nstor_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies nstor plugin in the URI. </p>

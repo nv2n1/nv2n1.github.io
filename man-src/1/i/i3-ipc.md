@@ -1,4 +1,5 @@
 ---
+
 title: "i3-ipc(1)"
 name: "i3-ipc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i3-ipc/"
 description: "i3-ipc — inter-process communication with i3"
 ---
 
-<h2>NAME</h2>
 <p> <code>i3-ipc</code> &#8212; inter-process communication with i3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>i3-ipc</code> [<code>-s</code>] [<code>-t type</code>] [<code>-p</code>] [<code>-j</code>] [<code>-q</code>] [<code>message</code>]</p>

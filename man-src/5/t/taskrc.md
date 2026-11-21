@@ -1,4 +1,5 @@
 ---
+
 title: "taskrc(5)"
 name: "taskrc"
 section: "5"
@@ -6,9 +7,10 @@ letter: "t"
 url: "/docs/linux/man/5-taskrc/"
 description: "taskrc – Configuration details for the"
 ---
+
 <p>taskrc &#8211; Configuration details for the </p>
 <p> <a href="/docs/linux/man/1-task/">task</a>(1) command </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>$HOME/.taskrc</code> <br />
  <code>task rc:&lt;directory-path&gt;/.taskrc ...</code> <br />
  <code>TASKRC=&lt;directory-path&gt;/.taskrc task ...</code> </p>

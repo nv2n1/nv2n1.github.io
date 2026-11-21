@@ -1,4 +1,5 @@
 ---
+
 title: "vbetool(1)"
 name: "vbetool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vbetool/"
 description: "vbetool – run real-mode video BIOS code to alter hardware state"
 ---
 
-<h2>NAME</h2>
 <p> vbetool &#8211; run real-mode video BIOS code to alter hardware state </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vbetool [[vbestate save|restore]|[vbemode set|get]|[vgamode]|[dpms on|off|standby|suspend|reduced]|[post [romfile]]|[vgastate on|off]|[vbefp panelid|panelsize|getbrightness|setbrightness|invert]]</code> </p>

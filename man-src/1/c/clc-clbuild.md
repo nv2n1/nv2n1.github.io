@@ -1,4 +1,5 @@
 ---
+
 title: "clc-clbuild(1)"
 name: "clc-clbuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clc-clbuild/"
 description: "clc-clbuild – clc enabled clbuild wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clc-clbuild &#8211; clc enabled clbuild wrapper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clc-clbuild</code> <i>setup</i> </p>

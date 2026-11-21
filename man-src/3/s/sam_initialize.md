@@ -1,4 +1,5 @@
 ---
+
 title: "sam_initialize(3)"
 name: "sam_initialize"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-sam_initialize/"
 description: "sam_initialize – Initialize health checking"
 ---
+
 <p>sam_initialize &#8211; Initialize health checking  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;corosync/sam.h&gt;</code> </p>
 <p> <code>cs_error_t sam_initialize (int</code> <i>time_interval</i><code>, sam_recovery_policy_t </code><i>recovery_policy</i>); </p>
 <h2>DESCRIPTION</h2>

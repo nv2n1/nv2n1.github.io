@@ -1,4 +1,5 @@
 ---
+
 title: "vinagre(1)"
 name: "vinagre"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vinagre/"
 description: "vinagre – a remote desktop viewer for the GNOME Desktop"
 ---
 
-<h2>NAME</h2>
 <p> vinagre &#8211; a remote desktop viewer for the GNOME Desktop</p>
 <h2>SYNOPSYS</h2>
 <p> <code>vinagre</code> [<code>OPTIONS</code>] [<i>server</i>][::<i>port</i>|:display]</p>

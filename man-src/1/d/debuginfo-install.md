@@ -1,4 +1,5 @@
 ---
+
 title: "debuginfo-install(1)"
 name: "debuginfo-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debuginfo-install/"
 description: "debuginfo-install – install debuginfo packages and their dependencies"
 ---
 
-<h2>NAME</h2>
 <p> debuginfo-install &#8211; install debuginfo packages and their dependencies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>debuginfo-install</code> package</p>

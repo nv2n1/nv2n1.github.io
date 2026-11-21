@@ -1,4 +1,5 @@
 ---
+
 title: "mutter-theme-viewer(1)"
 name: "mutter-theme-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mutter-theme-viewer/"
 description: "mutter-theme-viewer – view mutter themes"
 ---
 
-<h2>NAME</h2>
 <p> mutter-theme-viewer &#8211; view mutter themes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutter-theme-viewer</code> [ <i>THEMENAME</i> ]</p>

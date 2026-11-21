@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_read_tag(3)"
 name: "asn1_read_tag"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_read_tag/"
 description: "asn1_read_tag – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_read_tag &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

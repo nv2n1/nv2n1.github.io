@@ -1,4 +1,5 @@
 ---
+
 title: "ucfq(1)"
 name: "ucfq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ucfq/"
 description: "ucfq – query the ucf database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ucfq &#8211; query the ucf database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "idna_strerror(3)"
 name: "idna_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-idna_strerror/"
 description: "idna_strerror – API function"
 ---
 
-<h2>NAME</h2>
 <p> idna_strerror &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>

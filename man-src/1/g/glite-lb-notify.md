@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-notify(1)"
 name: "glite-lb-notify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glite-lb-notify/"
 description: "glite-lb-notify – Register and receive notification from L&B"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glite-lb-notify &#8211; Register and receive notification from L&amp;B</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-notify </code><br />

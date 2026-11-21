@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-ls-files-server(1)"
 name: "pq2-ls-files-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-ls-files-server/"
 description: "pq2-ls-files-server – List the file content of a dataset on a given server from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-ls-files-server &#8211; List the file content of a dataset on a given server from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-ls-files-server</code> [options] -s servers dataset</p>

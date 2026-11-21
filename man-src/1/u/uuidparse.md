@@ -1,4 +1,5 @@
 ---
+
 title: "uuidparse(1)"
 name: "uuidparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uuidparse/"
 description: "uuidparse – a utility to parse unique identifiers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uuidparse &#8211; a utility to parse unique identifiers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uuidparse</code> [options] <i>uuid</i></p>

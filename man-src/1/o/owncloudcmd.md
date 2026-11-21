@@ -1,4 +1,5 @@
 ---
+
 title: "owncloudcmd(1)"
 name: "owncloudcmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-owncloudcmd/"
 description: "owncloudcmd – Command line ownCloud client tool."
 ---
 
-<h2>NAME</h2>
 <p> owncloudcmd &#8211; Command line ownCloud client tool.</p>
 <h2>SYNOPSIS</h2>
 <p> <i>owncloudcmd</i> [<i>OPTIONS</i>&#8230;] sourcedir owncloudurl</p>

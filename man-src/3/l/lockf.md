@@ -1,4 +1,5 @@
 ---
+
 title: "lockf(3)"
 name: "lockf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lockf/"
 description: "lockf – apply, test or remove a POSIX lock on an open file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lockf &#8211; apply, test or remove a POSIX lock on an open file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

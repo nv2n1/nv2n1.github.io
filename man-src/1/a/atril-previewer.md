@@ -1,4 +1,5 @@
 ---
+
 title: "atril-previewer(1)"
 name: "atril-previewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atril-previewer/"
 description: "atril-previewer – show print preview for a document"
 ---
 
-<h2>NAME</h2>
 <p> atril-previewer &#8211; show print preview for a document</p>
 <h2>SYNOPSIS</h2>
 <p> <code>atril-previewer</code> <code>[file]</code></p>

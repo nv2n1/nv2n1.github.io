@@ -1,4 +1,5 @@
 ---
+
 title: "cptsvg(1)"
 name: "cptsvg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cptsvg/"
 description: "cptsvg – convert GMT colour palette tables (cpt) to SVG gradients."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cptsvg &#8211; convert GMT colour palette tables (cpt) to SVG gradients. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "lintian-info(1)"
 name: "lintian-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lintian-info/"
 description: "lintian-info – give detailed information about Lintian’s error tags"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lintian-info &#8211; give detailed information about Lintian&#8217;s error tags </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lintian-info</code> [<i>log-file</i>&#8230;] </p>

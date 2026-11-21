@@ -1,4 +1,5 @@
 ---
+
 title: "perf-stat(1)"
 name: "perf-stat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-stat/"
 description: "perf-stat – Run a command and gather performance counter statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-stat &#8211; Run a command and gather performance counter statistics </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

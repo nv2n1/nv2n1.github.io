@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-kra-install(1)"
 name: "ipa-kra-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-kra-install/"
 description: "ipa-kra-install – Install a KRA on a server"
 ---
 
-<h2>NAME</h2>
 <p> ipa-kra-install &#8211; Install a KRA on a server</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-kra-install [<i>OPTION</i>]&#8230; [replica_file]</p>

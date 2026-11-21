@@ -1,4 +1,5 @@
 ---
+
 title: "smbclient(1)"
 name: "smbclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbclient/"
 description: "smbclient – ftp-like client to access SMB/CIFS resources on servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbclient &#8211; ftp-like client to access SMB/CIFS resources on servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

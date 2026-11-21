@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_synchronize(3)"
 name: "ck_epoch_synchronize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_synchronize/"
 description: "ck_epoch_synchronize – block until a grace period has been detected"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_synchronize</code> &#8211; block until a grace period has been detected</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

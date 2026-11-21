@@ -1,4 +1,5 @@
 ---
+
 title: "genpmda(1)"
 name: "genpmda"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genpmda/"
 description: "genpmda – Performance Co-Pilot PMDA Generator"
 ---
 
-<h2>NAME</h2>
 <p> <code>genpmda</code> &#8211; Performance Co-Pilot PMDA Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genpmda</code> [<code>-d</code>] [<code>-D</code> <i>domain</i>] [<code>-s</code> <i>stdpmid</i>] [<code>-t</code> <i>topdir</i>] [<code>-n</code> <i>pmns</i>] [<code>-o</code> <i>dir</i>] [<code>-v</code>] <code>-i</code> <i>IAM</i> <code>-c</code> <i>config</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-unmonitor-instances(1)"
 name: "euca-unmonitor-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-unmonitor-instances/"
 description: "euca-unmonitor-instances – Disable monitoring for one or more instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-unmonitor-instances &#8211; Disable monitoring for one or more instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-unmonitor-instances [&#8211;show-empty-fields] [-U URL]</p>

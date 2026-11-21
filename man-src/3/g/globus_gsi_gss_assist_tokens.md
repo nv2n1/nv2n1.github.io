@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gss_assist_tokens(3)"
 name: "globus_gsi_gss_assist_tokens"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_assist_tokens/"
 description: "Security Token Transport –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Security Token Transport &#8211; </p>
 <p> Token routines using fread and fwrite.</p>
 <h3>Token Get File Descriptor</h3>

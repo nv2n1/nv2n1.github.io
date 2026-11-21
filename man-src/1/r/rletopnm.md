@@ -1,4 +1,5 @@
 ---
+
 title: "rletopnm(1)"
 name: "rletopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rletopnm/"
 description: "rletopnm – convert a Utah Raster Tools RLE image file into a PNM image file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rletopnm &#8211; convert a Utah Raster Tools RLE image file into a PNM image file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rletopnm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>&#8211;headerdump</code>|<code>-h</code>] [<code>&#8211;verbose</code>|<code>-v</code>] [<code>&#8211;plain</code>|<code>-p</code>] [<i>rlefile</i>|<i></i><code>&#8211;</code>] </p>

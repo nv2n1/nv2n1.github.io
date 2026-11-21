@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer2pkt_wire(3)"
 name: "ldns_buffer2pkt_wire"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer2pkt_wire/"
 description: "ldns_buffer2pkt_wire"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer2pkt_wire </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

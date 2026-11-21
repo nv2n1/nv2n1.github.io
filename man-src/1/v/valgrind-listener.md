@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind-listener(1)"
 name: "valgrind-listener"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-valgrind-listener/"
 description: "valgrind-listener – listens on a socket for Valgrind commentary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> valgrind-listener &#8211; listens on a socket for Valgrind commentary </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-archive-file(1)"
 name: "git-archive-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-archive-file/"
 description: "git-archive-file – Export the current HEAD of the git repository to a archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-archive-file</code> &#8211; Export the current HEAD of the git repository to a archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-archive-file</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ddjvu(1)"
 name: "ddjvu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddjvu/"
 description: "ddjvu – Command line DjVu decoder."
 ---
 
-<h2>NAME</h2>
 <p> ddjvu &#8211; Command line DjVu decoder. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ddjvu -format=</code><i>fmt</i><code> [</code><i>options</i><code>] [</code><i>djvufile</i><code>] [</code><i>outputfile</i><code>]</code> </p>

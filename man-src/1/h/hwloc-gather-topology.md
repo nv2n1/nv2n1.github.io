@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-gather-topology(1)"
 name: "hwloc-gather-topology"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-gather-topology/"
 description: "hwloc-gather-topology – Saves the relevant Linux topology files and the lstopo output for later (possibly offline) usage"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-gather-topology &#8211; Saves the relevant Linux topology files and the lstopo output for later (possibly offline) usage</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-gather-topology [</code><i>options</i>] <i>&lt;path&gt;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_cas(3)"
 name: "memcached_cas"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_cas/"
 description: "memcached_cas – Working with data on the server in an atomic fashion"
 ---
 
-<h2>NAME</h2>
 <p> memcached_cas &#8211; Working with data on the server in an atomic fashion</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

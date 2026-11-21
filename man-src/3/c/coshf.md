@@ -1,4 +1,5 @@
 ---
+
 title: "coshf(3)"
 name: "coshf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-coshf/"
 description: "cosh, coshf, coshl – hyperbolic cosine function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cosh, coshf, coshl &#8211; hyperbolic cosine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "checkpto(1)"
 name: "checkpto"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-checkpto/"
 description: "checkpto – Helper program for Hugin’s Makefile assistant"
 ---
 
-<h2 class="name">NAME</h2>
 <p> checkpto &#8211; Helper program for Hugin&#8217;s Makefile assistant </p>
 <h2>SYNOPSIS</h2>
 <p> <code>checkpto</code> <i>input.pto</i></p>

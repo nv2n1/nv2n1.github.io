@@ -1,4 +1,5 @@
 ---
+
 title: "dh_auto_build(1)"
 name: "dh_auto_build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_auto_build/"
 description: "dh_auto_build – automatically builds a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_auto_build &#8211; automatically builds a package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_auto_build</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>

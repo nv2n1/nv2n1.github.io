@@ -1,4 +1,5 @@
 ---
+
 title: "hcitrace(1)"
 name: "hcitrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hcitrace/"
 description: "hcitrace – hcitrace daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hcitrace &#8211; hcitrace daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hcitrace</code></p>

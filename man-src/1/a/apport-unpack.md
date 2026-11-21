@@ -1,4 +1,5 @@
 ---
+
 title: "apport-unpack(1)"
 name: "apport-unpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apport-unpack/"
 description: "apport-unpack – extract the fields of a problem report to separate files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apport-unpack &#8211; extract the fields of a problem report to separate files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apport-unpack</code> <i>report target-directory</i> </p>

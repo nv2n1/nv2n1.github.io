@@ -1,4 +1,5 @@
 ---
+
 title: "memtouch(1)"
 name: "memtouch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memtouch/"
 description: "memtouch – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memtouch &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memtouch [options] key</p>

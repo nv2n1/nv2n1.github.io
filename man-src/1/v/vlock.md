@@ -1,4 +1,5 @@
 ---
+
 title: "vlock(1)"
 name: "vlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vlock/"
 description: "vlock – Virtual Console lock program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vlock &#8211; Virtual Console lock program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vlock [ -hv ]</code> </p>

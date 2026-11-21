@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-apidoc(1)"
 name: "sphinx-apidoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphinx-apidoc/"
 description: "sphinx-apidoc – Sphinx API doc generator tool"
 ---
 
-<h2>NAME</h2>
 <p> sphinx-apidoc &#8211; Sphinx API doc generator tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphinx-apidoc</code> [<i>options</i>] -o &lt;<i>outputdir</i>&gt; &lt;<i>sourcedir</i>&gt; [<i>pathnames</i> &#8230;]</p>

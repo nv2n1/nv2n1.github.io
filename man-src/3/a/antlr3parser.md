@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3parser(3)"
 name: "antlr3parser"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3parser/"
 description: "include/antlr3parser.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3parser.h &#8211; </p>
 <p> Base implementation of an ANTLR3 parser.</p>
 <h2>SYNOPSIS</h2>

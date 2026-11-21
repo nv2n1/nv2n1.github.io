@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-reference(1)"
 name: "mrtg-reference"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-reference/"
 description: "mrtg-reference – MRTG 2.17.4 configuration reference"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-reference &#8211; MRTG 2.17.4 configuration reference </p>
 <h2>OVERVIEW</h2>
 <p> The runtime behaviour of <font SIZE="-1">MRTG</font> is governed by a configuration file. Run-of-the-mill configuration files can be generated with <code>cfgmaker</code>. (Check cfgmaker). But for more elaborate configurations some hand-tuning is required. </p>

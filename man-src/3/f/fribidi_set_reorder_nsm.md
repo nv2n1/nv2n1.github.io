@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_set_reorder_nsm(3)"
 name: "fribidi_set_reorder_nsm"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_reorder_nsm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_set_reorder_nsm - set marks reordering on or off 
+fribidi_set_reorder_nsm - set marks reordering on or off 
 
 <h2>SYNOPSIS</h2>
 

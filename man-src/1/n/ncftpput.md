@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpput(1)"
 name: "ncftpput"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftpput/"
 description: "ncftpput – Internet file transfer program for scripts"
 ---
 
-<h2>NAME</h2>
 <p> ncftpput &#8211; Internet file transfer program for scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftpput</code> [<i>options</i>] <i>remote-host remote-directory local-files&#8230;</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-less(1)"
 name: "gvfs-less"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-less/"
 description: "gvfs-less – Execute less on the output of gvfs-cat"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-less &#8211; Execute less on the output of gvfs-cat </p>
 <h2>SYNOPSIS</h2>
 <dl>

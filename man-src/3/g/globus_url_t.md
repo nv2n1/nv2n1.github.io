@@ -1,4 +1,5 @@
 ---
+
 title: "globus_url_t(3)"
 name: "globus_url_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_url_t/"
 description: "globus_url_t –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_url_t &#8211; </p>
 <p> Parsed URLs. </p>
 <p> This structure contains the fields which were parsed from an string representation of an URL. There are no methods to access fields of this structure.</p>

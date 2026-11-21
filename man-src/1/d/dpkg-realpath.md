@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-realpath(1)"
 name: "dpkg-realpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-realpath/"
 description: "dpkg-realpath – print the resolved pathname with DPKG_ROOT support"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-realpath &#8211; print the resolved pathname with DPKG_ROOT support </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-realpath</code> [<i>option</i>&#8230;] <i>pathname</i></p>

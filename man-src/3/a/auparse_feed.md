@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_feed(3)"
 name: "auparse_feed"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_feed/"
 description: "auparse_feed – feed data into parser"
 ---
 
-<h2>NAME</h2>
 <p> auparse_feed &#8211; feed data into parser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

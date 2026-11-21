@@ -1,4 +1,5 @@
 ---
+
 title: "g_wham_d(1)"
 name: "g_wham_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_wham_d/"
 description: "g_wham – weighted histogram analysis after umbrella sampling"
 ---
 
-<h2>NAME</h2>
 <p> g_wham &#8211; weighted histogram analysis after umbrella sampling </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

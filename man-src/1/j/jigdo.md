@@ -1,4 +1,5 @@
 ---
+
 title: "jigdo(1)"
 name: "jigdo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jigdo/"
 description: "jigdo – GTK+ download manager."
 ---
 
-<h2 class="name">NAME</h2>
 <p> jigdo &#8211; GTK+ download manager. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jigdo</code> [ <code>OPTIONS</code> ] [ <code>URLS</code> ] </p>

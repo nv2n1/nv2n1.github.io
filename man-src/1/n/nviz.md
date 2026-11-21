@@ -1,4 +1,5 @@
 ---
+
 title: "nviz(1)"
 name: "nviz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nviz/"
 description: "nviz – nviz – Visualization and animation tool for GRASS data"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>nviz</code> &#8211; nviz &#8211; Visualization and animation tool for GRASS data</p>
 <h2>KEYWORDS</h2>
 <p> raster, vector, visualization</p>

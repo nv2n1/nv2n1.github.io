@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_restart_marker_set_ascii_offset(3)"
 name: "globus_ftp_client_restart_marker_set_ascii_offset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_restart_marker_set_ascii_offset/"
 description: "Restart Markers –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Restart Markers &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_ftp_client_restart_marker_t</code><br />

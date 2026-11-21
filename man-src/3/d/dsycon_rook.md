@@ -1,4 +1,5 @@
 ---
+
 title: "dsycon_rook(3)"
 name: "dsycon_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsycon_rook/"
 description: "dsycon_rook.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsycon_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

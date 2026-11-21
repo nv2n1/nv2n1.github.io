@@ -1,4 +1,5 @@
 ---
+
 title: "mate-appearance-properties(1)"
 name: "mate-appearance-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-appearance-properties/"
 description: "mate-appearance-properties — is a control center applet."
 ---
 
-<h2>NAME</h2>
 <p> mate-appearance-properties &#8212; is a control center applet. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-appearance-properties</code> [<i>OPTIONS</i>]&#8230; [<i>WALLPAPER</i>]&#8230; </p>

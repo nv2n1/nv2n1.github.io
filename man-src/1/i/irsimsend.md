@@ -1,4 +1,5 @@
 ---
+
 title: "irsimsend(1)"
 name: "irsimsend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irsimsend/"
 description: "irsimsend- send simulated IR data."
 ---
 
-<h2>NAME</h2>
 <p> irsimsend- send simulated IR data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irsimsend [-v|-h|-c &lt;count&gt;|-U plugindir] irsimsend &lt;configfile&gt;</code> </p>

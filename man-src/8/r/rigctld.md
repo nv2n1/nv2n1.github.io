@@ -1,4 +1,5 @@
 ---
+
 title: "rigctld(8)"
 name: "rigctld"
 section: "8"
@@ -6,8 +7,9 @@ letter: "r"
 url: "/docs/linux/man/8-rigctld/"
 description: "rigctld – Hamlib TCP rig control daemon"
 ---
+
 <p>rigctld &#8211; Hamlib TCP rig control daemon </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>rigctld</code> [<i>OPTION</i>]...  </p>
 <h2>DESCRIPTION</h2>
 <p> The <code>rigctld</code> program is a NEW <code>Hamlib</code> rig control daemon ready for testing that handles client requests via TCP sockets. This allows multiple user programs to share one radio (this needs testing), except on Win32 where pthreads are not available. Multiple radios can be controlled on different TCP ports by use of multiple <code>rigctld</code> processes. The syntax of the commands are the same as <code>rigctl</code>. It is hoped that <code>rigctld</code> will be especially useful for client authors using languages such as Perl, Python, PHP, and others. </p>

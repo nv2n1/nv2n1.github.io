@@ -1,4 +1,5 @@
 ---
+
 title: "esd(1)"
 name: "esd"
 section: "1"
@@ -6,10 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-esd/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- esd - The Enlightened Sound Daemon 
+esd - The Enlightened Sound Daemon 
 
 <h2>DESCRIPTION</h2>
 

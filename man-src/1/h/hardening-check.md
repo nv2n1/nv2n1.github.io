@@ -1,4 +1,5 @@
 ---
+
 title: "hardening-check(1)"
 name: "hardening-check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hardening-check/"
 description: "hardening-check – check binaries for security hardening features"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hardening-check &#8211; check binaries for security hardening features </p>
 <h2>SYNOPSIS</h2>
 <p> hardening-check [options] [<font SIZE="-1">ELF &#8230;</font>] </p>

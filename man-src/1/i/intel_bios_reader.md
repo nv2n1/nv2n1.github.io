@@ -1,4 +1,5 @@
 ---
+
 title: "intel_bios_reader(1)"
 name: "intel_bios_reader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_bios_reader/"
 description: "intel_bios_reader – Parses an Intel BIOS and displays many of its tables"
 ---
 
-<h2>NAME</h2>
 <p> intel_bios_reader &#8211; Parses an Intel BIOS and displays many of its tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_bios_reader </code><i>filename</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "avr-ranlib(1)"
 name: "avr-ranlib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avr-ranlib/"
 description: "ranlib – generate index to archive."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ranlib &#8211; generate index to archive. </p>
 <h2>SYNOPSIS</h2>
 <p> ranlib [<code>&#8211;plugin</code> <i>name</i>] [<code>-DhHvVt</code>] <i>archive</i></p>

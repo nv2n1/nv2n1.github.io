@@ -1,4 +1,5 @@
 ---
+
 title: "nessus-fetch(1)"
 name: "nessus-fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nessus-fetch/"
 description: "nessus-fetch – A simple utility to retrieve plugins from www.nessus.org"
 ---
 
-<h2>NAME</h2>
 <p> nessus-fetch &#8211; A simple utility to retrieve plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a></p>
 <h2>SYNOPSIS</h2>
 <p> <code>nessus-fetch &#8211;plugins </code> <code>nessus-fetch &#8211;plugins-md5</code> <code>nessus-fetch &#8211;register &lt;code&gt; </code> <code>nessus-fetch &#8211;check</code> <code>nessus-fetch &#8211;url &lt;url&gt; &lt;localfile&gt; [&lt;http_login&gt; &lt;http_password&gt;]</code> </p>

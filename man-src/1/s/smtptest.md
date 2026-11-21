@@ -1,4 +1,5 @@
 ---
+
 title: "smtptest(1)"
 name: "smtptest"
 section: "1"
@@ -8,7 +9,7 @@ description: "smtptest – interactive SMTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> smtptest &#8211; interactive SMTP test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>smtptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

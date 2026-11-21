@@ -1,4 +1,5 @@
 ---
+
 title: "dpmgr(1)"
 name: "dpmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpmgr/"
 description: "dpmgr – administration utility for QDBM Depot"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpmgr &#8211; administration utility for QDBM Depot </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpmgr create</code> [-s] [-bnum <i>num</i>] <i>name</i><br />

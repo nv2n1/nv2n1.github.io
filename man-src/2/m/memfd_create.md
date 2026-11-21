@@ -1,4 +1,5 @@
 ---
+
 title: "memfd_create(2)"
 name: "memfd_create"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-memfd_create/"
 description: "memfd_create – create an anonymous file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memfd_create &#8211; create an anonymous file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

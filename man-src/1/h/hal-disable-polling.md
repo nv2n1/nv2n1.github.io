@@ -1,4 +1,5 @@
 ---
+
 title: "hal-disable-polling(1)"
 name: "hal-disable-polling"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-disable-polling/"
 description: "hal-disable-polling – disable polling on drives with removable media"
 ---
 
-<h2>NAME</h2>
 <p> hal-disable-polling &#8211; disable polling on drives with removable media</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-disable-polling</code> [options] </p>

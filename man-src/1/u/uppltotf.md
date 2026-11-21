@@ -1,4 +1,5 @@
 ---
+
 title: "uppltotf(1)"
 name: "uppltotf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uppltotf/"
 description: "ppltotf, uppltotf – Create Japanese pTeX font metric (JFM)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppltotf, uppltotf &#8211; Create Japanese pTeX font metric (JFM) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppltotf</code> [<i>options</i>] <i>pl_file_name</i>[<i></i><code>.pl</code>] [<i>tfm_file_name</i>[<i></i><code>.tfm</code>]]</p>

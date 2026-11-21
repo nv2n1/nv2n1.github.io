@@ -1,4 +1,5 @@
 ---
+
 title: "net-server(1)"
 name: "net-server"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-net-server/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- net-server - Base Net::Server starting module 
+net-server - Base Net::Server starting module 
 
 <h2>SYNOPSIS</h2>
 

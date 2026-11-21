@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_tzinfo_to_sql(1)"
 name: "mysql_tzinfo_to_sql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_tzinfo_to_sql/"
 description: "mysql_tzinfo_to_sql – load the time zone tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_tzinfo_to_sql &#8211; load the time zone tables </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mosquitto_sub(1)"
 name: "mosquitto_sub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mosquitto_sub/"
 description: "mosquitto_sub – an MQTT version 3.1 client for subscribing to topics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mosquitto_sub &#8211; an MQTT version 3.1 client for subscribing to topics </p>
 <h2>SYNOPSIS</h2>
 <dl>

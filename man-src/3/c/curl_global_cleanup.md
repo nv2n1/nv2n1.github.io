@@ -1,4 +1,5 @@
 ---
+
 title: "curl_global_cleanup(3)"
 name: "curl_global_cleanup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_global_cleanup/"
 description: "curl_global_cleanup – global libcurl cleanup"
 ---
 
-<h2>NAME</h2>
 <p> curl_global_cleanup &#8211; global libcurl cleanup</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

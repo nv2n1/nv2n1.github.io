@@ -1,4 +1,5 @@
 ---
+
 title: "gunzip(1)"
 name: "gunzip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gunzip/"
 description: "gzip, gunzip, zcat – compress or expand files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gzip, gunzip, zcat &#8211; compress or expand files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gzip</code> [<code> -acdfhklLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_remove_spmc(3)"
 name: "ck_ht_remove_spmc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_remove_spmc/"
 description: "ck_ht_remove_spmc – resize a hash table if necessary"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_remove_spmc</code> &#8211; resize a hash table if necessary</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

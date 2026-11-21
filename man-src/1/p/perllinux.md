@@ -1,4 +1,5 @@
 ---
+
 title: "perllinux(1)"
 name: "perllinux"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perllinux/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perllinux - Perl version 5 on Linux systems 
+perllinux - Perl version 5 on Linux systems 
 
 <h2>DESCRIPTION</h2>
 

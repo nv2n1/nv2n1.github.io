@@ -1,4 +1,5 @@
 ---
+
 title: "lilymidi(1)"
 name: "lilymidi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lilymidi/"
 description: "lilymidi – manual page for lilymidi 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> lilymidi &#8211; manual page for lilymidi 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lilymidi</code> [<i>options</i>] <i>FILE</i></p>

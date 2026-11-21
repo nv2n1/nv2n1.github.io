@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-logfile(1)"
 name: "mrtg-logfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-logfile/"
 description: "mrtg-logfile – description of the mrtg-2 logfile format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-logfile &#8211; description of the mrtg-2 logfile format </p>
 <h2>SYNOPSIS</h2>
 <p> This document provides a description of the contents of the mrtg-2 logfile.</p>

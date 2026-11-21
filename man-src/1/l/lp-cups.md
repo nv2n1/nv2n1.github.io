@@ -1,4 +1,5 @@
 ---
+
 title: "lp-cups(1)"
 name: "lp-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lp-cups/"
 description: "lp – print files"
 ---
 
-<h2>NAME</h2>
 <p> lp &#8211; print files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -d <i>destination[/instance]</i> ] [ -h <i>hostname[:port]</i> ] [ -m ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -s ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ] [ &#8212; ] [ <i>file(s)</i> ]<br />

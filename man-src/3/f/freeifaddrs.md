@@ -1,4 +1,5 @@
 ---
+
 title: "freeifaddrs(3)"
 name: "freeifaddrs"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-freeifaddrs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- getifaddrs, freeifaddrs - get interface addresses 
+getifaddrs, freeifaddrs - get interface addresses 
 
 <h2>SYNOPSIS</h2>
 

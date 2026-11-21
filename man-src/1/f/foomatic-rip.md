@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-rip(1)"
 name: "foomatic-rip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-rip/"
 description: "foomatic-rip – Universal print filter/RIP wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> foomatic-rip &#8211; Universal print filter/RIP wrapper </p>
 <h2>SYNOPSIS</h2>
 <h3>General Options:</h3>

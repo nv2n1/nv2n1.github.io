@@ -1,4 +1,5 @@
 ---
+
 title: "pssh(1)"
 name: "pssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pssh/"
 description: "pssh — parallel ssh program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pssh &#8212; parallel ssh program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pssh</code> [<code>-vAiIP</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] <i>command &#8230;</i> </p>

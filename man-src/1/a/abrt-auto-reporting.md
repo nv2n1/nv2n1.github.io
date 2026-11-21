@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-auto-reporting(1)"
 name: "abrt-auto-reporting"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-auto-reporting/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-auto-reporting - Get or modify the auto reporting option values 
+abrt-auto-reporting - Get or modify the auto reporting option values 
 
 <h2>SYNOPSIS</h2>
 

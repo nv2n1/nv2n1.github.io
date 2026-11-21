@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-wks-client(1)"
 name: "gpg-wks-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpg-wks-client/"
 description: "gpg-wks-client – Client for the Web Key Service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-wks-client</code> &#8211; Client for the Web Key Service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;supported</code> <i>user-id</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-remote(1)"
 name: "transmission-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-remote/"
 description: "transmission-remote – a remote control utility for transmission-daemon1 and transmission(1)"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-remote</code> &#8211; a remote control utility for transmission-daemon1 and <a href="/docs/linux/man/1-transmission/">transmission</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> -words [<i>host:port | host | port</i> ] [-<code>a </code><i>filenames-or-URLs </i>[-<code>as</code> ] ] [-<code>AS</code> ] [-<code>asd </code><i>number</i> ] [-<code>asu </code><i>number</i> ] [-<code>asc</code> ] [-<code>ASC</code> ] [-<code>b</code> ] [-<code>c </code><i>path | &#8211;</i><code>C</code> ] [-<code>d </code><i>number | &#8211;</i><code>D</code> ] [-<code>e </code><i>size</i> ] [-<code>er | ep | et</code> ] [-<code>-exit</code> ] [-<code>f</code> ] [-<code>g </code><i>files</i> ] [-<code>G </code><i>files</i> ] [-<code>gsr </code><i>ratio</i> ] [-<code>GSR</code> ] [-<code>h</code> ] [-<code>i</code> ] [-<code>ic</code> ] [-<code>if</code> ] [-<code>ip</code> ] [-<code>it</code> ] [-<code>l</code> ] [-<code>m | M</code> ] [-<code>n </code><i>user:pass</i> ] [-<code>ne</code> ] [-<code>N </code><i>netrc</i> ] [-<code>o | O</code> ] [-<code>p </code><i>port</i> ] [-<code>Bh </code>[-<code>Bn </code>[-<code></p>

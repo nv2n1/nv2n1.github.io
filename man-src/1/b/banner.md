@@ -1,4 +1,5 @@
 ---
+
 title: "banner(1)"
 name: "banner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-banner/"
 description: "banner – prints a short string to the console in very large letters"
 ---
 
-<h2>NAME</h2>
 <p> banner &#8211; prints a short string to the console in very large letters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>banner</code> <i>string</i></p>

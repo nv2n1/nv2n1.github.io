@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_get_identity(3)"
 name: "libssh2_agent_get_identity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_agent_get_identity/"
 description: "libssh2_agent_get_identity – get a public key off the collection of public keys managed by ssh-agent"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_agent_get_identity &#8211; get a public key off the collection of public keys managed by ssh-agent</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

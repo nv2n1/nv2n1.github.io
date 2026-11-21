@@ -1,4 +1,5 @@
 ---
+
 title: "backtrace_symbols(3)"
 name: "backtrace_symbols"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-backtrace_symbols/"
 description: "backtrace, backtrace_symbols, backtrace_symbols_fd – support for application self-debugging"
 ---
 
-<h2 class="name">NAME</h2>
 <p> backtrace, backtrace_symbols, backtrace_symbols_fd &#8211; support for application self-debugging </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;execinfo.h&gt;</code> </p>

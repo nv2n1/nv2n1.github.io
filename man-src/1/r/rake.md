@@ -1,4 +1,5 @@
 ---
+
 title: "rake(1)"
 name: "rake"
 section: "1"
@@ -8,7 +9,7 @@ description: "rake – make-like build utility for Ruby"
 ---
 
 <p>rake 11.2.2</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>rake</code> &#8211; make-like build utility for Ruby </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rake</code> [-<code>f </code><i>rakefile</i> ] [<i>options</i> ] <i>targets &#8230;</i></p>

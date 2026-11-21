@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpn-connection(1)"
 name: "euca-create-vpn-connection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-vpn-connection/"
 description: "euca-create-vpn-connection – Create a VPN connection between a virtual private gateway and a customer gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-vpn-connection &#8211; Create a VPN connection between a virtual private gateway and a customer gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-vpn-connection <code>-t</code> ipsec.1 <code>&#8211;customer-gateway</code> CGATEWAY</p>

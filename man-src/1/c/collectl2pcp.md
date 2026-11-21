@@ -1,4 +1,5 @@
 ---
+
 title: "collectl2pcp(1)"
 name: "collectl2pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-collectl2pcp/"
 description: "collectl2pcp – import collectl data to a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>collectl2pcp</code> &#8211; import collectl data to a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>collectl2pcp</code> [<code>-F</code>] [<code>-v</code>] [<code>-?</code>] <i>file</i> [<i>file</i> &#8230;] <i>archive</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "night_dark(1)"
 name: "night_dark"
 section: "1"
@@ -6,9 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-night_dark/"
 ---
 
-<h2>NAME</h2>
-
- night_dark - subtract dark from image
+night_dark - subtract dark from image
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "buffer(1)"
 name: "buffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-buffer/"
 description: "buffer – very fast reblocking program"
 ---
 
-<h2>NAME</h2>
 <p> buffer &#8211; very fast reblocking program</p>
 <h2>SYNTAX</h2>
 <p> <code>buffer</code> [<code>-S size</code>] [<code>-b blocks</code>] [<code>-s size</code>] [<code>-m size</code>] [<code>-p percentage</code>] [<code>-u microseconds</code>] [<code>-B</code>] [<code>-t</code>] [<code>-Z</code>] [<code>-i filename</code>] [<code>-o filename</code>]</p>

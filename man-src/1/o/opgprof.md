@@ -1,4 +1,5 @@
 ---
+
 title: "opgprof(1)"
 name: "opgprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opgprof/"
 description: "opgprof – produce gprof-format profile data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opgprof &#8211; produce gprof-format profile data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opgprof</code> [ <i>options</i> ] [profile specification]</p>

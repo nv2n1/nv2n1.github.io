@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_docbook2texi(1)"
 name: "db2x_docbook2texi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db2x_docbook2texi/"
 description: "docbook2texi – Convert DocBook to Texinfo"
 ---
 
-<h2>NAME</h2>
 <p> docbook2texi &#8211; Convert DocBook to Texinfo</p>
 <h2>SYNOPSIS</h2>
 <p> <code>docbook2texi</code> [<i>options</i>] <i>xml-document</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-unsub(1)"
 name: "mlmmj-unsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-unsub/"
 description: "mlmmj-unsub – unsubscribe address from a mailinglist run by mlmmj"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-unsub &#8211; unsubscribe address from a mailinglist run by mlmmj</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-unsub</code> <i>-L /path/to/list -a john [at] doe.org</i> [<i>-b</i>] [<i>-c</i> | <i>-C</i>] [<i>-d</i> | <i>-n</i> | <i>-N</i>] [<i>-h</i>] [<i>-q</i>] [<i>-r</i> | <i>-R</i>] [<i>-s</i>] [<i>-U</i>] [<i>-V</i>]</p>

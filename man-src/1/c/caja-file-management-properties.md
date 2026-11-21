@@ -1,4 +1,5 @@
 ---
+
 title: "caja-file-management-properties(1)"
 name: "caja-file-management-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-caja-file-management-properties/"
 description: "Caja-file-management-properties – Caja File Management Preferences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Caja-file-management-properties &#8211; Caja File Management Preferences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>caja-file-management-properties</code></p>

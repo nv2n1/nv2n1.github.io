@@ -1,4 +1,5 @@
 ---
+
 title: "pngquant(1)"
 name: "pngquant"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pngquant/"
 description: "pngquant – PNG converter and lossy image compressor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pngquant</code> &#8211; PNG converter and lossy image compressor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pngquant</code> Aq options [ncolors] file [<i>file &#8230;</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-delete-alarms(1)"
 name: "euwatch-delete-alarms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-delete-alarms/"
 description: "euwatch-delete-alarms – Delete alarms"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-delete-alarms &#8211; Delete alarms</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-delete-alarms [&#8211;show-empty-fields] [-U URL]</p>

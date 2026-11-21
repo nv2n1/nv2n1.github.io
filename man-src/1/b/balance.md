@@ -1,4 +1,5 @@
 ---
+
 title: "balance(1)"
 name: "balance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-balance/"
 description: "balance 3.42 – A simple TCP proxy with load balancing and failover mechanisms."
 ---
 
-<h2>NAME</h2>
 <p> balance 3.42 &#8211; A simple TCP proxy with load balancing and failover mechanisms.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>balance </code> [ <code>-b addr</code> ] [ <code>-B addr</code> ] [ <code>-t sec</code> ] [ <code>-T sec</code> ] [ <code>-adfpHM</code> ] port host1[:port1[:maxc]] [!|%] [ &#8230; hostn[:portn[:maxc]]] </p>

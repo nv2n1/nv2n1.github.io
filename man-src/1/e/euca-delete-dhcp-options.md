@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-dhcp-options(1)"
 name: "euca-delete-dhcp-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-dhcp-options/"
 description: "euca-delete-dhcp-options – Delete a VPC DHCP option set"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-dhcp-options &#8211; Delete a VPC DHCP option set</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-dhcp-options [&#8211;show-empty-fields] [-U URL]</p>

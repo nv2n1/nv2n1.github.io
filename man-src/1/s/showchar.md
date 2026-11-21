@@ -1,4 +1,5 @@
 ---
+
 title: "showchar(1)"
 name: "showchar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-showchar/"
 description: "showchar – show character with information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> showchar &#8211; show character with information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>showchar</code> [ <code>fontname</code> ] [ <code>charname</code> ]</p>

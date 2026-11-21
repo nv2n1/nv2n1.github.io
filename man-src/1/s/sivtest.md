@@ -1,4 +1,5 @@
 ---
+
 title: "sivtest(1)"
 name: "sivtest"
 section: "1"
@@ -8,7 +9,7 @@ description: "sivtest – interactive MANAGESIEVE test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> sivtest &#8211; interactive MANAGESIEVE test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sivtest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

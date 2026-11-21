@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_remove(3)"
 name: "ck_array_remove"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_remove/"
 description: "ck_array_remove – attempt immediate or deferred removal of a pointer from an array"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_remove</code> &#8211; attempt immediate or deferred removal of a pointer from an array</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

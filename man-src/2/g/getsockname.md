@@ -1,4 +1,5 @@
 ---
+
 title: "getsockname(2)"
 name: "getsockname"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getsockname/"
 description: "getsockname – get socket name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getsockname &#8211; get socket name </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

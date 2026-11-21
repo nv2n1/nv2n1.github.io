@@ -1,4 +1,5 @@
 ---
+
 title: "midi_seek(3)"
 name: "midi_seek"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-midi_seek/"
 description: "midi_seek – Seeks to the given midi_pos in the current MIDI file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> midi_seek &#8211; Seeks to the given midi_pos in the current MIDI file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

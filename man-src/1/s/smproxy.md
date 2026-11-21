@@ -1,4 +1,5 @@
 ---
+
 title: "smproxy(1)"
 name: "smproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smproxy/"
 description: "smproxy – Session Manager Proxy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smproxy &#8211; Session Manager Proxy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>smproxy</code> [-clientId id] [-restore saveFile] [-version]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cu(1)"
 name: "cu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cu/"
 description: "cu – Call up another system"
 ---
 
-<h2>NAME</h2>
 <p> cu &#8211; Call up another system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cu</code> [ options ] [ system | phone | &quot;dir&quot; ]</p>

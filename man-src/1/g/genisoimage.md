@@ -1,4 +1,5 @@
 ---
+
 title: "genisoimage(1)"
 name: "genisoimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genisoimage/"
 description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional Rock Ridge attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> genisoimage &#8211; create ISO9660/Joliet/HFS filesystem with optional Rock Ridge attributes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>genisoimage</code> [<i>options</i>] [<code>-o</code> <i>filename</i>] <i>pathspec</i> [<i>pathspec &#8230;</i>]</p>

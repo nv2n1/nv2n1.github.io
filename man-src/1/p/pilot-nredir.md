@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-nredir(1)"
 name: "pilot-nredir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-nredir/"
 description: "pilot-nredir – Accept connection and redirect via Network Hotsync Protocol."
 ---
 
-<h2>NAME</h2>
 <p> pilot-nredir &#8211; Accept connection and redirect via Network Hotsync Protocol.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

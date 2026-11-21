@@ -1,4 +1,5 @@
 ---
+
 title: "list_config_entries(3)"
 name: "list_config_entries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-list_config_entries/"
 description: "list_config_entries – Lists the names of all entries in a config section Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> list_config_entries &#8211; Lists the names of all entries in a config section Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

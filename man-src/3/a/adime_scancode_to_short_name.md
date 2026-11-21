@@ -1,4 +1,5 @@
 ---
+
 title: "adime_scancode_to_short_name(3)"
 name: "adime_scancode_to_short_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_scancode_to_short_name/"
 description: "adime_scancode_to_short_name"
 ---
 
-<h2>NAME</h2>
 <p> adime_scancode_to_short_name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

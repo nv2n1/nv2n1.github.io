@@ -1,4 +1,5 @@
 ---
+
 title: "cunbdb1(3)"
 name: "cunbdb1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunbdb1/"
 description: "cunbdb1.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cunbdb1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

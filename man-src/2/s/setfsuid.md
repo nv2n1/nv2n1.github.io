@@ -1,4 +1,5 @@
 ---
+
 title: "setfsuid(2)"
 name: "setfsuid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setfsuid/"
 description: "setfsuid – set user identity used for filesystem checks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setfsuid &#8211; set user identity used for filesystem checks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>

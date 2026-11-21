@@ -1,4 +1,5 @@
 ---
+
 title: "protoize(1)"
 name: "protoize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-protoize/"
 description: "protoize, unprotoize – automatically add or remove function prototypes"
 ---
 
-<h2>NAME</h2>
 <p> protoize, unprotoize &#8211; automatically add or remove function prototypes</p>
 <h2>SYNOPSIS</h2>
 <dl>

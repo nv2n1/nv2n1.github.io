@@ -1,4 +1,5 @@
 ---
+
 title: "k3d(1)"
 name: "k3d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-k3d/"
 description: "k3d – 3D modeling and animation system"
 ---
 
-<h2>NAME</h2>
 <p> k3d &#8211; 3D modeling and animation system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>k3d</code> [options] </p>

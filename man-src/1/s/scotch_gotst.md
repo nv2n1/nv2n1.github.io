@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gotst(1)"
 name: "scotch_gotst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gotst/"
 description: "gomtst – compute statistics on sparse matrix orderings"
 ---
 
-<h2>NAME</h2>
 <p> <code>gomtst </code>&#8211; compute statistics on sparse matrix orderings</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

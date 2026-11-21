@@ -1,4 +1,5 @@
 ---
+
 title: "mate-wm(1)"
 name: "mate-wm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-wm/"
 description: "mate-wm – Start the window manager configured by the user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-wm &#8211; Start the window manager configured by the user </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-wm [&#8211;default-wm=WINDOWMANAGER] [&#8211;sm-client-id=ID]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gcore(1)"
 name: "gcore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcore/"
 description: "gcore – Generate core files for running processes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcore &#8211; Generate core files for running processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcore</code> [-a] [-o <i>filename</i>] <i>pid[s]</i></p>

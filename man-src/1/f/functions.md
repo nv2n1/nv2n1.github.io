@@ -1,4 +1,5 @@
 ---
+
 title: "functions(1)"
 name: "functions"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-functions/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- functions - print or erase functions
+functions - print or erase functions
 
 <h3>Synopsis</h3>
 

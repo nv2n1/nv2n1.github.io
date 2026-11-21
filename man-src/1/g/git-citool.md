@@ -1,4 +1,5 @@
 ---
+
 title: "git-citool(1)"
 name: "git-citool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-citool/"
 description: "git-citool – Graphical alternative to git-commit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-citool &#8211; Graphical alternative to git-commit </p>
 <h2>SYNOPSIS</h2>
 <pre>

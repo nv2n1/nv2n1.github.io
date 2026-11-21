@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot-dial(1)"
 name: "jpilot-dial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpilot-dial/"
 description: "jpilot-dial – generates the DTMF tone signals used for telephone dialing"
 ---
 
-<h2>NAME</h2>
 <p> jpilot-dial &#8211; generates the DTMF tone signals used for telephone dialing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpilot-dial</code> [<i>options</i>]<i> number</i>&#8230;</p>

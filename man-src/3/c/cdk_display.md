@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_display(3)"
 name: "cdk_display"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_display/"
 description: "cdk_display – Curses Development Kit Display Capabilities."
 ---
 
-<h2>NAME</h2>
 <p> cdk_display &#8211; <code>Curses Development Kit</code> Display Capabilities.</p>
 <h2>SYNOPSIS</h2>
 <p> Cdk has a number of pre-defined display types. The following are outlined in this manual page: </p>

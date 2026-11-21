@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-bkpurge-offline(1)"
 name: "glite-lb-bkpurge-offline"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glite-lb-bkpurge-offline/"
 description: "glite-lb-bkpurge-offline – emergency utility for removing inactive jobs from the L&B database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glite-lb-bkpurge-offline &#8211; emergency utility for removing inactive jobs from the L&amp;B database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-bkpurge-offline</code> [<i>OPTIONS</i>] </p>

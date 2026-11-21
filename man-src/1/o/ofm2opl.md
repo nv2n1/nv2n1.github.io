@@ -1,4 +1,5 @@
 ---
+
 title: "ofm2opl(1)"
 name: "ofm2opl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ofm2opl/"
 description: "ofm2opl – convert Omega and TeX font-metric files to property-list files"
 ---
 
-<h2>NAME</h2>
 <p> ofm2opl &#8211; convert Omega and TeX font-metric files to property-list files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ofm2opl</code> [<i>options</i>] <i>ofmname</i>[<i></i><code>.ofm</code>] [<i>oplfile</i>[<i></i><code>.opl</code>]] </p>

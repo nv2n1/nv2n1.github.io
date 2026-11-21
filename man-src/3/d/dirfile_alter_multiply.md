@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_multiply(3)"
 name: "dirfile_alter_multiply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_alter_multiply/"
 description: "dirfile_alter_bit, dirfile_alter_clincom, dirfile_alter_const, dirfile_alter_cpolynom, dirfile_alter_lincom, dirfile_alter_linterp, dirfile_alter_multiply, dirfile_alter_phase, dirfile_alter_polyno..."
 ---
 
-<h2>NAME</h2>
 <p> dirfile_alter_bit, dirfile_alter_clincom, dirfile_alter_const, dirfile_alter_cpolynom, dirfile_alter_lincom, dirfile_alter_linterp, dirfile_alter_multiply, dirfile_alter_phase, dirfile_alter_polynom, dirfile_alter_raw, dirfile_alter_sbit &#8212; modify a field in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

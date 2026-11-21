@@ -1,4 +1,5 @@
 ---
+
 title: "edje(3)"
 name: "edje"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-edje/"
 description: "edje.c – Edje Graphical Design Library."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edje.c &#8211; Edje Graphical Design Library. </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions</h3>

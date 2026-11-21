@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-create(1)"
 name: "docker-service-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-service-create/"
 description: "docker-service-create – Create a new service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-service-create &#8211; Create a new service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service create [OPTIONS] IMAGE [COMMAND] [ARG&#8230;]</code> </p>

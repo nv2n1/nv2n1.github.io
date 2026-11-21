@@ -1,4 +1,5 @@
 ---
+
 title: "cd-read(1)"
 name: "cd-read"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-read/"
 description: "cd-read – reads Information from a CD or CD-image"
 ---
 
-<h2>NAME</h2>
 <p> cd-read &#8211; reads Information from a CD or CD-image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cd-read</code> [<i>OPTION</i>&#8230;]</p>

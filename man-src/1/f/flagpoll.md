@@ -1,4 +1,5 @@
 ---
+
 title: "flagpoll(1)"
 name: "flagpoll"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flagpoll/"
 description: "flagpoll – manual page for flagpoll 0.9.1"
 ---
 
-<h2>NAME</h2>
 <p> flagpoll &#8211; manual page for flagpoll 0.9.1</p>
 <h2>DESCRIPTION</h2>
 <p> usage: flagpoll pkg options [pkg options] [generic options]</p>

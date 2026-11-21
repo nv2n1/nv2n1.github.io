@@ -1,4 +1,5 @@
 ---
+
 title: "lxsession(1)"
 name: "lxsession"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxsession/"
 description: "lxsession — a lightweight X session manager"
 ---
 
-<h2>NAME</h2>
 <p> lxsession &#8212; a lightweight X session manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxsession</code></p>

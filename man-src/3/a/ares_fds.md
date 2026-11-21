@@ -1,4 +1,5 @@
 ---
+
 title: "ares_fds(3)"
 name: "ares_fds"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_fds/"
 description: "ares_fds – Get file descriptors to select on for name service"
 ---
 
-<h2>NAME</h2>
 <p> ares_fds &#8211; Get file descriptors to select on for name service</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

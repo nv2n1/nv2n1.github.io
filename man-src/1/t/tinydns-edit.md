@@ -1,4 +1,5 @@
 ---
+
 title: "tinydns-edit(1)"
 name: "tinydns-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tinydns-edit/"
 description: "tinydns-edit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tinydns-edit</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>tinydns-edit</code> [<code>OPTIONS</code>] DATA DATA.TMP add TYPE NAME ADDRESS </p>

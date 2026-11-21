@@ -1,4 +1,5 @@
 ---
+
 title: "qmake(1)"
 name: "qmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmake/"
 description: "qmake – distributed parallel make, scheduling by xxQS_NAMExx."
 ---
 
-<h2 class="name">NAME</h2>
 <p> qmake &#8211; distributed parallel make, scheduling by xxQS_NAMExx.</p>
 <h2>SYNTAX</h2>
 <p> <code>qmake</code> [<i>options</i>] &#8212; [<i>gmake options</i>]</p>

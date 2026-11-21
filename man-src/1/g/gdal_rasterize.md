@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_rasterize(1)"
 name: "gdal_rasterize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_rasterize/"
 description: "gdal_rasterize – gdal_rasterize burns vector geometries into a raster"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_rasterize &#8211; gdal_rasterize burns vector geometries into a raster </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "irrecord(1)"
 name: "irrecord"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irrecord/"
 description: "irrecord – application for recording IR-codes for usage with LIRC"
 ---
 
-<h2>NAME</h2>
 <p> irrecord &#8211; application for recording IR-codes for usage with LIRC</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irrecord [-f] [-n] [-H driver] [-d device] [file]</code><br />

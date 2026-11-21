@@ -1,4 +1,5 @@
 ---
+
 title: "curvecpmessage(1)"
 name: "curvecpmessage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-curvecpmessage/"
 description: "CurveCP — Message-handling programs"
 ---
 
-<h2>NAME</h2>
 <p> CurveCP &#8212; Message-handling programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>curvecpmessage</code> [<code>-q </code><i>(optional)</i>] [<code>-Q </code><i>(optional)</i>] [<code>-v </code><i>(optional)</i>] [<code>-c </code><i>(optional)</i>] [<code>-C </code><i>(optional)</i>] [<code>-s </code><i>(optional)</i>] [prog]</p>

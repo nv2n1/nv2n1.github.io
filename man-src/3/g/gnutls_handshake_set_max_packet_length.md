@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake_set_max_packet_length(3)"
 name: "gnutls_handshake_set_max_packet_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_handshake_set_max_packet_length/"
 description: "gnutls_handshake_set_max_packet_length – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_handshake_set_max_packet_length &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

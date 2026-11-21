@@ -1,4 +1,5 @@
 ---
+
 title: "build-jar-repository(1)"
 name: "build-jar-repository"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-build-jar-repository/"
 description: "build-jar-repository – create a symbolic link to a JAR"
 ---
 
-<h2 class="name">NAME</h2>
 <p> build-jar-repository &#8211; create a symbolic link to a JAR </p>
 <h2>SYNOPSIS</h2>
 <p> <code>build-jar-repository</code> [OPTION]&#8230; DIRECTORY JAR|artifact-coordinates</p>

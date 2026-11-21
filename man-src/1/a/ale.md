@@ -1,4 +1,5 @@
 ---
+
 title: "ale(1)"
 name: "ale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ale/"
 description: "ale – a synthetic capture engine and renderer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ale &#8211; a synthetic capture engine and renderer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ale</code> [<i>OPTIONS</i>] <i>original-frame</i> [<i>supplemental-frames</i> &#8230;] <i>output-file</i> </p>

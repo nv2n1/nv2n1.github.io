@@ -1,4 +1,5 @@
 ---
+
 title: "exblend(3)"
 name: "exblend"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exblend/"
 description: "exblend – Using translucency in truecolor modes. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exblend &#8211; Using translucency in truecolor modes. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

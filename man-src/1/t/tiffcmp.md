@@ -1,4 +1,5 @@
 ---
+
 title: "tiffcmp(1)"
 name: "tiffcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffcmp/"
 description: "tiffcmp – compare two TIFF files"
 ---
 
-<h2>NAME</h2>
 <p> tiffcmp &#8211; compare two <font SIZE="-1">TIFF</font> files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcmp</code> [ <i>options</i> ] <i>file1.tif file2.tif</i></p>

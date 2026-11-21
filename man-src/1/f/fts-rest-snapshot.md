@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-snapshot(1)"
 name: "fts-rest-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-snapshot/"
 description: "fts-rest-snapshot"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-snapshot</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-snapshot [options]</p>

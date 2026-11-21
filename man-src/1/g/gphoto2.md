@@ -1,4 +1,5 @@
 ---
+
 title: "gphoto2(1)"
 name: "gphoto2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gphoto2/"
 description: "gphoto2 – command-line gphoto2 client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gphoto2 &#8211; command-line gphoto2 client </p>
 <h2>SYNOPSIS</h2>
 <dl>

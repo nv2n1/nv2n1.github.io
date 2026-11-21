@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_mtst(1)"
 name: "scotch_mtst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_mtst/"
 description: "mtst – test the consistency of source meshes"
 ---
 
-<h2>NAME</h2>
 <p> <code>mtst </code>&#8211; test the consistency of source meshes</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "pspsvg(1)"
 name: "pspsvg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pspsvg/"
 description: "pspsvg – convert PaintShop Pro® gradients (jgd, PspGradient) to the SVG format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pspsvg &#8211; convert PaintShop Pro&#174; gradients (jgd, PspGradient) to the SVG format. </p>
 <h2>SYNOPSIS</h2>
 <dl>

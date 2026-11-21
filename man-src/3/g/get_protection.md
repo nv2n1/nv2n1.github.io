@@ -1,4 +1,5 @@
 ---
+
 title: "get_protection(3)"
 name: "get_protection"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_protection/"
 description: "get_protection — report the protection level of a dirfile fragment"
 ---
 
-<h2>NAME</h2>
 <p> get_protection &#8212; report the protection level of a dirfile fragment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

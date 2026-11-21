@@ -1,4 +1,5 @@
 ---
+
 title: "inc(1)"
 name: "inc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inc/"
 description: "inc – incorporate new mail"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inc &#8211; incorporate new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

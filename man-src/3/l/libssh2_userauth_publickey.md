@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_publickey(3)"
 name: "libssh2_userauth_publickey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_publickey/"
 description: "libssh2_userauth_publickey – authenticate using a callback function"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_publickey &#8211; authenticate using a callback function</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

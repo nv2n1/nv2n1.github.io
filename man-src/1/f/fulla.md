@@ -1,4 +1,5 @@
 ---
+
 title: "fulla(1)"
 name: "fulla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fulla/"
 description: "fulla – Correct lens distortion, vignetting and chromatic aberration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fulla &#8211; Correct lens distortion, vignetting and chromatic aberration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fulla</code> [options] <i>inputfile(s)</i></p>

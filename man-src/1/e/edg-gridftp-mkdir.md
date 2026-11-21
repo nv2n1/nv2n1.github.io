@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-mkdir(1)"
 name: "edg-gridftp-mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edg-gridftp-mkdir/"
 description: "edg-gridftp-mkdir – Create a directory on a GridFTP server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edg-gridftp-mkdir &#8211; Create a directory on a GridFTP server. </p>
 <h2>SYNOPSIS</h2>
 <p> edg-gridftp-mkdir [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;parents</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>

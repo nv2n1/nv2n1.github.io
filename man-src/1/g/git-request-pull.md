@@ -1,4 +1,5 @@
 ---
+
 title: "git-request-pull(1)"
 name: "git-request-pull"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-request-pull/"
 description: "git-request-pull – Generates a summary of pending changes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-request-pull &#8211; Generates a summary of pending changes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "xmltex(1)"
 name: "xmltex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmltex/"
 description: "xmltex, pdfxmltex – xml non-validating parser in TeX"
 ---
 
-<h2>NAME</h2>
 <p> xmltex, pdfxmltex &#8211; xml non-validating parser in TeX</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmltex</code> <i>xml file</i><br />

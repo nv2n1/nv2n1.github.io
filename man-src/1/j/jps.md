@@ -1,4 +1,5 @@
 ---
+
 title: "jps(1)"
 name: "jps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jps/"
 description: "jps – Lists the instrumented Java Virtual Machines (JVMs) on the target system. This command is experimental and unsupported."
 ---
 
-<h2>NAME</h2>
 <p> jps &#8211; Lists the instrumented Java Virtual Machines (JVMs) on the target system. This command is experimental and unsupported.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_getaddrinfo(3)"
 name: "ldns_getaddrinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_getaddrinfo/"
 description: "ldns_getaddrinfo"
 ---
 
-<h2>NAME</h2>
 <p> ldns_getaddrinfo </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

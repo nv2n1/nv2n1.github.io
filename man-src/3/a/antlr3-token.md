@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-token(3)"
 name: "antlr3-token"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-token/"
 description: "ANTLR3_COMMON_TREE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_COMMON_TREE_struct &#8211; </p>
 <p> Interface for an ANTLR3 common tree which is what gets passed around by the AST producing parser.</p>
 <h2>SYNOPSIS</h2>

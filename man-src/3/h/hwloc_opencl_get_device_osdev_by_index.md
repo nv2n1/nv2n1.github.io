@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_opencl_get_device_osdev_by_index(3)"
 name: "hwloc_opencl_get_device_osdev_by_index"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_opencl_get_device_osdev_by_index/"
 description: "hwlocality_opencl – Interoperability with OpenCL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_opencl &#8211; Interoperability with OpenCL </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_opencl_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, cl_device_id device, <code>hwloc_cpuset_t</code> set) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-wrap-passphrase(1)"
 name: "ecryptfs-wrap-passphrase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-wrap-passphrase/"
 description: "ecryptfs-wrap-passphrase – wrap an eCryptfs mount passphrase."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-wrap-passphrase &#8211; wrap an eCryptfs mount passphrase.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-wrap-passphrase [file]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-authorize(1)"
 name: "euca-authorize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-authorize/"
 description: "euca-authorize – Add a rule to a security group that allows traffic to pass"
 ---
 
-<h2>NAME</h2>
 <p> euca-authorize &#8211; Add a rule to a security group that allows traffic to pass</p>
 <h2>SYNOPSIS</h2>
 <p> euca-authorize [&#8211;egress] [-P PROTOCOL] [-p RANGE] [-t TYPE:CODE]</p>

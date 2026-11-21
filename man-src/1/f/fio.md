@@ -1,4 +1,5 @@
 ---
+
 title: "fio(1)"
 name: "fio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fio/"
 description: "fio – flexible I/O tester"
 ---
 
-<h2>NAME</h2>
 <p> fio &#8211; flexible I/O tester</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fio</code> [<i>options</i>] [<i>jobfile</i>]&#8230;</p>

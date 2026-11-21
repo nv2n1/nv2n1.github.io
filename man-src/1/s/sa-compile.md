@@ -1,4 +1,5 @@
 ---
+
 title: "sa-compile(1)"
 name: "sa-compile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sa-compile/"
 description: "sa-compile – compile SpamAssassin ruleset into native code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sa-compile &#8211; compile SpamAssassin ruleset into native code </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sa-compile</code> [options] </p>

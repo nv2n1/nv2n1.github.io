@@ -1,4 +1,5 @@
 ---
+
 title: "fadvise(2)"
 name: "fadvise"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fadvise/"
 description: "fadvise64,fadvise64_64 – Give advice about file access"
 ---
 
-<h2>NAME</h2>
 <p> fadvise64,fadvise64_64 &#8211; Give advice about file access</p>
 <h2>SYNOPSIS</h2>
 <dl>

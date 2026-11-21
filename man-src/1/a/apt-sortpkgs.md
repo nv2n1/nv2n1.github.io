@@ -1,4 +1,5 @@
 ---
+
 title: "apt-sortpkgs(1)"
 name: "apt-sortpkgs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-sortpkgs/"
 description: "apt-sortpkgs – Utility to sort package index files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-sortpkgs &#8211; Utility to sort package index files </p>
 <h2>SYNOPSIS</h2>
 <dl>

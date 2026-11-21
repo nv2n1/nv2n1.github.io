@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-nm(1)"
 name: "x86_64-linux-gnu-nm"
 section: "1"
@@ -6,9 +7,6 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-nm/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> nm &#8211; list symbols from object files </p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-A</code>|<code>-o</code>|<code>--print-file-name</code>] <br />

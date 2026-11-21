@@ -1,4 +1,5 @@
 ---
+
 title: "reindexdb(1)"
 name: "reindexdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reindexdb/"
 description: "reindexdb – reindex a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reindexdb &#8211; reindex a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>

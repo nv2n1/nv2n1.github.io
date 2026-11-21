@@ -1,4 +1,5 @@
 ---
+
 title: "aggregate(1)"
 name: "aggregate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aggregate/"
 description: "aggregate – optimise a list of route prefixes to help make nice short filters"
 ---
 
-<h2>NAME</h2>
 <p> <code>aggregate</code> &#8211; optimise a list of route prefixes to help make nice short filters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aggregate</code> [-m max-length] [-o max-opt-length] [-p default-length] [-q] [-t] [-v] </p>

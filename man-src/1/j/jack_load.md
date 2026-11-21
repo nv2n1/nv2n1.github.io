@@ -1,4 +1,5 @@
 ---
+
 title: "jack_load(1)"
 name: "jack_load"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_load/"
 description: "jack_load – JACK toolkit client for loading in-process clients"
 ---
 
-<h2>NAME</h2>
 <p> jack_load &#8211; JACK toolkit client for loading in-process clients</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_load</code> [ <i>-i</i> initstring ] [ <i>-s</i> servername ] [<i>-w</i> ] client-name so-name [ initstring ]</p>

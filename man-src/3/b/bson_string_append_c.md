@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_append_c(3)"
 name: "bson_string_append_c"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_string_append_c/"
 description: "bson_string_append_c() – Appends c to the string builder string."
 ---
 
-<h2>NAME</h2>
 <p> bson_string_append_c() &#8211; Appends c to the string builder string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

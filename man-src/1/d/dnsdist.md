@@ -1,4 +1,5 @@
 ---
+
 title: "dnsdist(1)"
 name: "dnsdist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnsdist/"
 description: "dnsdist – tool to balance DNS queries over downstream servers"
 ---
 
-<h2>NAME</h2>
 <p> dnsdist &#8211; tool to balance DNS queries over downstream servers</p>
 <h2>SYNOPSIS</h2>
 <p> dnsdist [OPTION]&#8230; ADDRESS&#8230;</p>

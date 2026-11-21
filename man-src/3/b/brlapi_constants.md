@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_constants(3)"
 name: "brlapi_constants"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_constants/"
 description: "brlapi_constants.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> brlapi_constants.h &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Defines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_callback_get(3)"
 name: "memcached_callback_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_callback_get/"
 description: "memcached_callback_get – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_callback_get &#8211; libmemcached Documentation </p>
 <p> Get and set a callback</p>
 <h2>SYNOPSIS</h2>

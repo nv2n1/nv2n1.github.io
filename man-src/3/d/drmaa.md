@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa(3)"
 name: "drmaa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa/"
 description: "DRMAA interface. –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> DRMAA interface. &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Vector iteration functions.</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "journalctl(1)"
 name: "journalctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-journalctl/"
 description: "journalctl – Query the systemd journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> journalctl &#8211; Query the systemd journal </p>
 <h2>SYNOPSIS</h2>
 <dl>

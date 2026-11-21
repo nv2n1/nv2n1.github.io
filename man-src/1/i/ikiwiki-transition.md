@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki-transition(1)"
 name: "ikiwiki-transition"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ikiwiki-transition/"
 ---
 
-<h2>NAME</h2>
-
- ikiwiki-transition - transition ikiwiki pages to new syntaxes, etc 
+ikiwiki-transition - transition ikiwiki pages to new syntaxes, etc 
 
 <h2>SYNOPSIS</h2>
 

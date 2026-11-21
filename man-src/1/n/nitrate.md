@@ -1,4 +1,5 @@
 ---
+
 title: "nitrate(1)"
 name: "nitrate"
 section: "1"
@@ -6,9 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nitrate/"
 ---
 
-<h2>NAME</h2>
-
- nitrate - Command line interpreter for the Nitrate Python API
+nitrate - Command line interpreter for the Nitrate Python API
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "gps2udp(1)"
 name: "gps2udp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gps2udp/"
 description: "gps2udp – feed the take from gpsd to one or more aggregation sites"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gps2udp &#8211; feed the take from gpsd to one or more aggregation sites </p>
 <h2>SYNOPSIS</h2>
 <dl>

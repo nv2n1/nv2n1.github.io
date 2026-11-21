@@ -1,4 +1,5 @@
 ---
+
 title: "jack_metro(1)"
 name: "jack_metro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_metro/"
 description: "jack_metro – JACK toolkit metronome"
 ---
 
-<h2>NAME</h2>
 <p> jack_metro &#8211; JACK toolkit metronome</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_metro</code> [ <i>-n</i> name ] [ <i>-f</i> hz ] [ <i>-D</i> msecs ] [<i>-a</i> % ] [ <i>-d</i> % ] <i>-b</i> bpm</p>

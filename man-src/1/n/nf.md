@@ -1,4 +1,5 @@
 ---
+
 title: "nf(1)"
 name: "nf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nf/"
 description: "fmt-ptrn – A simple template system"
 ---
 
-<h2>NAME</h2>
 <p> fmt-ptrn &#8211; A simple template system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fmt-ptrn [options] filename [template]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pnmscalefixed(1)"
 name: "pnmscalefixed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmscalefixed/"
 description: "pnmscalefixed – scale a portable anymap quickly, but less accurate"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmscalefixed &#8211; scale a portable anymap quickly, but less accurate</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pnmscalefixed</code> is the same thing as <code>pnmscale</code> except that it uses fixed point arithmetic internally instead of floating point, which makes it run faster. In turn, it is less accurate and may distort the image. </p>

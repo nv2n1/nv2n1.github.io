@@ -1,4 +1,5 @@
 ---
+
 title: "git-unpack-file(1)"
 name: "git-unpack-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-unpack-file/"
 description: "git-unpack-file – Creates a temporary file with a blob’s contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-unpack-file &#8211; Creates a temporary file with a blob&#8217;s contents </p>
 <h2>SYNOPSIS</h2>
 <pre>

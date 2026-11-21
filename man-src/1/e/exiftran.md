@@ -1,4 +1,5 @@
 ---
+
 title: "exiftran(1)"
 name: "exiftran"
 section: "1"
@@ -8,7 +9,7 @@ description: "exiftran – transform digital camera jpeg images # #"
 ---
 
 <p>#</p>
-<h2 class="name">NAME</h2>
+
 <p> exiftran &#8211; transform digital camera jpeg images # # </p>
 <h2>SYNOPSIS</h2>
 <dl>

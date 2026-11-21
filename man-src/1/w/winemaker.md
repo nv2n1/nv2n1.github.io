@@ -1,4 +1,5 @@
 ---
+
 title: "winemaker(1)"
 name: "winemaker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winemaker/"
 description: "winemaker – generate a build infrastructure for compiling Windows programs on Unix"
 ---
 
-<h2>NAME</h2>
 <p> winemaker &#8211; generate a build infrastructure for compiling Windows programs on Unix</p>
 <h2>SYNOPSIS</h2>
 <p> <code>winemaker </code> [ <code>&#8211;nobanner </code>] [ <code>&#8211;backup </code>| <code>&#8211;nobackup </code>] [ &#8211;nosource-fix ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rpmlint(1)"
 name: "rpmlint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmlint/"
 description: "rpmlint – check common problems in rpm packages"
 ---
 
-<h2>NAME</h2>
 <p> rpmlint &#8211; check common problems in rpm packages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmlint</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>|<i>PACKAGE</i>]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "discount-makepage(1)"
 name: "discount-makepage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-discount-makepage/"
 description: "makepage – convert markdown input to a fully-formed xhtml page"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>makepage</code> &#8211; convert markdown input to a fully-formed xhtml page </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>V</code> ] [-<code>F bitmap </code> ] [-<code>f </code><i>flags</i> ] [file ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bsdtar(1)"
 name: "bsdtar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsdtar/"
 description: "tar – manipulate tape archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>tar</code> &#8211; manipulate tape archives</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>bundled-flags Ao </i>args Ac [Ao <i>file Ac </i>| Ao <i>pattern Ac </i>&#8230; ] ]<br />

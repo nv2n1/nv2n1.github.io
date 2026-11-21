@@ -1,4 +1,5 @@
 ---
+
 title: "jasper(1)"
 name: "jasper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jasper/"
 description: "jasper – File format converter specialized in JPEG-2000 encoding"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jasper &#8211; File format converter specialized in JPEG-2000 encoding</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jasper</code> [<i>options</i>] </p>

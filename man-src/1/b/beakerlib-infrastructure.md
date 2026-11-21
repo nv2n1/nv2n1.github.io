@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-infrastructure(1)"
 name: "beakerlib-infrastructure"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-infrastructure/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- BeakerLib - infrastructure - mounting, backup and service helpers 
+BeakerLib - infrastructure - mounting, backup and service helpers 
 
 <h2>DESCRIPTION</h2>
 

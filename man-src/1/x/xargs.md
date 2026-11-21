@@ -1,4 +1,5 @@
 ---
+
 title: "xargs(1)"
 name: "xargs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xargs/"
 description: "xargs – build and execute command lines from standard input"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xargs &#8211; build and execute command lines from standard input </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xargs</code> [<i>options</i>] [<i>command</i> [<i>initial-arguments</i>]]</p>

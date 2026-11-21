@@ -1,4 +1,5 @@
 ---
+
 title: "grfcodec(1)"
 name: "grfcodec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grfcodec/"
 description: "GRFCodec – A tool to convert a GRF file into graphics files and meta data, and vice versa."
 ---
 
-<h2>NAME</h2>
 <p> <code>GRFCodec</code> &#8211; A tool to convert a GRF file into graphics files and meta data, and vice versa.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grfcodec</code> [-<code>sv</code> ] [-<code>d | e</code> ] [options] <i>GRF-file</i> [Directory] </p>

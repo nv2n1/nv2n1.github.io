@@ -1,4 +1,5 @@
 ---
+
 title: "grok-fsck(1)"
 name: "grok-fsck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grok-fsck/"
 description: "GROK-FSCK – Check mirrored repositories for corruption"
 ---
 
-<h2>NAME</h2>
 <p> GROK-FSCK &#8211; Check mirrored repositories for corruption</p>
 <h2>SYNOPSIS</h2>
 <p> grok-fsck -c /path/to/fsck.conf</p>

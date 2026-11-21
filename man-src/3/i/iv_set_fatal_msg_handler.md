@@ -1,4 +1,5 @@
 ---
+
 title: "iv_set_fatal_msg_handler(3)"
 name: "iv_set_fatal_msg_handler"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_set_fatal_msg_handler/"
 description: "iv_fatal, iv_set_fatal_msg_handler – ivykis fatal error condition handling"
 ---
 
-<h2>NAME</h2>
 <p> iv_fatal, iv_set_fatal_msg_handler &#8211; ivykis fatal error condition handling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

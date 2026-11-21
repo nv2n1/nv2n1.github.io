@@ -1,4 +1,5 @@
 ---
+
 title: "kismet_drone(1)"
 name: "kismet_drone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kismet_drone/"
 description: "kismet_drone – Wireless sniffing and monitoring remote drone"
 ---
 
-<h2>NAME</h2>
 <p> <code>kismet_drone </code>&#8211; Wireless sniffing and monitoring remote drone</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

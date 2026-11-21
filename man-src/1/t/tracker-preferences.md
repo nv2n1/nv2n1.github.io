@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-preferences(1)"
 name: "tracker-preferences"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-preferences/"
 description: "tracker-preferences – Preferences editor for tracker-miner-fs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-preferences &#8211; Preferences editor for tracker-miner-fs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-preferences</code> </p>

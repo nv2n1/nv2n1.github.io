@@ -1,4 +1,5 @@
 ---
+
 title: "stg-import(1)"
 name: "stg-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-import/"
 description: "stg-import – Import a GNU diff file as a new patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-import &#8211; Import a GNU diff file as a new patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

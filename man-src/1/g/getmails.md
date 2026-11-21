@@ -1,4 +1,5 @@
 ---
+
 title: "getmails(1)"
 name: "getmails"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getmails/"
 description: "getmails – wrapper for getmail to access multiple mailboxes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getmails &#8211; wrapper for getmail to access multiple mailboxes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getmails</code> [<code>-p</code>] [<i>OPTION</i>] &#8230;</p>

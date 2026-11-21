@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_stack_destroy(3)"
 name: "globus_xio_stack_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_stack_destroy/"
 description: "Globus XIO API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO API &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_xio_accept_callback_t</code> )(globus_xio_server_t server, globus_xio_handle_t handle, globus_result_t result, void *user_arg) </p>

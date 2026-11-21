@@ -1,4 +1,5 @@
 ---
+
 title: "ssyevd(3)"
 name: "ssyevd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyevd/"
 description: "ssyevd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ssyevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

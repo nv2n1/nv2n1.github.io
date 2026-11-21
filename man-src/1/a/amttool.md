@@ -1,4 +1,5 @@
 ---
+
 title: "amttool(1)"
 name: "amttool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amttool/"
 description: "amttool – remotely control Intel AMT managed machines."
 ---
 
-<h2>NAME</h2>
 <p> amttool &#8211; remotely control Intel AMT managed machines.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>amttool host [ command ] [ arg(s) ]</code></p>

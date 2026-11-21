@@ -1,4 +1,5 @@
 ---
+
 title: "csyrfs(3)"
 name: "csyrfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyrfs/"
 description: "csyrfs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csyrfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_field_type(3)"
 name: "auparse_get_field_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_field_type/"
 description: "auparse_get_field_type – get current field’s data type"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_field_type &#8211; get current field&#8217;s data type</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

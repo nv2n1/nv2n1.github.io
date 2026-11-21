@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr2canonical(3)"
 name: "ldns_rr2canonical"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr2canonical/"
 description: "ldns_rr2canonical"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr2canonical </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

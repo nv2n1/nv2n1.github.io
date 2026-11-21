@@ -1,4 +1,5 @@
 ---
+
 title: "cupstestppd(1)"
 name: "cupstestppd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cupstestppd/"
 description: "cupstestppd – test conformance of ppd files (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cupstestppd &#8211; test conformance of ppd files (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cupstestppd</code> [ <code>-I</code> <i>category</i> ] [ <code>-R</code> <i>rootdir</i> ] [ <code>-W</code> <i>category</i> ] [ <code>-q</code> ] [ <code>-r</code> ] [ <code>-v</code>[<code>v</code>] ] <i>filename.ppd[.gz]</i> [ &#8230; <i>filename.ppd[.gz]</i> ]<br />

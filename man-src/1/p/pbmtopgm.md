@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtopgm(1)"
 name: "pbmtopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtopgm/"
 description: "pbmtopgm – convert portable bitmap to portable graymap by averaging areas"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtopgm &#8211; convert portable bitmap to portable graymap by averaging areas</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtopgm </code> <i>width</i> <i>height</i> [<i>pbmfile</i>] </p>

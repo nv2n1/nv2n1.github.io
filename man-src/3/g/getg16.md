@@ -1,4 +1,5 @@
 ---
+
 title: "getg16(3)"
 name: "getg16"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getg16/"
 description: "getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb16, getr24, getg24, getb24, getr32, getg32, getb32 – Extract a color component from the specified pixel format. Allegro game program..."
 ---
 
-<h2>NAME</h2>
 <p> getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb16, getr24, getg24, getb24, getr32, getg32, getb32 &#8211; Extract a color component from the specified pixel format. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

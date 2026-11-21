@@ -1,4 +1,5 @@
 ---
+
 title: "mremap(2)"
 name: "mremap"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mremap/"
 description: "mremap – remap a virtual memory address"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mremap &#8211; remap a virtual memory address </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

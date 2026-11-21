@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-enable-zones-for-lb(1)"
 name: "eulb-enable-zones-for-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-enable-zones-for-lb/"
 description: "eulb-enable-zones-for-lb – Add a load balancer to one or more availability zones"
 ---
 
-<h2>NAME</h2>
 <p> eulb-enable-zones-for-lb &#8211; Add a load balancer to one or more availability zones</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-enable-zones-for-lb <code>-z</code> ZONE1,ZONE2,&#8230; [&#8211;show-empty-fields]</p>

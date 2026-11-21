@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-vol(1)"
 name: "euca-bundle-vol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-bundle-vol/"
 description: "euca-bundle-vol – Prepare this machine’s filesystem for use in the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-bundle-vol &#8211; Prepare this machine&#8217;s filesystem for use in the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-bundle-vol [-p PREFIX] [-d DIR]</p>

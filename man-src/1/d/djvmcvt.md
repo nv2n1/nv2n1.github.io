@@ -1,4 +1,5 @@
 ---
+
 title: "djvmcvt(1)"
 name: "djvmcvt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvmcvt/"
 description: "djvmcvt – Convert multi-page DjVu documents."
 ---
 
-<h2 class="name">NAME</h2>
 <p> djvmcvt &#8211; Convert multi-page DjVu documents.</p>
 <h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating a bundled document:</h2>

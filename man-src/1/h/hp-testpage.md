@@ -1,4 +1,5 @@
 ---
+
 title: "hp-testpage(1)"
 name: "hp-testpage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-testpage/"
 description: "hp-testpage – Testpage Print Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-testpage &#8211; Testpage Print Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Print a tespage to a printer. Prints a summary of device information and shows the printer&#8217;s margins.</p>

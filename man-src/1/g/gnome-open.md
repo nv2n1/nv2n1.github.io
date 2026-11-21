@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-open(1)"
 name: "gnome-open"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-open/"
 description: "gnome-open – Open files and URLs using the GNOME file handlers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-open &#8211; Open files and URLs using the GNOME file handlers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-open</code> [OPTION]&#8230; [URL]&#8230;</p>

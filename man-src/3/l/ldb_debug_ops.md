@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_debug_ops(3)"
 name: "ldb_debug_ops"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_debug_ops/"
 description: "ldb_debug_ops –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldb_debug_ops &#8211; </p>
 <p> the user can optionally supply a debug function.</p>
 <h2>SYNOPSIS</h2>

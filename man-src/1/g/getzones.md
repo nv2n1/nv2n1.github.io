@@ -1,4 +1,5 @@
 ---
+
 title: "getzones(1)"
 name: "getzones"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getzones/"
 description: "getzones – list AppleTalk zone names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getzones &#8211; list AppleTalk zone names </p>
 <h2>SYNOPSIS</h2>
 <dl>

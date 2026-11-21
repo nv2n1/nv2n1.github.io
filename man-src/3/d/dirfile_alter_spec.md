@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_spec(3)"
 name: "dirfile_alter_spec"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_alter_spec/"
 description: "dirfile_alter_spec, dirfile_malter_spec — modify a field in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_alter_spec, dirfile_malter_spec &#8212; modify a field in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

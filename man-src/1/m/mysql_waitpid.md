@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_waitpid(1)"
 name: "mysql_waitpid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_waitpid/"
 description: "mysql_waitpid – kill process and wait for its termination"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_waitpid &#8211; kill process and wait for its termination </p>
 <h2>SYNOPSIS</h2>
 <dl>

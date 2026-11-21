@@ -1,4 +1,5 @@
 ---
+
 title: "irtestcase(1)"
 name: "irtestcase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irtestcase/"
 description: "irtestcase – create or check decoding testcases."
 ---
 
-<h2>NAME</h2>
 <p> irtestcase &#8211; create or check decoding testcases.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irtestcase [-l lircrc-file -p prog] &lt;socket&gt;</code><br />

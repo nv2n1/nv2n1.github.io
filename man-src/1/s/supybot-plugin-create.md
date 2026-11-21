@@ -1,4 +1,5 @@
 ---
+
 title: "supybot-plugin-create(1)"
 name: "supybot-plugin-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-supybot-plugin-create/"
 description: "supybot-plugin-create – A wizard for creating Supybot plugins"
 ---
 
-<h2>NAME</h2>
 <p> supybot-plugin-create &#8211; A wizard for creating Supybot plugins</p>
 <h2>SYNOPSIS</h2>
 <p> <code>supybot-plugin-create</code> [<i>options</i>]</p>

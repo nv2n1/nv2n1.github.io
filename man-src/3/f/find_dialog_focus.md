@@ -1,4 +1,5 @@
 ---
+
 title: "find_dialog_focus(3)"
 name: "find_dialog_focus"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-find_dialog_focus/"
 description: "find_dialog_focus – Searches the dialog for the object which has the input focus. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> find_dialog_focus &#8211; Searches the dialog for the object which has the input focus. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

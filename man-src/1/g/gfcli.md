@@ -1,4 +1,5 @@
 ---
+
 title: "gfcli(1)"
 name: "gfcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfcli/"
 description: "gfcli – manual page for gfcli (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfcli &#8211; manual page for gfcli (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfcli</code> [<i>OPTION</i>]&#8230; [<i>URL</i>]</p>

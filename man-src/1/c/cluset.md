@@ -1,4 +1,5 @@
 ---
+
 title: "cluset(1)"
 name: "cluset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cluset/"
 description: "cluset – compute advanced cluster node set operations"
 ---
 
-<h2>NAME</h2>
 <p> cluset &#8211; compute advanced cluster node set operations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cluset</code> [OPTIONS] [COMMAND] [nodeset1 [OPERATION] nodeset2|&#8230;]</p>

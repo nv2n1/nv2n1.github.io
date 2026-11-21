@@ -1,4 +1,5 @@
 ---
+
 title: "softhsm2-util(1)"
 name: "softhsm2-util"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-softhsm2-util/"
 description: "softhsm2-util – support tool for libsofthsm2"
 ---
 
-<h2>NAME</h2>
 <p> softhsm2-util &#8211; support tool for libsofthsm2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>softhsm2-util &#8211;show-slots</code> </p>

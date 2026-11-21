@@ -1,4 +1,5 @@
 ---
+
 title: "perlsyn(1)"
 name: "perlsyn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsyn/"
 description: "perlsyn – Perl syntax"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlsyn &#8211; Perl syntax </p>
 <h2>DESCRIPTION</h2>
 <p> A Perl program consists of a sequence of declarations and statements which run from the top to the bottom. Loops, subroutines, and other control structures allow you to jump around within the code. </p>

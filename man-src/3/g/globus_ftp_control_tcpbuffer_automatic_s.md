@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_tcpbuffer_automatic_s(3)"
 name: "globus_ftp_control_tcpbuffer_automatic_s"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_control_tcpbuffer_automatic_s/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_ftp_control_tcpbuffer_automatic_s - 
+globus_ftp_control_tcpbuffer_automatic_s - 
 
  Automatically set the TCP buffer/window size.
 

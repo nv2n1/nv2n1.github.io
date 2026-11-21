@@ -1,4 +1,5 @@
 ---
+
 title: "funimagerowget(3)"
 name: "funimagerowget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funimagerowget/"
 description: "FunImageRowGet – get row(s) of an image"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunImageRowGet &#8211; get row(s) of an image</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

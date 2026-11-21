@@ -1,4 +1,5 @@
 ---
+
 title: "httpcfg(1)"
 name: "httpcfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-httpcfg/"
 description: "httpcfg – Mono Certificate Management for HttpListener"
 ---
 
-<h2>NAME</h2>
 <p> httpcfg &#8211; Mono Certificate Management for HttpListener</p>
 <h2>SYNOPSIS</h2>
 <p> <code>httpcfg [options] certificate</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fixcvsdiff(1)"
 name: "fixcvsdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixcvsdiff/"
 description: "fixcvsdiff – fix problematic diff files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fixcvsdiff &#8211; fix problematic diff files </p>
 <h2>SYNOPSIS</h2>
 <dl>

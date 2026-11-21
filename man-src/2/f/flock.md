@@ -1,4 +1,5 @@
 ---
+
 title: "flock(2)"
 name: "flock"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-flock/"
 description: "flock – apply or remove an advisory lock on an open file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flock &#8211; apply or remove an advisory lock on an open file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/file.h&gt;</code> </p>

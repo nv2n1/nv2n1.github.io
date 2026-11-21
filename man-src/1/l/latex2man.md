@@ -1,4 +1,5 @@
 ---
+
 title: "latex2man(1)"
 name: "latex2man"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-latex2man/"
 description: "Latex2man is a tool to translate UNIX manual pages written with LaTeXinto a format understood by the UNIX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> Latex2man is a tool to translate UNIX manual pages written with LaTeXinto a format understood by the UNIX <i> </p>
 <p> <a href="/docs/linux/man/1-man/">man</a></i>(1)-command. Alternatively HTML, TexInfo, or LaTeX code can be produced too. Output of parts of the text may be suppressed using the conditional text feature (for this, LaTeX generation may be used). </p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "dladdr1(3)"
 name: "dladdr1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dladdr1/"
 description: "dladdr, dladdr1 – translate address to symbolic information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dladdr, dladdr1 &#8211; translate address to symbolic information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

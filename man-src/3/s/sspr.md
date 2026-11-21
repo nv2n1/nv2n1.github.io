@@ -1,4 +1,5 @@
 ---
+
 title: "sspr(3)"
 name: "sspr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspr/"
 description: "sspr.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sspr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

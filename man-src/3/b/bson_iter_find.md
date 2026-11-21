@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_find(3)"
 name: "bson_iter_find"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_find/"
 description: "bson_iter_find() – The bson_iter_find()function shall advance iterto the element named keyor exhaust all elements of iter. If iteris exhausted, false is returned and itershould be considered invalid."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_find() &#8211; The bson_iter_find()function shall advance iterto the element named keyor exhaust all elements of iter. If iteris exhausted, false is returned and itershould be considered invalid.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

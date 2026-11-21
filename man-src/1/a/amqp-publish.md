@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-publish(1)"
 name: "amqp-publish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amqp-publish/"
 description: "amqp-publish – Publish a message on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amqp-publish &#8211; Publish a message on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>

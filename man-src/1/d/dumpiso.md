@@ -1,4 +1,5 @@
 ---
+
 title: "dumpiso(1)"
 name: "dumpiso"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dumpiso/"
 description: "dumpiso – dump IEEE 1394 isochronous channel packets"
 ---
 
-<h2>NAME</h2>
 <p> dumpiso &#8211; dump IEEE 1394 isochronous channel packets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dumpiso</code> [ <i>options</i> ] [ <i>FILE</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncview(1)"
 name: "ncview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncview/"
 description: "ncview – graphically display netCDF files under X windows"
 ---
 
-<h2>NAME</h2>
 <p> ncview &#8211; graphically display netCDF files under X windows</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncview</code> [-beep] [-copying] [-frames] [-warranty] [-private] [-ncolors XX] [-extrainfo] [-mtitle &quot;title&quot;] [-minmax fast | med | slow | all] datafiles &#8230; </p>

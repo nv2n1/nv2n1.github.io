@@ -1,4 +1,5 @@
 ---
+
 title: "tv_validate_grabber(1)"
 name: "tv_validate_grabber"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_validate_grabber/"
 description: "tv_validate_grabber – Validate that an xmltv grabber works correctly"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_validate_grabber &#8211; Validate that an xmltv grabber works correctly </p>
 <h2>SYNOPSIS</h2>
 <p> tv_validate_grabber &#8211;help </p>

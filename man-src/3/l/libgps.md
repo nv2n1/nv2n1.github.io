@@ -1,4 +1,5 @@
 ---
+
 title: "libgps(3)"
 name: "libgps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgps/"
 description: "libgps – C service library for communicating with the GPS daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libgps &#8211; C service library for communicating with the GPS daemon </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

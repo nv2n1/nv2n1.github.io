@@ -1,4 +1,5 @@
 ---
+
 title: "euform-describe-stack-events(1)"
 name: "euform-describe-stack-events"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-describe-stack-events/"
 description: "euform-describe-stack-events – Describe events that occurred in a stack"
 ---
 
-<h2>NAME</h2>
 <p> euform-describe-stack-events &#8211; Describe events that occurred in a stack</p>
 <h2>SYNOPSIS</h2>
 <p> euform-describe-stack-events [&#8211;show-empty-fields] [-U URL]</p>

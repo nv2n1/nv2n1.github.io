@@ -1,4 +1,5 @@
 ---
+
 title: "get_z_rotate_matrix_f(3)"
 name: "get_z_rotate_matrix_f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_z_rotate_matrix_f/"
 description: "get_z_rotate_matrix, get_z_rotate_matrix_f – Construct Z axis rotation matrices. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_z_rotate_matrix, get_z_rotate_matrix_f &#8211; Construct Z axis rotation matrices. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

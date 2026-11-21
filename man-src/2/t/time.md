@@ -1,4 +1,5 @@
 ---
+
 title: "time(2)"
 name: "time"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-time/"
 description: "time – get time in seconds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> time &#8211; get time in seconds </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>

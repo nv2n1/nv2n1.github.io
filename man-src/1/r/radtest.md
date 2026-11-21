@@ -1,4 +1,5 @@
 ---
+
 title: "radtest(1)"
 name: "radtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radtest/"
 description: "radtest – send packets to a RADIUS server, show reply"
 ---
 
-<h2>NAME</h2>
 <p> radtest &#8211; send packets to a RADIUS server, show reply</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radtest</code> [<code>-d</code> <i>raddb_directory</i>] [<code>-P</code> <i>tcp/udp</i>] [<code>-t</code> <i>pap/chap/mschap/eap-md5</i>] [<code>-x</code> <i>]</i> [<code>-4</code> <i>]</i> [<code>-6</code> <i>]</i> <i>user password radius-server nas-port-number secret</i> [<code>ppphint</code>] [<code>nasname</code>]</p>

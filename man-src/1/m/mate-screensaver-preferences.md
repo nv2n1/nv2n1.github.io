@@ -1,4 +1,5 @@
 ---
+
 title: "mate-screensaver-preferences(1)"
 name: "mate-screensaver-preferences"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-screensaver-preferences/"
 description: "mate-screensaver-preferences – Configure MATE Screensaver"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-screensaver-preferences &#8211; Configure MATE Screensaver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-screensaver-preferences [ OPTIONS]</code></p>

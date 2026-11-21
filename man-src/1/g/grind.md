@@ -1,4 +1,5 @@
 ---
+
 title: "grind(1)"
 name: "grind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grind/"
 description: "grind – process WordNet lexicographer files"
 ---
 
-<h2>NAME</h2>
 <p> grind &#8211; process WordNet lexicographer files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grind</code> [ <code>-v</code> ] [ <code>-s</code> ] [ <code>-L</code><i>logfile</i> ] [ <code>-a</code> ] [ <code>-d</code> ] [ <code>-i</code> ] [ <code>-o</code> ] [ <code>-n</code> ] <i>filename</i> [ <i>filename</i>&#8230; ]</p>

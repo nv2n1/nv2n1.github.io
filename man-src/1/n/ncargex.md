@@ -1,4 +1,5 @@
 ---
+
 title: "ncargex(1)"
 name: "ncargex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargex/"
 description: "ncargex – NCAR Graphics Fortran and C Low-Level Utility Examples"
 ---
 
-<h2>NAME</h2>
 <p> ncargex &#8211; NCAR Graphics Fortran and C Low-Level Utility Examples</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "x_update(1)"
 name: "x_update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_update/"
 description: "x_update – Archiving of Cross-Over Information"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_update</code> &#8211; Archiving of Cross-Over Information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_update</code> <i>cross-overfile</i> [ <code>-X</code><i>xbase</i> ] [ <code>-L</code><i>legbase</i> ] [ <code>-V</code> ] [ <code>-W</code><i>max</i> ]</p>

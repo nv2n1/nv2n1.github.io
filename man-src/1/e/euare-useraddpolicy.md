@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useraddpolicy(1)"
 name: "euare-useraddpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-useraddpolicy/"
 description: "euare-useraddpolicy – Add a new policy to a user. To add more complex policies than this tool supports, see euare-useruploadpolicy(1)."
 ---
 
-<h2>NAME</h2>
 <p> euare-useraddpolicy &#8211; Add a new policy to a user. To add more complex policies than this tool supports, see <a href="/docs/linux/man/1-euare-useruploadpolicy/">euare-useruploadpolicy</a>(1).</p>
 <h2>SYNOPSIS</h2>
 <p> euare-useraddpolicy <code>-p</code> POLICY <code>-e</code> {Allow,Deny} <code>-a</code> ACTIONS <code>-r</code> RESOURCES</p>

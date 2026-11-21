@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_iter(3)"
 name: "bson_append_iter"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_iter/"
 description: "bson_append_iter() – TODO:"
 ---
 
-<h2>NAME</h2>
 <p> bson_append_iter() &#8211; TODO:</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "permview(1)"
 name: "permview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-permview/"
 description: "permview – Viewer for declarative security permission sets inside assemblies."
 ---
 
-<h2>NAME</h2>
 <p> permview &#8211; Viewer for declarative security permission sets inside assemblies.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>permview [options] assembly</code></p>

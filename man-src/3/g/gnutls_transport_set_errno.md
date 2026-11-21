@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_transport_set_errno(3)"
 name: "gnutls_transport_set_errno"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_transport_set_errno/"
 description: "gnutls_transport_set_errno – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_transport_set_errno &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

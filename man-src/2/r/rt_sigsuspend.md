@@ -1,4 +1,5 @@
 ---
+
 title: "rt_sigsuspend(2)"
 name: "rt_sigsuspend"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-rt_sigsuspend/"
 description: "sigsuspend, rt_sigsuspend – wait for a signal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigsuspend, rt_sigsuspend &#8211; wait for a signal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>

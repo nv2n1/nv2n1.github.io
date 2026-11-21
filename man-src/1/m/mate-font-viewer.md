@@ -1,4 +1,5 @@
 ---
+
 title: "mate-font-viewer(1)"
 name: "mate-font-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-font-viewer/"
 description: "mate-font-viewer – preview fonts"
 ---
 
-<h2>NAME</h2>
 <p> <code>mate-font-viewer</code> &#8211; preview fonts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-font-viewer</code> [<i>OPTIONS&#8230;</i>]&nbsp;<wbr>&lt;filename&gt;</p>

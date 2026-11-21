@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-settings(1)"
 name: "beagle-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-settings/"
 description: "beagle-settings"
 ---
 
-<h2>NAME</h2>
 <p> beagle-settings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-settings</code></p>

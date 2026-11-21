@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-mailx(1)"
 name: "reporter-mailx"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-mailx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- reporter-mailx - Sends contents of a problem directory via email. 
+reporter-mailx - Sends contents of a problem directory via email. 
 
 <h2>SYNOPSIS</h2>
 

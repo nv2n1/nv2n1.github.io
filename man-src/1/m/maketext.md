@@ -1,4 +1,5 @@
 ---
+
 title: "maketext(1)"
 name: "maketext"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-maketext/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- maketext - translate and make messages 
+maketext - translate and make messages 
 
 <h2>SYNOPSIS</h2>
 

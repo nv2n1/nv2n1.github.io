@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_read(3)"
 name: "keyctl_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_read/"
 description: "keyctl_read – Read a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_read &#8211; Read a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

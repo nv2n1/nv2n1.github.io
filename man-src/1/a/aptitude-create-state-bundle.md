@@ -1,4 +1,5 @@
 ---
+
 title: "aptitude-create-state-bundle(1)"
 name: "aptitude-create-state-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aptitude-create-state-bundle/"
 description: "aptitude-create-state-bundle – bundle the current aptitude state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aptitude-create-state-bundle &#8211; bundle the current aptitude state </p>
 <h2>SYNOPSIS</h2>
 <dl>

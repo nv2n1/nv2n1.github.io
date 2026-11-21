@@ -1,4 +1,5 @@
 ---
+
 title: "xmode2(1)"
 name: "xmode2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmode2/"
 description: "mode2, smode2, xmode2 – shows the pulse/space length of infrared signals"
 ---
 
-<h2>NAME</h2>
 <p> mode2, smode2, xmode2 &#8211; shows the pulse/space length of infrared signals</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmode2</code> [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-gtk(1)"
 name: "transmission-gtk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-gtk/"
 description: "transmission-gtk – a bittorrent client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>transmission-gtk</code> &#8211; a bittorrent client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>transmission-gtk</code> &#8211;<code>?</code><br />

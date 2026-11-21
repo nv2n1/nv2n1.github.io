@@ -1,4 +1,5 @@
 ---
+
 title: "euimage-describe-pack(1)"
 name: "euimage-describe-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euimage-describe-pack/"
 description: "euimage-describe-pack – ***TECH PREVIEW***"
 ---
 
-<h2>NAME</h2>
 <p> euimage-describe-pack &#8211; ***TECH PREVIEW***</p>
 <h2>SYNOPSIS</h2>
 <p> euimage-describe-pack [&#8211;show-empty-fields] [&#8211;debug] [&#8211;debugger]</p>

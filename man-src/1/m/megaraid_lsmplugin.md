@@ -1,4 +1,5 @@
 ---
+
 title: "megaraid_lsmplugin(1)"
 name: "megaraid_lsmplugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megaraid_lsmplugin/"
 description: "megaraid_lsmplugin — LibstorageMgmt MegaRAID plugin"
 ---
 
-<h2>NAME</h2>
 <p> megaraid_lsmplugin &#8212; LibstorageMgmt MegaRAID plugin </p>
 <h2>DESCRIPTION</h2>
 <p> LibstorageMgmt megaraid plugin allows user to manage LSI MegaRAID via vendor tool <code>storcli</code>[1] or Dell PERC via <code>perccli</code>[2]. The &#8216;megaraid_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies megaraid plugin in the URI. </p>

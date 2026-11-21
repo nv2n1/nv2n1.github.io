@@ -1,4 +1,5 @@
 ---
+
 title: "getfsfile(3)"
 name: "getfsfile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getfsfile/"
 description: "getfsent, getfsspec, getfsfile, setfsent, endfsent – handle fstab entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getfsent, getfsspec, getfsfile, setfsent, endfsent &#8211; handle fstab entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;fstab.h&gt;</code> </p>

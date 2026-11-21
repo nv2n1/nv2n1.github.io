@@ -1,4 +1,5 @@
 ---
+
 title: "g_x2top(1)"
 name: "g_x2top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_x2top/"
 description: "x2top – generates a primitive topology from coordinates"
 ---
 
-<h2>NAME</h2>
 <p> x2top &#8211; generates a primitive topology from coordinates </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

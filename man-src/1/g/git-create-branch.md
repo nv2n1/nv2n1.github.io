@@ -1,4 +1,5 @@
 ---
+
 title: "git-create-branch(1)"
 name: "git-create-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-create-branch/"
 description: "git-create-branch – Create branches"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-create-branch</code> &#8211; Create branches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-create-branch</code> &lt;branchname&gt;</p>

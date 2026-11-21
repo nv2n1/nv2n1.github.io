@@ -1,4 +1,5 @@
 ---
+
 title: "tiffsplit(1)"
 name: "tiffsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffsplit/"
 description: "tiffsplit – split a multi-image TIFF into single-image TIFF files"
 ---
 
-<h2>NAME</h2>
 <p> tiffsplit &#8211; split a multi-image <font SIZE="-1">TIFF</font> into single-image <font SIZE="-1">TIFF</font> files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffsplit</code> <i>src.tif</i> [ <i>prefix</i> ]</p>

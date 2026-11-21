@@ -1,4 +1,5 @@
 ---
+
 title: "cimsub(1)"
 name: "cimsub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cimsub/"
 description: "cimsub – list, enable, disable,remove or create CIM indication subscriptions"
 ---
 
-<h2>NAME</h2>
 <p> cimsub &#8211; list, enable, disable,remove or create CIM indication subscriptions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cimsub</code> <code>-l</code> <code>s</code>|<code>f</code>|fB-v][<code>-n</code> namespace][<code>-F</code> [fnamespace:]filtername][<code>-H</code> [hnamespace:][hclassname.]handlername] </p>

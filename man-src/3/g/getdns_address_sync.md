@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_address_sync(3)"
 name: "getdns_address_sync"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_address_sync/"
 description: "getdns_address, getdns_address_sync — get ip address(es) for a name"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_address, </code> <code>getdns_address_sync</code> &#8212; get ip address(es) for a name </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

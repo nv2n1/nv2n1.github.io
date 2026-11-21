@@ -1,4 +1,5 @@
 ---
+
 title: "mimedefang-util(1)"
 name: "mimedefang-util"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mimedefang-util/"
 description: "mimedefang-util — Utility script for message structure debugging"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mimedefang-util &#8212; Utility script for message structure debugging </p>
 <h2>SYNOPSIS</h2>
 <pre>

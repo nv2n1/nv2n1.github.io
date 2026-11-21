@@ -1,4 +1,5 @@
 ---
+
 title: "mhash(3)"
 name: "mhash"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mhash/"
 description: "mhash – Hash Library"
 ---
 
-<h2>NAME</h2>
 <p> <code>mhash &#8211; Hash Library</code></p>
 <h2>VERSION</h2>
 <p> mhash <font SIZE="-1">0.9.2</font></p>

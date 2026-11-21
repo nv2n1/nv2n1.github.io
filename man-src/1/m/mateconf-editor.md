@@ -1,4 +1,5 @@
 ---
+
 title: "mateconf-editor(1)"
 name: "mateconf-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mateconf-editor/"
 description: "mateconf-editor – an editor for the MateConf configuration system"
 ---
 
-<h2>NAME</h2>
 <p> mateconf-editor &#8211; an editor for the MateConf configuration system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mateconf-editor</code></p>

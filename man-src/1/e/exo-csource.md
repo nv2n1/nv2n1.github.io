@@ -1,4 +1,5 @@
 ---
+
 title: "exo-csource(1)"
 name: "exo-csource"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-exo-csource/"
 description: "exo-csource – C code generation utility for arbitrary data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> exo-csource &#8211; C code generation utility for arbitrary data </p>
 <h2>SYNOPSIS</h2>
 <dl>

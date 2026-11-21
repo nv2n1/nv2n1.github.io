@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_list(2)"
 name: "ioctl_list"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_list/"
 description: "ioctl_list – list of ioctl calls in Linux/i386 kernel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_list &#8211; list of ioctl calls in Linux/i386 kernel </p>
 <h2>DESCRIPTION</h2>
 <p> This is Ioctl List 1.3.27, a list of ioctl calls in Linux/i386 kernel 1.3.27. It contains 421 ioctls from <i>&lt;/usr/include/{asm,linux}/*.h&gt;</i>. For each ioctl, its numerical value, its name, and its argument type are given. </p>

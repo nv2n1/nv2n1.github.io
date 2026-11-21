@@ -1,4 +1,5 @@
 ---
+
 title: "poe-gen-tests(1)"
 name: "poe-gen-tests"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-poe-gen-tests/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- poe-gen-tests - generate standard POE tests for third-party modules 
+poe-gen-tests - generate standard POE tests for third-party modules 
 
 <h2>SYNOPSIS</h2>
 

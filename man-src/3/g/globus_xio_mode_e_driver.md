@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_mode_e_driver(3)"
 name: "globus_xio_mode_e_driver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_mode_e_driver/"
 description: "Globus XIO MODE_E Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO MODE_E Driver &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Opening/Closing</code> </p>

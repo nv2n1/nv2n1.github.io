@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-storage(1)"
 name: "atomic-storage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-storage/"
 description: "atomic-storage – Manage container storage."
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-storage &#8211; Manage container storage. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic storage COMMAND [OPTIONS]</code> </p>

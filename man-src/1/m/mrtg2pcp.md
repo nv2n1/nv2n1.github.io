@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg2pcp(1)"
 name: "mrtg2pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg2pcp/"
 description: "mrtg2pcp – import MRTG data and create a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>mrtg2pcp</code> &#8211; import MRTG data and create a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mrtg2pcp</code> <i>hostname</i> <i>devname</i> <i>timezone</i> <i>infile</i> <i>outfile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_polystat(1)"
 name: "g_polystat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_polystat/"
 description: "g_polystat – calculates static properties of polymers"
 ---
 
-<h2>NAME</h2>
 <p> g_polystat &#8211; calculates static properties of polymers </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ntfsclone(8)"
 name: "ntfsclone"
 section: "8"
@@ -6,8 +7,9 @@ letter: "n"
 url: "/docs/linux/man/8-ntfsclone/"
 description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 ---
+
 <p>ntfsclone &#8211; Efficiently clone, image, restore or rescue an NTFS </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>ntfsclone</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
  <code>ntfsclone --save-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
  <code>ntfsclone --restore-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />

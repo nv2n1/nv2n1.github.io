@@ -1,4 +1,5 @@
 ---
+
 title: "git-check-attr(1)"
 name: "git-check-attr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-check-attr/"
 description: "git-check-attr – Display gitattributes information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-check-attr &#8211; Display gitattributes information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

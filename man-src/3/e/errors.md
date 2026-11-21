@@ -1,4 +1,5 @@
 ---
+
 title: "errors(3)"
 name: "errors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-errors/"
 description: "ql/errors.hpp – Classes and functions for error handling."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/errors.hpp &#8211; Classes and functions for error handling. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />

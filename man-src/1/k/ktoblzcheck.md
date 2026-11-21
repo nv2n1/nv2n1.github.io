@@ -1,4 +1,5 @@
 ---
+
 title: "ktoblzcheck(1)"
 name: "ktoblzcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ktoblzcheck/"
 description: "ktoblzcheck – Check Account and BLZ (bank routing code)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ktoblzcheck &#8211; Check Account and BLZ (bank routing code) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ktoblzcheck [&#8211;returncode] [&#8211;file=&lt;datafile&gt;] &lt;bank-id&gt; &lt;account-id&gt;</code> </p>

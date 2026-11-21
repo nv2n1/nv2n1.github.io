@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-detect-virt(1)"
 name: "systemd-detect-virt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-detect-virt/"
 description: "systemd-detect-virt – Detect execution in a virtualized environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-detect-virt &#8211; Detect execution in a virtualized environment </p>
 <h2>SYNOPSIS</h2>
 <dl>

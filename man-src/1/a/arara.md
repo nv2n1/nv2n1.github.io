@@ -1,4 +1,5 @@
 ---
+
 title: "arara(1)"
 name: "arara"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arara/"
 description: "arara – a TeX automation tool based on rules and directives."
 ---
 
-<h2 class="name">NAME</h2>
 <p> arara &#8211; a TeX automation tool based on rules and directives. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arara</code> [<i>options</i>] <i>documents</i>&#8230;</p>

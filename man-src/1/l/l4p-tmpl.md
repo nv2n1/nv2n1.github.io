@@ -1,4 +1,5 @@
 ---
+
 title: "l4p-tmpl(1)"
 name: "l4p-tmpl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-l4p-tmpl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <pre>
+<pre>
     l4p-tmpl - Print out a Log4perl template configuration
 </pre> 
 

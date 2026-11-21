@@ -1,4 +1,5 @@
 ---
+
 title: "docker-rm(1)"
 name: "docker-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-rm/"
 description: "docker-rm – Remove one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-rm &#8211; Remove one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker rm [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtopbm(1)"
 name: "pgmtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmtopbm/"
 description: "pgmtopbm – convert a portable graymap into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmtopbm &#8211; convert a portable graymap into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtopbm</code> [<code>-floyd</code>|<code>-fs</code>|<code>-threshold</code> |<code>-hilbert</code> |<code>-dither8</code>|<code>-d8</code>|<code>-cluster3</code> |<code>-c3</code>|<code>-cluster4</code>|<code>-c4</code> |<code>-cluster8</code>|<code>-c8</code>] [<code>-value</code> <i>val</i>] [<code>-clump</code> <i>size</i>] [<i>pgmfile</i>]</p>

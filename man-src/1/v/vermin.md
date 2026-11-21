@@ -1,4 +1,5 @@
 ---
+
 title: "vermin(1)"
 name: "vermin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vermin/"
 description: "vermin – Parses and processes Verilog HDL files"
 ---
 
-<h2>NAME</h2>
 <p> vermin &#8211; Parses and processes Verilog HDL files</p>
 <h2>SYNTAX</h2>
 <p> vermin [<i>VERILOGFILE</i>]&#8230; [<i>option</i>]&#8230;</p>

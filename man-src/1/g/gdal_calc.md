@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_calc(1)"
 name: "gdal_calc"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gdal_calc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gdal_calc - gdal_calc.py Command line raster calculator with numpy syntax 
+gdal_calc - gdal_calc.py Command line raster calculator with numpy syntax 
 
 <h2>SYNOPSIS</h2>
 

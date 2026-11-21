@@ -1,4 +1,5 @@
 ---
+
 title: "autovbox(1)"
 name: "autovbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autovbox/"
 description: "autovbox – ISDN voice box (sound converter)"
 ---
 
-<h2>NAME</h2>
 <p> autovbox &#8211; ISDN voice box (sound converter)</p>
 <h2>SYNOPSIS</h2>
 <p> autovbox [-2 | -3 | -4 | -h | -v] [-n name] [-p phone] [-l location]</p>

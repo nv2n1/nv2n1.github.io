@@ -1,4 +1,5 @@
 ---
+
 title: "expect_autoexpect(1)"
 name: "expect_autoexpect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_autoexpect/"
 description: "autoexpect – generate an Expect script from watching a session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> autoexpect &#8211; generate an Expect script from watching a session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoexpect</code> [ <i>args</i> ] [ <i>program args&#8230;</i> ] </p>

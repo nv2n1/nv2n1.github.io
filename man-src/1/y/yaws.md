@@ -1,4 +1,5 @@
 ---
+
 title: "yaws(1)"
 name: "yaws"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yaws/"
 description: "yaws – yet another webserver"
 ---
 
-<h2>NAME</h2>
 <p> yaws &#8211; yet another webserver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yaws</code> [<i>OPTIONS</i>]</p>

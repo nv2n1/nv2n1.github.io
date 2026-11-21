@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-chop(1)"
 name: "oggz-chop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-chop/"
 description: "oggz-chop — Extract the part of an Ogg file between given start and/or end times."
 ---
 
-<h2>NAME</h2>
 <p> oggz-chop &#8212; Extract the part of an Ogg file between given start and/or end times.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

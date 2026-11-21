@@ -1,4 +1,5 @@
 ---
+
 title: "wftopfa(1)"
 name: "wftopfa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wftopfa/"
 description: "wftopfa – Convert a Wadalab base font to Postscript .PFA (or .PFB) format using ghostscript"
 ---
 
-<h2>NAME</h2>
 <p> wftopfa &#8211; Convert a Wadalab base font to Postscript .PFA (or .PFB) format using ghostscript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wftopfa</code> <i>fontname</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_control_find(3)"
 name: "ldap_control_find"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_control_find/"
 description: "ldap_control_create, ldap_control_find, ldap_control_dup, ldap_controls_dup, ldap_control_free, ldap_controls_free – LDAP control manipulation routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_control_create, ldap_control_find, ldap_control_dup, ldap_controls_dup, ldap_control_free, ldap_controls_free &#8211; LDAP control manipulation routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

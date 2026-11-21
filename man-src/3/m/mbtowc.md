@@ -1,4 +1,5 @@
 ---
+
 title: "mbtowc(3)"
 name: "mbtowc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mbtowc/"
 description: "mbtowc – convert a multibyte sequence to a wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mbtowc &#8211; convert a multibyte sequence to a wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

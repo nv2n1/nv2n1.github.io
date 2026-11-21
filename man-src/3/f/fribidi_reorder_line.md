@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_reorder_line(3)"
 name: "fribidi_reorder_line"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_reorder_line/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_reorder_line - reorder a line of logical string to visual 
+fribidi_reorder_line - reorder a line of logical string to visual 
 
 <h2>SYNOPSIS</h2>
 

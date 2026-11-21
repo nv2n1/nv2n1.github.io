@@ -1,4 +1,5 @@
 ---
+
 title: "aa_puts(3)"
 name: "aa_puts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_puts/"
 description: "aa_puts – output string to AA-lib output buffers."
 ---
 
-<h2>NAME</h2>
 <p> aa_puts &#8211; output string to AA-lib output buffers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cs_register_fileload(3)"
 name: "cs_register_fileload"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_register_fileload/"
 description: "cs_register_fileload – register a fileload function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cs_register_fileload &#8211; register a fileload function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

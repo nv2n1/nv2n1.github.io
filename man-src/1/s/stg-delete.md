@@ -1,4 +1,5 @@
 ---
+
 title: "stg-delete(1)"
 name: "stg-delete"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-delete/"
 description: "stg-delete – Delete patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-delete &#8211; Delete patches </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

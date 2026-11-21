@@ -1,4 +1,5 @@
 ---
+
 title: "g_energy_d(1)"
 name: "g_energy_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_energy_d/"
 description: "g_energy – writes energies to xvg files and displays averages"
 ---
 
-<h2>NAME</h2>
 <p> g_energy &#8211; writes energies to xvg files and displays averages </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

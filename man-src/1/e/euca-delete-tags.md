@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-tags(1)"
 name: "euca-delete-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-tags/"
 description: "euca-delete-tags – Delete tags from one or more resources"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-tags &#8211; Delete tags from one or more resources</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-tags <code>&#8211;tag</code> KEY[=[VALUE]] [&#8211;show-empty-fields] [-U URL]</p>

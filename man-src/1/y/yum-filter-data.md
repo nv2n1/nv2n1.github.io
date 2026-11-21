@@ -1,4 +1,5 @@
 ---
+
 title: "yum-filter-data(1)"
 name: "yum-filter-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-filter-data/"
 description: "yum filter data plugin"
 ---
 
-<h2>NAME</h2>
 <p> yum filter data plugin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] [command] [package &#8230;]</p>

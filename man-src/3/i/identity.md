@@ -1,4 +1,5 @@
 ---
+
 title: "identity(3)"
 name: "identity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-identity/"
 description: "QuantLib::TridiagonalOperator – Base implementation for tridiagonal operator."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::TridiagonalOperator &#8211; Base implementation for tridiagonal operator. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_t(3)"
 name: "bson_string_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_string_t/"
 description: "bson_string_t – String Building Abstraction"
 ---
 
-<h2>NAME</h2>
 <p> bson_string_t &#8211; String Building Abstraction</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

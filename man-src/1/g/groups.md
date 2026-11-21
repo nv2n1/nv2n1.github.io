@@ -1,4 +1,5 @@
 ---
+
 title: "groups(1)"
 name: "groups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-groups/"
 description: "groups – print the groups a user is in"
 ---
 
-<h2 class="name">NAME</h2>
 <p> groups &#8211; print the groups a user is in </p>
 <h2>SYNOPSIS</h2>
 <p> <code>groups</code> [<i>,OPTION/</i>]&#8230; [<i>,USERNAME/</i>]&#8230;</p>

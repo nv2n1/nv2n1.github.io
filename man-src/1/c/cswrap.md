@@ -1,4 +1,5 @@
 ---
+
 title: "cswrap(1)"
 name: "cswrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cswrap/"
 description: "cswrap – generic compiler wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cswrap &#8211; generic compiler wrapper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cswrap</code> [<i>&#8211;help</i> | <i>&#8211;print-path-to-wrap</i>]</p>

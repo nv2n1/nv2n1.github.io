@@ -1,4 +1,5 @@
 ---
+
 title: "gmdb2(1)"
 name: "gmdb2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmdb2/"
 description: "gmdb2 – GNOME UI for MDB Tools"
 ---
 
-<h2>NAME</h2>
 <p> <code>gmdb2 </code>&#8211; GNOME UI for MDB Tools</p>
 <h2>SYNOPSIS</h2>
 <pre>

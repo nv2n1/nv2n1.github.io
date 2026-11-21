@@ -1,4 +1,5 @@
 ---
+
 title: "i(1)"
 name: "i"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i/"
 description: "i.zc – Zero-crossing \"edge detection\" raster function for image processing."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>i.zc</code> &#8211; Zero-crossing &quot;edge detection&quot; raster function for image processing.</p>
 <h2>KEYWORDS</h2>
 <p> imagery</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wvunpack(1)"
 name: "wvunpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wvunpack/"
 description: "wvunpack – decodes wavpack encoded files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wvunpack &#8211; decodes wavpack encoded files </p>
 <h2>SYNOPSIS</h2>
 <dl>

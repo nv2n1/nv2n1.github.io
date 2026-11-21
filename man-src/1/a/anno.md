@@ -1,4 +1,5 @@
 ---
+
 title: "anno(1)"
 name: "anno"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anno/"
 description: "anno – annotate messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> anno &#8211; annotate messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

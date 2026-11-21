@@ -1,4 +1,5 @@
 ---
+
 title: "pmnsadd(1)"
 name: "pmnsadd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmnsadd/"
 description: "pmnsadd – add new names to the Performance Co-Pilot PMNS"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmnsadd</code> &#8211; add new names to the Performance Co-Pilot PMNS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsadd</code> [<code>-n</code> <i>namespace</i>] <i>file</i></p>

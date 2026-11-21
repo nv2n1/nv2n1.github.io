@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-info(1)"
 name: "myproxy-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-info/"
 description: "myproxy-info – display information about MyProxy credentials"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-info &#8211; display information about MyProxy credentials</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-info</code> [ <i>options</i> ]</p>

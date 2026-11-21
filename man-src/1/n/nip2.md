@@ -1,4 +1,5 @@
 ---
+
 title: "nip2(1)"
 name: "nip2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nip2/"
 description: "nip2 – image processing with the VIPS library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nip2 &#8211; image processing with the VIPS library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nip2 [filename1 &#8230;]</code><br />

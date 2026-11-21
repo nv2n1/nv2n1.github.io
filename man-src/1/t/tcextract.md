@@ -1,4 +1,5 @@
 ---
+
 title: "tcextract(1)"
 name: "tcextract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcextract/"
 description: "tcextract – read multimedia file from medium, extract or demultiplex requested stream and print to standard output"
 ---
 
-<h2>NAME</h2>
 <p> tcextract &#8211; read multimedia file from medium, extract or demultiplex requested stream and print to standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>

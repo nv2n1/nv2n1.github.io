@@ -1,4 +1,5 @@
 ---
+
 title: "iceboxnet(1)"
 name: "iceboxnet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iceboxnet/"
 description: "iceboxnet.exe – CLI implementation of icebox"
 ---
 
-<h2>NAME</h2>
 <p> iceboxnet.exe &#8211; CLI implementation of icebox</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iceboxnet.exe [OPTIONS]&#8230;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "masktest(1)"
 name: "masktest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-masktest/"
 description: "masktest – Find differences in wildcard matching between Samba’s implementation and that of a remote server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> masktest &#8211; Find differences in wildcard matching between Samba&#8217;s implementation and that of a remote server. </p>
 <h2>SYNOPSIS</h2>
 <dl>

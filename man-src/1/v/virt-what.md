@@ -1,4 +1,5 @@
 ---
+
 title: "virt-what(1)"
 name: "virt-what"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-what/"
 description: "virt-what – detect if we are running in a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-what &#8211; detect if we are running in a virtual machine </p>
 <h2>SUMMARY</h2>
 <p> virt-what [options]</p>

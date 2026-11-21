@@ -1,4 +1,5 @@
 ---
+
 title: "ares_gethostbyaddr(3)"
 name: "ares_gethostbyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_gethostbyaddr/"
 description: "ares_gethostbyaddr – Initiate a host query by address"
 ---
 
-<h2>NAME</h2>
 <p> ares_gethostbyaddr &#8211; Initiate a host query by address</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

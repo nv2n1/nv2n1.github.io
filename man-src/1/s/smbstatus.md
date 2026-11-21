@@ -1,4 +1,5 @@
 ---
+
 title: "smbstatus(1)"
 name: "smbstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbstatus/"
 description: "smbstatus – report on current Samba connections"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbstatus &#8211; report on current Samba connections </p>
 <h2>SYNOPSIS</h2>
 <dl>

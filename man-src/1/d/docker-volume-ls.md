@@ -1,4 +1,5 @@
 ---
+
 title: "docker-volume-ls(1)"
 name: "docker-volume-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-volume-ls/"
 description: "docker-volume-ls – List volumes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-volume-ls &#8211; List volumes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker volume ls [OPTIONS]</code> </p>

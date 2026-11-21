@@ -1,4 +1,5 @@
 ---
+
 title: "draw_gouraud_sprite(3)"
 name: "draw_gouraud_sprite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-draw_gouraud_sprite/"
 description: "draw_gouraud_sprite – Draws a sprite with gouraud shading. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> draw_gouraud_sprite &#8211; Draws a sprite with gouraud shading. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

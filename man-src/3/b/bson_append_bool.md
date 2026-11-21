@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_bool(3)"
 name: "bson_append_bool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_bool/"
 description: "bson_append_bool() – The bson_append_bool() function shall append a new element to bson containing the boolean provided."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_bool() &#8211; The bson_append_bool() function shall append a new element to bson containing the boolean provided.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

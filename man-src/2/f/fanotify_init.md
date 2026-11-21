@@ -1,4 +1,5 @@
 ---
+
 title: "fanotify_init(2)"
 name: "fanotify_init"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fanotify_init/"
 description: "fanotify_init – create and initialize fanotify group"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fanotify_init &#8211; create and initialize fanotify group </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;fcntl.h&gt;</code><br />

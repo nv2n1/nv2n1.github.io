@@ -1,4 +1,5 @@
 ---
+
 title: "kdesu(1)"
 name: "kdesu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kdesu/"
 description: "kdesu – Runs a program with elevated privileges"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kdesu &#8211; Runs a program with elevated privileges </p>
 <h2>SYNOPSIS</h2>
 <dl>

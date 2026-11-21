@@ -1,4 +1,5 @@
 ---
+
 title: "matchpathcon_index(3)"
 name: "matchpathcon_index"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-matchpathcon_index/"
 description: "matchpathcon, matchpathcon_index – get the default SELinux security context for the specified path from the file contexts configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> matchpathcon, matchpathcon_index &#8211; get the default SELinux security context for the specified path from the file contexts configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>

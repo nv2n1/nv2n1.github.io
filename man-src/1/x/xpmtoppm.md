@@ -1,4 +1,5 @@
 ---
+
 title: "xpmtoppm(1)"
 name: "xpmtoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpmtoppm/"
 description: "xpmtoppm – convert an X11 pixmap into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xpmtoppm &#8211; convert an X11 pixmap into a portable pixmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xpmtoppm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>-verbose</code>] [<i>xpmfile</i>] </p>

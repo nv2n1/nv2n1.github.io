@@ -1,4 +1,5 @@
 ---
+
 title: "cd-info(1)"
 name: "cd-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-info/"
 description: "cd-info – shows Information about a CD or CD-image"
 ---
 
-<h2>NAME</h2>
 <p> cd-info &#8211; shows Information about a CD or CD-image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cd-info</code> [<i>OPTION</i>&#8230;]</p>

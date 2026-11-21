@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph(1)"
 name: "rrdgraph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdgraph/"
 description: "rrdgraph – Round Robin Database tool graphing functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdgraph &#8211; Round Robin Database tool graphing functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool graph|graphv</code> <i>filename</i> [<i>option</i> &#8230;] [<i>data definition</i> &#8230;] [<i>data calculation</i> &#8230;] [<i>variable definition</i> &#8230;] [<i>graph element</i> &#8230;] [<i>print element</i> &#8230;]</p>

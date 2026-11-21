@@ -1,4 +1,5 @@
 ---
+
 title: "grdhisteq(1)"
 name: "grdhisteq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdhisteq/"
 description: "grdhisteq – Perform histogram equalization for a grid"
 ---
 
-<h2>NAME</h2>
 <p> grdhisteq &#8211; Perform histogram equalization for a grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdhisteq</code> <i>in_grdfile</i> [ <i>out_grdfile</i> ] [ <i>n_cells</i> ] [ [<i>file</i>] ] [ [<i>norm</i>] ] [ ] <i>region</i> [<i>level</i>] </p>

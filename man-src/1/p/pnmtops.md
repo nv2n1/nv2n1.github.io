@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtops(1)"
 name: "pnmtops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtops/"
 description: "pnmtops – convert portable anymap to PostScript"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtops &#8211; convert portable anymap to PostScript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtops</code> [<code>-scale</code> <i>s</i>] [<code>-dpi</code> <i>n</i>] [<code>-imagewidth</code> <i>n</i>] [<code>-imageheight</code> <i>n</i>] [<code>-width=</code><i>N</i>] [<code>-height=</code><i>N</i>] [<code>-equalpixels</code>] [<code>-turn</code>|<code>-noturn</code>] [<code>-rle</code>|<code>-runlength</code>] [<code>-nocenter</code>] [<code>-setpage</code>] [<code>-nosetpage</code>] [<i>pnmfile</i>] </p>

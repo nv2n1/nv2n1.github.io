@@ -1,4 +1,5 @@
 ---
+
 title: "remmina-gnome(1)"
 name: "remmina-gnome"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-remmina-gnome/"
 description: "remmina-gnome – Script file to start common GNOME Shell interfaces"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>remmina-gnome</code> &#8211; Script file to start common GNOME Shell interfaces </p>
 <h2>DESCRIPTION</h2>
 <p> <code>remmina-gnome</code> This script is part of the Remmina kiosk mode. If you have a freedesktop compliant Login Manager, a Remmina kiosk mode will be added in the list of available sessions.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-get-log(1)"
 name: "nvme-get-log"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-get-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-get-log - Retrieves a log page from an NVMe device 
+nvme-get-log - Retrieves a log page from an NVMe device 
 
 <h2>SYNOPSIS</h2>
 

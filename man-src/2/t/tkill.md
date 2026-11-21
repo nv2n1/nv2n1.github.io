@@ -1,4 +1,5 @@
 ---
+
 title: "tkill(2)"
 name: "tkill"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-tkill/"
 description: "tkill, tgkill – send a signal to a thread"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tkill, tgkill &#8211; send a signal to a thread </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

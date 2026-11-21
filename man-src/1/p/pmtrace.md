@@ -1,4 +1,5 @@
 ---
+
 title: "pmtrace(1)"
 name: "pmtrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmtrace/"
 description: "pmtrace – command line performance instrumentation"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmtrace</code> &#8211; command line performance instrumentation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmtrace</code> [<code>-q</code>] [<code>-c</code> <i>value</i> | <code>-e</code> <i>command</i> | <code>-v</code> <i>value</i>] [<code>-h</code> <i>host</i>] [<code>-S</code> <i>state</i>] <i>tag</i></p>

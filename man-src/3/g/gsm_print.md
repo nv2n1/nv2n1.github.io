@@ -1,4 +1,5 @@
 ---
+
 title: "gsm_print(3)"
 name: "gsm_print"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gsm_print/"
 ---
 
-<h2>NAME</h2>
-
- gsm_print --- GSM 06.10 supplementary function for debugging
+gsm_print --- GSM 06.10 supplementary function for debugging
 
 <h2>SYNOPSIS</h2>
 

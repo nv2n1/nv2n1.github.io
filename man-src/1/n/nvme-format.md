@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-format(1)"
 name: "nvme-format"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-format/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-format - Format an NVMe device 
+nvme-format - Format an NVMe device 
 
 <h2>SYNOPSIS</h2>
 

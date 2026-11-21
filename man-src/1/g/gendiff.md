@@ -1,4 +1,5 @@
 ---
+
 title: "gendiff(1)"
 name: "gendiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gendiff/"
 description: "gendiff – utility to aid in error-free diff file generation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gendiff &#8211; utility to aid in error-free diff file generation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gendiff</code> &lt;directory&gt; &lt;diff-extension&gt;</p>

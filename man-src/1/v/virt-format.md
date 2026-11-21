@@ -1,4 +1,5 @@
 ---
+
 title: "virt-format(1)"
 name: "virt-format"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-format/"
 description: "virt-format – Erase and make a blank disk"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-format &#8211; Erase and make a blank disk </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

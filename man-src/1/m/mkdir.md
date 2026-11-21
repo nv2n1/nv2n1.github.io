@@ -1,4 +1,5 @@
 ---
+
 title: "mkdir(1)"
 name: "mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkdir/"
 description: "mkdir – make directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mkdir &#8211; make directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkdir</code> [<i>,OPTION/</i>]&#8230; <i>,DIRECTORY/</i>&#8230;</p>

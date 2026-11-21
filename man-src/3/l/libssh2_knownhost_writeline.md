@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_writeline(3)"
 name: "libssh2_knownhost_writeline"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_writeline/"
 description: "libssh2_knownhost_writeline – convert a known host to a line for storage"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_writeline &#8211; convert a known host to a line for storage</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

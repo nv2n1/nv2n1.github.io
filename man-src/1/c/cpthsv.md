@@ -1,4 +1,5 @@
 ---
+
 title: "cpthsv(1)"
 name: "cpthsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpthsv/"
 description: "cpthsv – modify hue, saturation and colour value of GMT colour palette tables."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpthsv &#8211; modify hue, saturation and colour value of GMT colour palette tables. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_print_backup_file(1)"
 name: "ndb_print_backup_file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_print_backup_file/"
 description: "ndb_print_backup_file – print NDB backup file contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_print_backup_file &#8211; print NDB backup file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>

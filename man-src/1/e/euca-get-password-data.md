@@ -1,4 +1,5 @@
 ---
+
 title: "euca-get-password-data(1)"
 name: "euca-get-password-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-get-password-data/"
 description: "euca-get-password-data – Retrieve the encrypted administrator password for an instance running Windows. The encrypted password may be decrypted using the private key of the key pair given when laun..."
 ---
 
-<h2>NAME</h2>
 <p> euca-get-password-data &#8211; Retrieve the encrypted administrator password for an instance running Windows. The encrypted password may be decrypted using the private key of the key pair given when launching the instance.</p>
 <h2>SYNOPSIS</h2>
 <p> euca-get-password-data [&#8211;show-empty-fields] [-U URL]</p>

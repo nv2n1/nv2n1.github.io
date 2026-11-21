@@ -1,4 +1,5 @@
 ---
+
 title: "fgetpwent_r(3)"
 name: "fgetpwent_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetpwent_r/"
 description: "getpwent_r, fgetpwent_r – get passwd file entry reentrantly"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpwent_r, fgetpwent_r &#8211; get passwd file entry reentrantly </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

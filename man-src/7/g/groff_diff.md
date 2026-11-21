@@ -1,4 +1,5 @@
 ---
+
 title: "groff_diff(7)"
 name: "groff_diff"
 section: "7"
@@ -6,8 +7,9 @@ letter: "g"
 url: "/docs/linux/man/7-groff_diff/"
 description: "groff_diff – differences between GNU troff and classical troff"
 ---
+
 <p>groff_diff &#8211; differences between GNU troff and classical troff </p>
-<h2>DESCRIPTION</h2>
+
 <p> This manual page describes the language differences between <i>groff</i>, the GNU <i>roff</i> text processing system, and the classical <i>roff</i> formatter of the freely available Unix~7 of the 1970s, documented in the <i>Troff User&#8217;s Manual</i> by <i>Ossanna</i> and <i>Kernighan</i>. This includes the roff language as well as the intermediate output format (troff output). </p>
 <p>Section "See Also" below gives pointers to both the classical <i>roff</i> and the modern <i>groff</i> documentation.  </p>
 <h2>GROFF LANGUAGE</h2>

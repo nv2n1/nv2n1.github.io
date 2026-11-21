@@ -1,4 +1,5 @@
 ---
+
 title: "get_current_dir_name(3)"
 name: "get_current_dir_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_current_dir_name/"
 description: "getcwd, getwd, get_current_dir_name – get current working directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcwd, getwd, get_current_dir_name &#8211; get current working directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

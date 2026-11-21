@@ -1,4 +1,5 @@
 ---
+
 title: "node-gyp(1)"
 name: "node-gyp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-node-gyp/"
 description: "node-gyp — native addon build tool for node"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>node-gyp</code> &#8212; native addon build tool for node </p>
 <h2>SYNOPSIS</h2>
 <pre>

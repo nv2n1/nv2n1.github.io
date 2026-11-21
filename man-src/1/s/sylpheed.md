@@ -1,4 +1,5 @@
 ---
+
 title: "sylpheed(1)"
 name: "sylpheed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sylpheed/"
 description: "sylpheed – a GTK+ based, lightweight, and fast email client"
 ---
 
-<h2>NAME</h2>
 <p> <code>sylpheed</code> &#8211; a GTK+ based, lightweight, and fast email client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sylpheed [options]&#8230;</code> </p>

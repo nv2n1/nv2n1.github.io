@@ -1,4 +1,5 @@
 ---
+
 title: "ef(1)"
 name: "ef"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ef/"
 description: "ef – Utility to run a program under the Electric Fence memory debugger"
 ---
 
-<h2>NAME</h2>
 <p> ef &#8211; Utility to run a program under the Electric Fence memory debugger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ef</code> PROGRAM [ARGS&#8230;] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bdftruncate(1)"
 name: "bdftruncate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bdftruncate/"
 description: "bdftruncate – generate truncated BDF font from ISO 10646-1-encoded BDF font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bdftruncate &#8211; generate truncated BDF font from ISO 10646-1-encoded BDF font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bdftruncate</code> <i>threshold</i> <code>&lt;</code> <i>source.bdf</i> <code>&gt;</code> <i>destination.bdf</i></p>

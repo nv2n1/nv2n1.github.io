@@ -1,4 +1,5 @@
 ---
+
 title: "ofxdump(1)"
 name: "ofxdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ofxdump/"
 description: "ofxdump – Dump content of OFX files as human-readable text"
 ---
 
-<h2>NAME</h2>
 <p> ofxdump &#8211; Dump content of OFX files as human-readable text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ofxdump</code> [<i>OPTIONS</i>]&#8230; [<i>FILES</i>]&#8230;</p>

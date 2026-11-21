@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mklayout(1)"
 name: "grub2-mklayout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-mklayout/"
 description: "grub-mklayout — Generate a GRUB keyboard layout file."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-mklayout</code> &#8212; Generate a GRUB keyboard layout file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mklayout</code> [-i | &#8211;input=<i>FILE</i>] [-o | &#8211;output=<i>FILE</i>]</p>

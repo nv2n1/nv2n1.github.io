@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-detach-lb-from-subnets(1)"
 name: "eulb-detach-lb-from-subnets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-detach-lb-from-subnets/"
 description: "eulb-detach-lb-from-subnets – [VPC only] Remove a load balancer from one or more subnets"
 ---
 
-<h2>NAME</h2>
 <p> eulb-detach-lb-from-subnets &#8211; [VPC only] Remove a load balancer from one or more subnets</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-detach-lb-from-subnets <code>-s</code> SUBNET1,SUBNET2,&#8230;</p>

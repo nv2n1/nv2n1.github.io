@@ -1,4 +1,5 @@
 ---
+
 title: "conjure(1)"
 name: "conjure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-conjure/"
 description: "conjure – interprets and executes scripts written in the Magick Scripting Language (MSL)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> conjure &#8211; interprets and executes scripts written in the Magick Scripting Language (MSL). </p>
 <h2>SYNOPSIS</h2>
 <dl>

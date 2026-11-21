@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-desktop-menu(1)"
 name: "xdg-desktop-menu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-desktop-menu/"
 description: "xdg-desktop-menu – command line tool for (un)installing desktop menu items"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-desktop-menu &#8211; command line tool for (un)installing desktop menu items </p>
 <h2>SYNOPSIS</h2>
 <dl>

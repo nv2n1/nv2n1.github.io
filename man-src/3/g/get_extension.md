@@ -1,4 +1,5 @@
 ---
+
 title: "get_extension(3)"
 name: "get_extension"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_extension/"
 description: "get_extension – Returns a pointer to the extension of a filename. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_extension &#8211; Returns a pointer to the extension of a filename. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

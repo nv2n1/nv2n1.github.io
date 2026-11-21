@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-instances(1)"
 name: "euca-describe-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-instances/"
 description: "euca-describe-instances – Show information about instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-instances &#8211; Show information about instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-instances [&#8211;show-empty-fields] [-U URL]</p>

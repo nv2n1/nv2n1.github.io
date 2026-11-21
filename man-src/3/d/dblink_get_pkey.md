@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_get_pkey(3)"
 name: "dblink_get_pkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_get_pkey/"
 description: "dblink_get_pkey – returns the positions and field names of a relation’s primary key fields"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_get_pkey &#8211; returns the positions and field names of a relation&#8217;s primary key fields </p>
 <h2>SYNOPSIS</h2>
 <pre>

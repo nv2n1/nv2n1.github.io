@@ -1,4 +1,5 @@
 ---
+
 title: "png2yuv(1)"
 name: "png2yuv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-png2yuv/"
 description: "png2yuv – Convert PNG images to the YUV4MPEG stream format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> png2yuv &#8211; Convert PNG images to the YUV4MPEG stream format.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>png2yuv</code> [<code>-b</code> <i>num</i>] [<code>-f</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-L</code> <i>num</i>] [<code>-n</code> num<code>]</code> [<code>-l</code> <i>num</i>] [<code>-j</code> <i>filename</i>] </p>

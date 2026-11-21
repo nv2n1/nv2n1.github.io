@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gmk_hy(1)"
 name: "scotch_gmk_hy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gmk_hy/"
 description: "gmk_hy, gmk_m2, gmk_m3, gmk_ub2 – create source graphs"
 ---
 
-<h2>NAME</h2>
 <p> <code>gmk_hy, gmk_m2, gmk_m3, gmk_ub2 </code>&#8211; create source graphs</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

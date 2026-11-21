@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-cancel(1)"
 name: "fts-rest-transfer-cancel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-transfer-cancel/"
 description: "fts-rest-transfer-cancel"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-transfer-cancel</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-cancel [options]</p>

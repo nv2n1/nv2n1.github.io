@@ -1,4 +1,5 @@
 ---
+
 title: "tpm_version(1)"
 name: "tpm_version"
 section: "1"
@@ -9,7 +10,7 @@ description: "tpm_version – report TPM version and manufacturer information"
 
 <p>TPM Management &#8211; tpm_version<br />
  </center></p>
-<h2 class="name">NAME</h2>
+
 <p> tpm_version &#8211; report TPM version and manufacturer information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpm_version</code> [<code>OPTION</code>] </p>

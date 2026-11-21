@@ -1,4 +1,5 @@
 ---
+
 title: "crc32(1)"
 name: "crc32"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crc32/"
 description: "crc32 – compute CRC-32 checksums for the given files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> crc32 &#8211; compute CRC-32 checksums for the given files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>crc32</code> <i>filename</i> [ <i>filename</i> &#8230; ]</p>

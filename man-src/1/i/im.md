@@ -1,4 +1,5 @@
 ---
+
 title: "im(1)"
 name: "im"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-im/"
 description: "im – run Instance Messenger, the Tkinter twisted.words client"
 ---
 
-<h2>NAME</h2>
 <p> im &#8211; run Instance Messenger, the Tkinter twisted.words client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>im </code></p>

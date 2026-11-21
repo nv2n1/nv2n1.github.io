@@ -1,4 +1,5 @@
 ---
+
 title: "liblldp_clif-vdp22(3)"
 name: "liblldp_clif-vdp22"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-liblldp_clif-vdp22/"
 description: "clif_vsi,clif_vsievt,clif_vsiwait – Manipulate VDP IEEE 802.1 Ratified Standard Assocications"
 ---
 
-<h2>NAME</h2>
 <p> clif_vsi,clif_vsievt,clif_vsiwait &#8211; Manipulate VDP IEEE 802.1 Ratified Standard Assocications</p>
 <h2>SYNOPSIS</h2>
 <p> #include &quot;include/clif.h&quot; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlothrtut(1)"
 name: "perlothrtut"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlothrtut/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlothrtut - old tutorial on threads in Perl 
+perlothrtut - old tutorial on threads in Perl 
 
 <h2>DESCRIPTION</h2>
 

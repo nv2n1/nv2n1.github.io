@@ -1,4 +1,5 @@
 ---
+
 title: "iv_quit(3)"
 name: "iv_quit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_quit/"
 description: "iv_quit – signal ivykis to exit the main loop"
 ---
 
-<h2>NAME</h2>
 <p> iv_quit &#8211; signal ivykis to exit the main loop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

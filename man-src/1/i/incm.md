@@ -1,4 +1,5 @@
 ---
+
 title: "incm(1)"
 name: "incm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-incm/"
 description: "incm – Incorporating new mails for Mew"
 ---
 
-<h2>NAME</h2>
 <p> incm &#8211; Incorporating new mails for Mew</p>
 <h2>SYNOPSIS</h2>
 <p> incm [<i>options</i>]</p>

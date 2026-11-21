@@ -1,4 +1,5 @@
 ---
+
 title: "do_ellipse(3)"
 name: "do_ellipse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-do_ellipse/"
 description: "do_ellipse – Calculates all the points in an ellipse. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> do_ellipse &#8211; Calculates all the points in an ellipse. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "saxon(1)"
 name: "saxon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-saxon/"
 description: "saxon8 – manual page for saxon8"
 ---
 
-<h2>NAME</h2>
 <p> saxon8 &#8211; manual page for saxon8</p>
 <h2>SYNOPSIS</h2>
 <p> <code>saxon8</code> [<i>options</i>] <i>source-document stylesheet </i>[ <i>params</i>&#8230;]</p>

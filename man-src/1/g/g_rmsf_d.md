@@ -1,4 +1,5 @@
 ---
+
 title: "g_rmsf_d(1)"
 name: "g_rmsf_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_rmsf_d/"
 description: "g_rmsf – calculates atomic fluctuations"
 ---
 
-<h2>NAME</h2>
 <p> g_rmsf &#8211; calculates atomic fluctuations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

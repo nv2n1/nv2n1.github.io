@@ -1,4 +1,5 @@
 ---
+
 title: "aespipe(1)"
 name: "aespipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aespipe/"
 description: "aespipe – AES encrypting or decrypting pipe"
 ---
 
-<h2>NAME</h2>
 <p> aespipe &#8211; AES encrypting or decrypting pipe</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aespipe</code> [options] &lt;inputfile &gt;outputfile</p>

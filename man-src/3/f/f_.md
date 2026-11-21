@@ -1,4 +1,5 @@
 ---
+
 title: "f_(3)"
 name: "f_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-f_/"
 description: "QuantLib::LiborForwardModel – Libor forward model"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::LiborForwardModel &#8211; Libor forward model </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/liborforwardmodel.hpp&gt; </p>

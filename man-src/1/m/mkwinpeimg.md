@@ -1,4 +1,5 @@
 ---
+
 title: "mkwinpeimg(1)"
 name: "mkwinpeimg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkwinpeimg/"
 description: "mkwinpeimg – Make a customized bootable image of Windows PE"
 ---
 
-<h2>NAME</h2>
 <p> mkwinpeimg &#8211; Make a customized bootable image of Windows PE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkwinpeimg</code> [<i>OPTIONS</i>] <i>IMAGE</i></p>

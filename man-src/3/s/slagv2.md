@@ -1,4 +1,5 @@
 ---
+
 title: "slagv2(3)"
 name: "slagv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slagv2/"
 description: "slagv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slagv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

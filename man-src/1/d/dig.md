@@ -1,4 +1,5 @@
 ---
+
 title: "dig(1)"
 name: "dig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dig/"
 description: "dig – DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dig &#8211; DNS lookup utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dig</code> [@server] [<code>-b</code> address] [<code>-c</code> class] [<code>-f</code> filename] [<code>-k</code> filename] [<code>-m</code>] [<code>-p</code> port#] [<code>-q</code> name] [<code>-t</code> type] [<code>-v</code>] [<code>-x</code> addr] [<code>-y</code> [hmac:]name:key] [ [<code>-4</code>] | [<code>-6</code>] ] [name] [type] [class] [queryopt&#8230;] </p>

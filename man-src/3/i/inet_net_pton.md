@@ -1,4 +1,5 @@
 ---
+
 title: "inet_net_pton(3)"
 name: "inet_net_pton"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-inet_net_pton/"
 description: "inet_net_pton, inet_net_ntop – Internet network number conversion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inet_net_pton, inet_net_ntop &#8211; Internet network number conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

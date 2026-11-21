@@ -1,4 +1,5 @@
 ---
+
 title: "mlx4dv_set_context_attr(3)"
 name: "mlx4dv_set_context_attr"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx4dv_set_context_attr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx4dv_set_context_attr - Set context attributes 
+mlx4dv_set_context_attr - Set context attributes 
 
 <h2>SYNOPSIS</h2>
 

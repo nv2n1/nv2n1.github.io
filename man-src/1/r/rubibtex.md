@@ -1,4 +1,5 @@
 ---
+
 title: "rubibtex(1)"
 name: "rubibtex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rubibtex/"
 description: "rubibtex – make a bibliography for (La)TeX using Russian letters as item names"
 ---
 
-<h2>NAME</h2>
 <p> rubibtex &#8211; make a bibliography for (La)TeX using Russian letters as item names </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rubibtex</code> <i>BASENAME</i> </p>

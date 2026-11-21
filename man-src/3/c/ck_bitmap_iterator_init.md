@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_iterator_init(3)"
 name: "ck_bitmap_iterator_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_iterator_init/"
 description: "ck_bitmap_iterator_init – initialize bitmap iterator"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_iterator_init</code> &#8211; initialize bitmap iterator</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

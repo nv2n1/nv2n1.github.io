@@ -1,4 +1,5 @@
 ---
+
 title: "corelist(1)"
 name: "corelist"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-corelist/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- corelist - a commandline frontend to Module::CoreList 
+corelist - a commandline frontend to Module::CoreList 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "imake(1)"
 name: "imake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imake/"
 description: "imake – C preprocessor interface to the make utility"
 ---
 
-<h2>NAME</h2>
 <p> imake &#8211; C preprocessor interface to the make utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imake</code> [ <code>-D</code><i>define</i> ] [ <code>-I</code><i>dir</i> ] [ <code>-U</code><i>define</i> ] [ <code>-T</code><i>template</i> ] [ <code>-f</code> <i>filename</i> ] [ <code>-C</code> <i>filename</i> ] [ <code>-s</code> <i>filename</i> ] [ <code>-e</code> ] [ <code>-v</code> ]</p>

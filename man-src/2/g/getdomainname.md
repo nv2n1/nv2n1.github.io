@@ -1,4 +1,5 @@
 ---
+
 title: "getdomainname(2)"
 name: "getdomainname"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getdomainname/"
 description: "getdomainname, setdomainname – get/set NIS domain name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getdomainname, setdomainname &#8211; get/set NIS domain name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

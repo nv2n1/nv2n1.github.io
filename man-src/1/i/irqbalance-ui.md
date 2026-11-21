@@ -1,4 +1,5 @@
 ---
+
 title: "irqbalance-ui(1)"
 name: "irqbalance-ui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irqbalance-ui/"
 description: "irqbalance-ui – user interface for irqbalance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> irqbalance-ui &#8211; user interface for irqbalance </p>
 <h2>SYNOPSIS</h2>
 <pre>

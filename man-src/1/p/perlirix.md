@@ -1,4 +1,5 @@
 ---
+
 title: "perlirix(1)"
 name: "perlirix"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlirix/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlirix - Perl version 5 on Irix systems 
+perlirix - Perl version 5 on Irix systems 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "perltrap(1)"
 name: "perltrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perltrap/"
 description: "perltrap – Perl traps for the unwary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perltrap &#8211; Perl traps for the unwary </p>
 <h2>DESCRIPTION</h2>
 <p> The biggest trap of all is forgetting to <tt>&quot;use warnings&quot;</tt> or use the <code>-w</code> switch; see warnings and perlrun. The second biggest trap is not making your entire program runnable under <tt>&quot;use strict&quot;</tt>. The third biggest trap is not reading the list of changes in this version of Perl; see perldelta.</p>

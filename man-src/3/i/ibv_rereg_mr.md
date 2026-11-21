@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_rereg_mr(3)"
 name: "ibv_rereg_mr"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_rereg_mr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_rereg_mr - re-register a memory region (MR) 
+ibv_rereg_mr - re-register a memory region (MR) 
 
 <h2>SYNOPSIS</h2>
 

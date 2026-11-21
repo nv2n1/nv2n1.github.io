@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installexamples(1)"
 name: "dh_installexamples"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installexamples/"
 description: "dh_installexamples – install example files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installexamples &#8211; install example files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installexamples</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipptool(1)"
 name: "ipptool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipptool/"
 description: "ipptool – perform internet printing protocol requests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipptool &#8211; perform internet printing protocol requests </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipptool</code> [ <code>&#8211;help</code> ] [ <code>&#8211;ippserver</code> <i>filename</i> ] [ <code>&#8211;stop-after-include-error</code> ] [ <code>&#8211;version</code> ] [ <code>-4</code> ] [ <code>-6</code> ] [ <code>-C</code> ] [ <code>-E</code> ] [ <code>-I</code> ] [ <code>-L</code> ] [ <code>-P</code> <i>filename.plist</i> ] [ <code>-S</code> ] [ <code>-T</code> <i>seconds</i> ] [ <code>-V</code> <i>version</i> ] [ <code>-X</code> ] [ <code>-c</code> ] [ <code>-d</code> <i>name=value</i> ] [ <code>-f</code> <i>filename</i> ] [ <code>-h</code> ] [ <code>-i</code> <i>seconds</i> ] [ <code>-j</code> ] [ <code>-n</code> <i>repeat-count</i> ] [ <code>-q</code> ] [ <code>-t</code> ] [ <code>-v ]</code> <i>printer-uri</i> <i>testfile</i> [ &#8230; <i>testfile</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fixup_datafile(3)"
 name: "fixup_datafile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixup_datafile/"
 description: "fixup_datafile – Fixes truecolor images in compiled datafiles. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixup_datafile &#8211; Fixes truecolor images in compiled datafiles. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

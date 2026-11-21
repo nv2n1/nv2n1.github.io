@@ -1,4 +1,5 @@
 ---
+
 title: "pcregrep(1)"
 name: "pcregrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcregrep/"
 description: "pcregrep – a grep with Perl-compatible regular expressions."
 ---
 
-<h2>NAME</h2>
 <p> pcregrep &#8211; a grep with Perl-compatible regular expressions.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcregrep [options] [long options] [pattern] [path1 path2 &#8230;]</code></p>

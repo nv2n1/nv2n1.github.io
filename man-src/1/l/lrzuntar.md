@@ -1,4 +1,5 @@
 ---
+
 title: "lrzuntar(1)"
 name: "lrzuntar"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lrzuntar/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lrzuntar - Extract whole tarball from .tar.lrz files 
+lrzuntar - Extract whole tarball from .tar.lrz files 
 
 <h2>SYNOPSIS</h2>
 

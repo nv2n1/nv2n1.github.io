@@ -1,4 +1,5 @@
 ---
+
 title: "bt-obex(1)"
 name: "bt-obex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bt-obex/"
 description: "bt-obex – a bluetooth OBEX client/server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bt-obex &#8211; a bluetooth OBEX client/server </p>
 <h2>SYNOPSIS</h2>
 <p> bt-obex [<font SIZE="-1">OPTION&#8230;</font>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "binlegs(1)"
 name: "binlegs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-binlegs/"
 description: "binlegs – Maintain the GMT index files for mgg supplement"
 ---
 
-<h2>NAME</h2>
 <p> binlegs &#8211; Maintain the <code>GMT</code> index files for mgg supplement</p>
 <h2>SYNOPSIS</h2>
 <p> <code>binlegs </code><i>leglistfile</i> [ <code>-R</code> ] [ <code>-D</code> ] [ <code>-P</code><i>path</i> ] [ <code>-V</code> ]</p>

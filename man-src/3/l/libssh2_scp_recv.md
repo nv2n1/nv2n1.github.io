@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_scp_recv(3)"
 name: "libssh2_scp_recv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_scp_recv/"
 description: "libssh2_scp_recv – request a remote file via SCP"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_scp_recv &#8211; request a remote file via SCP</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

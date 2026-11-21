@@ -1,4 +1,5 @@
 ---
+
 title: "keyring(1)"
 name: "keyring"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keyring/"
 description: "keyring – Python-Keyring command-line utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyring &#8211; Python-Keyring command-line utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>keyring</code> [<i>,get|set|del/</i>] <i>,SERVICE USERNAME/</i> </p>

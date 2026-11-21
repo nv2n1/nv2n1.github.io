@@ -1,4 +1,5 @@
 ---
+
 title: "g_genrestr(1)"
 name: "g_genrestr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_genrestr/"
 description: "genrestr – generates position restraints or distance restraints for index groups"
 ---
 
-<h2>NAME</h2>
 <p> genrestr &#8211; generates position restraints or distance restraints for index groups </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

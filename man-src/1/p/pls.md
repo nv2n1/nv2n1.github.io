@@ -1,4 +1,5 @@
 ---
+
 title: "pls(1)"
 name: "pls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pls/"
 description: "pls – list directory contents"
 ---
 
-<h2>NAME</h2>
 <p> pls &#8211; list directory contents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pls</code> [-a] [-R] [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] [<i>DIRECTORY</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "museekcontrol(1)"
 name: "museekcontrol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-museekcontrol/"
 description: "MuseekControl – Command-Line control Python Script for Museekd"
 ---
 
-<h2>NAME</h2>
 <p> <code>MuseekControl</code> &#8211; Command-Line control Python Script for Museekd</p>
 <h2>DESCRIPTION</h2>
 <p> MuseekControl is command-line Python script that connects to <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) and initiates many different commands. Chat Room watching, one-time chat messages, browsing shares, searching, viewing User info and setting tickers are just some of the many commands available. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_condattr_setspace(3)"
 name: "globus_condattr_setspace"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_condattr_setspace/"
 description: "Condition Variables –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Condition Variables &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_cond_t</code><br />

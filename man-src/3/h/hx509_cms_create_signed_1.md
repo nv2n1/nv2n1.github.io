@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_cms_create_signed_1(3)"
 name: "hx509_cms_create_signed_1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_cms_create_signed_1/"
 description: "hx509 CMS/pkcs7 functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 CMS/pkcs7 functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_cms_wrap_ContentInfo</code> (const heim_oid *oid, const heim_octet_string *buf, heim_octet_string *res) </p>

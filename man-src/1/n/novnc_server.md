@@ -1,4 +1,5 @@
 ---
+
 title: "novnc_server(1)"
 name: "novnc_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-novnc_server/"
 description: "novnc_server | noVNC proxy server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> novnc_server | noVNC proxy server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>novnc_server [&#8211;listen PORT] [&#8211;vnc VNC_HOST:PORT] [&#8211;cert CERT]</code> </p>

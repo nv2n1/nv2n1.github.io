@@ -1,4 +1,5 @@
 ---
+
 title: "sound-juicer(1)"
 name: "sound-juicer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sound-juicer/"
 description: "sound-juicer – GNOME-desktop CD ripper and player using GStreamer"
 ---
 
-<h2>NAME</h2>
 <p> sound-juicer &#8211; GNOME-desktop CD ripper and player using GStreamer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sound-juicer</code> [<i>option&#8230;</i>]</p>

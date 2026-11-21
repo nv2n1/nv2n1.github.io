@@ -1,4 +1,5 @@
 ---
+
 title: "cacaserver(1)"
 name: "cacaserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cacaserver/"
 description: "cacaserver – telnet server for libcaca"
 ---
 
-<h2>NAME</h2>
 <p> cacaserver &#8211; telnet server for libcaca</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cacaserver</code></p>

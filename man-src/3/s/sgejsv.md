@@ -1,4 +1,5 @@
 ---
+
 title: "sgejsv(3)"
 name: "sgejsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgejsv/"
 description: "sgejsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgejsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-config(1)"
 name: "flatpak-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-config/"
 description: "flatpak-config – Manage configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-config &#8211; Manage configuration </p>
 <h2>SYNOPSIS</h2>
 <dl>

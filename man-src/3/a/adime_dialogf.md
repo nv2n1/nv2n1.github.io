@@ -1,4 +1,5 @@
 ---
+
 title: "adime_dialogf(3)"
 name: "adime_dialogf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_dialogf/"
 description: "adime_dialogf"
 ---
 
-<h2>NAME</h2>
 <p> adime_dialogf</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

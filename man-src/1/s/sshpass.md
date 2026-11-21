@@ -1,4 +1,5 @@
 ---
+
 title: "sshpass(1)"
 name: "sshpass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sshpass/"
 description: "sshpass – noninteractive ssh password provider"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sshpass &#8211; noninteractive ssh password provider </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sshpass</code> [<code>-f</code><i>filename</i>|<code>-d</code><i>num</i>|<code>-p</code><i>password</i>|<code>-e</code>] [<i>options</i>]<i> command arguments</i> </p>

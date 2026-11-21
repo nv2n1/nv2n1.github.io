@@ -1,4 +1,5 @@
 ---
+
 title: "rmid(1)"
 name: "rmid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmid/"
 description: "rmid – Starts the activation system daemon that enables objects to be registered and activated in a Java Virtual Machine (JVM)."
 ---
 
-<h2>NAME</h2>
 <p> rmid &#8211; Starts the activation system daemon that enables objects to be registered and activated in a Java Virtual Machine (JVM).</p>
 <h2>SYNOPSIS</h2>
 <pre>

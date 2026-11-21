@@ -1,4 +1,5 @@
 ---
+
 title: "ncargf77(1)"
 name: "ncargf77"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargf77/"
 description: "ncargf77 – Command for compiling Fortran code that uses the NCAR Graphics low-level utilities"
 ---
 
-<h2>NAME</h2>
 <p> ncargf77 &#8211; Command for compiling Fortran code that uses the NCAR Graphics low-level utilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargf77</code> [<code>-ngmath</code>] [<code>-smooth</code>] [<code>-quick</code>] [<code>-super</code>] [<code>-agupwrtx</code>] [<code>-ncarbd</code>] [<code>-ngmathbd</code>] [<code>-ictrans</code>] [<code>-noX11</code>] &#8230;</p>

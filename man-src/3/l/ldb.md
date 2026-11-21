@@ -1,4 +1,5 @@
 ---
+
 title: "ldb(3)"
 name: "ldb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb/"
 description: "ldb – A light-weight database library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldb &#8211; A light-weight database library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

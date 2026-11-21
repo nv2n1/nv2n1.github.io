@@ -1,4 +1,5 @@
 ---
+
 title: "sigtool(1)"
 name: "sigtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sigtool/"
 description: "sigtool – signature and database management tool"
 ---
 
-<h2>NAME</h2>
 <p> sigtool &#8211; signature and database management tool</p>
 <h2>SYNOPSIS</h2>
 <p> sigtool [options]</p>

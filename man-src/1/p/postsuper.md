@@ -1,4 +1,5 @@
 ---
+
 title: "postsuper(1)"
 name: "postsuper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postsuper/"
 description: "postsuper – Postfix superintendent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postsuper &#8211; Postfix superintendent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postsuper</code> [<code>-psSv</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>queue_id</i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "relevation(1)"
 name: "relevation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-relevation/"
 description: "relevation — command-line searcher for Revelation files"
 ---
 
-<h2>NAME</h2>
 <p> relevation &#8212; command-line searcher for <code>Revelation</code> files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>relevation</code> [<code>options</code>] [<i>search string</i> [<i>&#8230;</i>] ]</p>

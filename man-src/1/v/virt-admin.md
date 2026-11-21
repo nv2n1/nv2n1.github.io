@@ -1,4 +1,5 @@
 ---
+
 title: "virt-admin(1)"
 name: "virt-admin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-admin/"
 description: "virt-admin – daemon administration interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-admin &#8211; daemon administration interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-admin</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; [<i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>] </p>

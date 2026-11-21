@@ -1,4 +1,5 @@
 ---
+
 title: "perlreguts(1)"
 name: "perlreguts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlreguts/"
 description: "perlreguts – Description of the Perl regular expression engine."
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlreguts &#8211; Description of the Perl regular expression engine. </p>
 <h2>DESCRIPTION</h2>
 <p> This document is an attempt to shine some light on the guts of the regex engine and how it works. The regex engine represents a significant chunk of the perl codebase, but is relatively poorly understood. This document is a meagre attempt at addressing this situation. It is derived from the author&#8217;s experience, comments in the source code, other papers on the regex engine, feedback on the perl5-porters mail list, and no doubt other places as well. </p>

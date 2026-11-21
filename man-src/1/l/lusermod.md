@@ -1,4 +1,5 @@
 ---
+
 title: "lusermod(1)"
 name: "lusermod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lusermod/"
 description: "lusermod – Modify an user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lusermod &#8211; Modify an user</p>
 <h2>SYNOPSIS</h2>
 <p> lusermod [<i>OPTION</i>]&#8230; <i>user</i> </p>

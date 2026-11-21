@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-resubmit(1)"
 name: "getcert-resubmit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getcert-resubmit/"
 description: "getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcert</p>
 <h2>SYNOPSIS</h2>
 <p> getcert resubmit [options] </p>

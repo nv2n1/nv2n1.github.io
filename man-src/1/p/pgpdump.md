@@ -1,4 +1,5 @@
 ---
+
 title: "pgpdump(1)"
 name: "pgpdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgpdump/"
 description: "pgpdump – A PGP packet visualizer"
 ---
 
-<h2>NAME</h2>
 <p> pgpdump &#8211; A PGP packet visualizer</p>
 <h2>SYNOPSIS</h2>
 <p> pgpdump [<i>options</i>] [<i>PGPfile</i>]</p>

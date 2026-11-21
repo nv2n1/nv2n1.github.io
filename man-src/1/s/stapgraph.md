@@ -1,4 +1,5 @@
 ---
+
 title: "stapgraph(1)"
 name: "stapgraph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stapgraph/"
 description: "stapgraph – systemtap grapher"
 ---
 
-<h2>NAME</h2>
 <p> stapgraph &#8211; systemtap grapher </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stapgraph</code> [ <i>OPTIONS</i> ] <i>FILENAME</i> [ <i>ARGUMENTS</i> ]<br />

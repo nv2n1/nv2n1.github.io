@@ -1,4 +1,5 @@
 ---
+
 title: "bson_value_copy(3)"
 name: "bson_value_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_value_copy/"
 description: "bson_value_copy() – This function will copy the boxed content in src into dst. dst must be freed with bson_value_destroy() when no longer in use."
 ---
 
-<h2>NAME</h2>
 <p> bson_value_copy() &#8211; This function will copy the boxed content in src into dst. dst must be freed with bson_value_destroy() when no longer in use.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

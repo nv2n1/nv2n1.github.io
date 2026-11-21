@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_wire2pkt(3)"
 name: "ldns_wire2pkt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_wire2pkt/"
 description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 ---
 
-<h2>NAME</h2>
 <p> ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "csharp(1)"
 name: "csharp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csharp/"
 description: "csharp, gsharp – Interactive C# Shell"
 ---
 
-<h2>NAME</h2>
 <p> csharp, gsharp &#8211; Interactive C# Shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>csharp [&#8211;attach PID] [-e EXPRESSION] [file1 [file2]]</code> [options] </p>

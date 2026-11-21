@@ -1,4 +1,5 @@
 ---
+
 title: "npm-install(1)"
 name: "npm-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-install/"
 description: "npm-install – Install a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-install</code> &#8211; Install a package </p>
 <h3>Synopsis</h3>
 <dl>

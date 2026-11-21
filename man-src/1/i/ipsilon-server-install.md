@@ -1,4 +1,5 @@
 ---
+
 title: "ipsilon-server-install(1)"
 name: "ipsilon-server-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipsilon-server-install/"
 description: "ipsilon-server-install – Configure an Ipsilon Identity Provider instance"
 ---
 
-<h2>NAME</h2>
 <p> ipsilon-server-install &#8211; Configure an Ipsilon Identity Provider instance</p>
 <h2>SYNOPSIS</h2>
 <p> ipsilon-server-install [OPTION]&#8230;</p>

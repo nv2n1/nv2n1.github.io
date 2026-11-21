@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_fstat_ex(3)"
 name: "libssh2_sftp_fstat_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_fstat_ex/"
 description: "libssh2_sftp_fstat_ex – get or set attributes on an SFTP file handle"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_fstat_ex &#8211; get or set attributes on an SFTP file handle</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

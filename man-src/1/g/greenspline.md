@@ -1,4 +1,5 @@
 ---
+
 title: "greenspline(1)"
 name: "greenspline"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-greenspline/"
 description: "greenspline – Interpolate using Green’s functions for splines in 1-3 dimensions"
 ---
 
-<h2>NAME</h2>
 <p> greenspline &#8211; Interpolate using Green&#8217;s functions for splines in 1-3 dimensions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>greenspline</code> [ <i>table</i> ] [ [<code>1</code>|<code>2</code>|<code>3</code>|<code>4</code>|<code>5</code>,]<i>gradfile</i> ] [ [<code>n</code>|<code>v</code>]<i>cut</i>[/<i>file</i>] ] [ <i>mode</i> ] [ <i>grdfile</i> ] [ <i>xinc</i>[/<i>yinc</i>[/<i>zinc</i>]] ] [ ] [ <i>nodefile</i> ] [ <i>az</i>|<i>x/y/z</i> ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ <code>c|t|l|r|p|q</code>[<i>pars</i>] ] [ <i>maskgrid</i> ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clusterdb(1)"
 name: "clusterdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clusterdb/"
 description: "clusterdb – cluster a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clusterdb &#8211; cluster a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>

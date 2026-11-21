@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-cov-14(1)"
 name: "llvm-cov-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-cov-14/"
 description: "llvm-cov – emit coverage information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-cov &#8211; emit coverage information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-cov</code> <i>command</i> [<i>args…</i>]</p>

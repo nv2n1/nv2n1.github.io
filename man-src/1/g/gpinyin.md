@@ -1,4 +1,5 @@
 ---
+
 title: "gpinyin(1)"
 name: "gpinyin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpinyin/"
 description: "gpinyin – use Hanyu Pinyin Chinese in roff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpinyin &#8211; use Hanyu Pinyin Chinese in roff </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>input-file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

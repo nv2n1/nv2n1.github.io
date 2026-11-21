@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-xdg-portal-3(1)"
 name: "tracker-xdg-portal-3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-xdg-portal-3/"
 description: "tracker-xdg-portal-3 – Portal to Tracker endpoints"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-xdg-portal-3 &#8211; Portal to Tracker endpoints </p>
 <h2>SYNOPSIS</h2>
 <pre>

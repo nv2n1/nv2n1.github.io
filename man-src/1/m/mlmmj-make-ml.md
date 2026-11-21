@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-make-ml(1)"
 name: "mlmmj-make-ml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-make-ml/"
 description: "mlmmj-make-ml – create a mailing list for mlmmj"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-make-ml &#8211; create a mailing list for mlmmj</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-make-ml</code> [<i>-h</i>] [<i>-L listname</i>] [<i>-s spooldir</i>] [<i>-a</i>] [<i>-c user</i>] [<i>-z</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cap_init(3)"
 name: "cap_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_init/"
 description: "cap_init, cap_free, cap_dup – capability data object storage management"
 ---
 
-<h2>NAME</h2>
 <p> cap_init, cap_free, cap_dup &#8211; capability data object storage management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>

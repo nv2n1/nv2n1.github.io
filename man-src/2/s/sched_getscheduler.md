@@ -1,4 +1,5 @@
 ---
+
 title: "sched_getscheduler(2)"
 name: "sched_getscheduler"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_getscheduler/"
 description: "sched_setscheduler, sched_getscheduler – set and get scheduling policy/parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_setscheduler, sched_getscheduler &#8211; set and get scheduling policy/parameters </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

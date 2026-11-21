@@ -1,4 +1,5 @@
 ---
+
 title: "sgegv(3)"
 name: "sgegv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgegv/"
 description: "sgegv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgegv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

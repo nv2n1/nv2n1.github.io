@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-submit(1)"
 name: "fts-rest-transfer-submit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-transfer-submit/"
 description: "fts-rest-transfer-submit"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-transfer-submit</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-submit [options] SOURCE DESTINATION [CHECKSUM]</p>

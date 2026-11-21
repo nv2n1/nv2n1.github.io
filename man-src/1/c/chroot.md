@@ -1,4 +1,5 @@
 ---
+
 title: "chroot(1)"
 name: "chroot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chroot/"
 description: "chroot – run command or interactive shell with special root directory"
 ---
 
-<h2>NAME</h2>
 <p> chroot &#8211; run command or interactive shell with special root directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chroot</code> [<i>OPTION</i>] <i>NEWROOT </i>[<i>COMMAND </i>[<i>ARG</i>]&#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_store(3)"
 name: "ck_pr_store"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_store/"
 description: "ck_pr_store_ptr ck_pr_store_double ck_pr_store_uint ck_pr_store_int ck_pr_store_char ck_pr_store_64 ck_pr_store_32 ck_pr_store_16 ck_pr_store_8 – atomic volatile store operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_store_ptr</code> <code>ck_pr_store_double</code> <code>ck_pr_store_uint</code> <code>ck_pr_store_int</code> <code>ck_pr_store_char</code> <code>ck_pr_store_64</code> <code>ck_pr_store_32</code> <code>ck_pr_store_16</code> <code>ck_pr_store_8</code> &#8211; atomic volatile store operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

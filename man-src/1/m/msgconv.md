@@ -1,4 +1,5 @@
 ---
+
 title: "msgconv(1)"
 name: "msgconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgconv/"
 description: "msgconv – character set conversion for message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgconv &#8211; character set conversion for message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgconv</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>

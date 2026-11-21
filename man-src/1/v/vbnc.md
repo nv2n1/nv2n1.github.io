@@ -1,4 +1,5 @@
 ---
+
 title: "vbnc(1)"
 name: "vbnc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vbnc/"
 description: "vbnc – Mono Visual Basic Compiler."
 ---
 
-<h2>NAME</h2>
 <p> vbnc &#8211; Mono Visual Basic Compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vbnc</code> [option] [source-files]</p>

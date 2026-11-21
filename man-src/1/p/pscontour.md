@@ -1,4 +1,5 @@
 ---
+
 title: "pscontour(1)"
 name: "pscontour"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pscontour/"
 description: "pscontour – Contour table data by direct triangulation [method]"
 ---
 
-<h2>NAME</h2>
 <p> pscontour &#8211; Contour table data by direct triangulation [method]</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pscontour</code> [ <i>table</i> ] [+]<i>cpt</i> <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>&#8211;</code>|[+]<i>annot_int</i>][<i>labelinfo</i>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>template</i>] ] [ <i>indexfile</i> ] [ [<code>d</code>|<code>f</code>|<code>n</code>|<code>l</code>|<code>L</code>|<code>x</code>|<code>X</code>]<i>params</i> ] [ ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ <i>pen</i> ] [ ] [ ] [ ] [ <i>cut</i> ] [ [<i>p</i>|<i>t</i>] ] [ [<code>+|-</code>][<code>+d</code><i>gap</i>[/<i>length</i>]][<code>+l</code>[<i>labels</i>]] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>+</code>]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

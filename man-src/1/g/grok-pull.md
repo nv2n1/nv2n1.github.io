@@ -1,4 +1,5 @@
 ---
+
 title: "grok-pull(1)"
 name: "grok-pull"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grok-pull/"
 description: "GROK-PULL – Clone or update local git repositories"
 ---
 
-<h2>NAME</h2>
 <p> GROK-PULL &#8211; Clone or update local git repositories</p>
 <h2>SYNOPSIS</h2>
 <p> grok-pull -c /path/to/repos.conf</p>

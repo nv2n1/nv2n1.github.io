@@ -1,4 +1,5 @@
 ---
+
 title: "freight-cache(1)"
 name: "freight-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freight-cache/"
 description: "freight-cache – (re)builds package repositories"
 ---
 
-<h2>NAME</h2>
 <p> <code>freight-cache</code> &#8211; (re)builds package repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freight cache</code> [<code>-k</code>] [<code>-g</code> <i>email</i>] [<code>-p</code> <i>passphrase file</i>] [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] [<i>manager</i>/<i>distro</i>][&#8230;]</p>

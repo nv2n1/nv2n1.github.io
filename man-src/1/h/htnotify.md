@@ -1,4 +1,5 @@
 ---
+
 title: "htnotify(1)"
 name: "htnotify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htnotify/"
 description: "htnotify – sends email notifications about out-dated web pages discovered by htmerge"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htnotify &#8211; sends email notifications about out-dated web pages discovered by htmerge </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htnotify</code> <i>[options]</i></p>

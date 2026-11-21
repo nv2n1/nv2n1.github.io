@@ -1,4 +1,5 @@
 ---
+
 title: "axcall(1)"
 name: "axcall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axcall/"
 description: "axcall – make an AX.25, NET/ROM or Rose connection."
 ---
 
-<h2>NAME</h2>
 <p> axcall &#8211; make an AX.25, NET/ROM or Rose connection.</p>
 <h2>SYNOPSIS</h2>
 <p> For AX.25<br />

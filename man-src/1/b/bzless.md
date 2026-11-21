@@ -1,4 +1,5 @@
 ---
+
 title: "bzless(1)"
 name: "bzless"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bzless/"
 description: "bzmore, bzless – file perusal filter for crt viewing of bzip2 compressed text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzmore, bzless &#8211; file perusal filter for crt viewing of bzip2 compressed text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bzmore</code> [ name &#8230; ]<br />

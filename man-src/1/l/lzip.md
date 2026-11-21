@@ -1,4 +1,5 @@
 ---
+
 title: "lzip(1)"
 name: "lzip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lzip/"
 description: "lzip – reduces the size of files"
 ---
 
-<h2>NAME</h2>
 <p> lzip &#8211; reduces the size of files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lzip</code> [<i>,options/</i>] [<i>,files/</i>]</p>

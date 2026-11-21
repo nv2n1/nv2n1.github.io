@@ -1,4 +1,5 @@
 ---
+
 title: "apt-transport-http(1)"
 name: "apt-transport-http"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-transport-http/"
 description: "apt-transport-http – APT transport for downloading via the Hypertext Transfer Protocol (HTTP)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-transport-http &#8211; APT transport for downloading via the Hypertext Transfer Protocol (HTTP) </p>
 <h2>DESCRIPTION</h2>
 <p> This APT transport allows the use of repositories accessed via the Hypertext Transfer Protocol (HTTP). It is available by default and probably the most used of all transports. Note that a transport is never called directly by a user but used by APT tools based on user configuration. </p>

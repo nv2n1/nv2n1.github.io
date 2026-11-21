@@ -1,4 +1,5 @@
 ---
+
 title: "make-first-existing-target(1)"
 name: "make-first-existing-target"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-make-first-existing-target/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- make-first-existing-target - runs make on one of several targets 
+make-first-existing-target - runs make on one of several targets 
 
 <h2>SYNOPSIS</h2>
 

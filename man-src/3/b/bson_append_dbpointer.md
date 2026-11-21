@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_dbpointer(3)"
 name: "bson_append_dbpointer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_dbpointer/"
 description: "bson_append_dbpointer() – The dbpointer field type is DEPRECATED and should only be used when interacting with legacy systems."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_dbpointer() &#8211; The dbpointer field type is DEPRECATED and should only be used when interacting with legacy systems.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

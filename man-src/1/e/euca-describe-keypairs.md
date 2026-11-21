@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-keypairs(1)"
 name: "euca-describe-keypairs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-keypairs/"
 description: "euca-describe-keypairs – Display information about available key pairs"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-keypairs &#8211; Display information about available key pairs</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-keypairs [&#8211;show-empty-fields] [-U URL]</p>

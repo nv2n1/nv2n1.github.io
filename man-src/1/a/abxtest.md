@@ -1,4 +1,5 @@
 ---
+
 title: "abxtest(1)"
 name: "abxtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abxtest/"
 description: "abxtest – double-blind ABX comparison testing script"
 ---
 
-<h2>NAME</h2>
 <p> abxtest &#8211; double-blind ABX comparison testing script</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abxtest</code> [<code>-n</code> <i>min</i>] [<code>-m</code> <i>max</i>] [<code>-g</code> <i>goal</i>] <i>A-cmd B-cmd</i></p>

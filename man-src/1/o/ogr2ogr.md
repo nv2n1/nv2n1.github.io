@@ -1,4 +1,5 @@
 ---
+
 title: "ogr2ogr(1)"
 name: "ogr2ogr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogr2ogr/"
 description: "ogr2ogr – ogr2ogr converts simple features data between file formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ogr2ogr &#8211; ogr2ogr converts simple features data between file formats </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

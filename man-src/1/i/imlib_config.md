@@ -1,4 +1,5 @@
 ---
+
 title: "imlib_config(1)"
 name: "imlib_config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imlib_config/"
 description: "imlib_config – Imlib Configuration Editor"
 ---
 
-<h2>NAME</h2>
 <p> imlib_config &#8211; Imlib Configuration Editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imlib_config</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdeactivatemfadevice(1)"
 name: "euare-userdeactivatemfadevice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdeactivatemfadevice/"
 description: "euare-userdeactivatemfadevice – Deactivate an MFA device"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdeactivatemfadevice &#8211; Deactivate an MFA device</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdeactivatemfadevice <code>-s</code> SERIAL [&#8211;as-account ACCOUNT] [-U URL]</p>

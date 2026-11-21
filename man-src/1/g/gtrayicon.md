@@ -1,4 +1,5 @@
 ---
+
 title: "gtrayicon(1)"
 name: "gtrayicon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtrayicon/"
 description: "gtrayicon – Generic tray icon for GNOME"
 ---
 
-<h2>NAME</h2>
 <p> gtrayicon &#8211; Generic tray icon for GNOME </p>
 <h2>DESCRIPTION</h2>
 <p> Generic tray icon for GNOME is a small utility which allows to add a icon to the system tray that can be used to trigger customized enable/disable actions. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-ust(3)"
 name: "lttng-ust"
 section: "3"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-lttng-ust/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lttng-ust --- Linux Trace Toolkit Next Generation User-Space Tracer 2.x
+lttng-ust --- Linux Trace Toolkit Next Generation User-Space Tracer 2.x
 
 <h2>SYNOPSIS</h2>
 

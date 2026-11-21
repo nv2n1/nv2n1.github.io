@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_appdefault_time(3)"
 name: "krb5_appdefault_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_appdefault_time/"
 description: "krb5_appdefault_boolean krb5_appdefault_string krb5_appdefault_time – get application configuration value"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_appdefault_boolean</code> <code>krb5_appdefault_string</code> <code>krb5_appdefault_time</code> &#8211; get application configuration value </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

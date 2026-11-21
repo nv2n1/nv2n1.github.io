@@ -1,4 +1,5 @@
 ---
+
 title: "kpsexpand(1)"
 name: "kpsexpand"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpsexpand/"
 description: "kpsetool – script to make teTeX-style kpsetool, kpsexpand, and kpsepath available"
 ---
 
-<h2>NAME</h2>
 <p> kpsetool &#8211; script to make teTeX-style <code>kpsetool</code>, <code>kpsexpand</code>, and <code>kpsepath</code> available </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpsetool </code> [ <i>OPTIONS</i>&#8230; ] <i>COMMAND</i> </p>

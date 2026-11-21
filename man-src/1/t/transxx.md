@@ -1,4 +1,5 @@
 ---
+
 title: "transxx(1)"
 name: "transxx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transxx/"
 description: "transxx – Create a pseudo translated PO file from a PO template file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> transxx &#8211; Create a pseudo translated PO file from a PO template file </p>
 <h2>SYNOPSIS</h2>
 <dl>

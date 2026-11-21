@@ -1,4 +1,5 @@
 ---
+
 title: "gplib(1)"
 name: "gplib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gplib/"
 description: "gplib – GNU PIC librarian"
 ---
 
-<h2>NAME</h2>
 <p> gplib &#8211; GNU PIC librarian</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gplib [options] library [member]</code></p>

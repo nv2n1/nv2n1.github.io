@@ -1,4 +1,5 @@
 ---
+
 title: "pcp(1)"
 name: "pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp/"
 description: "pcp, pcp-summary – run a command or summarize an installation"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp</code>, <code>pcp-summary</code> &#8211; run a command or summarize an installation</p>
 <h2>SYNOPSIS</h2>
 <p> <code> pcp</code> [pcp options&#8230;] pcp-<i>command</i> [command options&#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "xcursorlibraryloadcursors(3)"
 name: "xcursorlibraryloadcursors"
 section: "3"
@@ -6,9 +7,6 @@ letter: "x"
 url: "/docs/linux/man/3-xcursorlibraryloadcursors/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> XCURSOR &#8211; Cursor management library  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

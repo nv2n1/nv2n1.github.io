@@ -1,4 +1,5 @@
 ---
+
 title: "qtcsh(1)"
 name: "qtcsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qtcsh/"
 description: "qtcsh – tcsh with transparent remote execution by use of qrsh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qtcsh &#8211; tcsh with transparent remote execution by use of qrsh </p>
 <h2>SYNTAX</h2>
 <p> <code>qtcsh</code> [ <code>tcsh options</code> | <code>-ABLR</code> ]</p>

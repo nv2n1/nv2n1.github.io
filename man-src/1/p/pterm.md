@@ -1,4 +1,5 @@
 ---
+
 title: "pterm(1)"
 name: "pterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pterm/"
 description: "pterm – yet another X terminal emulator"
 ---
 
-<h2>NAME</h2>
 <p> pterm &#8211; yet another X terminal emulator</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

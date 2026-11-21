@@ -1,4 +1,5 @@
 ---
+
 title: "kayadoc2man(1)"
 name: "kayadoc2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kayadoc2man/"
 description: "kayadoc2man – Automatic man pages for Kaya modules"
 ---
 
-<h2>NAME</h2>
 <p> kayadoc2man &#8211; Automatic man pages for Kaya modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kayadoc2man</code> <i>XMLFILE [DONEFILE] [LICENSEFILE]</i></p>

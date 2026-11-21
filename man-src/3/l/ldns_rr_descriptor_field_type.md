@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_descriptor_field_type(3)"
 name: "ldns_rr_descriptor_field_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_descriptor_field_type/"
 description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, ldns_rr_descriptor_maximum, ldns_rr_descriptor_field_type"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, ldns_rr_descriptor_maximum, ldns_rr_descriptor_field_type </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

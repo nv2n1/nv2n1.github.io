@@ -1,4 +1,5 @@
 ---
+
 title: "capifaxrcvd(1)"
 name: "capifaxrcvd"
 section: "1"
@@ -6,9 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-capifaxrcvd/"
 ---
 
-<h2>NAME</h2>
-
- capifaxrcvd — a FAX receive daemon for CAPI
+capifaxrcvd — a FAX receive daemon for CAPI
 
 <h2>SYNOPSIS</h2>
 

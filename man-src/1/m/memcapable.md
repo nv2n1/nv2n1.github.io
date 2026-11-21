@@ -1,4 +1,5 @@
 ---
+
 title: "memcapable(1)"
 name: "memcapable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memcapable/"
 description: "memcapable – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcapable &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memcapable [options]</p>

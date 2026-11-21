@@ -1,4 +1,5 @@
 ---
+
 title: "pbzip2(1)"
 name: "pbzip2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbzip2/"
 description: "pbzip2 – parallel bzip2 file compressor, v1.1.10"
 ---
 
-<h2>NAME</h2>
 <p> pbzip2 &#8211; parallel bzip2 file compressor, v1.1.10</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbzip2</code> [<code> -123456789 </code>] [<code> -b#cdfhklm#p#qrS#tvVz </code>] [ <i>filenames &#8230;</i> ]</p>

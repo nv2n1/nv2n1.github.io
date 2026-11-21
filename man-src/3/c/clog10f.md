@@ -1,4 +1,5 @@
 ---
+
 title: "clog10f(3)"
 name: "clog10f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clog10f/"
 description: "clog10, clog10f, clog10l – base-10 logarithm of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clog10, clog10f, clog10l &#8211; base-10 logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_init(3)"
 name: "curl_multi_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_init/"
 description: "curl_multi_init – create a multi handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_init &#8211; create a multi handle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-compiledb(1)"
 name: "foomatic-compiledb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-compiledb/"
 description: "foomatic-compiledb – Compile the Foomatic printer/driver database"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-compiledb &#8211; Compile the Foomatic printer/driver database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>foomatic-compiledb</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>-t</code><i>&nbsp;<wbr>type</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>-f</code><i>&nbsp;<wbr></i><code>]&nbsp;<wbr>[&nbsp;<wbr>-j</code><i>&nbsp;<wbr>n</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>&nbsp;<wbr></code><i>driver</i><code>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>]</code> </p>

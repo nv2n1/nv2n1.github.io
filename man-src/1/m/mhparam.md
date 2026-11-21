@@ -1,4 +1,5 @@
 ---
+
 title: "mhparam(1)"
 name: "mhparam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhparam/"
 description: "mhparam – print nmh profile and context components"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhparam &#8211; print nmh profile and context components </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdabash(1)"
 name: "pmdabash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdabash/"
 description: "pmdabash – Bourne-Again SHell trace performance metrics domain agent"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdabash</code> &#8211; Bourne-Again SHell trace performance metrics domain agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/bash/pmdabash</code> [<code>-C</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-I</code> <i>interval</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] <i>configfile</i> </p>

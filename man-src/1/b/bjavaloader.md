@@ -1,4 +1,5 @@
 ---
+
 title: "bjavaloader(1)"
 name: "bjavaloader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bjavaloader/"
 description: "bjavaloader – Barry Project’s program to manage BlackBerry applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bjavaloader</code> &#8211; Barry Project&#8217;s program to manage BlackBerry applications </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bjavaloader [-h][-p pin][-P pass][-v]</code></p>

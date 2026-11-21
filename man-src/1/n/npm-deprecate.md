@@ -1,4 +1,5 @@
 ---
+
 title: "npm-deprecate(1)"
 name: "npm-deprecate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-deprecate/"
 description: "npm-deprecate – Deprecate a version of a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-deprecate</code> &#8211; Deprecate a version of a package </p>
 <h3>Synopsis</h3>
 <dl>

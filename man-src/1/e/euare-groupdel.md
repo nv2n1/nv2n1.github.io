@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupdel(1)"
 name: "euare-groupdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupdel/"
 description: "euare-groupdel – Delete a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupdel &#8211; Delete a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupdel [-r] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>

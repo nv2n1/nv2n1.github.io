@@ -1,4 +1,5 @@
 ---
+
 title: "icegridregistry(1)"
 name: "icegridregistry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icegridregistry/"
 description: "icegridregistry – The IceGrid registry server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> icegridregistry &#8211; The IceGrid registry server.</p>
 <h2>SYNOPSIS</h2>
 <p> icegridregistry [options] [command&#8230;] </p>

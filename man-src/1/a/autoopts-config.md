@@ -1,4 +1,5 @@
 ---
+
 title: "autoopts-config(1)"
 name: "autoopts-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autoopts-config/"
 description: "autoopts-config – script to get information about installed version of autoopts"
 ---
 
-<h2>NAME</h2>
 <p> autoopts-config &#8211; script to get information about installed version of autoopts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoopts-config</code> <code>{ &lt;value-name&gt; [&#8230;] | everything }</code> </p>

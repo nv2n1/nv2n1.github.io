@@ -1,4 +1,5 @@
 ---
+
 title: "libnutclient_misc(3)"
 name: "libnutclient_misc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnutclient_misc/"
 description: "libnutclient_misc, nutclient_authenticate, nutclient_logout, nutclient_device_login, nutclient_get_device_num_logins, nutclient_device_master, nutclient_device_forced_shutdown – Miscelaneous functi..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> libnutclient_misc, nutclient_authenticate, nutclient_logout, nutclient_device_login, nutclient_get_device_num_logins, nutclient_device_master, nutclient_device_forced_shutdown &#8211; Miscelaneous functions in Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

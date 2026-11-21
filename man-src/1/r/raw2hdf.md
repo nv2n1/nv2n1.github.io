@@ -1,4 +1,5 @@
 ---
+
 title: "raw2hdf(1)"
 name: "raw2hdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-raw2hdf/"
 description: "raw2hdf – Create an .hdf hard disk image from a raw data file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> raw2hdf &#8211; Create an .hdf hard disk image from a raw data file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>raw2hdf</code> <i>rawfile hdffile</i></p>

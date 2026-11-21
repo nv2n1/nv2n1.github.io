@@ -1,4 +1,5 @@
 ---
+
 title: "gravfft(1)"
 name: "gravfft"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gravfft/"
 description: "gravfft – Compute gravitational attraction of 3-D surfaces in the wavenumber (or frequency) domain"
 ---
 
-<h2>NAME</h2>
 <p> gravfft &#8211; Compute gravitational attraction of 3-D surfaces in the wavenumber (or frequency) domain</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gravfft</code> <i>ingrid</i> [ <i>ingrid2</i> ] <i>outfile</i> [ <i>n/wavelength/mean_depth/tbw</i> ] [ <i>density</i>|<i>rhogrid</i> ] [ <i>n_terms</i> ] [ [<code>f</code>[<code>+</code>]|<code>g</code>|<code>v</code>|<code>n</code>|<code>e</code>] ] [ <code>w</code>|<code>b</code>|<code>c</code>|<code>t</code> |<code>k</code> ] [ [<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|<code>d</code>|<code>h</code> |<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]] [ ] [ <i>te/rl/rm/rw</i>[<code>+m</code>] ] [ [<i>level</i>] ] [ <i>wd</i>] [ <i>zm</i>[<i>zl</i>] ] [ <code>-fg</code> ] </p>

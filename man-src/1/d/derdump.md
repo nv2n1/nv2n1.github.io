@@ -1,4 +1,5 @@
 ---
+
 title: "derdump(1)"
 name: "derdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-derdump/"
 description: "derdump_ – Dumps C-sequence strings from a DER encoded certificate file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> derdump_ &#8211; Dumps C-sequence strings from a DER encoded certificate file </p>
 <h2>SYNOPSIS</h2>
 <dl>

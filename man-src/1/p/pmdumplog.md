@@ -1,4 +1,5 @@
 ---
+
 title: "pmdumplog(1)"
 name: "pmdumplog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdumplog/"
 description: "pmdumplog – dump internal details of a performance metrics archive log"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdumplog</code> &#8211; dump internal details of a performance metrics archive log</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmdumplog</code> [<code>-adilLmMrstxz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "qdel-ge(1)"
 name: "qdel-ge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qdel-ge/"
 description: "qdel – delete Grid Engine jobs from queues"
 ---
 
-<h2>NAME</h2>
 <p> qdel &#8211; delete Grid Engine jobs from queues</p>
 <h2>SYNTAX</h2>
 <p> <code>qdel</code> [ <code>-f</code> ] [ <code>-help</code> ] [ <code>-u wc_user_list</code> ] [ <code>wc_job_range_list</code> ] [ <code>-t task_id_range</code> ]</p>

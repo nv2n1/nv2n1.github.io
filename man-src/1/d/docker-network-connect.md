@@ -1,4 +1,5 @@
 ---
+
 title: "docker-network-connect(1)"
 name: "docker-network-connect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-network-connect/"
 description: "docker-network-connect – Connect a container to a network"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-network-connect &#8211; Connect a container to a network </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network connect [OPTIONS] NETWORK CONTAINER</code> </p>

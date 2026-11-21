@@ -1,4 +1,5 @@
 ---
+
 title: "jaxodraw(1)"
 name: "jaxodraw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jaxodraw/"
 description: "JaxoDraw – A Program for the Interactive Generation of Feynman Diagrams"
 ---
 
-<h2>NAME</h2>
 <p> <code>JaxoDraw</code> &#8211; A Program for the Interactive Generation of Feynman Diagrams</p>
 <h2>SYNTAX</h2>
 <p> jaxodraw [<i>options</i>] [&lt;<i>file</i>&gt;]</p>

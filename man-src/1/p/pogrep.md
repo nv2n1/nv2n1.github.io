@@ -1,4 +1,5 @@
 ---
+
 title: "pogrep(1)"
 name: "pogrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pogrep/"
 description: "pogrep – Grep XLIFF, Gettext PO and TMX localization files."
 ---
 
-<h2>NAME</h2>
 <p> pogrep &#8211; Grep XLIFF, Gettext PO and TMX localization files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pogrep </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [&#8211;search <i>SEARCHPARTS</i>] [-I|&#8211;ignore-case] [-e|&#8211;regexp] [-v|&#8211;invert-match] [&#8211;accelerator <i>ACCELERATOR</i>] [-k|&#8211;keep-translations]</p>

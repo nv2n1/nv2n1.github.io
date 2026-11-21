@@ -1,4 +1,5 @@
 ---
+
 title: "libcurl-easy(3)"
 name: "libcurl-easy"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libcurl-easy/"
 ---
 
-<h2>NAME</h2>
-
- libcurl-easy - easy interface overview
+libcurl-easy - easy interface overview
 
 <h2>DESCRIPTION</h2>
 

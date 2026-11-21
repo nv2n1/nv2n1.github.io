@@ -1,4 +1,5 @@
 ---
+
 title: "mailmail(1)"
 name: "mailmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailmail/"
 description: "mailmail – Twisted sendmail compatibility script"
 ---
 
-<h2>NAME</h2>
 <p> mailmail &#8211; Twisted sendmail compatibility script</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mailmail [recipient addresses]</code></p>

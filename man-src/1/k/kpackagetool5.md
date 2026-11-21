@@ -1,4 +1,5 @@
 ---
+
 title: "kpackagetool5(1)"
 name: "kpackagetool5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpackagetool5/"
 description: "kpackagetool5 – Install, list, remove Plasma packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kpackagetool5 &#8211; Install, list, remove Plasma packages </p>
 <h2>SYNOPSIS</h2>
 <dl>

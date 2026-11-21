@@ -1,4 +1,5 @@
 ---
+
 title: "hercules(1)"
 name: "hercules"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hercules/"
 description: "Hercules – IBM System/370, ESA/390, and z/Architecture Emulator"
 ---
 
-<h2>NAME</h2>
 <p> <code>Hercules</code> &#8211; IBM System/370, ESA/390, and z/Architecture Emulator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hercules</code> [<code>-f</code> <i>config-filename</i>] [<code>-d</code>] [<code>-b</code> <i>logo-filename</i>] [<code>-p</code> <i>dyn-load-dir</i>] [[<code>-l</code> <i>dynmod-to-load</i>]&#8230;] [&gt; <i>logfile</i>]</p>

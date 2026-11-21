@@ -1,4 +1,5 @@
 ---
+
 title: "docker-restart(1)"
 name: "docker-restart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-restart/"
 description: "docker-restart – Restart one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-restart &#8211; Restart one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker restart [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>

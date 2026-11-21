@@ -1,4 +1,5 @@
 ---
+
 title: "containerd(1)"
 name: "containerd"
 section: "1"
@@ -9,7 +10,7 @@ description: "containerd"
 
 <p>containerd is a high performance container runtime whose daemon can be started by using this command. If none of the <i>config</i>, <i>publish</i>, or <i>help</i> commands are specified, the default action of the <code>containerd</code> command is to start the containerd daemon in the foreground. </p>
 <p> A default configuration is used if no TOML configuration is specified or located at the default file location. The <i>containerd config</i> command can be used to generate the default configuration for containerd. The output of that command can be used and modified as necessary as a custom configuration. </p>
-<h2 class="name">NAME</h2>
+
 <p> containerd </p>
 <h2>SYNOPSIS</h2>
 <p> containerd </p>

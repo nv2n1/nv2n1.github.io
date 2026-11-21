@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_init(3)"
 name: "hdf_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_init/"
 description: "hdf_init – Initialize an HDF data set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_init &#8211; Initialize an HDF data set </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

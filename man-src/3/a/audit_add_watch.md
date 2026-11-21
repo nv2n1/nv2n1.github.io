@@ -1,4 +1,5 @@
 ---
+
 title: "audit_add_watch(3)"
 name: "audit_add_watch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_add_watch/"
 description: "audit_add_watch – create a rule layout for a watch"
 ---
 
-<h2>NAME</h2>
 <p> audit_add_watch &#8211; create a rule layout for a watch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

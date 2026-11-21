@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-network-acl(1)"
 name: "euca-delete-network-acl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-network-acl/"
 description: "euca-delete-network-acl – Delete a VPC network ACL"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-network-acl &#8211; Delete a VPC network ACL</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-network-acl [&#8211;show-empty-fields] [-U URL]</p>

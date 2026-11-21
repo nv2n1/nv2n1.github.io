@@ -1,4 +1,5 @@
 ---
+
 title: "audit2allow(1)"
 name: "audit2allow"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-audit2allow/"
 description: "audit2allow – generate SELinux policy allow/dontaudit rules from logs of denied operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>audit2allow</code> &#8211; generate SELinux policy allow/dontaudit rules from logs of denied operations </p>
 <p> <code>audit2why</code> &#8211; translates SELinux audit messages into a description of why the access was denied (audit2allow -w) </p>
 <h2>SYNOPSIS</h2>

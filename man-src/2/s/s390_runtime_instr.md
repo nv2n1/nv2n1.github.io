@@ -1,4 +1,5 @@
 ---
+
 title: "s390_runtime_instr(2)"
 name: "s390_runtime_instr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-s390_runtime_instr/"
 description: "s390_runtime_instr – enable/disable s390 CPU run-time instrumentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> s390_runtime_instr &#8211; enable/disable s390 CPU run-time instrumentation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

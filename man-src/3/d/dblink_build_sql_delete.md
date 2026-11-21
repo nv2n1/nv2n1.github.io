@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_build_sql_delete(3)"
 name: "dblink_build_sql_delete"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_build_sql_delete/"
 description: "dblink_build_sql_delete – builds a DELETE statement using supplied values for primary key field values"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_build_sql_delete &#8211; builds a DELETE statement using supplied values for primary key field values </p>
 <h2>SYNOPSIS</h2>
 <pre>

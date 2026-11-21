@@ -1,4 +1,5 @@
 ---
+
 title: "fi_pingpong(1)"
 name: "fi_pingpong"
 section: "1"
@@ -6,12 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fi_pingpong/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- fi_pingpong - Quick and simple pingpong test for libfabric 
+fi_pingpong - Quick and simple pingpong test for libfabric 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "opaportinfo(1)"
 name: "opaportinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opaportinfo/"
 description: "opaportinfo"
 ---
 
-<h2>NAME</h2>
 <p> opaportinfo </p>
 <p> <code>(Host or Switch)</code> Displays configuration and state of a specified Intel(R) Omni-Path Host Fabric Interface (HFI) port on the local host or a remote switch.</p>
 <h2>Syntax</h2>

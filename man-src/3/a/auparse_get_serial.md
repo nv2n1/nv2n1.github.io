@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_serial(3)"
 name: "auparse_get_serial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_serial/"
 description: "auparse_get_serial – get the event’s serial number"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_serial &#8211; get the event&#8217;s serial number</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

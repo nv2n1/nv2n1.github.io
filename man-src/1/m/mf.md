@@ -1,4 +1,5 @@
 ---
+
 title: "mf(1)"
 name: "mf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mf/"
 description: "mf, inimf, mf-nowin – Metafont, a language for font and logo design"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mf, inimf, mf-nowin &#8211; Metafont, a language for font and logo design </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mf</code> [<i>options</i>] [<i>commands</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makecert(1)"
 name: "makecert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makecert/"
 description: "MakeCert – Create X.509 certificates for test purposes"
 ---
 
-<h2>NAME</h2>
 <p> MakeCert &#8211; Create X.509 certificates for test purposes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makecert [options] certificate</code></p>

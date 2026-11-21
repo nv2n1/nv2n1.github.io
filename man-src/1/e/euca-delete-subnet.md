@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-subnet(1)"
 name: "euca-delete-subnet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-subnet/"
 description: "euca-delete-subnet – Delete a VPC subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-subnet &#8211; Delete a VPC subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-subnet [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "im-chooser(1)"
 name: "im-chooser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-im-chooser/"
 description: "im-chooser – GUI Application to switch Input Method"
 ---
 
-<h2>NAME</h2>
 <p> im-chooser &#8211; GUI Application to switch Input Method</p>
 <h2>SYNOPSIS</h2>
 <p> <code>im-chooser</code></p>

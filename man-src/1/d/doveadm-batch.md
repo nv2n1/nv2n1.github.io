@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-batch(1)"
 name: "doveadm-batch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-batch/"
 description: "doveadm-batch – Execute multiple commands for multiple users"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-batch &#8211; Execute multiple commands for multiple users</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>batch</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> sep command sep command</i> [&#8230;]<br />

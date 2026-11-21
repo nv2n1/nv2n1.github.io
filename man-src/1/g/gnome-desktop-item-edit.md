@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-desktop-item-edit(1)"
 name: "gnome-desktop-item-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-desktop-item-edit/"
 description: "gnome-desktop-item-edit — tool to edit .desktop file"
 ---
 
-<h2>NAME</h2>
 <p> gnome-desktop-item-edit &#8212; tool to edit .desktop file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-desktop-item-edit</code> [<code>&#8211;create-new </code>] [<code>&#8211;help </code>]</p>

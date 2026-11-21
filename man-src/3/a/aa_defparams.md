@@ -1,4 +1,5 @@
 ---
+
 title: "aa_defparams(3)"
 name: "aa_defparams"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_defparams/"
 description: "aa_defparams – default hardware paramters requested by AA-lib programs."
 ---
 
-<h2>NAME</h2>
 <p> aa_defparams &#8211; default hardware paramters requested by AA-lib programs.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

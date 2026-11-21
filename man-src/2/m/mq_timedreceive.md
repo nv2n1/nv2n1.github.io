@@ -1,4 +1,5 @@
 ---
+
 title: "mq_timedreceive(2)"
 name: "mq_timedreceive"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mq_timedreceive/"
 description: "mq_receive, mq_timedreceive – receive a message from a message queue"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mq_receive, mq_timedreceive &#8211; receive a message from a message queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

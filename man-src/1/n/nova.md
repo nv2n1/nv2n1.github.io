@@ -1,4 +1,5 @@
 ---
+
 title: "nova(1)"
 name: "nova"
 section: "1"
@@ -6,9 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nova/"
 ---
 
-<h2>NAME</h2>
-
- nova - OpenStack Nova command line client
+nova - OpenStack Nova command line client
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-foto-treo650(1)"
 name: "pilot-foto-treo650"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-foto-treo650/"
 description: "pilot-foto-treo650 – Copies Treo \"foto\" databases and videos to the current directory"
 ---
 
-<h2>NAME</h2>
 <p> pilot-foto-treo650 &#8211; Copies Treo &quot;foto&quot; databases and videos to the current directory</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

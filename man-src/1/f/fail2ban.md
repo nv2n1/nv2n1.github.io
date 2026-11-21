@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban(1)"
 name: "fail2ban"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fail2ban/"
 description: "fail2ban – a set of server and client programs to limit brute force authentication attempts."
 ---
 
-<h2>NAME</h2>
 <p> fail2ban &#8211; a set of server and client programs to limit brute force authentication attempts.</p>
 <h2>DESCRIPTION</h2>
 <p> Fail2Ban consists of a client, server and configuration files to limit brute force authentication attempts. </p>

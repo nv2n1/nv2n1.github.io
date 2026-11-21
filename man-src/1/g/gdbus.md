@@ -1,4 +1,5 @@
 ---
+
 title: "gdbus(1)"
 name: "gdbus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbus/"
 description: "gdbus – Tool for working with D-Bus objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdbus &#8211; Tool for working with D-Bus objects </p>
 <h2>SYNOPSIS</h2>
 <dl>

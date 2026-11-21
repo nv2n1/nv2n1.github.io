@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-finduser(1)"
 name: "ipa-finduser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-finduser/"
 description: "ipa-finduser – Find a user"
 ---
 
-<h2>NAME</h2>
 <p> ipa-finduser &#8211; Find a user</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-finduser [<i>OPTION</i>]&#8230; <i>string</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ictrans(1)"
 name: "ictrans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ictrans/"
 description: "ictrans – interactive NCAR CGM translator ctrans"
 ---
 
-<h2>NAME</h2>
 <p> ictrans &#8211; interactive NCAR CGM translator <code>ctrans</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>ictrans</code> [ <code>-d</code><i> device</i> ] [ <code>-font</code><i> font</i> ] [ <code>-e</code><i> script</i> ]* [ <code>-soft</code> ] [ <code>-bell</code> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-Version</code> ] [ <code>-wid</code><i> window_id</i> ] [ <i>device-specific options</i> ] <i>metafile</i>&#8230;</p>

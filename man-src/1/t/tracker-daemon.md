@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-daemon(1)"
 name: "tracker-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-daemon/"
 description: "tracker-daemon – Start, stop, restart and list daemons responsible for indexing content"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-daemon &#8211; Start, stop, restart and list daemons responsible for indexing content</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

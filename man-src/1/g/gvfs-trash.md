@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-trash(1)"
 name: "gvfs-trash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-trash/"
 description: "gvfs-trash"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-trash </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-trash</code> has been deprecated and it is redirected to <code>gio trash</code>.</p>

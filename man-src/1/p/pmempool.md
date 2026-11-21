@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool(1)"
 name: "pmempool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool/"
 description: "pmempool – Persistent Memory Pool Management Tool"
 ---
 
-<h2>NAME</h2>
 <p> pmempool &#8211; Persistent Memory Pool Management Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool [&#8211;help] [&#8211;version] &lt;command&gt; [&lt;args&gt;]</code></p>

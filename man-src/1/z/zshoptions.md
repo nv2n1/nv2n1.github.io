@@ -1,4 +1,5 @@
 ---
+
 title: "zshoptions(1)"
 name: "zshoptions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshoptions/"
 description: "zshoptions – zsh options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshoptions &#8211; zsh options </p>
 <h2>SPECIFYING OPTIONS</h2>
 <p> Options are primarily referred to by name. These names are case insensitive and underscores are ignored. For example, `<code>allexport</code>&#8216; is equivalent to `<code>A__lleXP_ort</code>&#8216;. </p>

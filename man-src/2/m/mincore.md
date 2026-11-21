@@ -1,4 +1,5 @@
 ---
+
 title: "mincore(2)"
 name: "mincore"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mincore/"
 description: "mincore – determine whether pages are resident in memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mincore &#8211; determine whether pages are resident in memory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />

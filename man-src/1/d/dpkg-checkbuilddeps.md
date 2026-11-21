@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-checkbuilddeps(1)"
 name: "dpkg-checkbuilddeps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-checkbuilddeps/"
 description: "dpkg-checkbuilddeps – check build dependencies and conflicts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-checkbuilddeps &#8211; check build dependencies and conflicts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-checkbuilddeps</code> [<i>option</i>&#8230;] [<i>control-file</i>]</p>

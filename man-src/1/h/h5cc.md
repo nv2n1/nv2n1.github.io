@@ -1,4 +1,5 @@
 ---
+
 title: "h5cc(1)"
 name: "h5cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5cc/"
 description: "h5cc – Helper script to compile HDF5 applications."
 ---
 
-<h2>NAME</h2>
 <p> h5cc &#8211; Helper script to compile HDF5 applications.</p>
 <h2>SYNOPSIS</h2>
 <p> h5cc [OPTIONS] &lt;compile line&gt;</p>

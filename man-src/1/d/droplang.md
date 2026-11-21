@@ -1,4 +1,5 @@
 ---
+
 title: "droplang(1)"
 name: "droplang"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-droplang/"
 description: "droplang – remove a PostgreSQL procedural language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> droplang &#8211; remove a PostgreSQL procedural language </p>
 <h2>SYNOPSIS</h2>
 <dl>

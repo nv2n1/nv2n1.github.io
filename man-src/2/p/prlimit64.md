@@ -1,4 +1,5 @@
 ---
+
 title: "prlimit64(2)"
 name: "prlimit64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-prlimit64/"
 description: "getrlimit, setrlimit, prlimit – get/set resource limits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getrlimit, setrlimit, prlimit &#8211; get/set resource limits </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />

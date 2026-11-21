@@ -1,4 +1,5 @@
 ---
+
 title: "testlibraw(1)"
 name: "testlibraw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-testlibraw/"
 description: "testlibraw – run basic functionality tests on libraw1394"
 ---
 
-<h2>NAME</h2>
 <p> testlibraw &#8211; run basic functionality tests on libraw1394</p>
 <h2>SYNOPSIS</h2>
 <p> <code>testlibraw</code></p>

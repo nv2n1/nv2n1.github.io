@@ -1,4 +1,5 @@
 ---
+
 title: "hesinfo(1)"
 name: "hesinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hesinfo/"
 description: "hesinfo – find out what is stored in the Hesiod database"
 ---
 
-<h2>NAME</h2>
 <p> hesinfo &#8211; find out what is stored in the Hesiod database</p>
 <h2>SYNOPSIS</h2>
 <pre>

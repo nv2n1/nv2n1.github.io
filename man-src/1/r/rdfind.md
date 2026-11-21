@@ -1,4 +1,5 @@
 ---
+
 title: "rdfind(1)"
 name: "rdfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdfind/"
 description: "rdfind – finds duplicate files"
 ---
 
-<h2>NAME</h2>
 <p> rdfind &#8211; finds duplicate files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdfind [ options ] </code> <i>directory1 | file1</i> <code>[</code> <i>directory2 | file2</i> <code>] &#8230;</code></p>

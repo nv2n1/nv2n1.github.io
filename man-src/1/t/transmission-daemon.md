@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-daemon(1)"
 name: "transmission-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-daemon/"
 description: "transmission-daemon – a bittorrent client"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-daemon</code> &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
 <p> -words <code>transmission-daemon</code> &#8211;<code>h</code><br />

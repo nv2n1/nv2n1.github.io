@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-scheduled-actions(1)"
 name: "euscale-describe-scheduled-actions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-scheduled-actions/"
 description: "euscale-describe-scheduled-actions – Describe scheduled auto-scaling group actions"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-scheduled-actions &#8211; Describe scheduled auto-scaling group actions</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-scheduled-actions [-g ASGROUP]</p>

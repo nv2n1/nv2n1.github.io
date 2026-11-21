@@ -1,4 +1,5 @@
 ---
+
 title: "nwboprops(1)"
 name: "nwboprops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwboprops/"
 description: "nwboprops – List properies of a NetWare Bindery Object"
 ---
 
-<h2>NAME</h2>
 <p> nwboprops &#8211; List properies of a NetWare Bindery Object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwboprops</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-o</code> <i>object name</i> ] [ <code>-t</code> <i>type</i> ] [ <code>-v</code> ] </p>

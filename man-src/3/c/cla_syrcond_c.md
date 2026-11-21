@@ -1,4 +1,5 @@
 ---
+
 title: "cla_syrcond_c(3)"
 name: "cla_syrcond_c"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_syrcond_c/"
 description: "cla_syrcond_c.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cla_syrcond_c.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

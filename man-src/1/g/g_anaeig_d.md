@@ -1,4 +1,5 @@
 ---
+
 title: "g_anaeig_d(1)"
 name: "g_anaeig_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_anaeig_d/"
 description: "g_anaeig – analyzes the eigenvectors"
 ---
 
-<h2>NAME</h2>
 <p> g_anaeig &#8211; analyzes the eigenvectors </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

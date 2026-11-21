@@ -1,4 +1,5 @@
 ---
+
 title: "redis-check-rdb(1)"
 name: "redis-check-rdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-redis-check-rdb/"
 description: "redis-check-aof – Redis RDB file checker"
 ---
 
-<h2>NAME</h2>
 <p> redis-check-aof &#8211; Redis RDB file checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redis-check-aof</code> <i>file.rdb</i> </p>

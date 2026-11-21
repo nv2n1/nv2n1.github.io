@@ -1,4 +1,5 @@
 ---
+
 title: "gimp-remote(1)"
 name: "gimp-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gimp-remote/"
 description: "gimp-remote – tells a running GIMP to open a (local or remote) image file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gimp-remote &#8211; tells a running GIMP to open a (local or remote) image file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gimp-remote</code> [-h] [&#8211;help] [-v] [&#8211;version] [&#8211;display <i>display</i>] [-e] [&#8211;existing] [-q] [&#8211;query] [-s] [&#8211;no-splash] [-p] [&#8211;print-xid] <i>filename</i> &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpdasm(1)"
 name: "gpdasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpdasm/"
 description: "gpdasm – GNU PIC disassembler"
 ---
 
-<h2>NAME</h2>
 <p> gpdasm &#8211; GNU PIC disassembler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpdasm [options] file</code></p>

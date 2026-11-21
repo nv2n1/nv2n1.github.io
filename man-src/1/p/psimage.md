@@ -1,4 +1,5 @@
 ---
+
 title: "psimage(1)"
 name: "psimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psimage/"
 description: "psimage – Place images or EPS files on maps"
 ---
 
-<h2>NAME</h2>
 <p> psimage &#8211; Place images or EPS files on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psimage</code> <i>imagefile</i> [ <i>refpoint</i> ] [ <i>box</i> ] [ [<code>b</code>|<code>f</code>|<code>t</code>]<i>color</i> ] [ ] [ <i>parameters</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

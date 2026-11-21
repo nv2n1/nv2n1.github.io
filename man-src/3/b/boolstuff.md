@@ -1,4 +1,5 @@
 ---
+
 title: "boolstuff(3)"
 name: "boolstuff"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-boolstuff/"
 description: "boolstuff – Disjunctive Normal Form boolean expression C++ library"
 ---
 
-<h2>NAME</h2>
 <p> boolstuff &#8211; Disjunctive Normal Form boolean expression C++ library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>g++ prog.cpp -lboolstuff</code></p>

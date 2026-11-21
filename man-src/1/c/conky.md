@@ -1,4 +1,5 @@
 ---
+
 title: "conky(1)"
 name: "conky"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-conky/"
 description: "conky – A system monitor for X originally based on the torsmo code, but more kickass. It just keeps on given’er. Yeah."
 ---
 
-<h2>NAME</h2>
 <p> conky &#8211; A system monitor for X originally based on the torsmo code, but more kickass. It just keeps on given&#8217;er. Yeah.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>conky</code> [ <i>options</i> ]</p>

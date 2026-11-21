@@ -1,4 +1,5 @@
 ---
+
 title: "mp4track(1)"
 name: "mp4track"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mp4track/"
 description: "mp4track – manual page for mp4track – MP4v2 2.0.0"
 ---
 
-<h2>NAME</h2>
 <p> mp4track &#8211; manual page for mp4track &#8211; MP4v2 2.0.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mp4track</code> [<i>OPTION</i>]&#8230; [<i>PARAMETERS</i>]&#8230; <i>ACTION file</i>&#8230;</p>

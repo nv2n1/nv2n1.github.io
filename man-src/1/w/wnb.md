@@ -1,4 +1,5 @@
 ---
+
 title: "wnb(1)"
 name: "wnb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wnb/"
 description: "wnb – WordNet window-based browser interface"
 ---
 
-<h2>NAME</h2>
 <p> wnb &#8211; WordNet window-based browser interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wnb</code></p>

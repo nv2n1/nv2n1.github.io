@@ -1,4 +1,5 @@
 ---
+
 title: "posegment(1)"
 name: "posegment"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-posegment/"
 description: "posegment – Segment Gettext PO, XLIFF and TMX localization files at the sentence level."
 ---
 
-<h2>NAME</h2>
 <p> posegment &#8211; Segment Gettext PO, XLIFF and TMX localization files at the sentence level.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>posegment </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [-P|&#8211;pot] [-l|&#8211;language <i>LANG</i>] [&#8211;source-language <i>LANG</i>] [&#8211;keepspaces] [&#8211;only-aligned]</p>

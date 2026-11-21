@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-hinotes(1)"
 name: "pilot-hinotes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-hinotes/"
 description: "pilot-hinotes – Syncronize your Hi-Notes database with your desktop machine."
 ---
 
-<h2>NAME</h2>
 <p> pilot-hinotes &#8211; Syncronize your Hi-Notes database with your desktop machine.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

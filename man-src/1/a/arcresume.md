@@ -1,4 +1,5 @@
 ---
+
 title: "arcresume(1)"
 name: "arcresume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcresume/"
 description: "arcresume – ARC Resume"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcresume &#8211; ARC Resume</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcresume</code> command is used for resuming a job that was submitted to grid enabled resources and then subsequently failed. The job will be resumed at the last ok state reported by the cluster. </p>

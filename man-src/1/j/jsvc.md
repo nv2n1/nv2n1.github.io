@@ -1,4 +1,5 @@
 ---
+
 title: "jsvc(1)"
 name: "jsvc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jsvc/"
 description: "jsvc – application to launch java daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jsvc &#8211; application to launch java daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

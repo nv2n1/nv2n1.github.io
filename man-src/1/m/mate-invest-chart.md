@@ -1,4 +1,5 @@
 ---
+
 title: "mate-invest-chart(1)"
 name: "mate-invest-chart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-invest-chart/"
 description: "mate-invest-chart — tool to set CPU frequency"
 ---
 
-<h2>NAME</h2>
 <p> mate-invest-chart &#8212; tool to set CPU frequency</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-invest-chart</code></p>

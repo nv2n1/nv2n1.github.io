@@ -1,4 +1,5 @@
 ---
+
 title: "intel_error_decode(1)"
 name: "intel_error_decode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_error_decode/"
 description: "intel_error_decode – Decodes an Intel GPU dump automatically captured by the kernel at the time of an error."
 ---
 
-<h2>NAME</h2>
 <p> intel_error_decode &#8211; Decodes an Intel GPU dump automatically captured by the kernel at the time of an error.</p>
 <h2>SYNOPSIS</h2>
 <pre>

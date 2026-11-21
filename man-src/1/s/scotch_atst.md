@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_atst(1)"
 name: "scotch_atst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_atst/"
 description: "atst – test the consistency of target architectures"
 ---
 
-<h2>NAME</h2>
 <p> <code>atst </code>&#8211; test the consistency of target architectures</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

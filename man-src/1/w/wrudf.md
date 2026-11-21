@@ -1,4 +1,5 @@
 ---
+
 title: "wrudf(1)"
 name: "wrudf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wrudf/"
 description: "wrudf – Maintain an UDF filesystem."
 ---
 
-<h2>NAME</h2>
 <p> <code>wrudf </code>&#8211; Maintain an UDF filesystem.</p>
 <h2>SYNOPSIS</h2>
 <pre>

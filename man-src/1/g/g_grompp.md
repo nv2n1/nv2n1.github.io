@@ -1,4 +1,5 @@
 ---
+
 title: "g_grompp(1)"
 name: "g_grompp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_grompp/"
 description: "grompp – makes a run input file"
 ---
 
-<h2>NAME</h2>
 <p> grompp &#8211; makes a run input file </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

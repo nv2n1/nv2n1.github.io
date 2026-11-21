@@ -1,4 +1,5 @@
 ---
+
 title: "varnishstat(1)"
 name: "varnishstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishstat/"
 description: "varnishstat – Varnish Cache statistics"
 ---
 
-<h2>NAME</h2>
 <p> varnishstat &#8211; Varnish Cache statistics</p>
 <h2>SYNOPSIS</h2>
 <p> varnishstat [-1] [-x] [-j] [-f field_list] [-l] [-n varnish_name] [-N filename] [-V] [-w delay]</p>

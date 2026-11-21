@@ -1,4 +1,5 @@
 ---
+
 title: "elks(1)"
 name: "elks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elks/"
 description: "elksemu – Embedded Linux Kernel Subset emulator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> elksemu &#8211; Embedded Linux Kernel Subset emulator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>/lib/elksemu</code> <code>program</code> [<code>arguments</code>]</p>

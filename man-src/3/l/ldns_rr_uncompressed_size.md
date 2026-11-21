@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_uncompressed_size(3)"
 name: "ldns_rr_uncompressed_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_uncompressed_size/"
 description: "ldns_rr_uncompressed_size"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_uncompressed_size </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

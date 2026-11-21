@@ -1,4 +1,5 @@
 ---
+
 title: "rpmrebuild_plugins(1)"
 name: "rpmrebuild_plugins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmrebuild_plugins/"
 description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functionality."
 ---
 
-<h2>NAME</h2>
 <p> rpmrebuild_plugins &#8211; is an engine to expand <code>rpmrebuild</code> functionality.</p>
 <h2>SYNOPSIS</h2>
 <p> rpmrebuild [<i>non-plugins-option</i>] [<i>plugins-option</i>] &lt;<i>packagename</i>&gt;</p>

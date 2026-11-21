@@ -1,4 +1,5 @@
 ---
+
 title: "ipa(1)"
 name: "ipa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa/"
 description: "ipa – IPA command-line interface"
 ---
 
-<h2>NAME</h2>
 <p> ipa &#8211; IPA command-line interface</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

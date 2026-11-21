@@ -1,4 +1,5 @@
 ---
+
 title: "gnumeric(1)"
 name: "gnumeric"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnumeric/"
 description: "gnumeric – a GNOME spreadsheet application."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnumeric &#8211; a GNOME spreadsheet application.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnumeric</code> [<i>OPTIONS</i>] [<i>files</i> <i>&#8230;</i> ] </p>

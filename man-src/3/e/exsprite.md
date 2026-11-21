@@ -1,4 +1,5 @@
 ---
+
 title: "exsprite(3)"
 name: "exsprite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exsprite/"
 description: "exsprite – Datafiles access and sprite animation. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exsprite &#8211; Datafiles access and sprite animation. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

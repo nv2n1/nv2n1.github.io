@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_bits(3)"
 name: "ck_bitmap_bits"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_bits/"
 description: "ck_bitmap_bits – return number of addressable bits in bitmap"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_bits</code> &#8211; return number of addressable bits in bitmap</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

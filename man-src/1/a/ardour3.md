@@ -1,4 +1,5 @@
 ---
+
 title: "ardour3(1)"
 name: "ardour3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ardour3/"
 description: "ardour – a digital audio workstation"
 ---
 
-<h2>NAME</h2>
 <p> ardour &#8211; a digital audio workstation</p>
 <h2>SYNOPSIS</h2>
 <p> ardour <code>-b</code> [<code>-U</code> <i>file</i>] [<i>session</i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-gcc-12(1)"
 name: "x86_64-linux-gnu-gcc-12"
 section: "1"
@@ -6,8 +7,9 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-gcc-12/"
 description: "gcc – GNU project C and C++ compiler"
 ---
+
 <p>gcc &#8211; GNU project C and C++ compiler </p>
-<h2>SYNOPSIS</h2>
+
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code><i>warn</i>...]&nbsp;[<code>-Wpedantic</code>] <br />

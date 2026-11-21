@@ -1,4 +1,5 @@
 ---
+
 title: "kstats(1)"
 name: "kstats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kstats/"
 description: "kstats – show statistical FMS algorithm votes for an ivs dump and a specified WEP key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kstats &#8211; show statistical FMS algorithm votes for an ivs dump and a specified WEP key </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kstats</code> &lt;ivs file&gt; &lt;104-bit key&gt;</p>

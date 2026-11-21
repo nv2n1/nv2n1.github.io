@@ -1,4 +1,5 @@
 ---
+
 title: "dnsfilter(1)"
 name: "dnsfilter"
 section: "1"
@@ -6,7 +7,6 @@ letter: "d"
 url: "/docs/linux/man/1-dnsfilter/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsfilter</code> [<code>OPTIONS</code>]</dt>
 <dd>

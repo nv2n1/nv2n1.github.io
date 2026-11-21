@@ -1,4 +1,5 @@
 ---
+
 title: "chvt(1)"
 name: "chvt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chvt/"
 description: "chvt – change foreground virtual terminal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chvt &#8211; change foreground virtual terminal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chvt</code> [<i>,option/</i>&#8230;] <i>N</i></p>

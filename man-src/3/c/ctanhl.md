@@ -1,4 +1,5 @@
 ---
+
 title: "ctanhl(3)"
 name: "ctanhl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctanhl/"
 description: "ctanh, ctanhf, ctanhl – complex hyperbolic tangent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctanh, ctanhf, ctanhl &#8211; complex hyperbolic tangent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

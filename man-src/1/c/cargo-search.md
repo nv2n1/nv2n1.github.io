@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-search(1)"
 name: "cargo-search"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-search/"
 description: "cargo-search – Search packages in crates.io"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-search &#8211; Search packages in crates.io </p>
 <h2>SYNOPSIS</h2>
 <p> cargo search [OPTIONS] &lt;QUERY&gt;&#8230;</p>

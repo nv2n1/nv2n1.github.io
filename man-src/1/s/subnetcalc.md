@@ -1,4 +1,5 @@
 ---
+
 title: "subnetcalc(1)"
 name: "subnetcalc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-subnetcalc/"
 description: "subnetcalc – IPv4/IPv6 Subnet Calculator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>subnetcalc</code> &#8211; IPv4/IPv6 Subnet Calculator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>subnetcalc</code> [Address] [Netmask/Prefix] [-<code>n</code> ] [-<code>uniquelocal</code> ] [-<code>uniquelocalhq</code> ] [-<code>nocolour|-nocolor</code> ]</p>

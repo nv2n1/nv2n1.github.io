@@ -1,4 +1,5 @@
 ---
+
 title: "pldd(1)"
 name: "pldd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pldd/"
 description: "pldd – display dynamic shared objects linked into a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pldd &#8211; display dynamic shared objects linked into a process </p>
 <h2>SYNOPSIS</h2>
 <pre>

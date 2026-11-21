@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_padata_add(3)"
 name: "krb5_padata_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_padata_add/"
 description: "krb5_find_padata krb5_padata_add – Kerberos 5 pre-authentication data handling functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_find_padata</code> <code>krb5_padata_add</code> &#8211; Kerberos 5 pre-authentication data handling functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

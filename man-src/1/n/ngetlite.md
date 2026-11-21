@@ -1,4 +1,5 @@
 ---
+
 title: "ngetlite(1)"
 name: "ngetlite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ngetlite/"
 description: "ngetlite – retrieve files from NNTP hosts"
 ---
 
-<h2>NAME</h2>
 <p> ngetlite &#8211; retrieve files from NNTP hosts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ngetlite &lt;listfiles&#8230;&gt;</code></p>

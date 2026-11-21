@@ -1,4 +1,5 @@
 ---
+
 title: "mg(1)"
 name: "mg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mg/"
 description: "mg – emacs-like text editor"
 ---
 
-<h2>NAME</h2>
 <p> <code>mg</code> &#8211; emacs-like text editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mg</code> [-<code>n</code> ] [-<code>f </code><i>mode</i> ] [+ <i>number</i> ] [<i>file &#8230;</i> ]</p>

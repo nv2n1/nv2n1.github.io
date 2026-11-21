@@ -1,4 +1,5 @@
 ---
+
 title: "supybot(1)"
 name: "supybot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-supybot/"
 description: "supybot – A robust and user friendly Python IRC bot"
 ---
 
-<h2>NAME</h2>
 <p> supybot &#8211; A robust and user friendly Python IRC bot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>supybot</code> [<i>options</i>]<i> configFile</i></p>

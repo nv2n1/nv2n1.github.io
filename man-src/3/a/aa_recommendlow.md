@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendlow(3)"
 name: "aa_recommendlow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendlow/"
 description: "aa_recommendlow – Add the given driver to the end of list of recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendlow &#8211; Add the given driver to the end of list of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

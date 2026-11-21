@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_init(3)"
 name: "libssh2_sftp_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_init/"
 description: "libssh2_sftp_init – open SFTP channel for the given SSH session."
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_init &#8211; open SFTP channel for the given SSH session.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>

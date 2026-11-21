@@ -1,4 +1,5 @@
 ---
+
 title: "euare-servercertlistbypath(1)"
 name: "euare-servercertlistbypath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-servercertlistbypath/"
 description: "euare-servercertlistbypath – List your account’s server certificates"
 ---
 
-<h2>NAME</h2>
 <p> euare-servercertlistbypath &#8211; List your account&#8217;s server certificates</p>
 <h2>SYNOPSIS</h2>
 <p> euare-servercertlistbypath [-p PREFIX] [&#8211;as-account ACCOUNT] [-U URL]</p>

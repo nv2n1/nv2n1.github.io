@@ -1,4 +1,5 @@
 ---
+
 title: "blockmedian(1)"
 name: "blockmedian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blockmedian/"
 description: "blockmedian – Block average (x, y, z) data tables by L1 norm"
 ---
 
-<h2>NAME</h2>
 <p> blockmedian &#8211; Block average (x, y, z) data tables by L1 norm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>blockmedian</code> [ <i>table</i> ] <i>increment</i> <i>region</i> [ ] [ [<code>b</code>] ] [ <code>r</code>|<code>s</code>[<code>&#8211;</code>] ] [ ] [ <i>quantile</i> ] [ [<i>level</i>] ] [ [<code>i</code>|<code>o</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

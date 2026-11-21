@@ -1,4 +1,5 @@
 ---
+
 title: "load_txt_font(3)"
 name: "load_txt_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_txt_font/"
 description: "load_txt_font – Loads a font script. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_txt_font &#8211; Loads a font script. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

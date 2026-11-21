@@ -1,4 +1,5 @@
 ---
+
 title: "weplab(1)"
 name: "weplab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-weplab/"
 description: "weplab – Wireless WEP encryption security analyzer"
 ---
 
-<h2>NAME</h2>
 <p> weplab &#8211; Wireless WEP encryption security analyzer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>weplab</code> {-a | -r | -b | -y | -c} [options] {<code>pcap file</code>}</p>

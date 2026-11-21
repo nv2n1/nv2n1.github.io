@@ -1,4 +1,5 @@
 ---
+
 title: "blkls(1)"
 name: "blkls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blkls/"
 description: "blkls – List or output file system data units."
 ---
 
-<h2 class="name">NAME</h2>
 <p> blkls &#8211; List or output file system data units. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkls [-aAelsvV] [-f </code> <i>fstype</i> <code>] [-i </code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>]</code> <i>[-b dev_sector_size] image [images] [start-stop]</i> </p>

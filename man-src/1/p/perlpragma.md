@@ -1,4 +1,5 @@
 ---
+
 title: "perlpragma(1)"
 name: "perlpragma"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlpragma/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlpragma - how to write a user pragma 
+perlpragma - how to write a user pragma 
 
 <h2>DESCRIPTION</h2>
 

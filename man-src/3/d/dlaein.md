@@ -1,4 +1,5 @@
 ---
+
 title: "dlaein(3)"
 name: "dlaein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaein/"
 description: "dlaein.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlaein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

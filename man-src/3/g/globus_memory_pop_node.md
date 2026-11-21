@@ -1,4 +1,5 @@
 ---
+
 title: "globus_memory_pop_node(3)"
 name: "globus_memory_pop_node"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_memory_pop_node/"
 description: "Memory Pool –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Memory Pool &#8211; </p>
 <h3>Functions</h3>
 <p> <code>globus_bool_t</code> <code>globus_memory_init</code> (globus_memory_t *mem_info, int node_size, int node_count)<br />

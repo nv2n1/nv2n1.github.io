@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr2str(3)"
 name: "ldns_rr2str"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr2str/"
 description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_key2str"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_key2str </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

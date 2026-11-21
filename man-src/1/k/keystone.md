@@ -1,4 +1,5 @@
 ---
+
 title: "keystone(1)"
 name: "keystone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keystone/"
 description: "keystone – Client for OpenStack Identity API"
 ---
 
-<h2>NAME</h2>
 <p> keystone &#8211; Client for OpenStack Identity API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>keystone</code> [options] &lt;command&gt; [command-options] </p>

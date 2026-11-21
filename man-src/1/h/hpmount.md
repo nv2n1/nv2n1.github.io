@@ -1,4 +1,5 @@
 ---
+
 title: "hpmount(1)"
 name: "hpmount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpmount/"
 description: "hpmount — change directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpmount &#8212; change directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpmount</code> [<code>-r</code>] [<code>-p</code><i>n</i>] <i>source-path</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qemu(1)"
 name: "qemu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qemu/"
 description: "qemu-doc – QEMU Emulator User Documentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qemu-doc &#8211; QEMU Emulator User Documentation </p>
 <h2>SYNOPSIS</h2>
 <p> usage: qemu-system-i386 [options] [<i>disk_image</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_set_max_empty_records(3)"
 name: "gnutls_record_set_max_empty_records"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_record_set_max_empty_records/"
 description: "gnutls_record_set_max_empty_records – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_record_set_max_empty_records &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

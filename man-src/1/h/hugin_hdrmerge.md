@@ -1,4 +1,5 @@
 ---
+
 title: "hugin_hdrmerge(1)"
 name: "hugin_hdrmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hugin_hdrmerge/"
 description: "hugin_hdrmerge – Merge overlapping images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hugin_hdrmerge &#8211; Merge overlapping images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hugin_hdrmerge</code> [options] <code>-o</code> <i>output.exr</i> <i>input-files</i></p>

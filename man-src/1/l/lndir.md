@@ -1,4 +1,5 @@
 ---
+
 title: "lndir(1)"
 name: "lndir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lndir/"
 description: "lndir – create a shadow directory of symbolic links to another directory tree"
 ---
 
-<h2>NAME</h2>
 <p> lndir &#8211; create a shadow directory of symbolic links to another directory tree</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lndir</code> [ <code>-silent</code> ] [ <code>-ignorelinks</code> ] [ <code>-withrevinfo</code> ] <i>fromdir</i> [ <i>todir</i> ]</p>

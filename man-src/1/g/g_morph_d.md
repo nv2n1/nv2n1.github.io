@@ -1,4 +1,5 @@
 ---
+
 title: "g_morph_d(1)"
 name: "g_morph_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_morph_d/"
 description: "g_morph – linear interpolation of conformations"
 ---
 
-<h2>NAME</h2>
 <p> g_morph &#8211; linear interpolation of conformations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

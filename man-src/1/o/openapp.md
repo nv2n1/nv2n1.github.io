@@ -1,4 +1,5 @@
 ---
+
 title: "openapp(1)"
 name: "openapp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-openapp/"
 description: "openapp – launch applications from the command line"
 ---
 
-<h2>NAME</h2>
 <p> openapp &#8211; launch applications from the command line </p>
 <h2>SYNOPSIS</h2>
 <p> <code>openapp</code> [<code>&#8211;find</code>] [<code>&#8211;debug</code> [<code>&#8211;gdb=</code> <i>debuger</i>]] [ <code>&#8211;library-combo=</code><i>library-combo</i> ] <i>application</i> [<i>arguments&#8230;</i>] </p>

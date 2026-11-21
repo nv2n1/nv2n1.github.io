@@ -1,4 +1,5 @@
 ---
+
 title: "scl(1)"
 name: "scl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scl/"
 description: "scl – Setup and run software from Software Collection environment"
 ---
 
-<h2>NAME</h2>
 <p> scl &#8211; Setup and run software from Software Collection environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scl</code> <i>&lt;action&gt;</i> <i>&lt;collection1&gt;</i> [<i>&lt;collection2&gt; &#8230;</i>] <i>&lt;command&gt;</i> </p>

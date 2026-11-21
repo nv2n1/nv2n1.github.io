@@ -1,4 +1,5 @@
 ---
+
 title: "tset(1)"
 name: "tset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tset/"
 description: "tset, reset – terminal initialization"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tset</code>, <code>reset</code> &#8211; terminal initialization </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tset</code> [<code>-IQVcqrsw</code>] [<code>&#8211;</code>] [<code>-e</code> <i>ch</i>] [<code>-i</code> <i>ch</i>] [<code>-k</code> <i>ch</i>] [<code>-m</code> <i>mapping</i>] [<i>terminal</i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "jstatd(1)"
 name: "jstatd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstatd/"
 description: "jstatd – Monitors Java Virtual Machines (JVMs) and enables remote monitoring tools to attach to JVMs. This command is experimental and unsupported."
 ---
 
-<h2>NAME</h2>
 <p> jstatd &#8211; Monitors Java Virtual Machines (JVMs) and enables remote monitoring tools to attach to JVMs. This command is experimental and unsupported.</p>
 <h2>SYNOPSIS</h2>
 <pre>

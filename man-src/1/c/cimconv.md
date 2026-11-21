@@ -1,4 +1,5 @@
 ---
+
 title: "cimconv(1)"
 name: "cimconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cimconv/"
 description: "cimconv"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>cimconv</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>cimconv </code> [ <code>client</code> ] &#8230; </p>

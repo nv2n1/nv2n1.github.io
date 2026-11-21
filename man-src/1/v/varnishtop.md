@@ -1,4 +1,5 @@
 ---
+
 title: "varnishtop(1)"
 name: "varnishtop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishtop/"
 description: "varnishtop – Varnish log entry ranking"
 ---
 
-<h2>NAME</h2>
 <p> varnishtop &#8211; Varnish log entry ranking</p>
 <h2>SYNOPSIS</h2>
 <p> varnishtop [-1] [-b] [-c] [-C] [-d] [-f] [-g &lt;session|request|vxid|raw&gt;] [-h] [-i taglist] [-I &lt;[taglist:]regex&gt;] [-L limit] [-n name] [-N filename] [-p period] [-q query] [-r filename] [-T seconds] [-x taglist] [-X &lt;[taglist:]regex&gt;] [-V]</p>

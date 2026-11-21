@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lbs(1)"
 name: "eulb-describe-lbs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-lbs/"
 description: "eulb-describe-lbs – Show information about load balancers"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-lbs &#8211; Show information about load balancers</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-lbs [&#8211;show-long] [&#8211;show-empty-fields] [-U URL]</p>

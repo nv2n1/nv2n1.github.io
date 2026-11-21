@@ -1,4 +1,5 @@
 ---
+
 title: "discretization_(3)"
 name: "discretization_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-discretization_/"
 description: "QuantLib::StochasticProcess – multi-dimensional stochastic process class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::StochasticProcess &#8211; multi-dimensional stochastic process class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/stochasticprocess.hpp&gt; </p>

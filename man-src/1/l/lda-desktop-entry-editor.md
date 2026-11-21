@@ -1,4 +1,5 @@
 ---
+
 title: "lda-desktop-entry-editor(1)"
 name: "lda-desktop-entry-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lda-desktop-entry-editor/"
 description: "lda-desktop-entry-editor – A desktop entry editor for libdesktop-agnostic"
 ---
 
-<h2>NAME</h2>
 <p> lda-desktop-entry-editor &#8211; A desktop entry editor for libdesktop-agnostic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lda-desktop-entry-editor</code> </p>

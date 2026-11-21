@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-create(3)"
 name: "antlr3-create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-create/"
 description: "src/antlr3commontreeadaptor.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3commontreeadaptor.c &#8211; </p>
 <p> This is the standard tree adaptor used by the C runtime unless the grammar source file says to use anything different.</p>
 <h2>SYNOPSIS</h2>

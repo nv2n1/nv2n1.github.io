@@ -1,4 +1,5 @@
 ---
+
 title: "cryptoflex-tool(1)"
 name: "cryptoflex-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cryptoflex-tool/"
 description: "cryptoflex-tool – utility for manipulating Schlumberger Cryptoflex data structures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cryptoflex-tool &#8211; utility for manipulating Schlumberger Cryptoflex data structures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cryptoflex-tool</code> [OPTIONS]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_get_user_data(3)"
 name: "memcached_get_user_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_get_user_data/"
 description: "memcached_get_user_data – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_get_user_data &#8211; libmemcached Documentation </p>
 <p> Manage user specific data</p>
 <h2>LIBRARY</h2>

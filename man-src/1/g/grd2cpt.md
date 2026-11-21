@@ -1,4 +1,5 @@
 ---
+
 title: "grd2cpt(1)"
 name: "grd2cpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grd2cpt/"
 description: "grd2cpt – Make linear or histogram-equalized color palette table from grid"
 ---
 
-<h2>NAME</h2>
 <p> grd2cpt &#8211; Make linear or histogram-equalized color palette table from grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grd2cpt</code> <i>grid</i> [ [<code>+</code>]<i>transparency</i> ] [ <i>cpt</i> ] [ [<code>i</code>|<code>o</code>] ] [ <i>nlevels</i> ] [ [<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code> ] [ <i>zlo</i>/<i>zhi</i> ] [ ] [ <i>minlimit/maxlimit</i> ] [ ] [ ] [ [<code>i</code>|<code>o</code>] ] [ <i>region</i> ] [ <i>zstart/zstop/zinc</i> ] [ <code>&#8211;</code>|<code>+</code>|<code>_</code>|<code>=</code> ] [ [<i>level</i>] ] [ ] [ ] </p>

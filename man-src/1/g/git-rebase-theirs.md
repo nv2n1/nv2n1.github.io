@@ -1,4 +1,5 @@
 ---
+
 title: "git-rebase-theirs(1)"
 name: "git-rebase-theirs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rebase-theirs/"
 description: "git-rebase-theirs – Resolve rebase conflicts and failed cherry-picks by favoring ‘theirs’ version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-rebase-theirs &#8211; Resolve rebase conflicts and failed cherry-picks by favoring &#8216;theirs&#8217; version </p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-rebase-theirs</code> [<i>options</i>] [<i>&#8212;</i>] <i>FILE</i>&#8230;</p>

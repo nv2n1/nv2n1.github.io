@@ -1,4 +1,5 @@
 ---
+
 title: "nwtrustee(1)"
 name: "nwtrustee"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwtrustee/"
 description: "nwtrustee – List an object’s trustee directory assignments"
 ---
 
-<h2>NAME</h2>
 <p> nwtrustee &#8211; List an object&#8217;s trustee directory assignments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwtrustee</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-l</code> <i>volume number</i> ] [ <code>-L</code> <i>volume name</i> ] [ <code>-O</code> <i>object id</i> ] [ <code>-o</code> <i>object name</i> ] [ <code>-t</code> <i>object type</i> ] [ <code>-v</code> ] </p>

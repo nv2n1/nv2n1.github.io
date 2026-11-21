@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-join(1)"
 name: "wimlib-imagex-join"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-join/"
 description: "wimlib-imagex-join – Join split WIMs into a standalone one-part WIM"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-join &#8211; Join split WIMs into a standalone one-part WIM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex join</code> [<i>OPTION</i>&#8230;] <i>OUT_WIMFILE</i> <i>SPLIT_WIM_PART</i>&#8230;</p>

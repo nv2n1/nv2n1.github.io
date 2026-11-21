@@ -1,4 +1,5 @@
 ---
+
 title: "ncgen3(1)"
 name: "ncgen3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncgen3/"
 description: "ncgen3 – From a CDL file generate a netCDF classic or 64 bit classicfile, a C program, or a Fortran program"
 ---
 
-<h2>NAME</h2>
 <p> ncgen3 &#8211; From a CDL file generate a netCDF classic or 64 bit classicfile, a C program, or a Fortran program</p>
 <h2>SYNOPSIS</h2>
 <dl>

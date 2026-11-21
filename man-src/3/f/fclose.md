@@ -1,4 +1,5 @@
 ---
+
 title: "fclose(3)"
 name: "fclose"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fclose/"
 description: "fclose – close a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fclose &#8211; close a stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>

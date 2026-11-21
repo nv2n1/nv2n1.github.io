@@ -1,4 +1,5 @@
 ---
+
 title: "euca-associate-address(1)"
 name: "euca-associate-address"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-associate-address/"
 description: "euca-associate-address – Associate an elastic IP address with a running instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-associate-address &#8211; Associate an elastic IP address with a running instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-associate-address [-a ALLOC] (<code>-i</code> INSTANCE | <code>-n</code> INTERFACE)</p>

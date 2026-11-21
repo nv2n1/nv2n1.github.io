@@ -1,4 +1,5 @@
 ---
+
 title: "idate(1)"
 name: "idate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idate/"
 description: "idate – A Gregorian/Meladi to/from Hijri/Islamic date converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> idate &#8211; A Gregorian/Meladi to/from Hijri/Islamic date converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>idate</code> [<code>&#8211;gregorian</code> yyyymmdd<i>]</i> [<code>&#8211;hijri</code> yyyymmdd<i>]</i> [<code>&#8211;simple]</code> [<code>&#8211;umm_alqura</code>] [<code>&#8211;help</code>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvidia-smi(1)"
 name: "nvidia-smi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvidia-smi/"
 description: "nvidia-smi – NVIDIA System Management Interface program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nvidia-smi &#8211; NVIDIA System Management Interface program </p>
 <h2>SYNOPSIS</h2>
 <p> nvidia-smi [OPTION1 [ARG1]] [OPTION2 [ARG2]] &#8230; </p>

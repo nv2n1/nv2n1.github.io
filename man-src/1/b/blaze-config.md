@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-config(1)"
 name: "blaze-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blaze-config/"
 description: "blaze-config – display or set the BlazeBlogger repository options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blaze-config &#8211; display or set the BlazeBlogger repository options </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-config</code> [<code>-qV</code>] [<code>-b</code> <i>directory</i>] <i>name</i> [<i>value&#8230;</i>] </p>

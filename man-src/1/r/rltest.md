@@ -1,4 +1,5 @@
 ---
+
 title: "rltest(1)"
 name: "rltest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rltest/"
 description: "rltest – test cases for QDBM Relic"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rltest &#8211; test cases for QDBM Relic</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rltest write</code> <i>name rnum</i><br />

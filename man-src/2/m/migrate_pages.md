@@ -1,4 +1,5 @@
 ---
+
 title: "migrate_pages(2)"
 name: "migrate_pages"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-migrate_pages/"
 description: "migrate_pages – move all pages in a process to another set of nodes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> migrate_pages &#8211; move all pages in a process to another set of nodes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

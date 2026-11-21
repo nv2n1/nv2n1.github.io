@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_unregister(3)"
 name: "ck_epoch_unregister"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_unregister/"
 description: "ck_epoch_unregister – unregister a thread for epoch reclamation"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_unregister</code> &#8211; unregister a thread for epoch reclamation</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

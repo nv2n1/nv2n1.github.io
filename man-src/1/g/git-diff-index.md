@@ -1,4 +1,5 @@
 ---
+
 title: "git-diff-index(1)"
 name: "git-diff-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-diff-index/"
 description: "git-diff-index – Compare a tree to the working tree or index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-diff-index &#8211; Compare a tree to the working tree or index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

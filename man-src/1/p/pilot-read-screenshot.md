@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-screenshot(1)"
 name: "pilot-read-screenshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-screenshot/"
 description: "pilot-read-screenshot – Read screenshots from Palm (ScreenShotDB)."
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-screenshot &#8211; Read screenshots from Palm (ScreenShotDB).</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

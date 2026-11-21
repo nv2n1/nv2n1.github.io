@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-dump-hwdata(1)"
 name: "hwloc-dump-hwdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-dump-hwdata/"
 description: "hwloc-dump-hwdata – Dump topology and locality information from hardware tables"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-dump-hwdata &#8211; Dump topology and locality information from hardware tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-dump-hwdata</code> [<i>options</i>]</p>

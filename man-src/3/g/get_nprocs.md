@@ -1,4 +1,5 @@
 ---
+
 title: "get_nprocs(3)"
 name: "get_nprocs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_nprocs/"
 description: "get_nprocs, get_nprocs_conf – get number of processors"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_nprocs, get_nprocs_conf &#8211; get number of processors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sysinfo.h&gt;</code> </p>

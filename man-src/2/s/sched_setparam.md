@@ -1,4 +1,5 @@
 ---
+
 title: "sched_setparam(2)"
 name: "sched_setparam"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_setparam/"
 description: "sched_setparam, sched_getparam – set and get scheduling parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_setparam, sched_getparam &#8211; set and get scheduling parameters </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

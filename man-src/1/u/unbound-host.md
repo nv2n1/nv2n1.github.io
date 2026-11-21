@@ -1,4 +1,5 @@
 ---
+
 title: "unbound-host(1)"
 name: "unbound-host"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unbound-host/"
 description: "unbound-host – unbound DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>unbound-host</code> &#8211; unbound DNS lookup utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unbound-host</code> [<code>-vdhr46</code>] [<code>-c</code> <i>class</i>] [<code>-t</code> <i>type</i>] <i>hostname</i> [<code>-y</code> <i>key</i>] [<code>-f</code> <i>keyfile</i>] [<code>-F</code> <i>namedkeyfile</i>] [<code>-C</code> <i>configfile</i>]</p>

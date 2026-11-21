@@ -1,4 +1,5 @@
 ---
+
 title: "fmodf(3)"
 name: "fmodf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmodf/"
 description: "fmod, fmodf, fmodl – floating-point remainder function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmod, fmodf, fmodl &#8211; floating-point remainder function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

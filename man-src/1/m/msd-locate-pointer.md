@@ -1,4 +1,5 @@
 ---
+
 title: "msd-locate-pointer(1)"
 name: "msd-locate-pointer"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-msd-locate-pointer/"
 ---
 
-<h2>NAME</h2>
-
- msd-locate-pointer - create ripples around mouse pointer
+msd-locate-pointer - create ripples around mouse pointer
 
 <h2>SYNOPSIS</h2>
 

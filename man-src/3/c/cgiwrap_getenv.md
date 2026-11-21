@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_getenv(3)"
 name: "cgiwrap_getenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_getenv/"
 description: "cgiwrap_getenv – the wrapper for getenv"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_getenv &#8211; the wrapper for getenv </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

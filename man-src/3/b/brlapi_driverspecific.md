@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_driverspecific(3)"
 name: "brlapi_driverspecific"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_driverspecific/"
 description: "Driver-Specific modes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Driver-Specific modes &#8211; </p>
 <p> Raw and Suspend Modes mechanism.</p>
 <h3>Functions</h3>

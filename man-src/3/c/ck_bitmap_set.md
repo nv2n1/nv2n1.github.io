@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_set(3)"
 name: "ck_bitmap_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_set/"
 description: "ck_bitmap_set – set the bit at the specified index"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_set</code> &#8211; set the bit at the specified index</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

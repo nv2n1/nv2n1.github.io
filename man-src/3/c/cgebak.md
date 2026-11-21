@@ -1,4 +1,5 @@
 ---
+
 title: "cgebak(3)"
 name: "cgebak"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgebak/"
 description: "cgebak.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgebak.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlce(1)"
 name: "perlce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlce/"
 description: "perlce – Perl for WinCE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlce &#8211; Perl for WinCE </p>
 <h2>Building Perl for WinCE</h2>
 <h3><font SIZE="-1">WARNING</font></h3>

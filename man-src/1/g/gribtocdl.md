@@ -1,4 +1,5 @@
 ---
+
 title: "gribtocdl(1)"
 name: "gribtocdl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gribtocdl/"
 description: "gribtocdl – create netCDF CDL-file from GRIB dataset"
 ---
 
-<h2>NAME</h2>
 <p> gribtocdl &#8211; create netCDF CDL-file from GRIB dataset</p>
 <h2>SYNOPSIS</h2>
 <dl>

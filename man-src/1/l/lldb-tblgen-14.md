@@ -1,4 +1,5 @@
 ---
+
 title: "lldb-tblgen-14(1)"
 name: "lldb-tblgen-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lldb-tblgen-14/"
 description: "lldb-tblgen – Description to C++ Code for LLDB"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lldb-tblgen &#8211; Description to C++ Code for LLDB </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lldb-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>

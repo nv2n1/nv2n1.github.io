@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountdelpolicy(1)"
 name: "euare-accountdelpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountdelpolicy/"
 description: "euare-accountdelpolicy – [Eucalyptus cloud admin only] Remove a policy from an account"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountdelpolicy &#8211; [Eucalyptus cloud admin only] Remove a policy from an account</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountdelpolicy <code>-p</code> POLICY [-U URL] [&#8211;region USER [at] REGION]</p>

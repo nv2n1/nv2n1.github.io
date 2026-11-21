@@ -1,4 +1,5 @@
 ---
+
 title: "pngtopam(1)"
 name: "pngtopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pngtopam/"
 description: "pngtopam – convert a PNG image into a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pngtopam &#8211; convert a PNG image into a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pngtopam</code> [<code>-verbose</code>] [<code>-alphapam</code> | <code>-alpha</code> | <code>-mix</code>] [<code>-background</code>=<i>color</i>] [<code>-gamma</code>=<i>value</i>] [<code>-text</code>=<i>filename</i>] [<code>-time</code>] [<code>-byrow</code>] [<i>pngfile</i>] </p>

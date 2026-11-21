@@ -1,4 +1,5 @@
 ---
+
 title: "choom(1)"
 name: "choom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-choom/"
 description: "choom – display and adjust OOM-killer score."
 ---
 
-<h2 class="name">NAME</h2>
 <p> choom &#8211; display and adjust OOM-killer score. </p>
 <p> <code>choom</code> <code>-p</code> <i>PID</i> </p>
 <p> <code>choom</code> <code>-p</code> <i>PID</i> <code>-n</code> <i>number</i> </p>

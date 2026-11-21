@@ -1,4 +1,5 @@
 ---
+
 title: "uustat(1)"
 name: "uustat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uustat/"
 description: "uustat – UUCP status inquiry and control"
 ---
 
-<h2>NAME</h2>
 <p> uustat &#8211; UUCP status inquiry and control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uustat -a</code> </p>

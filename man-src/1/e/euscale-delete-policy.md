@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-policy(1)"
 name: "euscale-delete-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-policy/"
 description: "euscale-delete-policy – Delete a scaling policy"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-policy &#8211; Delete a scaling policy</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-policy <code>-g</code> ASGROUP [-U URL] [&#8211;region USER [at] REGION]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_camera_matrix(3)"
 name: "get_camera_matrix"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_camera_matrix/"
 description: "get_camera_matrix – Constructs a camera matrix for perspective projection. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_camera_matrix &#8211; Constructs a camera matrix for perspective projection. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

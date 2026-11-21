@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_join_arabic(3)"
 name: "fribidi_join_arabic"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_join_arabic/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_join_arabic - do Arabic joining 
+fribidi_join_arabic - do Arabic joining 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-all(1)"
 name: "ffmpeg-all"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-ffmpeg-all/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ffmpeg - ffmpeg video converter 
+ffmpeg - ffmpeg video converter 
 
 <h2>SYNOPSIS</h2>
 

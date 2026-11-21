@@ -1,4 +1,5 @@
 ---
+
 title: "cpanp(1)"
 name: "cpanp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpanp/"
 description: "cpanp – The CPANPLUS launcher"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpanp &#8211; The CPANPLUS launcher </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpanp</code> </p>

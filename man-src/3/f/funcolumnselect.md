@@ -1,4 +1,5 @@
 ---
+
 title: "funcolumnselect(3)"
 name: "funcolumnselect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funcolumnselect/"
 description: "FunColumnSelect – select Funtools columns"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunColumnSelect &#8211; select Funtools columns</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

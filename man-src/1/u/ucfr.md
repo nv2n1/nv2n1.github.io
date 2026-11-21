@@ -1,4 +1,5 @@
 ---
+
 title: "ucfr(1)"
 name: "ucfr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ucfr/"
 description: "ucfr – Update Configuration File Registry: associate packages with configuration files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ucfr &#8211; Update Configuration File Registry: associate packages with configuration files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ucfr</code> [<i>options</i>] <i>&lt;Package&gt;</i> <i>&lt;Path to configuration file&gt;</i></p>

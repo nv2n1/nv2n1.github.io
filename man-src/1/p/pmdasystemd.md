@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasystemd(1)"
 name: "pmdasystemd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdasystemd/"
 description: "pmdasystemd – systemd performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdasystemd</code> &#8211; systemd performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/systemd/pmdasystemd</code> [<code>-f</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>] [<code>-s</code> <i>interval</i>] [<code>-U</code> <i>username</i>]</p>

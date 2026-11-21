@@ -1,4 +1,5 @@
 ---
+
 title: "ltximg(1)"
 name: "ltximg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ltximg/"
 description: "ltximg – LaTeX environments to image and standalone files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ltximg &#8211; LaTeX environments to image and standalone files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ltximg</code> [&lt;<i>options</i>&gt;] [&#8211;] &lt;<i>filename</i>&gt;.&lt;<i>tex</i>|<i>ltx</i>&gt;</p>

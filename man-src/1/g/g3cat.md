@@ -1,4 +1,5 @@
 ---
+
 title: "g3cat(1)"
 name: "g3cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g3cat/"
 description: "g3cat – concatenate multiple g3 documents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> g3cat &#8211; concatenate multiple g3 documents </p>
 <h2>SYNOPSIS</h2>
 <p> g3cat [-l] [-a] g3-file1 &#8230;</p>

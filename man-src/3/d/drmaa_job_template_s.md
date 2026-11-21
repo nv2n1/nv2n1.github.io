@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_job_template_s(3)"
 name: "drmaa_job_template_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_job_template_s/"
 description: "drmaa_job_template_s –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drmaa_job_template_s &#8211; </p>
 <p> Job template data.</p>
 <h2>SYNOPSIS</h2>

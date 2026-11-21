@@ -1,4 +1,5 @@
 ---
+
 title: "tsql(1)"
 name: "tsql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsql/"
 description: "tsql – utility to test FreeTDS connections and queries"
 ---
 
-<h2>NAME</h2>
 <p> <code>tsql</code> &#8211; utility to test FreeTDS connections and queries</p>
 <h2>SYNOPSIS</h2>
 <p> Br o &#8211;<code>S </code><i>servername</i> [-<code>I </code><i>interface</i> ] | &#8211;<code>H </code><i>hostname</i> [-<code>L</code> ] [-<code>p </code><i>port</i> ] Br c [-<code>D </code><i>dbname</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>o </code><i>options</i> ]<br />

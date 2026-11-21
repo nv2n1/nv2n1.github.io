@@ -1,4 +1,5 @@
 ---
+
 title: "isic(1)"
 name: "isic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isic/"
 description: "ISIC – IP Stack Integrity Checker"
 ---
 
-<h2>NAME</h2>
 <p> ISIC &#8211; IP Stack Integrity Checker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>esic -i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br />

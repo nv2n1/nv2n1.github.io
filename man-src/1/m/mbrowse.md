@@ -1,4 +1,5 @@
 ---
+
 title: "mbrowse(1)"
 name: "mbrowse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mbrowse/"
 description: "mbrowse – SNMP MIB browser and query tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mbrowse &#8211; SNMP MIB browser and query tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mbrowse</code></p>

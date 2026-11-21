@@ -1,4 +1,5 @@
 ---
+
 title: "echoping_dns(1)"
 name: "echoping_dns"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-echoping_dns/"
 description: "echoping_dns – echoping plugin which queries a DNS server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> echoping_dns &#8211; echoping plugin which queries a DNS server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m dns <code>hostname</code> <code>request</code></p>

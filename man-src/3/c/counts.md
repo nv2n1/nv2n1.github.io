@@ -1,4 +1,5 @@
 ---
+
 title: "counts(3)"
 name: "counts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-counts/"
 description: "QuantLib::Histogram – Histogram class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Histogram &#8211; <code>Histogram</code> class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/histogram.hpp&gt; </p>

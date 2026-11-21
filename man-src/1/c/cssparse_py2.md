@@ -1,4 +1,5 @@
 ---
+
 title: "cssparse_py2(1)"
 name: "cssparse_py2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cssparse_py2/"
 description: "cssparse – A CSS parser."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>cssparse</code> &#8211; A CSS parser. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cssparse</code> [<i>options</i>&#8230;] [<i>path</i>&#8230;]</p>

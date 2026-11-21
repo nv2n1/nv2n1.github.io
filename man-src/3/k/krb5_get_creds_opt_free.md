@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_creds_opt_free(3)"
 name: "krb5_get_creds_opt_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_creds_opt_free/"
 description: "krb5_get_creds krb5_get_creds_opt_add_options krb5_get_creds_opt_alloc krb5_get_creds_opt_free krb5_get_creds_opt_set_enctype krb5_get_creds_opt_set_impersonate krb5_get_creds_opt_set_options krb5_..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_creds</code> <code>krb5_get_creds_opt_add_options</code> <code>krb5_get_creds_opt_alloc</code> <code>krb5_get_creds_opt_free</code> <code>krb5_get_creds_opt_set_enctype</code> <code>krb5_get_creds_opt_set_impersonate</code> <code>krb5_get_creds_opt_set_options</code> <code>krb5_get_creds_opt_set_ticket</code> &#8211; get credentials from the KDC </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

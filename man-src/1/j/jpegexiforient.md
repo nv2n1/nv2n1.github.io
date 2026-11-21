@@ -1,4 +1,5 @@
 ---
+
 title: "jpegexiforient(1)"
 name: "jpegexiforient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpegexiforient/"
 description: "jpegexiforient – reads or writes the Exif Orientation Tag"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jpegexiforient &#8211; reads or writes the Exif Orientation Tag </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpegexiforient</code> [<i>switches</i>] <i>jpegfile</i></p>

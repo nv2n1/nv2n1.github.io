@@ -1,4 +1,5 @@
 ---
+
 title: "xmp(1)"
 name: "xmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmp/"
 description: "xmp – Extended Module Player"
 ---
 
-<h2>NAME</h2>
 <p> xmp &#8211; Extended Module Player </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmp</code> [<code>-a, &#8211;amplify</code> <i>factor</i>] [<code>-b, &#8211;bits</code> <i>bits</i>] [<code>-c, &#8211;stdout</code>] [<code>-D</code> <i>device-specific parameters</i>] [<code>-d, &#8211;driver</code> <i>driver</i>] [<code>-F, &#8211;nofilter</code>] [<code>-f, &#8211;frequency</code> <i>rate</i>] [<code>&#8211;fix-sample-loop</code>] [<code>-h, &#8211;help</code>] [<code>-I, &#8211;instrument-path</code>] [<code>-i, &#8211;interpolation </code><i>type</i>] [<code>&#8211;load-only</code>] [<code>-L, &#8211;list-formats</code>] [<code>-l, &#8211;loop</code>] [<code>&#8211;loop-all</code>] [<code>-M, &#8211;mute</code> <i>channel-list</i>] [<code>-m, &#8211;mono</code>] [<code>-N, &#8211;null</code>] [<code>&#8211;nocmd</code>] [<code>-o, &#8211;output-file</code> <i>filename</i>] [<code>&#8211;offset-bug-emulation</code>] [<code>-P, &#8211;pan</code> <i>pan</i>] [<code>&#8211;probe-only</code>] [<code>-q, &#8211;quiet</code>] [<code>-R, &#8211;random</code>] [<code>-S, &#8211;solo</code> <i>channel-list</i>] [<code>-s, &#8211;start</code> <i>pos</i>] [<code>-t, &#8211;time</code> <i>time</i>] [<code>-u, &#8211;unsigned</code>] [<code>&#8211;vblank</code>] [<code>-V, &#8211;version</code>] [<code>-v, &#8211;verbose</code>] [<code>-Z, &#8211;all-sequences</code>] [<code>-z, &#8211;sequence</code>] <i>modules</i> </p>

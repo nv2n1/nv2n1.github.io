@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-desktop-icon(1)"
 name: "xdg-desktop-icon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-desktop-icon/"
 description: "xdg-desktop-icon – command line tool for (un)installing icons to the desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-desktop-icon &#8211; command line tool for (un)installing icons to the desktop </p>
 <h2>SYNOPSIS</h2>
 <dl>

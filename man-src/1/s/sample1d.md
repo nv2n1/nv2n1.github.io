@@ -1,4 +1,5 @@
 ---
+
 title: "sample1d(1)"
 name: "sample1d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sample1d/"
 description: "sample1d – Resample 1-D table data using splines"
 ---
 
-<h2>NAME</h2>
 <p> sample1d &#8211; Resample 1-D table data using splines</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sample1d</code> [ <i>table</i> ] [ <code>f</code>|<code>p</code>|<code>m</code>|<code>r</code>|<code>R</code>[<code>+l</code>] ] [ <code>l</code>|<code>a</code>|<code>c</code>|<code>n</code>[<code>+1</code>|<code>+2</code>] ] [ <i>inc</i>[<i>unit</i>] ] [ <i>knotfile</i> ] [ <i>start</i>[/<i>stop</i>] ] [ <i>col</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>

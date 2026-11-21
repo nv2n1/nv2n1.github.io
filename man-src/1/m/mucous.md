@@ -1,4 +1,5 @@
 ---
+
 title: "mucous(1)"
 name: "mucous"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mucous/"
 description: "Mucous – Python / Curses client for museek"
 ---
 
-<h2>NAME</h2>
 <p> <code>Mucous</code> &#8211; Python / Curses client for museek</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mucous </code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-l &lt;<i>directory</i>&gt;] [&#8211;log &lt;<i>directory</i>&gt;] [-v] [&#8211;version] [-h] [&#8211;help]</p>

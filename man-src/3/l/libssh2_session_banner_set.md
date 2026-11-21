@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_banner_set(3)"
 name: "libssh2_session_banner_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_banner_set/"
 description: "libssh2_session_banner_set – set the SSH prococol banner for the local client"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_banner_set &#8211; set the SSH prococol banner for the local client</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

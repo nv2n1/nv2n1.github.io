@@ -1,4 +1,5 @@
 ---
+
 title: "xsubpp(1)"
 name: "xsubpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsubpp/"
 description: "xsubpp – compiler to convert Perl XS code into C code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xsubpp &#8211; compiler to convert Perl XS code into C code </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsubpp</code> [<code>-v</code>] [<code>-except</code>] [<code>-s pattern</code>] [<code>-prototypes</code>] [<code>-noversioncheck</code>] [<code>-nolinenumbers</code>] [<code>-nooptimize</code>] [<code>-typemap typemap</code>] [<code>-output filename</code>]&#8230; file.xs</p>

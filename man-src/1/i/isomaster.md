@@ -1,4 +1,5 @@
 ---
+
 title: "isomaster(1)"
 name: "isomaster"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-isomaster/"
 ---
 
-<h2>NAME</h2>
-
- isomaster - an ISO image editor
+isomaster - an ISO image editor
 
 <h2>SYNTAX</h2>
 

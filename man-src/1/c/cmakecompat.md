@@ -1,4 +1,5 @@
 ---
+
 title: "cmakecompat(1)"
 name: "cmakecompat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmakecompat/"
 description: "cmakecompat – Reference of CMake compatibility commands."
 ---
 
-<h2>NAME</h2>
 <p> cmakecompat &#8211; Reference of CMake compatibility commands. </p>
 <h2>COMPATIBILITY COMMANDS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "recvmmsg(2)"
 name: "recvmmsg"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-recvmmsg/"
 description: "recvmmsg – receive multiple messages on a socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> recvmmsg &#8211; receive multiple messages on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

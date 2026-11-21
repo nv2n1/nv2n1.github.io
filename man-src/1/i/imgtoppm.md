@@ -1,4 +1,5 @@
 ---
+
 title: "imgtoppm(1)"
 name: "imgtoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imgtoppm/"
 description: "imgtoppm – convert an Img-whatnot file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> imgtoppm &#8211; convert an Img-whatnot file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>imgtoppm</code> [<i>imgfile</i>]</p>

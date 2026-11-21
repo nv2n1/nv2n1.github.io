@@ -1,4 +1,5 @@
 ---
+
 title: "bipmkpw(1)"
 name: "bipmkpw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bipmkpw/"
 description: "bipmkpw – Password hasher for BIP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bipmkpw &#8211; Password hasher for BIP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bipmkpw</code> </p>

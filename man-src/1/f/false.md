@@ -1,4 +1,5 @@
 ---
+
 title: "false(1)"
 name: "false"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-false/"
 description: "false – do nothing, unsuccessfully"
 ---
 
-<h2 class="name">NAME</h2>
 <p> false &#8211; do nothing, unsuccessfully </p>
 <h2>SYNOPSIS</h2>
 <p> <code>false</code> [<i>,ignored command line arguments/</i>]<br />

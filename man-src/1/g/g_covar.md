@@ -1,4 +1,5 @@
 ---
+
 title: "g_covar(1)"
 name: "g_covar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_covar/"
 description: "g_covar – calculates and diagonalizes the covariance matrix"
 ---
 
-<h2>NAME</h2>
 <p> g_covar &#8211; calculates and diagonalizes the covariance matrix </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

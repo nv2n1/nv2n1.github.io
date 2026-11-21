@@ -1,4 +1,5 @@
 ---
+
 title: "flow-nfilter(1)"
 name: "flow-nfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-nfilter/"
 description: "flow-nfilter – Filter flows."
 ---
 
-<h2>NAME</h2>
 <p> flow-nfilter &#8211; Filter flows.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-nfilter</code> [ <code>-hk</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> filter_fname</i> ] [ <code>-F</code><i> filter_definition</i> ] [ <code>-v</code><i> variable binding</i> ] [ <code>-z</code><i> z_level</i> ]</p>

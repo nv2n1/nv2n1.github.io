@@ -1,4 +1,5 @@
 ---
+
 title: "netmonitor(1)"
 name: "netmonitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netmonitor/"
 description: "netmonitor – Network Bandwidth Monitor"
 ---
 
-<h2>NAME</h2>
 <p> netmonitor &#8211; Network Bandwidth Monitor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>netmonitor</code> <i>[options&#8230;..]</i> </p>

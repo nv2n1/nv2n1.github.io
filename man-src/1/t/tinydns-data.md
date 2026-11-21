@@ -1,4 +1,5 @@
 ---
+
 title: "tinydns-data(1)"
 name: "tinydns-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tinydns-data/"
 description: "tinydns-data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tinydns-data</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>tinydns-data</code> [<code>OPTIONS</code>] </p>

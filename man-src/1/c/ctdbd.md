@@ -1,4 +1,5 @@
 ---
+
 title: "ctdbd(1)"
 name: "ctdbd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctdbd/"
 description: "ctdbd – The CTDB cluster daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctdbd &#8211; The CTDB cluster daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

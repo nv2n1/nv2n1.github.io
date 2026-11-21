@@ -1,4 +1,5 @@
 ---
+
 title: "axel(1)"
 name: "axel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axel/"
 description: "Axel – A light download accelerator for Linux."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>Axel</code> &#8211; A light download accelerator for Linux.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>axel</code> [<i>OPTIONS</i>] <i>url1</i> [<i>url2</i>] [<i>url&#8230;</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wait3(2)"
 name: "wait3"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-wait3/"
 description: "wait3, wait4 – wait for process to change state, BSD style"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wait3, wait4 &#8211; wait for process to change state, BSD style </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

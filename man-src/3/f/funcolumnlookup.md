@@ -1,4 +1,5 @@
 ---
+
 title: "funcolumnlookup(3)"
 name: "funcolumnlookup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funcolumnlookup/"
 description: "FunColumnLookup – lookup a Funtools column"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunColumnLookup &#8211; lookup a Funtools column</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

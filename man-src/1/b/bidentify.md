@@ -1,4 +1,5 @@
 ---
+
 title: "bidentify(1)"
 name: "bidentify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bidentify/"
 description: "bidentify – Barry Project’s program to identify BlackBerry handhelds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bidentify</code> &#8211; Barry Project&#8217;s program to identify BlackBerry handhelds </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bidentify</code> [-B busname][-N devname][-h][-v]</p>

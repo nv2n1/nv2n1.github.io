@@ -1,4 +1,5 @@
 ---
+
 title: "pbmto4425(1)"
 name: "pbmto4425"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmto4425/"
 description: "pbmto4425 – Display PBM images on an AT&T 4425 terminal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmto4425 &#8211; Display PBM images on an AT&amp;T 4425 terminal</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmto4425</code> [<i>pbmfile</i>] </p>

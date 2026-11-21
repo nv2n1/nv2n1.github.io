@@ -1,4 +1,5 @@
 ---
+
 title: "sim2trad(1)"
 name: "sim2trad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sim2trad/"
 description: "sim2trad, trad2sim – clipboard data conversion for traditional Chinese and simplified Chinese"
 ---
 
-<h2>NAME</h2>
 <p> sim2trad, trad2sim &#8211; clipboard data conversion for traditional Chinese and simplified Chinese</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sim2trad</code><br />

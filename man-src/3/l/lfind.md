@@ -1,4 +1,5 @@
 ---
+
 title: "lfind(3)"
 name: "lfind"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lfind/"
 description: "lfind, lsearch – linear search of an array"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lfind, lsearch &#8211; linear search of an array </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

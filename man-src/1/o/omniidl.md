@@ -1,4 +1,5 @@
 ---
+
 title: "omniidl(1)"
 name: "omniidl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-omniidl/"
 description: "omniidl – omniORB idl compiler"
 ---
 
-<h2>NAME</h2>
 <p> omniidl &#8211; omniORB idl compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>omniidl</code> [options] -b&lt;back-end&gt; [back-end options] file</p>

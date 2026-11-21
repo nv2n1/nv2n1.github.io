@@ -1,4 +1,5 @@
 ---
+
 title: "keychain(1)"
 name: "keychain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keychain/"
 description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 ---
 
-<h2>NAME</h2>
 <p> keychain &#8211; re-use ssh-agent and/or gpg-agent between logins</p>
 <h2>SYNOPSIS</h2>
 <p> keychain&nbsp;<wbr>[&nbsp;<wbr>-hkQqV&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;clear &#8211;help &#8211;ignore-missing &#8211;noask &#8211;nocolor &#8211;nogui &#8211;nolock &#8211;quick &#8211;quiet &#8211;version&nbsp;<wbr>] [&nbsp;<wbr>&#8211;agents&nbsp;<wbr><i>list</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;attempts&nbsp;<wbr><i>num</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;dir&nbsp;<wbr><i>dirname</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;host&nbsp;<wbr><i>name</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;lockwait&nbsp;<wbr><i>seconds</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;stop&nbsp;<wbr><i>which</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;timeout&nbsp;<wbr><i>minutes</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>keys&#8230;&nbsp;<wbr>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_next_event(3)"
 name: "ausearch_next_event"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_next_event/"
 description: "ausearch_next_event – find the next event that meets search criteria"
 ---
 
-<h2>NAME</h2>
 <p> ausearch_next_event &#8211; find the next event that meets search criteria</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

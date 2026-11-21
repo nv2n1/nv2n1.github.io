@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_interval(3)"
 name: "ldns_dname_interval"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname_interval/"
 description: "ldns_dname_compare, ldns_dname_interval"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname_compare, ldns_dname_interval </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

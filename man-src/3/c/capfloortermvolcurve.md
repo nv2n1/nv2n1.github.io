@@ -1,4 +1,5 @@
 ---
+
 title: "capfloortermvolcurve(3)"
 name: "capfloortermvolcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-capfloortermvolcurve/"
 description: "ql/termstructures/volatility/capfloor/capfloortermvolcurve.hpp – Cap/floor at-the-money term-volatility curve."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/volatility/capfloor/capfloortermvolcurve.hpp &#8211; Cap/floor at-the-money term-volatility curve. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/capfloor/capfloortermvolatilitystructure.hpp&gt;<br />

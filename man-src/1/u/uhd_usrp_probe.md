@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_usrp_probe(1)"
 name: "uhd_usrp_probe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uhd_usrp_probe/"
 description: "uhd_usrp_probe – USRP Hardware Driver Peripheral Report Utility"
 ---
 
-<h2>NAME</h2>
 <p> uhd_usrp_probe &#8211; USRP Hardware Driver Peripheral Report Utility</p>
 <h2>DESCRIPTION</h2>
 <p> Report detailed information on UHD-supported Software Radio Peripherals attached by USB, network, or embedded configuration. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-cleanup-sockets(1)"
 name: "dbus-cleanup-sockets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-cleanup-sockets/"
 description: "dbus-cleanup-sockets – clean up leftover sockets in a directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-cleanup-sockets &#8211; clean up leftover sockets in a directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

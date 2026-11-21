@@ -1,4 +1,5 @@
 ---
+
 title: "euca-deregister(1)"
 name: "euca-deregister"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-deregister/"
 description: "euca-deregister – De-register an image. After you de-register an image it cannot be used to launch new instances."
 ---
 
-<h2>NAME</h2>
 <p> euca-deregister &#8211; De-register an image. After you de-register an image it cannot be used to launch new instances.</p>
 <h2>SYNOPSIS</h2>
 <p> euca-deregister [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>

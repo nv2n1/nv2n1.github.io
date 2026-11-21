@@ -1,4 +1,5 @@
 ---
+
 title: "al_assert(3)"
 name: "al_assert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-al_assert/"
 description: "al_assert – Asserts at the specified file and line number. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> al_assert &#8211; Asserts at the specified file and line number. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

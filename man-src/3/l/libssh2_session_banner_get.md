@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_banner_get(3)"
 name: "libssh2_session_banner_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_banner_get/"
 description: "libssh2_session_banner_get – get the remote banner"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_banner_get &#8211; get the remote banner</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

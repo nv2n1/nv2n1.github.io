@@ -1,4 +1,5 @@
 ---
+
 title: "pamsumm(1)"
 name: "pamsumm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamsumm/"
 description: "pamsumm – Summarize the samples in a Netpbm image arithmetically"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamsumm &#8211; Summarize the samples in a Netpbm image arithmetically</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsumm</code> { <code>-sum</code> | <code>-mean</code> | <code>-min</code> | <code>-max</code> } [<code>-normalize</code>] [<code>-brief</code>] [<i>imagefile</i>] </p>

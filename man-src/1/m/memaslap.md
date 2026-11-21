@@ -1,4 +1,5 @@
 ---
+
 title: "memaslap(1)"
 name: "memaslap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memaslap/"
 description: "memaslap – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memaslap &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memaslap [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmt(1)"
 name: "gmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmt/"
 description: "gmt – The Generic Mapping Tools data processing and display software package"
 ---
 
-<h2>NAME</h2>
 <p> gmt &#8211; The Generic Mapping Tools data processing and display software package</p>
 <h2>INTRODUCTION</h2>
 <p> GMT is a collection of public-domain Unix tools that allows you to manipulate x,y and x,y,z data sets (filtering, trend fitting, gridding, projecting, etc.) and produce PostScript illustrations ranging from simple x-y plots, via contour maps, to artificially illuminated surfaces and 3-D perspective views in black/white or full color. Linear, log10, and power scaling is supported in addition to over 30 common map projections. The processing and display routines within GMT are completely general and will handle any (x,y) or (x,y,z) data as input.</p>

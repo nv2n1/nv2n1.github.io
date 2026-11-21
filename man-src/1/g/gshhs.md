@@ -1,4 +1,5 @@
 ---
+
 title: "gshhs(1)"
 name: "gshhs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gshhs/"
 description: "gshhs – Extract ASCII listings from binary GSHHS or WDBII data files"
 ---
 
-<h2>NAME</h2>
 <p> gshhs &#8211; Extract ASCII listings from binary GSHHS or WDBII data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gshhs</code> <i>binaryfile.b</i> [ <code>-I</code><i>id</i> ] [ <code>-L</code> ] [ <code>-M</code> ] &gt; <i>asciifile.txt</i></p>

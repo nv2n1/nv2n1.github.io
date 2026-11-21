@@ -1,4 +1,5 @@
 ---
+
 title: "get_executable_name(3)"
 name: "get_executable_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_executable_name/"
 description: "get_executable_name – Obtains the full path to the current executable. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_executable_name &#8211; Obtains the full path to the current executable. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

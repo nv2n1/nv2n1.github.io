@@ -1,4 +1,5 @@
 ---
+
 title: "hpiel(1)"
 name: "hpiel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpiel/"
 description: "hpiel – An openhpi sample application that displays HPI event log entries."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpiel &#8211; An openhpi sample application that displays HPI event log entries. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

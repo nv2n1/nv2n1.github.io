@@ -1,4 +1,5 @@
 ---
+
 title: "runx(1)"
 name: "runx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-runx/"
 description: "runx – try to overcome problems of Xfree96 restoring textmode using svgalib."
 ---
 
-<h2>NAME</h2>
 <p> runx &#8211; try to overcome problems of Xfree96 restoring textmode using svgalib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>runx</code> </p>

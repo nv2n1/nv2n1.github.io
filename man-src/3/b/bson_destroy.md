@@ -1,4 +1,5 @@
 ---
+
 title: "bson_destroy(3)"
 name: "bson_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_destroy/"
 description: "bson_destroy() – The bson_destroy() function shall free an allocated bson_t structure."
 ---
 
-<h2>NAME</h2>
 <p> bson_destroy() &#8211; The bson_destroy() function shall free an allocated bson_t structure.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

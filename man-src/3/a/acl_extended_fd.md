@@ -1,4 +1,5 @@
 ---
+
 title: "acl_extended_fd(3)"
 name: "acl_extended_fd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_extended_fd/"
 description: "acl_extended_fd – test for information in the ACL by file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_extended_fd</code> &#8211; test for information in the ACL by file descriptor </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

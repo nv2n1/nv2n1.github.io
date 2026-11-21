@@ -1,4 +1,5 @@
 ---
+
 title: "orbd-java-1(1)"
 name: "orbd-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-orbd-java-1/"
 description: "orbd – Enables clients to locate and call persistent objects on servers in the CORBA environment."
 ---
 
-<h2>NAME</h2>
 <p> orbd &#8211; Enables clients to locate and call persistent objects on servers in the CORBA environment.</p>
 <h2>SYNOPSIS</h2>
 <pre>

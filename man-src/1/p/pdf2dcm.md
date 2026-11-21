@@ -1,4 +1,5 @@
 ---
+
 title: "pdf2dcm(1)"
 name: "pdf2dcm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdf2dcm/"
 description: "pdf2dcm – Convert PDF file to DICOM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdf2dcm &#8211; Convert PDF file to DICOM </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "gsl-config(1)"
 name: "gsl-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsl-config/"
 description: "gsl-config – script to get version number and compiler flags of the installed GSL library"
 ---
 
-<h2>NAME</h2>
 <p> gsl-config &#8211; script to get version number and compiler flags of the installed GSL library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsl-config</code> [&#8211;prefix] [&#8211;version] [&#8211;libs] [&#8211;libs-without-cblas] [&#8211;cflags]</p>

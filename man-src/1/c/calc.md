@@ -1,4 +1,5 @@
 ---
+
 title: "calc(1)"
 name: "calc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-calc/"
 description: "calc – arbitrary precision calculator"
 ---
 
-<h2>NAME</h2>
 <p> calc &#8211; arbitrary precision calculator</p>
 <h2>SYNOPSIS</h2>
 <p> <i>calc</i> [<code>-c</code>] [<code>-C</code>] [<code>-d</code>]<br />

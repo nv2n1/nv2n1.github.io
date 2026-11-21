@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-gcc(1)"
 name: "arm-gp2x-linux-gcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
 
-<h2>NAME</h2>
 <p> gcc &#8211; GNU project C and C++ compiler</p>
 <h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>]<br />

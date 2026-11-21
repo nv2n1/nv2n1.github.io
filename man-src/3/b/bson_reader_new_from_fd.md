@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_new_from_fd(3)"
 name: "bson_reader_new_from_fd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_new_from_fd/"
 description: "bson_reader_new_from_fd() – The bson_reader_new_from_fd() function shall create a new bson_reader_t that will read from the provided file-descriptor."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_new_from_fd() &#8211; The bson_reader_new_from_fd() function shall create a new bson_reader_t that will read from the provided file-descriptor.</p>
 <h2>SYNOPSIS</h2>
 <pre>

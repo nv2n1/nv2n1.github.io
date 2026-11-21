@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-about(1)"
 name: "gnome-about"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-about/"
 description: "gnome-about – Learn more about GNOME"
 ---
 
-<h2>NAME</h2>
 <p> gnome-about &#8211; Learn more about GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-about [&#8211;gnome-version]</code></p>

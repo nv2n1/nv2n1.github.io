@@ -1,4 +1,5 @@
 ---
+
 title: "audit_set_failure(3)"
 name: "audit_set_failure"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_set_failure/"
 description: "audit_set_failure – Set audit failure flag"
 ---
 
-<h2>NAME</h2>
 <p> audit_set_failure &#8211; Set audit failure flag</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pldes(1)"
 name: "pldes"
 section: "1"
@@ -6,9 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pldes/"
 ---
 
-<h2>NAME</h2>
-
- pl, pldes, plser, plmerge, plparse, pl2link<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>- property list tools
+pl, pldes, plser, plmerge, plparse, pl2link<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>- property list tools
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "pfb2t1c(1)"
 name: "pfb2t1c"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pfb2t1c/"
 description: "pfb2t1c – convert from binary PostScript Type1 into compressible .t1c t1c2pfb – convert from compressible .t1c to binary PostScript Type1"
 ---
 
-<h2>NAME</h2>
 <p> pfb2t1c &#8211; convert from binary PostScript Type1 into compressible .t1c t1c2pfb &#8211; convert from compressible .t1c to binary PostScript Type1 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pfb2t1c</code> &quot;pfb file&quot; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncat(1)"
 name: "ncat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncat/"
 description: "ncat – Concatenate and redirect sockets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ncat &#8211; Concatenate and redirect sockets </p>
 <h2>SYNOPSIS</h2>
 <dl>

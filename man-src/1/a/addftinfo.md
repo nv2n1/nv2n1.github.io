@@ -1,4 +1,5 @@
 ---
+
 title: "addftinfo(1)"
 name: "addftinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-addftinfo/"
 description: "addftinfo – add information to troff font files for use with groff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> addftinfo &#8211; add information to troff font files for use with groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-asc-height </code><i>n</i> ] [ <code>-body-depth </code><i>n</i> ] [ <code>-body-height </code><i>n</i> ] [ <code>-cap-height </code><i>n</i> ] [ <code>-comma-depth </code><i>n</i> ] [ <code>-desc-depth </code><i>n</i> ] [ <code>-fig-height </code><i>n</i> ] [ <code>-x-height </code><i>n</i> ] <i>res</i> <i>unitwidth</i> <i>font</i> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

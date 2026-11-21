@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_functions(3)"
 name: "hashkit_functions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_functions/"
 description: "hashkit_functions – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_functions &#8211; libhashkit Documentation </p>
 <p> Various hash functions to use for calculating values for keys</p>
 <h2>SYNOPSIS</h2>

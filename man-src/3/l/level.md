@@ -1,4 +1,5 @@
 ---
+
 title: "level(3)"
 name: "level"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-level/"
 description: "QuantLib::OrnsteinUhlenbeckProcess – Ornstein-Uhlenbeck process class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::OrnsteinUhlenbeckProcess &#8211; Ornstein-Uhlenbeck process class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt; </p>

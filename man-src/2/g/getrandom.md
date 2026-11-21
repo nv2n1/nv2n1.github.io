@@ -1,4 +1,5 @@
 ---
+
 title: "getrandom(2)"
 name: "getrandom"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getrandom/"
 description: "getrandom – obtain a series of random bytes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getrandom &#8211; obtain a series of random bytes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/random.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installdirs(1)"
 name: "dh_installdirs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installdirs/"
 description: "dh_installdirs – create subdirectories in package build directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installdirs &#8211; create subdirectories in package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installdirs</code> [<i>debhelper options</i>] [<code>-A</code>] [<i>dir</i> &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbxtool(1)"
 name: "dbxtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbxtool/"
 description: "dbxtool – modify the dbx revokation list"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbxtool &#8211; modify the dbx revokation list </p>
 <h2>SYNOPSIS</h2>
 <p> dbxtool [CMD]</p>

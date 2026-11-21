@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_flow_action_modify_header(3)"
 name: "mlx5dv_create_flow_action_modify_header"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_flow_action_modify_header - Flow action modify header for mlx5 provider 
+mlx5dv_create_flow_action_modify_header - Flow action modify header for mlx5 provider 
 
 <h2>SYNOPSIS</h2>
 

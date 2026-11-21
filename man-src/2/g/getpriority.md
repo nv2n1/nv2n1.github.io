@@ -1,4 +1,5 @@
 ---
+
 title: "getpriority(2)"
 name: "getpriority"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getpriority/"
 description: "getpriority, setpriority – get/set program scheduling priority"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpriority, setpriority &#8211; get/set program scheduling priority </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />

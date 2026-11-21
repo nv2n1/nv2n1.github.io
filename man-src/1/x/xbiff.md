@@ -1,4 +1,5 @@
 ---
+
 title: "xbiff(1)"
 name: "xbiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xbiff/"
 description: "xbiff – mailbox flag for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xbiff &#8211; mailbox flag for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xbiff</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ <i>-option</i> &#8230; ]</p>

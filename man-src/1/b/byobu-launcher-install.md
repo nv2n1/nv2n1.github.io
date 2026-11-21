@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-launcher-install(1)"
 name: "byobu-launcher-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-launcher-install/"
 description: "byobu-launcher-install – Byobu Launcher installation utility"
 ---
 
-<h2>NAME</h2>
 <p> byobu-launcher-install &#8211; Byobu Launcher installation utility </p>
 <h2>SYNOPSIS</h2>
 <p> byobu-launcher-install [-n|&#8211;no-logout] </p>

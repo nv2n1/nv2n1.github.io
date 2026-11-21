@@ -1,4 +1,5 @@
 ---
+
 title: "sg_referrals(8)"
 name: "sg_referrals"
 section: "8"
@@ -6,9 +7,6 @@ letter: "s"
 url: "/docs/linux/man/8-sg_referrals/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> sg_referrals &#8211; send SCSI REPORT REFERRALS command  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sg_referrals</code> [<i>--help</i>] [<i>--hex</i>] [<i>--lba=LBA</i>] [<i>--maxlen=LEN</i>] [<i>--one-segment</i>] [<i>--raw</i>] [<i>--verbose</i>] [<i>--version</i>] <i>DEVICE</i>  </p>

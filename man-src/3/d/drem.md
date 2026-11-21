@@ -1,4 +1,5 @@
 ---
+
 title: "drem(3)"
 name: "drem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drem/"
 description: "drem, dremf, dreml, remainder, remainderf, remainderl – floating-point remainder function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drem, dremf, dreml, remainder, remainderf, remainderl &#8211; floating-point remainder function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

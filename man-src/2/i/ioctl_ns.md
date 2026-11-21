@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_ns(2)"
 name: "ioctl_ns"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_ns/"
 description: "ioctl_ns – ioctl() operations for Linux namespaces"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_ns &#8211; ioctl() operations for Linux namespaces </p>
 <h2>DESCRIPTION</h2>
 <h3>Discovering namespace relationships</h3>

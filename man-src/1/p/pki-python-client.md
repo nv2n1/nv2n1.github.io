@@ -1,4 +1,5 @@
 ---
+
 title: "pki-python-client(1)"
 name: "pki-python-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-python-client/"
 description: "pki-python-client – Dogtag Python Client API"
 ---
 
-<h2>NAME</h2>
 <p> pki-python-client &#8211; Dogtag Python Client API </p>
 <p> Dogtag is an enterprise software system designed to manage enterprise Public Key Infrastructure (PKI) deployments. These pages document the Python client API that can be used to interact with Dogtag&#8217;s REST API to request and issue certificates, store secrets in the KRA etc.</p>
 <h2>PKI PACKAGE</h2>

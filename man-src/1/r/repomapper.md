@@ -1,4 +1,5 @@
 ---
+
 title: "repomapper(1)"
 name: "repomapper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repomapper/"
 description: "repomapper – update and manipulate contributor maps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> repomapper &#8211; update and manipulate contributor maps </p>
 <h2>SYNOPSIS</h2>
 <dl>

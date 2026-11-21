@@ -1,4 +1,5 @@
 ---
+
 title: "vala-gen-project(1)"
 name: "vala-gen-project"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vala-gen-project/"
 description: "vala-gen-project – generate the and automake skeleton for your vala project"
 ---
 
-<h2>NAME</h2>
 <p> vala-gen-project &#8211; generate the and automake skeleton for your vala project</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vala-gen-project</code> [OPTION&#8230;] [NAME]</p>

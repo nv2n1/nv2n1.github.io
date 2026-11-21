@@ -1,4 +1,5 @@
 ---
+
 title: "control_rancid(1)"
 name: "control_rancid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-control_rancid/"
 description: "control_rancid – run rancid for devices of a group"
 ---
 
-<h2>NAME</h2>
 <p> control_rancid &#8211; run rancid for devices of a group</p>
 <h2>SYNOPSIS</h2>
 <p> <code>control_rancid</code> [<code>-V</code>] [<code>-f&nbsp;<wbr></code>config_file]&nbsp;<wbr>[<code>-m&nbsp;<wbr></code>mail_rcpt]&nbsp;<wbr>[<code>-r&nbsp;<wbr></code>device_name]&nbsp;<wbr>group</p>

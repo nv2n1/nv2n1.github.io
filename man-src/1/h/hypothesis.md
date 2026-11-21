@@ -1,4 +1,5 @@
 ---
+
 title: "hypothesis(1)"
 name: "hypothesis"
 section: "1"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-hypothesis/"
 ---
 
-<h2>NAME</h2>
-
- hypothesis - Hypothesis Documentation 
+hypothesis - Hypothesis Documentation 
 
  <i>Hypothesis</i> is a Python library for creating unit tests which are simpler to write and more powerful when run, finding edge cases in your code you wouldn't have thought to look for. It is stable, powerful and easy to add to any existing test suite. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "snmpbulkget(1)"
 name: "snmpbulkget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpbulkget/"
 description: "snmpbulkget – communicates with a network entity using SNMP GETBULK requests."
 ---
 
-<h2>NAME</h2>
 <p> snmpbulkget &#8211; communicates with a network entity using SNMP GETBULK requests.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpbulkget</code> [COMMON OPTIONS] [-Cn &lt;num&gt;] [-Cr &lt;NUM&gt;] AGENT OID [OID]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qbittorrent-nox(1)"
 name: "qbittorrent-nox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qbittorrent-nox/"
 description: "qBittorrent-nox – a command line Bittorrent client written in C++ / Qt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qBittorrent-nox &#8211; a command line Bittorrent client written in C++ / Qt</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qbittorrent-nox</code> [&#8211;d|&#8211;daemon] [&#8211;webui-port=x] [TORRENT_FILE | URL]&#8230; </p>

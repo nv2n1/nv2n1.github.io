@@ -1,4 +1,5 @@
 ---
+
 title: "zshtcpsys(1)"
 name: "zshtcpsys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshtcpsys/"
 description: "zshtcpsys – zsh tcp system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshtcpsys &#8211; zsh tcp system </p>
 <h2>DESCRIPTION</h2>
 <p> A module <code>zsh/net/tcp</code> is provided to provide network I/O over TCP/IP from within the shell; see its description in <i><a href="/docs/linux/man/1-zshmodules/">zshmodules</a></i>(1). This manual page describes a function suite based on the module. If the module is installed, the functions are usually installed at the same time, in which case they will be available for autoloading in the default function search path. In addition to the <code>zsh/net/tcp</code> module, the <code>zsh/zselect</code> module is used to implement timeouts on read operations. For troubleshooting tips, consult the corresponding advice for the <code>zftp</code> functions described in <i><a href="/docs/linux/man/1-zshzftpsys/">zshzftpsys</a></i>(1). </p>

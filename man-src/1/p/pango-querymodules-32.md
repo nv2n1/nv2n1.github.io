@@ -1,4 +1,5 @@
 ---
+
 title: "pango-querymodules-32(1)"
 name: "pango-querymodules-32"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pango-querymodules-32/"
 description: "pango-querymodules – Module registration utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pango-querymodules &#8211; Module registration utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

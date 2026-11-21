@@ -1,4 +1,5 @@
 ---
+
 title: "amount_(3)"
 name: "amount_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-amount_/"
 description: "QuantLib::FixedDividend – Predetermined cash flow."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::FixedDividend &#8211; Predetermined cash flow. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/dividend.hpp&gt; </p>

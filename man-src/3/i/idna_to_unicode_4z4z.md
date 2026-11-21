@@ -1,4 +1,5 @@
 ---
+
 title: "idna_to_unicode_4z4z(3)"
 name: "idna_to_unicode_4z4z"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-idna_to_unicode_4z4z/"
 description: "idna_to_unicode_4z4z – API function"
 ---
 
-<h2>NAME</h2>
 <p> idna_to_unicode_4z4z &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>

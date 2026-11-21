@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-restore(1)"
 name: "trace-cmd-restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-restore/"
 description: "trace-cmd-restore – restore a failed trace record"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-restore &#8211; restore a failed trace record </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd restore</code> [<i>OPTIONS</i>] [<i>command</i>] cpu-file [cpu-file &#8230;]</p>

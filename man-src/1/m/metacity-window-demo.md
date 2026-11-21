@@ -1,4 +1,5 @@
 ---
+
 title: "metacity-window-demo(1)"
 name: "metacity-window-demo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-metacity-window-demo/"
 description: "metacity-window-demo – demo of window features"
 ---
 
-<h2>NAME</h2>
 <p> metacity-window-demo &#8211; demo of window features</p>
 <h2>SYNOPSIS</h2>
 <p> <code>metacity-window-demo</code></p>

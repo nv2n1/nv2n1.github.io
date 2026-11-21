@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-generate-backtrace(1)"
 name: "abrt-action-generate-backtrace"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-generate-backtrace/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-generate-backtrace - Analyzes coredump, generates and saves backtrace. 
+abrt-action-generate-backtrace - Analyzes coredump, generates and saves backtrace. 
 
 <h2>SYNOPSIS</h2>
 

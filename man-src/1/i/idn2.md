@@ -1,4 +1,5 @@
 ---
+
 title: "idn2(1)"
 name: "idn2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idn2/"
 description: "idn2 – Libidn2 Internationalized Domain Names conversion tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>idn2</code> &#8211; Libidn2 Internationalized Domain Names conversion tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idn2</code> [OPTION]&#8230; [STRINGS]&#8230;</p>

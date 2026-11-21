@@ -1,4 +1,5 @@
 ---
+
 title: "load_bitmap_font(3)"
 name: "load_bitmap_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_bitmap_font/"
 description: "load_bitmap_font – Grabs a font from a bitmap file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_bitmap_font &#8211; Grabs a font from a bitmap file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

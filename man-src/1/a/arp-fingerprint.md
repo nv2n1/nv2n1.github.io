@@ -1,4 +1,5 @@
 ---
+
 title: "arp-fingerprint(1)"
 name: "arp-fingerprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arp-fingerprint/"
 description: "arp-fingerprint – Fingerprint a system using ARP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arp-fingerprint &#8211; Fingerprint a system using ARP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arp-fingerprint</code> [<i>options</i>] <i>target</i> </p>

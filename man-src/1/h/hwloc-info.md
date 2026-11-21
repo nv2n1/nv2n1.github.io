@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-info(1)"
 name: "hwloc-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-info/"
 description: "hwloc-info – Show some information about some objects or about a topology"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-info &#8211; Show some information about some objects or about a topology</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-info</code> [ <i>options </i>]&#8230; <i>&lt;object&gt;</i>&#8230; </p>

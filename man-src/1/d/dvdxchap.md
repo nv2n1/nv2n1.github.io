@@ -1,4 +1,5 @@
 ---
+
 title: "dvdxchap(1)"
 name: "dvdxchap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvdxchap/"
 description: "dvdxchap – Extract chapter information from DVDs"
 ---
 
-<h2>NAME</h2>
 <p> dvdxchap &#8211; Extract chapter information from DVDs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvdxchap</code> [<i>options</i>] <i>DVD-SOURCE</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_control(1)"
 name: "arm4_control"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm4_control/"
 description: "arm4_control – ARM 4 agent control program"
 ---
 
-<h2>NAME</h2>
 <p> arm4_control &#8211; ARM 4 agent control program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arm4_control</code> <i>&#8211;help|-h</i><br />

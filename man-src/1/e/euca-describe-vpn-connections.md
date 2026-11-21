@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpn-connections(1)"
 name: "euca-describe-vpn-connections"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-vpn-connections/"
 description: "euca-describe-vpn-connections – Show information about VPN connections"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-vpn-connections &#8211; Show information about VPN connections</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-vpn-connections [&#8211;format FORMAT]</p>

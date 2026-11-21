@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-mixer(1)"
 name: "ffado-mixer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-mixer/"
 description: "ffado-mixer – a graphical front-end for the FFADO mixer DBus controls exposed by ffado-dbus-server."
 ---
 
-<h2>NAME</h2>
 <p> ffado-mixer &#8211; a graphical front-end for the FFADO mixer DBus controls exposed by ffado-dbus-server.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-mixer</code> </p>

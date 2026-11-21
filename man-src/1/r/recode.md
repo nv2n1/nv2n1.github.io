@@ -1,4 +1,5 @@
 ---
+
 title: "recode(1)"
 name: "recode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-recode/"
 description: "recode – manual page for recode 3.6"
 ---
 
-<h2>NAME</h2>
 <p> recode &#8211; manual page for recode 3.6</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lt-recode</code> [<i>OPTION</i>]&#8230; [ [<i>CHARSET</i>] <i>| REQUEST </i>[<i>FILE</i>]&#8230; ]</p>

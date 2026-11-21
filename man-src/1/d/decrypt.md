@@ -1,4 +1,5 @@
 ---
+
 title: "decrypt(1)"
 name: "decrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-decrypt/"
 description: "decrypt – 802.11b packet decryption tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>decrypt</code> &#8211; 802.11b packet decryption tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>decrypt (-p </code><i>key | </i><code>-f </code><i>dictfile ) </i><code>-m </code><i>bssid </i><code>-e </code><i>infile </i> <code>-d </code><i>outfile </i> [-b ] [-o <i>offset</i> ]</p>

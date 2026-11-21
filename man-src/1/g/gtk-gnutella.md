@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-gnutella(1)"
 name: "gtk-gnutella"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-gnutella/"
 description: "gtk-gnutella – A Gnutella client for Gtk+"
 ---
 
-<h2>NAME</h2>
 <p> gtk-gnutella &#8211; A Gnutella client for Gtk+</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtk-gnutella</code></p>

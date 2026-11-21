@@ -1,4 +1,5 @@
 ---
+
 title: "fixmacps(1)"
 name: "fixmacps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixmacps/"
 description: "fixmacps – filter to fix Macintosh documents with saner version of md"
 ---
 
-<h2>NAME</h2>
 <p> fixmacps &#8211; filter to fix Macintosh documents with saner version of md</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixmacps </code> &lt; <i>Macintosh.ps</i> &gt; <i>Fixed.ps</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hullwhite(3)"
 name: "hullwhite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hullwhite/"
 description: "ql/models/shortrate/onefactormodels/hullwhite.hpp – Hull & White (HW) model."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/models/shortrate/onefactormodels/hullwhite.hpp &#8211; Hull &amp; White (HW) model. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodels/vasicek.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aa_image(3)"
 name: "aa_image"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_image/"
 description: "aa_image – returns pointer to the framebuffer emulated by AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_image &#8211; returns pointer to the framebuffer emulated by AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-8(3)"
 name: "std-codecvt-8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-std-codecvt-8/"
 description: "std::wctomb – std::wctomb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> std::wctomb &#8211; std::wctomb</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;cstdlib&gt;<br />

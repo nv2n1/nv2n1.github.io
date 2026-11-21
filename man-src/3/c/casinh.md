@@ -1,4 +1,5 @@
 ---
+
 title: "casinh(3)"
 name: "casinh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-casinh/"
 description: "casinh, casinhf, casinhl – complex arc sine hyperbolic"
 ---
 
-<h2 class="name">NAME</h2>
 <p> casinh, casinhf, casinhl &#8211; complex arc sine hyperbolic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

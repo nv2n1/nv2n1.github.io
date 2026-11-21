@@ -1,4 +1,5 @@
 ---
+
 title: "jmtpfs(1)"
 name: "jmtpfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jmtpfs/"
 description: "jmtpfs – FUSE based MTP filesystem"
 ---
 
-<h2>NAME</h2>
 <p> jmtpfs &#8211; FUSE based MTP filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jmtpfs</code> [OPTIONS] &lt;mountpoint&gt; </p>

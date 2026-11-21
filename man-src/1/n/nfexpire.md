@@ -1,4 +1,5 @@
 ---
+
 title: "nfexpire(1)"
 name: "nfexpire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfexpire/"
 description: "nfexpire – data expiry program"
 ---
 
-<h2>NAME</h2>
 <p> nfexpire &#8211; data expiry program</p>
 <h2>SYNOPSIS</h2>
 <dl>

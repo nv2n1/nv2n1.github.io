@@ -1,4 +1,5 @@
 ---
+
 title: "process_vm_readv(2)"
 name: "process_vm_readv"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-process_vm_readv/"
 description: "process_vm_readv, process_vm_writev – transfer data between process address spaces"
 ---
 
-<h2 class="name">NAME</h2>
 <p> process_vm_readv, process_vm_writev &#8211; transfer data between process address spaces </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

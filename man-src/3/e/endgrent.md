@@ -1,4 +1,5 @@
 ---
+
 title: "endgrent(3)"
 name: "endgrent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-endgrent/"
 description: "getgrent, setgrent, endgrent – get group file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getgrent, setgrent, endgrent &#8211; get group file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

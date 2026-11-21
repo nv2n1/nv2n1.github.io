@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_obj_query_async(3)"
 name: "mlx5dv_devx_obj_query_async"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_obj_query_async/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_obj_create - Creates a devx object 
+mlx5dv_devx_obj_create - Creates a devx object 
 
  mlx5dv_devx_obj_destroy - Destroys a devx object 
 

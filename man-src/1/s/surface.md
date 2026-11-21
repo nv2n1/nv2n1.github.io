@@ -1,4 +1,5 @@
 ---
+
 title: "surface(1)"
 name: "surface"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-surface/"
 description: "surface – Grid table data using adjustable tension continuous curvature splines"
 ---
 
-<h2>NAME</h2>
 <p> surface &#8211; Grid table data using adjustable tension continuous curvature splines</p>
 <h2>SYNOPSIS</h2>
 <p> <code>surface</code> [ <i>table</i> ] <i>outputfile.nc</i> <i>increment</i> <i>region</i> [ <i>aspect_ratio</i> ] [ <i>convergence_limit</i> ] [ <code>l</code><i>lower</i> ] [ <code>-Lu</code><i>upper</i> ] [ <i>max_iterations</i> ] [ ] [ <i>search_radius</i>[<code>m</code>|<code>s</code>] ] [ [<code>i</code>|<code>b</code>]<i>tension_factor</i> ] [ [<i>level</i>] ] [ <i>over-relaxation_factor</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

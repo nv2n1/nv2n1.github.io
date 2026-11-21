@@ -1,4 +1,5 @@
 ---
+
 title: "gmtpath(1)"
 name: "gmtpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtpath/"
 description: "gmtpath – Get full pathname for gmt files"
 ---
 
-<h2>NAME</h2>
 <p> gmtpath &#8211; Get full pathname for gmt files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtpath</code> <i>leg-ids</i></p>

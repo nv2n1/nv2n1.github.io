@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_sort_obj(3)"
 name: "hdf_sort_obj"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_sort_obj/"
 description: "hdf_sort_obj – sort the children of an HDF node"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_sort_obj &#8211; sort the children of an HDF node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

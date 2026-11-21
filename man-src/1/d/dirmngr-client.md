@@ -1,4 +1,5 @@
 ---
+
 title: "dirmngr-client(1)"
 name: "dirmngr-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dirmngr-client/"
 description: "dirmngr-client – Tool to access the Dirmngr services"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>dirmngr-client</code> &#8211; Tool to access the Dirmngr services </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dirmngr-client</code> [<i>options</i>] [<i>certfile</i>|<i>pattern</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pstoimg(1)"
 name: "pstoimg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstoimg/"
 description: "pstoimg – Convert a PostScript file to a bitmap image using Ghostscript and the Netpbm utilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pstoimg &#8211; Convert a PostScript file to a bitmap image using Ghostscript and the Netpbm utilities </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstoimg</code> <code>-help</code> | <code>-version</code> </p>

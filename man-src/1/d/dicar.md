@@ -1,4 +1,5 @@
 ---
+
 title: "dicar(1)"
 name: "dicar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dicar/"
 description: "dicar – Archive Binary Dictionary"
 ---
 
-<h2>NAME</h2>
 <p> dicar &#8211; Archive Binary Dictionary</p>
 <h2>SYNOPSYS</h2>
 <p> <code>dicar</code> <code>-t</code> <i>bindic1</i><br />

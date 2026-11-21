@@ -1,4 +1,5 @@
 ---
+
 title: "get_filename(3)"
 name: "get_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_filename/"
 description: "get_filename – Returns a pointer to the filename portion of a path. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_filename &#8211; Returns a pointer to the filename portion of a path. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

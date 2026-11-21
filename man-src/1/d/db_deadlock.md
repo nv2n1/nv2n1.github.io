@@ -1,4 +1,5 @@
 ---
+
 title: "db_deadlock(1)"
 name: "db_deadlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_deadlock/"
 description: "db5.3_deadlock – Detect and abort deadlocks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_deadlock &#8211; Detect and abort deadlocks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_deadlock</code> [-Vv] [-a e | m | n | o | W | w | y] [-h home] [-L file] [-t sec.usec]</p>

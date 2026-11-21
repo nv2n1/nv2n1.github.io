@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_trace(3)"
 name: "libssh2_trace"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_trace/"
 description: "libssh2_trace – enable debug info from inside libssh2"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_trace &#8211; enable debug info from inside libssh2</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

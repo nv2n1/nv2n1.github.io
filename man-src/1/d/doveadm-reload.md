@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-reload(1)"
 name: "doveadm-reload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-reload/"
 description: "doveadm – Dovecot’s administration utility"
 ---
 
-<h2>NAME</h2>
 <p> doveadm &#8211; Dovecot&#8217;s administration utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <i>command</i> [<i>command_options</i>] [<i>command_arguments</i>]</p>

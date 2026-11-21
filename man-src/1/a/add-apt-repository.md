@@ -1,4 +1,5 @@
 ---
+
 title: "add-apt-repository(1)"
 name: "add-apt-repository"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-add-apt-repository/"
 description: "add-apt-repository – Adds a repository into the /etc/apt/sources.list or /etc/apt/sources.list.d or removes an existing one"
 ---
 
-<h2 class="name">NAME</h2>
 <p> add-apt-repository &#8211; Adds a repository into the /etc/apt/sources.list or /etc/apt/sources.list.d or removes an existing one </p>
 <h2>SYNOPSIS</h2>
 <p> <code>add-apt-repository </code><i>[OPTIONS]</i> <i>[LINE]</i></p>

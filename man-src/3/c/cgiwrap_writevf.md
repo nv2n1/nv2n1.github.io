@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_writevf(3)"
 name: "cgiwrap_writevf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_writevf/"
 description: "cgiwrap_writevf – a wrapper for vprintf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_writevf &#8211; a wrapper for vprintf </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

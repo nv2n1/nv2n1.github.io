@@ -1,4 +1,5 @@
 ---
+
 title: "rtlbrowse(1)"
 name: "rtlbrowse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rtlbrowse/"
 description: "rtlbrowse – Allows hierarchical browsing of Verilog HDL source code and library design files."
 ---
 
-<h2>NAME</h2>
 <p> rtlbrowse &#8211; Allows hierarchical browsing of Verilog HDL source code and library design files.</p>
 <h2>SYNTAX</h2>
 <p> rtlbrowse &lt;<i>stemsfilename</i>&gt;</p>

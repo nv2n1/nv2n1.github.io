@@ -1,4 +1,5 @@
 ---
+
 title: "g_trjorder_d(1)"
 name: "g_trjorder_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_trjorder_d/"
 description: "trjorder – orders molecules according to their distance to a group"
 ---
 
-<h2>NAME</h2>
 <p> trjorder &#8211; orders molecules according to their distance to a group </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

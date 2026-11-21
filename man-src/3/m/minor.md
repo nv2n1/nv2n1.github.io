@@ -1,4 +1,5 @@
 ---
+
 title: "minor(3)"
 name: "minor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-minor/"
 description: "makedev, major, minor – manage a device number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makedev, major, minor &#8211; manage a device number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

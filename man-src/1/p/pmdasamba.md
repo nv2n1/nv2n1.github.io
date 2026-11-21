@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasamba(1)"
 name: "pmdasamba"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdasamba/"
 description: "pmdasamba – Samba performance metrics domain agent (PMDA)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pmdasamba &#8211; Samba performance metrics domain agent (PMDA) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdasamba</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from Samba, a Windows <font SIZE="-1">SMB/CIFS</font> server for <font SIZE="-1">UNIX.</font> </p>

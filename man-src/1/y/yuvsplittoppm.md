@@ -1,4 +1,5 @@
 ---
+
 title: "yuvsplittoppm(1)"
 name: "yuvsplittoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvsplittoppm/"
 description: "yuvsplittoppm – convert a Y- and a U- and a V-file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuvsplittoppm &#8211; convert a Y- and a U- and a V-file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvsplittoppm </code> <i>basename width height</i> [-ccir601]</p>

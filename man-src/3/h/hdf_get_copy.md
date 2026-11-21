@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_copy(3)"
 name: "hdf_get_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_copy/"
 description: "hdf_get_copy – Returns a copy of a string in the HDF data set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_get_copy &#8211; Returns a copy of a string in the HDF data set </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

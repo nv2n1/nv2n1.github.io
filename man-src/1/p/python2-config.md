@@ -1,4 +1,5 @@
 ---
+
 title: "python2-config(1)"
 name: "python2-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-python2-config/"
 description: "python-config – output build options for python C/C++ extensions or embedding"
 ---
 
-<h2 class="name">NAME</h2>
 <p> python-config &#8211; output build options for python C/C++ extensions or embedding </p>
 <h2>SYNOPSIS</h2>
 <p> <code>python-config</code> [ <code>&#8211;prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;includes</code> ] [ <code>&#8211;libs</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;ldflags</code> ] [ <code>&#8211;extension-suffix</code> ] [ <code>&#8211;configdir</code> ] [ <code>&#8211;help</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "acyclic(1)"
 name: "acyclic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acyclic/"
 description: "acyclic – make directed graph acyclic"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acyclic &#8211; make directed graph acyclic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acyclic</code> [ <code>-nv?</code> ] [ <code>-o</code> <i>outfile</i> ] [ <i>file</i> ]</p>

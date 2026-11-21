@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_init(3)"
 name: "auparse_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_init/"
 description: "auparse_init – initialize an instance of the audit parsing library"
 ---
 
-<h2>NAME</h2>
 <p> auparse_init &#8211; initialize an instance of the audit parsing library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

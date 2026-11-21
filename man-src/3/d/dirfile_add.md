@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_add(3)"
 name: "dirfile_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_add/"
 description: "dirfile_add, dirfile_madd — add a field to a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_add, dirfile_madd &#8212; add a field to a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

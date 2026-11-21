@@ -1,4 +1,5 @@
 ---
+
 title: "malaga(1)"
 name: "malaga"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-malaga/"
 description: "malaga – natural-language word and sentence analysis"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malaga &#8211; natural-language word and sentence analysis</p>
 <h2>SYNOPSIS</h2>
 <p> <code>malaga</code> [<code>-morphology</code>|<code>-syntax</code>] [<code>-quoted</code>] [<code>-input</code> <i>input</i>] <i>project-file</i> </p>

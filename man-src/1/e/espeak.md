@@ -1,4 +1,5 @@
 ---
+
 title: "espeak(1)"
 name: "espeak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-espeak/"
 description: "espeak – A multi-lingual software speech synthesizer."
 ---
 
-<h2 class="name">NAME</h2>
 <p> espeak &#8211; A multi-lingual software speech synthesizer. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>espeak</code> [<i>options</i>]&nbsp;<wbr>[<i>words</i>]</p>

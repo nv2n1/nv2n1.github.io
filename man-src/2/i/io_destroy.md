@@ -1,4 +1,5 @@
 ---
+
 title: "io_destroy(2)"
 name: "io_destroy"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-io_destroy/"
 description: "io_destroy – destroy an asynchronous I/O context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> io_destroy &#8211; destroy an asynchronous I/O context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

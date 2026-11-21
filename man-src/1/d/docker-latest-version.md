@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-version(1)"
 name: "docker-latest-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-version/"
 description: "docker-version – Show the Docker version information."
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-version &#8211; Show the Docker version information. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker version</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;format</code>[=<i>FORMAT</i>]] </p>

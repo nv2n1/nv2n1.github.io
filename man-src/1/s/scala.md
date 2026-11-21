@@ -1,4 +1,5 @@
 ---
+
 title: "scala(1)"
 name: "scala"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scala/"
 description: "scala – Run code in the Scala 2 language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>scala</code> &#8211; Run code in the Scala 2 language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scala</code> [ &lt;<i>option</i>&gt; ]&#8230; [ &lt;<i>torun</i>&gt; &lt;<i>argument</i>&gt;&#8230; ]</p>

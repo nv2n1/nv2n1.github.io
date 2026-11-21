@@ -1,4 +1,5 @@
 ---
+
 title: "bson_vsnprintf(3)"
 name: "bson_vsnprintf"
 section: "3"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_vsnprintf/"
 description: "bson_vsnprintf() – Like bson_snprintf() but allows for variadic parameters."
 ---
-<h2>NAME</h2>
+
 <p> bson_vsnprintf() - Like bson_snprintf() but allows for variadic parameters.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>int

@@ -1,4 +1,5 @@
 ---
+
 title: "bcftools(1)"
 name: "bcftools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcftools/"
 description: "bcftools – utilities for variant calling and manipulating VCFs and BCFs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> bcftools &#8211; utilities for variant calling and manipulating VCFs and BCFs. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcftools</code> [&#8211;version|&#8211;version-only] [&#8211;help] [<i>COMMAND</i>] [<i>OPTIONS</i>]</p>

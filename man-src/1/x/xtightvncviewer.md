@@ -1,4 +1,5 @@
 ---
+
 title: "xtightvncviewer(1)"
 name: "xtightvncviewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xtightvncviewer/"
 description: "vncviewer – an X viewer client for VNC"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vncviewer &#8211; an X viewer client for VNC </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>:display</i>]<br />

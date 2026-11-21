@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_pkt(1)"
 name: "nfstest_pkt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_pkt/"
 description: "nfstest_pkt – Packet trace decoder"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_pkt &#8211; Packet trace decoder</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_pkt [options] &lt;trace1.cap&gt; [&lt;trace2.cap&gt; &#8230;]</p>

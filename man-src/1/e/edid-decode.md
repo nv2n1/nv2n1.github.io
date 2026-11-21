@@ -1,4 +1,5 @@
 ---
+
 title: "edid-decode(1)"
 name: "edid-decode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edid-decode/"
 description: "edid-decode – Decode EDID data in human-readable format"
 ---
 
-<h2>NAME</h2>
 <p> edid-decode &#8211; Decode EDID data in human-readable format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>edid-decode [in] [out]</code></p>

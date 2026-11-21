@@ -1,4 +1,5 @@
 ---
+
 title: "rdmsr(1)"
 name: "rdmsr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdmsr/"
 description: "rdmsr – tool for reading CPU machine specific registers (MSR)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rdmsr &#8211; tool for reading CPU machine specific registers (MSR) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdmsr [options] regno</code></p>

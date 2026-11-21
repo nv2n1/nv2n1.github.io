@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_getnamebyaddr(3)"
 name: "lwres_getnamebyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_getnamebyaddr/"
 description: "lwres_string_parse, lwres_addr_parse, lwres_getaddrsbyname, lwres_getnamebyaddr – lightweight resolver utility functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_string_parse, lwres_addr_parse, lwres_getaddrsbyname, lwres_getnamebyaddr &#8211; lightweight resolver utility functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

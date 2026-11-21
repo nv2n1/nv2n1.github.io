@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rnd(3)"
 name: "gnutls_rnd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_rnd/"
 description: "gnutls_rnd – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_rnd &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

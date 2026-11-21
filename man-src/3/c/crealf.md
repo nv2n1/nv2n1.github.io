@@ -1,4 +1,5 @@
 ---
+
 title: "crealf(3)"
 name: "crealf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-crealf/"
 description: "creal, crealf, creall – get real part of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> creal, crealf, creall &#8211; get real part of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

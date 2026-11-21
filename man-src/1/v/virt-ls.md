@@ -1,4 +1,5 @@
 ---
+
 title: "virt-ls(1)"
 name: "virt-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-ls/"
 description: "virt-ls – List files in a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-ls &#8211; List files in a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

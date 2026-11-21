@@ -1,4 +1,5 @@
 ---
+
 title: "cycle(1)"
 name: "cycle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cycle/"
 description: "cycle – a calendar for women"
 ---
 
-<h2>NAME</h2>
 <p> cycle &#8211; a calendar for women</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cycle</code></p>

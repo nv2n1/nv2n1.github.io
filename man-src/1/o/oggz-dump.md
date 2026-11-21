@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-dump(1)"
 name: "oggz-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-dump/"
 description: "oggz-dump — Hexdump packets of an Ogg file, or revert an Ogg file from such a hexdump"
 ---
 
-<h2>NAME</h2>
 <p> oggz-dump &#8212; Hexdump packets of an Ogg file, or revert an Ogg file from such a hexdump<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

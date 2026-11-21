@@ -1,4 +1,5 @@
 ---
+
 title: "gjavah(1)"
 name: "gjavah"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gjavah/"
 description: "gjavah – – generate header files from Java class files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gjavah &#8211; &#8211; generate header files from Java class files </p>
 <h2>SYNOPSIS</h2>
 <p> gjavah &#8230;</p>

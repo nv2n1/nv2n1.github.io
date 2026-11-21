@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_srq(3)"
 name: "ibv_query_srq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_query_srq/"
 description: "ibv_query_srq – get the attributes of a shared receive queue (SRQ)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_query_srq &#8211; get the attributes of a shared receive queue (SRQ) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

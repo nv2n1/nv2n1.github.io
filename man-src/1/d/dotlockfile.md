@@ -1,4 +1,5 @@
 ---
+
 title: "dotlockfile(1)"
 name: "dotlockfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dotlockfile/"
 description: "dotlockfile – Utility to manage lockfiles"
 ---
 
-<h2>NAME</h2>
 <p> dotlockfile &#8211; Utility to manage lockfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/dotlockfile</code> [<code>-p</code>] [<code>-c</code>] [<code>-m</code>] [<code>-l|-u|-t</code>] [<code>-r</code> <i>retries</i>] [<code>lockfile]</code></p>

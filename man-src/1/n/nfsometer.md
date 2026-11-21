@@ -1,4 +1,5 @@
 ---
+
 title: "nfsometer(1)"
 name: "nfsometer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfsometer/"
 description: "nfsometer – NFS performance measurement tool"
 ---
 
-<h2>NAME</h2>
 <p> nfsometer &#8211; NFS performance measurement tool</p>
 <h2>SYNOPSIS</h2>
 <p> nfsometer [options] [mode] [[&lt;server:path&gt;] [workloads&#8230;]]</p>

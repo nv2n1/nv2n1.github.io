@@ -1,4 +1,5 @@
 ---
+
 title: "xmlstarlet(1)"
 name: "xmlstarlet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlstarlet/"
 description: "xmlstarlet – command line XML/XSLT toolkit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmlstarlet &#8211; command line XML/XSLT toolkit </p>
 <h2>SYNOPSIS</h2>
 <dl>

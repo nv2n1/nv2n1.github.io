@@ -1,4 +1,5 @@
 ---
+
 title: "plotfont(1)"
 name: "plotfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plotfont/"
 description: "plotfont – produce character maps of fonts supported by the plotting utilities"
 ---
 
-<h2>NAME</h2>
 <p> plotfont &#8211; produce character maps of fonts supported by the plotting utilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plotfont</code> [ <i>options </i> ] <i>fonts</i></p>

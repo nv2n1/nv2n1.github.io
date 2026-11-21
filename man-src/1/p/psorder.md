@@ -1,4 +1,5 @@
 ---
+
 title: "psorder(1)"
 name: "psorder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psorder/"
 description: "psorder – PostScript pageorder filter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psorder &#8211; PostScript pageorder filter </p>
 <h2>SYNOPSIS</h2>
 <dl>

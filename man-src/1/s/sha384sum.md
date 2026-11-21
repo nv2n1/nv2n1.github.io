@@ -1,4 +1,5 @@
 ---
+
 title: "sha384sum(1)"
 name: "sha384sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sha384sum/"
 description: "sha384sum – compute and check SHA384 message digest"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sha384sum &#8211; compute and check SHA384 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sha384sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

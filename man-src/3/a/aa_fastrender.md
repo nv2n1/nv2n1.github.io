@@ -1,4 +1,5 @@
 ---
+
 title: "aa_fastrender(3)"
 name: "aa_fastrender"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_fastrender/"
 description: "aa_fastrender – simple and fast AA-lib rendering function."
 ---
 
-<h2>NAME</h2>
 <p> aa_fastrender &#8211; simple and fast AA-lib rendering function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

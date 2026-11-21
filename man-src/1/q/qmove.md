@@ -1,4 +1,5 @@
 ---
+
 title: "qmove(1)"
 name: "qmove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmove/"
 description: "qmove – move pbs batch job"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qmove &#8211; move pbs batch job </p>
 <h2>SYNOPSIS</h2>
 <p> qmove destination job_identifier &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mongosniff(1)"
 name: "mongosniff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongosniff/"
 description: "mongosniff – MongoDB Protocol Introspection Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongosniff &#8211; MongoDB Protocol Introspection Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongosniff</code> provides a low-level operation tracing/sniffing view into database activity in real time. Think of <code>mongosniff</code> as a MongoDB-specific analogue of <code>tcpdump</code> for TCP/IP network traffic. Typically, <code>mongosniff</code> is most frequently used in driver development. </p>

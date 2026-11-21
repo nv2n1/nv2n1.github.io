@@ -1,4 +1,5 @@
 ---
+
 title: "assogiate(1)"
 name: "assogiate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-assogiate/"
 description: "assoGiate – modify the detection and display of file types"
 ---
 
-<h2>NAME</h2>
 <p> assoGiate &#8211; modify the detection and display of file types</p>
 <h2>SYNOPSIS</h2>
 <p> <code>assogiate [</code><i>options</i><code>]</code></p>

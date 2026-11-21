@@ -1,4 +1,5 @@
 ---
+
 title: "knsec3hash(1)"
 name: "knsec3hash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-knsec3hash/"
 description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equivalent of ISC nsec3hash)"
 ---
 
-<h2>NAME</h2>
 <p> <code>knsec3hash</code> &#8211; Simple utility to compute NSEC3 hash (libknot equivalent of ISC nsec3hash)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>knsec3hash</code> {<i>salt</i>} {<i>algorithm</i>} {<i>iterations</i>} {<i>domain-name</i>}</p>

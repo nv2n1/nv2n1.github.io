@@ -1,4 +1,5 @@
 ---
+
 title: "ghc(1)"
 name: "ghc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ghc/"
 description: "GHC – the Glasgow Haskell Compiler"
 ---
 
-<h2>NAME</h2>
 <p> GHC &#8211; the Glasgow Haskell Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ghc</code> [<i>option</i>|<i>filename</i>]&#8230;<br />

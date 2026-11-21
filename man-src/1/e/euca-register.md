@@ -1,4 +1,5 @@
 ---
+
 title: "euca-register(1)"
 name: "euca-register"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-register/"
 description: "euca-register – Register a new image"
 ---
 
-<h2>NAME</h2>
 <p> euca-register &#8211; Register a new image</p>
 <h2>SYNOPSIS</h2>
 <p> euca-register <code>-n</code> NAME [-d DESCRIPTION] [-a {i386,x86_64,armhf}]</p>

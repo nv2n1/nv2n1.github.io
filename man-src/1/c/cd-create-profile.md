@@ -1,4 +1,5 @@
 ---
+
 title: "cd-create-profile(1)"
 name: "cd-create-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-create-profile/"
 description: "cd-create-profile – Color Manager Profile Creation Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cd-create-profile &#8211; Color Manager Profile Creation Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

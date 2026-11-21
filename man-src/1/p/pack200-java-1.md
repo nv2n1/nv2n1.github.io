@@ -1,4 +1,5 @@
 ---
+
 title: "pack200-java-1(1)"
 name: "pack200-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pack200-java-1/"
 description: "pack200 – Packages a JAR file into a compressed pack200 file for web deployment."
 ---
 
-<h2>NAME</h2>
 <p> pack200 &#8211; Packages a JAR file into a compressed pack200 file for web deployment.</p>
 <h2>SYNOPSIS</h2>
 <pre>

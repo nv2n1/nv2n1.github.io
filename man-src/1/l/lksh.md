@@ -1,4 +1,5 @@
 ---
+
 title: "lksh(1)"
 name: "lksh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lksh/"
 description: "lksh – Legacy Korn shell built on mksh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>lksh</code> &#8211; Legacy Korn shell built on mksh </p>
 <h2>SYNOPSIS</h2>
 <p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>+o </code><i>opt</i> ] ] [-<code>c </code><i>string |</i> &#8211;<code>s |</code> <i>file</i> [<i>args &#8230;</i> ] ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_register_md5_handler(3)"
 name: "gnutls_register_md5_handler"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_register_md5_handler/"
 description: "gnutls_register_md5_handler – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_register_md5_handler &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

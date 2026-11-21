@@ -1,4 +1,5 @@
 ---
+
 title: "composite-im6(1)"
 name: "composite-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-composite-im6/"
 description: "composite – overlaps one image over another."
 ---
 
-<h2 class="name">NAME</h2>
 <p> composite &#8211; overlaps one image over another. </p>
 <h2>SYNOPSIS</h2>
 <dl>

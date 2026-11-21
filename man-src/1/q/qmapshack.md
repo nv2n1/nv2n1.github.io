@@ -1,4 +1,5 @@
 ---
+
 title: "qmapshack(1)"
 name: "qmapshack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmapshack/"
 description: "QMapShack – GPS mapping (GeoTiff and vector) and GPSr management"
 ---
 
-<h2>NAME</h2>
 <p> QMapShack &#8211; GPS mapping (GeoTiff and vector) and GPSr management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qmapshack</code> [ ] [ <code>-n</code> | <code>&#8211;no-splash</code> ] [ <i>files</i>&#8230; ]</p>

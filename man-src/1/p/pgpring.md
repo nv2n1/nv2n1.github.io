@@ -1,4 +1,5 @@
 ---
+
 title: "pgpring(1)"
 name: "pgpring"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgpring/"
 description: "pgpring – Mutt key ring dumper"
 ---
 
-<h2>NAME</h2>
 <p> pgpring &#8211; Mutt key ring dumper </p>
 <h2>SYNTAX</h2>
 <p> <code>pgpring</code> [ <code>-k</code> <i>keyring</i> ] [ <code>-2</code> | <code>-5</code> ] [ <code>-s</code> ] [ <code>-S</code> ] [ <code>-f</code> ] </p>

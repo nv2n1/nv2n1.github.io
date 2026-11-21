@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_mode_e_cmd_t(3)"
 name: "globus_xio_mode_e_cmd_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_mode_e_cmd_t/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Attributes and Cntls &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_mode_e_cmd_t</code> { <code>GLOBUS_XIO_MODE_E_SET_STACK</code>, <code>GLOBUS_XIO_MODE_E_GET_STACK</code>, <code>GLOBUS_XIO_MODE_E_SET_NUM_STREAMS</code>, <code>GLOBUS_XIO_MODE_E_GET_NUM_STREAMS</code>, <code>GLOBUS_XIO_MODE_E_SET_OFFSET_READS</code>, <code>GLOBUS_XIO_MODE_E_GET_OFFSET_READS</code>, <code>GLOBUS_XIO_MODE_E_SET_MANUAL_EODC</code>, <code>GLOBUS_XIO_MODE_E_GET_MANUAL_EODC</code>, <code>GLOBUS_XIO_MODE_E_SEND_EOD</code>, <code>GLOBUS_XIO_MODE_E_SET_EODC</code>, <code>GLOBUS_XIO_MODE_E_DD_GET_OFFSET</code>, <code>GLOBUS_XIO_MODE_E_SET_STACK_ATTR</code>, <code>GLOBUS_XIO_MODE_E_GET_STACK_ATTR</code> } </p>

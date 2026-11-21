@@ -1,4 +1,5 @@
 ---
+
 title: "lshal(1)"
 name: "lshal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lshal/"
 description: "lshal – list HAL devices"
 ---
 
-<h2>NAME</h2>
 <p> lshal &#8211; list HAL devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lshal</code> [options] </p>

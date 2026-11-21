@@ -1,4 +1,5 @@
 ---
+
 title: "pf-localization(1)"
 name: "pf-localization"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pf-localization/"
 description: "pf-localization – MonteCarlo mobile robot localization"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pf-localization &#8211; MonteCarlo mobile robot localization </p>
 <h2>SYNOPSIS</h2>
 <p> pf-localization <i>config_file.ini</i></p>

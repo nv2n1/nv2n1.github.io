@@ -1,4 +1,5 @@
 ---
+
 title: "daemon(3)"
 name: "daemon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-daemon/"
 description: "daemon – run in the background"
 ---
 
-<h2 class="name">NAME</h2>
 <p> daemon &#8211; run in the background </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

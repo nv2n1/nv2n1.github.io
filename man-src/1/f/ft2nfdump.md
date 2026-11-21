@@ -1,4 +1,5 @@
 ---
+
 title: "ft2nfdump(1)"
 name: "ft2nfdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ft2nfdump/"
 description: "ft2nfdump – flow-tools data converter program"
 ---
 
-<h2>NAME</h2>
 <p> ft2nfdump &#8211; flow-tools data converter program</p>
 <h2>SYNOPSIS</h2>
 <dl>

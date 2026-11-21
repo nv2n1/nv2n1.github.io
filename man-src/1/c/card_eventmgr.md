@@ -1,4 +1,5 @@
 ---
+
 title: "card_eventmgr(1)"
 name: "card_eventmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-card_eventmgr/"
 description: "card_eventmgr – PCSC-Lite Event Manager"
 ---
 
-<h2>NAME</h2>
 <p> card_eventmgr &#8211; PCSC-Lite Event Manager</p>
 <h2>SYNTAX</h2>
 <p> <code>card_eventmgr</code> [<code>debug</code>] [[<code>no</code>]<code>daemon</code>] [<code>timeout=</code><i>&lt;msecs&gt;</i>] [<code>config_file=</code><i>&lt;filename&gt;</i>] [<code>kill</code>] [<code>pidfile=</code><i>&lt;pidfile&gt;</i>]</p>

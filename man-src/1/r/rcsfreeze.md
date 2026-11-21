@@ -1,4 +1,5 @@
 ---
+
 title: "rcsfreeze(1)"
 name: "rcsfreeze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcsfreeze/"
 description: "rcsfreeze – freeze a configuration of sources checked in under RCS"
 ---
 
-<h2>NAME</h2>
 <p> rcsfreeze &#8211; freeze a configuration of sources checked in under RCS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcsfreeze</code> [<i>name</i>]</p>

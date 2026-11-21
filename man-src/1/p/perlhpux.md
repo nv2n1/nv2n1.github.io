@@ -1,4 +1,5 @@
 ---
+
 title: "perlhpux(1)"
 name: "perlhpux"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlhpux/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems 
+perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems 
 
 <h2>DESCRIPTION</h2>
 

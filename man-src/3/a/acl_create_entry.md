@@ -1,4 +1,5 @@
 ---
+
 title: "acl_create_entry(3)"
 name: "acl_create_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_create_entry/"
 description: "acl_create_entry – create a new ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_create_entry</code> &#8211; create a new ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

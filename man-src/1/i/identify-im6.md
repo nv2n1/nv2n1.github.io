@@ -1,4 +1,5 @@
 ---
+
 title: "identify-im6(1)"
 name: "identify-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-identify-im6/"
 description: "identify – describes the format and characteristics of one or more image files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> identify &#8211; describes the format and characteristics of one or more image files. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "openat2(2)"
 name: "openat2"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-openat2/"
 description: "openat2 – open and possibly create a file (extended)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> openat2 &#8211; open and possibly create a file (extended) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

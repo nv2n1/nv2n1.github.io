@@ -1,4 +1,5 @@
 ---
+
 title: "g_trjcat(1)"
 name: "g_trjcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_trjcat/"
 description: "trjcat – concatenates trajectory files"
 ---
 
-<h2>NAME</h2>
 <p> trjcat &#8211; concatenates trajectory files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

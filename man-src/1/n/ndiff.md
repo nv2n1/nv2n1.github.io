@@ -1,4 +1,5 @@
 ---
+
 title: "ndiff(1)"
 name: "ndiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndiff/"
 description: "ndiff – Utility to compare the results of Nmap scans"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndiff &#8211; Utility to compare the results of Nmap scans </p>
 <h2>SYNOPSIS</h2>
 <dl>

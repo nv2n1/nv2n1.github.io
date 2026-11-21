@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoleaf(1)"
 name: "ppmtoleaf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoleaf/"
 description: "ppmtoleaf – convert portable pixmap to Interleaf image format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoleaf &#8211; convert portable pixmap to Interleaf image format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoleaf</code> [<i>ppmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nxauth(1)"
 name: "nxauth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nxauth/"
 description: "nxauth – NoMachine X authority file utility"
 ---
 
-<h2>NAME</h2>
 <p> nxauth &#8211; NoMachine X authority file utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nxauth</code> [ <code>-f</code> <i>authfile</i> ] [ <code>-vqib</code> ] [ <i>command arg &#8230;</i> ]</p>

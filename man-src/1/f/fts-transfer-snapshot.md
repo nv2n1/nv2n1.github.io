@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-snapshot(1)"
 name: "fts-transfer-snapshot"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-transfer-snapshot/"
 ---
 
-<h2>NAME</h2>
-
- fts-transfer-snapshot
+fts-transfer-snapshot
 
 <h2>SYNOPSIS</h2>
 

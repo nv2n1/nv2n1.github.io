@@ -1,4 +1,5 @@
 ---
+
 title: "h5repart(1)"
 name: "h5repart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5repart/"
 description: "h5repart – Repartitions a file or family of files."
 ---
 
-<h2>NAME</h2>
 <p> h5repart &#8211; Repartitions a file or family of files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5repart </code> <code>[-v] </code> <code>[-V] </code> <code>[-[b|m]N[g|m|k]] </code> source_file dest_file</p>

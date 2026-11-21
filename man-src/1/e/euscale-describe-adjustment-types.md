@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-adjustment-types(1)"
 name: "euscale-describe-adjustment-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-adjustment-types/"
 description: "euscale-describe-adjustment-types – Describe policy adjustment types usable with scaling policies"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-adjustment-types &#8211; Describe policy adjustment types usable with scaling policies</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-adjustment-types [&#8211;show-empty-fields] [-U URL]</p>

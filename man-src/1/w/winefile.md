@@ -1,4 +1,5 @@
 ---
+
 title: "winefile(1)"
 name: "winefile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winefile/"
 description: "winefile – Wine File Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> winefile &#8211; Wine File Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winefile</code><i> path</i></p>

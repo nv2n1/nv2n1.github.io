@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-enable-namespace(1)"
 name: "ndctl-enable-namespace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndctl-enable-namespace/"
 description: "ndctl-enable-namespace – enable the given namespace(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndctl-enable-namespace &#8211; enable the given namespace(s) </p>
 <h2>SYNOPSIS</h2>
 <pre>

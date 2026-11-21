@@ -1,4 +1,5 @@
 ---
+
 title: "twistd(1)"
 name: "twistd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-twistd/"
 description: "twistd – run Twisted applications (TACs, TAPs)"
 ---
 
-<h2>NAME</h2>
 <p> twistd &#8211; run Twisted applications (TACs, TAPs)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>twistd</code> [options]</p>

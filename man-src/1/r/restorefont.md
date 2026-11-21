@@ -1,4 +1,5 @@
 ---
+
 title: "restorefont(1)"
 name: "restorefont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-restorefont/"
 description: "restorefont – save or restore the SVGA font for textmode."
 ---
 
-<h2>NAME</h2>
 <p> restorefont &#8211; save or restore the SVGA font for textmode.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>restorefont {-r|-w} </code><i>filename</i> </p>

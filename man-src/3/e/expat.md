@@ -1,4 +1,5 @@
 ---
+
 title: "expat(3)"
 name: "expat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expat/"
 description: "expat – Using patterned drawing modes and sub-bitmaps. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> expat &#8211; Using patterned drawing modes and sub-bitmaps. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

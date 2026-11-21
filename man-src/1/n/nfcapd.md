@@ -1,4 +1,5 @@
 ---
+
 title: "nfcapd(1)"
 name: "nfcapd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfcapd/"
 description: "nfcapd – netflow capture daemon"
 ---
 
-<h2>NAME</h2>
 <p> nfcapd &#8211; netflow capture daemon</p>
 <h2>SYNOPSIS</h2>
 <dl>

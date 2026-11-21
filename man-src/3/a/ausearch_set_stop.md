@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_set_stop(3)"
 name: "ausearch_set_stop"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_set_stop/"
 description: "ausearch_set_stop – set the cursor position"
 ---
 
-<h2>NAME</h2>
 <p>&nbsp;<wbr>ausearch_set_stop &#8211; set the cursor position</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

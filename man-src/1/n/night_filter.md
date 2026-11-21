@@ -1,4 +1,5 @@
 ---
+
 title: "night_filter(1)"
 name: "night_filter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_filter/"
 description: "night_filter – select filter or print current one"
 ---
 
-<h2>NAME</h2>
 <p> night_filter &#8211; select filter or print current one</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_filter&nbsp;<wbr>[-f filter]&nbsp;<wbr>[-list]</p>

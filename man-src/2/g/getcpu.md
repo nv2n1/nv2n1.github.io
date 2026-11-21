@@ -1,4 +1,5 @@
 ---
+
 title: "getcpu(2)"
 name: "getcpu"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getcpu/"
 description: "getcpu – determine CPU and NUMA node on which the calling thread is running"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcpu &#8211; determine CPU and NUMA node on which the calling thread is running </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

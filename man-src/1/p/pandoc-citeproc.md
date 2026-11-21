@@ -1,4 +1,5 @@
 ---
+
 title: "pandoc-citeproc(1)"
 name: "pandoc-citeproc"
 section: "1"
@@ -6,11 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pandoc-citeproc/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- pandoc-citeproc - filter to resolve citations in a pandoc document.
+pandoc-citeproc - filter to resolve citations in a pandoc document.
 
 <h2>SYNOPSIS</h2>
 

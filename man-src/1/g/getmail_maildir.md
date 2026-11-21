@@ -1,4 +1,5 @@
 ---
+
 title: "getmail_maildir(1)"
 name: "getmail_maildir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getmail_maildir/"
 description: "getmail_maildir – read a message from stdin and deliver to a named maildir"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getmail_maildir &#8211; read a message from stdin and deliver to a named maildir </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getmail_maildir</code> [<i>OPTION</i>] <i>PATH</i></p>

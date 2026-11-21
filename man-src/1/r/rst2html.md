@@ -1,4 +1,5 @@
 ---
+
 title: "rst2html(1)"
 name: "rst2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rst2html/"
 description: "rst2html – convert reST documents to XHTML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rst2html &#8211; convert reST documents to XHTML </p>
 <h2>SYNOPSIS</h2>
 <p> rst2html [options] [&lt;source&gt; [&lt;destination&gt;]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nicotine-import-winconfig(1)"
 name: "nicotine-import-winconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nicotine-import-winconfig/"
 description: "nicotine-import-winconfig is a script to convert SoulSeek Windows client configuration file to the Nicotine format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>nicotine-import-winconfig</code> is a script to convert SoulSeek Windows client configuration file to the Nicotine format. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nicotine-import-winconfig</code> [options] &lt;path_to_the_windows_soulseek_files&gt;</p>

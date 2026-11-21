@@ -1,4 +1,5 @@
 ---
+
 title: "vtysh(1)"
 name: "vtysh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vtysh/"
 description: "vtysh – a integrated shell for Quagga routing software"
 ---
 
-<h2>NAME</h2>
 <p> vtysh &#8211; a integrated shell for Quagga routing software</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vtysh</code> [ <code>-b</code> ]<br />

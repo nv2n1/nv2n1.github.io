@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_set_sasl_callbacks(3)"
 name: "memcached_set_sasl_callbacks"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_set_sasl_callbacks/"
 description: "memcached_set_sasl_callbacks – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_set_sasl_callbacks &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>

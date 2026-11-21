@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-shell(1)"
 name: "gnome-shell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-shell/"
 description: "gnome-shell – Graphical shell for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-shell &#8211; Graphical shell for the GNOME desktop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-shell</code> [<i>OPTION</i>&#8230;]</p>

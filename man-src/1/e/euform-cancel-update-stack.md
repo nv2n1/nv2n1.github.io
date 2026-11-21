@@ -1,4 +1,5 @@
 ---
+
 title: "euform-cancel-update-stack(1)"
 name: "euform-cancel-update-stack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-cancel-update-stack/"
 description: "euform-cancel-update-stack – Cancel a stack update that is currently running"
 ---
 
-<h2>NAME</h2>
 <p> euform-cancel-update-stack &#8211; Cancel a stack update that is currently running</p>
 <h2>SYNOPSIS</h2>
 <p> euform-cancel-update-stack [&#8211;show-empty-fields] [-U URL]</p>

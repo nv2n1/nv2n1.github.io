@@ -1,4 +1,5 @@
 ---
+
 title: "intel_gtt(1)"
 name: "intel_gtt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_gtt/"
 description: "intel_gtt – Dump the contents of an Intel GPU’s GTT"
 ---
 
-<h2>NAME</h2>
 <p> intel_gtt &#8211; Dump the contents of an Intel GPU&#8217;s GTT</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_gtt</code></p>

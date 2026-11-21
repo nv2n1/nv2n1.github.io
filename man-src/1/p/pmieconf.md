@@ -1,4 +1,5 @@
 ---
+
 title: "pmieconf(1)"
 name: "pmieconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmieconf/"
 description: "pmieconf – display and set configurable pmie rule variables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pmieconf</code> &#8211; display and set configurable pmie rule variables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmieconf</code> [<code>-cFv</code>] [<code>-f</code> <i>file</i>] [<code>-r</code> <i>rulepath</i>] [<i>command</i> [<i>args&#8230;</i>]]</p>

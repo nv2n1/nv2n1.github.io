@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaapache(1)"
 name: "pmdaapache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaapache/"
 description: "pmdaapache – Apache2 web server performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaapache</code> &#8211; Apache2 web server performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/apache/pmdaapache</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-S</code> <i>server</i>] [<code>-P</code> <i>port</i>] [<code>-L</code> <i>location</i>]</p>

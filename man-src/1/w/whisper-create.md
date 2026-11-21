@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-create(1)"
 name: "whisper-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-create/"
 description: "whisper-create – create a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> whisper-create &#8211; create a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre>

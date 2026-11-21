@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_constants(3)"
 name: "globus_gss_assist_constants"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_constants/"
 description: "GSI GSS Assist Constants –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GSI GSS Assist Constants &#8211; </p>
 <p> Constant Definitions.</p>
 <h3>Enumerations</h3>

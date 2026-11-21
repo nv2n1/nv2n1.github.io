@@ -1,4 +1,5 @@
 ---
+
 title: "fmaps(1)"
 name: "fmaps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fmaps/"
 description: "fmaps – print the process or a corefile’s address maps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmaps &#8211; print the process or a corefile&#8217;s address maps </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gcin-message(1)"
 name: "gcin-message"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcin-message/"
 description: "gcin-message – gcin’s notification tool"
 ---
 
-<h2>NAME</h2>
 <p> gcin-message &#8211; gcin&#8217;s notification tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcin-message</code> <code>[-icon</code> file] <code>[-text</code> string] <code>[-duration</code> milliseconds]</p>

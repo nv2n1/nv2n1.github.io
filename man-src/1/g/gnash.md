@@ -1,4 +1,5 @@
 ---
+
 title: "gnash(1)"
 name: "gnash"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gnash/"
 ---
 
-<h2>NAME</h2>
-
- gnash, gtk-gnash, qt4-gnash, dump-gnash, fb-gnash, sdl-gnash, gnash-gtk-launcher, gnash-qt-launcher - GNU Flash (SWF) Player
+gnash, gtk-gnash, qt4-gnash, dump-gnash, fb-gnash, sdl-gnash, gnash-gtk-launcher, gnash-qt-launcher - GNU Flash (SWF) Player
 
 <h2>Synopsis</h2>
 

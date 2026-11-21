@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_next_entry(3)"
 name: "ldap_next_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_next_entry/"
 description: "ldap_first_entry, ldap_next_entry, ldap_count_entries – LDAP result entry parsing and counting routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_first_entry, ldap_next_entry, ldap_count_entries &#8211; LDAP result entry parsing and counting routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mperfmon(1)"
 name: "mperfmon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mperfmon/"
 description: "mperfmon – Mono Performance Counter Monitor"
 ---
 
-<h2>NAME</h2>
 <p> mperfmon &#8211; Mono Performance Counter Monitor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mperfmon</code> [&#8211;config=FILE] [&#8211;report=REPORT_NAME] [&#8211;count=NUM] [pid]</p>

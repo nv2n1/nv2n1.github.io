@@ -1,4 +1,5 @@
 ---
+
 title: "fmio(1)"
 name: "fmio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fmio/"
 description: "fmio – small utility to manipulate fm radio card"
 ---
 
-<h2>NAME</h2>
 <p> <code>fmio</code> &#8211; small utility to manipulate fm radio card</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fmio</code> [-<code>d </code><i>driver</i> ] [-<code>f </code><i>freq</i> ] [-<code>i</code> ] [-<code>m</code> ] [-<code>s</code> ] [-<code>v </code><i>vol</i> ] [-<code>x </code><i>vol</i> ] [-<code>X </code><i>vol</i> ]<br />

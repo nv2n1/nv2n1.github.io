@@ -1,4 +1,5 @@
 ---
+
 title: "freeze(1)"
 name: "freeze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freeze/"
 description: "freeze, unfreeze, melt, fcat – compress and uncompress files"
 ---
 
-<h2>NAME</h2>
 <p> freeze, unfreeze, melt, fcat &#8211; compress and uncompress files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freeze</code> [ <code>-cdfvVgx</code> ] [ <i>filename | type &#8230;</i> ]<br />

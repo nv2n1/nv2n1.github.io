@@ -1,4 +1,5 @@
 ---
+
 title: "al_trace(3)"
 name: "al_trace"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-al_trace/"
 description: "al_trace – Outputs a debugging trace message. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> al_trace &#8211; Outputs a debugging trace message. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

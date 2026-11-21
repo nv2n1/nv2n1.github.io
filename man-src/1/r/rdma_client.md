@@ -1,4 +1,5 @@
 ---
+
 title: "rdma_client(1)"
 name: "rdma_client"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rdma_client/"
 ---
 
-<h2>NAME</h2>
-
- rdma_client - simple RDMA CM connection and ping-pong test.
+rdma_client - simple RDMA CM connection and ping-pong test.
 
 <h2>SYNOPSIS</h2>
 

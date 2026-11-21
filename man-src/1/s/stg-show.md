@@ -1,4 +1,5 @@
 ---
+
 title: "stg-show(1)"
 name: "stg-show"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-show/"
 description: "stg-show – Show the commit corresponding to a patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-show &#8211; Show the commit corresponding to a patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

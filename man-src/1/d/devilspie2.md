@@ -1,4 +1,5 @@
 ---
+
 title: "devilspie2(1)"
 name: "devilspie2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devilspie2/"
 description: "Devilspie2 – perform scripted actions on windows as they are created"
 ---
 
-<h2>NAME</h2>
 <p> Devilspie2 &#8211; perform scripted actions on windows as they are created</p>
 <h2>Description</h2>
 <p> <code>Devilspie2</code> is a program that detects windows as they are created, and performs scripted actions on them. The scripts are written in LUA, allowing a great deal of customisation. </p>

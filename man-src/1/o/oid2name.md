@@ -1,4 +1,5 @@
 ---
+
 title: "oid2name(1)"
 name: "oid2name"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oid2name/"
 description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oid2name &#8211; resolve OIDs and file nodes in a PostgreSQL data directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

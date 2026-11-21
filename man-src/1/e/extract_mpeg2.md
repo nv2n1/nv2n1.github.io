@@ -1,4 +1,5 @@
 ---
+
 title: "extract_mpeg2(1)"
 name: "extract_mpeg2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extract_mpeg2/"
 description: "extract_mpeg2 – extract MPEG video streams from a multiplexed stream."
 ---
 
-<h2>NAME</h2>
 <p> extract_mpeg2 &#8211; extract MPEG video streams from a multiplexed stream.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>extract_mpeg2</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>file</i>]</p>

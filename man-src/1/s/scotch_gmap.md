@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gmap(1)"
 name: "scotch_gmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gmap/"
 description: "gmap, gpart – compute static mappings and partitions sequentially"
 ---
 
-<h2>NAME</h2>
 <p> <code>gmap, gpart </code>&#8211; compute static mappings and partitions sequentially</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogextract(1)"
 name: "pmlogextract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogextract/"
 description: "pmlogextract – reduce, extract, concatenate and merge Performance Co-Pilot archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogextract</code> &#8211; reduce, extract, concatenate and merge Performance Co-Pilot archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogextract</code> [<code>-dfwz</code>] [<code>-c</code> <i>configfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-v</code> <i>volsamples</i>] [<code>-Z</code> <i>timezone</i>] <i>input</i> [&#8230;] <i>output</i></p>

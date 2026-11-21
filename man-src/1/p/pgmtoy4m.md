@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtoy4m(1)"
 name: "pgmtoy4m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmtoy4m/"
 description: "pgmtoy4m – Convert mpeg2dec pgm and pgmpipe output to YUV4MPEG2"
 ---
 
-<h2>NAME</h2>
 <p> pgmtoy4m &#8211; Convert mpeg2dec pgm and pgmpipe output to YUV4MPEG2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtoy4m</code> [<i>options</i>]</p>

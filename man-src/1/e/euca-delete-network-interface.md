@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-network-interface(1)"
 name: "euca-delete-network-interface"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-network-interface/"
 description: "euca-delete-network-interface – Delete a VPC network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-network-interface &#8211; Delete a VPC network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-network-interface [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "http(1)"
 name: "http"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-http/"
 description: "httpie – CLI, cURL-like tool for humans"
 ---
 
-<h2 class="name">NAME</h2>
 <p> httpie &#8211; CLI, cURL-like tool for humans </p>
 <h2>SYNOPSIS</h2>
 <dl>

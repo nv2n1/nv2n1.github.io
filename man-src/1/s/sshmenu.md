@@ -1,4 +1,5 @@
 ---
+
 title: "sshmenu(1)"
 name: "sshmenu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sshmenu/"
 description: "sshmenu – GNOME applet for connecting to hosts using SSH."
 ---
 
-<h2>NAME</h2>
 <p> sshmenu &#8211; GNOME applet for connecting to hosts using SSH.</p>
 <h2>DESCRIPTION</h2>
 <p> The SSHMenu applet puts all your most frequently used SSH connections on a handy menu in your GNOME panel (see below for non-GNOME versions. Click on a host name to open a new gnome-terminal window with an ssh connection to the selected host. Set up SSH options (such as port forwarding etc) and select a gnome terminal profile (for colour schemes, font sizes etc) using the preferences dialog. </p>

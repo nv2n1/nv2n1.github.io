@@ -1,4 +1,5 @@
 ---
+
 title: "dbench(1)"
 name: "dbench"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbench/"
 description: "dbench – Measure disk throughput for simulated netbench run"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbench &#8211; Measure disk throughput for simulated netbench run </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbench</code> [<i>options</i>]<i>numclients</i><br />

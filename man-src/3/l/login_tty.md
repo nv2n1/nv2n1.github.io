@@ -1,4 +1,5 @@
 ---
+
 title: "login_tty(3)"
 name: "login_tty"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-login_tty/"
 description: "openpty, login_tty, forkpty – terminal utility functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> openpty, login_tty, forkpty &#8211; terminal utility functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

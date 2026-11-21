@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-write-uncor(1)"
 name: "nvme-write-uncor"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-write-uncor/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-write-uncor - Send an NVMe write uncorrectable command, return results 
+nvme-write-uncor - Send an NVMe write uncorrectable command, return results 
 
 <h2>SYNOPSIS</h2>
 

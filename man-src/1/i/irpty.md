@@ -1,4 +1,5 @@
 ---
+
 title: "irpty(1)"
 name: "irpty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irpty/"
 description: "irpty – pseudo tty driver"
 ---
 
-<h2>NAME</h2>
 <p> irpty &#8211; pseudo tty driver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irpty</code> [<i>options</i>] <i>config_file &#8212; program </i>[<i>args </i>&#8230;]</p>

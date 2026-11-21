@@ -1,4 +1,5 @@
 ---
+
 title: "mate-drivemount-applet(1)"
 name: "mate-drivemount-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-drivemount-applet/"
 description: "mate-drivemount-applet – Drive Mount Applet for the MATE panel."
 ---
 
-<h2>NAME</h2>
 <p> mate-drivemount-applet &#8211; Drive Mount Applet for the MATE panel.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-drivemount-applet</code> [ <code>&#8211;activate-goad-server </code><i>[=GOAD_ID]</i> ] </p>

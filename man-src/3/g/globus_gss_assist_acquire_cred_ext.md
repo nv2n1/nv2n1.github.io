@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_acquire_cred_ext(3)"
 name: "globus_gss_assist_acquire_cred_ext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_acquire_cred_ext/"
 description: "Credential Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Credential Management &#8211; </p>
 <p> Acquire Credential.</p>
 <h3>Functions</h3>

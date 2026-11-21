@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_merge(1)"
 name: "x2sys_merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_merge/"
 description: "x2sys_merge – Merge an updated COEs table (smaller) into the main table (bigger)"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_merge &#8211; Merge an updated COEs table (smaller) into the main table (bigger)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_merge</code> <i>main_COElist.d</i> <i>new_COElist.d</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-gc(1)"
 name: "git-gc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-gc/"
 description: "git-gc – Cleanup unnecessary files and optimize the local repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-gc &#8211; Cleanup unnecessary files and optimize the local repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

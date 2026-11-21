@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_job_signal(3)"
 name: "globus_gram_protocol_job_signal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_job_signal/"
 description: "GRAM Signals –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GRAM Signals &#8211; </p>
 <p> GRAM Signals.</p>
 <h3>Enumerations</h3>

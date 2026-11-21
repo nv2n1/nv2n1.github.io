@@ -1,4 +1,5 @@
 ---
+
 title: "publican(1)"
 name: "publican"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-publican/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- publican - a DocBook XML publishing tool. 
+publican - a DocBook XML publishing tool. 
 
 <h2>VERSION</h2>
 

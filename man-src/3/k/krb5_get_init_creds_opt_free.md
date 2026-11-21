@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_init_creds_opt_free(3)"
 name: "krb5_get_init_creds_opt_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_init_creds_opt_free/"
 description: "Heimdal Kerberos 5 credential handing functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 credential handing functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

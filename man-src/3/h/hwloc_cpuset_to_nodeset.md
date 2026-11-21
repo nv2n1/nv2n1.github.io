@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_cpuset_to_nodeset(3)"
 name: "hwloc_cpuset_to_nodeset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_cpuset_to_nodeset/"
 description: "hwlocality_helper_nodeset_convert – Converting between CPU sets and node sets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_helper_nodeset_convert &#8211; Converting between CPU sets and node sets </p>
 <h3>Functions</h3>
 <p> static void <code>hwloc_cpuset_to_nodeset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> _cpuset, <code>hwloc_nodeset_t</code> nodeset) </p>

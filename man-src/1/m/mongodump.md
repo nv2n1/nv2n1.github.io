@@ -1,4 +1,5 @@
 ---
+
 title: "mongodump(1)"
 name: "mongodump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongodump/"
 description: "mongodump – MongoDB Data Dump Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongodump &#8211; MongoDB Data Dump Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongodump</code> is a utility for creating a binary export of the contents of a database. Consider using this utility as part an effective <code>backup strategy</code>. Use <code>mongodump</code> in conjunction with <code>mongorestore</code> to restore databases. </p>

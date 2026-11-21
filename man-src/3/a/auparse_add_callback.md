@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_add_callback(3)"
 name: "auparse_add_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_add_callback/"
 description: "auparse_add_callback – add a callback handler for notifications"
 ---
 
-<h2>NAME</h2>
 <p> auparse_add_callback &#8211; add a callback handler for notifications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

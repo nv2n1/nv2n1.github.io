@@ -1,4 +1,5 @@
 ---
+
 title: "efivar(1)"
 name: "efivar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-efivar/"
 description: "efivar – Tool to manipulate UEFI variables"
 ---
 
-<h2>NAME</h2>
 <p> efivar &#8211; Tool to manipulate UEFI variables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>efivar</code> [<i>,OPTION/</i>&#8230;]</p>

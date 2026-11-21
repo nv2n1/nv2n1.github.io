@@ -1,4 +1,5 @@
 ---
+
 title: "kasumi(1)"
 name: "kasumi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kasumi/"
 description: "kasumi – a personal dictionary manager for Anthy"
 ---
 
-<h2>NAME</h2>
 <p> kasumi &#8211; a personal dictionary manager for Anthy</p>
 <h2>SYNOPSIS</h2>
 <dl>

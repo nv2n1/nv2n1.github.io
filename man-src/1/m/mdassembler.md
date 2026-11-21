@@ -1,4 +1,5 @@
 ---
+
 title: "mdassembler(1)"
 name: "mdassembler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdassembler/"
 description: "mdassembler – Compile documentation for use in monodoc browser"
 ---
 
-<h2>NAME</h2>
 <p> mdassembler &#8211; Compile documentation for use in monodoc browser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdassembler</code> OPTIONS* DIRS+</p>

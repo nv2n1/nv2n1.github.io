@@ -1,4 +1,5 @@
 ---
+
 title: "lftpget(1)"
 name: "lftpget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lftpget/"
 description: "lftpget – get a file with lftp(1)"
 ---
 
-<h2>NAME</h2>
 <p> lftpget &#8211; get a file with <a href="/docs/linux/man/1-lftp/">lftp</a>(1) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lftpget </code> [-c] [-d] [-v] <i>URL</i> [URL&#8230;] </p>

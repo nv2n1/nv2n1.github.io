@@ -1,4 +1,5 @@
 ---
+
 title: "mysqld_multi(1)"
 name: "mysqld_multi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqld_multi/"
 description: "mysqld_multi – manage multiple MySQL servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqld_multi &#8211; manage multiple MySQL servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

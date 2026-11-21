@@ -1,4 +1,5 @@
 ---
+
 title: "ykclient(1)"
 name: "ykclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ykclient/"
 description: "ykclient – YubiCloud One-Time-Password Validation Client"
 ---
 
-<h2>NAME</h2>
 <p> ykclient &#8211; YubiCloud One-Time-Password Validation Client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykclient</code> [<i>OPTION</i>]&#8230; <i>CLIENTID YUBIKEYOTP</i></p>

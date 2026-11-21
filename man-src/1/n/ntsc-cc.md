@@ -1,4 +1,5 @@
 ---
+
 title: "ntsc-cc(1)"
 name: "ntsc-cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ntsc-cc/"
 description: "ntsc-cc – closed caption decoder"
 ---
 
-<h2>NAME</h2>
 <p> ntsc-cc &#8211; closed caption decoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ntsc-cc [ options ]</code></p>

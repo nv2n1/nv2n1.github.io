@@ -1,4 +1,5 @@
 ---
+
 title: "lmmnormaldriftcalculator(3)"
 name: "lmmnormaldriftcalculator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lmmnormaldriftcalculator/"
 description: "ql/models/marketmodels/driftcomputation/lmmnormaldriftcalculator.hpp – Drift computation for normal Libor market model."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/models/marketmodels/driftcomputation/lmmnormaldriftcalculator.hpp &#8211; Drift computation for normal Libor market model. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt;<br />

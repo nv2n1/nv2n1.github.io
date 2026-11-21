@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-convert(1)"
 name: "pmempool-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-convert/"
 description: "pmempool-convert – Convert pool files from old layout versions to the newest one."
 ---
 
-<h2>NAME</h2>
 <p> pmempool-convert &#8211; Convert pool files from old layout versions to the newest one.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool convert</code> &lt;file&gt;</p>

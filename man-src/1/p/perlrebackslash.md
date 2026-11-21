@@ -1,4 +1,5 @@
 ---
+
 title: "perlrebackslash(1)"
 name: "perlrebackslash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlrebackslash/"
 description: "perlrebackslash – Perl Regular Expression Backslash Sequences and Escapes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlrebackslash &#8211; Perl Regular Expression Backslash Sequences and Escapes </p>
 <h2>DESCRIPTION</h2>
 <p> The top level documentation about Perl regular expressions is found in perlre. </p>

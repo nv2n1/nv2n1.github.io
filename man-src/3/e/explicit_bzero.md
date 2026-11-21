@@ -1,4 +1,5 @@
 ---
+
 title: "explicit_bzero(3)"
 name: "explicit_bzero"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-explicit_bzero/"
 description: "bzero, explicit_bzero – zero a byte string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzero, explicit_bzero &#8211; zero a byte string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

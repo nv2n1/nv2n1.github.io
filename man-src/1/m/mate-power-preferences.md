@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-preferences(1)"
 name: "mate-power-preferences"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-power-preferences/"
 description: "mate-power-preferences – mate power preferences gui"
 ---
 
-<h2>NAME</h2>
 <p> mate-power-preferences &#8211; mate power preferences gui</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-power-preferences</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>

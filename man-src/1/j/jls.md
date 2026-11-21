@@ -1,4 +1,5 @@
 ---
+
 title: "jls(1)"
 name: "jls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jls/"
 description: "jls – List the contents of a file system journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jls &#8211; List the contents of a file system journal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jls [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images] [inode] </i> </p>

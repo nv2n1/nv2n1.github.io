@@ -1,4 +1,5 @@
 ---
+
 title: "nfs4_getfacl(1)"
 name: "nfs4_getfacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfs4_getfacl/"
 description: "nfs4_getfacl – get NFSv4 file/directory access control lists"
 ---
 
-<h2>NAME</h2>
 <p> nfs4_getfacl &#8211; get NFSv4 file/directory access control lists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nfs4_getfacl [-H]</code> <i>file</i></p>

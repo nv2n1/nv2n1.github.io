@@ -1,4 +1,5 @@
 ---
+
 title: "stg-pull(1)"
 name: "stg-pull"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-pull/"
 description: "stg-pull – Pull changes from a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-pull &#8211; Pull changes from a remote repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

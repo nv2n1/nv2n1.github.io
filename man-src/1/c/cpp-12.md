@@ -1,4 +1,5 @@
 ---
+
 title: "cpp-12(1)"
 name: "cpp-12"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpp-12/"
 description: "cpp – The C Preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpp &#8211; The C Preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />

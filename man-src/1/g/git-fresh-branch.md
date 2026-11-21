@@ -1,4 +1,5 @@
 ---
+
 title: "git-fresh-branch(1)"
 name: "git-fresh-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-fresh-branch/"
 description: "git-fresh-branch – Create fresh branches"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-fresh-branch</code> &#8211; Create fresh branches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-fresh-branch</code> &lt;branchname&gt;</p>

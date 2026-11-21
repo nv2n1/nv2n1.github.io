@@ -1,4 +1,5 @@
 ---
+
 title: "memkind_hbw(3)"
 name: "memkind_hbw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memkind_hbw/"
 description: "memkind_hbw.h – high bandwidth memory memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or..."
 ---
 
-<h2>NAME</h2>
 <p> memkind_hbw.h &#8211; high bandwidth memory memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>

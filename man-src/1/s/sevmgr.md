@@ -1,4 +1,5 @@
 ---
+
 title: "sevmgr(1)"
 name: "sevmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sevmgr/"
 description: "sevmgr –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sevmgr &#8211; </p>
 <pre>
       Command-line interpreter for the C++ Simulation-Oriented Discrete Event Management Library

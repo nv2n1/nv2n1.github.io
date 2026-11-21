@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_destroy_counters(3)"
 name: "ibv_destroy_counters"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_destroy_counters/"
 description: "ibv_create_counters, ibv_destroy_counters – Create or destroy a counters handle"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_create_counters, ibv_destroy_counters &#8211; Create or destroy a counters handle </p>
 <h2>SYNOPSIS</h2>
 <dl>

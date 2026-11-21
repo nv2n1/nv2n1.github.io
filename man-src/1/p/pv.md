@@ -1,4 +1,5 @@
 ---
+
 title: "pv(1)"
 name: "pv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pv/"
 description: "pv – monitor the progress of data through a pipe"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pv &#8211; monitor the progress of data through a pipe </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pv</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "masked_stretch_blit(3)"
 name: "masked_stretch_blit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-masked_stretch_blit/"
 description: "masked_stretch_blit – Scales a rectangular area skipping pixels with the mask color. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> masked_stretch_blit &#8211; Scales a rectangular area skipping pixels with the mask color. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

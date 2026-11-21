@@ -1,4 +1,5 @@
 ---
+
 title: "hesiod_getpwnam(3)"
 name: "hesiod_getpwnam"
 section: "3"
@@ -6,9 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hesiod_getpwnam/"
 ---
 
-<h2>NAME</h2>
-
- hesiod_getpwnam, hesiod_getpwuid, hesiod_free_passwd - Hesiod functions for retrieving passwd information
+hesiod_getpwnam, hesiod_getpwuid, hesiod_free_passwd - Hesiod functions for retrieving passwd information
 
 <h2>SYNOPSIS</h2>
 

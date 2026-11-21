@@ -1,4 +1,5 @@
 ---
+
 title: "abidw(1)"
 name: "abidw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abidw/"
 description: "abidw – serialize the ABI of an ELF file"
 ---
 
-<h2>NAME</h2>
 <p> abidw &#8211; serialize the ABI of an ELF file </p>
 <p> abidw reads a shared library in <i>ELF</i> format and emits an XML representation of its ABI to standard output. The emitted representation includes all the globally defined functions and variables, along with a complete representation of their types. It also includes a representation of the globally defined ELF symbols of the file. The input shared library must contain associated debug information in <i>DWARF</i> format.</p>
 <h2>INVOCATION</h2>

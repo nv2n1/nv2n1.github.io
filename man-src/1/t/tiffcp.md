@@ -1,4 +1,5 @@
 ---
+
 title: "tiffcp(1)"
 name: "tiffcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffcp/"
 description: "tiffcp – copy (and possibly convert) a TIFF file"
 ---
 
-<h2>NAME</h2>
 <p> tiffcp &#8211; copy (and possibly convert) a <font SIZE="-1">TIFF</font> file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffcp</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>

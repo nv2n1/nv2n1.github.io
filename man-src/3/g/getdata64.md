@@ -1,4 +1,5 @@
 ---
+
 title: "getdata64(3)"
 name: "getdata64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdata64/"
 description: "getdata64 — retrieve data from a dirfile database with largefile support"
 ---
 
-<h2>NAME</h2>
 <p> getdata64 &#8212; retrieve data from a dirfile database with largefile support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3intstream(3)"
 name: "antlr3intstream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3intstream/"
 description: "include/antlr3intstream.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3intstream.h &#8211; </p>
 <p> Defines the the class interface for an antlr3 INTSTREAM.</p>
 <h2>SYNOPSIS</h2>

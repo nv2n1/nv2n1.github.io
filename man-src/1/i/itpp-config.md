@@ -1,4 +1,5 @@
 ---
+
 title: "itpp-config(1)"
 name: "itpp-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-itpp-config/"
 description: "itpp-config – script to get information about intalled IT++ library prefix, compiler flags and its version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> itpp-config &#8211; script to get information about intalled IT++ library prefix, compiler flags and its version</p>
 <h2>SYNOPSIS</h2>
 <p> <code>itpp-config</code> [&#8211;prefix] [&#8211;exec-prefix] [&#8211;debug] [&#8211;static]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11_eventmgr(1)"
 name: "pkcs11_eventmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcs11_eventmgr/"
 description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
 ---
 
-<h2>NAME</h2>
 <p> pkcs11_eventmgr &#8211; SmartCard PKCS#11 Event Manager</p>
 <h2>SYNTAX</h2>
 <p> pkcs11_eventmgr [<i>[no]debug</i>] [<i>[no]daemon</i>] [<i>polling_time=&lt;secs&gt;</i> ] [<i>expire_time=&lt;secs&gt;</i>] [<i>pkcs11_module=&lt;module&gt;</i> ] [<i>config_file=&lt;filename&gt;</i>]</p>

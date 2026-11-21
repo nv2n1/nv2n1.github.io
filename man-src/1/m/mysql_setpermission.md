@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_setpermission(1)"
 name: "mysql_setpermission"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_setpermission/"
 description: "mysql_setpermission – interactively set permissions in grant tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_setpermission &#8211; interactively set permissions in grant tables </p>
 <h2>SYNOPSIS</h2>
 <dl>

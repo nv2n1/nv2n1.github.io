@@ -1,4 +1,5 @@
 ---
+
 title: "lockfile(1)"
 name: "lockfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lockfile/"
 description: "lockfile – conditional semaphore-file creator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lockfile &#8211; conditional semaphore-file creator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lockfile</code> <i></i><code>&#8211;</code>sleeptime | <i></i><code>-r </code>retries |<br />

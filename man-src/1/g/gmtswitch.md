@@ -1,4 +1,5 @@
 ---
+
 title: "gmtswitch(1)"
 name: "gmtswitch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtswitch/"
 description: "gmtswitch – Switching between different GMT versions"
 ---
 
-<h2>NAME</h2>
 <p> gmtswitch &#8211; Switching between different GMT versions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtswitch</code> [ D | <i>version</i> ]</p>

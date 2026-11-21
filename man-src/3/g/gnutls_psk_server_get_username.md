@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_server_get_username(3)"
 name: "gnutls_psk_server_get_username"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_psk_server_get_username/"
 description: "gnutls_psk_server_get_username – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_psk_server_get_username &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

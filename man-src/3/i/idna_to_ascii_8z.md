@@ -1,4 +1,5 @@
 ---
+
 title: "idna_to_ascii_8z(3)"
 name: "idna_to_ascii_8z"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-idna_to_ascii_8z/"
 description: "idna_to_ascii_8z – API function"
 ---
 
-<h2>NAME</h2>
 <p> idna_to_ascii_8z &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>

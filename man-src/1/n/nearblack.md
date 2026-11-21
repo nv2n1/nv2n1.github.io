@@ -1,4 +1,5 @@
 ---
+
 title: "nearblack(1)"
 name: "nearblack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nearblack/"
 description: "nearblack – nearblack convert nearly black/white borders to black"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nearblack &#8211; nearblack convert nearly black/white borders to black </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

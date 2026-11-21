@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-otool-14(1)"
 name: "llvm-otool-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-otool-14/"
 description: "llvm-otool – Mach-O dumping tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-otool &#8211; Mach-O dumping tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-otool</code> [<i>option…</i>] <i>[file…]</i></p>

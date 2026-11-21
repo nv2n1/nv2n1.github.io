@@ -1,4 +1,5 @@
 ---
+
 title: "ares_destroy(3)"
 name: "ares_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_destroy/"
 description: "ares_destroy – Destroy a resolver channel"
 ---
 
-<h2>NAME</h2>
 <p> ares_destroy &#8211; Destroy a resolver channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

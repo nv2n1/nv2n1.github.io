@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-delete-submit(1)"
 name: "fts-rest-delete-submit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-delete-submit/"
 description: "fts-rest-delete-submit"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-delete-submit</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-delete-submit [options] SURL1 [SURL2] [SURL3] [&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-reset-image-attribute(1)"
 name: "euca-reset-image-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-reset-image-attribute/"
 description: "euca-reset-image-attribute – Reset an attribute of an image to its default value"
 ---
 
-<h2>NAME</h2>
 <p> euca-reset-image-attribute &#8211; Reset an attribute of an image to its default value</p>
 <h2>SYNOPSIS</h2>
 <p> euca-reset-image-attribute <code>-l</code> [&#8211;show-empty-fields] [-U URL]</p>

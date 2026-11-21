@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-deregister-instances-from-lb(1)"
 name: "eulb-deregister-instances-from-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-deregister-instances-from-lb/"
 description: "eulb-deregister-instances-from-lb – Remove one or more instances from a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-deregister-instances-from-lb &#8211; Remove one or more instances from a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-deregister-instances-from-lb <code>&#8211;instances</code> INSTANCE1,INSTANCE2,&#8230;</p>

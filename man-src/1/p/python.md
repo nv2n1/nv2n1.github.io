@@ -1,4 +1,5 @@
 ---
+
 title: "python(1)"
 name: "python"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-python/"
 description: "python – an interpreted, interactive, object-oriented programming language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> python &#8211; an interpreted, interactive, object-oriented programming language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>python</code> [ <code>-B</code> ] [ <code>-d</code> ] [ <code>-E</code> ] [ <code>-h</code> ] [ <code>-i</code> ] [ <code>-m </code> <i>module-name</i> ] </p>

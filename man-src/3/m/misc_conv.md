@@ -1,4 +1,5 @@
 ---
+
 title: "misc_conv(3)"
 name: "misc_conv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-misc_conv/"
 description: "misc_conv – text based conversation function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> misc_conv &#8211; text based conversation function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

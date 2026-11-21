@@ -1,4 +1,5 @@
 ---
+
 title: "firefox(1)"
 name: "firefox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-firefox/"
 description: "firefox – a free and open source web browser from Mozilla"
 ---
 
-<h2 class="name">NAME</h2>
 <p> firefox &#8211; a free and open source web browser from Mozilla</p>
 <h2>SYNOPSIS</h2>
 <p> <code>firefox</code> [<i>OPTIONS</i>] [<i>url</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "panelctl(1)"
 name: "panelctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-panelctl/"
 description: "panelctl – manual page for panelctl (libavc1394) 0.1"
 ---
 
-<h2>NAME</h2>
 <p> panelctl &#8211; manual page for panelctl (libavc1394) 0.1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>panelctl</code> [<i>OPTION</i>] <i>&lt;channel|command&gt;</i></p>

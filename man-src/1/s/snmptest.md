@@ -1,4 +1,5 @@
 ---
+
 title: "snmptest(1)"
 name: "snmptest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmptest/"
 description: "snmptest – communicates with a network entity using SNMP requests"
 ---
 
-<h2>NAME</h2>
 <p> snmptest &#8211; communicates with a network entity using SNMP requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmptest</code> [COMMON OPTIONS] AGENT</p>

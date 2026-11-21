@@ -1,4 +1,5 @@
 ---
+
 title: "k5srvutil(1)"
 name: "k5srvutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-k5srvutil/"
 description: "k5srvutil – host key table (keytab) manipulation utility"
 ---
 
-<h2>NAME</h2>
 <p> k5srvutil &#8211; host key table (keytab) manipulation utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>k5srvutil</code> <i>operation</i> [<code>-i</code>] [<code>-f</code> <i>filename</i>] [<code>-e</code> <i>keysalts</i>]</p>

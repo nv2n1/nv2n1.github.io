@@ -1,4 +1,5 @@
 ---
+
 title: "synce-list-programs(1)"
 name: "synce-list-programs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-synce-list-programs/"
 description: "synce-list-programs – shows a list of all installed programs"
 ---
 
-<h2>NAME</h2>
 <p> synce-list-programs &#8211; shows a list of all installed programs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>synce-list-programs</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>

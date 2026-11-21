@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-kill(1)"
 name: "docker-latest-kill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-kill/"
 description: "docker-kill – Kill a running container using SIGKILL or a specified signal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-kill &#8211; Kill a running container using SIGKILL or a specified signal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker kill</code> [<code>&#8211;help</code>] [<code>-s</code>|<code>&#8211;signal</code>[=<i>&quot;KILL&quot;</i>]] CONTAINER [CONTAINER&#8230;] </p>

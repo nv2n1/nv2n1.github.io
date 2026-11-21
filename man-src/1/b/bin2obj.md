@@ -1,4 +1,5 @@
 ---
+
 title: "bin2obj(1)"
 name: "bin2obj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bin2obj/"
 description: "bin2obj – The Free Pascal binary to pascal include file converter."
 ---
 
-<h2>NAME</h2>
 <p> bin2obj &#8211; The Free Pascal binary to pascal include file converter. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bin2obj [-aeouUz] -c constname infile</code> </p>

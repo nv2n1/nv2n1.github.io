@@ -1,4 +1,5 @@
 ---
+
 title: "totem-audio-preview(1)"
 name: "totem-audio-preview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-totem-audio-preview/"
 description: "totem-audio-preview – play audio files"
 ---
 
-<h2>NAME</h2>
 <p> totem-audio-preview &#8211; play audio files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>totem-audio-preview</code> [<i>OPTION</i>]&#8230;<i> </i>[<i>FILE</i>]&#8230;</p>

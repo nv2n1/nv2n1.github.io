@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_client_attr_t(3)"
 name: "globus_gram_client_attr_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_client_attr_t/"
 description: "GRAM Client Attribute Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GRAM Client Attribute Functions &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GRAM_CLIENT_NO_ATTR</code><br />

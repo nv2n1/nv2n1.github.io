@@ -1,4 +1,5 @@
 ---
+
 title: "audit_detect_machine(3)"
 name: "audit_detect_machine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_detect_machine/"
 description: "audit_detect_machine – Detects the current machine type"
 ---
 
-<h2>NAME</h2>
 <p> audit_detect_machine &#8211; Detects the current machine type</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

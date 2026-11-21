@@ -1,4 +1,5 @@
 ---
+
 title: "bootconf(1)"
 name: "bootconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bootconf/"
 description: "bootconf – bootconf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bootconf &#8211; bootconf </p>
 <h2>SYNOPSIS</h2>
 <dl>

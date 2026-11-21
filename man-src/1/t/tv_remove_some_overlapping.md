@@ -1,4 +1,5 @@
 ---
+
 title: "tv_remove_some_overlapping(1)"
 name: "tv_remove_some_overlapping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_remove_some_overlapping/"
 description: "tv_remove_some_overlapping – Remove some overlapping programmes from XMLTV data."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_remove_some_overlapping &#8211; Remove some overlapping programmes from XMLTV data. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_remove_some_overlapping [&#8211;help] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>

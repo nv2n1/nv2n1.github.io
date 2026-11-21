@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useraddloginprofile(1)"
 name: "euare-useraddloginprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-useraddloginprofile/"
 description: "euare-useraddloginprofile – Create a password for the specified user"
 ---
 
-<h2>NAME</h2>
 <p> euare-useraddloginprofile &#8211; Create a password for the specified user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-useraddloginprofile [-p PASSWORD] [&#8211;as-account ACCOUNT] [-U URL]</p>

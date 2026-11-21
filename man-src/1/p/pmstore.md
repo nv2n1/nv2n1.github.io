@@ -1,4 +1,5 @@
 ---
+
 title: "pmstore(1)"
 name: "pmstore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmstore/"
 description: "pmstore – modify performance metric values"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmstore</code> &#8211; modify performance metric values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmstore</code> [<code>-Lf</code>] [<code>-h</code> <i>host</i>] [<code>-i</code> <i>instances</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] <i>metricname</i> <i>value</i></p>

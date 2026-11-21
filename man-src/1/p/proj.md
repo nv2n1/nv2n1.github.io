@@ -1,4 +1,5 @@
 ---
+
 title: "proj(1)"
 name: "proj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-proj/"
 description: "proj – forward cartographic projection filter invproj – inverse cartographic projection filter"
 ---
 
-<h2>NAME</h2>
 <p> proj &#8211; forward cartographic projection filter<br />
  invproj &#8211; inverse cartographic projection filter</p>
 <h2>SYNOPSIS</h2>

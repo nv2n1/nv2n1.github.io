@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77info(1)"
 name: "mgd77info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77info/"
 description: "mgd77info – Extract information about MGD77 files"
 ---
 
-<h2>NAME</h2>
 <p> mgd77info &#8211; Extract information about MGD77 files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77info</code> <i>NGDC-ids</i> [ [<code>m</code>|<code>e</code>] ] [ [<code>m</code>|<code>e</code>] ] [ <code>-I</code><i>ignore</i> ] [ <code>f</code>[<i>item</i>]|<code>r</code>|<code>e</code>|<code>h</code> ] [ [<code>v</code>] ] [ [<i>level</i>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mp4art(1)"
 name: "mp4art"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mp4art/"
 description: "mp4art – manual page for mp4art – MP4v2 2.0.0"
 ---
 
-<h2>NAME</h2>
 <p> mp4art &#8211; manual page for mp4art &#8211; MP4v2 2.0.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mp4art</code> [<i>OPTION</i>]&#8230; <i>ACTION file</i>&#8230;</p>

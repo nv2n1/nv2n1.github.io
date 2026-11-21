@@ -1,4 +1,5 @@
 ---
+
 title: "euca-get-password(1)"
 name: "euca-get-password"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-get-password/"
 description: "euca-get-password – Retrieve the administrator password for an instance running Windows"
 ---
 
-<h2>NAME</h2>
 <p> euca-get-password &#8211; Retrieve the administrator password for an instance running Windows</p>
 <h2>SYNOPSIS</h2>
 <p> euca-get-password <code>-k</code> FILE [&#8211;show-empty-fields] [-U URL]</p>

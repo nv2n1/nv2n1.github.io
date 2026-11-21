@@ -1,4 +1,5 @@
 ---
+
 title: "gmtselect(1)"
 name: "gmtselect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtselect/"
 description: "gmtselect – Select data table subsets based on multiple spatial criteria"
 ---
 
-<h2>NAME</h2>
 <p> gmtselect &#8211; Select data table subsets based on multiple spatial criteria</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtselect</code> [ <i>table</i> ] [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>dist</i>[<i>unit</i>]/<i>ptfile</i> ] [ <i>resolution</i>[<code>+</code>] ] [ [<code>fn</code>] ] [ <i>polygonfile</i> ] [ <code>-I</code>[<code>cflrsz</code>] ] [ <i>parameters</i> ] [ [<code>p</code>]<i>dist</i>[<i>unit</i>]/<i>linefile</i> ] [ <i>maskvalues</i> ] [ <i>region</i> ] [ <i>min</i>[/<i>max</i>][<code>+c</code><i>col</i>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

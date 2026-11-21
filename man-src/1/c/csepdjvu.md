@@ -1,4 +1,5 @@
 ---
+
 title: "csepdjvu(1)"
 name: "csepdjvu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csepdjvu/"
 description: "csepdjvu – DjVu encoder for separated data files."
 ---
 
-<h2>NAME</h2>
 <p> csepdjvu &#8211; DjVu encoder for separated data files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>csepdjvu [</code><i>options</i><code>] [</code><i>sepfiles</i><code>]&#8230; </code><i>outputdjvufile</i> </p>

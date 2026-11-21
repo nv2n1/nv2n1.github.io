@@ -1,4 +1,5 @@
 ---
+
 title: "asip-status(1)"
 name: "asip-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-asip-status/"
 description: "asip-status.pl – Queries AFP servers for their capabilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> asip-status.pl &#8211; Queries AFP servers for their capabilities </p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/asip-status.pl</code> ADDRESS<i>:PORT</i>&#8230;</p>

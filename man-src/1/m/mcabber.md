@@ -1,4 +1,5 @@
 ---
+
 title: "mcabber(1)"
 name: "mcabber"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mcabber/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mcabber - a simple Jabber console client 
+mcabber - a simple Jabber console client 
 
 <h2>SYNOPSIS</h2>
 

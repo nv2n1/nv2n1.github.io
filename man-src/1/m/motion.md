@@ -1,4 +1,5 @@
 ---
+
 title: "motion(1)"
 name: "motion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-motion/"
 description: "motion – Detect motion using a video4linux device"
 ---
 
-<h2>NAME</h2>
 <p> motion &#8211; Detect motion using a video4linux device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>motion</code> [ -hmns ] [ -c config file path ] [ -d log level ] [ -k log type ] [ -p process_id_file ] [ -l logfile ]</p>

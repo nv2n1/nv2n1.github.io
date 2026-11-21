@@ -1,4 +1,5 @@
 ---
+
 title: "quest(1)"
 name: "quest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-quest/"
 description: "quest – Xapian command line search tool"
 ---
 
-<h2>NAME</h2>
 <p> quest &#8211; Xapian command line search tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>quest</code> [<i>OPTIONS</i>] <i>&#8216;QUERY&#8217;</i></p>

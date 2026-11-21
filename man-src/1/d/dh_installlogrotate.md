@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installlogrotate(1)"
 name: "dh_installlogrotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installlogrotate/"
 description: "dh_installlogrotate – install logrotate config files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installlogrotate &#8211; install logrotate config files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installlogrotate</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>

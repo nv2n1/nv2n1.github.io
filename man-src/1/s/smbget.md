@@ -1,4 +1,5 @@
 ---
+
 title: "smbget(1)"
 name: "smbget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbget/"
 description: "smbget – wget-like utility for download files over SMB"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbget &#8211; wget-like utility for download files over SMB </p>
 <h2>SYNOPSIS</h2>
 <dl>

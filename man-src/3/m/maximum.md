@@ -1,4 +1,5 @@
 ---
+
 title: "maximum(3)"
 name: "maximum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-maximum/"
 description: "QuantLib::LossDist – Probability formulas and algorithms."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::LossDist &#8211; Probability formulas and algorithms. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/lossdistribution.hpp&gt; </p>

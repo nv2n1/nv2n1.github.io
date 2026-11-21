@@ -1,4 +1,5 @@
 ---
+
 title: "pythonvxi11(1)"
 name: "pythonvxi11"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pythonvxi11/"
 description: "pythonvxi11 – Python VXI11 Documentation"
 ---
 
-<h2>NAME</h2>
 <p> pythonvxi11 &#8211; Python VXI11 Documentation </p>
 <p> This Python package supports the VXI-11 Ethernet instrument control protocol for controlling VXI11 and LXI compatible instruments. </p>
 <p> See also:</p>

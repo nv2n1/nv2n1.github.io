@@ -1,4 +1,5 @@
 ---
+
 title: "pampop9(1)"
 name: "pampop9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pampop9/"
 description: "pampop9 – simulate a multi-lens camera such as the Pop9"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pampop9 &#8211; simulate a multi-lens camera such as the Pop9</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pampop9</code> <i>pnmfile|-</i> <i>xtiles</i> <i>ytiles</i> <i>xdelta</i> <i>ydelta</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_buf(3)"
 name: "hdf_set_buf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_buf/"
 description: "hdf_set_buf – Set the value of a node without duplicating the value"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_set_buf &#8211; Set the value of a node without duplicating the value </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

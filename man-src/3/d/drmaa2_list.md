@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa2_list(3)"
 name: "drmaa2_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa2_list/"
 description: "– DRMAA2 list routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;&#8211; DRMAA2 list routines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>

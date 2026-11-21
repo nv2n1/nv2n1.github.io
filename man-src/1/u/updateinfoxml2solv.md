@@ -1,4 +1,5 @@
 ---
+
 title: "updateinfoxml2solv(1)"
 name: "updateinfoxml2solv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-updateinfoxml2solv/"
 description: "updateinfoxml2solv – convert rpm-md’s updateinfo.xml format into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> updateinfoxml2solv &#8211; convert rpm-md&#8217;s updateinfo.xml format into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>updateinfoxml2solv</code> [<i>OPTIONS</i>]</p>

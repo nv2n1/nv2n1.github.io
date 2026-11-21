@@ -1,4 +1,5 @@
 ---
+
 title: "csi(1)"
 name: "csi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csi/"
 description: "The CHICKEN Scheme interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> The <i>CHICKEN</i> Scheme interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>csi</code> [ <i>pathname</i> | <i>option &#8230;</i> ] </p>

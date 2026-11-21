@@ -1,4 +1,5 @@
 ---
+
 title: "ffcall-vacall(3)"
 name: "ffcall-vacall"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffcall-vacall/"
 description: "vacall – C functions called with variable arguments"
 ---
 
-<h2>NAME</h2>
 <p> vacall &#8211; C functions called with variable arguments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;vacall.h&gt;</code> </p>

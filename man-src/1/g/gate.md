@@ -1,4 +1,5 @@
 ---
+
 title: "gate(1)"
 name: "gate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gate/"
 description: "gate – generate Ada applications from a GLADE XML file"
 ---
 
-<h2>NAME</h2>
 <p> gate &#8211; generate Ada applications from a GLADE XML file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gate</code> <i>file</i></p>

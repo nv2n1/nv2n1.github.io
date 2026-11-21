@@ -1,4 +1,5 @@
 ---
+
 title: "clogl(3)"
 name: "clogl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clogl/"
 description: "clog, clogf, clogl – natural logarithm of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clog, clogf, clogl &#8211; natural logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

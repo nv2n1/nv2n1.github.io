@@ -1,4 +1,5 @@
 ---
+
 title: "bzcat(1)"
 name: "bzcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bzcat/"
 description: "bzip2, bunzip2 – a block-sorting file compressor, v1.0.8 bzcat – decompresses files to stdout bzip2recover – recovers data from damaged bzip2 files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzip2, bunzip2 &#8211; a block-sorting file compressor, v1.0.8<br />
  bzcat &#8211; decompresses files to stdout<br />
  bzip2recover &#8211; recovers data from damaged bzip2 files</p>

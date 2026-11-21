@@ -1,4 +1,5 @@
 ---
+
 title: "megarm(1)"
 name: "megarm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megarm/"
 description: "megarm – Remove files and folders from your Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megarm &#8211; Remove files and folders from your Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre>

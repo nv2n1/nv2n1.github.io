@@ -1,4 +1,5 @@
 ---
+
 title: "incrontab(1)"
 name: "incrontab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-incrontab/"
 description: "incrontab – table manipulator for inotify cron (incron)"
 ---
 
-<h2>NAME</h2>
 <p> incrontab &#8211; table manipulator for inotify cron (incron)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>incrontab</code> [<code>-u</code> <i>user</i>] [<code>-f</code> <i>config</i>] <i>file</i> </p>

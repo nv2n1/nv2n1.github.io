@@ -1,4 +1,5 @@
 ---
+
 title: "avifix(1)"
 name: "avifix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avifix/"
 description: "avifix – fix header of AVI-file"
 ---
 
-<h2>NAME</h2>
 <p> avifix &#8211; fix header of AVI-file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avifix</code> [ <code>-i</code> <i>name</i> [ <code>-F</code> <i>string</i> ] [ <code>-f</code> <i>val1</i><code>,</code><i>val2</i> ] [ <code>-N 0x</code> <i>NN</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-e</code> <i>rate</i><code>[,</code><i>bits</i><code>[,</code><i>channels</i><code>]]</code> ] [ <code>-a</code> <i>num</i> ] [ <code>-v</code> ] ]</p>

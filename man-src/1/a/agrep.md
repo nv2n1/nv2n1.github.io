@@ -1,4 +1,5 @@
 ---
+
 title: "agrep(1)"
 name: "agrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-agrep/"
 description: "agrep – print lines approximately matching a pattern"
 ---
 
-<h2>NAME</h2>
 <p> agrep &#8211; print lines approximately matching a pattern</p>
 <h2>SYNOPSIS</h2>
 <p> <code>agrep</code> [<i>OPTION</i>]&#8230; <i>PATTERN</i> [<i>FILE</i>]&#8230;</p>

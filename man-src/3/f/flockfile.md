@@ -1,4 +1,5 @@
 ---
+
 title: "flockfile(3)"
 name: "flockfile"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-flockfile/"
 description: "flockfile, ftrylockfile, funlockfile – lock FILE for stdio"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flockfile, ftrylockfile, funlockfile &#8211; lock FILE for stdio </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

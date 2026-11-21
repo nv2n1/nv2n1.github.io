@@ -1,4 +1,5 @@
 ---
+
 title: "pkey_free(2)"
 name: "pkey_free"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pkey_free/"
 description: "pkey_alloc, pkey_free – allocate or free a protection key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkey_alloc, pkey_free &#8211; allocate or free a protection key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

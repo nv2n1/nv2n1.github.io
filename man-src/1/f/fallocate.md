@@ -1,4 +1,5 @@
 ---
+
 title: "fallocate(1)"
 name: "fallocate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fallocate/"
 description: "fallocate – preallocate or deallocate space to a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fallocate &#8211; preallocate or deallocate space to a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fallocate</code> [<code>-c</code>|<code>-p</code>|<code>-z</code>] [<code>-o</code> <i>offset</i>] <code>-l</code> <i>length</i> [<code>-n</code>] <i>filename</i> </p>

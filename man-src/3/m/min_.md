@@ -1,4 +1,5 @@
 ---
+
 title: "min_(3)"
 name: "min_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-min_/"
 description: "QuantLib::IncrementalStatistics – Statistics tool based on incremental accumulation."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::IncrementalStatistics &#8211; Statistics tool based on incremental accumulation. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/incrementalstatistics.hpp&gt; </p>

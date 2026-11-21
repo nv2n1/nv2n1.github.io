@@ -1,4 +1,5 @@
 ---
+
 title: "nwpqjob(1)"
 name: "nwpqjob"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwpqjob/"
 description: "nwpqjob – Perform operations on the jobs in NetWare print queue"
 ---
 
-<h2>NAME</h2>
 <p> nwpqjob &#8211; Perform operations on the jobs in NetWare print queue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwpqjob</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] &lt; <code>-d</code> | <code>-r</code> &gt; <i>queue_name</i> <i>job_ID</i> [ <i>another_job_ID</i> &#8230; ] </p>

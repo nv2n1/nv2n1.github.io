@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtonokia(1)"
 name: "pbmtonokia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtonokia/"
 description: "pbmtonokia – convert a portable bitmap to Nokia Smart Messaging Formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtonokia &#8211; convert a portable bitmap to Nokia Smart Messaging Formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtonokia [options]</code> [<i>pbmfile</i>]</p>

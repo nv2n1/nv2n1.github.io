@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-info(1)"
 name: "flatpak-remote-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-remote-info/"
 description: "flatpak-remote-info – Show information about an application or runtime in a remote"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-remote-info &#8211; Show information about an application or runtime in a remote </p>
 <h2>SYNOPSIS</h2>
 <dl>

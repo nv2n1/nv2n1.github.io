@@ -1,4 +1,5 @@
 ---
+
 title: "axlisten(1)"
 name: "axlisten"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axlisten/"
 description: "axlisten – monitor AX.25 traffic"
 ---
 
-<h2>NAME</h2>
 <p> axlisten &#8211; monitor AX.25 traffic</p>
 <h2>SYNOPSIS</h2>
 <p> <code>axlisten [-8] [-a] [-c] [-h] [-i] [-p port] [-r] [-t] [-v]</code></p>

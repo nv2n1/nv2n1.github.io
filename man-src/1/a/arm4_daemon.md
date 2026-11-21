@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_daemon(1)"
 name: "arm4_daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm4_daemon/"
 description: "arm4_daemon – ARM 4 collection agent"
 ---
 
-<h2>NAME</h2>
 <p> arm4_daemon &#8211; ARM 4 collection agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arm4_daemon</code> <i>&#8211;help|-h</i><br />

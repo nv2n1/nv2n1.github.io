@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_array_end(3)"
 name: "bson_append_array_end"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_array_end/"
 description: "bson_append_array_end() – The bson_append_array_end() function shall complete the appending of an array field started with bson_append_array_begin(). child is invalid after calling this function."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_array_end() &#8211; The bson_append_array_end() function shall complete the appending of an array field started with bson_append_array_begin(). child is invalid after calling this function.</p>
 <h2>SYNOPSIS</h2>
 <pre>

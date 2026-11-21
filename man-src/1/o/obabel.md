@@ -1,4 +1,5 @@
 ---
+
 title: "obabel(1)"
 name: "obabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obabel/"
 description: "babel , obabel – a converter for chemistry and molecular modeling data files"
 ---
 
-<h2>NAME</h2>
 <p> <code>babel , obabel</code> &#8211; a converter for chemistry and molecular modeling data files</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>H </code><i>help-options</i> ]<br />

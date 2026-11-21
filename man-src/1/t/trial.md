@@ -1,4 +1,5 @@
 ---
+
 title: "trial(1)"
 name: "trial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trial/"
 description: "trial – run unit tests"
 ---
 
-<h2>NAME</h2>
 <p> trial &#8211; run unit tests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>trial</code> [ <i>options</i> ] [ <i>file</i> | <i>package</i> | <i>module</i> | <i>TestCase</i> | <i>testmethod</i> ] &#8230; </p>

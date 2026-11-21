@@ -1,4 +1,5 @@
 ---
+
 title: "rcvpack(1)"
 name: "rcvpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcvpack/"
 description: "rcvpack – append message to file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rcvpack &#8211; append message to file </p>
 <h2>SYNOPSIS</h2>
 <dl>

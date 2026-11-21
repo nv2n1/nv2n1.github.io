@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_clear(3)"
 name: "ausearch_clear"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_clear/"
 description: "ausearch_clear – clear search parameters"
 ---
 
-<h2>NAME</h2>
 <p> ausearch_clear &#8211; clear search parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

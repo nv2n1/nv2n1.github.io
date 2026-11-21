@@ -1,4 +1,5 @@
 ---
+
 title: "mate-network-properties(1)"
 name: "mate-network-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-network-properties/"
 description: "mate-network-properties – configure MATE network proxy"
 ---
 
-<h2>NAME</h2>
 <p> mate-network-properties &#8211; configure MATE network proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-network-properties</code> [<i>OPTIONS&#8230;</i>]</p>

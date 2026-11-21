@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-cryptsetup(8)"
 name: "systemd-cryptsetup"
 section: "8"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/8-systemd-cryptsetup/"
 description: "systemd-cryptsetup [at] .service, systemd-cryptsetup – Full disk decryption logic"
 ---
+
 <p>systemd-cryptsetup [at] .service, systemd-cryptsetup &#8211; Full disk decryption logic </p>
-<h2>SYNOPSIS</h2>
+
 <p>systemd-cryptsetup [at] .service </p>
 <p>system-systemd\x2dcryptsetup.slice </p>
 <p>/lib/systemd/systemd-cryptsetup  </p>

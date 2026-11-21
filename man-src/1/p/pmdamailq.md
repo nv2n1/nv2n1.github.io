@@ -1,4 +1,5 @@
 ---
+
 title: "pmdamailq(1)"
 name: "pmdamailq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdamailq/"
 description: "pmdamailq – mail queue performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdamailq</code> &#8211; mail queue performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mailq/pmdamailq</code> [<code>-b</code> <i>binlist</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-r</code> <i>regex</i>] [<code>-U</code> <i>username</i>] [<i>queuedir</i>]</p>

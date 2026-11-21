@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaoracle(1)"
 name: "pmdaoracle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaoracle/"
 description: "pmdaoracle – Oracle database PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaoracle</code> &#8211; Oracle database PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdaoracle</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running Oracle database.</p>

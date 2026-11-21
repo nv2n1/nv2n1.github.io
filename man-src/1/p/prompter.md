@@ -1,4 +1,5 @@
 ---
+
 title: "prompter(1)"
 name: "prompter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prompter/"
 description: "prompter – prompting editor front-end for nmh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prompter &#8211; prompting editor front-end for nmh </p>
 <h2>SYNOPSIS</h2>
 <dl>

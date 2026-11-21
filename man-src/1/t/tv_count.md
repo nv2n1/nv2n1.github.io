@@ -1,4 +1,5 @@
 ---
+
 title: "tv_count(1)"
 name: "tv_count"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tv_count/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- tv_count - Count (and print) the number of channels and programmes in an XMLTV file. 
+tv_count - Count (and print) the number of channels and programmes in an XMLTV file. 
 
 <h2>SYNOPSIS</h2>
 

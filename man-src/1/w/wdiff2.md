@@ -1,4 +1,5 @@
 ---
+
 title: "wdiff2(1)"
 name: "wdiff2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wdiff2/"
 description: "wdiff – manual page for wdiff 1.2.2"
 ---
 
-<h2>NAME</h2>
 <p> wdiff &#8211; manual page for wdiff 1.2.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wdiff2</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>

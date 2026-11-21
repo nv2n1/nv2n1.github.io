@@ -1,4 +1,5 @@
 ---
+
 title: "beep-media-player-2(1)"
 name: "beep-media-player-2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beep-media-player-2/"
 description: "BMP – Media Player"
 ---
 
-<h2>NAME</h2>
 <p> BMP &#8211; Media Player</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beep-media-player-2 [OPTIONS]</code></p>

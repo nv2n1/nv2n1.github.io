@@ -1,4 +1,5 @@
 ---
+
 title: "printenv(1)"
 name: "printenv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-printenv/"
 description: "printenv – print all or part of environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> printenv &#8211; print all or part of environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>printenv</code> [<i>,OPTION/</i>]&#8230; [<i>,VARIABLE/</i>]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "startx(1)"
 name: "startx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-startx/"
 description: "startx – initialize an X session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> startx &#8211; initialize an X session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>startx</code> [ [ <i>client</i> ] <i>options</i> &#8230; ] [ <code>&#8212;</code> [ <i>server</i> ] [ <i>display</i> ] <i>options</i> &#8230; ]</p>

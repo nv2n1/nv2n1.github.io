@@ -1,4 +1,5 @@
 ---
+
 title: "gpvc(1)"
 name: "gpvc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpvc/"
 description: "gpvc – GNU PIC COD file viewer"
 ---
 
-<h2>NAME</h2>
 <p> gpvc &#8211; GNU PIC COD file viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpvc [options] file</code></p>

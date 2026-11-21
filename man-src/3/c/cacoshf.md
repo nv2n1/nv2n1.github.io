@@ -1,4 +1,5 @@
 ---
+
 title: "cacoshf(3)"
 name: "cacoshf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cacoshf/"
 description: "cacosh, cacoshf, cacoshl – complex arc hyperbolic cosine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cacosh, cacoshf, cacoshl &#8211; complex arc hyperbolic cosine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

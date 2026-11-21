@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_union(3)"
 name: "ck_bitmap_union"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_union/"
 description: "ck_bitmap_union – generates union of two bitmaps"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_union</code> &#8211; generates union of two bitmaps</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wordview(1)"
 name: "wordview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wordview/"
 description: "wordview – displays text contained in MS-Word file in X window"
 ---
 
-<h2>NAME</h2>
 <p> wordview &#8211; displays text contained in MS-Word file in X window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wordview</code> [ <i>filename</i>] </p>

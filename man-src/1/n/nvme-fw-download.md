@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-fw-download(1)"
 name: "nvme-fw-download"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-download/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-fw-download - Download all or a portion of an nvme firmware image. 
+nvme-fw-download - Download all or a portion of an nvme firmware image. 
 
 <h2>SYNOPSIS</h2>
 

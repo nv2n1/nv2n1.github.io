@@ -1,4 +1,5 @@
 ---
+
 title: "deweb(1)"
 name: "deweb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deweb/"
 description: "deweb – strips away C & CWEB commands from CWEB sources"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deweb &#8211; strips away C &amp; CWEB commands from CWEB sources </p>
 <h2>SYNOPSIS</h2>
 <p> <code>deweb</code> [ <code>file1 file2 &#8230;</code> ]</p>

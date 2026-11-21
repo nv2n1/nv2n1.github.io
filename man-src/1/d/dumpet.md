@@ -1,4 +1,5 @@
 ---
+
 title: "dumpet(1)"
 name: "dumpet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dumpet/"
 description: "dumpet – dump information about bootable CDs and other similar formats"
 ---
 
-<h2>NAME</h2>
 <p> <code>dumpet</code> &#8211; dump information about bootable CDs and other similar formats</p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>-iso </code><i>image</i> [-<code>-dumpdisks</code> ] [-<code>-dumphex | &#8211;xml</code> ]</p>

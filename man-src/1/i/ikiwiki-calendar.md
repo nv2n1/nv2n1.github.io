@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki-calendar(1)"
 name: "ikiwiki-calendar"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ikiwiki-calendar/"
 ---
 
-<h2>NAME</h2>
-
- ikiwiki-calendar - create calendar archive pages 
+ikiwiki-calendar - create calendar archive pages 
 
 <h2>SYNOPSIS</h2>
 

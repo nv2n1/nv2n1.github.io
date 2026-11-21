@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_begin(3)"
 name: "ldns_buffer_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer_begin/"
 description: "ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ldns_buffer_set_capacity, ldns_buffer_reserve, ldns_buffer_at, ldns_buffer_begin, ldns_buffer_end, ldns_buffer_current"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ldns_buffer_set_capacity, ldns_buffer_reserve, ldns_buffer_at, ldns_buffer_begin, ldns_buffer_end, ldns_buffer_current </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

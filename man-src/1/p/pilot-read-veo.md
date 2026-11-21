@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-veo(1)"
 name: "pilot-read-veo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-veo/"
 description: "pilot-read-veo – Synchronize your Veo Traveler databases"
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-veo &#8211; Synchronize your Veo Traveler databases</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

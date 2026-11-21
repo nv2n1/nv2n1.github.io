@@ -1,4 +1,5 @@
 ---
+
 title: "hpi_shell(1)"
 name: "hpi_shell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpi_shell/"
 description: "hpi_shell – An openhpi sample application that allows a user to interactively perform a number of HPI operations."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpi_shell &#8211; An openhpi sample application that allows a user to interactively perform a number of HPI operations. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

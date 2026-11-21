@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_status(3)"
 name: "ldns_buffer_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer_status/"
 description: "ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_available_at, ldns_buffer_available, ldns_buffer_status, ldns_buffer_status_ok"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_available_at, ldns_buffer_available, ldns_buffer_status, ldns_buffer_status_ok </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

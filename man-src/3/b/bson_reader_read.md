@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_read(3)"
 name: "bson_reader_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_read/"
 description: "bson_reader_read() – The bson_reader_read() function shall read the next document from the underlying file-descriptor or buffer."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_read() &#8211; The bson_reader_read() function shall read the next document from the underlying file-descriptor or buffer.</p>
 <h2>SYNOPSIS</h2>
 <pre>

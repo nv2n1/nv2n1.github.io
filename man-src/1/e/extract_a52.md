@@ -1,4 +1,5 @@
 ---
+
 title: "extract_a52(1)"
 name: "extract_a52"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extract_a52/"
 description: "extract_a52 – extract ATSC A/52 audio from a MPEG stream."
 ---
 
-<h2>NAME</h2>
 <p> extract_a52 &#8211; extract ATSC A/52 audio from a MPEG stream.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>extract_a52</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>file</i>]</p>

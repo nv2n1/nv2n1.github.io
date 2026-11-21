@@ -1,4 +1,5 @@
 ---
+
 title: "hb_takeover(1)"
 name: "hb_takeover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hb_takeover/"
 description: "hb_takeover – hb_takeover is a simple linux-ha shell script. It issues a command to takeover resources from the other node, if available."
 ---
 
-<h2>NAME</h2>
 <p> hb_takeover &#8211; hb_takeover is a simple linux-ha shell script. It issues a command to takeover resources from the other node, if available.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hb_takeover</code> [all|foreign|local|failback]</p>

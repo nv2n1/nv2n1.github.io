@@ -1,4 +1,5 @@
 ---
+
 title: "gethostbyaddr(3)"
 name: "gethostbyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gethostbyaddr/"
 description: "gethostbyname, gethostbyaddr, sethostent, gethostent, endhostent, h_errno, herror, hstrerror, gethostbyaddr_r, gethostbyname2, gethostbyname2_r, gethostbyname_r, gethostent_r – get network host entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gethostbyname, gethostbyaddr, sethostent, gethostent, endhostent, h_errno, herror, hstrerror, gethostbyaddr_r, gethostbyname2, gethostbyname2_r, gethostbyname_r, gethostent_r &#8211; get network host entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

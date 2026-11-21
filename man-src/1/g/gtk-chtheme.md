@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-chtheme(1)"
 name: "gtk-chtheme"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-chtheme/"
 description: "gtk-chtheme – Gtk+ 2.0 theme preview and selection made slick."
 ---
 
-<h2>NAME</h2>
 <p> gtk-chtheme &#8211; Gtk+ 2.0 theme preview and selection made slick.</p>
 <h2>SYNOPSIS</h2>
 <p> gtk-chtheme</p>

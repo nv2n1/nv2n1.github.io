@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbd(1)"
 name: "sfcbd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbd/"
 description: "sfcbd – Small-Footprint CIM Broker (sfcb)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sfcbd &#8211; Small-Footprint CIM Broker (sfcb) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbd</code> [<i>options</i>]</p>

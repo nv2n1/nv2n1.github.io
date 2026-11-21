@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-status(1)"
 name: "tracker3-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker3-status/"
 description: "tracker3-status – Provide status and statistics on the data indexed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker3-status &#8211; Provide status and statistics on the data indexed </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

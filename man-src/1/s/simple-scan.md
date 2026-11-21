@@ -1,4 +1,5 @@
 ---
+
 title: "simple-scan(1)"
 name: "simple-scan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simple-scan/"
 description: "simple-scan – Scanning utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simple-scan &#8211; Scanning utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>simple-scan [</code><i>DEVICE</i><code>]</code></p>

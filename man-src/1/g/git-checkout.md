@@ -1,4 +1,5 @@
 ---
+
 title: "git-checkout(1)"
 name: "git-checkout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-checkout/"
 description: "git-checkout – Switch branches or restore working tree files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-checkout &#8211; Switch branches or restore working tree files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

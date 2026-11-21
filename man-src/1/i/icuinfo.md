@@ -1,4 +1,5 @@
 ---
+
 title: "icuinfo(1)"
 name: "icuinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icuinfo/"
 description: "icuinfo – Shows some basic info about the current ICU"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>icuinfo</code> &#8211; Shows some basic info about the current ICU </p>
 <h2>SYNOPSIS</h2>
 <p> <code>icuinfo</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-L</code>, <code>&#8211;list-plugins</code> ] [ <code>-m</code>, <code>&#8211;milisecond-time</code> ] [ <code>-K</code>, <code>&#8211;cleanup</code> ]</p>

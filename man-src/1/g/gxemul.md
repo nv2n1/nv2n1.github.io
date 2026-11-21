@@ -1,4 +1,5 @@
 ---
+
 title: "gxemul(1)"
 name: "gxemul"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gxemul/"
 description: "gxemul – an experimental framework for full-system machine emulation"
 ---
 
-<h2>NAME</h2>
 <p> <code>gxemul</code> &#8211; an experimental framework for full-system machine emulation</p>
 <h2>SYNOPSIS</h2>
 <p> [machine, other, and general options] [file <i>&#8230;</i> ]<br />

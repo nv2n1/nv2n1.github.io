@@ -1,4 +1,5 @@
 ---
+
 title: "deliver(1)"
 name: "deliver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deliver/"
 description: "dovecot-lda – Dovecot’s local mail delivery agent"
 ---
 
-<h2>NAME</h2>
 <p> dovecot-lda &#8211; Dovecot&#8217;s local mail delivery agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dovecot-lda</code> [<code>-ek</code>] [<code>-a</code> <i>address</i>] [<code>-c</code> <i>config_file</i>] [<code>-d</code> <i>username</i>] [<code>-f</code> <i>envelope_sender</i>] [<code>-m</code> <i>mailbox</i>] [<code>-o</code> <i>setting=value</i>] [<code>-p</code> <i>path</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncflint(1)"
 name: "ncflint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncflint/"
 description: "ncflint – netCDF File Interpolator"
 ---
 
-<h2>NAME</h2>
 <p> ncflint &#8211; netCDF File Interpolator</p>
 <h2>SYNTAX</h2>
 <p> ncflint [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [-F] [&#8211;fix_rec_crd] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-i <i>var,</i>val3<i>]</i>[-L <i>dfl_lvl</i>]<i>[-l</i> <i>path</i>] [&#8211;msa] [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-w <i>wgt[,</i> <i>wgt2</i>]] [-X <i>box</i>] [-x] <i>file1 file2 file3</i></p>

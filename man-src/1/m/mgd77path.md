@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77path(1)"
 name: "mgd77path"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77path/"
 description: "mgd77path – Return paths to MGD77 cruises and directories"
 ---
 
-<h2>NAME</h2>
 <p> mgd77path &#8211; Return paths to MGD77 cruises and directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77path</code> <i>NGDC-ids</i> [ [<code>&#8211;</code>] ] [ ] [ <i>ignore</i> ] [ [<i>level</i>] ] </p>

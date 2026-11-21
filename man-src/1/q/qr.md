@@ -1,4 +1,5 @@
 ---
+
 title: "qr(1)"
 name: "qr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qr/"
 description: "qr – script to create QR codes at the command line"
 ---
 
-<h2>NAME</h2>
 <p> qr &#8211; script to create QR codes at the command line</p>
 <h2>SYNOPSIS</h2>
 <p> qr [&#8211;help] [&#8211;factory=FACTORY] [&#8211;optimize=OPTIMIZE] [data]</p>

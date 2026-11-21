@@ -1,4 +1,5 @@
 ---
+
 title: "tidy(1)"
 name: "tidy"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tidy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>tidy</b> - check, correct, and pretty-print 
+<b>tidy</b> - check, correct, and pretty-print 
 
 HTML(5) files
 

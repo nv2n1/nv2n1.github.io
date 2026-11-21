@@ -1,4 +1,5 @@
 ---
+
 title: "camera-calib(1)"
 name: "camera-calib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-camera-calib/"
 description: "camera-calib – GUI for calibrating a monocular camera using a checker-board"
 ---
 
-<h2 class="name">NAME</h2>
 <p> camera-calib &#8211; GUI for calibrating a monocular camera using a checker-board </p>
 <h2>SYNOPSIS</h2>
 <p> camera-calib</p>

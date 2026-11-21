@@ -1,4 +1,5 @@
 ---
+
 title: "kwalitee-metrics(1)"
 name: "kwalitee-metrics"
 section: "1"
@@ -6,10 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-kwalitee-metrics/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- kwalitee-metrics - list details of all kwalitee metrics installed on the system 
+kwalitee-metrics - list details of all kwalitee metrics installed on the system 
 
 <h2>VERSION</h2>
 

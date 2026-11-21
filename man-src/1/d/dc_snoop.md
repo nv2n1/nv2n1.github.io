@@ -1,4 +1,5 @@
 ---
+
 title: "dc_snoop(1)"
 name: "dc_snoop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc_snoop/"
 description: "dc_snoop – Distributed session cache traffic analysis"
 ---
 
-<h2>NAME</h2>
 <p> dc_snoop &#8211; Distributed session cache traffic analysis</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc_snoop</code> -listen &lt;address&gt; -server &lt;address&gt; [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xdmxconfig(1)"
 name: "xdmxconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdmxconfig/"
 description: "xdmxconfig – a graphical configuration tool for Xdmx configuration files"
 ---
 
-<h2>NAME</h2>
 <p> xdmxconfig &#8211; a graphical configuration tool for Xdmx configuration files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdmxconfig</code> [filename]</p>

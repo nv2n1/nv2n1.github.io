@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-show(1)"
 name: "transmission-show"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-show/"
 description: "transmission-show – command-line utility to show .torrent file metadata"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-show</code> &#8211; command-line utility to show .torrent file metadata</p>
 <h2>SYNOPSIS</h2>
 <p> -words [-<code>h</code> ] [-<code>m</code> ] [-<code>s</code> ] [<i>torrentfile</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-notify(1)"
 name: "ldns-notify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-notify/"
 description: "ldns-notify – notify DNS servers that updates are available"
 ---
 
-<h2>NAME</h2>
 <p> ldns-notify &#8211; notify DNS servers that updates are available</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-notify</code> [options] -z zone <i>servers</i> </p>

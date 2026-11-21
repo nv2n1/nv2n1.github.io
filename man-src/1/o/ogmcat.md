@@ -1,4 +1,5 @@
 ---
+
 title: "ogmcat(1)"
 name: "ogmcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogmcat/"
 description: "ogmcat – Concatenate several OGG/OGM files into one big OGG/OGM file"
 ---
 
-<h2>NAME</h2>
 <p> ogmcat &#8211; Concatenate several OGG/OGM files into one big OGG/OGM file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogmcat</code> [<i>options</i>] -o <i>outname</i> <i>inname1</i> [<i>inname2</i> [<i>inname3</i> &#8230;]]</p>

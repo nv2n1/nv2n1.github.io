@@ -1,4 +1,5 @@
 ---
+
 title: "bchunk(1)"
 name: "bchunk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bchunk/"
 description: "bchunk – CD image format conversion from bin/cue to iso/cdr"
 ---
 
-<h2>NAME</h2>
 <p> bchunk &#8211; CD image format conversion from bin/cue to iso/cdr</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bchunk [-v] [-p] [-r] [-w] [-s] &lt;image.bin&gt; &lt;image.cue&gt; &lt;basename&gt;</code></p>

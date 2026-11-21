@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-session(1)"
 name: "xfce4-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-session/"
 description: "xfce4-session – Starts up the Xfce Desktop Environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-session &#8211; Starts up the Xfce Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-session</code> </p>

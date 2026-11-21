@@ -1,4 +1,5 @@
 ---
+
 title: "spectrum1d(1)"
 name: "spectrum1d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spectrum1d/"
 description: "spectrum1d – Compute auto- [and cross- ] spectra from one [or two] time-series"
 ---
 
-<h2>NAME</h2>
 <p> spectrum1d &#8211; Compute auto- [and cross- ] spectra from one [or two] time-series</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spectrum1d</code> [ <i>table</i> ] <i>segment_size</i>] [ [<code>xycnpago</code>] ] [ <i>dt</i> ] [ [<code>h</code>|<code>m</code>] ] [ [<i>name_stem</i> ] ] [ ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] </p>

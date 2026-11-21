@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-hist(1)"
 name: "trace-cmd-hist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-hist/"
 description: "trace-cmd-hist – show histogram of events in trace.dat file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-hist &#8211; show histogram of events in trace.dat file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd hist</code> [<i>OPTIONS</i>][<i>input-file</i>]</p>

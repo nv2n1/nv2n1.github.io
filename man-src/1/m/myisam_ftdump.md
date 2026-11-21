@@ -1,4 +1,5 @@
 ---
+
 title: "myisam_ftdump(1)"
 name: "myisam_ftdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myisam_ftdump/"
 description: "myisam_ftdump – display full-text index information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> myisam_ftdump &#8211; display full-text index information </p>
 <h2>SYNOPSIS</h2>
 <dl>

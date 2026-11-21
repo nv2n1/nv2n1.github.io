@@ -1,4 +1,5 @@
 ---
+
 title: "grub-mkfont(1)"
 name: "grub-mkfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub-mkfont/"
 description: "grub-mkfont – make GRUB font files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grub-mkfont &#8211; make GRUB font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkfont</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>] <i>,FONT_FILES/</i></p>

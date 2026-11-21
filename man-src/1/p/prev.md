@@ -1,4 +1,5 @@
 ---
+
 title: "prev(1)"
 name: "prev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prev/"
 description: "prev – show the previous message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prev &#8211; show the previous message </p>
 <h2>SYNOPSIS</h2>
 <dl>

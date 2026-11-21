@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_425_conv_principal_ext(3)"
 name: "krb5_425_conv_principal_ext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_425_conv_principal_ext/"
 description: "krb5_425_conv_principal krb5_425_conv_principal_ext krb5_524_conv_principal – converts to and from version 4 principals"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_425_conv_principal</code> <code>krb5_425_conv_principal_ext</code> <code>krb5_524_conv_principal</code> &#8211; converts to and from version 4 principals </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

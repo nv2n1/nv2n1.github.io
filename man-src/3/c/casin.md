@@ -1,4 +1,5 @@
 ---
+
 title: "casin(3)"
 name: "casin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-casin/"
 description: "casin, casinf, casinl – complex arc sine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> casin, casinf, casinl &#8211; complex arc sine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

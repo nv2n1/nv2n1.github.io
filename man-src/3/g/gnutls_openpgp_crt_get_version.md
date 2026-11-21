@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_version(3)"
 name: "gnutls_openpgp_crt_get_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_openpgp_crt_get_version/"
 description: "gnutls_openpgp_crt_get_version – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_version &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>

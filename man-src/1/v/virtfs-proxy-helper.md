@@ -1,4 +1,5 @@
 ---
+
 title: "virtfs-proxy-helper(1)"
 name: "virtfs-proxy-helper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virtfs-proxy-helper/"
 description: "virtfs-proxy-helper – QEMU 9p virtfs proxy filesystem helper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virtfs-proxy-helper &#8211; QEMU 9p virtfs proxy filesystem helper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virtfs-proxy-helper</code> <i>options</i></p>

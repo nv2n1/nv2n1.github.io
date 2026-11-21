@@ -1,4 +1,5 @@
 ---
+
 title: "malloc_set_state(3)"
 name: "malloc_set_state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-malloc_set_state/"
 description: "malloc_get_state, malloc_set_state – record and restore state of malloc implementation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malloc_get_state, malloc_set_state &#8211; record and restore state of malloc implementation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

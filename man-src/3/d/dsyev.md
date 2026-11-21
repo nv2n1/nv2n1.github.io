@@ -1,4 +1,5 @@
 ---
+
 title: "dsyev(3)"
 name: "dsyev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsyev/"
 description: "dsyev.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsyev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

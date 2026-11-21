@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-network-acls(1)"
 name: "euca-describe-network-acls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-network-acls/"
 description: "euca-describe-network-acls – Describe one or more network ACLs"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-network-acls &#8211; Describe one or more network ACLs</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-network-acls [&#8211;show-empty-fields] [-U URL]</p>

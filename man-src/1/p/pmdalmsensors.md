@@ -1,4 +1,5 @@
 ---
+
 title: "pmdalmsensors(1)"
 name: "pmdalmsensors"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdalmsensors/"
 description: "pmdalmsensors – Linux hardware monitoring performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdalmsensors</code> &#8211; Linux hardware monitoring performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/lmsensors/pmdalmsensors</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>

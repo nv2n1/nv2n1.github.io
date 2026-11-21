@@ -1,4 +1,5 @@
 ---
+
 title: "curl_mprintf(3)"
 name: "curl_mprintf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_mprintf/"
 description: "curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_msprintf curl_mvaprintf, curl_mvfprintf, curl_mvprintf, curl_mvsnprintf, curl_mvsprintf – formatted output conversion"
 ---
 
-<h2>NAME</h2>
 <p> curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_msprintf curl_mvaprintf, curl_mvfprintf, curl_mvprintf, curl_mvsnprintf, curl_mvsprintf &#8211; formatted output conversion</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/mprintf.h&gt;</code> </p>

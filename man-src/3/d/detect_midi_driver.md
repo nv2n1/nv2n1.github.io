@@ -1,4 +1,5 @@
 ---
+
 title: "detect_midi_driver(3)"
 name: "detect_midi_driver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-detect_midi_driver/"
 description: "detect_midi_driver – Detects whether the specified MIDI sound device is available. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> detect_midi_driver &#8211; Detects whether the specified MIDI sound device is available. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

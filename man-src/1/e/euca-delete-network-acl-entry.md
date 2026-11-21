@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-network-acl-entry(1)"
 name: "euca-delete-network-acl-entry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-network-acl-entry/"
 description: "euca-delete-network-acl-entry – Delete a network acl rule"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-network-acl-entry &#8211; Delete a network acl rule</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-network-acl-entry <code>-n</code> RULENUMBER [&#8211;egress]</p>

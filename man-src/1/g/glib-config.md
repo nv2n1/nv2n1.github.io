@@ -1,4 +1,5 @@
 ---
+
 title: "glib-config(1)"
 name: "glib-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glib-config/"
 description: "glib-config – script to get information about the installed version of GLib"
 ---
 
-<h2>NAME</h2>
 <p> glib-config &#8211; script to get information about the installed version of GLib</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glib-config [&#8211;prefix</code><i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags] [LIBRARIES]</p>

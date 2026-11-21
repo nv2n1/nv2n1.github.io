@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-info(1)"
 name: "cpupower-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-info/"
 description: "cpupower-info – Shows processor power related kernel or hardware configurations"
 ---
 
-<h2>NAME</h2>
 <p> cpupower-info &#8211; Shows processor power related kernel or hardware configurations</p>
 <h2>SYNOPSIS</h2>
 <p> <code> cpupower info [ -b ]</code> </p>

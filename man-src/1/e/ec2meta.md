@@ -1,4 +1,5 @@
 ---
+
 title: "ec2meta(1)"
 name: "ec2meta"
 section: "1"
@@ -6,10 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-ec2meta/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ec2meta - get the metadata for this particular ec2 instance 
+ec2meta - get the metadata for this particular ec2 instance 
 
 <h2>SYNOPSIS</h2>
 

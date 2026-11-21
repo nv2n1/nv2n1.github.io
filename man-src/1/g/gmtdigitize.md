@@ -1,4 +1,5 @@
 ---
+
 title: "gmtdigitize(1)"
 name: "gmtdigitize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtdigitize/"
 description: "gmtdigitize – Digitizing and Inverse map transformation of map x/y coordinates"
 ---
 
-<h2>NAME</h2>
 <p> gmtdigitize &#8211; Digitizing and Inverse map transformation of map x/y coordinates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtdigitize</code> <code>-J</code><i>parameters</i> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <code>-A</code> ] [ <code>-C</code><i>device</i> ] [ <code>-D</code><i>limit</i> ] [ <code>-F</code> ] [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-L</code><i>lpi</i> ] [ <code>-N</code><i>namestem</i> ] [ <code>-S</code> ] [ <code>-V</code> ] [ <code>-Zk</code>|<code>v</code> ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-m</code>[<i>flag</i>] ] [ &gt; output.d ]</p>

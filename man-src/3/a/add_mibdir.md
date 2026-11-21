@@ -1,4 +1,5 @@
 ---
+
 title: "add_mibdir(3)"
 name: "add_mibdir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-add_mibdir/"
 description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, read_mib, read_all_mibs, add_module_replacement, snmp_set_mib_errors, snmp_set_mib_warnings, snmp_set_save_descriptions, read_objid,..."
 ---
 
-<h2>NAME</h2>
 <p> add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, read_mib, read_all_mibs, add_module_replacement, snmp_set_mib_errors, snmp_set_mib_warnings, snmp_set_save_descriptions, read_objid, snmp_parse_oid, get_module_node, print_mib, print_objid, fprint_objid, snprint_objid, print_description, fprint_description, snprint_description &#8211; netsnmp_mib_api functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/mib_api.h&gt;</code> </p>

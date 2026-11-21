@@ -1,4 +1,5 @@
 ---
+
 title: "login(3)"
 name: "login"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-login/"
 description: "login, logout – write utmp and wtmp entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> login, logout &#8211; write utmp and wtmp entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;utmp.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_constant(3)"
 name: "get_constant"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_constant/"
 description: "get_constant — retrieve a scalar constant from a dirfile database"
 ---
 
-<h2>NAME</h2>
 <p> get_constant &#8212; retrieve a scalar constant from a dirfile database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

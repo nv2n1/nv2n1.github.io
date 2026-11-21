@@ -1,4 +1,5 @@
 ---
+
 title: "libipq(3)"
 name: "libipq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libipq/"
 description: "libipq — iptables userspace packet queuing library."
 ---
 
-<h2 class="name">NAME</h2>
 <p> libipq &#8212; iptables userspace packet queuing library. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />

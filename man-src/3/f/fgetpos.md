@@ -1,4 +1,5 @@
 ---
+
 title: "fgetpos(3)"
 name: "fgetpos"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetpos/"
 description: "fgetpos, fseek, fsetpos, ftell, rewind – reposition a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fgetpos, fseek, fsetpos, ftell, rewind &#8211; reposition a stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>

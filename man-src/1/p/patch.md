@@ -1,4 +1,5 @@
 ---
+
 title: "patch(1)"
 name: "patch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-patch/"
 description: "patch – apply a diff file to an original"
 ---
 
-<h2 class="name">NAME</h2>
 <p> patch &#8211; apply a diff file to an original </p>
 <h2>SYNOPSIS</h2>
 <p> <code>patch</code> [<i>options</i>] [<i>originalfile</i> [<i>patchfile</i>]] </p>

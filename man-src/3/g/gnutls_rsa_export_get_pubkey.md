@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_export_get_pubkey(3)"
 name: "gnutls_rsa_export_get_pubkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_rsa_export_get_pubkey/"
 description: "gnutls_rsa_export_get_pubkey – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_rsa_export_get_pubkey &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

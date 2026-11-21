@@ -1,4 +1,5 @@
 ---
+
 title: "acl_clear_perms(3)"
 name: "acl_clear_perms"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_clear_perms/"
 description: "acl_clear_perms – clear all permissions from an ACL permission set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_clear_perms</code> &#8211; clear all permissions from an ACL permission set </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

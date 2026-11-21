@@ -1,4 +1,5 @@
 ---
+
 title: "night_exposure(1)"
 name: "night_exposure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_exposure/"
 description: "night_exposure – make a single exposure on a camera"
 ---
 
-<h2>NAME</h2>
 <p> night_exposure &#8211; make a single exposure on a camera</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_exposure&nbsp;<wbr>[-t time]&nbsp;<wbr>[-s shutter on|off]&nbsp;<wbr>[-b 1|2|3]&nbsp;<wbr>[-o output]</p>

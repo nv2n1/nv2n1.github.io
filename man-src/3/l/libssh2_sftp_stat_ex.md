@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_stat_ex(3)"
 name: "libssh2_sftp_stat_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_stat_ex/"
 description: "libssh2_sftp_stat_ex – get status about an SFTP file"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_stat_ex &#8211; get status about an SFTP file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

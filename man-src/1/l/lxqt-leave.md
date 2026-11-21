@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-leave(1)"
 name: "lxqt-leave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxqt-leave/"
 description: "lxqt-leave – Dialog to easily select logout, reboot, shutdown, suspend, hibernate, and lock screen"
 ---
 
-<h2>NAME</h2>
 <p> <code>lxqt-leave</code> &#8211; Dialog to easily select logout, reboot, shutdown, suspend, hibernate, and lock screen</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxqt-leave</code> [<i>argument</i>]</p>

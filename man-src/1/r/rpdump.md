@@ -1,4 +1,5 @@
 ---
+
 title: "rpdump(1)"
 name: "rpdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpdump/"
 description: "rpdump – alpine remote data utility"
 ---
 
-<h2>NAME</h2>
 <p> rpdump &#8211; alpine remote data utility</p>
 <h2>SYNTAX</h2>
 <p> <code>rpdump</code> [ -f ] -l Local_file -r Remote_folder</p>

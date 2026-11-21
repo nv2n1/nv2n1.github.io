@@ -1,4 +1,5 @@
 ---
+
 title: "ares_version(3)"
 name: "ares_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_version/"
 description: "ares_version – Get the version number of the library"
 ---
 
-<h2>NAME</h2>
 <p> ares_version &#8211; Get the version number of the library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

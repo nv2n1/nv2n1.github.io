@@ -1,4 +1,5 @@
 ---
+
 title: "rcsmerge(1)"
 name: "rcsmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcsmerge/"
 description: "rcsmerge – merge RCS revisions"
 ---
 
-<h2>NAME</h2>
 <p> rcsmerge &#8211; merge RCS revisions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcsmerge</code> [<i>options</i>]<i> file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-dane(1)"
 name: "ldns-dane"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-dane/"
 description: "ldns-dane – verify or create TLS authentication with DANE (RFC6698)"
 ---
 
-<h2>NAME</h2>
 <p> ldns-dane &#8211; verify or create TLS authentication with DANE (RFC6698)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-dane</code> <i>[OPTIONS]</i> <i>verify</i> <i>name</i> <i>port</i> </p>

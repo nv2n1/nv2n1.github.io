@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_dict_create(3)"
 name: "getdns_dict_create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_dict_create/"
 description: "getdns_dict, getdns_dict_create, getdns_dict_create_with_extended_memory_functions, getdns_dict_create_with_memory_functions, getdns_dict_destroy — getdns dict create and destroy routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_dict, </code> <code>getdns_dict_create, </code> <code>getdns_dict_create_with_extended_memory_functions, </code> <code>getdns_dict_create_with_memory_functions, </code> <code>getdns_dict_destroy </code> &#8212; getdns dict create and destroy routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

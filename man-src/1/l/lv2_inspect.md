@@ -1,4 +1,5 @@
 ---
+
 title: "lv2_inspect(1)"
 name: "lv2_inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lv2_inspect/"
 description: "lv2_inspect – print information about an LV2 plugin in human-readable form."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>lv2_inspect &#8211; print information about an LV2 plugin in human-readable form.</code> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lv2_inspect PLUGIN_URI</code> </p>

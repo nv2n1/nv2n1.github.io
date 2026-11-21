@@ -1,4 +1,5 @@
 ---
+
 title: "allegro_exit(3)"
 name: "allegro_exit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-allegro_exit/"
 description: "allegro_exit – Closes down the Allegro system."
 ---
 
-<h2>NAME</h2>
 <p> allegro_exit &#8211; Closes down the Allegro system.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

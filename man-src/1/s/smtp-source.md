@@ -1,4 +1,5 @@
 ---
+
 title: "smtp-source(1)"
 name: "smtp-source"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smtp-source/"
 description: "smtp-source – parallelized SMTP/LMTP test generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smtp-source &#8211; parallelized SMTP/LMTP test generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>smtp-source</code> [<i>options</i>] [<code>inet:</code>]<i>host</i>[:<i>port</i>] </p>

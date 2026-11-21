@@ -1,4 +1,5 @@
 ---
+
 title: "xycpt(1)"
 name: "xycpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xycpt/"
 description: "xycpt – generate GMT colour palette table (cpt) files from column data."
 ---
 
-<h2 class="name">NAME</h2>
 <p> xycpt &#8211; generate GMT colour palette table (cpt) files from column data. </p>
 <h2>SYNOPSIS</h2>
 <dl>

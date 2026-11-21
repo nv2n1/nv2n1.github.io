@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp_license(1)"
 name: "fstrcmp_license"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fstrcmp_license/"
 ---
 
-<h2>NAME</h2>
-
- GPL - GNU General Public License
+GPL - GNU General Public License
 
 <h2>DESCRIPTION</h2>
 

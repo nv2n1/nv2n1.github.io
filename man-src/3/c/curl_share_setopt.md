@@ -1,4 +1,5 @@
 ---
+
 title: "curl_share_setopt(3)"
 name: "curl_share_setopt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_share_setopt/"
 description: "curl_share_setopt – Set options for a shared object"
 ---
 
-<h2>NAME</h2>
 <p> curl_share_setopt &#8211; Set options for a shared object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

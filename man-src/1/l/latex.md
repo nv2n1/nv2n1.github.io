@@ -1,4 +1,5 @@
 ---
+
 title: "latex(1)"
 name: "latex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-latex/"
 description: "latex, pdflatex, xelatex, lualatex, dvilualatex, cslatex, pdfcslatex, platex, uplatex, lamed – structured text formatting and typesetting"
 ---
 
-<h2 class="name">NAME</h2>
 <p> latex, pdflatex, xelatex, lualatex, dvilualatex, cslatex, pdfcslatex, platex, uplatex, lamed &#8211; structured text formatting and typesetting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latex</code> [<i>first-line</i>]</p>

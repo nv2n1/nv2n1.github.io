@@ -1,4 +1,5 @@
 ---
+
 title: "bc(1)"
 name: "bc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bc/"
 description: "bc – An arbitrary precision calculator language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bc &#8211; An arbitrary precision calculator language </p>
 <h2>SYNTAX</h2>
 <p> <code>bc</code> [ <code>-hlwsqv</code> ] [long-options] [ <i> file &#8230;</i> ]</p>

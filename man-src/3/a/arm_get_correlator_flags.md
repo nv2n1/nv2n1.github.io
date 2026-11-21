@@ -1,4 +1,5 @@
 ---
+
 title: "arm_get_correlator_flags(3)"
 name: "arm_get_correlator_flags"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_get_correlator_flags/"
 description: "arm_get_correlator_flags – get value of flag"
 ---
 
-<h2>NAME</h2>
 <p> arm_get_correlator_flags &#8211; get value of flag</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memdump(1)"
 name: "memdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memdump/"
 description: "memdump – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memdump &#8211; libmemcached Documentation </p>
 <p> Dump a list of keys from a server.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "longstaffschwartzpathpricer(3)"
 name: "longstaffschwartzpathpricer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-longstaffschwartzpathpricer/"
 description: "ql/methods/montecarlo/longstaffschwartzpathpricer.hpp – Longstaff-Schwarz path pricer for early exercise options."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/methods/montecarlo/longstaffschwartzpathpricer.hpp &#8211; Longstaff-Schwarz path pricer for early exercise options. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br />

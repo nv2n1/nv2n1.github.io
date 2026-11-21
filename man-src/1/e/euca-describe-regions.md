@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-regions(1)"
 name: "euca-describe-regions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-regions/"
 description: "euca-describe-regions – Display information about regions"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-regions &#8211; Display information about regions</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-regions [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "originator(1)"
 name: "originator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-originator/"
 description: "originator – Associate seamounts with nearest hotspot point sources"
 ---
 
-<h2>NAME</h2>
 <p> originator &#8211; Associate seamounts with nearest hotspot point sources</p>
 <h2>SYNOPSIS</h2>
 <p> <code>originator</code> [ <i>tables</i> ] [<code>+</code>]<i>rotfile</i> [<code>+</code>]<i>hs_file</i> [ <i>d_km</i> ] [ [<i>flag</i>] ] [ <i>upper_age</i> ] [ <i>r/t</i> ] [ [<i>n_hs</i>] ] [ ] [ [<i>level</i>] ] [ <i>maxdist</i> ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

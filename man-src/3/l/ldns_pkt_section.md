@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_section(3)"
 name: "ldns_pkt_section"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_section/"
 description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt, ldns_pkt_section, ldns_pkt_type </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

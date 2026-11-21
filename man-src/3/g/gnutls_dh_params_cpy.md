@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_params_cpy(3)"
 name: "gnutls_dh_params_cpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_dh_params_cpy/"
 description: "gnutls_dh_params_cpy – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_dh_params_cpy &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

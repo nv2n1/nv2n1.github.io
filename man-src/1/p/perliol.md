@@ -1,4 +1,5 @@
 ---
+
 title: "perliol(1)"
 name: "perliol"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perliol/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perliol - C API for Perl's implementation of IO in Layers. 
+perliol - C API for Perl's implementation of IO in Layers. 
 
 <h2>SYNOPSIS</h2>
 

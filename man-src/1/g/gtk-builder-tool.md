@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-builder-tool(1)"
 name: "gtk-builder-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-builder-tool/"
 description: "gtk-builder-tool – GtkBuilder file utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk-builder-tool &#8211; GtkBuilder file utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

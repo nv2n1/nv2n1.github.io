@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_tutorial(3)"
 name: "globus_net_manager_tutorial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_net_manager_tutorial/"
 description: "globus_net_manager_tutorial – Net Manager Implementation Tutorial This example uses functionality from globus_common and globus_net_manager modules, so the headers for those must be included:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_net_manager_tutorial &#8211; Net Manager Implementation Tutorial This example uses functionality from globus_common and globus_net_manager modules, so the headers for those must be included: </p>
 <pre><code>
 #include "globus_common.h"

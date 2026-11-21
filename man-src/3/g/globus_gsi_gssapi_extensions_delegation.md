@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gssapi_extensions_delegation(3)"
 name: "globus_gsi_gssapi_extensions_delegation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_extensions_delegation/"
 description: "Delegation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Delegation &#8211; </p>
 <p> Delegation Functions.</p>
 <h3>Functions</h3>

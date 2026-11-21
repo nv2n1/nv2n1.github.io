@@ -1,4 +1,5 @@
 ---
+
 title: "ncargfile(1)"
 name: "ncargfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargfile/"
 description: "ncargfile – NCAR Graphics Files"
 ---
 
-<h2>NAME</h2>
 <p> ncargfile &#8211; NCAR Graphics Files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargfile</code> [<code>-all</code>] <code>file &#8230;</code></p>

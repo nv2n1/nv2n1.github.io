@@ -1,4 +1,5 @@
 ---
+
 title: "sysinfo(2)"
 name: "sysinfo"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sysinfo/"
 description: "sysinfo – return system information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sysinfo &#8211; return system information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sysinfo.h&gt;</code> </p>

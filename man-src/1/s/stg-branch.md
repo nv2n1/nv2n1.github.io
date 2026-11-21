@@ -1,4 +1,5 @@
 ---
+
 title: "stg-branch(1)"
 name: "stg-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-branch/"
 description: "stg-branch – Branch operations: switch, list, create, rename, delete, …"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-branch &#8211; Branch operations: switch, list, create, rename, delete, &#8230; </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

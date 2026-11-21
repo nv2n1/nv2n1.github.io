@@ -1,4 +1,5 @@
 ---
+
 title: "oz-cleanup-cache(1)"
 name: "oz-cleanup-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oz-cleanup-cache/"
 description: "oz-cleanup-cache – tool to remove cached oz data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oz-cleanup-cache &#8211; tool to remove cached oz data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oz-cleanup-cache [OPTIONS]</code> </p>

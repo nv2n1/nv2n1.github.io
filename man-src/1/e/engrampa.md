@@ -1,4 +1,5 @@
 ---
+
 title: "engrampa(1)"
 name: "engrampa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-engrampa/"
 description: "Engrampa – Archive Manager for MATE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Engrampa &#8211; Archive Manager for MATE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>engrampa [OPTIONS&#8230;] [FILES&#8230;]</code></p>

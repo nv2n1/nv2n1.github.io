@@ -1,4 +1,5 @@
 ---
+
 title: "gnc-fq-helper(1)"
 name: "gnc-fq-helper"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gnc-fq-helper/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gnc-fq-helper - allows gnucash to communicate with Finance::Quote 
+gnc-fq-helper - allows gnucash to communicate with Finance::Quote 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>over pipes from guile. The requests and responses 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>are scheme forms. 
 

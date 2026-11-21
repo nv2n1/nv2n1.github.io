@@ -1,4 +1,5 @@
 ---
+
 title: "arecordmidi(1)"
 name: "arecordmidi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arecordmidi/"
 description: "arecordmidi – record Standard MIDI Files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arecordmidi &#8211; record Standard MIDI Files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arecordmidi</code> -p client:port[,&#8230;] [options] midifile </p>

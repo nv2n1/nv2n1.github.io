@@ -1,4 +1,5 @@
 ---
+
 title: "aa_getkey(3)"
 name: "aa_getkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_getkey/"
 description: "aa_getkey – return next keypress event from queue."
 ---
 
-<h2>NAME</h2>
 <p> aa_getkey &#8211; return next keypress event from queue.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

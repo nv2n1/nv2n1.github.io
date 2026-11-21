@@ -1,4 +1,5 @@
 ---
+
 title: "boltctl(1)"
 name: "boltctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-boltctl/"
 description: "boltctl – control the thunderbolt device manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> boltctl &#8211; control the thunderbolt device manager </p>
 <h2>SYNOPSIS</h2>
 <pre>

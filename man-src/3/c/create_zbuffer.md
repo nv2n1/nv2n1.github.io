@@ -1,4 +1,5 @@
 ---
+
 title: "create_zbuffer(3)"
 name: "create_zbuffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_zbuffer/"
 description: "create_zbuffer – Creates a Z-buffer for a bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_zbuffer &#8211; Creates a Z-buffer for a bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

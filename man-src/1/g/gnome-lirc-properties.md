@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-lirc-properties(1)"
 name: "gnome-lirc-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-lirc-properties/"
 description: "gnome-lirc-properties – A control panel to configure remote controls."
 ---
 
-<h2>NAME</h2>
 <p> gnome-lirc-properties &#8211; A control panel to configure remote controls.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-lirc-properties</code></p>

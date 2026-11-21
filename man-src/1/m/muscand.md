@@ -1,4 +1,5 @@
 ---
+
 title: "muscand(1)"
 name: "muscand"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-muscand/"
 description: "Muscand – File scanner daemon for Museek"
 ---
 
-<h2>NAME</h2>
 <p> <code>Muscand</code> &#8211; File scanner daemon for Museek</p>
 <h2>SYNOPSIS</h2>
 <p> <code>muscand</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-b] [&#8211;buddy] [-l] [&#8211;list] [-h] [&#8211;help] [-v] [&#8211;verbose] [&#8211;no-reload]</p>

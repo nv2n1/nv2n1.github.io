@@ -1,4 +1,5 @@
 ---
+
 title: "fusecompress_offline(1)"
 name: "fusecompress_offline"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fusecompress_offline/"
 description: "fusecompress_offline – decompress or compress data without need to mount the compressed virtual filesystem"
 ---
 
-<h2>NAME</h2>
 <p> fusecompress_offline &#8211; decompress or compress data without need to mount the compressed virtual filesystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fusecompress_offline</code> [-h] [-v] [-o OPTIONS] path</p>

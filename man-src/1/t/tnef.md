@@ -1,4 +1,5 @@
 ---
+
 title: "tnef(1)"
 name: "tnef"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tnef/"
 description: "tnef - decode Microsoft's Transport Neutral Encapsulation Format SYNOPSIS tnef [options] [FILE]"
 ---
 
-<h2>NAME</h2>
 <pre>
 tnef - decode Microsoft's Transport Neutral Encapsulation Format
 </pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callout_activation(3)"
 name: "globus_callout_activation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callout_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Activation &#8211; </p>
 <p> Callback API Activation.</p>
 <h3>Macros</h3>

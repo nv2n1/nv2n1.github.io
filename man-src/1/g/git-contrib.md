@@ -1,4 +1,5 @@
 ---
+
 title: "git-contrib(1)"
 name: "git-contrib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-contrib/"
 description: "git-contrib – Show user’s contributions"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-contrib</code> &#8211; Show user&#8217;s contributions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-contrib</code> [&lt;username&gt;|&lt;email&gt;]</p>

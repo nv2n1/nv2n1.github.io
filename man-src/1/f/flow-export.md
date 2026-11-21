@@ -1,4 +1,5 @@
 ---
+
 title: "flow-export(1)"
 name: "flow-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-export/"
 description: "flow-export – Export flow-tools files into other NetFlow packages."
 ---
 
-<h2>NAME</h2>
 <p> flow-export &#8211; Export flow-tools files into other NetFlow packages.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-export</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> format</i> ] [ <code>-m</code><i> mask_fields</i> ] [ <code>-u</code><i> user:password:host:port:name:table</i> ]</p>

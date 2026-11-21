@@ -1,4 +1,5 @@
 ---
+
 title: "inndcomm(3)"
 name: "inndcomm"
 section: "3"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-inndcomm/"
 ---
 
-<h2>NAME</h2>
-
- inndcomm - INND communication part of InterNetNews library
+inndcomm - INND communication part of InterNetNews library
 
 <h2>SYNOPSIS</h2>
 

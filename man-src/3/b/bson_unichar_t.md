@@ -1,4 +1,5 @@
 ---
+
 title: "bson_unichar_t(3)"
 name: "bson_unichar_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_unichar_t/"
 description: "bson_unichar_t – Unicode Character Abstraction"
 ---
 
-<h2>NAME</h2>
 <p> bson_unichar_t &#8211; Unicode Character Abstraction</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "autooptimiser(1)"
 name: "autooptimiser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autooptimiser/"
 description: "autooptimiser – Optimize image positions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> autooptimiser &#8211; Optimize image positions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autooptimiser</code> [options] <i>project.pto</i> </p>

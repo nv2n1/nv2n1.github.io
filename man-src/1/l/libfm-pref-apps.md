@@ -1,4 +1,5 @@
 ---
+
 title: "libfm-pref-apps(1)"
 name: "libfm-pref-apps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libfm-pref-apps/"
 description: "libfm-pref-apps – sets preferred applications for programs based on libfm"
 ---
 
-<h2>NAME</h2>
 <p> libfm-pref-apps &#8211; sets preferred applications for programs based on libfm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>libfm-pref-apps</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdallocationinfo(1)"
 name: "gdallocationinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdallocationinfo/"
 description: "gdallocationinfo – gdallocationinfo raster query tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdallocationinfo &#8211; gdallocationinfo raster query tool </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

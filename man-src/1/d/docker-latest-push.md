@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-push(1)"
 name: "docker-latest-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-push/"
 description: "docker-push – Push an image or a repository to a registry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-push &#8211; Push an image or a repository to a registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker push</code> [<code>&#8211;help</code>] NAME[:TAG] | [REGISTRY_HOST[:REGISTRY_PORT]/]NAME[:TAG] </p>

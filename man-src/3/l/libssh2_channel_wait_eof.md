@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_wait_eof(3)"
 name: "libssh2_channel_wait_eof"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_wait_eof/"
 description: "libssh2_channel_wait_eof – wait for the remote to reply to an EOF request"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_wait_eof &#8211; wait for the remote to reply to an EOF request</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

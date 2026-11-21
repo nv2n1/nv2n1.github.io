@@ -1,4 +1,5 @@
 ---
+
 title: "stdair-config(1)"
 name: "stdair-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stdair-config/"
 description: "stdair-config – Configuration Script for the C++ Standard Airline IT Object Library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stdair-config &#8211; Configuration Script for the C++ Standard Airline IT Object Library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>stdair-config</code> [&#8211;prefix] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>

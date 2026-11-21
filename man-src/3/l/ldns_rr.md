@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr(3)"
 name: "ldns_rr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr/"
 description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_list"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_list </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

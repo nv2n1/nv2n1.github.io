@@ -1,4 +1,5 @@
 ---
+
 title: "pages2html(1)"
 name: "pages2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pages2html/"
 description: "pages2html – convert Pages document into HTML"
 ---
 
-<h2>NAME</h2>
 <p> pages2html &#8211; convert Pages document into HTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pages2html</code> [<i>OPTION</i>] <i>&lt;Pages Document&gt; | &lt;Pages Directory&gt;</i></p>

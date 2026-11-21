@@ -1,4 +1,5 @@
 ---
+
 title: "pstopdf(1)"
 name: "pstopdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstopdf/"
 description: "pstopdf – convert EPS to PDF"
 ---
 
-<h2>NAME</h2>
 <p> pstopdf &#8211; convert EPS to PDF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstopdf</code> [ <i>OPTION</i> &#8230; ] <i>FILE</i> [ &#8230; ] </p>

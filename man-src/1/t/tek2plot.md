@@ -1,4 +1,5 @@
 ---
+
 title: "tek2plot(1)"
 name: "tek2plot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tek2plot/"
 description: "tek2plot – translate Tektronix files to other graphics formats"
 ---
 
-<h2>NAME</h2>
 <p> tek2plot &#8211; translate Tektronix files to other graphics formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tek2plot </code> [ <i>options </i> ] [ <i>files </i> ]</p>

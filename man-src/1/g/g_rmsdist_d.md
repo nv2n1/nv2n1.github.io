@@ -1,4 +1,5 @@
 ---
+
 title: "g_rmsdist_d(1)"
 name: "g_rmsdist_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_rmsdist_d/"
 description: "g_rmsdist – calculates atom pair distances averaged with power 2, -3 or -6"
 ---
 
-<h2>NAME</h2>
 <p> g_rmsdist &#8211; calculates atom pair distances averaged with power 2, -3 or -6 </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

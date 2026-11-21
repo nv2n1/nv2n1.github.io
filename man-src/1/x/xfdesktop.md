@@ -1,4 +1,5 @@
 ---
+
 title: "xfdesktop(1)"
 name: "xfdesktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfdesktop/"
 description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfdesktop &#8211; The Xfce 4 Desktop Environment&#8217;s desktop manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfdesktop</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "oz-examples(1)"
 name: "oz-examples"
 section: "1"
@@ -6,10 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-oz-examples/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- oz-examples - example TDL files for Oz.
+oz-examples - example TDL files for Oz.
 
 <h2>DESCRIPTION</h2>
 

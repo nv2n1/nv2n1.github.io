@@ -1,4 +1,5 @@
 ---
+
 title: "med(1)"
 name: "med"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-med/"
 description: "med – NCAR CGM metafile frame editor"
 ---
 
-<h2>NAME</h2>
 <p> med &#8211; NCAR CGM metafile frame editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>med</code> [ <code>-e</code><i> command</i> ]* [ <code>-f</code><i> sfilename</i> ] [ <code>-l</code><i> local_dir</i> ] [ <code>-V</code> ] [ <i>filename</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-deb(1)"
 name: "dpkg-deb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-deb/"
 description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-deb &#8211; Debian package archive (.deb) manipulation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-deb</code> [<i>option</i>&#8230;] <i>command</i></p>

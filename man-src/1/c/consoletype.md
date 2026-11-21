@@ -1,4 +1,5 @@
 ---
+
 title: "consoletype(1)"
 name: "consoletype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-consoletype/"
 description: "consoletype – print type of the console connected to standard input"
 ---
 
-<h2>NAME</h2>
 <p> <code>consoletype &#8211; print type of the console connected to standard input </code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>consoletype [</code><i>stdout</i>] [<i>fg</i>]</p>

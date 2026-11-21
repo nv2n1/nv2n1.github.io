@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-sync(1)"
 name: "certmaster-sync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-certmaster-sync/"
 description: "certmaster-sync — synchronize client certificates with Func."
 ---
 
-<h2 class="name">NAME</h2>
 <p> certmaster-sync &#8212; synchronize client certificates with Func. </p>
 <h2>SYNOPSIS</h2>
 <p> certmaster-sync [-f|&#8211;force]</p>

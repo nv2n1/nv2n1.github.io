@@ -1,4 +1,5 @@
 ---
+
 title: "mbuffer(1)"
 name: "mbuffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mbuffer/"
 description: "mbuffer – measuring buffer"
 ---
 
-<h2>NAME</h2>
 <p> mbuffer &#8211; measuring buffer</p>
 <h2>SYNTAX</h2>
 <p> mbuffer [<i>options</i>]</p>

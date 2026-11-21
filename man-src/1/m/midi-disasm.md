@@ -1,4 +1,5 @@
 ---
+
 title: "midi-disasm(1)"
 name: "midi-disasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-midi-disasm/"
 description: "midi-disasm – disassemble midi files"
 ---
 
-<h2>NAME</h2>
 <p> midi-disasm &#8211; disassemble midi files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>midi-disasm</code> [ <code>-d</code> ] [ <code>-s</code> ] [ <code>-q</code> ] [ file ]</p>

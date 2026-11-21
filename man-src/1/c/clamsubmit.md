@@ -1,4 +1,5 @@
 ---
+
 title: "clamsubmit(1)"
 name: "clamsubmit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clamsubmit/"
 description: "clamsubmit – File submission utility for ClamAV"
 ---
 
-<h2>NAME</h2>
 <p> clamsubmit &#8211; File submission utility for ClamAV</p>
 <h2>SYNOPSIS</h2>
 <p> clamsubmit [options]</p>

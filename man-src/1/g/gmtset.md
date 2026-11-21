@@ -1,4 +1,5 @@
 ---
+
 title: "gmtset(1)"
 name: "gmtset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtset/"
 description: "gmtset – Change individual GMT default parameters"
 ---
 
-<h2>NAME</h2>
 <p> gmtset &#8211; Change individual GMT default parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtset</code> [ | [<code>s</code>|<code>u</code>] | <i>defaultsfile</i> ] [ <code>&#8211;</code>[<code>BJRXxYycp</code>]<i>value</i> ] PARAMETER1 [=] <i>value1</i> PARAMETER2 [=] <i>value2</i> PARAMETER3 [=] <i>value3</i> </p>

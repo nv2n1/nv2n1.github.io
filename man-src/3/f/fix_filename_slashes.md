@@ -1,4 +1,5 @@
 ---
+
 title: "fix_filename_slashes(3)"
 name: "fix_filename_slashes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fix_filename_slashes/"
 description: "fix_filename_slashes – Converts all the directory separators to a standard character. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fix_filename_slashes &#8211; Converts all the directory separators to a standard character. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

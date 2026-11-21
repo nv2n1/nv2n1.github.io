@@ -1,4 +1,5 @@
 ---
+
 title: "stap-report(1)"
 name: "stap-report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stap-report/"
 description: "stap-report – collect system information that is useful for debugging systemtap bugs"
 ---
 
-<h2>NAME</h2>
 <p> stap-report &#8211; collect system information that is useful for debugging systemtap bugs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stap-report</code> </p>

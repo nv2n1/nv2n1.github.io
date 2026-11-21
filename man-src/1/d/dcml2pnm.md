@@ -1,4 +1,5 @@
 ---
+
 title: "dcml2pnm(1)"
 name: "dcml2pnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcml2pnm/"
 description: "dcml2pnm – Convert DICOM images to PGM/PPM, PNG, TIFF or BMP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcml2pnm &#8211; Convert DICOM images to PGM/PPM, PNG, TIFF or BMP </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

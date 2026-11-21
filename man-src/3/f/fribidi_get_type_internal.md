@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_type_internal(3)"
 name: "fribidi_get_type_internal"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_type_internal/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_type_internal - get character bidi type 
+fribidi_get_type_internal - get character bidi type 
 
 <h2>SYNOPSIS</h2>
 

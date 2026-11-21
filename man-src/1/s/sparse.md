@@ -1,4 +1,5 @@
 ---
+
 title: "sparse(1)"
 name: "sparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sparse/"
 description: "sparse – Semantic Parser for C"
 ---
 
-<h2>NAME</h2>
 <p> sparse &#8211; Semantic Parser for C</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sparse</code> [<i>WARNING OPTIONS</i>]&#8230; <i>file.c</i></p>

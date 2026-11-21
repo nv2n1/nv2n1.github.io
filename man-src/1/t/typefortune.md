@@ -1,4 +1,5 @@
 ---
+
 title: "typefortune(1)"
 name: "typefortune"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-typefortune/"
 description: "typefortune – manual page for typefortune (part of gtypist)"
 ---
 
-<h2>NAME</h2>
 <p> typefortune &#8211; manual page for typefortune (part of gtypist)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>typefortune</code> [ <i>Options</i>&#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "unlink(2)"
 name: "unlink"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-unlink/"
 description: "unlink, unlinkat – delete a name and possibly the file it refers to"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unlink, unlinkat &#8211; delete a name and possibly the file it refers to </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

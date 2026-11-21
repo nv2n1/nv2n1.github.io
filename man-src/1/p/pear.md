@@ -1,4 +1,5 @@
 ---
+
 title: "pear(1)"
 name: "pear"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pear/"
 description: "pear, pecl, peardev – PEAR installer"
 ---
 
-<h2>NAME</h2>
 <p> pear, pecl, peardev &#8211; PEAR installer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pear</code> [ options ] command [command-options] &lt;parameters&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dnsq(1)"
 name: "dnsq"
 section: "1"
@@ -6,7 +7,6 @@ letter: "d"
 url: "/docs/linux/man/1-dnsq/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsq</code> [<code>OPTIONS</code>] &lt;record-type&gt; &lt;domain-name&gt; &lt;name-server&gt;</dt>
 <dd>

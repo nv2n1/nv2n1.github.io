@@ -1,4 +1,5 @@
 ---
+
 title: "ssh(1)"
 name: "ssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh/"
 description: "ssh – OpenSSH remote login client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh</code> &#8211; OpenSSH remote login client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh</code> [-<code>46AaCfGgKkMNnqsTtVvXxYy </code>[-<code>B </code><i>bind_interface</i> ] ] [-<code>b </code><i>bind_address</i> ] [-<code>c </code><i>cipher_spec</i> ] [-<code>D </code>[<i>bind_address : </i><i>port</i> ] ] [-<code>E </code><i>log_file</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>F </code><i>configfile</i> ] [-<code>I </code><i>pkcs11</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>J </code><i>destination</i> ] [-<code>L </code><i>address</i> ] [-<code>l </code><i>login_name</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>O </code><i>ctl_cmd</i> ] [-<code>o </code><i>option</i> ] [-<code>p </code><i>port</i> ] [-<code>Q </code><i>query_option</i> ] [-<code>R </code><i>address</i> ] [-<code>S </code><i>ctl_path</i> ] [-<code>W </code><i>host : </i><i>port</i> ] [-<code>w </code><i>local_tun </i>[: <i>remote_tun</i> ] ] <i>destination</i> [<i>command </i>[<i>argument &#8230;</i> ] ]</p>

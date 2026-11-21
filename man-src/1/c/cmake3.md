@@ -1,4 +1,5 @@
 ---
+
 title: "cmake3(1)"
 name: "cmake3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmake3/"
 description: "cmake – CMake Command-Line Reference"
 ---
 
-<h2>NAME</h2>
 <p> cmake &#8211; CMake Command-Line Reference</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

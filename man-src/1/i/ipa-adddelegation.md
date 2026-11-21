@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-adddelegation(1)"
 name: "ipa-adddelegation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-adddelegation/"
 description: "ipa-adddelegation – Add a delegation"
 ---
 
-<h2>NAME</h2>
 <p> ipa-adddelegation &#8211; Add a delegation </p>
 <h2>SYNOPSIS</h2>
 <p> ipa-adddelegation [<i>OPTION</i>]&#8230; <i>name</i> </p>

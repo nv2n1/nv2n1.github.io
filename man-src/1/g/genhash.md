@@ -1,4 +1,5 @@
 ---
+
 title: "genhash(1)"
 name: "genhash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genhash/"
 description: "genhash – md5 hash generation tool for remote web pages"
 ---
 
-<h2>NAME</h2>
 <p> genhash &#8211; md5 hash generation tool for remote web pages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>genhash [options] [-s server-address] [-p port] [-u url]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xv(1)"
 name: "xv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xv/"
 description: "xv – interactive image display for the X Window System"
 ---
 
-<h2>NAME</h2>
 <p> <code>xv</code> &#8211; interactive image display for the X Window System</p>
 <h2>SYNTAX</h2>
 <p> <code>xv</code> [<i>options</i>] [<i>filename</i>[<i>filename&#8230;</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "comps2solv(1)"
 name: "comps2solv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-comps2solv/"
 description: "comps2solv – convert rpm-md comps.xml file into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> comps2solv &#8211; convert rpm-md comps.xml file into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>comps2solv</code> [<i>OPTIONS</i>]</p>

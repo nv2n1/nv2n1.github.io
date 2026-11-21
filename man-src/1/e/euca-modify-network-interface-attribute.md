@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-network-interface-attribute(1)"
 name: "euca-modify-network-interface-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-network-interface-attribute/"
 description: "euca-modify-network-interface-attribute – Modify an attribute of a VPC network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-network-interface-attribute &#8211; Modify an attribute of a VPC network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-network-interface-attribute</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-quiet(1)"
 name: "byobu-quiet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-quiet/"
 description: "byobu-quiet – Silence all of Byobu’s status indicators and eliminate the hardstatus line"
 ---
 
-<h2>NAME</h2>
 <p> byobu-quiet &#8211; Silence all of Byobu&#8217;s status indicators and eliminate the hardstatus line </p>
 <h2>USAGE</h2>
 <p> byobu-quiet [&#8211;undo] </p>

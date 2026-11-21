@@ -1,4 +1,5 @@
 ---
+
 title: "git-rebase-patch(1)"
 name: "git-rebase-patch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rebase-patch/"
 description: "git-rebase-patch – Rebases a patch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-rebase-patch</code> &#8211; Rebases a patch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-rebase-patch</code> &lt;patch-file&gt;</p>

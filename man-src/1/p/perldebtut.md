@@ -1,4 +1,5 @@
 ---
+
 title: "perldebtut(1)"
 name: "perldebtut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldebtut/"
 description: "perldebtut – Perl debugging tutorial"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perldebtut &#8211; Perl debugging tutorial </p>
 <h2>DESCRIPTION</h2>
 <p> A (very) lightweight introduction in the use of the perl debugger, and a pointer to existing, deeper sources of information on the subject of debugging perl programs. </p>

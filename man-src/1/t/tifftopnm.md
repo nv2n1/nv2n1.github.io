@@ -1,4 +1,5 @@
 ---
+
 title: "tifftopnm(1)"
 name: "tifftopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tifftopnm/"
 description: "tifftopnm – convert a TIFF file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tifftopnm &#8211; convert a TIFF file into a portable anymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tifftopnm</code> [<code>-alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>-headerdump</code>] [<code>-respectfillorder</code>] [<i>tiff-filename</i>] </p>

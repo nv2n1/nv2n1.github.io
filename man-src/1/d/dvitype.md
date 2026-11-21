@@ -1,4 +1,5 @@
 ---
+
 title: "dvitype(1)"
 name: "dvitype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvitype/"
 description: "dvitype, odvitype – translate a dvi file for humans"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvitype, odvitype &#8211; translate a dvi file for humans </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvitype</code> <i>dvi_name</i>[<i></i><code>.dvi</code>]</p>

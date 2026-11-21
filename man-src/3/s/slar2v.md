@@ -1,4 +1,5 @@
 ---
+
 title: "slar2v(3)"
 name: "slar2v"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slar2v/"
 description: "slar2v.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slar2v.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

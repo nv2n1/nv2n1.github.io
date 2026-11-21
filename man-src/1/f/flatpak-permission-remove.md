@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-permission-remove(1)"
 name: "flatpak-permission-remove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-permission-remove/"
 description: "flatpak-permission-remove – Remove permissions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-permission-remove &#8211; Remove permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>

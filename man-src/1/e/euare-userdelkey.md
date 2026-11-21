@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdelkey(1)"
 name: "euare-userdelkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdelkey/"
 description: "euare-userdelkey – Delete an access key"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdelkey &#8211; Delete an access key</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdelkey [-u USER] [&#8211;as-account ACCOUNT] [-U URL]</p>

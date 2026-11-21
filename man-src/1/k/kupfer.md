@@ -1,4 +1,5 @@
 ---
+
 title: "kupfer(1)"
 name: "kupfer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kupfer/"
 description: "kupfer – Convenient command and access tool for applications and documents"
 ---
 
-<h2>NAME</h2>
 <p> kupfer &#8211; Convenient command and access tool for applications and documents</p>
 <h2>SYNOPSIS</h2>
 <pre>

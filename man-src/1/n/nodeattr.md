@@ -1,4 +1,5 @@
 ---
+
 title: "nodeattr(1)"
 name: "nodeattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nodeattr/"
 description: "nodeattr – query genders file"
 ---
 
-<h2>NAME</h2>
 <p> nodeattr &#8211; query genders file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] [-X exclude_query] query</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nmbscan(1)"
 name: "nmbscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nmbscan/"
 description: "nmbscan – NMB/SMB network scanner"
 ---
 
-<h2>NAME</h2>
 <p> nmbscan &#8211; NMB/SMB network scanner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nmbscan</code> -L<br />

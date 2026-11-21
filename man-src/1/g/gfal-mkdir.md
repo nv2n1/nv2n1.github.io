@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-mkdir(1)"
 name: "gfal-mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-mkdir/"
 description: "gfal-mkdir – make directories"
 ---
 
-<h2>NAME</h2>
 <p> gfal-mkdir &#8211; make directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-mkdir</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] [ <code>-p</code> ] <i>DIRECTORY</i>&#8230; </p>

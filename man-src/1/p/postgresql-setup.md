@@ -1,4 +1,5 @@
 ---
+
 title: "postgresql-setup(1)"
 name: "postgresql-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postgresql-setup/"
 description: "postgresql-setup – manual page for postgresql-setup 9.2.18"
 ---
 
-<h2>NAME</h2>
 <p> postgresql-setup &#8211; manual page for postgresql-setup 9.2.18</p>
 <h2>SYNOPSIS</h2>
 <p> <code>postgresql-setup</code> <i>{initdb|upgrade} </i>[<i>SERVICE_NAME</i>]</p>

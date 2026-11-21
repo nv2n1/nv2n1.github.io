@@ -1,4 +1,5 @@
 ---
+
 title: "krusader(1)"
 name: "krusader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-krusader/"
 description: "krusader – advanced twin-panel file manager and FTP client for KDE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> krusader &#8211; advanced twin-panel file manager and FTP client for KDE </p>
 <h2>SYNOPSIS</h2>
 <dl>

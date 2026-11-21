@@ -1,4 +1,5 @@
 ---
+
 title: "allegro_error(3)"
 name: "allegro_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-allegro_error/"
 description: "allegro_error – Stores the last Allegro error message."
 ---
 
-<h2>NAME</h2>
 <p> allegro_error &#8211; Stores the last Allegro error message.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

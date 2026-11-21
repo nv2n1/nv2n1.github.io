@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-frequency-set(1)"
 name: "cpupower-frequency-set"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-frequency-set/"
 description: "cpupower frequency-set – A small tool which allows to modify cpufreq settings."
 ---
 
-<h2>NAME</h2>
 <p> cpupower frequency-set &#8211; A small tool which allows to modify cpufreq settings.</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpu ] frequency-set [<i>options</i>]</p>

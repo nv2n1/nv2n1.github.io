@@ -1,4 +1,5 @@
 ---
+
 title: "update-binfmts(8)"
 name: "update-binfmts"
 section: "8"
@@ -6,8 +7,9 @@ letter: "u"
 url: "/docs/linux/man/8-update-binfmts/"
 description: "update-binfmts – maintain registry of executable binary formats"
 ---
+
 <p> <code>update-binfmts</code> - maintain registry of executable binary formats </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>update\-binfmts</code> [<i>options</i> ] -<code>-install</code> <i>name path spec</i> <br />
  <br />
 <code>update\-binfmts</code> [<i>options</i> ] -<code>-remove</code> <i>name path</i> <br />

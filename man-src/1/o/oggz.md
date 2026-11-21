@@ -1,4 +1,5 @@
 ---
+
 title: "oggz(1)"
 name: "oggz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz/"
 description: "oggz — inspect and manipulate Ogg multimedia files"
 ---
 
-<h2>NAME</h2>
 <p> oggz &#8212; inspect and manipulate Ogg multimedia files<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

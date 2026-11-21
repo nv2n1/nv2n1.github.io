@@ -1,4 +1,5 @@
 ---
+
 title: "varnishncsa(1)"
 name: "varnishncsa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishncsa/"
 description: "varnishncsa – Display Varnish logs in Apache / NCSA combined log format"
 ---
 
-<h2>NAME</h2>
 <p> varnishncsa &#8211; Display Varnish logs in Apache / NCSA combined log format</p>
 <h2>SYNOPSIS</h2>
 <p> varnishncsa [-a] [-C] [-d] [-D] [-F format] [-g &lt;request|vxid&gt;] [-h] [-n name] [-N filename] [-P file] [-q query] [-V] [-w filename]</p>

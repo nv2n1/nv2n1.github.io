@@ -1,4 +1,5 @@
 ---
+
 title: "barriertype(3)"
 name: "barriertype"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-barriertype/"
 description: "ql/instruments/barriertype.hpp – Barrier type."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/instruments/barriertype.hpp &#8211; Barrier type. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pmcat(1)"
 name: "pmcat"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmcat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmcat - page through a module file 
+pmcat - page through a module file 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "echoping_ldap(1)"
 name: "echoping_ldap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-echoping_ldap/"
 description: "echoping_ldap – echoping plugin which connects to a LDAP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> echoping_ldap &#8211; echoping plugin which connects to a LDAP server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m ldap <code>hostname</code> [-b<i>base]</i> [-r<i>request]</i> [-s<i>scope]</i> [-p<i>port]</i></p>

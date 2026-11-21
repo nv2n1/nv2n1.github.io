@@ -1,4 +1,5 @@
 ---
+
 title: "euca-add-keypair(1)"
 name: "euca-add-keypair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-add-keypair/"
 description: "euca-add-keypair – Eucalyptus tool: Creates a new key pair for use with instances."
 ---
 
-<h2>NAME</h2>
 <p> euca-add-keypair &#8211; Eucalyptus tool: Creates a new key pair for use with instances.</p>
 <h2>DESCRIPTION</h2>
 <p> Creates a new key pair for use with instances. </p>

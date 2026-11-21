@@ -1,4 +1,5 @@
 ---
+
 title: "fedora-create-review(1)"
 name: "fedora-create-review"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fedora-create-review/"
 description: "fedora-create-review – Automatically create RPM review request for Fedora."
 ---
 
-<h2>NAME</h2>
 <p> fedora-create-review &#8211; Automatically create RPM review request for Fedora. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fedora-create-review</code> &lt;specfile&gt; &lt;srpmfile&gt; </p>

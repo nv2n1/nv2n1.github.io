@@ -1,4 +1,5 @@
 ---
+
 title: "txt2regex(1)"
 name: "txt2regex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-txt2regex/"
 description: "txt2regex – a Regular Expression Wizard, written with bash2 builtins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> txt2regex &#8211; a Regular Expression Wizard, written with bash2 builtins</p>
 <h2>SYNOPSIS</h2>
 <p> <code>txt2regex</code> </p>

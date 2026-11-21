@@ -1,4 +1,5 @@
 ---
+
 title: "root(1)"
 name: "root"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-root/"
 description: "root – Interpretor of C++ for the ROOT framework"
 ---
 
-<h2 class="name">NAME</h2>
 <p> root &#8211; Interpretor of C++ for the ROOT framework </p>
 <h2>SYNOPSIS</h2>
 <p> <code>root</code> <i>[options] files &#8230;</i></p>

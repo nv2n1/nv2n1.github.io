@@ -1,4 +1,5 @@
 ---
+
 title: "webhttrack(1)"
 name: "webhttrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-webhttrack/"
 description: "webhttrack – offline browser : copy websites to a local directory"
 ---
 
-<h2>NAME</h2>
 <p> webhttrack &#8211; offline browser : copy websites to a local directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>webhttrack [ keyword value [ keyword value .. ] ]</code></p>

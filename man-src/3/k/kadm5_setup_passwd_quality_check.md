@@ -1,4 +1,5 @@
 ---
+
 title: "kadm5_setup_passwd_quality_check(3)"
 name: "kadm5_setup_passwd_quality_check"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-kadm5_setup_passwd_quality_check/"
 description: "krb5_pwcheck kadm5_setup_passwd_quality_check kadm5_add_passwd_quality_verifier kadm5_check_password_quality – Heimdal warning and error functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_pwcheck</code> <code>kadm5_setup_passwd_quality_check</code> <code>kadm5_add_passwd_quality_verifier</code> <code>kadm5_check_password_quality</code> &#8211; Heimdal warning and error functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkadm5srv, -lkadm5srv)</p>

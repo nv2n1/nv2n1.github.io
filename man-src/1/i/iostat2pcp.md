@@ -1,4 +1,5 @@
 ---
+
 title: "iostat2pcp(1)"
 name: "iostat2pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iostat2pcp/"
 description: "iostat2pcp – import iostat data and create a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>iostat2pcp</code> &#8211; import iostat data and create a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iostat2pcp</code> [<code>-v</code>] [<code>-S</code> <i>start</i>] [<code>-t</code> <i>interval</i>] [<code>-Z</code> <i>timezone</i>] <i>infile</i> <i>outfile</i></p>

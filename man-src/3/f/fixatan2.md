@@ -1,4 +1,5 @@
 ---
+
 title: "fixatan2(3)"
 name: "fixatan2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixatan2/"
 description: "fixatan2 – Fixed point version of the libc atan2() routine. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixatan2 &#8211; Fixed point version of the libc atan2() routine. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cg_diff(1)"
 name: "cg_diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cg_diff/"
 description: "cg_diff – compares two Cachegrind output files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cg_diff &#8211; compares two Cachegrind output files </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "postcat(1)"
 name: "postcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postcat/"
 description: "postcat – show Postfix queue file contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postcat &#8211; show Postfix queue file contents </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

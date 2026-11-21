@@ -1,4 +1,5 @@
 ---
+
 title: "backupninja(1)"
 name: "backupninja"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-backupninja/"
 description: "BACKUPNINJA – A lightweight, extensible meta-backup system \"a silent flower blossom death strike to lost data.\""
 ---
 
-<h2 class="name">NAME</h2>
 <p> BACKUPNINJA &#8211; A lightweight, extensible meta-backup system<br />
  <i>&quot;a silent flower blossom death strike to lost data.&quot;</i> </p>
 <h2>SYNOPSIS</h2>

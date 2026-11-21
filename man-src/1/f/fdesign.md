@@ -1,4 +1,5 @@
 ---
+
 title: "fdesign(1)"
 name: "fdesign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fdesign/"
 description: "fdesign – Forms Library User Interface Designer"
 ---
 
-<h2>NAME</h2>
 <p> fdesign &#8211; Forms Library User Interface Designer</p>
 <h2>SYNOPSIS</h2>
 <p> fdesign [-xformoptions] [-options] [files]</p>

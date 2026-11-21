@@ -1,4 +1,5 @@
 ---
+
 title: "inkscape(1)"
 name: "inkscape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inkscape/"
 description: "Inkscape – an SVG (Scalable Vector Graphics) editing program."
 ---
 
-<h2 class="name">NAME</h2>
 <p> Inkscape &#8211; an SVG (Scalable Vector Graphics) editing program. </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&quot;inkscape [options] [filename_1 filename_2 ...]&quot;</tt> </p>

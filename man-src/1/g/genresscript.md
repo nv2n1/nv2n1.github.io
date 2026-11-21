@@ -1,4 +1,5 @@
 ---
+
 title: "genresscript(1)"
 name: "genresscript"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genresscript/"
 description: "genresscript – generate resource script from PE and NE binaries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> genresscript &#8211; generate resource script from PE and NE binaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>genresscript</code> [<i>FILE</i>]&#8230;</p>

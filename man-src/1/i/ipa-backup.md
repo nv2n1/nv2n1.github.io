@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-backup(1)"
 name: "ipa-backup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-backup/"
 description: "ipa-backup – Back up an IPA master"
 ---
 
-<h2>NAME</h2>
 <p> ipa-backup &#8211; Back up an IPA master</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-backup [<i>OPTION</i>]&#8230;</p>

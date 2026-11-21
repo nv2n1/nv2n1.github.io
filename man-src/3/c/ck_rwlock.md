@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rwlock(3)"
 name: "ck_rwlock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rwlock/"
 description: "ck_rwlock_init ck_rwlock_write_lock ck_rwlock_write_unlock ck_rwlock_write_trylock ck_rwlock_write_downgrade ck_rwlock_locked_writer ck_rwlock_read_lock ck_rwlock_read_trylock ck_rwlock_read_unlock..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rwlock_init</code> <code>ck_rwlock_write_lock</code> <code>ck_rwlock_write_unlock</code> <code>ck_rwlock_write_trylock</code> <code>ck_rwlock_write_downgrade</code> <code>ck_rwlock_locked_writer</code> <code>ck_rwlock_read_lock</code> <code>ck_rwlock_read_trylock</code> <code>ck_rwlock_read_unlock</code> <code>ck_rwlock_locked_reader</code> <code>ck_rwlock_recursive_write_lock</code> <code>ck_rwlock_recursive_write_trylock</code> <code>ck_rwlock_recurisve_write_unlock</code> <code>ck_rwlock_recursive_read_lock</code> <code>ck_rwlock_recursive_read_trylock</code> <code>ck_rwlock_recursive_read_unlock</code> &#8211; centralized write-biased reader-writer locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

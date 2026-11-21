@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-popup-windowlist(1)"
 name: "xfce4-popup-windowlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-popup-windowlist/"
 description: "xfce4-popup-windowlist – shows the Xfce window list applet popup"
 ---
 
-<h2>NAME</h2>
 <p> xfce4-popup-windowlist &#8211; shows the Xfce window list applet popup </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-popup-windowlist </code> [ -pointer ] </p>

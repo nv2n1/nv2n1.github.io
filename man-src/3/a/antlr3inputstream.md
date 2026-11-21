@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3inputstream(3)"
 name: "antlr3inputstream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3inputstream/"
 description: "src/antlr3inputstream.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3inputstream.c &#8211; </p>
 <p> Base functions to initialize and manipulate any input stream.</p>
 <h2>SYNOPSIS</h2>

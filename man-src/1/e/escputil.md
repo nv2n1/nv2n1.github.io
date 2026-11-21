@@ -1,4 +1,5 @@
 ---
+
 title: "escputil(1)"
 name: "escputil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-escputil/"
 description: "escputil – maintain Epson Stylus inkjet printers"
 ---
 
-<h2>NAME</h2>
 <p> escputil &#8211; maintain Epson Stylus inkjet printers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>escputil</code> [ <i>-P</i> <i>printer</i> | <i>-r</i> <i>device</i> ] [ <i>-m</i> <i>model</i> ] [ <i>-S</i> ] [ <i>-C</i> ] [ <i>-p</i> ] [ <i>-u</i> ] [ <i>-c</i> | <i>-n</i> | <i>-a</i> | <i>-i</i> | <i>-d</i> | <i>-o</i> | <i>-s</i> | <i>-l</i> | <i>-M</i> | <i>-h</i> ] [ <i>-q</i> ]</p>

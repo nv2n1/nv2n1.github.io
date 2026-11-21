@@ -1,4 +1,5 @@
 ---
+
 title: "pto_var(1)"
 name: "pto_var"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pto_var/"
 description: "pto_var – change image variables inside Hugin .pto project files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pto_var &#8211; change image variables inside Hugin .pto project files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_var</code> [options] &#8211;opt|&#8211;link|&#8211;unlink|&#8211;set &quot;image variables list input.pto</p>

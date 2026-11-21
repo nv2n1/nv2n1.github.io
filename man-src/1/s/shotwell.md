@@ -1,4 +1,5 @@
 ---
+
 title: "shotwell(1)"
 name: "shotwell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shotwell/"
 description: "shotwell – Digital photo manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shotwell &#8211; Digital photo manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shotwell </code>[<i>OPTION</i>]&#8230; [<i>FILE</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "epydocgui(1)"
 name: "epydocgui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epydocgui/"
 description: "epydocgui – graphical interface to epydoc"
 ---
 
-<h2>NAME</h2>
 <p> epydocgui &#8211; graphical interface to epydoc</p>
 <h2>SYNOPSIS</h2>
 <p> <code>epydocgui</code> [<i>project.prj</i> | <i>modules</i>&#8230;] </p>

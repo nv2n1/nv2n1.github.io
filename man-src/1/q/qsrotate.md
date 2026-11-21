@@ -1,4 +1,5 @@
 ---
+
 title: "qsrotate(1)"
 name: "qsrotate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qsrotate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qsrotate - a log rotation tool (similar to Apache's rotatelogs). 
+qsrotate - a log rotation tool (similar to Apache's rotatelogs). 
 
 <h2>SYNOPSIS</h2>
 

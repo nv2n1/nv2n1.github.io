@@ -1,4 +1,5 @@
 ---
+
 title: "gpsdecode(1)"
 name: "gpsdecode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsdecode/"
 description: "gpsdecode – decode GPS, RTCM or AIS streams into a readable format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpsdecode &#8211; decode GPS, RTCM or AIS streams into a readable format </p>
 <h2>SYNOPSIS</h2>
 <dl>

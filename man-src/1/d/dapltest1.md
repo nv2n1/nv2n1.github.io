@@ -1,4 +1,5 @@
 ---
+
 title: "dapltest1(1)"
 name: "dapltest1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dapltest1/"
 description: "dapltest – test for the Direct Access Programming Library (DAPL)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code> dapltest </code>&#8211; test for the Direct Access Programming Library (DAPL) </p>
 <h2>DESCRIPTION</h2>
 <p> Dapltest is a set of tests developed to exercise, characterize, and verify the DAPL interfaces during development and porting. At least two instantiations of the test must be run. One acts as the server, fielding requests and spawning server-side test threads as needed. Other client invocations connect to the server and issue test requests. The server side of the test, once invoked, listens continuously for client connection requests, until quit or killed. Upon receipt of a connection request, the connection is established, the server and client sides swap version numbers to verify that they are able to communicate, and the client sends the test request to the server. If the version numbers match, and the test request is well-formed, the server spawns the threads needed to run the test before awaiting further connections.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-screenshooter(1)"
 name: "xfce4-screenshooter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-screenshooter/"
 description: "xfce4-screenshooter: – manual page for xfce4-screenshooter: Cannot open display:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-screenshooter: &#8211; manual page for xfce4-screenshooter: Cannot open display: </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

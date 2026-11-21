@@ -1,4 +1,5 @@
 ---
+
 title: "pmdadm(1)"
 name: "pmdadm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdadm/"
 description: "pmdadm – Device Mapper PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdadm</code> &#8211; Device Mapper PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdadm</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values for Devic Mapper on the local system. </p>

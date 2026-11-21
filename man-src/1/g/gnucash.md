@@ -1,4 +1,5 @@
 ---
+
 title: "gnucash(1)"
 name: "gnucash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnucash/"
 description: "gnucash – personal finance manager"
 ---
 
-<h2>NAME</h2>
 <p> gnucash &#8211; personal finance manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnucash [options] [</code> <i>accounts.gnc</i> <code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "signcode(1)"
 name: "signcode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-signcode/"
 description: "signcode – Digitally sign an PE executable using an X.509 certificate."
 ---
 
-<h2>NAME</h2>
 <p> signcode &#8211; Digitally sign an PE executable using an X.509 certificate.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>signcode [options] filename</code></p>

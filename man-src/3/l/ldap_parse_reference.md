@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_parse_reference(3)"
 name: "ldap_parse_reference"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_parse_reference/"
 description: "ldap_parse_reference – Extract referrals and controls from a reference message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_parse_reference &#8211; Extract referrals and controls from a reference message </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

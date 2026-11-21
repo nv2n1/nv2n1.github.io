@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_close(3)"
 name: "ieee1284_close"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_close/"
 description: "ieee1284_close – close an open port"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_close &#8211; close an open port </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

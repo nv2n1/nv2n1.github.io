@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ext_register(3)"
 name: "gnutls_ext_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ext_register/"
 description: "gnutls_ext_register – Register a handler for a TLS extension"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ext_register &#8211; Register a handler for a TLS extension</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmconfig(1)"
 name: "pmconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmconfig/"
 description: "pmconfig – Performance Co-Pilot configuration parameters"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmconfig</code> &#8211; Performance Co-Pilot configuration parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmconfig</code> [<code>-a</code>|<code>-l</code>] [<code>-L</code>] [<code>-s</code>] [<i>name &#8230;</i>]</p>

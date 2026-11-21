@@ -1,4 +1,5 @@
 ---
+
 title: "perlobj(1)"
 name: "perlobj"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlobj/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlobj - Perl object reference 
+perlobj - Perl object reference 
 
 <h2>DESCRIPTION</h2>
 

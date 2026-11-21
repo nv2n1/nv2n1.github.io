@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-push(1)"
 name: "docker-image-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image-push/"
 description: "docker-image-push – Push an image or a repository to a registry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image-push &#8211; Push an image or a repository to a registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image push [OPTIONS] NAME[:TAG]</code> </p>

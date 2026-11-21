@@ -1,4 +1,5 @@
 ---
+
 title: "matrix_mul(3)"
 name: "matrix_mul"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-matrix_mul/"
 description: "matrix_mul, matrix_mul_f – Multiplies two matrices. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> matrix_mul, matrix_mul_f &#8211; Multiplies two matrices. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

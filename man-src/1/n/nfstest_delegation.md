@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_delegation(1)"
 name: "nfstest_delegation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_delegation/"
 description: "nfstest_delegation – Delegation tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_delegation &#8211; Delegation tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_delegation &#8211;server &lt;server&gt; [&#8211;client &lt;client&gt;] [options]</p>

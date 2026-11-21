@@ -1,4 +1,5 @@
 ---
+
 title: "htpasswd(1)"
 name: "htpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htpasswd/"
 description: "htpasswd – Manage user files for basic authentication"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htpasswd &#8211; Manage user files for basic authentication</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>

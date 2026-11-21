@@ -1,4 +1,5 @@
 ---
+
 title: "verifytree(1)"
 name: "verifytree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-verifytree/"
 description: "verifytree – verify that a local yum repository is consistent"
 ---
 
-<h2>NAME</h2>
 <p> verifytree &#8211; verify that a local yum repository is consistent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>verifytree</code> [options] directory</p>

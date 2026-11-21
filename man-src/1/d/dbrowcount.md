@@ -1,4 +1,5 @@
 ---
+
 title: "dbrowcount(1)"
 name: "dbrowcount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbrowcount/"
 description: "dbrowcount – count the number of rows in an Fsdb stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbrowcount &#8211; count the number of rows in an Fsdb stream </p>
 <h2>SYNOPSIS</h2>
 <p> dbrowcount</p>

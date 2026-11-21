@@ -1,4 +1,5 @@
 ---
+
 title: "perlpod(1)"
 name: "perlpod"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlpod/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlpod - the Plain Old Documentation format 
+perlpod - the Plain Old Documentation format 
 
 <h2>DESCRIPTION</h2>
 

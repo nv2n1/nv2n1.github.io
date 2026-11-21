@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-ocaml(3)"
 name: "guestfs-ocaml"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-guestfs-ocaml/"
 description: "guestfs-ocaml – How to use libguestfs from OCaml"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-ocaml &#8211; How to use libguestfs from OCaml </p>
 <h2>SYNOPSIS</h2>
 <p> Module style: </p>

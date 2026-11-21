@@ -1,4 +1,5 @@
 ---
+
 title: "evcd2vcd(1)"
 name: "evcd2vcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-evcd2vcd/"
 description: "evcd2vcd – Converts EVCD files to VCD files"
 ---
 
-<h2>NAME</h2>
 <p> evcd2vcd &#8211; Converts EVCD files to VCD files</p>
 <h2>SYNTAX</h2>
 <p> evcd2vcd [<i>option</i>]&#8230; [<i>EVCDFILE</i>]</p>

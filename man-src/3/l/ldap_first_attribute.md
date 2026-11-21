@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_first_attribute(3)"
 name: "ldap_first_attribute"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_first_attribute/"
 description: "ldap_first_attribute, ldap_next_attribute – step through LDAP entry attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_first_attribute, ldap_next_attribute &#8211; step through LDAP entry attributes </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

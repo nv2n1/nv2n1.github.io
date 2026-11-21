@@ -1,4 +1,5 @@
 ---
+
 title: "osql(1)"
 name: "osql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osql/"
 description: "osql – utility to test FreeTDS connections and queries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>osql</code> &#8211; utility to test FreeTDS connections and queries </p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>S </code><i>dsn </i> &#8211;<code>U </code><i>username</i> &#8211;<code>P </code><i>password</i> [-<code>I ini_directory </code> ]</p>

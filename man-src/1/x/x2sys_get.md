@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_get(1)"
 name: "x2sys_get"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_get/"
 description: "x2sys_get – Get track listing from the x2sys track index databases"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_get &#8211; Get track listing from the x2sys track index databases</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_get</code> <i>TAG</i> [ ] [ <i>flags</i> ] [ ] [ [<code>+</code>][<i>list</i>] ] [ <i>flags</i> ] [ [ <i>region</i> ] [ [<i>level</i>] ] </p>

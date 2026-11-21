@@ -1,4 +1,5 @@
 ---
+
 title: "firehol(1)"
 name: "firehol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-firehol/"
 description: "firehol – An easy to use but powerful iptables stateful firewall"
 ---
 
-<h2>NAME</h2>
 <p> firehol &#8211; An easy to use but powerful iptables stateful firewall</p>
 <h2>SYNOPSIS</h2>
 <p> <code>firehol</code> start|try|stop|restart|condrestart|status|panic|save|debug|helpme </p>

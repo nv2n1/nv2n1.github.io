@@ -1,4 +1,5 @@
 ---
+
 title: "fixwfwps(1)"
 name: "fixwfwps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixwfwps/"
 description: "fixwfwps – filter to fix Word for Windows documents so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fixwfwps &#8211; filter to fix Word for Windows documents so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixwfwps </code> &lt; <i>WordforWindows.ps</i> &gt; <i>Fixed.ps</i></p>

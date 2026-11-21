@@ -1,4 +1,5 @@
 ---
+
 title: "kdenlive_render(1)"
 name: "kdenlive_render"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kdenlive_render/"
 description: "kdenlive_render – Render program for Kdenlive."
 ---
 
-<h2>NAME</h2>
 <p> kdenlive_render &#8211; Render program for Kdenlive.</p>
 <h2>SYNOPSIS</h2>
 <p> kdenlive_render [-erase] [in=pos] [out=pos] [render] [profile] [rendermodule] [player] [src] [dest] [[arg1] [arg2] &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-server-status(1)"
 name: "fts-rest-server-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-server-status/"
 description: "fts-rest-server-status"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-server-status</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-server-status [options]</p>

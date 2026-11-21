@@ -1,4 +1,5 @@
 ---
+
 title: "axi-cache(1)"
 name: "axi-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axi-cache/"
 description: "axi-cache – query the Apt Xapian Index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> axi-cache &#8211; query the Apt Xapian Index </p>
 <h2>SYNOPSIS</h2>
 <p> <code>axi-cache</code> [<i>options</i>] <i>command </i>[<i>args</i>]</p>

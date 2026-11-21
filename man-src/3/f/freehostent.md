@@ -1,4 +1,5 @@
 ---
+
 title: "freehostent(3)"
 name: "freehostent"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-freehostent/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- getipnodebyname, getipnodebyaddr, freehostent - get network hostnames and addresses 
+getipnodebyname, getipnodebyaddr, freehostent - get network hostnames and addresses 
 
 <h2>SYNOPSIS</h2>
 

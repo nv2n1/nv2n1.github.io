@@ -1,4 +1,5 @@
 ---
+
 title: "max(3)"
 name: "max"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-max/"
 description: "QuantLib::GeneralStatistics – Statistics tool."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::GeneralStatistics &#8211; Statistics tool. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/generalstatistics.hpp&gt; </p>

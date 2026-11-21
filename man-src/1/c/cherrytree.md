@@ -1,4 +1,5 @@
 ---
+
 title: "cherrytree(1)"
 name: "cherrytree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cherrytree/"
 description: "cherrytree – a hierarchical note taking application"
 ---
 
-<h2>NAME</h2>
 <p> cherrytree &#8211; a hierarchical note taking application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cherrytree [filepath [-n nodename] [-x export_to_html_dir]]</code></p>

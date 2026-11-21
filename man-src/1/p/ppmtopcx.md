@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopcx(1)"
 name: "ppmtopcx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtopcx/"
 description: "ppmtopcx – convert a portable pixmap into a PCX file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtopcx &#8211; convert a portable pixmap into a PCX file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopcx</code> [<code>-24bit</code>] [<code>-packed</code>] [<code>-xpos=</code><i>cols</i>] [<code>-ypos=</code><i>rows</i>] [<i>ppmfile</i>] </p>

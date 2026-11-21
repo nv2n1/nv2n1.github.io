@@ -1,4 +1,5 @@
 ---
+
 title: "mkaf(1)"
 name: "mkaf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkaf/"
 description: "mkaf – create a Performance Co-Pilot archive folio"
 ---
 
-<h2>NAME</h2>
 <p> <code>mkaf</code> &#8211; create a Performance Co-Pilot archive folio</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/mkaf</code> [<i>findopts</i>] <i>filename</i> &#8230;</p>

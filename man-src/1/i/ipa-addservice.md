@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-addservice(1)"
 name: "ipa-addservice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-addservice/"
 description: "ipa-addservice – Add a service principal"
 ---
 
-<h2>NAME</h2>
 <p> ipa-addservice &#8211; Add a service principal </p>
 <h2>SYNOPSIS</h2>
 <p> ipa-addservice [<i>OPTION</i>]&#8230; <i>principal</i></p>

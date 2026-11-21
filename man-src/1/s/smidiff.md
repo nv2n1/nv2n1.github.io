@@ -1,4 +1,5 @@
 ---
+
 title: "smidiff(1)"
 name: "smidiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smidiff/"
 description: "smidiff – check differences between a pair of SMI or SPPI modules"
 ---
 
-<h2>NAME</h2>
 <p> smidiff &#8211; check differences between a pair of SMI or SPPI modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smidiff</code> [ <code>-Vhsm</code> ] [ <code>-c </code><i>file</i> ] [ <code>-l </code><i>level</i> ] [ <code>-i </code><i>error-pattern</i> ] [ <code>-p </code><i>module</i> ] <i>oldmodule newmodule</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "backup-light(1)"
 name: "backup-light"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-backup-light/"
 description: "Backup-light – backups up the active users $HOME directory"
 ---
 
-<h2>NAME</h2>
 <p> Backup-light &#8211; backups up the active users $HOME directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>backup-light [option(s)]</code></p>

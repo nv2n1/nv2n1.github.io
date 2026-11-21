@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_enable(3)"
 name: "gnutls_ia_enable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_enable/"
 description: "gnutls_ia_enable – Indicate willingness for TLS/IA application phases"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_enable &#8211; Indicate willingness for TLS/IA application phases</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

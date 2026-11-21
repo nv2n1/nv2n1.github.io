@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-altmove(1)"
 name: "doveadm-altmove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-altmove/"
 description: "doveadm-altmove – Move matching mails to the alternative storage (dbox-only)"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-altmove &#8211; Move matching mails to the alternative storage (dbox-only)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <i>search_query</i><br />

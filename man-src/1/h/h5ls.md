@@ -1,4 +1,5 @@
 ---
+
 title: "h5ls(1)"
 name: "h5ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5ls/"
 description: "h5ls – Prints information about a file or dataset."
 ---
 
-<h2>NAME</h2>
 <p> h5ls &#8211; Prints information about a file or dataset.</p>
 <h2>SYNOPSIS</h2>
 <p> h5ls [OPTIONS] file [OBJECTS&#8230;]</p>

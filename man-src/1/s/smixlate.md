@@ -1,4 +1,5 @@
 ---
+
 title: "smixlate(1)"
 name: "smixlate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smixlate/"
 description: "smixlate – translate SMI/SPPI identifiers"
 ---
 
-<h2>NAME</h2>
 <p> smixlate &#8211; translate SMI/SPPI identifiers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smixlate</code> [ <code>-Vhm</code> ] [ <code>-c </code><i>file</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] <i>module(s)</i></p>

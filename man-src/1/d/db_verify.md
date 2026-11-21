@@ -1,4 +1,5 @@
 ---
+
 title: "db_verify(1)"
 name: "db_verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_verify/"
 description: "db5.3_verify – Verifies the structure databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_verify &#8211; Verifies the structure databases </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_verify</code> [-NoqV] [-h home] [-P password] file &#8230;</p>

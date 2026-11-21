@@ -1,4 +1,5 @@
 ---
+
 title: "intel_reg_dumper(1)"
 name: "intel_reg_dumper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_reg_dumper/"
 description: "intel_reg_dumper – Decode a bunch of Intel GPU registers for debugging"
 ---
 
-<h2>NAME</h2>
 <p> intel_reg_dumper &#8211; Decode a bunch of Intel GPU registers for debugging</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_reg_dumper [ options ] [ file ]</code></p>

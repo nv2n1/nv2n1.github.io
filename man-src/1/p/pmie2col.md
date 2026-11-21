@@ -1,4 +1,5 @@
 ---
+
 title: "pmie2col(1)"
 name: "pmie2col"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmie2col/"
 description: "pmie2col – convert pmie output to multi-column format"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmie2col</code> &#8211; convert pmie output to multi-column format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmie2col</code> [<code>-d</code> <i>delimiter</i>] [<code>-p</code> <i>precision</i>] [<code>-w</code> <i>width</i>]</p>

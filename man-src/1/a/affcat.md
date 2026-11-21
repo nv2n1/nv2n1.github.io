@@ -1,4 +1,5 @@
 ---
+
 title: "affcat(1)"
 name: "affcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-affcat/"
 description: "afcat – Output contents of an image file to stdout."
 ---
 
-<h2>NAME</h2>
 <p> afcat &#8211; Output contents of an image file to stdout.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>afcat [options] </code> <i>image [images] </i></p>

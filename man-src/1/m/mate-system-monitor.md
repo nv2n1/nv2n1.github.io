@@ -1,4 +1,5 @@
 ---
+
 title: "mate-system-monitor(1)"
 name: "mate-system-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-system-monitor/"
 description: "mate-system-monitor – view and control processes"
 ---
 
-<h2>NAME</h2>
 <p> mate-system-monitor &#8211; view and control processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-system-monitor [OPTIONS] </code></p>

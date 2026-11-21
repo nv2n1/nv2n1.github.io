@@ -1,4 +1,5 @@
 ---
+
 title: "nforenum(1)"
 name: "nforenum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nforenum/"
 description: "NFORenum – A tool for checking NFO code for errors, and for beautifying that code"
 ---
 
-<h2>NAME</h2>
 <p> <code>NFORenum</code> &#8211; A tool for checking NFO code for errors, and for beautifying that code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nforenum</code> [options] [file [file2 [file3 [&#8230;]]]]</p>

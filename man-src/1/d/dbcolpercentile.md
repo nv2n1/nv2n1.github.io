@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolpercentile(1)"
 name: "dbcolpercentile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolpercentile/"
 description: "dbcolpercentile – compute percentiles or ranks for an existing column"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolpercentile &#8211; compute percentiles or ranks for an existing column </p>
 <h2>SYNOPSIS</h2>
 <pre>

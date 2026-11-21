@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_restore(1)"
 name: "ndb_restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_restore/"
 description: "ndb_restore – restore a MySQL Cluster backup"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_restore &#8211; restore a MySQL Cluster backup </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "urlencode(1)"
 name: "urlencode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urlencode/"
 description: "urlencode – convert strings to or from URL-encoded form"
 ---
 
-<h2>NAME</h2>
 <p> <code>urlencode</code> &#8211; convert strings to or from URL-encoded form</p>
 <h2>SYNOPSIS</h2>
 <p> <code>urlencode </code> [-m|-d] <i>string [string &#8230;]</i></p>

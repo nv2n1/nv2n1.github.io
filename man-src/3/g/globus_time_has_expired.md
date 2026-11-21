@@ -1,4 +1,5 @@
 ---
+
 title: "globus_time_has_expired(3)"
 name: "globus_time_has_expired"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_time_has_expired/"
 description: "globus_time.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_time.h &#8211; </p>
 <p> Time Types and Macros.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "install_sound_input(3)"
 name: "install_sound_input"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_sound_input/"
 description: "install_sound_input – Initialises the sound recorder module. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> install_sound_input &#8211; Initialises the sound recorder module. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

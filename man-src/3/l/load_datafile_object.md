@@ -1,4 +1,5 @@
 ---
+
 title: "load_datafile_object(3)"
 name: "load_datafile_object"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_datafile_object/"
 description: "load_datafile_object – Loads a specific object from a datafile. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_datafile_object &#8211; Loads a specific object from a datafile. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "datefudge(1)"
 name: "datefudge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-datefudge/"
 description: "datefudge – pretend the system time is different"
 ---
 
-<h2>NAME</h2>
 <p> datefudge &#8211; pretend the system time is different</p>
 <h2>SYNOPSIS</h2>
 <p> <code>datefudge</code> [<i>-s</i>|<i>&#8211;static</i>] <i>at_date program</i> [<i>arguments</i> &#8230;]</p>

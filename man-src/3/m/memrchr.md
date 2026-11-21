@@ -1,4 +1,5 @@
 ---
+
 title: "memrchr(3)"
 name: "memrchr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memrchr/"
 description: "memchr, memrchr, rawmemchr – scan memory for a character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memchr, memrchr, rawmemchr &#8211; scan memory for a character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

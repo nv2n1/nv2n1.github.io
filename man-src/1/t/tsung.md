@@ -1,4 +1,5 @@
 ---
+
 title: "tsung(1)"
 name: "tsung"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsung/"
 description: "tsung – A distributed multi-protocol load testing tool."
 ---
 
-<h2>NAME</h2>
 <p> tsung &#8211; A distributed multi-protocol load testing tool.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsung</code> [ <code>-f configuration file</code> ] [ <code>-l log dir</code> ] [ <code>-m filename</code> ] [ <code>-r command</code> ] [ <code>-X directory</code> ] [ <code>-w delay</code> ] [ <code>-L lifetime</code> ] [ <code>-s</code> ] [ <code>-n</code> ] [ <code>-k</code> ] [ <code>-v</code> ] [ <code>-6</code> ] [ <code>-h</code> ] [ <code>start|stop|debug|status</code> ]</p>

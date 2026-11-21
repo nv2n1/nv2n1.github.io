@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-test(1)"
 name: "cargo-test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-test/"
 description: "cargo-test – Execute unit and integration tests of a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-test &#8211; Execute unit and integration tests of a package </p>
 <h2>SYNOPSIS</h2>
 <p> cargo test [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>

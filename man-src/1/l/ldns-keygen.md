@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-keygen(1)"
 name: "ldns-keygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-keygen/"
 description: "ldns-keygen – generate a DNSSEC key pair"
 ---
 
-<h2>NAME</h2>
 <p> ldns-keygen &#8211; generate a DNSSEC key pair</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-keygen </code> [ <i>OPTION</i> ] <i>DOMAIN</i> </p>

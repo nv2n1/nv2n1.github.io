@@ -1,4 +1,5 @@
 ---
+
 title: "tsung-recorder(1)"
 name: "tsung-recorder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsung-recorder/"
 description: "tsung-recorder – Proxy recorder for the tsung load testing tool."
 ---
 
-<h2>NAME</h2>
 <p> tsung-recorder &#8211; Proxy recorder for the tsung load testing tool.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsung-recorder</code> [ <code>-l log file</code> ] [ <code>-r command</code> ] [ <code>-p plugin</code> ] [ <code>-L listen port</code> ] [ <code>-I IP</code> ] [ <code>-P port</code> ] [ <code>-u </code> ] [ <code>start|stop|restart|record_tag</code> ]</p>

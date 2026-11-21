@@ -1,4 +1,5 @@
 ---
+
 title: "kuipc(1)"
 name: "kuipc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kuipc/"
 description: "kuipc – the CERN KUIP compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kuipc &#8211; the CERN KUIP compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kuipc</code> [ <i>options</i> ] [ <i>inputfile</i> [ <i>outputfile</i> ] ]</p>

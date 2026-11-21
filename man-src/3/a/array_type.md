@@ -1,4 +1,5 @@
 ---
+
 title: "array_type(3)"
 name: "array_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-array_type/"
 description: "QuantLib::BoundaryCondition – Abstract boundary condition class for finite difference problems."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::BoundaryCondition &#8211; Abstract boundary condition class for finite difference problems. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt; </p>

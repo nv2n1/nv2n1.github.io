@@ -1,4 +1,5 @@
 ---
+
 title: "delwords(1)"
 name: "delwords"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-delwords/"
 description: "delwords – Deleting words from specified dictionary collectively"
 ---
 
-<h2>NAME</h2>
 <p> delwords &#8211; Deleting words from specified dictionary collectively</p>
 <h2>SYNOPSIS</h2>
 <p> <code>delwords [{-cs|-cannaserver} </code><i>cannaserver</i>] dicname</p>

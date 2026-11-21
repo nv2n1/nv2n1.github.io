@@ -1,4 +1,5 @@
 ---
+
 title: "filezilla(1)"
 name: "filezilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-filezilla/"
 description: "FileZilla – FTP client"
 ---
 
-<h2>NAME</h2>
 <p> FileZilla &#8211; FTP client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>filezilla</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "couponpricer(3)"
 name: "couponpricer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-couponpricer/"
 description: "ql/cashflows/couponpricer.hpp – Coupon pricers."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/cashflows/couponpricer.hpp &#8211; Coupon pricers. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br />

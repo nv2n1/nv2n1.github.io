@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_auth_info_s(3)"
 name: "globus_ftp_control_auth_info_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_auth_info_s/"
 description: "globus_ftp_control_auth_info_s –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_ftp_control_auth_info_s &#8211; </p>
 <p> Authentication Values.</p>
 <h2>SYNOPSIS</h2>

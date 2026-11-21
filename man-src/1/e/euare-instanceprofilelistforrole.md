@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofilelistforrole(1)"
 name: "euare-instanceprofilelistforrole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofilelistforrole/"
 description: "euare-instanceprofilelistforrole – List all instance profiles that use a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofilelistforrole &#8211; List all instance profiles that use a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofilelistforrole [&#8211;as-account ACCOUNT] [-U URL]</p>

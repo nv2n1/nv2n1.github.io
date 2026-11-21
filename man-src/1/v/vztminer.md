@@ -1,4 +1,5 @@
 ---
+
 title: "vztminer(1)"
 name: "vztminer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vztminer/"
 description: "vztminer – Data mining of VZT files"
 ---
 
-<h2>NAME</h2>
 <p> vztminer &#8211; Data mining of VZT files</p>
 <h2>SYNTAX</h2>
 <p> vztminer [<i>option</i>]&#8230; [<i>VZTFILE</i>]</p>

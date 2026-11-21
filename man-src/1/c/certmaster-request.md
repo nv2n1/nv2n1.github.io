@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-request(1)"
 name: "certmaster-request"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-certmaster-request/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- certmaster-request -- requests SSL certs from a certmaster Fedora Unified Network Controller. 
+certmaster-request -- requests SSL certs from a certmaster Fedora Unified Network Controller. 
 
 <h2>SYNOPSIS</h2>
 

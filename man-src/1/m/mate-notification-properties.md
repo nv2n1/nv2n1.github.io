@@ -1,4 +1,5 @@
 ---
+
 title: "mate-notification-properties(1)"
 name: "mate-notification-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-notification-properties/"
 description: "mate-notification-properties – Set up the options for desktop notifications"
 ---
 
-<h2>NAME</h2>
 <p> mate-notification-properties &#8211; Set up the options for desktop notifications </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-notification-properties </code> </p>

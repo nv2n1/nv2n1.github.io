@@ -1,4 +1,5 @@
 ---
+
 title: "gribdump(1)"
 name: "gribdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gribdump/"
 description: "gribdump – Decode GRIB products and display as text"
 ---
 
-<h2>NAME</h2>
 <p> gribdump &#8211; Decode GRIB products and display as text</p>
 <h2>SYNOPSIS</h2>
 <dl>

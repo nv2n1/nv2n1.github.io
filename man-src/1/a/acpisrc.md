@@ -1,4 +1,5 @@
 ---
+
 title: "acpisrc(1)"
 name: "acpisrc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpisrc/"
 description: "acpisrc – ACPICA source code conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpisrc &#8211; ACPICA source code conversion utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpisrc</code> [<i>-c</i>|<i>-l</i>|<i>-u]</i>[-d]<i>[-s]</i>[-v]<i>[-y]</i>&lt;source-dir&gt;<i>&lt;dest-dir&gt;</i> &lt;aml-file&gt; </p>

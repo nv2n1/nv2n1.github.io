@@ -1,4 +1,5 @@
 ---
+
 title: "chromium-browser(1)"
 name: "chromium-browser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chromium-browser/"
 description: "chromium-browser – the web browser from Google"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chromium-browser &#8211; the web browser from Google</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chromium-browser</code> [<i>OPTION</i>] [<i>PATH</i>|<i>URL</i>] </p>

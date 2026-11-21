@@ -1,4 +1,5 @@
 ---
+
 title: "set_robust_list(2)"
 name: "set_robust_list"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-set_robust_list/"
 description: "get_robust_list, set_robust_list – get/set list of robust futexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_robust_list, set_robust_list &#8211; get/set list of robust futexes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

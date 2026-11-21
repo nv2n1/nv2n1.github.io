@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_query_eqn(3)"
 name: "mlx5dv_devx_query_eqn"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_query_eqn/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_query_eqn - Query EQN for a given vector id. 
+mlx5dv_devx_query_eqn - Query EQN for a given vector id. 
 
 <h2>SYNOPSIS</h2>
 

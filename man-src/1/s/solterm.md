@@ -1,4 +1,5 @@
 ---
+
 title: "solterm(1)"
 name: "solterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-solterm/"
 description: "solterm – An IPMI Serial over LAN program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> solterm &#8211; An IPMI Serial over LAN program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>solterm</code> </p>

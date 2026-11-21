@@ -1,4 +1,5 @@
 ---
+
 title: "ares_parse_ptr_reply(3)"
 name: "ares_parse_ptr_reply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_parse_ptr_reply/"
 description: "ares_parse_ptr_reply – Parse a reply to a DNS query of type PTR into a hostent"
 ---
 
-<h2>NAME</h2>
 <p> ares_parse_ptr_reply &#8211; Parse a reply to a DNS query of type PTR into a hostent</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

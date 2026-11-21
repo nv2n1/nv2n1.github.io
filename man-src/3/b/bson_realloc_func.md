@@ -1,4 +1,5 @@
 ---
+
 title: "bson_realloc_func(3)"
 name: "bson_realloc_func"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_realloc_func/"
 description: "bson_realloc_func – This is a prototype for pluggable realloc functions used through the Libbson library. If you wish to use a custom allocator this is one way to do it. Additionally, bson_realloc_..."
 ---
 
-<h2>NAME</h2>
 <p> bson_realloc_func &#8211; This is a prototype for pluggable realloc functions used through the Libbson library. If you wish to use a custom allocator this is one way to do it. Additionally, bson_realloc_ctx() is a default implementation of this prototype.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

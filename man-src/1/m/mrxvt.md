@@ -1,4 +1,5 @@
 ---
+
 title: "mrxvt(1)"
 name: "mrxvt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrxvt/"
 description: "mrxvt – A tabbed VT102 terminal emulator for X Window System"
 ---
 
-<h2>NAME</h2>
 <p> <code>mrxvt</code> &#8211; A tabbed VT102 terminal emulator for X Window System</p>
 <h2>SYNOPSIS</h2>
 <p> [options] [-<code>e </code><i>cmd</i> ]</p>

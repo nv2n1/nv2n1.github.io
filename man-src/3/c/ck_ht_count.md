@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_count(3)"
 name: "ck_ht_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_count/"
 description: "ck_ht_count – return count of key-value pairs in hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_count</code> &#8211; return count of key-value pairs in hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

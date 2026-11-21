@@ -1,4 +1,5 @@
 ---
+
 title: "texlinks(1)"
 name: "texlinks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texlinks/"
 description: "texlinks – maintain symbolic links from format to engine"
 ---
 
-<h2>NAME</h2>
 <p> texlinks &#8211; maintain symbolic links from format to engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texlinks</code> [ <i>OPTIONS</i>&#8230; ] <i>DIRECTORIES</i>&#8230; </p>

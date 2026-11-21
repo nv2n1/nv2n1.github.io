@@ -1,4 +1,5 @@
 ---
+
 title: "gxint(1)"
 name: "gxint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gxint/"
 description: "gxint – load and run an interactive GEANT application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gxint &#8211; load and run an interactive GEANT application </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gxint</code> [<i>options</i>]<i> file(s)</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_size(3)"
 name: "ck_bitmap_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_size/"
 description: "ck_bitmap_size – returns necessary number of bytes for bitmap"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_size</code> &#8211; returns necessary number of bytes for bitmap</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

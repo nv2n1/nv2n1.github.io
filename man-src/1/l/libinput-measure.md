@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure(1)"
 name: "libinput-measure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-measure/"
 description: "libinput-measure – measure properties of devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-measure &#8211; measure properties of devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure [&#8211;help] </code><i>&lt;feature&gt; [&lt;args&gt;]</i></p>

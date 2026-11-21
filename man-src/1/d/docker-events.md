@@ -1,4 +1,5 @@
 ---
+
 title: "docker-events(1)"
 name: "docker-events"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-events/"
 description: "docker-events – Get real time events from the server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-events &#8211; Get real time events from the server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker events [OPTIONS]</code> </p>

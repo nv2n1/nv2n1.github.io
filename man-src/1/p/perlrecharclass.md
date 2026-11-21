@@ -1,4 +1,5 @@
 ---
+
 title: "perlrecharclass(1)"
 name: "perlrecharclass"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlrecharclass/"
 description: "perlrecharclass – Perl Regular Expression Character Classes"
 ---
-<h2 class="name">NAME</h2>
+
 <p> perlrecharclass - Perl Regular Expression Character Classes </p>
 <h2>DESCRIPTION</h2>
 <p> The top level documentation about Perl regular expressions is found in perlre. </p>

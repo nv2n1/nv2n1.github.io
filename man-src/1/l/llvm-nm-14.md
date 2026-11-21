@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-nm-14(1)"
 name: "llvm-nm-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-nm-14/"
 description: "llvm-nm – list LLVM bitcode and object file’s symbol table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-nm &#8211; list LLVM bitcode and object file&#8217;s symbol table </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-nm</code> [<i>options</i>] [<i>filenames…</i>]</p>

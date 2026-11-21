@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-wait(1)"
 name: "lxc-wait"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-wait/"
 description: "lxc-wait – wait for a specific container state"
 ---
 
-<h2>NAME</h2>
 <p> lxc-wait &#8211; wait for a specific container state</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-wait</code> {-n <i>name</i>} {-s <i>states</i>}</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gprocessor(1)"
 name: "gprocessor"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gprocessor/"
 ---
 
-<h2>NAME</h2>
-
- gprocessor - Gnash SWF Processor
+gprocessor - Gnash SWF Processor
 
 <h2>Synopsis</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "aa_initkbd(3)"
 name: "aa_initkbd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_initkbd/"
 description: "aa_initkbd – initialize the AA-lib keyboard driver."
 ---
 
-<h2>NAME</h2>
 <p> aa_initkbd &#8211; initialize the AA-lib keyboard driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

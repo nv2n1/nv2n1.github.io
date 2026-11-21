@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_flush_buffers(3)"
 name: "memcached_flush_buffers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_flush_buffers/"
 description: "memcached_flush_buffers – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_flush_buffers &#8211; libmemcached Documentation </p>
 <p> Flush and senf buffered commands</p>
 <h2>SYNOPSIS</h2>

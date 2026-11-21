@@ -1,4 +1,5 @@
 ---
+
 title: "h5stat(1)"
 name: "h5stat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5stat/"
 description: "h5stat: – Reports statistics regarding an HDF5 file and the objects in the file."
 ---
 
-<h2>NAME</h2>
 <p> h5stat: &#8211; Reports statistics regarding an HDF5 file and the objects in the file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5stat</code> [<i>OPTIONS</i>] <i>file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "watch(1)"
 name: "watch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-watch/"
 description: "watch – execute a program periodically, showing output fullscreen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> watch &#8211; execute a program periodically, showing output fullscreen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>watch</code> [<i>options</i>] <i>command</i></p>

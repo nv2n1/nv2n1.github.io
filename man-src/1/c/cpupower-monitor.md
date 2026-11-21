@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-monitor(1)"
 name: "cpupower-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-monitor/"
 description: "cpupower-monitor – Report processor frequency and idle statistics"
 ---
 
-<h2>NAME</h2>
 <p> cpupower-monitor &#8211; Report processor frequency and idle statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code> cpupower monitor</code> -l </p>

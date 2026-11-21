@@ -1,4 +1,5 @@
 ---
+
 title: "doxywizard(1)"
 name: "doxywizard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doxywizard/"
 description: "doxywizard – a tool to configure and run doxygen on your source files"
 ---
 
-<h2>NAME</h2>
 <p> doxywizard &#8211; a tool to configure and run doxygen on your source files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doxywizard</code></p>

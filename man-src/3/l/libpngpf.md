@@ -1,4 +1,5 @@
 ---
+
 title: "libpngpf(3)"
 name: "libpngpf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpngpf/"
 description: "libpng – Portable Network Graphics (PNG) Reference Library 1.5.13 (private functions)"
 ---
 
-<h2>NAME</h2>
 <p> libpng &#8211; Portable Network Graphics (PNG) Reference Library 1.5.13 (private functions)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include </code><i>&quot;pngpriv.h&quot; </p>

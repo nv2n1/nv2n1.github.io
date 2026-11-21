@@ -1,4 +1,5 @@
 ---
+
 title: "memset(3)"
 name: "memset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memset/"
 description: "memset – fill memory with a constant byte"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memset &#8211; fill memory with a constant byte </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

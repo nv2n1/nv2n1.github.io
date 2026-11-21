@@ -1,4 +1,5 @@
 ---
+
 title: "gofmt(1)"
 name: "gofmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gofmt/"
 description: "gofmt – format Go programs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gofmt &#8211; format Go programs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gofmt</code> [<i>flags</i>] [<i>path &#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sd-daemon(7)"
 name: "sd-daemon"
 section: "7"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/7-sd-daemon/"
 description: "sd-daemon – Reference implementation of APIs for new-style daemons"
 ---
+
 <p>sd-daemon &#8211; Reference implementation of APIs for new-style daemons </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
 </code></pre>
 <dl>

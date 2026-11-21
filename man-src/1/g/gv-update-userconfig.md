@@ -1,4 +1,5 @@
 ---
+
 title: "gv-update-userconfig(1)"
 name: "gv-update-userconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gv-update-userconfig/"
 description: "gv-update-userconfig – update ~/.gv config file"
 ---
 
-<h2>NAME</h2>
 <p> gv-update-userconfig &#8211; update ~/.gv config file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gv-update-userconfig</code> [<i>filename</i>]</p>

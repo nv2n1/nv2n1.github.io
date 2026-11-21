@@ -1,4 +1,5 @@
 ---
+
 title: "virt-make-fs(1)"
 name: "virt-make-fs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-make-fs/"
 description: "virt-make-fs – Make a filesystem from a tar archive or files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-make-fs &#8211; Make a filesystem from a tar archive or files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

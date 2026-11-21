@@ -1,4 +1,5 @@
 ---
+
 title: "muniphot(1)"
 name: "muniphot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-muniphot/"
 description: "muniphot – CCD photometry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> muniphot &#8211; CCD photometry</p>
 <h2>SYNOPSIS</h2>
 <p> <code>muniphot </code><i>[options] source_file &#8230;</i> </p>

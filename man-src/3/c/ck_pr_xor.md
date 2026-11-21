@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_xor(3)"
 name: "ck_pr_xor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_xor/"
 description: "ck_pr_xor_ptr ck_pr_xor_char ck_pr_xor_uint ck_pr_xor_int ck_pr_xor_64 ck_pr_xor_32 ck_pr_xor_16 ck_pr_xor_8 – atomic bitwise-xor operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_xor_ptr</code> <code>ck_pr_xor_char</code> <code>ck_pr_xor_uint</code> <code>ck_pr_xor_int</code> <code>ck_pr_xor_64</code> <code>ck_pr_xor_32</code> <code>ck_pr_xor_16</code> <code>ck_pr_xor_8</code> &#8211; atomic bitwise-xor operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

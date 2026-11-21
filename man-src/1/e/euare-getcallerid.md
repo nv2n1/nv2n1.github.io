@@ -1,4 +1,5 @@
 ---
+
 title: "euare-getcallerid(1)"
 name: "euare-getcallerid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-getcallerid/"
 description: "euare-getcallerid – Show information about the currently-active credentials"
 ---
 
-<h2>NAME</h2>
 <p> euare-getcallerid &#8211; Show information about the currently-active credentials</p>
 <h2>SYNOPSIS</h2>
 <p> euare-getcallerid [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perl5280delta(1)"
 name: "perl5280delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5280delta/"
 description: "perl5280delta – what is new for perl v5.28.0"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl5280delta &#8211; what is new for perl v5.28.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.26.0 release and the 5.28.0 release. </p>

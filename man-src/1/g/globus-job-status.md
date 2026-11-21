@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-status(1)"
 name: "globus-job-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-job-status/"
 description: "globus-job-status – Check the status of a GRAM5 job"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-job-status &#8211; Check the status of a GRAM5 job </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-job-status</code> <i>JOBID</i> </p>

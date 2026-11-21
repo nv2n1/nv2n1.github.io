@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-network-interface(1)"
 name: "euca-create-network-interface"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-network-interface/"
 description: "euca-create-network-interface – Create a new VPC network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-network-interface &#8211; Create a new VPC network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-network-interface [-d DESC] [-g GROUP]</p>

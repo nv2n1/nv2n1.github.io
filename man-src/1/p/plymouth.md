@@ -1,4 +1,5 @@
 ---
+
 title: "plymouth(1)"
 name: "plymouth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plymouth/"
 description: "plymouth – Send commands to plymouthd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> plymouth &#8211; Send commands to plymouthd </p>
 <h2>SYNOPSIS</h2>
 <dl>

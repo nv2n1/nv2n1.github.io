@@ -1,4 +1,5 @@
 ---
+
 title: "freetype-config(1)"
 name: "freetype-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freetype-config/"
 description: "freetype-config – Get information about a libfreetype installation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> freetype-config &#8211; Get information about a libfreetype installation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>freetype-config</code> [<i>options</i>]</p>

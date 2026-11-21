@@ -1,4 +1,5 @@
 ---
+
 title: "callgrind_control(1)"
 name: "callgrind_control"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-callgrind_control/"
 description: "callgrind_control – observe and control programs being run by Callgrind"
 ---
 
-<h2 class="name">NAME</h2>
 <p> callgrind_control &#8211; observe and control programs being run by Callgrind </p>
 <h2>SYNOPSIS</h2>
 <dl>

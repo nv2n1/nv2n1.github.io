@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-install(1)"
 name: "ipa-replica-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-replica-install/"
 description: "ipa-replica-install – Create an IPA replica"
 ---
 
-<h2>NAME</h2>
 <p> ipa-replica-install &#8211; Create an IPA replica</p>
 <h2>SYNOPSIS</h2>
 <h3>DOMAIN LEVEL 0</h3>

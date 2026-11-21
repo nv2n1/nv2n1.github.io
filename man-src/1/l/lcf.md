@@ -1,4 +1,5 @@
 ---
+
 title: "lcf(1)"
 name: "lcf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lcf/"
 description: "lcf – Determine which of the historical versions of a config is installed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lcf &#8211; Determine which of the historical versions of a config is installed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lcf</code> <i>[options]</i> <i>&lt;Destination File Name&gt;</i> <i>&lt;Historical MD5SUM source directory&gt;</i></p>

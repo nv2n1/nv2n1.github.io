@@ -1,4 +1,5 @@
 ---
+
 title: "virt-tar-out(1)"
 name: "virt-tar-out"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-tar-out/"
 description: "virt-tar-out – Pack a virtual machine disk image directory into a tarball."
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-tar-out &#8211; Pack a virtual machine disk image directory into a tarball. </p>
 <h2>SYNOPSIS</h2>
 <pre>

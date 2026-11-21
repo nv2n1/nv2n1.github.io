@@ -1,4 +1,5 @@
 ---
+
 title: "nmcli(1)"
 name: "nmcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nmcli/"
 description: "nmcli – command-line tool for controlling NetworkManager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nmcli &#8211; command-line tool for controlling NetworkManager </p>
 <h2>SYNOPSIS</h2>
 <dl>

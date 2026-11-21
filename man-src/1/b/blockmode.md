@@ -1,4 +1,5 @@
 ---
+
 title: "blockmode(1)"
 name: "blockmode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blockmode/"
 description: "blockmode – Block average (x, y, z) data tables by mode estimation"
 ---
 
-<h2>NAME</h2>
 <p> blockmode &#8211; Block average (x, y, z) data tables by mode estimation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>blockmode</code> [ <i>table</i> ] <i>increment</i> <i>region</i> [ ] [ [<i>width</i>][<code>+c</code>][<code>+a</code>|<code>+l</code>|<code>+h</code> ] [ <code>r</code>|<code>s</code>[<code>&#8211;</code>] ] [ ] [ [<i>level</i>] ] [ [<code>i</code>|<code>o</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

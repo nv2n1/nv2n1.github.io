@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_int32(3)"
 name: "bson_iter_int32"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_int32/"
 description: "bson_iter_int32() – Fetches the value from a BSON_TYPE_INT32 element. You should verify that the field is a BSON_TYPE_INT32 field before calling this function."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_int32() &#8211; Fetches the value from a BSON_TYPE_INT32 element. You should verify that the field is a BSON_TYPE_INT32 field before calling this function.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

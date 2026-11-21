@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rmutex_t(3)"
 name: "globus_rmutex_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rmutex_t/"
 description: "globus_rmutex_t –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_rmutex_t &#8211; </p>
 <p> Recursive Mutex.</p>
 <h2>SYNOPSIS</h2>

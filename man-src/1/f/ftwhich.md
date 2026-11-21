@@ -1,4 +1,5 @@
 ---
+
 title: "ftwhich(1)"
 name: "ftwhich"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ftwhich/"
 description: "ftwhich – fault tolerant search for a command name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ftwhich &#8211; fault tolerant search for a command name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftwhich</code> [-#hIp][-t#] program_name</p>

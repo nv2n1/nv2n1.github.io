@@ -1,4 +1,5 @@
 ---
+
 title: "xminicom(1)"
 name: "xminicom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xminicom/"
 description: "xminicom – friendly serial communication program"
 ---
 
-<h2>NAME</h2>
 <p> xminicom &#8211; friendly serial communication program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xminicom</code> <i>minicom-options</i></p>

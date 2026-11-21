@@ -1,4 +1,5 @@
 ---
+
 title: "ripright(1)"
 name: "ripright"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ripright/"
 description: "ripright – CD ripper"
 ---
 
-<h2>NAME</h2>
 <p> ripright &#8211; CD ripper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ripright [-d] [-a] [-r] [-s] [-w] [-c </code><i>device</i>] [-o <i>format</i>] [<i>outpath</i>] </p>

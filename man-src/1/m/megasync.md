@@ -1,4 +1,5 @@
 ---
+
 title: "megasync(1)"
 name: "megasync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megasync/"
 description: "megasync – Upload/download entire directories to/from your Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megasync &#8211; Upload/download entire directories to/from your Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

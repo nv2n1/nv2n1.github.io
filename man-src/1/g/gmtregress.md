@@ -1,4 +1,5 @@
 ---
+
 title: "gmtregress(1)"
 name: "gmtregress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtregress/"
 description: "gmtregress – Linear regression of 1-D data sets"
 ---
 
-<h2>NAME</h2>
 <p> gmtregress &#8211; Linear regression of 1-D data sets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtregress</code> [ <i>table</i> ] [ <i>min</i>/<i>max</i>/<i>inc</i> ] [ <i>level</i> ] [ <code>x</code>|<code>y</code>|<code>o</code>|<code>r</code> ] [ <i>flags</i> ] [ <code>1</code>|<code>2</code>|<code>r</code>|<code>w</code> ] [ [<code>r</code>] ] [ <i>min</i>/<i>max</i>/<i>inc</i> | <i>n</i> ] [ [<code>w</code>][<code>x</code>][<code>y</code>][<code>r</code>] ] [ [<i>level</i>] ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>

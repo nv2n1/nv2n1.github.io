@@ -1,4 +1,5 @@
 ---
+
 title: "mateconf-gsettings-schema-convert(1)"
 name: "mateconf-gsettings-schema-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mateconf-gsettings-schema-convert/"
 description: "mateconf-gsettings-schema-convert – MateConf to GSettings schema conversion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mateconf-gsettings-schema-convert &#8211; MateConf to GSettings schema conversion </p>
 <h2>SYNOPSIS</h2>
 <dl>

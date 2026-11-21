@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-update(1)"
 name: "docker-swarm-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-swarm-update/"
 description: "docker-swarm-update – Update the swarm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-swarm-update &#8211; Update the swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm update [OPTIONS]</code> </p>

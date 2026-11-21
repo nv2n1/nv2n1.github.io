@@ -1,4 +1,5 @@
 ---
+
 title: "advpng(1)"
 name: "advpng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-advpng/"
 description: "advpng – AdvanceCOMP PNG Compression Utility"
 ---
 
-<h2>NAME</h2>
 <p> advpng &#8211; AdvanceCOMP PNG Compression Utility</p>
 <h2>SYNOPSIS</h2>
 <p> advpng [-l, &#8211;list] [-z, &#8211;recompress] [-0, &#8211;shrink-0] </p>

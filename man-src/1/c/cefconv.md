@@ -1,4 +1,5 @@
 ---
+
 title: "cefconv(1)"
 name: "cefconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cefconv/"
 description: "cefconv – convert a TeX document containing CEF macros into `preprocessed’ form."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cefconv &#8211; convert a TeX document containing CEF macros into `preprocessed&#8217; form. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cefconv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>

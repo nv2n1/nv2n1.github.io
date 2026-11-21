@@ -1,4 +1,5 @@
 ---
+
 title: "perf-sched(1)"
 name: "perf-sched"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-sched/"
 description: "perf-sched – Tool to trace/measure scheduler properties (latencies)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-sched &#8211; Tool to trace/measure scheduler properties (latencies) </p>
 <h2>SYNOPSIS</h2>
 <pre>

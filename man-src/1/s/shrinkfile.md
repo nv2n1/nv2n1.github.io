@@ -1,4 +1,5 @@
 ---
+
 title: "shrinkfile(1)"
 name: "shrinkfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shrinkfile/"
 description: "shrinkfile – shrink a file on a line boundary"
 ---
 
-<h2>NAME</h2>
 <p> shrinkfile &#8211; shrink a file on a line boundary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shrinkfile</code> [ <code>-n</code> ] [ <code>-m</code><i> maxsize</i> ] [ <code>-s</code><i> size</i> ] [ <code>-v</code> ] <i>file&#8230;</i></p>

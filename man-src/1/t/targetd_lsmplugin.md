@@ -1,4 +1,5 @@
 ---
+
 title: "targetd_lsmplugin(1)"
 name: "targetd_lsmplugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-targetd_lsmplugin/"
 description: "targetd_lsmplugin — libStorageMgmt targetd plugin"
 ---
 
-<h2>NAME</h2>
 <p> targetd_lsmplugin &#8212; libStorageMgmt targetd plugin </p>
 <h2>DESCRIPTION</h2>
 <p> LibStorageMgmt targetd plugin allows user to manage storage using the targetd storage API [1]. The &#8216;targetd_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies targetd plugin in the URI. </p>

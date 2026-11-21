@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_set_server_avp_function(3)"
 name: "gnutls_ia_set_server_avp_function"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_set_server_avp_function/"
 description: "gnutls_ia_set_server_avp_function – Used to set a AVP callback"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_set_server_avp_function &#8211; Used to set a AVP callback</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

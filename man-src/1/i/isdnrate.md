@@ -1,4 +1,5 @@
 ---
+
 title: "isdnrate(1)"
 name: "isdnrate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isdnrate/"
 description: "isdnrate – Print telephone rates and various info from rate-files(5)."
 ---
 
-<h2>NAME</h2>
 <p> isdnrate &#8211; Print telephone rates and various info from <a href="/docs/linux/man/5-rate-files/">rate-files</a>(5).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isdnrate -a -b</code><i>best</i><code> -d</code><i>day</i><code> -f</code><i>from</i><code> -h</code><i>hour</i><code> -l</code><i>len</i> <code>-o</code> <code>-p</code><i>provs</i><code> -r</code> <i></i>v<i>NN</i> <code>-s</code> <code>-t</code><i>takt</i><code> -v</code><i>verbose</i><code> -x</code><i>exclude</i> <code> -C -D</code><i>det</i><code> -G</code><i>data</i><code> -H -L -N -O</code><i>socketfile</i><code> -P</code><i>piddir</i> <code> -S</code><i>sort</i><code> -T -U -V -X</code><i>explain</i> <code>-Z</code> <code>NUMBER &#8230;</code> </p>

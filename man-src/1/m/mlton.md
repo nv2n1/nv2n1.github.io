@@ -1,4 +1,5 @@
 ---
+
 title: "mlton(1)"
 name: "mlton"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlton/"
 description: "mlton – whole-program compiler for the Standard ML (SML) programming language"
 ---
 
-<h2>NAME</h2>
 <p> <code>mlton</code> &#8211; whole-program compiler for the Standard ML (SML) programming language</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlton</code> <i>[option &#8230;] file</i><code>.</code>{<code>c</code>|<code>cm</code>|<code>mlb</code>|<code>o</code>|<code>sml</code>} [file<code>.</code>{<code>c</code>|<code>o</code>|<code>s</code>|<code>S</code>} &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sigaltstack(2)"
 name: "sigaltstack"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sigaltstack/"
 description: "sigaltstack – set and/or get signal stack context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigaltstack &#8211; set and/or get signal stack context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>

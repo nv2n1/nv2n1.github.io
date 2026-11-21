@@ -1,4 +1,5 @@
 ---
+
 title: "remap_file_pages(2)"
 name: "remap_file_pages"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-remap_file_pages/"
 description: "remap_file_pages – create a nonlinear file mapping"
 ---
 
-<h2 class="name">NAME</h2>
 <p> remap_file_pages &#8211; create a nonlinear file mapping </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

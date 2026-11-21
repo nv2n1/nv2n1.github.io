@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_attach_counters_point_flow(3)"
 name: "ibv_attach_counters_point_flow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_attach_counters_point_flow/"
 description: "ibv_attach_counters_point_flow – attach individual counter definition to a flow object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_attach_counters_point_flow &#8211; attach individual counter definition to a flow object </p>
 <h2>SYNOPSIS</h2>
 <dl>

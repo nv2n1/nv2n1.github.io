@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-stop(1)"
 name: "lxc-stop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-stop/"
 description: "lxc-stop – stop the application running inside a container"
 ---
 
-<h2>NAME</h2>
 <p> lxc-stop &#8211; stop the application running inside a container</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-stop</code> {-n <i>name</i>} [-W] [-r] [-t <i>timeout</i>] [-k] [&#8211;nokill] [&#8211;nolock]</p>

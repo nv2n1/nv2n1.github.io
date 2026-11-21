@@ -1,4 +1,5 @@
 ---
+
 title: "alsaucm(1)"
 name: "alsaucm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alsaucm/"
 description: "alsaucm – ALSA Use Case Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alsaucm &#8211; ALSA Use Case Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <i>alsaucm</i> &lt;options&gt; [command]</p>

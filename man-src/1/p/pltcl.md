@@ -1,4 +1,5 @@
 ---
+
 title: "pltcl(1)"
 name: "pltcl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pltcl/"
 description: "pltcl – Tcl interface to PLplot"
 ---
 
-<h2>NAME</h2>
 <p> pltcl &#8211; Tcl interface to PLplot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pltcl</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getprotobyname(3)"
 name: "getprotobyname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getprotobyname/"
 description: "getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent – get protocol entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent &#8211; get protocol entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-termination-policy-types(1)"
 name: "euscale-describe-termination-policy-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-termination-policy-types/"
 description: "euscale-describe-termination-policy-types – List all termination policies supported by the service"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-termination-policy-types &#8211; List all termination policies supported by the service</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-termination-policy-types [&#8211;show-empty-fields]</p>

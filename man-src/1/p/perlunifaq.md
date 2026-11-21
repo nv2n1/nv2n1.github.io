@@ -1,4 +1,5 @@
 ---
+
 title: "perlunifaq(1)"
 name: "perlunifaq"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlunifaq/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlunifaq - Perl Unicode FAQ 
+perlunifaq - Perl Unicode FAQ 
 
 <h2>Q and A</h2>
 

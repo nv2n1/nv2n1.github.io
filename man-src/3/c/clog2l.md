@@ -1,4 +1,5 @@
 ---
+
 title: "clog2l(3)"
 name: "clog2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clog2l/"
 description: "clog2, clog2f, clog2l – base-2 logarithm of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clog2, clog2f, clog2l &#8211; base-2 logarithm of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

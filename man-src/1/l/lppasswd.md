@@ -1,4 +1,5 @@
 ---
+
 title: "lppasswd(1)"
 name: "lppasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lppasswd/"
 description: "lppasswd – add, change, or delete digest passwords."
 ---
 
-<h2>NAME</h2>
 <p> lppasswd &#8211; add, change, or delete digest passwords.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lppasswd</code> [ <i>username</i> ]<br />

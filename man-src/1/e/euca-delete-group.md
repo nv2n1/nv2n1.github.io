@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-group(1)"
 name: "euca-delete-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-group/"
 description: "euca-delete-group – Delete a security group"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-group &#8211; Delete a security group</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-group [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>

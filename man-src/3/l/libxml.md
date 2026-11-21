@@ -1,4 +1,5 @@
 ---
+
 title: "libxml(3)"
 name: "libxml"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libxml/"
 description: "libxml – library used to parse XML files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libxml &#8211; library used to parse XML files </p>
 <h2>DESCRIPTION</h2>
 <p> The <i>libxml</i> library is used to parse XML files. Its internal document representation is as close as possible to the <i>DOM </i> (Document Object Model) interface, an API for accessing XML or HTML structured documents. </p>

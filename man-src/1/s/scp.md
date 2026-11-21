@@ -1,4 +1,5 @@
 ---
+
 title: "scp(1)"
 name: "scp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scp/"
 description: "scp – OpenSSH secure file copy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>scp</code> &#8211; OpenSSH secure file copy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scp</code> [-<code>346ABCOpqRrsTv </code>[-<code>c </code><i>cipher</i> ] ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>J </code><i>destination</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>S </code><i>program</i> ] <i>source &#8230; target</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "stapvirt(1)"
 name: "stapvirt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stapvirt/"
 description: "stapvirt – prepare libvirt domains for systemtap probing"
 ---
 
-<h2>NAME</h2>
 <p> stapvirt &#8211; prepare libvirt domains for systemtap probing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stapvirt</code> [<code>-c</code> <i>URI</i>] [<code>-d</code> <i>PATH</i>] [<code>-v</code>] <i>COMMAND</i> <i>ARGUMENTS</i> </p>

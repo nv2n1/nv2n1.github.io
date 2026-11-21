@@ -1,4 +1,5 @@
 ---
+
 title: "xcmap(1)"
 name: "xcmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcmap/"
 description: "xcmap – displays the default colormap on X11 displays"
 ---
 
-<h2>NAME</h2>
 <p> xcmap &#8211; displays the default colormap on X11 displays</p>
 <h2>SYNTAX</h2>
 <p> <code>xcmap</code> [ [-d] <i>display</i>] [ [-g] <i>geometry</i>]</p>

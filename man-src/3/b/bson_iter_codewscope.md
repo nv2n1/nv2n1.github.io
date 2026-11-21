@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_codewscope(3)"
 name: "bson_iter_codewscope"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_codewscope/"
 description: "bson_iter_codewscope() – The bson_iter_codewscope() function acts similar to bson_iter_code() except for BSON_TYPE_CODEWSCOPE elements. It also will provide a pointer to the buffer for scope, which..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_codewscope() &#8211; The bson_iter_codewscope() function acts similar to bson_iter_code() except for BSON_TYPE_CODEWSCOPE elements. It also will provide a pointer to the buffer for scope, which can be loaded into a bson_t using bson_init_static().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

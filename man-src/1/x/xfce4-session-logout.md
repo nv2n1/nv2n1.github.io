@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-session-logout(1)"
 name: "xfce4-session-logout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-session-logout/"
 description: "xfce4-session-logout – Logs out from Xfce"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-session-logout &#8211; Logs out from Xfce </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-session-logout</code> </p>

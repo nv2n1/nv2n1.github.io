@@ -1,4 +1,5 @@
 ---
+
 title: "zone2sql(1)"
 name: "zone2sql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zone2sql/"
 description: "zone2sql – Convert ISC Bind zones to SQL"
 ---
 
-<h2>NAME</h2>
 <p> zone2sql &#8211; Convert ISC Bind zones to SQL</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zone2sql [OPTIONS]</code></p>

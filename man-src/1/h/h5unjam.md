@@ -1,4 +1,5 @@
 ---
+
 title: "h5unjam(1)"
 name: "h5unjam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5unjam/"
 description: "h5unjam – Extract the user block from a HDF5 file"
 ---
 
-<h2>NAME</h2>
 <p> h5unjam &#8211; Extract the user block from a HDF5 file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5unjam</code> <code>-i</code> <i>in_file.h5</i> [<code>-u</code> <i>user_block</i> | <code>&#8211;delete</code>] [<code>-o</code> <i>out_file.h5</i>]</p>

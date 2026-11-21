@@ -1,4 +1,5 @@
 ---
+
 title: "os-prober(1)"
 name: "os-prober"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-os-prober/"
 description: "os-prober — Discover bootable partitions on the local system."
 ---
 
-<h2>NAME</h2>
 <p> os-prober &#8212; Discover bootable partitions on the local system.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>os-prober</code></p>

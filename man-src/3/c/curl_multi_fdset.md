@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_fdset(3)"
 name: "curl_multi_fdset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_fdset/"
 description: "curl_multi_fdset – extracts file descriptor information from a multi handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_fdset &#8211; extracts file descriptor information from a multi handle</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

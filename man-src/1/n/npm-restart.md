@@ -1,4 +1,5 @@
 ---
+
 title: "npm-restart(1)"
 name: "npm-restart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-restart/"
 description: "npm-restart – Restart a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-restart</code> &#8211; Restart a package </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gstack(1)"
 name: "gstack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gstack/"
 description: "gstack – print a stack trace of a running process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gstack &#8211; print a stack trace of a running process</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gstack</code> pid </p>

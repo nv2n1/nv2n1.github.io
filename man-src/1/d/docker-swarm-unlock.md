@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-unlock(1)"
 name: "docker-swarm-unlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-swarm-unlock/"
 description: "docker-swarm-unlock – Unlock swarm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-swarm-unlock &#8211; Unlock swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm unlock</code> </p>

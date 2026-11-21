@@ -1,4 +1,5 @@
 ---
+
 title: "pamexec(1)"
 name: "pamexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamexec/"
 description: "pamexec – Execute a shell command on each image in a Netpbm image stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamexec &#8211; Execute a shell command on each image in a Netpbm image stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamexec</code> </p>

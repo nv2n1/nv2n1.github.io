@@ -1,4 +1,5 @@
 ---
+
 title: "virt-index-validate(1)"
 name: "virt-index-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-index-validate/"
 description: "virt-index-validate – Validate virt-builder index file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-index-validate &#8211; Validate virt-builder index file </p>
 <h2>SYNOPSIS</h2>
 <pre>

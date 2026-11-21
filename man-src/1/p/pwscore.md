@@ -1,4 +1,5 @@
 ---
+
 title: "pwscore(1)"
 name: "pwscore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwscore/"
 description: "pwscore – simple configurable tool for checking quality of a password"
 ---
 
-<h2>NAME</h2>
 <p> pwscore &#8211; simple configurable tool for checking quality of a password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pwscore</code> [user]</p>

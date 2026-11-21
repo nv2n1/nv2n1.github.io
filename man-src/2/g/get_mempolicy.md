@@ -1,4 +1,5 @@
 ---
+
 title: "get_mempolicy(2)"
 name: "get_mempolicy"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-get_mempolicy/"
 description: "get_mempolicy – retrieve NUMA memory policy for a thread"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_mempolicy &#8211; retrieve NUMA memory policy for a thread </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;numaif.h&gt;</code> </p>

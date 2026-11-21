@@ -1,4 +1,5 @@
 ---
+
 title: "lou_allround(1)"
 name: "lou_allround"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lou_allround/"
 description: "lou_allround – Test every capability of the liblouis library"
 ---
 
-<h2>NAME</h2>
 <p> lou_allround &#8211; Test every capability of the liblouis library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lou_allround</code> [<i>OPTION</i>]</p>

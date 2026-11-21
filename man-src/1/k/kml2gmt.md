@@ -1,4 +1,5 @@
 ---
+
 title: "kml2gmt(1)"
 name: "kml2gmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kml2gmt/"
 description: "kml2gmt – Extract GMT table data from Google Earth KML files"
 ---
 
-<h2>NAME</h2>
 <p> kml2gmt &#8211; Extract GMT table data from Google Earth KML files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kml2gmt</code> [ <i>kmlfiles</i> ] [ <code>s</code>|<code>l</code>|<code>p</code> ] [ [<i>level</i>] ] [ ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

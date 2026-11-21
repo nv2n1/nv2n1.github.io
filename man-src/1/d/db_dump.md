@@ -1,4 +1,5 @@
 ---
+
 title: "db_dump(1)"
 name: "db_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_dump/"
 description: "db5.3_dump – Write database to flat-text format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_dump &#8211; Write database to flat-text format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_dump</code> [-klNpRrV] [-d ahr] [-f output] [-h home] [-P password] [-s database] file</p>

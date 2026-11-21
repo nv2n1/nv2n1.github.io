@@ -1,4 +1,5 @@
 ---
+
 title: "memstat(1)"
 name: "memstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memstat/"
 description: "memstat – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memstat &#8211; libmemcached Documentation </p>
 <p> memstat &#8211; Display the operating status of a single or group of memcached servers</p>
 <h2>SYNOPSIS</h2>

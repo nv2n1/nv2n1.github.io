@@ -1,4 +1,5 @@
 ---
+
 title: "getpeereid(3)"
 name: "getpeereid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpeereid/"
 description: "getpeereid – get the effective credentials of a UNIX-domain peer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getpeereid</code> &#8211; get the effective credentials of a UNIX-domain peer </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

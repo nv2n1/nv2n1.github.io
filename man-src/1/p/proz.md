@@ -1,4 +1,5 @@
 ---
+
 title: "proz(1)"
 name: "proz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-proz/"
 description: "ProZilla – a download accelerator for GNU/Linux"
 ---
 
-<h2>NAME</h2>
 <p> <code>ProZilla</code> &#8211; a download accelerator for GNU/Linux</p>
 <h2>SYNTAX</h2>
 <p> <code>proz [OPTIONS] &lt;URL&gt;</code></p>

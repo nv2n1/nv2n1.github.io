@@ -1,4 +1,5 @@
 ---
+
 title: "html-minifier(1)"
 name: "html-minifier"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-html-minifier/"
 description: "html-minifier – HTML minifier with lint-like capabilities"
 ---
 
-<h2>NAME</h2>
 <p> html-minifier &#8211; HTML minifier with lint-like capabilities</p>
 <h2>SYNOPSIS</h2>
 <p> html-minifier [OPTIONS] [FILE(s)]</p>

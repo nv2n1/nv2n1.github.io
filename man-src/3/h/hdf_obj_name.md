@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_obj_name(3)"
 name: "hdf_obj_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_obj_name/"
 description: "hdf_obj_name – Return the name of a node"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_obj_name &#8211; Return the name of a node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-getimage-file(1)"
 name: "xscreensaver-getimage-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xscreensaver-getimage-file/"
 description: "xscreensaver-getimage-file – put a randomly-selected image on the root window"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xscreensaver-getimage-file &#8211; put a randomly-selected image on the root window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage-file</code> [-display <i>host:display.screen</i>] [&#8211;verbose] [&#8211;name] [&#8211;no-cache] directory-or-URL</p>

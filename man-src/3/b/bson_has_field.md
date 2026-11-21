@@ -1,4 +1,5 @@
 ---
+
 title: "bson_has_field(3)"
 name: "bson_has_field"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_has_field/"
 description: "bson_has_field() – Checks to see if key contains an element named key. This also accepts \"dotkey\" notation such as \"a.b.c.d\"."
 ---
 
-<h2>NAME</h2>
 <p> bson_has_field() &#8211; Checks to see if key contains an element named key. This also accepts &quot;dotkey&quot; notation such as &quot;a.b.c.d&quot;.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

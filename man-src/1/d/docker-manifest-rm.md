@@ -1,4 +1,5 @@
 ---
+
 title: "docker-manifest-rm(1)"
 name: "docker-manifest-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-manifest-rm/"
 description: "docker-manifest-rm – Delete one or more manifest lists from local storage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-manifest-rm &#8211; Delete one or more manifest lists from local storage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest rm MANIFEST_LIST [MANIFEST_LIST&#8230;]</code> </p>

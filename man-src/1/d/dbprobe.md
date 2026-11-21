@@ -1,4 +1,5 @@
 ---
+
 title: "dbprobe(1)"
 name: "dbprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbprobe/"
 description: "dbprobe – database response time and availability information"
 ---
 
-<h2>NAME</h2>
 <p> <code>dbprobe</code> &#8211; database response time and availability information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbprobe.pl</code> [<i>delay</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "exquat(3)"
 name: "exquat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exquat/"
 description: "exquat – A comparison between Euler angles and quaternions. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exquat &#8211; A comparison between Euler angles and quaternions. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

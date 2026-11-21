@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installcron(1)"
 name: "dh_installcron"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installcron/"
 description: "dh_installcron – install cron scripts into etc/cron.*"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installcron &#8211; install cron scripts into etc/cron.* </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installcron</code> [<code>debhelper options</code>] [<code>&#8211;name=</code><i>name</i>]</p>

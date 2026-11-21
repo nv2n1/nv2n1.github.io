@@ -1,4 +1,5 @@
 ---
+
 title: "dh_ucf(1)"
 name: "dh_ucf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_ucf/"
 description: "dh_ucf – register configuration files with ucf"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_ucf &#8211; register configuration files with ucf </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_ucf</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-n</code>] [<i>file</i> &#8230;]</p>

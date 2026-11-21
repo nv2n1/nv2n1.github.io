@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_store_load(3)"
 name: "ck_pr_fence_store_load"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_store_load/"
 description: "ck_pr_fence_store_load – enforce ordering of store operations to load operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_store_load</code> &#8211; enforce ordering of store operations to load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

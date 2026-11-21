@@ -1,4 +1,5 @@
 ---
+
 title: "gvcolor(1)"
 name: "gvcolor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvcolor/"
 description: "gvcolor – flow colors through a ranked digraph"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvcolor &#8211; flow colors through a ranked digraph </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gvcolor</code> [ <i>files </i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "avrdude(1)"
 name: "avrdude"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avrdude/"
 description: "avrdude – driver program for “simple” Atmel AVR MCU programmer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>avrdude</code> &#8211; driver program for &#8220;simple&#8221; Atmel AVR MCU programmer </p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>p </code><i>partno</i> [-<code>b </code><i>baudrate</i> ] [-<code>B </code><i>bitclock</i> ] [-<code>c </code><i>programmer-id</i> ] [-<code>C </code><i>config-file</i> ] [-<code>D</code> ] [-<code>e</code> ] [-<code>E </code><i>exitspec </i>[, <i>exitspec</i> ] ] [-<code>F</code> ] [-<code>i </code><i>delay</i> ] [-<code>n</code> ] [-<code>O</code> ] [-<code>P </code><i>port</i> ] [-<code>q</code> ] [-<code>s</code> ] [-<code>t</code> ] [-<code>u</code> ] [-<code>U </code><i>memtype:op:filename:filefmt</i> ] [-<code>v</code> ] [-<code>x </code><i>extended_param</i> ] [-<code>V</code> ] [-<code>y</code> ] [-<code>Y</code> ]</p>

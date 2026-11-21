@@ -1,4 +1,5 @@
 ---
+
 title: "aa_createedit(3)"
 name: "aa_createedit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_createedit/"
 description: "aa_createedit – Simple interactive line editor provided as helper function."
 ---
 
-<h2>NAME</h2>
 <p> aa_createedit &#8211; Simple interactive line editor provided as helper function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

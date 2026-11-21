@@ -1,4 +1,5 @@
 ---
+
 title: "rawmemchr(3)"
 name: "rawmemchr"
 section: "3"
@@ -6,8 +7,9 @@ letter: "r"
 url: "/docs/linux/man/3-rawmemchr/"
 description: "memchr, memrchr, rawmemchr – scan memory for a character"
 ---
+
 <p>memchr, memrchr, rawmemchr &#8211; scan memory for a character </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;string.h&gt; 
  void *memchr(const void *  s  , int  c  , size_t  n  ); 

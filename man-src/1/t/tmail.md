@@ -1,4 +1,5 @@
 ---
+
 title: "tmail(1)"
 name: "tmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tmail/"
 description: "tmail – Mail Delivery Module"
 ---
 
-<h2>NAME</h2>
 <p> tmail &#8211; Mail Delivery Module</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tmail</code> <i>[-b format] [-D] [-f from_name] [-I inbox_specifier] user[+folder] &#8230;</i></p>

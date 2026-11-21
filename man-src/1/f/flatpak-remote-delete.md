@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-delete(1)"
 name: "flatpak-remote-delete"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-remote-delete/"
 description: "flatpak-remote-delete – Delete a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-remote-delete &#8211; Delete a remote repository </p>
 <h2>SYNOPSIS</h2>
 <dl>

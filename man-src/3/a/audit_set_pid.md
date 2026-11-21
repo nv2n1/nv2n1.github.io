@@ -1,4 +1,5 @@
 ---
+
 title: "audit_set_pid(3)"
 name: "audit_set_pid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_set_pid/"
 description: "audit_set_pid – Set audit daemon process ID"
 ---
 
-<h2>NAME</h2>
 <p> audit_set_pid &#8211; Set audit daemon process ID</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

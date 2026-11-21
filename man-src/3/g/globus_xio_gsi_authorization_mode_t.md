@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_gsi_authorization_mode_t(3)"
 name: "globus_xio_gsi_authorization_mode_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_gsi_authorization_mode_t/"
 description: "Globus XIO GSI Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO GSI Driver &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_xio_gsi_delegation_init_callback_t</code> )(globus_result_t result, void *user_arg) </p>

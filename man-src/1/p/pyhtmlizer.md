@@ -1,4 +1,5 @@
 ---
+
 title: "pyhtmlizer(1)"
 name: "pyhtmlizer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyhtmlizer/"
 description: "pyhtmlizer – pretty-print Python source as HTML"
 ---
 
-<h2>NAME</h2>
 <p> pyhtmlizer &#8211; pretty-print Python source as HTML </p>
 <h2>SYNTAX</h2>
 <p> pyhtmlizer [<i>-s|&#8211;stylesheet</i> &lt;<i>url</i>&gt;] &lt;<i>filename</i>&gt;</p>

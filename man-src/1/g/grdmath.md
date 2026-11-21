@@ -1,4 +1,5 @@
 ---
+
 title: "grdmath(1)"
 name: "grdmath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdmath/"
 description: "grdmath – Reverse Polish Notation (RPN) calculator for grids (element by element)"
 ---
 
-<h2>NAME</h2>
 <p> grdmath &#8211; Reverse Polish Notation (RPN) calculator for grids (element by element)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdmath</code> [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code> |<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>resolution</i>[<code>+</code>] ] [ <i>increment</i> ] [ ] [ ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] <i>operand</i> [ <i>operand</i> ] <code>OPERATOR</code> [ <i>operand</i> ] <code>OPERATOR</code> &#8230; <code>=</code> <i>outgrdfile</i> </p>

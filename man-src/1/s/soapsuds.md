@@ -1,4 +1,5 @@
 ---
+
 title: "soapsuds(1)"
 name: "soapsuds"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-soapsuds/"
 description: "soapsuds – Mono’s Remoting Proxy Generator"
 ---
 
-<h2>NAME</h2>
 <p> soapsuds &#8211; Mono&#8217;s Remoting Proxy Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>soapsuds</code> [options] [inputs] [outputs]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "omnicpp(1)"
 name: "omnicpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-omnicpp/"
 description: "omnicpp – OmniORB cpp preprocessor for IDL compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> omnicpp &#8211; OmniORB cpp preprocessor for IDL compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>omnicpp</code> [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-verify-zone(1)"
 name: "ldns-verify-zone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-verify-zone/"
 description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 ---
 
-<h2>NAME</h2>
 <p> ldns-verify-zone &#8211; read a DNSSEC signed zone and verify it.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-verify-zone </code> <i>ZONEFILE</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "file(1)"
 name: "file"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-file/"
 description: "file – determine file type"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>file</code> - determine file type </p>
 <h2>SYNOPSIS</h2>
 <p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file ...</i> <br />

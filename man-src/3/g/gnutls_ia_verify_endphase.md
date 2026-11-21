@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_verify_endphase(3)"
 name: "gnutls_ia_verify_endphase"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_verify_endphase/"
 description: "gnutls_ia_verify_endphase – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_verify_endphase &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

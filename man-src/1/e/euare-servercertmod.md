@@ -1,4 +1,5 @@
 ---
+
 title: "euare-servercertmod(1)"
 name: "euare-servercertmod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-servercertmod/"
 description: "euare-servercertmod – Change the name and/or path of a server certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-servercertmod &#8211; Change the name and/or path of a server certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-servercertmod [-n CERT] [-p PATH] [&#8211;as-account ACCOUNT] [-U URL]</p>

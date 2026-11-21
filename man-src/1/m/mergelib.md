@@ -1,4 +1,5 @@
 ---
+
 title: "mergelib(1)"
 name: "mergelib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mergelib/"
 description: "mergelib – merge one library into another"
 ---
 
-<h2>NAME</h2>
 <p> mergelib &#8211; merge one library into another</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mergelib</code> <i>to-library</i> <i>from-library</i> [<i>object-filename-prefix</i>]</p>

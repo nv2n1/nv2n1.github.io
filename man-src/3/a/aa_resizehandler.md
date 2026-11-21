@@ -1,4 +1,5 @@
 ---
+
 title: "aa_resizehandler(3)"
 name: "aa_resizehandler"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_resizehandler/"
 description: "aa_resizehandler – Set user handler to be called on resize event."
 ---
 
-<h2>NAME</h2>
 <p> aa_resizehandler &#8211; Set user handler to be called on resize event.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

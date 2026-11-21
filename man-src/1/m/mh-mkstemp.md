@@ -1,4 +1,5 @@
 ---
+
 title: "mh-mkstemp(1)"
 name: "mh-mkstemp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mh-mkstemp/"
 description: "mkstemp – create a temporary file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mkstemp &#8211; create a temporary file </p>
 <h2>SYNOPSIS</h2>
 <dl>

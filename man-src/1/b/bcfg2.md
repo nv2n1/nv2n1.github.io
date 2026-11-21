@@ -1,4 +1,5 @@
 ---
+
 title: "bcfg2(1)"
 name: "bcfg2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcfg2/"
 description: "bcfg2 – reconfigure machine based on settings in BCFG2"
 ---
 
-<h2>NAME</h2>
 <p> bcfg2 &#8211; reconfigure machine based on settings in BCFG2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcfg2</code> <i>[-d] [-v] [-p] [-c cache file] [-e] [-f config file] [-I] [-q] [-b bundle]</i> [-r removal mode]</p>

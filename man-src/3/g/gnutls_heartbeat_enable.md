@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_heartbeat_enable(3)"
 name: "gnutls_heartbeat_enable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_heartbeat_enable/"
 description: "gnutls_heartbeat_enable – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_heartbeat_enable &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

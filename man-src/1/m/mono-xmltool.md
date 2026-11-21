@@ -1,4 +1,5 @@
 ---
+
 title: "mono-xmltool(1)"
 name: "mono-xmltool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-xmltool/"
 description: "mono-xmltool – Mono XML validation and transformation tool."
 ---
 
-<h2>NAME</h2>
 <p> mono-xmltool &#8211; Mono XML validation and transformation tool.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-xmltool &#8211;validate [*.rng | *.rnc | *.nvdl | *.xsd] [instances]</code> </p>

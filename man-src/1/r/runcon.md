@@ -1,4 +1,5 @@
 ---
+
 title: "runcon(1)"
 name: "runcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-runcon/"
 description: "runcon – run command with specified security context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> runcon &#8211; run command with specified security context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runcon</code> <i>,CONTEXT COMMAND /</i>[<i>,args/</i>]<br />

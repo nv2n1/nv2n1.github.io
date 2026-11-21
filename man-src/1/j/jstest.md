@@ -1,4 +1,5 @@
 ---
+
 title: "jstest(1)"
 name: "jstest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstest/"
 description: "jstest – joystick test program"
 ---
 
-<h2>NAME</h2>
 <p> jstest &#8211; joystick test program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jstest</code> [<code>&#8211;normal</code>] [<code>&#8211;old</code>] [<code>&#8211;event</code>] [<code>&#8211;nonblock</code>] [<code>&#8211;select</code>] &lt;<i>device-name</i>&gt;</p>

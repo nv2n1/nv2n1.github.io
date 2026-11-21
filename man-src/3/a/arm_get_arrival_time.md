@@ -1,4 +1,5 @@
 ---
+
 title: "arm_get_arrival_time(3)"
 name: "arm_get_arrival_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_get_arrival_time/"
 description: "arm_get_arrival_time – store current time"
 ---
 
-<h2>NAME</h2>
 <p> arm_get_arrival_time &#8211; store current time</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

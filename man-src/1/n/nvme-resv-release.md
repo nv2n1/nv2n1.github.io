@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-release(1)"
 name: "nvme-resv-release"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-release/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-resv-release - Release an nvme reservation 
+nvme-resv-release - Release an nvme reservation 
 
 <h2>SYNOPSIS</h2>
 

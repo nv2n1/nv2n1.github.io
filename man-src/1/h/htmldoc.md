@@ -1,4 +1,5 @@
 ---
+
 title: "htmldoc(1)"
 name: "htmldoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htmldoc/"
 description: "htmldoc – convert html source files into html, postscript, or pdf."
 ---
 
-<h2>NAME</h2>
 <p> htmldoc &#8211; convert html source files into html, postscript, or pdf. </p>
 <h2>SYNOPSIS</h2>
 <p> htmldoc [options] filename1.html [ &#8230; filenameN.html ] </p>

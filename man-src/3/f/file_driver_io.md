@@ -1,4 +1,5 @@
 ---
+
 title: "file_driver_io(3)"
 name: "file_driver_io"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-file_driver_io/"
 description: "Reading/Writing –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Reading/Writing &#8211; </p>
 <p> Both the <code>globus_xio_register_read()</code> and <code>globus_xio_register_write()</code> calls follow similar semantics as described below. Both the <code>globus_xio_register_read()</code> and <code>globus_xio_register_write()</code> calls follow similar semantics as described below. </p>
 <p> If the waitforbytes parameter is greater than zero, the io will happen asynchronously and be completed when at least waitforbytes has been read/written. </p>

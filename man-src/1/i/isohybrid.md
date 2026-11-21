@@ -1,4 +1,5 @@
 ---
+
 title: "isohybrid(1)"
 name: "isohybrid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isohybrid/"
 description: "isohybrid — Post-process an ISO 9660 image generated with mkisofs or genisoimage to allow hybrid booting as a CD-ROM or as a hard disk."
 ---
 
-<h2>NAME</h2>
 <p> isohybrid &#8212; Post-process an ISO 9660 image generated with mkisofs or genisoimage to allow hybrid booting as a CD-ROM or as a hard disk.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isohybrid</code> [<code>OPTIONS</code>] <i>&lt;boot.iso&gt;</i></p>

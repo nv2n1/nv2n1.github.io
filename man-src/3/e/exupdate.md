@@ -1,4 +1,5 @@
 ---
+
 title: "exupdate(3)"
 name: "exupdate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exupdate/"
 description: "exupdate – Supporting different screen update methods in a single program. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exupdate &#8211; Supporting different screen update methods in a single program. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

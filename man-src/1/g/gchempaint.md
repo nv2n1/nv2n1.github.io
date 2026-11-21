@@ -1,4 +1,5 @@
 ---
+
 title: "gchempaint(1)"
 name: "gchempaint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gchempaint/"
 description: "gchempaint – 2D chemical structures editor for the GNOME2 desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gchempaint &#8211; 2D chemical structures editor for the GNOME2 desktop </p>
 <h2>SYNOPSIS</h2>
 <dl>

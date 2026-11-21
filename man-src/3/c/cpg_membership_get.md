@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_membership_get(3)"
 name: "cpg_membership_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_membership_get/"
 description: "cpg_membership_get – Returns a list of members of a CPG group"
 ---
 
-<h2>NAME</h2>
 <p> cpg_membership_get &#8211; Returns a list of members of a CPG group</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psbook(1)"
 name: "psbook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psbook/"
 description: "psbook – rearrange pages in PostScript file into signatures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psbook &#8211; rearrange pages in PostScript file into signatures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psbook</code> [ <code>-q</code> ] [ <code>-s</code><i>signature</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>

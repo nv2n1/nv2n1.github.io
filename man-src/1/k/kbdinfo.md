@@ -1,4 +1,5 @@
 ---
+
 title: "kbdinfo(1)"
 name: "kbdinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kbdinfo/"
 description: "kbdinfo – obtain information about the status of a console"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kbdinfo &#8211; obtain information about the status of a console </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kbdinfo</code> [-C <i>DEVICE</i>] getmode [text|graphics] </p>

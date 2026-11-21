@@ -1,4 +1,5 @@
 ---
+
 title: "dvisvgm(1)"
 name: "dvisvgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvisvgm/"
 description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvisvgm &#8211; converts DVI and EPS files to the XML-based SVG format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvisvgm</code> [<i>options</i>] <i>file</i>[.dvi] </p>

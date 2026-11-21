@@ -1,4 +1,5 @@
 ---
+
 title: "clone3(2)"
 name: "clone3"
 section: "2"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/2-clone3/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- clone, __clone2, clone3 - create a child process 
+clone, __clone2, clone3 - create a child process 
 
 <h2>SYNOPSIS</h2>
 

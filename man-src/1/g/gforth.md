@@ -1,4 +1,5 @@
 ---
+
 title: "gforth(1)"
 name: "gforth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gforth/"
 description: "gforth, gforth-fast, gforthmi – a fast and portable Forth system"
 ---
 
-<h2>NAME</h2>
 <p> gforth, gforth-fast, gforthmi &#8211; a fast and portable Forth system</p>
 <h2>SYNOPSIS</h2>
 <p> gforth [initialization options] [image-specific options] gforth-fast [initialization options] [image-specific options] </p>

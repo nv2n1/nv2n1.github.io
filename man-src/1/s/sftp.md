@@ -1,4 +1,5 @@
 ---
+
 title: "sftp(1)"
 name: "sftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sftp/"
 description: "sftp – OpenSSH secure file transfer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sftp</code> &#8211; OpenSSH secure file transfer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sftp</code> [-<code>46AaCfNpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>J </code><i>destination</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>destination</i></p>

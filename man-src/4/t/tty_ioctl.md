@@ -1,4 +1,5 @@
 ---
+
 title: "tty_ioctl(4)"
 name: "tty_ioctl"
 section: "4"
@@ -6,8 +7,9 @@ letter: "t"
 url: "/docs/linux/man/4-tty_ioctl/"
 description: "ioctl_tty – ioctls for terminals and serial lines"
 ---
+
 <p>ioctl_tty &#8211; ioctls for terminals and serial lines </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;termios.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>fd</i><code>, int </code><i>cmd</i><code>, ...);</code>  </p>
 <h2>DESCRIPTION</h2>

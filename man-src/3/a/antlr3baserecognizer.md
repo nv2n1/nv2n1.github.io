@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3baserecognizer(3)"
 name: "antlr3baserecognizer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3baserecognizer/"
 description: "include/antlr3baserecognizer.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3baserecognizer.h &#8211; </p>
 <p> Defines the basic structure to support recognizing by either a lexer, parser, or tree parser.</p>
 <h2>SYNOPSIS</h2>

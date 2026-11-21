@@ -1,4 +1,5 @@
 ---
+
 title: "pmdashping(1)"
 name: "pmdashping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdashping/"
 description: "pmdashping – \"shell-ping\" performance metrics domain agent"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdashping</code> &#8211; &quot;shell-ping&quot; performance metrics domain agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/shping/pmdashping</code> [<code>-C</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-I</code> <i>interval</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] <i>configfile</i> </p>

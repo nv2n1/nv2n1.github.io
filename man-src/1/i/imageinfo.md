@@ -1,4 +1,5 @@
 ---
+
 title: "imageinfo(1)"
 name: "imageinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imageinfo/"
 description: "imageinfo – display selected image information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> imageinfo &#8211; display selected image information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>imageinfo</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;format</code>] [<code>&#8211;fmtdscr</code>] [<code>&#8211;size</code>] [<code>&#8211;depth</code>] [<code>&#8211;geom</code>] [<code>&#8211;width</code>] [<code>&#8211;height</code>] [<code>&#8211;iccname</code>] [<code>&#8211;iccfile</code>=file] [<code>&#8211;iccmd5</code>] [<code>&#8211;md5hash</code>] [<code>&#8211;sha256hash</code>] <code>imagefile</code></p>

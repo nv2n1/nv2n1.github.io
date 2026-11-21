@@ -1,4 +1,5 @@
 ---
+
 title: "filter_wait(3)"
 name: "filter_wait"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-filter_wait/"
 description: "filter_wait – wrap waitpid to decode the exitcode and why your filter quit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> filter_wait &#8211; wrap waitpid to decode the exitcode and why your filter quit </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

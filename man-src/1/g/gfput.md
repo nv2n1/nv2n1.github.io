@@ -1,4 +1,5 @@
 ---
+
 title: "gfput(1)"
 name: "gfput"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfput/"
 description: "gfput – manual page for gfput (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfput &#8211; manual page for gfput (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfput</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

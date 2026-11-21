@@ -1,4 +1,5 @@
 ---
+
 title: "svn-bisect(1)"
 name: "svn-bisect"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-svn-bisect/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- svn-bisect 
+svn-bisect 
 
 <h2>SYNOPSIS</h2>
 

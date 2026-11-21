@@ -1,4 +1,5 @@
 ---
+
 title: "yum-config-manager(1)"
 name: "yum-config-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-config-manager/"
 description: "yum-config-manager – manage yum configuration options and yum repositories"
 ---
 
-<h2>NAME</h2>
 <p> yum-config-manager &#8211; manage yum configuration options and yum repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-config-manager</code> [options] [section &#8230;]</p>

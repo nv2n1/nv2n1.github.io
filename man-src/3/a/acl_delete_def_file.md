@@ -1,4 +1,5 @@
 ---
+
 title: "acl_delete_def_file(3)"
 name: "acl_delete_def_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_delete_def_file/"
 description: "acl_delete_def_file – delete a default ACL by filename"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_delete_def_file</code> &#8211; delete a default ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

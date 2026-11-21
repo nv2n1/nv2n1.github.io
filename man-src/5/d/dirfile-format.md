@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile-format(5)"
 name: "dirfile-format"
 section: "5"
@@ -6,8 +7,9 @@ letter: "d"
 url: "/docs/linux/man/5-dirfile-format/"
 description: "dirfile-format — the dirfile database format specification file"
 ---
+
 <p> dirfile-format --- the dirfile database format specification file  </p>
-<h2>DESCRIPTION</h2>
+
 <p> The <i>dirfile format</i> file fully specifies the raw and derived time streams and auxiliary information for a <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5) database. </p>
 <p>The format file is a case sensitive text file called <code>format</code> located in the dirfile directory. The explicit text encoding of the file is not specified by these standards, but must be 7-bit ASCII compatible. Examples of acceptable character encodings include all the ISO~8859 character sets (<i>i.e.</i> Latin-1 through Latin-10, among others), as well as the UTF-8 encoding of Unicode and UCS. </p>
 <h2>SYNTAX</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmchange(1)"
 name: "ppmchange"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmchange/"
 description: "ppmchange – change all pixels of one color to another in a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmchange &#8211; change all pixels of one color to another in a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmchange</code> [ <code>-closeness </code><i>closeness_percent</i> ] [ <code>-remainder </code><i>remainder_color</i> ] [ <i>oldcolor newcolor</i> ] &#8230; [<i>ppmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "itstool(1)"
 name: "itstool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-itstool/"
 description: "itstool – convert between XML and PO using ITS"
 ---
 
-<h2 class="name">NAME</h2>
 <p> itstool &#8211; convert between XML and PO using ITS </p>
 <h2>SYNOPSIS</h2>
 <p> itstool [OPTIONS] XMLFILES&#8230;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "g_filter(1)"
 name: "g_filter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_filter/"
 description: "g_filter – frequency filters trajectories, useful for making smooth movies"
 ---
 
-<h2>NAME</h2>
 <p> g_filter &#8211; frequency filters trajectories, useful for making smooth movies </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

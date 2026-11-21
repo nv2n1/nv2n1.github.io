@@ -1,4 +1,5 @@
 ---
+
 title: "npm-owner(1)"
 name: "npm-owner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-owner/"
 description: "npm-owner – Manage package owners"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-owner</code> &#8211; Manage package owners </p>
 <h3>Synopsis</h3>
 <dl>

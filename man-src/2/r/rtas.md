@@ -1,4 +1,5 @@
 ---
+
 title: "rtas(2)"
 name: "rtas"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-rtas/"
 description: "rtas – Allows userspace to call RTAS (Run Time Abstraction Services)"
 ---
 
-<h2>NAME</h2>
 <p> rtas &#8211; Allows userspace to call RTAS (Run Time Abstraction Services)</p>
 <h2>SYNOPSIS</h2>
 <dl>

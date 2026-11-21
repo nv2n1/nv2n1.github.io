@@ -1,4 +1,5 @@
 ---
+
 title: "elfedit(1)"
 name: "elfedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elfedit/"
 description: "elfedit – update ELF header and program property of ELF files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> elfedit &#8211; update ELF header and program property of ELF files </p>
 <h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />

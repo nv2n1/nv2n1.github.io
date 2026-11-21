@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_mcast_joined(3)"
 name: "cpg_mcast_joined"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_mcast_joined/"
 description: "cpg_mcast_joined – Multicasts to all groups joined to a handle"
 ---
 
-<h2>NAME</h2>
 <p> cpg_mcast_joined &#8211; Multicasts to all groups joined to a handle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/uio.h&gt;</code> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

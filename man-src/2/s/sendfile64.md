@@ -1,4 +1,5 @@
 ---
+
 title: "sendfile64(2)"
 name: "sendfile64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sendfile64/"
 description: "sendfile – transfer data between file descriptors"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sendfile &#8211; transfer data between file descriptors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sendfile.h&gt;</code> </p>

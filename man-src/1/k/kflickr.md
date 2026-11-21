@@ -1,4 +1,5 @@
 ---
+
 title: "kflickr(1)"
 name: "kflickr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kflickr/"
 description: "kflickr – stand-alone flickr.com photo uploader for KDE"
 ---
 
-<h2>NAME</h2>
 <p> kflickr &#8211; stand-alone flickr.com photo uploader for KDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kflickr [&#8211;help] [&#8211;help-qt] [&#8211;help-kde] [&#8211;help-all] [&#8211;author] [&#8211;license] [-v] [</code> <i>URL(s)</i> <code>]</code></p>

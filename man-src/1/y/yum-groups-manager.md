@@ -1,4 +1,5 @@
 ---
+
 title: "yum-groups-manager(1)"
 name: "yum-groups-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-groups-manager/"
 description: "yum-groups-manager – create and edit yum’s group metadata"
 ---
 
-<h2>NAME</h2>
 <p> yum-groups-manager &#8211; create and edit yum&#8217;s group metadata</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-groups-manager</code> [options] [packages]</p>

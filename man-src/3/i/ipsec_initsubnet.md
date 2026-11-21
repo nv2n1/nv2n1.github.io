@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_initsubnet(3)"
 name: "ipsec_initsubnet"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_initsubnet/"
 description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_masktocount, ipsec_networkof, ipsec_maskof – initialize an ip_subnet, initialize a singleton ip_subnet, get address type of an ip_sub..."
 ---
 
-<h2>NAME</h2>
 <p> ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_masktocount, ipsec_networkof, ipsec_maskof &#8211; initialize an ip_subnet, initialize a singleton ip_subnet, get address type of an ip_subnet, convert subnet mask to bit count, get base address of an ip_subnet, get subnet mask of an ip_subnet</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

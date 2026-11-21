@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-rip(1)"
 name: "oggz-rip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-rip/"
 description: "oggz-rip — Extract one or more logical bitstreams from an Ogg file."
 ---
 
-<h2>NAME</h2>
 <p> oggz-rip &#8212; Extract one or more logical bitstreams from an Ogg file.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

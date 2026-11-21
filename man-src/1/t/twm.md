@@ -1,4 +1,5 @@
 ---
+
 title: "twm(1)"
 name: "twm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-twm/"
 description: "twm – Tab Window Manager for the X Window System"
 ---
 
-<h2>NAME</h2>
 <p> twm &#8211; Tab Window Manager for the X Window System</p>
 <h2>SYNTAX</h2>
 <p> <code>twm </code>[ <code>-display</code> <i>dpy</i> ] [ <code>-s</code> ] [ <code>-f</code> <i>initfile</i> ] [ <code>-v</code> ]</p>

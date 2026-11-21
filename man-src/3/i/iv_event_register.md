@@ -1,4 +1,5 @@
 ---
+
 title: "iv_event_register(3)"
 name: "iv_event_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_event_register/"
 description: "IV_EVENT_INIT, iv_event_register, iv_event_unregister, iv_event_post – manage ivykis objects for event notification"
 ---
 
-<h2>NAME</h2>
 <p> IV_EVENT_INIT, iv_event_register, iv_event_unregister, iv_event_post &#8211; manage ivykis objects for event notification</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_event.h&gt;</code> </p>

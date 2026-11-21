@@ -1,4 +1,5 @@
 ---
+
 title: "mc_discr_arith_av_price(3)"
 name: "mc_discr_arith_av_price"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mc_discr_arith_av_price/"
 description: "ql/pricingengines/asian/mc_discr_arith_av_price.hpp – Monte Carlo engine for discrete arithmetic average price Asian."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/asian/mc_discr_arith_av_price.hpp &#8211; Monte Carlo engine for discrete arithmetic average price Asian. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/asian/mc_discr_geom_av_price.hpp&gt;<br />

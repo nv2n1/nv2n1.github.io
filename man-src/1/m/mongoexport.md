@@ -1,4 +1,5 @@
 ---
+
 title: "mongoexport(1)"
 name: "mongoexport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongoexport/"
 description: "mongoexport – MongoDB Export Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongoexport &#8211; MongoDB Export Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mongoexport</code> is a utility that produces a JSON or CSV export of data stored in a MongoDB instance. See the <a rel="nofollow" href="http://docs.mongodb.org/manual/core/import-export">http://docs.mongodb.org/manual/core/import-export</a> document for a more in depth usage overview, and the <code>mongoimport</code> document for more information regarding the <code>mongoimport</code> utility, which provides the inverse &quot;importing&quot; capability.</p>

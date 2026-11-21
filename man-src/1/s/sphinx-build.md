@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-build(1)"
 name: "sphinx-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphinx-build/"
 description: "sphinx-build – Sphinx documentation generator tool"
 ---
 
-<h2>NAME</h2>
 <p> sphinx-build &#8211; Sphinx documentation generator tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphinx-build</code> [<i>options</i>] &lt;<i>sourcedir</i>&gt; &lt;<i>outdir</i>&gt; [<i>filenames</i> &#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lv(1)"
 name: "lv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lv/"
 description: "lv – a Powerful Multilingual File Viewer / Grep"
 ---
 
-<h2>NAME</h2>
 <p> lv &#8211; a Powerful Multilingual File Viewer / Grep</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lv, lgrep</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ptop(1)"
 name: "ptop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ptop/"
 description: "ptop – The FPC Pascal configurable source beautifier."
 ---
 
-<h2>NAME</h2>
 <p> ptop &#8211; The FPC Pascal configurable source beautifier. </p>
 <p> Origin probably Pascal-TO-Pascal. </p>
 <h2>SYNOPSIS</h2>

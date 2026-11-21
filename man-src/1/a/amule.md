@@ -1,4 +1,5 @@
 ---
+
 title: "amule(1)"
 name: "amule"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amule/"
 description: "amule – the all-platform eMule p2p client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> amule &#8211; the all-platform eMule p2p client </p>
 <h2>SYNOPSIS</h2>
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-geometry</code> <i>&lt;geom&gt;</i>] _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-r<code>]</code> [<code>-w</code> <i>&lt;path&gt;</i>] _untranslated<code>[</code>-d<code>]</code> _untranslated<code>[</code>-i<code>]</code> [<code>-t</code> <i>&lt;num&gt;</i>] [<i>eD2k-link</i>] </p>

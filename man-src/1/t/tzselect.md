@@ -1,4 +1,5 @@
 ---
+
 title: "tzselect(1)"
 name: "tzselect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tzselect/"
 description: "tzselect – view timezones"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tzselect &#8211; view timezones </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tzselect</code></p>

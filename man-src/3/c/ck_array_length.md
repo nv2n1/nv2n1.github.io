@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_length(3)"
 name: "ck_array_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_length/"
 description: "ck_array_length – returns the number of pointers committed to an array"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_length</code> &#8211; returns the number of pointers committed to an array</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

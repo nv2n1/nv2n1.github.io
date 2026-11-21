@@ -1,4 +1,5 @@
 ---
+
 title: "znc-buildmod(1)"
 name: "znc-buildmod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-znc-buildmod/"
 description: "znc-buildmod – compile ZNC modules"
 ---
 
-<h2>NAME</h2>
 <p> znc-buildmod &#8211; compile ZNC modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>znc-buildmod</code> FILE&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-screensaver-preferences(1)"
 name: "gnome-screensaver-preferences"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-screensaver-preferences/"
 description: "gnome-screensaver-preferences – configure GNOME Screensaver"
 ---
 
-<h2>NAME</h2>
 <p> gnome-screensaver-preferences &#8211; configure GNOME Screensaver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-screensaver-preferences</code> [<i>OPTIONS&#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ot2kpx(1)"
 name: "ot2kpx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ot2kpx/"
 description: "ot2kpx – extract kerning information from OpenType fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ot2kpx &#8211; extract kerning information from OpenType fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ot2kpx</code> [ <i>-afm</i> | <i>-kpx</i> | <i>-lua</i> ] <code>&lt;fontfile&gt;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "transcode_filter(1)"
 name: "transcode_filter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transcode_filter/"
 description: "transcode – filter modules collection"
 ---
 
-<h2>NAME</h2>
 <p> transcode &#8211; filter modules collection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>transcode -J filters [other options]</code></p>

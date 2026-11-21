@@ -1,4 +1,5 @@
 ---
+
 title: "attr_set(3)"
 name: "attr_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-attr_set/"
 description: "attr_set, attr_setf – set the value of a user attribute of a filesystem object"
 ---
 
-<h2>NAME</h2>
 <p> attr_set, attr_setf &#8211; set the value of a user attribute of a filesystem object</p>
 <h2>C SYNOPSIS</h2>
 <pre><code>

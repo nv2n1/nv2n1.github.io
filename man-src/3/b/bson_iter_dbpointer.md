@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_dbpointer(3)"
 name: "bson_iter_dbpointer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_dbpointer/"
 description: "bson_iter_dbpointer() – Fetches the contents of a BSON_TYPE_DBPOINTER element."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_dbpointer() &#8211; Fetches the contents of a BSON_TYPE_DBPOINTER element.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

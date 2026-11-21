@@ -1,4 +1,5 @@
 ---
+
 title: "gen_table(1)"
 name: "gen_table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gen_table/"
 description: "gen_table – generate tables for use by mdrun"
 ---
 
-<h2>NAME</h2>
 <p> gen_table &#8211; generate tables for use by mdrun </p>
 <p> <code>VERSION 4.0_rc1</code></p>
 <h2>SYNOPSIS</h2>

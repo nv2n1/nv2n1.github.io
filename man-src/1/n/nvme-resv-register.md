@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-register(1)"
 name: "nvme-resv-register"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-register/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-resv-register - Register an nvme reservation 
+nvme-resv-register - Register an nvme reservation 
 
 <h2>SYNOPSIS</h2>
 

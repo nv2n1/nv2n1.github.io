@@ -1,4 +1,5 @@
 ---
+
 title: "fusecompress(1)"
 name: "fusecompress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fusecompress/"
 description: "fusecompress – mounts an compressed virtual filesystem"
 ---
 
-<h2>NAME</h2>
 <p> fusecompress &#8211; mounts an compressed virtual filesystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fusecompress [OPTION]&#8230; rootDir mountPoint</code></p>

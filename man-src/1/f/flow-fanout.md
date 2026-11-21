@@ -1,4 +1,5 @@
 ---
+
 title: "flow-fanout(1)"
 name: "flow-fanout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-fanout/"
 description: "flow-fanout – Fanout (replicate) flow exports to many destinations."
 ---
 
-<h2>NAME</h2>
 <p> flow-fanout &#8211; Fanout (replicate) flow exports to many destinations.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-fanout</code> [ <code>-h</code> ] [ <code>-A</code><i> AS0_substitution</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> filter_fname</i> ] [ <code>-F</code><i> filter_definition</i> ] [ <code>-m</code><i> privacy_mask</i> ] [ <code>-p</code><i> pidfile</i> ] [ <code>-s</code> ] [ <code>-S</code><i> stat_interval</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-x</code><i> xmit_delay</i> ] <i>localip/remoteip/port</i> <i>localip/remoteip/port</i><i>&#8230;</i></p>

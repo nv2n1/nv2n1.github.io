@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy_handle_set_req(3)"
 name: "globus_gsi_proxy_handle_set_req"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_set_req/"
 description: "globus_gsi_proxy.h – Globus GSI Proxy API."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gsi_proxy.h &#8211; Globus GSI Proxy API.</p>
 <h2>SYNOPSIS</h2>
 <h3>Macros</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "cefsconv(1)"
 name: "cefsconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cefsconv/"
 description: "cefsconv – convert a TeX document in SJIS encoding containing CEF macros into `preprocessed’ form."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cefsconv &#8211; convert a TeX document in SJIS encoding containing CEF macros into `preprocessed&#8217; form. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cefsconv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>

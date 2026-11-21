@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-dhcp-options(1)"
 name: "euca-create-dhcp-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-dhcp-options/"
 description: "euca-create-dhcp-options – Create a VPC DHCP option set"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-dhcp-options &#8211; Create a VPC DHCP option set</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-dhcp-options [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qjackctl(1)"
 name: "qjackctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qjackctl/"
 description: "qjackctl – User interface for controlling JACK (Jack Audio Connection Kit)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qjackctl &#8211; User interface for controlling JACK (Jack Audio Connection Kit) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qjackctl </code> [options]</p>

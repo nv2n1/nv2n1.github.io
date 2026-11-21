@@ -1,4 +1,5 @@
 ---
+
 title: "fstack(1)"
 name: "fstack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fstack/"
 description: "fstack – print a stack back-trace"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fstack &#8211; print a stack back-trace </p>
 <h2>SYNOPSIS</h2>
 <dl>

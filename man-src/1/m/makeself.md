@@ -1,4 +1,5 @@
 ---
+
 title: "makeself(1)"
 name: "makeself"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makeself/"
 description: "makeself – An utility to generate self-extractable archives."
 ---
 
-<h2>NAME</h2>
 <p> makeself &#8211; An utility to generate self-extractable archives.</p>
 <h2>SYNTAX</h2>
 <p> <code>makeself [</code><i>options</i>] archive_dir file_name label <code>[</code><i>startup_script</i>] [<i>args</i>]</p>

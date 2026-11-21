@@ -1,4 +1,5 @@
 ---
+
 title: "wineboot-stable(1)"
 name: "wineboot-stable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wineboot-stable/"
 description: "wineboot – perform Wine initialization, startup, and shutdown tasks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wineboot &#8211; perform Wine initialization, startup, and shutdown tasks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wineboot</code> [<i>options</i>]</p>

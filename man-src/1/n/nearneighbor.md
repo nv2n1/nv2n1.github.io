@@ -1,4 +1,5 @@
 ---
+
 title: "nearneighbor(1)"
 name: "nearneighbor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nearneighbor/"
 description: "nearneighbor – \"Grid table data using a \"\"Nearest neighbor\"\" algorithm\""
 ---
 
-<h2>NAME</h2>
 <p> nearneighbor &#8211; &quot;Grid table data using a &quot;&quot;Nearest neighbor&quot;&quot; algorithm&quot;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nearneighbor</code> [ <i>table</i> ] <i>out_grdfile</i> <i>increment</i> <i>sectors</i>[/<i>min_sectors</i>] <i>region</i> [ <i>search_radius</i>[<i>unit</i>] [ <i>empty</i> ] [ [<i>level</i>] ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

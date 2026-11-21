@@ -1,4 +1,5 @@
 ---
+
 title: "disktype(1)"
 name: "disktype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-disktype/"
 description: "disktype – disk format detector"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>disktype</code> &#8211; disk format detector </p>
 <h2>SYNOPSIS</h2>
 <p> <i>file&#8230;</i></p>

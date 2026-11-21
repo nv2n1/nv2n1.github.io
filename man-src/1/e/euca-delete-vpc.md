@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpc(1)"
 name: "euca-delete-vpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-vpc/"
 description: "euca-delete-vpc – Delete a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-vpc &#8211; Delete a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-vpc [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>

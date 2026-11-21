@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcprovideraddclientid(1)"
 name: "euare-oidcprovideraddclientid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcprovideraddclientid/"
 description: "euare-oidcprovideraddclientid – Add a client ID to an OpenID Connect provider"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcprovideraddclientid &#8211; Add a client ID to an OpenID Connect provider</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcprovideraddclientid <code>-c</code> CLIENT [&#8211;as-account ACCOUNT] [-U URL]</p>

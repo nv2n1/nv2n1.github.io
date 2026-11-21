@@ -1,4 +1,5 @@
 ---
+
 title: "gst-feedback-0(1)"
 name: "gst-feedback-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-feedback-0/"
 description: "gst-feedback – generate debug info for GStreamer bug reports"
 ---
 
-<h2>NAME</h2>
 <p> gst-feedback &#8211; generate debug info for GStreamer bug reports</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-feedback-0.10</code></p>

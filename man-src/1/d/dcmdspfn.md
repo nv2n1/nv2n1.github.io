@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdspfn(1)"
 name: "dcmdspfn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmdspfn/"
 description: "dcmdspfn – Export standard display curves to a text file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmdspfn &#8211; Export standard display curves to a text file </p>
 <h2>SYNOPSIS</h2>
 <pre>

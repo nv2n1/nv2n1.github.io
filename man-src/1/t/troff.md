@@ -1,4 +1,5 @@
 ---
+
 title: "troff(1)"
 name: "troff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-troff/"
 description: "troff – the troff processor of the groff text formatting system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> troff &#8211; the troff processor of the groff text formatting system </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-abcivzCERU</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>name</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [<i>file</i> &#8230;]</p>

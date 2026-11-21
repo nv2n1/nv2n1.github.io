@@ -1,4 +1,5 @@
 ---
+
 title: "grdfft(1)"
 name: "grdfft"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdfft/"
 description: "grdfft – Do mathematical operations on grids in the wavenumber (or frequency) domain"
 ---
 
-<h2>NAME</h2>
 <p> grdfft &#8211; Do mathematical operations on grids in the wavenumber (or frequency) domain</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdfft</code> <i>ingrid</i> [ <i>ingrid2</i> ] <i>outfile</i> [ <i>azimuth</i> ] [ <i>zlevel</i> ] [ [<i>scale</i>|<code>g</code>] ] [ [<code>r</code>|<code>x</code>|<code>y</code>][<code>w</code>[<code>k</code>]] ] [ [<code>r</code>|<code>x</code>|<code>y</code>]<i>params</i> ] [ [<i>scale</i>|<code>g</code>] ] [ [<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|<code>d</code>|<code>h</code>|<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]] ] [ <i>scale</i> ] [ [<i>level</i>] ] [ <code>-fg</code> ] </p>

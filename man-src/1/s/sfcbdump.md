@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbdump(1)"
 name: "sfcbdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbdump/"
 description: "sfcbdump – sfcBroker repository dumper"
 ---
 
-<h2>NAME</h2>
 <p> sfcbdump &#8211; sfcBroker repository dumper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbdump</code> [<i>-hsapqm</i>] <i>schemafile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dcmcrle(1)"
 name: "dcmcrle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmcrle/"
 description: "dcmcrle – Encode DICOM file to RLE transfer syntax"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmcrle &#8211; Encode DICOM file to RLE transfer syntax </p>
 <h2>SYNOPSIS</h2>
 <pre>

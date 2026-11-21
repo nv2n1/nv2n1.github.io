@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_free(3)"
 name: "libssh2_session_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_free/"
 description: "libssh2_session_free – frees resources associated with a session instance"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_free &#8211; frees resources associated with a session instance</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

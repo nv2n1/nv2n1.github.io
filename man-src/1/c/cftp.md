@@ -1,4 +1,5 @@
 ---
+
 title: "cftp(1)"
 name: "cftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cftp/"
 description: "cftp – Conch command-line SFTP client"
 ---
 
-<h2>NAME</h2>
 <p> <code>cftp</code> &#8211; Conch command-line SFTP client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cftp</code> [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>command_file</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>s </code><i>subsystem</i> ]</p>

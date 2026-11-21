@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_merge(1)"
 name: "gdal_merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_merge/"
 description: "gdal_merge – gdal_merge.py mosaics a set of images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_merge &#8211; gdal_merge.py mosaics a set of images </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

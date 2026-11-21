@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-build(1)"
 name: "po4a-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po4a-build/"
 description: "po4a-build – build translated documentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> po4a-build &#8211; build translated documentation </p>
 <h2>SYNOPSIS</h2>
 <dl>

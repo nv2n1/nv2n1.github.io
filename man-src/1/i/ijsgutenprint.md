@@ -1,4 +1,5 @@
 ---
+
 title: "ijsgutenprint(1)"
 name: "ijsgutenprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ijsgutenprint/"
 description: "ijsgutenprint – Ghostscript driver for Gutenprint"
 ---
 
-<h2>NAME</h2>
 <p> ijsgutenprint &#8211; Ghostscript driver for Gutenprint</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gs</code> -sDEVICE=ijs -sIjsServer=/usr/bin/ijsgutenprint -sDeviceManufacturer=<i>vendor</i> -sDeviceModel=<i>name</i> [ <i>-dIjsUseOutputFD</i> ] -sIjsParams=[ <i>key1</i>=<i>value1</i>,<i>keyn</i>=<i>valuen</i>&#8230; ] [ <i>options</i> ] [ <i>files</i> ]</p>

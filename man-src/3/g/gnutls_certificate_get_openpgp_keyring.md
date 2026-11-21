@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_openpgp_keyring(3)"
 name: "gnutls_certificate_get_openpgp_keyring"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_get_openpgp_keyring/"
 description: "gnutls_certificate_get_openpgp_keyring – export keyring from a #gnutls_certificate_credentials_t"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_get_openpgp_keyring &#8211; export keyring from a #gnutls_certificate_credentials_t</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

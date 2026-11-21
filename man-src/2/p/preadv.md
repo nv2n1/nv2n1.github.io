@@ -1,4 +1,5 @@
 ---
+
 title: "preadv(2)"
 name: "preadv"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-preadv/"
 description: "readv, writev, preadv, pwritev, preadv2, pwritev2 – read or write data into multiple buffers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readv, writev, preadv, pwritev, preadv2, pwritev2 &#8211; read or write data into multiple buffers </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

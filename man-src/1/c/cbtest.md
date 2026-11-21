@@ -1,4 +1,5 @@
 ---
+
 title: "cbtest(1)"
 name: "cbtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cbtest/"
 description: "cbtest – test cases for QDBM Cabin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cbtest &#8211; test cases for QDBM Cabin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cbtest sort</code> [-d] <i>rnum</i><br />

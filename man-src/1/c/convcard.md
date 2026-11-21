@@ -1,4 +1,5 @@
 ---
+
 title: "convcard(1)"
 name: "convcard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convcard/"
 description: "convcard – converts a vCard version 2.1 in a vCard version 3.0 and vice versa"
 ---
 
-<h2>NAME</h2>
 <p> convcard &#8211; converts a vCard version 2.1 in a vCard version 3.0 and vice versa</p>
 <h2>SYNTAX</h2>
 <p> convcard <i>option</i> [<i>arguments</i>] [<i>option</i>] <i>FileName</i><br />

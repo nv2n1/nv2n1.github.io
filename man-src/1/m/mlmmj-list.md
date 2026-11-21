@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-list(1)"
 name: "mlmmj-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-list/"
 description: "mlmmj-list – list people / subscribers associated with a list"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-list &#8211; list people / subscribers associated with a list</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-list</code> <i>-L /path/to/listdir </i>[<i>-c</i>] [<i>-d</i>] [<i>-h</i>] [<i>-m</i>] [<i>-n</i>] [<i>-o</i>] [<i>-s</i>] [<i>-V</i>]</p>

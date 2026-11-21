@@ -1,4 +1,5 @@
 ---
+
 title: "ghwdump(1)"
 name: "ghwdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ghwdump/"
 description: "ghwdump – Dumps info contained in GHW files"
 ---
 
-<h2>NAME</h2>
 <p> ghwdump &#8211; Dumps info contained in GHW files</p>
 <h2>SYNTAX</h2>
 <p> ghwdump [<i>option</i>]&#8230; <i>GHWFILE</i> [[<i>GHWFILE</i>]&#8230;] </p>

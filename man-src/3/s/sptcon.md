@@ -1,4 +1,5 @@
 ---
+
 title: "sptcon(3)"
 name: "sptcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sptcon/"
 description: "sptcon.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sptcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

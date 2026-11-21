@@ -1,4 +1,5 @@
 ---
+
 title: "qdbus(1)"
 name: "qdbus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qdbus/"
 description: "qdbus – a communication-interface for qt-based applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qdbus &#8211; a communication-interface for qt-based applications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qdbus</code> [&#8211;system] [&#8211;literal] [servicename] [path] [method] [args] </p>

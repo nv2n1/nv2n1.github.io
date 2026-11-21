@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-dump(1)"
 name: "doveadm-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-dump/"
 description: "doveadm-dump – Dump the content of Dovecot’s binary mailbox index/log"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-dump &#8211; Dump the content of Dovecot&#8217;s binary mailbox index/log</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>dump</code> [<code>-t</code> <i>type</i>] <i>path</i></p>

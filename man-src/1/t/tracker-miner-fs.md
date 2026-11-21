@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-miner-fs(1)"
 name: "tracker-miner-fs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-miner-fs/"
 description: "tracker-miner-fs – Used to crawl the file system to mine data."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-miner-fs &#8211; Used to crawl the file system to mine data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-miner-fs</code> [<i>OPTION</i>&#8230;] </p>

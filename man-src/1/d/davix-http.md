@@ -1,4 +1,5 @@
 ---
+
 title: "davix-http(1)"
 name: "davix-http"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-http/"
 description: "davix-http – HTTP query tool based on libdavix"
 ---
 
-<h2>NAME</h2>
 <p> davix-http &#8211; HTTP query tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-http [options]&#8230; url</p>

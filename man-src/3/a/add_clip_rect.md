@@ -1,4 +1,5 @@
 ---
+
 title: "add_clip_rect(3)"
 name: "add_clip_rect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-add_clip_rect/"
 description: "add_clip_rect – Intersects a bitmap’s clipping rectangle with the given area. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> add_clip_rect &#8211; Intersects a bitmap&#8217;s clipping rectangle with the given area. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mhl(1)"
 name: "mhl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhl/"
 description: "mhl – produce formatted listings of nmh messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhl &#8211; produce formatted listings of nmh messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

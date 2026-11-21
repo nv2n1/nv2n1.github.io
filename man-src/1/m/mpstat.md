@@ -1,4 +1,5 @@
 ---
+
 title: "mpstat(1)"
 name: "mpstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpstat/"
 description: "mpstat – Report processors related statistics."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpstat &#8211; Report processors related statistics.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpstat [ -A ] [ &#8211;dec={ 0 | 1 | 2 } ] [ -n ] [ -u ] [ -T ] [ -V ] [ -I {</code> <i>keyword</i><code>[,&#8230;] | ALL } ] [ -N { </code><i>node_list </i><code>| ALL } ] [ -o JSON ] [ -P {</code> <i>cpu_list </i><code>| ALL } ] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>

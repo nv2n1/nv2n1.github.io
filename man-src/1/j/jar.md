@@ -1,4 +1,5 @@
 ---
+
 title: "jar(1)"
 name: "jar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jar/"
 description: "jar – Manipulates Java Archive (JAR) files."
 ---
 
-<h2>NAME</h2>
 <p> jar &#8211; Manipulates Java Archive (JAR) files.</p>
 <h2>SYNOPSIS</h2>
 <p> Create JAR file </p>

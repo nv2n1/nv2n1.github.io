@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-path(1)"
 name: "systemd-path"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-path/"
 description: "systemd-path – List and query system and user paths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-path &#8211; List and query system and user paths </p>
 <h2>SYNOPSIS</h2>
 <dl>

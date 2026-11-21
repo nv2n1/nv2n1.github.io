@@ -1,4 +1,5 @@
 ---
+
 title: "stapref(1)"
 name: "stapref"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stapref/"
 description: "stapref – systemtap language reference"
 ---
 
-<h2>NAME</h2>
 <p> stapref &#8211; systemtap language reference </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stapref</code> </p>

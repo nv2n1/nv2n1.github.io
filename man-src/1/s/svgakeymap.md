@@ -1,4 +1,5 @@
 ---
+
 title: "svgakeymap(1)"
 name: "svgakeymap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svgakeymap/"
 description: "svgakeymap – generates keymaps for svgalib"
 ---
 
-<h2>NAME</h2>
 <p> svgakeymap &#8211; generates keymaps for svgalib </p>
 <h2>SYNOPSIS</h2>
 <p> <code>svgakeymap [</code><i>physical_table</i><code> [</code><i>program_table</i><code>]] &gt; </code><i>output.keymap</i> </p>

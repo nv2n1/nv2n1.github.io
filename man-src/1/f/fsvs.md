@@ -1,4 +1,5 @@
 ---
+
 title: "fsvs(1)"
 name: "fsvs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fsvs/"
 description: "FSVS – fast versioning tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> FSVS &#8211; fast versioning tool </p>
 <h2>SYNOPSIS</h2>
 <p> fsvs command [options] [args] </p>

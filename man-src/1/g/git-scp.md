@@ -1,4 +1,5 @@
 ---
+
 title: "git-scp(1)"
 name: "git-scp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-scp/"
 description: "git-scp – Copy files to SSH compatible git-remote"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-scp</code> &#8211; Copy files to SSH compatible <code>git-remote</code></p>
 <h2>SYNOPSIS</h2>
 <pre>

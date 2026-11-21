@@ -1,4 +1,5 @@
 ---
+
 title: "perlform(1)"
 name: "perlform"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlform/"
 description: "perlform – Perl formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlform &#8211; Perl formats </p>
 <h2>DESCRIPTION</h2>
 <p> Perl has a mechanism to help you generate simple reports and charts. To facilitate this, Perl helps you code up your output page close to how it will look when it&#8217;s printed. It can keep track of things like how many lines are on a page, what page you&#8217;re on, when to print page headers, etc. Keywords are borrowed from <font SIZE="-1">FORTRAN:</font> <code>format()</code> to declare and <code>write()</code> to execute; see their entries in perlfunc. Fortunately, the layout is much more legible, more like <font SIZE="-1">BASIC</font>&#8216;s <font SIZE="-1">PRINT USING</font> statement. Think of it as a poor man&#8217;s <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kmouth(1)"
 name: "kmouth"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmouth/"
 description: "kmouth – A type-and-say front end for speech synthesizers"
 ---
 
-<h2>NAME</h2>
 <p> kmouth &#8211; A type-and-say front end for speech synthesizers</p>
 <h2>SYNOPSIS</h2>
 <dl>

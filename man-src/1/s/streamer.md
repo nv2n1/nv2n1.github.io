@@ -1,4 +1,5 @@
 ---
+
 title: "streamer(1)"
 name: "streamer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-streamer/"
 description: "streamer – record audio and/or video"
 ---
 
-<h2>NAME</h2>
 <p> streamer &#8211; record audio and/or video</p>
 <h2>SYNOPSIS</h2>
 <p> <code>streamer [ options ]</code></p>

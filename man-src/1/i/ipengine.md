@@ -1,4 +1,5 @@
 ---
+
 title: "ipengine(1)"
 name: "ipengine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipengine/"
 description: "ipengine – IPython parallel computing engine"
 ---
 
-<h2>NAME</h2>
 <p> <code>ipengine &#8211; IPython parallel computing engine </code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipengine</code> [<i>options</i>] </p>

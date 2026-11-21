@@ -1,4 +1,5 @@
 ---
+
 title: "psxyz(1)"
 name: "psxyz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psxyz/"
 description: "psxyz – Plot lines, polygons, and symbols in 3-D"
 ---
 
-<h2>NAME</h2>
 <p> psxyz &#8211; Plot lines, polygons, and symbols in 3-D</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psxyz</code> [ <i>table</i> ] <i>parameters</i> <code>z</code>|<code>Z</code><i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>dx</i>/<i>dy</i>[/<i>dz</i>] ] [ <i>fill</i> ] [ <i>intens</i> ] [ ] [ [<code>+b</code>|<code>d</code>|<code>D</code>][<code>+xl</code>|<code>r</code>|<i>x0</i>][<code>+yl</code>|<code>r</code>|<i>y0</i>][<code>+p</code><i>pen</i>] ] [ ] [ ] [ ] [ ] [ [<i>symbol</i>][<i>size</i>[<code>unit</code>]][/<i>size_y</i>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>][<i>pen</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

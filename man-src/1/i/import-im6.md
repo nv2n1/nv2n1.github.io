@@ -1,4 +1,5 @@
 ---
+
 title: "import-im6(1)"
 name: "import-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-import-im6/"
 description: "import – saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen."
 ---
 
-<h2 class="name">NAME</h2>
 <p> import &#8211; saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_methods(3)"
 name: "libssh2_session_methods"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_methods/"
 description: "libssh2_session_methods – return the currently active algorithms"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_methods &#8211; return the currently active algorithms</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

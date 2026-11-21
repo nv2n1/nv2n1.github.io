@@ -1,4 +1,5 @@
 ---
+
 title: "tkjpeg(1)"
 name: "tkjpeg"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tkjpeg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- tkjpeg - simple JPEG viewer using perl/Tk 
+tkjpeg - simple JPEG viewer using perl/Tk 
 
 <h2>SYNOPSIS</h2>
 

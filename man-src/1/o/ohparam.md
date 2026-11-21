@@ -1,4 +1,5 @@
 ---
+
 title: "ohparam(1)"
 name: "ohparam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ohparam/"
 description: "ohparam – An openhpi sample application that uses the openhpi additional interface to control openhpi configuration parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ohparam &#8211; An openhpi sample application that uses the openhpi additional interface to control openhpi configuration parameters </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

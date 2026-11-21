@@ -1,4 +1,5 @@
 ---
+
 title: "img2grd(1)"
 name: "img2grd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img2grd/"
 description: "img2grd – Extract subset of img file in Mercator or Geographic format"
 ---
 
-<h2>NAME</h2>
 <p> img2grd &#8211; Extract subset of img file in Mercator or Geographic format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>img2grd</code> <i>imgfile</i> <i>grdfile</i> <i>region</i> <i>type</i> [ ] [ [<i>minlat/maxlat</i>] ] [ ] [ <i>minutes</i> ] [ ] [ <i>navg</i> ] [ [<i>scale</i>] ] [ [<i>level</i>] ] [ <i>maxlon</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>

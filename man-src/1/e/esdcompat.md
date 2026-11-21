@@ -1,4 +1,5 @@
 ---
+
 title: "esdcompat(1)"
 name: "esdcompat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esdcompat/"
 description: "esdcompat – PulseAudio ESD wrapper script"
 ---
 
-<h2>NAME</h2>
 <p> esdcompat &#8211; PulseAudio ESD wrapper script</p>
 <h2>SYNOPSIS</h2>
 <p> <code>esdcompat [</code><i>options</i><code>] </p>

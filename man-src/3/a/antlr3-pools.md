@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-pools(3)"
 name: "antlr3-pools"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-pools/"
 description: "ANTLR3_ARBORETUM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_ARBORETUM_struct &#8211; </p>
 <p> ANTLR3 Tree factory interface to create lots of trees efficiently rather than creating and freeing lots of little bits of memory.</p>
 <h2>SYNOPSIS</h2>

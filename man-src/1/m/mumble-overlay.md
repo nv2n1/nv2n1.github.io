@@ -1,4 +1,5 @@
 ---
+
 title: "mumble-overlay(1)"
 name: "mumble-overlay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mumble-overlay/"
 description: "mumble-overlay – load OpenGL overlay for Mumble."
 ---
 
-<h2>NAME</h2>
 <p> mumble-overlay &#8211; load OpenGL overlay for Mumble.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mumble-overlay</code> executable</p>

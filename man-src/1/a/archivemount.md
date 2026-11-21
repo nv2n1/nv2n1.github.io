@@ -1,4 +1,5 @@
 ---
+
 title: "archivemount(1)"
 name: "archivemount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-archivemount/"
 description: "archivemount – mounts an archive for access as a file system"
 ---
 
-<h2>NAME</h2>
 <p> archivemount &#8211; mounts an archive for access as a file system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>archivemount</code> [<code>-hVdfs</code>] [<code>-o</code> <i>options</i>] <i>archivepath</i> <i>mountpoint</i></p>

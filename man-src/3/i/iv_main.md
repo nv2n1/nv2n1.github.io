@@ -1,4 +1,5 @@
 ---
+
 title: "iv_main(3)"
 name: "iv_main"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_main/"
 description: "iv_main – enter the ivykis main loop"
 ---
 
-<h2>NAME</h2>
 <p> iv_main &#8211; enter the ivykis main loop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

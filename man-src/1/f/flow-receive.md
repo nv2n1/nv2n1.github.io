@@ -1,4 +1,5 @@
 ---
+
 title: "flow-receive(1)"
 name: "flow-receive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-receive/"
 description: "flow-receive – Receive flow data with the NetFlow protocol."
 ---
 
-<h2>NAME</h2>
 <p> flow-receive &#8211; Receive flow data with the NetFlow protocol.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-receive</code> [ <code>-h</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> output_file</i> ] [ <code>-S</code><i> stat_interval</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ] <i>localip/remoteip/port</i></p>

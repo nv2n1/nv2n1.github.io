@@ -1,4 +1,5 @@
 ---
+
 title: "euare-grouplistpolicies(1)"
 name: "euare-grouplistpolicies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-grouplistpolicies/"
 description: "euare-grouplistpolicies – List one or all policies attached to a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-grouplistpolicies &#8211; List one or all policies attached to a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-grouplistpolicies [-p POLICY] [-v] [&#8211;pretty-print]</p>

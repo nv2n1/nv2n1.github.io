@@ -1,4 +1,5 @@
 ---
+
 title: "snmpcheck(1)"
 name: "snmpcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpcheck/"
 description: "snmpcheck – enumerate information via SNMP protocol"
 ---
 
-<h2>NAME</h2>
 <p> snmpcheck &#8211; enumerate information via SNMP protocol</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpcheck</code> [<code>-OPTIONS </code>] <code>-t</code> <i>&lt;IP address&gt;</i></p>

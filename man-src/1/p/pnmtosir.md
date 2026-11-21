@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtosir(1)"
 name: "pnmtosir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtosir/"
 description: "pnmtosir – convert a portable anymap into a Solitaire format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtosir &#8211; convert a portable anymap into a Solitaire format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtosir</code> [<i>pnmfile</i>]</p>

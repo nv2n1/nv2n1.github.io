@@ -1,4 +1,5 @@
 ---
+
 title: "munilist(1)"
 name: "munilist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-munilist/"
 description: "munilist – Making listing from CCD photomtetry files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> munilist &#8211; Making listing from CCD photomtetry files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>munilist -os </code><i>[options</i>] <i>var comp chk1 chk2 &#8230; source_file &#8230;</i><br />

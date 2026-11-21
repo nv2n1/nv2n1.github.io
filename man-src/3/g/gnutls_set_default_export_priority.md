@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_set_default_export_priority(3)"
 name: "gnutls_set_default_export_priority"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_set_default_export_priority/"
 description: "gnutls_set_default_export_priority – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_set_default_export_priority &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

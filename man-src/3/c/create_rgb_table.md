@@ -1,4 +1,5 @@
 ---
+
 title: "create_rgb_table(3)"
 name: "create_rgb_table"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_rgb_table/"
 description: "create_rgb_table – Generates an RGB mapping table with lookup data for a palette. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_rgb_table &#8211; Generates an RGB mapping table with lookup data for a palette. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qsfilter2(1)"
 name: "qsfilter2"
 section: "1"
@@ -6,10 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qsfilter2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- qsfilter2 - an utility to generate mod_qos request line rules out from existing access/audit log data. 
+qsfilter2 - an utility to generate mod_qos request line rules out from existing access/audit log data. 
 
 <h2>SYNOPSIS</h2>
 

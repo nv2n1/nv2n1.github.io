@@ -1,4 +1,5 @@
 ---
+
 title: "xganim(1)"
 name: "xganim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xganim/"
 description: "xganim"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>xganim</code></p>
 <h2>DESCRIPTION</h2>
 <p> <i>xganim</i> is a tool for animating a series of GRASS raster files. At startup, a graphics window is opened containing VCR-like button controls for: rewind, reverse play, step back, stop, step forward, forward play, loop, swing, slower, faster, show filenames, current frame number, and Exit. The image is displayed above or to the left of the controls. Each raster map is read into memory, then the animation is played once beginning to end. The user may then replay the series or play continuous animation by using the buttons. </p>

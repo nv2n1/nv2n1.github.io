@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_set_blocking(3)"
 name: "libssh2_channel_set_blocking"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_set_blocking/"
 description: "libssh2_channel_set_blocking – set or clear blocking mode on channel"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_set_blocking &#8211; set or clear blocking mode on channel</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-config-rm(1)"
 name: "docker-config-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-config-rm/"
 description: "docker-config-rm – Remove one or more configs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-config-rm &#8211; Remove one or more configs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker config rm CONFIG [CONFIG&#8230;]</code> </p>

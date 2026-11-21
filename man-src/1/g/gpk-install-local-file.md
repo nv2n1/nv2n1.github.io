@@ -1,4 +1,5 @@
 ---
+
 title: "gpk-install-local-file(1)"
 name: "gpk-install-local-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpk-install-local-file/"
 description: "gpk-install-local-file – GNOME PackageKit Local File Helper"
 ---
 
-<h2>NAME</h2>
 <p> gpk-install-local-file &#8211; GNOME PackageKit Local File Helper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpk-install-local-file</code> [ <code>&#8211;verbose</code> ] [ <code>filename</code> ]</p>

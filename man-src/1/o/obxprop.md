@@ -1,4 +1,5 @@
 ---
+
 title: "obxprop(1)"
 name: "obxprop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obxprop/"
 description: "openbox — A minimalistic, highly configurable, next generation window manager with extensive standards support."
 ---
 
-<h2>NAME</h2>
 <p> openbox &#8212; A minimalistic, highly configurable, next generation window manager with extensive standards support.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openbox</code> [&#8211;help] [&#8211;display DISPLAY] [&#8211;id ID] [&#8211;root] [&#8211;] [PROPERTY &#8230;]</p>

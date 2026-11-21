@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_equal(3)"
 name: "bson_oid_equal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_equal/"
 description: "bson_oid_equal() – Checks if two bson_oid_t contain the same bytes."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_equal() &#8211; Checks if two bson_oid_t contain the same bytes.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmpscale(1)"
 name: "pbmpscale"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pbmpscale/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pbmpscale - enlarge a portable bitmap with edge smoothing 
+pbmpscale - enlarge a portable bitmap with edge smoothing 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-loadtemplate(1)"
 name: "debconf-loadtemplate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-loadtemplate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- debconf-loadtemplate - load template file into debconf database 
+debconf-loadtemplate - load template file into debconf database 
 
 <h2>SYNOPSIS</h2>
 

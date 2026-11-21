@@ -1,4 +1,5 @@
 ---
+
 title: "gob2(1)"
 name: "gob2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gob2/"
 description: "GOB2 – The GObject Builder"
 ---
 
-<h2>NAME</h2>
 <p> GOB2 &#8211; The GObject Builder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gob2</code> [ option ] &#8230; file </p>

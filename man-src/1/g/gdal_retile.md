@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_retile(1)"
 name: "gdal_retile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_retile/"
 description: "gdal_retile – gdal_retile.py gdal_retile.py retiles a set of tiles and/or build tiled pyramid levels"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_retile &#8211; gdal_retile.py gdal_retile.py retiles a set of tiles and/or build tiled pyramid levels </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

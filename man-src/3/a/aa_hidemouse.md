@@ -1,4 +1,5 @@
 ---
+
 title: "aa_hidemouse(3)"
 name: "aa_hidemouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_hidemouse/"
 description: "aa_hidemouse – hide the mouse cursor."
 ---
 
-<h2>NAME</h2>
 <p> aa_hidemouse &#8211; hide the mouse cursor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

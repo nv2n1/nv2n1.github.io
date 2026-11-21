@@ -1,4 +1,5 @@
 ---
+
 title: "cernlib(1)"
 name: "cernlib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cernlib/"
 description: "cernlib – print CERN library dependencies"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cernlib &#8211; print CERN library dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cernlib</code> [<i>options</i>]<i> libraries</i></p>

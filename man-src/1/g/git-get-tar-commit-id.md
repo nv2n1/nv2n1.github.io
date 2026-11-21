@@ -1,4 +1,5 @@
 ---
+
 title: "git-get-tar-commit-id(1)"
 name: "git-get-tar-commit-id"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-get-tar-commit-id/"
 description: "git-get-tar-commit-id – Extract commit ID from an archive created using git-archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-get-tar-commit-id &#8211; Extract commit ID from an archive created using git-archive </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "gifsicle(1)"
 name: "gifsicle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gifsicle/"
 description: "gifsicle – manipulates GIF images and animations"
 ---
 
-<h2>NAME</h2>
 <p> gifsicle &#8211; manipulates GIF images and animations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gifsicle</code> [options, frames, and filenames]&#8230;</p>

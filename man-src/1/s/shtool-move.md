@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-move(1)"
 name: "shtool-move"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-move/"
 description: "shtool move – GNU shtool enhanced"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool move &#8211; GNU shtool enhanced </p>
 <p><a href="/docs/linux/man/1-mv/">mv</a>(1) replacement</p>
 <h2>SYNOPSIS</h2>

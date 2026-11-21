@@ -1,4 +1,5 @@
 ---
+
 title: "libnetcfg(1)"
 name: "libnetcfg"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-libnetcfg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- libnetcfg - configure libnet 
+libnetcfg - configure libnet 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "funimageget(3)"
 name: "funimageget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funimageget/"
 description: "FunImageGet – get an image or image section"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunImageGet &#8211; get an image or image section</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

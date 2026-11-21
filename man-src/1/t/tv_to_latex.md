@@ -1,4 +1,5 @@
 ---
+
 title: "tv_to_latex(1)"
 name: "tv_to_latex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_to_latex/"
 description: "tv_to_latex – Convert XMLTV listings to LaTeX source."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_to_latex &#8211; Convert XMLTV listings to LaTeX source. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_to_latex [&#8211;help] [&#8211;with-desc] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>

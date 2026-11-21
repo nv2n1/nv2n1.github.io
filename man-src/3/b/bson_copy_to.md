@@ -1,4 +1,5 @@
 ---
+
 title: "bson_copy_to(3)"
 name: "bson_copy_to"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_copy_to/"
 description: "bson_copy_to() – The bson_copy_to() function shall initialize dst with a copy of the contents of src."
 ---
 
-<h2>NAME</h2>
 <p> bson_copy_to() &#8211; The bson_copy_to() function shall initialize dst with a copy of the contents of src.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

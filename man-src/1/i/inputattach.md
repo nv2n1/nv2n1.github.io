@@ -1,4 +1,5 @@
 ---
+
 title: "inputattach(1)"
 name: "inputattach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inputattach/"
 description: "inputattach – attach a serial line to an input-layer device"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inputattach &#8211; attach a serial line to an input-layer device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>inputattach</code> [<code>&#8211;daemon</code>] [<code>&#8211;always</code>] [<code>&#8211;noinit</code>] [<code>&#8211;baud</code> <i>baud</i>&gt;] &lt;<i>mode</i>&gt; &lt;<i>device</i>&gt;</p>

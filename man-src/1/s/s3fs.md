@@ -1,4 +1,5 @@
 ---
+
 title: "s3fs(1)"
 name: "s3fs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-s3fs/"
 description: "s3fs – The S3 FUSE filesystem disk management utility"
 ---
 
-<h2>NAME</h2>
 <p> s3fs &#8211; The S3 FUSE filesystem disk management utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>s3fs </code> <code>[&lt;-C&gt; [-h] | [-cdrf &lt;bucket&gt;] [-p &lt;access_key&gt;] [-s secret_access_key] ] | [ -o &lt;options&gt; &lt;mountpoint&gt;]</code></p>

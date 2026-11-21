@@ -1,4 +1,5 @@
 ---
+
 title: "audit_get_session(3)"
 name: "audit_get_session"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_get_session/"
 description: "audit_getloginuid – Get a program’s login session id value"
 ---
 
-<h2>NAME</h2>
 <p> audit_getloginuid &#8211; Get a program&#8217;s login session id value</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

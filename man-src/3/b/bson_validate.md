@@ -1,4 +1,5 @@
 ---
+
 title: "bson_validate(3)"
 name: "bson_validate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_validate/"
 description: "bson_validate() – Validates a BSON document by walking through the document and inspecting the fields for valid content."
 ---
 
-<h2>NAME</h2>
 <p> bson_validate() &#8211; Validates a BSON document by walking through the document and inspecting the fields for valid content.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

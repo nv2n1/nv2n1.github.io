@@ -1,4 +1,5 @@
 ---
+
 title: "gbdfed(1)"
 name: "gbdfed"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gbdfed/"
 description: "gbdfed – GTK-based BDF font editor"
 ---
-<h2>NAME</h2>
+
 <p> gbdfed - GTK-based BDF font editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gbdfed</code> [<i>options</i>] [<i>fonts ...</i>] </p>

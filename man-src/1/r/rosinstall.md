@@ -1,4 +1,5 @@
 ---
+
 title: "rosinstall(1)"
 name: "rosinstall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rosinstall/"
 description: "rosinstall – rosinstall command"
 ---
 
-<h2>NAME</h2>
 <p> rosinstall &#8211; rosinstall command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rosinstall</code> [<i>options</i>] &lt;<i>install-path</i>&gt; [<i>rosinstall files or directories</i>]&#8230;</p>

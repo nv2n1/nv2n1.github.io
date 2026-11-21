@@ -1,4 +1,5 @@
 ---
+
 title: "dc1394_vloopback(1)"
 name: "dc1394_vloopback"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc1394_vloopback/"
 description: "dc1394_vloopback – send format0 video to V4L vloopback device"
 ---
 
-<h2>NAME</h2>
 <p> dc1394_vloopback &#8211; send format0 video to V4L vloopback device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc1394_vloopback [</code><i>&#8211;daemon</i>] [<i>&#8211;pipe</i>] [<i>&#8211;guid=camera-euid</i>] [<i>&#8211;video1394=/dev/video1394/x</i>] [<i>&#8211;vloopback=/dev/video0</i>] [<i>&#8211;palette=yuv422|rgb24</i>] [<i>&#8211;width=n</i>] [<i>&#8211;height=n</i>]</p>

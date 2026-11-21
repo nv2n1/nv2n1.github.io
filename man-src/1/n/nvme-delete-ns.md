@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-delete-ns(1)"
 name: "nvme-delete-ns"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-delete-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-delete-ns - Send NVMe Namespace Management delete namespace command, return result. 
+nvme-delete-ns - Send NVMe Namespace Management delete namespace command, return result. 
 
 <h2>SYNOPSIS</h2>
 

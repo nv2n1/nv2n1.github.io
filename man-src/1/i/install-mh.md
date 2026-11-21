@@ -1,4 +1,5 @@
 ---
+
 title: "install-mh(1)"
 name: "install-mh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-install-mh/"
 description: "install-mh – initialize the nmh environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> install-mh &#8211; initialize the nmh environment </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "sphtriangulate(1)"
 name: "sphtriangulate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphtriangulate/"
 description: "sphtriangulate – Delaunay or Voronoi construction of spherical lon,lat data"
 ---
 
-<h2>NAME</h2>
 <p> sphtriangulate &#8211; Delaunay or Voronoi construction of spherical lon,lat data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphtriangulate</code> [ <i>table</i> ] [ ] [ ] [ ] [ <i>unit</i> ] [ <i>nfile</i> ] [ <code>d</code>|<code>v</code> ] [ ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

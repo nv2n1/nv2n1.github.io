@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77track(1)"
 name: "mgd77track"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77track/"
 description: "mgd77track – Plot track-line map of MGD77 cruises"
 ---
 
-<h2>NAME</h2>
 <p> mgd77track &#8211; Plot track-line map of MGD77 cruises</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77track</code> <i>NGDC-ids</i> <i>region</i> <i>parameters</i> [ [<code>c</code>][<i>size</i>][,<i>spacing</i>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <code>f</code>|<code>g</code>|<code>e</code> ] [ <code>-Da</code><i>startdate</i> ] [ <code>b</code><i>stopdate</i> ] [ ] [ <code>d</code>|<code>t</code>|<code>n</code><i>gap</i> ] [ <i>ignore</i> ] [ ] [ <i>trackticks</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>a</code><i>startdist</i>[<code>u</code>] ] [ <code>b</code><i>stopdist</i>[<code>u</code>] ] [ <code>T</code>|<code>t</code>|<code>d</code><i>ms</i>,<i>mc</i>,<i>mfs</i>,<i>mf</i>,<i>mfc</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>][<i>pen</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

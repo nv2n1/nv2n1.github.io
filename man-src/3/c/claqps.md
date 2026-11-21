@@ -1,4 +1,5 @@
 ---
+
 title: "claqps(3)"
 name: "claqps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqps/"
 description: "claqps.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claqps.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

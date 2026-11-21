@@ -1,4 +1,5 @@
 ---
+
 title: "editcap(1)"
 name: "editcap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-editcap/"
 description: "editcap – Edit and/or translate the format of capture files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> editcap &#8211; Edit and/or translate the format of capture files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>editcap</code> [&nbsp;<wbr><code>-A</code>&nbsp;<wbr>&lt;start time&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-B</code>&nbsp;<wbr>&lt;stop time&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;packets per file&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-C</code>&nbsp;<wbr>&lt;choplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-E</code>&nbsp;<wbr>&lt;error probability&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-F</code>&nbsp;<wbr>&lt;file format&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>&lt;seconds per file&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-r</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;snaplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>&lt;strict time adjustment&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>&lt;time adjustment&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>&lt;encapsulation type&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] <i>infile</i> <i>outfile</i> [&nbsp;<wbr><i>packet#</i>[-<i>packet#</i>]&nbsp;<wbr>&#8230;&nbsp;<wbr>] </p>

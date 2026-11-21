@@ -1,4 +1,5 @@
 ---
+
 title: "pnmgamma(1)"
 name: "pnmgamma"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmgamma/"
 description: "pnmgamma – perform gamma correction on a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmgamma &#8211; perform gamma correction on a portable anymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmgamma </code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] [<i>value</i> [<i>pnmfile</i>]]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-image(1)"
 name: "euca-create-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-image/"
 description: "euca-create-image – Create an EBS image from a running or stopped EBS instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-image &#8211; Create an EBS image from a running or stopped EBS instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-image <code>-n</code> NAME [-d DESC] [&#8211;no-reboot] [-b DEVICE=MAPPED]</p>

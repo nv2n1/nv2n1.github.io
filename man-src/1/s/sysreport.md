@@ -1,4 +1,5 @@
 ---
+
 title: "sysreport(1)"
 name: "sysreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sysreport/"
 description: "sysreporter – Simple system statistics aggregator and emailer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sysreporter &#8211; Simple system statistics aggregator and emailer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sysreport</code> COMMAND [ARGUMENTS] </p>

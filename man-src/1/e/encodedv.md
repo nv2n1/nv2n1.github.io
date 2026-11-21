@@ -1,4 +1,5 @@
 ---
+
 title: "encodedv(1)"
 name: "encodedv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-encodedv/"
 description: "encodedv – encode a series of images to a digital video stream"
 ---
 
-<h2>NAME</h2>
 <p> encodedv &#8211; encode a series of images to a digital video stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>encodedv</code> [ <code>options</code> ] <i>video_pattern</i> <i>[ audio_input ]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libsolv-pool(3)"
 name: "libsolv-pool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libsolv-pool/"
 description: "libsolv-pool – Libsolv’s pool object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libsolv-pool &#8211; Libsolv&#8217;s pool object </p>
 <h2>PUBLIC ATTRIBUTES</h2>
 <p> <code>void *appdata</code></p>

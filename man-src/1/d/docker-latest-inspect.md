@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-inspect(1)"
 name: "docker-latest-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-inspect/"
 description: "docker-inspect – Return low-level information on a container or image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-inspect &#8211; Return low-level information on a container or image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker inspect</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;format</code>[=<i>FORMAT</i>]] [<code>-s</code>|<code>&#8211;size</code>] [<code>&#8211;type</code>=<i>container</i>|<i>image</i>] CONTAINER|IMAGE [CONTAINER|IMAGE&#8230;] </p>

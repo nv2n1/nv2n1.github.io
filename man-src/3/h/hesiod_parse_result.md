@@ -1,4 +1,5 @@
 ---
+
 title: "hesiod_parse_result(3)"
 name: "hesiod_parse_result"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hesiod_parse_result/"
 description: "hesiod, hesiod_init, hesiod_resolve, hesiod_free_list, hesiod_to_bind, hesiod_free_string, hesiod_end – Hesiod name server interface library"
 ---
 
-<h2>NAME</h2>
 <p> hesiod, hesiod_init, hesiod_resolve, hesiod_free_list, hesiod_to_bind, hesiod_free_string, hesiod_end &#8211; Hesiod name server interface library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "userpasswd(1)"
 name: "userpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-userpasswd/"
 description: "userpasswd – A graphical tool to allow users to change their passwords."
 ---
 
-<h2>NAME</h2>
 <p> userpasswd &#8211; A graphical tool to allow users to change their passwords.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>userpasswd</code> [ <i>options</i> ]</p>

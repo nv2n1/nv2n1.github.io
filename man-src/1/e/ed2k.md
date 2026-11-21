@@ -1,4 +1,5 @@
 ---
+
 title: "ed2k(1)"
 name: "ed2k"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ed2k/"
 description: "ed2k – aMule eD2k link parser"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ed2k &#8211; aMule eD2k link parser </p>
 <h2>SYNOPSIS</h2>
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-t</code> <i>&lt;num&gt;</i>] _untranslated<code>[</code>-e<code>]</code> _untranslated<code>[</code>-l<code>]</code> <i>&lt;eD2k-link&gt;</i> </p>

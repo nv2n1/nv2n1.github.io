@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gss_requested_context_flags(3)"
 name: "globus_gsi_gss_requested_context_flags"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_requested_context_flags/"
 description: "Request Flags –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Request Flags &#8211; </p>
 <p> Request Flags.</p>
 <h3>Macros</h3>

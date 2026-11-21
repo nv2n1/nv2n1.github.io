@@ -1,4 +1,5 @@
 ---
+
 title: "data2inc(1)"
 name: "data2inc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-data2inc/"
 description: "data2inc – Free Pascal binary to pascal include file converter."
 ---
 
-<h2>NAME</h2>
 <p> data2inc &#8211; Free Pascal binary to pascal include file converter. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>data2inc [-ABSVH] msgfile [incfile] [constname]</code> </p>

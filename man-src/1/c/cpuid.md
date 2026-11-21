@@ -1,4 +1,5 @@
 ---
+
 title: "cpuid(1)"
 name: "cpuid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpuid/"
 description: "cpuid – Dump CPUID information for each CPU"
 ---
 
-<h2>NAME</h2>
 <p> cpuid &#8211; Dump CPUID information for each CPU</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpuid</code> <i>[options&#8230;]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-shutdown(1)"
 name: "beagle-shutdown"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-shutdown/"
 description: "beagle-shutdown – cleanly shutdown the Beagle daemon"
 ---
 
-<h2>NAME</h2>
 <p> beagle-shutdown &#8211; cleanly shutdown the Beagle daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-shutdown</code></p>

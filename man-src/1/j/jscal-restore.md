@@ -1,4 +1,5 @@
 ---
+
 title: "jscal-restore(1)"
 name: "jscal-restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jscal-restore/"
 description: "jscal-restore – restores joystick calibration"
 ---
 
-<h2>NAME</h2>
 <p> jscal-restore &#8211; restores joystick calibration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jscal-restore</code> &lt;<i>device-name</i>&gt;</p>

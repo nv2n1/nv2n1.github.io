@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistcerts(1)"
 name: "euare-userlistcerts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userlistcerts/"
 description: "euare-userlistcerts – List a user’s signing certificates"
 ---
 
-<h2>NAME</h2>
 <p> euare-userlistcerts &#8211; List a user&#8217;s signing certificates</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userlistcerts [-v] [&#8211;as-account ACCOUNT] [-U URL]</p>

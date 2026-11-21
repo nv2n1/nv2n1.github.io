@@ -1,4 +1,5 @@
 ---
+
 title: "makempy(1)"
 name: "makempy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makempy/"
 description: "makempy – convert PDF or PostScript text to MetaPost graphics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makempy &#8211; convert PDF or PostScript text to MetaPost graphics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makempy</code> <i>filenam</i> </p>

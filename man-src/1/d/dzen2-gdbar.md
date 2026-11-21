@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2-gdbar(1)"
 name: "dzen2-gdbar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dzen2-gdbar/"
 description: "dzen2-gdbar – generates fully graphical progress meters"
 ---
 
-<h2>NAME</h2>
 <p> dzen2-gdbar &#8211; generates fully graphical progress meters</p>
 <h2>SYNOPSIS</h2>
 <dl>

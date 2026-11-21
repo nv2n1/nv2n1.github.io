@@ -1,4 +1,5 @@
 ---
+
 title: "draw_character_ex(3)"
 name: "draw_character_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-draw_character_ex/"
 description: "draw_character_ex – Draws non transparent pixels of the sprite with a color. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> draw_character_ex &#8211; Draws non transparent pixels of the sprite with a color. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

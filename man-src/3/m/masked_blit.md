@@ -1,4 +1,5 @@
 ---
+
 title: "masked_blit(3)"
 name: "masked_blit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-masked_blit/"
 description: "masked_blit – Copies a rectangle skipping pixels with the mask color. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> masked_blit &#8211; Copies a rectangle skipping pixels with the mask color. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

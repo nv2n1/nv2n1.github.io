@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_debug_status(3)"
 name: "fribidi_debug_status"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_debug_status/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_debug_status - get current debug state 
+fribidi_debug_status - get current debug state 
 
 <h2>SYNOPSIS</h2>
 

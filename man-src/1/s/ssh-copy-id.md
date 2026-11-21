@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-copy-id(1)"
 name: "ssh-copy-id"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-copy-id/"
 description: "ssh-copy-id – use locally available keys to authorise logins on a remote machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-copy-id</code> &#8211; use locally available keys to authorise logins on a remote machine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-copy-id</code> [-<code>f</code> ] [-<code>n</code> ] [-<code>s</code> ] [-<code>i </code>[<i>identity_file</i> ] ] [-<code>p </code><i>port</i> ] [-<code>o </code><i>ssh_option</i> ] [<i>user </i><code>@ </code><i>hostname</i> ]<br />

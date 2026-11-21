@@ -1,4 +1,5 @@
 ---
+
 title: "ospcat(1)"
 name: "ospcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ospcat/"
 description: "ospcat – SGML print catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ospcat &#8211; SGML print catalog </p>
 <h2>SYNOPSIS</h2>
 <dl>

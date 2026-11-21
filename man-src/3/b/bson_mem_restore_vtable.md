@@ -1,4 +1,5 @@
 ---
+
 title: "bson_mem_restore_vtable(3)"
 name: "bson_mem_restore_vtable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_mem_restore_vtable/"
 description: "bson_mem_restore_vtable() – This function shall restore the default memory allocator to be used by Libbson."
 ---
 
-<h2>NAME</h2>
 <p> bson_mem_restore_vtable() &#8211; This function shall restore the default memory allocator to be used by Libbson.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

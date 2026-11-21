@@ -1,4 +1,5 @@
 ---
+
 title: "xsdcxx(1)"
 name: "xsdcxx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsdcxx/"
 description: "xsdcxx – W3C XML Schema to C++ Compiler"
 ---
 
-<h2>NAME</h2>
 <p> xsdcxx &#8211; W3C XML Schema to C++ Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsdcxx</code> <i>command</i> <code>[</code> <i>options</i> <code>]</code> <i>file</i> <code>[</code> <i>file</i> <code>&#8230;]</code> <code>xsdcxx help</code> <code>[</code> <i>command</i> <code>]</code> <code>xsdcxx version</code></p>

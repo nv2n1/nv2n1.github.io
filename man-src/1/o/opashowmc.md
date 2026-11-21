@@ -1,4 +1,5 @@
 ---
+
 title: "opashowmc(1)"
 name: "opashowmc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opashowmc/"
 description: "opashowmc"
 ---
 
-<h2>NAME</h2>
 <p> opashowmc </p>
 <p> <code>(Linux)</code> Displays the Intel(R) Omni-Path Multicast groups created for the fabric along with the Intel(R) Omni-Path Host Fabric Interface (HFI) ports which are a member of each multicast group. This command can be helpful when attempting to analyze or debug Intel(R) Omni-Path multicast usage by applications or ULPs such as IPoIB.</p>
 <h2>Syntax</h2>

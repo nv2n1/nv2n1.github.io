@@ -1,4 +1,5 @@
 ---
+
 title: "catdoc(1)"
 name: "catdoc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-catdoc/"
 description: "catdoc – reads MS-Word file and puts its content as plain text on standard output"
 ---
-<h2>NAME</h2>
+
 <p> catdoc - reads MS-Word file and puts its content as plain text on standard output  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>catdoc</code> [<code>-vlu8btawxV</code>] [<code>-m</code> <i>number</i>] [ <code>-s</code> <i>charset</i>] [ <code>-d </code> <i>charset</i>] [ <code>-f</code> <i>output-format</i>] <i>file</i> </p>

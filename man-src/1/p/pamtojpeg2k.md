@@ -1,4 +1,5 @@
 ---
+
 title: "pamtojpeg2k(1)"
 name: "pamtojpeg2k"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtojpeg2k/"
 description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtojpeg2k &#8211; convert PAM/PNM image to a JPEG-2000 code stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtojpeg2k</code> [<code>-imgareatlx=</code><i>column</i>] [<code>-imgareatly=</code><i>row</i>] [<code>-tilegrdtlx=</code><i>column</i>] [<code>-tilegrdtly=</code><i>row</i>] [<code>-tilewidth=</code><i>columns</i>] [<code>-tileheight=</code><i>rows</i>] [<code>-prcwidth=</code><i>columns</i>] [<code>-prcheight=</code><i>rows</i>] [<code>-cblkwidth=</code><i>columns</i>] [<code>-cblkheight=</code><i>rows</i>] [<code>-mode=</code>{<code>integer</code>|<code>int</code>|<code>real</code>}] [<code>-compression=</code><i>ratio</i>] [<code>-ilyrrates=</code><i>ratestring</i>] [<code>-numrlvls=</code><i>number</i>] [<code>-progression=</code>{<code>lrcp</code>|<code>rlcp</code>|<code>rpcl</code>|<code>pcrl</code>|<code>cprl</code>}] [<code>-numgbits=</code><i>number</i>] [<code>-nomct</code>] [<code>-sop</code>] [<code>-eph</code>] [<code>-lazy</code>] [<code>-termall</code>] [<code>-segsym</code>] [<code>-vcausal</code>] [<code>-pterm</code>] [<code>-resetprob</code>] [<code>-verbose</code>] [<code>-debuglevel=</code><i>number</i>] <i>filename</i> </p>

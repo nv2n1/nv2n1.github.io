@@ -1,4 +1,5 @@
 ---
+
 title: "mtt(1)"
 name: "mtt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtt/"
 description: "mtt – teletext browser for X11 and console."
 ---
 
-<h2>NAME</h2>
 <p> mtt &#8211; teletext browser for X11 and console.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtt [ options ]</code></p>

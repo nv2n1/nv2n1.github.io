@@ -1,4 +1,5 @@
 ---
+
 title: "gvc(3)"
 name: "gvc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gvc/"
 description: "libgvc – Graphviz context library"
 ---
 
-<h2>NAME</h2>
 <p> <code>libgvc</code> &#8211; Graphviz context library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

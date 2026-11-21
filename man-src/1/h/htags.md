@@ -1,4 +1,5 @@
 ---
+
 title: "htags(1)"
 name: "htags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htags/"
 description: "htags – generate hypertext from source code."
 ---
 
-<h2>NAME</h2>
 <p> htags &#8211; generate hypertext from source code.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>htags</code> [-acDfFghInosTvwx][-d <i>dbpath</i>][-m <i>name</i>][-S <i>cgidir</i>][-t <i>title</i>][<i>dir</i>] </p>

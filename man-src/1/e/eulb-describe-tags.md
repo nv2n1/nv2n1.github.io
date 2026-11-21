@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-tags(1)"
 name: "eulb-describe-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-tags/"
 description: "eulb-describe-tags – Show the tags associated with one or more load balancers"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-tags &#8211; Show the tags associated with one or more load balancers</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-tags [&#8211;show-headers] [&#8211;show-empty-fields] [-U URL]</p>

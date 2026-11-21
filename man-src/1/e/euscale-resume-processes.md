@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-resume-processes(1)"
 name: "euscale-resume-processes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-resume-processes/"
 description: "euscale-resume-processes – Resume an auto-scaling group’s auto-scaling processes"
 ---
 
-<h2>NAME</h2>
 <p> euscale-resume-processes &#8211; Resume an auto-scaling group&#8217;s auto-scaling processes</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-resume-processes [&#8211;processes PROCESS1,PROCESS2,&#8230;] [-U URL]</p>

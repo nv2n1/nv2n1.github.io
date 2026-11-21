@@ -1,4 +1,5 @@
 ---
+
 title: "euca-detach-vpn-gateway(1)"
 name: "euca-detach-vpn-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-detach-vpn-gateway/"
 description: "euca-detach-vpn-gateway – Detach a virtual private gateway from a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-detach-vpn-gateway &#8211; Detach a virtual private gateway from a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-detach-vpn-gateway <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>

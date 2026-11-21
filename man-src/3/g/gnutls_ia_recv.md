@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_recv(3)"
 name: "gnutls_ia_recv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_recv/"
 description: "gnutls_ia_recv – read data from the TLS/IA protocol"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_recv &#8211; read data from the TLS/IA protocol</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iswlower(3)"
 name: "iswlower"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswlower/"
 description: "iswlower – test for lowercase wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswlower &#8211; test for lowercase wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

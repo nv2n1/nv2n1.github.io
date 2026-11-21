@@ -1,4 +1,5 @@
 ---
+
 title: "ares_create_query(3)"
 name: "ares_create_query"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_create_query/"
 description: "ares_create_query – Compose a single-question DNS query buffer"
 ---
 
-<h2>NAME</h2>
 <p> ares_create_query &#8211; Compose a single-question DNS query buffer</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

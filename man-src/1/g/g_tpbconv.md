@@ -1,4 +1,5 @@
 ---
+
 title: "g_tpbconv(1)"
 name: "g_tpbconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_tpbconv/"
 description: "tpbconv – makes a run input file for restarting a crashed run"
 ---
 
-<h2>NAME</h2>
 <p> tpbconv &#8211; makes a run input file for restarting a crashed run </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

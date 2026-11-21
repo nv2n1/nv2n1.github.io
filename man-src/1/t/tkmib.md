@@ -1,4 +1,5 @@
 ---
+
 title: "tkmib(1)"
 name: "tkmib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tkmib/"
 description: "tkmib – an interactive graphical MIB browser for SNMP"
 ---
 
-<h2>NAME</h2>
 <p> tkmib &#8211; an interactive graphical MIB browser for SNMP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tkmib</code></p>

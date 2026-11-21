@@ -1,4 +1,5 @@
 ---
+
 title: "ipcmk(1)"
 name: "ipcmk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipcmk/"
 description: "ipcmk – make various IPC resources"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipcmk &#8211; make various IPC resources </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcmk</code> [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt(1)"
 name: "urxvt"
 section: "1"
@@ -6,7 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt/"
 description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X window system)"
 ---
-<h2 class="name">NAME</h2>
+
 <p> rxvt-unicode (ouR XVT, unicode) - (a VT102 emulator for the X window system) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvt</code> [options] [-e command [ args ]]  </p>

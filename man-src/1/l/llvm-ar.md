@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-ar(1)"
 name: "llvm-ar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-ar/"
 description: "llvm-ar – LLVM archiver"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-ar &#8211; LLVM archiver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-ar</code> [-]{dmpqrtx}[Rabfikouz] [relpos] [count] &lt;archive&gt; [files&#8230;]</p>

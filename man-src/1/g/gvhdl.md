@@ -1,4 +1,5 @@
 ---
+
 title: "gvhdl(1)"
 name: "gvhdl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvhdl/"
 description: "gvhdl – Frontend to the VHDL compiler/simulator FreeHDL."
 ---
 
-<h2>NAME</h2>
 <p> gvhdl &#8211; Frontend to the VHDL compiler/simulator FreeHDL.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gvhdl</code> [<i>OPTION</i>] &#8230; [<i>VHDL_FILES</i>] &#8230; [<i>OBJECT_FILES</i>] &#8230;</p>

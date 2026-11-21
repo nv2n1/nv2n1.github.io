@@ -1,4 +1,5 @@
 ---
+
 title: "dtrevc(3)"
 name: "dtrevc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrevc/"
 description: "dtrevc.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtrevc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

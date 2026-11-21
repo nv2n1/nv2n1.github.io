@@ -1,4 +1,5 @@
 ---
+
 title: "scs2pdf(1)"
 name: "scs2pdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scs2pdf/"
 description: "scs2pdf – convert IBM SCS printer data into PDF"
 ---
 
-<h2>NAME</h2>
 <p> scs2pdf &#8211; convert IBM SCS printer data into PDF</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scs2pdf</code></p>

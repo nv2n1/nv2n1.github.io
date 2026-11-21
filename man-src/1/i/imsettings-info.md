@@ -1,4 +1,5 @@
 ---
+
 title: "imsettings-info(1)"
 name: "imsettings-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imsettings-info/"
 description: "imsettings-info – Display information about Input Method"
 ---
 
-<h2>NAME</h2>
 <p> imsettings-info &#8211; Display information about Input Method</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imsettings-info</code> [ <code>-h</code> ] [ <code>&#8211;help</code> ] [Input Method name | configuration filename]</p>

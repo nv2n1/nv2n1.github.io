@@ -1,4 +1,5 @@
 ---
+
 title: "p2hex(1)"
 name: "p2hex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-p2hex/"
 description: "p2hex – convert code files into hex files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>p2hex &#8211; convert code files into hex files</code></p>
 <h2>SYNTAX</h2>
 <p> <code>p2hex</code> [ option(s) ] &lt;name(s)&gt; [ further options/names ] </p>

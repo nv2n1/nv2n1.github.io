@@ -1,4 +1,5 @@
 ---
+
 title: "bmptopnm(1)"
 name: "bmptopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bmptopnm/"
 description: "bmptopnm – convert a BMP file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bmptopnm &#8211; convert a BMP file into a portable anymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bmptopnm</code> [<i>bmpfile</i>] </p>

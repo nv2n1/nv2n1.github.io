@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-save-package-data(1)"
 name: "abrt-action-save-package-data"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-save-package-data/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-save-package-data - Query package database and save package and component name. 
+abrt-action-save-package-data - Query package database and save package and component name. 
 
 <h2>SYNOPSIS</h2>
 

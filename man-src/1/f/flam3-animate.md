@@ -1,4 +1,5 @@
 ---
+
 title: "flam3-animate(1)"
 name: "flam3-animate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flam3-animate/"
 description: "flam3-animate flam3-render flam3-genome flam3-convert – render and animate FLAM3s and manipulate their genomes"
 ---
 
-<h2>NAME</h2>
 <p> flam3-animate flam3-render flam3-genome flam3-convert &#8211; render and animate FLAM3s and manipulate their genomes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flam3-render &lt; input</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "randomip(1)"
 name: "randomip"
 section: "1"
@@ -6,7 +7,6 @@ letter: "r"
 url: "/docs/linux/man/1-randomip/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>randomip</code> [OPTIONS] [NUM] [BYTE1] [BYTE2] [BYTE3]</dt>
 <dd>

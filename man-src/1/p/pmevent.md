@@ -1,4 +1,5 @@
 ---
+
 title: "pmevent(1)"
 name: "pmevent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmevent/"
 description: "pmval, pmevent – arbitrary performance metrics value dumper"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmval</code>, <code>pmevent</code> &#8211; arbitrary performance metrics value dumper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmval</code> [<code>-dgLrvz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-f</code> <i>N</i>] [<code>-h</code> <i>host</i>] [<code>-i</code> <i>instances</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-p</code> <i>port</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-U</code> <i>archive</i>] [<code>-w</code> <i>width</i>] [<code>-x</code> <i>pattern</i>] [<code>-Z</code> <i>timezone</i>] <i>metricname</i></p>

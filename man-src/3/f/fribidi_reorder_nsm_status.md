@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_reorder_nsm_status(3)"
 name: "fribidi_reorder_nsm_status"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_reorder_nsm_status/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_reorder_nsm_status - get current marks reordering status 
+fribidi_reorder_nsm_status - get current marks reordering status 
 
 <h2>SYNOPSIS</h2>
 

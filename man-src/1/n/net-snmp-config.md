@@ -1,4 +1,5 @@
 ---
+
 title: "net-snmp-config(1)"
 name: "net-snmp-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-net-snmp-config/"
 description: "net-snmp-config – returns information about installed net-snmp libraries and binaries"
 ---
 
-<h2>NAME</h2>
 <p> net-snmp-config &#8211; returns information about installed net-snmp libraries and binaries</p>
 <h2>SYNOPSIS</h2>
 <p> <code>net-snmp-config</code> [OPTIONS]</p>

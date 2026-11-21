@@ -1,4 +1,5 @@
 ---
+
 title: "bson_count_keys(3)"
 name: "bson_count_keys"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_count_keys/"
 description: "bson_count_keys() – The bson_count_keys() function shall count the number of elements within bson."
 ---
 
-<h2>NAME</h2>
 <p> bson_count_keys() &#8211; The bson_count_keys() function shall count the number of elements within bson.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

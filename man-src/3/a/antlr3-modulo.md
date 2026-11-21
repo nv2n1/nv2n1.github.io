@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-modulo(3)"
 name: "antlr3-modulo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-modulo/"
 description: "ANTLR3_HASH_TABLE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_HASH_TABLE_struct &#8211; </p>
 <p> Structure that tracks a hash table.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "kawa(1)"
 name: "kawa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kawa/"
 description: "kawa – Scheme language implemented using on a Java VM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kawa &#8211; Scheme language implemented using on a Java VM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kawa</code> <i>[options]</i><br />

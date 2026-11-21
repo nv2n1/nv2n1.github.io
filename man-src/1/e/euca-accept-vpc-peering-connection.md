@@ -1,4 +1,5 @@
 ---
+
 title: "euca-accept-vpc-peering-connection(1)"
 name: "euca-accept-vpc-peering-connection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-accept-vpc-peering-connection/"
 description: "euca-accept-vpc-peering-connection – Accept a request for a VPC peering connection"
 ---
 
-<h2>NAME</h2>
 <p> euca-accept-vpc-peering-connection &#8211; Accept a request for a VPC peering connection</p>
 <h2>SYNOPSIS</h2>
 <p> euca-accept-vpc-peering-connection [&#8211;show-empty-fields] [-U URL]</p>

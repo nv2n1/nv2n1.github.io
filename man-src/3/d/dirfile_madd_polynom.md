@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_madd_polynom(3)"
 name: "dirfile_madd_polynom"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_madd_polynom/"
 description: "dirfile_madd_bit, dirfile_madd_clincom, dirfile_madd_const, dirfile_madd_cpolynom, dirfile_madd_lincom, dirfile_madd_linterp, dirfile_madd_multiply, dirfile_madd_phase, dirfile_madd_polynom, dirfil..."
 ---
 
-<h2>NAME</h2>
 <p> dirfile_madd_bit, dirfile_madd_clincom, dirfile_madd_const, dirfile_madd_cpolynom, dirfile_madd_lincom, dirfile_madd_linterp, dirfile_madd_multiply, dirfile_madd_phase, dirfile_madd_polynom, dirfile_madd_bit, dirfile_madd_string &#8212; add a field to a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

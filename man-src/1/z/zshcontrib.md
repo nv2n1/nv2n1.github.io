@@ -1,4 +1,5 @@
 ---
+
 title: "zshcontrib(1)"
 name: "zshcontrib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshcontrib/"
 description: "zshcontrib – user contributions to zsh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshcontrib &#8211; user contributions to zsh </p>
 <h2>DESCRIPTION</h2>
 <p> The Zsh source distribution includes a number of items contributed by the user community. These are not inherently a part of the shell, and some may not be available in every zsh installation. The most significant of these are documented here. For documentation on other contributed items such as shell functions, look for comments in the function source files. </p>

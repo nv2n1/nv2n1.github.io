@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_date_time(3)"
 name: "bson_append_date_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_date_time/"
 description: "bson_append_date_time() – The bson_append_date_time() function shall append a new element to a bson document containing a date and time with no timezone information. value is assumed to be in UTC f..."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_date_time() &#8211; The bson_append_date_time() function shall append a new element to a bson document containing a date and time with no timezone information. value is assumed to be in UTC format of milliseconds since the UNIX epoch. value MAY be negative.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

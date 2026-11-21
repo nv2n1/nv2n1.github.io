@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-java(1)"
 name: "abrt-action-analyze-java"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-java/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-java - Calculate and save UUID &amp; DUPHASH and determine the level of usability for reporting of a Java stack trace. 
+abrt-action-analyze-java - Calculate and save UUID &amp; DUPHASH and determine the level of usability for reporting of a Java stack trace. 
 
 <h2>SYNOPSIS</h2>
 

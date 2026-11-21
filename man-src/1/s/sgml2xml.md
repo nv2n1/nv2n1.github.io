@@ -1,4 +1,5 @@
 ---
+
 title: "sgml2xml(1)"
 name: "sgml2xml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgml2xml/"
 description: "osx – An SGML to XML converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osx &#8211; An SGML to XML converter </p>
 <h2>SYNOPSIS</h2>
 <dl>

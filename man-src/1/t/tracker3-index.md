@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-index(1)"
 name: "tracker3-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker3-index/"
 description: "tracker3-index – Index content using the Tracker filesystem miner"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker3-index &#8211; Index content using the Tracker filesystem miner </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

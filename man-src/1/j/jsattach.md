@@ -1,4 +1,5 @@
 ---
+
 title: "jsattach(1)"
 name: "jsattach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jsattach/"
 description: "jsattach – attach a serial line to a joystick device"
 ---
 
-<h2>NAME</h2>
 <p> jsattach &#8211; attach a serial line to a joystick device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jsattach</code> &lt;mode&gt; &lt;device&gt;</p>

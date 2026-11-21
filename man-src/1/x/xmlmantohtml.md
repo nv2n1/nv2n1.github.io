@@ -1,4 +1,5 @@
 ---
+
 title: "xmlmantohtml(1)"
 name: "xmlmantohtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlmantohtml/"
 description: "xmlmantohtml – xml to html converter"
 ---
 
-<h2>NAME</h2>
 <p> xmlmantohtml &#8211; xml to html converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmlmantohtml </code><i>file.1.xml</i><code> &gt; file.1.html </code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "borg(1)"
 name: "borg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-borg/"
 description: "borg – BorgBackup is a deduplicating backup program with optional compression and authenticated encryption."
 ---
 
-<h2>NAME</h2>
 <p> borg &#8211; BorgBackup is a deduplicating backup program with optional compression and authenticated encryption. </p>
 <p> Borg consists of a number of commands. Each command accepts a number of arguments and options. The following sections will describe each command in detail.</p>
 <h2>GENERAL</h2>

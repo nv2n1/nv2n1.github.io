@@ -1,4 +1,5 @@
 ---
+
 title: "ccosf(3)"
 name: "ccosf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ccosf/"
 description: "ccos, ccosf, ccosl – complex cosine function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ccos, ccosf, ccosl &#8211; complex cosine function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

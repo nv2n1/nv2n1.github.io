@@ -1,4 +1,5 @@
 ---
+
 title: "exdbuf(3)"
 name: "exdbuf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exdbuf/"
 description: "exdbuf – How to use double buffering to avoid flicker. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exdbuf &#8211; How to use double buffering to avoid flicker. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

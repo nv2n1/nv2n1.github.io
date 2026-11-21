@@ -1,4 +1,5 @@
 ---
+
 title: "ogonkify(1)"
 name: "ogonkify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogonkify/"
 description: "ogonkify – international support for PostScript"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ogonkify &#8211; international support for PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogonkify</code> [<code>-p</code> <i>procset</i>] [<code>-e</code> <i>encoding</i>] [<code>-r</code> <i>Old=New</i>] [<code>-a</code>] [<code>-c</code>] [<code>-h</code>] [<code>-t</code>] [<code>-A</code>] [<code>-C</code>] [<code>-H</code>] [<code>-T</code>] [<code>-AT</code>] [<code>-CT</code>] [<code>-ATH</code>] [<code>-CTH</code>] [<code>-E</code>] [<code>-N</code>] [<code>-M</code>] [<code>-mp</code>] [<code>-SO</code>] [<code>-AX</code>] [<code>-F</code>] [<code>-RS</code>] [<code>&#8212;</code>] <i>file &#8230;</i> </p>

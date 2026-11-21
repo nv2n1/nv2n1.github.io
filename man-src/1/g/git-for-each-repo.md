@@ -1,4 +1,5 @@
 ---
+
 title: "git-for-each-repo(1)"
 name: "git-for-each-repo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-for-each-repo/"
 description: "git-for-each-repo – Run a Git command on a list of repositories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-for-each-repo &#8211; Run a Git command on a list of repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

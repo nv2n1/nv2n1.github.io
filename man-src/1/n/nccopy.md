@@ -1,4 +1,5 @@
 ---
+
 title: "nccopy(1)"
 name: "nccopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nccopy/"
 description: "nccopy – Copy a netCDF file, optionally changing format, compression, or chunking in the output."
 ---
 
-<h2>NAME</h2>
 <p> nccopy &#8211; Copy a netCDF file, optionally changing format, compression, or chunking in the output.</p>
 <h2>SYNOPSIS</h2>
 <p> <code></p>

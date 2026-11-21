@@ -1,4 +1,5 @@
 ---
+
 title: "fish_indent(1)"
 name: "fish_indent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fish_indent/"
 description: "fish_indent — indenter and prettifier"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fish_indent</code> &#8212; indenter and prettifier </p>
 <h3>Synopsis</h3>
 <pre>

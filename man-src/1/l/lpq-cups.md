@@ -1,4 +1,5 @@
 ---
+
 title: "lpq-cups(1)"
 name: "lpq-cups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lpq-cups/"
 description: "lpq – show printer queue status"
 ---
 
-<h2>NAME</h2>
 <p> lpq &#8211; show printer queue status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lpq</code> [ -E ] [ -U <i>username</i> ] [ -h <i>server[:port]</i> ] [ -P <i>destination[/instance]</i> ] [ -a ] [ -l ] [ <i>+interval</i> ]</p>

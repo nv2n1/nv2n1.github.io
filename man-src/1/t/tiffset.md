@@ -1,4 +1,5 @@
 ---
+
 title: "tiffset(1)"
 name: "tiffset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffset/"
 description: "tiffset – set a field in a TIFF header"
 ---
 
-<h2>NAME</h2>
 <p> tiffset &#8211; set a field in a <font SIZE="-1">TIFF</font> header</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffset</code> [ <i>options</i> ] <i>filename.tif</i></p>

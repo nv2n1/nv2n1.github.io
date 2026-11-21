@@ -1,4 +1,5 @@
 ---
+
 title: "rubber-info(1)"
 name: "rubber-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rubber-info/"
 description: "rubber-info – extract information from LaTeX documents"
 ---
 
-<h2>NAME</h2>
 <p> rubber-info &#8211; extract information from LaTeX documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rubber-info</code> [<i>options</i>] [<i>action</i>] <i>source</i> </p>

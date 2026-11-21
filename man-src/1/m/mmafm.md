@@ -1,4 +1,5 @@
 ---
+
 title: "mmafm(1)"
 name: "mmafm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mmafm/"
 description: "mmafm – creates AFM font metrics for multiple master fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmafm &#8211; creates AFM font metrics for multiple master fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mmafm</code> [OPTIONS&#8230;] <i>font</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-info2(1)"
 name: "voms-proxy-info2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voms-proxy-info2/"
 description: "voms-proxy-info – prints informations about a proxy with VOMS extensions"
 ---
 
-<h2>NAME</h2>
 <p> voms-proxy-info &#8211; prints informations about a proxy with VOMS extensions</p>
 <h2>SYNOPSIS</h2>
 <dl>

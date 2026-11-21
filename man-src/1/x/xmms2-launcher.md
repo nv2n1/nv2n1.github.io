@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2-launcher(1)"
 name: "xmms2-launcher"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmms2-launcher/"
 description: "xmms2-launcher – XMMS2 daemon launcher"
 ---
 
-<h2>NAME</h2>
 <p> xmms2-launcher &#8211; XMMS2 daemon launcher</p>
 <h2>SYNOPSIS</h2>
 <p> <i>xmms2-launcher</i> [ <code>-?</code> / <code>&#8211;help</code> ] <i>xmms2-launcher</i> [ <code>-l </code> logfile / <code>&#8211;logfile=</code> logfile] [ <code>-P </code> pidfile / <code>&#8211;pidfile=</code> pidfile]</p>

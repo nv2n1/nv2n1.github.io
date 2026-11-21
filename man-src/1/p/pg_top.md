@@ -1,4 +1,5 @@
 ---
+
 title: "pg_top(1)"
 name: "pg_top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_top/"
 description: "pg_top – display and update information about the top cpu PostgreSQL processes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_top &#8211; display and update information about the top cpu PostgreSQL processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pg_top</code> [ OPTIONS ] [ NUMBER ]</p>

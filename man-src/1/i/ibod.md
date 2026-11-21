@@ -1,4 +1,5 @@
 ---
+
 title: "ibod(1)"
 name: "ibod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibod/"
 description: "ibod – ISDN MPPP bandwidth on demand daemon"
 ---
 
-<h2>NAME</h2>
 <p> ibod &#8211; ISDN MPPP bandwidth on demand daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibod</code> </p>

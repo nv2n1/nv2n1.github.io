@@ -1,4 +1,5 @@
 ---
+
 title: "virt-inspector(1)"
 name: "virt-inspector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-inspector/"
 description: "virt-inspector – Display operating system version and other information about a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-inspector &#8211; Display operating system version and other information about a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

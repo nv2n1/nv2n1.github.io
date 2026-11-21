@@ -1,4 +1,5 @@
 ---
+
 title: "hal-is-caller-locked-out(1)"
 name: "hal-is-caller-locked-out"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-is-caller-locked-out/"
 description: "hal-is-caller-locked-out – determine if a caller is locked out"
 ---
 
-<h2>NAME</h2>
 <p> hal-is-caller-locked-out &#8211; determine if a caller is locked out</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-is-caller-locked-out</code> [options] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "adddebug(1)"
 name: "adddebug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-adddebug/"
 description: "adddebug – Modifies Makefile(s) to add debug info"
 ---
 
-<h2 class="name">NAME</h2>
 <p> adddebug &#8211; Modifies Makefile(s) to add debug info </p>
 <h2>SYNOPSIS</h2>
 <dl>

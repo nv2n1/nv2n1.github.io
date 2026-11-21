@@ -1,4 +1,5 @@
 ---
+
 title: "postlog(1)"
 name: "postlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postlog/"
 description: "postlog – Postfix-compatible logging utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postlog &#8211; Postfix-compatible logging utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postlog</code> [<code>-iv</code>] [<code>-c </code><i>config_dir</i>] [<code>-p </code><i>priority</i>] [<code>-t </code><i>tag</i>] [<i>text&#8230;</i>]</p>

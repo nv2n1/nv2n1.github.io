@@ -1,4 +1,5 @@
 ---
+
 title: "ptaskset(1)"
 name: "ptaskset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ptaskset/"
 description: "ptaskset (python-schedutils) – set or get the affinity of a process"
 ---
 
-<h2>NAME</h2>
 <p> <code>ptaskset (python-schedutils) &#8211; set or get the affinity of a process</code></p>
 <h2>SYNOPSIS</h2>
 <p> ptaskset [options] [mask | cpu-list] [pid | cmd [args&#8230;]]</p>

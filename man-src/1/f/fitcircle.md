@@ -1,4 +1,5 @@
 ---
+
 title: "fitcircle(1)"
 name: "fitcircle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fitcircle/"
 description: "fitcircle – find mean position and pole of best-fit great [or small] circle to points on a sphere."
 ---
 
-<h2>NAME</h2>
 <p> fitcircle &#8211; find mean position and pole of best-fit great [or small] circle to points on a sphere.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fitcircle</code> [ <i>table</i> ] <i>norm</i> [ <i>flags</i> ] [ [<i>lat</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

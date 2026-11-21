@@ -1,4 +1,5 @@
 ---
+
 title: "globus_hashtable_int_keyeq(3)"
 name: "globus_hashtable_int_keyeq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_hashtable_int_keyeq/"
 description: "globus_hashtable.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_hashtable.h &#8211; </p>
 <p> Hash Table.</p>
 <h2>SYNOPSIS</h2>

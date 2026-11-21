@@ -1,4 +1,5 @@
 ---
+
 title: "acl_init(3)"
 name: "acl_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_init/"
 description: "acl_init – initialize ACL working storage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_init</code> &#8211; initialize ACL working storage </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

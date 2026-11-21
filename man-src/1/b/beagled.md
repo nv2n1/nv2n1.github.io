@@ -1,4 +1,5 @@
 ---
+
 title: "beagled(1)"
 name: "beagled"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagled/"
 description: "beagled – the Beagle desktop search daemon"
 ---
 
-<h2>NAME</h2>
 <p> beagled &#8211; the Beagle desktop search daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagled</code> [<i>options</i>]</p>

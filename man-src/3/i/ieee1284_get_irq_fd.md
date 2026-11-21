@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_get_irq_fd(3)"
 name: "ieee1284_get_irq_fd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_get_irq_fd/"
 description: "ieee1284_get_irq_fd, ieee1284_clear_irq – interrupt notification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_get_irq_fd, ieee1284_clear_irq &#8211; interrupt notification </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

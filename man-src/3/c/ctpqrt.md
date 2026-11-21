@@ -1,4 +1,5 @@
 ---
+
 title: "ctpqrt(3)"
 name: "ctpqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctpqrt/"
 description: "ctpqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctpqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_cohort(3)"
 name: "ck_cohort"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_cohort/"
 description: "ck_cohort – generalized interface for lock cohorts"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_cohort</code> &#8211; generalized interface for lock cohorts</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

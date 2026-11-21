@@ -1,4 +1,5 @@
 ---
+
 title: "afpcmd(1)"
 name: "afpcmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afpcmd/"
 description: "afpcmd – Transfer files over the networking using the Apple Filing Protocol (AFP)"
 ---
 
-<h2>NAME</h2>
 <p> afpcmd &#8211; Transfer files over the networking using the Apple Filing Protocol (AFP)</p>
 <h2>SYNOPSIS</h2>
 <p> <i>afpcmd</i> [<code>-r</code> [<code>afp url</code>] </p>

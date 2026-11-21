@@ -1,4 +1,5 @@
 ---
+
 title: "ogmmerge(1)"
 name: "ogmmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogmmerge/"
 description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 ---
 
-<h2>NAME</h2>
 <p> ogmmerge &#8211; Merge multimedia streams into an OGG/OGM file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogmmerge</code> [<i>global options</i>] -o <i>out</i> [<i>options</i>] &lt;file1&gt; [[<i>options</i>] &lt;file2&gt; &#8230;]</p>

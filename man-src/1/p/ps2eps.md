@@ -1,4 +1,5 @@
 ---
+
 title: "ps2eps(1)"
 name: "ps2eps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ps2eps/"
 description: "ps2eps – convert PostScript to EPS (Encapsulated PostScript) files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ps2eps &#8211; convert PostScript to EPS (Encapsulated PostScript) files </p>
 <h2>SYNOPSIS</h2>
 <dl>

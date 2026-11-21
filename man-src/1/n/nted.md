@@ -1,4 +1,5 @@
 ---
+
 title: "nted(1)"
 name: "nted"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nted/"
 description: "NtEd – A WYSIWYG Musical Score Editor"
 ---
 
-<h2>NAME</h2>
 <p> NtEd &#8211; A WYSIWYG Musical Score Editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nted</code> [file]</p>

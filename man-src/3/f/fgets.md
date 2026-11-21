@@ -1,4 +1,5 @@
 ---
+
 title: "fgets(3)"
 name: "fgets"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgets/"
 description: "fgetc, fgets, getc, getchar, ungetc – input of characters and strings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fgetc, fgets, getc, getchar, ungetc &#8211; input of characters and strings </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_open(3)"
 name: "ieee1284_open"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_open/"
 description: "ieee1284_open – open a port"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_open &#8211; open a port </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

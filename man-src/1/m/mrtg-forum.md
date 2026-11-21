@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-forum(1)"
 name: "mrtg-forum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-forum/"
 description: "mrtg-forum – Interactive Help for MRTG users"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mrtg-forum &#8211; Interactive Help for MRTG users </p>
 <h2>SYNOPSIS</h2>
 <p> There is a lot of written documentation for mrtg, but nevertheless you may have a problem where you can&#8217;t find the solution. In this case some Human Help may be necessary. With <font SIZE="-1">MRTG</font> there are several ways to get Humans to help you.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-lib-14(1)"
 name: "llvm-lib-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-lib-14/"
 description: "llvm-lib – LLVM lib.exe compatible library tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-lib &#8211; LLVM lib.exe compatible library tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-lib</code> [/libpath:&lt;path&gt;] [/out:&lt;output&gt;] [/llvmlibthin] [/ignore] [/machine] [/nologo] [files…]</p>

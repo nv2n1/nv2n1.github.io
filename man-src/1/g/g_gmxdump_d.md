@@ -1,4 +1,5 @@
 ---
+
 title: "g_gmxdump_d(1)"
 name: "g_gmxdump_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_gmxdump_d/"
 description: "gmxdump – makes binary files human readable"
 ---
 
-<h2>NAME</h2>
 <p> gmxdump &#8211; makes binary files human readable </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "joy(3)"
 name: "joy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-joy/"
 description: "joy – Global array of joystick state information. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> joy &#8211; Global array of joystick state information. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

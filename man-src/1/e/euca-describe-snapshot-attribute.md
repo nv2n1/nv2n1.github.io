@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-snapshot-attribute(1)"
 name: "euca-describe-snapshot-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-snapshot-attribute/"
 description: "euca-describe-snapshot-attribute – Show information about an attribute of a snapshot"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-snapshot-attribute &#8211; Show information about an attribute of a snapshot</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-snapshot-attribute (<code>-c</code> | <code>-p</code>) [&#8211;show-empty-fields]</p>

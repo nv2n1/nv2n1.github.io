@@ -1,4 +1,5 @@
 ---
+
 title: "nvim(1)"
 name: "nvim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvim/"
 description: "nvim – edit text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>nvim</code> &#8211; edit text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nvim</code> [<i>options</i> ] [<i>file &#8230;</i> ]<br />

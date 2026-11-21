@@ -1,4 +1,5 @@
 ---
+
 title: "mate-window-properties(1)"
 name: "mate-window-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-window-properties/"
 description: "mate-window-properties – configure MATE network proxy"
 ---
 
-<h2>NAME</h2>
 <p> mate-window-properties &#8211; configure MATE network proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-window-properties</code> [<i>OPTIONS&#8230;</i>]</p>

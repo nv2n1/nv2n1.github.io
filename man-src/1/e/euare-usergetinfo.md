@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetinfo(1)"
 name: "euare-usergetinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usergetinfo/"
 description: "euare-usergetinfo – [Eucalyptus only] Display information about a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-usergetinfo &#8211; [Eucalyptus only] Display information about a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usergetinfo [-k INFOKEY] [&#8211;as-account ACCOUNT]</p>

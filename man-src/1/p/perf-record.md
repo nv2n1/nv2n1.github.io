@@ -1,4 +1,5 @@
 ---
+
 title: "perf-record(1)"
 name: "perf-record"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-record/"
 description: "perf-record – Run a command and record its profile into perf.data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-record &#8211; Run a command and record its profile into perf.data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

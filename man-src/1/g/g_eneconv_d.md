@@ -1,4 +1,5 @@
 ---
+
 title: "g_eneconv_d(1)"
 name: "g_eneconv_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_eneconv_d/"
 description: "eneconv – converts energy files"
 ---
 
-<h2>NAME</h2>
 <p> eneconv &#8211; converts energy files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

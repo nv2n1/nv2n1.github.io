@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-run-session(1)"
 name: "dbus-run-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-run-session/"
 description: "dbus-run-session – start a process as a new D-Bus session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-run-session &#8211; start a process as a new D-Bus session </p>
 <h2>SYNOPSIS</h2>
 <dl>

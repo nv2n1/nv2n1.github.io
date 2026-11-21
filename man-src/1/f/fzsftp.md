@@ -1,4 +1,5 @@
 ---
+
 title: "fzsftp(1)"
 name: "fzsftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fzsftp/"
 description: "fzsftp – SFTP connection handler of FileZilla"
 ---
 
-<h2>NAME</h2>
 <p> fzsftp &#8211; SFTP connection handler of FileZilla</p>
 <h2>DESCRIPTION</h2>
 <p> <code>fzsftp</code> is part of FileZilla. It is used to handle SFTP (SSH File Transfer Protocol) connections. It usually gets called by FileZilla and is not intended to be used directly. </p>

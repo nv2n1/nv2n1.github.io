@@ -1,4 +1,5 @@
 ---
+
 title: "nco(1)"
 name: "nco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nco/"
 description: "NCO – netCDF Operators"
 ---
 
-<h2>NAME</h2>
 <p> NCO &#8211; netCDF Operators</p>
 <h2>SYNTAX</h2>
 <p> operator [ <i>options</i>] <i>input-files</i> <i>output-file</i></p>

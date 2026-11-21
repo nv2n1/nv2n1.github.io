@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-network-acl-association(1)"
 name: "euca-replace-network-acl-association"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-replace-network-acl-association/"
 description: "euca-replace-network-acl-association – Associate a new VPC network ACL with a subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-replace-network-acl-association &#8211; Associate a new VPC network ACL with a subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-replace-network-acl-association <code>-a</code> ACL [&#8211;show-empty-fields]</p>

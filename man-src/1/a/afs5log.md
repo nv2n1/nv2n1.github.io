@@ -1,4 +1,5 @@
 ---
+
 title: "afs5log(1)"
 name: "afs5log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afs5log/"
 description: "afs5log – AFS token initializer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> afs5log &#8211; AFS token initializer</p>
 <h2>SYNOPSIS</h2>
 <p> afs5log [ [-v] [-5] [-k] [-p <i>path</i>] [cell[=principal] ] ] [&#8230;] </p>

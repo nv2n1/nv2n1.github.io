@@ -1,4 +1,5 @@
 ---
+
 title: "pg_test_fsync(1)"
 name: "pg_test_fsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_test_fsync/"
 description: "pg_test_fsync – determine fastest wal_sync_method for PostgreSQL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_test_fsync &#8211; determine fastest wal_sync_method for PostgreSQL </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpstrip(1)"
 name: "gpstrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpstrip/"
 description: "gpstrip – discard symbols from object file"
 ---
 
-<h2>NAME</h2>
 <p> gpstrip &#8211; discard symbols from object file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpstrip [options] [file(s)]</code></p>

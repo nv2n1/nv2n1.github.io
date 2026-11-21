@@ -1,4 +1,5 @@
 ---
+
 title: "get_font_range_begin(3)"
 name: "get_font_range_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_font_range_begin/"
 description: "get_font_range_begin – Returns the start of a character range in a font. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_font_range_begin &#8211; Returns the start of a character range in a font. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

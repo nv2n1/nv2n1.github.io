@@ -1,4 +1,5 @@
 ---
+
 title: "ber_put_seq(3)"
 name: "ber_put_seq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ber_put_seq/"
 description: "ber_alloc_t, ber_flush, ber_flush2, ber_printf, ber_put_int, ber_put_enum, ber_put_ostring, ber_put_string, ber_put_null, ber_put_boolean, ber_put_bitstring, ber_start_seq, ber_start_set, ber_put_s..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ber_alloc_t, ber_flush, ber_flush2, ber_printf, ber_put_int, ber_put_enum, ber_put_ostring, ber_put_string, ber_put_null, ber_put_boolean, ber_put_bitstring, ber_start_seq, ber_start_set, ber_put_seq, ber_put_set &#8211; OpenLDAP LBER simplified Basic Encoding Rules library routines for encoding </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>

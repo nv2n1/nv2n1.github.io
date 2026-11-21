@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-check-events(1)"
 name: "trace-cmd-check-events"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-check-events/"
 description: "trace-cmd-check-events – parse the event formats on local system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-check-events &#8211; parse the event formats on local system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd check-events</code> [<i>OPTIONS</i>]</p>

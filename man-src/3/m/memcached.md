@@ -1,4 +1,5 @@
 ---
+
 title: "memcached(3)"
 name: "memcached"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached/"
 description: "memcached – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached-1.0/memcached.h&gt;</p>

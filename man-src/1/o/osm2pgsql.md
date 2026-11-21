@@ -1,4 +1,5 @@
 ---
+
 title: "osm2pgsql(1)"
 name: "osm2pgsql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osm2pgsql/"
 description: "osm2pgsql – Openstreetmap data to PostgreSQL converter."
 ---
 
-<h2 class="name">NAME</h2>
 <p> osm2pgsql &#8211; Openstreetmap data to PostgreSQL converter. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm</i><br />

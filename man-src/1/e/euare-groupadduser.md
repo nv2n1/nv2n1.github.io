@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupadduser(1)"
 name: "euare-groupadduser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupadduser/"
 description: "euare-groupadduser – Add a user to a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupadduser &#8211; Add a user to a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupadduser <code>-u</code> USERNAME [&#8211;as-account ACCOUNT] [-U URL]</p>

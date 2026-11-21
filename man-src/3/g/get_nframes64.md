@@ -1,4 +1,5 @@
 ---
+
 title: "get_nframes64(3)"
 name: "get_nframes64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_nframes64/"
 description: "get_nframes64 — report the size of a dirfile with largefile support"
 ---
 
-<h2>NAME</h2>
 <p> get_nframes64 &#8212; report the size of a dirfile with largefile support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> </p>

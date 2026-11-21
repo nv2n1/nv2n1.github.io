@@ -1,4 +1,5 @@
 ---
+
 title: "eps2eps(1)"
 name: "eps2eps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eps2eps/"
 description: "ps2ps, eps2eps – Ghostscript PostScript \"distiller\""
 ---
 
-<h2 class="name">NAME</h2>
 <p> ps2ps, eps2eps &#8211; Ghostscript PostScript &quot;distiller&quot; </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ps2ps</code> [ <i>options</i> ] <i>input output.ps</i><br />

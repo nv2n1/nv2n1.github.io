@@ -1,4 +1,5 @@
 ---
+
 title: "pamtopfm(1)"
 name: "pamtopfm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtopfm/"
 description: "pamtopfm – Convert Netpbm image to PFM (Portable Float Map)"
 ---
 
-<h2>NAME</h2>
 <p> pamtopfm &#8211; Convert Netpbm image to PFM (Portable Float Map) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtopfm</code> [<code>-endian=</code>{<code>big</code>|<code>little</code>}] [<code>-scale=</code><i>float</i>] [<i>imagefile</i>] </p>

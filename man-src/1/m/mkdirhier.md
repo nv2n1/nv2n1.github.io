@@ -1,4 +1,5 @@
 ---
+
 title: "mkdirhier(1)"
 name: "mkdirhier"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkdirhier/"
 description: "mkdirhier – makes a directory hierarchy"
 ---
 
-<h2>NAME</h2>
 <p> mkdirhier &#8211; makes a directory hierarchy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkdirhier</code> directory &#8230;</p>

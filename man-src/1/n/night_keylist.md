@@ -1,4 +1,5 @@
 ---
+
 title: "night_keylist(1)"
 name: "night_keylist"
 section: "1"
@@ -6,9 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-night_keylist/"
 ---
 
-<h2>NAME</h2>
-
- night_keylist - print value of the FITS header keyword
+night_keylist - print value of the FITS header keyword
 
 <h2>SYNOPSIS</h2>
 

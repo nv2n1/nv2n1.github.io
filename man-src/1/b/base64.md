@@ -1,4 +1,5 @@
 ---
+
 title: "base64(1)"
 name: "base64"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-base64/"
 description: "base64 – base64 encode/decode data and print to standard output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> base64 &#8211; base64 encode/decode data and print to standard output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>base64</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>

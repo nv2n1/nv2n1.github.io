@@ -1,4 +1,5 @@
 ---
+
 title: "cache-clean(1)"
 name: "cache-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cache-clean/"
 description: "cache-clean – Administration tool for the A-REX cache."
 ---
 
-<h2>NAME</h2>
 <p> cache-clean &#8211; Administration tool for the A-REX cache. </p>
 <h2>SYNOPSIS</h2>
 <p> cache-clean [-h] [-s] [-S] [-m NN -M NN] [-E N] [-D debug_level]<br />

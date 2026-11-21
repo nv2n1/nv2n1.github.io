@@ -1,4 +1,5 @@
 ---
+
 title: "macpack(1)"
 name: "macpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-macpack/"
 description: "macpack – Macintosh OS X Packager for managed gui assemblies"
 ---
 
-<h2>NAME</h2>
 <p> macpack &#8211; Macintosh OS X Packager for managed gui assemblies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>macpack [options] assembly</code></p>

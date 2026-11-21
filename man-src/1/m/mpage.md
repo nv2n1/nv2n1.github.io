@@ -1,4 +1,5 @@
 ---
+
 title: "mpage(1)"
 name: "mpage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpage/"
 description: "mpage – print multiple pages per sheet on PostScript printer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpage &#8211; print multiple pages per sheet on PostScript printer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpage</code> [<code>-1248aAceEfHloOrRStTuUvVxX</code>] [<code>-b</code><i>&nbsp;<wbr>papersize</i>] [<code>-B</code>[<i>num</i>[<code>lrtb</code>]]&#8230;] [<code>-C</code> [<i>encoding</i>]] [<code>-da</code><i>|</i><code>p</code>] [<code>-D</code><i>&nbsp;<wbr>dateformat</i>] [<code>-F</code><i>&nbsp;<wbr>fontname</i>] [<code>-h</code><i>&nbsp;<wbr>header</i>] [<code>-j</code><i>&nbsp;<wbr>first</i>[-<i>last</i>][%<i>interval</i>]] [<code>-J</code><i>&nbsp;<wbr>startpageno</i>] [<code>-L</code><i>&nbsp;<wbr>lines</i>] [<code>-m</code>[<i>num</i>[<code>lrtb</code>]]&#8230;] [<code>-M</code>[<i>num</i>[<code>lrtb</code>]]&#8230;] [<code>-p</code>[<i>prprog</i>]] [<code>-P</code>[<i>printer</i>]] [<code>-s</code><i>&nbsp;<wbr>tabstop</i>] [<code>-W</code><i>&nbsp;<wbr>width</i>] [<code>-z</code><i>&nbsp;<wbr>printcmd</i>] [<code>-Z</code><i>&nbsp;<wbr>printcmd_args</i>] [<i>file</i>&nbsp;<wbr>&#8230;] </p>

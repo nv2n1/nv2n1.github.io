@@ -1,4 +1,5 @@
 ---
+
 title: "tor-resolve(1)"
 name: "tor-resolve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tor-resolve/"
 description: "tor-resolve – resolve a hostname to an IP address via tor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tor-resolve &#8211; resolve a hostname to an IP address via tor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tor-resolve</code> [-4|-5] [-v] [-x] [-p <i>socksport</i>] <i>hostname</i> [<i>sockshost</i>[:<i>socksport</i>]]</p>

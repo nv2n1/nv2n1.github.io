@@ -1,4 +1,5 @@
 ---
+
 title: "synctex(1)"
 name: "synctex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-synctex/"
 description: "synctex – command line client tool to support the Synchronize TeXnology available in most TeX engines."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>synctex</code> &#8211; command line client tool to support the Synchronize TeXnology available in most TeX engines. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>synctex</code> <i>command</i> [<i>options</i>] [<i>args</i>]</p>

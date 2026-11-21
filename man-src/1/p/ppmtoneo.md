@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoneo(1)"
 name: "ppmtoneo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoneo/"
 description: "ppmtoneo – convert a portable pixmap into an Atari Neochrome .neo file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoneo &#8211; convert a portable pixmap into an Atari Neochrome .neo file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoneo</code> [<i>ppmfile</i>]</p>

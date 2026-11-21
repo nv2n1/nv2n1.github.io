@@ -1,4 +1,5 @@
 ---
+
 title: "irsend(1)"
 name: "irsend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irsend/"
 description: "irsend – basic LIRC program to send infra-red commands"
 ---
 
-<h2>NAME</h2>
 <p> irsend &#8211; basic LIRC program to send infra-red commands</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irsend</code> [<i>options</i>] <i>DIRECTIVE REMOTE CODE </i>[<i>CODE</i>&#8230;]</p>

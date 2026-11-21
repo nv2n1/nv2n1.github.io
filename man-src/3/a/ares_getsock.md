@@ -1,4 +1,5 @@
 ---
+
 title: "ares_getsock(3)"
 name: "ares_getsock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_getsock/"
 description: "ares_getsock – get socket descriptors to wait on"
 ---
 
-<h2>NAME</h2>
 <p> ares_getsock &#8211; get socket descriptors to wait on</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

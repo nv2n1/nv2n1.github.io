@@ -1,4 +1,5 @@
 ---
+
 title: "spbtrs(3)"
 name: "spbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spbtrs/"
 description: "spbtrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

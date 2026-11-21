@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-distrib(1)"
 name: "hwloc-distrib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-distrib/"
 description: "hwloc-distrib – Build a number of cpu masks distributed on the system"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-distrib &#8211; Build a number of cpu masks distributed on the system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-distrib</code> [<i>options</i>] <i>&lt;integer&gt;</i></p>

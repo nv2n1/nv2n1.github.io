@@ -1,4 +1,5 @@
 ---
+
 title: "mimeexplode(1)"
 name: "mimeexplode"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimeexplode/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimeexplode - explode one or more MIME messages 
+mimeexplode - explode one or more MIME messages 
 
 <h2>SYNOPSIS</h2>
 

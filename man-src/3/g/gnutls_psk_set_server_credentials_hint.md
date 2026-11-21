@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_set_server_credentials_hint(3)"
 name: "gnutls_psk_set_server_credentials_hint"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_psk_set_server_credentials_hint/"
 description: "gnutls_psk_set_server_credentials_hint – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_psk_set_server_credentials_hint &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

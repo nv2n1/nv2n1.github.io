@@ -1,4 +1,5 @@
 ---
+
 title: "cvsgraph(1)"
 name: "cvsgraph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cvsgraph/"
 description: "cvsgraph – A CVS/RCS repository grapher"
 ---
 
-<h2>NAME</h2>
 <p> cvsgraph &#8211; A CVS/RCS repository grapher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cvsgraph</code> [<i>options</i>] [<i>file</i>]</p>

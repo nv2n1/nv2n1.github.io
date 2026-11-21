@@ -1,4 +1,5 @@
 ---
+
 title: "get_sound_input_cap_rate(3)"
 name: "get_sound_input_cap_rate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_sound_input_cap_rate/"
 description: "get_sound_input_cap_rate – Returns the maximum sample frequency for recording. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_sound_input_cap_rate &#8211; Returns the maximum sample frequency for recording. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

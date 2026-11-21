@@ -1,4 +1,5 @@
 ---
+
 title: "encode_keychange(1)"
 name: "encode_keychange"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-encode_keychange/"
 description: "encode_keychange – produce the KeyChange string for SNMPv3"
 ---
 
-<h2>NAME</h2>
 <p> encode_keychange &#8211; produce the KeyChange string for SNMPv3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>encode_keychange </code> -t md5|sha1 [<i>OPTIONS</i>]</p>

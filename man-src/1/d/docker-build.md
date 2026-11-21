@@ -1,4 +1,5 @@
 ---
+
 title: "docker-build(1)"
 name: "docker-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-build/"
 description: "docker-build – Build an image from a Dockerfile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-build &#8211; Build an image from a Dockerfile </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker build</code> [<code>&#8211;add-host</code>[=<i>[]</i>]] [<code>&#8211;build-arg</code>[=<i>[]</i>]] [<code>&#8211;cache-from</code>[=<i>[]</i>]] [<code>&#8211;cpu-shares</code>[=<i>0</i>]] [<code>&#8211;cgroup-parent</code>[=<i>CGROUP-PARENT</i>]] [<code>&#8211;help</code>] [<code>&#8211;iidfile</code>[=<i>CIDFILE</i>]] [<code>-f</code>|<code>&#8211;file</code>[=<i>PATH/Dockerfile</i>]] [<code>-squash</code>] <i>Experimental</i> [<code>&#8211;force-rm</code>] [<code>&#8211;isolation</code>[=<i>default</i>]] [<code>&#8211;label</code>[=<i>[]</i>]] [<code>&#8211;no-cache</code>] [<code>&#8211;pull</code>] [<code>&#8211;compress</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>&#8211;rm</code>[=<i>true</i>]] [<code>-t</code>|<code>&#8211;tag</code>[=<i>[]</i>]] [<code>-m</code>|<code>&#8211;memory</code>[=<i>MEMORY</i>]] [<code>&#8211;memory-swap</code>[=<i>LIMIT</i>]] [<code>&#8211;network</code>[=<i>&quot;default&quot;</i>]] [<code>&#8211;shm-size</code>[=<i>SHM-SIZE</i>]] [<code>&#8211;cpu-period</code>[=<i>0</i>]] [<code>&#8211;cpu-quota</code>[=<i>0</i>]] [<code>&#8211;cpuset-cpus</code>[=<i>CPUSET-CPUS</i>]] [<code>&#8211;cpuset-mems</code>[=<i>CPUSET-MEMS</i>]] [<code>&#8211;target</code>[=<i>[]</i>]] [<code>&#8211;ulimit</code>[=<i>[]</i>]] PATH | URL | &#8211; </p>

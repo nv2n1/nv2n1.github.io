@@ -1,4 +1,5 @@
 ---
+
 title: "espdiff(1)"
 name: "espdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-espdiff/"
 description: "espdiff – apply the appropriate transformation to a set of patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> espdiff &#8211; apply the appropriate transformation to a set of patches </p>
 <h2>SYNOPSIS</h2>
 <dl>

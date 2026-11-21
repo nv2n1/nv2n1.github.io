@@ -1,4 +1,5 @@
 ---
+
 title: "statfs64(2)"
 name: "statfs64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-statfs64/"
 description: "statfs, fstatfs – get filesystem statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> statfs, fstatfs &#8211; get filesystem statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/vfs.h&gt; </code>/* or &lt;sys/statfs.h&gt; */ </p>

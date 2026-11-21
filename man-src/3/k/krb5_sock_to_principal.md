@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_sock_to_principal(3)"
 name: "krb5_sock_to_principal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_sock_to_principal/"
 description: "krb5_get_default_principal krb5_principal krb5_build_principal krb5_build_principal_ext krb5_build_principal_va krb5_build_principal_va_ext krb5_copy_principal krb5_free_principal krb5_make_princip..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_default_principal</code> <code>krb5_principal</code> <code>krb5_build_principal</code> <code>krb5_build_principal_ext</code> <code>krb5_build_principal_va</code> <code>krb5_build_principal_va_ext</code> <code>krb5_copy_principal</code> <code>krb5_free_principal</code> <code>krb5_make_principal</code> <code>krb5_parse_name</code> <code>krb5_parse_name_flags</code> <code>krb5_parse_nametype</code> <code>krb5_princ_set_realm</code> <code>krb5_principal_compare</code> <code>krb5_principal_compare_any_realm</code> <code>krb5_principal_get_comp_string</code> <code>krb5_principal_get_realm</code> <code>krb5_principal_get_type</code> <code>krb5_principal_match</code> <code>krb5_principal_set_type</code> <code>krb5_realm_compare</code> <code>krb5_sname_to_principal</code> <code>krb5_sock_to_principal</code> <code>krb5_unparse_name</code> <code>krb5_unparse_name_flags</code> <code>krb5_unparse_name_fixed</code> <code>krb5_unparse_name_fixed_flags</code> <code>krb5_unparse_name_fixed_short</code> <code>krb5_unparse_name_short</code> &#8211; Kerberos 5 principal handling functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

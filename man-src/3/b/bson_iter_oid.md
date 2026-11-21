@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_oid(3)"
 name: "bson_iter_oid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_oid/"
 description: "bson_iter_oid() – Fetches the bson_oid_t for a BSON_TYPE_OID element. You should verify it is an element of type BSON_TYPE_OID before calling this function."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_oid() &#8211; Fetches the bson_oid_t for a BSON_TYPE_OID element. You should verify it is an element of type BSON_TYPE_OID before calling this function.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "psbbox(1)"
 name: "psbbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psbbox/"
 description: "psbbox.sh – Replace BoundingBox line in PostScript files by \"real\" BoundingBox"
 ---
 
-<h2>NAME</h2>
 <p> psbbox.sh &#8211; Replace BoundingBox line in PostScript files by &quot;real&quot; BoundingBox</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psbbox.sh</code> <i>file</i> &#8230;</p>

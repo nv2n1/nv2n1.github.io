@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_set_server_avp_ptr(3)"
 name: "gnutls_ia_set_server_avp_ptr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_set_server_avp_ptr/"
 description: "gnutls_ia_set_server_avp_ptr – Sets a pointer to be sent to TLS/IA callback"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_set_server_avp_ptr &#8211; Sets a pointer to be sent to TLS/IA callback</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

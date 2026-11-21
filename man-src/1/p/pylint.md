@@ -1,4 +1,5 @@
 ---
+
 title: "pylint(1)"
 name: "pylint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pylint/"
 description: "pylint – python code static checker"
 ---
 
-<h2>NAME</h2>
 <p> <code>pylint </code> &#8211; python code static checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pylint</code> [ <i>OPTIONS</i> ] [ <i>&lt;arguments&gt;</i> ] </p>

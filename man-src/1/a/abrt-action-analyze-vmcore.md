@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-vmcore(1)"
 name: "abrt-action-analyze-vmcore"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-vmcore/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-vmcore - Extracts the oops message from the kernel core and install the kernel debuginfo if needed 
+abrt-action-analyze-vmcore - Extracts the oops message from the kernel core and install the kernel debuginfo if needed 
 
 <h2>SYNOPSIS</h2>
 

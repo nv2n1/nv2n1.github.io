@@ -1,4 +1,5 @@
 ---
+
 title: "gmt2bin(1)"
 name: "gmt2bin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmt2bin/"
 description: "gmt2bin – Create bin-index files from gmt files"
 ---
 
-<h2>NAME</h2>
 <p> gmt2bin &#8211; Create bin-index files from gmt files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmt2bin</code> <i>listfile</i> [ <code>-P</code><i>path</i> ] [ <code>-V</code> ]</p>

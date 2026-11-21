@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-config(1)"
 name: "llvm-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-config/"
 description: "llvm-config – Print LLVM compilation options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-config &#8211; Print LLVM compilation options </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-config</code> <i>option</i> [<i>components</i>&#8230;]</p>

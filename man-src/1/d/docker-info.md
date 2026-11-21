@@ -1,4 +1,5 @@
 ---
+
 title: "docker-info(1)"
 name: "docker-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-info/"
 description: "docker-info – Display system-wide information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-info &#8211; Display system-wide information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker info [OPTIONS]</code> </p>

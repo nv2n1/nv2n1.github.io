@@ -1,4 +1,5 @@
 ---
+
 title: "ctprfs(3)"
 name: "ctprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctprfs/"
 description: "ctprfs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

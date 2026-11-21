@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb(1)"
 name: "eulb-create-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-lb/"
 description: "eulb-create-lb – Create a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-lb &#8211; Create a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-lb (<code>-s</code> SUBNET1,SUBNET2,&#8230; | <code>-z</code> ZONE1,ZONE2,&#8230;) <code>-l</code></p>

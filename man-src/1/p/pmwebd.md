@@ -1,4 +1,5 @@
 ---
+
 title: "pmwebd(1)"
 name: "pmwebd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmwebd/"
 description: "pmwebd – web access to PCP"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmwebd</code> &#8211; web access to PCP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmwebd</code> [<code>-p</code> <i>port</i>] [<code>-4</code>] [<code>-6</code>] [<code>-t</code> <i>timeout</i>] [<code>-R</code> <i>resdir</i>] [<code>-c</code> <i>number</i>] [<code>-h</code> <i>hostname</i>] [<code>-a</code> <i>archive</i>] [<code>-P</code>] [<code>-L</code>] [<code>-N</code>] [<code>-G</code>] [<code>-X</code>] [<code>-i</code> <i>min-interval</i>] [<code>-I</code> [<code>-K</code> <i>spec</i>] [<code>-A</code> <i>archivesdir</i>] [<code>-S</code>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>] [<code>-v</code>] [<code>-?</code>]</p>

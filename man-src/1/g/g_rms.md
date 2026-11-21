@@ -1,4 +1,5 @@
 ---
+
 title: "g_rms(1)"
 name: "g_rms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_rms/"
 description: "g_rms – calculates rmsd’s with a reference structure and rmsd matrices"
 ---
 
-<h2>NAME</h2>
 <p> g_rms &#8211; calculates rmsd&#8217;s with a reference structure and rmsd matrices </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

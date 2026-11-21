@@ -1,4 +1,5 @@
 ---
+
 title: "psmegaplot(1)"
 name: "psmegaplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psmegaplot/"
 description: "psmegaplot – To create poster-size PostScript plots from page-size plot"
 ---
 
-<h2>NAME</h2>
 <p> psmegaplot &#8211; To create poster-size <i>PostScript</i> plots from page-size plot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psmegaplot</code> <i>plotfile</i> <code>-S</code><i>scale</i> [ <code>-C</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-split(1)"
 name: "trace-cmd-split"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-split/"
 description: "trace-cmd-split – split a trace.dat file into smaller files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-split &#8211; split a trace.dat file into smaller files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd split</code> [<i>OPTIONS</i>] [<i>start-time</i> [<i>end-time</i>]]</p>

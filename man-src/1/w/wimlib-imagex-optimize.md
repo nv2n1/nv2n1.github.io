@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-optimize(1)"
 name: "wimlib-imagex-optimize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-optimize/"
 description: "wimlib-imagex-optimize – Optimize a WIM archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-optimize &#8211; Optimize a WIM archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex optimize</code> <i>WIMFILE</i> [<i>OPTION</i>&#8230;]</p>

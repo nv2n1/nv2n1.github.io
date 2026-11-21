@@ -1,4 +1,5 @@
 ---
+
 title: "gtg_new_task(1)"
 name: "gtg_new_task"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtg_new_task/"
 description: "gtg_new_task – Adds a task to the Getting Things GNOME! organizer"
 ---
 
-<h2>NAME</h2>
 <p> gtg_new_task &#8211; Adds a task to the <code>Getting Things GNOME!</code> organizer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtg_new_task</code></p>

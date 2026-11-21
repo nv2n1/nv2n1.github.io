@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_protocol(3)"
 name: "brlapi_protocol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_protocol/"
 description: "BrlAPI’s protocol –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> BrlAPI&#8217;s protocol &#8211; </p>
 <p> Instructions and constants for <i>BrlAPI</i> &#8216;s protocol.</p>
 <h3>Data Structures</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ascii-xfr(1)"
 name: "ascii-xfr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ascii-xfr/"
 description: "ascii-xfr – upload/download files using the ASCII protocol"
 ---
 
-<h2>NAME</h2>
 <p> ascii-xfr &#8211; upload/download files using the ASCII protocol</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ascii-xfr</code> <code>-s|-r</code> [<code>-ednv</code>] [<code>-l</code> <i>linedelay</i>] [<code>-c</code> <i>characterdelay</i>] <i>filename</i></p>

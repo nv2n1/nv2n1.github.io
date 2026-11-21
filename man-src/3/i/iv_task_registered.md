@@ -1,4 +1,5 @@
 ---
+
 title: "iv_task_registered(3)"
 name: "iv_task_registered"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_task_registered/"
 description: "iv_task_register, iv_task_unregister, iv_task_registered – deal with ivykis tasks"
 ---
 
-<h2>NAME</h2>
 <p> iv_task_register, iv_task_unregister, iv_task_registered &#8211; deal with ivykis tasks</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

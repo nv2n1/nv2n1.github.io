@@ -1,4 +1,5 @@
 ---
+
 title: "e2ls(1)"
 name: "e2ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-e2ls/"
 description: "e2ls – list files and directories on an ext2 filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> e2ls &#8211; list files and directories on an ext2 filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2ls</code> [<i>options</i>]<i> file_specification</i></p>

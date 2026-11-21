@@ -1,4 +1,5 @@
 ---
+
 title: "pamtilt(1)"
 name: "pamtilt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtilt/"
 description: "pamtilt – print the tilt angle of a PGM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtilt &#8211; print the tilt angle of a PGM file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtilt</code> [<code>-angle=</code><i>maxangle</i>] [<code>-fast</code>] [<code>-quality=</code><i>q</i>] [<code>-hstep=</code><i>n</i>] [<code>-vstep=</code><i>n</i>] [<code>-dstep=</code><i>n</i>] [<code>-astep=</code><i>n</i>] [<code>-verbose</code>] [<i>pgmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-apply-security-groups-to-lb(1)"
 name: "eulb-apply-security-groups-to-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-apply-security-groups-to-lb/"
 description: "eulb-apply-security-groups-to-lb – [VPC only] Associate one or more security groups with a load balancer. All previous associations with security groups will be replaced."
 ---
 
-<h2>NAME</h2>
 <p> eulb-apply-security-groups-to-lb &#8211; [VPC only] Associate one or more security groups with a load balancer. All previous associations with security groups will be replaced.</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-apply-security-groups-to-lb <code>-g</code> GROUP1,GROUP2,&#8230;</p>

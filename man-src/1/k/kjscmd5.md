@@ -1,4 +1,5 @@
 ---
+
 title: "kjscmd5(1)"
 name: "kjscmd5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kjscmd5/"
 description: "kjscmd5 – Frameworks KJSEmbed interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kjscmd5 &#8211; Frameworks KJSEmbed interpreter </p>
 <h2>SYNOPSIS</h2>
 <dl>

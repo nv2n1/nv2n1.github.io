@@ -1,4 +1,5 @@
 ---
+
 title: "gfcp(1)"
 name: "gfcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfcp/"
 description: "gfcp – manual page for gfcp (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfcp &#8211; manual page for gfcp (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfcp</code> [<i>OPTION</i>]&#8230; <i>SOURCE DEST</i></p>

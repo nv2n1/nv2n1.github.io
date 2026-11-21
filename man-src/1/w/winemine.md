@@ -1,4 +1,5 @@
 ---
+
 title: "winemine(1)"
 name: "winemine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winemine/"
 description: "winemine – Wine Minesweeper game"
 ---
 
-<h2>NAME</h2>
 <p> winemine &#8211; Wine Minesweeper game</p>
 <h2>SYNOPSIS</h2>
 <p> <code>winemine</code></p>

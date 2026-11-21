@@ -1,4 +1,5 @@
 ---
+
 title: "cgset(1)"
 name: "cgset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgset/"
 description: "cgset – set the parameters of given cgroup(s)"
 ---
 
-<h2>NAME</h2>
 <p> cgset &#8211; set the parameters of given cgroup(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgset</code> [<code>-r</code> &lt;<i>name=value</i>&gt;] &lt;<code>cgroup_path</code>&gt; &#8230;<br />

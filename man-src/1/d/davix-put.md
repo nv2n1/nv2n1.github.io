@@ -1,4 +1,5 @@
 ---
+
 title: "davix-put(1)"
 name: "davix-put"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-put/"
 description: "davix-put – Upload tool based on libdavix"
 ---
 
-<h2>NAME</h2>
 <p> davix-put &#8211; Upload tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-put [options]&#8230; local_file url</p>

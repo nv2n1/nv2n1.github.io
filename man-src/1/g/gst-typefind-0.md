@@ -1,4 +1,5 @@
 ---
+
 title: "gst-typefind-0(1)"
 name: "gst-typefind-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-typefind-0/"
 description: "gst-typefind – print MIME type of file"
 ---
 
-<h2>NAME</h2>
 <p> gst-typefind &#8211; print MIME type of file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-typefind &lt;file&gt;</code></p>

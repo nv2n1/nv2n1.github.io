@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_tty(2)"
 name: "ioctl_tty"
 section: "2"
@@ -6,7 +7,7 @@ letter: "i"
 url: "/docs/linux/man/2-ioctl_tty/"
 description: "ioctl_tty – ioctls for terminals and serial lines"
 ---
-<h2 class="name">NAME</h2>
+
 <p> ioctl_tty - ioctls for terminals and serial lines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;termios.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_add_timestamp_item_ex(3)"
 name: "ausearch_add_timestamp_item_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_add_timestamp_item_ex/"
 description: "ausearch_add_timestamp_item_ex – build up search rule"
 ---
 
-<h2>NAME</h2>
 <p> ausearch_add_timestamp_item_ex &#8211; build up search rule</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

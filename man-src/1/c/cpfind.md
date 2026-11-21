@@ -1,4 +1,5 @@
 ---
+
 title: "cpfind(1)"
 name: "cpfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpfind/"
 description: "cpfind – Feature matching for panoramic stitching"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpfind &#8211; Feature matching for panoramic stitching </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpfind</code> [options] -o <i>output_project</i> <i>project.pto</i> </p>

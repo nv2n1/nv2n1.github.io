@@ -1,4 +1,5 @@
 ---
+
 title: "fmtutil(1)"
 name: "fmtutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fmtutil/"
 description: "fmtutil – manage TeX formats and Metafont bases, per-user fmtutil-sys – manage TeX formats and Metafont bases, system-wide mktexfmt – create a TeX format or Metafont base"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmtutil &#8211; manage TeX formats and Metafont bases, per-user<br />
  fmtutil-sys &#8211; manage TeX formats and Metafont bases, system-wide<br />
  mktexfmt &#8211; create a TeX format or Metafont base </p>

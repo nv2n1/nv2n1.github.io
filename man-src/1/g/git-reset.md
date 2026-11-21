@@ -1,4 +1,5 @@
 ---
+
 title: "git-reset(1)"
 name: "git-reset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-reset/"
 description: "git-reset – Reset current HEAD to the specified state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-reset &#8211; Reset current HEAD to the specified state </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

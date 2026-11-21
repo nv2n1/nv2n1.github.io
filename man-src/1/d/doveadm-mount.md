@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-mount(1)"
 name: "doveadm-mount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-mount/"
 description: "doveadm-mount – Manage the list of mountpoints where mails are stored"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-mount &#8211; Manage the list of mountpoints where mails are stored</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>mount</code> <i>command</i> [<i>arguments</i>]</p>

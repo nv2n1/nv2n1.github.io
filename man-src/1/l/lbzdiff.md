@@ -1,4 +1,5 @@
 ---
+
 title: "lbzdiff(1)"
 name: "lbzdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzdiff/"
 description: "lbzcmp, lbzdiff – compare compressed files"
 ---
 
-<h2>NAME</h2>
 <p> lbzcmp, lbzdiff &#8211; compare compressed files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzcmp</code> [ cmp_options ] file1 [ file2 ]<br />

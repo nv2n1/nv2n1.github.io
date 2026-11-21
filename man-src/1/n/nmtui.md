@@ -1,4 +1,5 @@
 ---
+
 title: "nmtui(1)"
 name: "nmtui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nmtui/"
 description: "nmtui – Text User Interface for controlling NetworkManager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nmtui &#8211; Text User Interface for controlling NetworkManager </p>
 <h2>SYNOPSIS</h2>
 <dl>

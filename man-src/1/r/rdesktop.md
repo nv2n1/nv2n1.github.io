@@ -1,4 +1,5 @@
 ---
+
 title: "rdesktop(1)"
 name: "rdesktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdesktop/"
 description: "rdesktop – Remote Desktop Protocol client"
 ---
 
-<h2>NAME</h2>
 <p> <i>rdesktop</i> &#8211; Remote Desktop Protocol client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdesktop [options] server[:port]</code> </p>

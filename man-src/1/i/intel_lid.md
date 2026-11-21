@@ -1,4 +1,5 @@
 ---
+
 title: "intel_lid(1)"
 name: "intel_lid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_lid/"
 description: "intel_lid – Polls the values of different reports about laptop lid state."
 ---
 
-<h2>NAME</h2>
 <p> intel_lid &#8211; Polls the values of different reports about laptop lid state.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_lid</code></p>

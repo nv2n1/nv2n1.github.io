@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-make(1)"
 name: "blaze-make"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blaze-make/"
 description: "blaze-make – generate static content from the BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blaze-make &#8211; generate static content from the BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-make</code> [<code>-cpqrtIFPV</code>] [<code>-b</code> <i>directory</i>] [<code>-d</code> <i>directory</i>] </p>

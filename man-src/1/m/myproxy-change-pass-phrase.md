@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-change-pass-phrase(1)"
 name: "myproxy-change-pass-phrase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-change-pass-phrase/"
 description: "myproxy-change-pass-phrase – change MyProxy passphrase"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-change-pass-phrase &#8211; change MyProxy passphrase</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-change-pass-phrase</code> [ <i>options</i> ]</p>

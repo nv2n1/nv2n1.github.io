@@ -1,5 +1,6 @@
 ---
 
+
 title: "repo(1)"
 name: "repo"
 section: "1"
@@ -9,7 +10,7 @@ description: "npm-repo – Open package repository page in the browser"
 ---
 
 <p> <code>npm-repo</code> &#8211; Open package repository page in the browser </p>
-<h2>SYNOPSIS</h2>
+
 <pre>
 npm repo &lt;pkgname&gt;
 </pre>

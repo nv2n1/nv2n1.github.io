@@ -1,4 +1,5 @@
 ---
+
 title: "pamtowinicon(1)"
 name: "pamtowinicon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtowinicon/"
 description: "pamtowinicon – convert Netpbm PAM images to a Microsoft Windows icon file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtowinicon &#8211; convert Netpbm PAM images to a Microsoft Windows icon file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtowinicon</code> [<code>-pngthreshold=</code><i>threshold</i>] [<code>-truetransparent</code>] [<code>-verbose</code>] [<i>pam_file</i>] </p>

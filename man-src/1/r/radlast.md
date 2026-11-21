@@ -1,4 +1,5 @@
 ---
+
 title: "radlast(1)"
 name: "radlast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radlast/"
 description: "radlast – show \"last\" info from the radwtmp file"
 ---
 
-<h2>NAME</h2>
 <p> radlast &#8211; show &quot;last&quot; info from the radwtmp file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radlast</code> <i>[</i>options<i>]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "spawn-fcgi(1)"
 name: "spawn-fcgi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spawn-fcgi/"
 description: "spawn-fcgi – Spawns FastCGI processes"
 ---
 
-<h2>NAME</h2>
 <p> spawn-fcgi &#8211; Spawns FastCGI processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spawn-fcgi</code> [options] [ &#8212; &lt;fcgiapp&gt; [fcgi app arguments]] </p>

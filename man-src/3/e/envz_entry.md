@@ -1,4 +1,5 @@
 ---
+
 title: "envz_entry(3)"
 name: "envz_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-envz_entry/"
 description: "envz_add, envz_entry, envz_get, envz_merge, envz_remove, envz_strip – environment string support"
 ---
 
-<h2 class="name">NAME</h2>
 <p> envz_add, envz_entry, envz_get, envz_merge, envz_remove, envz_strip &#8211; environment string support </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

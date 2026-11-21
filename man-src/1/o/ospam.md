@@ -1,4 +1,5 @@
 ---
+
 title: "ospam(1)"
 name: "ospam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ospam/"
 description: "ospam – An SGML/XML markup stream editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ospam &#8211; An SGML/XML markup stream editor </p>
 <h2>SYNOPSIS</h2>
 <dl>

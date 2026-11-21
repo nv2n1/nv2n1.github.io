@@ -1,4 +1,5 @@
 ---
+
 title: "globus_openssl_module(3)"
 name: "globus_openssl_module"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_openssl_module/"
 description: "Globus OpenSSL Module –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus OpenSSL Module &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

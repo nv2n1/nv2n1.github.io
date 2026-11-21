@@ -1,4 +1,5 @@
 ---
+
 title: "h5jam(1)"
 name: "h5jam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5jam/"
 description: "h5jam – Add a user block to a HDF5 file"
 ---
 
-<h2>NAME</h2>
 <p> h5jam &#8211; Add a user block to a HDF5 file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5jam </code> <code>-u</code> <i>user_block</i> <code>-i</code> <i>in_file.h5</i> [<code>-o</code> <i>out_file.h5</i>] [<code>&#8211;clobber</code>]</p>

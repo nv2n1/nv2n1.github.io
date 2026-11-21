@@ -1,4 +1,5 @@
 ---
+
 title: "lchfn(1)"
 name: "lchfn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lchfn/"
 description: "lchfn – Change finger information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lchfn &#8211; Change finger information</p>
 <h2>SYNOPSIS</h2>
 <p> lchfn [<i>OPTION</i>]&#8230; [<i>user</i>] </p>

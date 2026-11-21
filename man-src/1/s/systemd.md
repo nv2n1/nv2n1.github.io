@@ -1,4 +1,5 @@
 ---
+
 title: "systemd(1)"
 name: "systemd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd/"
 description: "systemd, init – systemd system and service manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd, init &#8211; systemd system and service manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

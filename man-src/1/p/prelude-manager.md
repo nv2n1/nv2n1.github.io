@@ -1,4 +1,5 @@
 ---
+
 title: "prelude-manager(1)"
 name: "prelude-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prelude-manager/"
 description: "prelude-manager – Collects and normalize events."
 ---
 
-<h2>NAME</h2>
 <p> prelude-manager &#8211; Collects and normalize events.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prelude-manager [options]</code></p>

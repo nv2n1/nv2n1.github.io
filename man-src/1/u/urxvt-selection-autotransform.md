@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-selection-autotransform(1)"
 name: "urxvt-selection-autotransform"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-selection-autotransform/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- selection-autotransform - automatically transform select text 
+selection-autotransform - automatically transform select text 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "grconvert(1)"
 name: "grconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grconvert/"
 description: "grconvert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grconvert</p>
 <h2>DESCRIPTION</h2>
 <p> grconvert converts old binary project files from Xmgr 4.0 to an ASCII format understood by late versions of Xmgr and Grace 5.x </p>

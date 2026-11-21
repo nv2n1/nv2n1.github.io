@@ -1,4 +1,5 @@
 ---
+
 title: "photorec(1)"
 name: "photorec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-photorec/"
 description: "photorec – Recover lost files from harddisk, digital camera and cdrom"
 ---
 
-<h2>NAME</h2>
 <p> photorec &#8211; Recover lost files from harddisk, digital camera and cdrom</p>
 <h2>SYNOPSIS</h2>
 <p> <code>photorec [/log] [/debug] [/d recup_dir] [device|image.dd|image.e01]</code> </p>

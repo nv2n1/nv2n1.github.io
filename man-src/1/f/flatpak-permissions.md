@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-permissions(1)"
 name: "flatpak-permissions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-permissions/"
 description: "flatpak-permissions – List permissions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-permissions &#8211; List permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>

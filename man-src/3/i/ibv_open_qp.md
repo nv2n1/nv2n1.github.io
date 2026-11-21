@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_open_qp(3)"
 name: "ibv_open_qp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_open_qp/"
 description: "ibv_open_qp – open a shareable queue pair (QP)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_open_qp &#8211; open a shareable queue pair (QP) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

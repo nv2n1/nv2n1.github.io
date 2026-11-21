@@ -1,4 +1,5 @@
 ---
+
 title: "ncdump(1)"
 name: "ncdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncdump/"
 description: "ncdump – Convert netCDF file to text form (CDL)"
 ---
 
-<h2>NAME</h2>
 <p> ncdump &#8211; Convert netCDF file to text form (CDL)</p>
 <h2>SYNOPSIS</h2>
 <p> <code></p>

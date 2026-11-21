@@ -1,4 +1,5 @@
 ---
+
 title: "ekiga(1)"
 name: "ekiga"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ekiga/"
 description: "Ekiga – SIP and H.323 Voice over IP and Videoconferencing for UN*X"
 ---
 
-<h2>NAME</h2>
 <p> Ekiga &#8211; SIP and H.323 Voice over IP and Videoconferencing for UN*X</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ekiga [-d level] [-c URL]</code></p>

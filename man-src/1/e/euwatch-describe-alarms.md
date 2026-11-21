@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-describe-alarms(1)"
 name: "euwatch-describe-alarms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-describe-alarms/"
 description: "euwatch-describe-alarms – Describe alarms"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-describe-alarms &#8211; Describe alarms</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-describe-alarms [&#8211;action-prefix PREFIX]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hotspotter(1)"
 name: "hotspotter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hotspotter/"
 description: "hotspotter – Create CVA image from seamount locations"
 ---
 
-<h2>NAME</h2>
 <p> hotspotter &#8211; Create CVA image from seamount locations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hotspotter</code> [<i>tables</i>] <i>rotfile</i> <i>CVAgrid</i> <i>increment</i> <i>region</i> [ <i>upper_age</i> ] [ ] [ ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

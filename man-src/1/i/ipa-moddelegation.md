@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-moddelegation(1)"
 name: "ipa-moddelegation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-moddelegation/"
 description: "ipa-moddelegation – Modify an existing delegation"
 ---
 
-<h2>NAME</h2>
 <p> ipa-moddelegation &#8211; Modify an existing delegation </p>
 <h2>SYNOPSIS</h2>
 <p> ipa-moddelegation [<i>OPTION</i>]&#8230; <i>name</i> </p>

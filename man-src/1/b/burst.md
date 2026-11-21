@@ -1,4 +1,5 @@
 ---
+
 title: "burst(1)"
 name: "burst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-burst/"
 description: "burst – explode digests into messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> burst &#8211; explode digests into messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

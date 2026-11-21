@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_free_checksum_contents(3)"
 name: "krb5_free_checksum_contents"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_free_checksum_contents/"
 description: "krb5_checksum krb5_checksum_disable krb5_checksum_is_collision_proof krb5_checksum_is_keyed krb5_checksumsize krb5_cksumtype_valid krb5_copy_checksum krb5_create_checksum krb5_crypto_get_checksum_t..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_checksum</code> <code>krb5_checksum_disable</code> <code>krb5_checksum_is_collision_proof</code> <code>krb5_checksum_is_keyed</code> <code>krb5_checksumsize</code> <code>krb5_cksumtype_valid</code> <code>krb5_copy_checksum</code> <code>krb5_create_checksum</code> <code>krb5_crypto_get_checksum_type</code> <code>krb5_free_checksum</code> <code>krb5_free_checksum_contents</code> <code>krb5_hmac</code> <code>krb5_verify_checksum</code> &#8211; creates, handles and verifies checksums </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

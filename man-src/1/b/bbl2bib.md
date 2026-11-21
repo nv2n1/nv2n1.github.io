@@ -1,4 +1,5 @@
 ---
+
 title: "bbl2bib(1)"
 name: "bbl2bib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bbl2bib/"
 description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bbl2bib.pl &#8211; convert thebibliography environment to a bib file </p>
 <h2>SYNOPSIS</h2>
 <p> bbl2bib.pl [-d] [-u] [<code>-o</code> <i>output</i>] <i>file</i></p>

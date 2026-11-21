@@ -1,4 +1,5 @@
 ---
+
 title: "ods-hsmspeed(1)"
 name: "ods-hsmspeed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ods-hsmspeed/"
 description: "ods-hsmspeed – OpenDNSSEC HSM speed tester"
 ---
 
-<h2>NAME</h2>
 <p> <code>ods-hsmspeed</code> &#8211; OpenDNSSEC HSM speed tester</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ods-hsmspeed</code> [<code>-c</code> <i>config</i>] <code>-r</code> <i>repository</i> [<code>-i</code> <i>iterations</i>] [<code>-s</code> <i>keysize</i>] [<code>-t</code> <i>threads</i>]</p>

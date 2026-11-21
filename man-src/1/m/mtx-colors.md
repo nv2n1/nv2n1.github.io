@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-colors(1)"
 name: "mtx-colors"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-colors/"
 description: "mtx-colors – ConTeXt Color Management"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-colors &#8211; ConTeXt Color Management </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script colors [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

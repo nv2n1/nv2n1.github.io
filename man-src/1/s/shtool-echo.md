@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-echo(1)"
 name: "shtool-echo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-echo/"
 description: "shtool echo – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool echo &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-echo/">echo</a>(1) extensional command</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cpu_vendor(3)"
 name: "cpu_vendor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpu_vendor/"
 description: "cpu_vendor – Contains the CPU vendor name. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> cpu_vendor &#8211; Contains the CPU vendor name. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-start(3)"
 name: "antlr3-start"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-start/"
 description: "ANTLR3_COMMON_TOKEN_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_COMMON_TOKEN_struct &#8211; </p>
 <p> The definition of an ANTLR3 common token structure, which all implementations of a token stream should provide, installing any further structures in the custom pointer element of this structure.</p>
 <h2>SYNOPSIS</h2>

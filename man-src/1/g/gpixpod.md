@@ -1,4 +1,5 @@
 ---
+
 title: "gpixpod(1)"
 name: "gpixpod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpixpod/"
 description: "gpixpod – organize photos on your iPod, freely"
 ---
 
-<h2>NAME</h2>
 <p> gpixpod &#8211; organize photos on your iPod, freely</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpixpod</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nwfsinfo(1)"
 name: "nwfsinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwfsinfo/"
 description: "nwfsinfo – Print some information about the file server"
 ---
 
-<h2>NAME</h2>
 <p> nwfsinfo &#8211; Print some information about the file server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwfsinfo</code> [<code>-h</code>] [<code>-S</code> <i>server</i>] [<code>-t</code>] [<code>-i</code>] [<code>-d</code>] [<code>-e</code>] </p>

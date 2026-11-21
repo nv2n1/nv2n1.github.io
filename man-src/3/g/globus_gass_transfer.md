@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer(3)"
 name: "globus_gass_transfer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer/"
 description: "GASS Transfer API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GASS Transfer API &#8211; </p>
 <p> GASS Transfer API.</p>
 <h3>Modules</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_enemat_d(1)"
 name: "g_enemat_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_enemat_d/"
 description: "g_enemat – extracts an energy matrix from an energy file"
 ---
 
-<h2>NAME</h2>
 <p> g_enemat &#8211; extracts an energy matrix from an energy file </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

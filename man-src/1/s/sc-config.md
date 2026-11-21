@@ -1,4 +1,5 @@
 ---
+
 title: "sc-config(1)"
 name: "sc-config"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sc-config/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sc-config - The sc-config program is used to obtain information about MPQC's compile time environment.
+sc-config - The sc-config program is used to obtain information about MPQC's compile time environment.
 
 <h2>Synopsis</h2>
 

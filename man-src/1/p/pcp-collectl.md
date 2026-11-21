@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-collectl(1)"
 name: "pcp-collectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-collectl/"
 description: "pmcollectl, pcp-collectl – collect data that describes the current system status"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmcollectl</code>, <code>pcp-collectl</code> &#8211; collect data that describes the current system status</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp collectl</code> [<code>-f</code> <i>file</i> | <code>-p</code> <i>file</i> &#8230;] <i>[options</i> &#8230;]</p>

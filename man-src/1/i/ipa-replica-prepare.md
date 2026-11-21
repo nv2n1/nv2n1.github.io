@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-prepare(1)"
 name: "ipa-replica-prepare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-replica-prepare/"
 description: "ipa-replica-prepare – Create an IPA replica file"
 ---
 
-<h2>NAME</h2>
 <p> ipa-replica-prepare &#8211; Create an IPA replica file</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-replica-prepare [<i>OPTION</i>]&#8230; hostname</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "capfloortermvolsurface(3)"
 name: "capfloortermvolsurface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-capfloortermvolsurface/"
 description: "ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp – Cap/floor smile volatility surface."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp &#8211; Cap/floor smile volatility surface. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/capfloor/capfloortermvolatilitystructure.hpp&gt;<br />

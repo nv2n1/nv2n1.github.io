@@ -1,4 +1,5 @@
 ---
+
 title: "curl(1)"
 name: "curl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-curl/"
 description: "curl – transfer a URL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> curl &#8211; transfer a URL </p>
 <h2>SYNOPSIS</h2>
 <p> <code>curl [options / URLs]</code></p>

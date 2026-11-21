@@ -1,4 +1,5 @@
 ---
+
 title: "gui_edit_proc(3)"
 name: "gui_edit_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gui_edit_proc/"
 description: "gui_shadow_box_proc, gui_ctext_proc, gui_button_proc, gui_edit_proc, gui_list_proc, gui_text_list_proc – Hooks to customise the look and feel of Allegro dialogs."
 ---
 
-<h2>NAME</h2>
 <p> gui_shadow_box_proc, gui_ctext_proc, gui_button_proc, gui_edit_proc, gui_list_proc, gui_text_list_proc &#8211; Hooks to customise the look and feel of Allegro dialogs.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

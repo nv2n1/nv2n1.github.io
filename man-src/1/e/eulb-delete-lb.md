@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-lb(1)"
 name: "eulb-delete-lb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-delete-lb/"
 description: "eulb-delete-lb – Delete a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-delete-lb &#8211; Delete a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-delete-lb [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</p>

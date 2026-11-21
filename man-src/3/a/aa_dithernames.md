@@ -1,4 +1,5 @@
 ---
+
 title: "aa_dithernames(3)"
 name: "aa_dithernames"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_dithernames/"
 description: "aa_dithernames – Names of dithering methods supported by AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_dithernames &#8211; Names of dithering methods supported by AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_queue(3)"
 name: "ck_queue"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_queue/"
 description: "CK_LIST_EMPTY CK_LIST_ENTRY CK_LIST_FIRST CK_LIST_FOREACH CK_LIST_FOREACH_SAFE CK_LIST_HEAD CK_LIST_HEAD_INITIALIZER CK_LIST_INIT CK_LIST_INSERT_AFTER CK_LIST_INSERT_BEFORE CK_LIST_INSERT_HEAD CK_L..."
 ---
 
-<h2>NAME</h2>
 <p> <code>CK_LIST_EMPTY</code> <code>CK_LIST_ENTRY</code> <code>CK_LIST_FIRST</code> <code>CK_LIST_FOREACH</code> <code>CK_LIST_FOREACH_SAFE</code> <code>CK_LIST_HEAD</code> <code>CK_LIST_HEAD_INITIALIZER</code> <code>CK_LIST_INIT</code> <code>CK_LIST_INSERT_AFTER</code> <code>CK_LIST_INSERT_BEFORE</code> <code>CK_LIST_INSERT_HEAD</code> <code>CK_LIST_MOVE</code> <code>CK_LIST_NEXT</code> <code>CK_LIST_REMOVE</code> <code>CK_LIST_SWAP</code> <code>CK_SLIST_EMPTY</code> <code>CK_SLIST_ENTRY</code> <code>CK_SLIST_FIRST</code> <code>CK_SLIST_FOREACH</code> <code>CK_SLIST_FOREACH_PREVPTR</code> <code>CK_SLIST_FOREACH_SAFE</code> <code>CK_SLIST_HEAD</code> <code>CK_SLIST_HEAD_INITIALIZER</code> <code>CK_SLIST_INIT</code> <code>CK_SLIST_INSERT_AFTER</code> <code>CK_SLIST_INSERT_HEAD</code> <code>CK_SLIST_MOVE</code> <code>CK_SLIST_NEXT</code> <code>CK_SLIST_REMOVE</code> <code>CK_SLIST_REMOVE_AFTER</code> <code>CK_SLIST_REMOVE_HEAD</code> <code>CK_SLIST_SWAP</code> <code>CK_STAILQ_CONCAT</code> <code>CK_STAILQ_EMPTY</code> <code>CK_STAILQ_ENTRY</code> <code>CK_STAILQ_FIRST</code> <code>CK_STAILQ_FOREACH</code> <code>CK_STAILQ_FOREACH_SAFE</code> <code>CK_STAILQ_HEAD</code> <code>CK_STAILQ_HEAD_INITIALIZER</code> <code>CK_STAILQ_INIT</code> <code>CK_STAILQ_INSERT_AFTER</code> <code>CK_STAILQ_INSERT_HEAD</code> <code>CK_STAILQ_INSERT_TAIL</code> <code>CK_STAILQ_MOVE</code> <code>CK_STAILQ_NEXT</code> <code>CK_STAILQ_REMOVE</code> <code>CK_STAILQ_REMOVE_AFTER</code> <code>CK_STAILQ_REMOVE_HEAD</code> <code>CK_STAILQ_SWAP</code> &#8211; multi-reader single-writer singly-linked lists, singly-linked tail queues and lists</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

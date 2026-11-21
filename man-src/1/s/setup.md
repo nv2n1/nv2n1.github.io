@@ -1,4 +1,5 @@
 ---
+
 title: "setup(1)"
 name: "setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setup/"
 description: "setup – A text mode system configuration tool"
 ---
 
-<h2>NAME</h2>
 <p> setup &#8211; A text mode system configuration tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>setup</code></p>

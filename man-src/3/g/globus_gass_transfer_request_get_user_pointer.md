@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_request_get_user_pointer(3)"
 name: "globus_gass_transfer_request_get_user_pointer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_request_get_user_pointer/"
 description: "Request Handles –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Request Handles &#8211; </p>
 <p> Request Handles.</p>
 <h3>Data Structures</h3>

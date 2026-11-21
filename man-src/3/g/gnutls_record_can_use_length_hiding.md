@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_can_use_length_hiding(3)"
 name: "gnutls_record_can_use_length_hiding"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_record_can_use_length_hiding/"
 description: "gnutls_record_can_use_length_hiding – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_record_can_use_length_hiding &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

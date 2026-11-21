@@ -1,4 +1,5 @@
 ---
+
 title: "gpodder-backup(1)"
 name: "gpodder-backup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpodder-backup/"
 description: "gpodder-backup – Backup and restore utility for gPodder user data"
 ---
 
-<h2>NAME</h2>
 <p> gpodder-backup &#8211; Backup and restore utility for gPodder user data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpodder-backup</code> [<i>&#8211;create|&#8211;extract</i>] <i>&lt;archive.gpo.tar.gz&gt; </i>[<i>options</i>] <code>gpodder-backup</code> <i>&#8211;purge</i></p>

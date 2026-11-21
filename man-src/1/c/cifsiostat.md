@@ -1,4 +1,5 @@
 ---
+
 title: "cifsiostat(1)"
 name: "cifsiostat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cifsiostat/"
 description: "cifsiostat – Report CIFS statistics."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cifsiostat &#8211; Report CIFS statistics.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cifsiostat [ -h ] [ -k | -m ] [ -t ] [ -V ] [ &#8211;dec={ 0 | 1 | 2 } ] [ &#8211;human ] [ &#8211;pretty ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nwpasswd(1)"
 name: "nwpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwpasswd/"
 description: "nwpasswd – Change a user’s password"
 ---
 
-<h2>NAME</h2>
 <p> nwpasswd &#8211; Change a user&#8217;s password</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwpasswd</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-O</code> <i>object name</i> ] [ <code>-t</code> <i>object type</i> ] </p>

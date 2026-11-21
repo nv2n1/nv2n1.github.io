@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_free_device_list(3)"
 name: "ibv_free_device_list"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_free_device_list/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_device_list, ibv_free_device_list - get and release list of available RDMA devices 
+ibv_get_device_list, ibv_free_device_list - get and release list of available RDMA devices 
 
 <h2>SYNOPSIS</h2>
 

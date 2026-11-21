@@ -1,4 +1,5 @@
 ---
+
 title: "mm-common-prepare(1)"
 name: "mm-common-prepare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mm-common-prepare/"
 description: "mm-common-prepare – Prepare a C++ binding module to use mm-common"
 ---
 
-<h2>NAME</h2>
 <p> mm-common-prepare &#8211; Prepare a C++ binding module to use mm-common</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mm-common-prepare</code> [<i>OPTION</i>]&#8230; [<i>SOURCE-DIR</i>]</p>

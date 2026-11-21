@@ -1,4 +1,5 @@
 ---
+
 title: "i686-w64-mingw32-objdump(1)"
 name: "i686-w64-mingw32-objdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-w64-mingw32-objdump/"
 description: "objdump – display information from object files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> objdump &#8211; display information from object files. </p>
 <h2>SYNOPSIS</h2>
 <p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pacmd(1)"
 name: "pacmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pacmd/"
 description: "pacmd – Reconfigure a PulseAudio sound server during runtime"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pacmd &#8211; Reconfigure a PulseAudio sound server during runtime </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pacmd </p>

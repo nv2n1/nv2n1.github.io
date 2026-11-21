@@ -1,4 +1,5 @@
 ---
+
 title: "run-redir(1)"
 name: "run-redir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-run-redir/"
 description: "run-redir – run program but redirect some resulting files"
 ---
 
-<h2>NAME</h2>
 <p> run-redir &#8211; run program but redirect some resulting files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>run-redir</code> <i>COMMAND-TO-RUN</i> </p>

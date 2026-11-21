@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph_rpn(1)"
 name: "rrdgraph_rpn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdgraph_rpn/"
 description: "rrdgraph_rpn – About RPN Math in rrdtool graph"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdgraph_rpn &#8211; About RPN Math in rrdtool graph </p>
 <h2>SYNOPSIS</h2>
 <p> <i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i>:=<i>vname</i>|<i>operator</i>|<i>value</i>[,<i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i>]</p>

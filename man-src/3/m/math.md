@@ -1,4 +1,5 @@
 ---
+
 title: "math(3)"
 name: "math"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-math/"
 description: "Math tools – Math facilities of the library include:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Math tools &#8211; Math facilities of the library include: </p>
 <h2>Pseudo-random number and low-discrepancy sequence generators</h2>
 <p> Implementations of pseudo-random number and low-discrepancy sequence generators. They share the ql/RandomNumbers directory.</p>

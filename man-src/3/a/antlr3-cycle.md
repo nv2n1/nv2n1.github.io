@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-cycle(3)"
 name: "antlr3-cycle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-cycle/"
 description: "ANTLR3_TOPO_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_TOPO_struct &#8211; </p>
 <p> A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order.</p>
 <h2>SYNOPSIS</h2>

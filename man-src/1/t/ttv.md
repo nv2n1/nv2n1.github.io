@@ -1,4 +1,5 @@
 ---
+
 title: "ttv(1)"
 name: "ttv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttv/"
 description: "ttv – display TV/video on a tty"
 ---
 
-<h2>NAME</h2>
 <p> ttv &#8211; display TV/video on a tty</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttv [ options ] [ station name ]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_privkey_verify_params(3)"
 name: "gnutls_privkey_verify_params"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_privkey_verify_params/"
 description: "gnutls_privkey_verify_params – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_privkey_verify_params &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>

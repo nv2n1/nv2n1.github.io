@@ -1,4 +1,5 @@
 ---
+
 title: "javac(1)"
 name: "javac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javac/"
 description: "javac – Reads Java class and interface definitions and compiles them into bytecode and class files."
 ---
 
-<h2>NAME</h2>
 <p> javac &#8211; Reads Java class and interface definitions and compiles them into bytecode and class files.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

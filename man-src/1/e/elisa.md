@@ -1,4 +1,5 @@
 ---
+
 title: "elisa(1)"
 name: "elisa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-elisa/"
 description: "elisa – media center solution"
 ---
 
-<h2>NAME</h2>
 <p> elisa &#8211; media center solution</p>
 <h2>SYNOPSIS</h2>
 <p> <code>elisa</code> [<i>option&#8230;</i>]<i> </i>[<i>config_file</i>]<br />

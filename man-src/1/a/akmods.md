@@ -1,4 +1,5 @@
 ---
+
 title: "akmods(1)"
 name: "akmods"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-akmods/"
 description: "akmods – manual page for akmods 0.4.0"
 ---
 
-<h2>NAME</h2>
 <p> akmods &#8211; manual page for akmods 0.4.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>akmods</code> [<i>OPTIONS</i>]</p>

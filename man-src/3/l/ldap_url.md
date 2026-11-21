@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_url(3)"
 name: "ldap_url"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_url/"
 description: "ldap_is_ldap_url, ldap_url_parse, ldap_free_urldesc – LDAP Uniform Resource Locator routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_is_ldap_url, ldap_url_parse, ldap_free_urldesc &#8211; LDAP Uniform Resource Locator routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

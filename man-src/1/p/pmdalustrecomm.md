@@ -1,4 +1,5 @@
 ---
+
 title: "pmdalustrecomm(1)"
 name: "pmdalustrecomm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdalustrecomm/"
 description: "pmdalustrecomm – Lustre filesystem comms performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdalustrecomm</code> &#8211; Lustre filesystem comms performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/lustrecomm/pmdalustrecomm</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>

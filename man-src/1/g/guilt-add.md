@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-add(1)"
 name: "guilt-add"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-add/"
 description: "guilt-add – Add a file to git and guilt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-add &#8211; Add a file to git and guilt </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-add</i> &lt;file&gt;&#8230;</p>

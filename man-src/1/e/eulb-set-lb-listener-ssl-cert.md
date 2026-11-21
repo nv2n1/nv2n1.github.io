@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-set-lb-listener-ssl-cert(1)"
 name: "eulb-set-lb-listener-ssl-cert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-set-lb-listener-ssl-cert/"
 description: "eulb-set-lb-listener-ssl-cert – Change the certificate that terminates a load balancer’slistener’s SSL connections"
 ---
 
-<h2>NAME</h2>
 <p> eulb-set-lb-listener-ssl-cert &#8211; Change the certificate that terminates a load balancer&#8217;slistener&#8217;s SSL connections</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-set-lb-listener-ssl-cert <code>-l</code> PORT <code>-c</code> ARN [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ngspice(1)"
 name: "ngspice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ngspice/"
 description: "ngspice – circuit simulator derived from spice]3f5"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ngspice &#8211; circuit simulator derived from spice]3f5 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ngspice</code> [<i>options</i>] [<i>file</i> &#8230;]</p>

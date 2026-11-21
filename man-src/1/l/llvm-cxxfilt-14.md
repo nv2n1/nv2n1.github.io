@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-cxxfilt-14(1)"
 name: "llvm-cxxfilt-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-cxxfilt-14/"
 description: "llvm-cxxfilt – LLVM symbol name demangler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-cxxfilt &#8211; LLVM symbol name demangler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-cxxfilt</code> [<i>options</i>] [<i>mangled names…</i>]</p>

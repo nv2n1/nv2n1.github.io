@@ -1,4 +1,5 @@
 ---
+
 title: "nfs4_setfacl(1)"
 name: "nfs4_setfacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfs4_setfacl/"
 description: "nfs4_setfacl, nfs4_editfacl – manipulate NFSv4 file/directory access control lists"
 ---
 
-<h2>NAME</h2>
 <p> nfs4_setfacl, nfs4_editfacl &#8211; manipulate NFSv4 file/directory access control lists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nfs4_setfacl</code> [OPTIONS] COMMAND <i>file</i>&#8230;<br />

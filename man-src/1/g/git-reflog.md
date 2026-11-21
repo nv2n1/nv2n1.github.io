@@ -1,4 +1,5 @@
 ---
+
 title: "git-reflog(1)"
 name: "git-reflog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-reflog/"
 description: "git-reflog – Manage reflog information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-reflog &#8211; Manage reflog information </p>
 <h2>SYNOPSIS</h2>
 <pre>

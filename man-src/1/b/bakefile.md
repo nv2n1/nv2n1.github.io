@@ -1,4 +1,5 @@
 ---
+
 title: "bakefile(1)"
 name: "bakefile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bakefile/"
 description: "bakefile – native makefiles generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bakefile &#8211; native makefiles generator </p>
 <h2>SYNOPSIS</h2>
 <dl>

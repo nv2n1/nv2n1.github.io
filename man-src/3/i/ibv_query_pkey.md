@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_pkey(3)"
 name: "ibv_query_pkey"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_query_pkey/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_query_pkey - query an InfiniBand port's P_Key table 
+ibv_query_pkey - query an InfiniBand port's P_Key table 
 
 <h2>SYNOPSIS</h2>
 

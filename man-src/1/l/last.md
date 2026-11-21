@@ -1,4 +1,5 @@
 ---
+
 title: "last(1)"
 name: "last"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-last/"
 description: "last, lastb – show a listing of last logged in users"
 ---
 
-<h2 class="name">NAME</h2>
 <p> last, lastb &#8211; show a listing of last logged in users </p>
 <h2>SYNOPSIS</h2>
 <p> <code>last</code> [options] [<i>username</i>&#8230;] [<i>tty</i>&#8230;] </p>

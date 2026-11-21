@@ -1,4 +1,5 @@
 ---
+
 title: "jscal(1)"
 name: "jscal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jscal/"
 description: "jscal – joystick calibration and remapping program"
 ---
 
-<h2>NAME</h2>
 <p> jscal &#8211; joystick calibration and remapping program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jscal</code> [<i>options</i>] &lt;<i>device-name</i>&gt;</p>

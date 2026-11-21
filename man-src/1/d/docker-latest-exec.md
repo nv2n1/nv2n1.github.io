@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-exec(1)"
 name: "docker-latest-exec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-exec/"
 description: "docker-exec – Run a command in a running container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-exec &#8211; Run a command in a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker exec</code> [<code>-d</code>|<code>&#8211;detach</code>] [<code>&#8211;detach-keys</code>[=<i>[]</i>]] [<code>&#8211;help</code>] [<code>-i</code>|<code>&#8211;interactive</code>] [<code>&#8211;privileged</code>] [<code>-t</code>|<code>&#8211;tty</code>] [<code>-u</code>|<code>&#8211;user</code>[=<i>USER</i>]] CONTAINER COMMAND [ARG&#8230;] </p>

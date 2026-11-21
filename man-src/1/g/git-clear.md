@@ -1,4 +1,5 @@
 ---
+
 title: "git-clear(1)"
 name: "git-clear"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-clear/"
 description: "git-clear – Rigorously clean up a repository"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-clear</code> &#8211; Rigorously clean up a repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-clear</code></p>

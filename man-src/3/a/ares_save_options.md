@@ -1,4 +1,5 @@
 ---
+
 title: "ares_save_options(3)"
 name: "ares_save_options"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_save_options/"
 description: "ares_save_options – Save configuration values obtained from initialized ares_channel"
 ---
 
-<h2>NAME</h2>
 <p> ares_save_options &#8211; Save configuration values obtained from initialized ares_channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

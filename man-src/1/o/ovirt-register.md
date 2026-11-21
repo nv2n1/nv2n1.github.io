@@ -1,4 +1,5 @@
 ---
+
 title: "ovirt-register(1)"
 name: "ovirt-register"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovirt-register/"
 description: "ovirt-register – oVirt registration tool for hosts"
 ---
 
-<h2>NAME</h2>
 <p> ovirt-register &#8211; oVirt registration tool for hosts</p>
 <h2>SYNOPSIS</h2>
 <p> ovirt-register &#8211;engine-fqdn ENGINE_FQDN [options]</p>

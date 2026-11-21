@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_req_notify_cq(3)"
 name: "ibv_req_notify_cq"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_req_notify_cq/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_req_notify_cq - request completion notification on a completion queue (CQ) 
+ibv_req_notify_cq - request completion notification on a completion queue (CQ) 
 
 <h2>SYNOPSIS</h2>
 

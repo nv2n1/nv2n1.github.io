@@ -1,4 +1,5 @@
 ---
+
 title: "xkbvleds(1)"
 name: "xkbvleds"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xkbvleds/"
 description: "xkbvleds – XKB extension user utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xkbvleds &#8211; XKB extension user utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkbvleds</code> [-indpy &lt;name&gt;] [-watch &lt;leds&gt;] [[-+]automatic] [[-+]explicit] [[-+]name] [[-+]real] [[-+]virtual] [-intersection] [-union]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-attach-lb-to-subnets(1)"
 name: "eulb-attach-lb-to-subnets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-attach-lb-to-subnets/"
 description: "eulb-attach-lb-to-subnets – [VPC only] Add a load balancer to one or more subnets"
 ---
 
-<h2>NAME</h2>
 <p> eulb-attach-lb-to-subnets &#8211; [VPC only] Add a load balancer to one or more subnets</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-attach-lb-to-subnets <code>-s</code> SUBNET1,SUBNET2,&#8230; [&#8211;show-empty-fields]</p>

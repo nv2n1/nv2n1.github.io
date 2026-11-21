@@ -1,4 +1,5 @@
 ---
+
 title: "puuencode(1)"
 name: "puuencode"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-puuencode/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <pre>
+<pre>
  puuencode - perl replacement for uuencode
 </pre> 
 

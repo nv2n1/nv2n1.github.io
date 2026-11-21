@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-storage-setup(1)"
 name: "docker-latest-storage-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-storage-setup/"
 description: "docker-latest-storage-setup – Grows the root filesystem and sets up storage for docker-latest."
 ---
 
-<h2>NAME</h2>
 <p> docker-latest-storage-setup &#8211; Grows the root filesystem and sets up storage for docker-latest.</p>
 <h2>SYNOPSIS</h2>
 <p> docker-latest-storage-setup [OPTIONS]</p>

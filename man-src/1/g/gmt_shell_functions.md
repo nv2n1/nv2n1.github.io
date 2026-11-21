@@ -1,4 +1,5 @@
 ---
+
 title: "gmt_shell_functions(1)"
 name: "gmt_shell_functions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmt_shell_functions/"
 description: "gmt_shell_functions.sh – Practical functions to be used in GMT bourne shell scripts"
 ---
 
-<h2>NAME</h2>
 <p> gmt_shell_functions.sh &#8211; Practical functions to be used in GMT bourne shell scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmt_init_tmpdir</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "fixdiv(3)"
 name: "fixdiv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixdiv/"
 description: "fixdiv – Fixed point division. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixdiv &#8211; Fixed point division. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

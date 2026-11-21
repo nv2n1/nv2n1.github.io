@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-diff(1)"
 name: "oggz-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-diff/"
 description: "oggz-diff — Hexdump the packets of two Ogg files and output differences"
 ---
 
-<h2>NAME</h2>
 <p> oggz-diff &#8212; Hexdump the packets of two Ogg files and output differences<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

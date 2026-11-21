@@ -1,4 +1,5 @@
 ---
+
 title: "pmlock(1)"
 name: "pmlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlock/"
 description: "pmlock – simple file-based mutex"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlock</code> &#8211; simple file-based mutex</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlock</code> [ <code>-v</code> ] <i>file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makeconv(1)"
 name: "makeconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makeconv/"
 description: "makeconv – compile a converter table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>makeconv</code> &#8211; compile a converter table </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeconv</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] <i>convertertable</i> &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xboxdrv-daemon(1)"
 name: "xboxdrv-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xboxdrv-daemon/"
 description: "xboxdrv-daemon – A simple daemon that automatically launches xboxdrv when it detects a controller."
 ---
 
-<h2>NAME</h2>
 <p> xboxdrv-daemon &#8211; A simple daemon that automatically launches xboxdrv when it detects a controller.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xboxdrv</code> [OPTION]&#8230; [&#8211;] {XBOXDRV} [ARGS]&#8230;</p>

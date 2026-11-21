@@ -1,4 +1,5 @@
 ---
+
 title: "pgmenhance(1)"
 name: "pgmenhance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmenhance/"
 description: "pgmenhance – edge-enhance a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmenhance &#8211; edge-enhance a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmenhance</code> [<i>-N</i>] [<i>pgmfile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpmetis(1)"
 name: "gpmetis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpmetis/"
 description: "gpmetis – Partitions a graph into a specified number of parts."
 ---
 
-<h2>NAME</h2>
 <p> gpmetis &#8211; Partitions a graph into a specified number of parts.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpmetis</code> [<i>options</i>] <i>graphfile nparts</i></p>

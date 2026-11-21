@@ -1,4 +1,5 @@
 ---
+
 title: "pmls(1)"
 name: "pmls"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmls/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmls - long list the module path 
+pmls - long list the module path 
 
 <h2>DESCRIPTION</h2>
 

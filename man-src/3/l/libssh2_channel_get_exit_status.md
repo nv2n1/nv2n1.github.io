@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_get_exit_status(3)"
 name: "libssh2_channel_get_exit_status"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_channel_get_exit_status/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_channel_get_exit_status - get the remote exit code
+libssh2_channel_get_exit_status - get the remote exit code
 
 <h2>SYNOPSIS</h2>
 

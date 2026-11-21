@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-foto(1)"
 name: "pilot-foto"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-foto/"
 description: "pilot-foto – Palm ‘Foto’ Image Installer/Remover/Fetcher/Converter"
 ---
 
-<h2>NAME</h2>
 <p> pilot-foto &#8211; Palm &#8216;Foto&#8217; Image Installer/Remover/Fetcher/Converter</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

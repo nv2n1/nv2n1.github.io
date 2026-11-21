@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_fetch_execute(3)"
 name: "memcached_fetch_execute"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_fetch_execute/"
 description: "memcached_fetch_execute – Retrieving data from the server"
 ---
 
-<h2>NAME</h2>
 <p> memcached_fetch_execute &#8211; Retrieving data from the server</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

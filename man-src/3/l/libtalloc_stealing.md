@@ -1,4 +1,5 @@
 ---
+
 title: "libtalloc_stealing(3)"
 name: "libtalloc_stealing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtalloc_stealing/"
 description: "libtalloc_stealing – Chapter 2: Stealing a context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libtalloc_stealing &#8211; Chapter 2: Stealing a context</p>
 <h2>Stealing a context</h2>
 <p> Talloc has the ability to change the parent of a talloc context to another one. This operation is commonly referred to as stealing and it is one of the most important actions performed with talloc contexts. </p>

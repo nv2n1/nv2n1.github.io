@@ -1,4 +1,5 @@
 ---
+
 title: "zone2sqlite(1)"
 name: "zone2sqlite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zone2sqlite/"
 description: "zone2sqlite – Load BIND 9 zone file into SQLite database"
 ---
 
-<h2>NAME</h2>
 <p> zone2sqlite &#8211; Load BIND 9 zone file into SQLite database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zone2sqlite zone zonefile dbfile dbtable</code></p>

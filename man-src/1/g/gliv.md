@@ -1,4 +1,5 @@
 ---
+
 title: "gliv(1)"
 name: "gliv"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gliv/"
 description: "gliv – An OpenGL Image Viewer"
 ---
-<h2>NAME</h2>
+
 <p> gliv - An OpenGL Image Viewer  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gliv</code> [OPTIONS]... [FILES]...  </p>

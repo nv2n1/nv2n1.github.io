@@ -1,4 +1,5 @@
 ---
+
 title: "memcached-tool(1)"
 name: "memcached-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memcached-tool/"
 description: "memcached-tool – stats and management tool for memcached"
 ---
 
-<h2>NAME</h2>
 <p> memcached-tool &#8211; stats and management tool for memcached </p>
 <h2>SYNOPSIS</h2>
 <p> <code>memcached-tool</code> &lt;<i>host</i>[:<i>port</i>] | <i>/path/to/socket</i>&gt; [<i>mode</i>] </p>

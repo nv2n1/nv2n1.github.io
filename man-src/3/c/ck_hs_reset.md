@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_reset(3)"
 name: "ck_hs_reset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_hs_reset/"
 description: "ck_hs_reset – remove all keys from a hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_hs_reset</code> &#8211; remove all keys from a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

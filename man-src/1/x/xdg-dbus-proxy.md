@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-dbus-proxy(1)"
 name: "xdg-dbus-proxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-dbus-proxy/"
 description: "xdg-dbus-proxy – D-Bus proxy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-dbus-proxy &#8211; D-Bus proxy </p>
 <h2>SYNOPSIS</h2>
 <dl>

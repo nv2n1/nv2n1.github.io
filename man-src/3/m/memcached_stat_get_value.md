@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_stat_get_value(3)"
 name: "memcached_stat_get_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_stat_get_value/"
 description: "memcached_stat_get_value – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_stat_get_value &#8211; libmemcached Documentation </p>
 <p> Get memcached statistics</p>
 <h2>SYNOPSIS</h2>

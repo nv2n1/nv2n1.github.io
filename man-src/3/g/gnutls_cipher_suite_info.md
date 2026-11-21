@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_suite_info(3)"
 name: "gnutls_cipher_suite_info"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_cipher_suite_info/"
 description: "gnutls_cipher_suite_info – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_cipher_suite_info &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

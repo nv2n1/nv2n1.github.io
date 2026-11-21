@@ -1,4 +1,5 @@
 ---
+
 title: "do_arc(3)"
 name: "do_arc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-do_arc/"
 description: "do_arc – Calculates all the points in a circular arc. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> do_arc &#8211; Calculates all the points in a circular arc. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

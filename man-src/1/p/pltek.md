@@ -1,4 +1,5 @@
 ---
+
 title: "pltek(1)"
 name: "pltek"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pltek/"
 description: "pltek – review a Tektronix vector file."
 ---
 
-<h2>NAME</h2>
 <p> pltek &#8211; review a Tektronix vector file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pltek</code> <i>file</i></p>

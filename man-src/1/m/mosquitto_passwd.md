@@ -1,4 +1,5 @@
 ---
+
 title: "mosquitto_passwd(1)"
 name: "mosquitto_passwd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mosquitto_passwd/"
 description: "mosquitto_passwd – manage password files for mosquitto"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mosquitto_passwd &#8211; manage password files for mosquitto </p>
 <h2>SYNOPSIS</h2>
 <dl>

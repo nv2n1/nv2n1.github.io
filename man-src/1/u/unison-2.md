@@ -1,4 +1,5 @@
 ---
+
 title: "unison-2(1)"
 name: "unison-2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unison-2/"
 description: "unison-2.40.102 – a file-synchronization tool for Unix and Windows"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unison-2.40.102 &#8211; a file-synchronization tool for Unix and Windows </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unison-2.40.102</code> [<i>options</i>]<br />

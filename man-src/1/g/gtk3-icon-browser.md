@@ -1,4 +1,5 @@
 ---
+
 title: "gtk3-icon-browser(1)"
 name: "gtk3-icon-browser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk3-icon-browser/"
 description: "gtk3-icon-browser – List themed icons"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk3-icon-browser &#8211; List themed icons </p>
 <h2>SYNOPSIS</h2>
 <dl>

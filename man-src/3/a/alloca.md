@@ -1,4 +1,5 @@
 ---
+
 title: "alloca(3)"
 name: "alloca"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-alloca/"
 description: "alloca – allocate memory that is automatically freed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alloca &#8211; allocate memory that is automatically freed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;alloca.h&gt;</code> </p>

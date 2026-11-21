@@ -1,4 +1,5 @@
 ---
+
 title: "strongswan_pki(1)"
 name: "strongswan_pki"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-strongswan_pki/"
 description: "pki – Simple public key infrastructure (PKI) management tool"
 ---
 
-<h2>NAME</h2>
 <p> pki &#8211; Simple public key infrastructure (PKI) management tool</p>
 <h2>SYNOPSIS</h2>
 <p> <i>command</i> [<i>option~</i>&#8230;] <code>-h</code> | <code>&#8211;help</code></p>

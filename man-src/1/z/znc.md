@@ -1,4 +1,5 @@
 ---
+
 title: "znc(1)"
 name: "znc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-znc/"
 description: "znc – An advanced IRC bouncer"
 ---
 
-<h2>NAME</h2>
 <p> znc &#8211; An advanced IRC bouncer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>znc &#8211;help</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_trust_tree(3)"
 name: "ldns_dnssec_trust_tree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_trust_tree/"
 description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec_trust_tree"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec_trust_tree </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

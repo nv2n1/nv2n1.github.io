@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-certupdate(1)"
 name: "ipa-certupdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-certupdate/"
 description: "ipa-certupdate – Update local IPA certificate databases with certificates from the server"
 ---
 
-<h2>NAME</h2>
 <p> ipa-certupdate &#8211; Update local IPA certificate databases with certificates from the server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipa-certupdate</code> [<i>OPTIONS</i>&#8230;]</p>

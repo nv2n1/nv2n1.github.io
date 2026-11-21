@@ -1,4 +1,5 @@
 ---
+
 title: "discount-mkd2html(1)"
 name: "discount-mkd2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-discount-mkd2html/"
 description: "mkd2html – markdown to html converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mkd2html</code> &#8211; markdown to html converter </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>css file </code> ] [-<code>header string </code> ] [-<code>footer string </code> ] [file ]</p>

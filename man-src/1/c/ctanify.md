@@ -1,4 +1,5 @@
 ---
+
 title: "ctanify(1)"
 name: "ctanify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctanify/"
 description: "ctanify – Prepare a package for upload to CTAN"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctanify &#8211; Prepare a package for upload to CTAN </p>
 <h2>SYNOPSIS</h2>
 <p> ctanify [<code>&#8211;pkgname</code>=<i>string</i>] [<code>&#8212;</code>[<code>no</code>]<code>auto</code>] [<code>&#8211;tdsonly</code>=<i>filespec</i> &#8230;] [<code>&#8212;</code>[<code>no</code>]<code>unixify</code>] [<code>&#8212;</code>[<code>no</code>]<code>skip</code>] [<code>&#8211;tdsdir</code>=<i>dirname</i> &#8230;] [<code>&#8211;tex</code>=<i>macro_pkg</i>] [<code>&#8212;</code>[<code>no</code>]<code>miscify</code>] [<code>&#8212;</code>[<code>no</code>]<code>tds</code>] <i>filespec</i>[=<i>dirname</i>] &#8230; </p>

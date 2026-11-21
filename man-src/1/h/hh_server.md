@@ -1,4 +1,5 @@
 ---
+
 title: "hh_server(1)"
 name: "hh_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hh_server/"
 description: "hh_server – Hack language typechecker daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hh_server &#8211; Hack language typechecker daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hh_server</code> [<i>&#8211;check&nbsp;</i>[<i>&#8211;json</i>]] <i>DIRECTORY</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlos400(1)"
 name: "perlos400"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlos400/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlos400 - Perl version 5 on OS/400 
+perlos400 - Perl version 5 on OS/400 
 
  This document needs to be updated, but we don't know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "asin(3)"
 name: "asin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asin/"
 description: "asin, asinf, asinl – arc sine function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> asin, asinf, asinl &#8211; arc sine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

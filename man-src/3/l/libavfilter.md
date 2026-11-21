@@ -1,4 +1,5 @@
 ---
+
 title: "libavfilter(3)"
 name: "libavfilter"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libavfilter/"
 description: "libavfilter – multimedia filtering library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libavfilter &#8211; multimedia filtering library </p>
 <h2>DESCRIPTION</h2>
 <p> The libavfilter library provides a generic audio/video filtering framework containing several filters, sources and sinks.</p>

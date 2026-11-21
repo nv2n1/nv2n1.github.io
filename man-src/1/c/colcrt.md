@@ -1,4 +1,5 @@
 ---
+
 title: "colcrt(1)"
 name: "colcrt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colcrt/"
 description: "colcrt – filter nroff output for CRT previewing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colcrt &#8211; filter nroff output for CRT previewing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>colcrt</code> [options] [<i>file</i> &#8230;]</p>

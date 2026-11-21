@@ -1,4 +1,5 @@
 ---
+
 title: "splitxyz(1)"
 name: "splitxyz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-splitxyz/"
 description: "splitxyz – Split xyz[dh] data tables into individual segments"
 ---
 
-<h2>NAME</h2>
 <p> splitxyz &#8211; Split xyz[dh] data tables into individual segments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>splitxyz</code> [ <i>table</i> ] [ <i>azimuth</i>/<i>tolerance</i> ] [ <i>course_change</i>] [ <i>minimum_distance</i> ] [ <i>xy_filter</i>/<i>z_filter</i> ] [ <i>template</i> ] [ <i>flags</i> ] [ ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

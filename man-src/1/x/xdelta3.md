@@ -1,4 +1,5 @@
 ---
+
 title: "xdelta3(1)"
 name: "xdelta3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdelta3/"
 description: "xdelta3 – VCDIFF (RFC 3284) binary diff tool"
 ---
 
-<h2>NAME</h2>
 <p> xdelta3 &#8211; VCDIFF (RFC 3284) binary diff tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdelta3 </code> [<i>command</i>] [<i>options</i>] [<i>input</i> [<i>output</i>]]</p>

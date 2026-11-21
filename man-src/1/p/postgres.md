@@ -1,4 +1,5 @@
 ---
+
 title: "postgres(1)"
 name: "postgres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postgres/"
 description: "postgres – PostgreSQL database server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postgres &#8211; PostgreSQL database server </p>
 <h2>SYNOPSIS</h2>
 <dl>

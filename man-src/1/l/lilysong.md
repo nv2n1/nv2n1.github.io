@@ -1,4 +1,5 @@
 ---
+
 title: "lilysong(1)"
 name: "lilysong"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lilysong/"
 description: "lilysong – manual page for lilysong 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> lilysong &#8211; manual page for lilysong 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lilysong</code> [<i>-p PLAY-PROGRAM</i>] <i>FILE.xml </i>[<i>LANGUAGE-CODE-OR-VOICE </i>[<i>SPEEDUP</i>]]<br />

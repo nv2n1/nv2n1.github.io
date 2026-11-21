@@ -1,4 +1,5 @@
 ---
+
 title: "rabbitmq-plugins(1)"
 name: "rabbitmq-plugins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rabbitmq-plugins/"
 description: "rabbitmq-plugins – command line tool for managing RabbitMQ broker plugins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rabbitmq-plugins &#8211; command line tool for managing RabbitMQ broker plugins </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "qodem(1)"
 name: "qodem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qodem/"
 description: "qodem – Qodem Terminal Emulator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qodem &#8211; Qodem Terminal Emulator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qodem</code> [ &#8211;enable-capture FILENAME ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nacl-sha512(1)"
 name: "nacl-sha512"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nacl-sha512/"
 description: "nacl-sha512 — program to calculate the sha512 hash"
 ---
 
-<h2>NAME</h2>
 <p> nacl-sha512 &#8212; program to calculate the sha512 hash</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nacl-sha512</code></p>

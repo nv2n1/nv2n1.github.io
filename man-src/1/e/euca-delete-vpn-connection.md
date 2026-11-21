@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpn-connection(1)"
 name: "euca-delete-vpn-connection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-vpn-connection/"
 description: "euca-delete-vpn-connection – Delete a VPN connection"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-vpn-connection &#8211; Delete a VPN connection</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-vpn-connection [&#8211;show-empty-fields] [-U URL]</p>

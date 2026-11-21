@@ -1,4 +1,5 @@
 ---
+
 title: "otr_toolkit(1)"
 name: "otr_toolkit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otr_toolkit/"
 description: "otr_parse, otr_sesskeys, otr_mackey, otr_readforge, otr_modify, otr_remac – Process Off-the-Record Messaging transcripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> otr_parse, otr_sesskeys, otr_mackey, otr_readforge, otr_modify, otr_remac &#8211; Process Off-the-Record Messaging transcripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>otr_parse</code><br />

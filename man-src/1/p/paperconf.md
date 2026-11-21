@@ -1,4 +1,5 @@
 ---
+
 title: "paperconf(1)"
 name: "paperconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-paperconf/"
 description: "paperconf – print paper configuration information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>paperconf</code> &#8211; print paper configuration information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>paperconf</code> [ [ <code>-p</code> ] <i>paper</i> | <code>-d</code> | <code>-a</code> ] [ <code>-z</code> ] [ <code>-n</code> | <code>-N</code> ] [ <code>-s</code> | <code>-w</code> | <code>-h</code> ] [ <code>-c</code> | <code>-m</code> | <code>-i</code> ]</p>

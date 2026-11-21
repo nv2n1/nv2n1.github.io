@@ -1,4 +1,5 @@
 ---
+
 title: "pre2ncgm(1)"
 name: "pre2ncgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pre2ncgm/"
 description: "pre2ncgm – convert a pre-CGM NCAR metafile to an NCAR CGM."
 ---
 
-<h2>NAME</h2>
 <p> pre2ncgm &#8211; convert a pre-CGM NCAR metafile to an NCAR CGM.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pre2ncgm</code> [<code>-n</code>]</p>

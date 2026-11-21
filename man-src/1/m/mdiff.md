@@ -1,4 +1,5 @@
 ---
+
 title: "mdiff(1)"
 name: "mdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdiff/"
 description: "mdiff – manual page for mdiff 1.2.2"
 ---
 
-<h2>NAME</h2>
 <p> mdiff &#8211; manual page for mdiff 1.2.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdiff</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

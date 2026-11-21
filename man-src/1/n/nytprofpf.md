@@ -1,4 +1,5 @@
 ---
+
 title: "nytprofpf(1)"
 name: "nytprofpf"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nytprofpf/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nytprofpf - Generate a report for plat_forms (&lt;
+nytprofpf - Generate a report for plat_forms (&lt;
 
 <a rel="nofollow" HREF="http://www.plat-forms.org/">http://www.plat-forms.org/</a>&gt;) from Devel::NYTProf data
 

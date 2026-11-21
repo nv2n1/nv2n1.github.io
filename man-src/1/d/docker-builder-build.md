@@ -1,4 +1,5 @@
 ---
+
 title: "docker-builder-build(1)"
 name: "docker-builder-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-builder-build/"
 description: "docker-builder-build – Build an image from a Dockerfile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-builder-build &#8211; Build an image from a Dockerfile </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker builder build [OPTIONS] PATH | URL | &#8211;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "idevicebackup(1)"
 name: "idevicebackup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicebackup/"
 description: "idevicebackup – Create or restore backup for devices."
 ---
 
-<h2>NAME</h2>
 <p> idevicebackup &#8211; Create or restore backup for devices.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicebackup</code> [OPTIONS] CMD [DIRECTORY] </p>

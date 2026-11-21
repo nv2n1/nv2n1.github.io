@@ -1,4 +1,5 @@
 ---
+
 title: "perlnumber(1)"
 name: "perlnumber"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlnumber/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlnumber - semantics of numbers and numeric operations in Perl 
+perlnumber - semantics of numbers and numeric operations in Perl 
 
 <h2>SYNOPSIS</h2>
 

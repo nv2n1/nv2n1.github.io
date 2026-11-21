@@ -1,4 +1,5 @@
 ---
+
 title: "inotify_init1(2)"
 name: "inotify_init1"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-inotify_init1/"
 description: "inotify_init, inotify_init1 – initialize an inotify instance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inotify_init, inotify_init1 &#8211; initialize an inotify instance </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

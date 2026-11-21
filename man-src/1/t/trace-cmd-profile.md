@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-profile(1)"
 name: "trace-cmd-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-profile/"
 description: "trace-cmd-profile – profile tasks running live"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-profile &#8211; profile tasks running live </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd profile [</code><i>OPTIONS</i><code>]</code> [<i>command</i>]</p>

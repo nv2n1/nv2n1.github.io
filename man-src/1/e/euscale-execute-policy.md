@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-execute-policy(1)"
 name: "euscale-execute-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-execute-policy/"
 description: "euscale-execute-policy – Manually set an auto-scaling instance’s health status"
 ---
 
-<h2>NAME</h2>
 <p> euscale-execute-policy &#8211; Manually set an auto-scaling instance&#8217;s health status</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-execute-policy [-g ASGROUP] [-h] [-H] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_module_print_activated_versions(3)"
 name: "globus_module_print_activated_versions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_module_print_activated_versions/"
 description: "globus_module.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_module.h &#8211; </p>
 <p> Reference Counting Module Activation and Deactivation.</p>
 <h2>SYNOPSIS</h2>

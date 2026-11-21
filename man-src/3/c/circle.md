@@ -1,4 +1,5 @@
 ---
+
 title: "circle(3)"
 name: "circle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-circle/"
 description: "circle – Draws a circle. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> circle &#8211; Draws a circle. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

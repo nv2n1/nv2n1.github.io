@@ -1,4 +1,5 @@
 ---
+
 title: "list(3)"
 name: "list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-list/"
 description: "list – list routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> list &#8211; list routines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

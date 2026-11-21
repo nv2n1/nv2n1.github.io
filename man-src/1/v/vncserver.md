@@ -1,4 +1,5 @@
 ---
+
 title: "vncserver(1)"
 name: "vncserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vncserver/"
 description: "vncserver – start or stop a VNC server"
 ---
 
-<h2>NAME</h2>
 <p> vncserver &#8211; start or stop a VNC server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncserver</code> [:<i>display#</i>] [<code>-name</code> <i>desktop-name</i>] [<code>-geometry</code> <i>width</i>x<i>height</i>] [<code>-depth</code> <i>depth</i>] [<code>-pixelformat</code> <i>format</i>] [<code>-fp</code> <i>font-path</i>] [<code>-fg</code>] [<code>-autokill</code>] [<code>-noxstartup</code>] [<code>-xstartup</code> <i>script</i>] [<i>Xvnc-options&#8230;</i>]<br />

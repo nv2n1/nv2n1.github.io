@@ -1,4 +1,5 @@
 ---
+
 title: "libfreeipmi(3)"
 name: "libfreeipmi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libfreeipmi/"
 description: "libfreeipmi – FreeIPMI library"
 ---
 
-<h2>NAME</h2>
 <p> libfreeipmi &#8211; FreeIPMI library</p>
 <h2>Introduction</h2>
 <p> Libfreeipmi is the primary library that most of the FreeIPMI tools are based upon. The following describe the sub-sections of the library.</p>

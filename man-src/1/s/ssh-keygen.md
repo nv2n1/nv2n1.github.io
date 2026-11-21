@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-keygen(1)"
 name: "ssh-keygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-keygen/"
 description: "ssh-keygen – OpenSSH authentication key utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-keygen</code> &#8211; OpenSSH authentication key utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-keygen</code> [-<code>q</code> ] [-<code>a </code><i>rounds</i> ] [-<code>b </code><i>bits</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>O </code><i>option</i> ] [-<code>t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa</code> ] [-<code>w </code><i>provider</i> ] [-<code>Z </code><i>cipher</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "mupdisp(1)"
 name: "mupdisp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mupdisp/"
 description: "mupdisp – display output from Mup music publisher program"
 ---
 
-<h2>NAME</h2>
 <p> mupdisp &#8211; display output from Mup music publisher program</p>
 <h2>SYNOPSIS</h2>
 <p> mupdisp <i>[mup_options] file</i></p>

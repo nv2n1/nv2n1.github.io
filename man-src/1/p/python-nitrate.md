@@ -1,4 +1,5 @@
 ---
+
 title: "python-nitrate(1)"
 name: "python-nitrate"
 section: "1"
@@ -6,9 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-python-nitrate/"
 ---
 
-<h2>NAME</h2>
-
- python-nitrate - Python API for the Nitrate test case management system
+python-nitrate - Python API for the Nitrate test case management system
 
 <h2>DESCRIPTION</h2>
 

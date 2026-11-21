@@ -1,4 +1,5 @@
 ---
+
 title: "pdfmom(1)"
 name: "pdfmom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfmom/"
 description: "pdfmom – produce PDF documents using the mom macro package for groff"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdfmom &#8211; produce PDF documents using the mom macro package for groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-Tpdf</code> ] [<i>groff-options</i>] <i>file</i> &#8230; <code>-Tps</code> [<i>pdfroff-options</i>] [<i>groff-options</i>] <i>file</i> &#8230; <code>-v</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_int_value(3)"
 name: "hdf_set_int_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_int_value/"
 description: "hdf_set_int_value – Set the value of a named node to a number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hdf_set_int_value &#8211; Set the value of a named node to a number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

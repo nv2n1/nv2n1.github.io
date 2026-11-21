@@ -1,4 +1,5 @@
 ---
+
 title: "smb(5)"
 name: "smb"
 section: "5"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/5-smb/"
 description: "smb.conf – The configuration file for the Samba suite"
 ---
+
 <p>smb.conf &#8211; The configuration file for the Samba suite </p>
-<h2>SYNOPSIS</h2>
+
 <p>The smb.conf file is a configuration file for the Samba suite. smb.conf contains runtime configuration information for the Samba programs. The complete description of the file format and possible parameters held within are here for reference purposes.  </p>
 <h2>FILE FORMAT</h2>
 <p>The file consists of sections and parameters. A section begins with the name of the section in square brackets and continues until the next section begins. Sections contain parameters of the form: </p>

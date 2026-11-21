@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-scite(1)"
 name: "mtx-scite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-scite/"
 description: "mtx-scite – Scite Helper Script"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-scite &#8211; Scite Helper Script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script scite [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

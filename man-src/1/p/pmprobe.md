@@ -1,4 +1,5 @@
 ---
+
 title: "pmprobe(1)"
 name: "pmprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmprobe/"
 description: "pmprobe – lightweight probe for performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmprobe</code> &#8211; lightweight probe for performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmprobe</code> [<code>-fIiLVvz</code>] [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>hostname</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>time</i>] [<code>-Z</code> <i>timezone</i>] [<i>metricname</i> &#8230;]</p>

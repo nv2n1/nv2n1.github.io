@@ -1,4 +1,5 @@
 ---
+
 title: "testdisk(1)"
 name: "testdisk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-testdisk/"
 description: "testdisk – Scan and repair disk partitions"
 ---
 
-<h2>NAME</h2>
 <p> testdisk &#8211; Scan and repair disk partitions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>testdisk [/log] [/debug] [/dump] [device|image.dd|image.e01]</code> </p>

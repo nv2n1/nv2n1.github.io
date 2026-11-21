@@ -1,4 +1,5 @@
 ---
+
 title: "bmp2tiff(1)"
 name: "bmp2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bmp2tiff/"
 description: "bmp2tiff – create a TIFF file from a Microsoft Windows Device Independent Bitmap image file"
 ---
 
-<h2>NAME</h2>
 <p> bmp2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a Microsoft Windows Device Independent Bitmap image file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bmp2tiff</code> [ <i>options</i> ] <i>input.bmp</i> [ <i>input2.bmp &#8230;</i> ] <i>output.tiff</i></p>

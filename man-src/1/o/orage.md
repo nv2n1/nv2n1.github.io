@@ -1,4 +1,5 @@
 ---
+
 title: "orage(1)"
 name: "orage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-orage/"
 description: "orage – Calendar for the Xfce Desktop Environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> orage &#8211; Calendar for the Xfce Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <dl>

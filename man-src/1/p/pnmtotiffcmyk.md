@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtotiffcmyk(1)"
 name: "pnmtotiffcmyk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtotiffcmyk/"
 description: "pnmtotiffcmyk – convert a portable anymap into a CMYK encoded TIFF file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtotiffcmyk &#8211; convert a portable anymap into a CMYK encoded TIFF file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtotiffcmyk </code> [<code>Compargs</code>][<code>Tiffargs</code>][<code>Convargs</code>][ <i>pnmfile</i> ]</p>

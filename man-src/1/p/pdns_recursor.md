@@ -1,4 +1,5 @@
 ---
+
 title: "pdns_recursor(1)"
 name: "pdns_recursor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdns_recursor/"
 description: "pdns_recursor – high-performance, simple and secure recursing nameserver"
 ---
 
-<h2>NAME</h2>
 <p> pdns_recursor &#8211; high-performance, simple and secure recursing nameserver</p>
 <h2>SYNOPSIS</h2>
 <p> pdns_recursor [OPTION]&#8230;</p>

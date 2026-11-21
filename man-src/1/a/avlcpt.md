@@ -1,4 +1,5 @@
 ---
+
 title: "avlcpt(1)"
 name: "avlcpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avlcpt/"
 description: "avlcpt – convert ArcView Legend gradients to GMT colour palette tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avlcpt &#8211; convert ArcView Legend gradients to GMT colour palette tables </p>
 <h2>SYNOPSIS</h2>
 <dl>

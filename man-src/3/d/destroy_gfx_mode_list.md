@@ -1,4 +1,5 @@
 ---
+
 title: "destroy_gfx_mode_list(3)"
 name: "destroy_gfx_mode_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-destroy_gfx_mode_list/"
 description: "destroy_gfx_mode_list – Frees the list created by get_gfx_mode_list(). Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> destroy_gfx_mode_list &#8211; Frees the list created by get_gfx_mode_list(). Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

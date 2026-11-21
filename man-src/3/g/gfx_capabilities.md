@@ -1,4 +1,5 @@
 ---
+
 title: "gfx_capabilities(3)"
 name: "gfx_capabilities"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gfx_capabilities/"
 description: "gfx_capabilities – Bitfield describing video hardware capabilities. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> gfx_capabilities &#8211; Bitfield describing video hardware capabilities. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

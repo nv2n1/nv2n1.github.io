@@ -1,4 +1,5 @@
 ---
+
 title: "mutt(1)"
 name: "mutt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mutt/"
 description: "mutt – The Mutt Mail User Agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mutt &#8211; The Mutt Mail User Agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutt</code> [-nRyzZ] [-e <i>cmd</i>] [-F <i>file</i>] [-m <i>type</i>] [-f <i>file</i>] </p>

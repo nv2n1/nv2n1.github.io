@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-interleave(1)"
 name: "sndfile-interleave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-interleave/"
 description: "sndfile-interleave – convert multiple single channel files into a multi-channel file sndfile-deinterleave – split a multi-channel into multiple single channel files"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-interleave &#8211; convert multiple single channel files into a multi-channel file<br />
  sndfile-deinterleave &#8211; split a multi-channel into multiple single channel files</p>
 <h2>SYNOPSIS</h2>

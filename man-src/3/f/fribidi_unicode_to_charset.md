@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_unicode_to_charset(3)"
 name: "fribidi_unicode_to_charset"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_unicode_to_charset/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_unicode_to_charset - convert string from Unicode 
+fribidi_unicode_to_charset - convert string from Unicode 
 
 <h2>SYNOPSIS</h2>
 

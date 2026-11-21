@@ -1,4 +1,5 @@
 ---
+
 title: "create_sample(3)"
 name: "create_sample"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_sample/"
 description: "create_sample – Constructs a new sample structure of the specified type. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_sample &#8211; Constructs a new sample structure of the specified type. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

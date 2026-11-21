@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-render-label(1)"
 name: "grub2-render-label"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-render-label/"
 description: "grub-render-label — Render an Apple disk label."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-render-label</code> &#8212; Render an Apple disk label. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-render-label</code> [-b | &#8211;bgcolor=<i>COLOR</i>] [-c | &#8211;color=<i>COLOR</i>]</p>

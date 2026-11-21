@@ -1,4 +1,5 @@
 ---
+
 title: "suricata(1)"
 name: "suricata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-suricata/"
 description: "suricata – Suricata"
 ---
 
-<h2>NAME</h2>
 <p> suricata &#8211; Suricata</p>
 <h2>SYNOPSIS</h2>
 <p> <code>suricata</code> [OPTIONS] [BPF FILTER]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_authorize(3)"
 name: "globus_gsi_authorize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_authorize/"
 description: "GSI Authorization API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GSI Authorization API &#8211; </p>
 <p> Authorization Callouts.</p>
 <h3>Modules</h3>

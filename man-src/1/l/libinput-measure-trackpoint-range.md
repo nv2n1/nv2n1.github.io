@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-trackpoint-range(1)"
 name: "libinput-measure-trackpoint-range"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-measure-trackpoint-range/"
 description: "libinput-measure-trackpoint-range – measure the delta range of a trackpoint"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-measure-trackpoint-range &#8211; measure the delta range of a trackpoint </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure trackpoint-range [&#8211;help] [/dev/input/event0]</code></p>

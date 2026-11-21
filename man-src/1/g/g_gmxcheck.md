@@ -1,4 +1,5 @@
 ---
+
 title: "g_gmxcheck(1)"
 name: "g_gmxcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_gmxcheck/"
 description: "gmxcheck – checks and compares files"
 ---
 
-<h2>NAME</h2>
 <p> gmxcheck &#8211; checks and compares files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

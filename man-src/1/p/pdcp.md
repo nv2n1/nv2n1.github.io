@@ -1,4 +1,5 @@
 ---
+
 title: "pdcp(1)"
 name: "pdcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdcp/"
 description: "pdcp – copy files to groups of hosts in parallel rpdcp – (reverse pdcp) copy files from a group of hosts in parallel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdcp &#8211; copy files to groups of hosts in parallel<br />
  rpdcp &#8211; (reverse pdcp) copy files from a group of hosts in parallel</p>
 <h2>SYNOPSIS</h2>

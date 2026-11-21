@@ -1,4 +1,5 @@
 ---
+
 title: "npm-config(1)"
 name: "npm-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-config/"
 description: "npm-config – Manage the npm configuration files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-config</code> &#8211; Manage the npm configuration files </p>
 <h3>Synopsis</h3>
 <dl>

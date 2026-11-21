@@ -1,4 +1,5 @@
 ---
+
 title: "jhead(1)"
 name: "jhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jhead/"
 description: "jhead – Digicam JPEG Exif header manipulation tool"
 ---
 
-<h2>NAME</h2>
 <p> jhead &#8211; Digicam JPEG Exif header manipulation tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jhead</code> [ <i>options</i> ] [ <i>file&#8230;</i> ] </p>

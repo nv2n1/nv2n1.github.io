@@ -1,4 +1,5 @@
 ---
+
 title: "muscan(1)"
 name: "muscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-muscan/"
 description: "Muscan – File scanner for Museek"
 ---
 
-<h2>NAME</h2>
 <p> <code>Muscan</code> &#8211; File scanner for Museek</p>
 <h2>SYNOPSIS</h2>
 <p> <code>muscan</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-b] [&#8211;buddy] [-v] [&#8211;verbose] [-r] [&#8211;rescan] [-n] [&#8211;noscan] [-s &lt;<i>directory</i>&gt;] [&#8211;share &lt;<i>directory</i>&gt;] [-u &lt;<i>directory</i>&gt;] [&#8211;unshare &lt;<i>directory</i>&gt;] [-l] [&#8211;list] [-h] [&#8211;help]</p>

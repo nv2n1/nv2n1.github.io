@@ -1,4 +1,5 @@
 ---
+
 title: "tgatoppm(1)"
 name: "tgatoppm"
 section: "1"
@@ -6,9 +7,6 @@ letter: "t"
 url: "/docs/linux/man/1-tgatoppm/"
 ---
 
-
-  </p>
-<h2 class="name">NAME</h2>
 <p> tgatoppm &#8211; convert TrueVision Targa file into a portable pixmap  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tgatoppm</code> [<code>--alphaout=</code>{<i>alpha-filename</i>,<code>-</code>}] [<code>--headerdump</code>] <i>tga-filename</i> </p>

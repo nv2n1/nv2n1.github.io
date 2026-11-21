@@ -1,4 +1,5 @@
 ---
+
 title: "emerald(1)"
 name: "emerald"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-emerald/"
 description: "emerald – The Emerald Windows Decorator"
 ---
 
-<h2>NAME</h2>
 <p> emerald &#8211; The Emerald Windows Decorator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>emerald [&#8211;replace] [&#8211;help] [&#8211;version]</code></p>

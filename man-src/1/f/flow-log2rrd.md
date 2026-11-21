@@ -1,4 +1,5 @@
 ---
+
 title: "flow-log2rrd(1)"
 name: "flow-log2rrd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-log2rrd/"
 description: "flow-log2rrd – Process the STAT: lines from flow-capture andflow-fanout to RRD files."
 ---
 
-<h2>NAME</h2>
 <p> flow-log2rrd &#8211; Process the STAT: lines from flow-capture andflow-fanout to RRD files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-log2rrd</code> [ <code>-p</code><i> rrd_path</i> ]</p>

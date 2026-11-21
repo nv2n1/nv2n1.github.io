@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo(1)"
 name: "osinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osinfo/"
 description: "osinfo – gather information regarding the running operating system"
 ---
 
-<h2>NAME</h2>
 <p> osinfo &#8211; gather information regarding the running operating system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>osinfo</code> [ <code>-s</code> ] [ <code>-h</code> hostname ] [ <code>-p</code> portnumber ]<br />

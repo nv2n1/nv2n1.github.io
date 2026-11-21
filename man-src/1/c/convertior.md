@@ -1,4 +1,5 @@
 ---
+
 title: "convertior(1)"
 name: "convertior"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convertior/"
 description: "convertior – Utility for creating a new IOR from existing. changing the hostname of an existing stringified IOR"
 ---
 
-<h2 class="name">NAME</h2>
 <p> convertior &#8211; Utility for creating a new IOR from existing. changing the hostname of an existing stringified IOR</p>
 <h2>SYNOPSIS</h2>
 <p> <code>convertior</code> [-x] &lt;stringified IOR&gt; &lt;New Hostname&gt; </p>

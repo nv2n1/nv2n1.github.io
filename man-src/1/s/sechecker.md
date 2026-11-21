@@ -1,4 +1,5 @@
 ---
+
 title: "sechecker(1)"
 name: "sechecker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sechecker/"
 description: "sechecker – SELinux policy checking tool"
 ---
 
-<h2>NAME</h2>
 <p> sechecker &#8211; SELinux policy checking tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sechecker</code> [OPTIONS] -p profile [POLICY &#8230;]<br />

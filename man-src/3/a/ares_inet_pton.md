@@ -1,4 +1,5 @@
 ---
+
 title: "ares_inet_pton(3)"
 name: "ares_inet_pton"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_inet_pton/"
 description: "ares_inet_pton – convert an IPv4 or IPv6 address from text to binary form"
 ---
 
-<h2>NAME</h2>
 <p> ares_inet_pton &#8211; convert an IPv4 or IPv6 address from text to binary form</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

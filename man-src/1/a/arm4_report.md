@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_report(1)"
 name: "arm4_report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm4_report/"
 description: "arm4_report – report on ARM 4 transactions"
 ---
 
-<h2>NAME</h2>
 <p> arm4_report &#8211; report on ARM 4 transactions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arm4_report</code> <i>&#8211;help|-h</i><br />

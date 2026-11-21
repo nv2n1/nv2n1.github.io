@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-disable-alarm-actions(1)"
 name: "euwatch-disable-alarm-actions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-disable-alarm-actions/"
 description: "euwatch-disable-alarm-actions – Disable all actions for one or more alarms"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-disable-alarm-actions &#8211; Disable all actions for one or more alarms</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-disable-alarm-actions [&#8211;show-empty-fields] [-U URL]</p>

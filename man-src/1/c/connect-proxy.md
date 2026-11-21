@@ -1,4 +1,5 @@
 ---
+
 title: "connect-proxy(1)"
 name: "connect-proxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-connect-proxy/"
 description: "connect-proxy — connect over SOCKS4/5 proxy"
 ---
 
-<h2>NAME</h2>
 <p> connect-proxy &#8212; connect over SOCKS4/5 proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>connect-proxy</code> [<code>-dnhst45</code>] [<code>-R </code><i>resolve</i> ] [<code>-p </code><i>local-port</i> ] [<code>-w </code><i>secs</i> ] [<code>-H </code><i>[user@]proxy-server[:port]]</i> ] [<code>-S </code><i>[user@]socks-server[:port]]</i> ] [<code>-T </code><i>proxy-server[:port]</i> ] [<code>-c </code><i>telnet-proxy-command</i> ] [host] [port]</p>

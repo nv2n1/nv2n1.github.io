@@ -1,4 +1,5 @@
 ---
+
 title: "seinfo(1)"
 name: "seinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-seinfo/"
 description: "seinfo – SELinux policy query tool"
 ---
 
-<h2>NAME</h2>
 <p> seinfo &#8211; SELinux policy query tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>seinfo</code> [OPTIONS] [EXPRESSION] [POLICY &#8230;]</p>

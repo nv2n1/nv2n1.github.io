@@ -1,4 +1,5 @@
 ---
+
 title: "intel_infoframes(1)"
 name: "intel_infoframes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_infoframes/"
 description: "intel_infoframes – View and change HDMI InfoFrames"
 ---
 
-<h2>NAME</h2>
 <p> intel_infoframes &#8211; View and change HDMI InfoFrames</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_infoframes</code></p>

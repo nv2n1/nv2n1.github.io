@@ -1,4 +1,5 @@
 ---
+
 title: "include_server(1)"
 name: "include_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-include_server/"
 description: "include_server.py – conservative approximation of include dependencies for C/C++"
 ---
 
-<h2>NAME</h2>
 <p> include_server.py &#8211; conservative approximation of include dependencies for C/C++</p>
 <h2>SYNOPSIS</h2>
 <p> <code>include_server</code> &#8211;port <i>INCLUDE_SERVER_PORT [OPTIONS]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tiffmedian(1)"
 name: "tiffmedian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffmedian/"
 description: "tiffmedian – apply the median cut algorithm to data in a TIFF file"
 ---
 
-<h2>NAME</h2>
 <p> tiffmedian &#8211; apply the median cut algorithm to data in a <font SIZE="-1">TIFF</font> file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffmedian</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>

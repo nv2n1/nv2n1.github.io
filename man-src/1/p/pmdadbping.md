@@ -1,4 +1,5 @@
 ---
+
 title: "pmdadbping(1)"
 name: "pmdadbping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdadbping/"
 description: "pmdadbping – database response time and availability PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdadbping</code> &#8211; database response time and availability PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdadbping</code> is a database response time measurement <font SIZE="-1">PMDA</font>. </p>

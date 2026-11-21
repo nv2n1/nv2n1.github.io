@@ -1,4 +1,5 @@
 ---
+
 title: "opa_osd_perf(1)"
 name: "opa_osd_perf"
 section: "1"
@@ -6,9 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opa_osd_perf/"
 ---
 
-<h2>NAME</h2>
-
- opa_osd_perf 
+opa_osd_perf 
 
  
 

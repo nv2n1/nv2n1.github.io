@@ -1,4 +1,5 @@
 ---
+
 title: "sendsms(1)"
 name: "sendsms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sendsms/"
 description: "sendsms – command line tool to send SMSes using gnokii"
 ---
 
-<h2>NAME</h2>
 <p> sendsms &#8211; command line tool to send SMSes using gnokii</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sendsms </code><i>[OPTIONS]</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmcolors(1)"
 name: "ppmcolors"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmcolors/"
 description: "ppmcolors – generate a color map of all colors of a certain maxval"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmcolors &#8211; generate a color map of all colors of a certain maxval</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmcolors</code> [<code>-maxval=</code><i>maxval</i>] </p>

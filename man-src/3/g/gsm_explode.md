@@ -1,4 +1,5 @@
 ---
+
 title: "gsm_explode(3)"
 name: "gsm_explode"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gsm_explode/"
 ---
 
-<h2>NAME</h2>
-
- gsm_explode, gsm_implode --- GSM 06.10 supplementary functions for testing
+gsm_explode, gsm_implode --- GSM 06.10 supplementary functions for testing
 
 <h2>SYNOPSIS</h2>
 

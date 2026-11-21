@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-adtrust-install(1)"
 name: "ipa-adtrust-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-adtrust-install/"
 description: "ipa-adtrust-install – Prepare an IPA server to be able to establish trust relationships with AD domains"
 ---
 
-<h2>NAME</h2>
 <p> ipa-adtrust-install &#8211; Prepare an IPA server to be able to establish trust relationships with AD domains</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-adtrust-install [<i>OPTION</i>]&#8230;</p>

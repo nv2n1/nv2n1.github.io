@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_string_to_key_data_salt_opaque(3)"
 name: "krb5_string_to_key_data_salt_opaque"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_string_to_key_data_salt_opaque/"
 description: "krb5_string_to_key krb5_string_to_key_data krb5_string_to_key_data_salt krb5_string_to_key_data_salt_opaque krb5_string_to_key_salt krb5_string_to_key_salt_opaque krb5_get_pw_salt krb5_free_salt – ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_string_to_key</code> <code>krb5_string_to_key_data</code> <code>krb5_string_to_key_data_salt</code> <code>krb5_string_to_key_data_salt_opaque</code> <code>krb5_string_to_key_salt</code> <code>krb5_string_to_key_salt_opaque</code> <code>krb5_get_pw_salt</code> <code>krb5_free_salt</code> &#8211; turns a string to a Kerberos key </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

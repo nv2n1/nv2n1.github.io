@@ -1,4 +1,5 @@
 ---
+
 title: "mhn(1)"
 name: "mhn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhn/"
 description: "mhn – display/list/store/cache MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhn &#8211; display/list/store/cache MIME messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

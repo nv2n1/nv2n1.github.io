@@ -1,4 +1,5 @@
 ---
+
 title: "onnode(1)"
 name: "onnode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-onnode/"
 description: "onnode – run commands on CTDB cluster nodes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> onnode &#8211; run commands on CTDB cluster nodes </p>
 <h2>SYNOPSIS</h2>
 <dl>

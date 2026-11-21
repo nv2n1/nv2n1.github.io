@@ -1,4 +1,5 @@
 ---
+
 title: "git-clear-soft(1)"
 name: "git-clear-soft"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-clear-soft/"
 description: "git-clear-soft – Soft clean up a repository"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-clear-soft</code> &#8211; Soft clean up a repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-clear-soft</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-cleanupdrivers(1)"
 name: "foomatic-cleanupdrivers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-cleanupdrivers/"
 description: "foomatic-cleanupdrivers – Remove driver entries with no command line"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-cleanupdrivers &#8211; Remove driver entries with no command line</p>
 <h2>SYNOPSIS</h2>
 <dl>

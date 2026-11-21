@@ -1,4 +1,5 @@
 ---
+
 title: "ttx(1)"
 name: "ttx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttx/"
 description: "ttx – tool for manipulating TrueType and OpenType fonts"
 ---
 
-<h2>NAME</h2>
 <p> <code>ttx</code> &#8211; tool for manipulating TrueType and OpenType fonts</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>option &#8230;</i> ] <i>file &#8230;</i></p>

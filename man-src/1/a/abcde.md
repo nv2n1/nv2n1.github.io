@@ -1,4 +1,5 @@
 ---
+
 title: "abcde(1)"
 name: "abcde"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abcde/"
 description: "abcde – Grab an entire CD and compress it to Ogg/Vorbis, MP3, FLAC, Ogg/Speex and/or MPP/MP+(Musepack) format."
 ---
 
-<h2>NAME</h2>
 <p> abcde &#8211; Grab an entire CD and compress it to Ogg/Vorbis, MP3, FLAC, Ogg/Speex and/or MPP/MP+(Musepack) format.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abcde</code> <i>[options] [tracks]</i></p>

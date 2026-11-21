@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogreduce(1)"
 name: "pmlogreduce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogreduce/"
 description: "pmlogreduce – temporal reduction of Performance Co-Pilot archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogreduce</code> &#8211; temporal reduction of Performance Co-Pilot archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogreduce</code> [<code>-z</code>] [<code>-A</code> <i>align</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code> <i>volsamples</i>] [<code>-Z</code> <i>timezone</i>] <i>input</i> <i>output</i></p>

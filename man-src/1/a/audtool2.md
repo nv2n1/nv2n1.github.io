@@ -1,4 +1,5 @@
 ---
+
 title: "audtool2(1)"
 name: "audtool2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-audtool2/"
 description: "audtool2 – a small tool to modify behavior of a running audacious2 instance."
 ---
 
-<h2>NAME</h2>
 <p> <code>audtool2</code> &#8211; a small tool to modify behavior of a running audacious2 instance.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>audtool2</code> [&#8211;[[handler [parameters]] [&#8230;]</p>

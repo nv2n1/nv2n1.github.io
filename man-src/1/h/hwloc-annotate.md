@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-annotate(1)"
 name: "hwloc-annotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-annotate/"
 description: "hwloc-annotate – Add info attributes to a XML topology"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-annotate &#8211; Add info attributes to a XML topology</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-annotate</code> [<i>options</i>] <i>&lt;input.xml&gt;</i> <i>&lt;output.xml&gt;</i> <i>&lt;location&gt;</i> <i>&lt;mode&gt;</i> <i>&lt;annotation&gt;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_interop(1)"
 name: "nfstest_interop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_interop/"
 description: "nfstest_interop – NFS interoperability tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_interop &#8211; NFS interoperability tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_interop &#8211;server &lt;server&gt; [options]</p>

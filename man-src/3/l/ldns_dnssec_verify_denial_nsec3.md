@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_verify_denial_nsec3(3)"
 name: "ldns_dnssec_verify_denial_nsec3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_verify_denial_nsec3/"
 description: "ldns_dnssec_verify_denial, ldns_dnssec_verify_denial_nsec3"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_verify_denial, ldns_dnssec_verify_denial_nsec3 </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

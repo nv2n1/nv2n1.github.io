@@ -1,4 +1,5 @@
 ---
+
 title: "fprintd-enroll(1)"
 name: "fprintd-enroll"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fprintd-enroll/"
 description: "fprintd – Fingerprint management daemon, and test applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fprintd &#8211; Fingerprint management daemon, and test applications </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fprintd-enroll</code> [-f finger] [usename] </p>

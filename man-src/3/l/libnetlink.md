@@ -1,4 +1,5 @@
 ---
+
 title: "libnetlink(3)"
 name: "libnetlink"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnetlink/"
 description: "libnetlink – A library for accessing the netlink service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libnetlink &#8211; A library for accessing the netlink service </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

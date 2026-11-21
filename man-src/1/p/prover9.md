@@ -1,4 +1,5 @@
 ---
+
 title: "prover9(1)"
 name: "prover9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prover9/"
 description: "prover9 – resolution/paramodulation theorem prover"
 ---
 
-<h2>NAME</h2>
 <p> prover9 &#8211; resolution/paramodulation theorem prover</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prover9</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />

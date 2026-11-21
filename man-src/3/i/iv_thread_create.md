@@ -1,4 +1,5 @@
 ---
+
 title: "iv_thread_create(3)"
 name: "iv_thread_create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_thread_create/"
 description: "iv_thread_create, iv_thread_set_debug_state – ivykis thread convenience functions"
 ---
 
-<h2>NAME</h2>
 <p> iv_thread_create, iv_thread_set_debug_state &#8211; ivykis thread convenience functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_thread.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "csplit(1)"
 name: "csplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csplit/"
 description: "csplit – split a file into sections determined by context lines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csplit &#8211; split a file into sections determined by context lines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>csplit</code> [<i>,OPTION/</i>]&#8230; <i>,FILE PATTERN/</i>&#8230;</p>

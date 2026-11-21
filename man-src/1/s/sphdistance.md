@@ -1,4 +1,5 @@
 ---
+
 title: "sphdistance(1)"
 name: "sphdistance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphdistance/"
 description: "sphdistance – Make Voronoi distance, node, or nearest-neighbor grid on a sphere"
 ---
 
-<h2>NAME</h2>
 <p> sphdistance &#8211; Make Voronoi distance, node, or nearest-neighbor grid on a sphere</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphdistance</code> [ <i>table</i> ] <i>grdfile</i> [ ] [ <code>d</code>|<code>n</code>|<code>z</code>[<i>dist</i>] ] [ <i>increment</i> ] [ <i>unit</i> ] [ <i>nodetable</i> ] [ <i>voronoi.txt</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

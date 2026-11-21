@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_cal_tx_dc_offset(1)"
 name: "uhd_cal_tx_dc_offset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uhd_cal_tx_dc_offset/"
 description: "uhd_cal_tx_dc_offset – Generate TX DC Offset Calibration Table for a UHD Device"
 ---
 
-<h2>NAME</h2>
 <p> uhd_cal_tx_dc_offset &#8211; Generate TX DC Offset Calibration Table for a UHD Device</p>
 <h2>DESCRIPTION</h2>
 <p> The Universal Software Radio Peripheral Hardware Drivers handle calibration information. This application reduces TX DC offset within the specified frequency range using transmit leakage into the receive path. Remove all external hardware from the RF antenna ports before using this application. This can take up to several minutes with default settings. </p>

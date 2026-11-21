@@ -1,4 +1,5 @@
 ---
+
 title: "markdown(1)"
 name: "markdown"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-markdown/"
 description: "markdown – text to html conversion tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>markdown</code> &#8211; text to html conversion tool </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>d</code> ] [-<code>T</code> ] [-<code>V</code> ] [-<code>b </code><i>url-base</i> ] [-<code>C </code><i>prefix</i> ] [-<code>F bitmap </code> ] [-<code>f </code><i>flags</i> ] [-<code>n</code> ] [-<code>o file </code> ] [-<code>S</code> ] [-<code>s text </code> ] [-<code>t text </code> ] [textfile ]</p>

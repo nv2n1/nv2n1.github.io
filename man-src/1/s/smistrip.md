@@ -1,4 +1,5 @@
 ---
+
 title: "smistrip(1)"
 name: "smistrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smistrip/"
 description: "smistrip – extract MIB or PIB modules from text files, like RFCs or I-Ds"
 ---
 
-<h2>NAME</h2>
 <p> smistrip &#8211; extract MIB or PIB modules from text files, like RFCs or I-Ds</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smistrip</code> [ <code>-Vhn</code> ] [ <code>-d </code><i>dir</i> ] [ <code>-m </code><i>module</i> ] [ <i>file(s)</i> ]</p>

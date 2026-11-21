@@ -1,4 +1,5 @@
 ---
+
 title: "cfv(1)"
 name: "cfv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cfv/"
 description: "cfv – Verify file consistency with .sfv, .csv, .crc, .md5, md5sum, sha1sum, .torrent, par, or par2 files"
 ---
 
-<h2>NAME</h2>
 <p> cfv &#8211; Verify file consistency with .sfv, .csv, .crc, .md5, md5sum, sha1sum, .torrent, par, or par2 files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cfv [-p dir] [-v|-V|-VV] [-r|-rr|-R] [-n|-N] [&#8211;renameformat &lt;s&gt;] [-s|-S] [-zz|-z|-Z|-ZZ] [-T|-C] [-m|-M] [-i|-I] [-u|-uu|-U] [&#8211;unquote &lt;b&gt;] [&#8211;fixpaths &lt;s&gt;] [&#8211;showpaths &lt;i&gt;] [&#8211;list/&#8211;list0 &lt;l&gt;] [&#8211;announceurl &lt;u&gt;] [&#8211;piece_size_pow2 &lt;n&gt;] [-t type] [-f file] [files&#8230;]</code></p>

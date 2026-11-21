@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoicr(1)"
 name: "ppmtoicr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoicr/"
 description: "ppmtoicr – convert a portable pixmap into NCSA ICR format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoicr &#8211; convert a portable pixmap into NCSA ICR format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoicr</code> [<code>-windowname</code> <i>name</i>] [<code>-expand</code> <i>expand</i>] [<code>-display</code> <i>display</i>] [<code>-rle</code>] [<i>ppmfile</i>]</p>

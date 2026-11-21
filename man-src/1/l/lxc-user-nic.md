@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-user-nic(1)"
 name: "lxc-user-nic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-user-nic/"
 description: "lxc-user-nic – Create and attach a nic to another network namespace."
 ---
 
-<h2>NAME</h2>
 <p> lxc-user-nic &#8211; Create and attach a nic to another network namespace.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-user-nic</code> {<i>pid</i>} {<i>type</i>} {<i>bridge</i>} [<i>nicname</i>]</p>

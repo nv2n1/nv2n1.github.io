@@ -1,4 +1,5 @@
 ---
+
 title: "expr(3)"
 name: "expr"
 section: "3"
@@ -6,9 +7,7 @@ letter: "e"
 url: "/docs/linux/man/3-expr/"
 ---
 
-<h2>NAME</h2>
-
- expr - c-like expression library
+expr - c-like expression library
 
 <h2>SYNOPSIS</h2>
 

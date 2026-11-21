@@ -1,4 +1,5 @@
 ---
+
 title: "ldexpl(3)"
 name: "ldexpl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldexpl/"
 description: "ldexp, ldexpf, ldexpl – multiply floating-point number by integral power of 2"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldexp, ldexpf, ldexpl &#8211; multiply floating-point number by integral power of 2 </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

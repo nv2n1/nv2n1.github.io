@@ -1,4 +1,5 @@
 ---
+
 title: "ompi-top(1)"
 name: "ompi-top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ompi-top/"
 description: "ompi-top, orte-top – Diagnostic to provide process info similar to the popular \"top\" program."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ompi-top, orte-top &#8211; Diagnostic to provide process info similar to the popular &quot;top&quot; program. </p>
 <p> <code>NOTE:</code> <i>ompi-top</i>, and <i>orte-top</i> are exact synonyms for each other. Using any of the names will result in exactly identical behavior.</p>
 <h2>SYNOPSIS</h2>

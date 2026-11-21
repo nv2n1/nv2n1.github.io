@@ -1,4 +1,5 @@
 ---
+
 title: "icecast(1)"
 name: "icecast"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icecast/"
 description: "icecast – an MP3/Ogg Vorbis broadcast streaming media server"
 ---
 
-<h2>NAME</h2>
 <p> icecast &#8211; an MP3/Ogg Vorbis broadcast streaming media server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>icecast</code> -c config.xml</p>

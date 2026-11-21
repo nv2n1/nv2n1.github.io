@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-xfer(1)"
 name: "pilot-xfer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-xfer/"
 description: "pilot-xfer – Backup, sync, and restore databases from a Palm handheld device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-xfer &#8211; Backup, sync, and restore databases from a Palm handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

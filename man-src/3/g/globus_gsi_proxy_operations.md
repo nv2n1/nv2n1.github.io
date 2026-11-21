@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy_operations(3)"
 name: "globus_gsi_proxy_operations"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_operations/"
 description: "Proxy Operations –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Proxy Operations &#8211; </p>
 <p> Initiate a proxy operation.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "bigloo(1)"
 name: "bigloo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bigloo/"
 description: "bigloo v2.3 – `a practical Scheme compiler’"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bigloo v2.3 &#8211; `a practical Scheme compiler&#8217;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bigloo</code> [ options ] <i>[ input ]</i> </p>

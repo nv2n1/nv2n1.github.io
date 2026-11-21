@@ -1,4 +1,5 @@
 ---
+
 title: "po2tiki(1)"
 name: "po2tiki"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-po2tiki/"
 description: "po2tiki – Convert Gettext PO files to TikiWiki’s language.php files."
 ---
 
-<h2>NAME</h2>
 <p> po2tiki &#8211; Convert Gettext PO files to TikiWiki&#8217;s language.php files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>po2tiki </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp]</p>

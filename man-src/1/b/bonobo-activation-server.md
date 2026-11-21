@@ -1,4 +1,5 @@
 ---
+
 title: "bonobo-activation-server(1)"
 name: "bonobo-activation-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bonobo-activation-server/"
 description: "bonobo-activation-server – GNOME component tracker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bonobo-activation-server &#8211; GNOME component tracker </p>
 <h2>DESCRIPTION</h2>
 <p> This application tracks information about installed components and brokers components, in conjunction with its client library; libbonobo-activation. </p>

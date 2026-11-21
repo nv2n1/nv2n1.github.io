@@ -1,4 +1,5 @@
 ---
+
 title: "id3info(1)"
 name: "id3info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-id3info/"
 description: "id3info – Display id3 tag information."
 ---
 
-<h2>NAME</h2>
 <p> id3info &#8211; Display id3 tag information.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>id3info</code> [ <i>OPTION</i> ] [ <i>FILE</i> ] </p>

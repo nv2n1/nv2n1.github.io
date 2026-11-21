@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_update_adcount(3)"
 name: "ldns_update_adcount"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_update_adcount/"
 description: "ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldns_update_adcount"
 ---
 
-<h2>NAME</h2>
 <p> ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldns_update_adcount </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

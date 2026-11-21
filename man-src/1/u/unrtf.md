@@ -1,4 +1,5 @@
 ---
+
 title: "unrtf(1)"
 name: "unrtf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unrtf/"
 description: "UnRTF – converts document in RTF format to other formats"
 ---
 
-<h2>NAME</h2>
 <p> UnRTF &#8211; converts document in RTF format to other formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>unrtf [</code><i>options</i><code>] [</code><i>file&#8230;</i><code>]</code> </p>

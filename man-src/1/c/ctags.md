@@ -1,4 +1,5 @@
 ---
+
 title: "ctags(1)"
 name: "ctags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctags/"
 description: "ctags – Generate tag files for source code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctags &#8211; Generate tag files for source code </p>
 <h2>SYNOPSIS</h2>
 <dl>

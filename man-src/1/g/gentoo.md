@@ -1,4 +1,5 @@
 ---
+
 title: "gentoo(1)"
 name: "gentoo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gentoo/"
 description: "gentoo – A highly configurable file manager for X"
 ---
 
-<h2>NAME</h2>
 <p> gentoo &#8211; A highly configurable file manager for X</p>
 <h2>SYNOPSIS</h2>
 <p> gentoo [&#8211;version] [&#8211;root-ok] [&#8211;no-rc] [&#8211;no-gtkrc] [&#8211;no-fam] [&#8211;left=path] [&#8211;right=path]</p>

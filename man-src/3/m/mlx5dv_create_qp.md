@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_qp(3)"
 name: "mlx5dv_create_qp"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_qp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_qp - creates a queue pair (QP) 
+mlx5dv_create_qp - creates a queue pair (QP) 
 
 <h2>SYNOPSIS</h2>
 

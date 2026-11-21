@@ -1,4 +1,5 @@
 ---
+
 title: "wipefs(8)"
 name: "wipefs"
 section: "8"
@@ -6,8 +7,9 @@ letter: "w"
 url: "/docs/linux/man/8-wipefs/"
 description: "wipefs – wipe a signature from a device"
 ---
+
 <p>wipefs &#8211; wipe a signature from a device </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>wipefs</code> [options] <i>device</i>... </p>
 <p> <code>wipefs</code> [<code>--backup</code>] <code>-o</code> <i>offset device</i>... </p>
 <p> <code>wipefs</code> [<code>--backup</code>] <code>-a</code> <i>device</i>...  </p>

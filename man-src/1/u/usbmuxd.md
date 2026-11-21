@@ -1,4 +1,5 @@
 ---
+
 title: "usbmuxd(1)"
 name: "usbmuxd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usbmuxd/"
 description: "usbmuxd – Expose a socket to multiplex connections from and to iOS devices."
 ---
 
-<h2 class="name">NAME</h2>
 <p> usbmuxd &#8211; Expose a socket to multiplex connections from and to iOS devices. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>usbmuxd</code> [OPTIONS] </p>

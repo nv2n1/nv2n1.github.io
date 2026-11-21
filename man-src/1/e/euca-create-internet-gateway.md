@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-internet-gateway(1)"
 name: "euca-create-internet-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-internet-gateway/"
 description: "euca-create-internet-gateway – Create a new VPC Internet gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-internet-gateway &#8211; Create a new VPC Internet gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-internet-gateway [&#8211;show-empty-fields] [-U URL]</p>

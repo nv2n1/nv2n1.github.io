@@ -1,4 +1,5 @@
 ---
+
 title: "h2xs(1)"
 name: "h2xs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h2xs/"
 description: "h2xs – convert .h C header files to Perl extensions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> h2xs &#8211; convert .h C header files to Perl extensions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2xs</code> [<font SIZE="-1"><code>OPTIONS</code></font> &#8230;] [headerfile &#8230; [extra_libraries]] </p>

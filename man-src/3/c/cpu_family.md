@@ -1,4 +1,5 @@
 ---
+
 title: "cpu_family(3)"
 name: "cpu_family"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpu_family/"
 description: "cpu_family – Contains the CPU type. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> cpu_family &#8211; Contains the CPU type. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

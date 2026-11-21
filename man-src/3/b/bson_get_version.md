@@ -1,4 +1,5 @@
 ---
+
 title: "bson_get_version(3)"
 name: "bson_get_version"
 section: "3"
@@ -6,9 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_get_version/"
 ---
 
-<h2>NAME</h2>
-
- bson_get_version() - A string representation of Libbson's version, formatted something like &quot;1.2.3&quot; or &quot;1.2.3-dev&quot;.
+bson_get_version() - A string representation of Libbson's version, formatted something like &quot;1.2.3&quot; or &quot;1.2.3-dev&quot;.
 
 <h2>SYNOPSIS</h2>
 

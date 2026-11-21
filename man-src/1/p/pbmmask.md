@@ -1,4 +1,5 @@
 ---
+
 title: "pbmmask(1)"
 name: "pbmmask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmmask/"
 description: "pbmmask – create a mask bitmap from a regular bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmmask &#8211; create a mask bitmap from a regular bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmmask</code> [<code>-expand</code>] [<i>pbmfile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "flow-dscan(1)"
 name: "flow-dscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-dscan/"
 description: "flow-dscan – Detect scanning and other suspicious network activity."
 ---
 
-<h2>NAME</h2>
 <p> flow-dscan &#8211; Detect scanning and other suspicious network activity.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-dscan</code> [ <code>-bBhlmpwW</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-D</code><i> iplist_depth</i> ] [ <code>-s</code><i> state_file</i> ] [ <code>-i</code><i> input_filter</i> ] [ <code>-L</code><i> suppress_list</i> ] [ <code>-o</code><i> output_filter</i> ] [ <code>-O</code><i> excessive_octets</i> ] [ <code>-P</code><i> excessive_flows</i> ] [ <code>-S</code><i> port_scan_trigger</i> ] [ <code>-t</code><i> ager_timeout</i> ]</p>

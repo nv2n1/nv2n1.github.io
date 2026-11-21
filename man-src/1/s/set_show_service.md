@@ -1,4 +1,5 @@
 ---
+
 title: "set_show_service(1)"
 name: "set_show_service"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-set_show_service/"
 description: "set_show_service – enable or disable a service for the current user"
 ---
 
-<h2>NAME</h2>
 <p> set_show_service &#8211; enable or disable a service for the current user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>set_show_service [&#8211;enable &lt;service&gt;] [&#8211;disable &lt;service&gt;]</code></p>

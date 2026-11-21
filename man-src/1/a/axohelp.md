@@ -1,4 +1,5 @@
 ---
+
 title: "axohelp(1)"
 name: "axohelp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-axohelp/"
 description: "axohelp – helper program for use of LaTeX package axodraw2 with pdflatex."
 ---
 
-<h2 class="name">NAME</h2>
 <p> axohelp &#8211; helper program for use of LaTeX package axodraw2 with pdflatex. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>axohelp [options] [filename]</code></p>

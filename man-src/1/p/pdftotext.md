@@ -1,4 +1,5 @@
 ---
+
 title: "pdftotext(1)"
 name: "pdftotext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdftotext/"
 description: "pdftotext – Portable Document Format (PDF) to text converter (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdftotext &#8211; Portable Document Format (PDF) to text converter (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftotext</code> [options] [<i>PDF-file</i> [<i>text-file</i>]]</p>

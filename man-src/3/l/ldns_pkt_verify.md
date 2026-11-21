@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_verify(3)"
 name: "ldns_pkt_verify"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_verify/"
 description: "ldns_pkt_verify"
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_verify </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

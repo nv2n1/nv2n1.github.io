@@ -1,4 +1,5 @@
 ---
+
 title: "zonetodb(1)"
 name: "zonetodb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zonetodb/"
 description: "zonetodb – Generate a PostgreSQL table from a zone."
 ---
 
-<h2>NAME</h2>
 <p> zonetodb &#8211; Generate a PostgreSQL table from a zone.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zonetodb origin file dbname dbtable</code></p>

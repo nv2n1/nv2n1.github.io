@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-rm(1)"
 name: "pq2-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-rm/"
 description: "pq2-rm – Remove one or more datasets from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-rm &#8211; Remove one or more datasets from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-rm</code> [options] dataset</p>

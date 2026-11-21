@@ -1,4 +1,5 @@
 ---
+
 title: "g_vanhove_d(1)"
 name: "g_vanhove_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_vanhove_d/"
 description: "g_vanhove – calculates Van Hove displacement functions"
 ---
 
-<h2>NAME</h2>
 <p> g_vanhove &#8211; calculates Van Hove displacement functions </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "alc(1)"
 name: "alc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alc/"
 description: "aLinkCreator – the aMule eD2k link creator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aLinkCreator &#8211; the aMule eD2k link creator </p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>

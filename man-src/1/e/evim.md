@@ -1,4 +1,5 @@
 ---
+
 title: "evim(1)"
 name: "evim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-evim/"
 description: "evim – easy Vim, edit a file with Vim and setup for modeless editing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> evim &#8211; easy Vim, edit a file with Vim and setup for modeless editing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>evim</code> [options] [file ..]<br />

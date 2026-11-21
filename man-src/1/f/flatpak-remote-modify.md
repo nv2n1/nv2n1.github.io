@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-modify(1)"
 name: "flatpak-remote-modify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-remote-modify/"
 description: "flatpak-remote-modify – Modify a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-remote-modify &#8211; Modify a remote repository </p>
 <h2>SYNOPSIS</h2>
 <dl>

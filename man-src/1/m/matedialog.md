@@ -1,4 +1,5 @@
 ---
+
 title: "matedialog(1)"
 name: "matedialog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-matedialog/"
 description: "matedialog – display GTK+ dialogs"
 ---
 
-<h2>NAME</h2>
 <p> matedialog &#8211; display GTK+ dialogs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matedialog</code> [<i>options</i>]</p>

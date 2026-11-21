@@ -1,4 +1,5 @@
 ---
+
 title: "rebuild-jar-repository(1)"
 name: "rebuild-jar-repository"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rebuild-jar-repository/"
 description: "rebuild-jar-repository – rebuild a JAR repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rebuild-jar-repository &#8211; rebuild a JAR repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rebuild-jar-repository</code> [OPTION]&#8230; DIRECTORY</p>

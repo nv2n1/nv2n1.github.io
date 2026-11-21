@@ -1,4 +1,5 @@
 ---
+
 title: "curl_formfree(3)"
 name: "curl_formfree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_formfree/"
 description: "curl_formfree – free a previously build multipart/formdata HTTP POST chain"
 ---
 
-<h2>NAME</h2>
 <p> curl_formfree &#8211; free a previously build multipart/formdata HTTP POST chain</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

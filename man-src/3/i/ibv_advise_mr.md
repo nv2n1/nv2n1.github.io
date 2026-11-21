@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_advise_mr(3)"
 name: "ibv_advise_mr"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_advise_mr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_advise_mr - Gives advice or directions to the kernel about an address range belongs to a memory region (MR). 
+ibv_advise_mr - Gives advice or directions to the kernel about an address range belongs to a memory region (MR). 
 
 <h2>SYNOPSIS</h2>
 

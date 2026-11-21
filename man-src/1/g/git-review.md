@@ -1,4 +1,5 @@
 ---
+
 title: "git-review(1)"
 name: "git-review"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-review/"
 description: "git-review – Submit changes to Gerrit for review"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-review</code> &#8211; Submit changes to Gerrit for review</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>r </code><i>remote</i> ] [-<code>uv</code> ] &#8211;<code>d </code><i>change</i> [<i>branch</i> ]<br />

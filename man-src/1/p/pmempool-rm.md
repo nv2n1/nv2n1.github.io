@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-rm(1)"
 name: "pmempool-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-rm/"
 description: "pmempool-rm – Remove (unlink) poolset files"
 ---
 
-<h2>NAME</h2>
 <p> pmempool-rm &#8211; Remove (unlink) poolset files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool rm</code> [&lt;options&gt;] &lt;file&gt;..</p>

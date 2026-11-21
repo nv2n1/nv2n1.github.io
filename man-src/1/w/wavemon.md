@@ -1,4 +1,5 @@
 ---
+
 title: "wavemon(1)"
 name: "wavemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wavemon/"
 description: "wavemon – a wireless network monitor"
 ---
 
-<h2>NAME</h2>
 <p> wavemon &#8211; a wireless network monitor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wavemon [-h] [-i</code> <i>ifname</i> <code>] [-l] [-r] [-v]</code></p>

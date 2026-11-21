@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-flush(1)"
 name: "nvme-flush"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-flush/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-flush - Flush command. 
+nvme-flush - Flush command. 
 
 <h2>SYNOPSIS</h2>
 

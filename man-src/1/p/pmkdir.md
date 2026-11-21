@@ -1,4 +1,5 @@
 ---
+
 title: "pmkdir(1)"
 name: "pmkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmkdir/"
 description: "pmkdir – make directory"
 ---
 
-<h2>NAME</h2>
 <p> pmkdir &#8211; make directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmkdir</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>DIRECTORY</i> </p>

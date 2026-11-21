@@ -1,4 +1,5 @@
 ---
+
 title: "matherr(3)"
 name: "matherr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-matherr/"
 description: "matherr – SVID math library exception handling"
 ---
 
-<h2 class="name">NAME</h2>
 <p> matherr &#8211; SVID math library exception handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

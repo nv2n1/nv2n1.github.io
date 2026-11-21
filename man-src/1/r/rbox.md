@@ -1,4 +1,5 @@
 ---
+
 title: "rbox(1)"
 name: "rbox"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rbox/"
 ---
 
-<h2>NAME</h2>
-
- rbox - generate point distributions for qhull
+rbox - generate point distributions for qhull
 
 <h2>SYNOPSIS</h2>
 

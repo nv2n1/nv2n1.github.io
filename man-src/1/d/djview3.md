@@ -1,4 +1,5 @@
 ---
+
 title: "djview3(1)"
 name: "djview3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djview3/"
 description: "djview3 – Standalone DjVu viewer"
 ---
 
-<h2>NAME</h2>
 <p> djview3 &#8211; Standalone DjVu viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>djview3 [</code><i>options</i><code>] [</code><i>djvufile</i><code>]</code> </p>

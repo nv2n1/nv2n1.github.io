@@ -1,4 +1,5 @@
 ---
+
 title: "transfig(1)"
 name: "transfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transfig/"
 description: "transfig – creates a makefile for portable LaTeX figures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> transfig &#8211; creates a makefile for portable LaTeX figures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>transfig</code> [ -L <i>language</i> ] [ -M <i>makefile</i> ] [ -T <i>texfile</i> ] [ -I <i>macrofile</i> ] [ -V ] [ <i>control_specs</i> figfile &#8230; ]</p>

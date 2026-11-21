@@ -1,4 +1,5 @@
 ---
+
 title: "xvile(1)"
 name: "xvile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvile/"
 description: "vile, xvile, uxvile, lxvile – VI Like Emacs"
 ---
 
-<h2>NAME</h2>
 <p> vile, xvile, uxvile, lxvile &#8211; <code>VI L</code>ike <code>E</code>macs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vile [@</code><i>cmdfile</i><code>] [+</code><i>command</i><code>] [-FhIiRVv] [-g</code><i>NNN</i><code>] [-k</code><i>cryptkey</i><code>] [-s</code><i>pattern</i><code>] [-t</code><i>tag</i><code>] [</code><i>filename</i><code>]&#8230;</code></p>

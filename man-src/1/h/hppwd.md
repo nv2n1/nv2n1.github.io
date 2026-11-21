@@ -1,4 +1,5 @@
 ---
+
 title: "hppwd(1)"
 name: "hppwd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hppwd/"
 description: "hppwd — print the current working directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hppwd &#8212; print the current working directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hppwd</code></p>

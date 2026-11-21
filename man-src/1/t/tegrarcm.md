@@ -1,4 +1,5 @@
 ---
+
 title: "tegrarcm(1)"
 name: "tegrarcm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tegrarcm/"
 description: "tegrarcm – tegra firmware download utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tegrarcm &#8211; tegra firmware download utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tegrarcm</code> [ <i>options</i> ]</p>

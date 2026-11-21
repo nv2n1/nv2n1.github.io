@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-patch(1)"
 name: "hwloc-patch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-patch/"
 description: "hwloc-patch – Apply a topology difference to an existing XML topology"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-patch &#8211; Apply a topology difference to an existing XML topology</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-patch</code> [<i>options</i>] <i>[&lt;topology.xml&gt; | refname]</i> <i>[&lt;diff.xml&gt; | -]</i> <i>&lt;output.xml&gt;</i> </p>

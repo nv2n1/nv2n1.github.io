@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_server_add(3)"
 name: "memcached_server_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_server_add/"
 description: "memcached_server_add – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_server_add &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gclose(1)"
 name: "gclose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gclose/"
 description: "gclose – This tool terminates an application"
 ---
 
-<h2>NAME</h2>
 <p> gclose &#8211; This tool terminates an application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gclose &lt;application&gt;</code></p>

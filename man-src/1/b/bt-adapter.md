@@ -1,4 +1,5 @@
 ---
+
 title: "bt-adapter(1)"
 name: "bt-adapter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bt-adapter/"
 description: "bt-adapter – a bluetooth adapter manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bt-adapter &#8211; a bluetooth adapter manager </p>
 <h2>SYNOPSIS</h2>
 <p> bt-adapter [<font SIZE="-1">OPTION&#8230;</font>] </p>

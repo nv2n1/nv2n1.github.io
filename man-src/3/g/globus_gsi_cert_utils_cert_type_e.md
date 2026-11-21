@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_cert_utils_cert_type_e(3)"
 name: "globus_gsi_cert_utils_cert_type_e"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_cert_utils_cert_type_e/"
 description: "Cert Utils Constants –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Cert Utils Constants &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef enum<br />

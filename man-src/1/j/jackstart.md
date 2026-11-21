@@ -1,4 +1,5 @@
 ---
+
 title: "jackstart(1)"
 name: "jackstart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jackstart/"
 description: "jackd – JACK Audio Connection Kit sound server"
 ---
 
-<h2>NAME</h2>
 <p> jackd &#8211; JACK Audio Connection Kit sound server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jackd</code> [<i>options</i>] <code>-d</code><i> backend </i> [<i>backend-parameters</i>]<br />

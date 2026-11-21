@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-statistics(1)"
 name: "mate-power-statistics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-power-statistics/"
 description: "mate-power-statistics – mate power statistics gui"
 ---
 
-<h2>NAME</h2>
 <p> mate-power-statistics &#8211; mate power statistics gui</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-power-statistics</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>

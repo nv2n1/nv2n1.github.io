@@ -1,4 +1,5 @@
 ---
+
 title: "svnadmin(1)"
 name: "svnadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svnadmin/"
 description: "svnadmin – Subversion repository administration tool"
 ---
 
-<h2>NAME</h2>
 <p> svnadmin &#8211; Subversion repository administration tool</p>
 <h2>SYNOPSIS</h2>
 <dl>

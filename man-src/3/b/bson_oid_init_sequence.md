@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_init_sequence(3)"
 name: "bson_oid_init_sequence"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_init_sequence/"
 description: "bson_oid_init_sequence() – Generates a new ObjectID using the 64-bit sequence."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_init_sequence() &#8211; Generates a new ObjectID using the 64-bit sequence.</p>
 <h2>SYNOPSIS</h2>
 <pre>

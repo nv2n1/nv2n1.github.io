@@ -1,4 +1,5 @@
 ---
+
 title: "inetutils-dnsdomainname(1)"
 name: "inetutils-dnsdomainname"
 section: "1"
@@ -8,7 +9,7 @@ description: "dnsdomainname – show DNS domain name"
 ---
 
 <p>GNU Network Utilities</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>dnsdomainname</code> &#8211; show DNS domain name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnsdomainname</code> [<i>option &#8230;</i> ]</p>

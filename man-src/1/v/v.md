@@ -1,4 +1,5 @@
 ---
+
 title: "v(1)"
 name: "v"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-v/"
 description: "v.what.vect – Uploads vector values at positions of vector points to the table."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>v.what.vect</code> &#8211; Uploads vector values at positions of vector points to the table.</p>
 <h2>KEYWORDS</h2>
 <p> vector, database, attribute table</p>

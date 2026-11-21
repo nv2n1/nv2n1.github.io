@@ -1,4 +1,5 @@
 ---
+
 title: "scalap(1)"
 name: "scalap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scalap/"
 description: "scalap – Scala class file decoder for the Scala 2 language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>scalap</code> &#8211; Scala class file decoder for the Scala 2 language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scalap</code> [ &lt;<i>options</i>&gt; ] &lt;<i>class name</i>&gt;</p>

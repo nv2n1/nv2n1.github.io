@@ -1,4 +1,5 @@
 ---
+
 title: "freight-add(1)"
 name: "freight-add"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freight-add/"
 description: "freight-add – add a package to Freight"
 ---
 
-<h2>NAME</h2>
 <p> <code>freight-add</code> &#8211; add a package to Freight</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freight add</code> [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] <i>package</i> <i>manager</i>/<i>distro</i>[/<i>component</i>][&#8230;]</p>

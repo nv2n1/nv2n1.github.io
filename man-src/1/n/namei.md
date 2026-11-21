@@ -1,4 +1,5 @@
 ---
+
 title: "namei(1)"
 name: "namei"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-namei/"
 description: "namei – follow a pathname until a terminal point is found"
 ---
 
-<h2 class="name">NAME</h2>
 <p> namei &#8211; follow a pathname until a terminal point is found </p>
 <h2>SYNOPSIS</h2>
 <p> <code>namei</code> [options] <i>pathname</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slabtop(1)"
 name: "slabtop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slabtop/"
 description: "slabtop – display kernel slab cache information in real time"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slabtop &#8211; display kernel slab cache information in real time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>slabtop</code> [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "yubico-piv-tool(1)"
 name: "yubico-piv-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yubico-piv-tool/"
 description: "yubico-piv-tool – Yubico PIV tool"
 ---
 
-<h2>NAME</h2>
 <p> yubico-piv-tool &#8211; Yubico PIV tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yubico-piv-tool</code> [<i>,OPTIONS/</i>]&#8230;</p>

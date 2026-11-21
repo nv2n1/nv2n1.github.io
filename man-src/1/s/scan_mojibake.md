@@ -1,4 +1,5 @@
 ---
+
 title: "scan_mojibake(1)"
 name: "scan_mojibake"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-scan_mojibake/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- scan_mojibake - scan Perl source and report bad character encoding 
+scan_mojibake - scan Perl source and report bad character encoding 
 
 <h2>VERSION</h2>
 

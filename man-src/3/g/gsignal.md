@@ -1,4 +1,5 @@
 ---
+
 title: "gsignal(3)"
 name: "gsignal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gsignal/"
 description: "gsignal, ssignal – software signal facility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gsignal, ssignal &#8211; software signal facility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

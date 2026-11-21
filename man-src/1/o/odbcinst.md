@@ -1,4 +1,5 @@
 ---
+
 title: "odbcinst(1)"
 name: "odbcinst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-odbcinst/"
 description: "odbcinst – An unixODBC tool for manipulating configuration files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> odbcinst &#8211; An unixODBC tool for manipulating configuration files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>odbcinst</code> <i>ACTION OBJECT OPTIONS</i> </p>

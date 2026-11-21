@@ -1,4 +1,5 @@
 ---
+
 title: "callback(3)"
 name: "callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-callback/"
 description: "callback – closures with variable arguments as first-class C functions"
 ---
 
-<h2>NAME</h2>
 <p> callback &#8211; closures with variable arguments as first-class C functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/callback.h">callback.h</a>&gt;</code> </p>

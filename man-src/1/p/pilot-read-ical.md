@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-ical(1)"
 name: "pilot-read-ical"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-ical/"
 description: "pilot-read-ical – Exports the DatebookDB and/or ToDo applications to ical format."
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-ical &#8211; Exports the DatebookDB and/or ToDo applications to ical format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

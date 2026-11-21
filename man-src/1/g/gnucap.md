@@ -1,4 +1,5 @@
 ---
+
 title: "gnucap(1)"
 name: "gnucap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnucap/"
 description: "gnucap – GNU Circuit Analysis Package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnucap &#8211; GNU Circuit Analysis Package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnucap</code> [<code>-b</code> filename] [<code>-i</code> filename] </p>

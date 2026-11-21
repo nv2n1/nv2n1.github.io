@@ -1,4 +1,5 @@
 ---
+
 title: "dcmquant(1)"
 name: "dcmquant"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmquant/"
 description: "dcmquant – Convert DICOM color images to palette color"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmquant &#8211; Convert DICOM color images to palette color </p>
 <h2>SYNOPSIS</h2>
 <pre>

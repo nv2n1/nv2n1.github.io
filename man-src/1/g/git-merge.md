@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge(1)"
 name: "git-merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge/"
 description: "git-merge – Join two or more development histories together"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-merge &#8211; Join two or more development histories together </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

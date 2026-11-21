@@ -1,4 +1,5 @@
 ---
+
 title: "grd2xyz(1)"
 name: "grd2xyz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grd2xyz/"
 description: "grd2xyz – Convert grid file to data table"
 ---
 
-<h2>NAME</h2>
 <p> grd2xyz &#8211; Convert grid file to data table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grd2xyz</code> <i>grid</i> [ [<code>f</code>|<code>i</code>] ] [ <i>region</i> ] [ [<i>level</i>] ] [ [<i>weight</i>] ] [ [<i>flags</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-ho</code>[<i>n</i>] ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] </p>

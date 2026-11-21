@@ -1,4 +1,5 @@
 ---
+
 title: "racount(1)"
 name: "racount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-racount/"
 description: "racount – count things from an argus(8) data file/stream."
 ---
 
-<h2>NAME</h2>
 <p> <code>racount</code> &#8211; count things from an <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>racount</code> <i>[-M addr proto] [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>

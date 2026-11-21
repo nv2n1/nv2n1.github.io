@@ -1,4 +1,5 @@
 ---
+
 title: "jjs-java-1(1)"
 name: "jjs-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jjs-java-1/"
 description: "jjs – Invokes the Nashorn engine."
 ---
 
-<h2>NAME</h2>
 <p> jjs &#8211; Invokes the Nashorn engine.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

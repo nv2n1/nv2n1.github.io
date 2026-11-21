@@ -1,4 +1,5 @@
 ---
+
 title: "pg_receivexlog(1)"
 name: "pg_receivexlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_receivexlog/"
 description: "pg_receivexlog – streams transaction logs from a PostgreSQL cluster"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_receivexlog &#8211; streams transaction logs from a PostgreSQL cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>

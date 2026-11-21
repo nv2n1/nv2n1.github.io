@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-codecs(1)"
 name: "oggz-codecs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-codecs/"
 description: "oggz-codecs — List codecs in one or more Ogg files and their bitstreams."
 ---
 
-<h2>NAME</h2>
 <p> oggz-codecs &#8212; List codecs in one or more Ogg files and their bitstreams.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

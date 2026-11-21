@@ -1,4 +1,5 @@
 ---
+
 title: "sfz2pat(1)"
 name: "sfz2pat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfz2pat/"
 description: "sz2pat – convert sample files into extended GUS patches"
 ---
 
-<h2>NAME</h2>
 <p> sz2pat &#8211; convert sample files into extended GUS patches </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfz2pat</code> filename.sfz </p>

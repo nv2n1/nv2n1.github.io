@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-unapplied(1)"
 name: "guilt-unapplied"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-unapplied/"
 description: "guilt-unapplied – List all unapplied patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-unapplied &#8211; List all unapplied patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-unapplied</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slasq5(3)"
 name: "slasq5"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasq5/"
 description: "slasq5.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slasq5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

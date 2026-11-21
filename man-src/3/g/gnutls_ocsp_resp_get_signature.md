@@ -1,12 +1,14 @@
 ---
+
 title: "gnutls_ocsp_resp_get_signature(3)"
 name: "gnutls_ocsp_resp_get_signature"
 section: "3"
 letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_resp_get_signature/"
 ---
+
 <p> gnutls_ocsp_resp_get_signature - API function  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_get_signature(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_datum_t * </code><i>sig</i><code>);</code>  </p>
 <h2>ARGUMENTS</h2>

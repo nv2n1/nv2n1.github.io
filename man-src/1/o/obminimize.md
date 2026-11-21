@@ -1,4 +1,5 @@
 ---
+
 title: "obminimize(1)"
 name: "obminimize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obminimize/"
 description: "obminimize – optimize the geometry, minimize the energy for a molecule"
 ---
 
-<h2>NAME</h2>
 <p> <code>obminimize</code> &#8211; optimize the geometry, minimize the energy for a molecule</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>

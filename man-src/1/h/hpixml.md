@@ -1,4 +1,5 @@
 ---
+
 title: "hpixml(1)"
 name: "hpixml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpixml/"
 description: "hpxml – An openhpi sample application that displays system view in XML."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpxml &#8211; An openhpi sample application that displays system view in XML. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "gapplication(1)"
 name: "gapplication"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gapplication/"
 description: "gapplication – D-Bus application launcher"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gapplication &#8211; D-Bus application launcher </p>
 <h2>SYNOPSIS</h2>
 <dl>

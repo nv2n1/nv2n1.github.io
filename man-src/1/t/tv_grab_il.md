@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_il(1)"
 name: "tv_grab_il"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_il/"
 description: "tv_grab_il – Grab TV listings for Israel."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_il &#8211; Grab TV listings for Israel. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_il &#8211;help </p>

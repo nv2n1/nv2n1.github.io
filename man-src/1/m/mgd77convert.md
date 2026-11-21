@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77convert(1)"
 name: "mgd77convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77convert/"
 description: "mgd77convert – Convert MGD77 data to other file formats"
 ---
 
-<h2>NAME</h2>
 <p> mgd77convert &#8211; Convert MGD77 data to other file formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77convert</code> <i>NGDC-ids</i> <code>a</code>|<code>c</code>|<code>m</code> |<code>t</code> [<code>+</code>]<code>a</code>|<code>c</code>|<code>m</code>|<code>t</code> [ ] [ ] [ [<code>w</code>][<code>e</code>][<code>+</code>] ] [ [<i>level</i>] ] </p>

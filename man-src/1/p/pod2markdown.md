@@ -1,4 +1,5 @@
 ---
+
 title: "pod2markdown(1)"
 name: "pod2markdown"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pod2markdown/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pod2markdown - Convert POD text to Markdown 
+pod2markdown - Convert POD text to Markdown 
 
 <h2>VERSION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "anxenc(1)"
 name: "anxenc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anxenc/"
 description: "anxenc — Encapsulate annotations and data into annodexed media"
 ---
 
-<h2>NAME</h2>
 <p> anxenc &#8212; Encapsulate annotations and data into annodexed media<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

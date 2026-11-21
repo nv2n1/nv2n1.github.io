@@ -1,4 +1,5 @@
 ---
+
 title: "xkbwatch(1)"
 name: "xkbwatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xkbwatch/"
 description: "xkbwatch – XKB extension user utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xkbwatch &#8211; XKB extension user utility </p>
 <h2>DESCRIPTION</h2>
 <p> This program reports changes in the fundamental components of the XKB keyboard state plus the effective compatibility state.</p>

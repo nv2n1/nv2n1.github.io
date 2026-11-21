@@ -1,4 +1,5 @@
 ---
+
 title: "grip(1)"
 name: "grip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grip/"
 description: "Grip – Grip is a cd-player and cd-ripper for the Gnome desktop."
 ---
 
-<h2>NAME</h2>
 <p> Grip &#8211; Grip is a cd-player and cd-ripper for the Gnome desktop.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grip</code> [<i>options</i>]</p>

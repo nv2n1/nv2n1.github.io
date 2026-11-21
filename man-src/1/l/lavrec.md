@@ -1,4 +1,5 @@
 ---
+
 title: "lavrec(1)"
 name: "lavrec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lavrec/"
 description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lavrec &#8211; Record MJPEG-video from a zoran/video4linux-device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lavrec</code> [<i>options</i>] <i>filename(s)</i> </p>

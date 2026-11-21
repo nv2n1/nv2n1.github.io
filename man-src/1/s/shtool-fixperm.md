@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-fixperm(1)"
 name: "shtool-fixperm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-fixperm/"
 description: "shtool fixperm – GNU shtool file permission fixing command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool fixperm &#8211; GNU shtool file permission fixing command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool fixperm</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] <i>path</i> [<i>path</i> &#8230;]</p>

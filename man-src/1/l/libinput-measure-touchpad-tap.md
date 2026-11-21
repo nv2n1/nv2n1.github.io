@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-touchpad-tap(1)"
 name: "libinput-measure-touchpad-tap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-measure-touchpad-tap/"
 description: "libinput-measure-touchpad-tap – measure tap-to-click properties of devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-measure-touchpad-tap &#8211; measure tap-to-click properties of devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure touchpad-tap [&#8211;help] [&#8211;format=</code><i>&lt;format&gt;</i><code>] </code><i>[/dev/input/event0]</i></p>

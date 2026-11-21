@@ -1,4 +1,5 @@
 ---
+
 title: "gxine_client(1)"
 name: "gxine_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gxine_client/"
 description: "gxine_client – the gxine video player command line client"
 ---
 
-<h2>NAME</h2>
 <p> gxine_client &#8211; the gxine video player command line client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gxine_client</code> </p>

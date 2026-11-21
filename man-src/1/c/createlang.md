@@ -1,4 +1,5 @@
 ---
+
 title: "createlang(1)"
 name: "createlang"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-createlang/"
 description: "createlang – install a PostgreSQL procedural language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> createlang &#8211; install a PostgreSQL procedural language </p>
 <h2>SYNOPSIS</h2>
 <dl>

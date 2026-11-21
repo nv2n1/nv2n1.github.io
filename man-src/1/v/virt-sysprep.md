@@ -1,4 +1,5 @@
 ---
+
 title: "virt-sysprep(1)"
 name: "virt-sysprep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-sysprep/"
 description: "virt-sysprep – Reset, unconfigure or customize a virtual machine so clones can be made"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-sysprep &#8211; Reset, unconfigure or customize a virtual machine so clones can be made </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

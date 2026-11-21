@@ -1,4 +1,5 @@
 ---
+
 title: "convert-im6(1)"
 name: "convert-im6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convert-im6/"
 description: "convert – convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more."
 ---
 
-<h2 class="name">NAME</h2>
 <p> convert &#8211; convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. </p>
 <h2>SYNOPSIS</h2>
 <dl>

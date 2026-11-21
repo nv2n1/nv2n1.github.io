@@ -1,4 +1,5 @@
 ---
+
 title: "dcmftest(1)"
 name: "dcmftest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmftest/"
 description: "dcmftest – Test if file uses DICOM part 10 format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmftest &#8211; Test if file uses DICOM part 10 format </p>
 <h2>SYNOPSIS</h2>
 <pre>

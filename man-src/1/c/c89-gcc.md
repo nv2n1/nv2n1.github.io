@@ -1,4 +1,5 @@
 ---
+
 title: "c89-gcc(1)"
 name: "c89-gcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-c89-gcc/"
 description: "c89 – ANSI (1989) C compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> c89 &#8211; ANSI (1989) C compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>c89</code> <i></i>[-pedantic] [-pedantic-errors] [-D_ANSI_SOURCE] options &#8230;</p>

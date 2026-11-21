@@ -1,4 +1,5 @@
 ---
+
 title: "mprof-decoder(1)"
 name: "mprof-decoder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mprof-decoder/"
 description: "mprof-decoder – Console decoder for the logging profiler output files"
 ---
 
-<h2>NAME</h2>
 <p> mprof-decoder &#8211; Console decoder for the logging profiler output files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mprof-decoder</code> file</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rzxtool(1)"
 name: "rzxtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rzxtool/"
 description: "rzxtool – Modify Sinclair ZX Spectrum input recording files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rzxtool &#8211; Modify Sinclair ZX Spectrum input recording files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rzxtool</code> [-d<i>block number</i>] [-e<i>block number</i>,<i>filename</i>] [-i<i>block number</i>,<i>filename</i>] [-u] <i>rzxfile</i> [<i>outfile</i>]</p>

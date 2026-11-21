@@ -1,4 +1,5 @@
 ---
+
 title: "pnmfile(1)"
 name: "pnmfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmfile/"
 description: "pnmfile – describe a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmfile &#8211; describe a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmfile</code> [<code>-allimages</code>] [<i>pnmfile &#8230;</i>] </p>

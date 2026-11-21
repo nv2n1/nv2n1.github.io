@@ -1,4 +1,5 @@
 ---
+
 title: "grid-ca-sign(1)"
 name: "grid-ca-sign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grid-ca-sign/"
 description: "grid-ca-sign – Sign a certificate with a SimpleCA for use on a grid"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grid-ca-sign &#8211; Sign a certificate with a SimpleCA for use on a grid </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-ca-sign</code> -in <i>REQUEST</i> -out <i>CERTIFICATE</i> [OPTIONS] </p>

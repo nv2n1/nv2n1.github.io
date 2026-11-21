@@ -1,4 +1,5 @@
 ---
+
 title: "ares_free_data(3)"
 name: "ares_free_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_free_data/"
 description: "ares_free_data – Free data allocated by several c-ares functions"
 ---
 
-<h2>NAME</h2>
 <p> ares_free_data &#8211; Free data allocated by several c-ares functions</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

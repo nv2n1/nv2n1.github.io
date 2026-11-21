@@ -1,4 +1,5 @@
 ---
+
 title: "h5dump(1)"
 name: "h5dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5dump/"
 description: "h5dump – Displays HDF5 file contents."
 ---
 
-<h2>NAME</h2>
 <p> h5dump &#8211; Displays HDF5 file contents.</p>
 <h2>SYNOPSIS</h2>
 <p> h5dump [OPTIONS] file</p>

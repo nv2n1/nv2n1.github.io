@@ -1,4 +1,5 @@
 ---
+
 title: "timer_settime(2)"
 name: "timer_settime"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-timer_settime/"
 description: "timer_settime, timer_gettime – arm/disarm and fetch state of POSIX per-process timer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> timer_settime, timer_gettime &#8211; arm/disarm and fetch state of POSIX per-process timer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

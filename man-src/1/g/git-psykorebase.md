@@ -1,4 +1,5 @@
 ---
+
 title: "git-psykorebase(1)"
 name: "git-psykorebase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-psykorebase/"
 description: "git-psykorebase – Rebase a branch with a merge commit"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-psykorebase</code> &#8211; Rebase a branch with a merge commit</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-psykorebase</code> &lt;target_branch&gt; [&lt;feature_branch&gt;] [&#8211;no-ff] </p>

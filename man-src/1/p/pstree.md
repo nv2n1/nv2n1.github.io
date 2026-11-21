@@ -1,4 +1,5 @@
 ---
+
 title: "pstree(1)"
 name: "pstree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstree/"
 description: "pstree – display a tree of processes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pstree &#8211; display a tree of processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstree</code> [<code>-a</code>,<code>&nbsp;&#8211;arguments</code>] [<code>-c</code>,<code>&nbsp;&#8211;compact-not</code>] [<code>-C</code>,<code>&nbsp;&#8211;color&nbsp;</code><i>attr</i>] [<code>-g</code>,<code>&nbsp;&#8211;show-pgids</code>] [<code>-h</code>,<code>&nbsp;&#8211;highlight-all</code>,<code>&nbsp;-H</code><i>&nbsp;pid</i>,<code>&nbsp;&#8211;highlight-pid&nbsp;</code><i>pid</i>] [<code>-l</code>,<code>&nbsp;&#8211;long</code>] [<code>-n</code>,<code>&nbsp;&#8211;numeric-sort</code>] [<code>-N</code>,<code>&nbsp;&#8211;ns-sort&nbsp;</code><i>ns</i>] [<code>-p</code>,<code>&nbsp;&#8211;show-pids</code>] [<code>-s</code>,<code>&nbsp;&#8211;show-parents</code>] [<code>-S</code>,<code>&nbsp;&#8211;ns-changes</code>] [<code>-t</code>,<code>&nbsp;&#8211;thread-names</code>] [<code>-T</code>,<code>&nbsp;&#8211;hide-threads</code>] [<code>-u</code>,<code>&nbsp;&#8211;uid-changes</code>] [<code>-Z</code>,<code>&nbsp;&#8211;security-context</code>] [<code>-A</code>,<code>&nbsp;&#8211;ascii</code>,<code>&nbsp;-G</code>,<code>&nbsp;&#8211;vt100</code>,<code>&nbsp;-U</code>,<code>&nbsp;&#8211;unicode</code>] [<i>pid</i>,<code>&nbsp;</code><i>user</i>]<br />

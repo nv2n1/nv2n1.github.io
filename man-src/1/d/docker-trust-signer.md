@@ -1,4 +1,5 @@
 ---
+
 title: "docker-trust-signer(1)"
 name: "docker-trust-signer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-trust-signer/"
 description: "docker-trust-signer – Manage entities who can sign Docker images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-trust-signer &#8211; Manage entities who can sign Docker images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust signer</code> </p>

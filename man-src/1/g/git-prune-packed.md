@@ -1,4 +1,5 @@
 ---
+
 title: "git-prune-packed(1)"
 name: "git-prune-packed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-prune-packed/"
 description: "git-prune-packed – Remove extra objects that are already in pack files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-prune-packed &#8211; Remove extra objects that are already in pack files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

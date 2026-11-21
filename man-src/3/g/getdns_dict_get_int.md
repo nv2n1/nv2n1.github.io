@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_dict_get_int(3)"
 name: "getdns_dict_get_int"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_dict_get_int/"
 description: "getdns_dict_get, getdns_dict_get_bindata, getdns_dict_get_data_type, getdns_dict_get_dict, getdns_dict_get_int, getdns_dict_get_list, getdns_dict_get_names — get value by name from a getdns dict"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_dict_get, </code> <code>getdns_dict_get_bindata, </code> <code>getdns_dict_get_data_type, </code> <code>getdns_dict_get_dict, </code> <code>getdns_dict_get_int, </code> <code>getdns_dict_get_list, </code> <code>getdns_dict_get_names</code> &#8212; get value by name from a getdns dict </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

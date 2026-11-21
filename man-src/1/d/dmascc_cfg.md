@@ -1,4 +1,5 @@
 ---
+
 title: "dmascc_cfg(1)"
 name: "dmascc_cfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmascc_cfg/"
 description: "dmascc_cfg – Configure dmascc devices"
 ---
 
-<h2>NAME</h2>
 <p> dmascc_cfg &#8211; Configure dmascc devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmascc &lt;interface&gt; [&lt;options&gt;]</code></p>

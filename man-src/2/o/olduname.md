@@ -1,4 +1,5 @@
 ---
+
 title: "olduname(2)"
 name: "olduname"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-olduname/"
 description: "uname – get name and information about current kernel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uname &#8211; get name and information about current kernel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/utsname.h&gt;</code> </p>

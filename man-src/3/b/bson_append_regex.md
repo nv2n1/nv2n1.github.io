@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_regex(3)"
 name: "bson_append_regex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_regex/"
 description: "bson_append_regex() – Appends a new field to bson of type BSON_TYPE_REGEX. regex should be the regex string. options should contain the options for the regex."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_regex() &#8211; Appends a new field to bson of type BSON_TYPE_REGEX. regex should be the regex string. options should contain the options for the regex.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

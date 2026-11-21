@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpc-peering-connections(1)"
 name: "euca-describe-vpc-peering-connections"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-vpc-peering-connections/"
 description: "euca-describe-vpc-peering-connections – Show information about VPC peering connections"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-vpc-peering-connections &#8211; Show information about VPC peering connections</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-vpc-peering-connections [&#8211;show-empty-fields] [-U URL]</p>

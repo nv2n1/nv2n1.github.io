@@ -1,4 +1,5 @@
 ---
+
 title: "zlib-flate(1)"
 name: "zlib-flate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zlib-flate/"
 description: "zlib-flate – raw zlib compression program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zlib-flate &#8211; raw zlib compression program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zlib-flate</code> <i>-compress | -uncompress</i></p>

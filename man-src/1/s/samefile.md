@@ -1,4 +1,5 @@
 ---
+
 title: "samefile(1)"
 name: "samefile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-samefile/"
 description: "samefile – find identical files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> samefile &#8211; find identical files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>samefile [-g size] [-l | -r] [-s sep] [-0aiqVvx]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "flist(1)"
 name: "flist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flist/"
 description: "flist, flists – list the number of messages in given sequence(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flist, flists &#8211; list the number of messages in given sequence(s) </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "synce-registry(1)"
 name: "synce-registry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-synce-registry/"
 description: "synce-registry – read or modify the registry on a PDA"
 ---
 
-<h2>NAME</h2>
 <p> synce-registry &#8211; read or modify the registry on a PDA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>synce-registry</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h]<br />

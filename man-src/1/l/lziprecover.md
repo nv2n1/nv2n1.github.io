@@ -1,4 +1,5 @@
 ---
+
 title: "lziprecover(1)"
 name: "lziprecover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lziprecover/"
 description: "lziprecover – recovers data from damaged lzip files"
 ---
 
-<h2>NAME</h2>
 <p> lziprecover &#8211; recovers data from damaged lzip files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lziprecover</code> [<i>,options/</i>] [<i>,files/</i>]</p>

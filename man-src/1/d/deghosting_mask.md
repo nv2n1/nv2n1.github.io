@@ -1,4 +1,5 @@
 ---
+
 title: "deghosting_mask(1)"
 name: "deghosting_mask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deghosting_mask/"
 description: "deghosting_mask – Creates mask for removing ghosting in images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deghosting_mask &#8211; Creates mask for removing ghosting in images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>deghosting_mask</code> [options] <i>&lt;image1</i>&gt; <i>&lt;image2</i>&gt; <i>&#8230;</i></p>

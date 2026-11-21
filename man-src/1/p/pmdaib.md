@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaib(1)"
 name: "pmdaib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaib/"
 description: "pmdaib – Infiniband performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaib</code> &#8211; Infiniband performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSYS</h2>
 <p> <code>$PCP_PMDAS_DIR/infiniband/pmdaib</code> [<code>-c</code> <i>configFile</i>] [<code>-D</code> <i>debug</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-w</code>]</p>

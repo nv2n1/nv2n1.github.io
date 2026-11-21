@@ -1,4 +1,5 @@
 ---
+
 title: "mate-panel(1)"
 name: "mate-panel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-panel/"
 description: "mate-panel – The Panel for the MATE Desktop Environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-panel &#8211; The Panel for the MATE Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-panel [OPTIONS]</code></p>

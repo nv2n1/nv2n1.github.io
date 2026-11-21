@@ -1,4 +1,5 @@
 ---
+
 title: "memmem(3)"
 name: "memmem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memmem/"
 description: "memmem – locate a substring"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memmem &#8211; locate a substring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

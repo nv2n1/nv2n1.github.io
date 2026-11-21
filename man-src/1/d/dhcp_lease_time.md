@@ -1,4 +1,5 @@
 ---
+
 title: "dhcp_lease_time(1)"
 name: "dhcp_lease_time"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dhcp_lease_time/"
 description: "dhcp_lease_time – Query remaining time of a lease on a the local dnsmasq DHCP server."
 ---
 
-<h2>NAME</h2>
 <p> dhcp_lease_time &#8211; Query remaining time of a lease on a the local dnsmasq DHCP server.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dhcp_lease_time &lt;address&gt;</code></p>

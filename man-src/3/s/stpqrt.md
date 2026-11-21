@@ -1,4 +1,5 @@
 ---
+
 title: "stpqrt(3)"
 name: "stpqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stpqrt/"
 description: "stpqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stpqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermod(1)"
 name: "euare-usermod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usermod/"
 description: "euare-usermod – Change the name and/or path of a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-usermod &#8211; Change the name and/or path of a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usermod [-n USER] [-p PATH] [&#8211;enabled {true,false}]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getcontext(2)"
 name: "getcontext"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getcontext/"
 description: "getcontext, setcontext – get or set the user context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcontext, setcontext &#8211; get or set the user context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ucontext.h&gt;</code> </p>

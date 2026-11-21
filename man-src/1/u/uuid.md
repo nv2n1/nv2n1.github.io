@@ -1,4 +1,5 @@
 ---
+
 title: "uuid(1)"
 name: "uuid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uuid/"
 description: "uuid – Universally Unique Identifier Command-Line Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uuid &#8211; Universally Unique Identifier Command-Line Tool </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">OSSP</font> uuid <font SIZE="-1">1.6.2 (04-Jul-2008)</font></p>

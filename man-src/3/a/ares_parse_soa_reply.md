@@ -1,4 +1,5 @@
 ---
+
 title: "ares_parse_soa_reply(3)"
 name: "ares_parse_soa_reply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_parse_soa_reply/"
 description: "ares_parse_soa_reply – Parse a reply to a DNS query of type SOA"
 ---
 
-<h2>NAME</h2>
 <p> ares_parse_soa_reply &#8211; Parse a reply to a DNS query of type SOA</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

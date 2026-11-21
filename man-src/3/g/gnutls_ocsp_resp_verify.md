@@ -1,12 +1,14 @@
 ---
+
 title: "gnutls_ocsp_resp_verify(3)"
 name: "gnutls_ocsp_resp_verify"
 section: "3"
 letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_resp_verify/"
 ---
+
 <p> gnutls_ocsp_resp_verify - API function  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_verify(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_x509_trust_list_t </code><i>trustlist</i><code>, unsigned int * </code><i>verify</i><code>, unsigned int </code><i>flags</i><code>);</code>  </p>
 <h2>ARGUMENTS</h2>

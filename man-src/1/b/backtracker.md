@@ -1,4 +1,5 @@
 ---
+
 title: "backtracker(1)"
 name: "backtracker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-backtracker/"
 description: "backtracker – Generate forward and backward flowlines and hotspot tracks"
 ---
 
-<h2>NAME</h2>
 <p> backtracker &#8211; Generate forward and backward flowlines and hotspot tracks</p>
 <h2>SYNOPSIS</h2>
 <p> <code>backtracker</code> [ <i>table</i> ] <i>rot_file</i>|<i>lon</i>/<i>lat</i>/<i>angle</i> [ [<i>young</i>/<i>old</i>] ] [ <code>f</code>|<code>b</code> ] [ <i>drift.txt</i> ] [ <code>f</code>|<code>b</code><i>step</i> ] [ <i>upper_age</i> ] [ <i>fixed_age</i> ] [ <i>filestem</i> ] [ <i>zero_age</i> ] [ [<i>level</i>] ] [ [<code>a</code>|<code>t</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

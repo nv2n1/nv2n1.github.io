@@ -1,4 +1,5 @@
 ---
+
 title: "uz(1)"
 name: "uz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uz/"
 description: "uz – gunzips and extracts a gzip’d tar’d archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uz &#8211; gunzips and extracts a gzip&#8217;d tar&#8217;d archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uz </code> <i>file</i></p>

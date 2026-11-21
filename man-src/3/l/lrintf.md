@@ -1,4 +1,5 @@
 ---
+
 title: "lrintf(3)"
 name: "lrintf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lrintf/"
 description: "lrint, lrintf, lrintl, llrint, llrintf, llrintl – round to nearest integer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lrint, lrintf, lrintl, llrint, llrintf, llrintl &#8211; round to nearest integer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

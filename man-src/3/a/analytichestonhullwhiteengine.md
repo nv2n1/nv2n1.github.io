@@ -1,4 +1,5 @@
 ---
+
 title: "analytichestonhullwhiteengine(3)"
 name: "analytichestonhullwhiteengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analytichestonhullwhiteengine/"
 description: "ql/pricingengines/vanilla/analytichestonhullwhiteengine.hpp – analytic heston engine incl. stochastic interest rates"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/vanilla/analytichestonhullwhiteengine.hpp &#8211; analytic heston engine incl. stochastic interest rates </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />

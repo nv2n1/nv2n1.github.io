@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_uninclude(3)"
 name: "dirfile_uninclude"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_uninclude/"
 description: "dirfile_uninclude — remove a format file fragment from a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_uninclude &#8212; remove a format file fragment from a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

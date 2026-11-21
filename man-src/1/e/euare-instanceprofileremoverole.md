@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofileremoverole(1)"
 name: "euare-instanceprofileremoverole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofileremoverole/"
 description: "euare-instanceprofileremoverole – Remove a role from an instance profile"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofileremoverole &#8211; Remove a role from an instance profile</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofileremoverole <code>-r</code> ROLE [&#8211;as-account ACCOUNT] [-U URL]</p>

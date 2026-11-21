@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdeplint(1)"
 name: "rpmdeplint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmdeplint/"
 description: "rpmdeplint – a tool to find errors in RPM packages in the context of their dependency graph"
 ---
 
-<h2>NAME</h2>
 <p> rpmdeplint &#8211; a tool to find errors in RPM packages in the context of their dependency graph</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

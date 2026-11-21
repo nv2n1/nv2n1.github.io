@@ -1,4 +1,5 @@
 ---
+
 title: "sensible-pager(1)"
 name: "sensible-pager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sensible-pager/"
 description: "sensible-pager – sensible paging"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sensible-pager &#8211; sensible paging </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sensible-pager</code> [OPTIONS&#8230;] </p>

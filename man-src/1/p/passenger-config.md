@@ -1,4 +1,5 @@
 ---
+
 title: "passenger-config(1)"
 name: "passenger-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-passenger-config/"
 description: "passenger-config – Show configuration settings for Phusion Passenger"
 ---
 
-<h2>NAME</h2>
 <p> passenger-config &#8211; Show configuration settings for Phusion Passenger</p>
 <h2>SYNOPSIS</h2>
 <p> <code>passenger-config</code> <i>&#8211;root</i> | <i>&#8211;version</i></p>

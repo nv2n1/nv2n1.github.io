@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-addr2line(1)"
 name: "arm-gp2x-linux-addr2line"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-addr2line/"
 description: "addr2line – convert addresses into file names and line numbers."
 ---
 
-<h2>NAME</h2>
 <p> addr2line &#8211; convert addresses into file names and line numbers.</p>
 <h2>SYNOPSIS</h2>
 <p> addr2line [<code>-b</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />

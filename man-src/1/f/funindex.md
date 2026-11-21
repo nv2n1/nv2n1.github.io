@@ -1,4 +1,5 @@
 ---
+
 title: "funindex(1)"
 name: "funindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funindex/"
 description: "funindex – create an index for a column of a FITS binary table"
 ---
 
-<h2>NAME</h2>
 <p> <code>funindex &#8211; create an index for a column of a FITS binary table</code></p>
 <h2>SYNOPSIS</h2>
 <p> funindex &lt;switches&gt; &lt;iname&gt; [oname]</p>

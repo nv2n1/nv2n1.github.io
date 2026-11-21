@@ -1,4 +1,5 @@
 ---
+
 title: "mimepostcard(1)"
 name: "mimepostcard"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimepostcard/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimepostcard - send/output a multipart/alternative message 
+mimepostcard - send/output a multipart/alternative message 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "jack_freewheel(1)"
 name: "jack_freewheel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_freewheel/"
 description: "jack_freewheel – JACK toolkit client to control freewheeling mode"
 ---
 
-<h2>NAME</h2>
 <p> jack_freewheel &#8211; JACK toolkit client to control freewheeling mode</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_freewheel [y|n]</code></p>

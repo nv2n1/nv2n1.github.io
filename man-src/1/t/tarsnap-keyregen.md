@@ -1,4 +1,5 @@
 ---
+
 title: "tarsnap-keyregen(1)"
 name: "tarsnap-keyregen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tarsnap-keyregen/"
 description: "tarsnap-keyregen – generate a key file for use with tarsnap-recrypt1"
 ---
 
-<h2>NAME</h2>
 <p> <code>tarsnap-keyregen</code> &#8211; generate a key file for use with tarsnap-recrypt1</p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-oldkey </code><i>old-key-file</i> &#8211;<code>-user </code><i>user-name</i> &#8211;<code>-machine </code><i>machine-name</i> [-<code>-passphrased</code> ] [-<code>-passphrase-mem </code><i>maxmem</i> ]</p>

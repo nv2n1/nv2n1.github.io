@@ -1,4 +1,5 @@
 ---
+
 title: "tail(1)"
 name: "tail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tail/"
 description: "tail – output the last part of files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tail &#8211; output the last part of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tail</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

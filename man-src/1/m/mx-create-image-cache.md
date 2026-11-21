@@ -1,4 +1,5 @@
 ---
+
 title: "mx-create-image-cache(1)"
 name: "mx-create-image-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mx-create-image-cache/"
 description: "mx-create-image-cache — program to make a cache of a directory"
 ---
 
-<h2>NAME</h2>
 <p> mx-create-image-cache &#8212; program to make a cache of a directory<br />
 &nbsp;</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind-di-server(1)"
 name: "valgrind-di-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-valgrind-di-server/"
 description: "valgrind-di-server – Experimental debuginfo server for valgrind"
 ---
 
-<h2 class="name">NAME</h2>
 <p> valgrind-di-server &#8211; Experimental debuginfo server for valgrind </p>
 <h2>SYNOPSIS</h2>
 <dl>

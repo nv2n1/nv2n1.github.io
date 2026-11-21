@@ -1,4 +1,5 @@
 ---
+
 title: "check-bios-nx(1)"
 name: "check-bios-nx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-check-bios-nx/"
 description: "check-bios-nx – determine if BIOS has blocked CPU’s NX capabilities"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>check-bios-nx</code> &#8211; determine if BIOS has blocked CPU&#8217;s NX capabilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>check-bios-nx [-h|&#8211;help] [&#8211;verbose]</code> </p>

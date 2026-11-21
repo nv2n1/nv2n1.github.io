@@ -1,4 +1,5 @@
 ---
+
 title: "snmpwalk(1)"
 name: "snmpwalk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpwalk/"
 description: "snmpwalk – retrieve a subtree of management values using SNMP GETNEXT requests"
 ---
 
-<h2>NAME</h2>
 <p> snmpwalk &#8211; retrieve a subtree of management values using SNMP GETNEXT requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpwalk</code> [APPLICATION OPTIONS] [COMMON OPTIONS] AGENT [OID]</p>

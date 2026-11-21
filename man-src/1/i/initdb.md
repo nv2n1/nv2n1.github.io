@@ -1,4 +1,5 @@
 ---
+
 title: "initdb(1)"
 name: "initdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-initdb/"
 description: "initdb – create a new PostgreSQL database cluster"
 ---
 
-<h2 class="name">NAME</h2>
 <p> initdb &#8211; create a new PostgreSQL database cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>

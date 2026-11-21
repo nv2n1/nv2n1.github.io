@@ -1,4 +1,5 @@
 ---
+
 title: "ipseckey(1)"
 name: "ipseckey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipseckey/"
 description: "ipseckey – Generate IPSECKEY records on libreswan IPsec servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipseckey &#8211; Generate IPSECKEY records on libreswan IPsec servers </p>
 <h2>SYNTAX</h2>
 <p> ipseckey</p>

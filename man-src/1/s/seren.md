@@ -1,4 +1,5 @@
 ---
+
 title: "seren(1)"
 name: "seren"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-seren/"
 description: "Seren – A simple VoIP program to create conferences from the terminal"
 ---
 
-<h2>NAME</h2>
 <p> Seren &#8211; A simple VoIP program to create conferences from the terminal</p>
 <h2>SYNOPSIS</h2>
 <p> <code>seren</code> [option&#8230;]</p>

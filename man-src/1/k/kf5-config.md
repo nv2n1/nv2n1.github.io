@@ -1,4 +1,5 @@
 ---
+
 title: "kf5-config(1)"
 name: "kf5-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kf5-config/"
 description: "kf5-config – Prints Qt(TM) and Frameworks installation paths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kf5-config &#8211; Prints Qt(TM) and Frameworks installation paths </p>
 <h2>SYNOPSIS</h2>
 <dl>

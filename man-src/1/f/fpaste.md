@@ -1,4 +1,5 @@
 ---
+
 title: "fpaste(1)"
 name: "fpaste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpaste/"
 description: "fpaste – A cli frontend for the fpaste.org pastebin"
 ---
 
-<h2>NAME</h2>
 <p> fpaste &#8211; A cli frontend for the fpaste.org pastebin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpaste</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

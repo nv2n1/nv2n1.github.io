@@ -1,4 +1,5 @@
 ---
+
 title: "erfcl(3)"
 name: "erfcl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-erfcl/"
 description: "erfc, erfcf, erfcl – complementary error function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> erfc, erfcf, erfcl &#8211; complementary error function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

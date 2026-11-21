@@ -1,4 +1,5 @@
 ---
+
 title: "abs2rel(1)"
 name: "abs2rel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abs2rel/"
 description: "abs2rel – convert absolute path to relative path"
 ---
 
-<h2 class="name">NAME</h2>
 <p> abs2rel &#8211; convert absolute path to relative path </p>
 <h2>SYNOPSIS</h2>
 <p> <code>abs2rel</code> path base</p>

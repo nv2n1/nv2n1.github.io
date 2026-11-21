@@ -1,4 +1,5 @@
 ---
+
 title: "mona(1)"
 name: "mona"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mona/"
 description: "mona – a decision procedure for the logics WS1S and WS2S"
 ---
 
-<h2>NAME</h2>
 <p> mona &#8211; a decision procedure for the logics WS1S and WS2S</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mona </code> [ <i>options</i> ] <i>mona-file</i></p>

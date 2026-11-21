@@ -1,4 +1,5 @@
 ---
+
 title: "dwz(1)"
 name: "dwz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dwz/"
 description: "dwz – DWARF optimization and duplicate removal tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dwz &#8211; DWARF optimization and duplicate removal tool </p>
 <h2>SYNOPSIS</h2>
 <p> dwz [OPTION&#8230;]&nbsp;[FILES]</p>

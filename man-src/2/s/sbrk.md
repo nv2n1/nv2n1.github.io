@@ -1,4 +1,5 @@
 ---
+
 title: "sbrk(2)"
 name: "sbrk"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sbrk/"
 description: "brk, sbrk – change data segment size"
 ---
 
-<h2 class="name">NAME</h2>
 <p> brk, sbrk &#8211; change data segment size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

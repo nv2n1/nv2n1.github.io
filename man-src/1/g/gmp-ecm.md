@@ -1,4 +1,5 @@
 ---
+
 title: "gmp-ecm(1)"
 name: "gmp-ecm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmp-ecm/"
 description: "ecm – integer factorization using ECM, P-1 or P+1"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecm &#8211; integer factorization using ECM, P-1 or P+1 </p>
 <h2>SYNOPSIS</h2>
 <dl>

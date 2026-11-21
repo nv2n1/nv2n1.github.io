@@ -1,4 +1,5 @@
 ---
+
 title: "funsky(1)"
 name: "funsky"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funsky/"
 description: "funsky – convert between image and sky coordinates"
 ---
 
-<h2>NAME</h2>
 <p> <code>funsky &#8211; convert between image and sky coordinates</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

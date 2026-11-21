@@ -1,4 +1,5 @@
 ---
+
 title: "supybot-botchk(1)"
 name: "supybot-botchk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-supybot-botchk/"
 description: "supybot-botchk – A script to start Supybot if it’s not already running."
 ---
 
-<h2>NAME</h2>
 <p> supybot-botchk &#8211; A script to start Supybot if it&#8217;s not already running.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>supybot-botchk</code> [<i>options</i>]</p>

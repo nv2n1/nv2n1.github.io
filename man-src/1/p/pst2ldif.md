@@ -1,4 +1,5 @@
 ---
+
 title: "pst2ldif(1)"
 name: "pst2ldif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pst2ldif/"
 description: "pst2ldif – extract contacts from a MS Outlook .pst file in .ldif format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pst2ldif &#8211; extract contacts from a MS Outlook .pst file in .ldif format </p>
 <h2>SYNOPSIS</h2>
 <dl>

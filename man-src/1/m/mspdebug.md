@@ -1,4 +1,5 @@
 ---
+
 title: "mspdebug(1)"
 name: "mspdebug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mspdebug/"
 description: "MSPDebug – debugging tool for MSP430 MCUs"
 ---
 
-<h2>NAME</h2>
 <p> MSPDebug &#8211; debugging tool for MSP430 MCUs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mspdebug</code> [options] <i>driver</i> [<i>command</i> &#8230;]</p>

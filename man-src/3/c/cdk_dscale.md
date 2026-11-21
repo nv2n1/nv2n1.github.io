@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_dscale(3)"
 name: "cdk_dscale"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_dscale/"
 description: "cdk_dscale – curses scale widget (type double)."
 ---
 
-<h2>NAME</h2>
 <p> cdk_dscale &#8211; curses scale widget (type double).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

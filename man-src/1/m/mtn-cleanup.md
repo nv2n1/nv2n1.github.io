@@ -1,4 +1,5 @@
 ---
+
 title: "mtn-cleanup(1)"
 name: "mtn-cleanup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtn-cleanup/"
 description: "mtn-cleanup – generate shell variables from monotone workspace options"
 ---
 
-<h2>NAME</h2>
 <p> mtn-cleanup &#8211; generate shell variables from monotone workspace options</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtn-cleanup</code> </p>

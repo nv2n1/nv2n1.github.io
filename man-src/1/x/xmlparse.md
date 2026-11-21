@@ -1,4 +1,5 @@
 ---
+
 title: "xmlparse(1)"
 name: "xmlparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlparse/"
 description: "xmlparse – error-check and validate XML documents"
 ---
 
-<h2>NAME</h2>
 <p> xmlparse &#8211; error-check and validate XML documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmlparse</code><br />

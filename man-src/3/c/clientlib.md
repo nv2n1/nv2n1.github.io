@@ -1,4 +1,5 @@
 ---
+
 title: "clientlib(3)"
 name: "clientlib"
 section: "3"
@@ -6,9 +7,7 @@ letter: "c"
 url: "/docs/linux/man/3-clientlib/"
 ---
 
-<h2>NAME</h2>
-
- clientlib - NNTP clientlib part of InterNetNews library
+clientlib - NNTP clientlib part of InterNetNews library
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ssconvert(1)"
 name: "ssconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssconvert/"
 description: "ssconvert – a command line spreadsheet format converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ssconvert &#8211; a command line spreadsheet format converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssconvert</code> [<i>OPTIONS</i>] <i>infile</i> <i>outfile</i> </p>

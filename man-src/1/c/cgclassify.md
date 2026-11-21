@@ -1,4 +1,5 @@
 ---
+
 title: "cgclassify(1)"
 name: "cgclassify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgclassify/"
 description: "cgclassify – move running task(s) to given cgroups"
 ---
 
-<h2>NAME</h2>
 <p> cgclassify &#8211; move running task(s) to given cgroups </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgclassify</code> [<code>-g</code> &lt;<i>controllers&gt;:&lt;path</i>&gt;] [&#8211;sticky | &#8211;cancel-sticky] &lt;<i>pidlist</i>&gt; </p>

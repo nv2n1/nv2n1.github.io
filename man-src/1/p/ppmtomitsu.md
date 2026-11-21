@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtomitsu(1)"
 name: "ppmtomitsu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtomitsu/"
 description: "ppmtomitsu – convert a portable pixmap to a Mitsubishi S340-10 file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtomitsu &#8211; convert a portable pixmap to a Mitsubishi S340-10 file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtomitsu</code> [-sharpness <i>val</i>] [<code>-enlarge</code> <i>val</i>] [<code>-media</code> <i>string</i>] [<code>-copy</code> <i>val</i>] [<code>-dpi300</code>] [<code>-tiny</code>] [<i>ppmfile</i>]</p>

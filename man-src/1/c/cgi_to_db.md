@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_to_db(1)"
 name: "cgi_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgi_to_db/"
 description: "cgi_to_db – convert stored CGI files (from CGI.pm) to fsdb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_to_db &#8211; convert stored CGI files (from CGI.pm) to fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-publish(1)"
 name: "avahi-publish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avahi-publish/"
 description: "avahi-publish-service – Register an mDNS/DNS-SD service or host name or address mapping using the Avahi daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avahi-publish-service &#8211; Register an mDNS/DNS-SD service or host name or address mapping using the Avahi daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-publish -s [</code><i>options</i><code>] </code><i>name</i><i>service-type</i><i>port</i><code> [</code><i>TXT data</i><code> &#8230;] </p>

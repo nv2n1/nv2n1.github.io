@@ -1,4 +1,5 @@
 ---
+
 title: "qquota(1)"
 name: "qquota"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qquota/"
 description: "qquota – shows current usage of xxQS_NAMExx resource quotas"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qquota &#8211; shows current usage of xxQS_NAMExx resource quotas </p>
 <h2>SYNTAX</h2>
 <p> <code>qquota</code> [ <code>-h wc_host|wc_hostgroup,&#8230;</code> ] [ <code>-help</code> ] [ <code>-l resource_name,&#8230;</code> ] [ <code>-u wc_user,&#8230;</code> ] [ <code>-P wc_project,&#8230;</code> ] [ <code>-pe wc_pe_name,&#8230;</code> ] [ <code>-q wc_cqueue,&#8230;</code> ] [ <code>-xml</code> ]</p>

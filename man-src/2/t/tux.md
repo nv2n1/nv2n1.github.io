@@ -1,4 +1,5 @@
 ---
+
 title: "tux(2)"
 name: "tux"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-tux/"
 description: "tux – interact with the TUX kernel subsystem"
 ---
 
-<h2>NAME</h2>
 <p> tux &#8211; interact with the TUX kernel subsystem</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_new_from_handle(3)"
 name: "bson_reader_new_from_handle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_new_from_handle/"
 description: "bson_reader_new_from_handle() – This function allows for a pluggable data stream for the reader. This can be used to read from sockets, files, memory, or other arbitrary sources."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_new_from_handle() &#8211; This function allows for a pluggable data stream for the reader. This can be used to read from sockets, files, memory, or other arbitrary sources.</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "bzz(1)"
 name: "bzz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bzz/"
 description: "bzz – DjVu general purpose compression utility."
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzz &#8211; DjVu general purpose compression utility.</p>
 <h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Encoding:</h2>

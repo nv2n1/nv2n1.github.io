@@ -1,4 +1,5 @@
 ---
+
 title: "rcsdiff(1)"
 name: "rcsdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcsdiff/"
 description: "rcsdiff – compare RCS revisions"
 ---
 
-<h2>NAME</h2>
 <p> rcsdiff &#8211; compare RCS revisions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcsdiff</code> [ <code>-k</code><i>subst</i> ] [ <code>-q</code> ] [ <code>-r</code><i>rev1</i> [ <code>-r</code><i>rev2</i> ] ] [ <code>-T</code> ] [ <code>-V</code>[<i>n</i>] ] [ <code>-x</code><i>suffixes</i> ] [ <code>-z</code><i>zone</i> ] [ <i>diff options</i> ] <i>file &#8230;</i></p>

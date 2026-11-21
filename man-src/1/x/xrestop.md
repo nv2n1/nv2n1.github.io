@@ -1,4 +1,5 @@
 ---
+
 title: "xrestop(1)"
 name: "xrestop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrestop/"
 description: "xrestop – monitor server resources used by X11 clients"
 ---
 
-<h2>NAME</h2>
 <p> xrestop &#8211; monitor server resources used by X11 clients</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xrestop &#8211;help</code><br />

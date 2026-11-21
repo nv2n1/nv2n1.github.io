@@ -1,4 +1,5 @@
 ---
+
 title: "docker-pause(1)"
 name: "docker-pause"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-pause/"
 description: "docker-pause – Pause all processes within one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-pause &#8211; Pause all processes within one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker pause CONTAINER [CONTAINER&#8230;]</code> </p>

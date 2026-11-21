@@ -1,4 +1,5 @@
 ---
+
 title: "imapsync(1)"
 name: "imapsync"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-imapsync/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- imapsync - Email IMAP tool for syncing, copying and migrating email mailboxes. 
+imapsync - Email IMAP tool for syncing, copying and migrating email mailboxes. 
 
  The imapsync command synchronises mailboxes between two imap servers. More than 69 different IMAP server softwares supported with success, few failures. 
 

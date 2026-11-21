@@ -1,4 +1,5 @@
 ---
+
 title: "mingetty(8)"
 name: "mingetty"
 section: "8"
@@ -6,8 +7,9 @@ letter: "m"
 url: "/docs/linux/man/8-mingetty/"
 description: "mingetty – minimal getty for consoles"
 ---
+
 <p> mingetty - minimal getty for consoles  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>mingetty</code> [--noclear] [--nonewline] [--noissue] [--nohangup] [--nohostname] [--long-hostname] [--loginprog=/bin/login] [--nice=10] [--delay=5] [--chdir=/home] [--chroot=/chroot] [--autologin username] [--loginpause] <i>tty</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>mingetty </code> is a minimal getty for use on virtual consoles. Unlike <code><a href="/docs/linux/man/8-agetty/">agetty</a></code>(8), <code>mingetty</code> is not suitable for serial lines. I recommend using <code><a href="/docs/linux/man/8-mgetty/">mgetty</a></code>(8) for this purpose. </p>

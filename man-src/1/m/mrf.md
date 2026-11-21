@@ -1,4 +1,5 @@
 ---
+
 title: "mrf(1)"
 name: "mrf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrf/"
 description: "MRF – monochrome recursive format (compressed bitmaps)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> MRF &#8211; monochrome recursive format (compressed bitmaps)</p>
 <h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>

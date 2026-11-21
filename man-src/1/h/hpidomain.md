@@ -1,4 +1,5 @@
 ---
+
 title: "hpidomain(1)"
 name: "hpidomain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpidomain/"
 description: "hpidomain – A openhpi sample application that shows information about domains. It can also set the domain tag."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpidomain &#8211; A openhpi sample application that shows information about domains. It can also set the domain tag. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

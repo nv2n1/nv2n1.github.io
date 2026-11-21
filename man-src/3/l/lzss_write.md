@@ -1,4 +1,5 @@
 ---
+
 title: "lzss_write(3)"
 name: "lzss_write"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lzss_write/"
 description: "lzss_write – Compresses data using LZSS. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> lzss_write &#8211; Compresses data using LZSS. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

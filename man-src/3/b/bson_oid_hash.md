@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_hash(3)"
 name: "bson_oid_hash"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_hash/"
 description: "bson_oid_hash() – Generates a hash code for oid suitable for a hashtable."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_hash() &#8211; Generates a hash code for oid suitable for a hashtable.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

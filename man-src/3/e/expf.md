@@ -1,4 +1,5 @@
 ---
+
 title: "expf(3)"
 name: "expf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expf/"
 description: "exp, expf, expl – base-e exponential function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> exp, expf, expl &#8211; base-e exponential function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

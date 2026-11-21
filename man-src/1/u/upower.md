@@ -1,4 +1,5 @@
 ---
+
 title: "upower(1)"
 name: "upower"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-upower/"
 description: "upower – UPower command line tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> upower &#8211; UPower command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

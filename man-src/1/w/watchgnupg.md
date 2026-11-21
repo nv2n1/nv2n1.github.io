@@ -1,4 +1,5 @@
 ---
+
 title: "watchgnupg(1)"
 name: "watchgnupg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-watchgnupg/"
 description: "watchgnupg – Read and print logs from a socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>watchgnupg</code> &#8211; Read and print logs from a socket </p>
 <h2>SYNOPSIS</h2>
 <p> <code>watchgnupg</code> [<code>&#8211;force</code>] [<code>&#8211;verbose</code>] <i>socketname</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "stg-prev(1)"
 name: "stg-prev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-prev/"
 description: "stg-prev – Print the name of the previous patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-prev &#8211; Print the name of the previous patch </p>
 <h2>SYNOPSIS</h2>
 <pre>

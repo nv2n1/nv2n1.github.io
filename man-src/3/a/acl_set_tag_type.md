@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_tag_type(3)"
 name: "acl_set_tag_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_set_tag_type/"
 description: "acl_set_tag_type – set the tag type of an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_tag_type</code> &#8211; set the tag type of an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psmask(1)"
 name: "psmask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psmask/"
 description: "psmask – Use data tables to clip or mask map areas with no coverage"
 ---
 
-<h2>NAME</h2>
 <p> psmask &#8211; Use data tables to clip or mask map areas with no coverage</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psmask</code> [ <i>table</i> ] <i>increment</i> <i>parameters</i> <i>region</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>dumpfile</i> ] [ [<code>l</code>|<code>r</code>] ] [ <i>fill</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>+</code>|<code>&#8211;</code>]<i>nodegrid</i> ] [ ] [ ] [ ] [ <i>cut</i> ] [ <i>search_radius</i>[<i>unit</i>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jpgicc2(1)"
 name: "jpgicc2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpgicc2/"
 description: "jpegicc – little cms ICC profile applier for JPEG."
 ---
 
-<h2>NAME</h2>
 <p> jpegicc &#8211; little cms ICC profile applier for JPEG.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpegicc</code> [<i>options</i>]<i> input.jpg output.jpg</i></p>

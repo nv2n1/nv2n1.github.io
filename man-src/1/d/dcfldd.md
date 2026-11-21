@@ -1,4 +1,5 @@
 ---
+
 title: "dcfldd(1)"
 name: "dcfldd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcfldd/"
 description: "dcfldd – manual page for dcfldd (dcfldd) 1.3.4"
 ---
 
-<h2>NAME</h2>
 <p> dcfldd &#8211; manual page for dcfldd (dcfldd) 1.3.4</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dcfldd</code> [<i>OPTION</i>]&#8230;</p>

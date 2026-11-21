@@ -1,4 +1,5 @@
 ---
+
 title: "swprintf(3)"
 name: "swprintf"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-swprintf/"
 description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – formatted wide-character output conversion"
 ---
+
 <p>wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf &#8211; formatted wide-character output conversion </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;stdio.h&gt; 
  #include &lt;wchar.h&gt; 

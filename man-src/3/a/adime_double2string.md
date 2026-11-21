@@ -1,4 +1,5 @@
 ---
+
 title: "adime_double2string(3)"
 name: "adime_double2string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-adime_double2string/"
 description: "adime_double2string"
 ---
 
-<h2>NAME</h2>
 <p> adime_double2string</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>

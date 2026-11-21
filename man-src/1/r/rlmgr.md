@@ -1,4 +1,5 @@
 ---
+
 title: "rlmgr(1)"
 name: "rlmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rlmgr/"
 description: "rlmgr – administration utility for QDBM Relic"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rlmgr &#8211; administration utility for QDBM Relic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rlmgr create</code> <i>name</i><br />

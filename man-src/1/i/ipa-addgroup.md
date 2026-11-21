@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-addgroup(1)"
 name: "ipa-addgroup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-addgroup/"
 description: "ipa-addgroup – Add a group"
 ---
 
-<h2>NAME</h2>
 <p> ipa-addgroup &#8211; Add a group </p>
 <h2>SYNOPSIS</h2>
 <p> ipa-addgroup [<i>OPTION</i>]&#8230; <i>group</i> </p>

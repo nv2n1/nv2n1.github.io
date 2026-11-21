@@ -1,4 +1,5 @@
 ---
+
 title: "keyboard_lowlevel_callback(3)"
 name: "keyboard_lowlevel_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyboard_lowlevel_callback/"
 description: "keyboard_lowlevel_callback – User specified low level keyboard event handler. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> keyboard_lowlevel_callback &#8211; User specified low level keyboard event handler. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

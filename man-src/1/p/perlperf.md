@@ -1,4 +1,5 @@
 ---
+
 title: "perlperf(1)"
 name: "perlperf"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlperf/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlperf - Perl Performance and Optimization Techniques 
+perlperf - Perl Performance and Optimization Techniques 
 
 <h2>DESCRIPTION</h2>
 

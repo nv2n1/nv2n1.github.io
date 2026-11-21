@@ -1,4 +1,5 @@
 ---
+
 title: "tarsnap-keymgmt(1)"
 name: "tarsnap-keymgmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tarsnap-keymgmt/"
 description: "tarsnap-keymgmt – generate subsets of tarsnap(1) key files"
 ---
 
-<h2>NAME</h2>
 <p> <code>tarsnap-keymgmt</code> &#8211; generate subsets of <a href="/docs/linux/man/1-tarsnap/">tarsnap</a>(1) key files</p>
 <h2>SYNOPSIS</h2>
 <p> &#8211;<code>-outkeyfile </code><i>new-key-file</i> [-<code>r</code> ] [-<code>w</code> ] [-<code>d</code> ] [-<code>-nuke</code> ] [-<code>-passphrased</code> ] [-<code>-passphrase-mem </code><i>maxmem</i> ] <i>key-file &#8230;</i></p>

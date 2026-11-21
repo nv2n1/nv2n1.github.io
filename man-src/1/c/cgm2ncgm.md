@@ -1,4 +1,5 @@
 ---
+
 title: "cgm2ncgm(1)"
 name: "cgm2ncgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgm2ncgm/"
 description: "cgm2ncgm ncgm2cgm – filter NCAR CGM to/from vanilla CGM"
 ---
 
-<h2>NAME</h2>
 <p> cgm2ncgm ncgm2cgm &#8211; filter <code>NCAR CGM</code> to/from vanilla <code>CGM</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncgm2cgm</code> [&nbsp;<wbr><code>-s&nbsp;<wbr></code><i>output block size</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-V&nbsp;<wbr>] </p>

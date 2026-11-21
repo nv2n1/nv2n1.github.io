@@ -1,4 +1,5 @@
 ---
+
 title: "snmpset(1)"
 name: "snmpset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpset/"
 description: "snmpset – communicates with a network entity using SNMP SET requests"
 ---
 
-<h2>NAME</h2>
 <p> snmpset &#8211; communicates with a network entity using SNMP SET requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpset</code> [COMMON OPTIONS] AGENT OID TYPE VALUE [OID TYPE VALUE]&#8230;</p>

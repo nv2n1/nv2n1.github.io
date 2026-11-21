@@ -1,4 +1,5 @@
 ---
+
 title: "bglafile(1)"
 name: "bglafile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bglafile/"
 description: "Bglafile – a Module Access File Generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Bglafile &#8211; a Module Access File Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bglafile</code> [ options ] <i>file &#8230;</i> </p>

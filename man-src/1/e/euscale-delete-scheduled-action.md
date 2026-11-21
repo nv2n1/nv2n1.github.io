@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-scheduled-action(1)"
 name: "euscale-delete-scheduled-action"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-scheduled-action/"
 description: "euscale-delete-scheduled-action – Delete a scheduled action"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-scheduled-action &#8211; Delete a scheduled action</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-scheduled-action <code>-g</code> ASGROUP [-U URL]</p>

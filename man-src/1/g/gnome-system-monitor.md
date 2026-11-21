@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-system-monitor(1)"
 name: "gnome-system-monitor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-system-monitor/"
 description: "gnome-system-monitor — view and control processes"
 ---
 
-<h2>NAME</h2>
 <p> gnome-system-monitor &#8212; view and control processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-system-monitor</code> [<code>-s,</code><code>&#8211;simple</code>]</p>

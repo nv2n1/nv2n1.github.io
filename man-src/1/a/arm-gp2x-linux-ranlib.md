@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-ranlib(1)"
 name: "arm-gp2x-linux-ranlib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-ranlib/"
 description: "ranlib – generate index to archive."
 ---
 
-<h2>NAME</h2>
 <p> ranlib &#8211; generate index to archive.</p>
 <h2>SYNOPSIS</h2>
 <p> ranlib [<code>-vV</code>] <i>archive</i></p>

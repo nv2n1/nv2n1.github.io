@@ -1,4 +1,5 @@
 ---
+
 title: "vgdb(1)"
 name: "vgdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vgdb/"
 description: "vgdb – intermediary between Valgrind and GDB or a shell"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vgdb &#8211; intermediary between Valgrind and GDB or a shell </p>
 <h2>SYNOPSIS</h2>
 <dl>

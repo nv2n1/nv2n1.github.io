@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_get_notify(3)"
 name: "dblink_get_notify"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_get_notify/"
 description: "dblink_get_notify – retrieve async notifications on a connection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_get_notify &#8211; retrieve async notifications on a connection </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "btparser(1)"
 name: "btparser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-btparser/"
 description: "btparser – a backtrace analyzer"
 ---
 
-<h2>NAME</h2>
 <p> btparser &#8211; a backtrace analyzer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>btparser</code> [option]&#8230; [FILE]&#8230;</p>

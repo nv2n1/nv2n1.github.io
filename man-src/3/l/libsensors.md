@@ -1,4 +1,5 @@
 ---
+
 title: "libsensors(3)"
 name: "libsensors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libsensors/"
 description: "libsensors – publicly accessible functions provided by the sensors library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libsensors &#8211; publicly accessible functions provided by the sensors library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

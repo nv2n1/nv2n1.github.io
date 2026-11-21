@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_prepend_config_files(3)"
 name: "krb5_prepend_config_files"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_prepend_config_files/"
 description: "krb5_add_et_list krb5_add_extra_addresses krb5_add_ignore_addresses krb5_context krb5_free_config_files krb5_free_context krb5_get_default_config_files krb5_get_dns_canonize_hostname krb5_get_extra..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_add_et_list</code> <code>krb5_add_extra_addresses</code> <code>krb5_add_ignore_addresses</code> <code>krb5_context</code> <code>krb5_free_config_files</code> <code>krb5_free_context</code> <code>krb5_get_default_config_files</code> <code>krb5_get_dns_canonize_hostname</code> <code>krb5_get_extra_addresses</code> <code>krb5_get_fcache_version</code> <code>krb5_get_ignore_addresses</code> <code>krb5_get_kdc_sec_offset</code> <code>krb5_get_max_time_skew</code> <code>krb5_get_use_admin_kdc</code> <code>krb5_init_context</code> <code>krb5_init_ets</code> <code>krb5_prepend_config_files</code> <code>krb5_prepend_config_files_default</code> <code>krb5_set_config_files</code> <code>krb5_set_dns_canonize_hostname</code> <code>krb5_set_extra_addresses</code> <code>krb5_set_fcache_version</code> <code>krb5_set_ignore_addresses</code> <code>krb5_set_max_time_skew</code> <code>krb5_set_use_admin_kdc</code> &#8211; create, modify and delete krb5_context structures </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

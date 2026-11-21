@@ -1,4 +1,5 @@
 ---
+
 title: "createuser(1)"
 name: "createuser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-createuser/"
 description: "createuser – define a new PostgreSQL user account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> createuser &#8211; define a new PostgreSQL user account </p>
 <h2>SYNOPSIS</h2>
 <dl>

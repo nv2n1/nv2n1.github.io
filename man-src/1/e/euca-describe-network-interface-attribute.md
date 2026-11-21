@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-network-interface-attribute(1)"
 name: "euca-describe-network-interface-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-network-interface-attribute/"
 description: "euca-describe-network-interface-attribute – Show an attribute of a VPC network interface"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-network-interface-attribute &#8211; Show an attribute of a VPC network interface</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-network-interface-attribute</p>

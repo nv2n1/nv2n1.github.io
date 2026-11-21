@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlpump(1)"
 name: "mysqlpump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlpump/"
 description: "mysqlpump – a database backup program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlpump &#8211; a database backup program </p>
 <h2>SYNOPSIS</h2>
 <dl>

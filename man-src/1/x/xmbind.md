@@ -1,4 +1,5 @@
 ---
+
 title: "xmbind(1)"
 name: "xmbind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmbind/"
 description: "xmbind — Configures virtual key bindings"
 ---
 
-<h2>NAME</h2>
 <p> <code>xmbind</code> &#8212; Configures virtual key bindings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmbind</code> [<i>options</i> ] [<i>file</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nprint(1)"
 name: "nprint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nprint/"
 description: "nprint – NetWare print client"
 ---
 
-<h2>NAME</h2>
 <p> nprint &#8211; NetWare print client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nprint</code> [ <code>-S</code> <i>server</i> ] [ <code>-h</code> ] [ <code>-U</code> <i>username</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-q</code> <i>queuename</i> ] [ <code>-d</code> <i>job-description</i> ] [ <code>-p</code> <i>pathname-in-banner</i> ] [ <code>-B</code> <i>username-in-banner</i> ] [ <code>-s</code> ] [ <code>-f</code> <i>filename-in-banner</i> ] [ <code>-l</code> <i>lines</i> ] [ <code>-r</code> <i>rows</i> ] [ <code>-c</code> <i>copies</i> ] [ <code>-t</code> <i>tab size</i> ] [ <code>-T</code> ] [ <code>-N</code> ] [ <code>-F</code> <i>form-number</i> ] <i>filename</i> </p>

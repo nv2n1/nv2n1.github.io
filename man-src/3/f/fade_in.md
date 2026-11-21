@@ -1,4 +1,5 @@
 ---
+
 title: "fade_in(3)"
 name: "fade_in"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fade_in/"
 description: "fade_in – Gradually fades the palette from black. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fade_in &#8211; Gradually fades the palette from black. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

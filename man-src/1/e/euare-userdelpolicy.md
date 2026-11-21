@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdelpolicy(1)"
 name: "euare-userdelpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdelpolicy/"
 description: "euare-userdelpolicy – Remove a policy from a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdelpolicy &#8211; Remove a policy from a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdelpolicy <code>-p</code> POLICY [&#8211;as-account ACCOUNT] [-U URL]</p>

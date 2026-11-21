@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-log(1)"
 name: "doveadm-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-log/"
 description: "doveadm-log – Locate, test or reopen Dovecot’s log files"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-log &#8211; Locate, test or reopen Dovecot&#8217;s log files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>log errors</code> [<code>-s</code> <i>min_timestamp</i>]<br />

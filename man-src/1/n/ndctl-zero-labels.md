@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-zero-labels(1)"
 name: "ndctl-zero-labels"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndctl-zero-labels/"
 description: "ndctl-zero-labels – zero out the label area on a dimm or set of dimms"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndctl-zero-labels &#8211; zero out the label area on a dimm or set of dimms </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

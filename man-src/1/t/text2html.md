@@ -1,4 +1,5 @@
 ---
+
 title: "text2html(1)"
 name: "text2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-text2html/"
 description: "text2html – convert plain text to HTML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> text2html &#8211; convert plain text to HTML </p>
 <h2>VERSION</h2>
 <p> version 2.07</p>

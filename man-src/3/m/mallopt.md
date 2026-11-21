@@ -1,4 +1,5 @@
 ---
+
 title: "mallopt(3)"
 name: "mallopt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mallopt/"
 description: "mallopt – set memory allocation parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mallopt &#8211; set memory allocation parameters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>

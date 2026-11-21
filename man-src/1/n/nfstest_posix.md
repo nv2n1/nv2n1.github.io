@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_posix(1)"
 name: "nfstest_posix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_posix/"
 description: "nfstest_posix – POSIX file system level access tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_posix &#8211; POSIX file system level access tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_posix &#8211;server &lt;server&gt; [options]</p>

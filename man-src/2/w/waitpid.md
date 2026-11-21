@@ -1,4 +1,5 @@
 ---
+
 title: "waitpid(2)"
 name: "waitpid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-waitpid/"
 description: "wait, waitpid, waitid – wait for process to change state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wait, waitpid, waitid &#8211; wait for process to change state </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

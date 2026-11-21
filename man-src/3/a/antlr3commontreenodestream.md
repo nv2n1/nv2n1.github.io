@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3commontreenodestream(3)"
 name: "antlr3commontreenodestream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3commontreenodestream/"
 description: "include/antlr3commontreenodestream.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3commontreenodestream.h &#8211; </p>
 <p> Definition of the ANTLR3 common tree node stream.</p>
 <h2>SYNOPSIS</h2>

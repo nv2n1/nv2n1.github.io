@@ -1,4 +1,5 @@
 ---
+
 title: "sievec(1)"
 name: "sievec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sievec/"
 description: "sievec – Pigeonhole’s Sieve script compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sievec &#8211; Pigeonhole&#8217;s Sieve script compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sievec</code> [<i>options</i>] <i>script-file</i> [<i>out-file</i>]</p>

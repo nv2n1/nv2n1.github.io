@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_to_string(3)"
 name: "bson_oid_to_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_to_string/"
 description: "bson_oid_to_string() – Converts oid into a hex encoded string."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_to_string() &#8211; Converts oid into a hex encoded string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

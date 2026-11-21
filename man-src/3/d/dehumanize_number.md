@@ -1,4 +1,5 @@
 ---
+
 title: "dehumanize_number(3)"
 name: "dehumanize_number"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dehumanize_number/"
 description: "dehumanize_number humanize_number – format a number into a human readable form and viceversa"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>dehumanize_number</code> <code>humanize_number</code> &#8211; format a number into a human readable form and viceversa </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

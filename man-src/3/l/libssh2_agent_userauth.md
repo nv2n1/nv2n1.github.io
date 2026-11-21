@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_userauth(3)"
 name: "libssh2_agent_userauth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_agent_userauth/"
 description: "libssh2_agent_userauth – authenticate a session with a public key, with the help of ssh-agent"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_agent_userauth &#8211; authenticate a session with a public key, with the help of ssh-agent</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

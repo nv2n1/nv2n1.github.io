@@ -1,4 +1,5 @@
 ---
+
 title: "dh_scrollkeeper(1)"
 name: "dh_scrollkeeper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_scrollkeeper/"
 description: "dh_scrollkeeper – deprecated no-op"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_scrollkeeper &#8211; deprecated no-op </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_scrollkeeper</code> [<i>debhelper options</i>] [<code>-n</code>] [<i>directory</i>]</p>

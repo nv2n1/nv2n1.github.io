@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-device(1)"
 name: "lxc-device"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-device/"
 description: "lxc-device – manage devices of running containers"
 ---
 
-<h2>NAME</h2>
 <p> lxc-device &#8211; manage devices of running containers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-device</code> [-h] [-n <i>name</i>] [add] [DEVICE] [NAME]</p>

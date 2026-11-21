@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-move(1)"
 name: "gvfs-move"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-move/"
 description: "gvfs-move"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-move </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-move</code> has been deprecated and it is redirected to <code>gio move</code>.</p>

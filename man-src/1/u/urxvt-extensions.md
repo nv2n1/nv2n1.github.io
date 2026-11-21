@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-extensions(1)"
 name: "urxvt-extensions"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-extensions/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- urxvt-extensions - briefly list urxvt perl extensions 
+urxvt-extensions - briefly list urxvt perl extensions 
 
 <h2>SYNOPSIS</h2>
 

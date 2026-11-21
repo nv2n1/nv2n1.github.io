@@ -1,4 +1,5 @@
 ---
+
 title: "myisampack(1)"
 name: "myisampack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myisampack/"
 description: "myisampack – generate compressed, read-only MyISAM tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> myisampack &#8211; generate compressed, read-only MyISAM tables </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "bibtexu(1)"
 name: "bibtexu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibtexu/"
 description: "bibtexu – UTF-8 Big BibTeX"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bibtexu &#8211; UTF-8 Big BibTeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibtexu</code> [<i>options</i>] <i>aux-file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpsmon(1)"
 name: "gpsmon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsmon/"
 description: "gpsmon – real-time GPS packet monitor and control utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpsmon &#8211; real-time GPS packet monitor and control utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

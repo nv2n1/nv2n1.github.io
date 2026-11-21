@@ -1,4 +1,5 @@
 ---
+
 title: "oldfind(1)"
 name: "oldfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oldfind/"
 description: "oldfind – search for files in a directory hierarchy"
 ---
 
-<h2>NAME</h2>
 <p> oldfind &#8211; search for files in a directory hierarchy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oldfind</code> [-H] [-L] [-P] [-D debugopts] [-Olevel] [path&#8230;] [expression]</p>

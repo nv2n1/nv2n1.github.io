@@ -1,4 +1,5 @@
 ---
+
 title: "gdk-pixbuf-query-loaders(1)"
 name: "gdk-pixbuf-query-loaders"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdk-pixbuf-query-loaders/"
 description: "gdk-pixbuf-query-loaders – GdkPixbuf loader registration utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdk-pixbuf-query-loaders &#8211; GdkPixbuf loader registration utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

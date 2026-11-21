@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_grow(3)"
 name: "ck_rhs_grow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_grow/"
 description: "ck_rhs_grow – enlarge hash set capacity"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_grow</code> &#8211; enlarge hash set capacity</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

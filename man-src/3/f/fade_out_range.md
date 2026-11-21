@@ -1,4 +1,5 @@
 ---
+
 title: "fade_out_range(3)"
 name: "fade_out_range"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fade_out_range/"
 description: "fade_out_range – Gradually fades a part of the palette to black. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fade_out_range &#8211; Gradually fades a part of the palette to black. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

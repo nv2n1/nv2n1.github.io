@@ -1,4 +1,5 @@
 ---
+
 title: "grub-menulst2cfg(1)"
 name: "grub-menulst2cfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub-menulst2cfg/"
 description: "grub-menulst2cfg – transform legacy menu.lst into grub.cfg"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grub-menulst2cfg &#8211; transform legacy menu.lst into grub.cfg </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-menulst2cfg</code> [<i>,INFILE /</i>[<i>,OUTFILE/</i>]]</p>

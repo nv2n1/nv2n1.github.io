@@ -1,4 +1,5 @@
 ---
+
 title: "mallex(1)"
 name: "mallex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mallex/"
 description: "mallex – generate a Malaga run-time lexicon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mallex &#8211; generate a Malaga run-time lexicon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mallex</code> [<code>-binary</code>|<code>-readable</code>|<code>-prelex</code>] <i>project-file</i> </p>

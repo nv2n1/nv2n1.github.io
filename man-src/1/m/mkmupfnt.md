@@ -1,4 +1,5 @@
 ---
+
 title: "mkmupfnt(1)"
 name: "mkmupfnt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkmupfnt/"
 description: "mkmupfnt – create fontfile for overriding Mup fonts"
 ---
 
-<h2>NAME</h2>
 <p> mkmupfnt &#8211; create fontfile for overriding Mup fonts</p>
 <h2>SYNOPSIS</h2>
 <p> mkmupfnt <i>PostScript_font_name Mup_font_name outfile [file]</i></p>

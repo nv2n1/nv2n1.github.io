@@ -1,4 +1,5 @@
 ---
+
 title: "enc2xs(1)"
 name: "enc2xs"
 section: "1"
@@ -6,7 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-enc2xs/"
 description: "enc2xs — Perl Encode Module Generator"
 ---
-<h2 class="name">NAME</h2>
+
 <p> enc2xs -- Perl Encode Module Generator </p>
 <h2>SYNOPSIS</h2>
 <pre><code>  enc2xs -[options]

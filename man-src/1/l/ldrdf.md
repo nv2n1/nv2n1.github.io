@@ -1,4 +1,5 @@
 ---
+
 title: "ldrdf(1)"
 name: "ldrdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldrdf/"
 description: "ldrdf – link RDOFF objects and libraries produced by rdflib(1)"
 ---
 
-<h2>NAME</h2>
 <p> ldrdf &#8211; link RDOFF objects and libraries produced by <a href="/docs/linux/man/1-rdflib/">rdflib</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldrdf</code> [-o <i>output-file</i>] <i>object-file</i>&#8230; [-l<i>library</i>&#8230;]</p>

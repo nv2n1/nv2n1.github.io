@@ -1,4 +1,5 @@
 ---
+
 title: "maildrop(1)"
 name: "maildrop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-maildrop/"
 description: "maildrop – mail delivery filter/agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> maildrop &#8211; mail delivery filter/agent </p>
 <h2>SYNOPSIS</h2>
 <dl>

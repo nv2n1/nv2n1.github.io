@@ -1,4 +1,5 @@
 ---
+
 title: "zmq_proxy_steerable(3)"
 name: "zmq_proxy_steerable"
 section: "3"
@@ -6,8 +7,9 @@ letter: "z"
 url: "/docs/linux/man/3-zmq_proxy_steerable/"
 description: "zmq_proxy_steerable – built-in 0MQ proxy with control flow"
 ---
+
 <p>zmq_proxy_steerable &#8211; built-in 0MQ proxy with control flow </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>int zmq_proxy_steerable (const void </code><i>*frontend</i><code>, const void </code><i>*backend</i><code>, const void </code><i>*capture</i><code>, const void </code><i>*control</i><code>);</code>  </p>
 <h2>DESCRIPTION</h2>
 <p>The <i>zmq_proxy_steerable()</i> function starts the built-in 0MQ proxy in the current application thread, as <i>zmq_proxy()</i> do. Please, refer to this function for the general description and usage. We describe here only the additional control flow provided by the socket passed as the fourth argument &quot;control&quot;. </p>

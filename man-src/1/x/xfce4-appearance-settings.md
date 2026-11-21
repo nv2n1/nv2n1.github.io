@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-appearance-settings(1)"
 name: "xfce4-appearance-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-appearance-settings/"
 description: "xfce4-appearance-settings – Appearance settings for Xfce"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-appearance-settings &#8211; Appearance settings for Xfce </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_list_remove(3)"
 name: "globus_list_remove"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_list_remove/"
 description: "globus_list –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_list &#8211; </p>
 <p> List data type.</p>
 <h2>SYNOPSIS</h2>

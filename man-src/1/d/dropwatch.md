@@ -1,4 +1,5 @@
 ---
+
 title: "dropwatch(1)"
 name: "dropwatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dropwatch/"
 description: "dropwatch – kernel dropped packet monitoring utility"
 ---
 
-<h2>NAME</h2>
 <p> dropwatch &#8211; kernel dropped packet monitoring utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dropwatch [-l &lt;method&gt; | list]</code></p>

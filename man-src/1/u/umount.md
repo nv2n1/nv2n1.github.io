@@ -1,4 +1,5 @@
 ---
+
 title: "umount(1)"
 name: "umount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-umount/"
 description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 ---
 
-<h2 class="name">NAME</h2>
 <p> umount.ecryptfs_private &#8211; eCryptfs private unmount helper.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>umount.ecryptfs_private</code> [-f] </p>

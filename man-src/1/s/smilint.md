@@ -1,4 +1,5 @@
 ---
+
 title: "smilint(1)"
 name: "smilint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smilint/"
 description: "smilint – syntax and semantic checks of SMIv1/v2 and SPPI modules"
 ---
 
-<h2>NAME</h2>
 <p> smilint &#8211; syntax and semantic checks of SMIv1/v2 and SPPI modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smilint</code> [ <code>-Vhersm</code> ] [ <code>-c </code><i>file</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] [ <code>-i </code><i>error-pattern</i> ] <i>module(s)</i></p>

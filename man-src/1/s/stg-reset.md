@@ -1,4 +1,5 @@
 ---
+
 title: "stg-reset(1)"
 name: "stg-reset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-reset/"
 description: "stg-reset – Reset the patch stack to an earlier state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-reset &#8211; Reset the patch stack to an earlier state </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "unbuffer(1)"
 name: "unbuffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unbuffer/"
 description: "unbuffer – unbuffer output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unbuffer &#8211; unbuffer output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unbuffer</code> <i>program</i> [ <i>args</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "grdraster(1)"
 name: "grdraster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdraster/"
 description: "grdraster – Extract subregion from a binary raster and save as a GMT grid"
 ---
 
-<h2>NAME</h2>
 <p> grdraster &#8211; Extract subregion from a binary raster and save as a GMT grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdraster</code> [ <i>filenumber</i> | <i>&quot;text pattern&quot;</i> ] <i>region</i> [ <i>grdfile</i> ] [ <i>increment</i> ] [ <i>parameters</i> ] [ [<i>level</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>

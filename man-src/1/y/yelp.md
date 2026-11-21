@@ -1,4 +1,5 @@
 ---
+
 title: "yelp(1)"
 name: "yelp"
 section: "1"
@@ -6,9 +7,7 @@ letter: "y"
 url: "/docs/linux/man/1-yelp/"
 ---
 
-<h2>NAME</h2>
-
- yelp --- browse system documentation
+yelp --- browse system documentation
 
 <h2>USAGE</h2>
 

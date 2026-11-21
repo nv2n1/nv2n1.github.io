@@ -1,4 +1,5 @@
 ---
+
 title: "pamsummcol(1)"
 name: "pamsummcol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamsummcol/"
 description: "pamsummcol – summarize (sum, average, etc) a Netpbm image by column"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamsummcol &#8211; summarize (sum, average, etc) a Netpbm image by column</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsummcol</code> { <code>-sum</code> | <code>-mean</code> | <code>-min</code> | <code>-max</code> } [<i>imagefile</i>] </p>

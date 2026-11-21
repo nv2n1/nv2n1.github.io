@@ -1,4 +1,5 @@
 ---
+
 title: "go-test(1)"
 name: "go-test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-test/"
 description: "go-test – test packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-test &#8211; test packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go test</code> [<i>build/test flags</i>] [<i>packages</i>] [<i>build/test flags &amp; test binary flags</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zenity(1)"
 name: "zenity"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zenity/"
 description: "zenity – display GTK+ dialogs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zenity &#8211; display GTK+ dialogs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zenity</code> [<i>options</i>]</p>

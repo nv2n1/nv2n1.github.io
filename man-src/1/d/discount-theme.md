@@ -1,4 +1,5 @@
 ---
+
 title: "discount-theme(1)"
 name: "discount-theme"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-discount-theme/"
 description: "theme – create a web page from a template file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>theme</code> &#8211; create a web page from a template file </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>C option-flags </code> ] [-<code>c options </code> ] [-<code>d root </code> ] [-<code>E</code> ] [-<code>f</code> ] [-<code>o file </code> ] [-<code>p pagename </code> ] [-<code>t template </code> ] [-<code>V</code> ] [textfile ]</p>

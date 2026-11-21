@@ -1,4 +1,5 @@
 ---
+
 title: "saoimage(1)"
 name: "saoimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-saoimage/"
 description: "SAOimage 1.23 – X11 window based, interactive, color or halftone image display program for astronomical images"
 ---
 
-<h2>NAME</h2>
 <p> SAOimage 1.23 &#8211; X11 window based, interactive, color or halftone image display program for astronomical images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>saoimage</code> [ <code>-display </code><i>nodename:0.0 </i>] [ <code>-geometry | -gd </code><i>geometry </i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "freeconary(3)"
 name: "freeconary"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-freeconary/"
 description: "getcon, getprevcon, getpidcon – get SELinux security context of a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getcon, getprevcon, getpidcon &#8211; get SELinux security context of a process </p>
 <p> freecon, freeconary &#8211; free memory associated with SELinux security contexts </p>
 <p> getpeercon &#8211; get security context of a peer socket </p>

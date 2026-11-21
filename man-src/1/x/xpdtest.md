@@ -1,4 +1,5 @@
 ---
+
 title: "xpdtest(1)"
 name: "xpdtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpdtest/"
 description: "xpdtest – xproofd test utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xpdtest &#8211; xproofd test utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xpdtest</code> <i>[options]</i></p>

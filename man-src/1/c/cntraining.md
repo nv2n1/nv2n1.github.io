@@ -1,4 +1,5 @@
 ---
+
 title: "cntraining(1)"
 name: "cntraining"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cntraining/"
 description: "cntraining – character normalization training for Tesseract"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cntraining &#8211; character normalization training for Tesseract </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cntraining</code> [-D <i>dir</i>] <i>FILE</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clansp(3)"
 name: "clansp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clansp/"
 description: "clansp.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clansp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

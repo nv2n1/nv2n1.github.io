@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-vmstat(1)"
 name: "pcp-vmstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-vmstat/"
 description: "pcp-vmstat, pmstat – high-level system performance overview"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-vmstat</code>, <code>pmstat</code> &#8211; high-level system performance overview</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>vmstat</code> [<i>interval</i> [<i>samples</i>]] </p>

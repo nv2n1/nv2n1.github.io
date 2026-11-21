@@ -1,4 +1,5 @@
 ---
+
 title: "darktable-cli(1)"
 name: "darktable-cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-darktable-cli/"
 description: "darktable-cli – a command line darktable variant"
 ---
 
-<h2 class="name">NAME</h2>
 <p> darktable-cli &#8211; a command line darktable variant </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

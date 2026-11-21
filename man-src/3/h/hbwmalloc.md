@@ -1,4 +1,5 @@
 ---
+
 title: "hbwmalloc(3)"
 name: "hbwmalloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hbwmalloc/"
 description: "hbwmalloc – The high bandwidth memory interface Note: hbwmalloc.h functionality is considered as stable API (STANDARD API)."
 ---
 
-<h2>NAME</h2>
 <p> hbwmalloc &#8211; The high bandwidth memory interface<br />
  Note: hbwmalloc.h functionality is considered as stable API (STANDARD API).</p>
 <h2>SYNOPSIS</h2>

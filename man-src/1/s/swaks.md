@@ -1,4 +1,5 @@
 ---
+
 title: "swaks(1)"
 name: "swaks"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-swaks/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- swaks - Swiss Army Knife SMTP, the all-purpose smtp transaction tester 
+swaks - Swiss Army Knife SMTP, the all-purpose smtp transaction tester 
 
 <h2>DESCRIPTION</h2>
 

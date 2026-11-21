@@ -1,4 +1,5 @@
 ---
+
 title: "mate-autogen(1)"
 name: "mate-autogen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-autogen/"
 description: "mate-autogen – generates all makefiles for MATE packages"
 ---
 
-<h2>NAME</h2>
 <p> <code>mate-autogen </code>&#8211; generates all makefiles for MATE packages</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-journal(1)"
 name: "beakerlib-journal"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-journal/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- BeakerLib - journal - journalling functionality 
+BeakerLib - journal - journalling functionality 
 
 <h2>DESCRIPTION</h2>
 

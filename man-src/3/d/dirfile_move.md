@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_move(3)"
 name: "dirfile_move"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_move/"
 description: "dirfile_move — move a dirfile field between format file fragments"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_move &#8212; move a dirfile field between format file fragments</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

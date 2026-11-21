@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_atomic_store(3)"
 name: "ck_pr_fence_atomic_store"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_atomic_store/"
 description: "ck_pr_fence_atomic_store – enforce ordering of atomic read-modify-write operations to store operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_atomic_store</code> &#8211; enforce ordering of atomic read-modify-write operations to store operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

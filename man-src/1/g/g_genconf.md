@@ -1,4 +1,5 @@
 ---
+
 title: "g_genconf(1)"
 name: "g_genconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_genconf/"
 description: "genconf – multiplies a conformation in ‘random’ orientations"
 ---
 
-<h2>NAME</h2>
 <p> genconf &#8211; multiplies a conformation in &#8216;random&#8217; orientations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-containers(1)"
 name: "atomic-containers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-containers/"
 description: "atomic-containers – operations on containers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-containers &#8211; operations on containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic containers COMMAND [OPTIONS] [CONTAINERS&#8230;]</code> </p>

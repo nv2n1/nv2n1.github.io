@@ -1,4 +1,5 @@
 ---
+
 title: "fenv(3)"
 name: "fenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fenv/"
 description: "feclearexcept, fegetexceptflag, feraiseexcept, fesetexceptflag, fetestexcept, fegetenv, fegetround, feholdexcept, fesetround, fesetenv, feupdateenv, feenableexcept, fedisableexcept, fegetexcept – f..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> feclearexcept, fegetexceptflag, feraiseexcept, fesetexceptflag, fetestexcept, fegetenv, fegetround, feholdexcept, fesetround, fesetenv, feupdateenv, feenableexcept, fedisableexcept, fegetexcept &#8211; floating-point rounding and exception handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

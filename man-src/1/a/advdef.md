@@ -1,4 +1,5 @@
 ---
+
 title: "advdef(1)"
 name: "advdef"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-advdef/"
 description: "advdef – AdvanceCOMP Deflate Compression Utility"
 ---
 
-<h2>NAME</h2>
 <p> advdef &#8211; AdvanceCOMP Deflate Compression Utility</p>
 <h2>SYNOPSIS</h2>
 <p> advdef [-z, &#8211;recompress] [-0, &#8211;shrink-store] </p>

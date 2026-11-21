@@ -1,4 +1,5 @@
 ---
+
 title: "gmtconvert(1)"
 name: "gmtconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtconvert/"
 description: "gmtconvert – Convert, Paste, and/or Extract columns from data tables"
 ---
 
-<h2>NAME</h2>
 <p> gmtconvert &#8211; Convert, Paste, and/or Extract columns from data tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtconvert</code> [ <i>table</i> ] [ ] [ [<code>+l</code><i>min</i>][<code>+u</code><i>max</i>][<code>+i</code>]] [ [<i>template</i>] ] [ [<code>f</code>|<code>l</code>|<code>m</code><i>stride</i>] ] [ ] [ [<code>c</code>|<code>n</code>|<code>r</code>|<code>v</code>][<i>refpoint</i>] ] [ [<code>tsr</code>] ] [ [<code>~</code>]<i>selection</i>] [ [<code>~</code>]<i>&quot;search string&quot;</i> | [<code>~</code>]/<i>regexp</i>/[<code>i</code>] ] [ ] [ [<i>level</i>] ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

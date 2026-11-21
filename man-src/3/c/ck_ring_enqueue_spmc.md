@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_enqueue_spmc(3)"
 name: "ck_ring_enqueue_spmc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ring_enqueue_spmc/"
 description: "ck_ring_enqueue_spmc – enqueue pointer into bounded FIFO"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ring_enqueue_spmc</code> &#8211; enqueue pointer into bounded FIFO</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

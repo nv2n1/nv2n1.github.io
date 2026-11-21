@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-extract(1)"
 name: "rpmdev-extract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmdev-extract/"
 description: "rpmdev-extract – manual page for rpmdev-extract version 1.10"
 ---
 
-<h2>NAME</h2>
 <p> rpmdev-extract &#8211; manual page for rpmdev-extract version 1.10</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmdev-extract</code> [<i>OPTION</i>]&#8230; <i>ARCHIVE</i>&#8230;</p>

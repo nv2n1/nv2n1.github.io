@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-notifyd-config(1)"
 name: "xfce4-notifyd-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-notifyd-config/"
 description: "xfce4-notifyd-config – configuration GUI for xfce4-notifyd"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-notifyd-config &#8211; configuration GUI for xfce4-notifyd </p>
 <h2>SYNOPSIS</h2>
 <dl>

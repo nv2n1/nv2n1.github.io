@@ -1,4 +1,5 @@
 ---
+
 title: "pam_issue(8)"
 name: "pam_issue"
 section: "8"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/8-pam_issue/"
 description: "pam_issue – PAM module to add issue file to user prompt"
 ---
+
 <p>pam_issue &#8211; PAM module to add issue file to user prompt </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>pam_issue.so</code> [noesc] [issue=<i>issue-file-name</i>] </dt>
 </dl>

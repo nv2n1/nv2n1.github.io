@@ -1,4 +1,5 @@
 ---
+
 title: "memcp(1)"
 name: "memcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memcp/"
 description: "memcp – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcp &#8211; libmemcached Documentation </p>
 <p> Copies files to a collection of memcached servers</p>
 <h2>SYNOPSIS</h2>

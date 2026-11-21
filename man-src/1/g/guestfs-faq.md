@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-faq(1)"
 name: "guestfs-faq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-faq/"
 description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-faq &#8211; libguestfs Frequently Asked Questions (FAQ) </p>
 <h2>ABOUT LIBGUESTFS</h2>
 <h3>What is libguestfs?</h3>

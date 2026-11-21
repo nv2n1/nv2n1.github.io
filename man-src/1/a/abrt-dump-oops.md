@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-dump-oops(1)"
 name: "abrt-dump-oops"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-dump-oops/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-dump-oops - Extract oops from FILE (or standard input) 
+abrt-dump-oops - Extract oops from FILE (or standard input) 
 
 <h2>SYNOPSIS</h2>
 

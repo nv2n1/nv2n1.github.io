@@ -1,4 +1,5 @@
 ---
+
 title: "rc2po(1)"
 name: "rc2po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rc2po/"
 description: "rc2po – Convert Windows RC files to Gettext PO localization files."
 ---
 
-<h2>NAME</h2>
 <p> rc2po &#8211; Convert Windows RC files to Gettext PO localization files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rc2po </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [-P|&#8211;pot] [&#8211;charset <i>CHARSET</i>] [-l|&#8211;lang <i>LANG</i>] [&#8211;sublang <i>SUBLANG</i>] [&#8211;duplicates <i>DUPLICATESTYLE</i>]</p>

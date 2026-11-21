@@ -1,4 +1,5 @@
 ---
+
 title: "opa_osd_exercise(1)"
 name: "opa_osd_exercise"
 section: "1"
@@ -6,9 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opa_osd_exercise/"
 ---
 
-<h2>NAME</h2>
-
- opa_osd_exercise 
+opa_osd_exercise 
 
  
 

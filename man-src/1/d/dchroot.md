@@ -1,4 +1,5 @@
 ---
+
 title: "dchroot(1)"
 name: "dchroot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dchroot/"
 description: "dchroot – enter a chroot environment"
 ---
 
-<h2>NAME</h2>
 <p> dchroot &#8211; enter a chroot environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dchroot</code> [<code>-h</code>|<code>&#8211;help</code> | <code>-V</code>|<code>&#8211;version</code> | <code>-l</code>|<code>&#8211;list</code> | <code>-i</code>|<code>&#8211;info</code> | <code>&#8211;config</code> | <code>&#8211;location</code>] [<code>&#8211;directory=</code><i>directory</i>] [<code>-d</code>|<code>&#8211;preserve-environment</code>] [<code>-q</code>|<code>&#8211;quiet</code> | <code>-v</code>|<code>&#8211;verbose</code>] [<code>-c </code><i>chroot</i>|<code>&#8211;chroot=</code><i>chroot</i> | <code>&#8211;all</code>] [<code>COMMAND</code> [ <code>ARG1</code> [ <code>ARG2</code> [ <code>ARGn</code>]]]]</p>

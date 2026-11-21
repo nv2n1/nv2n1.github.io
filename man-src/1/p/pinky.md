@@ -1,4 +1,5 @@
 ---
+
 title: "pinky(1)"
 name: "pinky"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pinky/"
 description: "pinky – lightweight finger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pinky &#8211; lightweight finger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pinky</code> [<i>,OPTION/</i>]&#8230; [<i>,USER/</i>]&#8230;</p>

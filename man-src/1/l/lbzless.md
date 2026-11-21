@@ -1,4 +1,5 @@
 ---
+
 title: "lbzless(1)"
 name: "lbzless"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbzless/"
 description: "lbzless – file perusal filter for crt viewing of compressed text"
 ---
 
-<h2>NAME</h2>
 <p> lbzless &#8211; file perusal filter for crt viewing of compressed text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzless</code> [ name &#8230; ]</p>

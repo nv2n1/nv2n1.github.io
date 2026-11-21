@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_general_name_unparse(3)"
 name: "hx509_general_name_unparse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_general_name_unparse/"
 description: "hx509 name functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 name functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_general_name_unparse</code> (GeneralName *, char **) </p>

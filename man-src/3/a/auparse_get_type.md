@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_type(3)"
 name: "auparse_get_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_type/"
 description: "auparse_get_type – get record’s type"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_type &#8211; get record&#8217;s type</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

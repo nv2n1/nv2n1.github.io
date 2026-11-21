@@ -1,4 +1,5 @@
 ---
+
 title: "shortrpm(1)"
 name: "shortrpm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shortrpm/"
 description: "shortrpm – Short-circuit binary RPM package build"
 ---
 
-<h2>NAME</h2>
 <p> <code>shortrpm</code> &#8211; Short-circuit binary RPM package build</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shortrpm</code> [-<code>-bb</code> ] [-<code>&#8211;short-circuit</code> ] [<i>rpmbuild options</i> ]</p>

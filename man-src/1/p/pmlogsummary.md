@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogsummary(1)"
 name: "pmlogsummary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogsummary/"
 description: "pmlogsummary – calculate averages of metrics stored in a set of PCP archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogsummary</code> &#8211; calculate averages of metrics stored in a set of PCP archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogsummary</code> [<code>-abfFHiIlmMNsvxyz</code>] [<code>-B</code> <i>nbins</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-p</code> <i>precision</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]</p>

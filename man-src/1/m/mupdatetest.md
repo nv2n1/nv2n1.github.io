@@ -1,4 +1,5 @@
 ---
+
 title: "mupdatetest(1)"
 name: "mupdatetest"
 section: "1"
@@ -8,7 +9,7 @@ description: "mupdatetest – interactive MUPDATE test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> mupdatetest &#8211; interactive MUPDATE test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mupdatetest</code> [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

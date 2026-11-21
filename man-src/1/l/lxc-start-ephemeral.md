@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-start-ephemeral(1)"
 name: "lxc-start-ephemeral"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-start-ephemeral/"
 description: "lxc-start-ephemeral – start an ephemeral copy of an existing container"
 ---
 
-<h2>NAME</h2>
 <p> lxc-start-ephemeral &#8211; start an ephemeral copy of an existing container</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-start-ephemeral</code> [-o] [-n] [-d] [&#8211;bdir] [&#8211;user] [&#8211;key] [&#8211;storage-type] [&#8211;union-type] [&#8211;keep-data] [COMMAND]</p>

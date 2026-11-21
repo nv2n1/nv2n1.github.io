@@ -1,4 +1,5 @@
 ---
+
 title: "tex2vcd(1)"
 name: "tex2vcd"
 section: "1"
@@ -6,11 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tex2vcd/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- tex2vcd - Coverts TEXSIM AET files to VCD
+tex2vcd - Coverts TEXSIM AET files to VCD
 
 <h2>SYNTAX</h2>
 

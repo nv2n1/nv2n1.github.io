@@ -1,4 +1,5 @@
 ---
+
 title: "mbsrtowcs(3)"
 name: "mbsrtowcs"
 section: "3"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mbsrtowcs/"
 description: "mbsrtowcs – convert a multibyte string to a wide-character string"
 ---
-<h2 class="name">NAME</h2>
+
 <p> mbsrtowcs - convert a multibyte string to a wide-character string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

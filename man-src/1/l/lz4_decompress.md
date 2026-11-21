@@ -1,4 +1,5 @@
 ---
+
 title: "lz4_decompress(1)"
 name: "lz4_decompress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lz4_decompress/"
 description: "lz4_decompress – decompress mysqlpump LZ4-compressed output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lz4_decompress &#8211; decompress mysqlpump LZ4-compressed output </p>
 <h2>SYNOPSIS</h2>
 <dl>

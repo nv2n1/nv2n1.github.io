@@ -1,4 +1,5 @@
 ---
+
 title: "lscpu(1)"
 name: "lscpu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lscpu/"
 description: "lscpu – display information about the CPU architecture"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lscpu &#8211; display information about the CPU architecture </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lscpu</code> [options]</p>

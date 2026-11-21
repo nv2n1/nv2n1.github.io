@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_delete_crt(3)"
 name: "gnutls_pkcs7_delete_crt"
 section: "3"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-gnutls_pkcs7_delete_crt/"
 ---
 
-<h2>NAME</h2>
-
- gnutls_pkcs7_delete_crt - API function
+gnutls_pkcs7_delete_crt - API function
 
 <h2>SYNOPSIS</h2>
 

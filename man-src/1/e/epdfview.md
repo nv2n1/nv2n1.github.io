@@ -1,4 +1,5 @@
 ---
+
 title: "epdfview(1)"
 name: "epdfview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epdfview/"
 description: "epdfview – view PDF documents"
 ---
 
-<h2>NAME</h2>
 <p> epdfview &#8211; view PDF documents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>epdfview</code> [ <i>OPTION&#8230;</i> ] [ <i>FILE</i> ]</p>

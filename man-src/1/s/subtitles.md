@@ -1,4 +1,5 @@
 ---
+
 title: "subtitles(1)"
 name: "subtitles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-subtitles/"
 description: "subtitles – display subtitles within xawtv."
 ---
 
-<h2>NAME</h2>
 <p> subtitles &#8211; display subtitles within xawtv.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>subtitles [ -help | -tty ] &lt;page&gt;</code></p>

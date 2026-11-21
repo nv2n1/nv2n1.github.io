@@ -1,4 +1,5 @@
 ---
+
 title: "jade(1)"
 name: "jade"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jade/"
 description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 ---
 
-<h2>NAME</h2>
 <p> openjade &#8211; apply a DSSSL stylesheet to an SGML or XML document</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

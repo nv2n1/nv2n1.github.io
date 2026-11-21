@@ -1,4 +1,5 @@
 ---
+
 title: "cpclean(1)"
 name: "cpclean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpclean/"
 description: "cpclean – Remove wrong control points by statistical methods"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpclean &#8211; Remove wrong control points by statistical methods </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpclean</code> [options] <i>input.pto</i></p>

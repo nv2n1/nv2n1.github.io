@@ -1,4 +1,5 @@
 ---
+
 title: "kross(1)"
 name: "kross"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kross/"
 description: "kross – KDE application to run kross scripts."
 ---
 
-<h2 class="name">NAME</h2>
 <p> kross &#8211; KDE application to run kross scripts. </p>
 <h2>SYNOPSIS</h2>
 <dl>

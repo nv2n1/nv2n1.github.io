@@ -1,4 +1,5 @@
 ---
+
 title: "guake(1)"
 name: "guake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guake/"
 description: "guake — A drop-down terminal for GNOME environment."
 ---
 
-<h2>NAME</h2>
 <p> guake &#8212; A drop-down terminal for GNOME environment.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>guake</code> [<code>-h, &#8211;help</code>] [<code>-p, &#8211;preferences</code>] [<code>-a, &#8211;about</code>] [<code>-q, &#8211;quit</code>] [<code>-f, &#8211;fullscreen</code>] [<code>-t, &#8211;toggle-visiblity</code>] [<code>&#8211;show</code>] [<code>&#8211;hide</code>] [<code>-s, &#8211;select-tab</code>] [<code>-g, &#8211;selected-tab</code>] [<code>-e, &#8211;execute-command</code>] [<code>-t, &#8211;tab-index</code>] [<code>&#8211;bgcolor</code>] [<code>&#8211;fgcolor</code>] [<code>-r, &#8211;rename-current-tab</code>]</p>

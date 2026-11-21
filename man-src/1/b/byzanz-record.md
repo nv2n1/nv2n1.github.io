@@ -1,4 +1,5 @@
 ---
+
 title: "byzanz-record(1)"
 name: "byzanz-record"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byzanz-record/"
 description: "byzanz-record – record your desktop session to an animated GIF"
 ---
 
-<h2>NAME</h2>
 <p> byzanz-record &#8211; record your desktop session to an animated GIF</p>
 <h2>SYNOPSIS</h2>
 <p> <code>byzanz-record</code> [<i>options</i>]<i> filename.gif</i></p>

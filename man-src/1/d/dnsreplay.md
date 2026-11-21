@@ -1,4 +1,5 @@
 ---
+
 title: "dnsreplay(1)"
 name: "dnsreplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnsreplay/"
 description: "dnsreplay – A PowerDNS nameserver debugging tool"
 ---
 
-<h2>NAME</h2>
 <p> dnsreplay &#8211; A PowerDNS nameserver debugging tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnsreplay </code><i>[options]</i> <i>filename</i> <i>ip-address</i> <i>[port]</i></p>

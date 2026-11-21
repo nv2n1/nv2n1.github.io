@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_atoasr(3)"
 name: "ipsec_atoasr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_atoasr/"
 description: "ipsec_atoasr, ipsec_rangetoa – convert ASCII to Internet address, subnet, or range, convert Internet address range to ASCII"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_atoasr, ipsec_rangetoa &#8211; convert ASCII to Internet address, subnet, or range, convert Internet address range to ASCII</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

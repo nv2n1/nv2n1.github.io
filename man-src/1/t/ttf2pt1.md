@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2pt1(1)"
 name: "ttf2pt1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttf2pt1/"
 description: "TTF2PT1 – A True Type to PostScript Type 1 Font Converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> TTF2PT1 &#8211; A True Type to PostScript Type 1 Font Converter </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&quot;ttf2pt1 </tt>[-options] ttffont.ttf [Fontname]<tt>&quot;</tt> </p>

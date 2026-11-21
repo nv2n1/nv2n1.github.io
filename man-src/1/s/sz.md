@@ -1,4 +1,5 @@
 ---
+
 title: "sz(1)"
 name: "sz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sz/"
 description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 ---
 
-<h2>NAME</h2>
 <p> sx, sb, sz &#8211; XMODEM, YMODEM, ZMODEM file send</p>
 <h2>SYNOPSIS</h2>
 <p> sz [-<code>+8abdefkLlNnopqTtuvyY</code>] <i>file &#8230;</i><br />

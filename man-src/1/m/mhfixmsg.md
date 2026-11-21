@@ -1,4 +1,5 @@
 ---
+
 title: "mhfixmsg(1)"
 name: "mhfixmsg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhfixmsg/"
 description: "mhfixmsg – rewrite MIME messages with various transformations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhfixmsg &#8211; rewrite MIME messages with various transformations </p>
 <h2>SYNOPSIS</h2>
 <dl>

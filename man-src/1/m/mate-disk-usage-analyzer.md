@@ -1,4 +1,5 @@
 ---
+
 title: "mate-disk-usage-analyzer(1)"
 name: "mate-disk-usage-analyzer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-disk-usage-analyzer/"
 description: "Baobab – A graphical tool to analyse disk usage"
 ---
 
-<h2>NAME</h2>
 <p> <code>Baobab</code> &#8211; A graphical tool to analyse disk usage</p>
 <h2>SYNOPSIS</h2>
 <p> <code>baobab</code> [directory]</p>

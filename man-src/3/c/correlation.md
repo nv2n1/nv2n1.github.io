@@ -1,4 +1,5 @@
 ---
+
 title: "correlation(3)"
 name: "correlation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-correlation/"
 description: "QuantLib::OneFactorCopula – Abstract base class for one-factor copula models."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::OneFactorCopula &#8211; Abstract base class for one-factor copula models. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt; </p>

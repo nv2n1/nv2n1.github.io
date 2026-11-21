@@ -1,4 +1,5 @@
 ---
+
 title: "dcmmklut(1)"
 name: "dcmmklut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmmklut/"
 description: "dcmmklut – Create DICOM look-up tables"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmmklut &#8211; Create DICOM look-up tables </p>
 <h2>SYNOPSIS</h2>
 <pre>

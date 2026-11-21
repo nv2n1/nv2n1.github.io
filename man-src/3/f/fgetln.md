@@ -1,4 +1,5 @@
 ---
+
 title: "fgetln(3)"
 name: "fgetln"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetln/"
 description: "fgetln – get a line from a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fgetln</code> &#8211; get a line from a stream </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

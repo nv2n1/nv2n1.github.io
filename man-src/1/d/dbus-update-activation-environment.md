@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-update-activation-environment(1)"
 name: "dbus-update-activation-environment"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-update-activation-environment/"
 description: "dbus-update-activation-environment – update environment used for D-Bus session services"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-update-activation-environment &#8211; update environment used for D-Bus session services </p>
 <h2>SYNOPSIS</h2>
 <dl>

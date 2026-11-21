@@ -1,4 +1,5 @@
 ---
+
 title: "poswap(1)"
 name: "poswap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-poswap/"
 description: "poswap – Builds a new translation file with the target of the input language as source language."
 ---
 
-<h2>NAME</h2>
 <p> poswap &#8211; Builds a new translation file with the target of the input language as source language.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>poswap </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [&#8211;reverse]</p>

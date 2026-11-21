@@ -1,4 +1,5 @@
 ---
+
 title: "pki-group(1)"
 name: "pki-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-group/"
 description: "pki-group – Command-Line Interface for managing Certificate System groups."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-group &#8211; Command-Line Interface for managing Certificate System groups.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

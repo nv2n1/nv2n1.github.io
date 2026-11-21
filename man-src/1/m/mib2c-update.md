@@ -1,4 +1,5 @@
 ---
+
 title: "mib2c-update(1)"
 name: "mib2c-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mib2c-update/"
 description: "mib2c-update – script to merge custom code into updated mib2c code"
 ---
 
-<h2>NAME</h2>
 <p> mib2c-update &#8211; script to merge custom code into updated mib2c code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mib2c-update</code></p>

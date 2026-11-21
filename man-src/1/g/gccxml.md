@@ -1,4 +1,5 @@
 ---
+
 title: "gccxml(1)"
 name: "gccxml"
 section: "1"
@@ -6,7 +7,6 @@ letter: "g"
 url: "/docs/linux/man/1-gccxml/"
 ---
 
-<h2>NAME</h2>
 <dl>
 <dt><code>gccxml</code></dt>
 <dd> &#8211; Create an XML representation of C++ declarations.</dd></dl>

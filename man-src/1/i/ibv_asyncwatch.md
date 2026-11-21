@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_asyncwatch(1)"
 name: "ibv_asyncwatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibv_asyncwatch/"
 description: "ibv_asyncwatch – display asynchronous events"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_asyncwatch &#8211; display asynchronous events</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibv_asyncwatch</code> [-d device] [-h] </p>

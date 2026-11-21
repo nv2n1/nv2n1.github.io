@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_set_debug(3)"
 name: "fribidi_set_debug"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_debug/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_set_debug - set debug state 
+fribidi_set_debug - set debug state 
 
 <h2>SYNOPSIS</h2>
 

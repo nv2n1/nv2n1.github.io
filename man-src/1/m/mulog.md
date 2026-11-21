@@ -1,4 +1,5 @@
 ---
+
 title: "mulog(1)"
 name: "mulog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mulog/"
 description: "Mulog – Chat Logging Script for Museekd"
 ---
 
-<h2>NAME</h2>
 <p> <code>Mulog</code> &#8211; Chat Logging Script for Museekd</p>
 <h2>DESCRIPTION</h2>
 <p> Mulog is command-line Python script that connects to <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) and saves chat messages into log files. Under the Log Directory, it creates room &amp; private subdirectories and a syslog file. If it loses connection with museekd, it will automatically exit. </p>

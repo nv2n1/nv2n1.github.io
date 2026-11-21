@@ -1,4 +1,5 @@
 ---
+
 title: "pmexp(1)"
 name: "pmexp"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmexp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmexp - show a module's exports 
+pmexp - show a module's exports 
 
 <h2>DESCRIPTION</h2>
 

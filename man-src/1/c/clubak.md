@@ -1,4 +1,5 @@
 ---
+
 title: "clubak(1)"
 name: "clubak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clubak/"
 description: "clubak – format output from clush/pdsh-like output and more"
 ---
 
-<h2>NAME</h2>
 <p> clubak &#8211; format output from clush/pdsh-like output and more</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clubak</code> [ OPTIONS ]</p>

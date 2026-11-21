@@ -1,4 +1,5 @@
 ---
+
 title: "getpw(3)"
 name: "getpw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpw/"
 description: "getpw – reconstruct password line entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpw &#8211; reconstruct password line entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

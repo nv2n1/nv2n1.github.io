@@ -1,4 +1,5 @@
 ---
+
 title: "dlaed8(3)"
 name: "dlaed8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaed8/"
 description: "dlaed8.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlaed8.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

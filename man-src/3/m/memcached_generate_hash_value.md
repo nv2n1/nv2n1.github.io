@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_generate_hash_value(3)"
 name: "memcached_generate_hash_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_generate_hash_value/"
 description: "memcached_generate_hash_value – Generating hash values directly"
 ---
 
-<h2>NAME</h2>
 <p> memcached_generate_hash_value &#8211; Generating hash values directly </p>
 <p> Hash a key value</p>
 <h2>SYNOPSIS</h2>

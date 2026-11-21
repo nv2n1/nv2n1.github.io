@@ -1,4 +1,5 @@
 ---
+
 title: "daylight(3)"
 name: "daylight"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-daylight/"
 description: "tzset, tzname, timezone, daylight – initialize time conversion information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tzset, tzname, timezone, daylight &#8211; initialize time conversion information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

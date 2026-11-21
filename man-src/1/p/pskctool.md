@@ -1,4 +1,5 @@
 ---
+
 title: "pskctool(1)"
 name: "pskctool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pskctool/"
 description: "pskctool – Portable Symmetric Key Container (PSKC) tool"
 ---
 
-<h2>NAME</h2>
 <p> pskctool &#8211; Portable Symmetric Key Container (PSKC) tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pskctool</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>

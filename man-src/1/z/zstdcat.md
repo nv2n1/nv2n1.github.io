@@ -1,4 +1,5 @@
 ---
+
 title: "zstdcat(1)"
 name: "zstdcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zstdcat/"
 description: "zstd – zstd, zstdmt, unzstd, zstdcat – Compress or decompress .zst files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>zstd</code> &#8211; zstd, zstdmt, unzstd, zstdcat &#8211; Compress or decompress .zst files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zstd</code> [<i>OPTIONS</i>] [-|<i>INPUT-FILE</i>] [-o <i>OUTPUT-FILE</i>] </p>

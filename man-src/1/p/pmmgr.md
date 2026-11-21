@@ -1,4 +1,5 @@
 ---
+
 title: "pmmgr(1)"
 name: "pmmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmmgr/"
 description: "pmmgr – pcp daemon manager"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmmgr</code> &#8211; pcp daemon manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmmgr</code> [<code>-v</code>] [<code>-c</code> <i>config-directory</i>] [<code>-p</code> <i>polling-interval</i>] [<code>-l</code> <i>log-file</i>] </p>

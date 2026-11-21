@@ -1,4 +1,5 @@
 ---
+
 title: "roundtrip(1)"
 name: "roundtrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-roundtrip/"
 description: "roundtrip – a comparison program for testing roundtrip conversion"
 ---
 
-<h2>NAME</h2>
 <p> <code>roundtrip</code> &#8211; a comparison program for testing roundtrip conversion</p>
 <h2>SYNOPSIS</h2>
 <p> <i>filename</i> <i>filename</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sqlite3(1)"
 name: "sqlite3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sqlite3/"
 description: "sqlite3 – A command line interface for SQLite version 3"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sqlite3 </code> &#8211; A command line interface for SQLite version 3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sqlite3</code> [<i>options</i>] [<i>databasefile</i>] [<i>SQL</i>] </p>

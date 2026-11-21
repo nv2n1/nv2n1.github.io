@@ -1,4 +1,5 @@
 ---
+
 title: "git-setup(1)"
 name: "git-setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-setup/"
 description: "git-setup – Set up a git repository"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-setup</code> &#8211; Set up a git repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-setup</code> [&lt;directory&gt;]</p>

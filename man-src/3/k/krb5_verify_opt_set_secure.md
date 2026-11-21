@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_verify_opt_set_secure(3)"
 name: "krb5_verify_opt_set_secure"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_verify_opt_set_secure/"
 description: "krb5_verify_user krb5_verify_user_lrealm krb5_verify_user_opt krb5_verify_opt_init krb5_verify_opt_alloc krb5_verify_opt_free krb5_verify_opt_set_ccache krb5_verify_opt_set_flags krb5_verify_opt_se..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_verify_user</code> <code>krb5_verify_user_lrealm</code> <code>krb5_verify_user_opt</code> <code>krb5_verify_opt_init</code> <code>krb5_verify_opt_alloc</code> <code>krb5_verify_opt_free</code> <code>krb5_verify_opt_set_ccache</code> <code>krb5_verify_opt_set_flags</code> <code>krb5_verify_opt_set_service</code> <code>krb5_verify_opt_set_secure</code> <code>krb5_verify_opt_set_keytab</code> &#8211; Heimdal password verifying functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

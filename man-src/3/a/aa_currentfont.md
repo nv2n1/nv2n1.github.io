@@ -1,4 +1,5 @@
 ---
+
 title: "aa_currentfont(3)"
 name: "aa_currentfont"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_currentfont/"
 description: "aa_currentfont – returns specification of the fonts used by AA-lib rendering routines."
 ---
 
-<h2>NAME</h2>
 <p> aa_currentfont &#8211; returns specification of the fonts used by AA-lib rendering routines.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

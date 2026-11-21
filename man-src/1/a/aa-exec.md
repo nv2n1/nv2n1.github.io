@@ -1,4 +1,5 @@
 ---
+
 title: "aa-exec(1)"
 name: "aa-exec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aa-exec/"
 description: "aa-exec – confine a program with the specified AppArmor profile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aa-exec &#8211; confine a program with the specified AppArmor profile </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aa-exec</code> [options] [&#8211;] [<i>&lt;command&gt;</i> &#8230;]</p>

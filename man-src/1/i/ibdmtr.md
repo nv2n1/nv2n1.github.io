@@ -1,4 +1,5 @@
 ---
+
 title: "ibdmtr(1)"
 name: "ibdmtr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdmtr/"
 description: "ibdmtr – Fabric Trace Route"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibdmtr</code> &#8211; Fabric Trace Route</p>
 <h2>SYNOPSYS</h2>
 <p> ibdmtr [-v][-h] {-c &lt;cbaling file&gt;|-t &lt;topo file&gt;} -s &lt;sm node name&gt;<br />

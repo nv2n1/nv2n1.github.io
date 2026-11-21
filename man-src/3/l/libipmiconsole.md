@@ -1,4 +1,5 @@
 ---
+
 title: "libipmiconsole(3)"
 name: "libipmiconsole"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libipmiconsole/"
 description: "libipmiconsole – IPMI SOL library"
 ---
 
-<h2>NAME</h2>
 <p> libipmiconsole &#8211; IPMI SOL library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ipmiconsole.h&gt;</code> </p>

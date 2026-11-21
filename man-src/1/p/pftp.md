@@ -1,4 +1,5 @@
 ---
+
 title: "pftp(1)"
 name: "pftp"
 section: "1"
@@ -8,7 +9,7 @@ description: "ftp – Internet file transfer program"
 ---
 
 <p>Linux NetKit (0.17)</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>ftp</code> &#8211; <code>Internet</code> file transfer program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftp</code> [-<code>46pinegvd</code> ] [<i>host </i>[<i>port</i> ] ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "sge_intro(1)"
 name: "sge_intro"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sge_intro/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sge_intro - xxQS_NAMExx, a facility for executing jobs on remote machines 
+sge_intro - xxQS_NAMExx, a facility for executing jobs on remote machines 
 
 <h2>DESCRIPTION</h2>
 

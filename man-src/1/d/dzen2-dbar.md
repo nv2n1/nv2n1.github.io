@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2-dbar(1)"
 name: "dzen2-dbar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dzen2-dbar/"
 description: "dzen2-dbar – simple gadget that you can use in combination with dzen to display a progressbar."
 ---
 
-<h2>NAME</h2>
 <p> dzen2-dbar &#8211; simple gadget that you can use in combination with dzen to display a progressbar.</p>
 <h2>SYNOPSIS</h2>
 <dl>

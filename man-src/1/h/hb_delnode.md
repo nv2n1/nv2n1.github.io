@@ -1,4 +1,5 @@
 ---
+
 title: "hb_delnode(1)"
 name: "hb_delnode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hb_delnode/"
 description: "hb_delnode – hb_delnode is a simple linux-ha shell script. It sends a message to the cluster to delete nodes."
 ---
 
-<h2>NAME</h2>
 <p> hb_delnode &#8211; hb_delnode is a simple linux-ha shell script. It sends a message to the cluster to delete nodes.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hb_delnode</code> <code>&lt;node1&gt;</code> <code>[node2]</code> <code>[node3]</code> <code>&#8230;</code></p>

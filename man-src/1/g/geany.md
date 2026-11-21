@@ -1,4 +1,5 @@
 ---
+
 title: "geany(1)"
 name: "geany"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geany/"
 description: "Geany — a small and lightweight IDE"
 ---
 
-<h2>NAME</h2>
 <p> Geany &#8212; a small and lightweight IDE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>geany</code> [<code>option</code>] [+number] [<code>files &#8230;</code>]</p>

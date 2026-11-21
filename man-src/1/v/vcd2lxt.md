@@ -1,4 +1,5 @@
 ---
+
 title: "vcd2lxt(1)"
 name: "vcd2lxt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcd2lxt/"
 description: "vcd2lxt – Converts VCD files to interlaced or linear LXT files"
 ---
 
-<h2>NAME</h2>
 <p> vcd2lxt &#8211; Converts VCD files to interlaced or linear LXT files</p>
 <h2>SYNTAX</h2>
 <p> vcd2lxt [<i>VCDFILE</i>] [<i>LXTFILE</i>] [<i>option</i>]&#8230;</p>

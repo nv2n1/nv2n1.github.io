@@ -1,4 +1,5 @@
 ---
+
 title: "euca-import-volume(1)"
 name: "euca-import-volume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-import-volume/"
 description: "euca-import-volume – Import a file to a volume in the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-import-volume &#8211; Import a file to a volume in the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-import-volume <code>-f</code> FORMAT <code>-z</code> ZONE [-s GiB] [&#8211;image-size BYTES]</p>

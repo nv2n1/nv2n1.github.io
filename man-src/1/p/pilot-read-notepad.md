@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-notepad(1)"
 name: "pilot-read-notepad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-read-notepad/"
 description: "pilot-read-notepad – List the record information found in the Palm Notepad"
 ---
 
-<h2>NAME</h2>
 <p> pilot-read-notepad &#8211; List the record information found in the Palm Notepad</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

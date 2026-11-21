@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaunbound(1)"
 name: "pmdaunbound"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaunbound/"
 description: "pmdaunbound – Unbound resolver PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaunbound</code> &#8211; Unbound resolver PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdaunbound</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about the Unbound DNS resolver using the <code><a href="/docs/linux/man/8-unbound-control/">unbound-control</a></code>(8) <code>stats_noreset</code> command. </p>

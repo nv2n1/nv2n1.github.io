@@ -1,4 +1,5 @@
 ---
+
 title: "csv_to_db(1)"
 name: "csv_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csv_to_db/"
 description: "csv_to_db – convert comma-separated-value data into fsdb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csv_to_db &#8211; convert comma-separated-value data into fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "clint(1)"
 name: "clint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clint/"
 description: "clint – Clint Documentation"
 ---
 
-<h2>NAME</h2>
 <p> clint &#8211; Clint Documentation </p>
 <p> Welcome to Clint.</p>
 <h2>CONTENTS</h2>

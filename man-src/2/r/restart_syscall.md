@@ -1,4 +1,5 @@
 ---
+
 title: "restart_syscall(2)"
 name: "restart_syscall"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-restart_syscall/"
 description: "restart_syscall – restart a system call after interruption by a stop signal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> restart_syscall &#8211; restart a system call after interruption by a stop signal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>long restart_syscall(void);</code> </p>

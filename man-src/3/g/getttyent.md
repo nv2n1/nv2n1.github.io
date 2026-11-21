@@ -1,4 +1,5 @@
 ---
+
 title: "getttyent(3)"
 name: "getttyent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getttyent/"
 description: "getttyent, getttynam, setttyent, endttyent – get ttys file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getttyent, getttynam, setttyent, endttyent &#8211; get ttys file entry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ttyent.h&gt;</code> </p>

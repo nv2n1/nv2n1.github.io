@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendhimouse(3)"
 name: "aa_recommendhimouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendhimouse/"
 description: "aa_recommendhimouse – insert the given driver on beggining of the list of recommended mouse drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendhimouse &#8211; insert the given driver on beggining of the list of recommended mouse drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

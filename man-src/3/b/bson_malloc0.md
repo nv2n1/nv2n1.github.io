@@ -1,4 +1,5 @@
 ---
+
 title: "bson_malloc0(3)"
 name: "bson_malloc0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_malloc0/"
 description: "bson_malloc0() – This is a portable malloc() wrapper that also sets the memory to zero. Similar to calloc()."
 ---
 
-<h2>NAME</h2>
 <p> bson_malloc0() &#8211; This is a portable malloc() wrapper that also sets the memory to zero. Similar to calloc().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

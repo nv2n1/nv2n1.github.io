@@ -1,4 +1,5 @@
 ---
+
 title: "fetchmailrc(1)"
 name: "fetchmailrc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fetchmailrc/"
 description: "fetchmail – fetch mail from a POP, IMAP, ETRN, or ODMR-capable server"
 ---
-<h2 class="name">NAME</h2>
+
 <p> fetchmail - fetch mail from a POP, IMAP, ETRN, or ODMR-capable server  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fetchmail</code> [<i>option...</i>] [<i>mailserver...</i>] <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "wvdialconf(1)"
 name: "wvdialconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wvdialconf/"
 description: "wvdialconf – build a configuration file for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wvdialconf &#8211; build a configuration file for <code></p>
 <p><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1)</p>
 <h2>SYNOPSIS</h2>

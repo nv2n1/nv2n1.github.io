@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_graph(3)"
 name: "cdk_graph"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_graph/"
 description: "cdk_graph – curses graph widget"
 ---
 
-<h2>NAME</h2>
 <p> cdk_graph &#8211; curses graph widget</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

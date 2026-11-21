@@ -1,4 +1,5 @@
 ---
+
 title: "pmdammv(1)"
 name: "pmdammv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdammv/"
 description: "pmdammv – memory mapped values performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdammv</code> &#8211; memory mapped values performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mmv/pmdammv</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>

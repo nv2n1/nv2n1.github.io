@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-mplayer(1)"
 name: "gnome-mplayer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-mplayer/"
 description: "gnome-mplayer – a simple GUI for MPlayer"
 ---
 
-<h2>NAME</h2>
 <p> gnome-mplayer &#8211; a simple GUI for MPlayer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-mplayer</code> [<i>options</i>]<i> files</i>&#8230;<br />

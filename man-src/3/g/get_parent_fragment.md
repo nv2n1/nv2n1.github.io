@@ -1,4 +1,5 @@
 ---
+
 title: "get_parent_fragment(3)"
 name: "get_parent_fragment"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_parent_fragment/"
 description: "get_parent_fragment — retrieve the parent fragment of a fragment in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_parent_fragment &#8212; retrieve the parent fragment of a fragment in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

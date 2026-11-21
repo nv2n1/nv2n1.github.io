@@ -1,4 +1,5 @@
 ---
+
 title: "pg_resetxlog(1)"
 name: "pg_resetxlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_resetxlog/"
 description: "pg_resetxlog – reset the write-ahead log and other control information of a PostgreSQL database cluster"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_resetxlog &#8211; reset the write-ahead log and other control information of a PostgreSQL database cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>

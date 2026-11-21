@@ -1,4 +1,5 @@
 ---
+
 title: "syscalls(2)"
 name: "syscalls"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-syscalls/"
 description: "syscalls – Linux system calls"
 ---
 
-<h2 class="name">NAME</h2>
 <p> syscalls &#8211; Linux system calls </p>
 <h2>SYNOPSIS</h2>
 <p> Linux system calls.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "map(1)"
 name: "map"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-map/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- map - An utility to map texts from and to unicode 
+map - An utility to map texts from and to unicode 
 
 <h2>SYNOPSIS</h2>
 

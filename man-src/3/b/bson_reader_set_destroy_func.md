@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_set_destroy_func(3)"
 name: "bson_reader_set_destroy_func"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_set_destroy_func/"
 description: "bson_reader_set_destroy_func() – Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_set_destroy_func() &#8211; Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks.</p>
 <h2>SYNOPSIS</h2>
 <pre>

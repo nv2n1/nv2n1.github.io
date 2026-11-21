@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_mmk_m2(1)"
 name: "scotch_mmk_m2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_mmk_m2/"
 description: "mmk_m2, mmk_m3 – create source meshes"
 ---
 
-<h2>NAME</h2>
 <p> <code>mmk_m2, mmk_m3 </code>&#8211; create source meshes</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

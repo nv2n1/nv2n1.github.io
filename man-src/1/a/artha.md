@@ -1,4 +1,5 @@
 ---
+
 title: "artha(1)"
 name: "artha"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-artha/"
 description: "Artha – An cross-platform thesaurus based on WordNet"
 ---
 
-<h2>NAME</h2>
 <p> Artha &#8211; An cross-platform thesaurus based on WordNet</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Artha</code> is an open thesaurus based on the WordNet database, created with simplicity in mind. Once executed, Artha monitors for a user preset global hotkey combination. When the user selects some text in any window, and presses this hotkey combo, Artha looks up WordNet thesaurus for the selected text and pops-up with the results. </p>

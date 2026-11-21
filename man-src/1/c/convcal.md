@@ -1,4 +1,5 @@
 ---
+
 title: "convcal(1)"
 name: "convcal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-convcal/"
 description: "convcal – convert dates to different formats"
 ---
 
-<h2>NAME</h2>
 <p> convcal &#8211; convert dates to different formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>convcal</code> [<i>OPTIONS</i>] [<i>DATE</i>] </p>

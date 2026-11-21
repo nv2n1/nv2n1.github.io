@@ -1,4 +1,5 @@
 ---
+
 title: "dcmpsprt(1)"
 name: "dcmpsprt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmpsprt/"
 description: "dcmpsprt – Read DICOM images and presentation states and render print job"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmpsprt &#8211; Read DICOM images and presentation states and render print job </p>
 <h2>SYNOPSIS</h2>
 <pre>

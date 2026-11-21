@@ -1,4 +1,5 @@
 ---
+
 title: "museeq(1)"
 name: "museeq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-museeq/"
 description: "Museeq – QT GUI for the Museek Daemon"
 ---
 
-<h2>NAME</h2>
 <p> <code>Museeq</code> &#8211; QT GUI for the Museek Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>museeq</code> [-V] [&#8211;version] [-h] [&#8211;help] [&#8211;no-tray]</p>

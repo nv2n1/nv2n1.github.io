@@ -1,4 +1,5 @@
 ---
+
 title: "gettext(3)"
 name: "gettext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gettext/"
 description: "gettext, dgettext, dcgettext – translate message"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gettext, dgettext, dcgettext &#8211; translate message </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

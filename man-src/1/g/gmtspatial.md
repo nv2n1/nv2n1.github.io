@@ -1,4 +1,5 @@
 ---
+
 title: "gmtspatial(1)"
 name: "gmtspatial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtspatial/"
 description: "gmtspatial – Do geospatial operations on lines and polygons"
 ---
 
-<h2>NAME</h2>
 <p> gmtspatial &#8211; Do geospatial operations on lines and polygons</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtspatial</code> [ <i>table</i> ] [ [<code>a</code><i>min_dist</i>][<i>unit</i>]] [ ] [ [<code>+f</code><i>file</i>][<code>+a</code><i>amax</i>][<code>+d</code><i>dmax</i>][<code>+c|C</code><i>cmax</i>][<code>+s</code><i>fact</i>] ] [ <code>+</code>|<code>&#8211;</code> ] [ [<code>l</code>] ] [ <code>-I</code>[<code>e</code>|<code>i</code>] ] [ <i>pfile</i>[<code>+a</code>][<code>+p</code><i>start</i>][<code>+r</code>][<code>+z</code>] ] [ [[<code>&#8211;</code>|<code>+</code>]*unit*][<code>+h</code>][<code>+l</code>][<code>+p</code>] ] [ <i>region</i> ] [ <code>i</code>|<code>u</code>|<code>s</code>|<code>j</code> ] [ [<i>clippolygon</i>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

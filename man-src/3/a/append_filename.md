@@ -1,4 +1,5 @@
 ---
+
 title: "append_filename(3)"
 name: "append_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-append_filename/"
 description: "append_filename – Concatenates a filename to a path. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> append_filename &#8211; Concatenates a filename to a path. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

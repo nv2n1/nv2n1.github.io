@@ -1,4 +1,5 @@
 ---
+
 title: "ppmpat(1)"
 name: "ppmpat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmpat/"
 description: "ppmpat – make a pretty pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmpat &#8211; make a pretty pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmpat</code> <code>-gingham2</code>|<code>-g2</code>|<code>-gingham3</code>| <code>-g3</code>|<code>-madras</code>|<code>-tartan</code>| <code>-poles</code>|<code>-squig</code>|<code>-camo</code>| <code>-anticamo</code> <i>width height</i></p>

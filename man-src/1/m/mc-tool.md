@@ -1,4 +1,5 @@
 ---
+
 title: "mc-tool(1)"
 name: "mc-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mc-tool/"
 description: "mc-tool – manipulate Mission Control accounts from the command line"
 ---
 
-<h2>NAME</h2>
 <p> mc-tool &#8211; manipulate Mission Control accounts from the command line</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mc-tool list</code> </p>

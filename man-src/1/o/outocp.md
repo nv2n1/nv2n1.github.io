@@ -1,4 +1,5 @@
 ---
+
 title: "outocp(1)"
 name: "outocp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-outocp/"
 description: "outocp – debug an OCP file"
 ---
 
-<h2>NAME</h2>
 <p> outocp &#8211; debug an OCP file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>outocp</code> <i>OCPFILE</i>[<i></i><code>.ocp</code>]</p>

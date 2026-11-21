@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpn-connection-route(1)"
 name: "euca-create-vpn-connection-route"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-vpn-connection-route/"
 description: "euca-create-vpn-connection-route – Create a static route that sends traffic from a virtual private gateway to a customer gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-vpn-connection-route &#8211; Create a static route that sends traffic from a virtual private gateway to a customer gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-vpn-connection-route <code>&#8211;vpn-connection</code> VPNCONN <code>&#8211;cidr</code> CIDR</p>

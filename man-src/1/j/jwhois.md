@@ -1,4 +1,5 @@
 ---
+
 title: "jwhois(1)"
 name: "jwhois"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jwhois/"
 description: "jwhois – client for the whois service"
 ---
 
-<h2>NAME</h2>
 <p> jwhois &#8211; client for the whois service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jwhois</code> [ <i>OPTIONS</i> ]&#8230; [ <i>QUERY</i> ]</p>

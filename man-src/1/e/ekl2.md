@@ -1,4 +1,5 @@
 ---
+
 title: "ekl2(1)"
 name: "ekl2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ekl2/"
 description: "ekl2 – EKG history viewer."
 ---
 
-<h2>NAME</h2>
 <p> ekl2 &#8211; EKG history viewer.</p>
 <h2>SYNTAX</h2>
 <p> <code>ekl2 [</code> <code>OPTIONS</code> <code>] [</code> <code>SOURCE</code> <code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-dsm(1)"
 name: "nvme-dsm"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-dsm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-dsm - Send NVMe Data Set Management, return results 
+nvme-dsm - Send NVMe Data Set Management, return results 
 
 <h2>SYNOPSIS</h2>
 

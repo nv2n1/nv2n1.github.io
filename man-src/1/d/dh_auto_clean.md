@@ -1,4 +1,5 @@
 ---
+
 title: "dh_auto_clean(1)"
 name: "dh_auto_clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_auto_clean/"
 description: "dh_auto_clean – automatically cleans up after a build"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_auto_clean &#8211; automatically cleans up after a build </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_auto_clean</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>

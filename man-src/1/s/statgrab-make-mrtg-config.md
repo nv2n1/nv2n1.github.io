@@ -1,4 +1,5 @@
 ---
+
 title: "statgrab-make-mrtg-config(1)"
 name: "statgrab-make-mrtg-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-statgrab-make-mrtg-config/"
 description: "statgrab-make-mrtg-config – generates MRTG configuration"
 ---
 
-<h2>NAME</h2>
 <p> statgrab-make-mrtg-config &#8211; generates MRTG configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>statgrab-make-mrtg-config</code> [OPTION]&#8230;</p>

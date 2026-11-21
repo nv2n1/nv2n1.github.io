@@ -1,4 +1,5 @@
 ---
+
 title: "stg-series(1)"
 name: "stg-series"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-series/"
 description: "stg-series – Print the patch series"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-series &#8211; Print the patch series </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

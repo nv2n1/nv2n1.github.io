@@ -1,4 +1,5 @@
 ---
+
 title: "heapsort(3)"
 name: "heapsort"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-heapsort/"
 description: "heapsort , mergesort – sort functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>heapsort , mergesort</code> &#8211; sort functions </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

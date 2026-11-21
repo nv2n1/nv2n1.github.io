@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-fuzz(1)"
 name: "libinput-measure-fuzz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-measure-fuzz/"
 description: "libinput-measure-fuzz – measure absolute axis fuzz"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-measure-fuzz &#8211; measure absolute axis fuzz </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure fuzz [&#8211;help] [options]</code> [<i>/dev/input/event0] </i></p>

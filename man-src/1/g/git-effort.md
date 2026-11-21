@@ -1,4 +1,5 @@
 ---
+
 title: "git-effort(1)"
 name: "git-effort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-effort/"
 description: "git-effort – Show effort statistics on file(s)"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-effort</code> &#8211; Show effort statistics on file(s)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-effort</code> [&#8211;above &lt;value&gt;] [&lt;path&gt;&#8230;] [&#8211; [&lt;log options&gt;&#8230;]]</p>

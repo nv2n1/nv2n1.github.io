@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-xattr(1)"
 name: "gfal-xattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-xattr/"
 description: "gfal-xattr – show or set attributes of a file"
 ---
 
-<h2>NAME</h2>
 <p> gfal-xattr &#8211; show or set attributes of a file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-xattr</code> [ <i>OPTION</i> ]&#8230; <i>FILE</i> [ <i>ATTRIBUTE</i> [= <i>VALUE</i> ]] </p>

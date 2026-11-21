@@ -1,4 +1,5 @@
 ---
+
 title: "cjdns-online(1)"
 name: "cjdns-online"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cjdns-online/"
 description: "cjdns-online — check whether cjdns tunnel devices are available"
 ---
 
-<h2>NAME</h2>
 <p> <code>cjdns-online</code> &#8212; check whether cjdns tunnel devices are available</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cjdns-online</code> [&lt;options&gt;&#8230;]</p>
