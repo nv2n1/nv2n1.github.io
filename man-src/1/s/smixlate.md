@@ -46,4 +46,3 @@ description: "smixlate – translate SMI/SPPI identifiers"
 <h2>AUTHORS</h2>
 <p> (C) 2006-2006 J. Schoenwaelder, International University Bremen, Germany<br />
  and contributions by many other people. </p>
-<h2>Index</h2>

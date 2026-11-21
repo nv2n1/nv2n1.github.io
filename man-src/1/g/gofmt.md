@@ -78,4 +78,3 @@ gofmt - r 'α[β:len(α)] -&gt; α[β:]' - w $GOROOT / src / pkg
 <p> This may result in changes that are incompatible with earlier versions of Go.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go doc cmd/gofmt&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

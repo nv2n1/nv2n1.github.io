@@ -56,4 +56,3 @@ description: "texworks – a simple TeX front-end program"
 <p> Copyright (C) 2007-2016 Jonathan Kew, Stefan Löffler, Charlie Sharpsteen </p>
 <p> License GPLv2+: GNU GPL (version 2 or later) &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; </p>
 <p> This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>

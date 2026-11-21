@@ -125,4 +125,3 @@ A is COMPLEX array, dimension(LDA, ka) where KA is K when TRANS = 'N' or 'n', an
 <p> Definition at line 168 of file chfrk.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

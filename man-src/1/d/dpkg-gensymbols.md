@@ -103,4 +103,3 @@ description: "dpkg-gensymbols – generate symbols files (shared library depende
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/symbol-versioning">https://people.redhat.com/drepper/symbol-versioning</a>&gt;, &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/goodpractice.pdf">https://people.redhat.com/drepper/goodpractice.pdf</a>&gt;, &lt;<a rel="nofollow" href="https://people.redhat.com/drepper/dsohowto.pdf">https://people.redhat.com/drepper/dsohowto.pdf</a>&gt;, <code>deb-src-symbol</code>(5), <code><a href="/docs/linux/man/5-deb-symbols/">deb-symbols</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></code>(1). </p>
-<h2>Index</h2>

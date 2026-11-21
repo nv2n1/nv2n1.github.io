@@ -17,4 +17,3 @@ description: "arjdisp – ARJ simple graphical interface"
 <p> <code><a href="/docs/linux/man/1-arj/">arj</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ola Lundqvist &lt;opal [at] debian.org&gt; in pod format, then converted by Guillem Jover &lt;guillem [at] debian.org&gt; to nroff format. </p>
-<h2>Index</h2>

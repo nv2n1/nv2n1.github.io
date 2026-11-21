@@ -66,4 +66,3 @@ g++ `llvm - config-- cxxflags` - o HowToUseJIT.o - c HowToUseJIT.cpp g++ `llvm -
 <p> If <code>llvm-config</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

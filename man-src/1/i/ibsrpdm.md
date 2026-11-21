@@ -31,4 +31,3 @@ description: "ibsrpdm – Discover SRP targets on an InfiniBand Fabric"
 <dt>Roland Dreier</dt>
 <dd> &lt;<i>roland [at] kernel.org</i>&gt; </dd>
 </dl>
-<h2>Index</h2>

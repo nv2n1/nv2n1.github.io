@@ -24,4 +24,3 @@ description: "ldns-test-edns – test if dns cache supports EDNS and DNSSEC."
 <p> Report bugs to &lt;ldns-team [at] nlnetlabs.nl&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 NLnet Labs. This is free software. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

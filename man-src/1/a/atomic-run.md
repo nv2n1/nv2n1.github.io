@@ -49,4 +49,3 @@ Allows you to override the default definition for the storage backend where your
 &nbsp;<wbr>&nbsp;<wbr>Run without verbose messaging&nbsp;<wbr>(i.e. security warnings). </p>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) July 2015, edited by Sally O&#8217;Malley (somalley at redhat dot com) </p>
-<h2>Index</h2>

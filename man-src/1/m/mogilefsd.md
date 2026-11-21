@@ -45,4 +45,3 @@ description: "mogilefsd — MogileFS tracker daemon"
 <h2>SEE ALSO</h2>
 <p> mogstored &#8212; MogileFS storage daemon </p>
 <p> &lt;<a rel="nofollow" href="http://danga.com/mogilefs/">http://danga.com/mogilefs/</a>&gt; </p>
-<h2>Index</h2>

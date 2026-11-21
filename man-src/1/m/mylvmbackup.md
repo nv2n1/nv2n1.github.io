@@ -300,4 +300,3 @@ description: "mylvmbackup – a utility for creating MySQL backups using LVM sna
 <p> See the file <font SIZE="-1">CREDITS</font> included in the distribution for a list of individual contributors.</p>
 <h2>COPYING</h2>
 <p> <i>mylvmbackup</i> is distributed under the <font SIZE="-1">GNU</font> public license. See the file <font SIZE="-1">COPYING</font> for details. </p>
-<h2>Index</h2>

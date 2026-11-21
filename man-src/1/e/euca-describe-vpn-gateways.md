@@ -61,4 +61,3 @@ description: "euca-describe-vpn-gateways – Show information about virtual priv
 <dt>vpn-gateway-id</dt>
 <dd> ID of the virtual private gateway </dd>
 </dl>
-<h2>Index</h2>

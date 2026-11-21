@@ -57,4 +57,3 @@ description: "cckddiag – Hercules CCKD DASD diagnostic tool"
 </dl>
 <h2>HISTORY</h2>
 <p> 2003-02-07 originally written by James M. Morrison </p>
-<h2>Index</h2>

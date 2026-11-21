@@ -49,4 +49,3 @@ description: "bannergrab – a network service banner grabbing tool"
 </dd></dl>
 <h2>AUTHOR</h2>
 <p> bannergrab was written by Ian Ventura-Whiting &lt;fizz [at] titania.co.uk&gt;. </p>
-<h2>Index</h2>

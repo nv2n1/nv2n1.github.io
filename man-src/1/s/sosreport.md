@@ -102,4 +102,3 @@ Bryn M. Reeves &lt;bmr [at] redhat.com&gt;
 <pre>
 Translations are handled by transifex (<a rel="nofollow" href="https://fedorahosted.org/transifex/)">https://fedorahosted.org/transifex/)</a>
 </pre>
-<h2>Index</h2>

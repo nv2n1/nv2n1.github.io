@@ -22,4 +22,3 @@ description: "rtlbrowse – Allows hierarchical browsing of Verilog HDL source c
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-vermin/">vermin</a></i>(1) <i><a href="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1) </p>
-<h2>Index</h2>

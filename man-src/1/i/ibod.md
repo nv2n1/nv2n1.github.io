@@ -25,4 +25,3 @@ description: "ibod – ISDN MPPP bandwidth on demand daemon"
 <p> ibod.cf(4) and xibod(1) </p>
 <h2>AUTHOR</h2>
 <p> Bjoern Smith, Smith [at] Compound.SE </p>
-<h2>Index</h2>

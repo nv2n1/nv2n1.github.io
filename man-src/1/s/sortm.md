@@ -56,4 +56,3 @@ description: "sortm – sort messages"
 <p> <code>Sortm</code> sometimes did not preserve the message numbering in a folder (e.g., messages 1, 3, and 5, might have been renumbered to 1, 2, 3 after sorting). This was a bug, and has been fixed. To compress the message numbering in a folder, use &#8220;<code>folder -pack</code>&#8221; as always.</p>
 <h2>BUGS</h2>
 <p> When <code>sortm</code> complains about a message which it can&#8217;t temporally order, it complains about the message number <code>prior</code> to sorting. It should indicate what the message number will be <code>after</code> sorting. </p>
-<h2>Index</h2>

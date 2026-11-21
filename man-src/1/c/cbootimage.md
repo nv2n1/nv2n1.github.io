@@ -69,4 +69,3 @@ Image file jetson-tk1-emmc.img has been successfully generated!
 <p> If any error occurs a non zero exit status is returned. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tegrarcm/">tegrarcm</a>(1),</code><a href="/docs/linux/man/1-bct_dump/">bct_dump</a>(1) </p>
-<h2>Index</h2>

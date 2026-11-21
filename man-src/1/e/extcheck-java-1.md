@@ -30,4 +30,3 @@ description: "extcheck – A utility to detect jar conflicts"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-jar/">jar</a>(1) </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

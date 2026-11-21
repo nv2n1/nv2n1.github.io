@@ -24,4 +24,3 @@ description: "containerd-config – information on the containerd config"
 <p> Phil Estes &lt;estesp [at] gmail.com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ctr/">ctr</a>(1), <a href="/docs/linux/man/1-containerd/">containerd</a>(1), <a href="/docs/linux/man/5-containerd-config-toml/">containerd-config.toml</a>(5) </p>
-<h2>Index</h2>

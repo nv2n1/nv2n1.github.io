@@ -60,4 +60,3 @@ description: "ip6sic – flood a node with IPv6 frames in an attempt to cause gr
 <p> isic &#8211; the IP Stack Integrity Checker libdnet &#8211; a cross-platform networking library</p>
 <h2>AUTHOR</h2>
 <p> Greg Taleck, taleck [at] oz.net </p>
-<h2>Index</h2>

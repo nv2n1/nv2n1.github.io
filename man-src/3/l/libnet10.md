@@ -347,4 +347,3 @@ u_char *libnet_build_asn1_bitstring(u_char *data, int *datalen,
 <p> The Berkeley Packet Filter alone does not allow for the arbitrary specification of source ethernet addresses. This is not so much a bug as an oversight in the protocol. Included with the distribution is lkm code to work around this (FreeBSD has support for an ioctl that works around this). </p>
 <p> The OSPF functionality has not been extensively tested as yet and is considered to be in beta release. </p>
 <p> Please send bug reports to mike [at] infonexus.com. </p>
-<h2>Index</h2>

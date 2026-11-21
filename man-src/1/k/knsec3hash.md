@@ -35,4 +35,3 @@ description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equiv
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-knotc/">knotc</a></code>(8), <code><a href="/docs/linux/man/8-knotd/">knotd</a></code>(8). </p>
-<h2>Index</h2>

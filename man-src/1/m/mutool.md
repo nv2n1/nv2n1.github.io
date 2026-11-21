@@ -116,4 +116,3 @@ description: "mutool – all purpose tool for dealing with PDF files"
 <p> <code><a href="/docs/linux/man/1-mudraw/">mudraw</a></code>(1). <code><a href="/docs/linux/man/1-mupdf/">mupdf</a></code>(1), </p>
 <h2>AUTHOR</h2>
 <p> MuPDF is Copyright 2006-2015 Artifex Software, Inc. </p>
-<h2>Index</h2>

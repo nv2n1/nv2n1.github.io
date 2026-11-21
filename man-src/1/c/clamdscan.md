@@ -78,4 +78,3 @@ description: "clamdscan – scan files and directories for viruses using Clam An
 <p> Tomasz Kojm &lt;tkojm [at] clamav.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-clamd/">clamd</a>(8), <a href="/docs/linux/man/5-clamd-conf/">clamd.conf</a>(5), <a href="/docs/linux/man/1-clamscan/">clamscan</a>(1) </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "bchunk – CD image format conversion from bin/cue to iso/cdr"
  Colas Nahaboo &lt;Colas [at] Nahaboo.com&gt;<br />
  Godmar Back &lt;gback [at] cs.utah.edu&gt;<br />
  Matthew Green &lt;mrg [at] eterna.com.au&gt; </p>
-<h2>Index</h2>

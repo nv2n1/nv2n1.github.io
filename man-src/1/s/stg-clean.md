@@ -26,4 +26,3 @@ description: "stg-clean – Delete the empty patches in the series"
 </dt><dd> Delete the empty unapplied patches.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

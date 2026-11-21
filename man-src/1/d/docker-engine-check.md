@@ -34,4 +34,3 @@ description: "docker-engine-check – Check for available engine updates"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Report available upgrades </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-engine/">docker-engine</a>(1)</code> </p>
-<h2>Index</h2>

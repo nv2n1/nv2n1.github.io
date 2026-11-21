@@ -29,4 +29,3 @@ description: "getpcaps – List Process Capabilities"
 <p> <code><a href="/docs/linux/man/3-cap_from_text/">cap_from_text</a></code>(3).</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1997-8,2007 Andrew G. Morgan &lt;morgan [at] kernel.org&gt; </p>
-<h2>Index</h2>

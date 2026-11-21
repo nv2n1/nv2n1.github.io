@@ -22,4 +22,3 @@ void draw_explosion_ring(BITMAP *bmp, int x, int y, int d){
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-do_circle/">do_circle</a></code>(3), <code><a href="/docs/linux/man/3-do_ellipse/">do_ellipse</a></code>(3), <code><a href="/docs/linux/man/3-do_line/">do_line</a></code>(3), <code><a href="/docs/linux/man/3-arc/">arc</a></code>(3) </p>
-<h2>Index</h2>

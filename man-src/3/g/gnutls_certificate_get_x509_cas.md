@@ -35,4 +35,3 @@ description: "gnutls_certificate_get_x509_cas – Used to export all the CAs fro
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

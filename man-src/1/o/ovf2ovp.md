@@ -52,4 +52,3 @@ description: "ovf2ovp – convert virtual font file and associated font metrics 
 <p> Thus, <code>ovf2ovp</code> is based on the WEB source code for <code><a href="/docs/linux/man/1-vftovp/">vftovp</a></code>(1), although nowadays it is a link to <code>omfonts</code>, implemented entirely in C. </p>
 <p> The primary authors of Omega are John Plaice and Yannis Haralambous. Omega (and Aleph) are now maintained as part of TeX Live. </p>
 <p> This manual page was written by C.M. Connelly &lt;cmc [at] debian.org&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

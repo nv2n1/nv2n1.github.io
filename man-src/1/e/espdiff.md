@@ -51,4 +51,3 @@ description: "espdiff – apply the appropriate transformation to a set of patch
 <dl>
 <dt>
 </dt><dd> Conceptual designer</dd></dl>
-<h2>Index</h2>

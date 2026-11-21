@@ -1179,4 +1179,3 @@ description: "monotone – a distributed version control system"
 <p> Nowadays, monotone is maintained by a collective of enthusiastic programmers, known as the monotone development team.</p>
 <h2>COPYRIGHT</h2>
 <p> monotone and this man page is Copyright (c) 2003 &#8211; 2016 by the monotone development team. </p>
-<h2>Index</h2>

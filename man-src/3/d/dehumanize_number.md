@@ -66,4 +66,3 @@ description: "dehumanize_number humanize_number – format a number into a human
 <h2>HISTORY</h2>
 <p> Fn humanize_number first appeared in Nx 2.0 . </p>
 <p> Fn dehumanize_number first appeared in Nx 5.0 . </p>
-<h2>Index</h2>

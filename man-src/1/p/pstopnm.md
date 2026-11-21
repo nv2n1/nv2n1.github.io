@@ -68,4 +68,3 @@ description: "pstopnm – convert a PostScript file into a portable anymap"
  PostScript is a Trademark of Adobe Systems Incorporated.</p>
 <h2>AUTHOR</h2>
 <p> Alberto Accomazzi, WIPL, Center for Astrophysics. </p>
-<h2>Index</h2>

@@ -154,4 +154,3 @@ $ pmval 'localhost:kernel.all.load[&quot;1 minute&quot;,&quot;5 minute&quot;]'
 </table>
 </table>
 <p></center> </p>
-<h2>Index</h2>

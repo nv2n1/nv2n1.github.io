@@ -54,4 +54,3 @@ description: "zarafa-gateway – Start the Zarafa IMAP/POP3 Gateway."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-zarafa-gateway-cfg/">zarafa-gateway.cfg</a></code>(5)<code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1) </p>
-<h2>Index</h2>

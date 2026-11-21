@@ -44,4 +44,3 @@ description: "composeglyphs – generate an encoding vector or new font for post
 <dt>
 </dt><dd> <code>info Ogonkify</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

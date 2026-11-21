@@ -44,4 +44,3 @@ this. </p>
 <dt>&#8211;reverse</dt>
 <dd> reverse the process of intermediate language conversion </dd>
 </dl>
-<h2>Index</h2>

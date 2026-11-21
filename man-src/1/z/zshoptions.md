@@ -969,4 +969,3 @@ unsetopt localtraps
 <dt><code>-s</code></dt>
 <dd> <p> Used by <code>set</code> to sort positional parameters </p>
  </dd></dl>
-<h2>Index</h2>

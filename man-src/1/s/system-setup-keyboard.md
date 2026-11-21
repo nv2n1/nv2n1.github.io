@@ -606,4 +606,3 @@ system-setup-keyboard
  Peter Hutterer &lt;peter.hutterer [at] redhat.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5) </p>
-<h2>Index</h2>

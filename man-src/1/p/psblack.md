@@ -19,4 +19,3 @@ description: "psblack – PostScript filter."
 <p> Copyright (C) 1987-2002<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement. </p>
-<h2>Index</h2>

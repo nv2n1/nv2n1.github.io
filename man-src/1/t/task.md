@@ -643,4 +643,3 @@ description: "task – A command line todo manager."
 <dt>Bugs in Taskwarrior may be reported to the issue-tracker at</dt>
 <dd> &lt;<a rel="nofollow" href="https://bug.tasktools.org/">https://bug.tasktools.org/</a>&gt; </dd>
 </dl>
-<h2>Index</h2>

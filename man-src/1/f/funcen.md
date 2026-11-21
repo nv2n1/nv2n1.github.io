@@ -66,4 +66,3 @@ description: "funcen – find centroid (for binary tables)"
 <p> See Region Boundaries for more information about how boundaries are calculated using these two methods.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

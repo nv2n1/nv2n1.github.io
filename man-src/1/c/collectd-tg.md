@@ -34,4 +34,3 @@ description: "collectd-tg – Traffic generator for collectd."
 <p> <i><a href="/docs/linux/man/1-collectd/">collectd</a></i>(1), <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5)</p>
 <h2>AUTHOR</h2>
 <p> Florian Forster &lt;octo at collectd.org&gt; </p>
-<h2>Index</h2>

@@ -563,4 +563,3 @@ b: a
 <p> mkdep(1)</p>
 <h2>HISTORY</h2>
 <p> is derived from NetBSD&#8217;s <a href="/docs/linux/man/1-make/">make</a>(1). It uses autoconf to facilitate portability to other platforms. </p>
-<h2>Index</h2>

@@ -58,4 +58,3 @@ prompter-next:       To name the editor to be used on exit from .B prompter
 <p> The user may wish to link <code>prompter under several names (e.g.,</code> &#8220;rapid&#8221;) and give appropriate switches in the profile entries under these names (e.g., &#8220;rapid: -rapid&#8221;). This facilitates invoking prompter differently for different <code>nmh</code> commands (e.g., &#8220;forw: -editor rapid&#8221;).</p>
 <h2>BUGS</h2>
 <p> <code>Prompter</code> uses <i><a href="/docs/linux/man/3-stdio/">stdio</a></i>(3), so it will lose if you edit files with nulls in them. </p>
-<h2>Index</h2>

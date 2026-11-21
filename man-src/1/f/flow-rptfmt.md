@@ -42,4 +42,3 @@ description: "flow-rptfmt – Format the output of flow-report in ASCII or HTML"
 <p> Mark Fullmer &lt;maf [at] splintered.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
-<h2>Index</h2>

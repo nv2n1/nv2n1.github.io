@@ -93,4 +93,3 @@ DROP ROLE joe;
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-createuser/">createuser</a></code>(1), DROP ROLE (<code><a href="/docs/linux/man/7-drop_role/">DROP_ROLE</a></code>(7)) </p>
-<h2>Index</h2>

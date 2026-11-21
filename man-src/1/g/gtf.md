@@ -26,4 +26,3 @@ description: "gtf – calculate VESA GTF mode lines"
 <h2>AUTHOR</h2>
 <p> Andy Ritger. </p>
 <p> This program is based on the Generalized Timing Formula (GTF(TM)) Standard Version: 1.0, Revision: 1.0. The GTF Excel(TM) spreadsheet, a sample (and the definitive) implementation of the GTF Timing Standard is available at &lt;<a href="ftp://ftp.vesa.org/pub/GTF/VTF_V1R1.xls">ftp://ftp.vesa.org/pub/GTF/VTF_V1R1.xls</a>&gt;. </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "ql/experimental/credit/lossdistribution.hpp – Loss distributions
 <p> Loss distributions and probability of n defaults. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

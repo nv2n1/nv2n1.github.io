@@ -22,4 +22,3 @@ description: "bareftp – graphical file transfer client"
 <p> If you find bugs, please report them at <a rel="nofollow" href="http://www.bareftp.org/devel">http://www.bareftp.org/devel</a></p>
 <h2>AUTHOR</h2>
 <p> Christian Eide &lt;christian [at] bareftp.org&gt; &#8211; <a rel="nofollow" href="http://www.bareftp.org">http://www.bareftp.org</a> </p>
-<h2>Index</h2>

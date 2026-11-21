@@ -58,4 +58,3 @@ description: "abc2abc – a simple abc checker/re-formatter/transposer"
 <p> This manual page was written by Anselm Lingnau &lt;lingnau [at] tm.informatik.uni-frankfurt.de&gt; and is now supported by Seymour Shlien &lt;seymour.shlien [at] crc.ca&gt; for the GNU/Linux system.</p>
 <h2>VERSION</h2>
 <p> This man page describes abc2abc version 1.44 from August 13 2005. </p>
-<h2>Index</h2>

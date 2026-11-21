@@ -45,4 +45,3 @@ frysk
 <p> <a href="/docs/linux/man/7-frysk/">frysk</a>(7)</p>
 <h2>BUGS</h2>
 <p> Report bugs to m[blue]<code>http:/sourceware.org/frysk</code>m[] </p>
-<h2>Index</h2>

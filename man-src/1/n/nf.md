@@ -112,4 +112,3 @@ description: "fmt-ptrn – A simple template system"
 <p> Modifiers use a stack to be applied. The first modifier to be applied is the one farthest to the right. The last to be applied it the one farthest to the left. </p>
 <h2>AUTHORS</h2>
 <p> W. Michael Petullo &lt;mike [at] flyn.org&gt;</p>
-<h2>Index</h2>

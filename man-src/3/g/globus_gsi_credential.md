@@ -29,4 +29,3 @@ description: "Globus GSI Credential –"
 <dd> <code>Credential Constants</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_credential from the source code. </p>
-<h2>Index</h2>

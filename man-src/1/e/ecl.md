@@ -83,4 +83,3 @@ description: "ecl – Embeddable Common LISP"
 </dt><dd> The Common Lisp HyperSpec</dd></dl>
 <h2>BUGS</h2>
 <p> Probably some. Report them! </p>
-<h2>Index</h2>

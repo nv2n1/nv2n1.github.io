@@ -41,4 +41,3 @@ description: "rafilteraddr – select argus(8) data based on an IANA IP address 
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

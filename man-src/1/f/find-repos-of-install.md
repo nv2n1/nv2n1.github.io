@@ -43,4 +43,3 @@ description: "find-repos-of-install – report which Yum repository a package wa
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

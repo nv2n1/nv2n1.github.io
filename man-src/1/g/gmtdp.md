@@ -44,4 +44,3 @@ description: "gmtdp – Line reduction using the Douglas-Peucker algorithm"
  This implementation of the algorithm has been kindly provided by Dr. Gary J. Robinson, Environmental Systems Science Centre, University of Reading, Reading, UK (gazza [at] mail.nerc-essc.ac.uk); his subroutine forms the basis for this program.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1) </p>
-<h2>Index</h2>

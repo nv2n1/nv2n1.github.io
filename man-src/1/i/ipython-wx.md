@@ -24,4 +24,3 @@ description: "ipython-wx – Graphical frontend that embeds a multithreaded IPyt
 <h2>AUTHOR</h2>
 <p> <code>ipython-wx</code> is a tool that ships with IPython, created by the IPython Development Team. </p>
 <p> This manual page was written by Stephan Peijnik &lt;debian [at] sp.or.at&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

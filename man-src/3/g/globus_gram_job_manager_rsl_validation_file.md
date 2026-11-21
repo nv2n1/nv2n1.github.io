@@ -72,4 +72,3 @@ Description: 'Specifies the path of the directory the jobmanager will
 <dl>
 <dt>
 </dt><dd> The RSL attribute pertains to the STDIO_UPDATE signal.</dd></dl>
-<h2>Index</h2>

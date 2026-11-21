@@ -29,4 +29,3 @@ description: "QuantLib::TqrEigenDecomposition – tridiag. QR eigen decompositio
 </dt><dd> the correctness of the result is tested by checking it against known good values.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -100,4 +100,3 @@ description: "p2hex – convert code files into hex files"
 <p> P2HEX does not have so far an opportunity to filter records by target segment. Instead, records that contain data for any other segment than CODE are completely ignored. </p>
 <h2>AUTHOR(S)</h2>
 <p> Alfred Arnold (alfred [at] ccac.rwth-aachen.de) </p>
-<h2>Index</h2>

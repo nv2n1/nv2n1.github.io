@@ -31,4 +31,3 @@ description: "xmlsec1-config – detail installed version of xmlsec library"
 <dt><code>&#8211;crypto</code>=<i>LIB</i></dt>
 <dd> configure with XMLSEC crypto library (one of the following: none default openssl nss gnutls gcrypt) </dd>
 </dl>
-<h2>Index</h2>

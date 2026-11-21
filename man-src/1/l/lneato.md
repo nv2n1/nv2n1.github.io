@@ -28,4 +28,3 @@ description: "lneato – A Customizable Graph Editor"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-lefty/">lefty</a>(1), <a href="/docs/linux/man/1-dotty/">dotty</a>(1), <a href="/docs/linux/man/3-xdot/">xdot</a>(3),<br />
  <i>dotty</i> user guide. </p>
-<h2>Index</h2>

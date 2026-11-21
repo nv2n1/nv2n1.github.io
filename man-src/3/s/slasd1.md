@@ -159,4 +159,3 @@ where Z **T = (Z1 * *T a Z2 * *T b) = u * *T VT * *T, and u is a vector of dimen
 <p> Definition at line 204 of file slasd1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

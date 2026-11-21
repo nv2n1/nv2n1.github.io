@@ -56,4 +56,3 @@ description: "cd-create-profile – Color Manager Profile Creation Tool"
 </dt><dd> Specifies the named color palette suffix.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "pva-dbschema-update – PHP VOMS-Admin(PVA) tool to update databas
 <p> Andrii Salnikov &lt;manf [at] grid.org.ua&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pva-addvo/">pva-addvo</a></code>(1), <code><a href="/docs/linux/man/5-pva-config/">pva-config</a></code>(5), <code><a href="/docs/linux/man/8-voms/">voms</a></code>(8) </p>
-<h2>Index</h2>

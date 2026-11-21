@@ -87,4 +87,3 @@ description: "htload – reads in an ASCII-text version of the document database
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i><a href="/docs/linux/man/1-htdig/">htdig</a>(1)</i> , <i><a href="/docs/linux/man/1-htmerge/">htmerge</a>(1)</i> and <i><a href="/docs/linux/man/1-htdump/">htdump</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stijn de Bekker, based on the HTML documentation of ht://Dig. </p>
-<h2>Index</h2>

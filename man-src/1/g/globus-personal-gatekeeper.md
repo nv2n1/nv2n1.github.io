@@ -116,4 +116,3 @@ killing gatekeeper: &quot;personal-grid.example.org:57846:/DC=org/DC=example/CN=
 <p> <a href="/docs/linux/man/1-globusrun/">globusrun</a>(1), <a href="/docs/linux/man/8-globus-job-manager/">globus-job-manager</a>(8), <a href="/docs/linux/man/8-globus-gatekeeper/">globus-gatekeeper</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
-<h2>Index</h2>

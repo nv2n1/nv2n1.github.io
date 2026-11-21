@@ -21,4 +21,3 @@ description: "png2icns – convert png images to Mac OS icns files"
 <p> Copyright &#169; 2008 Julien BLACHE<br />
  Copyright &#169; 2008 Mathew Eis<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

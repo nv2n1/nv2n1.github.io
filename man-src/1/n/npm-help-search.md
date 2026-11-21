@@ -42,4 +42,3 @@ npm help-search &lt;text&gt;
 <dd> npm help help </dd>
 </dl>
 </dl>
-<h2>Index</h2>

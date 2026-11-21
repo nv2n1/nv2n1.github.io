@@ -26,4 +26,3 @@ b = getb(color_value);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-getr8/">getr8</a></code>(3), <code><a href="/docs/linux/man/3-getr_depth/">getr_depth</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-exalpha/">exalpha</a></code>(3) </p>
-<h2>Index</h2>

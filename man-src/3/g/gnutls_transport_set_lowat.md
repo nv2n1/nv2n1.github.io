@@ -31,4 +31,3 @@ description: "gnutls_transport_set_lowat – Used to set the lowat value in orde
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

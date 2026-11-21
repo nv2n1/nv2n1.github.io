@@ -52,4 +52,3 @@ description: "rediff, editdiff – fix offsets and counts of a hand-edited diff"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

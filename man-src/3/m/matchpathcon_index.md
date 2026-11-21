@@ -28,4 +28,3 @@ description: "matchpathcon, matchpathcon_index – get the default SELinux secur
 <p> Returns zero on success or -1 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-set_matchpathcon_flags/">set_matchpathcon_flags</a></code>(3), <code><a href="/docs/linux/man/3-set_matchpathcon_invalidcon/">set_matchpathcon_invalidcon</a></code>(3), <code><a href="/docs/linux/man/3-set_matchpathcon_printf/">set_matchpathcon_printf</a></code>(3), <code><a href="/docs/linux/man/3-matchpathcon_filespec_add/">matchpathcon_filespec_add</a></code>(3), <code><a href="/docs/linux/man/3-matchpathcon_checkmatches/">matchpathcon_checkmatches</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-setfilecon/">setfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
-<h2>Index</h2>

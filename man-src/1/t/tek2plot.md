@@ -106,4 +106,3 @@ description: "tek2plot – translate Tektronix files to other graphics formats"
 <p> <code>tek2plot</code> was written by Robert S. Maier (<code>rsm [at] math.arizona.edu</code>). It incorporates a Tektronix parser written by Edward Moy (<code>moy [at] parc.xerox.com</code>).</p>
 <h2>BUGS</h2>
 <p> Email bug reports to <code>bug-gnu-utils [at] gnu.org</code>. </p>
-<h2>Index</h2>

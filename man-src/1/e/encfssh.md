@@ -16,4 +16,3 @@ description: "encfssh – mount encrypted virtual filesystem and start shell"
 <p> <code>EncFS</code> was written by <code>Valient Gough &lt;vgough [at] pobox.com&gt;</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-encfs/">encfs</a></code>(1) </p>
-<h2>Index</h2>

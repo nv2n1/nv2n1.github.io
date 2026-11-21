@@ -28,4 +28,3 @@ description: "libinput-quirks – quirk debug helper for libinput"
 <dd> Use verbose output, useful for debugging.</dd></dl>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

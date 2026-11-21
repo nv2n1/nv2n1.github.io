@@ -35,4 +35,3 @@ description: "ideviceprovision – Manage provisioning profiles on a device."
 </dl>
 <h2>AUTHORS</h2>
 <p> Nikias Bassen </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "musixflx – process mx1 files (the second pass of 3-pass MusiXTeX
  musixdoc.pdf </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Andreas Tille &lt;tille [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). Corrections to the synopsis were pointed out by Peter Breitenlohner &lt;peb [at] mppmu.mpg.de&gt; and implemented by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

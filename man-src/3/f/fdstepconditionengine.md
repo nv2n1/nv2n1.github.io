@@ -20,4 +20,3 @@ description: "ql/pricingengines/vanilla/fdstepconditionengine.hpp – Finite-dif
 <p> Finite-differences step-condition engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

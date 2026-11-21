@@ -26,4 +26,3 @@ description: "ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask – check if In
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
 <p> The error-reporting convention of <i>bitstomask</i> is less than ideal; zero is sometimes a legitimate mask. </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ $ owncloudcmd --httpproxy <a rel="nofollow" href="http://192.168.178.1:8080">htt
 <p> The ownCloud developers</p>
 <h2>COPYRIGHT</h2>
 <p> 2013-2016, The ownCloud developers </p>
-<h2>Index</h2>

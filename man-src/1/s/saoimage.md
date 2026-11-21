@@ -177,4 +177,3 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
 <p> <i>SAOimage</i> does not allocate its own colormap and thus fails with static color (i.e. NeWS) window managers. X resource settings of a user&#8217;s default preferences are not read.</p>
 <h2>ONLINE HELP</h2>
 <p> Additional information about <i>SAOimage</i> is available on the World-Wide Web at <a rel="nofollow" href="http://tdc-www.harvard.edu/software/saoimage.html">http://tdc-www.harvard.edu/software/saoimage.html</a> </p>
-<h2>Index</h2>

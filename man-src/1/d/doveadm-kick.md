@@ -76,4 +76,3 @@ foo                       1 imap  (8135) (fd95:4eed:38ba::25)
 <p> Report bugs, including <i>doveconf -n</i> output, to the Dovecot Mailing List &lt;dovecot [at] dovecot.org&gt;. Information about reporting bugs is available at: <a rel="nofollow" href="http://dovecot.org/bugreport.html">http://dovecot.org/bugreport.html</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-doveadm-who/">doveadm-who</a></code>(1) </p>
-<h2>Index</h2>

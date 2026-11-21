@@ -21,4 +21,3 @@ description: "dvi2fax – convert a TeX DVI file to G3 fax format"
 <p> Example: dvi2fax foo -l 2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1). </p>
-<h2>Index</h2>

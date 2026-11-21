@@ -228,4 +228,3 @@ $HTTP["url"] = ~"^/git/private"
 <p> All <code>CGI</code> environment variables are available to each of the hooks invoked by the <i>git-receive-pack</i>.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -128,4 +128,3 @@ description: "pgrep, pkill, pidwait – look up, signal, or wait for processes b
 <p> Kjetil Torgrim Homme</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

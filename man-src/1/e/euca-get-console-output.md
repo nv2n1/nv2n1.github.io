@@ -43,4 +43,3 @@ description: "euca-get-console-output – Retrieve console output for the specif
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

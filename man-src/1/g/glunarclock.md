@@ -17,4 +17,3 @@ description: "glunarclock – A lunar clock applet for the gnome panel"
 <p> To add this applet to a Panel, right-click on the Panel and choose Add to panel-&gt;Accessories-&gt;Lunar Glock </p>
 <p> For more information, please see the Gnome help for glunarclock. To access gnome help for glunarclock either right-click on the applet and then choose help or start the Gnome help browser and then choose Applets-&gt;Accessories-&gt;Lunar Clock. </p>
 <p> This manual page was written by Yoshito Komatsu &lt;ykomatsu [at] akaumigame.org&gt; and Josh Buhl &lt;jbuhl [at] users.sourceforge.net&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

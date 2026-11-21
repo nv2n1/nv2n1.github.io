@@ -61,4 +61,3 @@ slim[options][&lt;arguments&gt;]
 <p> Johannes Winkelmann &lt;jw [at] tks6.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> See the online documentation at the SLiM web site for further information on themes, FAQs, etc. </p>
-<h2>Index</h2>

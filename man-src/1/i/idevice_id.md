@@ -35,4 +35,3 @@ description: "idevice_id – Prints device name or a list of attached devices."
 <p>&nbsp;<wbr>Nikias Bassen </p>
 <p>&nbsp;<wbr>Todd Zullinger </p>
 <p> Man page written to conform with Debian by Julien Lavergne. </p>
-<h2>Index</h2>

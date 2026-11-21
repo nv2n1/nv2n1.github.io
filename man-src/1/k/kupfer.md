@@ -47,4 +47,3 @@ description: "kupfer – Convenient command and access tool for applications and
 <p> If <i>KUPFER_NO_CACHE</i> is set, do not load from or write to any source cache files.</p>
 <h2>AUTHOR</h2>
 <p> Ulrik Sverdrup &lt;ulrik.sverdrup [at] gmail.com&gt; </p>
-<h2>Index</h2>

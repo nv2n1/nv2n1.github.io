@@ -52,4 +52,3 @@ description: "openipmish – Shell interface to an IPMI system"
 <p> None </p>
 <h2>AUTHOR</h2>
 <p> Corey Minyard &lt;cminyard [at] mvista.org&gt; </p>
-<h2>Index</h2>

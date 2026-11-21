@@ -175,4 +175,3 @@ $&nbsp;<wbr>cargo help clean
 <p> See &lt;<a rel="nofollow" href="https://github.com/rust-lang/cargo/issues">https://github.com/rust-lang/cargo/issues</a>&gt; for issues.</p>
 <h2>COPYRIGHT</h2>
 <p> This work is dual-licensed under Apache 2.0 and MIT terms. See COPYRIGHT file in the cargo source distribution. </p>
-<h2>Index</h2>

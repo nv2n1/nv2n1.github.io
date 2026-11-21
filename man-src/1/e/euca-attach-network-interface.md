@@ -45,4 +45,3 @@ description: "euca-attach-network-interface – Attach a VPC network interface t
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

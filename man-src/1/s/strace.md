@@ -470,4 +470,3 @@ sigprocmask(SIG_UNBLOCK, ~[], NULL) = 0
 <p> <code>strace</code> Home Page</p>
 <h2>AUTHORS</h2>
 <p> The complete list of <code>strace</code> contributors can be found in the <code>CREDITS</code> file. </p>
-<h2>Index</h2>

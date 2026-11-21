@@ -28,4 +28,3 @@ description: "QuantLib::OneFactorModel – Single-factor short-rate model abstra
 <p> Single-factor short-rate model abstract class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

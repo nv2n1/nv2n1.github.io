@@ -32,4 +32,3 @@ description: "tsocks – Shell wrapper to simplify the use of the"
 <p> </code></p>
 <h2>AUTHOR</h2>
 <p> This script was created by Tamas SZERB &lt;toma [at] rulez.org&gt; for the debian package of tsocks. It (along with this manual page) have since been adapted into the main tsocks project and modified. </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "latex-dev, pdflatex-dev, xelatex-dev, lualatex-dev, dvilualatex-de
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1). </p>
 <p> The LaTeX home page is <a rel="nofollow" href="https://latex-project.org.">https://latex-project.org.</a> </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "BMP – Media Player"
 <dd> SQlite library file</dd></dl>
 <h2>OTHER INFO</h2>
 <p> The BMPx web site is <a rel="nofollow" href="http://bmpx.beep-media-player.org">http://bmpx.beep-media-player.org</a> </p>
-<h2>Index</h2>

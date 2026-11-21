@@ -108,4 +108,3 @@ bincols = ([xname[:tlmin[:tlmax:[binsiz]]]], [yname[:tlmin[:tlmax[:binsiz]]]])
 <p> See Binning <font SIZE="-1">FITS</font> Binary Tables and Non-FITS Event Files for more information.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

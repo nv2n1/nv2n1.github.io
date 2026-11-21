@@ -73,4 +73,3 @@ description: "xfce4-panel – A panel for the Xfce4 desktop environment"
 </dt><dd> The Xfce development team. All rights reserved. This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Upstream documentation in /usr/share/doc/xfce4-panel/html/C/index.html </p>
-<h2>Index</h2>

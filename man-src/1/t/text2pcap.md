@@ -74,4 +74,3 @@ description: "text2pcap – Generate a capture file from an ASCII hexdump of pac
 <pre>
   Ashok Narayanan          &lt;ashokn[AT]cisco.com&gt;
 </pre>
-<h2>Index</h2>

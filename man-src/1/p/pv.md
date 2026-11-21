@@ -215,4 +215,3 @@ description: "pv – monitor the progress of data through a pipe"
 <p> <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1), <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1), <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) </p>
 <h2>LICENSE</h2>
 <p> This is free software, distributed under the ARTISTIC 2.0 license. </p>
-<h2>Index</h2>

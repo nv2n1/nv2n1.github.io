@@ -18,4 +18,3 @@ description: "load_ibk – Reads in a .IBK patch definition file for the Adlib d
 <p> Returns non-zero on error. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_sound</code>(3) </p>
-<h2>Index</h2>

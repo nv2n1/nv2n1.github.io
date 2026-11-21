@@ -36,4 +36,3 @@ description: "cg_diff – compares two Cachegrind output files"
 <p> <a href="/docs/linux/man/1-cg_annotate/">cg_annotate</a>(1), <a href="/docs/linux/man/1-valgrind/">valgrind</a>(1), $INSTALL/share/doc/valgrind/html/index.html or <a rel="nofollow" href="http://www.valgrind.org/docs/manual/index.html.">http://www.valgrind.org/docs/manual/index.html.</a></p>
 <h2>AUTHOR</h2>
 <p> Nicholas Nethercote. </p>
-<h2>Index</h2>

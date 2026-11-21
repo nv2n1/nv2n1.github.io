@@ -20,4 +20,3 @@ description: "krb5_rcache krb5_rc_close krb5_rc_default krb5_rc_default_name krb
 <p> Fn krb5_rc_initialize Creates the reply cache Fa id and sets it lifespan to Fa auth_lifespan . If the cache already exists, the content is destroyed.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_data3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

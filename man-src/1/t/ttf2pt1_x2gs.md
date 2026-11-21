@@ -47,4 +47,3 @@ description: "ttf2pt1_x2gs – font installer for Ghostscript"
 <dt>&bull;</dt>
 <dd> <i><a href="/docs/linux/man/1-t1asm/">t1asm</a></i>(1) </dd>
 </dl>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "cgset – set the parameters of given cgroup(s)"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgrules.conf (1), cgcreate (1), cgget (1) </p>
-<h2>Index</h2>

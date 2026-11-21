@@ -74,4 +74,3 @@ description: "slrnpull – Pull a small newsfeed for offline reading."
 <h2>AUTHOR</h2>
 <p> John E. Davis &lt;davis [at] space.mit.edu&gt; </p>
 <p> Please send any bug reports to the current maintainer, Thomas Schultz &lt;tststs [at] gmx.de&gt; </p>
-<h2>Index</h2>

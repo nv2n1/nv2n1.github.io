@@ -45,4 +45,3 @@ description: "libpng16-config – get information about installed libpng library
 <dd> print version information</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage has been written by Junichi Uekawa &lt;dancer [at] debian.org&gt; for Debian GNU/Linux system, with the help of help2man, and may be used by others. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "asn1_length_der – API function"
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/libtasn1/manual/">http://www.gnu.org/software/libtasn1/manual/</a></code></dd></dl>
-<h2>Index</h2>

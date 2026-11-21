@@ -46,4 +46,3 @@ description: "xfce4-session – Starts up the Xfce Desktop Environment"
 <p> Report bugs to <a rel="nofollow" href="http://bugzilla.xfce.org/.">http://bugzilla.xfce.org/.</a> </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2003-2014 Benedikt Meurer. </p>
-<h2>Index</h2>

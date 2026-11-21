@@ -18,4 +18,3 @@ validate-storage-schemas
 <h2>AUTHOR</h2>
 <p> <code>validate-storage-schemas</code>, created by Chris Davis. </p>
 <p> This manual page was written by Jonas Genannt &lt;jonas.genannt [at] capi2name.de, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

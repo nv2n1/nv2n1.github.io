@@ -39,4 +39,3 @@ description: "mlprof – display profiling information for a MLton-compiled exec
 <dd> Print a warning about broken <code>mlmon.out</code> files, but do not exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mlton/">mlton</a></code>(1) and the <code>MLton Guide</code>. </p>
-<h2>Index</h2>

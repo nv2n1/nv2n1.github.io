@@ -193,4 +193,3 @@ description: "MP4Client – GPAC MPEG-4 command-line Player"
 <p> Jean Le Feuvre &lt;jeanlf [at] users.sourceforge.net&gt; &#8211; GPAC (c) 2000-2005 &#8211; ENST 2005-200X</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gpac/">GPAC</a>(1), <a href="/docs/linux/man/1-mp4box/">MP4Box</a>(1) </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ npm help &lt;term&gt; [&lt;terms..&gt;]
 <dd> npm help help-search </dd>
 </dl>
 </dl>
-<h2>Index</h2>

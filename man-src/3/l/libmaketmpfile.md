@@ -43,4 +43,3 @@ strfree(myfilename);
 <p> If <code>pm_make_tmpfile()</code> is unable to create a temporary file, it issues a message to Standard Error and aborts the program. </p>
 <h2>HISTORY</h2>
 <p> <code>pm_tmpfile()</code> was introduced in Netpbm 10.27 (March 2005). </p>
-<h2>Index</h2>

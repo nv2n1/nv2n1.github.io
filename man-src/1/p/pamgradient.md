@@ -35,4 +35,3 @@ description: "pamgradient – create a four-corner gradient PAM image"
 <p> <code>pamgradient</code> was new in Netpbm 10.31 (December 2005). </p>
 <h2>AUTHOR</h2>
 <p> pamgradient was written by Daniel Haude in October 2005. </p>
-<h2>Index</h2>

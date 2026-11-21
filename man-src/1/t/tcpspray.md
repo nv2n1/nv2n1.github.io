@@ -47,4 +47,3 @@ description: "tcpspray – TCP/IP bandwidth measurement tool (Discard and Echo c
 <h2>AUTHOR</h2>
 <p> R33mi Denis-Courmont &lt;remi at remlab dot net&gt; </p>
 <p> <a rel="nofollow" href="http://www.remlab.net/ndisc6/">http://www.remlab.net/ndisc6/</a> </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "glite-lb-dump_exporter – L&B dump exporter for Job Provenance"
 <p> L&amp;B Product Team, CESNET. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a></code>(1), <code><a href="/docs/linux/man/1-glite-lb-statistics/">glite-lb-statistics</a></code>(1), <code>glite-jp-importer</code>(8) </p>
-<h2>Index</h2>

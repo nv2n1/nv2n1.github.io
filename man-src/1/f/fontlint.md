@@ -28,4 +28,3 @@ description: "fontlint – check a font"
  <a rel="nofollow" href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2007 by George Williams (gww [at] silcom.com). </p>
-<h2>Index</h2>

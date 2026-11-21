@@ -125,4 +125,3 @@ initial&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>:&nbsp;
 <p> Martin Sivak &lt;msivak [at] redhat.com&gt; Joel Granados &lt;jgranado [at] redhat.com&gt; </p>
 <h2>BUGS</h2>
 <p> Please search/report bugs at <a rel="nofollow" href="http://fedorahosted.org/firstaidkit/newticket">http://fedorahosted.org/firstaidkit/newticket</a> </p>
-<h2>Index</h2>

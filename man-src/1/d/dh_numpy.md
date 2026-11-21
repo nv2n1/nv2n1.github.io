@@ -18,4 +18,3 @@ description: "dh_numpy – adds Numpy depends to python:Depends substvar"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7) </p>
 <p> This program is not a part of debhelper (and it&#8217;s provided by python-numpy). </p>
-<h2>Index</h2>

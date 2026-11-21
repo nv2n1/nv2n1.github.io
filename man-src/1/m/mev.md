@@ -57,4 +57,3 @@ description: "mev – a program to report mouse events"
 <code> <a href="//www.systutorials.com/docs/linux/man/1-gpm-root/">gpm-root</a>(1) </code> An handler for Control-Mouse events.
 </pre>
 <p> The info file about `gpm&#8217;, which gives more complete information and explains how to write a gpm client. </p>
-<h2>Index</h2>

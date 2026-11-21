@@ -85,4 +85,3 @@ description: "vncviewer – VNC viewer for X"
 <h2>AUTHOR</h2>
 <p> Tristan Richardson, RealVNC Ltd. </p>
 <p> VNC was originally developed by the RealVNC team while at Olivetti Research Ltd / AT&amp;T Laboratories Cambridge. It is now being maintained by RealVNC Ltd. See <a rel="nofollow" href="http://www.realvnc.com">http://www.realvnc.com</a> for details. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "pyacc – Pascal Yacc compiler compiler."
 <p> Albert Graeff (&lt;ag [at] muwiinfa.geschichte.uni-mainz.de&gt;, &lt;Dr.Graef [at] t-online.de&gt;) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-plex/">plex</a></code>(1) </p>
-<h2>Index</h2>

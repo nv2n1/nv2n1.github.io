@@ -81,4 +81,3 @@ size_t&amp;nbsp;error_diag_len
 <dt><code>DRMAA_ERRNO_DRMS_EXIT_ERROR</code></dt>
 <dd> DRM system disengagement failed.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ echo vcl.use foo | ssh vhost varnishadm -T localhost:999 -S /var/db/secret
 <dt>&bull;</dt>
 <dd> Copyright (c) 2007-2014 Varnish Software AS </dd>
 </dl>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "cabextract – program to extract files from Microsoft cabinet (.c
 <p> This manual page was written by Stuart Caie &lt;kyzer [at] 4u.net&gt;, based on the one written by Eric Sharkey &lt;sharkey [at] debian.org&gt;, for the Debian GNU/Linux system.</p>
 <h2>SEE ALSO</h2>
 <p> <code>lcab</code>(1) </p>
-<h2>Index</h2>

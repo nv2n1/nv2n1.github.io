@@ -47,4 +47,3 @@ description: "dvitodvi – rearrange pages in a DVI file"
  <i>MC-TeX User&#8217;s Guide</i></p>
 <h2>BUGS</h2>
 <p> <i>Dvitodvi</i> does not adjust some of the parameters in the postamble. This may be a problem if these values are used to size certain structures in the output conversion programs. </p>
-<h2>Index</h2>

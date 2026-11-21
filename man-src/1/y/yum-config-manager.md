@@ -70,4 +70,3 @@ description: "yum-config-manager – manage yum configuration options and yum re
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

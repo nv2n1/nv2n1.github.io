@@ -48,4 +48,3 @@ description: "imageinfo – display selected image information"
 <p> <code><a href="/docs/linux/man/1-identify/">identify</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Brendt Wohlberg &lt;software [at] wohlberg.net&gt; </p>
-<h2>Index</h2>

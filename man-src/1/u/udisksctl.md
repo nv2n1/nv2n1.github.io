@@ -148,4 +148,3 @@ description: "udisksctl – The udisks command line tool"
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="https://github.com/storaged-project/udisks/issues">https://github.com/storaged-project/udisks/issues</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-udisks/">udisks</a></code>(8), <code><a href="/docs/linux/man/8-udisksd/">udisksd</a></code>(8), <code><a href="/docs/linux/man/8-umount-udisks2/">umount.udisks2</a></code>(8), <code><a href="/docs/linux/man/8-polkit/">polkit</a></code>(8) </p>
-<h2>Index</h2>

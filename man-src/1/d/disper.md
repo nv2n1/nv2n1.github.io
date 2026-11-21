@@ -115,4 +115,3 @@ description: "disper – on-the-fly display switcher"
 <p> Written by Willem van Engen.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xrandr/">xrandr</a></code>(1), <code><a href="/docs/linux/man/1-nvidia-settings/">nvidia-settings</a></code>(1) </p>
-<h2>Index</h2>

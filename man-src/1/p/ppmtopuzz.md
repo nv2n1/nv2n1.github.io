@@ -17,4 +17,3 @@ description: "ppmtopuzz – convert a portable pixmap into an X11 \"puzzle\" fil
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5), puzzle(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

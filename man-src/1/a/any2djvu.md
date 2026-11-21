@@ -26,4 +26,3 @@ description: "any2djvu – Convert .ps/.ps.gz/.pdf to .djvu"
 <p> There is a security issue in operating on documents not intended for widespread distribution, which could be partially although not completely ameliorated by using a secure web connection.</p>
 <h2>SEE ALSO</h2>
 <p> The entire djvu suite, eg <a href="/docs/linux/man/1-djvu/">djvu</a>(1), <a href="/docs/linux/man/1-djview/">djview</a>(1), and djvuserver(1). </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "xclip-copyfile, xclip-cutfile, xclip-pastefile – copy and move f
 </code></pre>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Maximilian Gass &lt;mxey [at] cloudconnected.org&gt; for the Debian project. It may be used for everything else, of course. </p>
-<h2>Index</h2>

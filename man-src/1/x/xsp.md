@@ -162,4 +162,3 @@ description: "XSP – Mono ASP.NET Web Server (xsp and xsp2)"
 <p> The Mono project (<a rel="nofollow" href="http://www.go-mono.com)">http://www.go-mono.com)</a> is a collaborative effort led by Novell (<a rel="nofollow" href="http://www.novell.com)">http://www.novell.com)</a> to implement an open source version of the .NET Framework.</p>
 <h2>MAILING LISTS</h2>
 <p> Mailing lists are listed at the <a rel="nofollow" href="http://www.mono-project.com/Mailing_Lists">http://www.mono-project.com/Mailing_Lists</a> </p>
-<h2>Index</h2>

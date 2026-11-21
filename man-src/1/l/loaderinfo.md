@@ -33,4 +33,3 @@ description: "loaderinfo – report SCSI tape device info"
 <p> <code>loaderinfo</code> is currently being maintained by Robert Nelson &lt;robertnelson [at] users.sourceforge.net&gt; as part of the &#8216;mtx&#8217; suite of programs. The &#8216;mtx&#8217; home page is <a rel="nofollow" href="http://mtx.sourceforge.net">http://mtx.sourceforge.net</a> and the actual code is currently available there and via SVN from <a rel="nofollow" href="http://sourceforge.net/projects/mtx.">http://sourceforge.net/projects/mtx.</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mt/">mt</a></code>(1),<code><a href="/docs/linux/man/1-tapeinfo/">tapeinfo</a></code>(1),<code><a href="/docs/linux/man/1-mtx/">mtx</a></code>(1) </p>
-<h2>Index</h2>

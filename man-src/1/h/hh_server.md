@@ -47,4 +47,3 @@ description: "hh_server – Hack language typechecker daemon"
 <p> <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1),<code>&nbsp;hackificator</code>(1),<code>&nbsp;hack_remove_soft_types</code>(1).<br />
  <i><a rel="nofollow" href="http://docs.hhvm.com/hack/typechecker/setup">http://docs.hhvm.com/hack/typechecker/setup</a></i><br />
  <i><a rel="nofollow" href="http://www.hacklang.org/">http://www.hacklang.org/</a></i> </p>
-<h2>Index</h2>

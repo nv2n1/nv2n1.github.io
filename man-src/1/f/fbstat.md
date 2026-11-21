@@ -53,4 +53,3 @@ fbstat[command][option...] [server:] database
 <h2>AUTHOR &amp; COPYRIGHT</h2>
 <p> Copyright (C) 2010, Damyan Ivanov. </p>
 <p> This manpage was written by Damyan Ivanov for the Debian project but may be used by others. Permission is granted to use this document, with or without modifications, provided that this notice is retained. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. </p>
-<h2>Index</h2>

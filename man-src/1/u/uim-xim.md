@@ -33,4 +33,3 @@ uim-xim [<i>options</i>]
 <dd> Trace XIM messages</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Wesley J. Landaker &lt;wjl [at] icecavern.net&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "showrgb – display an rgb color-name database"
 <dt><i>/usr/share/X11/rgb</i></dt>
 <dd> default database. </dd>
 </dl>
-<h2>Index</h2>

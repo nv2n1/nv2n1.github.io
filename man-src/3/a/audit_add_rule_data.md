@@ -35,4 +35,3 @@ description: "audit_add_rule_data – Add new audit rule"
 <p> <code>audit_rule_fieldpair_data(3),</code> <code><a href="/docs/linux/man/3-audit_delete_rule_data/">audit_delete_rule_data</a></code>(3), <code><a href="/docs/linux/man/8-auditctl/">auditctl</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb. </p>
-<h2>Index</h2>

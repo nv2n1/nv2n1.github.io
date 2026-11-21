@@ -617,4 +617,3 @@ $ docker run --sysctl net.ipv4.ip_forward=1 someimage
 <p> See the definition of the &#8211;sysctl option above for the current list of supported sysctls. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; November 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>

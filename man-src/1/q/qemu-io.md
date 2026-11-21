@@ -38,4 +38,3 @@ description: "qemu-io – QEMU Disk exerciser"
 <h2>AUTHOR</h2>
 <p> QEMU project </p>
 <p> This manual page was written by Asias He &lt;asias.hejun [at] gmail.com&gt;, for the Debian project (and may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the Creative Commons Attribution-Share Alike 3.0 United States License. (See <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/us/legalcode)">http://creativecommons.org/licenses/by-sa/3.0/us/legalcode)</a> </p>
-<h2>Index</h2>

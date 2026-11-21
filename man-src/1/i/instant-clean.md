@@ -19,4 +19,3 @@ description: "instant-clean – Clean up the Instant cache"
 <p> instant-clean is licensed under the GNU GPL Version 3 or any later version. </p>
 <h2>AUTHOR</h2>
 <p> instant-clean was originally written by Ilmar Wilbers &lt;ilmarw [at] simula.no&gt; and later modified by Martin Alnes &lt;martinal [at] simula.no&gt;. This manual page was written by Johannes Ring &lt;johannr [at] simula.no&gt;. </p>
-<h2>Index</h2>

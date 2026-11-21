@@ -24,4 +24,3 @@ description: "wicd-client – frontend to the WICD daemon"
 <dd> Run the tray without network traffic tray animations.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-wicd-curses/">wicd-curses</a></code>(8) <code><a href="/docs/linux/man/8-wicd/">wicd</a></code>(8) </p>
-<h2>Index</h2>

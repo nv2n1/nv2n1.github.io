@@ -21,4 +21,3 @@ description: "cvslastlog – Prints the log entry for the last commit for a file
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

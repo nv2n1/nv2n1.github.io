@@ -44,4 +44,3 @@ description: "mono-xmltool – Mono XML validation and transformation tool."
 <p> <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1),</code><a href="/docs/linux/man/1-mcs/">mcs</a>(1). </p>
-<h2>Index</h2>

@@ -111,4 +111,3 @@ For QP Transport Service Type IBV_QPT_RAW_PACKET : Next state Required attribute
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

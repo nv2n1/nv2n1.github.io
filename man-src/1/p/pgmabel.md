@@ -48,4 +48,3 @@ description: "pgmabel – create cross section using Abel Integration for Deconv
 <h2>AUTHOR</h2>
 <p> Volker Schmidt (lefti [at] voyager.boerde.de) </p>
 <p> Copyright (C) 1997-2002 German Aerospace research establishment </p>
-<h2>Index</h2>

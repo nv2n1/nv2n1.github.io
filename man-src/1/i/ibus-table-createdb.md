@@ -39,4 +39,3 @@ description: "ibus-table-createdb – create ibus-table database from table sour
 <dd> Create an index for the database &#8220;ipa-x-sampa.db&#8221;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Mike FABIAN &lt;mfabian [at] redhat.com&gt;. </p>
-<h2>Index</h2>

@@ -214,4 +214,3 @@ Other settings:
 <h2>AUTHOR</h2>
 <p> skipfish was written by Michal Zalewski &lt;lcamtuf [at] google.com&gt;, with contributions from Niels Heinen &lt;heinenn [at] google.com&gt;, Sebastian Roschke &lt;s.roschke [at] googlemail.com&gt;, and other parties. </p>
 <p> This manual page was written with the help of Thorsten Schifferdecker &lt;tsd [at] debian.systs.org&gt;. </p>
-<h2>Index</h2>

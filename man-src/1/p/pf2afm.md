@@ -20,4 +20,3 @@ description: "pf2afm – Make an AFM file from Postscript (PFB/PFA/PFM) font fil
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. This manpage by George Ferguson. </p>
-<h2>Index</h2>

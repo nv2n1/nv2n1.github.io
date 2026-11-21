@@ -31,4 +31,3 @@ description: "auparse_init – initialize an instance of the audit parsing libra
 <p> <code><a href="/docs/linux/man/3-auparse_reset/">auparse_reset</a></code>(3), <code><a href="/docs/linux/man/3-auparse_destroy/">auparse_destroy</a></code>(3). <code><a href="/docs/linux/man/3-auparse_feed/">auparse_feed</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

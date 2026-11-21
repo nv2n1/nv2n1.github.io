@@ -313,4 +313,3 @@ description: "Heimdal Kerberos 5 keytab handling functions –"
 </dt><dd> Return an error code or 0, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

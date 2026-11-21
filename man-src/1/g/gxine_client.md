@@ -21,4 +21,3 @@ description: "gxine_client – the gxine video player command line client"
 <p> Guenter Bartsch &lt;guenter [at] users.sourceforge.net&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gxine/">gxine</a></code>(1), <code><a href="/docs/linux/man/1-xine/">xine</a></code>(1). </p>
-<h2>Index</h2>

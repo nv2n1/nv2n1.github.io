@@ -217,4 +217,3 @@ description: "DVDISASTER – data loss/scratch/aging protection for optical medi
 <h2>AUTHOR</h2>
 <p> DVDISASTER was written by Carsten Gnoerlich &lt;carsten [at] dvdisaster.com&gt;. </p>
 <p> This manual page was written by Daniel Baumann &lt;daniel.baumann [at] panthera-systems.net&gt;, for the Debian project (but may be used by others). Since version 0.70 it is maintained by Carsten Gnoerlich. </p>
-<h2>Index</h2>

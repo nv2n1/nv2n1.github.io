@@ -18,4 +18,3 @@ description: "Run Software – helper tool"
 <p> Autostart files are described at <a rel="nofollow" href="https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html">https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html</a> </p>
 <h2>BUGS</h2>
 <p> Bug reports can be found and filed at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/nautilus/issues">https://gitlab.gnome.org/GNOME/nautilus/issues</a> </p>
-<h2>Index</h2>

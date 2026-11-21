@@ -19,4 +19,3 @@ description: "pamstretch-gen – use pamstretch and pnmscale to scale by non-int
 <p> <code><a href="/docs/linux/man/1-pamstretch/">pamstretch</a></code>(1), <code><a href="/docs/linux/man/1-pnmscale/">pnmscale</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Russell Marks (russell.marks [at] ntlworld.com). </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "gnome-power-preferences – gnome power preferences gui"
 <p> The programs are documented fully on <a rel="nofollow" href="http://gnome.org/projects/gnome-power-manager/">http://gnome.org/projects/gnome-power-manager/</a> .</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Oliver Grawert &lt;ogra [at] ubuntu.com&gt; for the Debian system. </p>
-<h2>Index</h2>

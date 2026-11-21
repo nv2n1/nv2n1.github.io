@@ -35,4 +35,3 @@ description: "gmpc-remote [OPTION]"
 <p> MPD Website: <a rel="nofollow" href="http://www.musicpd.org">http://www.musicpd.org</a> </p>
 <h2>AUTHOR</h2>
 <p> gmpc-remote was written by Qball Cow &lt;qball [at] sarine.nl&gt; </p>
-<h2>Index</h2>

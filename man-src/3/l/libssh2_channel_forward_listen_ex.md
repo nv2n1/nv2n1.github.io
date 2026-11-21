@@ -31,4 +31,3 @@ description: "libssh2_channel_forward_listen_ex – listen to inbound connection
 <p> <i>LIBSSH2_ERROR_EAGAIN</i> &#8211; Marked for non-blocking I/O but the call would block.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_forward_accept/">libssh2_channel_forward_accept</a>(3)</code> </p>
-<h2>Index</h2>

@@ -116,4 +116,3 @@ description: "ldapdelete – LDAP delete entry tool"
 <p> The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

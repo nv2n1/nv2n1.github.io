@@ -23,4 +23,3 @@ void libssh2_session_set_timeout(LIBSSH2_SESSION *session, long timeout);
 <p> Added in 1.2.9</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_get_timeout/">libssh2_session_get_timeout</a>(3)</code> </p>
-<h2>Index</h2>

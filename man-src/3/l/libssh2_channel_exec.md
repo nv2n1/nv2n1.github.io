@@ -20,4 +20,3 @@ description: "libssh2_channel_exec – convenience macro for libssh2_channel_pro
 <p> See <i><a href="/docs/linux/man/3-libssh2_channel_process_startup/">libssh2_channel_process_startup</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_process_startup/">libssh2_channel_process_startup</a>(3)</code> </p>
-<h2>Index</h2>

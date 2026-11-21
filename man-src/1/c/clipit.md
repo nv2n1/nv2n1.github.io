@@ -44,4 +44,3 @@ description: "ClipIt – Lightweight GTK+ Clipboard Manager"
 <p> Website: <a rel="nofollow" href="http://sourceforge.net/projects/gtkclipit/">http://sourceforge.net/projects/gtkclipit/</a></p>
 <h2>AUTHOR</h2>
 <p> Maintained by Cristian Henzel &lt;oss [at] rspwn.com&gt;. Forked from parcellite, which was written by Gilberto &quot;Xyhthyx&quot; Miralla &lt;xyhthyx [at] gmail.com&gt;. </p>
-<h2>Index</h2>

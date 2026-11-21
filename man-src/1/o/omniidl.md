@@ -104,4 +104,3 @@ description: "omniidl – omniORB idl compiler"
 <p> See the omniORB or omniORBpy manual for full details of <code>omniidl.</code> </p>
 <h2>AUTHOR</h2>
 <p> Duncan Grisby </p>
-<h2>Index</h2>

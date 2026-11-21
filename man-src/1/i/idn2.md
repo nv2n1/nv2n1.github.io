@@ -43,4 +43,3 @@ description: "idn2 – Libidn2 Internationalized Domain Names conversion tool"
 <p> Written by Simon Josefsson.</p>
 <h2>Reporting bugs</h2>
 <p> Report bugs to the gitlab issue tracker of the project <i><a rel="nofollow" href="https://gitlab.com/libidn/libidn2/issues">https://gitlab.com/libidn/libidn2/issues</a></i>. </p>
-<h2>Index</h2>

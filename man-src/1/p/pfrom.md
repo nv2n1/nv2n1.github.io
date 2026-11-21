@@ -15,4 +15,3 @@ description: "pfrom – fetch a list of the current mail via POP"
 <p> is a script that does push &#8211;from.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-push/">push</a>(8) </p>
-<h2>Index</h2>

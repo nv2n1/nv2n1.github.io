@@ -89,4 +89,3 @@ tcp   *.smtp                        *.*                            LISTEN
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-iostat/">iostat</a>(1), vmstat(1), <a href="/docs/linux/man/5-hosts/">hosts</a>(5), <a href="/docs/linux/man/5-networks/">networks</a>(5), <a href="/docs/linux/man/5-protocols/">protocols</a>(5), <a href="/docs/linux/man/5-services/">services</a>(5).</p>
 <h2>BUGS</h2>
 <p> The notion of errors is ill-defined. </p>
-<h2>Index</h2>

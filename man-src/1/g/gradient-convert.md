@@ -84,4 +84,3 @@ description: "gradient-convert – convert gradients between formats"
 <p> Note also that those options which are passed to component programs are not checked for relevance. Converting a GMT cpt file to GIMP format while using using the irrelevant <code>-g</code> option will not cause an error, it will simply be ignored.</p>
 <h2>AUTHOR</h2>
 <p> J.J. Green </p>
-<h2>Index</h2>

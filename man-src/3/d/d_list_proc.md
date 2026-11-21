@@ -21,4 +21,3 @@ char *foobar(int index, int *list_size);
 <p> To create a multiple selection listbox, set the dp2 field to an array of byte flags indicating the selection state of each list item (non-zero for selected entries). This table must be at least as big as the number of objects in the list! </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

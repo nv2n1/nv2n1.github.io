@@ -82,4 +82,3 @@ description: "okular – a universal document viewer"
 <dl>
 <dt>
 </dt><dd> Okular man page.</dd></dl>
-<h2>Index</h2>

@@ -175,4 +175,3 @@ CREATE ROLE joe PASSWORD 'md5b5f5ba1a423792b526f799ae4eb3d59e' SUPERUSER CREATED
 <p> In the above example, the new password isn&#8217;t actually echoed when typed, but we show what was typed for clarity. As you see, the password is encrypted before it is sent to the client. If the option <code>&#8211;unencrypted</code> is used, the password <i>will</i> appear in the echoed command (and possibly also in the server log and elsewhere), so you don&#8217;t want to use <code>-e</code> in that case, if anyone else can see your screen.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dropuser/">dropuser</a></code>(1), CREATE ROLE (<code><a href="/docs/linux/man/7-create_role/">CREATE_ROLE</a></code>(7)) </p>
-<h2>Index</h2>

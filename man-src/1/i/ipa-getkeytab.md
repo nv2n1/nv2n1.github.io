@@ -69,4 +69,3 @@ description: "ipa-getkeytab – Get a keytab for a Kerberos principal"
 <p> 10 Bind password required when using a bind DN </p>
 <p> 11 Failed to add key to keytab </p>
 <p> 12 Failed to close keytab </p>
-<h2>Index</h2>

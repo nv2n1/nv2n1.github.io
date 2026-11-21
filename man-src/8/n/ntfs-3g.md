@@ -222,4 +222,3 @@ description: "ntfs-3g – Third Generation Read/Write NTFS Driver"
 <p> Several people made heroic efforts, often over five or more years which resulted the ntfs-3g driver. Most importantly they are Anton Altaparmakov, Jean-Pierre André, Erik Larsson, Richard Russon, Szabolcs Szakacsits, Yura Pakhuchiy, Yuval Fledel, and the author of the groundbreaking FUSE filesystem development framework, Miklos Szeredi.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ntfs-3g.probe/">ntfs-3g.probe</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8), <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5), <code><a href="/docs/linux/man/1-getfattr/">getfattr</a></code>(1) </p>
-<h2>Index</h2>

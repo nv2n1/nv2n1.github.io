@@ -35,4 +35,3 @@ $ ls -sh angry_bell-latest.tar
 <p> <code>-o</code>, <code>&#8211;output</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Write to a file, instead of STDOUT</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

@@ -15,4 +15,3 @@ description: "gcalccmd – a console calculator"
 <p> <code>gcalccmd</code> is the console version of <code>gnome-calculator</code> the calculator of the GNOME desktop environment. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gnome-calculator</code> </p>
-<h2>Index</h2>

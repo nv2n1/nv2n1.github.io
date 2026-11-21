@@ -31,4 +31,3 @@ description: "gsl-config – script to get version number and compiler flags of 
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001 Christopher R. Gabriel </p>
 <p> Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>
-<h2>Index</h2>

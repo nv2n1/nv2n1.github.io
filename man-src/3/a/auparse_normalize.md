@@ -24,4 +24,3 @@ description: "auparse_normalize – normalize the current event"
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

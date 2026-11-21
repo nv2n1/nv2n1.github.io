@@ -157,4 +157,3 @@ description: "rabins – process argus(8) data within specified bins."
 <pre>
 Carter Bullard (carter [at] qosient.com).
 </pre>
-<h2>Index</h2>

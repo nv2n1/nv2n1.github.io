@@ -68,4 +68,3 @@ description: "d.zoom – Allows the user to change the current geographic region
 <p> <i>Last changed: $Date: 2004-08-05 14:53:21 +0200 (Thu, 05 Aug 2004) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

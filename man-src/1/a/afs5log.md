@@ -36,4 +36,3 @@ description: "afs5log – AFS token initializer"
 <p> Probably, but let&#8217;s hope not. If you find any, please file them in the bug database at <a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a> against the &quot;pam_krb5&quot; component. </p>
 <h2>AUTHOR</h2>
 <p> Nalin Dahyabhai &lt;nalin [at] redhat.com&gt; </p>
-<h2>Index</h2>

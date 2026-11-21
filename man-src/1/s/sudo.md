@@ -275,4 +275,3 @@ description: "sudo, sudoedit – execute a command as another user"
 <p> Limited free support is available via the sudo-users mailing list, see <a rel="nofollow" href="http://www.sudo.ws/mailman/listinfo/sudo-users">http://www.sudo.ws/mailman/listinfo/sudo-users</a> to subscribe or search the archives.</p>
 <h2>DISCLAIMER</h2>
 <p> <code>sudo</code> is provided &#8220;<font SIZE="-1">AS</font> <font SIZE="-1">IS</font>&#8221; and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. See the <font SIZE="-1">LICENSE</font> file distributed with <code>sudo</code> or <a rel="nofollow" href="http://www.sudo.ws/sudo/license.html">http://www.sudo.ws/sudo/license.html</a> for complete details. </p>
-<h2>Index</h2>

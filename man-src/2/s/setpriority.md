@@ -53,4 +53,3 @@ description: "getpriority, setpriority – get/set program scheduling priority"
 <p> <i>Documentation/scheduler/sched-nice-design.txt</i> in the Linux kernel source tree (since Linux 2.6.23)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

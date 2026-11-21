@@ -21,4 +21,3 @@ description: "afm2tfm – convert Adobe font metrics to TeX font metrics"
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki and Donald E. Knuth. </p>
 <p> Maintained in TeX Live; please send bug reports or other correspondence to tex-k [at] tug.org (<a rel="nofollow" href="http://lists.tug.org/tex-k">http://lists.tug.org/tex-k</a>). </p>
-<h2>Index</h2>

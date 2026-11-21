@@ -27,4 +27,3 @@ description: "go-fmt – gofmt (reformat) package sources"
 <p> <code><a href="/docs/linux/man/1-go-fix/">go-fix</a></code>(1), <code><a href="/docs/linux/man/1-go-vet/">go-vet</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help fmt&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

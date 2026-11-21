@@ -252,4 +252,3 @@ ipraytime -lat 29.5000 -lon 47.7500 -u 3 --anglemethod 2 -d 20071229 -h12
  Copyright &#169; 2005, Arabeyes, Nadim Shaikli.</p>
 <h2>SEE ALSO</h2>
 <p> The ITL library (libitl) from the Islamic Tools and Libraries project. It is the underlying requirement for <code>ipraytime</code> to function. The ITL library was created and is hosted at <code><a rel="nofollow" href="http://www.arabeyes.org">www.arabeyes.org</a></code>. </p>
-<h2>Index</h2>

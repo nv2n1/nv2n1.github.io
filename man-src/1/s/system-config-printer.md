@@ -33,4 +33,3 @@ description: "system-config-printer – configure a CUPS server"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

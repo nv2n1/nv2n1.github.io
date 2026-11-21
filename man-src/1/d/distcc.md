@@ -356,4 +356,3 @@ DISTCC_HOSTS = HOSTSPEC... HOSTSPEC = LOCAL_HOST | SSH_HOST | TCP_HOST | OLDSTYL
 <p> You are free to use distcc. distcc (including this manual) may be copied, modified or distributed only under the terms of the GNU General Public Licence version 2 or later. distcc comes with absolutely no warrany. A copy of the GPL is included in the file COPYING.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-distccd/">distccd</a></code>(1), <code><a href="/docs/linux/man/1-pump/">pump</a></code>(1), <code><a href="/docs/linux/man/1-include_server/">include_server</a></code>(1), <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1), and <code><a href="/docs/linux/man/1-ccache/">ccache</a></code>(1). <i><a rel="nofollow" href="http://code.google.com/p/distcc/">http://code.google.com/p/distcc/</a></i> <i><a rel="nofollow" href="http://ccache.samba.org/">http://ccache.samba.org/</a></i> </p>
-<h2>Index</h2>

@@ -504,4 +504,3 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> Another way to create anonymous filehandles is with the Symbol module or with the IO::Handle module and its ilk. These modules have the advantage of not hiding different types of the same name during the <code>local()</code>. See the bottom of ``open&#8217;&#8216; in perlfunc for an example.  </p>
 <h2>SEE ALSO</h2>
 <p> See perlvar for a description of Perl&#8217;s built-in variables and a discussion of legal variable names. See perlref, perlsub, and ``Symbol Tables&#8217;&#8216; in perlmod for more discussion on typeglobs and the <code>*foo{THING}</code> syntax. </p>
-<h2>Index</h2>

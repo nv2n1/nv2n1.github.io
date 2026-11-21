@@ -27,4 +27,3 @@ description: "sunicontopnm – convert a Sun icon into a Netpbm image"
 <p> In October 2010, Prophet Of The Way (afu [at] wta.att.ne.jp) converted it to use the more recent &#8216;packed PBM&#8217; library functions, thus speeding it up </p>
 <p> Netpbm 10.53 (December 2010) renamed the program to <code>sunicontopnm</code>. This name reflects the fact that there are lots of kinds of icons in the world besides the Sun variety, Windows ones being most popular. It also takes into account the new Depth=8 capability (see below). </p>
 <p> Netpbm 10.53 (December 2010) added the ability to work with Depth=8 icon input and input with 32 bit &#8216;items.&#8217; Whereas the previous program always produced PBM output, the new program produced PGM in the Depth=8 case. </p>
-<h2>Index</h2>

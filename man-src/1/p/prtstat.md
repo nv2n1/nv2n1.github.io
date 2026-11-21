@@ -25,4 +25,3 @@ description: "prtstat – print statistics of a process"
 <dt><code>/proc/</code><i>pid</i><code>/stat</code></dt>
 <dd> source of the information <code>prtstat</code> uses. </dd>
 </dl>
-<h2>Index</h2>

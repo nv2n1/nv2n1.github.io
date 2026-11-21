@@ -128,4 +128,3 @@ LUT data VR:<br />
 <p> <i>&lt;datadir&gt;/philips.lut</i> &#8211; sample LUT in text format</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1998-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

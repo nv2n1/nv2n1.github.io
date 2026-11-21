@@ -61,4 +61,3 @@ description: "xdpr – dump an X window directly to a printer"
 <p> Paul Boutin, MIT Project Athena<br />
  Michael R. Gretzinger, MIT Project Athena<br />
  Jim Gettys, MIT Project Athena </p>
-<h2>Index</h2>

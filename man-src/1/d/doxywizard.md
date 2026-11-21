@@ -16,4 +16,3 @@ description: "doxywizard – a tool to configure and run doxygen on your source 
 <p> You can optionally pass the name of a configuration file as the first argument to load it at startup.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-doxygen/">doxygen</a>(1) </p>
-<h2>Index</h2>

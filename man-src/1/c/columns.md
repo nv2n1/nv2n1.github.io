@@ -144,4 +144,3 @@ $ columns-- first = '#define TABLE' - c 2 - I4-- line = ' ' &lt;&lt; _EOF_
 <p> Please send bug reports to: autogen-users [at] lists.sourceforge.net</p>
 <h2>NOTES</h2>
 <p> This manual page was <i>AutoGen</i>-erated from the <code>columns</code> option definitions. </p>
-<h2>Index</h2>

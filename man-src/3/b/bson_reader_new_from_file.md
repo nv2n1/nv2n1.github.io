@@ -30,4 +30,3 @@ bson_reader_new_from_file(const char *path,
 <p> A newly allocated <code>bson_reader_t</code> on success, otherwise NULL and error is set. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

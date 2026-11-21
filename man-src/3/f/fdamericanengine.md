@@ -21,4 +21,3 @@ description: "ql/pricingengines/vanilla/fdamericanengine.hpp – Finite-differen
 <p> Finite-differences American option engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

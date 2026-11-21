@@ -87,4 +87,3 @@ description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap
 <p> The program could be much faster. </p>
 <h2>AUTHOR</h2>
 <p> <code>jpegtopnm</code> and this man page were derived in large part from <code>djpeg</code>, by the Independent JPEG Group. The program is otherwise by Bryan Henderson on March 19, 2000. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "imusa2 – Find USNO-SA2.0 stars in FITS or IRAF image files"
 <p> <a rel="nofollow" href="http://tdc-www.harvard.edu/software/wcstools/imcat/imusa2.html">http://tdc-www.harvard.edu/software/wcstools/imcat/imusa2.html</a></p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

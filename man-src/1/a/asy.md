@@ -241,4 +241,3 @@ description: "asy – Asymptote: a script-based vector graphics language"
 <h2>AUTHOR</h2>
 <p> Asymptote was written by Andy Hammerlindl, John Bowman, and Tom Prince. </p>
 <p> This manual page was written by Hubert Chan for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

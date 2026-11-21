@@ -43,4 +43,3 @@ Ping error: {*Detail about error}
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

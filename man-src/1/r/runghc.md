@@ -37,4 +37,3 @@ description: "runghc – program to run Haskell programs without first having to
 <p> Copyright 2002, The University Court of the University of Glasgow. All rights reserved. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Efrain Valles Pulgar &lt;effie.jayx [at] gmail.com&gt;. This is free documentation; see the GNU General Public Licence version 2 or later for copying conditions. There is NO WARRANTY. </p>
-<h2>Index</h2>

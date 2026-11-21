@@ -35,4 +35,3 @@ description: "jpilot-sync – A command line tool for syncing jpilot databases t
 <p> <a href="/docs/linux/man/1-jpilot/">jpilot</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Judd Montgomery &lt;judd [at] jpilot.org&gt; </p>
-<h2>Index</h2>

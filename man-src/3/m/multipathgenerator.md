@@ -20,4 +20,3 @@ description: "ql/methods/montecarlo/multipathgenerator.hpp – Generates a multi
 <p> Generates a multi path from a random-array generator. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

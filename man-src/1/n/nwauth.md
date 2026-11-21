@@ -36,4 +36,3 @@ description: "nwauth – Verify username/password"
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5)</code> </p>
 <h2>CREDITS</h2>
 <p> nwauth was written by Volker Lendecke (lendecke [at] math.uni-goettingen.de) </p>
-<h2>Index</h2>

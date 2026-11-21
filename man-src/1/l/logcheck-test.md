@@ -62,4 +62,3 @@ description: "logcheck-test – test new logcheck rules easily"
 <p> <code><a href="/docs/linux/man/8-logcheck/">logcheck</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> logcheck is developed by Debian logcheck Team at alioth: <a rel="nofollow" href="http://alioth.debian.org/projects/logcheck/.">http://alioth.debian.org/projects/logcheck/.</a> This manual was written by Hannes von Haugwitz &lt;hannes [at] vonhaugwitz.com&gt;. </p>
-<h2>Index</h2>

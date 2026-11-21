@@ -103,4 +103,3 @@ long long strtoll(const char *nptr, char **endptr, int base);</code></pre>
 <p> <code><a href="/docs/linux/man/3-atof/">atof</a></code>(3), <code><a href="/docs/linux/man/3-atoi/">atoi</a></code>(3), <code><a href="/docs/linux/man/3-atol/">atol</a></code>(3), <code><a href="/docs/linux/man/3-strtod/">strtod</a></code>(3), <code><a href="/docs/linux/man/3-strtoimax/">strtoimax</a></code>(3), <code><a href="/docs/linux/man/3-strtoul/">strtoul</a></code>(3),  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

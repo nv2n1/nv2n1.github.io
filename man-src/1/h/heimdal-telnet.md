@@ -306,4 +306,3 @@ description: "telnet – user interface to the TELNET protocol"
 <h2>NOTES</h2>
 <p> On some remote systems, echo has to be turned off manually when in &ldquo;old line by line&rdquo; mode. </p>
 <p> In &ldquo;old line by line&rdquo; mode or <code>LINEMODE</code> the terminal&#8217;s <code>eof</code> character is only recognized (and sent to the remote system) when it is the first character on a line. </p>
-<h2>Index</h2>

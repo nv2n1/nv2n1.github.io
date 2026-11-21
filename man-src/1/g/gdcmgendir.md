@@ -69,4 +69,3 @@ file-out  DICOM output filename
 <p> <code><a href="/docs/linux/man/1-gdcmconv/">gdcmconv</a></code>(1), <code><a href="/docs/linux/man/1-gdcmanon/">gdcmanon</a></code>(1), <code><a href="/docs/linux/man/1-rename/">rename</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>

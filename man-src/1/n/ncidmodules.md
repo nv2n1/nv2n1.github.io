@@ -34,4 +34,3 @@ description: "ncid-kpopup – Popup Caller ID using KDE"
 <p> /etc/ncid/ncidmodules.conf</p>
 <h2>SEE ALSO</h2>
 <p> ncid.1, ncidmodules.conf.5, ncidd.8 </p>
-<h2>Index</h2>

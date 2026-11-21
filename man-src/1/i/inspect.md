@@ -30,4 +30,3 @@ description: "inspect – Boost code inspection tool"
 <dd>The default is to have all checks on; otherwise options specify desired checks.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>inspect</code> is maintained in HTML; see /usr/share/doc/libboostX.Y-doc/HTML/tools/inspect/index.html </p>
-<h2>Index</h2>

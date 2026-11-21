@@ -42,4 +42,3 @@ description: "mktemp – create a temporary file or directory"
 <p> <a href="/docs/linux/man/3-mkstemp/">mkstemp</a>(3), <a href="/docs/linux/man/3-mkdtemp/">mkdtemp</a>(3), <a href="/docs/linux/man/3-mktemp/">mktemp</a>(3) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/mktemp">https://www.gnu.org/software/coreutils/mktemp</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) mktemp invocation&#8217; </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "gspath – Utility to display standard directory/path information"
 <h2>AUTHORS</h2>
 <p> <code>gspath </code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt;. </p>
 <p> This man page was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt;. </p>
-<h2>Index</h2>

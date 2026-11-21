@@ -48,4 +48,3 @@ description: "ps2epsi – generate conforming Encapsulated PostScript"
 <p> This document was last revised for Ghostscript version 9.55.0. However, the content may be obsolete, or inconsistent with ps2epsi.txt.</p>
 <h2>AUTHOR</h2>
 <p> George Cameron </p>
-<h2>Index</h2>

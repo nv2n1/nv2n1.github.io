@@ -21,4 +21,3 @@ description: "ql/math/interpolations/forwardflatinterpolation.hpp – forward-fl
 <p> forward-flat interpolation between discrete points </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

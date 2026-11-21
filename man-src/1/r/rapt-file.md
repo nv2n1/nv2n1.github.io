@@ -41,4 +41,3 @@ description: "rapt-file – APT package searching utility — search remotely"
 <dd> Directory with additional sources.list snippets</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>rapt-file</code> was written by Enrico Zini &lt;enrico [at] debian.org&gt;. </p>
-<h2>Index</h2>

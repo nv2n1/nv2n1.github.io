@@ -187,4 +187,3 @@ description: "pack200 – Packages a JAR file into a compressed pack200 file for
 <dt>&bull;</dt>
 <dd> <a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1) </dd>
 </dl>
-<h2>Index</h2>

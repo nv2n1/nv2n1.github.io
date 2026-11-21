@@ -36,4 +36,3 @@ description: "git-upload-archive – Send archive back to git-archive"
 </dt><dd> The repository to get a tar archive from.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

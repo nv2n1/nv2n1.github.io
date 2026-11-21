@@ -31,4 +31,3 @@ description: "kdestroy – remove one credential or destroy the current ticket f
 <dd> Do not remove v4 tickets.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1) </p>
-<h2>Index</h2>

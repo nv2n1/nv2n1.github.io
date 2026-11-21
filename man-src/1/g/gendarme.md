@@ -61,4 +61,3 @@ description: "Gendarme – Rule-based code analysis for Mono::"
 <p> <a rel="nofollow" href="http://www.mono-project.com/Gendarme">http://www.mono-project.com/Gendarme</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1)</code> </p>
-<h2>Index</h2>

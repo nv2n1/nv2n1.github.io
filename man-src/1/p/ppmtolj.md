@@ -31,4 +31,3 @@ description: "ppmtolj – convert a portable pixmap to an HP LaserJet PCL 5 Colo
 <p> None known.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2000 by Jonathan Melvin.(jonathan.melvin [at] heywood.co.uk) </p>
-<h2>Index</h2>

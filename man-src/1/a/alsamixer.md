@@ -195,4 +195,3 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <h2>AUTHOR</h2>
 <p> <code>alsamixer</code> has been written by Tim Janik and been further improved by Jaroslav Kysela &lt;perex [at] perex.cz&gt; and Clemens Ladisch &lt;clemens [at] ladisch.de&gt;. </p>
 <p> This manual page was provided by Paul Winkler &lt;zarmzarm [at] erols.com&gt;. </p>
-<h2>Index</h2>

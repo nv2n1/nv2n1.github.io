@@ -17,4 +17,3 @@ description: "dh_autoreconf_clean – Clean all changes made by dh_autoreconf"
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7), <i><a href="/docs/linux/man/1-dh_autoreconf/">dh_autoreconf</a></i>(1), <i><a href="/docs/linux/man/7-dh-autoreconf/">dh-autoreconf</a></i>(7)</p>
 <h2>AUTHOR</h2>
 <p> Julian Andres Klode &lt;jak [at] debian.org&gt; </p>
-<h2>Index</h2>

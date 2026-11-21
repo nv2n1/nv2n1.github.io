@@ -63,4 +63,3 @@ description: "fusecompress – mounts an compressed virtual filesystem"
 <p> fusecompress was written by Milan Svoboda &lt;milan.svoboda [at] centrum.cz&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> fusecompress_offline </p>
-<h2>Index</h2>

@@ -122,4 +122,3 @@ description: "xsetwacom – commandline utility to query and modify wacom driver
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/4-wacom/">wacom</a>(4), <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/7-x/">X</a>(7) </p>
 <p> More information is available at <a rel="nofollow" href="https://github.com/linuxwacom/xf86-input-wacom">https://github.com/linuxwacom/xf86-input-wacom</a> </p>
-<h2>Index</h2>

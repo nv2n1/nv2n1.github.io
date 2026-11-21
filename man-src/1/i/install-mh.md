@@ -32,4 +32,3 @@ description: "install-mh – initialize the nmh environment"
 <dd> To set the user&#8217;s nmh directory.</dd></dl>
 <h2>CONTEXT</h2>
 <p> With <code>-auto</code>, the current folder is changed to &#8220;<i>inbox</i>&#8221;. </p>
-<h2>Index</h2>

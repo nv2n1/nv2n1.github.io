@@ -31,4 +31,3 @@ description: "shtool fixperm – GNU shtool file permission fixing command"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>fixperm</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1996 for <i></i><font SIZE="-1"><i>OSSP</i></font><i> eperl</i>. It was later taken over into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1). </p>
-<h2>Index</h2>

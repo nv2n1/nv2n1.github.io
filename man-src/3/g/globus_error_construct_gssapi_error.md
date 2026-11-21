@@ -52,4 +52,3 @@ description: "Error Construction –"
 </dt><dd> The resulting error object. You may have to call globus_error_put() on this object before passing it on.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_error from the source code. </p>
-<h2>Index</h2>

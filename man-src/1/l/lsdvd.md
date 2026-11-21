@@ -59,4 +59,3 @@ description: "lsdvd – read the content info of a DVD"
 <h2>AUTHORS</h2>
 <p> <code>lsdvd</code> was written by Chris Philips. &lt;acid_kewpie [at] users.sourceforge.net&gt; </p>
 <p> This manual page was written by Moritz Muehlenhoff &lt;jmm [at] inutil.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

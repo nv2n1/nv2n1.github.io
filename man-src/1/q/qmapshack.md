@@ -32,4 +32,3 @@ description: "QMapShack – GPS mapping (GeoTiff and vector) and GPSr management
 <dd> &lt;<a rel="nofollow" href="https://bitbucket.org/maproom/qmapshack/wiki/DocMain">https://bitbucket.org/maproom/qmapshack/wiki/DocMain</a>&gt;.</dd>
 <h2>AUTHOR</h2>
 <p> <i>QMapShack</i> was written and is currently maintained by Oliver Eichler <code>&lt;oliver.eichler [at] gmx.de&gt;</code>. </p>
-<h2>Index</h2>

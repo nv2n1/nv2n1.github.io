@@ -35,4 +35,3 @@ description: "innmail – Simple mail-sending program"
 <p> <tt>$Id:</tt> innmail.pod 7851 2008-05-26 19:33:08Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1). </p>
-<h2>Index</h2>

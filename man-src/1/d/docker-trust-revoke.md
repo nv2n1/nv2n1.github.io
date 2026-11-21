@@ -18,4 +18,3 @@ description: "docker-trust-revoke – Remove trust for an image"
 <p> <code>-y</code>, <code>&#8211;yes</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Do not prompt for confirmation</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-trust/">docker-trust</a>(1)</code> </p>
-<h2>Index</h2>

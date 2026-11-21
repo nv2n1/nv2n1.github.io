@@ -22,4 +22,3 @@ description: "grub-script-check — Check GRUB configuration file for syntax err
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "makempy – convert PDF or PostScript text to MetaPost graphics"
 <p> <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt wiki </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Frank K[:u]ster &lt;frank [at] kuesterei.ch&gt;, for the Debian GNU/Linux system. It may be used and modified by others without contacting the author. </p>
-<h2>Index</h2>

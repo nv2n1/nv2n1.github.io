@@ -90,4 +90,3 @@ description: "hspell – Hebrew spellchecker"
 <p> This manual page is in English. </p>
 <p> For GUI-lovers, <code>hspell</code>&#8216;s user interface is an abomination. However, as more and more applications learn to interface with <code>hspell</code>, and as Hspell&#8217;s data becomes available in multi-lingual spellcheckers (such as aspell and hunspell), this will no longer be an issue. See <code><a rel="nofollow" href="http://hspell.ivrix.org.il/">http://hspell.ivrix.org.il/</a></code> for instructions on how to use Hspell in a variety of applications. </p>
 <p> <code>hspell</code>&#8216;s being limited to the ISO-8859-8 encoding, and not recognizing UTF-8 or even CP1255 (including niqqud), is an anachronism today. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "zipcmp – compare contents of zip archives"
 <p> <a href="/docs/linux/man/1-zipmerge/">zipmerge</a>(1), <a href="/docs/linux/man/1-ziptorrent/">ziptorrent</a>(1), libzip(3)</p>
 <h2>AUTHORS</h2>
 <p> Dieter Baron &lt;dillo [at] giga.or.at&gt; and Thomas Klausner &lt;tk [at] giga.or.at&gt; </p>
-<h2>Index</h2>

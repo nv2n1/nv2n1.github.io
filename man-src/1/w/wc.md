@@ -44,4 +44,3 @@ description: "wc – print newline, word, and byte counts for each file"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/wc">https://www.gnu.org/software/coreutils/wc</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) wc invocation&#8217; </p>
-<h2>Index</h2>

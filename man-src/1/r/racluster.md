@@ -126,4 +126,3 @@ description: "racluster – aggregate argus(8) data files."
 Carter Bullard (carter [at] qosient.com).
 </pre>
 <h2>BUGS</h2>
-<h2>Index</h2>

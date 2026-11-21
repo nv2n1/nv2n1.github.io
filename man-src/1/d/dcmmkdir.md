@@ -249,4 +249,3 @@ length encoding in sequences and items:
 <p> <code><a href="/docs/linux/man/1-dcmgpdir/">dcmgpdir</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2001-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

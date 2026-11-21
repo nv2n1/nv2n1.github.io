@@ -230,4 +230,3 @@ description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 <p> SASL mechanisms are listed at <a rel="nofollow" href="http://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml">http://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml</a></p>
 <h2>AUTHORS</h2>
 <p> Originally written by Michael R. Elkins, rewritten and currently maintained by Oswald Buddenhagen, contributions by Theodore Y. Ts&#8217;o. </p>
-<h2>Index</h2>

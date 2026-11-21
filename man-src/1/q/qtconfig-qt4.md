@@ -17,4 +17,3 @@ description: "qtconfig – Configuration tool for Qt"
 <dd> Specifies the base Qt dir</dd></dl>
 <h2>AUTHORS</h2>
 <p> TrollTech &lt;<a rel="nofollow" href="http://www.trolltech.com/">http://www.trolltech.com/</a>&gt; </p>
-<h2>Index</h2>

@@ -71,4 +71,3 @@ My</a>&nbsp;<wbr>modest homepage.&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<w
 <p> This page and centerim was originally written by Konstantin Klyagin. Currently, several people are maintaining this software project. </p>
 <h2>WEB</h2>
 <p> <a rel="nofollow" href="http://www.centerim.org/">http://www.centerim.org/</a> </p>
-<h2>Index</h2>

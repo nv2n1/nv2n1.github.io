@@ -25,4 +25,3 @@ description: "getkey – wait until a key is pressed"
 <dd> Display <i>MESSAGE</i> while waiting. The message is used as a format string in <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), with a single argument, the number of seconds left. Typical usage is therefore <code>&quot;Press a key within %d seconds to &#8230;&quot;</code>. If <i>MESSAGE</i> contains other format string directives, the behavior is undefined and <code>getkey</code> may crash. </dd>
 <p> If there is no time limit specified, the number of seconds left is reported as 0. </p>
 </dl>
-<h2>Index</h2>

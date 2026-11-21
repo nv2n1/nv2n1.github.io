@@ -47,4 +47,3 @@ Yiannis &quot;mandrav&quot; Mandravellos (mandrav [at] codeblocks.org)
 </pre>
 <h2>HISTORY</h2>
 <p> 2006 &#8211; Initial version </p>
-<h2>Index</h2>

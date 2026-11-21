@@ -125,4 +125,3 @@ $ git show-branch --reflog=&quot;10,1 hour ago&quot; --list master
 <p> shows 10 reflog entries going back from the tip as of 1 hour ago. Without <code>&#8211;list</code>, the output also shows how these tips are topologically related with each other.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "eplain – expanded plain TeX"
 <p> <code><a href="/docs/linux/man/5-texinfo/">texinfo</a></code>(5), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1),<br />
  Karl Berry, <i>eplain</i>, TUGboat 11(4), 571&#8211;572, 1990, <a rel="nofollow" href="http://tug.org/TUGboat/tb11-4/tb30resources.pdf.">http://tug.org/TUGboat/tb11-4/tb30resources.pdf.</a><br />
  Paul W. Abrahams with Karl Berry and Kathryn A. Hargreaves, <i>TeX for nroff for the Impatient</i>, <a rel="nofollow" href="http://www.gnu.org/software/teximpatient.">http://www.gnu.org/software/teximpatient.</a> </p>
-<h2>Index</h2>

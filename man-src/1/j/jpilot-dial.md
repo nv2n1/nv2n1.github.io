@@ -49,4 +49,3 @@ description: "jpilot-dial – generates the DTMF tone signals used for telephone
 <p> <code><a href="/docs/linux/man/1-jpilot/">jpilot</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ludovic Rousseau &lt;rousseau [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

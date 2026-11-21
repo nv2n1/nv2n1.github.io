@@ -109,4 +109,3 @@ description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 <p> NULs occurring in result strings don&#8217;t get passed back to gnudoit properly. </p>
 <h2>AUTHOR.</h2>
 <p> Andy Norman (ange [at] hplb.hpl.hp.com), based heavily upon etc/emacsclient.c, etc/server.c and lisp/server.el from the GNU Emacs 18.52 distribution. Various modifications from Bob Weiner (weiner [at] mot.com), Darrell Kindred (dkindred [at] cmu.edu), Arup Mukherjee (arup [at] cmu.edu), Ben Wing (ben [at] xemacs.org) and Hrvoje Niksic (hniksic [at] xemacs.org). </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "zsync – Partial/differential file download client over HTTP"
 <p> Colin Phipps &lt;cph [at] moria.org.uk&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-zsyncmake/">zsyncmake</a>(1) </p>
-<h2>Index</h2>

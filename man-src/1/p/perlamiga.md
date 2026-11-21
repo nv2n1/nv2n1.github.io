@@ -132,4 +132,3 @@ description: "perlamiga – Perl under AmigaOS 4.1"
 <dd> First release of port to 5.16.3.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> You like this port? See &lt;<a rel="nofollow" href="http://www.broad.ology.org.uk/amiga/">http://www.broad.ology.org.uk/amiga/</a>&gt; for how you can help. </p>
-<h2>Index</h2>

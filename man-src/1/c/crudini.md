@@ -80,4 +80,3 @@ description: "crudini – manipulate ini files"
 <dt>
 </dt><dd> &lt;(crudini &#8211;get &#8211;format=lines file2.ini|sort) </dd>
 </dl>
-<h2>Index</h2>

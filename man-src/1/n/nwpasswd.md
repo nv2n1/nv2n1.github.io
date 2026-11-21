@@ -36,4 +36,3 @@ description: "nwpasswd – Change a user’s password"
 </dt><dd> is the bindery object type of the object whose password is to be changed.</dd></dl>
 <h2>CREDITS</h2>
 <p> nwpasswd would not have been possible without the work of Guntram Blom. Look at nwcrypt.c for his work. </p>
-<h2>Index</h2>

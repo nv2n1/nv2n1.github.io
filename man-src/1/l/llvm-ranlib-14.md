@@ -22,4 +22,3 @@ description: "llvm-ranlib – manual page for llvm-ranlib 14"
 <dt> <code>-D</code> &#8211; Use zero for timestamps and uids/gids (default)</dt>
 <dt> <code>-U</code> &#8211; Use actual timestamps and uids/gids </dt>
 </dl>
-<h2>Index</h2>

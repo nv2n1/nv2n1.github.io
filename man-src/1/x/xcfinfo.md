@@ -73,4 +73,3 @@ description: "xcfinfo – display information about GIMP xcf files"
 <p> <code>xcfinfo</code> was written by Henning Makholm &lt;henning [at] makholm.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xcf2pnm/">xcf2pnm</a></code>(1), <code><a href="/docs/linux/man/1-xcf2png/">xcf2png</a></code>(1) </p>
-<h2>Index</h2>

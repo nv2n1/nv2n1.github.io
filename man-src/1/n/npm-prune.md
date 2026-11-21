@@ -36,4 +36,3 @@ npm prune[[&lt;@scope&gt; / ]&lt;pkg&gt;...][--production][--dry - run][--json]
 <dd> npm help ls </dd>
 </dl>
 </dl>
-<h2>Index</h2>

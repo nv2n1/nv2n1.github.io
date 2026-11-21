@@ -126,4 +126,3 @@ description: "xml2po – program to create a PO-template file from a DocBook XML
 <p> This manual page was written by Daniel Leidert daniel.leidert [at] wgdd.de for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005 Daniel Leidert </p>
-<h2>Index</h2>

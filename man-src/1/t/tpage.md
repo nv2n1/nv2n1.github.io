@@ -37,4 +37,3 @@ tpage[--define var = value] file(s)
 <p> This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
 <h2>SEE ALSO</h2>
 <p> ttree </p>
-<h2>Index</h2>

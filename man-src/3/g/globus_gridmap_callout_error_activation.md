@@ -29,4 +29,3 @@ description: "Activation –"
 <p> Module descriptor</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gridmap_callout_error from the source code. </p>
-<h2>Index</h2>

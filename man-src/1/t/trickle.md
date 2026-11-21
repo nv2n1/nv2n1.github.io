@@ -45,4 +45,3 @@ description: "trickle – a lightweight userspace bandwidth shaper"
 <p> <code>trickle</code> has been developed by Marius Aamodt Eriksen Aq marius [at] monkey.org .</p>
 <h2>BUGS</h2>
 <p> Does not support executables utilizing kqueue(2). Does not support statically linked executables. </p>
-<h2>Index</h2>

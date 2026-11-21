@@ -1264,4 +1264,3 @@ path old-file old-hex old-mode new-file new-hex new-mode
 <dt>
 </dt><dd> mailto:git-security [at] googlegroups.com</dd></dl>
 </dl>
-<h2>Index</h2>

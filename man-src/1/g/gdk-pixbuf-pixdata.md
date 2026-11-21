@@ -20,4 +20,3 @@ description: "gdk-pixbuf-pixdata – GDK Pixbuf library"
 <dt><code>&#8211;g-fatal-warnings</code></dt>
 <dd> make warnings fatal (abort)</dd></dl>
 <p> gdk-pixbuf-pixdata comes with ABSOLUTELY NO WARRANTY. You may redistribute copies of gdk-pixbuf-pixdata under the terms of the GNU Lesser General Public License which can be found in the gdk-pixbuf source package. Sources, examples and contact information are available at <a rel="nofollow" href="http://www.gtk.org">http://www.gtk.org</a> </p>
-<h2>Index</h2>

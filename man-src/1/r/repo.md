@@ -31,4 +31,3 @@ npm repo &lt;pkgname&gt;
 <dt>&bull;</dt>
 <dd> npm help config</dd>
 </dl>
-<h2>Index</h2>

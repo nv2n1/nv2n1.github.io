@@ -157,4 +157,3 @@ user_patterns_suffix user-patterns
 <p> Ahmad Abdulkader, Chris Newton, Dan Johnson, Dar-Shyang Lee, David Eger, Eric Wiseblatt, Faisal Shafait, Hiroshi Takenaka, Joe Liu, Joern Wanke, Mark Seaman, Mickey Namiki, Nicholas Beato, Oded Fuhrmann, Phil Cheatle, Pingping Xiu, Pong Eksombatchai (Chantat), Ranjith Unnikrishnan, Raquel Romano, Ray Smith, Rika Antonova, Robert Moss, Samuel Charron, Sheelagh Lloyd, Shobhit Saxena, and Thomas Kielbus.</p>
 <h2>COPYING</h2>
 <p> Licensed under the Apache License, Version 2.0 </p>
-<h2>Index</h2>

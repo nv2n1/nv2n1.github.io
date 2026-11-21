@@ -45,4 +45,3 @@ description: "h5cc – Helper script to compile HDF5 applications."
 <dd> Use shared version of the HDF5 library [default: no].</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5fc/">h5fc</a></i>(1), <i>h5c++</i>(1) </p>
-<h2>Index</h2>

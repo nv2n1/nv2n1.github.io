@@ -110,4 +110,3 @@ $ DISPLAY=:0.0 fbsetbg -l
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

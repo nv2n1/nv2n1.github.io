@@ -65,4 +65,3 @@ Copyright 2012, Red Hat, Inc.
 Benjamin Tissoires &lt;benjamin.tissoires [at] redhat.com&gt;
 </pre>
 </dd></dl>
-<h2>Index</h2>

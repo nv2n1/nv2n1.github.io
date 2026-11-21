@@ -42,4 +42,3 @@ description: "distccmon-text – Displays current compilation jobs in text form.
 <p> distcc was written by Martin Pool &lt;mbp [at] sourcefrog.net&gt;, with the co-operation of many scholars including Wayne Davison, Frerich Raabe, Dimitri Papadopoulos and others noted in the NEWS file. Please report bugs to &lt;distcc [at] lists.samba.org&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-distccd/">distccd</a>(1), <a href="/docs/linux/man/1-ccache/">ccache</a>(1), <a href="/docs/linux/man/1-gcc/">gcc</a>(1), <a href="/docs/linux/man/1-make/">make</a>(1) <a rel="nofollow" href="http://code.google.com/p/distcc/">http://code.google.com/p/distcc/</a> <a rel="nofollow" href="http://ccache.samba.org/">http://ccache.samba.org/</a> </p>
-<h2>Index</h2>

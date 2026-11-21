@@ -22,4 +22,3 @@ description: "bmp2tiff – create a TIFF file from a Microsoft Windows Device In
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gif2tiff/">gif2tiff</a></code>(1), <code><a href="/docs/linux/man/1-pal2rgb/">pal2rgb</a></code>(1), <code><a href="/docs/linux/man/1-ppm2tiff/">ppm2tiff</a></code>(1), <code><a href="/docs/linux/man/1-raw2tiff/">raw2tiff</a></code>(1), <code><a href="/docs/linux/man/1-ras2tiff/">ras2tiff</a></code>(1), <code>sgi2tiff</code>(1), <code>libtiff</code>(3TIFF) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
-<h2>Index</h2>

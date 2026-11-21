@@ -32,4 +32,3 @@ description: "guilt-fork – Fork the topmost applied patch"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

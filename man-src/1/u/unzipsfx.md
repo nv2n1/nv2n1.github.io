@@ -126,4 +126,3 @@ letters -z
 </pre>
 <h2>AUTHORS</h2>
 <p> Greg Roelofs was responsible for the basic modifications to UnZip necessary to create UnZipSFX. See <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) for the current list of Zip-Bugs authors, or the file CONTRIBS in the UnZip source distribution for the full list of Info-ZIP contributors. </p>
-<h2>Index</h2>

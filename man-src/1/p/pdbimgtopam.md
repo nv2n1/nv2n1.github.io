@@ -29,4 +29,3 @@ description: "pdbimgtopam – convert a Palm Pilot Image Viewer PDB Image to a P
 <p> <code><a href="/docs/linux/man/1-pamtopdbimg/">pamtopdbimg</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtopalm/">pnmtopalm</a></code>(1) , <code>pam</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pdbimgtopam</code> was new in Netpbm 10.52 (September 2010). It was modelled after Eric A. Howe&#8217;s <code>imgvtopbm</code> package, which dates back to September 1997. </p>
-<h2>Index</h2>

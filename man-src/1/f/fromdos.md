@@ -48,4 +48,3 @@ description: "tofrodos – Converts text files between DOS and Unix formats."
 <p> The program and its documentation are copyrighted (c) 1996-2013 by Christopher Heng. All rights reserved. They are distributed under the terms of the GNU General Public License Version 2. </p>
 <p> The latest version of tofrodos can be obtained from<br />
  <a rel="nofollow" href="http://www.thefreecountry.com/tofrodos/index.shtml">http://www.thefreecountry.com/tofrodos/index.shtml</a> </p>
-<h2>Index</h2>

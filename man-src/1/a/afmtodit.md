@@ -78,4 +78,3 @@ description: "afmtodit – create font files for use with groff -Tps and -Tpdf"
 <h2>SEE ALSO</h2>
 <p> <i>Groff: The GNU Implementation of troff</i>, by Trent A. Fisher and Werner Lemberg, is the primary <i>groff</i> manual. Section &#8220;Using Symbols&#8221; may be of particular note. You can browse it interactively with &#8220;info &#8216;(groff)Using Symbols'&#8221;. </p>
 <p> <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-gropdf/">gropdf</a></i>(1), <i><a href="/docs/linux/man/1-grops/">grops</a></i>(1), <i><a href="/docs/linux/man/5-groff_font/">groff_font</a></i>(5), <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1) </p>
-<h2>Index</h2>

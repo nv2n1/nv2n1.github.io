@@ -16,4 +16,3 @@ description: "exifautotran – Transforms Exif files so that Orientation becomes
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Guido Vollbeding&nbsp;&lt;guido [at] jpegclub.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a>(1)</code> <code><a href="/docs/linux/man/1-jpegexiforient/">jpegexiforient</a>(1)</code> </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "QuantLib::ProjectedCostFunction – Parameterized cost function."
 <p> This class creates a proxy cost function which can depend on any arbitrary subset of parameters (the other being fixed) </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

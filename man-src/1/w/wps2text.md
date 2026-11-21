@@ -18,4 +18,3 @@ description: "wps2text – convert Works document into plain text"
 <dt><code>-v</code>:</dt>
 <dd> Output wps2text version </dd>
 </dl>
-<h2>Index</h2>

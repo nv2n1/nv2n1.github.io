@@ -30,4 +30,3 @@ description: "h5mkgrp: – Creates a new HDF5 group in a file"
 <dt>
 </dt><dd> <code>info h5mkgrp:</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -417,4 +417,3 @@ description: "gcin-setup – configuration tools of gcin"
  <code>0 OFF</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1) </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "sgscan – scan an file or mailbox for viruses/spams"
 <p> Jan ONDREJ (SAL) &lt;ondrejj (at) salstar.sk&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sgfilter/">sgfilter</a>(1), <a href="/docs/linux/man/8-sagator/">sagator</a>(8), <a href="/docs/linux/man/8-sqback/">sqback</a>(8) </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "iv_init, iv_deinit, iv_inited – initialise and deinitialise ivyk
 <p> <code>iv_inited</code> returns true if <code>iv_init</code> has been called in this thread. After <code>iv_deinit</code> is called, it will return false.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
-<h2>Index</h2>

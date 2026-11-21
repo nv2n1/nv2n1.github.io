@@ -23,4 +23,3 @@ void ibnd_iter_nodes(ibnd_fabric_t *fabric, ibnd_iter_func_t func, void *user_da
 <dt>Ira Weiny &lt;weiny2 [at] llnl.gov&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

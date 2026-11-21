@@ -30,4 +30,3 @@ description: "ttftotype42 – create PostScript Type 42 wrapper of TrueType font
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
 <p> The latest version is available from:<br />
  <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a> </p>
-<h2>Index</h2>

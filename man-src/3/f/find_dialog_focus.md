@@ -16,4 +16,3 @@ description: "find_dialog_focus – Searches the dialog for the object which has
 <p> Searches the dialog for the object which has the input focus, returning an index or -1 if the focus is not set. This is useful if you are calling do_dialog() several times in a row and want to leave the focus in the same place it was when the dialog was last displayed, as you can call do_dialog(dlg, find_dialog_focus(dlg)); </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-do_dialog/">do_dialog</a></code>(3), <code>init_dialog</code>(3), <code>offer_focus</code>(3) </p>
-<h2>Index</h2>

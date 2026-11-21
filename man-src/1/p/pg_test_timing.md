@@ -126,4 +126,3 @@ Histogram of timing durations:
 <p> Ants Aasma &lt;ants.aasma [at] eesti.ee&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-explain/">EXPLAIN</a></code>(7) </p>
-<h2>Index</h2>

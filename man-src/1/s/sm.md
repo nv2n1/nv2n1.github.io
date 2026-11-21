@@ -45,4 +45,3 @@ description: "sm – Command-line interface to the INN storage manager"
 <p> <tt>$Id:</tt> sm.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8), <i><a href="/docs/linux/man/1-grephistory/">grephistory</a></i>(1), <i><a href="/docs/linux/man/5-history/">history</a></i>(5), <i><a href="/docs/linux/man/1-rnews/">rnews</a></i>(1), <i><a href="/docs/linux/man/5-storage-conf/">storage.conf</a></i>(5). </p>
-<h2>Index</h2>

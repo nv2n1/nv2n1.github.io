@@ -175,4 +175,3 @@ description: "krb5_introduction – Introduction to the Kerberos 5 API"
 <h3>Error messages</h3>
 <p> To get the error string, Heimdal uses <code>krb5_get_error_message()</code>. This is to return custom error messages (like Can&#8217;t find host/datan.example.com\@CODE.COM in /etc/krb5.conf.&#8221; instead of aKey table entry not found&#8221; that error_message returns. </p>
 <p> Heimdal uses a threadsafe(r) version of the com_err interface; the global com_err table isn&#8217;t initialised. Then error_message returns quite a boring error string (just the error code itself). </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ description: "finger – user information lookup program"
 <p> <a href="/docs/linux/man/1-chfn/">chfn</a>(1), <a href="/docs/linux/man/1-passwd/">passwd</a>(1), <a href="/docs/linux/man/1-w/">w</a>(1), <a href="/docs/linux/man/1-who/">who</a>(1)</p>
 <h2>HISTORY</h2>
 <p> The <code>finger</code> command appeared in BSD 3.0 </p>
-<h2>Index</h2>

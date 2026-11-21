@@ -20,4 +20,3 @@ description: "ql/math/integrals/gausslobattointegral.hpp – integral of a one-d
 <p> integral of a one-dimensional function using the adaptive Gauss-Lobatto integral </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

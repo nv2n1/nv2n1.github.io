@@ -50,4 +50,3 @@ description: "update-desktop-database – Build cache database of MIME types han
 </dt><dd> This file is the cache database created by <i>update-desktop-database</i>.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>update-desktop-database</i> program, please report these on <a rel="nofollow" href="https://bugs.freedesktop.org.">https://bugs.freedesktop.org.</a> </p>
-<h2>Index</h2>

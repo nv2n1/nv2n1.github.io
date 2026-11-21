@@ -52,4 +52,3 @@ description: "munin-run – A program to run Munin plugins from the command line
 <p> Copyright (C) 2002-2009 Audun Ytterdal, Jimmy Olsen, Tore Anderson, Nicolai Langfeldt / Linpro <font SIZE="-1">AS.</font> </p>
 <p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
 <p> This program is released under the <font SIZE="-1">GNU</font> General Public License </p>
-<h2>Index</h2>

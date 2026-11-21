@@ -40,4 +40,3 @@ description: "wks2csv – convert Works spreadsheet into CSV"
 <dt>
 </dt><dd> If <code>-F</code> is present, the formula are generated which english names </dd>
 </dl>
-<h2>Index</h2>

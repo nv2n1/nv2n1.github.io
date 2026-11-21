@@ -57,4 +57,3 @@ description: "v.what.vect – Uploads vector values at positions of vector point
 <p> <i>Last changed: $Date: 2007-06-10 13:23:21 +0200 (Sun, 10 Jun 2007) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

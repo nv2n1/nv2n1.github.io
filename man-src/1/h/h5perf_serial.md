@@ -140,4 +140,3 @@ description: "h5perf_serial: – Measures HDF5 serial performance."
 <dt>
 </dt><dd> <code>info h5perf_serial:</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

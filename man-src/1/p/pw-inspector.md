@@ -44,4 +44,3 @@ description: "pw-inspector – A tool to reduce the password list"
 <h2>AUTHOR</h2>
 <p> hydra was written by van Hauser / THC &lt;vh [at] thc.org&gt; and co-maintained by David Maciejak &lt;david.maciejak [at] gmail.com&gt;. </p>
 <p> This manual page was written by Daniel Echeverry &lt;epsilon77 [at] gmail.com&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

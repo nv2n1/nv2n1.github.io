@@ -30,4 +30,3 @@ description: "pdns_server – The PowerDNS nameserver"
 <dd> Control socket used to communicate with <code>pdns_server</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>pdns_control</code>(8) </p>
-<h2>Index</h2>

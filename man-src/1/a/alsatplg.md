@@ -54,4 +54,3 @@ description: "alsatplg – ALSA Topology Compiler"
 <p> Jaroslav Kysela &lt;perex [at] perex.cz&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> GPLv2+ </p>
-<h2>Index</h2>

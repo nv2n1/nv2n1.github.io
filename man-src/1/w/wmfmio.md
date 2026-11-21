@@ -54,4 +54,3 @@ description: "wmfmio – WindowMaker dockable application to manipulate fm radio
 <h2>AUTHORS</h2>
 <p> Author of wmtune &#8211; Soren Aq soren [at] leiden.org </p>
 <p> Author of fmio &#8211; Vladimir Popov Aq jumbo [at] narod.ru </p>
-<h2>Index</h2>

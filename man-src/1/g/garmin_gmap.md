@@ -16,4 +16,3 @@ description: "garmin_gmap – convert .gmn files into xml data for use with gool
 <p> <code><a href="/docs/linux/man/1-garmin_get_info/">garmin_get_info</a></code>(1), <code><a href="/docs/linux/man/1-garmin_save_runs/">garmin_save_runs</a></code>(1), <code><a href="/docs/linux/man/1-garmin_dump/">garmin_dump</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> garmin_get_info was written by Dave Bailey. </p>
-<h2>Index</h2>

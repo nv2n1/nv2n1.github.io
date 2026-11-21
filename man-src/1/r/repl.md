@@ -202,4 +202,3 @@ fcc     string   Any folders specified with `-fcc folder'
 <p> If any addresses occur in the reply template, addresses in the template that do not contain hosts are defaulted incorrectly. Instead of using the localhost for the default, <code>repl</code> uses the sender&#8217;s host. Moral of the story: if you&#8217;re going to include addresses in a reply template, include the host portion of the address. </p>
 <p> The <code>-width</code> <i>columns</i> switch is only used to do address-folding; other headers are not line-wrapped. </p>
 <p> If <i>whatnowproc</i> is <code>whatnow</code>, then <code>repl</code> uses a built-in <code>whatnow</code>, it does not actually run the <code>whatnow</code> program. Hence, if you define your own <i>whatnowproc</i>, don&#8217;t call it <code>whatnow</code> since <code>repl</code> won&#8217;t run it. </p>
-<h2>Index</h2>

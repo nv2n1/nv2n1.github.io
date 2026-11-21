@@ -111,4 +111,3 @@ description: "pamsistoaglyph – convert a single-image stereogram to a red/cyan
 <dd>
 <p> <a rel="nofollow" href="http://en.wikipedia.org/wiki/Stereogram">http://en.wikipedia.org/wiki/Stereogram</a> </p>
 </dd></dl>
-<h2>Index</h2>

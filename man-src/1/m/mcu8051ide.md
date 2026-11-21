@@ -97,4 +97,3 @@ description: "MCU 8051 IDE – Itegrated development enviroment for MCS-51 based
 <p> Add support for more MCS-51 based microcontrollers. Fix all bugs. </p>
 <h2>AUTHOR</h2>
 <p> Martin Osmera &lt;martin.osmera [at] gmail.com&gt; </p>
-<h2>Index</h2>

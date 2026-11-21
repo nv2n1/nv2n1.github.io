@@ -73,4 +73,3 @@ description: "euca-describe-route-tables – Describe one or more VPC route tabl
 <dt>vpc-id</dt>
 <dd> the associated VPC&#8217;s ID </dd>
 </dl>
-<h2>Index</h2>

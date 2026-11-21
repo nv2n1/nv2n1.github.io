@@ -685,4 +685,3 @@ auto-execute *.c c-mode
 <p> Since it is written completely in C, there is currently no language in which extensions can be written; however, keys can be rebound and certain parameters can be changed in startup files. </p>
 <p> In order to use 8-bit characters (such as German umlauts), the Meta key needs to be disabled via the &#8220;meta-key-mode&#8221; command. </p>
 <p> Multi-byte character sets, such as UTF-8, are not supported. </p>
-<h2>Index</h2>

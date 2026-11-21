@@ -92,4 +92,3 @@ description: "locate – find files by name"
 <p> Miloslav Trmac &lt;mitr [at] redhat.com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-updatedb/">updatedb</a></code>(8), <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), </p>
-<h2>Index</h2>

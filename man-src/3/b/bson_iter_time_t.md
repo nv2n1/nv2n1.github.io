@@ -24,4 +24,3 @@ bson_iter_time_t(const bson_iter_t *iter);
 <p> A <code>time_t</code> containing the number of seconds since the UNIX epoch. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "docker-rm – Remove one or more containers"
 <p> <code>-v</code>, <code>&#8211;volumes</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Remove anonymous volumes associated with the container</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

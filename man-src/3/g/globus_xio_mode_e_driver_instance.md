@@ -13,4 +13,3 @@ description: "Opening/Closing – An XIO handle with the mode_e driver can be cr
 <p> When the XIO handle is closed, the mode_e driver will destroy its internal resources and close the stream(s). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

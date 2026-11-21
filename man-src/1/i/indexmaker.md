@@ -107,4 +107,3 @@ description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4
 <p> <font SIZE="-1">GNU</font> General Public License</p>
 <h2>COPYRIGHT</h2>
 <p> 2000-2001 Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

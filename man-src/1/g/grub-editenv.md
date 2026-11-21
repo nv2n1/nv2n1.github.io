@@ -45,4 +45,3 @@ description: "grub-editenv – edit GRUB environment block"
 <dt>
 </dt><dd> <code>info grub-editenv</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

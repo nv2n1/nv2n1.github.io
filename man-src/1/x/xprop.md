@@ -136,4 +136,3 @@ description: "xprop – property displayer for X"
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a>(1), <a href="/docs/linux/man/1-xwininfo/">xwininfo</a>(1), <a href="/docs/linux/man/1-xdriinfo/">xdriinfo</a>(1), <a href="/docs/linux/man/1-glxinfo/">glxinfo</a>(1), <a href="/docs/linux/man/1-xvinfo/">xvinfo</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Mark Lillibridge, MIT Project Athena </p>
-<h2>Index</h2>

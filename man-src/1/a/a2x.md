@@ -319,4 +319,3 @@ XSLTPROC_OPTS = ''
 <p> Main web site: <a rel="nofollow" href="http://www.methods.co.nz/asciidoc/">http://www.methods.co.nz/asciidoc/</a></p>
 <h2>COPYING</h2>
 <p> Copyright (C) 2002-2011 Stuart Rackham. Free use of this software is granted under the terms of the MIT license. </p>
-<h2>Index</h2>

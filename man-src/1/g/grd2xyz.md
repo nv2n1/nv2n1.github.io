@@ -93,4 +93,3 @@ gmt grd2xyz raw_data.nc -ZTLf &gt; hawaii_grv.b
 <p> <code>gmt.conf</code>, <code>gmt</code>, <code>grdedit</code>, <code>grdconvert</code>, <code>xyz2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

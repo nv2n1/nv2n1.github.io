@@ -30,4 +30,3 @@ description: "gst-feedback – generate debug info for GStreamer bug reports"
 <p> <code>gst-inspect</code>(1), <code>gst-launch</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
-<h2>Index</h2>

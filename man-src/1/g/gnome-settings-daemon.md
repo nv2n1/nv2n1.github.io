@@ -42,4 +42,3 @@ description: "gnome-settings-daemon – GNOME settings daemon"
 </dt><dd> Autostart file for gnome-settings-daemon, where its autostart phase is set.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gnome-shell/">gnome-shell</a></code>(1), <code><a href="/docs/linux/man/1-gnome-control-center/">gnome-control-center</a></code>(1), <code><a href="/docs/linux/man/1-gnome-session/">gnome-session</a></code>(1) </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ description: "pyclean – removes .pyc and .pyo files"
 <dd> specify Debian package name to clean (combining with DIR_OR_FILE will additionally limit list of files)</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-201 </p>
-<h2>Index</h2>

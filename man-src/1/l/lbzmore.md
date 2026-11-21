@@ -65,4 +65,3 @@ description: "lbzmore – file perusal filter for crt viewing of compressed text
 <dd> Terminal data base</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-more/">more</a>(1), <a href="/docs/linux/man/1-lbzip2/">lbzip2</a>(1), <a href="/docs/linux/man/1-lbzdiff/">lbzdiff</a>(1), <a href="/docs/linux/man/1-lbzgrep/">lbzgrep</a>(1), <a href="/docs/linux/man/1-lbzforce/">lbzforce</a>(1), <a href="/docs/linux/man/1-lbzexe/">lbzexe</a>(1) </p>
-<h2>Index</h2>

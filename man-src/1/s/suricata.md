@@ -137,4 +137,3 @@ description: "suricata – Suricata"
 <dd> Suricata Support Page <i><a rel="nofollow" href="https://suricata-ids.org/support/">https://suricata-ids.org/support/</a></i></dd></dl>
 <h2>COPYRIGHT</h2>
 <p> 2016, OISF </p>
-<h2>Index</h2>

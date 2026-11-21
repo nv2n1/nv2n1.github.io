@@ -1131,4 +1131,3 @@ description: "BeakerLib – a shell-level integration testing library"
 <dt>&bull;</dt>
 <dd> Jakub Prokes &lt;jprokes [at] redhat.com&gt; </dd>
 </dl>
-<h2>Index</h2>

@@ -90,4 +90,3 @@ description: "vstpg, vstpp – VisioBraille file transferring"
 <p> The one we could find has been corrected :) </p>
 <h2>AUTHOR</h2>
 <p> Samuel Thibault &lt;samuel.thibault [at] ens-lyon.org&gt; and Sebastien Hinderer &lt;sebastien.hinderer [at] ens-lyon.fr&gt; </p>
-<h2>Index</h2>

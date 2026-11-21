@@ -37,4 +37,3 @@ description: "guilt-rm – Remove a file from the git tree and guilt"
 <dt>
 </dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
-<h2>Index</h2>

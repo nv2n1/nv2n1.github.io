@@ -32,4 +32,3 @@ description: "dh_autotools-dev_updateconfig – update config.sub and config.gue
 <p> This program is meant to be used together with debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Fabian Greffrath &lt;fabian+debian [at] greffrath.com&gt; </p>
-<h2>Index</h2>

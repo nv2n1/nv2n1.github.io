@@ -63,4 +63,3 @@ description: "stest – filter a list of files by properties"
 <dd> An error occurred.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-dmenu/">dmenu</a></i>(1), <i><a href="/docs/linux/man/1-test/">test</a></i>(1) </p>
-<h2>Index</h2>

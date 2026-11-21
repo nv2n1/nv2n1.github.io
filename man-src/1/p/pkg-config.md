@@ -234,4 +234,3 @@ Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib/include
 <h2>BUGS</h2>
 <p> <i>pkg-config</i> does not handle mixing of parameters with and without = well. Stick with one. </p>
 <p> Bugs can be reported at <a rel="nofollow" href="http://bugs.freedesktop.org/">http://bugs.freedesktop.org/</a> under the <i>pkg-config</i> component. </p>
-<h2>Index</h2>

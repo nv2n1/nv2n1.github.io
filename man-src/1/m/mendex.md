@@ -395,4 +395,3 @@ description: "mendex – Japanese index processor"
 <p> <a href="/docs/linux/man/1-tex/">tex</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1), <a href="/docs/linux/man/1-makeindex/">makeindex</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Japanese TeX Development Community. </p>
-<h2>Index</h2>

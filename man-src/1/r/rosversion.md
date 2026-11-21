@@ -20,4 +20,3 @@ description: "rosversion – rosverion command"
 <p> Ken Conley</p>
 <h2>COPYRIGHT</h2>
 <p> 2011, Willow Garage </p>
-<h2>Index</h2>

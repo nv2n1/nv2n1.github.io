@@ -86,4 +86,3 @@ atomic diff foo1 foo2 --keywords sha256digest time
 </dd></dl>
 <h2>HISTORY</h2>
 <p> Updated by Brent Baude (bbaude at redhat dot com) Nov 2016 Updated by Brent Baude (bbaude at redhat dot com) May 2016 Initial revision by Brent Baude (bbaude at redhat dot com) November 2015 </p>
-<h2>Index</h2>

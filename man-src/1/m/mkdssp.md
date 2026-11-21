@@ -151,4 +151,3 @@ description: "mkdssp – Calculate secondary structure for proteins in a PDB fil
 <p> If you find any, please let me know.</p>
 <h2>AUTHOR</h2>
 <p> Maarten L. Hekkelman (m.hekkelman (at) cmbi.ru.nl) </p>
-<h2>Index</h2>

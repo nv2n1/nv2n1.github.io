@@ -37,4 +37,3 @@ description: "dircolors – color setup for ls"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/dircolors">https://www.gnu.org/software/coreutils/dircolors</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) dircolors invocation&#8217; </p>
-<h2>Index</h2>

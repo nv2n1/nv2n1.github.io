@@ -24,4 +24,3 @@ description: "dpromdic – Convert the binary-form Romaji-to-Kana conversion tab
 </pre>
 <h2>SEE ALSO</h2>
 <p> mkromdic(1) </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ do_ellipse(screen, SCREEN_W / 2, SCREEN_H / 2,
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-do_circle/">do_circle</a></code>(3), <code><a href="/docs/linux/man/3-do_arc/">do_arc</a></code>(3), <code><a href="/docs/linux/man/3-do_line/">do_line</a></code>(3), <code><a href="/docs/linux/man/3-ellipse/">ellipse</a></code>(3), <code><a href="/docs/linux/man/3-ellipsefill/">ellipsefill</a></code>(3) </p>
-<h2>Index</h2>

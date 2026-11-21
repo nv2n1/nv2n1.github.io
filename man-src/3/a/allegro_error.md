@@ -30,4 +30,3 @@ Last Allegro error `%s'
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code>install_sound</code>(3) </p>
-<h2>Index</h2>

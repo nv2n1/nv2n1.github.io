@@ -22,4 +22,3 @@ description: "libssh2_session_block_directions – get directions to wait for"
 <p> Application should wait for data to be available for socket prior to calling a libssh2 function again. If <code>LIBSSH2_SESSION_BLOCK_INBOUND</code> is set select should contain the session socket in readfds set. Correspondingly in case of <code>LIBSSH2_SESSION_BLOCK_OUTBOUND</code> writefds set should contain the socket.</p>
 <h2>AVAILABILITY</h2>
 <p> Added in 1.0 </p>
-<h2>Index</h2>

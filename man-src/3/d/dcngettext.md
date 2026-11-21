@@ -34,4 +34,3 @@ char *dcngettext(const char *domainname,
 <p> The return type ought to be <code>const char *</code>, but is <code>char *</code> to avoid warnings in C code predating ANSI C.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gettext/">gettext</a></code>(3), <code><a href="/docs/linux/man/3-dgettext/">dgettext</a></code>(3), <code><a href="/docs/linux/man/3-dcgettext/">dcgettext</a></code>(3) </p>
-<h2>Index</h2>

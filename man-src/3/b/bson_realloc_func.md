@@ -29,4 +29,3 @@ typedef void *(*bson_realloc_func)(void *mem,
 <p> This is a prototype for pluggable realloc functions used through the Libbson library. If you wish to use a custom allocator this is one way to do it. Additionally, <code><a href="/docs/linux/man/3-bson_realloc_ctx/">bson_realloc_ctx</a>(3)</code> is a default implementation of this prototype. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

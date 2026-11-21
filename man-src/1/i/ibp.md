@@ -29,4 +29,3 @@ description: "ibp – show which of the International Beacon Project beacons is 
 <h2>AUTHOR</h2>
 <p> Pieter-Tjerk de Boer &lt;pa3fwm [at] amsat.org&gt;; via amateur packet-radio: PA3FWM @ PI8DAZ.#TWE.NLD.EU. </p>
 <p> The X11 display code is heavily based on the &#8216;sunclock&#8217; program by John Mackin &lt;john [at] cs.su.oz.AU&gt;. </p>
-<h2>Index</h2>

@@ -234,4 +234,3 @@ description: "safekeep – Client/server backup script"
 <dt>
 </dt><dd> mailto:stelian [at] lattica.com</dd></dl>
 </dl>
-<h2>Index</h2>

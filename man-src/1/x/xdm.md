@@ -542,4 +542,3 @@ then<br />
  <i>X Display Manager Control Protocol</i></p>
 <h2>AUTHOR</h2>
 <p> Keith Packard, MIT X Consortium </p>
-<h2>Index</h2>

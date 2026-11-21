@@ -34,4 +34,3 @@ description: "foomatic-compiledb – Compile the Foomatic printer/driver databas
 <p> Existing files are always conserved instead of older files being overwritten. So deleting the destination directory (rm -rf dir) and calling foomatic-compiledb without the -f option is recommended. </p>
 <p> Please post bug reports on </p>
 <p> <a rel="nofollow" href="http://lists.freestandards.org/mailman/listinfo/printing-foomatic">http://lists.freestandards.org/mailman/listinfo/printing-foomatic</a> </p>
-<h2>Index</h2>

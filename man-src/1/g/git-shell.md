@@ -72,4 +72,3 @@ $ chmod +x $HOME/git-shell-commands/cvs
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1), <code><a href="/docs/linux/man/1-git-daemon/">git-daemon</a></code>(1), contrib/git-shell-commands/README</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

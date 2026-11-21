@@ -136,4 +136,3 @@ uustat-- command rmail-- older - than 168 --kill - all-- no - list-- mail-- noti
 <p> <a href="/docs/linux/man/1-ps/">ps</a>(1), rmail(1), <a href="/docs/linux/man/1-uucp/">uucp</a>(1), <a href="/docs/linux/man/1-uux/">uux</a>(1), <a href="/docs/linux/man/8-uucico/">uucico</a>(8), <a href="/docs/linux/man/8-uuxqt/">uuxqt</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> Ian Lance Taylor (ian [at] airs.com) </p>
-<h2>Index</h2>

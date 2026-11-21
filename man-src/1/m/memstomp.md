@@ -30,4 +30,3 @@ description: "memstomp – detect function calls with overlapping memory regions
 <h2>AUTHORS</h2>
 <p> Lennart Poettering &lt;lennart [at] poettering.net&gt;<br />
  William Cohen &lt;wcohen [at] redhat.com&gt; </p>
-<h2>Index</h2>

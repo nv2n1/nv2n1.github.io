@@ -36,4 +36,3 @@ int ares_save_options(ares_channel channel, struct ares_options *options, int *o
 <h2>AUTHOR</h2>
 <p> Brad House<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

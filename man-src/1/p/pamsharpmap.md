@@ -23,4 +23,3 @@ description: "pamsharpmap – create map of sharpness in a PNM/PAM image"
 <p> <code><a href="/docs/linux/man/1-pamsharpness/">pamsharpness</a></code>(1) , <code><a href="/docs/linux/man/1-pammasksharpen/">pammasksharpen</a></code>(1) , <code><a href="/docs/linux/man/1-pamedge/">pamedge</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamsharpmap</code> was added to Netpbm in Release 10.21 (March 2004). Bryan Henderson derived it from the program <code>pnmsharp</code> by B.W. van Schooten and distributed as part of the Photopnmtools package. </p>
-<h2>Index</h2>

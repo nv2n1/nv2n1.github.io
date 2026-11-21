@@ -78,4 +78,3 @@ description: "tsplot – Plot several tsung logs on the same charts, for compari
 <p> Please reports bugs to the mailing list &lt;tsung-users [at] process-one.net&gt; or in the bug tracker &lt;URL:<a rel="nofollow" href="https://support.process-one.net/browse/TSUN">https://support.process-one.net/browse/TSUN</a>&gt;, see also &lt;URL:<a rel="nofollow" href="https://lists.process-one.net/mailman/listinfo/tsung-users">https://lists.process-one.net/mailman/listinfo/tsung-users</a>&gt; for archives.</p>
 <h2>AUTHORS</h2>
 <p> <code>tsplot</code> is written by Dimitri Fontaine &lt;dim [at] tapoueh.org&gt;. </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "tiki2po – Convert TikiWiki’s language.php files to GetText PO 
 <dt>&#8211;include-unused</dt>
 <dd> Include strings in the unused section </dd>
 </dl>
-<h2>Index</h2>

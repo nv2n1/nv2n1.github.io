@@ -37,4 +37,3 @@ evemu - event / dev / input / eventX[--sync]-- type&lt;type&gt; --code&lt;code&g
 <dt>
 </dt><dd> mailto:rydberg [at] euromail.se</dd></dl>
 </dl>
-<h2>Index</h2>

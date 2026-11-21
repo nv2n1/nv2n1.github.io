@@ -30,4 +30,3 @@ description: "ldns_pkt_verify"
 <p> <i>ldns_verify</i>, <i>ldns_sign_public</i>, <i>ldns_zone_sign</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>

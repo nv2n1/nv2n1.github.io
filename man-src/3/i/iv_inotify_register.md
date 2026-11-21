@@ -42,4 +42,3 @@ struct iv_inotify_watch {
 <p> iv_inotify will return errors returned by <code>inotify_init</code>(3) and <code>inotify_add_watch</code>(3).</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7), <code>inotify_init</code>(3), <code>inotify_add_watch</code>(3), <code>inotify_rm_watch</code>(3) </p>
-<h2>Index</h2>

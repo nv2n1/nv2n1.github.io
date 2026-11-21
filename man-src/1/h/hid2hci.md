@@ -31,4 +31,3 @@ description: "hid2hci – Bluetooth HID to HCI mode switching utility"
 <p> Marcel Holtmann &lt;marcel [at] holtmann.org&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Free use of this software is granted under ther terms of the GNU Lesser General Public Licenses (LGPL). </p>
-<h2>Index</h2>

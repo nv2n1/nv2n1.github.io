@@ -46,4 +46,3 @@ description: "ffind – Finds the name of the file or directory using a given in
 <h2>AUTHOR</h2>
 <p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
 <p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

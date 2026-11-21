@@ -32,4 +32,3 @@ description: "pammixinterlace – mix adjacent lines to merge interlaced images"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamdeinterlace/">pamdeinterlace</a></code>(1) , <code>pam</code>(1) </p>
 <p> <code>pnm</code>(1) </p>
-<h2>Index</h2>

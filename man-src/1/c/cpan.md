@@ -166,4 +166,3 @@ cpan module_name[module_name...]
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001-2015, brian d foy, All Rights Reserved. </p>
 <p> You may redistribute this under the same terms as Perl itself. </p>
-<h2>Index</h2>

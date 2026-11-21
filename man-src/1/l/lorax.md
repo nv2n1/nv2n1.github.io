@@ -66,4 +66,3 @@ Martin Gracik
 Will Woods
 Brian C. Lane
 </pre>
-<h2>Index</h2>

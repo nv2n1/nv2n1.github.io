@@ -65,4 +65,3 @@ description: "libpgm – libnetpbm functions to read and write PGM image files"
 <p> <code>pgm_check() </code> is analogous to <code>pbm_check()</code>, but works on PGM and PBM files. </p>
 <h2>SEE ALSO</h2>
 <p> <code>libpbm</code>(1) , <code>libppm</code>(1) , <code>libpnm</code>(1) </p>
-<h2>Index</h2>

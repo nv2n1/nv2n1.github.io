@@ -50,4 +50,3 @@ description: "cdda2ogg — extract audio CD audio tracks and encode them"
 <p> <code>submit [at] bugs.debian.org</code> </p>
 <p> writing at least a short description into the Subject and &quot;Package: cdrkit&quot; into the first line of the mail body. </p>
 <p> This manual page was written by Eduard Bloch (blade [at] debian.org) for the <code>Debian GNU/Linux system (but may be used by others). Permission is granted</code> to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 as published by the Free Software Foundation. </p>
-<h2>Index</h2>

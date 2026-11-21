@@ -20,4 +20,3 @@ description: "mispipe – pipe two commands, returning the exit status of the fi
 <p> The exit status of the first command. If the process terminated abnormally (due to a signal), 128 will be added to its exit status.</p>
 <h2>AUTHOR</h2>
 <p> Nathanael Nerode </p>
-<h2>Index</h2>

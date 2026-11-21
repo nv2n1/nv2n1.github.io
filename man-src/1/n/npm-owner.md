@@ -47,4 +47,3 @@ npm owner add&lt;user&gt;[&lt;@scope&gt; / ]&lt;pkg&gt;
 <dd> npm help disputes </dd>
 </dl>
 </dl>
-<h2>Index</h2>

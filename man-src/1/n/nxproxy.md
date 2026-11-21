@@ -17,4 +17,3 @@ description: "nxproxy – NX Proxy Tool"
 <p> For an insight in <code>nxproxy</code> options use <code>nxproxy -help</code> on the command line. </p>
 <h2>AUTHOR</h2>
 <p> This manual has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the X2Go project (<a rel="nofollow" href="http://www.x2go.org">http://www.x2go.org</a>). </p>
-<h2>Index</h2>

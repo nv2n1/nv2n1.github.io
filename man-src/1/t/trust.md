@@ -261,4 +261,3 @@ $ trust dump
 <p> <code><a href="/docs/linux/man/8-p11-kit/">p11-kit</a></code>(8) </p>
 <p> An explanatory document about storing trust policy: m[blue]<code><a rel="nofollow" href="https://p11-glue.github.io/p11-glue/doc/storing-trust-policy/">https://p11-glue.github.io/p11-glue/doc/storing-trust-policy/</a></code>m[] </p>
 <p> Further details available in the p11-kit online documentation at m[blue]<code><a rel="nofollow" href="https://p11-glue.github.io/p11-glue/p11-kit/manual/">https://p11-glue.github.io/p11-glue/p11-kit/manual/</a></code>m[]. </p>
-<h2>Index</h2>

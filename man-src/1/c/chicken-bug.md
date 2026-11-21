@@ -30,4 +30,3 @@ description: "chicken-bug – generates a bug report from user input"
 <p> The CHICKEN Team. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chicken/">chicken</a>(1)</code> </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "archdetect – detect hardware architecture"
 <dd> When bringing up new subarchitectures, may not yet have been taught about this specific machine. This option asks that try to guess a generic subarchitecture that may be compatible with this machine. This is only necessary on certain architectures, and simply has no effect elsewhere.</dd></dl>
 <h2>AUTHORS</h2>
 <p> was written by the Debian Installer team. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL ico
 <p> Before May 2002, <code>pamtouil</code> was called <code>ppmtouil</code> and had no way to specify transparency. </p>
 <h2>AUTHOR</h2>
 <p> Converted by Bryan Henderson from ppmtouil.c, which was converted by Jef Poskanzer from ppmtoxpm.c, which is Copyright (C) 1990 by Mark W. Snitily </p>
-<h2>Index</h2>

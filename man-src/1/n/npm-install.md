@@ -446,4 +446,3 @@ A-&gt;B-&gt;A ' -&gt; B'-&gt;A-&gt;B-&gt;A ' -&gt; B'-&gt;A-&gt;...
 <dd> npm help package.json </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "bfuse – Create a FUSE filesystem out of BlackBerry databases."
 <p> <code>bfuse</code> is part of the Barry project and was written Chris Frey, as was this manual page.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

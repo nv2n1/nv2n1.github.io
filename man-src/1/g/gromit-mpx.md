@@ -53,4 +53,3 @@ description: "Gromit-MPX – Presentation helper to make annotations on screen"
 <h2>AUTHORS</h2>
 <p> Simon Budig &lt;simon [at] gimp.org&gt; Christian Beier &lt;dontmind [at] freeshell.org&gt; </p>
 <p> This manual page was written by Pierre Chifflier &lt;chifflier [at] cpe.fr&gt; and Simon Budig for the original Gromit and extended for Gromit-MPX by Christian Beier. </p>
-<h2>Index</h2>

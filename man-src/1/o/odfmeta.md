@@ -75,4 +75,3 @@ odfmeta -I &quot;title:The Little Engine That Could&quot; -A subject:I-think-I-c
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

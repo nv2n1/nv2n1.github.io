@@ -37,4 +37,3 @@ description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 <h2>AUTHORS</h2>
 <p> This program was originally written as Tbmptopnm.c, by Ian Goldberg. It was heavily modified by Bill Janssen to add color, compression, and transparency function.<br />
  Copyright 1995-2001 by Ian Goldberg and Bill Janssen. </p>
-<h2>Index</h2>

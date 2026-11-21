@@ -64,4 +64,3 @@ int main(int argc, char **argv)
 *
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

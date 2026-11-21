@@ -67,4 +67,3 @@ description: "Security Token Transport –"
 </dt><dd> 0 on success &gt;0 on error &lt;0 on errno error (-errno)</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus gss assist from the source code. </p>
-<h2>Index</h2>

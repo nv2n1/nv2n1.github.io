@@ -60,4 +60,3 @@ description: "pand – BlueZ Bluetooth PAN daemon"
 </dl>
 <h2>SCRIPTS</h2>
 <p> The devup/devdown script will be called with bluetooth device as first argument and bluetooth destination address as second argument. </p>
-<h2>Index</h2>

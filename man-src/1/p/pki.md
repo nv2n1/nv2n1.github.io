@@ -188,4 +188,3 @@ where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), pass
 <p> Ade Lee &lt;alee [at] redhat.com&gt;, Endi Dewata &lt;edewata [at] redhat.com&gt;, and Matthew Harmsen &lt;mharmsen [at] redhat.com&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2012 Red Hat, Inc. This is licensed under the GNU General Public License, version 2 (GPLv2). A copy of this license is available at <a rel="nofollow" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.">http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.</a> </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "mmroff – cross-reference preprocessor for GNU roff mm macro pack
 <p> <code>mmroff</code> was written by Jörgen Hägg of Lund, Sweden.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-groff_mm/">groff_mm</a></i>(7), <i><a href="/docs/linux/man/7-groff_mmse/">groff_mmse</a></i>(7) (only in Swedish locales), <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1), <i><a href="/docs/linux/man/1-tbl/">tbl</a></i>(1), <i><a href="/docs/linux/man/1-pic/">pic</a></i>(1), <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1) </p>
-<h2>Index</h2>

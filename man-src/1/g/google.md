@@ -206,4 +206,3 @@ google blogger post-- title 'foo' 'command line posting' google calendar add 'Lu
                                                                                                                                                       photos / cats/*.jpg
 google youtube post --category Education killer_robots.avi
 </code></pre>
-<h2>Index</h2>

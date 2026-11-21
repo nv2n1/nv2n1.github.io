@@ -16,4 +16,3 @@ description: "d_button_proc – Dialog procedure implementing a button object. A
 <p> A button object (the dp field points to the text string). This object can be selected by clicking on it with the mouse or by pressing its keyboard shortcut. If the D_EXIT flag is set, selecting it will close the dialog, otherwise it will toggle on and off. Like d_text_proc(), ampersands can be used to display the keyboard shortcut of the button. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

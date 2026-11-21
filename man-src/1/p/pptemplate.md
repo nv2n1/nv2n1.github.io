@@ -38,4 +38,3 @@ pptemplate - i PDL::IO::Mpthree;
 <p> Maybe <tt>&quot;;)&quot;</tt>. Feedback and bug reports are welcome.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001, Christian Soeller. All Rights Reserved. This module is free software. It may be used, redistributed and/or modified under the same terms as <font SIZE="-1">PDL</font> itself (see &lt;<a rel="nofollow" href="http://pdl.perl.org">http://pdl.perl.org</a>&gt;). </p>
-<h2>Index</h2>

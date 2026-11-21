@@ -180,4 +180,3 @@ Cambridge CB2 3QH, England.
 Last updated: 13 September 2012
 Copyright (c) 1997-2012 University of Cambridge.
 </pre>
-<h2>Index</h2>

@@ -123,4 +123,3 @@ description: "gentoo – A highly configurable file manager for X"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-regex/">regex</a></code>(7), <code><a href="/docs/linux/man/1-file/">file</a></code>(1), <code><a href="/docs/linux/man/5-magic/">magic</a></code>(5), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) </p>
 <p> Manual page section numbers in this page refer to sections on (some?) Linux systems, your mileage will most likely vary. Try the <code><a href="/docs/linux/man/1-apropos/">apropos</a></code>(1) command, it might help you out. </p>
-<h2>Index</h2>

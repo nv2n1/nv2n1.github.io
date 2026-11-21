@@ -26,4 +26,3 @@ description: "xentrace_format – pretty-print Xen trace data"
 <p> Mark A. Williamson &lt;mark.a.williamson [at] intel.com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-xentrace/">xentrace</a>(8), xentrace_cpusplit(1) </p>
-<h2>Index</h2>

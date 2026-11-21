@@ -46,4 +46,3 @@ description: "openipmicmd – An IPMI Command Interface"
 <p> The asynchronous nature of the program can be annoying. </p>
 <h2>AUTHOR</h2>
 <p> Corey Minyard &lt;cminyard [at] mvista.org&gt; </p>
-<h2>Index</h2>

@@ -308,4 +308,3 @@ rm $1.ps $1.bbox
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-afmtodit/">afmtodit</a></code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1), <code><a href="/docs/linux/man/1-pfbtops/">pfbtops</a></code>(1), <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5), <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5), <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7), <code><a href="/docs/linux/man/5-groff_tmac/">groff_tmac</a></code>(5) </p>
 <p> PostScript Language Document Structuring Conventions Specification </p>
-<h2>Index</h2>

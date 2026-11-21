@@ -25,4 +25,3 @@ description: "gdk-pixbuf-query-loaders – GdkPixbuf loader registration utility
 </dt><dd> Write the output to the default cache location instead of stdout</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The environment variable <code>GDK_PIXBUF_MODULEDIR</code> can be used to specify a different loader directory. The default gdk-pixbuf loader directory is <i>libdir</i>/gdk-pixbuf-2.0/<i>version</i>/loaders. </p>
-<h2>Index</h2>

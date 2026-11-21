@@ -29,4 +29,3 @@ int ldap_parse_reference(LDAP *ld, LDAPMessage *reference,
 <p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_first_reference/">ldap_first_reference</a></code>(3), <code><a href="/docs/linux/man/3-ldap_first_message/">ldap_first_message</a></code>(3), <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code><a href="/docs/linux/man/3-ldap_get_values/">ldap_get_values</a></code>(3), <code><a href="/docs/linux/man/3-ldap_controls_free/">ldap_controls_free</a></code>(3)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

@@ -121,4 +121,3 @@ description: "xpr – print an X window dump"
  See <i>X(1)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHORS</h2>
 <p> Michael R. Gretzinger, MIT Project Athena, Jose Capo, MIT Project Athena (PP3812 support), Marvin Solomon, University of Wisconsin, Bob Scheifler, MIT, Angela Bock and E. Mike Durbin, Rich Inc. (grayscale), Larry Rupp, HP (HP printer support). </p>
-<h2>Index</h2>

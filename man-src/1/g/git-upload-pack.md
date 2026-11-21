@@ -59,4 +59,3 @@ git - upload - pack[--[no - ] strict][--timeout = &lt;n&gt;][--stateless - rpc][
 <dt>
 </dt><dd> file:///usr/share/doc/git/html/technical/protocol-v2.html</dd></dl>
 </dl>
-<h2>Index</h2>

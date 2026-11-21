@@ -21,4 +21,3 @@ description: "ql/pricingengines/barrier/mcbarrierengine.hpp – Monte Carlo barr
 <p> Monte Carlo barrier option engines. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

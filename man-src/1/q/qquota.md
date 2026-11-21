@@ -70,4 +70,3 @@ description: "qquota – shows current usage of xxQS_NAMExx resource quotas"
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> See for a full statement of rights and permissions. </p>
-<h2>Index</h2>

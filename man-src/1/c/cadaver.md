@@ -136,4 +136,3 @@ description: "cadaver – A command-line WebDAV client for Unix."
 <p> Joe Orton &lt;cadaver [at] webdav.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ftp/">ftp</a>(1), <a href="/docs/linux/man/1-smbclient/">smbclient</a>(1) </p>
-<h2>Index</h2>

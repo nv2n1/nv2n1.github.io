@@ -67,4 +67,3 @@ textools --tpmmake t-modulename
 <p> This manual page is incomplete because I have no clue what this program does. </p>
 <h2>AUTHOR</h2>
 <p> <code><a href="/docs/linux/man/1-textools/">textools</a></code>(1) is part of the <a rel="nofollow" href="http://www.contextgarden.net">http://www.contextgarden.net</a> laURL: L raConTeXt suite of typesetting programs based on the <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) family of typesetting programs. This manual page was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt; based on running <code>textools &#8211;help</code> and with help from Mojca Miklavec. It is in the public domain. </p>
-<h2>Index</h2>

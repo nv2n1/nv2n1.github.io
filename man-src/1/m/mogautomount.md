@@ -40,4 +40,3 @@ mogautomount[--verbose | -v] mogautomount[--help | -h]
 <dt>Around line 134:</dt>
 <dd> &#8216;=end&#8217; without a target? </dd>
 </dl>
-<h2>Index</h2>

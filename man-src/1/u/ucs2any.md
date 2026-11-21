@@ -41,4 +41,3 @@ description: "ucs2any – generate BDF fonts containing subsets of ISO 10646-1 c
 <h2>AUTHOR</h2>
 <p> <code>ucs2any</code> was written by Markus Kuhn. </p>
 <p> Branden Robinson wrote this manual page, originally for the Debian Project. </p>
-<h2>Index</h2>

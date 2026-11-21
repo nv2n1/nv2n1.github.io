@@ -251,4 +251,3 @@ description: "ppmtompeg – encodes MPEG-1 bitstreams"
 </dt><dd>Steve Smoot &#8211; University of California, Berkeley, smoot [at] cs.berkeley.edu</dd>
 <dt>
 </dt></dl>
-<h2>Index</h2>

@@ -70,4 +70,3 @@ description: "greylist – command line interface to greylistd(8)"
 <dt><code><a href="/docs/linux/man/8-greylistd-setup-exim4/">greylistd-setup-exim4</a></code>(8)</dt>
 <dd> Utility to add/remove support for greylistd in Exim 4 configuration files. </dd>
 </dl>
-<h2>Index</h2>

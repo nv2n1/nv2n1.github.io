@@ -116,4 +116,3 @@ description: "cpphs – liberalised cpp-a-like preprocessor for Haskell"
 <p> <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written, based on <code>index.html</code>, by Ian Lynagh &lt;igloo [at] debian.org&gt; for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

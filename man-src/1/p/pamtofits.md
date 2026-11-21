@@ -31,4 +31,3 @@ description: "pamtofits – convert a Netpbm image into FITS format"
 <p> <code><a href="/docs/linux/man/1-fitstopnm/">fitstopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Wilson H. Bent (<i>whb [at] hoh-2.att.com</i>), with modifications by Alberto Accomazzi (<i>alberto [at] cfa.harvard.edu</i>). </p>
-<h2>Index</h2>

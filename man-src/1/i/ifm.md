@@ -99,4 +99,3 @@ description: "IFM – Interactive Fiction Mapper"
 <dt>/usr/share/doc/ifm-5.1/ifm.pdf</dt>
 <dd> Documentation suitable for printing </dd>
 </dl>
-<h2>Index</h2>

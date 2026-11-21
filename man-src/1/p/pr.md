@@ -79,4 +79,3 @@ description: "pr – convert text files for printing"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/pr">https://www.gnu.org/software/coreutils/pr</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) pr invocation&#8217; </p>
-<h2>Index</h2>

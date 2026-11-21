@@ -128,4 +128,3 @@ continue prompt = &quot;   ...&gt; &quot;
  The sqlite-doc package</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Andreas Rottmann &lt;rotty [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

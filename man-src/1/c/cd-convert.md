@@ -21,4 +21,3 @@ description: "cd-it8 – Color Manager Testing Tool"
 <dd> Show summary of options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

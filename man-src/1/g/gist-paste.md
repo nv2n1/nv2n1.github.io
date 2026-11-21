@@ -185,4 +185,3 @@ export GITHUB_URL=<a rel="nofollow" href="http://github.internal.example.com/">h
 <h2>Meta-fu</h2>
 <p> Thanks to @defunkt and @indirect for writing and maintaining versions 1 through 3. Thanks to @rking and @ConradIrwin for maintaining version 4. </p>
 <p> Licensed under the MIT license. Bug-reports, and pull requests are welcome. </p>
-<h2>Index</h2>

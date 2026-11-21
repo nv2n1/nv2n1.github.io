@@ -63,4 +63,3 @@ description: "mono-service, mono-service2 – Mono ServiceProcess host"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1)</code> </p>
 <p> <code>N:System.ServiceProcess</code> </p>
-<h2>Index</h2>

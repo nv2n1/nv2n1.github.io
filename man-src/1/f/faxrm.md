@@ -30,4 +30,3 @@ description: "faxrm – remove fax jobs queued by"
 <p> <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1), faxrunq(8), <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/1-faxq/">faxq</a>(1), <a href="/docs/linux/man/5-faxqueue/">faxqueue</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> <i>faxrm</i> is Copyright (C) 1993-2002 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. </p>
-<h2>Index</h2>

@@ -388,4 +388,3 @@ description: "ctags – Generate tag files for source code"
 <p> This version of <code>ctags</code> was originally derived from and inspired by the ctags program by Steve Kirkendall &lt;kirkenda [at] cs.pdx.edu&gt; that comes with the Elvis vi clone (though virtually none of the original code remains). </p>
 <p> Credit is also due Bram Moolenaar &lt;Bram [at] vim.org&gt;, the author of <code>vim</code>, who has devoted so much of his time and energy both to developing the editor as a service to others, and to helping the orphans of Uganda. </p>
 <p> The section entitled &quot;HOW TO USE WITH GNU EMACS&quot; was shamelessly stolen from the info page for GNU <code>etags</code>. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ addresses string   the addresses to distribute to
 </pre>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-rcvpack/">rcvpack</a></i>(1), <i><a href="/docs/linux/man/1-rcvstore/">rcvstore</a></i>(1), <i><a href="/docs/linux/man/1-rcvtty/">rcvtty</a></i>(1), <i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1), <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) </p>
-<h2>Index</h2>

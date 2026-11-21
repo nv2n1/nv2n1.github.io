@@ -39,4 +39,3 @@ description: "dubdv – insert audio into a digital video stream"
 <h2>AUTHORS</h2>
 <p> <code>dubdv</code> was written by James Bowman &lt;jamesb [at] excamera.com&gt; and Peter Schlaile &lt;udbz [at] rz.uni-karlsruhe.de&gt;. </p>
 <p> This manual page is based on dubdv&#8217;s help message and was written by Dan Dennedy &lt;dan [at] dennedy.org&gt;. </p>
-<h2>Index</h2>

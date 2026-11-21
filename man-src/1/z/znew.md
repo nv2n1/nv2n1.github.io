@@ -31,4 +31,3 @@ description: "znew – recompress .Z files to .gz files"
 <p> <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zdiff/">zdiff</a>(1), <a href="/docs/linux/man/1-zgrep/">zgrep</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-compress/">compress</a>(1)</p>
 <h2>BUGS</h2>
 <p> If the <code>-P</code> option is used, <i>znew</i> does not maintain the timestamp if <i><a href="/docs/linux/man/1-touch/">touch</a></i>(1) does not support the <code>-r</code> option, and does not maintain permissions if <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1) does not support the <code>&#8211;reference</code> option. </p>
-<h2>Index</h2>

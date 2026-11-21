@@ -78,4 +78,3 @@ description: "recode – manual page for recode 3.6"
 <dt>
 </dt><dd> <code>info recode</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

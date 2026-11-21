@@ -56,4 +56,3 @@ description: "lnst-slave – Linux Network Stack Test slave daemon"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2011-2015 Red Hat, Inc. </p>
 <p> LNST is distributed under GNU General Public License version 2. See the file &quot;COPYING&quot; in the source distribution for information on terms &amp; conditions for accessing and otherwise using LNST. </p>
-<h2>Index</h2>

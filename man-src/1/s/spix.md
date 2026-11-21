@@ -42,4 +42,3 @@ description: "spix – Compile a .tex file, executing commands that are set insi
 }
 </code></pre>
 <p> When running <code>spix</code> on this file, it is compiled twice using <code><a href="/docs/linux/man/1-lualatex/">lualatex</a>(1)</code> (as written in lines 2 and 3 of the file). </p>
-<h2>Index</h2>

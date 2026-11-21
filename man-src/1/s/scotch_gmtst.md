@@ -37,4 +37,3 @@ gmtst[options][gfile][tfile][mfile][lfile]
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
-<h2>Index</h2>

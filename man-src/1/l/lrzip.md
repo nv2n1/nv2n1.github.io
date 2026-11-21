@@ -156,4 +156,3 @@ If no filenames or "-" is specified, stdin/out will be used.
  Peter Hyman added informational output, updated LZMA SDK, and added lzma multi-threading capabilities. </p>
 <p> If you wish to report a problem, or make a suggestion, then please email Con at kernel [at] kolivas.org </p>
 <p> lrzip is released under the GNU General Public License version 2. Please see the file COPYING for license details. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "gsf-office-thumbnailer – office files thumbnailer for the GNOME 
 <h2>AUTHOR</h2>
 <p> <code>gsf-office-thumbnailer</code>&#8216;s primary author is Federico Mena-Quintero &lt;federico [at] novell.com&gt;. </p>
 <p> The initial version of this manpage was written by J.H.M. Dassen (Ray) &lt;jdassen [at] debian.org&gt;. </p>
-<h2>Index</h2>

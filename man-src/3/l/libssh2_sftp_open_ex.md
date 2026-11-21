@@ -51,4 +51,3 @@ libssh2_sftp_open_ex(LIBSSH2_SFTP *sftp, const char *filename,
 <p> <i>LIBSSH2_ERROR_EAGAIN</i> &#8211; Marked for non-blocking I/O but the call would block.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_close_handle/">libssh2_sftp_close_handle</a>(3)</code> </p>
-<h2>Index</h2>

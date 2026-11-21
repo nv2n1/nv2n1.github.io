@@ -226,4 +226,3 @@ description: "genxs – Mono’s Xml Serializer Generator"
 <p> GenXS is released under the terms of the GNU GPL. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-sgen/">sgen</a>(1) </p>
-<h2>Index</h2>

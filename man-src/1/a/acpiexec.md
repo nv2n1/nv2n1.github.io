@@ -57,4 +57,3 @@ description: "acpiexec – ACPI AML execution and debug utility"
 <h2>AUTHOR</h2>
 <p> acpiexec was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>
 <p> This manual page was written by Al Stone &lt;ahs3 [at] redhat.com&gt; for the Fedora project (but may be used by others). </p>
-<h2>Index</h2>

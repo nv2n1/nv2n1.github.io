@@ -29,4 +29,3 @@ description: "desktop-file-validate – Validate desktop entry files"
 <p> If you find bugs in the <i>desktop-file-validate</i> program, please report these on <a rel="nofollow" href="https://bugs.freedesktop.org.">https://bugs.freedesktop.org.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-desktop-file-edit/">desktop-file-edit</a>(1)</code> <code><a href="/docs/linux/man/1-desktop-file-install/">desktop-file-install</a>(1)</code> </p>
-<h2>Index</h2>

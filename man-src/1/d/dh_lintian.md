@@ -25,4 +25,3 @@ description: "dh_lintian – install lintian override files into package build d
 <p> <i><a href="/docs/linux/man/1-lintian/">lintian</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Steve Robbins &lt;smr [at] debian.org&gt; </p>
-<h2>Index</h2>

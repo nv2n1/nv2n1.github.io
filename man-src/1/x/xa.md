@@ -274,4 +274,3 @@ description: "xa – 6502/R65C02/65816 cross-assembler"
 <p> This manual page was written by David Weinehall &lt;tao [at] acc.umu.se&gt;, Andre Fachat &lt;fachat [at] web.de&gt; and Cameron Kaiser &lt;ckaiser [at] floodgap.com&gt;. Original xa package (C)1989-1997 Andre Fachat. Additional changes (C)1989-2015 Andre Fachat, Jolse Maginnis, David Weinehall, Cameron Kaiser. The official maintainer is Cameron Kaiser. </p>
 <h2>WEBSITE</h2>
 <p> <a rel="nofollow" href="http://www.floodgap.com/retrotech/xa/">http://www.floodgap.com/retrotech/xa/</a> </p>
-<h2>Index</h2>

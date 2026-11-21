@@ -24,4 +24,3 @@ description: "vlc-wrapper – a wrapper to drop privileges with VLC"
 <p> <code><a href="/docs/linux/man/1-vlc/">vlc</a></code>(1), <code><a href="/docs/linux/man/8-sudo/">sudo</a></code>(8) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christophe Mutricy. </p>
-<h2>Index</h2>

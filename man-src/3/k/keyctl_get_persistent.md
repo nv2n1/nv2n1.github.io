@@ -53,4 +53,3 @@ long keyctl_get_persistent(uid_t uid, key_serial_t keyring);
  <code><a href="/docs/linux/man/7-persistent-keyring/">persistent-keyring</a></code>(7),<br />
  <code><a href="/docs/linux/man/7-keyutils/">keyutils</a></code>(7),<br />
  <code><a href="/docs/linux/man/7-keyrings/">keyrings</a></code>(7) </p>
-<h2>Index</h2>

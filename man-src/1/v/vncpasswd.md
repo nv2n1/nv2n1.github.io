@@ -31,4 +31,3 @@ description: "vncpasswd – change the VNC password"
 <h2>AUTHORS</h2>
 <p> Tristan Richardson, RealVNC Ltd., Antoine Martin, D. R. Commander and others. </p>
 <p> VNC was originally developed by the RealVNC team while at Olivetti Research Ltd / AT&amp;T Laboratories Cambridge. TightVNC additions were implemented by Constantin Kaplinsky. Many other people have since participated in development, testing and support. This manual is part of the TigerVNC software suite. </p>
-<h2>Index</h2>

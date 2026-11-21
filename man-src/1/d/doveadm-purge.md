@@ -41,4 +41,3 @@ description: "doveadm-purge – Remove messages with refcount=0 from mdbox files
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1), <code><a href="/docs/linux/man/1-doveadm-expunge/">doveadm-expunge</a></code>(1) </p>
 <p> See <a rel="nofollow" href="http://wiki2.dovecot.org/MailboxFormat/dbox#Multi-dbox">http://wiki2.dovecot.org/MailboxFormat/dbox#Multi-dbox</a> for some details. </p>
-<h2>Index</h2>

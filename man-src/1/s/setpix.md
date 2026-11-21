@@ -39,4 +39,3 @@ description: "setpix – Set FITS or IRAF image values"
 </dl>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "dh_missing – check for missing files"
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Michael Stapelberg &lt;stapelberg [at] debian.org&gt; </p>
-<h2>Index</h2>

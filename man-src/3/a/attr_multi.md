@@ -85,4 +85,3 @@ ATTR_OP_REMOVE /* remove the indicated attr */
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately. Note that the individual operations listed in the <i>oplist</i> array each have their own error return fields. The <i>errno</i> variable only records the result of the <i>attr_multi</i> call itself, not the result of any of the sub-operations.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-attr/">attr</a></code>(1), <code><a href="/docs/linux/man/3-attr_get/">attr_get</a></code>(3), <code><a href="/docs/linux/man/3-attr_list/">attr_list</a></code>(3), <code><a href="/docs/linux/man/3-attr_remove/">attr_remove</a></code>(3), and <code><a href="/docs/linux/man/3-attr_set/">attr_set</a></code>(3). </p>
-<h2>Index</h2>

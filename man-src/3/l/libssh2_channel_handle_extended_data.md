@@ -24,4 +24,3 @@ description: "libssh2_channel_handle_extended_data – set extended data handlin
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_handle_extended_data2/">libssh2_channel_handle_extended_data2</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</code> </p>
-<h2>Index</h2>

@@ -202,4 +202,3 @@ description: "rst-buildhtml – convert many reST documents to HTML"
 <dt><code>&#8211;dry-run</code></dt>
 <dd> Do not process files, show files that would be processed. </dd>
 </dl>
-<h2>Index</h2>

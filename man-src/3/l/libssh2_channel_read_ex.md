@@ -29,4 +29,3 @@ description: "libssh2_channel_read_ex – read data from a channel stream"
 <p> <i>LIBSSH2_ERROR_CHANNEL_CLOSED</i> &#8211; The channel has been closed. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_poll_channel_read/">libssh2_poll_channel_read</a>(3)</code> </p>
-<h2>Index</h2>

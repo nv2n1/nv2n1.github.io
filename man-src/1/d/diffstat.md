@@ -147,4 +147,3 @@ DIFFSTAT_ZCAT_PATH
 <p> <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Thomas Dickey &lt;dickey [at] invisible-island.net&gt;. </p>
-<h2>Index</h2>

@@ -183,4 +183,3 @@ description: "rst2odt – convert reST documents to OpenDocument text (ODT)"
 <dt><code>&#8211;custom-odt-footer=</code><i>CUSTOM_FOOTER</i></dt>
 <dd> Specify the contents of an custom footer line. See odf_odt writer documentation for details about special field character sequences. </dd>
 </dl>
-<h2>Index</h2>

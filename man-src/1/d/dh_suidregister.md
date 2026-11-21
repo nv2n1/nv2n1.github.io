@@ -24,4 +24,3 @@ description: "dh_suidregister – suid registration program (deprecated)"
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

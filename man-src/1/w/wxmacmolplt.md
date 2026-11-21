@@ -32,4 +32,3 @@ More information may be found at
 <p> wxMacMolPlt is still undergoing development, and there are probably still several bugs. If you find one, please e-mail the author with a description of the bug and instructions for reproducing it.</p>
 <h2>AUTHOR</h2>
 <p> Brett Bode &lt;brett [at] scl.ameslab.gov&gt; </p>
-<h2>Index</h2>

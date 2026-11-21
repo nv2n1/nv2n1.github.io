@@ -270,4 +270,3 @@ description: "xemacs – Emacs: The Next Generation"
 <p> The latest version of <i>XEmacs</i> can be downloaded using anonymous FTP from </p>
 <p> <a href="ftp://ftp.xemacs.org/pub/xemacs/">ftp://ftp.xemacs.org/pub/xemacs/</a> </p>
 <p> or from a mirror site near you. Mirror sites are listed in the file etc/FTP in the XEmacs distribution or see the Web site for an up-to-date list of mirror sites. </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "sfconv – A tool for converting the encoding of Standard Format (
 <dd> (only when mapping to Unicode) normalize to NFC or NFD</dd></dl>
 <h2>Further Information</h2>
 <p> For further information see the document TECkit_Tools.pdf. On a Debian system, this can be found in /usr/share/doc/teckit. </p>
-<h2>Index</h2>

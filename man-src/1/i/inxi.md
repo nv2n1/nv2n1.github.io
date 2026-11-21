@@ -607,4 +607,3 @@ description: "inxi – Command line system information script for console and IR
 <p> All the inxi package maintainers, distro support people, forum moderators, and in particular, sys admins with their particular issues, which almost always help make inxi better, and any others who contribute ideas, suggestions, and patches. </p>
 <p> Without a wide range of diverse Linux kernel-based Free Desktop systems to test on, we could never have gotten inxi to be as reliable and solid as it&#8217;s turning out to be. </p>
 <p> And of course, a big thanks to locsmif, who figured out a lot of the core methods, logic, and tricks originally used in inxi Gawk/Bash. </p>
-<h2>Index</h2>

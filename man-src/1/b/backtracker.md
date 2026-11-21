@@ -91,4 +91,3 @@ echo 204 19 80 | gmt backtracker -Df -EPAC_APM.txt -Lb1 &gt; path.txt
 <p> Wessel, P., 1999, &quot;Hotspotting&quot; tools released, EOS Trans. AGU, 80 (29), p. 319.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

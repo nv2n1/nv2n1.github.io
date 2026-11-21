@@ -48,4 +48,3 @@ $ tracker3 export -b org.freedesktop.Tracker3.Miner.Files | rapper - -I . -i tur
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-import/">tracker3-import</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1). </p>
-<h2>Index</h2>

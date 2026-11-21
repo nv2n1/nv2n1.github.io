@@ -46,4 +46,3 @@ description: "mtnopt – generate shell variables from monotone workspace option
 <p> The behavior when there is no <i>_MTN/options</i> file to be found is less than helpful.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mtn/">mtn</a></code>(1), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-csh/">csh</a></code>(1) </p>
-<h2>Index</h2>

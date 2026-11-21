@@ -19,4 +19,3 @@ description: "wbmptopbm – convert a wireless bitmap (wbmp) file to a portable 
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pbmtowbmp/">pbmtowbmp</a></code>(1), <code>Wireless Application Environment Specification.</code></p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1999 Terje Sannum &lt;terje [at] looplab.com&gt;. </p>
-<h2>Index</h2>

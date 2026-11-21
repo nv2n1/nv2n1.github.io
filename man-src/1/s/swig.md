@@ -234,4 +234,3 @@ description: "swig – Simplified Wrapper and Interface Generator"
 <p> Note: &#8216;swig &#8211;<i>lang</i> -help&#8217; displays options for a specific target language. </p>
 <h2>AUTHOR</h2>
 <p> SWIG was originally created by David Beazley. For up-to-date information about authors and contributors please check <a rel="nofollow" href="http://www.swig.org/guilty.html.">http://www.swig.org/guilty.html.</a> This manual page was written by Torsten Landschoff &lt;torsten [at] debian.org&gt; and updated by Jitka Plesnikova &lt;jplesnik [at] redhat.com&gt; (but may be used by others). </p>
-<h2>Index</h2>

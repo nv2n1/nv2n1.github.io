@@ -41,4 +41,3 @@ gcc -o mydevice mydevice.c
 <dt>
 </dt><dd> mailto:peter.hutterer [at] redhat.com</dd></dl>
 </dl>
-<h2>Index</h2>

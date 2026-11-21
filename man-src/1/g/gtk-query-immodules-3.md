@@ -37,4 +37,3 @@ description: "gtk-query-immodules-3.0 – Input method module registration utili
 <dl>
 <dt>
 </dt><dd> Specifies an alternative im module cache for GTK+ applications</dd></dl>
-<h2>Index</h2>

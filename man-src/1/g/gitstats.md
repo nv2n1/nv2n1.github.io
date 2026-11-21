@@ -61,4 +61,3 @@ description: "gitstats – git history statistics generator"
 <p> <a rel="nofollow" href="http://gitstats.sourceforge.net/">http://gitstats.sourceforge.net/</a></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-git/">git</a></i>(1) </p>
-<h2>Index</h2>

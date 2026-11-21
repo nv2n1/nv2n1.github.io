@@ -17,4 +17,3 @@ description: "diff-jars – output the differences between two JAR files"
 <p> Written by Guillaume Rousse</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs using JPackage Bugzilla (<a rel="nofollow" href="http://www.jpackage.org/bugzilla/)">http://www.jpackage.org/bugzilla/)</a> </p>
-<h2>Index</h2>

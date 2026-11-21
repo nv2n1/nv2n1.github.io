@@ -54,4 +54,3 @@ description: "vows – Asynchronous behavior-driven development (BDD) framework"
 <dd> You&#8217;re staring at it</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs on the GitHub issue tracker: &lt;<code><a rel="nofollow" href="https://github.com/cloudhead/vows/issues">https://github.com/cloudhead/vows/issues</a></code>&gt; </p>
-<h2>Index</h2>

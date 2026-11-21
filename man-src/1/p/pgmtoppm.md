@@ -37,4 +37,3 @@ description: "pgmtoppm – colorize a portable graymap into a portable pixmap"
 <p> <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-rgb3toppm/">rgb3toppm</a></code>(1), <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1), <code><a href="/docs/linux/man/1-ppmtorgb3/">ppmtorgb3</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a>(5)</code> </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

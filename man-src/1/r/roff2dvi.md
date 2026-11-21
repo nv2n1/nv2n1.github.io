@@ -32,4 +32,3 @@ description: "roff2dvi – transform roff code into dvi mode"
 <p> <code>roff2dvi</code> was written by Bernd Warken</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1), <code><a href="/docs/linux/man/1-roff2html/">roff2html</a></code>(1), <code><a href="/docs/linux/man/1-roff2pdf/">roff2pdf</a></code>(1), <code><a href="/docs/linux/man/1-roff2ps/">roff2ps</a></code>(1), <code><a href="/docs/linux/man/1-roff2text/">roff2text</a></code>(1), <code><a href="/docs/linux/man/1-roff2x/">roff2x</a></code>(1), <code><a href="/docs/linux/man/1-gxditview/">gxditview</a></code>(1). </p>
-<h2>Index</h2>

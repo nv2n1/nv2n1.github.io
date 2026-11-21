@@ -23,4 +23,3 @@ description: "perf-help – display help information about perf"
 </dt><dd> Prints all the available commands on the standard output. This option supersedes any other option.</dd></dl>
 <h2>PERF</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-perf/">perf</a></code>(1) suite </p>
-<h2>Index</h2>

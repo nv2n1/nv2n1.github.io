@@ -389,4 +389,3 @@ movescu-- patient-- port 9876 --move TEST_AE-- call ARCHIVE caesar 104 q.dcm
 <p> <code><a href="/docs/linux/man/1-findscu/">findscu</a></code>(1), <code><a href="/docs/linux/man/1-dump2dcm/">dump2dcm</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1994-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

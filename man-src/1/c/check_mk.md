@@ -193,4 +193,3 @@ description: "check_mk – command line utility for managing Check_MK"
 <p>&nbsp;<wbr>&nbsp;<wbr>-i, &#8211;inventory does a HW/SW-Inventory for all, one or several<br />
 &nbsp;<wbr>&nbsp;<wbr>hosts. If you add the option -f, &#8211;force then persisted sections<br />
 &nbsp;<wbr>&nbsp;<wbr>will be used even if they are outdated. </p>
-<h2>Index</h2>

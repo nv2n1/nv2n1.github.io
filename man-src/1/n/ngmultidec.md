@@ -53,4 +53,3 @@ pp. 740-745.
 <code><a rel="nofollow" href="http://portal.acm.org/citation.cfm?doid=127601.127762">http://portal.acm.org/citation.cfm?doid=127601.127762</a></code>
 </pre>
 <p> <i><a href="/docs/linux/man/1-ngnutmeg/">ngnutmeg</a></i>(1), <i>ngproc2mod</i>(1), <i><a href="/docs/linux/man/1-ngsconvert/">ngsconvert</a></i>(1), <i><a href="/docs/linux/man/1-ngspice/">ngspice</a></i>(1), <i>nghelp</i>(1). </p>
-<h2>Index</h2>

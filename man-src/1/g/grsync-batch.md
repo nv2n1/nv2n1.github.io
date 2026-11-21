@@ -20,4 +20,3 @@ description: "GRSYNC-BATCH – Grsync batch session runner"
 <h2>AUTHOR</h2>
 <p> GRSYNC was written by Piero Orsoni &lt;info [at] opbyte.it&gt;. </p>
 <p> This manual page was written by Piero Orsoni </p>
-<h2>Index</h2>

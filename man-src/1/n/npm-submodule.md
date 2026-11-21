@@ -24,4 +24,3 @@ npm submodule &lt;pkg&gt;
 <dt>&bull;</dt>
 <dd> git help submodule</dd>
 </dl>
-<h2>Index</h2>

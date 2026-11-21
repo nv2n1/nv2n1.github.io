@@ -86,4 +86,3 @@ description: "soapcpp2 – the gSOAP Stub and Skeleton Compiler for C and C++"
 <p> <code><a href="/docs/linux/man/1-wsdl2h/">wsdl2h</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Wana &lt;greuff [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "xfce4-power-information â€“ Find information about your computerâ€
 <h2>SEE ALSO</h2>
 <p> <i>xfce4-power-manager</i>(7) </p>
 <p> This program is a part of xfce4-power-manager. </p>
-<h2>Index</h2>

@@ -110,4 +110,3 @@ description: "pdfgrep – search pdf files for a regular expression"
 <p> Hans-Peter Deifel &lt;hpdeifel at gmx.de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/7-regex/">regex</a>(7) </p>
-<h2>Index</h2>

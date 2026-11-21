@@ -39,4 +39,3 @@ description: "guilt-guard – Assign guards to patches"
 <dt>
 </dt><dd> mailto:eclesh [at] ucla.edu</dd></dl>
 </dl>
-<h2>Index</h2>

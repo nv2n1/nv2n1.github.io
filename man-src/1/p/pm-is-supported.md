@@ -58,4 +58,3 @@ description: "pm-is-supported – Test whether suspend or hibernate is supported
 <p> Copyright &#169; 2007 Tim Dijkstra </p>
 <p> This manual page was originally written for the Debian(TM) system, and has been adopted by the pm-utils project. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or (at your option) any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

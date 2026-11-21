@@ -223,4 +223,3 @@ description: "rst2xetex – convert reST documents to XeLaTeX"
 <dt><code>&#8211;docutils-footnotes</code></dt>
 <dd> Footnotes with numbers/symbols by Docutils. (default) (The alternative, &#8211;latex-footnotes, is not implemented yet.) </dd>
 </dl>
-<h2>Index</h2>

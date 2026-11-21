@@ -23,4 +23,3 @@ description: "ps2ascii – Ghostscript translator from PostScript or PDF to ASCI
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. David M. Jones &lt;dmjones [at] theory.lcs.mit.edu&gt; made substantial improvements to <code>ps2ascii</code>. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "r.out.vrml – Export a raster map to the Virtual Reality Modeling
  Name for new VRML file</dd></dl>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

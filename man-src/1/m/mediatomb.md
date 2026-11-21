@@ -88,4 +88,3 @@ description: "mediatomb – UPnP MediaServer"
  Copyright &#169; 2006-2008 Gena Batsyan, Sergey Bostandzhyan, Leonhard Wimmer </p>
 <p> This manual page is part of MediaTomb. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License version 2 as published by the Free Software Foundation. </p>
-<h2>Index</h2>

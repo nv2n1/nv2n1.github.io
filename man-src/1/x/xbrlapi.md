@@ -33,4 +33,3 @@ description: "xbrlapi – X11 BrlAPI helper for Linux/Unix"
 <dd> Print a thorough command line usage summary and then exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> For more details on the purpose of <code>xbrlapi</code>, see <code>BrlAPI</code>&#8216;s on-line manual at [<code><a rel="nofollow" href="http://brltty.app/doc/Manual-BrlAPI/English/BrlAPI-3.html">http://brltty.app/doc/Manual-BrlAPI/English/BrlAPI-3.html</a></code>]. </p>
-<h2>Index</h2>

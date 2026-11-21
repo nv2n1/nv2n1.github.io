@@ -81,4 +81,3 @@ AKEY KEY A AKEY_2 KEY_2 C AKEY_3 KEY_3 F G JFILES-- -- -- -- -- -- -- -- -- -- -
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

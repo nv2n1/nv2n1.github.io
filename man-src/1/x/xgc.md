@@ -45,4 +45,3 @@ description: "xgc – X graphics demo"
 <p> This program isn&#8217;t really finished yet, but it probably never will be, since it only demonstrates the original X11 core protocol rendering operations, which few modern programs use anymore.</p>
 <h2>AUTHORS</h2>
 <p> Dan Schmidt, MIT </p>
-<h2>Index</h2>

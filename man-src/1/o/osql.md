@@ -46,4 +46,3 @@ TDS_Version = 5.0
 <p> first appeared in FreeTDS 0.65.</p>
 <h2>AUTHORS</h2>
 <p> The utility was written by An James K. Lowden Ns . </p>
-<h2>Index</h2>

@@ -91,4 +91,3 @@ URLs using the SOCKS v4 proxy&nbsp;<wbr>&quot;baz:1080&quot;. </p>
 <p> Be sure to do your search within &quot;All Issues&quot; before reporting bugs, and be sure to pick the &quot;Defect on Linux&quot; template when filing a new one. </p>
 <h2>AUTHOR</h2>
 <p> The Chromium team &#8211; &lt;<a rel="nofollow" href="http://www.chromium.org">http://www.chromium.org</a>&gt; </p>
-<h2>Index</h2>

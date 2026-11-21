@@ -53,4 +53,3 @@ description: "jwhois – client for the whois service"
 <p> <code>&#8212;</code> is used to separate the RIPE options from the jwhois options. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-whois/">whois</a>(1) </p>
-<h2>Index</h2>

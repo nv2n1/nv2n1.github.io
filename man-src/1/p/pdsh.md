@@ -211,4 +211,3 @@ Run command on foo0-eth0,foo1-eth0,foo2-eth0,foo3-eth0
 <h2>FILES</h2>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rsh/">rsh</a>(1), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), <a href="/docs/linux/man/1-dshbak/">dshbak</a>(1), <a href="/docs/linux/man/1-pdcp/">pdcp</a>(1) </p>
-<h2>Index</h2>

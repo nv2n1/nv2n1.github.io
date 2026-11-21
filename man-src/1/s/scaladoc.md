@@ -71,4 +71,3 @@ description: "scaladoc – Documentation generator for the Scala 2 language"
 <p> This version of Scaladoc was written by Gilles Dubochet with contributions by Pedro Furlanetto and Johannes Rudolph. It is based on the original Scaladoc (Sean McDirmid, Geoffrey Washburn, Vincent Cremet and St?phane Micheloud), on vScaladoc (David Bernard), as well as on an unreleased version of Scaladoc 2 (Manohar Jonnalagedda).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fsc/">fsc</a></code>(1), <code><a href="/docs/linux/man/1-scala/">scala</a></code>(1), <code><a href="/docs/linux/man/1-scalac/">scalac</a></code>(1), <code><a href="/docs/linux/man/1-scalap/">scalap</a></code>(1) </p>
-<h2>Index</h2>

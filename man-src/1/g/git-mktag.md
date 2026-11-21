@@ -54,4 +54,3 @@ tagger &lt;tagger&gt;
 <p> followed by some <i>optional</i> free-form message (some tags created by older Git may not have <code>tagger</code> line). The message, when it exists, is separated by a blank line from the header. The message part may contain a signature that Git itself doesn&#8217;t care about, but that can be verified with gpg.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

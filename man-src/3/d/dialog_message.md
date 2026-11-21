@@ -16,4 +16,3 @@ description: "dialog_message – Sends a message to all the objects in an array.
 <p> Sends a message to all the objects in an array. If any of the dialog procedures return values other than D_O_K, it returns the value and sets obj to the index of the object which produced it. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-object_message/">object_message</a></code>(3), <code>broadcast_dialog_message</code>(3) </p>
-<h2>Index</h2>

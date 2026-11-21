@@ -29,4 +29,3 @@ description: "curl_easy_recv – receives raw data on an \"easy\" connection"
 <p> See <code>sendrecv.c</code> in <code>docs/examples</code> directory for usage example.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_send/">curl_easy_send</a></code>(3) </p>
-<h2>Index</h2>

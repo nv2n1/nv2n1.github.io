@@ -58,4 +58,3 @@ description: "systemd-id128 – Generate and print sd-128 identifiers"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Format">https://en.wikipedia.org/wiki/Universally_unique_identifier#Format</a></dd></dl>
 </dl>
-<h2>Index</h2>

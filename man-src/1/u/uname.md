@@ -48,4 +48,3 @@ description: "uname – print system information"
 <p> <a href="/docs/linux/man/1-arch/">arch</a>(1), <a href="/docs/linux/man/2-uname/">uname</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/uname">https://www.gnu.org/software/coreutils/uname</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) uname invocation&#8217; </p>
-<h2>Index</h2>

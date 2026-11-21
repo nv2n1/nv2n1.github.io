@@ -54,4 +54,3 @@ description: "iceauth – ICE authority file utility"
 <p> <i>source</i> <i>filename</i> </p>
 <h2>AUTHOR</h2>
 <p> Ralph Mor, X Consortium </p>
-<h2>Index</h2>

@@ -270,4 +270,3 @@ e - manually edit the current hunk
 <p> <code><a href="/docs/linux/man/1-git-status/">git-status</a></code>(1) <code><a href="/docs/linux/man/1-git-rm/">git-rm</a></code>(1) <code><a href="/docs/linux/man/1-git-reset/">git-reset</a></code>(1) <code><a href="/docs/linux/man/1-git-mv/">git-mv</a></code>(1) <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) <code><a href="/docs/linux/man/1-git-update-index/">git-update-index</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

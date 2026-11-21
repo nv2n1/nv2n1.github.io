@@ -89,4 +89,3 @@ description: "rhino – invokes the JavaScript shell for running scripts in batc
 <p> The online documentation under <i><a rel="nofollow" href="http://www.mozilla.org/rhino/shell.html">http://www.mozilla.org/rhino/shell.html</a></i> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Wolfgang Baer &lt;WBaer [at] gmx.de&gt;, with modifications by Elliott Baron &lt;ebaron [at] redhat.com&gt;. </p>
-<h2>Index</h2>

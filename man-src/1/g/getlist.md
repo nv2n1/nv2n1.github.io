@@ -47,4 +47,3 @@ description: "getlist – Get a list from an NNTP server"
 <p> <tt>$Id:</tt> getlist.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-active-times/">active.times</a></i>(5), <i><a href="/docs/linux/man/5-distrib-pats/">distrib.pats</a></i>(5), <i><a href="/docs/linux/man/5-distributions/">distributions</a></i>(5), <i><a href="/docs/linux/man/5-inn-conf/">inn.conf</a></i>(5), <i><a href="/docs/linux/man/5-moderators/">moderators</a></i>(5), <i><a href="/docs/linux/man/5-motd-news/">motd.news</a></i>(5), <i><a href="/docs/linux/man/5-newsgroups/">newsgroups</a></i>(5), <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/5-passwd-nntp/">passwd.nntp</a></i>(5), <i><a href="/docs/linux/man/5-subscriptions/">subscriptions</a></i>(5), <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3). </p>
-<h2>Index</h2>

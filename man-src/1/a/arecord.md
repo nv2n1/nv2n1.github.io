@@ -134,4 +134,3 @@ pcm.copy
 <p> Note that .aiff files are not currently supported. </p>
 <h2>AUTHOR</h2>
 <p> <code>arecord</code> and <code>aplay</code> are by Jaroslav Kysela &lt;perex [at] perex.cz&gt; This document is by Paul Winkler &lt;zarmzarm [at] erols.com&gt;. Updated for Alsa 0.9 by James Tappin &lt;james [at] xena.uklinux.net&gt; </p>
-<h2>Index</h2>

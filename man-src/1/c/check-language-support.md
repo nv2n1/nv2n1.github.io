@@ -25,4 +25,3 @@ description: "check-language-support – returns the list of missing packages in
 <dd> show installed packages as well as missing ones</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage has been written by Arne Goetje &lt;arne [at] ubuntu.com&gt; </p>
-<h2>Index</h2>

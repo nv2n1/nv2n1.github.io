@@ -54,4 +54,3 @@ description: "getrichacl – Get Rich Access Control Lists"
 <p> Rich Access Control Lists are Linux-specific.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-setrichacl/">setrichacl</a></code>(1), <code><a href="/docs/linux/man/7-richacl/">richacl</a></code>(7), <code><a href="/docs/linux/man/7-richaclex/">richaclex</a></code>(7) </p>
-<h2>Index</h2>

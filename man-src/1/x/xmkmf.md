@@ -18,4 +18,3 @@ description: "xmkmf – create a Makefile from an Imakefile"
 <p> If a <i>topdir</i> is given, <i>xmkmf</i> assumes nothing is installed on your system and looks for files in the build tree instead of using the installed versions. Optionally, <i>curdir</i> may be specified as a relative pathname from the top of the build tree to the current directory. It is necessary to supply <i>curdir</i> if the current directory has subdirectories, or the <i>Makefile</i> will not be able to build the subdirectories.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-imake/">imake</a>(1) </p>
-<h2>Index</h2>

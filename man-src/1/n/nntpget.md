@@ -33,4 +33,3 @@ description: "nntpget – get Usenet articles from a remote NNTP server"
 <p> Written by Rich $alz &lt;rsalz [at] uunet.uu.net&gt; for InterNetNews. This is revision 5909, dated 2002-12-03.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-innd/">innd</a>(8). </p>
-<h2>Index</h2>

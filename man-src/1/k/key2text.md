@@ -14,4 +14,3 @@ description: "Usage: – convert Keynote presentation into plain text"
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> Shows this help message </p>
 <p> <code>&#8211;help</code> Shows this help message </p>
-<h2>Index</h2>

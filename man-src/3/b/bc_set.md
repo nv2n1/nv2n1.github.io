@@ -49,4 +49,3 @@ Operator operator+(const Operator &amp;, const Operator &amp;);
 </dt><dd> The differential operator must be linear for this evolver to work.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

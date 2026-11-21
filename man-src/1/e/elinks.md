@@ -277,4 +277,3 @@ description: "elinks – lynx-like alternative character mode WWW browser"
 <p> This manual page was written by Peter Gervai &lt;grin [at] tolna.net&gt;, using excerpts from a (yet?) unknown <i>Links</i> fan for the <i>Debian GNU/Linux system</i> (but may be used by others). Contributions from Francis A. Holop. Extended, clarified and made more up-to-date by Petr Baudis &lt;pasky [at] ucw.cz&gt;. Updated by Zas &lt;zas [at] norz.org&gt;. The conversion to Asciidoc and trimming was done by Jonas Fonseca &lt;fonseca [at] diku.dk&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-elinkskeys/">elinkskeys</a></code>(5), <code><a href="/docs/linux/man/5-elinks-conf/">elinks.conf</a></code>(5), <code>links</code>(1), <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-w3m/">w3m</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "rrdresize – alters the size of an RRA and creates a new .rrd fil
 <p> It is possible to abuse this tool and get strange results by first removing some rows and then reinserting the same amount (effectively clearing them to be Unknown). You may thus end up with unknown data in one <font SIZE="-1">RRA</font> while at the same timestamp this data is available in another <font SIZE="-1">RRA</font>.</p>
 <h2>AUTHOR</h2>
 <p> Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; </p>
-<h2>Index</h2>

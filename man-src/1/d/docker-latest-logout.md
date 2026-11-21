@@ -28,4 +28,3 @@ description: "docker-logout – Log out from a Docker registry."
 <p> <code><a href="/docs/linux/man/1-docker-login/">docker-login</a>(1)</code> to log in to a Docker registry server. </p>
 <h2>HISTORY</h2>
 <p> June 2014, Originally compiled by Daniel, Dao Quang Minh (daniel at nitrous dot io) July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Mary Anthony for v2 &lt;mary [at] docker.com&gt; </p>
-<h2>Index</h2>

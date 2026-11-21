@@ -94,4 +94,3 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools 2.0 – Copyright 
 <dt><code>-bc5</code></dt>
 <dd> BC5 format (3Dc/ATI2) </dd>
 </dl>
-<h2>Index</h2>

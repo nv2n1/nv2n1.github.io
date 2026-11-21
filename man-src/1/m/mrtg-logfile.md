@@ -55,4 +55,3 @@ description: "mrtg-logfile – description of the mrtg-2 logfile format"
 <dd> The maximum outgoing transfer rate in bytes per second for the current interval.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Butch Kemper &lt;kemper [at] bihs.net&gt; and Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

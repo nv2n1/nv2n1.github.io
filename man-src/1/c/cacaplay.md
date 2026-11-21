@@ -21,4 +21,3 @@ description: "cacaplay – play libcaca files"
 <p> <a href="/docs/linux/man/1-cacaserver/">cacaserver</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sam Hocevar &lt;sam [at] hocevar.net&gt;. </p>
-<h2>Index</h2>

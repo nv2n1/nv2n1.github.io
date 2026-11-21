@@ -89,4 +89,3 @@ gmt info profile_*.txt -C -I1/1/1/1
 <p> <code>gmt</code>, <code>gmtconvert</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

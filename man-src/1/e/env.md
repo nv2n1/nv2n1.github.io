@@ -88,4 +88,3 @@ sh -c 'env --default-signal=PIPE seq inf | head -n1'
 <p> <a href="/docs/linux/man/2-sigaction/">sigaction</a>(2), <a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a>(2), <a href="/docs/linux/man/7-signal/">signal</a>(7) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/env">https://www.gnu.org/software/coreutils/env</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) env invocation&#8217; </p>
-<h2>Index</h2>

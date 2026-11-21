@@ -50,4 +50,3 @@ description: "trace-cmd-listen – listen for incoming connection to record trac
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

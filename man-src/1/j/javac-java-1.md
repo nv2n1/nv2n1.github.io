@@ -583,4 +583,3 @@ warning: [options] bootstrap class path not set in conjunction with -source 1.6
 <dd> <i>The Java Extensions Framework</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/extensions/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/extensions/index.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

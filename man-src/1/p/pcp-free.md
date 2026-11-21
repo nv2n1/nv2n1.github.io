@@ -26,4 +26,3 @@ description: "pcp-free – report on free and used memory in the system"
 <p> The shared memory column should be ignored; it is obsolete.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-free/">free</a>(1),</code> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/3-pmparseinterval/">pmParseInterval</a></code>(3) and <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7). </p>
-<h2>Index</h2>

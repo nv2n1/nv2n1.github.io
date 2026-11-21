@@ -37,4 +37,3 @@ description: "kgetcred – get a ticket for a particular service"
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kinit/">kinit</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1) </p>
-<h2>Index</h2>

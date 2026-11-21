@@ -82,4 +82,3 @@ description: "install – copy files and set attributes"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/install">https://www.gnu.org/software/coreutils/install</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) install invocation&#8217; </p>
-<h2>Index</h2>

@@ -119,4 +119,3 @@ description: "jpegtran – lossless transformation of JPEG files"
 <h2>BUGS</h2>
 <p> The transform options can&#8217;t transform odd-size images perfectly. Use <code>-trim</code> or <code>-perfect</code> if you don&#8217;t like the results. </p>
 <p> The entire image is read into memory and then written out again, even in cases where this isn&#8217;t really necessary. Expect swapping on large images, especially when using the more complex transform options. </p>
-<h2>Index</h2>

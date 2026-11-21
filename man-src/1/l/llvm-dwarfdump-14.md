@@ -88,4 +88,3 @@ description: "llvm-dwarfdump – manual page for llvm-dwarfdump 14"
 <dt> <code>&#8211;verify</code> &#8211; Verify the DWARF debug info.</dt>
 <dt> <code>-x</code> &#8211; Alias for <code>&#8211;regex</code></dt></dl>
 <dd>Pass @FILE as argument to read options from FILE. </dd>
-<h2>Index</h2>

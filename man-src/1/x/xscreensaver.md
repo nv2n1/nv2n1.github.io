@@ -424,4 +424,3 @@ programs:  \
 <p> Jamie Zawinski &lt;jwz [at] jwz.org&gt;. Written in late 1991; version 1.0 posted to comp.sources.x on 17-Aug-1992. </p>
 <p> Please let me know if you find any bugs or make any improvements. </p>
 <p> And a huge thank you to the hundreds of people who have contributed, in large ways and small, to the xscreensaver collection over the past two decades! </p>
-<h2>Index</h2>

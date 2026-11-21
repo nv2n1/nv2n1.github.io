@@ -52,4 +52,3 @@ description: "mkfontscale – create an index of scalable font files for X"
 <p> <code>mkfontscale -b -s -l</code> is equivalent to <code>mkfontdir</code>.</p>
 <h2>AUTHOR</h2>
 <p> The version of <code>mkfontscale</code> included in this X.Org Foundation release was originally written by Juliusz Chroboczek &lt;jch [at] freedesktop.org&gt; for the XFree86 project. The functionality of this program was inspired by the <code>ttmkfdir</code> utility by Joerg Pommnitz. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "pmfind – find PCP services on the network"
 <p> <code>pmfind</code> will interrupt the service discovery process when one of the following signals is received: SIGHUP, SIGPIPE, SIGINT, SIGTERM, SIGXFSZ, SIGXCPU. <code>pmfind</code> will report any results which were discovered up to point of the interruption.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmproxy/">pmproxy</a></code>(1), <code><a href="/docs/linux/man/1-pmwebd/">pmwebd</a></code>(1), <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), <code><a href="/docs/linux/man/3-pmdiscoverservices/">pmDiscoverServices</a></code>(3), <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5) and <code><a href="/docs/linux/man/5-pcp-env/">pcp.env</a></code>(5). </p>
-<h2>Index</h2>

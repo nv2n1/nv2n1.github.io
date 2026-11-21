@@ -25,4 +25,3 @@ description: "FreeHDL-GENNODES – Abstract syntax tree generator used by the VH
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>AUTHORS</h2>
 <p> Written by Marius Vollmer &lt;mvo [at] zagadka.ping.de&gt; and Edwin Naroska &lt;edwin [at] ds.e-technik.uni-dortmund.de&gt;. </p>
-<h2>Index</h2>

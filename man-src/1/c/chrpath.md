@@ -39,4 +39,3 @@ description: "chrpath – change the rpath or runpath in binaries"
 <h2>AUTHOR</h2>
 <p> The chrpath program was written by Petter Reinholdtsen &lt;pere [at] hungry.com&gt;, based on works by Geoffrey Keating &lt;geoffk [at] ozemail.com.au&gt; and Peeter Joot &lt;peeterj [at] ca.ibm.com&gt;. </p>
 <p> This manual page was originally written by Tollef Fog Heen &lt;tfheen [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

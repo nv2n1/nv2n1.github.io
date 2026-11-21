@@ -322,4 +322,3 @@ description: "jackd – JACK Audio Connection Kit sound server"
 <p> Original design Group: Paul Davis, David Olofson, Kai Vehmanen, Benno Sennoner, Richard Guenther, and other members of the Linux Audio Developers group. </p>
 <p> Programming: Paul Davis, Jack O&#8217;Quin, Taybin Rutkin, Stephane Letz, Fernando Pablo Lopez-Lezcano, Steve Harris, Jeremy Hall, Andy Wingo, Kai Vehmanen, Melanie Thielker, Jussi Laako, Tilman Linneweh, Johnny Petrantoni, Torben Hohn. </p>
 <p> Manpage written by Stefan Schwandter, Jack O&#8217;Quin and Alexandre Prokoudine. </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "x_system – A Cross-Over Error Analysis Tool"
 <h2>AUTHOR</h2>
 <p> Paul Wessel, Dept. of Geology and Geophysics, SOEST, University of Hawaii at Manoa. Wessel, P. XOVER: A Cross-over Error Detector for Track Data, <i>Computers &amp; Geosciences, 15</i>, 333-346. </p>
 <p> Wessel, P. and A. B. Watts, On the Accuracy of Marine Gravity Measurements, <i>J. Geophys. Res., 93</i>, 393-413, 1988. </p>
-<h2>Index</h2>

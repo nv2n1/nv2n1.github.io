@@ -36,4 +36,3 @@ description: "hwloc_distances_s –"
 <p> Relative depth of the considered objects below the object containing this distance information. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

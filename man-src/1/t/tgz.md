@@ -19,4 +19,3 @@ description: "tgz – makes a gzip’d tar archive"
 <p> Filip Van Raemdonck (mechanix [at] debian.org) wrote this page for the <i>Debian/GNU</i> mtools package.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "curl_easy_perform – Perform a file transfer"
 <p> 0 means everything was ok, non-zero means an error occurred as <i>&lt;curl/curl.h&gt;</i> defines. If the CURLOPT_ERRORBUFFER was set with <i>curl_easy_setopt</i> there will be a readable error message in the error buffer when non-zero is returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></code>(3), </p>
-<h2>Index</h2>

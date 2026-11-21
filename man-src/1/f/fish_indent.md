@@ -27,4 +27,3 @@ description: "fish_indent — indenter and prettifier"
 <dd> &#8211;ansi colorizes the output using ANSI escape sequences, appropriate for the current $TERM, using the colors defined in the environment (such as $fish_color_command).</dd>
 <dt>&bull;</dt>
 <dd> &#8211;html outputs HTML, which supports syntax highlighting if the appropriate CSS is defined. The CSS class names are the same as the variable names, such as fish_color_command</dd></dl>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ r MODULE... #display README files of module(s)
 <pre>
     cpanp -d --fetchdir=. MODULE ...
 </pre>
-<h2>Index</h2>

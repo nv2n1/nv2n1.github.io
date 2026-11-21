@@ -19,4 +19,3 @@ description: "thunar-settings – display thunar(1) preferences dialog"
 <h2>AUTHORS</h2>
 <p> thunar-settings is copyright &#169; 2004-2007 The Thunar development team. All rights reserved. </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] posteo.net&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

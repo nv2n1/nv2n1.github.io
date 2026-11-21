@@ -20,4 +20,3 @@ description: "libssh2_agent_free – free an ssh-agent handle"
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_agent_init/">libssh2_agent_init</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_agent_disconnect/">libssh2_agent_disconnect</a>(3)</code> </p>
-<h2>Index</h2>

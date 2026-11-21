@@ -228,4 +228,3 @@ include / usr / share / dpkg / architecture.mk ifeq($(DEB_HOST_ARCH), alpha)[...
 <p> All long command and option names available only since dpkg 1.17.17.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1). </p>
-<h2>Index</h2>

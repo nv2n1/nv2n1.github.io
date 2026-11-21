@@ -28,4 +28,3 @@ description: "cinnamon-session-quit – End the current GNOME session"
 <dd> End the session without user interaction. This only works with <i>&#8211;logout</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon-session/">cinnamon-session</a>(1)</code> </p>
-<h2>Index</h2>

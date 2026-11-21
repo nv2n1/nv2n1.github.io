@@ -50,4 +50,3 @@ description: "passmass – change password on multiple machines"
 <p> <i>&quot;Exploring Expect: A Tcl-Based Toolkit for Automating Interactive Programs&quot;</i> by Don Libes, O&#8217;Reilly and Associates, January 1995.</p>
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>
-<h2>Index</h2>

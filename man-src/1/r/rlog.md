@@ -103,4 +103,3 @@ description: "rlog – print log messages and other information about RCS files"
 <p> has news and links to the latest release, development site, etc.</p>
 <h2>BUGS</h2>
 <p> The separator for revision ranges in the <code>-r</code> option used to be <code>&#8211;</code> instead of <code>:</code>, but this leads to confusion when symbolic names contain <code>&#8211;</code>. For backwards compatibility <code>rlog -r</code> still supports the old <code>&#8211;</code> separator, but it warns about this obsolete use. </p>
-<h2>Index</h2>

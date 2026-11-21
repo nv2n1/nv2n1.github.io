@@ -21,4 +21,3 @@ description: "krb5_digest krb5_digest_alloc krb5_digest_free krb5_digest_set_ser
 <p> Fn krb5_digest_free free the structure Fa digest .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

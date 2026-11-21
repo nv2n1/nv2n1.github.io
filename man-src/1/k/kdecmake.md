@@ -1952,4 +1952,3 @@ NEPOMUK_ADD_ONTOLOGY_CLASSES(&lt;sources - var&gt;[FAST]
   Mail: <a rel="nofollow" href="http://www.cmake.org/HTML/MailingLists.html">http://www.cmake.org/HTML/MailingLists.html</a>
   FAQ:  <a rel="nofollow" href="http://www.cmake.org/Wiki/CMake_FAQ">http://www.cmake.org/Wiki/CMake_FAQ</a>
 </pre>
-<h2>Index</h2>

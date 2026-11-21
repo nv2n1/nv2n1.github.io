@@ -42,4 +42,3 @@ description: "prooftrans – tool for transforming Prover9 proofs"
 <h2>AUTHOR</h2>
 <p> <code>prooftrans</code> was written by William McCune &lt;mccune [at] cs.unm.edu&gt; </p>
 <p> This manual page was written by Peter Collingbourne &lt;pcc03 [at] doc.ic.ac.uk&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

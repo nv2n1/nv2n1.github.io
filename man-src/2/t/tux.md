@@ -239,4 +239,3 @@ enum tux_reactions {
 <p> Any negative value (such as -EFAULT, -EINVAL) is an indication of an error. </p>
 <h2>BUGS</h2>
 <p> This man page is incomplete. </p>
-<h2>Index</h2>

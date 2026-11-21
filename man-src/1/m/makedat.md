@@ -66,4 +66,3 @@ makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildropgdbm.html">http://www.courier-mta.org/maildrop/maildropgdbm.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -146,4 +146,3 @@ description: "hx509 name functions –"
 </dt><dd> An hx509 error code, see <code>hx509_get_error_string()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>

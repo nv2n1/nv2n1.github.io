@@ -336,4 +336,3 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
  Gowri Visweswaran, Verisign Labs<br />
  Wouter Wijngaards, NLnet Labs<br />
  Glen Wiley, Verisign Inc.</dd></dl>
-<h2>Index</h2>

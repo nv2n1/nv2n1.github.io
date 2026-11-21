@@ -44,4 +44,3 @@ description: "mate-cpufreq-selector – A generic command line tool to change th
 <p> Carlos García Campos &lt;carlosgc [at] gnome.org&gt; (2004)</p>
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
-<h2>Index</h2>

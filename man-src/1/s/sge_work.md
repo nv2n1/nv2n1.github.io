@@ -40,4 +40,3 @@ description: "work – do some work for testing purposes"
 <dt><code>-daemonize</code></dt>
 <dd> Daemonize</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

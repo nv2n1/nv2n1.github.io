@@ -97,4 +97,3 @@ description: "msgcomm – match two message catalogs"
 <dt>
 </dt><dd> <code>info msgcomm</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

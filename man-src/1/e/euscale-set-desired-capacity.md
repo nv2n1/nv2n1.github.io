@@ -45,4 +45,3 @@ description: "euscale-set-desired-capacity – Set an auto-scaling group’s des
 <dt><code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

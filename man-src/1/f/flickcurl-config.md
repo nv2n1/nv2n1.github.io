@@ -33,4 +33,3 @@ description: "flickcurl-config – script to get information about the installed
 <dd> Output version as a decimal integer.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Kumar Appaiah &lt;akumar [at] ee.iitm.ac.in&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

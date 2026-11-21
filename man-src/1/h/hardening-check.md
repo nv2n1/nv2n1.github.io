@@ -66,4 +66,3 @@ description: "hardening-check – check binaries for security hardening features
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; version 2 or later.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i>hardening-wrapper</i>(1) </p>
-<h2>Index</h2>

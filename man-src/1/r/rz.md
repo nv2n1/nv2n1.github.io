@@ -154,4 +154,3 @@ description: "rx, rb, rz – XMODEM, YMODEM, ZMODEM (Batch) file receive"
 <h2>FILES</h2>
 <p> rz.c, crctab.c, rbsb.c, zm.c, zmodem.h Unix source files. </p>
 <p> rz.c, crctab.c, vrzsz.c, zm.c, zmodem.h, vmodem.h, vvmodem.c, VMS source files. </p>
-<h2>Index</h2>

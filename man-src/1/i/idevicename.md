@@ -26,4 +26,3 @@ description: "idevicename – Display the device name or set it to NAME if speci
 </dl>
 <h2>AUTHOR</h2>
 <p> Nikias Bassen </p>
-<h2>Index</h2>

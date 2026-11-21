@@ -7984,4 +7984,3 @@ mp.observe_property(&quot;pause&quot;, &quot;bool&quot;, on_pause_change);</pre>
 <p> Note that mpv likes to mix <code>/</code> and <code>\</code> path separators for simplicity. kernel32.dll accepts this, but cmd.exe does not.  </p>
 <h2>COPYRIGHT</h2>
 <p> GPLv2+ </p>
-<h2>Index</h2>

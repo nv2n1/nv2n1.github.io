@@ -89,4 +89,3 @@ typedef struct {
 <p> A pointer to a curl_version_info_data struct.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-curl_version/">curl_version</a>(3)</i> </p>
-<h2>Index</h2>

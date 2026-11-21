@@ -45,4 +45,3 @@ description: "whom – report to whom a message would go"
 <p> None</p>
 <h2>BUGS</h2>
 <p> With the <code>-check</code> option, <code>whom</code> makes no guarantees that the addresses listed as being ok are really deliverable, rather, an address being listed as ok means that at the time that <code>whom</code> was run the address was thought to be deliverable by the transport service. For local addresses, this is absolute; for network addresses, it means that the host is known; for uucp addresses, it (often) means that the <code>UUCP</code> network is available for use. </p>
-<h2>Index</h2>

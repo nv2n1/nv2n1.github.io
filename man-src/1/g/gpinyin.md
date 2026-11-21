@@ -124,4 +124,3 @@ description: "gpinyin – use Hanyu Pinyin Chinese in roff"
  pinyin.sty from the CJK macro package for </p>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-grog/">grog</a></code>(1), and <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1) explain how to view <i>roff</i> documents. </p>
 <p> <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) and <code><a href="/docs/linux/man/7-groff_char/">groff_char</a></code>(7) are comprehensive references covering the language elements of GNU <i>roff</i> and the available glyph repertoire, respectively. </p>
-<h2>Index</h2>

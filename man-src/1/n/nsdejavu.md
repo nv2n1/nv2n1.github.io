@@ -114,4 +114,3 @@ description: "nsdejavu – DjVu browser plugin"
 <p> This program was written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was then improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and L&#8217;eon Bottou &lt;leonb [at] users.sourceforge.net&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1), <code>djview4</code>(1) <code><a href="/docs/linux/man/1-djview3/">djview3</a></code>(1) </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ globus_module_deactivate(GLOBUS_GSI_GSSAPI_MODULE)
 <p> Module descriptor</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
-<h2>Index</h2>

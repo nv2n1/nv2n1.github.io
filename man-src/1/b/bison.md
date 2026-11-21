@@ -140,4 +140,3 @@ description: "bison – GNU Project parser generator (yacc replacement)"
 <dt>
 </dt><dd> <code>info bison</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

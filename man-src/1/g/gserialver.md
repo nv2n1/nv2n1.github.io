@@ -29,4 +29,3 @@ description: "gserialver – version command"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-javac/">javac</a></i>(1), &#8230;</p>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

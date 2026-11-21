@@ -36,4 +36,3 @@ description: "spottopgm – convert SPOT satellite images to a PGM image"
 <p> Warren Toomey <i>wkt [at] csadfa.cs.adfa.oz.au</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code>pgm</code>(1) </p>
-<h2>Index</h2>

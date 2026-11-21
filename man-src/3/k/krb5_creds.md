@@ -34,4 +34,3 @@ typedef struct krb5_creds {
 <p> Fn krb5_free_cred_contents frees the content of the Fa cred structure.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_compare_creds3, krb5_get_init_creds3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

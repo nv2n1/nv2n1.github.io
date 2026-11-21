@@ -20,4 +20,3 @@ description: "audit_detect_machine – Detects the current machine type"
 <p> <code>uname</code>(3), <code>audit_name_to_syscall</code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

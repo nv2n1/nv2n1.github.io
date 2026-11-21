@@ -88,4 +88,3 @@ description: "vbnc – Mono Visual Basic Compiler."
 <p> To report bugs in the compiler, you can file bug reports in our bug tracking system: <a rel="nofollow" href="http://bugzilla.ximian.com.">http://bugzilla.ximian.com.</a></p>
 <h2>MAILING LIST</h2>
 <p> The Mono Basic Mailing List is available at: mono-vb-list-request [at] ximian.com </p>
-<h2>Index</h2>

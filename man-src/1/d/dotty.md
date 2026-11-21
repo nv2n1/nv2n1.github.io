@@ -30,4 +30,3 @@ description: "dotty – A Customizable Graph Editor"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-lefty/">lefty</a>(1), <a href="/docs/linux/man/1-lneato/">lneato</a>(1), <a href="/docs/linux/man/3-xdot/">xdot</a>(3)<br />
  <i>dotty</i> user guide. </p>
-<h2>Index</h2>

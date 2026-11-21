@@ -38,4 +38,3 @@ $ tracker sql -q 'SELECT * FROM &quot;nfo:Document&quot; WHERE &quot;nfo:tableOf
 <dt><code><a rel="nofollow" href="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</a></code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

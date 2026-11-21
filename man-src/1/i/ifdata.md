@@ -139,4 +139,3 @@ description: "ifdata – get network interface info without parsing ifconfig out
 </dt><dd> Prints the number of bytes of outgoing traffic measured in one second.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Benjamin BAYART </p>
-<h2>Index</h2>

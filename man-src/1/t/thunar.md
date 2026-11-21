@@ -48,4 +48,3 @@ description: "Thunar – File Manager for the Xfce Desktop Environment"
 <h2>AUTHOR</h2>
 <p> <code>Thunar</code> was written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
 <p> This manual page was written by Benedikt Meurer &lt;benny [at] xfce.org&gt;. </p>
-<h2>Index</h2>

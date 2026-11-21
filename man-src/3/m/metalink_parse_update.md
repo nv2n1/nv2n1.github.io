@@ -141,4 +141,3 @@ int main(int argc, char **argv)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>metalink_delete</code>(3), <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3), <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) </p>
-<h2>Index</h2>

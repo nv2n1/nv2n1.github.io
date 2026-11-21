@@ -55,4 +55,3 @@ description: "nviz – nviz – Visualization and animation tool for GRASS data"
 <h2>SEE ALSO</h2>
 <p> Please refer to the detailed manual inside NVIZ (HELP menu) or see the NVIZ Tutorial. </p>
 <p> Full index </p>
-<h2>Index</h2>

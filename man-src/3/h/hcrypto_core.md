@@ -49,4 +49,3 @@ description: "hcrypto function controlling behavior –"
 <p> Add all algorithms to the crypto core, but don&#8217;t use the configuration file.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdal crypto library from the source code. </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "graphml2gv – GRAPHML-DOT converter"
 <p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dot/">dot</a>(1), libcgraph(3) </p>
-<h2>Index</h2>

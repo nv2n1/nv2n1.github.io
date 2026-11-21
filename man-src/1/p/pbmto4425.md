@@ -26,4 +26,3 @@ description: "pbmto4425 – Display PBM images on an AT&T 4425 terminal"
 <p> <code><a href="/docs/linux/man/1-pbmtoascii/">pbmtoascii</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtoterm/">ppmtoterm</a></code>(1) , <code>pbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Robert Perlberg </p>
-<h2>Index</h2>

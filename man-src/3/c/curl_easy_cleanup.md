@@ -22,4 +22,3 @@ description: "curl_easy_cleanup – End a libcurl easy session"
 <p> None</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3), </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "dpkg-mergechangelogs – 3-way merge of debian/changelog files"
 <pre>
  debian/changelog merge=dpkg-mergechangelogs
 </pre>
-<h2>Index</h2>

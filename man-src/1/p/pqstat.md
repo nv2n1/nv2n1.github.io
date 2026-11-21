@@ -55,4 +55,3 @@ description: "pqstat – List jobs in NetWare print queue"
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5), <a href="/docs/linux/man/1-nprint/">nprint</a>(1), <a href="/docs/linux/man/1-slist/">slist</a>(1), <a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/1-pqlist/">pqlist</a>(1), <a href="/docs/linux/man/1-pqrm/">pqrm</a>(1)</code> </p>
 <h2>CREDITS</h2>
 <p> pqstat was written by David Woodhouse (dave [at] imladris.demon.co.uk) </p>
-<h2>Index</h2>

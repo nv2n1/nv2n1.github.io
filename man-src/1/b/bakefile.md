@@ -184,4 +184,3 @@ description: "bakefile – native makefiles generator"
 <dl>
 <dt>
 </dt><dd> List of directories where ruleset files are looked for (syntax is same as in <i>PATH</i>). Bakefile&#8217;s data directory is always searched in addition to paths listed in <i>BAKEFILE_PATHS</i>, but <i>BAKEFILE_PATHS</i> has higher priority.</dd></dl>
-<h2>Index</h2>

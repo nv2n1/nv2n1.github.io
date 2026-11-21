@@ -37,4 +37,3 @@ description: "axgetput – upload or download files via AX.25 / axspawn Linux lo
 <p> Anyone like to implement yapp and didadit protcols? </p>
 <h2>AUTHOR</h2>
 <p> Thomas Osterried DL9SAU &lt;thomas [at] x-berg.in-berlin.de&gt; Ralf Baechle DL5RB &lt;ralf [at] linux-mips.org&gt; </p>
-<h2>Index</h2>

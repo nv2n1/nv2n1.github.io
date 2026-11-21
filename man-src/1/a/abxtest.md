@@ -36,4 +36,3 @@ description: "abxtest – double-blind ABX comparison testing script"
 <p> <code>abxtest</code> uses the binomial distribution to accurately calculate the probability that the result is the same as random guesses.</p>
 <h2>AUTHOR</h2>
 <p> Robert Leslie &lt;rob [at] mars.org&gt; </p>
-<h2>Index</h2>

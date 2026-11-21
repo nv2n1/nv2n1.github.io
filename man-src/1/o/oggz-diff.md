@@ -92,4 +92,3 @@ description: "oggz-diff — Hexdump the packets of two Ogg files and output diff
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-diff/">diff</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-patch/">patch</a></code><code>(1)</code> </p>
-<h2>Index</h2>

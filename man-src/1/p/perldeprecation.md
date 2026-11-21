@@ -169,4 +169,3 @@ $sub = sub(){return $var};
 <p> So now <code>&quot;tie $scalar&quot;</code> will always tie the scalar, not the handle it holds. To tie the handle, use <code>&quot;tie *$scalar&quot;</code> (with an explicit asterisk). The same applies to <code>&quot;tied *$scalar&quot;</code> and <code>&quot;untie *$scalar&quot;</code>.  </p>
 <h2>SEE ALSO</h2>
 <p> warnings, diagnostics. </p>
-<h2>Index</h2>

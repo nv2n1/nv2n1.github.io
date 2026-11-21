@@ -71,4 +71,3 @@ description: "ucf – Update Configuration File: preserve user changes in config
 <p> <a href="/docs/linux/man/5-ucf-conf/">ucf.conf</a>(5), <a href="/docs/linux/man/1-ucfr/">ucfr</a>(1), <a href="/docs/linux/man/1-ucfq/">ucfq</a>(1), and <a href="/docs/linux/man/1-diff3/">diff3</a>(1). The <code>Debian</code> Emacs policy, shipped with the package <i>emacsen-common.</i></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written Manoj Srivastava &lt;srivasta [at] debian.org&gt;, for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

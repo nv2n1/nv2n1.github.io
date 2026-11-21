@@ -58,4 +58,3 @@ int modify_ldt(int func, void *ptr, unsigned long bytecount);
 <p> <code><a href="/docs/linux/man/2-arch_prctl/">arch_prctl</a></code>(2), <code><a href="/docs/linux/man/2-set_thread_area/">set_thread_area</a></code>(2), <code><a href="/docs/linux/man/2-vm86/">vm86</a></code>(2)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "euca-describe-regions – Display information about regions"
 <dd> show this help message and exit</dd></dl>
 <h3>allowed filter names:</h3>
 <p> endpoint region-name </p>
-<h2>Index</h2>

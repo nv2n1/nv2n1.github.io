@@ -57,4 +57,3 @@ description: "alembic – manual page for alembic 0.8.7"
 <dt><code>&#8211;raiseerr</code></dt>
 <dd> Raise a full stack trace on error </dd>
 </dl>
-<h2>Index</h2>

@@ -83,4 +83,3 @@ $ LD_PRELOAD=libnss_wrapper.so NSS_WRAPPER_HOSTNAME=test.example.org hostname
 test.example.org
 </pre>
 </dd></dl>
-<h2>Index</h2>

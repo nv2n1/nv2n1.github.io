@@ -15,4 +15,3 @@ description: "grub-menulst2cfg — Convert a configuration file from GRUB 0.xx t
 <p> <code>grub-menulst2cfg</code> converts a configuration file from GRUB 0.xx to the current format. </p>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

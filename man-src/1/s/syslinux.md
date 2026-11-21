@@ -197,4 +197,3 @@ BS               Boot sector
 <p> <code>lilo</code>(8), <code>keytab-lilo.pl</code>(8), <code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-mkfs/">mkfs</a></code>(8), <code>superformat</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page is a modified version of the original <code>syslinux</code> documentation by H. Peter Anvin &lt;hpa [at] zytor.com&gt;. The conversion to a manpage was made by Arthur Korn &lt;arthur [at] korn.ch&gt;. </p>
-<h2>Index</h2>

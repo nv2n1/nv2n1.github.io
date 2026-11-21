@@ -127,4 +127,3 @@ ncid-- no - gui tardis.drwho.home
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> ncid.conf.5, ncidmodules.1, ncidmodules.conf.5, ncidd.8, ncidd.conf.5, ncidd.alias.5, sip2ncid.8, sip2ncid.conf.5, ncidsip.8, ncidsip.conf.5 </p>
-<h2>Index</h2>

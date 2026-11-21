@@ -34,4 +34,3 @@ description: "sff2g3 – convert CAPI SFF fax files into G3 fax files"
 <p> <a href="/docs/linux/man/1-g32pbm/">g32pbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> <i>sff2g3</i> is Copyright (C) 2004 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. </p>
-<h2>Index</h2>

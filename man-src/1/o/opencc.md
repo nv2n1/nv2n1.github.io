@@ -30,4 +30,3 @@ description: "opencc – simplified-traditional chinese conversion tool"
 <p> Open Chinese Convert (OpenCC) Command Line Tool</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) </p>
-<h2>Index</h2>

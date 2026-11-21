@@ -108,4 +108,3 @@ description: "tracker3-search – Search for content by type or across all types
 </dt><dd> This disables any ANSI color use on the command line. By default this is enabled to make it easier to see results.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-status/">tracker3-status</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-tag/">tracker3-tag</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
-<h2>Index</h2>

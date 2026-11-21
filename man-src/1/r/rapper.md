@@ -94,4 +94,3 @@ description: "rapper – Raptor RDF parsing and serializing utility"
 <p> Removed -a, &#8211;assume since rdf:RDF is now always optional. </p>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://www.dajobe.org/">http://www.dajobe.org/</a> </p>
-<h2>Index</h2>

@@ -100,4 +100,3 @@ example%<code> uniconv -f UTF8 -t ASCII -m MAC_CYRILLIC /path/to/share</code>
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>AppleVolumes.default</code>(5),<code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8),<code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1),<code><a href="/docs/linux/man/8-cnid_metad/">cnid_metad</a></code>(8),<code><a href="/docs/linux/man/8-cnid_dbd/">cnid_dbd</a></code>(8) </p>
-<h2>Index</h2>

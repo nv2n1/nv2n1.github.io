@@ -16,4 +16,3 @@ description: "foomatic-cleanupdrivers – Remove driver entries with no command 
 <h2>DESCRIPTION</h2>
 <dd>The <code>foomatic-cleanupdrivers</code> command removes all driver XML files which have an empty command line. </dd>
 <p> It is not intended to be called directly by the user. </p>
-<h2>Index</h2>

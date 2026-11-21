@@ -33,4 +33,3 @@ description: "ppmcolormask – produce mask of areas of a certain color in a PPM
 <p> <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/1-pbmmask/">pbmmask</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a>(5)</code> </p>
 <h2>AUTHOR</h2>
 <p> Bryan Henderson (bryanh [at] giraffe-data.com) </p>
-<h2>Index</h2>

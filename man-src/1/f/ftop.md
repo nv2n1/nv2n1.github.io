@@ -160,4 +160,3 @@ description: "ftop – show progress of open files and file systems"
 <p> ftop -On 1 -l all 2&gt; log.txt</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-top/">top</a></code>(1) </p>
-<h2>Index</h2>

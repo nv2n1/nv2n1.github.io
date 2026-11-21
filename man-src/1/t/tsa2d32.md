@@ -29,4 +29,3 @@ description: "tsa2d32, tsd2a32, tsd2a – gcin’s Tsin tools"
 <p> <code><a href="/docs/linux/man/1-gcin/">gcin</a></code>(1), <code>tslearn.</code></p>
 <h2>AUTHOR</h2>
 <p> tsa2d32, tsd2a32, and tsd2a were written by Edward Der-Hua Liu &lt;cp76 [at] csie.nctu.edu.tw&gt;. </p>
-<h2>Index</h2>

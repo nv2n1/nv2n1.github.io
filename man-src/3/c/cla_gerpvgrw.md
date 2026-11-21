@@ -79,4 +79,3 @@ description: "cla_gerpvgrw.f –"
 <p> Definition at line 99 of file cla_gerpvgrw.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

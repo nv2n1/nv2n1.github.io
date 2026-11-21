@@ -20,4 +20,3 @@ description: "docker-plugin-upgrade – Upgrade an existing plugin"
 <p> <code>&#8211;skip-remote-check</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Do not check if specified remote plugin matches existing plugin image</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-plugin/">docker-plugin</a>(1)</code> </p>
-<h2>Index</h2>

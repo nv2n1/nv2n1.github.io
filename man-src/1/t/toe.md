@@ -88,4 +88,3 @@ qansi-t         QNX ansi without console writes
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-captoinfo/">captoinfo</a></code>(1), <code><a href="/docs/linux/man/1-infocmp/">infocmp</a></code>(1), <code><a href="/docs/linux/man/1-infotocap/">infotocap</a></code>(1), <code><a href="/docs/linux/man/1-tic/">tic</a></code>(1), <code>ncurses</code>(3NCURSES), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5). </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
-<h2>Index</h2>

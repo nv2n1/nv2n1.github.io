@@ -947,4 +947,3 @@ yad-- plug = 12345 --tabnum = 1 --text = "first tab with text" &amp; &gt; res1 &
 <p> <code>Yad</code> was written by Victor Ananjevsky &lt;ananasik [at] gmail.com&gt;. Yad icon created by Bogdan Lisovich. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gdialog</code>(1), <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1), <code><a href="/docs/linux/man/1-zenity/">zenity</a></code>(1) </p>
-<h2>Index</h2>

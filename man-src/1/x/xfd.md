@@ -76,4 +76,3 @@ Xfd  xfd
 <p> The program should skip over pages full of non-existent characters.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium; previous program of the same name by Mark Lillibridge, MIT Project Athena. </p>
-<h2>Index</h2>

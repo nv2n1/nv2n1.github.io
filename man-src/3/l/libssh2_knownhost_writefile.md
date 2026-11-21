@@ -23,4 +23,3 @@ description: "libssh2_knownhost_writefile – write a collection of known hosts 
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_knownhost_readfile/">libssh2_knownhost_readfile</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_add/">libssh2_knownhost_add</a>(3)</code> </p>
-<h2>Index</h2>

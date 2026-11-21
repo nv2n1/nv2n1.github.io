@@ -77,4 +77,3 @@ description: "ipa-join – Join a machine to an IPA realm and get a keytab for t
 <p> 21 Failed to get default Kerberos realm </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipa-rmkeytab/">ipa-rmkeytab</a></code>(1) <code><a href="/docs/linux/man/1-ipa-client-install/">ipa-client-install</a></code>(1) </p>
-<h2>Index</h2>

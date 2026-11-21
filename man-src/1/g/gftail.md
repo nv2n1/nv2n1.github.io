@@ -55,4 +55,3 @@ description: "gftail – manual page for gftail (glusterfs-coreutils) 0.2.0"
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gfcli/">gfcli</a>(1) </p>
-<h2>Index</h2>

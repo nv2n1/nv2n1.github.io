@@ -88,4 +88,3 @@ description: "ttf2pt1_convert – convenience font conversion script"
 <dt>&bull;</dt>
 <dd> The conversion script has no support for Eastern multi-plane fonts. Contribution of such a support would be welcome. </dd>
 </dl>
-<h2>Index</h2>

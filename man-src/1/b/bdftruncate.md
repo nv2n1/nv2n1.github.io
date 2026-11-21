@@ -24,4 +24,3 @@ description: "bdftruncate – generate truncated BDF font from ISO 10646-1-encod
 <h2>AUTHOR</h2>
 <p> <code>bdftruncate</code> was written by Markus Kuhn. </p>
 <p> Branden Robinson wrote this manual page, originally for the Debian Project. </p>
-<h2>Index</h2>

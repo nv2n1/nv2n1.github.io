@@ -27,4 +27,3 @@ description: "voikkohyphenate – test program for Voikko hyphenator"
 <p> <code>voikkospell</code> for common options of different Voikko test tools.</p>
 <h2>AUTHOR</h2>
 <p> voikkohyphenate and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
-<h2>Index</h2>

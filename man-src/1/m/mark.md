@@ -53,4 +53,3 @@ description: "mark – manipulate message sequences"
 <p> If a folder is given, it will become the current folder.</p>
 <h2>HELPFUL HINTS</h2>
 <p> Use <code>flist</code> to find folders with a given sequence, and &#8220;<code>pick</code> <i>sequence</i> <code>-list</code>&#8221; to enumerate those messages in the sequence (such as for use by a shell script). </p>
-<h2>Index</h2>

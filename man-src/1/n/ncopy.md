@@ -71,4 +71,3 @@ description: "ncopy – NetWare file copy"
 <p> <code><a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8)</code> </p>
 <h2>CREDITS</h2>
 <p> ncopy was written by Brian G. Reid (breid [at] tim.com) and Tom C. Henderson (thenderson [at] tim.com). Many thanks to Volker Lendecke (lendecke [at] math.uni-goettingen.de) for the ncpfs and ncplib which made ncopy possible. Some further work was done by Petr Vandrovec (vandrove [at] vc.cvut.cz). </p>
-<h2>Index</h2>

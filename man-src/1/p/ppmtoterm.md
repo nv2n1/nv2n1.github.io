@@ -30,4 +30,3 @@ description: "ppmtoterm – convert a PPM image to a ANSI ISO 6429 ascii image"
 <p> Copyright (C) 2002 by Ero Carrera. </p>
 <h2>HISTORY</h2>
 <p> This program was new in Netpbm 10.9 (August 2002). </p>
-<h2>Index</h2>

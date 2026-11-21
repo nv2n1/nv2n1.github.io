@@ -21,4 +21,3 @@ description: "userinfo – A graphical equivilient to chfn."
 <p> Currently doesn&#8217;t give feedback to the user when the helper fails. (things like incorrect passwords and such) The next iteration should fix this bug.</p>
 <h2>AUTHOR</h2>
 <p> Otto Hammersmith &lt;otto [at] redhat.com&gt; </p>
-<h2>Index</h2>

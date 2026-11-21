@@ -64,4 +64,3 @@ description: "gedit – text editor for the GNOME Desktop"
 </dd><dt>Chema Celorio</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

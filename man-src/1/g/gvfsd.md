@@ -48,4 +48,3 @@ description: "gvfsd – Main daemon for gvfs"
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-gvfs/">gvfs</a></code>(7), <code><a href="/docs/linux/man/1-gvfsd-fuse/">gvfsd-fuse</a></code>(1) </p>
-<h2>Index</h2>

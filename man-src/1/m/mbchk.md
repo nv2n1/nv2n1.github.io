@@ -22,4 +22,3 @@ description: "mbchk – check the format of a Multiboot kernel"
 <dt>
 </dt><dd> <code>info mbchk</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

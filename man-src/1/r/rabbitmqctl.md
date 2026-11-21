@@ -1164,4 +1164,3 @@ rabbitmqctl close_connection &quot;&lt;rabbit [at] tanto.4262.0&gt;&quot; &quot;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.rabbitmq.com/clustering.html">http://www.rabbitmq.com/clustering.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

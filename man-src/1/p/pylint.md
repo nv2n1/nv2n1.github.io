@@ -223,4 +223,3 @@ description: "pylint – python code static checker"
 <p> Please report bugs on the project&#8217;s mailing list: mailto://python-projects [at] logilab.org </p>
 <h2>AUTHOR</h2>
 <p> Sylvain Thenault &lt;sylvain.thenault [at] logilab.fr&gt; </p>
-<h2>Index</h2>

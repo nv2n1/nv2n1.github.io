@@ -18,4 +18,3 @@ description: "zcmp, zdiff – compare compressed files"
 <p> <a href="/docs/linux/man/1-cmp/">cmp</a>(1), <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-zgrep/">zgrep</a>(1), <a href="/docs/linux/man/1-znew/">znew</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1)</p>
 <h2>BUGS</h2>
 <p> Messages from the <i>cmp</i> or <i>diff</i> programs may refer to file names such as &quot;-&quot; instead of to the file names specified. </p>
-<h2>Index</h2>

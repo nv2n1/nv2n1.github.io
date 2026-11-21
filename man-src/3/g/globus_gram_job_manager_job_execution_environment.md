@@ -121,4 +121,3 @@ description: "globus_gram_job_manager_job_execution_environment – Job Executio
 <dl>
 <dt>
 </dt><dd> The condor name of the operating system which the job manager is handling jobs for.</dd></dl>
-<h2>Index</h2>

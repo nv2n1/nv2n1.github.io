@@ -78,4 +78,3 @@ description: "growisofs – combined genisoimage frontend/DVD recording program.
 <p> This manpage is currently maintained by Huub Reuver &lt;h_reuver [at] mantell.xs4all.nl&gt;. </p>
 <h2>LICENSE</h2>
 <p> <code>growisofs</code> is distributed under GNU GPL. </p>
-<h2>Index</h2>

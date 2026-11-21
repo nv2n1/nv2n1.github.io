@@ -36,4 +36,3 @@ description: "ptex, uptex, eptex, euptex – Japanese \"Publishing TeX\""
 <h2>AUTHORS</h2>
 <p> This version of (e-)(u)pTeX is maintained by Japanese TeX Development Community &lt;<a rel="nofollow" href="https://texjp.org">https://texjp.org</a>&gt;. For bug reports, open an issue at GitHub repository &lt;<a rel="nofollow" href="https://github.com/texjporg/tex-jp-build">https://github.com/texjporg/tex-jp-build</a>&gt;, or send an e-mail to &lt;issue [at] texjp.org&gt;. </p>
 <p> This manual page was written by Hironobu Yamashita. </p>
-<h2>Index</h2>

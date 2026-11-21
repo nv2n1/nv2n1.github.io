@@ -34,4 +34,3 @@ description: "arm_destroy_application – destroy application data"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> .BR arm_register_application (3) </p>
-<h2>Index</h2>

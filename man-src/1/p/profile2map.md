@@ -27,4 +27,3 @@ description: "profile2map – Fuse profiler output converter"
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Stuart Brady (sdbrady [at] ntlworld.com). </p>
-<h2>Index</h2>

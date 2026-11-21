@@ -28,4 +28,3 @@ description: "lxqt-sudo, lxsu – execute a command as privileged user"
 <p> <code><a href="/docs/linux/man/8-sudo/">sudo</a>(8)</code> <code><a href="/docs/linux/man/1-su/">su</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> This manual page was created by <code>Palo Kisa</code> <i>&lt;palo.kisa [at] gmail.com&gt;</i> for <code>LXQt</code> project. </p>
-<h2>Index</h2>

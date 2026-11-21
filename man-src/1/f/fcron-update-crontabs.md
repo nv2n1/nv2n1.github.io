@@ -17,4 +17,3 @@ description: "fcron-update-crontabs – refreshes all fcron crontabs"
 <p> <code><a href="/docs/linux/man/8-fcron/">fcron</a></code>(8), <code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), <code><a href="/docs/linux/man/1-fcrontab/">fcrontab</a></code>(1), <code><a href="/docs/linux/man/5-fcrontab/">fcrontab</a></code>(5).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Henrique M. Holschuh &lt;hmh [at] rcm.org.br&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

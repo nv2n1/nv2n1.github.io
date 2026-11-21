@@ -24,4 +24,3 @@ description: "eiciel – GNOME ACL file permissions editor"
 <h2>SEE ALSO</h2>
 <p> <code>gnome</code>(1) <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5) <code><a href="/docs/linux/man/5-attr/">attr</a></code>(5) </p>
 <p> <code><a rel="nofollow" href="http://acl.bestbits.at">http://acl.bestbits.at</a></code> &#8211; Home of the Linux 2.4 ACL support </p>
-<h2>Index</h2>

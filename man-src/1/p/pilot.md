@@ -51,4 +51,3 @@ description: "pilot – simple file system browser in the style of the Alpine Co
 <p> <a href="/docs/linux/man/1-alpine/">alpine</a>(1)<br />
  Source distribution (part of the Alpine Message System): </p>
 <p> $Date: 2005/01/14 20:40:14 $ </p>
-<h2>Index</h2>

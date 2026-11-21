@@ -58,4 +58,3 @@ description: "nwpjvm – Move print job to Unix queue"
 <p> <code><a href="/docs/linux/man/5-nwclient/">nwclient</a>(5), <a href="/docs/linux/man/1-slist/">slist</a>(1), <a href="/docs/linux/man/1-pqlist/">pqlist</a>(1), <a href="/docs/linux/man/8-ncpmount/">ncpmount</a>(8), <a href="/docs/linux/man/8-ncpumount/">ncpumount</a>(8), <a href="/docs/linux/man/1-pserver/">pserver</a>(1)</code> </p>
 <h2>CREDITS</h2>
 <p> nwpjmv was written by Bruno Browning (bruno [at] lss.wisc.edu) based on pserver by Volker Lendecke (lendecke [at] math.uni-goettingen.de) </p>
-<h2>Index</h2>

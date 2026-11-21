@@ -192,4 +192,3 @@ sty2dtx.pl-- author Me-- email me[at] there.com mypkg.sty mypkg.dtx
 <p> Martin Scharrer </p>
 <p> E-mail: martin [at] scharrer-online.de </p>
 <p> <font SIZE="-1">WWW:</font> <a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a> &lt;<a rel="nofollow" href="http://www.scharrer-online.de">http://www.scharrer-online.de</a>&gt; </p>
-<h2>Index</h2>

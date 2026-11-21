@@ -72,4 +72,3 @@ description: "bootconf – bootconf"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/bootconf/download/">http://www.courier-mta.org/bootconf/download/</a></dd></dl>
 </dl>
-<h2>Index</h2>

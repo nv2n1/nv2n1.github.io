@@ -48,4 +48,3 @@ description: "glite-lb-bkpurge-offline – emergency utility for removing inacti
 <p> L&amp;B Product Team, CESNET. </p>
 <h2>SEE ALSO</h2>
 <p>&nbsp;<wbr><code><a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a></code>(1) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "i3-wsbar – sample implementation of a standalone workspace bar"
 <dt><code>&#8211;show-all</code></dt>
 <dd> If enabled, all workspaces are shown (not only those of the current output). Handy to use with <tt>&quot;--output-on&quot;</tt>. </dd>
 </dl>
-<h2>Index</h2>

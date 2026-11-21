@@ -42,4 +42,3 @@ description: "newuidmap – set the uid mapping of a user namespace"
 </dt><dd> Mapping of uids from one between user namespaces.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-login-defs/">login.defs</a></code>(5), <code><a href="/docs/linux/man/8-newusers/">newusers</a></code>(8), <code><a href="/docs/linux/man/5-subuid/">subuid</a></code>(5), <code><a href="/docs/linux/man/8-useradd/">useradd</a></code>(8), <code><a href="/docs/linux/man/8-usermod/">usermod</a></code>(8), <code><a href="/docs/linux/man/8-userdel/">userdel</a></code>(8). </p>
-<h2>Index</h2>

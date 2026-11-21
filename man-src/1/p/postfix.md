@@ -282,4 +282,3 @@ Jun-ichiro 'itojun' Hagino, KAME project, Japan
 The Linux PLD project
 Dean Strik, Eindhoven University, The Netherlands
 </pre>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "syndaemon – a program that monitors keyboard activity and disabl
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/1-synclient/">synclient</a>(1), <a href="/docs/linux/man/4-synaptics/">synaptics</a>(4) </p>
-<h2>Index</h2>

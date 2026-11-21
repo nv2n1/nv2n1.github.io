@@ -32,4 +32,3 @@ url: "/docs/linux/man/1-tgatoppm/"
 <h2>AUTHOR</h2>
 <p> Partially based on tga2rast, version 1.0, by Ian J. MacPhedran. </p>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

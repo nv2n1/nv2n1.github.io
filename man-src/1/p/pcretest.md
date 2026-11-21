@@ -453,4 +453,3 @@ Cambridge CB2 3QH, England.
 <pre><code>Last updated: 10 September 2012
 Copyright (c) 1997-2012 University of Cambridge.
 </code></pre>
-<h2>Index</h2>

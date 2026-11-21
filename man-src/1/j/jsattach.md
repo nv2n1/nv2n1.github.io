@@ -26,4 +26,3 @@ description: "jsattach – attach a serial line to a joystick device"
 <dd> Use this option for the WingMan Warrior.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1). </p>
-<h2>Index</h2>

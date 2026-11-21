@@ -68,4 +68,3 @@ flag.
 <dt>Ariel Levkovich &lt;lariel [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

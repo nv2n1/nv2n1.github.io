@@ -16,4 +16,3 @@ description: "midi_out – Streams a block of MIDI commands into the player. All
 <p> Streams a block of MIDI commands into the player in real-time, allowing you to trigger notes, jingles, etc, over the top of whatever MIDI file is currently playing. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_sound</code>(3), <code><a href="/docs/linux/man/3-load_midi_patches/">load_midi_patches</a></code>(3), <code><a href="/docs/linux/man/3-midi_recorder/">midi_recorder</a></code>(3) </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "yuvplay – Display YUV4MPEG2 streams (using SDL)"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavpipe/">lavpipe</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1) <code><a href="/docs/linux/man/1-lavplay/">lavplay</a></code>(1) </p>
-<h2>Index</h2>

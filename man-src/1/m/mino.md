@@ -45,4 +45,3 @@ description: "Mino – a user friendly text editor for GNU/Linux console/xterm"
 <p> info mino, info gnudos</p>
 <h2>AUTHOR</h2>
 <p> Mohammed Isam &lt;mohammed_isam1984 [at] yahoo.com&gt; </p>
-<h2>Index</h2>

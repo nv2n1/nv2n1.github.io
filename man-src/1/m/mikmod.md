@@ -323,4 +323,3 @@ description: "mikmod – play soundtracker etc. modules on a Unix machine."
 <h2>LOCATING NEWER VERSIONS&#8230;</h2>
 <p> The official MikMod and libmikmod home page is located on<br />
 &nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://mikmod.raphnet.net">http://mikmod.raphnet.net</a> </p>
-<h2>Index</h2>

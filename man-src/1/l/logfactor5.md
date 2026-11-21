@@ -14,4 +14,3 @@ description: "logfactor5 – GUI tool for viewing logging events"
 <h2>DESCRIPTION</h2>
 <p> LogFactor5 is a Swing based GUI tool for viewing logging events that leverages the power of Log4j logging framework and provides developers with a sophisticated, feature-rich, logging interface for managing log messages. </p>
 <p> LogFactor5 seamlessly plugs into Log4j and provides developers with an alternate destination for outputting messages. </p>
-<h2>Index</h2>

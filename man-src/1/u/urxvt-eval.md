@@ -41,4 +41,3 @@ description: "eval – evaluate arbitrary perl code using actions"
 </dd><dt>paste_clipboard</dt>
 <dd> Paste the value of the <font SIZE="-1">PRIMARY</font> or <font SIZE="-1">CLIPBOARD</font> selection. </dd>
 </dl>
-<h2>Index</h2>

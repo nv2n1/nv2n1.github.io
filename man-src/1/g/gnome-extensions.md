@@ -194,4 +194,3 @@ description: "gnome-extensions – Command line tool for managing GNOME extensio
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>BUGS</h2>
 <p> The tool is part of the gnome-shell project, and bugs should be reported in its issue tracker at m[blue]<code><a rel="nofollow" href="https://gitlab.gnome.org/GNOME/gnome-shell/issues">https://gitlab.gnome.org/GNOME/gnome-shell/issues</a></code>m[]. </p>
-<h2>Index</h2>

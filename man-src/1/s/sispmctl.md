@@ -85,4 +85,3 @@ description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 <p> First version by Mondrian Nuessle, nuessle [at] uni-mannheim.de </p>
 <p> Web integration and man page by Andreas Neuper, ANeuper-at-web-dot-de </p>
 <p> Plannifications by Olivier Matheret </p>
-<h2>Index</h2>

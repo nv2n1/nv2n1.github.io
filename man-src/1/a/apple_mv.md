@@ -21,4 +21,3 @@ description: "apple_mv – Do an apple move, moving metadata and the resource fo
 <p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-apple_cp/">apple_cp</a></code>(1), <code><a href="/docs/linux/man/1-apple_rm/">apple_rm</a></code>(1). </p>
-<h2>Index</h2>

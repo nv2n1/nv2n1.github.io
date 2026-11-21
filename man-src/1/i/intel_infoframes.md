@@ -19,4 +19,3 @@ description: "intel_infoframes – View and change HDMI InfoFrames"
 <p> Not all HDMI monitors respect the InfoFrames sent to them. Only GEN 4 or newer hardware is supported yet.</p>
 <h2>SEE ALSO</h2>
 <p> HDMI specification, CEA-861 specification. </p>
-<h2>Index</h2>

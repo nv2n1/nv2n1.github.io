@@ -45,4 +45,3 @@ description: "qdel – delete pbs batch job"
 <p> If the qdel command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), qsig(1B), and pbs_deljob(3B) </p>
-<h2>Index</h2>

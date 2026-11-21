@@ -79,4 +79,3 @@ James Antill &lt;james.antill [at] redhat.com&gt;.
 <h2>BUGS</h2>
 <p> Currently yum can&#8217;t filter packages in all of the commands, so for instance &quot;yum list &#8216;yum*&#8217;&quot; doesn&#8217;t get the results filtered. </p>
 <p> Apart from that there are no bugs, but should you find any, you should first consult the FAQ section on <a rel="nofollow" href="http://yum.baseurl.org/wiki/Faq">http://yum.baseurl.org/wiki/Faq</a> and if unsuccessful in finding a resolution contact the mailing list: yum-devel [at] lists.baseurl.org. To file a bug use <a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a> for Fedora/RHEL/Centos related bugs and <a rel="nofollow" href="http://yum.baseurl.org/report">http://yum.baseurl.org/report</a> for all other bugs. </p>
-<h2>Index</h2>

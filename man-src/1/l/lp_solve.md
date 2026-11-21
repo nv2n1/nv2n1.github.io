@@ -444,4 +444,3 @@ $ lp_solve - S3 example.lp
 <p> $ <code>lp_solve -parse_only -lp example.lp -wmps example.mps</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) </p>
-<h2>Index</h2>

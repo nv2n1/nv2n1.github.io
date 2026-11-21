@@ -42,4 +42,3 @@ description: "pnmtopalm – convert a portable anymap into a Palm pixmap"
 <h2>AUTHORS</h2>
 <p> This program was originally written as ppmtoTbmp.c, by Ian Goldberg and George Caswell. It was completely re-written by Bill Janssen to add color, compression, and transparency function.<br />
  Copyright 1995-2001 by Ian Goldberg, George Caswell, and Bill Janssen. </p>
-<h2>Index</h2>

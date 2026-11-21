@@ -22,4 +22,3 @@ description: "gnome-session-save – Saves or ends the current GNOME session"
 <p> <code><a href="/docs/linux/man/1-gnome-session/">gnome-session</a>(1)</code></p>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>gnome-session-save</i> program, please report these on <a rel="nofollow" href="http://bugzilla.gnome.org.">http://bugzilla.gnome.org.</a> </p>
-<h2>Index</h2>

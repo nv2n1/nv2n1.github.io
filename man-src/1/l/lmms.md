@@ -46,4 +46,3 @@ description: "lmms – software for easy music production"
 <p> <code><a rel="nofollow" href="http://lmms.sf.net/">http://lmms.sf.net/</a></code> <code><a rel="nofollow" href="http://lmms.sf.net/wiki/">http://lmms.sf.net/wiki/</a></code></p>
 <h2>AUTHORS</h2>
 <p> <code>Tobias</code>Doerffel<code>&lt;tobydox/at/users.sourceforge.net&gt;,</code>Paul<code>Giblock</code>and<code>others.</code>See<code>AUTHORS</code>for<code>details.</code> </p>
-<h2>Index</h2>

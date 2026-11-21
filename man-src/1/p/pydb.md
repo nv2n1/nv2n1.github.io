@@ -132,4 +132,3 @@ description: "pydb — enhanced Python debugger"
 <h2>AUTHOR</h2>
 <p> pydb was written by Richard Wolff &lt;rwolff [at] noao.edu&gt; (now retired) based on the standard Python debugger pdb.py. Over the many years, pdb.py and pydb.py have diverged. It was subsequently revised and expanded to be more like gdb by Rocky Bernstein &lt;rocky [at] gnu.org&gt; </p>
 <p> The first version of this manual page was written by Gregor Hoffleit &lt;flight [at] debian.org&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

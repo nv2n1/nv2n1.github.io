@@ -113,4 +113,3 @@ long kexec_file_load(int kernel_fd, int initrd_fd,
 <p> The kernel source files <i>Documentation/kdump/kdump.txt</i> and <i>Documentation/admin-guide/kernel-parameters.txt</i>  </p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

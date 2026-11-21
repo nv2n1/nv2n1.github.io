@@ -24,4 +24,3 @@ description: "dirsplit – splits directory into multiple with equal size"
 <p> Run dirsplit <code>-H</code> to see the commented examples.</p>
 <h2>AUTHOR</h2>
 <p> <code>dirsplit</code> is created by Eduard Bloch (blade [at] debian.org) and is licensed under the GPLv2. </p>
-<h2>Index</h2>

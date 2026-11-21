@@ -192,4 +192,3 @@ gcc -o prog proc.c -lgdbm -lgdbm_compat
 <p>e-mail:&nbsp;<wbr>&nbsp;<wbr>downsj [at] downsj.com<br />
  and<br />
 e-mail:&nbsp;<wbr>&nbsp;<wbr>gray [at] gnu.org </p>
-<h2>Index</h2>

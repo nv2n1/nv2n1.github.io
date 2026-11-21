@@ -22,4 +22,3 @@ description: "jscal-store – stores joystick calibration"
 <p> <code><a href="/docs/linux/man/1-jscal/">jscal</a></code>(1), <code><a href="/docs/linux/man/1-jscal-restore/">jscal-restore</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> <code>jscal-store</code> was written by Stephen Kitt. </p>
-<h2>Index</h2>

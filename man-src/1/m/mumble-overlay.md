@@ -29,4 +29,3 @@ description: "mumble-overlay – load OpenGL overlay for Mumble."
 <p> <code><a href="/docs/linux/man/1-mumble/">mumble</a></code>(1), <code><a href="/docs/linux/man/1-murmurd/">murmurd</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> mumble and murmurd was written by Thorvald Natvig &lt;slicer [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

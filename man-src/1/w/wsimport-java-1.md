@@ -121,4 +121,3 @@ Multiple JAX-WS and JAXB binding files can be specified using <i>-b</i> option a
 </pre>
 <p> This will generate the Java artifacts and compile them by importing the <i><a rel="nofollow" href="http://stockquote.example.com/quote?wsdl">http://stockquote.example.com/quote?wsdl</a></i>. </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -317,4 +317,3 @@ print x &quot; &quot; y
 <p> Input characters that are invalid for <code>groff</code> (i.e., those with ASCII code 0, or 013 octal, or between 015 and 037 octal, or between 0200 and 0237 octal) are rejected even in TeX mode. </p>
 <p> The interpretation of <code>fillval</code> is incompatible with the pic in 10th edition Unix, which interprets 0 as black and 1 as white. </p>
 <p> PostScript&#174; is a registered trademark of Adobe Systems Incorporation. </p>
-<h2>Index</h2>

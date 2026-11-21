@@ -68,4 +68,3 @@ stg publish[options][--][branch]
 </dt><dd> Add an &quot;Acked-by:&quot; line to the end of the patch.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

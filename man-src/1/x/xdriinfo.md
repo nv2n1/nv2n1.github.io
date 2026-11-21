@@ -35,4 +35,3 @@ description: "xdriinfo – query configuration information of DRI drivers"
 <p> <i><a href="/docs/linux/man/7-x/">X</a></i>(7), <i><a href="/docs/linux/man/1-xdpyinfo/">xdpyinfo</a></i>(1), <i><a href="/docs/linux/man/1-xwininfo/">xwininfo</a></i>(1), <i><a href="/docs/linux/man/1-xvinfo/">xvinfo</a></i>(1), <i><a href="/docs/linux/man/1-glxinfo/">glxinfo</a></i>(1), <i><a href="/docs/linux/man/1-xprop/">xprop</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Felix Kuehling </p>
-<h2>Index</h2>

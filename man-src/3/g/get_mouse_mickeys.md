@@ -17,4 +17,3 @@ description: "get_mouse_mickeys – How far the mouse has moved since the last c
 <p> Note that the infinite movement may not work in windowed mode, since under some platforms the mouse would leave the window, and may not work at all if the hardware cursor is in use. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_mouse</code>(3), <code><a href="/docs/linux/man/3-exmouse/">exmouse</a></code>(3) </p>
-<h2>Index</h2>

@@ -82,4 +82,3 @@ description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets
  <code><a href="/docs/linux/man/1-kstats/">kstats</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
-<h2>Index</h2>

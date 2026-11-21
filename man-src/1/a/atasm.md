@@ -39,4 +39,3 @@ description: "atasm – assembler targeted for the 6502 CPU with Atari-specific 
 </dl>
 <h2>NOTES</h2>
 <p> This man page is nowhere near complete. For full documentation, see <code>%/usr/share/doc/atasm-1.07d%/atasm.txt</code> </p>
-<h2>Index</h2>

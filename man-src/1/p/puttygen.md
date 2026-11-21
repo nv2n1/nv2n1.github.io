@@ -135,4 +135,3 @@ puttygen -L mykey.ppk&nbsp;<wbr>&gt;&gt;&nbsp;<wbr>$HOME/.ssh/authorized_keys
 </pre>
 <h2>BUGS</h2>
 <p> There&#8217;s currently no way to supply passphrases in batch mode, or even just to specify that you don&#8217;t want a passphrase at all. </p>
-<h2>Index</h2>

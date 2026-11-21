@@ -103,4 +103,3 @@ description: "dh_pypy – calculates PyPy dependencies, adds maintainer scripts 
 <dd> <i><a rel="nofollow" href="http://deb.li/dhpy">http://deb.li/dhpy</a></i> &#8211; most recent version of this document</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2013 </p>
-<h2>Index</h2>

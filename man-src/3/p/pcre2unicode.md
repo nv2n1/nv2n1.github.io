@@ -127,4 +127,3 @@ Cambridge, England.
 <pre><code>Last updated: 24 May 2019
 Copyright (c) 1997-2019 University of Cambridge.
 </code></pre>
-<h2>Index</h2>

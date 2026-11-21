@@ -36,4 +36,3 @@ description: "getpeereid – get the effective credentials of a UNIX-domain peer
 <p> <a href="/docs/linux/man/2-connect/">connect</a>(2), <a href="/docs/linux/man/2-getpeername/">getpeername</a>(2), <a href="/docs/linux/man/2-getsockname/">getsockname</a>(2), <a href="/docs/linux/man/2-getsockopt/">getsockopt</a>(2), <a href="/docs/linux/man/2-listen/">listen</a>(2), unix(4)</p>
 <h2>HISTORY</h2>
 <p> The Fn getpeereid function appeared in Fx 4.6 . </p>
-<h2>Index</h2>

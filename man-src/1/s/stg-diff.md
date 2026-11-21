@@ -30,4 +30,3 @@ stg diff[options][--][ &lt; files or dirs &gt; ]
 </dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ description: "tbl-dctrl – generate tabular representations of data in dctrl fo
 <p> The <code>tbl-dctrl</code> program and this manual page were written by Antti-Juhani Kaijanaho.</p>
 <h2>SEE ALSO</h2>
 <p> <code>apt-cache</code>(1), <code>ara</code>(1), <code>dpkg-awk</code>(1), <code><a href="/docs/linux/man/1-dpkg-query/">dpkg-query</a></code>(1), <code><a href="/docs/linux/man/1-grep-dctrl/">grep-dctrl</a></code>(1), <code><a href="/docs/linux/man/1-sort-dctrl/">sort-dctrl</a></code>(1), <code>dpkg</code>(8) </p>
-<h2>Index</h2>

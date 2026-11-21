@@ -33,4 +33,3 @@ description: "icuinfo – Shows some basic info about the current ICU"
 <dd> Print the current UTC time in milliseconds.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 International Business Machines Corporation and others </p>
-<h2>Index</h2>

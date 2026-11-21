@@ -28,4 +28,3 @@ description: "g-ir-generate – typelib generator"
 <p> <a rel="nofollow" href="http://live.gnome.org/GObjectIntrospection">http://live.gnome.org/GObjectIntrospection</a></p>
 <h2>AUTHORS</h2>
 <p> Mattias Clasen </p>
-<h2>Index</h2>

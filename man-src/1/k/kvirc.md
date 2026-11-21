@@ -72,4 +72,3 @@ description: "KVIrc – an Internet Relay Chat client."
 <p> Old authors </p>
 <p> With patches, fixes, extensions, and more from [Anodine]@efnet, Till &#8216;BuTi [at] ircnet&#8217; Busch, Fritz &#8216;KNFritz [at] ircnet&#8217; Elfert, RAD Kade 1 </p>
 <p> With bug-hunting, hard-thinking, eyes-consuming, nights spent on IRC, great suggestions and more from lots of people all over the net, including but not limited to Paul &#8216;infected [at] ircnet&#8217; Boehm, Olle &#8216;Crocodile [at] ircnet&#8217; H[:a]lln[:a]s, Diablo [at] ircnet, Andrew &#8216;Drosha [at] ircnet&#8217; Frolov, MalboroLi [at] ircnet, munehiro [at] ircnet </p>
-<h2>Index</h2>

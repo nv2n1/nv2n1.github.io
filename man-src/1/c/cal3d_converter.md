@@ -21,4 +21,3 @@ description: "cal3d_converter – convert cal3d files from / to binary and XML (
 </dl>
 <h2>AUTHORS</h2>
 <p> Loic Dachary &lt;loic [at] gnu.org&gt; </p>
-<h2>Index</h2>

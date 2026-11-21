@@ -20,4 +20,3 @@ description: "aspell-import – import old personal dictionaries into GNU Aspell
 <p> The full documentation for <code>Aspell</code> is maintained as a Texinfo manual The `<code>aspell</code>&#8216; entry in <code>info</code> for more complete documentation.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Brian Nelson &lt;pyro [at] debian.org&gt;. </p>
-<h2>Index</h2>

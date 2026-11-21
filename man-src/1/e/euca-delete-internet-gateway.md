@@ -41,4 +41,3 @@ description: "euca-delete-internet-gateway – Delete a VPC Internet gateway"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

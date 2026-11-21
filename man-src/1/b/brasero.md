@@ -72,4 +72,3 @@ description: "brasero – Simple and easy to use CD/DVD burning application for 
 <p> Please report any <code>brasero</code> bugs you find to <a rel="nofollow" href="https://bugzilla.gnome.org.">https://bugzilla.gnome.org.</a></p>
 <h2>AUTHOR</h2>
 <p> Brasero&#8217;s manual page was written by Jeremy Bicha &lt;jeremy [at] bicha.net&gt;. </p>
-<h2>Index</h2>

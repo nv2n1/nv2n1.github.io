@@ -69,4 +69,3 @@ description: "hugin_hdrmerge – Merge overlapping images"
 <h2>AUTHORS</h2>
 <p> Written by Jing Jin. Also contains contributions from Pablo d&#8217;Angelo, Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>
-<h2>Index</h2>

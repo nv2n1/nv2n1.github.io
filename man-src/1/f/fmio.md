@@ -292,4 +292,3 @@ description: "fmio – small utility to manipulate fm radio card"
 <p> Due to the above limitation the BSD bktr driver cannot work correctly if frequency was not specified. E.g. <code>fmio -d bktr -i</code> will not work as expected. Correct use is <code>fmio -d bktr -f &lt;some freq&gt; -i</code></p>
 <h2>AUTHOR</h2>
 <p> Vladimir Popov Aq jumbo [at] narod.ru </p>
-<h2>Index</h2>

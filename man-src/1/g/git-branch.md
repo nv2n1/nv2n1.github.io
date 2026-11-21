@@ -259,4 +259,3 @@ $ git for-each-ref 'refs/remotes/&lt;remote&gt;/&lt;pattern&gt;'    <code>(2)</c
 <dt>
 </dt><dd> file:///usr/share/doc/git/html/user-manual.html#what-is-a-branch</dd></dl>
 </dl>
-<h2>Index</h2>

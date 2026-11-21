@@ -87,4 +87,3 @@ description: "mrtg – What is MRTG ?"
 <p> Learn more about <font SIZE="-1">MRTG</font> by going to the mrtg home page on: <a rel="nofollow" href="http://oss.oetiker.ch/mrtg">http://oss.oetiker.ch/mrtg</a></p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; and many contributors </p>
-<h2>Index</h2>

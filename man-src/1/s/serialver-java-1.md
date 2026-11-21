@@ -44,4 +44,3 @@ serialver[options][classnames]
 <h2>SEE ALSO</h2>
 <p> <i>java.io.ObjectStreamClass</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectStreamClass.html">http://docs.oracle.com/javase/7/docs/api/java/io/ObjectStreamClass.html</a> </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

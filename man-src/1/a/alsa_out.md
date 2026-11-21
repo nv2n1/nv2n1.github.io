@@ -60,4 +60,3 @@ description: "alsa_in, alsa_out – Jack clients that perform I/O with an altern
 </dl>
 <h2>AUTHOR</h2>
 <p> Torben Hohn </p>
-<h2>Index</h2>

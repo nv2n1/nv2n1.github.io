@@ -524,4 +524,3 @@ option add&nbsp;<wbr>*ToolTip.foreground black&nbsp;<wbr></dd></dl>
 <p> <a href="/docs/linux/man/1-cvs/">cvs</a>(1), <a href="/docs/linux/man/1-svn/">svn</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Del (del [at] babel.babel.com.au): Maintenance and Subversion support: Dorothy Robinson </p>
-<h2>Index</h2>

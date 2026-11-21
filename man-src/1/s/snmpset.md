@@ -49,4 +49,3 @@ description: "snmpset – communicates with a network entity using SNMP SET requ
 <p> <code>snmpset</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page. Note that <code>snmpset</code> REQUIRES an argument specifying the agent to query and at least one set of OID/type/value arguments, as described in there.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
-<h2>Index</h2>

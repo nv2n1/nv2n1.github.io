@@ -138,4 +138,3 @@ description: "sfconvert – convert audio files"
 <p> <code><a href="/docs/linux/man/1-sfinfo/">sfinfo</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Michael Pruett &lt;michael [at] 68k.org&gt; </p>
-<h2>Index</h2>

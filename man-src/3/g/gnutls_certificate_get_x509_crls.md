@@ -35,4 +35,3 @@ description: "gnutls_certificate_get_x509_crls – Used to export all the CRLs f
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

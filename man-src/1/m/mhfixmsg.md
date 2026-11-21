@@ -104,4 +104,3 @@ STORE = /usr/libexec/nmh/rcvstore
 </pre>
 <h2>CONTEXT</h2>
 <p> If a folder is given, it will become the current folder. The last message selected from a folder will become the current message. If the <code>-file</code> switch or an absolute pathname is used, the context will not be modified. </p>
-<h2>Index</h2>

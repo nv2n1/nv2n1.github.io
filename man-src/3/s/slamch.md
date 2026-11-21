@@ -94,4 +94,3 @@ description: "slamch.f –"
 <p> Definition at line 68 of file slamch.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

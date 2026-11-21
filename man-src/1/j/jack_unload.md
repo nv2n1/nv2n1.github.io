@@ -19,4 +19,3 @@ description: "jack_unload – The JACK Audio Connection Kit example client"
 <h2>AUTHOR</h2>
 <p> Jeremy Hall </p>
 <p> This manpage was written by Robert Jordens &lt;jordens [at] debian.org&gt; for Debian. </p>
-<h2>Index</h2>

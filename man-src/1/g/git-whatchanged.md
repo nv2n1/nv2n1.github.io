@@ -28,4 +28,3 @@ description: "git-whatchanged – Show logs with difference each commit introduc
 </dt><dd> Show the changes during the last two weeks to the file <i>gitk</i>. The &quot;&#8211;&quot; is necessary to avoid confusion with the <code>branch</code> named <i>gitk</i></dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

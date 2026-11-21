@@ -129,4 +129,3 @@ description: "gDesklets – provides an advanced architecture for desktop applet
 <dl>
 <dt> * Benoît Dejean &lt;tazforever [at] dlfp.org&gt;</dt></dl>
 <dd>The latest version of <code>gDesklets</code> can be found at <a rel="nofollow" href="http://www.gdesklets.de/">http://www.gdesklets.de/</a> The <code>Desklets</code> bzr repository can be found at <a rel="nofollow" href="https://code.launchpad.net/gdesklets/">https://code.launchpad.net/gdesklets/</a> </dd>
-<h2>Index</h2>

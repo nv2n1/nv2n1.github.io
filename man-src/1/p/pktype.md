@@ -24,4 +24,3 @@ description: "pktype – verify and translate a packed font bitmap file to plain
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Tomas Rokicki wrote the program, Donald E. Knuth originally ported it to Unix, Pierre MacKay originally adapted it for compilation with Web2c. </p>
-<h2>Index</h2>

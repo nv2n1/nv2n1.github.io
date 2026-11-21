@@ -84,4 +84,3 @@ Copyright: Felix Rauch and ETH Zurich
 David Mathog
 Biology Division, Caltech
 </pre>
-<h2>Index</h2>

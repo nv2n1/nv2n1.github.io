@@ -26,4 +26,3 @@ description: "daily_cleanup.py – Database clean-up for the Django Web framewor
 <p> Originally developed at World Online in Lawrence, Kansas, USA. Refer to the AUTHORS file in the Django distribution for contributors. </p>
 <h2>LICENSE</h2>
 <p> New BSD license. For the full license text refer to the LICENSE file in the Django distribution. </p>
-<h2>Index</h2>

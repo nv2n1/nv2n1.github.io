@@ -19,4 +19,3 @@ description: "pbmtogem – convert a portable bitmap into a GEM .img file"
 <p> <a href="/docs/linux/man/1-gemtopbm/">gemtopbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by David Beckemeyer (bdt!david) and Jef Poskanzer. </p>
-<h2>Index</h2>

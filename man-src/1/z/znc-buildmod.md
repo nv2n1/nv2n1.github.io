@@ -23,4 +23,3 @@ description: "znc-buildmod – compile ZNC modules"
 <h3>INCLUDES</h3>
 <h3>LIBS</h3>
 <p> may be used. </p>
-<h2>Index</h2>

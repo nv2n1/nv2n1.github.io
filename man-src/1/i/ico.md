@@ -52,4 +52,3 @@ description: "ico – animate an icosahedron or other polyhedron"
 <h2>COPYRIGHT</h2>
 <p> Copyright 1994 X Consortium<br />
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions. </p>
-<h2>Index</h2>

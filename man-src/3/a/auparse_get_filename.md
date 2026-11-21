@@ -20,4 +20,3 @@ description: "auparse_get_filename – get the filename where record was found"
 <p> <code><a href="/docs/linux/man/3-auparse_get_line_number/">auparse_get_line_number</a></code>(3). <code><a href="/docs/linux/man/3-auparse_next_record/">auparse_next_record</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> John Dennis </p>
-<h2>Index</h2>

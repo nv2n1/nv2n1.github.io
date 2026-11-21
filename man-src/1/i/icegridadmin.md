@@ -46,4 +46,3 @@ description: "icegridadmin – The IceGrid command-line administrative utility."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icegridnode/">icegridnode</a></code>(1), <code><a href="/docs/linux/man/1-icegridregistry/">icegridregistry</a></code>(1), </p>
-<h2>Index</h2>

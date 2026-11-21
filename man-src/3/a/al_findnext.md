@@ -26,4 +26,3 @@ al_findclose(&amp;info);
 <p> Returns zero if a match is found, non-zero if none is found or if an error occurred and, in the latter case, sets errno accordingly. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-al_findfirst/">al_findfirst</a></code>(3), <code>al_findclose</code>(3) </p>
-<h2>Index</h2>

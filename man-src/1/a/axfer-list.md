@@ -36,4 +36,3 @@ description: "axfer-list – dump lists of available sound devices and nodes to 
 <p> <code><a href="/docs/linux/man/1-axfer/">axfer</a>(1),</code> <code><a href="/docs/linux/man/1-axfer-transfer/">axfer-transfer</a>(1),</code> <code><a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1),</code> <code><a href="/docs/linux/man/1-amixer/">amixer</a>(1)</code> </p>
 <h2>AUTHOR</h2>
 <p> Takashi Sakamoto &lt;o-takashi [at] sakamocchi.jp&gt; </p>
-<h2>Index</h2>

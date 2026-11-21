@@ -1482,4 +1482,3 @@ complete to do completion
 <p> See the file TODO in the distribution for information on what remains to be done. </p>
 <p> If you want to report a problem with the program, please send mail to this address: mc-devel [at] gnome.org. </p>
 <p> Provide a detailed description of the bug, the version of the program you are running (<i>mc -V</i> displays this information), the operating system you are running the program on. If the program crashes, we would appreciate a stack trace. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "busy-nodes, idle-nodes, dead-nodes, nodes-in-job, qselect-node-lis
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Dave Love &lt;d.love [at] liverpool.ac.uk&gt; </p>
-<h2>Index</h2>

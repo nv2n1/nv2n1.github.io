@@ -75,4 +75,3 @@ description: "cpptri.f –"
 <p> Definition at line 94 of file cpptri.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -113,4 +113,3 @@ or value in centrimetres or inches. </p>
 <p> More complete documentation can be found in abcguide.txt which comes with the abcMIDI distribution package.</p>
 <h2>VERSION</h2>
 <p> This man page describes version 1.39 August 13 2005. </p>
-<h2>Index</h2>

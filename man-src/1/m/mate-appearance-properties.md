@@ -24,4 +24,3 @@ description: "mate-appearance-properties — is a control center applet."
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>
-<h2>Index</h2>

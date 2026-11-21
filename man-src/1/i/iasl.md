@@ -150,4 +150,3 @@ description: "iasl – ACPI Source Language compiler/decompiler"
 <h2>AUTHOR</h2>
 <p> iasl was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>
 <p> This manual page was written by Mattia Dongili &lt;malattia [at] debian.org&gt;, for the Debian project (but may be used by others). It was updated for the Fedora project by Al Stone &lt;ahs3 [at] redhat.com&gt; (and may also be used by others). </p>
-<h2>Index</h2>

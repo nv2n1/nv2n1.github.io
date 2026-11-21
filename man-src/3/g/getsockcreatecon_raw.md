@@ -26,4 +26,3 @@ description: "getsockcreatecon, setsockcreatecon – get or set the SELinux secu
 <p> On error -1 is returned. On success 0 is returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-getcon/">getcon</a></code>(3) </p>
-<h2>Index</h2>

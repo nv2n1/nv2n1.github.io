@@ -11,4 +11,3 @@ description: "hx509 lock functions – See the Locking and unlocking certificate
 <p> hx509 lock functions &#8211; See the <code>Locking and unlocking certificates and encrypted data.</code> for description and examples. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>

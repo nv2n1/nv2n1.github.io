@@ -147,4 +147,3 @@ description: "livemedia-creator – Create live install media"
 <pre>
 Brian C. Lane
 </pre>
-<h2>Index</h2>

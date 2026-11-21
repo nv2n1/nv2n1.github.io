@@ -190,4 +190,3 @@ resperf-report -s 10.0.0.2 -d queryfile
 <p> Nominum, Inc.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dnsperf/">dnsperf</a></code>(1) </p>
-<h2>Index</h2>

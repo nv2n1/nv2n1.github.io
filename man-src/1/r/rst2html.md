@@ -187,4 +187,3 @@ description: "rst2html – convert reST documents to XHTML"
 <dt><code>&#8211;cloak-email-addresses</code></dt>
 <dd> Obfuscate email addresses to confuse harvesters while still keeping email links usable with standards- compliant browsers. </dd>
 </dl>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "makeglossaries-lite – Calls makeindex/xindy for LaTeX documents 
 <pre>
         texdoc glossaries
 </pre>
-<h2>Index</h2>

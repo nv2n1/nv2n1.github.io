@@ -177,4 +177,3 @@ tweak -D&nbsp;<wbr>&gt;&nbsp;<wbr>$HOME/.tweakrc
 <p> Then you can read the default file, learn the <code>tweak</code> internal command names, and edit the file to do what you want.</p>
 <h2>BUGS</h2>
 <p> This man page probably ought to contain an explicit list of internal command names, rather than simply referring you to the default <code>.tweakrc</code>. </p>
-<h2>Index</h2>

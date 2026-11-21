@@ -39,4 +39,3 @@ description: "fail2ban-server – start the server"
  Copyright of modifications held by their respective authors. Licensed under the GNU General Public License v2 (GPL).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fail2ban-client/">fail2ban-client</a>(1) </p>
-<h2>Index</h2>

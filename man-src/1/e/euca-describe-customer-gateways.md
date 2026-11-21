@@ -61,4 +61,3 @@ description: "euca-describe-customer-gateways – Show information about VPN cus
 <dt>type</dt>
 <dd> the type of customer gateway (ipsec.1) </dd>
 </dl>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "libssh2_channel_ignore_extended_data – convenience macro for lib
 <p> See <i><a href="/docs/linux/man/3-libssh2_channel_handle_extended_data/">libssh2_channel_handle_extended_data</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_handle_extended_data/">libssh2_channel_handle_extended_data</a>(3)</code> </p>
-<h2>Index</h2>

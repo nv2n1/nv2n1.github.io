@@ -65,4 +65,3 @@ EINVAL          lockspace was not a valid lockspace handle
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libdlm/">libdlm</a></code>(3), <code><a href="/docs/linux/man/3-dlm_unlock/">dlm_unlock</a></code>(3), <code><a href="/docs/linux/man/3-dlm_lock/">dlm_lock</a></code>(3), </p>
-<h2>Index</h2>

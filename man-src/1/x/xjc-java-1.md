@@ -151,4 +151,3 @@ Extensions:
 <dd> <i>Java Architecture for XML Binding (JAXB)</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/xml/jaxb/index.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

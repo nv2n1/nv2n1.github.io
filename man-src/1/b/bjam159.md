@@ -88,4 +88,3 @@ description: "bjam – Command-line utility to build Boost-related C++ projects 
 <p> Boost Software License &#8211; Version 1.0 &#8211; August 17th, 2003 </p>
 <p> See the LICENSE_1_0.txt file for more information on that license, or directly on Internet: </p>
 <p>&nbsp;<wbr><a rel="nofollow" href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>&nbsp;<wbr> </p>
-<h2>Index</h2>

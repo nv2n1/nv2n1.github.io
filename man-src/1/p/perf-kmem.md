@@ -57,4 +57,3 @@ of an arbitrary workload.
 </dt><dd> Print raw ip instead of symbol</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1) </p>
-<h2>Index</h2>

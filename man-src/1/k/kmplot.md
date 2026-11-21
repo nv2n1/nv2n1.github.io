@@ -30,4 +30,3 @@ description: "kmplot – mathematical function plotter"
 <p> KmPlot was written by Klaus-Dieter Möller &lt;kdmoeller [at] foni.net&gt;, Matthias Messmer &lt;bmlmessmer [at] web.de&gt; and Fredrik Edemar &lt;f_edemar [at] linux.se&gt; </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

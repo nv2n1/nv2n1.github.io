@@ -66,4 +66,3 @@ gmt grdinfo -L1 -L2 -M hawaii_topo.nc
 <p> <code>gmt</code>, <code>grd2cpt</code>, <code>grd2xyz</code>, <code>grdedit</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

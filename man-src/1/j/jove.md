@@ -129,4 +129,3 @@ teachjove(1) --- for an interactive JOVE tutorial.
 <p> Searches can&#8217;t cross line boundaries.</p>
 <h2>AUTHOR</h2>
 <p> Jonathan Payne </p>
-<h2>Index</h2>

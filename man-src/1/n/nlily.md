@@ -63,4 +63,3 @@ description: "naim – console mode chat client"
  <i> diff -rcN naim-0.11.8,original naim-0.11.8 &gt; \</i><br />
  <i> naim-0.11.8.feature1.patch</i> </p>
 <p> And submit `<code>naim-0.11.8.feature1.patch</code>&#8216;. Do not gzip or otherwise encode patches, so they may be reviewed from within a mail client. </p>
-<h2>Index</h2>

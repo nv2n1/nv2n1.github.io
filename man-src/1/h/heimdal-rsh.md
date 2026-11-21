@@ -88,4 +88,3 @@ description: "rsh – remote shell"
 <h2>BUGS</h2>
 <p> Some shells (notably <a href="/docs/linux/man/1-csh/">csh</a>(1)) will cause to block if run in the background, unless the standard input is directed away from the terminal. This is what the &#8211;<code>n</code> option is for. </p>
 <p> The &#8211;<code>x</code> options enables encryption for the session, but for both Kerberos 4 and 5 the actual command is sent unencrypted, so you should not send any secret information in the command line (which is probably a bad idea anyway, since the command line can usually be read with tools like <a href="/docs/linux/man/1-ps/">ps</a>(1)). Forthermore in Kerberos 4 the command is not even integrity protected, so anyone with the right tools can modify the command. </p>
-<h2>Index</h2>

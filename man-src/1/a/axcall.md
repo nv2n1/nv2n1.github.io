@@ -101,4 +101,3 @@ Alexander Tietzel DG6XA&lt;TIETZE_A[at] etech.fh - hamburg.de&gt;
             Jonathan Naylor G4KLX&lt;g4klx[at] g4klx.demon.co.uk&gt;
                 Steve Henson G6IXS&lt;shenson[at] nyx.cs.du.edu&gt;
 </code></pre>
-<h2>Index</h2>

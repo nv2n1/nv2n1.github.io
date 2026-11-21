@@ -34,4 +34,3 @@ description: "tcutest – test cases of the on-memory database API"
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tcutest/">tcutest</a></code>(1), <code><a href="/docs/linux/man/1-tcucodec/">tcucodec</a></code>(1), <code><a href="/docs/linux/man/3-tcutil/">tcutil</a></code>(3), <code><a href="/docs/linux/man/3-tokyocabinet/">tokyocabinet</a></code>(3) </p>
-<h2>Index</h2>

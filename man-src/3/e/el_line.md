@@ -268,4 +268,3 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
 <p> The <code>editline</code> library was written by Christos Zoulas. Luke Mewburn wrote this manual and implemented CC_REDISPLAY , CC_REFRESH_BEEP , EL_EDITMODE , and EL_RPROMPT . Jaromir Dolecek implemented the readline emulation.</p>
 <h2>BUGS</h2>
 <p> At this time, it is the responsibility of the caller to check the result of the EL_EDITMODE operation of <code>el_get</code>() (after an <code>el_source</code>() or <code>el_parse</code>() ) to determine if <code>editline</code> should be used for further input. I.e., EL_EDITMODE is purely an indication of the result of the most recent <code><a href="/docs/linux/man/5-editrc/">editrc</a></code>(5) <code>edit</code> command. </p>
-<h2>Index</h2>

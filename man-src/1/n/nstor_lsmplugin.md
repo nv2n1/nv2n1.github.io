@@ -47,4 +47,3 @@ description: "nstor_lsmplugin — LibstorageMgmt nstor plugin"
 <h2>AUTHOR</h2>
 <p> Gris Ge <i>&lt;fge [at] redhat.com&gt;</i><br />
  Tony Asleson <i>&lt;tasleson [at] redhat.com&gt;</i> </p>
-<h2>Index</h2>

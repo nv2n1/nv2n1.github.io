@@ -132,4 +132,3 @@ description: "mrtg-mibhelp – A Table of some interesting OIDs"
 <p> Note these are not real <font SIZE="-1">MIB</font> entities but mrtg hacks</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

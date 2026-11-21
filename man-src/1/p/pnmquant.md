@@ -21,4 +21,3 @@ description: "pnmquant – quantize the colors in a Netpbm image to a smaller se
 <p> <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1), <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1), <code><a href="/docs/linux/man/1-ppmquantall/">ppmquantall</a></code>(1), <code><a href="/docs/linux/man/1-pnmdepth/">pnmdepth</a></code>(1), <code><a href="/docs/linux/man/1-ppmdither/">ppmdither</a></code>(1), <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Written by Bryan Henderson </p>
-<h2>Index</h2>

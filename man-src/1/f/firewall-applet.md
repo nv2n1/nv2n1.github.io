@@ -114,4 +114,3 @@ show-inactive=true
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

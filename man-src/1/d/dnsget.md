@@ -71,4 +71,3 @@ alias.example.com. CNAME <a rel="nofollow" href="http://www.example.com">www.exa
 <p> When all names where resovled successefully, <code>dnsget</code> exits with zero exit status. If at least one name was not found, <code>dnsget</code> will exit with return code 100. If some other error occured during name resolution, it will exit with code 99. In case of usage or initialization error, <code>dnsget</code> will return 1. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-host/">host</a></code>(1) <code><a href="/docs/linux/man/1-dig/">dig</a></code>(1) <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5) <code><a href="/docs/linux/man/3-udns/">udns</a></code>(3). </p>
-<h2>Index</h2>

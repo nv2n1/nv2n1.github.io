@@ -119,4 +119,3 @@ description: "nessus – The client part of the Nessus Security Scanner"
 <h2>AUTHORS</h2>
 <p> The Nessus Project was started and is being maintained by Renaud Deraison &lt;deraison [at] cvs.nessus.org&gt;. The <code>nessusd</code> server is mainly Copyright (C) 1998-2001 Renaud Deraison, as well as the attack modules. </p>
 <p> Several other people have been kind enough to send patches and bug reports. Thanks to them. </p>
-<h2>Index</h2>

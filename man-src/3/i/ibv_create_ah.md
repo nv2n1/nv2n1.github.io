@@ -49,4 +49,3 @@ struct ibv_global_route {
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

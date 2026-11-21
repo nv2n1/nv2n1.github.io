@@ -173,4 +173,3 @@ org.git-scm.git.weekly.plist
 <p> If you want to customize the background tasks, please rename the tasks so future calls to <code>git maintenance (start|stop)</code> do not overwrite your custom tasks.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -91,4 +91,3 @@ description: "install-info – update info/dir entries"
 <dt>
 </dt><dd> <code>info install-info</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -108,4 +108,3 @@ description: "kchashmgr – command line interface to manage the file hash datab
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kchashtest/">kchashtest</a></code>(1) </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ npm star[&lt;pkg&gt;...] npm unstar[&lt;pkg&gt;...]
 <dd> npm help adduser </dd>
 </dl>
 </dl>
-<h2>Index</h2>

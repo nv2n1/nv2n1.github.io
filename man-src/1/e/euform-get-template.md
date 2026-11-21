@@ -41,4 +41,3 @@ description: "euform-get-template – Show a stack’s template"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

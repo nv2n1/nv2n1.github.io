@@ -22,4 +22,3 @@ description: "pmempool-convert – Convert pool files from old layout versions t
 <dd> <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1) <a href="/docs/linux/man/1-pmempool-info/">pmempool-info</a>(1) libpmemobj(3)</code></dd>
 <h2>PMEMPOOL</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code> suite. </p>
-<h2>Index</h2>

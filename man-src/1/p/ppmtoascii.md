@@ -31,4 +31,3 @@ description: "ppmtoascii – convert a PPM image to ASCII graphics with ANSI ter
 <p> <code>ppmtoascii</code> was new in Netpbm 10.51 (June 2010). Frank Ch. Eigler derived it from <code>pbmtoascii</code>. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2010 by Frank Ch. Eigler. </p>
-<h2>Index</h2>

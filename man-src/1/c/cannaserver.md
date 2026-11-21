@@ -47,4 +47,3 @@ description: "cannaserver – Kana-Kanji conversion server"
 <dd> Log file. &quot;?&quot; is replaced with <i>num</i> specified with -p, and defaults to 0 without -p <i>num</i>. Log messages are not output to this file when -syslog is specified.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cannakill(1M), <a href="/docs/linux/man/1-cannastat/">cannastat</a>(1), <a href="/docs/linux/man/1-cannacheck/">cannacheck</a>(1), <a href="/docs/linux/man/1-cshost/">cshost</a>(1) </p>
-<h2>Index</h2>

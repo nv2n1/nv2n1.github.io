@@ -43,4 +43,3 @@ description: "pano_modify – Change output parameters of project file"
 <dd> Shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "genhash – md5 hash generation tool for remote web pages"
 <h2>AUTHOR</h2>
 <p> <code>genhash</code> was written by Alexandre Cassen &lt;acassen [at] linux-vs.org&gt;. </p>
 <p> This man page was contributed by Andres Salomon &lt;dilinger [at] voxel.net&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

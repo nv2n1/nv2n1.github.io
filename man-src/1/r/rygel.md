@@ -165,4 +165,3 @@ description: "rygel – a collection of DLNA/UPnP AV services"
 <dl>
 <dt>
 </dt><dd> Wrote this manpage.</dd></dl>
-<h2>Index</h2>

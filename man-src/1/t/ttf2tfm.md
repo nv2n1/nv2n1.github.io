@@ -571,4 +571,3 @@ description: "ttf2tfm – build TeX metric files from a TrueType font"
 <h2>AUTHORS</h2>
 <p> Werner LEMBERG<br />
  Fr&eacute;d&eacute;ric LOYER </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "Iterators –"
 <p> Decrement hash table iterator. Set iterator to the previous entry and return datum, NULL if at end</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "ttembed – remove embedding restrictions from TrueType files"
 <dt>-n</dt>
 <dd> Dry-run mode, which just displays the fsType field and filename of the given fonts if it is non-zero (i.e. if <code>ttembed</code> would change it. </dd>
 </dl>
-<h2>Index</h2>

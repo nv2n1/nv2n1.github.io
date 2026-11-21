@@ -95,4 +95,3 @@ To convert from CIELab ITU/Fax JPEG to sRGB
 <p> <code><a href="/docs/linux/man/1-linkicc/">linkicc</a></code>(1), <code><a href="/docs/linux/man/1-psicc/">psicc</a></code>(1), <code><a href="/docs/linux/man/1-tificc/">tificc</a></code>(1), <code><a href="/docs/linux/man/1-transicc/">transicc</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Shiju p. Nair &lt;shiju.p [at] gmail.com&gt;, for the Debian project. </p>
-<h2>Index</h2>

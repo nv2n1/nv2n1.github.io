@@ -51,4 +51,3 @@ description: "tangle – translate WEB to Pascal"
 <p> There is an active Internet electronic mail discussion list on the subject of literate programming; send a subscription request to <i>litprog-request [at] shsu.edu</i> to join.</p>
 <h2>AUTHORS</h2>
 <p> Web was designed by Donald E. Knuth, based on an earlier system called DOC (implemented by Ignacio Zabala). The <code>tangle</code> and <code>weave</code> programs are themselves written in Web. The system was originally ported to Unix at Stanford by Howard Trickey, and at Cornell by Pavel Curtis. </p>
-<h2>Index</h2>

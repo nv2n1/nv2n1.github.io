@@ -27,4 +27,3 @@ snmpkey&lt;authProto&gt;&lt;password&gt;&lt;authEngineID&gt;[&lt;privProto&gt;[&
 <p> This program is free software; you may redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.</p>
 <h2>SEE ALSO</h2>
 <p> Net::SNMP </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "transmission-gtk – a bittorrent client"
 <h2>SEE ALSO</h2>
 <p> transmission-create1, transmission-daemon1, transmission-edit1, transmission-gtk1, transmission-qt1, transmission-remote1, transmission-show1 </p>
 <p> <a rel="nofollow" href="https://transmissionbt.com/">https://transmissionbt.com/</a> </p>
-<h2>Index</h2>

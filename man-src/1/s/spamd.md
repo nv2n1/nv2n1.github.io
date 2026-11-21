@@ -249,4 +249,3 @@ description: "spamd – daemonized version of spamassassin"
 <p> The SpamAssassin(tm) Project (<a rel="nofollow" href="http://spamassassin.apache.org/)">http://spamassassin.apache.org/)</a></p>
 <h2>LICENSE</h2>
 <p> SpamAssassin is distributed under the Apache License, Version 2.0, as described in the file <tt>&quot;LICENSE&quot;</tt> included with the distribution. </p>
-<h2>Index</h2>

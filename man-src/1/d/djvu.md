@@ -95,4 +95,3 @@ description: "DjVu – DjVu and DjVuLibre."
 <dt>
 </dt><dd> Yoshua Bengio, L&eacute;on Bottou, Chakradhar Chandaluri, Regis M. Chaplin, Ming Chen, Parag Deshmukh, Royce Edwards, Andrew Erofeev, Praveen Guduru, Patrick Haffner, Paul G. Howard, Orlando Keise, Yann Le Cun, Artem Mikheev, Florin Nicsa, Joseph M. Orost, Steven Pigeon, Bill Riemers, Patrice Simard, Jeffery Triggs, Luc Vincent, Pascal Vincent. </dd>
 </dl>
-<h2>Index</h2>

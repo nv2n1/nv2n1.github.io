@@ -35,4 +35,3 @@ description: "pbmtolj – convert a portable bitmap into HP LaserJet format"
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Jef Poskanzer and Michael Haberler. <code>-float</code> and <code>-noreset</code> options added by Wim Lewis. <code>-delta, -packbits,</code> and <code>-compress</code> options added by Dave Platt. </p>
-<h2>Index</h2>

@@ -264,4 +264,3 @@ o &quot;/org/freedesktop/systemd1/job/42684&quot;
 <dt>
 </dt><dd> <a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/dbus">https://www.freedesktop.org/wiki/Software/dbus</a></dd></dl>
 </dl>
-<h2>Index</h2>

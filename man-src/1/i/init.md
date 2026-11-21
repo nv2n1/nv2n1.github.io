@@ -542,4 +542,3 @@ description: "systemd, init – systemd system and service manager"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/">https://www.freedesktop.org/wiki/Software/systemd/</a></dd></dl>
 </dl>
-<h2>Index</h2>

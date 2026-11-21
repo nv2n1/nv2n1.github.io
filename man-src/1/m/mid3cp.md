@@ -25,4 +25,3 @@ description: "mid3cp – copy ID3 tags"
 <h2>AUTHOR</h2>
 <p> Marcus Sundman. </p>
 <p> Based on id3cp (part of id3lib) by Dirk Mahoney and Scott Thomas Haug. </p>
-<h2>Index</h2>

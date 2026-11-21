@@ -17,4 +17,3 @@ description: "pi1toppm – convert an Atari Degas .pi1 into a portable pixmap"
 <p> <a href="/docs/linux/man/1-ppmtopi1/">ppmtopi1</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-pi3topbm/">pi3topbm</a>(1), <a href="/docs/linux/man/1-pbmtopi3/">pbmtopi3</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Steve Belczyk (seb3 [at] gte.com) and Jef Poskanzer. </p>
-<h2>Index</h2>

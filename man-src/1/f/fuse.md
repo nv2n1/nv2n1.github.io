@@ -1517,4 +1517,3 @@ description: "fuse – Sinclair ZX Spectrum emulator"
 <p> Stuart Brady wrote the +D emulation, Scorpion emulation and the HP-UX sound code. </p>
 <p> Garry Lancaster wrote the 8-bit IDE, ZXATASP and ZXCF interface emulations. </p>
 <p> Gergely Szasz wrote the Interface I and Microdrive emulation, the PAL TV scalers, the TV 3x scaler, the movie logging code, the libao sound code, the upd765 disk controller used in the +3 and made many improvements to the widget code. </p>
-<h2>Index</h2>

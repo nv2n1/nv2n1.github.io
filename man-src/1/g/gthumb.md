@@ -38,4 +38,3 @@ description: "gThumb – an image viewer and browser for GNOME"
 <h2>AUTHORS</h2>
 <p> Written by Paolo Bacchilega &lt;paolo.bacch [at] tin.it&gt;. </p>
 <p> This manual page was originally written by Remco van de Meent &lt;remco [at] debian.org&gt;, for the Debian GNU/Linux system, now is maintained by Paolo Bacchilega. </p>
-<h2>Index</h2>

@@ -85,4 +85,3 @@ description: "MEDUSA – Parallel Network Login Auditor"
 <p> JoMo-Kun &lt;jmk [at] foofus.net&gt; fizzgig &lt;fizzgig [at] foofus.net&gt;</p>
 <h2>BUGS</h2>
 <p> Found a bug? Feel free to send in a patch. </p>
-<h2>Index</h2>

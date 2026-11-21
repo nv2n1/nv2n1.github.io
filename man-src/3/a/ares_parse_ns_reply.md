@@ -32,4 +32,3 @@ int ares_parse_ns_reply(const unsigned char *abuf, int alen,
 <p> <code><a href="/docs/linux/man/3-ares_query/">ares_query</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3)</p>
 <h2>AUTHOR</h2>
 <p> Written by Vlad Dinulescu &lt;vlad.dinulescu [at] avira.com&gt;, on behalf of AVIRA Gmbh <a rel="nofollow" href="http://www.avira.com">http://www.avira.com</a> </p>
-<h2>Index</h2>

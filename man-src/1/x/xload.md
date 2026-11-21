@@ -68,4 +68,3 @@ XLoad  xload
 <h2>AUTHORS</h2>
 <p> K. Shane Hartman (MIT-LCS) and Stuart A. Malone (MIT-LCS);<br />
  with features added by Jim Gettys (MIT-Athena), Bob Scheifler (MIT-LCS), Tony Della Fera (MIT-Athena), and Chris Peterson (MIT-LCS). </p>
-<h2>Index</h2>

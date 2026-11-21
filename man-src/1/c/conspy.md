@@ -33,4 +33,3 @@ description: "conspy – virtual console spy tool"
 <dd> The display of the virtual console is read from here. The latter is for devfs. It is only used if the former does not exist.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Russell Stuart, &lt;russell-conspy [at] stuart.id.au&gt;. </p>
-<h2>Index</h2>

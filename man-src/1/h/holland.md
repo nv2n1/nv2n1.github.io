@@ -83,4 +83,3 @@ description: "holland – pluggable database backup agent"
 <p> Andrew Garner &lt;andrew.garner [at] rackspace.com&gt; </p>
 <h2>COPYRIGHT</h2>
 <p> Other/Proprietary </p>
-<h2>Index</h2>

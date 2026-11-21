@@ -102,4 +102,3 @@ URI intercepted from the application. </p>
 <p> A much better documentation can be found in configuration.txt. On Debian systems, you can find this file in /usr/share/doc/haproxy/configuration.txt.gz. </p>
 <h2>AUTHOR</h2>
 <p> HAProxy was written by Willy Tarreau. This man page was written by Arnaud Cornet and Willy Tarreau. </p>
-<h2>Index</h2>

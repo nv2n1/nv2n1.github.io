@@ -745,4 +745,3 @@ express or implied warranty.
 <p> Many bug fixes/cleanups etc. by a host of faithful users. </p>
 <p> See the <code>CHANGES</code> file for all the credits. </p>
 <p> The <i>Fig2dev</i> package was written by Micah Beck and is maintained by Thomas Loimer. </p>
-<h2>Index</h2>

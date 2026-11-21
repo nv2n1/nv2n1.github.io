@@ -18,4 +18,3 @@ description: "ecalloc emalloc eread erealloc esetenv estrdup ewrite – exit-on-
 <p> This is useful in applications when there is no need for a more advanced failure mode.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-read/">read</a>(2), <a href="/docs/linux/man/2-write/">write</a>(2), <a href="/docs/linux/man/3-calloc/">calloc</a>(3), <a href="/docs/linux/man/3-errx/">errx</a>(3), <a href="/docs/linux/man/3-malloc/">malloc</a>(3), <a href="/docs/linux/man/3-realloc/">realloc</a>(3), <a href="/docs/linux/man/3-setenv/">setenv</a>(3), <a href="/docs/linux/man/3-strdup/">strdup</a>(3) </p>
-<h2>Index</h2>

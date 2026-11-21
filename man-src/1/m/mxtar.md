@@ -19,4 +19,3 @@ description: "mxtar – Wrapper for using GNU tar directly from a floppy disk"
 <p> Luis Bustamante &lt;luferbu [at] fluidsignal.com&gt; wrote this page for the <i>Debian/GNU</i> mtools package. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/1-mcopy/">mcopy</a></code>(1) </p>
-<h2>Index</h2>

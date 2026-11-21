@@ -34,4 +34,3 @@ description: "chicken-install – download and install extension libraries for C
 <p> The CHICKEN Team </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chicken-uninstall/">chicken-uninstall</a>(1)</code> <code><a href="/docs/linux/man/1-chicken-status/">chicken-status</a>(1)</code> <code><a href="/docs/linux/man/1-chicken/">chicken</a>(1)</code> <code><a href="/docs/linux/man/1-csc/">csc</a>(1)</code> <code><a href="/docs/linux/man/1-chicken-bug/">chicken-bug</a>(1)</code> </p>
-<h2>Index</h2>

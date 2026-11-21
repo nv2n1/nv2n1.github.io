@@ -128,4 +128,3 @@ description: "ipsilon-server-install – Configure an Ipsilon Identity Provider 
 <p> 1 if an error occurred</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-ipsilon/">ipsilon</a>(7),</code> <code><a href="/docs/linux/man/1-ipsilon-client-install/">ipsilon-client-install</a>(1)</code> </p>
-<h2>Index</h2>

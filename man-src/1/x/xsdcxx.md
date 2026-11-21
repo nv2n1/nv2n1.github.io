@@ -670,4 +670,3 @@ description: "xsdcxx – W3C XML Schema to C++ Compiler"
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2005-2014 Code Synthesis Tools CC. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, version 1.2; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. Copy of the license can be obtained from <a rel="nofollow" href="http://codesynthesis.com/licenses/fdl-1.2.txt">http://codesynthesis.com/licenses/fdl-1.2.txt</a> </p>
-<h2>Index</h2>

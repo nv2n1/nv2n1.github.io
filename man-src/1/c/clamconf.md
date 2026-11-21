@@ -31,4 +31,3 @@ description: "clamconf – Clam AntiVirus configuration utility"
 <p> Tomasz Kojm &lt;tkojm [at] clamav.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-clamd-conf/">clamd.conf</a>(5), <a href="/docs/linux/man/5-freshclam-conf/">freshclam.conf</a>(5) </p>
-<h2>Index</h2>

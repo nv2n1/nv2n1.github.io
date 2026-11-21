@@ -27,4 +27,3 @@ description: "tv_merge – Merge (combine) two XMLTV files."
 <h2>AUTHOR</h2>
 <p> Copyright Geoff Westcott, February 2013. </p>
 <p> This code is distributed under the <font SIZE="-1">GNU</font> General Public License v2 (GPLv2) . </p>
-<h2>Index</h2>

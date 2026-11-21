@@ -19,4 +19,3 @@ description: "globus_gass_transfer_request_t –"
 <p> Each request handle should be destroyed by calling <code>globus_gass_transfer_request_destroy()</code> once the user has completed processing the request. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>

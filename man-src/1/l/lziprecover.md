@@ -68,4 +68,3 @@ description: "lziprecover – recovers data from damaged lzip files"
 <dt>
 </dt><dd> <code>info lziprecover</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

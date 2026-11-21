@@ -74,4 +74,3 @@ Roger Dingledine&lt;arma[at] mit.edu&gt;, Nick Mathewson&lt;nickm[at] alum.mit.e
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

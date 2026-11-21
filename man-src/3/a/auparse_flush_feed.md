@@ -20,4 +20,3 @@ description: "auparse_flush_feed – flush any unconsumed feed data through pars
 <p> <code><a href="/docs/linux/man/3-auparse_feed/">auparse_feed</a></code>(3), <code><a href="/docs/linux/man/3-auparse_feed_age_events/">auparse_feed_age_events</a></code>(3), <code><a href="/docs/linux/man/3-auparse_feed_has_data/">auparse_feed_has_data</a></code>(3) </p>
 <h2>AUTHOR</h2>
 <p> John Dennis </p>
-<h2>Index</h2>

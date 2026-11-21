@@ -31,4 +31,3 @@ description: "gtkada-config – script to get information about the installed ve
 <h2>COPYRIGHT FOR THIS MAN PAGE</h2>
 <p> This man page has been written by Samuel Tardieu for the Debian GNU/Linux distribution, from informations given by the GtkAda authors Emmanuel Briot, Joel Brobecker and Arnaud Charlet. </p>
 <p> Permission to use, copy, modify, and distribute this documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. </p>
-<h2>Index</h2>

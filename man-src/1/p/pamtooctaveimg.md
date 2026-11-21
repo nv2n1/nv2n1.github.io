@@ -47,4 +47,3 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 <p> <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1) , <code>pam</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2007 Scott Pakin, <i>scott+pbm [at] pakin.org</i>. </p>
-<h2>Index</h2>

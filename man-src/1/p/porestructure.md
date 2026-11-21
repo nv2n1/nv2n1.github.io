@@ -32,4 +32,3 @@ description: "porestructure – Restructure Gettxt PO files produced by :doc:`po
 <dt>-o/&#8211;output</dt>
 <dd> write to OUTPUT in po format </dd>
 </dl>
-<h2>Index</h2>

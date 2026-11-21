@@ -23,4 +23,3 @@ description: "winff – video and audio batch converter using ffmpeg or avconv"
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008 Paul Gevers </p>
-<h2>Index</h2>

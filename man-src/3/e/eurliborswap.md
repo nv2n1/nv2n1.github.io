@@ -23,4 +23,3 @@ description: "ql/indexes/swap/eurliborswap.hpp – EUR Libor Swap indexes"
 <p> EUR Libor Swap indexes </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -71,4 +71,3 @@ Copyright &#169;  2002-2009 Stephen Williams
 This document can be freely redistributed according to the terms of the
 GNU General Public License version 2.0
 </pre>
-<h2>Index</h2>

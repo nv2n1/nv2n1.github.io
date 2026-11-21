@@ -87,4 +87,3 @@ mdb - schema[options] database[backend]
 <p> The <code>mdb-schema</code> utility was written by Brian Bruns and others.</p>
 <h2>BUGS</h2>
 <p> Relationships and other features may not be supported by all databases. Access datatypes are mapped to their closest counterparts in the target <i>backend</i>. This may not always yield an exact fit. </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "gnutls_ia_set_client_avp_ptr – Sets a pointer to be sent to TLS/
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

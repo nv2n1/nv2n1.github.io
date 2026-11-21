@@ -90,4 +90,3 @@ description: "TiLP2 – a communication program for TI calculators (‘Tilp Is a
 <p> Thanks to these people for having lent me their calculator: Jean-Pierre and Thomas (TI92+), Benoit, Philippe and Florence (TI89), Louis (TI86), Luc (TI85), Nicolas (TI83), Jean-Philippe and Francois (TI82). Special thanks to Guillaume for his Grey/Gray TIGL link cable. Thanks to many others (patches, suggestions, &#8230;) </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-tilp/">tilp</a>(1) tiemu(1) </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "mutagen-inspect – view Mutagen-supported audio tags"
 <p> It is primarily intended as a debugging tool for Mutagen, but can be useful for extracting tags from the command line.</p>
 <h2>AUTHOR</h2>
 <p> Joe Wreschnig </p>
-<h2>Index</h2>

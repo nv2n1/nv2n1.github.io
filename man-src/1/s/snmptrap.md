@@ -51,4 +51,3 @@ description: "snmptrap, snmpinform – sends an SNMP notification to a manager"
 <p> <code>snmptrap</code> takes the common options described in the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1) </i> manual page in addition to the <code>-Ci</code> option described above. Note that <code>snmptrap</code> REQUIRES an argument specifying the agent to query as described there.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpset/">snmpset</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
-<h2>Index</h2>

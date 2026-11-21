@@ -51,4 +51,3 @@ description: "pkcsconf – configuration utility for the pkcsslotd daemon"
 </dd><dt><code><a href="/docs/linux/man/8-pkcsslotd/">pkcsslotd</a></code>(8).</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

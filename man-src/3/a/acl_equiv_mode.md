@@ -29,4 +29,3 @@ description: "acl_equiv_mode – check for an equivalent ACL"
 <p> acl_from_mode3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

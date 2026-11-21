@@ -35,4 +35,3 @@ int ares_gethostbyname_file(ares_channel channel, const char *name,
 <h2>AUTHOR</h2>
 <p> Brad Spencer<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

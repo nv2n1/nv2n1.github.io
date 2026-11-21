@@ -180,4 +180,3 @@ src/widget.c 1.1 1d862f173cdc7325b6fa6d2ae1cfd61fd1b512b7
 <dt>
 </dt><dd> <a rel="nofollow" href="https://github.com/BartMassey/parsecvs">https://github.com/BartMassey/parsecvs</a></dd></dl>
 </dl>
-<h2>Index</h2>

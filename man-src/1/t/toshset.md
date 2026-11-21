@@ -109,4 +109,3 @@ description: "toshset – manipulate bios and hardware settings of Toshiba lapto
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-8 Charles D. Schwieters<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

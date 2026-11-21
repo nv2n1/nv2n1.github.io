@@ -27,4 +27,3 @@ description: "acpi_available – test whether ACPI subsystem is available"
 </pre>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Hood &lt;jdthood [at] yahoo.co.uk&gt;. </p>
-<h2>Index</h2>

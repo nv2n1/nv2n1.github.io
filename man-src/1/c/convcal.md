@@ -59,4 +59,3 @@ description: "convcal – convert dates to different formats"
 <h2>AUTHOR</h2>
 <p> Luc Maisonobe </p>
 <p> This man-page was written by Jan Schaumann &lt;jschauma [at] netmeister.org&gt; as part of &quot;The Missing Man Pages Project&quot;. Please see <i><a rel="nofollow" href="http://www.netmeister.org/misc/m2p2/index.html">http://www.netmeister.org/misc/m2p2/index.html</a></i> for details. </p>
-<h2>Index</h2>

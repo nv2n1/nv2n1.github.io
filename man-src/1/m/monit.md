@@ -1739,4 +1739,3 @@ the -s switch when Monit is started. </p>
 <p> Copyright (C) 2001-2015 by Tildeslash Ltd. All Rights Reserved. This product is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> any warranty; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> for a particular purpose.  </p>
 <h2>SEE ALSO</h2>
 <p> <font SIZE="-1">GNU</font> text utilities; <i><a href="/docs/linux/man/1-md5sum/">md5sum</a></i>(1); <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></i>(1); <i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1); <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7); <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7); <i><a rel="nofollow" href="http://www.mmonit.com/">http://www.mmonit.com/</a></i> </p>
-<h2>Index</h2>

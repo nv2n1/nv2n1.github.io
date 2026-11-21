@@ -42,4 +42,3 @@ description: "mewencode, mewdecode, mewcat – MIME encoder/decoder"
 <dt><code>-v</code></dt>
 <dd> Display the version. </dd>
 </dl>
-<h2>Index</h2>

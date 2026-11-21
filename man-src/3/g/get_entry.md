@@ -136,4 +136,3 @@ double ca[GD_MAX_POLY_ORD + 1][2];
 <p> The first element of the two element array is the real part of the complex number, and the second element is the imaginary part. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_free_entry_strings/">dirfile_free_entry_strings</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/3-get_field_list/">get_field_list</a></code>(3), <code><a href="/docs/linux/man/3-get_fragmentname/">get_fragmentname</a></code>(3), <code><a href="/docs/linux/man/3-get_raw_filename/">get_raw_filename</a></code>(3) </p>
-<h2>Index</h2>

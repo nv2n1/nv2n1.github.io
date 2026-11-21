@@ -107,4 +107,3 @@ description: "prsync — parallel process kill program"
 <p> <a rel="nofollow" href="http://code.google.com/p/parallel-ssh/">http://code.google.com/p/parallel-ssh/</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rsync/">rsync</a></code>(1), <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/5-ssh_config/">ssh_config</a>(5),</code> <code><a href="/docs/linux/man/1-pssh/">pssh</a></code>(1), <code><a href="/docs/linux/man/1-prsync/">prsync</a></code>(1), <code><a href="/docs/linux/man/1-pslurp/">pslurp</a></code>(1), <code><a href="/docs/linux/man/1-pnuke/">pnuke</a></code>(1), </p>
-<h2>Index</h2>

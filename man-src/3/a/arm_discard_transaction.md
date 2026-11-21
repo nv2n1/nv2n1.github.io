@@ -37,4 +37,3 @@ description: "arm_discard_transaction – discard transaction"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_bind_thread/">arm_bind_thread</a></code>(3), <code><a href="/docs/linux/man/3-arm_block_transaction/">arm_block_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_stop_transaction/">arm_stop_transaction</a></code>(3) </p>
-<h2>Index</h2>

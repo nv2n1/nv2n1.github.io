@@ -21,4 +21,3 @@ description: "gtg_new_task – Adds a task to the Getting Things GNOME! organize
 <p> Please report any bug you may experience to the <code>GTG</code> Developers, that can be reached at <a rel="nofollow" href="https://edge.launchpad.net/gtg">https://edge.launchpad.net/gtg</a></p>
 <h2>COPYRIGHT</h2>
 <p> This manual page is Copyright2009 Luca Invernizzi &lt;invernizzi.l [at] gmail.com&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

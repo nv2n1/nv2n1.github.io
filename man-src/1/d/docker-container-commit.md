@@ -44,4 +44,3 @@ $ docker container commit -c=&quot;ENV DEBUG=true&quot; 98bd7fc99854 debug-image
 <p> <code>-p</code>, <code>&#8211;pause</code>[=true] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Pause container during commit</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

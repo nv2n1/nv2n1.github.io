@@ -27,4 +27,3 @@ description: "fityk – non-linear curve fitting and data analysis"
 <p> Use &#8211;help to see the full list of options.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Carlo Segre &lt;segre [at] iit.edu&gt; and updated by Marcin Wojdyr. </p>
-<h2>Index</h2>

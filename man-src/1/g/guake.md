@@ -49,4 +49,3 @@ description: "guake — A drop-down terminal for GNOME environment."
 <h2>AUTHOR</h2>
 <p> guake was originally written by &lt;gabriel [at] guake-terminal.org&gt; </p>
 <p> This manual page was written by Gabriel Falcao Goncalves de Moura &lt;gabriel [at] guake-terminal.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

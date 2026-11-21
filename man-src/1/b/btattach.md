@@ -134,4 +134,3 @@ description: "btattach – Attach serial devices to BlueZ stack"
 <p> <i>linux-bluetooth [at] vger.kernel.org</i></p>
 <h2>COPYRIGHT</h2>
 <p> Free use of this software is granted under ther terms of the GNU Lesser General Public Licenses (LGPL). </p>
-<h2>Index</h2>

@@ -174,4 +174,3 @@ $ source (npx --shell-auto-fallback fish | psub)
 <dd> <code><a href="/docs/linux/man/7-npm-config/">npm-config</a>(7)</code> </dd>
 </dl>
 </dl>
-<h2>Index</h2>

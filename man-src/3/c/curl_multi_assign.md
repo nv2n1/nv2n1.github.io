@@ -28,4 +28,3 @@ description: "curl_multi_assign – set data to association with an internal soc
 <p> This function was added in libcurl 7.15.5, although not deemed stable yet.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_setopt/">curl_multi_setopt</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_socket/">curl_multi_socket</a></code>(3) </p>
-<h2>Index</h2>

@@ -71,4 +71,3 @@ int curl_socket_callback(CURL *easy,      /* easy handle */
 <p> <i><a href="/docs/linux/man/3-curl_multi_socket/">curl_multi_socket</a>(3)</i> is deprecated, use <i><a href="/docs/linux/man/3-curl_multi_socket_action/">curl_multi_socket_action</a>(3)</i> instead!</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_fdset/">curl_multi_fdset</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_info_read/">curl_multi_info_read</a></code>(3), <code>the hiperfifo.c example</code> </p>
-<h2>Index</h2>

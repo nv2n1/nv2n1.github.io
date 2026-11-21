@@ -48,4 +48,3 @@ description: "cycle – a calendar for women"
 <h2>SEE ALSO</h2>
 <p> You can find cycle&#8217;s home page at: <a rel="nofollow" href="http://cycle.sourceforge.net/">http://cycle.sourceforge.net/</a> </p>
 <p> More information about calendar method are available at: <a rel="nofollow" href="http://www.mama.ru/gynecolog/STA/st18.htm">http://www.mama.ru/gynecolog/STA/st18.htm</a> (in Russian) </p>
-<h2>Index</h2>

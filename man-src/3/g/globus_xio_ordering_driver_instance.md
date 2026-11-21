@@ -12,4 +12,3 @@ description: "Opening/Closing – Ordering driver is a transform driver and thus
 <p> When the XIO handle is closed, the ordering driver will destroy its internal resources. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

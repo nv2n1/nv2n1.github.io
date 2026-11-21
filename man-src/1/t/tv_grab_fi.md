@@ -114,4 +114,3 @@ description: "tv_grab_fi – Grab TV listings for Finland"
 <dd></dd></dl>
 <h2>BUGS</h2>
 <p> The channels are identified by channel number rather than the <font SIZE="-1">RFC2838</font> form recommended by the <font SIZE="-1">XMLTV DTD.</font> </p>
-<h2>Index</h2>

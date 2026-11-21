@@ -164,4 +164,3 @@ DELETE badfile
 <p> inotifywait is part of inotify-tools. The inotify-tools website is located at: <i><a rel="nofollow" href="http://inotify-tools.sourceforge.net/">http://inotify-tools.sourceforge.net/</a></i> </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-inotifywatch/">inotifywatch</a>(1), <a href="/docs/linux/man/3-strftime/">strftime</a>(3), <a href="/docs/linux/man/7-inotify/">inotify</a>(7) </p>
-<h2>Index</h2>

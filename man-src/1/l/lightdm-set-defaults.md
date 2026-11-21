@@ -42,4 +42,3 @@ description: "lightdm-set-defaults – sets configuration options for lightdm"
 <dt><code>/etc/lightdm/lightdm.conf</code></dt>
 <dd> Configuration </dd>
 </dl>
-<h2>Index</h2>

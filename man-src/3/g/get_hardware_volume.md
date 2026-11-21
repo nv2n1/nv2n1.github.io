@@ -16,4 +16,3 @@ description: "get_hardware_volume – Retrieves the hardware sound output volume
 <p> Retrieves the hardware sound output volume, both for digital samples and MIDI playback, as integers from 0 to 255, or -1 if the information is not available. Parameters digi_volume and midi_volume must be valid pointers to int, or NULL if not interested in specific value. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_hardware_volume/">set_hardware_volume</a></code>(3), <code><a href="/docs/linux/man/3-get_volume/">get_volume</a></code>(3) </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ J  Ascii    /usr/bin/ascii-xfr -rv   Y   D   N   Y
  Jukka Lahtinen, walker [at] netsonic.fi</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-minicom/">minicom</a>(1) </p>
-<h2>Index</h2>

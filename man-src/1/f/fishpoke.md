@@ -24,4 +24,3 @@ fishpoke HOST[:PORT] TOPIC[SUBJECT...]
 <p> More information can be found by browsing the README file shipped with the package. </p>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Andrea Veri &lt;and [at] debian.org&gt; for the Debian GNU/Linux distribution. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

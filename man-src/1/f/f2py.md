@@ -134,4 +134,3 @@ description: "f2py – Fortran to Python interface generator"
 <p> NumPy License</p>
 <h2>VERSION</h2>
 <p> 2.45.241 </p>
-<h2>Index</h2>

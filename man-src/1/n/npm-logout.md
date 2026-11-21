@@ -48,4 +48,3 @@ npm logout --scope=@myco
 <dd> npm help whoami </dd>
 </dl>
 </dl>
-<h2>Index</h2>

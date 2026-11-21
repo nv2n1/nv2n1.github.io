@@ -76,4 +76,3 @@ description: "dconf – Simple tool for manipulating a dconf database"
 </dt><dd> This environment variable determines which dconf profile to use. See <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7), <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1), <code><a href="/docs/linux/man/1-dconf-editor/">dconf-editor</a></code>(1) </p>
-<h2>Index</h2>

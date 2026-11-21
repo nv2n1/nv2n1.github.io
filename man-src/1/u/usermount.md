@@ -31,4 +31,3 @@ description: "usermount – A graphical tool to mount, unmount and format filesy
 <p> Mount entries for swap files or partitions are also ignored. A nice feature might be to allow root to turn swap on and off for swap partitions.</p>
 <h2>AUTHOR</h2>
 <p> Otto Hammersmith &lt;otto [at] redhat.com&gt; </p>
-<h2>Index</h2>

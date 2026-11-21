@@ -23,4 +23,3 @@ description: "hwloc_obj_info_s –"
 <p> Info value. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

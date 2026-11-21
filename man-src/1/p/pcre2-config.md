@@ -45,4 +45,3 @@ pcre2 - config[--prefix][--exec - prefix][--version]
 <pre>
 Last updated: 28 September 2014
 </pre>
-<h2>Index</h2>

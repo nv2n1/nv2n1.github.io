@@ -32,4 +32,3 @@ description: "mc-wait-for-name – run until a D-Bus name appears on the session
 <p> There are no additional command-line options.</p>
 <h2>BUGS</h2>
 <p> The &quot;reasonable time&quot; to wait is currently hard-coded. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "retrace-server-cleanup – Collects garbage from Retrace server."
 <dt>
 </dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "docker-stop – Stop a container by sending SIGTERM and then SIGKI
 <p> #See also <code><a href="/docs/linux/man/1-docker-start/">docker-start</a>(1)</code> to restart a stopped container. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

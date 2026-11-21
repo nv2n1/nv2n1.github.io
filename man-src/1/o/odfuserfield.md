@@ -64,4 +64,3 @@ odfuserfield -L odf-file
 <dl>
 <dt>
 </dt><dd> Refactoring</dd></dl>
-<h2>Index</h2>

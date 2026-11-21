@@ -17,4 +17,3 @@ description: "iv_quit – signal ivykis to exit the main loop"
 <p> If called from any callback function, <code>iv_quit</code> will cause the <code>iv_main</code>(3) function called from the current thread to return. It is not meant to be used casually.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
-<h2>Index</h2>

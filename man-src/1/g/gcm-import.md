@@ -19,4 +19,3 @@ description: "gcm-import – GNOME Color Manager Import Tool"
 <p> gnome-control-center</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

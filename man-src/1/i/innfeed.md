@@ -162,4 +162,3 @@ done
 <p> Written by James Brister &lt;brister [at] vix.com&gt; for InterNetNews. This is revision 7799, dated 2008-04-26.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-innfeed-conf/">innfeed.conf</a>(5)</i> </p>
-<h2>Index</h2>

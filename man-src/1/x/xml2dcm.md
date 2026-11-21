@@ -178,4 +178,3 @@ Hebrew &quot;ISO_IR 138&quot; (ISO-8859-8)
 <p> <code><a href="/docs/linux/man/1-dcm2xml/">dcm2xml</a></code>(1)  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2003-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

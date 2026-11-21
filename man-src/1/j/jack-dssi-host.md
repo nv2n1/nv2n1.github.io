@@ -43,4 +43,3 @@ description: "jack-dssi-host – a simple JACK host for DSSI plugins"
 <p> <code>jack-dssi-host</code> will search for plugin shared libraries in the directories specified by the environment variable <code>DSSI_PATH,</code> which is a colon-separated list of directories. If <code>DSSI_PATH</code> is not set, a default search path of /usr/lib64/dssi, /usr/local/lib64/dssi, /usr/lib/dssi, /usr/local/lib/dssi, and (assuming the environment variable HOME is set,) $HOME/.dssi is used. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally created by Mark Hymers from the help text of the application, for the Debian project (but may be freely used by others). </p>
-<h2>Index</h2>

@@ -131,4 +131,3 @@ description: "slrn – An easy to use NNTP / spool based newsreader."
 <p> The latest version of <i>slrn</i> is available from <a rel="nofollow" href="http://prdownloads.sourceforge.net/slrn/">http://prdownloads.sourceforge.net/slrn/</a></p>
 <h2>AUTHOR</h2>
 <p> John E. Davis &lt;jed [at] jedsoft.org&gt; </p>
-<h2>Index</h2>

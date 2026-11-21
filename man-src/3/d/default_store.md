@@ -211,4 +211,3 @@ description: "default_store – generic storage of global data."
 <dd> Analogous to the preceding function, but the <i>token</i> is processed before MIBs are read (this is therefore useful for controlling MIB processing options).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-snmp_config/">snmp_config</a></code>(5), <code><a href="/docs/linux/man/3-netsnmp_config_api/">netsnmp_config_api</a></code>(3) </p>
-<h2>Index</h2>

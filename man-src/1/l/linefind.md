@@ -25,4 +25,3 @@ description: "linefind – Detect vertical features in images"
 <dd> shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes, line detection code based on calibrate_lens by Tim Nugent </p>
-<h2>Index</h2>

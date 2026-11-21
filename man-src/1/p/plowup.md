@@ -291,4 +291,3 @@ description: "plowup – Simple upload manager for file sharing websites"
 <p> Plowshare is (C) 2010-2014 The Plowshare Team</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-plowdown/">plowdown</a></code>(1), <code><a href="/docs/linux/man/1-plowdel/">plowdel</a></code>(1), <code><a href="/docs/linux/man/1-plowlist/">plowlist</a></code>(1), <code><a href="/docs/linux/man/1-plowprobe/">plowprobe</a></code>(1), <code><a href="/docs/linux/man/5-plowshare-conf/">plowshare.conf</a></code>(5). </p>
-<h2>Index</h2>

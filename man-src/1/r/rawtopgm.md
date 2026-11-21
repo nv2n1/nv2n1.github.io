@@ -44,4 +44,3 @@ description: "rawtopgm – convert raw grayscale bytes into a portable graymap"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer.<br />
  Modified June 1993 by Oliver Trepte, oliver [at] fysik4.kth.se </p>
-<h2>Index</h2>

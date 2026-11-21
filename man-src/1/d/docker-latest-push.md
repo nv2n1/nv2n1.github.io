@@ -51,4 +51,3 @@ description: "docker-push – Push an image or a repository to a registry"
 <p> You should see both rhel-httpd and registry-host:5000/myadmin/rhel-httpd listed. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; April 2015, updated by Mary Anthony for v2 &lt;mary [at] docker.com&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>

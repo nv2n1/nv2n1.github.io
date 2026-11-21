@@ -45,4 +45,3 @@ description: "xfconf-query – Command line utility for xfconf system"
 <dt><code>-m</code>, <code>&#8211;monitor</code></dt>
 <dd> Monitor a channel for property changes </dd>
 </dl>
-<h2>Index</h2>

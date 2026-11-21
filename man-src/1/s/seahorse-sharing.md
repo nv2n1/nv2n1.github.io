@@ -50,4 +50,3 @@ description: "seahorse-sharing – public pgp key sharing"
  Documentation and help files are covered by GFDL license. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-seahorse-tool/">seahorse-tool</a>(1)</code> </p>
-<h2>Index</h2>

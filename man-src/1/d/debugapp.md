@@ -22,4 +22,3 @@ description: "debugapp – A wrapper for openapp."
 <p> Work on <code>debugapp</code> started in October 1997 by Ovidiu Predescu &lt;ovidiu [at] net-community.com&gt;. In October 2006 Nicola Pero &lt;nicola.pero [at] meta-innovation.com&gt; merged it with openapp. </p>
 <h2>AUTHORS</h2>
 <p> This man page was written by Dennis Leeuw &lt;dleeuw [at] made-it.com&gt;. </p>
-<h2>Index</h2>

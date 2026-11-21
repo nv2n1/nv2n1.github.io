@@ -45,4 +45,3 @@ description: "nitrogen – X11 background previewer and setter"
 <p> Dave Foster &lt;daf [at] minuslab.net&gt; Javeed Shaikh &lt;syscrash2k [at] gmail.com&gt;</p>
 <h2>AVAILABILITY</h2>
 <p> Homepage &#8211; <a rel="nofollow" href="http://projects.l3ib.org/nitrogen/.">http://projects.l3ib.org/nitrogen/.</a> The git repository is at <a href="http://code.l3ib.org/nitrogen.git">http://code.l3ib.org/nitrogen.git</a> </p>
-<h2>Index</h2>

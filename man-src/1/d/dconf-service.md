@@ -17,4 +17,3 @@ description: "dconf-service – D-Bus service for writes to the dconf database"
 <p> Reading values from the dconf database does not involve the service; it is only needed for writes. The service is stateless and can exit freely at any time (and is therefore robust against crashes).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-dconf/">dconf</a></code>(7), <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) </p>
-<h2>Index</h2>

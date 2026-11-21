@@ -39,4 +39,3 @@ description: "ffcfstress – constant force stress test for force-feedback devic
 <h2>AUTHOR</h2>
 <p> <code>ffcfstress</code> was written by Oliver Hamann. </p>
 <p> This manual page was written by Stephen Kitt &lt;steve [at] sk2.org&gt;, for the Debian GNU/Linux system (but may be used by others). It was last modified for <code>ffcfstress</code> dated February 15, 2002. </p>
-<h2>Index</h2>

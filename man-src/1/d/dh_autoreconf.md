@@ -42,4 +42,3 @@ description: "dh_autoreconf – Call autoreconf -f -i and keep track of the chan
 <p> <i><a href="/docs/linux/man/7-debhelper/">debhelper</a></i>(7), <i><a href="/docs/linux/man/1-dh_autoreconf_clean/">dh_autoreconf_clean</a></i>(1), <i><a href="/docs/linux/man/7-dh-autoreconf/">dh-autoreconf</a></i>(7)</p>
 <h2>AUTHOR</h2>
 <p> Julian Andres Klode &lt;jak [at] debian.org&gt; </p>
-<h2>Index</h2>

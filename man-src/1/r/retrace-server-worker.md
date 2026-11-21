@@ -25,4 +25,3 @@ description: "retrace-server-worker – Executes the retrace job."
 <dt>
 </dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
-<h2>Index</h2>

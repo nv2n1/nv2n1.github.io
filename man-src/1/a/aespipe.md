@@ -58,4 +58,3 @@ description: "aespipe – AES encrypting or decrypting pipe"
 <p> Source is available from <a rel="nofollow" href="http://loop-aes.sourceforge.net/">http://loop-aes.sourceforge.net/</a></p>
 <h2>AUTHORS</h2>
 <p> Jari Ruusu </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "expiry – check and enforce password expiration policy"
 </dt><dd> Secure user account information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5). </p>
-<h2>Index</h2>

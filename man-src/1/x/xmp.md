@@ -182,4 +182,3 @@ description: "xmp – Extended Module Player"
 <p> <tt>/etc/xmp/xmp.conf, $HOME/.xmp/xmp.conf, /etc/xmp/modules.conf, $HOME/.xmp/modules.conf</tt> </p>
 <h2>AUTHORS</h2>
 <p> Claudio Matsuoka and Hipolito Carraro Jr. </p>
-<h2>Index</h2>

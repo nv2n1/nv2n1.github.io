@@ -30,4 +30,3 @@ krb5_free_krbhst(context, hosts);
 </blockquote>
 <h2>SEE ALSO</h2>
 <p> krb5_krbhst_init3 </p>
-<h2>Index</h2>

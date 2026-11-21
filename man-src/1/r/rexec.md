@@ -71,4 +71,3 @@ description: "rexec — remote execution client for an exec server"
  mas22 [at] cornell.edu<br />
  <a rel="nofollow" href="http://www.tc.cornell.edu/~sadd/">http://www.tc.cornell.edu/~sadd/</a> </p>
 <p> Thanks to Orange Gopher (2/10/97) and Johannes Plass (plass [at] dipmza.physik.uni-mainz.de, Oct. 17 1996) for useful suggestions. </p>
-<h2>Index</h2>

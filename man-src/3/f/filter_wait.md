@@ -25,4 +25,3 @@ NEOERR *filter_wait(pid_t pid, int options, int *exitcode);
 <p> exitcode -&gt; the exitcode if the process existed normally </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-filter_wait/">filter_wait</a></code>(3), <a href="/docs/linux/man/3-filter_create_fp/">filter_create_fp</a><code>(3), filter_create_fd</code> </p>
-<h2>Index</h2>

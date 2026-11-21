@@ -71,4 +71,3 @@ description: "gnote – A simple note-taking application for Gnome"
 <dd>
 <p> This manual page was originally written by Luca Capello &lt;luca [at] pca.it&gt;. Adapted to Gnote by Hubert Figuiere and Aurimas Cernius </p>
 </dd></dl>
-<h2>Index</h2>

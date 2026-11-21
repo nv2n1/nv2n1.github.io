@@ -16,4 +16,3 @@ description: "lv2_jack_host – Run an LV2 plugin as a JACK application (with MI
 <h2>AUTHOR</h2>
 <p> lv2_inspect was written by Dave Robillard &lt;dave [at] drobilla.net&gt; </p>
 <p> This manual page was written by Jaromír Mikes &lt;mira.mikes [at] seznam.cz&gt; and Dave Robillard &lt;dave [at] drobilla.net&gt; </p>
-<h2>Index</h2>

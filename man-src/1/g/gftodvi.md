@@ -41,4 +41,3 @@ description: "gftodvi – make proof sheets from generic font files"
  Donald E. Knuth et al., <i>Metafontware</i>.</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote and still maintains the program. It was published as part of the <i>Metafontware</i> technical report. Paul Richards originally ported it to Unix. Bug reports should go to tex-k [at] tug.org (<a rel="nofollow" href="https://lists.tug.org/tex-k">https://lists.tug.org/tex-k</a>). </p>
-<h2>Index</h2>

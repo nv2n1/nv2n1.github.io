@@ -70,4 +70,3 @@ description: "pssvg – convert Photoshop® gradients to SVG."
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-svgx/">svgx</a></code>(1). </p>
-<h2>Index</h2>

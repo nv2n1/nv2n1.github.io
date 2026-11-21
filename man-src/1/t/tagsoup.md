@@ -78,4 +78,3 @@ description: "tagsoup – convert nasty, ugly HTML to clean XHTML"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2008 John Cowan<br />
  TagSoup is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

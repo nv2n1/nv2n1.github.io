@@ -126,4 +126,3 @@ mpqcrun[options][file1.in][file2.in]...
 <p> mpqcrun is open-source software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
 <h2>Warranty</h2>
 <p> mpqcrun is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. </p>
-<h2>Index</h2>

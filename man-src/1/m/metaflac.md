@@ -151,4 +151,3 @@ description: "metaflac – program to list, add, remove, or edit metadata in one
 <dd> Move all PADDING blocks to the end of the metadata and merge them into a single block.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-flac/">flac</a>(1). </p>
-<h2>Index</h2>

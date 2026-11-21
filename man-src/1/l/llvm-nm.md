@@ -57,4 +57,3 @@ description: "llvm-nm – list LLVM bitcode file’s symbol table"
 <p> llvm-dis, <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1), <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

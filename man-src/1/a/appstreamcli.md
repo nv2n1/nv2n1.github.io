@@ -172,4 +172,3 @@ description: "appstreamcli – Handle AppStream metadata formats and query AppSt
 <dt>
 </dt><dd> <a rel="nofollow" href="https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html">https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

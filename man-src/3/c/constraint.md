@@ -28,4 +28,3 @@ description: "ql/math/optimization/constraint.hpp – Abstract constraint class.
 <p> Abstract constraint class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

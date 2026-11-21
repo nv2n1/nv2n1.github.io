@@ -263,4 +263,3 @@ rsl: &quot;&amp;( executable =   (arguments =
 <dd> Messages must be wrapped with support for the delegation message. When using Globus I/O, this is accomplished by using the the GLOBUS_IO_SECURE_CHANNEL_MODE_GSI_WRAP wrapping mode.</dd></dl>
 <h3>Changes</h3>
 <p> 2004-08-11 Added information about gridmap choosing </p>
-<h2>Index</h2>

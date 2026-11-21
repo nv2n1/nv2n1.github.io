@@ -75,4 +75,3 @@ description: "hwloc-info – Show some information about some objects or about a
 &#8230;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-bind/">hwloc-bind</a>(1), <a href="/docs/linux/man/1-hwloc-ps/">hwloc-ps</a>(1), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>
-<h2>Index</h2>

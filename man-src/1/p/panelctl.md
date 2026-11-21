@@ -102,4 +102,3 @@ description: "panelctl – manual page for panelctl (libavc1394) 0.1"
 <dt><code>dvcont</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

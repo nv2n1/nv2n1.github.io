@@ -19,4 +19,3 @@ description: "libssh2_sftp_tell – get the current read/write position indicato
 <p> Current offset from beginning of file in bytes.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3),</code> <code><a href="/docs/linux/man/3-libssh2_sftp_tell64/">libssh2_sftp_tell64</a>(3)</code> </p>
-<h2>Index</h2>

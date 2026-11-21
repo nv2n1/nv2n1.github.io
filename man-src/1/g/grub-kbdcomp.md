@@ -31,4 +31,3 @@ description: "grub-kbdcomp – generate a GRUB keyboard layout file"
 <dt>
 </dt><dd> <code>info grub-kbdcomp</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "cacademo, cacafire – libcaca’s demonstration applications"
 <p> <code>cacademo&#8217;s</code> metaball effect was written by Jean-Yves Lamoureux &lt;jylam [at] lnxscene.org&gt;, <code>cacafire</code> is a port of AAlib&#8217;s <code>aafire</code> written by Jan Hubicka &lt;hubicka [at] freesoft.cz&gt; and <code>cacademo&#8217;s</code> plasma effect is a port of an SDL plasma effect written and put in the public domain by Michele Bini &lt;mibin [at] tin.it&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cacaview/">cacaview</a>(1), <a href="/docs/linux/man/1-aafire/">aafire</a>(1) </p>
-<h2>Index</h2>

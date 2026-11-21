@@ -75,4 +75,3 @@ description: "findcon – SELinux file context search tool"
 <p> Please report bugs via an email to setools-bugs [at] tresys.com.</p>
 <h2>SEE ALSO</h2>
 <p> replcon(1), indexcon(1) </p>
-<h2>Index</h2>

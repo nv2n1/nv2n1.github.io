@@ -57,4 +57,3 @@ graph
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvmap/">gvmap</a>(1) </p>
 <p> Blondel, V.D., Guillaume, J.L., Lambiotte, R., Lefebvre, E.: Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment (2008), P10008. </p>
-<h2>Index</h2>

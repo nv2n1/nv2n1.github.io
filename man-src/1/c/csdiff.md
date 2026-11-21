@@ -36,4 +36,3 @@ description: "csdiff – manual page for csdiff 1.3.2"
 <dt><code>&#8211;version</code></dt>
 <dd> print version </dd>
 </dl>
-<h2>Index</h2>

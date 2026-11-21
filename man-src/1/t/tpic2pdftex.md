@@ -21,4 +21,3 @@ description: "tpic2pdftex – convert tpic \\specials for use by pdftex"
 <p> Spline curve shapes not fully authentic (unknown algorithm). Bounding box does not care for line thickness (groff pic feature). Splines might be outside bounding box. Fill color does not work correctly for arrowheads (pic limitation). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code>grap</code>(1), <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1), <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). </p>
-<h2>Index</h2>

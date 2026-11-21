@@ -85,4 +85,3 @@ rsync-ssl -aiv <a href="rsync://example.com:9874/mod/">rsync://example.com:9874/
 <h2>AUTHOR</h2>
 <p> This manpage was written by Wayne Davison. </p>
 <p> Mailing lists for support and development are available at <a rel="nofollow" href="https://lists.samba.org/.">https://lists.samba.org/.</a> </p>
-<h2>Index</h2>

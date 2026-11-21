@@ -27,4 +27,3 @@ description: "Heimdal Kerberos 5 ticket functions –"
 </dt><dd> ticket flags</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

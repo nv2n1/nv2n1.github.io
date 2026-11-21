@@ -105,4 +105,3 @@ description: "udisks – udisks command line tool"
 <p> Please send bug reports to either the distribution bug tracker or the upstream bug tracker at m[blue]<code><a rel="nofollow" href="http://bugs.freedesktop.org/enter_bug.cgi?product=udisks">http://bugs.freedesktop.org/enter_bug.cgi?product=udisks</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-udisks-daemon/">udisks-daemon</a></code>(8), <code><a href="/docs/linux/man/7-udisks/">udisks</a></code>(7), </p>
-<h2>Index</h2>

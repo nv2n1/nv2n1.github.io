@@ -20,4 +20,3 @@ description: "libssh2_hostkey_hash – return a hash of the remote host’s key"
 <p> Computed hostkey hash value, or NULL if the information is not available (either the session has not yet been started up, or the requested hash algorithm was not available). The hash consists of raw binary bytes, not hex digits, so it is not directly printable.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "QuantLib::Option – base option class"
 <h3>std::ostream &amp; operator&lt;&lt; (std::ostream &amp;, Option::Type) [related]</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

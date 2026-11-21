@@ -126,4 +126,3 @@ group service time timeleft failed output
 <p> Report bugs to the email address below.</p>
 <h2>AUTHOR</h2>
 <p> Jim Trocki &lt;trockij [at] arctic.org&gt; </p>
-<h2>Index</h2>

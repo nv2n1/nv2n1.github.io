@@ -17,4 +17,3 @@ description: "system-tools-backends – message dispatcher for system-tools-back
 <h2>AUTHORS</h2>
 <p> <code>system-tools-backends</code> is written by Carlos Garnacho Parro &lt;carlosg [at] gnome.org&gt;. </p>
 <p> This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

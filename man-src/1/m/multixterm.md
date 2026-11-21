@@ -136,4 +136,3 @@ switch
 <p> Don Libes &lt;don [at] libes.com&gt; </p>
 <h2>LICENSE</h2>
 <p> Multixterm is in the public domain; however the author would appreciate acknowledgement if multixterm or parts of it or ideas from it are used. </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
 <p> <code>At</code> and <code>batch</code> as presently implemented are not suitable when users are competing for resources. If this is the case for your site, you might want to consider another batch system, such as <code>nqs</code>.</p>
 <h2>AUTHOR</h2>
 <p> At was mostly written by Thomas Koenig, ig25 [at] rz.uni-karlsruhe.de. </p>
-<h2>Index</h2>

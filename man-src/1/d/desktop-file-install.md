@@ -85,4 +85,3 @@ description: "desktop-file-install, desktop-file-edit – Installation and editi
 <p> If you find bugs in the <i>desktop-file-install</i> program, please report these on <a rel="nofollow" href="https://bugs.freedesktop.org.">https://bugs.freedesktop.org.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-desktop-file-validate/">desktop-file-validate</a>(1)</code> <code><a href="/docs/linux/man/1-update-desktop-database/">update-desktop-database</a>(1)</code> </p>
-<h2>Index</h2>

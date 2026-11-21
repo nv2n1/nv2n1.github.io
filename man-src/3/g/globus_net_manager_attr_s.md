@@ -28,4 +28,3 @@ description: "globus_net_manager_attr_s –"
 <p> Value of the attribute </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_net_manager from the source code. </p>
-<h2>Index</h2>

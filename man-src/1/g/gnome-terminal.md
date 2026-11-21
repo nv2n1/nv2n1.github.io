@@ -188,4 +188,3 @@ gnome - terminal-- sh - c 'if [ "$(id -u)" = 0 ]; then ...'
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> For further information, visit the website m[blue]<code><a rel="nofollow" href="https://wiki.gnome.org/Apps/Terminal">https://wiki.gnome.org/Apps/Terminal</a></code>m[]. There&#8217;s a list of frequently asked questions at m[blue]<code><a rel="nofollow" href="https://wiki.gnome.org/Apps/Terminal/FAQ">https://wiki.gnome.org/Apps/Terminal/FAQ</a></code>m[]. </p>
-<h2>Index</h2>

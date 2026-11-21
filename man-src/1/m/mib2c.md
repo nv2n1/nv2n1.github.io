@@ -108,4 +108,3 @@ description: "mib2c — generate template code for extending the agent"
 <p> The resulting tcpConnTable.c and tcpConnTable.h files are generated in the current working directory. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/5-snmp-conf/">snmp.conf</a>(5) </p>
-<h2>Index</h2>

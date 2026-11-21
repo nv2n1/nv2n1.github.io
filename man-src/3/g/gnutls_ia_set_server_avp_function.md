@@ -37,4 +37,3 @@ description: "gnutls_ia_set_server_avp_function – Used to set a AVP callback"
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

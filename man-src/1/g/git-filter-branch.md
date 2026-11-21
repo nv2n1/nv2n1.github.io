@@ -392,4 +392,3 @@ git filter-branch --index-filter \
 <dt>
 </dt><dd> <a rel="nofollow" href="https://github.com/newren/git-filter-repo/blob/master/contrib/filter-repo-demos/filter-lamely">https://github.com/newren/git-filter-repo/blob/master/contrib/filter-repo-demos/filter-lamely</a></dd></dl>
 </dl>
-<h2>Index</h2>

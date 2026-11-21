@@ -540,4 +540,3 @@ tunnel=&quot;2&quot;,command=&quot;sh /etc/netstart tun2&quot; ssh-rsa ... john
 </dt><dd> A. Perrig D. Song 1999 International Workshop on Cryptographic Techniques and E-Commerce (CrypTEC &#8217;99) <i>Hash Visualization: a New Technique to improve Real-World Security</i></dd></dl>
 <h2>AUTHORS</h2>
 <p> OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. </p>
-<h2>Index</h2>

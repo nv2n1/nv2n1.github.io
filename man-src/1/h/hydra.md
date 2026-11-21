@@ -87,4 +87,3 @@ lowcase letters, numbers and/or percent signs and dots.</dd>
 <h2>AUTHOR</h2>
 <p> hydra was written by van Hauser / THC &lt;vh [at] thc.org&gt; </p>
 <p> This manual page was written by Daniel Echeverry &lt;epsilon77 [at] gmail.com&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ regular-alias                   fixed
 <dd> List of known encodings and the files they are stored in. Created by <i>mkfontdir</i>. Read by the X server and font server each time a font with an unknown charset is opened.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), <a href="/docs/linux/man/1-mkfontscale/">mkfontscale</a>(1), xfs(1), <a href="/docs/linux/man/1-xset/">xset</a>(1) </p>
-<h2>Index</h2>

@@ -14,4 +14,3 @@ description: "Server –"
 <p> All accepted handles inherit all gsi specific attributes set in the attr to <code>globus_xio_server_create()</code>, but can be overridden with the attr to <code>globus_xio_register_open()</code>. Furthermore, accepted handles will use the GSSAPI accept security context call unless explicitly overriden during the <code>globus_xio_register_open()</code> call (<code>GLOBUS_XIO_GSI_FORCE_SERVER_MODE</code>). </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
-<h2>Index</h2>

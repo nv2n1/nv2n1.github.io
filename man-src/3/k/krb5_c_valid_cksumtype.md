@@ -34,4 +34,3 @@ description: "krb5_c_block_size krb5_c_decrypt krb5_c_encrypt krb5_c_encrypt_len
 <p> Fn krb5_c_keylengths return the minimum length Fa ( inlength ) bytes needed to create a key and the length Fa ( keylength ) of the resulting key for the Fa enctype .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_create_checksum3, krb5_free_data3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

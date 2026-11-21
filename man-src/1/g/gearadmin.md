@@ -42,4 +42,3 @@ description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 <p> Data Differential <a rel="nofollow" href="http://www.datadifferential.com/">http://www.datadifferential.com/</a></p>
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Data Differential, <a rel="nofollow" href="http://www.datadifferential.com/">http://www.datadifferential.com/</a> </p>
-<h2>Index</h2>

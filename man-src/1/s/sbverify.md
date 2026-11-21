@@ -22,4 +22,3 @@ description: "sbverify – UEFI secure boot verification tool"
 <dt><code>&#8211;detached</code> &lt;file&gt;</dt>
 <dd> read signature from &lt;file&gt;, instead of looking for an embedded signature </dd>
 </dl>
-<h2>Index</h2>

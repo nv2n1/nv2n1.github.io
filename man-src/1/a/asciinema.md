@@ -94,4 +94,3 @@ description: "asciinema – terminal session recorder"
 <dd> issues and ideas for the javascript player</dd></dl>
 <h2>AUTHORS</h2>
 <p> Developed with passion by <code>Marcin Kulik</code> and great open source contributors. </p>
-<h2>Index</h2>

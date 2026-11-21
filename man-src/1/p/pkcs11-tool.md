@@ -129,4 +129,3 @@ description: "pkcs11-tool – utility for managing and using PKCS #11 security t
 </dt><dd> Causes <code>pkcs11-tool</code> to be more verbose. Specify this flag several times to enable debug output in the OpenSC library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7) </p>
-<h2>Index</h2>

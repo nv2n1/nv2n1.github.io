@@ -25,4 +25,3 @@ description: "lzmainfo – show information stored in the .lzma file header"
 <p> <code>lzmainfo</code> uses <code>MB</code> while the correct suffix would be <code>MiB</code> (2^20 bytes). This is to keep the output compatible with LZMA Utils.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) </p>
-<h2>Index</h2>

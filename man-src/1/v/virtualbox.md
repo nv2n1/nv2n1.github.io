@@ -13,4 +13,3 @@ description: "VirtualBox – x86 virtualization solution"
 <p> Oracle VM VirtualBox VM Selector v6.0.2_Ubuntu (C) 2005-2019 Oracle Corporation All rights reserved. </p>
 <p> No special options. </p>
 <p> If you are looking for <code>&#8211;startvm</code> and related options, you need to use VirtualBoxVM. </p>
-<h2>Index</h2>

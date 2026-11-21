@@ -49,4 +49,3 @@ description: "img2google – Create Google Earth KML overlay tiles from bathymet
 <p> For topo.11.1.img and other Sandwell/Smith altimetry-derived Mercator grids, visit <a rel="nofollow" href="http://topex.ucsd.edu.">http://topex.ucsd.edu.</a></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-img2grd/">img2grd</a></i>(1) <i><a href="/docs/linux/man/1-img2mercgrd/">img2mercgrd</a></i>(1) <i><a href="/docs/linux/man/1-ps2raster/">ps2raster</a></i>(1) </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "rrdlast – Return the date of the last data sample in an RRD"
 <dd> If this environment variable is set it will have the same effect as specifying the <tt>&quot;--daemon&quot;</tt> option on the command line. If both are present, the command line argument takes precedence.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Russ Wright &lt;rwwright [at] home.com&gt; </p>
-<h2>Index</h2>

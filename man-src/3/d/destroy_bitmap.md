@@ -17,4 +17,3 @@ description: "destroy_bitmap – Destroys any type of created bitmap. Allegro ga
 <p> The bitmap must not have a mouse cursor shown on it at the time it is destroyed. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-create_bitmap/">create_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-load_bitmap/">load_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-show_mouse/">show_mouse</a></code>(3) </p>
-<h2>Index</h2>

@@ -166,4 +166,3 @@ jw mydoc.sgml
 <p> Eric Bischoff (jw shell script and a few backends), Jochem Huhmann (the <i>man</i> and <i>texi</i> backends)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docbook2man-spec-pl/">docbook2man-spec.pl</a></code>(1), <code><a href="/docs/linux/man/1-docbook2texi-spec-pl/">docbook2texi-spec.pl</a></code>(1), <code><a href="/docs/linux/man/8-install-catalog/">install-catalog</a></code>(8), <code><a href="/docs/linux/man/1-nsgmls/">nsgmls</a></code>(1), docbook-utils homepage &lt;URL:<a rel="nofollow" href="http://sources.redhat.com/docbook-tools/">http://sources.redhat.com/docbook-tools/</a>&gt;. </p>
-<h2>Index</h2>

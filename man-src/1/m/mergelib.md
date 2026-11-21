@@ -16,4 +16,3 @@ description: "mergelib – merge one library into another"
 <h2>AUTHOR</h2>
 <p> Jim Fulton wrote the <i>mergelib</i> program for the X Consortium. </p>
 <p> Colin Watson wrote this manual page, originally for the Debian Project. </p>
-<h2>Index</h2>

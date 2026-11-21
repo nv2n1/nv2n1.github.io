@@ -119,4 +119,3 @@ description: "mpdscribble – A Music Player Daemon (MPD) client which submits i
 </dt><dd> <a rel="nofollow" href="http://www.audioscrobbler.com/user/TrevorCaira/">http://www.audioscrobbler.com/user/TrevorCaira/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mpd/">mpd</a></code>(1), <code><a href="/docs/linux/man/1-mpc/">mpc</a></code>(1) </p>
-<h2>Index</h2>

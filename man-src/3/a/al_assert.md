@@ -17,4 +17,3 @@ description: "al_assert – Asserts at the specified file and line number. Alleg
 <p> You will usually want to use the ASSERT() macro instead of calling this function directly. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-assert/">ASSERT</a></code>(3), <code><a href="/docs/linux/man/3-al_trace/">al_trace</a></code>(3), <code><a href="/docs/linux/man/3-register_assert_handler/">register_assert_handler</a></code>(3) </p>
-<h2>Index</h2>

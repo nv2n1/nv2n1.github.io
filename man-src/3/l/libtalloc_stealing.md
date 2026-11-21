@@ -35,4 +35,3 @@ bar-&gt;foo = talloc_move(bar, &amp;foo);
 <p> The <code>talloc_move()</code> function is similar to the <code>talloc_steal()</code> function but additionally sets the source pointer to NULL. </p>
 <p> In general, the source pointer itself is not changed (it only replaces the parent in the meta data). But the common usage is that the result is assigned to another variable, thus further accessing the pointer from the original variable should be avoided unless it is necessary. In this case <code>talloc_move()</code> is the preferred way of stealing a context. Additionally sets the source pointer to NULL, thus.protects the pointer from being accidentally freed and accessed using the old variable after its parent has been changed. </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

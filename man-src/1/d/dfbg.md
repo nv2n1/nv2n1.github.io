@@ -34,4 +34,3 @@ description: "dfbg – DirectFB background configuration tool"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>dfbg -t bg.png</p>
 <h2>OTHER INFO</h2>
 <p> The canonical place to find informations about DirectFB is at <a rel="nofollow" href="http://www.directfb.org/.">http://www.directfb.org/.</a> </p>
-<h2>Index</h2>

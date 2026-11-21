@@ -21,4 +21,3 @@ description: "fwupdate -debugging utility for UEFI firmware updates"
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Richard Hughes (richard [at] hughsie.com) </p>
-<h2>Index</h2>

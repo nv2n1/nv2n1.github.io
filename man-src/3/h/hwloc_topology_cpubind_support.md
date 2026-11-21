@@ -50,4 +50,3 @@ description: "hwloc_topology_cpubind_support –"
 <p> Binding a given thread only is supported. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "tracker-writeback-3 – Used to write metadata set in Tracker back
 </dt><dd> Disable shutting down after 30 seconds of inactivity.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-miner-fs-3/">tracker-miner-fs-3</a></code>(1). <code><a href="/docs/linux/man/1-tracker3-extract/">tracker3-extract</a></code>(1). </p>
-<h2>Index</h2>

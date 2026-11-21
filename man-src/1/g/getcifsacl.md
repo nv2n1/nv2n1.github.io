@@ -34,4 +34,3 @@ description: "getcifsacl – Userspace helper to display an ACL in a security de
 <h2>AUTHOR</h2>
 <p> Shirish Pargaonkar wrote the getcifsacl program. </p>
 <p> The Linux CIFS Mailing list is the preferred place to ask questions regarding these programs. </p>
-<h2>Index</h2>

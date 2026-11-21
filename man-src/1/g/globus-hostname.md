@@ -24,4 +24,3 @@ description: "globus-hostname – Print the system host name"
 </dt><dd> Show version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2016 University of Chicago </p>
-<h2>Index</h2>

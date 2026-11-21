@@ -26,4 +26,3 @@ description: "dc1394_reset_bus – resets the IEEE1394 bus"
 <p> On Debian systems (like Ubuntu), the complete text of the GNU Lesser General Public License can be found in /usr/share/common-licenses/LGPL-2.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dc1394_vloopback/">dc1394_vloopback</a></code>(1) </p>
-<h2>Index</h2>

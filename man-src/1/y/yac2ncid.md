@@ -29,4 +29,3 @@ description: "yac2ncid – YAC server to NCID server gateway"
 <p> /etc/ncid/yac2ncid.conf</p>
 <h2>SEE ALSO</h2>
 <p> yac2ncid.conf.5, ncidd.8, ncidd.conf.5, ncidd.alias.5, ncidmodules.1 </p>
-<h2>Index</h2>

@@ -58,4 +58,3 @@ modhex -d -h nghgibhv
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
-<h2>Index</h2>

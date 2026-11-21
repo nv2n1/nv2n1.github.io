@@ -16,4 +16,3 @@ description: "v4l-info – dump video4linux(2) device info to stdout"
 <p> Was written to help debug drivers, probably not that useful for end users &#8230;</p>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt; </p>
-<h2>Index</h2>

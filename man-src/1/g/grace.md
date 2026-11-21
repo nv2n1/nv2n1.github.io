@@ -150,4 +150,3 @@ description: "grace – command line interface xmgrace – full-featured GUI mod
  Copyright (c) 1996-2007 Grace Development Team </p>
 <h2>LICENSE</h2>
 <p> The program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

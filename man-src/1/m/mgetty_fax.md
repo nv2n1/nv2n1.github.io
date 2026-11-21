@@ -75,4 +75,3 @@ description: "fax – fax sending and receiving with mgetty+sendfax"
 <p> mgetty.info</p>
 <h2>AUTHOR</h2>
 <p> The <i>mgetty+sendfax</i> program suite is Copyright (C) 1993-2002 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. Parts of the programs kindly donated by Chris Lewis, Paul Sutcliffe, Klaus Weidner, and numerous others. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "examiner – A ELF binary executable analyzer"
 <p> The program is copyrighted by Craig Smith under the terms of the <font SIZE="-1">GPL</font></p>
 <h2>AUTHOR(s)</h2>
 <p> Craig Smith </p>
-<h2>Index</h2>

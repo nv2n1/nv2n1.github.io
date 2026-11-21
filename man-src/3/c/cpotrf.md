@@ -86,4 +86,3 @@ description: "cpotrf.f –"
 <p> Definition at line 108 of file cpotrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

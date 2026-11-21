@@ -65,4 +65,3 @@ description: "xsane – scanner frontend for SANE"
 <p> <a href="/docs/linux/man/1-gimp/">gimp</a>(1), xscanimage(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5), <a href="/docs/linux/man/5-sane-net/">sane-net</a>(5), saned(1), <a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a>(5), <a href="/docs/linux/man/5-sane-usb/">sane-usb</a>(5), sane-&quot;backendname&quot;(5)</p>
 <h2>AUTHOR</h2>
 <p> Oliver Rauch &lt;Oliver.Rauch [at] rauch-domain.de&gt; </p>
-<h2>Index</h2>

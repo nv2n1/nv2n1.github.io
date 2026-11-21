@@ -17,4 +17,3 @@ description: "globus_ftp_control_auth_info_s –"
 <p> This structure is populated and passed back to the user via the <code>globus_ftp_control_auth_callback_t()</code>. It contains the information needed to decide if a client may use the server. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_control from the source code. </p>
-<h2>Index</h2>

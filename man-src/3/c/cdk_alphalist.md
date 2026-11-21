@@ -283,4 +283,3 @@ void setCDKAlphalistVerticalChar(
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_position/">cdk_position</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3)</p>
 <h2>NOTES</h2>
 <p> This widget is created from the scrolling list widget and the entry field widget. This is a good example on how to build your own widgets using the base widgets provided in this distribution. </p>
-<h2>Index</h2>

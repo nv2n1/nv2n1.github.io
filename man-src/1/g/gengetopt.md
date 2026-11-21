@@ -114,4 +114,3 @@ description: "gengetopt – manual page for gengetopt 2.22.6"
 <dt>
 </dt><dd> <code>info gengetopt</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "load_bios_font – Loads a 8×8 or 8×16 BIOS format font. Allegro
 <p> Returns a pointer to the font or NULL on error. Remember that you are responsible for destroying the font when you are finished with it to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-register_font_file_type/">register_font_file_type</a></code>(3), <code><a href="/docs/linux/man/3-load_font/">load_font</a></code>(3) </p>
-<h2>Index</h2>

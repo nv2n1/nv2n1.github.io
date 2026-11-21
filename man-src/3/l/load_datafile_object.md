@@ -28,4 +28,3 @@ play_midi(music_object-&gt;dat);
 <p> Returns a pointer to a single DATAFILE element whose `dat&#8217; member points to the object, or NULL if there was an error or there was no object with the requested name. Remember to free this DATAFILE later to avoid memory leaks, but use the correct unloading function! </p>
 <h2>SEE ALSO</h2>
 <p> <code>unload_datafile_object</code>(3), <code><a href="/docs/linux/man/3-load_datafile/">load_datafile</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3), <code><a href="/docs/linux/man/3-find_datafile_object/">find_datafile_object</a></code>(3), <code><a href="/docs/linux/man/3-register_datafile_object/">register_datafile_object</a></code>(3) </p>
-<h2>Index</h2>

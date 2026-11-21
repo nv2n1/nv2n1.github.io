@@ -33,4 +33,3 @@ description: "fstopgm – convert a Usenix FaceSaver(tm) file into a portable gr
 <p> <a href="/docs/linux/man/1-pgmtofs/">pgmtofs</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/1-pgmnorm/">pgmnorm</a>(1), <a href="/docs/linux/man/1-pnmenlarge/">pnmenlarge</a>(1), <a href="/docs/linux/man/1-pnmscale/">pnmscale</a>(1), <a href="/docs/linux/man/1-pgmtopbm/">pgmtopbm</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

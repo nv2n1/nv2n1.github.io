@@ -21,4 +21,3 @@ description: "subtitles – display subtitles within xawtv."
 <dd> dump a copy of the videotext page to the tty.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1), <a href="/docs/linux/man/1-xawtv-remote/">xawtv-remote</a>(1), <a href="/docs/linux/man/1-alevt-cap/">alevt-cap</a>(1) </p>
-<h2>Index</h2>

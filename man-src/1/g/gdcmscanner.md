@@ -62,4 +62,3 @@ $ find gdcmData -type d -exec gdcmscanner -t 10,10 -d {} -p ;
 <p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code><a href="/docs/linux/man/1-gdcmraw/">gdcmraw</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>

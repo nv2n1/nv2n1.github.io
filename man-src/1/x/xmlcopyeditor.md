@@ -31,4 +31,3 @@ description: "xmlcopyeditor – fast, free, validating XML editor"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1), <code><a href="/docs/linux/man/1-xmlcatalog/">xmlcatalog</a></code>(1), <code><a href="/docs/linux/man/1-xmllint/">xmllint</a></code>(1), <code><a href="/docs/linux/man/1-xsltproc/">xsltproc</a></code>(1) </p>
 <p> You can find more information in the <i>Help</i> menu inside the program and in its homepage at <a rel="nofollow" href="http://xml-copy-editor.sourceforge.net/">http://xml-copy-editor.sourceforge.net/</a> </p>
-<h2>Index</h2>

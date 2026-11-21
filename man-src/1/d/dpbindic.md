@@ -35,4 +35,3 @@ description: "dpbindic – Convert a binary-form dictionary into a text-form dic
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mkbindic/">mkbindic</a>(1), <a href="/docs/linux/man/1-dicar/">dicar</a>(1) </p>
-<h2>Index</h2>

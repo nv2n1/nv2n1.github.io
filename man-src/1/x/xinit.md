@@ -77,4 +77,3 @@ xinit /etc/X11/xinit/site.xinitrc -- /usr/bin/X -br
 <p> <code><a href="/docs/linux/man/7-x/">X</a></code>(7), <code><a href="/docs/linux/man/1-startx/">startx</a></code>(1), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), <code><a href="/docs/linux/man/1-xorg/">Xorg</a></code>(1), <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a></code>(5), <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Bob Scheifler, MIT Laboratory for Computer Science </p>
-<h2>Index</h2>

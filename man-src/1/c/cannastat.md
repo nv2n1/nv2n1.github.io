@@ -60,4 +60,3 @@ description: "cannastat – Display information about the Kana-Kanji conversion 
 <dt>CANNAHOST</dt>
 <dd> Specifies the name of the host under which <i>cannaserver(1M)</i> is in operation. </dd>
 </dl>
-<h2>Index</h2>

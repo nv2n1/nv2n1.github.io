@@ -588,4 +588,3 @@ Code: 16 (ERRCODE_IO_CANTWRITE)
 <dt>
 </dt><dd> mailto:dag [at] wieers.com</dd></dl>
 </dl>
-<h2>Index</h2>

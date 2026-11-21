@@ -350,4 +350,3 @@ print - n "]2;TCP:" $
 <h2>TCP BUGS</h2>
 <p> The function <code>tcp_read</code> uses the shell&#8217;s normal <code>read</code> builtin. As this reads a complete line at once, data arriving without a terminating newline can cause the function to block indefinitely. </p>
 <p> Though the function suite works well for interactive use and for data arriving in small amounts, the performance when large amounts of data are being exchanged is likely to be extremely poor. </p>
-<h2>Index</h2>

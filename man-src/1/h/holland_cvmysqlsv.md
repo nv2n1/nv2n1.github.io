@@ -39,4 +39,3 @@ description: "holland_cvmysqlsv – Holland Addon for CommVault Support"
 <p> Holland Core Team &lt;holland-coredev [at] lists.launchpad.net&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> 3-Clause BSD </p>
-<h2>Index</h2>

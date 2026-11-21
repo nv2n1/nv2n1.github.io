@@ -36,4 +36,3 @@ description: "glite-lb-load – utility for loading job events into the L&B data
 <p> <code><a href="/docs/linux/man/8-glite-lb-bkindex/">glite-lb-bkindex</a></code>(8), <a href="/docs/linux/man/8-glite-lb-bkserverd/">glite-lb-bkserverd</a>(8), <a href="/docs/linux/man/1-glite-lb-dump/">glite-lb-dump</a>(1), <a href="/docs/linux/man/1-glite-lb-purge/">glite-lb-purge</a>(1), </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE, JRA1. </p>
-<h2>Index</h2>

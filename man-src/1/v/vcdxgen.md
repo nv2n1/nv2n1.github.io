@@ -70,4 +70,3 @@ description: "vcdxgen – manual page for vcdxgen 0.7.24"
 <dt>
 </dt><dd> <code>info vcdxgen</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

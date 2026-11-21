@@ -115,4 +115,3 @@ Technology: %[st] (%[at])' -S ' ' -C '/'&quot;</tt>&quot; and results in outputs
 <p> The major difference to <font SIZE="-1"><code>GNU</code></font> <i>config.guess</i> is that <code>shtool platform</code> does not use a <i>vendor</i> identification (cannot be determined most of the time and is not used at all in all projects I&#8217;ve ever seen) and is a lot more flexible (class, product and technology identifications combined with verbose, regular and concise outputs). The drawback of <code>shtool platform</code> is that it (still) knows less particular platforms, although the generic platform identification is sufficient enough most of the time.</p>
 <h2>SEE ALSO</h2>
 <p> <i>uname</i>(3), <font SIZE="-1">GNU </font><i>config.guess</i>. </p>
-<h2>Index</h2>

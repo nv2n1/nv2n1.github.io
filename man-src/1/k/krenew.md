@@ -98,4 +98,3 @@ description: "krenew – Renew a Kerberos ticket"
 <p> The kstart web page at &lt;<a rel="nofollow" href="http://www.eyrie.org/~eagle/software/kstart/">http://www.eyrie.org/~eagle/software/kstart/</a>&gt; will have the current version of <code>krenew</code>.</p>
 <h2>AUTHORS</h2>
 <p> <code>krenew</code> was written by Russ Allbery &lt;rra [at] stanford.edu&gt;. It was based heavily on <code>k5start</code> by Booker C. Bense, which in turn was based on the k4start code written by Robert Morgan. </p>
-<h2>Index</h2>

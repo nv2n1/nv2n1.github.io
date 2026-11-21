@@ -25,4 +25,3 @@ description: "ql/indexes/ibor/gbplibor.hpp – GBP LIBOR rate"
 <p> GBP LIBOR rate </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

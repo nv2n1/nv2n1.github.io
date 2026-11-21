@@ -19,4 +19,3 @@ description: "ql/pricingengines/asian/analytic_discr_geom_av_price.hpp – Analy
 <p> Analytic engine for discrete geometric average price Asian. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

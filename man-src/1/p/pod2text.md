@@ -86,4 +86,3 @@ description: "pod2text – Convert POD data to formatted ASCII text"
 <h2>SEE ALSO</h2>
 <p> Pod::Text, Pod::Text::Color, Pod::Text::Overstrike, Pod::Text::Termcap, Pod::Simple, <code><a href="/docs/linux/man/1-perlpod/">perlpod</a></code>(1) </p>
 <p> The current version of this script is always available from its web site at &lt;<a rel="nofollow" href="https://www.eyrie.org/~eagle/software/podlators/">https://www.eyrie.org/~eagle/software/podlators/</a>&gt;. It is also part of the Perl core distribution as of 5.6.0. </p>
-<h2>Index</h2>

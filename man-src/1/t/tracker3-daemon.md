@@ -100,4 +100,3 @@ tracker3 daemon --miner &lt;miner&gt; --resume &lt;cookie&gt;
 <dl>
 <dt>
 </dt><dd> The <i>cookie</i> is given by a successful <code>&#8211;pause</code> command. It is a number which identifies each pause request. When all pauses have been resumed, the miner will resume working.</dd></dl>
-<h2>Index</h2>

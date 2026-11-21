@@ -159,4 +159,3 @@ description: "unrar – extract files from rar archives"
  switches_x=-o+</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Petr Cech &lt;cech [at] debian.org&gt; according to &quot;unrar&quot; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

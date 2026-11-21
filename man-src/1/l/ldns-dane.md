@@ -109,4 +109,3 @@ description: "ldns-dane – verify or create TLS authentication with DANE (RFC66
 <p> Report bugs to <i>ldns-team [at] nlnetlabs.nl</i>. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2012 NLnet Labs. This is free software. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

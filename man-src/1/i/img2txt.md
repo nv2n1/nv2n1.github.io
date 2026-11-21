@@ -73,4 +73,3 @@ description: "img2txt – convert images to various text-based coloured files"
 <p> <a href="/docs/linux/man/1-cacaview/">cacaview</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sam Hocevar &lt;sam [at] hocevar.net&gt; and Jean-Yves Lamoureux &lt;jylam [at] lnxscene.org&gt;. </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "adjust_sample – Alters the parameters of a sample while it is pl
 <p> Alters the parameters of a sample while it is playing (useful for manipulating looped sounds). You can alter the volume, pan, and frequency, and can also clear the loop flag, which will stop the sample when it next reaches the end of its loop. The values of the parameters are just like those of play_sample(). If there are several copies of the same sample playing, this will adjust the first one it comes across. If the sample is not playing it has no effect. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_sample/">play_sample</a></code>(3), <code><a href="/docs/linux/man/3-exsample/">exsample</a></code>(3) </p>
-<h2>Index</h2>

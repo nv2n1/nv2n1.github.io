@@ -30,4 +30,3 @@ description: "bzexe – compress executable files in place"
 <p> The compressed executable is a shell script. This may create some security holes. In particular, the compressed executable relies on the PATH environment variable to find <i>gzip</i> and some other utilities <i>(tail, chmod, ln, sleep).</i></p>
 <h2>BUGS</h2>
 <p> <i>bzexe</i> attempts to retain the original file attributes on the compressed executable, but you may have to fix them manually in some cases, using <i>chmod</i> or <i>chown.</i> </p>
-<h2>Index</h2>

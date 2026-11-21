@@ -31,4 +31,3 @@ description: "gnutls_sign_algorithm_get_name – Returns a string with the name 
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

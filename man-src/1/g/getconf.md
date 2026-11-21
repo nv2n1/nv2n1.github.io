@@ -39,4 +39,3 @@ description: "getconf – Query system configuration variables"
 <p> This man page was written by Ben Collins &lt;bcollins [at] debian.org&gt; for the Debian GNU/Linux system.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3), <code><a href="/docs/linux/man/3-pathconf/">pathconf</a></code>(3), <code>confstr</code>(3) </p>
-<h2>Index</h2>

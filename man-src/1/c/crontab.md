@@ -46,4 +46,3 @@ description: "crontab – maintain crontab files for individual users (Vixie Cro
 <p> The files under <i>/var/spool/cron/crontabs</i> are named based on the user&#8217;s account name. Crontab jobs will not be run for users whose accounts have been renamed either due to changes in the local system or because they are managed through a central user database (external to the system, for example an LDAP directory). </p>
 <h2>AUTHOR</h2>
 <p> Paul Vixie &lt;paul [at] vix.com&gt; is the author of <i>cron</i> and original creator of this manual page. This page has also been modified for Debian by Steve Greenland, Javier Fernandez-Sanguino and Christian Kastner. </p>
-<h2>Index</h2>

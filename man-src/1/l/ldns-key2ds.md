@@ -32,4 +32,3 @@ description: "ldns-key2ds – transform a DNSKEY RR to a DS RR"
 <p> Report bugs to &lt;ldns-team [at] nlnetlabs.nl&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005 NLnet Labs. This is free software. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

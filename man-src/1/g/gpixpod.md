@@ -37,4 +37,3 @@ description: "gpixpod – organize photos on your iPod, freely"
 <p> Please report bugs from the SourceForge project page at <a rel="nofollow" href="http://sourceforge.net/projects/gpixpod">http://sourceforge.net/projects/gpixpod</a></p>
 <h2>AUTHOR</h2>
 <p> Flavio Gargiulo &lt;flagar at gmail dot com&gt; </p>
-<h2>Index</h2>

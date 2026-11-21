@@ -66,4 +66,3 @@ url: "/docs/linux/man/7-ocf_heartbeat_icp/"
 <p> m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/ICP_(resource_agent)">http://www.linux-ha.org/wiki/ICP_(resource_agent)</a></code>m[]  </p>
 <h2>AUTHOR</h2>
 <p> <code>Linux-HA contributors (see the resource agent source for information about individual authors)</code> </p>
-<h2>Index</h2>

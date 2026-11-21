@@ -110,4 +110,3 @@ $ echo "hello bob!" | sendxmpp - s hello someone[at] jabber.org or to send to a 
 <p> The sendxmpp homepage: &lt;<a rel="nofollow" href="http://sendxmpp.hostname.sk">http://sendxmpp.hostname.sk</a>&gt;</p>
 <h2>AUTHOR</h2>
 <p> sendxmpp has been written by Dirk-Jan C. Binnema &lt;djcb [at] djcbsoftware.nl&gt;, and uses the Net::XMPP modules written by Ryan Eatmon. Current maintainer is Lubomir Host &lt;lubomir.host [at] gmail.com&gt;, &lt;<a rel="nofollow" href="http://blog.hostname.sk">http://blog.hostname.sk</a>&gt; </p>
-<h2>Index</h2>

@@ -66,4 +66,3 @@ description: "cernlib – print CERN library dependencies"
 <p> This manual page and the version of the cernlib script that it describes were written by Kevin McCarty &lt;kmccarty [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). They are licensed under the GNU General Public License, version 2 or later (at your choice).</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) Kevin B. McCarty, 2002, 2003, 2004, 2005, 2006. </p>
-<h2>Index</h2>

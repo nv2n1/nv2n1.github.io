@@ -58,4 +58,3 @@ Mlocal, P=/usr/local/etc/tmail, F=lsDFMAw5:/|@qPrn+,
 <h2>SEE ALSO</h2>
 <p> binmail(1)<br />
  sendmail(8) </p>
-<h2>Index</h2>

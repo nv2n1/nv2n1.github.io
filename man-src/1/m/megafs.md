@@ -138,4 +138,3 @@ Contacts Inbox Root Trash
 <h2>AUTHOR</h2>
 <p> Megatools was written by Ondrej Jirman &lt;megous [at] megous.com&gt;, 2013. </p>
 <p> Official website is <a rel="nofollow" href="http://megatools.megous.com.">http://megatools.megous.com.</a> </p>
-<h2>Index</h2>

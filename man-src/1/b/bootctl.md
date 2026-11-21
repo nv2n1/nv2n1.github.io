@@ -133,4 +133,3 @@ description: "bootctl – Control EFI firmware boot settings and manage boot loa
 <dt>
 </dt><dd> <a rel="nofollow" href="https://systemd.io/RANDOM_SEEDS">https://systemd.io/RANDOM_SEEDS</a></dd></dl>
 </dl>
-<h2>Index</h2>

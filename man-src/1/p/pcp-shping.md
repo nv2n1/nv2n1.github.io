@@ -20,4 +20,3 @@ description: "pcp-shping – report on shell service availability and response"
 <p> The <code>-l</code>/<code>&#8211;tags</code> switch displays the valid <i>tag</i>s.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-pmdashping/">pmdashping</a></code>(1) and <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "snmpstatus – retrieves a fixed set of management information fro
 <dd> By default, snmpstatus will try to fix errors returned by the agent and retry a request. In this situation, the command will display the data that it can. If the -Cf option is specified, then snmpstatus will not try to fix errors, and the error will cause the command to terminate.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpget/">snmpget</a>(1) </p>
-<h2>Index</h2>

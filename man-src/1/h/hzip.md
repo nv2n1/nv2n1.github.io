@@ -25,4 +25,3 @@ description: "hunzip – compress and encrypt dictionary files"
 <p> <code>hzip (1), <a href="/docs/linux/man/1-hunspell/">hunspell</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> László Németh. </p>
-<h2>Index</h2>

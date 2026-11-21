@@ -47,4 +47,3 @@ description: "kbxutil – List, export, import Keybox data"
 <p> Copyright &#169; 2016 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="https://gnu.org/licenses/gpl.html">https://gnu.org/licenses/gpl.html</a>&gt; </p>
 <p> This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
 <p> This manpage was written by <code>Daniel Kahn Gillmor</code> for the Debian distribution (but may be used by others). </p>
-<h2>Index</h2>

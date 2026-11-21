@@ -124,4 +124,3 @@ gmt psrose lines.az_r -R0/500/0/360 -S5c -Bxg100 -Byg45 -B+t&quot;Windrose diagr
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtcolors</code>, <code>pshistogram</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

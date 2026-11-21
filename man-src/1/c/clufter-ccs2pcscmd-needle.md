@@ -85,4 +85,3 @@ description: "clufter – ccs2pcscmd-needle"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-pcs/">pcs</a></i>(8), <i>/usr/share/doc/clufter-0.59.5/rgmanager-pacemaker</i>, <i>cluster.conf</i>(5), <i>ccs</i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd/">clufter-ccs2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd-flatiron/">clufter-ccs2pcscmd-flatiron</a></i>(1), and perhaps more </p>
-<h2>Index</h2>

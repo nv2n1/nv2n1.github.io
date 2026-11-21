@@ -54,4 +54,3 @@ description: "pkcsicsf – configuration utility for the ICSF token"
 </dd><dt><code>pkcsconf</code>(8).</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "lwp-dump – See what headers and content is returned for a URL"
 <dd> Also dump the request sent.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> lwp-request, <font SIZE="-1">LWP</font>, &#8220;dump&#8221; in HTTP::Message </p>
-<h2>Index</h2>

@@ -108,4 +108,3 @@ description: "dpkg-parsechangelog – parse Debian changelog files"
 <dd> The changelog file, used to obtain version-dependent information about the source package, such as the urgency and distribution of an upload, the changes made since a particular release, and the source version number itself.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-changelog/">deb-changelog</a></code>(5). </p>
-<h2>Index</h2>

@@ -152,4 +152,3 @@ description: "krusader – advanced twin-panel file manager and FTP client for K
 <dt>
 </dt><dd> <a rel="nofollow" href="http://docs.kde.org/development/en/extragear-utils/krusader/faq.html">http://docs.kde.org/development/en/extragear-utils/krusader/faq.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

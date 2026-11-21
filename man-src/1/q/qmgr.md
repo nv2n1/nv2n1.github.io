@@ -92,4 +92,3 @@ description: "qmgr – pbs batch system manager"
 <p> If the qmgr command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> pbs_server(8B), pbs_queue_attributes(7B), pbs_server_attributes(7B), qstart(8B), qstop(8B), qenable(8B), <a href="/docs/linux/man/8-qdisable/">qdisable</a>(8), pbs_resources(7B) and the PBS External Reference Specification </p>
-<h2>Index</h2>

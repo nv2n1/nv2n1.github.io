@@ -44,4 +44,3 @@ description: "dbench – Measure disk throughput for simulated netbench run"
 <p> <i>/usr/share/doc/dbench/README</i> contains the original README by Andrew Tridgell which accompanies the dbench source.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Paul Russell &lt;prussell [at] alderaan.franken.de&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

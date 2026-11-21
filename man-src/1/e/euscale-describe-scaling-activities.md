@@ -45,4 +45,3 @@ description: "euscale-describe-scaling-activities – Describe past and current 
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

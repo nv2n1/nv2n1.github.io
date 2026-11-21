@@ -204,4 +204,3 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 <p> Most ZMODEM options are merely passed to the receiving program; some do not implement all these options. </p>
 <p> Circular buffering and a ZMODEM sliding window should be used when input is from pipes instead of acknowledging frames each 1024 bytes. If no files can be opened, <code>sz</code> sends a ZMODEM command to echo a suitable complaint; perhaps it should check for the presence of at least one accessible file before getting hot and bothered. The test mode leaves a zero length file on the receiving system. </p>
 <p> A few high speed modems have a firmware bug that drops characters when the direction of high speed transmission is reversed. The environment variable ZNULLS may be used to specify the number of nulls to send before a ZDATA frame. Values of 101 for a 4.77 MHz PC and 124 for an AT are typical. </p>
-<h2>Index</h2>

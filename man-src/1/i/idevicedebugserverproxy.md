@@ -29,4 +29,3 @@ description: "idevicedebugserverproxy – Remote debugging proxy."
 </dl>
 <h2>AUTHORS</h2>
 <p> Martin Szulecki </p>
-<h2>Index</h2>

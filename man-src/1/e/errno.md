@@ -35,4 +35,3 @@ description: "errno – look up errno names and descriptions"
 <p> Lars Wirzenius</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3) </p>
-<h2>Index</h2>

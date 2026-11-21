@@ -167,4 +167,3 @@ description: "euwatch-put-data – add data points to a CloudWatch metric"
 <p> The ability to report multiple metric data in a single request and the generic &#8211;<code>s</code> syntax that allows one to specify all attributes of a metric datum first appeared in euca2ools 3.4.</p>
 <h2>NOTES</h2>
 <p> requires access keys and knowledge of where to locate the web services it needs to contact. It can obtain these from several locations. See <a href="/docs/linux/man/7-euca2ools/">euca2ools</a>(7) for more information. </p>
-<h2>Index</h2>

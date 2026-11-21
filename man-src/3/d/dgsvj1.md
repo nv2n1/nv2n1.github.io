@@ -197,4 +197,3 @@ description: "dgsvj1.f –"
 <p> Definition at line 236 of file dgsvj1.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

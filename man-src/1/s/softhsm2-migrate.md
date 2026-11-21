@@ -42,4 +42,3 @@ softhsm2-migrate --db /home/user/token.db --slot 1
 <p> Written by Rickard Bellgrim, Francis Dupont, René Post, and Roland van Rijswijk. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-softhsm2-keyconv/">softhsm2-keyconv</a></i>(1), <i><a href="/docs/linux/man/1-softhsm2-util/">softhsm2-util</a></i>(1), <i><a href="/docs/linux/man/5-softhsm2-conf/">softhsm2.conf</a></i>(5) </p>
-<h2>Index</h2>

@@ -166,4 +166,3 @@ description: "kdb – Elektra key database command line administration tool"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004 Avi Alkalay </p>
-<h2>Index</h2>

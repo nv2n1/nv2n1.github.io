@@ -16,4 +16,3 @@ description: "midi_time – The current position in the MIDI file, in seconds. A
 <p> Contains the position in seconds in the currently playing midi. This is useful if you want to display the current song position in seconds, not as beat number. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_midi/">play_midi</a></code>(3), <code><a href="/docs/linux/man/3-midi_pos/">midi_pos</a></code>(3), <code><a href="/docs/linux/man/3-get_midi_length/">get_midi_length</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3) </p>
-<h2>Index</h2>

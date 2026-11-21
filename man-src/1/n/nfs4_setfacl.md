@@ -103,4 +103,3 @@ D::EVERYONE@:waxTC
 <p> Please send bug reports, feature requests, and comments to &lt;<i>nfsv4 [at] linux-nfs.org</i>&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nfs4_getfacl/">nfs4_getfacl</a></code>(1), <code><a href="/docs/linux/man/5-nfs4_acl/">nfs4_acl</a></code>(5), <i>RFC3530</i> (NFSv4.0), NFSv4.1 Minor Version Draft. </p>
-<h2>Index</h2>

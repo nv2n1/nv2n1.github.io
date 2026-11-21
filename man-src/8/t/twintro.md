@@ -56,4 +56,3 @@ url: "/docs/linux/man/8-twintro/"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-tripwire/">tripwire</a></code>(8), <code><a href="/docs/linux/man/8-twadmin/">twadmin</a></code>(8), <code><a href="/docs/linux/man/8-twprint/">twprint</a></code>(8), <code><a href="/docs/linux/man/8-siggen/">siggen</a></code>(8), <code><a href="/docs/linux/man/4-twconfig/">twconfig</a></code>(4), <code><a href="/docs/linux/man/4-twpolicy/">twpolicy</a></code>(4), <code><a href="/docs/linux/man/5-twfiles/">twfiles</a></code>(5) </p>
 <p> <i>The Design and Implementation of Tripwire: A </i><font SIZE="-1"><i>UNIX</i></font><i> File Integrity Checker</i>by <i>Gene</i>Kim <i>and</i>Eugene <i>Spafford.</i>Purdue <i>Technical</i>Report <i>CSD-TR-93-071.</i> </p>
-<h2>Index</h2>

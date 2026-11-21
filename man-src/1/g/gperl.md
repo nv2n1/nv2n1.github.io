@@ -125,4 +125,3 @@ description: "gperl – groff preprocessor for Perl parts in roff files"
 <h2>SEE ALSO</h2>
 <p> Man pages related to <i>groff</i> are <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7), <code><a href="/docs/linux/man/1-grog/">grog</a></code>(1), and <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1). </p>
 <p> Documents related to <i>Perl</i> are <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code>perl</code>(7). </p>
-<h2>Index</h2>

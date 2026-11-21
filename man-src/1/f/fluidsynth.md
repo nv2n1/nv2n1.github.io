@@ -328,4 +328,3 @@ description: "FluidSynth – a SoundFont synthesizer"
 <p> Please check the AUTHORS and THANKS files for all credits</p>
 <h2>DISCLAIMER</h2>
 <p> SoundFont(R) is a registered trademark of E-mu Systems, Inc. </p>
-<h2>Index</h2>

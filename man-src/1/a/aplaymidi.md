@@ -36,4 +36,3 @@ description: "aplaymidi – play Standard MIDI Files"
  playmidi(1) </p>
 <h2>AUTHOR</h2>
 <p> Clemens Ladisch &lt;clemens [at] ladisch.de&gt; </p>
-<h2>Index</h2>

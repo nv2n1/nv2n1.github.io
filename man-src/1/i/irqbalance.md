@@ -87,4 +87,3 @@ description: "irqbalance – distribute hardware interrupts across processors on
 <p> irqbalance checks SCM_CREDENTIALS of sender (only root user is allowed to interact). Based on chosen tools, ancillary message with credentials needs to be sent with request. </p>
 <h2>HOMEPAGE</h2>
 <p> <a rel="nofollow" href="https://github.com/Irqbalance/irqbalance">https://github.com/Irqbalance/irqbalance</a> </p>
-<h2>Index</h2>

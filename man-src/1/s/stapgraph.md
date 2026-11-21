@@ -45,4 +45,3 @@ description: "stapgraph – systemtap grapher"
 <p> <i>stap</i>(3stap), <i>staprun</i>(3stap), </p>
 <h2>BUGS</h2>
 <p> Use the Bugzilla link off of the project web page or our mailing list. <code><a rel="nofollow" href="http://sources.redhat.com/systemtap/">http://sources.redhat.com/systemtap/</a></code>,<code>&lt;systemtap [at] sources.redhat.com&gt;</code>. </p>
-<h2>Index</h2>

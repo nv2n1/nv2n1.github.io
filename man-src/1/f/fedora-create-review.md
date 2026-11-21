@@ -46,4 +46,3 @@ Pierre-Yves Chibon&nbsp;<wbr>&lt;pingou [at] pingoured.fr&gt;<br />
 Stanislav Ochotnicky&nbsp;<wbr>&lt;sochotnicky [at] redhat.com&gt; </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>For a list of all contributors see AUTHORS file </p>
 <p> No known bugs at this time </p>
-<h2>Index</h2>

@@ -136,4 +136,3 @@ description: "ibnl – a generic IB netlist format"
 <p> subsystem_to_port_link: <font SIZE="-1">NAME</font> &#8216;-&#8216; <font SIZE="-1">WIDTH</font> &#8216;-&#8216; <font SIZE="-1">SPEED</font> &#8216;-&#8216; &#8216;&gt;&#8217; <font SIZE="-1">NAME</font> | <font SIZE="-1">NAME</font> &#8216;-&#8216; <font SIZE="-1">WIDTH</font> &#8216;-&#8216; &#8216;&gt;&#8217; <font SIZE="-1">NAME</font> | <font SIZE="-1">NAME</font> &#8216;-&#8216; <font SIZE="-1">SPEED</font> &#8216;-&#8216; &#8216;&gt;&#8217; <font SIZE="-1">NAME</font> | <font SIZE="-1">NAME</font> &#8216;-&#8216; &#8216;&gt;&#8217; <font SIZE="-1">NAME</font> ;</p>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
-<h2>Index</h2>

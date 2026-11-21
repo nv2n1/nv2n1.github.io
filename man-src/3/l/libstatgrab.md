@@ -145,4 +145,3 @@ description: "statgrab, libstatgrab – get system statistics"
 <p> <code>sg_intro</code>(3) <code>sg_get_cpu_stats</code>(3) <code>sg_get_disk_io_stats</code>(3) <code>sg_get_fs_stats</code>(3) <code>sg_get_host_info</code>(3) <code>sg_get_load_stats</code>(3) <code>sg_get_mem_stats</code>(3) <code>sg_get_network_io_stats</code>(3) <code>sg_get_network_iface_stats</code>(3) <code>sg_get_page_stats</code>(3) <code>sg_get_process_stats</code>(3) <code>sg_get_swap_stats</code>(3) <code>sg_get_user_stats</code>(3) <code>sg_get_error</code>(3) <code>sg_internal-intro</code>(3)</p>
 <h2>WEBSITE</h2>
 <p> &lt;<a rel="nofollow" href="http://www.i-scream.org/libstatgrab/">http://www.i-scream.org/libstatgrab/</a>&gt; </p>
-<h2>Index</h2>

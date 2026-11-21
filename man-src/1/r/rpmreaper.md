@@ -111,4 +111,3 @@ description: "rpmreaper – A tool for removing unnecessary packages from system
 <h2>AUTHORS</h2>
 <p> Miroslav Lichvar &lt;mlichvar [at] redhat.com&gt;<br />
  Petr Machata &lt;pmachata [at] redhat.com&gt; </p>
-<h2>Index</h2>

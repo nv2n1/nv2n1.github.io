@@ -34,4 +34,3 @@ npm bin [-g|--global]
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

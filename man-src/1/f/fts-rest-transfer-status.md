@@ -69,4 +69,3 @@ https : // fts3-devel.cern.ch:8446&amp;nbsp;c079a636-c363-11e3-b7e5-02163e009f5a
 </dd></dl>
 <h2>AUTHORS</h2>
 <p> fts-devel [at] cern.ch. </p>
-<h2>Index</h2>

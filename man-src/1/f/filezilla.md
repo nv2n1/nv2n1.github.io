@@ -48,4 +48,3 @@ description: "FileZilla – FTP client"
 <p> FileZilla is distributed under the terms of the GNU General Public License version 2 or later.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-fzdefaults-xml/">fzdefaults.xml</a>(5) </p>
-<h2>Index</h2>

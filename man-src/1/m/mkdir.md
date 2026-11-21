@@ -41,4 +41,3 @@ description: "mkdir – make directories"
 <p> <a href="/docs/linux/man/2-mkdir/">mkdir</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/mkdir">https://www.gnu.org/software/coreutils/mkdir</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) mkdir invocation&#8217; </p>
-<h2>Index</h2>

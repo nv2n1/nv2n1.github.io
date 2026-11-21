@@ -72,4 +72,3 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <p> Thomas, P.D., 1970, <i>Spheroidal Geodesics, Reference Systems &amp; Local Geometry:</i> U.S. Naval Oceanographic Office, S-138.</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>
-<h2>Index</h2>

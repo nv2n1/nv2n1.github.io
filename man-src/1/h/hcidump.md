@@ -57,4 +57,3 @@ description: "hcidump – Parse HCI data"
 <h2>AUTHORS</h2>
 <p> Written by Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt; and Marcel Holtmann &lt;marcel [at] holtmann.org&gt; </p>
 <p> man page by Fabrizio Gennari &lt;fabrizio.gennari [at] philips.com&gt; </p>
-<h2>Index</h2>

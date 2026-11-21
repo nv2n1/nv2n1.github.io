@@ -104,4 +104,3 @@ To mount the first image of this split WIM to the directory &quot;dir&quot;, run
 <p> <code>wimlib-imagex unmount</code> runs in a separate process from the process that previously ran <code>wimlib-imagex mount</code>. When unmounting a read-write mounted WIM image with <code>&#8211;commit</code>, these two processes communicate using a POSIX message queue so that the unmount process can track the progress of the mount process. See <i>src/mount_image.c</i> in the sources for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) </p>
-<h2>Index</h2>

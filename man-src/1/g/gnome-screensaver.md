@@ -25,4 +25,3 @@ description: "gnome-screensaver – screen saver and locker"
 <p> This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7) </p>
-<h2>Index</h2>

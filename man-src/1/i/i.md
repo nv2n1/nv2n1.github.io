@@ -80,4 +80,3 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
 <p> <i>Last changed: $Date: 2003-04-17 16:51:33 +0200 (Thu, 17 Apr 2003) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

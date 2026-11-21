@@ -30,4 +30,3 @@ description: "libssh2_knownhost_writeline – convert a known host to a line for
 <p> Added in libssh2 1.2</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_knownhost_get/">libssh2_knownhost_get</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_readline/">libssh2_knownhost_readline</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_writefile/">libssh2_knownhost_writefile</a>(3)</code> </p>
-<h2>Index</h2>

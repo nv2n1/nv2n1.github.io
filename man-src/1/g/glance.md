@@ -63,4 +63,3 @@ glance image-show foo
 <p> OpenStack Foundation</p>
 <h2>COPYRIGHT</h2>
 <p> OpenStack Foundation </p>
-<h2>Index</h2>

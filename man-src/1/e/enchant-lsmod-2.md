@@ -29,4 +29,3 @@ description: "Enchant – list provider and dictionary information"
 <p> <code><a href="/docs/linux/man/1-enchant-2/">enchant-2</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Written by Dom Lachowicz and Reuben Thomas. </p>
-<h2>Index</h2>

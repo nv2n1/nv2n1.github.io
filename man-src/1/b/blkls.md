@@ -46,4 +46,3 @@ description: "blkls – List or output file system data units."
 <h2>HISTORY</h2>
 <p> First appeared in The Coroners Toolkit (TCT) 1.0 (Wietse Venema). Now maintained by Brian Carrier &lt;carrier at sleuthkit dot org&gt;. </p>
 <p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

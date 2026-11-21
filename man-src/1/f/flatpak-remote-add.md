@@ -137,4 +137,3 @@ allow org.signal.Signal.*/*/stable
 <p> <code>$ flatpak &#8211;user remote-add &#8211;no-gpg-verify test-repo <a rel="nofollow" href="https://people.gnome.org/~alexl/gnome-sdk/repo/">https://people.gnome.org/~alexl/gnome-sdk/repo/</a></code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-modify/">flatpak-remote-modify</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-delete/">flatpak-remote-delete</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remotes/">flatpak-remotes</a></code>(1), <code><a href="/docs/linux/man/5-flatpak-flatpakrepo/">flatpak-flatpakrepo</a></code>(5) </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "bbkeys – a general XWindow keygrabber"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-bbkeysrc/">bbkeysrc</a>(5)</code> </p>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

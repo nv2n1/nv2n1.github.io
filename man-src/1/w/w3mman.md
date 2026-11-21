@@ -40,4 +40,3 @@ description: "w3mman – an interface to the on-line reference manuals via"
 <p> <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-w3m/">w3m</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -128,4 +128,3 @@ description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed fil
  Ullrich Hafner. <code>Low Bit-Rate Image and Video Coding with Weighted Finite Automata</code>, Ph.D. thesis, Mensch &amp; Buch Verlag, ISBN 3-89820-002-7, October 1999. </p>
 <h2>AUTHOR</h2>
 <p> Ullrich Hafner &lt;hafner [at] bigfoot.de&gt; </p>
-<h2>Index</h2>

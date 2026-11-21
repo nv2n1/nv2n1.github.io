@@ -142,4 +142,3 @@ xdg - icon - resource install-- context mimetypes-- size 48./ mime - foobar - 48
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/">http://www.freedesktop.org/wiki/Specifications/icon-theme-spec/</a></dd></dl>
 </dl>
-<h2>Index</h2>

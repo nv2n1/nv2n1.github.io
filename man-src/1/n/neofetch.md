@@ -270,4 +270,3 @@ description: "Neofetch – A fast, highly customizable system info script"
 <dd> Generate a manpage for Neofetch in your PWD. (Requires GNU help2man)</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://github.com/dylanaraps/neofetch/issues">https://github.com/dylanaraps/neofetch/issues</a> </p>
-<h2>Index</h2>

@@ -245,4 +245,3 @@ H: flush-pkt
 <dl>
 <dd> <p> <a rel="nofollow" href="https://github.com/newren/git-filter-repo">https://github.com/newren/git-filter-repo</a> </p>
  </dd></dl>
-<h2>Index</h2>

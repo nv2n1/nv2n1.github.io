@@ -71,4 +71,3 @@ description: "snmpconf – creates and modifies SNMP configuration files"
 <p> <code>snmpconf</code> is actually a very generic utility that could be easily configured to help construct just about any kind of configuration file. Its default configuration set of files are SNMP based.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-snmpd/">snmpd</a>(8), <a href="/docs/linux/man/5-snmp_config/">snmp_config</a>(5), <a href="/docs/linux/man/5-snmp-conf/">snmp.conf</a>(5), <a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5) </p>
-<h2>Index</h2>

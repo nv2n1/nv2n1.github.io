@@ -57,4 +57,3 @@ and then telling the linker it should link in the library:
  <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2),<br />
  <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
  <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>
-<h2>Index</h2>

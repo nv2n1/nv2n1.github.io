@@ -234,4 +234,3 @@ mov ax, es : wordvar[bx] es mov ax, wordvar[1]
 <p> Please report bugs through the bug tracker function at m[blue]<code><a rel="nofollow" href="http://nasm.us">http://nasm.us</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-as/">as</a></code>(1), <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1). </p>
-<h2>Index</h2>

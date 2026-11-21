@@ -19,4 +19,3 @@ description: "pbmtoplot – convert a portable bitmap into a Unix"
 <p> <a href="/docs/linux/man/5-pbm/">pbm</a>(5), plot(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Arthur David Olson. </p>
-<h2>Index</h2>

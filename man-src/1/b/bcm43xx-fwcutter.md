@@ -79,4 +79,3 @@ description: "bcm43xx-fwcutter – manual page for bcm43xx-fwcutter"
 <dd> Linux 2.6.x driver file (mips, bcm6348)</dd></dl>
 <h2>AUTHORS</h2>
 <p> BCM43xx development team, <a rel="nofollow" href="http://bcm43xx.berlios.de">http://bcm43xx.berlios.de</a> </p>
-<h2>Index</h2>

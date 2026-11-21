@@ -43,4 +43,3 @@ description: "eulb-describe-tags – Show the tags associated with one or more l
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

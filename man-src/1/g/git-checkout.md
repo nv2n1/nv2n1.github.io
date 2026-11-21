@@ -408,4 +408,3 @@ $ git add frotz
 <p> <code><a href="/docs/linux/man/1-git-switch/">git-switch</a></code>(1), <code><a href="/docs/linux/man/1-git-restore/">git-restore</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

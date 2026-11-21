@@ -223,4 +223,3 @@ description: "perlgpl – the GNU General Public License, version 1"
  necessary.  Here a sample;
                     alter the names : Yoyodyne, Inc., hereby disclaims all copyright interest in the program 'Gnomovision'(a program to direct compilers to make passes at assemblers)written by James Hacker.&lt;signature of Ty Coon&gt;, 1 April 1989 Ty Coon, President of Vice That's all there is to it!
 </code></pre>
-<h2>Index</h2>

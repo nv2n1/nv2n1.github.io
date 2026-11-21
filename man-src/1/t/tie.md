@@ -25,4 +25,3 @@ description: "tie – merge or apply WEB change files"
 <p> <code>web</code>(1), <code><a href="/docs/linux/man/1-ctie/">ctie</a></code>(1), <code><a href="/docs/linux/man/1-cweb/">cweb</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> Klaus Guntermann, TH Darmstadt, Institut f. Theoretische Informatik. Man page by Joachim Schnitter, TH Darmstadt, Phys. Chemie I. </p>
-<h2>Index</h2>

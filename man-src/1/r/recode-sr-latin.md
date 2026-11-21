@@ -32,4 +32,3 @@ description: "recode-sr-latin – convert Serbian text from Cyrillic to Latin sc
 <dt>
 </dt><dd> <code>info recode-sr-latin</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

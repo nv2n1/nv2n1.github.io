@@ -38,4 +38,3 @@ description: "ppmtopcx – convert a portable pixmap into a PCX file"
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1994 by Ingo Wilken (Ingo.Wilken [at] informatik.uni-oldenburg.de)<br />
  Based on previous work by Michael Davidson. </p>
-<h2>Index</h2>

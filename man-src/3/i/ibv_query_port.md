@@ -56,4 +56,3 @@ IBV_QPF_GRH_REQUIRED - When this flag is set, the applications must create all A
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

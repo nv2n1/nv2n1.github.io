@@ -58,4 +58,3 @@ display:
 <p> If the VDL file is not in the expected format, the program will probably dump core.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xdmx/">Xdmx</a>(1), <a href="/docs/linux/man/1-xdmxconfig/">xdmxconfig</a>(1), vdl(3), xmovie(1) </p>
-<h2>Index</h2>

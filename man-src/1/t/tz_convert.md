@@ -75,4 +75,3 @@ description: "tz_convert – Timezone converter from operating system tz format 
 <h2>AUTHOR</h2>
 <p> <code>tz_convert</code> was written by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
 <p> This manual page was written by Juha Kautto &lt;juha [at] xfce.org&gt;. </p>
-<h2>Index</h2>

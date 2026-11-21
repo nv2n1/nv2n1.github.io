@@ -25,4 +25,3 @@ description: "QuantLib::NormalDistribution – Normal distribution function."
 </dt><dd> the correctness of the returned value is tested by checking it against numerical calculations. Cross-checks are also performed against the <code>CumulativeNormalDistribution</code> and <code>InverseCumulativeNormal</code> classes.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

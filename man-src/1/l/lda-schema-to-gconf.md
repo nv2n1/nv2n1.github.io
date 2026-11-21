@@ -16,4 +16,3 @@ description: "lda-schema-to-gconf – A script which converts keyfile-based sche
 <h2>AUTHOR</h2>
 <p> lda-schema-to-gconf was written by Mark Lee &lt;libdesktop-agnostic [at] lazymalevolence.com&gt;. </p>
 <p> This manual page was originally written by Julien Lavergne &lt;julien.lavergne [at] gmail.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

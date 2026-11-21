@@ -92,4 +92,3 @@ size_t&amp;nbsp;error_diag_len
 <dt><code>DRMAA_ERRNO_NO_ACTIVE_SESSION</code></dt>
 <dd> Failed because there is no active session.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

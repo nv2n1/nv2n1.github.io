@@ -51,4 +51,3 @@ description: "pwgen – generate pronounceable passwords"
 <p> This version of <code>pwgen</code> was written by Theodore Ts&#8217;o &lt;tytso [at] alum.mit.edu&gt;. It is modelled after a program originally written by Brandon S. Allbery, and then later extensively modified by Olaf Titz, Jim Lynch, and others. It was rewritten from scratch by Theodore Ts&#8217;o because the original program was somewhat of a hack, and thus hard to maintain, and because the licensing status of the program was unclear.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1) </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "shtool path – GNU shtool command dealing with shell path variabl
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>path</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for <code>Apache</code>. It was later taken over into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-which/">which</a></i>(1). </p>
-<h2>Index</h2>

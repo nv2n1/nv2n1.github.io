@@ -106,4 +106,3 @@ description: "ucpp – C preprocessor"
 <dt><a rel="nofollow" href="http://pornin.nerim.net/ucpp/">http://pornin.nerim.net/ucpp/</a></dt>
 <dd></dd></dl>
 <p> has the bug. </p>
-<h2>Index</h2>

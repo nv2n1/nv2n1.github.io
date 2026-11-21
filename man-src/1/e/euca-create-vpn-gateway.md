@@ -41,4 +41,3 @@ description: "euca-create-vpn-gateway – Create a virtual private gateway"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

@@ -72,4 +72,3 @@ description: "ale – a synthetic capture engine and renderer"
 <h2>SEE ALSO</h2>
 <p> More detailed manuals for certain versions of ALE are distributed with source packages, and may also be available from: </p>
 <p> <a rel="nofollow" href="http://auricle.dyndns.org/ALE/manuals/">http://auricle.dyndns.org/ALE/manuals/</a> </p>
-<h2>Index</h2>

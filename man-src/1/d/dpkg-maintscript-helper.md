@@ -106,4 +106,3 @@ description: "dpkg-maintscript-helper – works around known dpkg limitations in
 <dd> Sets the color mode (since dpkg 1.19.1). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></code>(1). </p>
-<h2>Index</h2>

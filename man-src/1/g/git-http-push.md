@@ -72,4 +72,3 @@ git http - push[--all][--dry - run][--force][--verbose]&lt;url&gt;&lt;ref&gt;[&l
 <p> Optionally, a &lt;ref&gt; parameter can be prefixed with a plus <i>+</i> sign to disable the fast-forward check only on that ref.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

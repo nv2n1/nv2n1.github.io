@@ -70,4 +70,3 @@ $ docker update --cpu-shares 512 -m 300M abebf7571666 hopeful_morse
 $ docker update --restart=on-failure:3 abebf7571666 hopeful_morse
 </pre>
 </dd></dl>
-<h2>Index</h2>

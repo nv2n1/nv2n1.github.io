@@ -74,4 +74,3 @@ description: "changestool – verify, dump, modify, create or fix Debian .change
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2006-2009 Bernhard R. Link<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

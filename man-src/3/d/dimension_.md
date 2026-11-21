@@ -72,4 +72,3 @@ description: "QuantLib::GenericSequenceStatistics – Statistics analysis of N-d
 </dt><dd> the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

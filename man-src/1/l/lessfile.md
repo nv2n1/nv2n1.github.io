@@ -78,4 +78,3 @@ description: "lessfile, lesspipe – \"input preprocessor\" for less."
 <p> <a href="/docs/linux/man/1-less/">less</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Schoepf &lt;schoepf [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). Most of the text was copied from a description written by Darren Stalder &lt;torin [at] daft.com&gt;. </p>
-<h2>Index</h2>

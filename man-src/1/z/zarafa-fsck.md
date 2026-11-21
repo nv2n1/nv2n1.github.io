@@ -78,4 +78,3 @@ description: "zarafa-fsck – Start the Zarafa fsck calendar check program."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa/">zarafa</a></code>(1) </p>
-<h2>Index</h2>

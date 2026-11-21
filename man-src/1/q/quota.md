@@ -68,4 +68,3 @@ description: "quota – display disk usage and limits"
 <dd> default filesystems</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/2-quotactl/">quotactl</a></code>(2), <code><a href="/docs/linux/man/5-fstab/">fstab</a></code>(5), <code><a href="/docs/linux/man/8-edquota/">edquota</a></code>(8), <code><a href="/docs/linux/man/8-quotacheck/">quotacheck</a></code>(8), <code><a href="/docs/linux/man/8-quotaon/">quotaon</a></code>(8), <code><a href="/docs/linux/man/8-quota_nld/">quota_nld</a></code>(8), <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8), <code><a href="/docs/linux/man/8-warnquota/">warnquota</a></code>(8), <code><a href="/docs/linux/man/8-setquota/">setquota</a></code>(8) </p>
-<h2>Index</h2>

@@ -55,4 +55,3 @@ description: "PZSTD – parallelised Zstandard compression, al la pigz"
 <dt><code>&#8212;</code></dt>
 <dd> : all arguments after &quot;&#8211;&quot; are treated as files </dd>
 </dl>
-<h2>Index</h2>

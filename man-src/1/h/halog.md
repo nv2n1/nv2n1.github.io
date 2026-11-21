@@ -81,4 +81,3 @@ description: "halog – HAProxy log statistics reporter"
 <h2>AUTHOR</h2>
 <p> <code>halog</code> was written by Willy Tarreau &lt;w@1wt.eu&gt; and is part of <code><a href="/docs/linux/man/1-haproxy/">haproxy</a></code>(1). </p>
 <p> This manual page was written by Apollon Oikonomopoulos &lt;apoikos [at] gmail.com&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

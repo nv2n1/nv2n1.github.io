@@ -24,4 +24,3 @@ description: "checkpto – Helper program for Hugin’s Makefile assistant"
 <dd> Don&#8217;t include GPano tags in argfile</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

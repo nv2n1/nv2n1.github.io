@@ -752,4 +752,3 @@ $ git format-patch -3
 <p> <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1), <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "gnome-language-selector – graphical language selection utility"
 <dd> use an alternative data directory instead of the default <code>/usr/share/language-selector</code></dd></dl>
 <h2>AUTHOR</h2>
 <p> This manpage has been written by Alex Lourie (djay.il (at) gmail.com) </p>
-<h2>Index</h2>

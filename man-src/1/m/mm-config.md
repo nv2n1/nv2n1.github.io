@@ -50,4 +50,3 @@ description: "mm-config – OSSP mm library configuration/build utility"
  rse [at] engelschall.com
  <a rel="nofollow" href="http://www.engelschall.com">www.engelschall.com</a>
 </pre>
-<h2>Index</h2>

@@ -76,4 +76,3 @@ description: "xgridfit – a program for gridfitting, or \"hinting,\" TrueType f
 <h2>AUTHOR</h2>
 <p> <code>xgridfit</code> was written by Peter Baker &lt;psb6m [at] virginia.edu&gt;. </p>
 <p> This manual page was written by Kestutis Biliunas &lt;kebil [at] kaunas.init.lt&gt;, for the Debian project (but may be used by others). Revised and OPTIONS section added by P. Baker. </p>
-<h2>Index</h2>

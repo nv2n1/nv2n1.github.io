@@ -34,4 +34,3 @@ description: "ndctl-disable-namespace – disable the given namespace(s)"
 </dt><dd> Emit debug messages for the namespace operation</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-disable-namespace/">ndctl-disable-namespace</a></code>(1) </p>
-<h2>Index</h2>

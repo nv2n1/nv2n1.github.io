@@ -28,4 +28,3 @@ description: "megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary â
 <p> The filename used to store any output file is the filename that is encoded in the source file. MacBinary files are created with a &quot;.bin&quot; extension. In the case of conflicts, the old file is overwritten!</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-afpd/">afpd</a></code>(8) </p>
-<h2>Index</h2>

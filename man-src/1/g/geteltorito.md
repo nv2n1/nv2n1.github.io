@@ -19,4 +19,3 @@ description: "geteltorito – an El Torito boot image extractor"
 <h2>AUTHOR</h2>
 <p> geteltorito was written by Rainer Krienke &lt;krienke [at] uni-koblenz.de&gt;. </p>
 <p> This manual page was written by Eduard Bloch &lt;blade [at] debian.org&gt; based on README.geteltorito from geteltorito-0.4 package. </p>
-<h2>Index</h2>

@@ -150,4 +150,3 @@ END
 <p> Genevieve Patau, <i>Laboratory of Seismogenesis &lt;<a rel="nofollow" href="http://www.ipgp.fr/rech/sismogenese/">http://www.ipgp.fr/rech/sismogenese/</a>&gt;</i>, Institut de Physique du Globe de Paris, Departement de Sismologie, Paris, France</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

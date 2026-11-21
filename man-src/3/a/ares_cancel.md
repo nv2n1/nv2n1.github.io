@@ -23,4 +23,3 @@ void ares_cancel(ares_channel channel)
 <p> c-ares 1.6.0 and earlier pass a status of <code>ARES_ETIMEOUT</code> instead of <code>ARES_ECANCELLED</code>.</p>
 <h2>AUTHOR</h2>
 <p> Dirk Manske </p>
-<h2>Index</h2>

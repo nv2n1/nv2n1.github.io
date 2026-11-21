@@ -177,4 +177,3 @@ description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and a
 <p> Dan Dennedy &lt;dan [at] dennedy.org&gt; and Daniel Kobras kobras [at] debian.org&gt; </p>
 <p> See <a rel="nofollow" href="http://www.kinodv.org/">http://www.kinodv.org/</a> for more information and support.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

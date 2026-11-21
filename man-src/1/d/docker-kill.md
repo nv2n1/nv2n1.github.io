@@ -18,4 +18,3 @@ description: "docker-kill – Kill one or more running containers"
 <p> <code>-s</code>, <code>&#8211;signal</code>=&quot;KILL&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Signal to send to the container</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

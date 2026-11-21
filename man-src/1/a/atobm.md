@@ -498,4 +498,3 @@ description: "bitmap, bmtoa, atobm – bitmap editor and converter utilities for
 </table>
 <h2>AUTHOR</h2>
 <p> Davor Matic, MIT X Consortium </p>
-<h2>Index</h2>

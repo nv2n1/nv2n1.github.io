@@ -34,4 +34,3 @@ description: "setleds – set the keyboard leds"
 <p> In keyboard application mode the NumLock key does not influence the NumLock flag setting.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) </p>
-<h2>Index</h2>

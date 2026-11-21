@@ -63,4 +63,3 @@ description: "nvclock – Overclock your nVidia graphics adapter."
 <dd> Show summary of options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Wouter de Vries &lt;sax [at] debian.org&gt;, for the Debian GNU/Linux system. Later on it got an update by Kel Modderman &lt;kelrin [at] tpg.com.au&gt; and at last it got rewritten for inclusion in NVClock 0.8 by Roderick Colenbrander &lt;thunderbird [at] linuxhardware.org&gt; </p>
-<h2>Index</h2>

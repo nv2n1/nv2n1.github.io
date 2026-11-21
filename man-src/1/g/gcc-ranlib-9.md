@@ -17,4 +17,3 @@ description: "gcc-ranlib – a wrapper around ranlib adding the –plugin option
 <p> See <a href="/docs/linux/man/1-ranlib/">ranlib</a>(1) for a list of options that ranlib understands. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ranlib/">ranlib</a>(1)</code> </p>
-<h2>Index</h2>

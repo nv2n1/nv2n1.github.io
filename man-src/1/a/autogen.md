@@ -218,4 +218,3 @@ autogen -Tagtexi-cmd.tpl -MFtexi-dep -MTtexi-stamp opts.def
 <p> Please send bug reports to: autogen-users [at] lists.sourceforge.net</p>
 <h2>NOTES</h2>
 <p> This manual page was <i>AutoGen</i>-erated from the <code>autogen</code> option definitions. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "zstdgrep – print lines matching a pattern in zstandard-compresse
 <p> <code>zstd (1)</code></p>
 <h2>AUTHORS</h2>
 <p> Thomas Klausner <i>wiz [at] NetBSD.org</i> </p>
-<h2>Index</h2>

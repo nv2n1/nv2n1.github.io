@@ -22,4 +22,3 @@ description: "kodi-j2meremote – Java Bluetooth Phone Remote Control Client for
 <dt><code>&#8211;help</code></dt>
 <dd> (Brings up this message) </dd>
 </dl>
-<h2>Index</h2>

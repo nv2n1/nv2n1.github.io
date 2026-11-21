@@ -27,4 +27,3 @@ hello
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-volume/">docker-volume</a>(1)</code> </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "uchardet – universalchardet (Universal Charset Detector)"
 <dt>
 </dt></dl>
 <dd>uchardet Command Line Tool </dd>
-<h2>Index</h2>

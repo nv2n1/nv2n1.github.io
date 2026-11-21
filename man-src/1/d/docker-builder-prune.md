@@ -21,4 +21,3 @@ description: "docker-builder-prune – Remove build cache"
 <p> <code>&#8211;keep-storage</code>=0 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Amount of disk space to keep for cache</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-builder/">docker-builder</a>(1)</code> </p>
-<h2>Index</h2>

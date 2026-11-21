@@ -43,4 +43,3 @@ export PS1='`prwd`'
 <p> <a href="/docs/linux/man/5-prwdrc/">prwdrc</a>(5), <a href="/docs/linux/man/1-pwd/">pwd</a>(1), <a href="/docs/linux/man/1-csh/">csh</a>(1), ksh(1), <a href="/docs/linux/man/1-sh/">sh</a>(1), <a href="/docs/linux/man/3-getcwd/">getcwd</a>(3)</p>
 <h2>AUTHORS</h2>
 <p> prwd was written by Bertrand Janin &lt;b@janin.com&gt; and is distributed under an ISC license (BSD compatible, OSI compatible). </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ const char *ares_version(int *version)
 <p> This function is not compatible with ares.</p>
 <h2>AUTHOR</h2>
 <p> Daniel Stenberg </p>
-<h2>Index</h2>

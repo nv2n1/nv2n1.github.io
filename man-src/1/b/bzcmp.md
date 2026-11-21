@@ -18,4 +18,3 @@ description: "bzcmp, bzdiff – compare bzip2 compressed files"
 <p> <a href="/docs/linux/man/1-cmp/">cmp</a>(1), <a href="/docs/linux/man/1-diff/">diff</a>(1), <a href="/docs/linux/man/1-bzmore/">bzmore</a>(1), <a href="/docs/linux/man/1-bzless/">bzless</a>(1), <a href="/docs/linux/man/1-bzgrep/">bzgrep</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1)</p>
 <h2>BUGS</h2>
 <p> Messages from the <i>cmp</i> or <i>diff</i> programs refer to temporary filenames instead of those specified. </p>
-<h2>Index</h2>

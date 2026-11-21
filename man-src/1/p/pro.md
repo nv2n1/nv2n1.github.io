@@ -158,4 +158,3 @@ description: "pro – Manage Ubuntu Pro services from Canonical"
 <p> Please report bugs either by running `ubuntu-bug ubuntu-advantage-tools` or login to Launchpad and navigate to <a rel="nofollow" href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-advantage-tools/+filebug">https://bugs.launchpad.net/ubuntu/+source/ubuntu-advantage-tools/+filebug</a> </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2019-2020 Canonical Ltd. </p>
-<h2>Index</h2>

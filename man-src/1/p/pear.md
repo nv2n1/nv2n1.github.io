@@ -173,4 +173,3 @@ description: "pear, pecl, peardev – PEAR installer"
 <h2>BUGS</h2>
 <p> You can view the list of known bugs or report any new bug you found at: </p>
 <p> <code><a rel="nofollow" href="http://pear.php.net/bugs/">http://pear.php.net/bugs/</a></code> </p>
-<h2>Index</h2>

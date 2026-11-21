@@ -17,4 +17,3 @@ description: "gcc-nm – a wrapper around nm adding the –plugin option"
 <p> See <a href="/docs/linux/man/1-nm/">nm</a>(1) for a list of options that nm understands. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nm/">nm</a>(1)</code> </p>
-<h2>Index</h2>

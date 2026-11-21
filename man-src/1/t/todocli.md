@@ -25,4 +25,3 @@ description: "todocli – Command line To Do application"
 <dd> &#8211;delete &lt;ID&gt; delete a todo item with id</dd></dl>
 <h2>AUTHOR</h2>
 <p> Hasan Tayyar &#8211; Hüseyin Mert </p>
-<h2>Index</h2>

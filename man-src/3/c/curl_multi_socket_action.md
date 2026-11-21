@@ -66,4 +66,3 @@ int curl_socket_callback(CURL *easy,      /* easy handle */
 <p> This function was added in libcurl 7.15.4, and is deemed stable since 7.16.0.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_fdset/">curl_multi_fdset</a></code>(3), <code><a href="/docs/linux/man/3-curl_multi_info_read/">curl_multi_info_read</a></code>(3), <code>the hiperfifo.c example</code> </p>
-<h2>Index</h2>

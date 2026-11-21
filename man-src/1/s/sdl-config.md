@@ -37,4 +37,3 @@ description: "sdl-config – script to get information about the installed versi
 <p> The Simple DirectMedia Layer (SDL) library was written by Sam Lantinga. </p>
 <p> This manual page was written by Branden Robinson, originally for Progeny Linux Systems, Inc., and the Debian Project. </p>
 <p> This manual page was modified by Petr Pisar to match original SDL distribution. </p>
-<h2>Index</h2>

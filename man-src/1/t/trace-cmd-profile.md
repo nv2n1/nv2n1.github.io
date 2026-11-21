@@ -701,4 +701,3 @@ Event: softirq_raise:SCHED (2) Total: 241249 Avg: 120624 Max: 239076 Min:2173
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

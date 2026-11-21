@@ -66,4 +66,3 @@ XERBLA_ARRAY assists other languages in calling XERBLA, the LAPACK and BLAS erro
 <p> Definition at line 91 of file SRC/xerbla_array.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ description: "exo-desktop-item-edit – Edit freedesktop.org .desktop files"
 <dt>
 </dt><dd> os-cillation e.K. All rights reserved. </dd>
 </dl>
-<h2>Index</h2>

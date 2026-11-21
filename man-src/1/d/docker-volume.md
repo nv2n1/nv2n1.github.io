@@ -27,4 +27,3 @@ docker volume COMMAND --help
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for volume</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-volume-create/">docker-volume-create</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-volume-inspect/">docker-volume-inspect</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-volume-ls/">docker-volume-ls</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-volume-prune/">docker-volume-prune</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-volume-rm/">docker-volume-rm</a>(1)</code> </p>
-<h2>Index</h2>

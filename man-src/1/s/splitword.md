@@ -23,4 +23,3 @@ description: "splitwd – Collect several text-form dictionary files into a sing
 <dt><a href="/docs/linux/man/1-ctow/">ctow</a>(1)</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

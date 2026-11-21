@@ -50,4 +50,3 @@ description: "getdns_dict, getdns_dict_create, getdns_dict_create_with_extended_
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict_get/">getdns_dict_get</a></code>(3), <code><a href="/docs/linux/man/3-getdns_dict_set/">getdns_dict_set</a></code>(3), <code><a href="/docs/linux/man/3-getdns_list/">getdns_list</a></code>(3), <code><a href="/docs/linux/man/3-getdns_pretty_print_dict/">getdns_pretty_print_dict</a></code>(3). </p>
-<h2>Index</h2>

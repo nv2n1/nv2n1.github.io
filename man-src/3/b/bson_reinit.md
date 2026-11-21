@@ -22,4 +22,3 @@ void bson_reinit(bson_t *b);
 <p> However, if the <code>bson_t</code> structure contains a malloc()&#8217;d buffer, it may be reused. To be certain that any buffer is freed, always call <code>bson_destroy</code> on any <code>bson_t</code> structure, whether initialized or reinitialized, after its final use. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -101,4 +101,3 @@ description: "tf – TinyFugue, a MUD client"
 <p> If a shell quote (/quote !) reads a partial line from the pipe, the read will block until the rest of the line is read. </p>
 <h2>WARNINGS</h2>
 <p> The Surgeon General has determined that MUDding can be detrimental to your GPA. </p>
-<h2>Index</h2>

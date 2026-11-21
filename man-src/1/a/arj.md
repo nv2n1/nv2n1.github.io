@@ -787,4 +787,3 @@ The "dc" command is an abbreviation for "d -jb"
 <p> <code><a href="/docs/linux/man/1-rearj/">rearj</a></code>(1), <code><a href="/docs/linux/man/1-unarj/">unarj</a></code>(1), <code>arj-register</code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ola Lundqvist &lt;opal [at] debian.org&gt; in pod format, then converted by Guillem Jover &lt;guillem [at] debian.org&gt; to nroff format. </p>
-<h2>Index</h2>

@@ -506,4 +506,3 @@ description: "gphoto2 – command-line gphoto2 client"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.teaser.fr/~hfiguiere/linux/digicam.html">http://www.teaser.fr/~hfiguiere/linux/digicam.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

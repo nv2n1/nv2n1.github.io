@@ -148,4 +148,3 @@ Your proxy is valid until: Thu Mar 17 23:48:05 2010
 <p> <a href="/docs/linux/man/1-grid-proxy-destroy/">grid-proxy-destroy</a>(1), <a href="/docs/linux/man/1-grid-proxy-info/">grid-proxy-info</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

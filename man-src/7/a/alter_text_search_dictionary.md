@@ -51,4 +51,3 @@ ALTER TEXT SEARCH DICTIONARY name  RENAME TO newname ALTER TEXT SEARCH DICTIONAR
 <p> There is no <code>ALTER TEXT SEARCH DICTIONARY</code> statement in the SQL standard.  </p>
 <h2>SEE ALSO</h2>
 <p> CREATE TEXT SEARCH DICTIONARY [<code><a href="/docs/linux/man/7-create_text_search_dictionary/">create_text_search_dictionary</a></code>(7)], DROP TEXT SEARCH DICTIONARY [<code><a href="/docs/linux/man/7-drop_text_search_dictionary/">drop_text_search_dictionary</a></code>(7)] </p>
-<h2>Index</h2>

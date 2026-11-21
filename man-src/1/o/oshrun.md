@@ -513,4 +513,3 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <p> <i>mpirun</i> returns 0 if all processes started by <i>mpirun</i> exit after calling MPI_FINALIZE. A non-zero value is returned if an internal error occurred in mpirun, or one or more processes exited before calling MPI_FINALIZE. If an internal error occurred in mpirun, the corresponding error code is returned. In the event that one or more processes exit before calling MPI_FINALIZE, the return value of the MPI_COMM_WORLD rank of the process that <i>mpirun</i> first notices died before calling MPI_FINALIZE will be returned. Note that, in general, this will be the first process that died but is not guaranteed to be so.</p>
 <h2>SEE ALSO</h2>
 <p> MPI_Init_thread(3) </p>
-<h2>Index</h2>

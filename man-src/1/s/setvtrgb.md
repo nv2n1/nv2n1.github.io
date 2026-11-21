@@ -36,4 +36,3 @@ description: "setvtrgb – customize the console color map"
 <h2>AUTHOR</h2>
 <p> setvtrgb is Copyright &#169; 2011 Alexey Gladkov &lt;gladkov.alexey [at] gmail.com&gt;, with portions by Dustin Kirkland &lt;kirkland [at] canonical.com&gt; and Seth Forshee &lt;seth.forshee [at] canonical.com&gt; at Canonical Ltd. </p>
 <p> This manual page was written by Michael Schutte &lt;michi [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

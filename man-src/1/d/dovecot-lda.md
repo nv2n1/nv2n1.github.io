@@ -82,4 +82,3 @@ description: "dovecot-lda – Dovecot’s local mail delivery agent"
 <dt>The pipe transport</dt>
 <dd> <a rel="nofollow" href="http://exim.org/exim-html-current/doc/html/spec_html/ch29.html">http://exim.org/exim-html-current/doc/html/spec_html/ch29.html</a> </dd>
 </dl>
-<h2>Index</h2>

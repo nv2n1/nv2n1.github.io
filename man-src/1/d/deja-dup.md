@@ -36,4 +36,3 @@ description: "deja-dup – a desktop backup tool"
 <dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-duplicity/">duplicity</a></code>(1) </p>
-<h2>Index</h2>

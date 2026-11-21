@@ -48,4 +48,3 @@ description: "realpath – print the resolved path"
 <p> <a href="/docs/linux/man/1-readlink/">readlink</a>(1), <a href="/docs/linux/man/2-readlink/">readlink</a>(2), <a href="/docs/linux/man/3-realpath/">realpath</a>(3) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/realpath">https://www.gnu.org/software/coreutils/realpath</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) realpath invocation&#8217; </p>
-<h2>Index</h2>

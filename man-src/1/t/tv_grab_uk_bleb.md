@@ -33,4 +33,3 @@ description: "tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from 
 <p> Andy Balaam, axis3x3 [at] users.sourceforge.net </p>
 <p> Icon URLs collated by Lawrence, MagicLGH [at] aol.com </p>
 <p> Based on tv_grab_nl_wolf by Ed Avis </p>
-<h2>Index</h2>

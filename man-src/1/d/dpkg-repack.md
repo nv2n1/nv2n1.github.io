@@ -33,4 +33,3 @@ description: "dpkg-repack – put an unpacked .deb file back together"
 <p> While dpkg-repack can be run under fakeroot and will work most of the time, fakeroot -u must be used if any of the files to be repacked are owned by non-root users. Otherwise the package will have them owned by root. dpkg-repack will warn if you run it under fakeroot without the -u flag. </p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

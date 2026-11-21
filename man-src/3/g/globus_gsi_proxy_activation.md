@@ -25,4 +25,3 @@ globus_module_deactivate(GLOBUS_GSI_PROXY_MODULE)
 <p> This function should be called once for each time Globus GSI Proxy was activated.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_proxy_core from the source code. </p>
-<h2>Index</h2>

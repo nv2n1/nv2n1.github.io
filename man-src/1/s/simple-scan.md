@@ -31,4 +31,3 @@ description: "simple-scan – Scanning utility"
 <h2>AUTHOR</h2>
 <p> simple-scan was written by Robert Ancell &lt;robert.ancell [at] canonical.com&gt;. </p>
 <p> This manual page was written by Alessio Treglia &lt;quadrispro [at] ubuntu.com&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

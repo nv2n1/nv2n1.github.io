@@ -25,4 +25,3 @@ description: "qorder – exchange order of two pbs batch jobs in a queue."
 <p> If the qorder command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), qmove(1B), pbs_orderjob(3B), pbs_movejob(3B) </p>
-<h2>Index</h2>

@@ -15,4 +15,3 @@ description: "cinnamon-extension-tool – extension management program"
 <p> <code>cinnamon-extension-tool</code> runs the graphical user interface allowing to manage the extensions to be used in cinnamon.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon-settings/">cinnamon-settings</a></code>(1) </p>
-<h2>Index</h2>

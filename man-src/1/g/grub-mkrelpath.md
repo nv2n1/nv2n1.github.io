@@ -29,4 +29,3 @@ description: "grub-mkrelpath – make a system path relative to its root"
 <dt>
 </dt><dd> <code>info grub-mkrelpath</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

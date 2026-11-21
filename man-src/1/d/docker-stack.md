@@ -19,4 +19,3 @@ description: "docker-stack – Manage Docker stacks"
 <p> <code>&#8211;orchestrator</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Orchestrator to use (swarm|kubernetes|all)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-stack-deploy/">docker-stack-deploy</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-stack-ls/">docker-stack-ls</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-stack-ps/">docker-stack-ps</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-stack-rm/">docker-stack-rm</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-stack-services/">docker-stack-services</a>(1)</code> </p>
-<h2>Index</h2>

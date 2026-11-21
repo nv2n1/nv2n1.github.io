@@ -123,4 +123,3 @@ description: "add-apt-repository – Adds a repository into the /etc/apt/sources
 <h2>COPYRIGHT</h2>
 <p> This manual page was written by Chow Loong Jin &lt;hyperair [at] gmail.com&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses. </p>
-<h2>Index</h2>

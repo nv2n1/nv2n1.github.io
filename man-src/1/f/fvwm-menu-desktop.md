@@ -150,4 +150,3 @@ Module FvwmPerl -l fvwm-menu-desktop-config.fpl
 <p> The script was reworked to replace the existing fvwm-menu-desktop perl script by the fvwm-workers. </p>
 <h2>COPYING</h2>
 <p> The script is distributed by the same terms as fvwm itself. See GNU General Public License for details. </p>
-<h2>Index</h2>

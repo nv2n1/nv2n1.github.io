@@ -13,4 +13,3 @@ description: "Configuration keys for the encoder ctl interface. –"
 <p> These defines and macros are for altering the behaviour of the encoder through the <code>daala_encode_ctl</code> interface. These should have even values. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

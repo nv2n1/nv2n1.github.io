@@ -36,4 +36,3 @@ description: "iceboxadmin – The IceBox administrative utility."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icebox/">icebox</a></code>(1), <code><a href="/docs/linux/man/1-iceboxnet/">iceboxnet</a></code>(1) </p>
-<h2>Index</h2>

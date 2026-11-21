@@ -41,4 +41,3 @@ options = Letter(US Letter), A4(A4), ...
 <p> Patrick Powell &lt;papowell at astart.com&gt; </p>
 <h2>BUGS</h2>
 <p> Probably. But it has been tested. </p>
-<h2>Index</h2>

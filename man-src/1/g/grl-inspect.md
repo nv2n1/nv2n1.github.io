@@ -31,4 +31,3 @@ description: "grl-inspect – show information about Grilo sources and keys"
 <dd> Configuration file to use with the plugins.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Alberto Garcia &lt;agarcia [at] igalia.com&gt;. </p>
-<h2>Index</h2>

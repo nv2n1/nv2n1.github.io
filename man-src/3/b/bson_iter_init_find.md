@@ -29,4 +29,3 @@ bool bson_iter_init_find(bson_iter_t *iter,
 <p> This function is identical to <code>(<a href="/docs/linux/man/3-bson_iter_init/">bson_iter_init</a>(3) &amp;&amp; <a href="/docs/linux/man/3-bson_iter_find/">bson_iter_find</a>(3))</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

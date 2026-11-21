@@ -141,4 +141,3 @@ description: "flatpak-remote-modify – Modify a remote repository"
 <p> <code>$ flatpak &#8211;user remote-modify &#8211;no-gpg-verify test-repo</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-add/">flatpak-remote-add</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-delete/">flatpak-remote-delete</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remotes/">flatpak-remotes</a></code>(1) </p>
-<h2>Index</h2>

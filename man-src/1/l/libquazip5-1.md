@@ -17,4 +17,3 @@ description: "quazip – C++/Qt wrapper for UNZIP/ZIP"
 <p> <code>minizip</code>(1), <code>miniunzip</code>(1), <code><a href="/docs/linux/man/3-zlib/">zlib</a></code>(3), <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This program was written by Sergey A. Tachenov. This manual page was written by Eric Maeker &lt;eric.maeker [at] gmail.com&gt;. </p>
-<h2>Index</h2>

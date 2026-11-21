@@ -103,4 +103,3 @@ Runtime: org.gnome.Platform/x86_64/3.24
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remotes/">flatpak-remotes</a></code>(1) <code><a href="/docs/linux/man/1-flatpak-remote-ls/">flatpak-remote-ls</a></code>(1) </p>
-<h2>Index</h2>

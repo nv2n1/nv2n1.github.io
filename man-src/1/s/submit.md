@@ -664,4 +664,3 @@ $REQUEST.oJID[.TASKID] STDOUT of job #JID $REQUEST.eJID[.TASKID] STDERR of job
 <h2>COPYRIGHT</h2>
 <p> If configured correspondingly, <i>qrsh</i> and <i>qlogin</i> contains portions of the <i>rsh</i>, <i>rshd</i>, <i>telnet</i> and <i>telnetd</i> code copyrighted by The Regents of the University of California. Therefore, the following note applies with respect to <i>qrsh</i> and <i>qlogin</i>: This product includes software developed by the University of California, Berkeley and its contributors. </p>
 <p> See as well as the information provided in &lt;xxqs_name_sxx_root&gt;/3rd_party/qrsh and &lt;xxqs_name_sxx_root&gt;/3rd_party/qlogin for a statement of further rights and permissions. </p>
-<h2>Index</h2>

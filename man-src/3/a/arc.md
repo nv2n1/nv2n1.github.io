@@ -21,4 +21,3 @@ description: "arc – Draws a circular arc. Allegro game programming library."
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-circle/">circle</a></code>(3), <code><a href="/docs/linux/man/3-ellipse/">ellipse</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3) </p>
-<h2>Index</h2>

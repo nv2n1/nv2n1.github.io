@@ -287,4 +287,3 @@ New data                                 17858641          5658308
 <p> Hard link information may be lost if an archive file which is included via the <code>@ archive-file </code> option is in a non-&quot;tar&quot; format. (This is a consequence of the incompatible ways that different archive formats store hardlink information.) </p>
 <p> There are alternative long options for many of the short options that are deliberately not documented. </p>
 <p> The limit specified by a &#8211;<code>-maxbw</code> option is not strictly enforced; in particular, due to the need to cleanly terminate an archive, the amount of bandwidth used may slightly exceed the limit. </p>
-<h2>Index</h2>

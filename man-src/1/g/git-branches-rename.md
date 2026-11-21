@@ -33,4 +33,3 @@ $ git - rename - branches bug bugfix bug / 128-&gt;bugfix / 128 bug_test-&gt;bug
 <p> <code><a rel="nofollow" href="https://github.com/MestreLion/git-tools">https://github.com/MestreLion/git-tools</a></code></p>
 <h2>AUTHOR</h2>
 <p> Rodrigo Silva (MestreLion) linux [at] rodrigosilva.com </p>
-<h2>Index</h2>

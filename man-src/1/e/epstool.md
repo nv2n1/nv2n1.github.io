@@ -175,4 +175,3 @@ description: "epstool – Edit preview images and fix bounding boxes in EPS file
 <h2>AUTHOR</h2>
 <p> <code>epstool</code> was written by Russell Lang &lt;gsview [at] ghostgum.com.au&gt; </p>
 <p> This man page was contributed by Martin Pitt &lt;martin [at] piware.de&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

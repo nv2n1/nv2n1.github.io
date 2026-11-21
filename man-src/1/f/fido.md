@@ -72,4 +72,3 @@ description: "fido is a realish-time log watchdog and alert daemon."
 </dt><dd> Copyright (C) <tt>2000-2014</tt> by <tt>Jeffrey Fulmer, et al.</tt> </dd>
 <p> This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. </p>
 </dl>
-<h2>Index</h2>

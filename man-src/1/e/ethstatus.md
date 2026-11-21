@@ -27,4 +27,3 @@ description: "ethstatus – Console-based ethernet statistics monitor"
 <dt></dt></dl>
 <h2>AUTHORS</h2>
 <dd> The original program was written by Gabriel Montenegro &lt;johnpetrucci [at] users.sourceforge.net&gt;. Bug fixes, code cleanup, different improvements and this manual page were provided by Christoph Haas &lt;email [at] christoph-haas.de&gt; for the Debian GNU/Linux system. </dd>
-<h2>Index</h2>

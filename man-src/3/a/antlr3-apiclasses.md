@@ -21,4 +21,3 @@ description: "API Classes –"
 <p> The typedefs contain data and function pointers, which together define the object. The implementation functions are the default implementations of the &#8216;methds&#8217; encapsulated by the typdef structures.You may override any of the methods once their objects are created by installing a pointer to your own function. Some of these methods create other &#8216;objects&#8217; (instances of typedef structures), which allows you install your own method and create your own implementation of these.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>

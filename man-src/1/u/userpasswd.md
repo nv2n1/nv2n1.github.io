@@ -21,4 +21,3 @@ description: "userpasswd – A graphical tool to allow users to change their pas
 <p> No known bugs, but compatibility with bizarre changes in the pam configuration have not been tested aggressively. If you have a non-standard pam configuration, I&#8217;d be interested to hear whether it worked and what kind of configuration you have.</p>
 <h2>AUTHOR</h2>
 <p> Otto Hammersmith &lt;otto [at] redhat.com&gt; </p>
-<h2>Index</h2>

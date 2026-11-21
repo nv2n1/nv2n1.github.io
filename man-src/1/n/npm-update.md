@@ -115,4 +115,3 @@ npm update[-g][&lt;pkg&gt;...] aliases : up, upgrade
 <dd> npm help ls </dd>
 </dl>
 </dl>
-<h2>Index</h2>

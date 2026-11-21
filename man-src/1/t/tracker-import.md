@@ -28,4 +28,3 @@ description: "tracker-import – Imports Turtle file data into the database"
 <dt><code>Turtle.</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

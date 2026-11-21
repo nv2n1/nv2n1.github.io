@@ -49,4 +49,3 @@ description: "QuantLib::HaganPricer – CMS-coupon pricer."
 <p> Base class for the pricing of a CMS coupon via static replication as in Hagan&#8217;s &#8216;Conundrums&#8230;&#8217; article </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "pamedge – edge-detect an image"
 <p> <code>pamedge</code> was added to Netpbm in Release 10.14 (March 2003). It replaced <code>pgmedge</code>, which was the same thing, but worked only on PGM and PBM images. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. Adapted to <code>pnmedge</code> Peter Kichgessner in 1995, and then to <code>pamedge</code> by Bryan Henderson in 2003. </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "lirc-lsplugins – print dynamic modules info"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3)<br />
  <a href="/docs/linux/man/8-lircd/">lircd</a>(8) </p>
-<h2>Index</h2>

@@ -531,4 +531,3 @@ description: "flickcurl – call Flickr API"
 <h2>AUTHOR</h2>
 <p> flickcurl was written by David Beckett. </p>
 <p> This manual page was written by Kumar Appaiah &lt;akumar [at] ee.iitm.ac.in&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

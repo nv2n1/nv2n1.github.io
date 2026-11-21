@@ -21,4 +21,3 @@ description: "openstack-config – Manipulate the OpenStack ini files"
 <dd>Remove the specified parameter or section</dd></dl>
 <h2>SEE ALSO</h2>
 <p> This command is deprecated. Please consider using the more featureful <a href="/docs/linux/man/1-crudini/">crudini</a>(1). </p>
-<h2>Index</h2>

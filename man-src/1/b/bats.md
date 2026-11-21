@@ -63,4 +63,3 @@ ok 2 addition using dc
 <h2>COPYRIGHT</h2>
 <p> (c) 2014 Sam Stephenson </p>
 <p> Bats is released under the terms of an MIT-style license. </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "setregdomain – set regulatory domain based on country code"
 <p> <code>/etc/sysconfig/regdomain</code> <code>/etc/localtime</code> <code>/usr/share/zoneinfo/zone.tab</code></p>
 <h2>SEE ALSO</h2>
 <p> <code>iw</code>(1) </p>
-<h2>Index</h2>

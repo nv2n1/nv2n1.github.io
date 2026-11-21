@@ -26,4 +26,3 @@ description: "gendiff – utility to aid in error-free diff file generation"
 <pre>
 Marc Ewing &lt;marc [at] redhat.com&gt;
 </pre>
-<h2>Index</h2>

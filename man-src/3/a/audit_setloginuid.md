@@ -21,4 +21,3 @@ description: "audit_setloginuid – Set a program’s loginuid value"
 <p> <code><a href="/docs/linux/man/3-audit_getloginuid/">audit_getloginuid</a></code>(3), <code><a href="/docs/linux/man/8-pam_loginuid/">pam_loginuid</a></code>(8). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

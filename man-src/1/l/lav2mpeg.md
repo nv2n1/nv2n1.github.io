@@ -130,4 +130,3 @@ yuvscaler:
 Please read other examples included in documentation for .lav2mpegrc 
 usage
 </pre>
-<h2>Index</h2>

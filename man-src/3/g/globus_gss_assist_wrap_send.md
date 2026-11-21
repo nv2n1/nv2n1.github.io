@@ -94,4 +94,3 @@ description: "globus_gss_assist.h – GSS Assist Header."
 </dt><dd> gss_wrap()</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

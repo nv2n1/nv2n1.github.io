@@ -20,4 +20,3 @@ description: "gpk-update-viewer – GNOME PackageKit Update Viewer"
 <p> gpk-install-catalog (3).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

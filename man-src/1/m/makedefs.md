@@ -109,4 +109,3 @@ Google, Inc.
 111 8th Avenue
 New York, NY 10011, USA
 </pre>
-<h2>Index</h2>

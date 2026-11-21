@@ -30,4 +30,3 @@ description: "gpodder – A Media aggregator and Podcast catcher"
 <dt><code>-s</code> URL, <code>&#8211;subscribe</code>=<i>URL</i></dt>
 <dd> Subscribe to the given URL </dd>
 </dl>
-<h2>Index</h2>

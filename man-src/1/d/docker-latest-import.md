@@ -85,4 +85,3 @@ Set commit message for imported image </p>
 <p> <code><a href="/docs/linux/man/1-docker-export/">docker-export</a>(1)</code> to export the contents of a filesystem as a tar archive to STDOUT. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

@@ -133,4 +133,3 @@ MYRA MYDEC X Y-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 <p> Finally, the <code>-d</code> (ds9) switch mimicks ds9&#8217;s use of integer <font SIZE="-1">TLMIN</font> and <font SIZE="-1">TLMAX</font> values for all coordinate transformations. <font SIZE="-1">FITS</font> conventions seem to call for use of floating point <font SIZE="-1">TLMIN</font> and <font SIZE="-1">TLMAX</font> when the data are floats. This convention is followed by funsky but results in a small discrepancy with ds9&#8217;s converted values for floating point data. We will remedy this conflict in the future, maybe.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

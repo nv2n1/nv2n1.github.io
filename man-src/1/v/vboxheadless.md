@@ -40,4 +40,3 @@ description: "VBoxHeadless – x86 virtualization solution"
 <dt><code>-f</code>, <code>&#8211;filename</code></dt>
 <dd> File name when recording. The codec used will be chosen based on file extension </dd>
 </dl>
-<h2>Index</h2>

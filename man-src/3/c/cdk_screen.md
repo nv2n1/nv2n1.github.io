@@ -64,4 +64,3 @@ void unregisterCDKObject(
 <dd> removes the widget from the screen. This does <code>NOT</code> destroy the object, it removes the widget from any further refreshes by the function <code>refreshCDKScreen</code>. The <i>widgetType</i> parameter states what Cdk widget type this object is. The <i>object</i> parameter is a void pointer to the object.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3) </p>
-<h2>Index</h2>

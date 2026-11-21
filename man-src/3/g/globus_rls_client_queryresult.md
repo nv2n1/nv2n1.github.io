@@ -60,4 +60,3 @@ while (globus_rls_client_lrc_get_lfn(h, "somepfn", &amp;offset, 5, &amp;str2_lis
 </dt><dd> <i>GLOBUS_SUCCESS</i> List and contents successfully freed.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus rls client from the source code. </p>
-<h2>Index</h2>

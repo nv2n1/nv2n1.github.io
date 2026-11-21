@@ -33,4 +33,3 @@ description: "texindex – sort Texinfo index files"
 <dt>
 </dt><dd> <code>info texindex</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

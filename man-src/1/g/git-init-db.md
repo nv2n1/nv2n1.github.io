@@ -17,4 +17,3 @@ git init - db[-q | --quiet][--bare][--template = &lt;template_directory&gt;][--s
 <p> This is a synonym for <code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1). Please refer to the documentation of that command.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "freight – a modern take on the Debian archive"
 <p> Richard Crowley <i>r@rcrowley.org</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-reprepro/">reprepro</a></code>(1) manages Debian archives, too, if Freight isn&#8217;t your thing. </p>
-<h2>Index</h2>

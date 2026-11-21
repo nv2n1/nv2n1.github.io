@@ -62,4 +62,3 @@ description: "lnav – ncurses-based log file viewer"
 </pre>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Salvatore Bonaccorso &lt;carnil [at] debian.org&gt; for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

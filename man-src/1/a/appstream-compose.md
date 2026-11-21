@@ -17,4 +17,3 @@ description: "appstream-compose – Generate AppStream metadata"
 <p> <code>appstream-compose</code> is a simple app that takes a prefix (default /usr) and a set of application names. It looks for appdata, metainfo, desktop and icon files with that basename in $prefix/share/[appdata|metainfo|applications|icons] and generates appstream xml files and icons in (by default) $prefix/share/app-info.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ find / usr / local / {lib / node, bin} - exec grep - l npm \
 <dt>&bull;</dt>
 <dd> npm help prune</dd>
 </dl>
-<h2>Index</h2>

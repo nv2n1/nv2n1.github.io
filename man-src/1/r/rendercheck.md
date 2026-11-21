@@ -38,4 +38,3 @@ rendercheck[-d | --display display][-i | --iter][--sync][-t | --tests test1, tes
 <p> Several limitations are documented in the TODO file accompanying the source. Please report any further bugs you find to <a rel="nofollow" href="http://bugs.freedesktop.org/.">http://bugs.freedesktop.org/.</a></p>
 <h2>AUTHORS</h2>
 <p> Eric Anholt, with help from Keith Packard. </p>
-<h2>Index</h2>

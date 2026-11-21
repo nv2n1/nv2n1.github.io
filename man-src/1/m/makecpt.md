@@ -82,4 +82,3 @@ gmt makecpt -Cgebco depths.txt -i2 -Z -E24 &gt; my_depths.cpt
 <p> <code>gmt</code>, <code>grd2cpt</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

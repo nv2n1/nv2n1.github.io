@@ -28,4 +28,3 @@ ipv4calc[--network | --broadcast | --netmask |
 <p> This program is free software; you can redistribute it and/or modify it under the terms as perl itself.</p>
 <h2>SEE ALSO</h2>
 <p> <i>Network::IPv4Addr</i>(3). </p>
-<h2>Index</h2>

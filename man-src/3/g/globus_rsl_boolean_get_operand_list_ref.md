@@ -206,4 +206,3 @@ description: "RSL Accessor Functions –"
 </dt><dd> Upon success, <code>globus_rsl_value_variable_get_size()</code> returns the list of values within a RSL variable reference, or -1 if the node pointed to by <i>variable_node</i> is not a variable reference. If the return value is 1, then the variable has no default value included in the reference.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

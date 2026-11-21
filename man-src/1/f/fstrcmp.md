@@ -87,4 +87,3 @@ esac
  Peter Miller &lt;pmiller [at] opensource.org.au&gt; </p>
 <p> The comparison code is derived from the fuzzy comparison functions in GNU Gettext 0.17. The GNU Gettext comparison functions were, in turn, derived from GNU Diff 2.7. </p>
 <p> Copyright (C) 1988-2009 Free Software Foundation </p>
-<h2>Index</h2>

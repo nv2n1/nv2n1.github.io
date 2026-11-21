@@ -33,4 +33,3 @@ void bson_iter_timestamp(const bson_iter_t *iter,
 <p> The <code><a href="/docs/linux/man/3-bson_iter_timestamp/">bson_iter_timestamp</a>(3)</code> function shall return the contents of a BSON_TYPE_TIMESTAMP element. It is invalid to call this function while observing an element that is not of type BSON_TYPE_TIMESTAMP. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -258,4 +258,3 @@ description: "colmux – multiplex communications to multiple systems running co
  Copyright 2016 Hewlett-Packard Development Company, L.P. </p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://collectl-utils.sourceforge.net/colmux.html">http://collectl-utils.sourceforge.net/colmux.html</a> </p>
-<h2>Index</h2>

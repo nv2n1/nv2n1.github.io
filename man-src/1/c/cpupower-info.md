@@ -17,4 +17,3 @@ description: "cpupower-info – Shows processor power related kernel or hardware
 <h2>SEE ALSO</h2>
 <p> Options are described in detail in: </p>
 <p> <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1), <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1) </p>
-<h2>Index</h2>

@@ -144,4 +144,3 @@ description: "mpage – print multiple pages per sheet on PostScript printer"
 <h2>AUTHORS</h2>
 <p> Marcel Mol &lt;marcel [at] mesa.nl&gt; (current maintainer). </p>
 <p> Mark P. Hahn (Original author) </p>
-<h2>Index</h2>

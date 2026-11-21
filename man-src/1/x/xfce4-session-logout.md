@@ -43,4 +43,3 @@ description: "xfce4-session-logout – Logs out from Xfce"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004 Benedikt Meurer.<br />
  Copyright &#169; 2008 Brian Tarricone. </p>
-<h2>Index</h2>

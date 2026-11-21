@@ -143,4 +143,3 @@ description: "gnome-control-center – Configure GNOME settings"
 <p> On success 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1) </p>
-<h2>Index</h2>

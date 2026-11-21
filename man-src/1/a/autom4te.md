@@ -133,4 +133,3 @@ description: "autom4te – Generate files and scripts thanks to M4"
 <dt>
 </dt><dd> <code>info autom4te</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

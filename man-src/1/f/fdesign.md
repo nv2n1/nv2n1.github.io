@@ -97,4 +97,3 @@ description: "fdesign – Forms Library User Interface Designer"
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://xforms-toolkit.org">http://xforms-toolkit.org</a><br />
  <a rel="nofollow" href="http://savannah.nongnu.org/projects/xforms/">http://savannah.nongnu.org/projects/xforms/</a> </p>
-<h2>Index</h2>

@@ -139,4 +139,3 @@ description: "qpdfview – tabbed document viewer"
 <dl>
 <dt>
 </dt><dd> &quot;<a rel="nofollow" href="https://launchpad.net/qpdfview">https://launchpad.net/qpdfview</a>&quot;.</dd></dl>
-<h2>Index</h2>

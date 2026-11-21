@@ -47,4 +47,3 @@ description: "genbrk – Compiles ICU break iteration rules source files into bi
 <p> Copyright (C) 2005 International Business Machines Corporation and others</p>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="http://www.icu-project.org/userguide/boundaryAnalysis.html">http://www.icu-project.org/userguide/boundaryAnalysis.html</a></code> </p>
-<h2>Index</h2>

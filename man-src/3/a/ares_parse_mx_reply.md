@@ -42,4 +42,3 @@ struct ares_mx_reply {
 <p> <code><a href="/docs/linux/man/3-ares_query/">ares_query</a></code>(3) <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a></code>(3)</p>
 <h2>AUTHOR</h2>
 <p> Written by Jeremy Lal &lt;kapouer [at] melix.org&gt; </p>
-<h2>Index</h2>

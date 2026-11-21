@@ -73,4 +73,3 @@ SRV     _kerberos._tcp.cwrap.org kerberos.cwrap.org 88
 $ LD_PRELOAD=libresolv_wrapper.so RESOLV_WRAPPER_CONF=&quot;./resolv.conf&quot; kinit user [at] EXAMPLE.COM
 </pre>
 </dd></dl>
-<h2>Index</h2>

@@ -121,4 +121,3 @@ colordiff --fakeexitcode ...
 <dl>
 <dt>
 </dt><dd> Debian package sponsor</dd></dl>
-<h2>Index</h2>

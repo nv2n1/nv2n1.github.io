@@ -20,4 +20,3 @@ description: "clc-(un)register-user-package – registers a user asdf system"
 <p> Bug reports should be sent to the Debian BTS, preferably with reportbug. </p>
 <h2>AUTHOR</h2>
 <p> Peter Van Eynde (pvaneynd [at] debian.org) and Kevin M. Rosenberg (kmr [at] debian.org) 2001-2008. </p>
-<h2>Index</h2>

@@ -75,4 +75,3 @@ gdaladdo --config USE_RRD YES airphoto.jpg 3 9 27 81
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

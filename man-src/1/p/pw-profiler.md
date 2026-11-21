@@ -31,4 +31,3 @@ description: "pw-profiler – The PipeWire profiler"
 <p> The PipeWire Developers &lt;<i><a rel="nofollow" href="https://gitlab.freedesktop.org/pipewire/pipewire/issues">https://gitlab.freedesktop.org/pipewire/pipewire/issues</a></i>&gt;; PipeWire is available from <i><a rel="nofollow" href="https://pipewire.org">https://pipewire.org</a></i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pipewire/">pipewire</a>(1)</code>, </p>
-<h2>Index</h2>

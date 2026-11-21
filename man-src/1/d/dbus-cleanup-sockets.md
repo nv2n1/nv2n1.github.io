@@ -23,4 +23,3 @@ description: "dbus-cleanup-sockets – clean up leftover sockets in a directory"
 <p> dbus-cleanup-sockets was adapted by Havoc Pennington from linc-cleanup-sockets written by Michael Meeks.</p>
 <h2>BUGS</h2>
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] </p>
-<h2>Index</h2>

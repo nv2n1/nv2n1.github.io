@@ -64,4 +64,3 @@ description: "numconv – convert numbers from one number system to another"
 <p> Bill Poser (billposer [at] alum.mit.edu)</p>
 <h2>LICENSE</h2>
 <p> GNU General Public License, version 2. (<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt)">http://www.gnu.org/licenses/gpl.txt)</a> </p>
-<h2>Index</h2>

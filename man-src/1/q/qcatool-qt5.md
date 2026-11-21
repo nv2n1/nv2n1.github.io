@@ -121,4 +121,3 @@ description: "qcatool – command line tool for the Qt Cryptographic Architectur
 <p> These must be identified by either a filename or a keystore reference (&quot;store:obj&quot;). </p>
 <h2>AUTHOR</h2>
 <p> qcatool was written by Justin Karneges as part of QCA. This manual page was written by Brad Hards. </p>
-<h2>Index</h2>

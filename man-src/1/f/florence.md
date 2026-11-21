@@ -49,4 +49,3 @@ description: "florence – extensible and scalable virtual keyboard for GNOME"
 <p> Florence website: <a rel="nofollow" href="http://florence.sourceforge.net/">http://florence.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
 <p> François Agrech &lt;f.agrech [at] gmail.com&gt; </p>
-<h2>Index</h2>

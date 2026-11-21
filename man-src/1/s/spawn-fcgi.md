@@ -72,4 +72,3 @@ description: "spawn-fcgi – Spawns FastCGI processes"
 <h2>SEE ALSO</h2>
 <p> <code>svc(8),</code> <code>supervise(8),</code> see <a rel="nofollow" href="http://cr.yp.to/daemontools.html">http://cr.yp.to/daemontools.html</a> </p>
 <p> <code>multiwatch(1),</code> see <a rel="nofollow" href="http://cgit.stbuehler.de/gitosis/multiwatch/about/">http://cgit.stbuehler.de/gitosis/multiwatch/about/</a> </p>
-<h2>Index</h2>

@@ -1471,4 +1471,3 @@ Token Type xxxxxx x-- -- -- -- -- -- -- -- -- --comment comment c
 <h2>DISCLAIMER</h2>
 <p> This package is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> </p>
 <p> See the &#8220;<font SIZE="-1">GNU</font> General Public License&#8221; for more details. </p>
-<h2>Index</h2>

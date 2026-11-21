@@ -24,4 +24,3 @@ description: "krb5_copy_host_realm krb5_free_host_realm krb5_get_default_realm k
 <p> Fn krb5_set_default_realm sets the default realm for the Fa context . If <code>NULL</code> is used as a Fa realm , the <code>[libdefaults]default_realm</code> stanza in krb5.conf is used. If there is no such stanza in the configuration file, the Fn krb5_get_host_realm function is used to form a default realm.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-free/">free</a>(3), krb5.conf5 </p>
-<h2>Index</h2>

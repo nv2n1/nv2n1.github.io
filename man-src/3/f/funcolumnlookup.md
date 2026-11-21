@@ -77,4 +77,3 @@ if (!FunColumnLookup(fun, "phas", 0, NULL NULL, NULL, NULL, &amp;npha, NULL))
 <p> only returns information about the size of the phas vector.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

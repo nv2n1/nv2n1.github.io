@@ -53,4 +53,3 @@ description: "minmax – Find extreme values in data tables"
 <p> The <code>-I</code> option does not yet work properly with time series data (e.g., <code>-f</code>0T). Thus, such variable intervals as months and years are not calculated. Instead, specify your interval in the same units as the current setting of <code>TIME_UNIT</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1) </p>
-<h2>Index</h2>

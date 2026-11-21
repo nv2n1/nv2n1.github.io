@@ -263,4 +263,3 @@ for (link = dtflatten(dt); link; link = dtlink(dt, link))
 <p> Dtset and Dtbag are based on hash tables with move-to-front collision chains. Dtoset and Dtobag are based on top-down splay trees. Dtlist, Dtstack and Dtqueue are based on doubly linked list. </p>
 <h2>AUTHOR</h2>
 <p> Kiem-Phong Vo, kpv [at] research.att.com </p>
-<h2>Index</h2>

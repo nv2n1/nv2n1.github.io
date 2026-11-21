@@ -94,4 +94,3 @@ description: "pamflip – flip or rotate a PAM or PNM image"
 <p> <code>pamflip</code> replaced <code>pnmflip</code> in Netpbm 10.13 (December 2002). <code>pamflip</code> is backward compatible, but also works on PAM images. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

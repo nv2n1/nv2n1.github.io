@@ -86,4 +86,3 @@ Content-Disposition: attachment; filename=&quot;VERSION&quot;
 <h2>BUGS</h2>
 <p> Under some configurations, it is not possible to monitor the mail delivery transaction; <code>-watch</code> is a no-op on those systems. </p>
 <p> Using <code>-split</code> <i>0</i> doesn&#8217;t work correctly. </p>
-<h2>Index</h2>

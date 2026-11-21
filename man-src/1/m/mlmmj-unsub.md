@@ -42,4 +42,3 @@ description: "mlmmj-unsub – unsubscribe address from a mailinglist run by mlmm
 <dt>
 </dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
-<h2>Index</h2>

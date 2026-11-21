@@ -69,4 +69,3 @@ rcmd.a - host-&gt;host / a - host.foo.com ftp.b - host-&gt;ftp / b - host.bar.co
 <p> The first three are what you expect. If you remove the &#8220;v4_domains&#8221; the fourth entry will result in an error (since the host &#8220;other&#8221; can&#8217;t be found). Even if &#8220;a-host&#8221; is a valid host name, the last entry will not be converted, since the &#8220;other&#8221; name is not known to represent a host-type principal. If you turn off &#8220;v4_instance_resolve&#8221; the second example will result in &#8220;ftp/b-host.foo.com&#8221; (because of the default domain). And all of this is of course only valid if you have working name resolving.</p>
 <h2>SEE ALSO</h2>
 <p> krb5_build_principal3, krb5_free_principal3, krb5_parse_name3, krb5_sname_to_principal3, krb5_unparse_name3, krb5.conf5 </p>
-<h2>Index</h2>

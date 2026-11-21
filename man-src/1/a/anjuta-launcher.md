@@ -24,4 +24,3 @@ description: "anjuta-launcher – GNOME Integrated Development Environment"
 <p> This man page was written by Jens Georg &lt;mail [at] jensgeorg.de&gt;. Anjuta was developed by Kh. Naba Kumar Singh &lt;kh_naba [at] users.sourceforge.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-anjuta/">anjuta</a>(1) </p>
-<h2>Index</h2>

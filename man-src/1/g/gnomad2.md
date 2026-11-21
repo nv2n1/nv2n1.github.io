@@ -89,4 +89,3 @@ description: "gnomad2 – transfer files between a host and a Creative Labs Noma
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://gnomad2.sourceforge.net/">http://gnomad2.sourceforge.net/</a> </p>
-<h2>Index</h2>

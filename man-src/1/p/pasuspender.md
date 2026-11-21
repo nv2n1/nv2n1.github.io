@@ -28,4 +28,3 @@ description: "pasuspender – Temporarily suspend PulseAudio"
 <p> The PulseAudio Developers &lt;pulseaudio-discuss (at) lists (dot) freedesktop (dot) org&gt;; PulseAudio is available from <code><a rel="nofollow" href="http://pulseaudio.org/">http://pulseaudio.org/</a></code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pulseaudio/">pulseaudio</a>(1)</code>, <code><a href="/docs/linux/man/1-padsp/">padsp</a>(1)</code>, <code><a href="/docs/linux/man/1-pacmd/">pacmd</a>(1)</code>, <code><a href="/docs/linux/man/1-pactl/">pactl</a>(1)</code> </p>
-<h2>Index</h2>

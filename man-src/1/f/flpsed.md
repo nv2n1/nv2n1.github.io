@@ -44,4 +44,3 @@ description: "flpsed – annotate PostScript and PDF files"
 <p> <a href="/docs/linux/man/1-pdftops/">pdftops</a>(1), <a href="/docs/linux/man/1-ps2pdf/">ps2pdf</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Johannes Hofmann &lt;Johannes.Hofmann [at] gmx.de&gt; </p>
-<h2>Index</h2>

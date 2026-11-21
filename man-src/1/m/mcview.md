@@ -63,4 +63,3 @@ selected=black,green&quot;
 <p> <a href="/docs/linux/man/1-mc/">mc</a>(1), <a href="/docs/linux/man/1-mcedit/">mcedit</a>(1) </p>
 <h2>BUGS</h2>
 <p> Bugs should be reported to mc-devel [at] gnome.org </p>
-<h2>Index</h2>

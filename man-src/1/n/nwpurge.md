@@ -40,4 +40,3 @@ description: "nwpurge – Permanently delete previously erased files"
 <p> With this example, all files from directory /NetWare/server/sys and from all its subdirectories are purged. </p>
 <h2>AUTHORS</h2>
 <p> nwpurge was written by Petr Vandrovec with the corresponding NetWare utility in mind. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

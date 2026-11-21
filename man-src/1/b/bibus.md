@@ -32,4 +32,3 @@ description: "bibus – Bibus is a bibliographic database"
 <h2>AUTHOR</h2>
 <p> <code>bibus</code> was written by Pierre Martineau &lt;pmartino [at] users.sourceforge.net&gt; </p>
 <p> This manual page was written by Pierre Martineau &lt;pmartino [at] users.sourceforge.net&gt; and updated by Jan Beyer &lt;jan [at] beathovn.de&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

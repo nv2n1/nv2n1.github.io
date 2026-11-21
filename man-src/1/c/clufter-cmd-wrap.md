@@ -59,4 +59,3 @@ description: "clufter – cmd-wrap"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd/">clufter-ccs2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd-flatiron/">clufter-ccs2pcscmd-flatiron</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs2pcscmd-needle/">clufter-ccs2pcscmd-needle</a></i>(1), <i><a href="/docs/linux/man/1-clufter-cib2pcscmd/">clufter-cib2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-pcs2pcscmd/">clufter-pcs2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-pcs2pcscmd-flatiron/">clufter-pcs2pcscmd-flatiron</a></i>(1), <i><a href="/docs/linux/man/1-clufter-pcs2pcscmd-needle/">clufter-pcs2pcscmd-needle</a></i>(1), and perhaps more </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "is_relative_filename – Returns TRUE if the filename is relative.
 <p> Returns TRUE if the filename is relative or FALSE if it is absolute. Note that an absolute filename under DOS (with a device separator) will be considered as relative under Unix, because there absolute paths always start with a slash. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-make_absolute_filename/">make_absolute_filename</a></code>(3), <code><a href="/docs/linux/man/3-make_relative_filename/">make_relative_filename</a></code>(3) </p>
-<h2>Index</h2>

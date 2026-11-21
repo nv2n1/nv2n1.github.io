@@ -238,4 +238,3 @@ description: "libopenjp2 – a library for reading and writing JPEG2000 image fi
 <p> <code>image_to_j2k</code>(1) <code>j2k_to_image</code>(1) <code>j2k_dump</code>(1) </p>
 <p> <code>JPWL_image_to_j2k</code>(1) <code>JPWL_j2k_to_image</code>(1) </p>
 <p> <code>extract_j2k_from_mj2</code>(1) <code>wrap_j2k_in_mj2</code>(1) <code>frames_to_mj2</code>(1) <code>mj2_to_frames</code>(1) </p>
-<h2>Index</h2>

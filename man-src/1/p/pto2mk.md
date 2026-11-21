@@ -22,4 +22,3 @@ description: "pto2mk – Generate hugin stitching Makefiles"
 <dd> Prefix of output panorama</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo and others. </p>
-<h2>Index</h2>

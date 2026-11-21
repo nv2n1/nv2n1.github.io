@@ -32,4 +32,3 @@ description: "linux-check-removal – check whether removal of a kernel is safe"
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>linux-check-removal</code> and this manual page were written by Ben Hutchings as part of the Debian <code>linux-base</code> package. </p>
-<h2>Index</h2>

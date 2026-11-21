@@ -112,4 +112,3 @@ alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 <p> alien has been extensively rewritten (3 times) and is now maintained by Joey Hess, <code>&lt;joeyh [at] debian.org</code>&gt;.</p>
 <h2>COPYRIGHT</h2>
 <p> alien may be copied and modified under the terms of the <font SIZE="-1">GNU</font> General Public License. </p>
-<h2>Index</h2>

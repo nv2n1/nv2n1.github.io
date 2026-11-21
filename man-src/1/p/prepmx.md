@@ -54,4 +54,3 @@ description: "prepmx – preprocessor for PMX, easy music typesetting program"
  <a href="/docs/linux/man/1-pmxab/">pmxab</a>(1), <a href="/docs/linux/man/1-musixtex/">musixtex</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> prepmx was written by Dirk Laurie &lt;dirk.laurie [at] gmail.com&gt;. This manual page was written by Roland Stigge &lt;stigge [at] antcom.de&gt; for the Debian project. It was revised and extended by Nis Martensen &lt;nis.martensen [at] web.de&gt; and Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

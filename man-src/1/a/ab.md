@@ -141,4 +141,3 @@ description: "ab – Apache HTTP server benchmarking tool"
 &nbsp; </p>
 <p> It does not implement HTTP/1.x fully; only accepts some &#8216;expected&#8217; forms of responses. The rather heavy use of <code><a href="/docs/linux/man/3-strstr/">strstr</a>(3)</code> shows up top in profile, which might indicate a performance problem; <i>i.e.</i>, you would measure the <code>ab</code> performance rather than the server&#8217;s.<br />
 &nbsp; </p>
-<h2>Index</h2>

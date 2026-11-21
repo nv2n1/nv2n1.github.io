@@ -32,4 +32,3 @@ bson_strerror_r(int err_code,
 <p> The passed in <code>buf</code> parameter or an internal string. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

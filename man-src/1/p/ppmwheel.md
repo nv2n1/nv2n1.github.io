@@ -24,4 +24,3 @@ description: "ppmwheel – make a PPM image of a color wheel"
 <p> <code>ppmwheel</code> was added to Netpbm in Release 10.14 (March 2003). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1995 by Peter Kirchgessner </p>
-<h2>Index</h2>

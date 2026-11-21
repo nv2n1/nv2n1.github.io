@@ -16,4 +16,3 @@ description: "ldb_schema_attribute –"
 <p> struct <code>ldb_schema_syntax</code> * <code>syntax</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "rrdfirst – Return the date of the first data sample in an RRA wi
 <dd> The index number of the <font SIZE="-1"><code>RRA</code></font> that is to be examined. If not specified, the index defaults to zero. <font SIZE="-1"><code>RRA</code></font> index numbers can be determined through <code>rrdtool info</code>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Burton Strauss &lt;Burton [at] ntopSupport.com&gt; </p>
-<h2>Index</h2>

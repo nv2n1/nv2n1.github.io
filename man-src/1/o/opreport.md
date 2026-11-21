@@ -85,4 +85,3 @@ description: "opreport – produce symbol or binary image summaries"
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>/usr/share/doc/oprofile/,</code> <code><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1)</code> </p>
-<h2>Index</h2>

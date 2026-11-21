@@ -27,4 +27,3 @@ description: "lwp-download – Fetch large files from the web"
 </pre>
 <h2>AUTHOR</h2>
 <p> Gisle Aas &lt;gisle [at] aas.no&gt; </p>
-<h2>Index</h2>

@@ -113,4 +113,3 @@ description: "svgx – extract gradients from SVG files."
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cptsvg/">cptsvg</a></code>(1), <code><a href="/docs/linux/man/1-gimpsvg/">gimpsvg</a></code>(1), <code><a href="/docs/linux/man/1-pspsvg/">pspsvg</a></code>(1). </p>
-<h2>Index</h2>

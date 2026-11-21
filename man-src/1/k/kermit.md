@@ -1034,4 +1034,3 @@ USA
 <dd> <p> <a rel="nofollow" href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a> <br />
  </p>
  </dd></dl>
-<h2>Index</h2>

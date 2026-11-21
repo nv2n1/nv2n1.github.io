@@ -32,4 +32,3 @@ description: "libinput-measure – measure properties of devices"
 <dd> Measure touch pressure</dd></dl>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

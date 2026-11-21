@@ -80,4 +80,3 @@ gmt nearneighbor geoid.xyz -R0/360/-90/90 -I1 -Lg -Ggeoid.nc -S200k -N4
 <p> <code>blockmean</code>, <code>blockmedian</code>, <code>blockmode</code>, <code>gmt</code>, <code>greenspline</code>, <code>sphtriangulate</code>, <code>surface</code>, <code>triangulate</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

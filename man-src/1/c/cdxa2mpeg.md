@@ -40,4 +40,3 @@ description: "cdxa2mpeg – manual page for cdxa2mpeg 0.7.24"
 <dt>
 </dt><dd> <code>info cdxa2mpeg</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

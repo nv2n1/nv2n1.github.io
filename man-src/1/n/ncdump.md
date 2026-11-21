@@ -92,4 +92,3 @@ description: "ncdump – Convert netCDF file to text form (CDL)"
 <p> Character arrays that contain a null-byte are treated like C strings, so no characters after the null byte appear in the output. </p>
 <p> Multidimensional character string arrays are not handled well, since the CDL syntax for breaking a long character string into several shorter lines is weak. </p>
 <p> There should be a way to specify that the data should be displayed in `record&#8217; order, that is with the all the values for `record&#8217; variables together that have the same value of the record dimension. </p>
-<h2>Index</h2>

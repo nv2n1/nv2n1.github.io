@@ -138,4 +138,3 @@ description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm
 <p> <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1) , <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1) , <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , <code><a href="/docs/linux/man/1-pamarith/">pamarith</a></code>(1) , <code><a href="/docs/linux/man/1-pamsummcol/">pamsummcol</a></code>(1) , <code><a href="/docs/linux/man/1-pamsumm/">pamsumm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmfade/">ppmfade</a></code>(1) , <code><a href="/docs/linux/man/1-pnminvert/">pnminvert</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.3 (June 2002). </p>
-<h2>Index</h2>

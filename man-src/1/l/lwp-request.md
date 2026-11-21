@@ -79,4 +79,3 @@ description: "lwp-request, GET, POST, HEAD – Simple command line user agent"
 <p> This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
 <h2>AUTHOR</h2>
 <p> Gisle Aas &lt;gisle [at] aas.no&gt; </p>
-<h2>Index</h2>

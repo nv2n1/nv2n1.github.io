@@ -16,4 +16,3 @@ description: "oldfind – search for files in a directory hierarchy"
 <p> The implementation which is installed as <code>find</code> on this system is the fts-based implementation, since the <code>&#8211;without-fts</code> option was not passed to the <code>configure</code> script when findutils was built.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/3-fts/">fts</a></code>(3), <code>Finding Files</code> (on-line in Info, or printed). </p>
-<h2>Index</h2>

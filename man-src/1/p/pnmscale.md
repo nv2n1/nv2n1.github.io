@@ -43,4 +43,3 @@ description: "pnmscale – scale a portable anymap"
 <p> <code><a href="/docs/linux/man/1-pnmscalefixed/">pnmscalefixed</a></code>(1), <code><a href="/docs/linux/man/1-pamstretch/">pamstretch</a></code>(1), <code><a href="/docs/linux/man/1-pbmreduce/">pbmreduce</a></code>(1), <code><a href="/docs/linux/man/1-pnmenlarge/">pnmenlarge</a></code>(1), <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1), <code><a href="/docs/linux/man/1-pnmcut/">pnmcut</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a>(5)</code> </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

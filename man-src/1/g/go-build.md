@@ -84,4 +84,3 @@ description: "go-build – compile the packages named by the import paths"
 <p> <code><a href="/docs/linux/man/1-go-install/">go-install</a></code>(1), <code><a href="/docs/linux/man/1-go-get/">go-get</a></code>(1), <code><a href="/docs/linux/man/1-go-clean/">go-clean</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help build&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

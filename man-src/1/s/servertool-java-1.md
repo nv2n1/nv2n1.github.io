@@ -67,4 +67,3 @@ servertool - ORBInitialPort nameserverport[options][commands]
 <dt>&bull;</dt>
 <dd> orbd(1) </dd>
 </dl>
-<h2>Index</h2>

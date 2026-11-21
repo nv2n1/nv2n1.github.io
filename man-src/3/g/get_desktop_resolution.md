@@ -27,4 +27,3 @@ allegro_init();
 <p> Returns zero on success, or a negative number if this information is not available or does not apply, in which case the values stored in the variables you provided for `width&#8217; and `height&#8217; are undefined. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-desktop_color_depth/">desktop_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3) </p>
-<h2>Index</h2>

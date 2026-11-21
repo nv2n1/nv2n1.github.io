@@ -35,4 +35,3 @@ description: "ekl2 – EKG history viewer."
 <dd> gg number, nickname or logfile name.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ekg/">ekg</a></code>(1). </p>
-<h2>Index</h2>

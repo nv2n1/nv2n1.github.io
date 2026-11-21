@@ -99,4 +99,3 @@ description: "h2pas – The C header to pascal unit conversion program."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "evince – GNOME document viewer"
 <p> </code></p>
 <h2>BUGS</h2>
 <p> If you find a bug, please report it at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/evince/issues.">https://gitlab.gnome.org/GNOME/evince/issues.</a> </p>
-<h2>Index</h2>

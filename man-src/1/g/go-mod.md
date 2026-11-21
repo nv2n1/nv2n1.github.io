@@ -35,4 +35,3 @@ description: "go-mod – module maintenance"
 <p> Use &quot;go help mod &lt;command&gt;&quot; for more information about a command.</p>
 <h2>AUTHOR</h2>
 <p> This manual page and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help mod&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

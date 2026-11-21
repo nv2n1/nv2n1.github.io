@@ -14,4 +14,3 @@ description: "Opening/Closing –"
 <p> If the handle is created with <code>globus_xio_handle_create()</code>, then the XIO handle will implement the client-side (init) of the GSSAPI call sequence and establish a security context with the accepting side indicated by the contact_string passed to <code>globus_xio_register_open()</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio gsi driver from the source code. </p>
-<h2>Index</h2>

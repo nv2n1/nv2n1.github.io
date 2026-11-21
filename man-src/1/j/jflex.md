@@ -45,4 +45,3 @@ description: "jflex – a lexical analyzer generator (also known as scanner gene
 <dd> print this message</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Wolfgang Baer &lt;WBaer [at] gmx.de&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

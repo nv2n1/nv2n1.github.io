@@ -56,4 +56,3 @@ description: "wesside-ng – crack a WEP key of an open network without user int
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code> </p>
-<h2>Index</h2>

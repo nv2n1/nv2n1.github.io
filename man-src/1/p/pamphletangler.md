@@ -47,4 +47,3 @@ description: "pamphletangler – Extract code bits from LaTeX pamphlet files."
 <p> Ernesto Lanchares &lt;e.lancha98 [at] gmail.com&gt;</p>
 <h2>BUGS</h2>
 <p> Report bugs to e.lancha98 [at] gmail.com </p>
-<h2>Index</h2>

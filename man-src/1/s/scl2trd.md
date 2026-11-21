@@ -28,4 +28,3 @@ description: "scl2trd – Convert .scl disk images to .trd."
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
 <p> Dmitry Sanarin&#8217;s conversion routines from his Glukalka emulator are used. </p>
-<h2>Index</h2>

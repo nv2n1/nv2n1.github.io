@@ -52,4 +52,3 @@ description: "lssu – list usage state of NILFS2 segments"
 <p> <code>lssu</code> is part of the nilfs-utils package and is available from <a rel="nofollow" href="http://www.nilfs.org.">http://www.nilfs.org.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-nilfs/">nilfs</a></code>(8), <code><a href="/docs/linux/man/8-dumpseg/">dumpseg</a></code>(8). </p>
-<h2>Index</h2>

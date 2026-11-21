@@ -18,4 +18,3 @@ description: "optex – OPmac and Plain TeX for LuaTeX engine."
 <p> <code><a href="/docs/linux/man/1-luatex/">luatex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1), </p>
 <h2>AUTHORS</h2>
 <p> The author of <code>OpTeX </code> is Petr Olsak. </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "wnintro – WordNet user commands"
 <p> Fellbaum, C. (1998), ed. <i>&quot;WordNet: An Electronic Lexical Database&quot;</i>. MIT Press, Cambridge, MA.</p>
 <h2>AVAILABILITY</h2>
 <p> WordNet has a World Wide Web site at <code><a rel="nofollow" href="http://wordnet.princeton.edu">http://wordnet.princeton.edu</a></code>. From this web site users can learn about the WordNet project, run several different interfaces to the WordNet database, and download various WordNet system packages and <i>&quot;Five Papers on WordNet&quot;</i>. </p>
-<h2>Index</h2>

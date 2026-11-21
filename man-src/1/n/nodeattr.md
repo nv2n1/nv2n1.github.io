@@ -77,4 +77,3 @@ description: "nodeattr – query genders file"
 <p> /etc/genders </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-libgenders/">libgenders</a>(3) </p>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "oz-customize – tool to automatically modify installed operating 
 <p> <a href="/docs/linux/man/1-oz-generate-icicle/">oz-generate-icicle</a>(1), <a href="/docs/linux/man/1-oz-install/">oz-install</a>(1), <a href="/docs/linux/man/1-oz-cleanup-cache/">oz-cleanup-cache</a>(1), <a href="/docs/linux/man/1-oz-examples/">oz-examples</a>(1) </p>
 <h2>AUTHOR</h2>
 <p> Chris Lalancette &lt;clalancette [at] gmail.com&gt; </p>
-<h2>Index</h2>

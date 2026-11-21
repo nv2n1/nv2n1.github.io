@@ -135,4 +135,3 @@ description: "mbuffer – measuring buffer"
 <p> This software is published under GNU General Public License V3. See file LICENSE for details.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-buffer/">buffer</a>(1) </p>
-<h2>Index</h2>

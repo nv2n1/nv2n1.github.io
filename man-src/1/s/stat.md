@@ -142,4 +142,3 @@ description: "stat – display file or file system status"
 <p> <a href="/docs/linux/man/2-stat/">stat</a>(2), <a href="/docs/linux/man/2-statfs/">statfs</a>(2), <a href="/docs/linux/man/2-statx/">statx</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/stat">https://www.gnu.org/software/coreutils/stat</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) stat invocation&#8217; </p>
-<h2>Index</h2>

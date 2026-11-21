@@ -32,4 +32,3 @@ gtk4 - builder - tool&lt;COMMAND&gt;[OPTIONS...]&lt;FILE&gt; gtk4 - builder - to
 <p> Note in particular that the conversion done with <code>&#8211;3to4</code> is meant as a starting point for a port from GTK 3 to GTK 4. It is expected that you will have to do manual fixups after the initial conversion. </p>
 <p> <code>&#8211;replace</code> Write the content back to the UI definition file instead of using the standard output. </p>
 <p> <code>&#8211;3to4</code> Transform a GTK 3 UI definition file to the equivalent GTK 4 definitions. </p>
-<h2>Index</h2>

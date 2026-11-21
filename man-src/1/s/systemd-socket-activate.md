@@ -82,4 +82,3 @@ $ systemd-socket-activate -l 19531 /lib/systemd/systemd-journal-gatewayd
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-socket/">systemd.socket</a></code>(5), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/1-systemd-run/">systemd-run</a></code>(1), <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code>sd_listen_fds_with_names</code>(3), <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1) </p>
-<h2>Index</h2>

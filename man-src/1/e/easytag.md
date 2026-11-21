@@ -34,4 +34,3 @@ description: "easytag – tag editor for MP3, Ogg Vorbis files and more"
 <h2>AUTHOR</h2>
 <p> <code>easytag</code> was written by J&eacute;r&ocirc;me Couderc &lt;easytag [at] gmail.com&gt;, Kip Warner &lt;kip [at] thevertigo.com&gt; and David King &lt;amigadave [at] amigadave.com&gt;. </p>
 <p> This manual page was written by David King &lt;amigadave [at] amigadave.com&gt;. </p>
-<h2>Index</h2>

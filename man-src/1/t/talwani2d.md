@@ -83,4 +83,3 @@ gmt talwani2d -Ncrossing.txt body.txt -D1700 -Fn &gt; n_crossing.txt
 <p> <code>gmt.conf</code>, <code>gmt</code>, <code>grdmath</code>, <code>gmtmath</code>, <code>gravfft</code>, <code>gmtgravmag3d</code>, <code>grdgravmag3d</code>, <code>talwani3d</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

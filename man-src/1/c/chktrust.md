@@ -38,4 +38,3 @@ description: "chktrust – Check the trust of a PE executable."
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-signcode/">signcode</a>(1),</code><a href="/docs/linux/man/1-makecert/">makecert</a>(1),<code><a href="/docs/linux/man/1-certmgr/">certmgr</a>(1),</code><a href="/docs/linux/man/1-setreg/">setreg</a>(1) </p>
-<h2>Index</h2>

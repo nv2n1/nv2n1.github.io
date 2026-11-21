@@ -31,4 +31,3 @@ mapi_object_release(&amp;obj_store);
 <p> Beyond memory management considerations, understanding MAPI handles role in object manipulation provides a better understanding why <code>mapi_object_release()</code> matters. </p>
 <p> Handles are temporary identifiers returned by Exchange when you access or create objects on the server. They are used to make reference to a particular object all along its session lifetime. They are stored in unsigned integers, are unique for each object but temporary along MAPI session. Handles are the only links between objects accessed on the client side and efficiently stored on the server side. </p>
 <p> Although OpenChange MAPI makes handles manipulation transparent for developers, <code>mapi_object_release()</code> frees both the allocated memory for the object on client side, but also releases the object on the server. </p>
-<h2>Index</h2>

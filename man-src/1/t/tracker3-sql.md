@@ -40,4 +40,3 @@ $ tracker3 sql -q 'SELECT * FROM &quot;nfo:Document&quot; WHERE &quot;nfo:tableO
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
 <p> <code><a rel="nofollow" href="http://en.wikipedia.org/wiki/SQL">http://en.wikipedia.org/wiki/SQL</a></code> </p>
-<h2>Index</h2>

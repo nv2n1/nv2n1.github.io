@@ -61,4 +61,3 @@ description: "avlcpt – convert ArcView Legend gradients to GMT colour palette 
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1). </p>
-<h2>Index</h2>

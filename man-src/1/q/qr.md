@@ -32,4 +32,3 @@ description: "qr – script to create QR codes at the command line"
 </dt><dd> The data from which the QR code will be generated.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="https://github.com/lincolnloop/python-qrcode/">https://github.com/lincolnloop/python-qrcode/</a> </p>
-<h2>Index</h2>

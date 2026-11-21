@@ -29,4 +29,3 @@ description: "pamoil – turn a PAM image into an oil painting"
 <p> Based on pgmoil Copyright (C) 1990 by Wilson Bent (whb [at] hoh-2.att.com) </p>
 <p> Modified to ppm by Chris Sheppard, June 25, 2001 </p>
 <p> Modified to pnm, using pam functions, by Bryan Henderson June 28, 2001. </p>
-<h2>Index</h2>

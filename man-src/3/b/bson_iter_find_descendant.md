@@ -31,4 +31,3 @@ bool bson_iter_find_descendant(bson_iter_t *iter,
 <p> true is returned if the requested key was found. If not, false is returned and <code>iter</code> was exhausted and should now be considered invalid. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

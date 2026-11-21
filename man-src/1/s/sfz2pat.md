@@ -80,4 +80,3 @@ description: "sz2pat – convert sample files into extended GUS patches"
 <p> Probably, there are lots of bugs. This is an experiment.</p>
 <h2>AUTHOR</h2>
 <p> Greg Lee &lt;greg [at] ling.lll.hawaii.edu&gt; </p>
-<h2>Index</h2>

@@ -61,4 +61,3 @@ description: "idn – Internationalized Domain Names command line tool"
 <dt>
 </dt><dd> <code>info idn</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

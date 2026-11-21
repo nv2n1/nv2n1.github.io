@@ -288,4 +288,3 @@ shell &gt; mysql - e 'CREATE TABLE imptest(id INT, n VARCHAR(30))' test
 <p> For more information, please refer to the MySQL Reference Manual, which may already be installed locally and which is also available online at <a rel="nofollow" href="http://dev.mysql.com/doc/.">http://dev.mysql.com/doc/.</a></p>
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
-<h2>Index</h2>

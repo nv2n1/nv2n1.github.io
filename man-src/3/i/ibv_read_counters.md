@@ -145,4 +145,3 @@ supported");
 <h2>AUTHORS</h2>
 <p> Raed Salem &lt;raeds [at] mellanox.com&gt; </p>
 <p> Alex Rosenbaum &lt;alexr [at] mellanox.com&gt; </p>
-<h2>Index</h2>

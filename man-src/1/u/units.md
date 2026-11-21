@@ -884,4 +884,3 @@ You have: metr
 <h2>FILES</h2>
 <p> /usr/share/units/definitions.units &#8212; the standard units data file</p>
 <h2>AUTHO</h2>
-<h2>Index</h2>

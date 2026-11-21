@@ -16,4 +16,3 @@ description: "fade_interpolate – Calculates a new palette interpolated between
 <p> Calculates a temporary palette part way between source and dest, returning it in the output parameter. The position between the two extremes is specified by the pos value: 0 returns an exact copy of source, 64 returns dest, 32 returns a palette half way between the two, etc. This routine only affects colors between from and to (inclusive: pass 0 and 255 to interpolate the entire palette). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fade_in/">fade_in</a></code>(3), <code><a href="/docs/linux/man/3-fade_out/">fade_out</a></code>(3), <code><a href="/docs/linux/man/3-fade_from/">fade_from</a></code>(3) </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "vm86old, vm86 – enter virtual 8086 mode"
 <p> This call is specific to Linux on 32-bit Intel processors, and should not be used in programs intended to be portable.</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

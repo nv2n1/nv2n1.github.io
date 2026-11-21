@@ -25,4 +25,3 @@ description: "gtk4-update-icon-cache – Icon theme caching utility"
 <p> <code>-c, &#8211;source &lt;NAME&gt;</code> Output a C header file declaring a constant <code>NAME</code> with the contents of the icon cache. </p>
 <p> <code>-q, &#8211;quiet</code> Turn off verbose output. </p>
 <p> <code>-v, &#8211;validate</code> Validate existing icon cache. </p>
-<h2>Index</h2>

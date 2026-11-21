@@ -33,4 +33,3 @@ description: "gshhs_dp – Line reduction using the Douglas-Peucker algorithm"
 <p> This implementation of the D-P algorithm has been kindly provided by Dr. Gary J. Robinson, Environmental Systems Science Centre, University of Reading, Reading, UK (gazza [at] mail.nerc-essc.ac.uk); his subroutine forms the basis for this program.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-gshhs/">gshhs</a></i>(1), <i><a href="/docs/linux/man/1-gshhstograss/">gshhstograss</a></i>(1) </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ url: "/docs/linux/man/3-scroll_screen/"
 <p> Returns zero on success. Returns non-zero if the graphics driver can&#8217;t handle hardware scrolling or the virtual screen is not large enough. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-show_video_bitmap/">show_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-request_scroll/">request_scroll</a></code>(3), <code><a href="/docs/linux/man/3-request_video_bitmap/">request_video_bitmap</a></code>(3), <code><a href="/docs/linux/man/3-exscroll/">exscroll</a></code>(3) </p>
-<h2>Index</h2>

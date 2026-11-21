@@ -43,4 +43,3 @@ description: "isc-config.sh – Get information about the installed version of I
 <p> Internet Systems Consortium</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;) </p>
-<h2>Index</h2>

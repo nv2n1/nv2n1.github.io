@@ -37,4 +37,3 @@ description: "gencfu – Generates Unicode Confusable data files"
 <p> 1.0</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009 International Business Machines Corporation and others </p>
-<h2>Index</h2>

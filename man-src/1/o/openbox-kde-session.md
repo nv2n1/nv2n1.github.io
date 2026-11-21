@@ -18,4 +18,3 @@ description: "openbox-kde-session — Run a KDE session with Openbox as the wind
 &nbsp;<wbr> </p>
 <p> The program&#8217;s full documentation is available on the website: <code><a rel="nofollow" href="http://openbox.org/">http://openbox.org/</a></code> </p>
 <p> Please report bugs to: <code><a rel="nofollow" href="http://bugzilla.icculus.org/">http://bugzilla.icculus.org/</a> </code> </p>
-<h2>Index</h2>

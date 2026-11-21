@@ -70,4 +70,3 @@ description: "afp_client- Mount, unmount and control Apple Filing Protocol (AFP)
 <p> <a href="/docs/linux/man/1-afpfsd/">afpfsd</a>(1), <a href="/docs/linux/man/1-mount_afp/">mount_afp</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> Alex deVries, alexthepuffin [at] gmail.com </p>
-<h2>Index</h2>

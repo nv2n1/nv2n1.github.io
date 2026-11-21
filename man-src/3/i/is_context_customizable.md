@@ -20,4 +20,3 @@ description: "is_context_customizable – check whether SELinux context type is 
 <p> <i>/etc/selinux/{SELINUXTYPE}/context/customizable_types</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

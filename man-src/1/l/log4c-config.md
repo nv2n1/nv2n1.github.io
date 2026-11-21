@@ -26,4 +26,3 @@ description: "log4c-config – script to get information about the installed ver
 <dd> Print the prefix with which log4c was compiled.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was copied from xml2-config manpage written by Fredrik Hallenberg &lt;hallon [at] lysator.liu.se&gt;. It was modified by František Dvořák &lt;valtri [at] civ.zcu.cz&gt;. </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "cardos-tool – displays information about Card OS-based security 
 </dt><dd> Causes <code>cardos-info</code> to be more verbose. Specify this flag several times to enable debug output in the opensc library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7) </p>
-<h2>Index</h2>

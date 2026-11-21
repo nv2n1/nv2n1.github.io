@@ -122,4 +122,3 @@ description: "kcc – Kanji code coverter with encoding auto detection"
 <p> When output is <font SIZE="-1">JIS</font> encoding, control characters such as newline, TAB, DEL and white space (halfwidth) will be output in ASCII mode. </p>
 <p> When encoding of input is detected wrongly, or input undefined character for expected character sets, output is indefined. </p>
 <p> This manual are translated by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt; for Debian system, but you can use it for any purpose. </p>
-<h2>Index</h2>

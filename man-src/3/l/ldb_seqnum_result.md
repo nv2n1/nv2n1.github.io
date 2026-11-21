@@ -15,4 +15,3 @@ description: "ldb_seqnum_result –"
 <p> uint32_t <code>flags</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

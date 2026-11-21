@@ -18,4 +18,3 @@ description: "pmxab – a MusiXTeX preprocessor"
 <p> <a href="/docs/linux/man/1-scor2prt/">scor2prt</a>(1), <a href="/docs/linux/man/1-musixtex/">musixtex</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> PMX was written by Don Simons &lt;dsimons [at] roadrunner.com&gt;. This manual page was written by Roland Stigge &lt;stigge [at] antcom.de&gt; for the Debian project and revised by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

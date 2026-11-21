@@ -31,4 +31,3 @@ description: "fixnt – Filter for the Windows NT postscript printer driver."
 <p> Patches are always welcome; send to &lt;bauer [at] itsm.uni-stuttgart.de&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-psnup/">psnup</a>(1), <a href="/docs/linux/man/1-sed/">sed</a>(1) </p>
-<h2>Index</h2>

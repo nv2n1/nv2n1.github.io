@@ -25,4 +25,3 @@ void bson_zero_free(void *mem,
 <p> This function behaves like <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> except that it zeroes the memory first. This can be useful if you are storing passwords or other similarly important data. Note that if it truly is important, you probably want a page protected with <code><a href="/docs/linux/man/3-mlock/">mlock</a>(3)</code> as well to prevent it swapping to disk. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

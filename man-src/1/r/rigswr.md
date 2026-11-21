@@ -86,4 +86,3 @@ description: "rigswr – measure VSWR vs frequency using Hamlib."
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1), <code><a href="/docs/linux/man/1-gnuplot/">gnuplot</a></code>(1), <code>hamlib</code>(3) </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "METACITY – minimal GTK2 Window Manager"
 <p> <code><a href="/docs/linux/man/1-metacity-message/">metacity-message</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The original manual page was written by Thom May &lt;thom [at] debian.org&gt;. It was updated by Akira TAGOH &lt;tagoh [at] debian.org&gt; for the Debian GNU/Linux system (with permission to use by others), and then updated by Luke Morton and Philip O&#8217;Brien for inclusion in metacity. </p>
-<h2>Index</h2>

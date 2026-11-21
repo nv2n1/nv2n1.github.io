@@ -77,4 +77,3 @@ mdb - export[-H][-d delimiter][-R row_delim][[-Q] | [-q quote[-X escape]]][-I ba
 <p> The <code>mdb-export</code> utility was written by Brian Bruns.</p>
 <h2>BUGS</h2>
 <p> Memo fields are allowed to contain a newline characters, the current program does nothing about this. </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "xapian-compact – Compact a database, or merge and compact severa
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

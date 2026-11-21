@@ -27,4 +27,3 @@ description: "get_sound_input_cap_parm – Detects if the specified recording pa
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-start_sound_input/">start_sound_input</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_bits/">get_sound_input_cap_bits</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_rate/">get_sound_input_cap_rate</a></code>(3), <code><a href="/docs/linux/man/3-get_sound_input_cap_stereo/">get_sound_input_cap_stereo</a></code>(3) </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "gnome-lirc-properties – A control panel to configure remote cont
 <p> The full documentation for the <code>gnome-lirc-properties</code> command is available in the GNOME help system: &lt;ghelp:gnome-lirc-properties&gt;. </p>
 <h2>PROJECT PAGE</h2>
 <p> The project page is available at &lt;<a rel="nofollow" href="https://code.fluendo.com/remotecontrol/trac/">https://code.fluendo.com/remotecontrol/trac/</a>&gt;. </p>
-<h2>Index</h2>

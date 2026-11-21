@@ -47,4 +47,3 @@ description: "gftp – file transfer client for *NIX based machines."
 <p> If you find any bugs in gFTP, please report them to GNOME&#8217;s Bugzilla at <a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a></p>
 <h2>AUTHOR</h2>
 <p> Brian Masney &lt;masneyb [at] gftp.org&gt; &#8211; <a rel="nofollow" href="http://www.gftp.org/">http://www.gftp.org/</a> </p>
-<h2>Index</h2>

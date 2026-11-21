@@ -236,4 +236,3 @@ description: "ssh-keygen – authentication key generation, management and conve
 </dt><dd> <i>RFC 4716</i> <i>&quot;The Secure Shell (SSH) Public Key File Format&quot;</i> 2006</dd></dl>
 <h2>AUTHORS</h2>
 <p> OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. </p>
-<h2>Index</h2>

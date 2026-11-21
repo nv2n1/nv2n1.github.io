@@ -45,4 +45,3 @@ nearblack[-of format][-white | [ -color c1, c2, c3... cn ] * ][-near dist][-nb n
 <p> If the output file is omitted, the processed results will be written back to the input file &#8211; which must support update.</p>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

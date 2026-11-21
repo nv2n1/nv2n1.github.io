@@ -18,4 +18,3 @@ description: "muffin-window-demo – demo of window features"
 <p> This manual page was written by Jose M. Moya &lt;josem [at] die.upm.es&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-x-window-manager/">x-window-manager</a></code>(1), <code><a href="/docs/linux/man/1-muffin/">muffin</a></code>(1), <code><a href="/docs/linux/man/1-muffin-theme-viewer/">muffin-theme-viewer</a></code>(1). </p>
-<h2>Index</h2>

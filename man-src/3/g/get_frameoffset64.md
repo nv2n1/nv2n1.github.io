@@ -20,4 +20,3 @@ description: "get_frameoffset64, dirfile_alter_frameoffset64 — report or chang
 <p> If <i>off_t</i> is a 64-bit type (i.e. if <i>_FILE_OFFSET_BITS</i> is defined to be 64), these function will be called <code>get_frameoffset</code>() and <code>dirfile_alter_frameoffset</code>(). Otherwise, <code>get_frameoffset</code>() and <code>dirfile_alter_frameoffset</code>() will be versions of these functions which use a 32-bit <i>off_t</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code>dirfile_alter_frameoffset</code>(3), <code><a href="/docs/linux/man/3-get_frameoffset/">get_frameoffset</a></code>(3), <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7) </p>
-<h2>Index</h2>

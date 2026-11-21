@@ -41,4 +41,3 @@ description: "debconf-set-selections – insert new values into the debconf data
 <p> <code><a href="/docs/linux/man/1-debconf-get-selections/">debconf-get-selections</a></code>(1) (available in the debconf-utils package)</p>
 <h2>AUTHOR</h2>
 <p> Petter Reinholdtsen &lt;pere [at] hungry.com&gt; </p>
-<h2>Index</h2>

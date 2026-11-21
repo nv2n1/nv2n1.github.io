@@ -60,4 +60,3 @@ description: "ndmetis – Computes a fill-reducing ordering of the vertices of t
 <dt> <code>-help</code></dt>
 <dd>Prints this message. </dd>
 </dl>
-<h2>Index</h2>

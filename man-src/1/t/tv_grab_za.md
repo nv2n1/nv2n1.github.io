@@ -31,4 +31,3 @@ description: "tv_grab_za – Grab TV listings for South Africa."
 <p> Latest version always available at <a rel="nofollow" href="http://xmltv.cvs.sourceforge.net/xmltv/xmltv/grab/za/">http://xmltv.cvs.sourceforge.net/xmltv/xmltv/grab/za/</a></p>
 <h2>BUGS</h2>
 <p> Does not automatically update itself, when <font SIZE="-1">DSTV</font> changes their site </p>
-<h2>Index</h2>

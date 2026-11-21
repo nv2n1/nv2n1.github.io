@@ -58,4 +58,3 @@ description: "encodedv – encode a series of images to a digital video stream"
 <h2>AUTHORS</h2>
 <p> <code>encodedv</code> was written by James Bowman &lt;jamesb [at] excamera.com&gt; and Peter Schlaile &lt;udbz [at] rz.uni-karlsruhe.de&gt;. </p>
 <p> This manual page is based on encodedv&#8217;s help message and was written by Daniel Kobras &lt;kobras [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). It was updated by Peter Schlaile &lt;udbz [at] rz.uni-karlsruhe.de&gt;. </p>
-<h2>Index</h2>

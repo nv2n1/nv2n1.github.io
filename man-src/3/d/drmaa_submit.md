@@ -106,4 +106,3 @@ int&amp;nbsp;value_len
 <dt><code>DRMAA_ERRNO_INVALID_ATTRIBUTE_VALUE</code></dt>
 <dd> When there are no more entries in the vector.</dd></dl>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

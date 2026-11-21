@@ -55,4 +55,3 @@ You can run nodeunit on specific files or on all&nbsp;<wbr><i>*.js</i>&nbsp;<wbr
  <i><a rel="nofollow" href="http://github.com/caolan/nodeunit/raw/master/LICENSE">http://github.com/caolan/nodeunit/raw/master/LICENSE</a></i>.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-node/">node</a>(1) </p>
-<h2>Index</h2>

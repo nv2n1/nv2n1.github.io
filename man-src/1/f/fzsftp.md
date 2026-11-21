@@ -20,4 +20,3 @@ description: "fzsftp – SFTP connection handler of FileZilla"
 <p> FileZilla is distributed under the terms of the GNU General Public License version 2 or later.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-filezilla/">filezilla</a>(1) </p>
-<h2>Index</h2>

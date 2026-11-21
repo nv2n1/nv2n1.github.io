@@ -84,4 +84,3 @@ description: "firehol – An easy to use but powerful iptables stateful firewall
 <p> Man page written by Marc Brockschmidt &lt;marc [at] marcbrockschmidt.de&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> firehol.conf(5), <a href="/docs/linux/man/8-iptables/">iptables</a>(8), <a href="/docs/linux/man/1-bash/">bash</a>(1) </p>
-<h2>Index</h2>

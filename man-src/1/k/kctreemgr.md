@@ -113,4 +113,3 @@ description: "kctreemgr – command line interface to manage the file tree datab
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kctreetest/">kctreetest</a></code>(1) </p>
-<h2>Index</h2>

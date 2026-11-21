@@ -27,4 +27,3 @@ description: "getdns_display_ip_address — convert an getdns ip address to stri
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3) </p>
-<h2>Index</h2>

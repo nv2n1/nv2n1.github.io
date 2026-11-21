@@ -46,4 +46,3 @@ MC:(csrow|noinfo):(label|all):(UE|CE):count
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-edac/">edac</a></code>(3), <code><a href="/docs/linux/man/8-edac-ctl/">edac-ctl</a></code>(8) </p>
-<h2>Index</h2>

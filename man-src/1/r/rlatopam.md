@@ -23,4 +23,3 @@ description: "rlatopam – convert Alias/Wavefront RLA and RPF image files to PA
 <p> <code>rlatopam</code> was new in Netpbm 10.32 (February 2006). </p>
 <h2>AUTHOR</h2>
 <p> Simon Walton Matte World Digital </p>
-<h2>Index</h2>

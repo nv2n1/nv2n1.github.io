@@ -180,4 +180,3 @@ description: "gnome-mplayer – a simple GUI for MPlayer"
 </dd></dl>
 <h2>AUTHOR</h2>
 <p> gnome-mplayer was written by Kevin DeKorte &lt;kdekorte [at] gmail.com&gt;. </p>
-<h2>Index</h2>

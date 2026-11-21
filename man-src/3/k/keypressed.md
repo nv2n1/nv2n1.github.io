@@ -22,4 +22,3 @@ description: "keypressed – Tells if there are keypresses waiting in the input 
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-readkey/">readkey</a></code>(3), <code><a href="/docs/linux/man/3-ureadkey/">ureadkey</a></code>(3), <code><a href="/docs/linux/man/3-clear_keybuf/">clear_keybuf</a></code>(3), <code><a href="/docs/linux/man/3-simulate_keypress/">simulate_keypress</a></code>(3), <code><a href="/docs/linux/man/3-simulate_ukeypress/">simulate_ukeypress</a></code>(3) </p>
-<h2>Index</h2>

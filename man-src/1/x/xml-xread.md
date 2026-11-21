@@ -48,4 +48,3 @@ description: "xml-xread – A simple command-line XML parsing application"
 <dl>
 <dt>
 </dt><dd> Set the maximum number of errors to display</dd></dl>
-<h2>Index</h2>

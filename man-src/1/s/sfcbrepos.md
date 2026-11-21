@@ -80,4 +80,3 @@ description: "sfcbrepos – Script to rebuild the Small-Footprint CIM Broker (sf
 </dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sfcbd/">sfcbd</a>(1),</code> <code><a href="/docs/linux/man/1-sfcbstage/">sfcbstage</a></code>(1), <code><a href="/docs/linux/man/1-sfcbunstage/">sfcbunstage</a></code>(1), <code><a href="/docs/linux/man/1-getschema/">getSchema</a></code>(1) </p>
-<h2>Index</h2>

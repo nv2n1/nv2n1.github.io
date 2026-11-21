@@ -66,4 +66,3 @@ description: "ptx – produce a permuted index of file contents"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/ptx">https://www.gnu.org/software/coreutils/ptx</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) ptx invocation&#8217; </p>
-<h2>Index</h2>

@@ -72,4 +72,3 @@ if (str == NULL) {
    name[talloc_new: ../src/main.c:24] expected[char] */
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

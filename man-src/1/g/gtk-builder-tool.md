@@ -50,4 +50,3 @@ description: "gtk-builder-tool – GtkBuilder file utility"
 <dl>
 <dt>
 </dt><dd> Load style information from the given .css file.</dd></dl>
-<h2>Index</h2>

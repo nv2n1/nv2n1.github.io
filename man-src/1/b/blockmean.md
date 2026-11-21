@@ -73,4 +73,3 @@ gmt blockmean hawaii.xyg -R198/208/18/25 -I5m &gt; hawaii_5x5.xyg
 <p> <code>blockmedian</code>, <code>blockmode</code>, <code>gmt</code>, <code>gmt.conf</code>, <code>greenspline</code>, <code>nearneighbor</code>, <code>sphtriangulate</code>, <code>surface</code>, <code>triangulate</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

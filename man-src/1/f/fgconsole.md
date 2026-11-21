@@ -26,4 +26,3 @@ description: "fgconsole – print the number of the active VT."
 <p> Under <i>devfs</i>, the consoles are in <i>/dev/vc/N</i>. <i>devfsd</i> may maintain symlinks for compatibility.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1). </p>
-<h2>Index</h2>

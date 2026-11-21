@@ -30,4 +30,3 @@ description: "i3lock – slightly improved version of slock"
 <h2>AUTHOR</h2>
 <p> Michael Stapelberg &lt;michael+i3lock at stapelberg dot de&gt; </p>
 <p> forked from slock-0.9 by Anselm R Garbe &lt;garbeam at gmail dot com&gt; </p>
-<h2>Index</h2>

@@ -105,4 +105,3 @@ gmt psbasemap -R-40/40/-70.023256525/-29.9368261101 -Jm0.1i -Ba10 -O &gt;&gt; ma
 <p> <code>gmt</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

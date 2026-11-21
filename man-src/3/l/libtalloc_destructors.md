@@ -53,4 +53,3 @@ struct list_el *list_insert_free(TALLOC_CTX *mem_ctx,
 }
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -31,4 +31,3 @@ description: "ppmhist – print a histogram of a portable pixmap"
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code><a href="/docs/linux/man/1-pgmhist/">pgmhist</a></code>(1), <code><a href="/docs/linux/man/1-ppmtomap/">ppmtomap</a></code>(1), <code><a href="/docs/linux/man/1-pnmhistmap/">pnmhistmap</a></code>(1), <code><a href="/docs/linux/man/1-ppmchange/">ppmchange</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

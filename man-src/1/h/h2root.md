@@ -56,4 +56,3 @@ description: "h2root – convert PAW HBOOK files to ROOT files"
 <p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Holm Christensen &lt;cholm [at] nbi.dk&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

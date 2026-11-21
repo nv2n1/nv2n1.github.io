@@ -24,4 +24,3 @@ description: "get_font_range_end – Returns the last character of a character r
 <p> Returns the last character in the font range, or -1 if that information is not available. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_font_ranges/">get_font_ranges</a></code>(3), <code><a href="/docs/linux/man/3-get_font_range_begin/">get_font_range_begin</a></code>(3), <code><a href="/docs/linux/man/3-transpose_font/">transpose_font</a></code>(3) </p>
-<h2>Index</h2>

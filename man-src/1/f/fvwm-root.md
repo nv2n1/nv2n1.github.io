@@ -46,4 +46,3 @@ description: "fvwm-root – Sets the root window of the current X display to ima
 <h2>AUTHOR</h2>
 <p> Rob Nation </p>
 <p> Rewritten and enhanced by fvwm-workers. </p>
-<h2>Index</h2>

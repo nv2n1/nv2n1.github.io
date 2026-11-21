@@ -35,4 +35,3 @@ description: "heif-convert – convert HEIC/HEIF image"
  Dirk Farin, struktur AG</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2017 struktur AG </p>
-<h2>Index</h2>

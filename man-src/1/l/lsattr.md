@@ -37,4 +37,3 @@ description: "lsattr – list file attributes on a Linux second extended file sy
 <p> <code>lsattr</code> is part of the e2fsprogs package and is available from <a rel="nofollow" href="http://e2fsprogs.sourceforge.net.">http://e2fsprogs.sourceforge.net.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1) </p>
-<h2>Index</h2>

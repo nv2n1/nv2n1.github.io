@@ -199,4 +199,3 @@ description: "a2ps – format files for printing on a PostScript printer"
 <dt>
 </dt><dd> <code>info a2ps</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

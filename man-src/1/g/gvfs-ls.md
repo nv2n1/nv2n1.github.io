@@ -21,4 +21,3 @@ description: "gvfs-ls"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://developer.gnome.org/gio/stable/gio.html">https://developer.gnome.org/gio/stable/gio.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

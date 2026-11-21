@@ -91,4 +91,3 @@ description: "flatpak-uninstall – Uninstall an application or runtime"
 </dt><dd> Print OSTree debug information during command processing.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>$ flatpak &#8211;user uninstall org.gnome.gedit</code> </p>
-<h2>Index</h2>

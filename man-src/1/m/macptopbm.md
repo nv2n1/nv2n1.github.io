@@ -22,4 +22,3 @@ description: "macptopbm – convert a MacPaint file into a portable bitmap"
 <p> picttoppm(1), <a href="/docs/linux/man/1-pbmtomacp/">pbmtomacp</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Jef Poskanzer. The MacPaint-reading code is copyright (c) 1987 by Patrick J. Naughton (naughton [at] wind.sun.com). </p>
-<h2>Index</h2>

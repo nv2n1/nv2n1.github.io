@@ -92,4 +92,3 @@ description: "testparm – check an smb.conf configuration file for internal cor
 <p> <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5), <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8)</p>
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
-<h2>Index</h2>

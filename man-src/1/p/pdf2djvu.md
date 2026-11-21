@@ -308,4 +308,3 @@ description: "pdf2djvu – creates DjVu files from PDF files"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://bitbucket.org/jwilk/pdf2djvu/issues">https://bitbucket.org/jwilk/pdf2djvu/issues</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -541,4 +541,3 @@ $encoded = encode_qp(&#8220;Smiley in Unicode: \x{263a}&quot;); $decoded = decod
 <h2>HISTORY</h2>
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
-<h2>Index</h2>

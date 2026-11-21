@@ -65,4 +65,3 @@ description: "killall – kill processes by name"
 <p> <code>killall</code> has a limit of names that can be specified on the command line. This figure is the size of an unsigned long integer multiplied by 8. For most 32 bit systems the limit is 32 and similarly for a 64 bit system the limit is usually 64.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kill/">kill</a></code>(1), <code><a href="/docs/linux/man/1-fuser/">fuser</a></code>(1), <code><a href="/docs/linux/man/1-pgrep/">pgrep</a></code>(1), <code><a href="/docs/linux/man/1-pidof/">pidof</a></code>(1), <code><a href="/docs/linux/man/1-pkill/">pkill</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), <code><a href="/docs/linux/man/3-regex/">regex</a></code>(3). </p>
-<h2>Index</h2>

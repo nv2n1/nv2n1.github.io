@@ -59,4 +59,3 @@ typedef struct ipq_packet_msg {
 <p> Distributed under the GNU General Public License.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/3-libipq/">libipq</a></code>(3). </p>
-<h2>Index</h2>

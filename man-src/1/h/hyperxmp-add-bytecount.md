@@ -22,4 +22,3 @@ description: "hyperxmp-add-bytecount – adds/updates byteCount specification in
 <dd> Output version information and exit.</dd></dl>
 <h2>BUGS</h2>
 <p> Email bug reports to John Collins and/or Scott Pakin </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "perf-buildid-cache – Manage build-id cache."
 </dt><dd> Be more verbose.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1), <code><a href="/docs/linux/man/1-perf-buildid-list/">perf-buildid-list</a></code>(1) </p>
-<h2>Index</h2>

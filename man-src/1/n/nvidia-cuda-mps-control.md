@@ -64,4 +64,3 @@ description: "nvidia-cuda-mps-control – NVIDIA CUDA Multi Process Service mana
 <dt><code>server.log</code></dt>
 <dd> Record startup and shutdown of MPS servers, and status of MPS clients. </dd>
 </dl>
-<h2>Index</h2>

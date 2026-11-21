@@ -22,4 +22,3 @@ description: "qt-faststart – utility for Quicktime files"
 <dd> The destination Quicktime file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Andres Mejia &lt;mcitadel [at] gmail.com&gt; for the Debian GNU/Linux system, but may be used by others. </p>
-<h2>Index</h2>

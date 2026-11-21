@@ -30,4 +30,3 @@ description: "docker-deploy – Deploy a new stack or update an existing stack"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Send registry authentication details to Swarm agents </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code> </p>
-<h2>Index</h2>

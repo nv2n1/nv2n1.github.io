@@ -92,4 +92,3 @@ description: "xpstopdf – XPS to PDF converter"
 <p> Please send bug reports to m[blue]<code><a rel="nofollow" href="https://bugzilla.gnome.org/enter_bug.cgi?product=libgxps">https://bugzilla.gnome.org/enter_bug.cgi?product=libgxps</a></code>m[].</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xpstojpeg/">xpstojpeg</a></code>(1) <code><a href="/docs/linux/man/1-xpstopng/">xpstopng</a></code>(1) <code><a href="/docs/linux/man/1-xpstops/">xpstops</a></code>(1) <code><a href="/docs/linux/man/1-xpstosvg/">xpstosvg</a></code>(1) </p>
-<h2>Index</h2>

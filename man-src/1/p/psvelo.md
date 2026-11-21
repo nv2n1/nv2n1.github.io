@@ -136,4 +136,3 @@ END
 <p> Genevieve Patau, <i>Laboratory of Seismogenesis</i>, Institut de Physique du Globe de Paris, Departement de Sismologie, Paris, France</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

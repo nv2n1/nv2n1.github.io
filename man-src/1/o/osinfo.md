@@ -105,4 +105,3 @@ description: "osinfo – gather information regarding the running operating syst
 <p> cimserver(1).</p>
 <h2>STANDARDS CONFORMANCE</h2>
 <p> <code>osinfo</code> : DMTF WBEM (Web-Based Enterprise Management) and CIM (Common Information Model) </p>
-<h2>Index</h2>

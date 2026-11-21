@@ -22,4 +22,3 @@ description: "pdfopt – Ghostscript PDF Optimizer"
 <p> This document was last revised for Ghostscript version 9.06.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. </p>
-<h2>Index</h2>

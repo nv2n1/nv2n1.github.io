@@ -40,4 +40,3 @@ description: "pamgauss – create a two dimensional gaussian function as a PAM i
 <p> <code><a href="/docs/linux/man/1-pnmconvol/">pnmconvol</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pgmkernel/">pgmkernel</a></code>(1) , <code><a href="/docs/linux/man/1-pamseq/">pamseq</a></code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamgauss</code> was new in Netpbm 10.23 (July 2004). </p>
-<h2>Index</h2>

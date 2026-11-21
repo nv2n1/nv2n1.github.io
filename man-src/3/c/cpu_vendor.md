@@ -16,4 +16,3 @@ description: "cpu_vendor – Contains the CPU vendor name. Allegro game programm
 <p> On Intel PCs, contains the CPU vendor name if known. On Mac OSX systems this contains the PPC subtype name. On other platforms, this may be an empty string. You can read this variable after you have called check_cpu() (which is automatically called by allegro_init()). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-check_cpu/">check_cpu</a></code>(3), <code><a href="/docs/linux/man/3-cpu_family/">cpu_family</a></code>(3), <code><a href="/docs/linux/man/3-cpu_model/">cpu_model</a></code>(3), <code><a href="/docs/linux/man/3-cpu_capabilities/">cpu_capabilities</a></code>(3), <code>allegro_init</code>(3) </p>
-<h2>Index</h2>

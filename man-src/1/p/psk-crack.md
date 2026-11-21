@@ -41,4 +41,3 @@ description: "psk-crack – Crack IKE Aggressive Mode Pre-Shared Keys"
 <dd> Set bruteforce character set to &lt;s&gt; Default is &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Roy Hills &lt;Roy.Hills [at] nta-monitor.com&gt; </p>
-<h2>Index</h2>

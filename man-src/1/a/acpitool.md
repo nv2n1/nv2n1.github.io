@@ -85,4 +85,3 @@ description: "acpitool – a Linux ACPI client, allowing you to query or set ACP
 <p> <a rel="nofollow" href="http://freeunix.dyndns.org:8000/site2/acpitool.shtml">http://freeunix.dyndns.org:8000/site2/acpitool.shtml</a></p>
 <h2>AUTHOR</h2>
 <p> This program is written and maintained by David Leemans (davidleemans |at| scarlet |dot| be) and may be freely distributed under the terms of the GNU General Public License. There is ABSOLUTELY NO WARRANTY for this program. </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "akmods – manual page for akmods 0.4.0"
 <p> Thorsten Leemhuis &lt;fedora [AT] leemhuis [DOT] info&gt;</p>
 <h2>MAINTAINER</h2>
 <p> Richard Shaw &lt;hobbes1069 [AT] gmail [DOT] com&gt; </p>
-<h2>Index</h2>

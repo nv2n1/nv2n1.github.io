@@ -60,4 +60,3 @@ description: "apt-extracttemplates – Utility to extract debconf config and tem
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ fclose(myfileP);
 <p> If you need to refer to the temporary file by name, use <code>pm_make_tmpfile()</code> instead. </p>
 <h2>HISTORY</h2>
 <p> <code>pm_tmpfile()</code> was introduced in Netpbm 10.20 (January 2004). </p>
-<h2>Index</h2>

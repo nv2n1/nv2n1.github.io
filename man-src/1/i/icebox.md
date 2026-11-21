@@ -39,4 +39,3 @@ description: "icebox – The IceBox C++ service daemon."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-iceboxadmin/">iceboxadmin</a></code>(1), <code><a href="/docs/linux/man/1-iceboxnet/">iceboxnet</a></code>(1) </p>
-<h2>Index</h2>

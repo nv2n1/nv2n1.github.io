@@ -634,4 +634,3 @@ fsvs checkout[path] URL[URLs...]
 <pre><code> fsvs urls dump ' %u %n:%p\n'http://svn/repos/installation/machine-1/trunk local:10http://svn/repos/installation/common/trunk common:50
 </code></pre>
 <p> The default format is &#8216;N:%n,P:%p,D:%t,%u\\n&#8217;; for a more readable version you can use <code>-v</code>. </p>
-<h2>Index</h2>

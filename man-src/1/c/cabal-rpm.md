@@ -70,4 +70,3 @@ cblrpm CMD path/to/some.cabal
 <p> &lt;<a rel="nofollow" href="http://github.com/juhp/cabal-rpm/">http://github.com/juhp/cabal-rpm/</a>&gt;</p>
 <h2>AUTHORS</h2>
 <p> This manpage was written by Jens Petersen. </p>
-<h2>Index</h2>

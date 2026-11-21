@@ -37,4 +37,3 @@ description: "lua – Lua interpreter"
 <p> Error messages should be self explanatory.</p>
 <h2>AUTHORS</h2>
 <p> R. Ierusalimschy, L. H. de Figueiredo, and W. Celes </p>
-<h2>Index</h2>

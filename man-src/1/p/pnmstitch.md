@@ -46,4 +46,3 @@ description: "pnmstitch – stitch together two panoramic (side-by-side) photogr
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code>pnm</code>(1) , </p>
 <h2>HISTORY</h2>
 <p> This program was added to Netpbm in Release 10.7 (August 2002). </p>
-<h2>Index</h2>

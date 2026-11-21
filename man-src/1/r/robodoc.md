@@ -61,4 +61,3 @@ robodoc-- src./ myproject /
 <h2>SEE ALSO</h2>
 <p> The documentation in HTML format that comes with ROBODoc. Latest version can be found from <a rel="nofollow" href="http://www.xs4all.nl/~rfsber/Robo/">http://www.xs4all.nl/~rfsber/Robo/</a> or from <a rel="nofollow" href="http://sourceforge.net/projects/robodoc/.">http://sourceforge.net/projects/robodoc/.</a> </p>
 <p> <code><a href="/docs/linux/man/1-robohdrs/">robohdrs</a>(1)</code> </p>
-<h2>Index</h2>

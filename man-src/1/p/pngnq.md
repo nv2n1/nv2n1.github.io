@@ -44,4 +44,3 @@ description: "pngnq – quantize png images"
 <p> Stuart Coyle &lt;stuart.coyle [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-png/">png</a>(5)</code> </p>
-<h2>Index</h2>

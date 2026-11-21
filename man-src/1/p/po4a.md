@@ -172,4 +172,3 @@ description: "po4a – update both the po files and translated documents in one 
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright 2002, 2003, 2004 by <font SIZE="-1">SPI</font>, inc. </p>
 <p> This program is free software; you may redistribute it and/or modify it under the terms of <font SIZE="-1">GPL</font> (see the <font SIZE="-1">COPYING</font> file). </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ mount -t fuse funionfs#/upper_dir mountpoint&nbsp;<wbr>[&nbsp;<wbr>options&nbsp;
 <p> You cannot mount an overlay on / (the program that list the content of / will hang). This is probably due to a loop call of the fuse driver. There is no known solution for now. </p>
 <p> Probably minor (or major) mistakes in not-so-frequent cases. </p>
 <p> Not enough tested. </p>
-<h2>Index</h2>

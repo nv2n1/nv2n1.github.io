@@ -20,4 +20,3 @@ description: "calibrate_lens_gui – Lens distortion calibration by straight lin
 <p> <i><a href="/docs/linux/man/1-hugin/">hugin</a></i>(1)</p>
 <h2>AUTHORS</h2>
 <p> Tim Nugent, Thomas Modes </p>
-<h2>Index</h2>

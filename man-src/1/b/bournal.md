@@ -64,4 +64,3 @@ description: "bournal – When nobody else cares what you have to say!"
 <h2>AUTHOR</h2>
 <p> bournal was written by Professor Fapsanders &lt;frankpena [at] gmail.com&gt;. </p>
 <p> This manual page was written by Kevin Wallace &lt;kevjava [at] gmail.com&gt;, for the Ubuntu project (but may be used by others). </p>
-<h2>Index</h2>

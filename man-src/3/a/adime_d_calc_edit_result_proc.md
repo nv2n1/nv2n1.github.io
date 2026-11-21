@@ -16,4 +16,3 @@ description: "adime_d_calc_edit_result_proc"
 <p> Dialog proc for the result of a calculator edit box. The difference between this and Allegro&#8217;s `d_text_proc()&#8217; is that it uses the c parameter to find the color to draw with (see `d_double_calc_edit_proc()&#8217;), and it also erases its whole area even if the text doesn&#8217;t fill it. </p>
 <h2>SEE ALSO</h2>
 <p> <code>adime_d_int_calc_edit_proc</code>(3), <code><a href="/docs/linux/man/3-adime_d_double_calc_edit_proc/">adime_d_double_calc_edit_proc</a></code>(3) </p>
-<h2>Index</h2>

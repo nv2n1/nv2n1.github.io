@@ -223,4 +223,3 @@ description: "MultiTail – browse through several files at once"
 <p> <code><a rel="nofollow" href="http://www.vanheusden.com/multitail/">http://www.vanheusden.com/multitail/</a></code> </p>
 <h2>NOTES</h2>
 <p> This page describes <code>MultiTail</code> as found in the multitail-4.3.1 package; other versions may differ slightly. Mail corrections and additions to folkert [at] vanheusden.com. Report bugs in the program to folkert [at] vanheusden.com. </p>
-<h2>Index</h2>

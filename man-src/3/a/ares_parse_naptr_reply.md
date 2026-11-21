@@ -46,4 +46,3 @@ struct ares_naptr_reply {
 <p> <code><a href="/docs/linux/man/3-ares_query/">ares_query</a></code>(3) <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a></code>(3)</p>
 <h2>AUTHOR</h2>
 <p> Written by Jakub Hrozek &lt;jhrozek [at] redhat.com&gt;, on behalf of Red Hat, Inc <a rel="nofollow" href="http://www.redhat.com">http://www.redhat.com</a> </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "nmbscan – NMB/SMB network scanner"
 <dd> Show information on hosts, known by nmb name.</dd></dl>
 <h2>AUTHOR</h2>
 <p> nmbscan was written by Grégoire Barbier. </p>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "rhythmbox – music player and library for tagged files using GStr
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rhythmbox-client/">rhythmbox-client</a></code>(1). </p>
 <p> The online documentation available through the program&#8217;s <i>Help</i> menu. </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "manpage-alert – check for binaries without corresponding manpage
 <h2>AUTHOR</h2>
 <p> <code>manpage-alert</code> was written by Branden Robinson and modified by Julian Gilbey &lt;jdg [at] debian.org&gt; and Adam D. Barratt &lt;debian-bts [at] adam-barratt.org.uk&gt; (who also wrote this manpage) for the devscripts package. </p>
 <p> This manpage and the associated program are licensed under the terms of the GPL, version 2 or later. </p>
-<h2>Index</h2>

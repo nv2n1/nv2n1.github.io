@@ -43,4 +43,3 @@ TEXMFLOCAL=$HOME/texmf ctxtools --updatecontext
 <p> This manual page is not complete. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt;. It is in the public domain. </p>
-<h2>Index</h2>

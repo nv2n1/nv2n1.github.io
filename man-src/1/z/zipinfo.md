@@ -153,4 +153,3 @@ zipinfo -T storage | sort -nr -k 7 | sed 15q
 </pre>
 <h2>AUTHOR</h2>
 <p> Greg &#8220;Cave Newt&#8221; Roelofs. ZipInfo contains pattern-matching code by Mark Adler and fixes/improvements by many others. Please refer to the CONTRIBS file in the UnZip source distribution for a more complete list. </p>
-<h2>Index</h2>

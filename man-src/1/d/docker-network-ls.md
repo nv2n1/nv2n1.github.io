@@ -220,4 +220,3 @@ $ docker network rm `docker network ls --filter type=custom -q`
 <p> <code>-q</code>, <code>&#8211;quiet</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Only display network IDs</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-network/">docker-network</a>(1)</code> </p>
-<h2>Index</h2>

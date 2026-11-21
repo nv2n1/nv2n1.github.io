@@ -27,4 +27,3 @@ description: "mate-power-statistics – mate power statistics gui"
 <p> The programs are documented fully on <a rel="nofollow" href="http://mate.org/projects/mate-power-manager/">http://mate.org/projects/mate-power-manager/</a> .</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Simon Zheng &lt;simon.zheng [at] sun.com&gt;. </p>
-<h2>Index</h2>

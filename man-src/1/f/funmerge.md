@@ -36,4 +36,3 @@ description: "funmerge – merge one or more Funtools table files"
 <p> This program only works on raw event files and binary tables. We have not yet implemented image and array merging.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

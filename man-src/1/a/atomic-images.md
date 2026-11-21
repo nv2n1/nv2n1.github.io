@@ -143,4 +143,3 @@ got 7a07ac69054c2a3533569874c2...
 </dd></dl>
 <h2>HISTORY</h2>
 <p> July 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) July 2016, Updated to reflect images sub-command changes (jhonce at redhat dot com) July 2016, Added sub-commands all, filter and quiet to list (jerzhang at redhat dot com) </p>
-<h2>Index</h2>

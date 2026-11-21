@@ -139,4 +139,3 @@ class FooOption : public Option
 <dd> define suitable argument and result classes for the instrument and implement the isExpired and setupArguments methods, reusing the pricing-engine machinery provided by the default performCalculations method. The latter can be extended by first calling the default implementation and then performing any additional tasks required by the instrument&#8212;most often, copying additional results from the pricing engine results to the corresponding data members of the instrument. As in the previous case, the setupExpired method can be extended to account for such extra data members.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

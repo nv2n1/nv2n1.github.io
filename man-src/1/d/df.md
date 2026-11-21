@@ -68,4 +68,3 @@ description: "df – report file system disk space usage"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/df">https://www.gnu.org/software/coreutils/df</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) df invocation&#8217; </p>
-<h2>Index</h2>

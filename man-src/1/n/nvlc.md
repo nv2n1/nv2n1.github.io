@@ -60,4 +60,3 @@ description: "vlc, qvlc, svlc, nvlc, rvlc, cvlc – the VLC media player"
 <p> Online documentation: <a rel="nofollow" href="http://www.videolan.org/doc/">http://www.videolan.org/doc/</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sam Hocevar &lt;sam [at] zoy.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

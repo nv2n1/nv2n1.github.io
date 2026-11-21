@@ -79,4 +79,3 @@ description: "Lattice methods –"
 <dd> Define the method adjusting values, when necessary, at each time steps (e.g. apply the step condition for american or bermudan options). Some examples are found in QuantLib::DiscretizedSwap and QuantLib::DiscretizedSwaption.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

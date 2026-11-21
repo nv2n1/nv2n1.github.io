@@ -31,4 +31,3 @@ description: "gnome-power-manager – gnome power manager userspace daemon"
 <p> The programs are documented fully on <a rel="nofollow" href="http://gnome.org/projects/gnome-power-manager/">http://gnome.org/projects/gnome-power-manager/</a> .</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Oliver Grawert &lt;ogra [at] ubuntu.com&gt; for the Debian system and updated by Ow Mun Heng &lt;nikeow [at] yahoo.com&gt; </p>
-<h2>Index</h2>

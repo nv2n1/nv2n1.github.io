@@ -46,4 +46,3 @@ description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of
  There is NO warranty. Redistribution of this software is covered by the terms of both the MFLua copyright and the Lesser GNU General Public License.<br />
  For more information about these matters, see the file named COPYING and the MFLua source.<br />
  Primary author of MFLua: L. Scarso. </p>
-<h2>Index</h2>

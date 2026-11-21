@@ -44,4 +44,3 @@ permissions:
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-export/">flatpak-document-export</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-document-unexport/">flatpak-document-unexport</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-documents/">flatpak-documents</a></code>(1) </p>
-<h2>Index</h2>

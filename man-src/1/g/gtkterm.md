@@ -43,4 +43,3 @@ description: "gtkterm – A simple GTK+ serial port terminal"
 <h2>AUTHOR</h2>
 <p> <code>gtkterm</code> was written by Julien Schmitt &lt;julien [at] jls-info.com&gt;. </p>
 <p> This manual page was written by Sebastien Bacher &lt;seb128 [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "psjoin – psjoin"
 <dt> <code>-p</code>: not strip prolog/trailer of the input files</dt>
 <dt> <code>-h</code>: display help </dt>
 </dl>
-<h2>Index</h2>

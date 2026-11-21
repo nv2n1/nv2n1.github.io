@@ -33,4 +33,3 @@ ykparse ecde18dbe76fbd0c33330f1c354871db dteffujedcflcindvdbrblehecuitvjkjevvehj
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
-<h2>Index</h2>

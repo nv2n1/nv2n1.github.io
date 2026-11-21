@@ -28,4 +28,3 @@ description: "obex_push – Push and Receive Files over the Bluetooth OBEX Push 
 <dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> Harald Hoyer <i>&lt;harald [at] redhat.com&gt;</i> </p>
-<h2>Index</h2>

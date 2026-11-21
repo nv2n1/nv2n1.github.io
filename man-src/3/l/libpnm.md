@@ -78,4 +78,3 @@ description: "libpnm – libnetpbm functions to read and write PNM image files"
 <p> <code>Libnetpbm</code>(1) , <code>Libnetpbm</code>User&#8217;s<code>Guide</code>(1) , <code>Libnetpbm</code>Directory<code>(1)</code> , <code>pbm</code>(1) , <code>pgm</code>(1) , <code>ppm</code>(1) , <code>pam</code>(1) , <code>libpbm</code>(1) , <code>libpgm</code>(1) , <code>libppm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Tony Hansen and Jef Poskanzer. </p>
-<h2>Index</h2>

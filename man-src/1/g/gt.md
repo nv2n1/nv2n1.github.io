@@ -266,4 +266,3 @@ description: "gt – version of TiMidity MIDI to WAVE converter and player"
  The autoconf script is (C)Copyright 1998 by Hiroshi Takekawa &lt;t80679 [at] hongo.ecc.u-tokyo.ac.jp&gt;, modified for automake by Isaku Yamahata &lt;yamahata [at] kusm.kyoto-u.ac.jp&gt;, modified for automake by Masanao Izumo &lt;mo [at] goice.co.jp&gt; (1998.11).<br />
  The m4 autoconf definitions: Configure paths for ESD by Manish Singh 98-9-30, stolen back from Frank Belew, stolen from Manish Singh, Shamelessly stolen from Owen Taylor.<br />
  Configure Paths for Alsa by Christopher Lansdown (lansdoct [at] cs.alfred.edu), 29/10/1998, modified for TiMidity++ by Isaku Yamahata(yamahata [at] kusm.kyoto-u.ac.jp), 16/12/1998. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "pdfmom – produce PDF documents using the mom macro package for g
 <h2>SEE ALSO</h2>
 <p> <i>Producing PDFs with groff and mom</i>, by Deri James and Peter Schaffter; a copy is installed at <i>/usr/:share/:doc/:groff-base/:pdf/:mom-pdf.pdf</i>. </p>
 <p> <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-gropdf/">gropdf</a></i>(1), <i><a href="/docs/linux/man/1-pdfroff/">pdfroff</a></i>(1), <i><a href="/docs/linux/man/1-ps2pdf/">ps2pdf</a></i>(1) </p>
-<h2>Index</h2>

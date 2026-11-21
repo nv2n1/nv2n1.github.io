@@ -147,4 +147,3 @@ This will split out all the events for cpu 1 in the file.
 <dt>
 </dt><dd> mailto:rostedt [at] goodmis.org</dd></dl>
 </dl>
-<h2>Index</h2>

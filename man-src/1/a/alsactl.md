@@ -102,4 +102,3 @@ description: "alsactl – advanced controls for ALSA soundcard driver"
 <p> None known. </p>
 <h2>AUTHOR</h2>
 <p> <code>alsactl</code> is by Jaroslav Kysela &lt;perex [at] perex.cz&gt; and Abramo Bagnara &lt;abramo [at] alsa-project.org&gt;. This document is by Paul Winkler &lt;zarmzarm [at] erols.com&gt;. </p>
-<h2>Index</h2>

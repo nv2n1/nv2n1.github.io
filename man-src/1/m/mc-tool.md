@@ -59,4 +59,3 @@ description: "mc-tool – manipulate Mission Control accounts from the command l
 <p> <code>mc-tool request</code> <i>ACCOUNT</i> <i>STATUS</i> [<i>MESSAGE</i>] sets the <code>RequestedPresence</code> property of <i>ACCOUNT</i> to <i>STATUS</i> with optional message <i>MESSAGE</i>; this is how you tell an account to connect or go offline, for example. </p>
 <h3>AUTO-CONNECT</h3>
 <p> <code>mc-tool auto-connect</code> <i>ACCOUNT</i> <code>on</code> sets the <code>ConnectAutomatically</code> property of <i>ACCOUNT</i> to <code>True</code>. <code>mc-tool auto-connect</code> <i>ACCOUNT</i> <code>off</code> sets it to <code>False</code>. </p>
-<h2>Index</h2>

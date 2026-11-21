@@ -32,4 +32,3 @@ description: "ijs-config – script to get information about the installed versi
 <p> <code><a href="/docs/linux/man/1-gtk-config/">gtk-config</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Roger Leigh <i>&lt;rleigh [at] debian.org&gt;</i>, originally for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

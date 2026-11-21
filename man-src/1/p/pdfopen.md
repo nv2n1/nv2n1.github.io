@@ -47,4 +47,3 @@ description: "pdfopen, pdfclose – open or close a PDF file viewer"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jim Diamond &lt;<tt>Jim.Diamond [at] acadiau.ca</tt>&gt;. I am the current maintainer of the X11 versions of <code>pdfopen</code> and <code>pdfclose</code>. Report any bugs you find to me. Feature enhancement requests are welcome, coded enhancements even more so. </p>
 <p> Past authors: Fabrice Popineau wrote the MS-windows versions of <code>pdfopen</code> and <code>pdfclose</code> upon which these programs were originally based. Taco Hoekwater created the GNU/Linux versions, up to Version 0.61 (including some documentation which inspired parts of this man page). Peter Breitenlohner has contributed both code and suggestions to versions later than 0.61. </p>
-<h2>Index</h2>

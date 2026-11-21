@@ -33,4 +33,3 @@ description: "gtk-builder-convert – Glade file conversion utility"
 <p> Toolbars are not handled. </p>
 <p> Support for accessibility is not yet implemented. </p>
 <p> The script requires a python interpreter to run. </p>
-<h2>Index</h2>

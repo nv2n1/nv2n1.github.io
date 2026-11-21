@@ -32,4 +32,3 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERNAME,
 <p> Returns CURLE_OK if the option is supported, CURLE_UNKNOWN_OPTION if not, or CURLE_OUT_OF_MEMORY if there was insufficient heap space.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-CURLOPT_USERPWD/">CURLOPT_USERPWD</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_PASSWORD/">CURLOPT_PASSWORD</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_HTTPAUTH/">CURLOPT_HTTPAUTH</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_PROXYAUTH/">CURLOPT_PROXYAUTH</a></code>(3) </p>
-<h2>Index</h2>

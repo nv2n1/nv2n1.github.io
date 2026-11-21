@@ -27,4 +27,3 @@ description: "cpdic – User Dictionary Copy Tool"
 <dd> Copies the dictionary of the specified user.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-lsdic/">lsdic</a>(1), <a href="/docs/linux/man/1-mkdic/">mkdic</a>(1), <a href="/docs/linux/man/1-mvdic/">mvdic</a>(1), <a href="/docs/linux/man/1-rmdic/">rmdic</a>(1) </p>
-<h2>Index</h2>

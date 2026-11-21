@@ -26,4 +26,3 @@ description: "ipa-winsync-migrate – Seamless migration of AD users created by 
 <dt><code>&#8211;unattended</code></dt>
 <dd> Never prompts for user input. </dd>
 </dl>
-<h2>Index</h2>

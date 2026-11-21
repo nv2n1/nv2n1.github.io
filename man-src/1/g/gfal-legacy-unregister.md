@@ -49,4 +49,3 @@ description: "gfal-legacy-unregister – register a replica"
  Alejandro Alvarez Ayllon &lt;alejandro.alvarez.ayllon [at] cern.ch&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gfal-legacy-replicas/">gfal-legacy-replicas</a></code>(1), <code><a href="/docs/linux/man/1-gfal-legacy-register/">gfal-legacy-register</a></code>(1) </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "katedec – decodes Kate streams to a textual description"
 <p>&nbsp;<wbr>katedec -t srt -o output.%l.kate input.ogg </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kateenc/">kateenc</a></code>(1), <code><a href="/docs/linux/man/1-katalyzer/">katalyzer</a></code>(1) </p>
-<h2>Index</h2>

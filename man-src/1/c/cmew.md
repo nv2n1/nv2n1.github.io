@@ -22,4 +22,3 @@ description: "cmew – create Mew’s database file"
 <dt><code>-f</code></dt>
 <dd> Full update. Unless this option is specified, incremental update is used. </dd>
 </dl>
-<h2>Index</h2>

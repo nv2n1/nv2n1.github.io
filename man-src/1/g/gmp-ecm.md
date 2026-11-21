@@ -321,4 +321,3 @@ q, it is considered to continue on the next line. </p>
 <p> Jason S. Papadopoulos contributed a speedup of the NTT code </p>
 <p> Paul Zimmermann &lt;zimmerma at loria dot fr&gt; is the author of the first version of the program and chief maintainer of GMP-ECM. </p>
 <p> Note: email addresses have been obscured, the required substitutions should be obvious. </p>
-<h2>Index</h2>

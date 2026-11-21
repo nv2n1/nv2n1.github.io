@@ -260,4 +260,3 @@ description: "hx509 certificate store functions –"
 </dt><dd> Returns an hx509 error code.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>

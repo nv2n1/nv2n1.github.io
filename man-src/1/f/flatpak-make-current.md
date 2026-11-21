@@ -50,4 +50,3 @@ description: "flatpak-make-current – Make a specific version of an app current
 <p> <code>$ flatpak &#8211;user make-current org.gnome.gedit 3.14</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1) </p>
-<h2>Index</h2>

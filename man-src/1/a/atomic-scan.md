@@ -98,4 +98,3 @@ atomic scan --scanner custom_scanner --scan_type list_rpms foo1
 </dd></dl>
 <h2>HISTORY</h2>
 <p> Initial revision by Brent Baude (bbaude at redhat dot com) September 2015 Updated for new atomic scan architecture by Brent Baude (bbaude at redhat dot com) May 2016 </p>
-<h2>Index</h2>

@@ -65,4 +65,3 @@ description: "oggz-comment — List or edit comments in an Ogg file."
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vorbiscomment/">vorbiscomment</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-ogginfo/">ogginfo</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code>, <code>hogg</code><code>(1)</code> </p>
-<h2>Index</h2>

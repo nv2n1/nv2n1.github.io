@@ -2173,4 +2173,3 @@ static void main(String[] args)
 <dd> <p> HTML standard, HTML Document Representation (4197265 and 4137321) <a rel="nofollow" href="http://www.w3.org/TR/REC-html40/charset.html#h-5.2.2">http://www.w3.org/TR/REC-html40/charset.html#h-5.2.2</a> <br />
  </p>
  </dd></dl>
-<h2>Index</h2>

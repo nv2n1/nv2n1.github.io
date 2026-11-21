@@ -35,4 +35,3 @@ description: "tv_grab_es_laguiatv – Alternative TV grabber for Spain."
 <h2>AUTHOR</h2>
 <p> CandU, candu_sf [at] sourceforge.net, based on tv_grab_es, from Ramon Roca.</p>
 <h2>BUGS</h2>
-<h2>Index</h2>

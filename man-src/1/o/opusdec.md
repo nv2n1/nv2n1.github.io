@@ -64,4 +64,3 @@ description: "opusdec – decode audio from Opus format to WAV (or simple audio 
 <p> Opusdec does not currently reject all invalid files which it should reject. It also doesn&#8217;t provide very helpful output for the corrupted files it does reject. Use <code><a href="/docs/linux/man/1-opusinfo/">opusinfo</a></code>(1) for somewhat better diagnostics. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-opusenc/">opusenc</a></code>(1), <code><a href="/docs/linux/man/1-opusinfo/">opusinfo</a></code>(1) </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "btparser – a backtrace analyzer"
 <dt>-v, &#8211;verbose</dt>
 <dd> Print more output than usual. </dd>
 </dl>
-<h2>Index</h2>

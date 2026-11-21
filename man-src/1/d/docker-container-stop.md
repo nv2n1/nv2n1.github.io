@@ -18,4 +18,3 @@ description: "docker-container-stop – Stop one or more running containers"
 <p> <code>-t</code>, <code>&#8211;time</code>=10 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Seconds to wait for stop before killing it</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-container/">docker-container</a>(1)</code> </p>
-<h2>Index</h2>

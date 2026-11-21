@@ -32,4 +32,3 @@ description: "krb5_get_creds krb5_get_creds_opt_add_options krb5_get_creds_opt_a
 <p> Fn krb5_get_creds_opt_set_ticket sets the extra ticket used in user-to-user or contrained delegation use case.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_get_credentials3, krb5.conf5 </p>
-<h2>Index</h2>

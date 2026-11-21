@@ -311,4 +311,3 @@ sub MySub($$ @)
 <p> Reini Urban &lt;rurban [at] cpan.org&gt;</p>
 <h2>Copyrights</h2>
 <p> The first version of this article originally appeared in The Perl Journal #11, and is copyright 1998 The Perl Journal. It appears courtesy of Jon Orwant and The Perl Journal. This document may be distributed under the same terms as Perl itself. </p>
-<h2>Index</h2>

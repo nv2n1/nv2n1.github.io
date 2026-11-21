@@ -17,4 +17,3 @@ description: "texutil – ConTeXt utility program"
 <p> <code><a href="/docs/linux/man/1-ctxtools/">ctxtools</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-pdftools/">pdftools</a></code>(1), <code><a href="/docs/linux/man/1-texexec/">texexec</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This incomplete man page was written by Sanjoy Mahajan &lt;sanjoy [at] mit.edu&gt; and is in the public domain. </p>
-<h2>Index</h2>

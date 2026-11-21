@@ -29,4 +29,3 @@ description: "rcp – copy file to and from remote machines"
 <p> <code>rcp</code> is implemented as a protocol on top of <a href="/docs/linux/man/1-rsh/">rsh</a>(1), and thus requires a working rsh. If you intend to use Kerberos authentication, rsh needs to be Kerberos aware, else you may see more or less strange errors, such as &quot;login incorrect&quot;, or &quot;lost connection&quot;.</p>
 <h2>HISTORY</h2>
 <p> The <code>rcp</code> utility first appeared in 4.2BSD. This version is derived from 4.3BSD-Reno. </p>
-<h2>Index</h2>

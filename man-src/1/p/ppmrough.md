@@ -69,4 +69,3 @@ description: "ppmrough – create PPM image of two colors with a ragged border b
 <p> This program was added to Netpbm in Release 10.9 (September 2002). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2002 by Eckard Specht. </p>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "xrefresh – refresh all or part of an X screen"
 <p> It should have just one default type for the background.</p>
 <h2>AUTHORS</h2>
 <p> Jim Gettys, Digital Equipment Corp., MIT Project Athena </p>
-<h2>Index</h2>

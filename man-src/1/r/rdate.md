@@ -38,4 +38,3 @@ description: "rdate – get the time via the network"
 <dt>2000-02-04 Elliot Lee &lt;sopwith [at] redhat.com&gt;</dt>
 <dd> Wrote it (previous incarnation had license problems, all 200 lines of it). </dd>
 </dl>
-<h2>Index</h2>

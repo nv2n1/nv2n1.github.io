@@ -91,4 +91,3 @@ description: "whatsup – list up and/or down nodes in a cluster"
 <p> <a href="/docs/linux/man/3-libnodeupdown/">libnodeupdown</a>(3), <a href="/docs/linux/man/5-nodeupdown-conf/">nodeupdown.conf</a>(5)</p>
 <h2>ORIGIN</h2>
 <p> Developed by Albert Chu &lt;chu11 [at] llnl.gov&gt; on LLNL&#8217;s Linux clusters. This software is open source and distributed under the terms of the Gnu GPL. </p>
-<h2>Index</h2>

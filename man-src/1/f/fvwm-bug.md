@@ -22,4 +22,3 @@ description: "fvwm-bug – report a bug in fvwm"
 <dt><code>HOME</code></dt>
 <dd> Directory in which the failed bug report is saved if the mail fails. </dd>
 </dl>
-<h2>Index</h2>

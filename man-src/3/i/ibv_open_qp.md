@@ -37,4 +37,3 @@ struct ibv_qp_open_attr {
 <dt>Sean Hefty &lt;sean.hefty [at] intel.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "stdbuf – Run COMMAND, with modified buffering operations for its
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/stdbuf">https://www.gnu.org/software/coreutils/stdbuf</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) stdbuf invocation&#8217; </p>
-<h2>Index</h2>

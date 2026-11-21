@@ -31,4 +31,3 @@ description: "gethostip — convert an IP address into various formats"
 <p> More details can be found in the pxelinux documentation, which can be found in <code>/usr/share/doc/syslinux/pxelinux.doc.gz</code> on <code>Debian GNU/Linux</code> systems. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was compiled by dann frazier &lt;dannf [at] debian.org&gt; for the <code>Debian GNU/Linux</code> system (but may be used by others). </p>
-<h2>Index</h2>

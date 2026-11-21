@@ -123,4 +123,3 @@ gmt grd2xyz pacific_topo.nc | project -T-75/68 -C0/-90 -Fxyq | xyz2grd -Retc -Ie
 <p> <code>fitcircle</code>, <code>gmt</code>, <code>gmtvector</code>, <code>mapproject</code>, <code>grdproject</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

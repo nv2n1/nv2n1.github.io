@@ -64,4 +64,3 @@ description: "opashowmc"
 <dt><code>PORTS_FILE</code></dt>
 <dd> File containing list of ports, used in absence of -t and -p. </dd>
 </dl>
-<h2>Index</h2>

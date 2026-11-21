@@ -107,4 +107,3 @@ gmt grdfft topo.nc -N+w+z -fg -V
 <p> <code>gmt</code>, <code>grdedit</code>, <code>grdfilter</code>, <code>grdmath</code>, <code>grdproject</code>, <code>gravfft</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "tape2wav – Sinclair ZX Spectrum tape to wav audio file converter
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Fredrick Meunier (fredm [at] spamcop.net). </p>
-<h2>Index</h2>

@@ -111,4 +111,3 @@ url: "/docs/linux/man/1-lrs/"
 <p> Radim Blazek, ITC-irst/MPA Solutions Trento<br />
  Documentation update (based on above journal article and available fragments): Markus Neteler </p>
 <p> <i>Last changed: $Date: 2007-12-17 14:45:01 +0100 (Mon, 17 Dec 2007) $</i> </p>
-<h2>Index</h2>

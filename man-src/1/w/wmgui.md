@@ -25,4 +25,3 @@ description: "wmgui – GTK gui to the wiimote"
 <h2>AUTHOR</h2>
 <p> wmgui was written by L. Donnie Smith &lt;donnie.smith [at] gatech.edu&gt; </p>
 <p> This manual page was written by Romain Beauxis &lt;toots [at] rastageeks.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

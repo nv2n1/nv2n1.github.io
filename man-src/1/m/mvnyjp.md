@@ -88,4 +88,3 @@ description: "mvn – software project management and comprehension tool"
 <dt><code>-X</code>,&#8211;debug</dt>
 <dd> Produce execution debug output </dd>
 </dl>
-<h2>Index</h2>

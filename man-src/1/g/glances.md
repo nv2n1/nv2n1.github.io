@@ -112,4 +112,3 @@ description: "glances – A cross-platform curses-based monitoring tool"
 <p> It returns 2 if it fails to parse its options (missing arguments, invalid value, etc).</p>
 <h2>AUTHOR</h2>
 <p> Glances is written by Nicolas Hennion aka Nicolargo (contact [at] nicolargo.com) </p>
-<h2>Index</h2>

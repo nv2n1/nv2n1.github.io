@@ -20,4 +20,3 @@ description: "blackbox.h –"
 <h3>#define ALCHEMIST_BLACKBOX_MOD_PATH &#8216;/usr/lib/alchemist/blackbox&#8217;</h3>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Alchemist from the source code. </p>
-<h2>Index</h2>

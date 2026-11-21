@@ -106,4 +106,3 @@ description: "wrestool – extract resources from Microsoft Windows(R) binaries"
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>TRADEMARKS</h2>
 <p> Windows is a registered trademark of Microsoft Corporation in the United States and other countries. </p>
-<h2>Index</h2>

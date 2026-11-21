@@ -29,4 +29,3 @@ description: "obex-data-server – D-Bus service providing OBEX functionality"
 <p> This manual page was written by Tadas Dailyda &lt;tadas [at] dailyda.com&gt;.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="http://bugs.muiline.com">http://bugs.muiline.com</a> (obex-data-server project). </p>
-<h2>Index</h2>

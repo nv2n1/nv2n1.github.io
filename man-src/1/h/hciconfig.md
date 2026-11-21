@@ -280,4 +280,3 @@ description: "hciconfig – Configure Bluetooth devices"
 <p> Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt;, Marcel Holtmann &lt;marcel [at] holtmann.org&gt;, Fabrizio Gennari &lt;fabrizio.gennari [at] philips.com&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Free use of this software is granted under ther terms of the GNU Lesser General Public Licenses (LGPL). </p>
-<h2>Index</h2>

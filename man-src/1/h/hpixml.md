@@ -50,4 +50,3 @@ hpixml[-D nn][-s][-i - t][-N host[:port]][-C = file][-h] hpixml[--domain = nn][-
 Anton Pak(anton.pak[at] pigeonpoint.com)
     Ulrich Kleber(ulikleber[at] users.sourceforge.net)
 </code></pre>
-<h2>Index</h2>

@@ -99,4 +99,3 @@ description: "adplay – AdPlay/UNIX console-based OPL2 audio player"
 <dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Simon Peter &lt;dn.tlp [at] gmx.net&gt; </p>
-<h2>Index</h2>

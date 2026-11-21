@@ -149,4 +149,3 @@ description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX a
 <h2>AUTHORS</h2>
 <p> Werner Lemberg<br />
  Ross Paterson (the HBF API) </p>
-<h2>Index</h2>

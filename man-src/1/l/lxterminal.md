@@ -47,4 +47,3 @@ description: "lxterminal – a lightweight terminal emulator based on GTK+ for t
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008 paulliu </p>
-<h2>Index</h2>

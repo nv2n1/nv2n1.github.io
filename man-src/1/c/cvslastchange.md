@@ -24,4 +24,3 @@ description: "cvslastchange – Display the last change committed to CVS for a f
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

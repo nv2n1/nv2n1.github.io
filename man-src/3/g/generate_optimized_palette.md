@@ -18,4 +18,3 @@ description: "generate_optimized_palette – Generates an optimized palette for 
 <p> Returns the number of different colors recognised in the provided bitmap, zero if the bitmap is not a truecolor image or there wasn&#8217;t enough memory to perform the operation, and negative if there was any internal error in the color reduction code. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-generate_332_palette/">generate_332_palette</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3) </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "pgmtolispm – convert a portable graymap into Lisp Machine format
 <p> No color.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jamie Zawinski and Jef Poskanzer. </p>
-<h2>Index</h2>

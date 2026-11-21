@@ -70,4 +70,3 @@ description: "pamtilt – print the tilt angle of a PGM file"
 <h2>HISTORY</h2>
 <p> <code>pamtilt</code> was new in Netpbm 10.30 (October 2005). </p>
 <p> Gregg Townsend wrote it and sent it to Bryan Henderson in August 2005. Bryan recoded it to fit Netpbm conventions. </p>
-<h2>Index</h2>

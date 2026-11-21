@@ -43,4 +43,3 @@ description: "pomerge – Merges XLIFF and Gettext PO localization files."
 <dt>&#8211;mergecomments</dt>
 <dd> whether to merge comments as well as translations (yes/no). Default is yes. </dd>
 </dl>
-<h2>Index</h2>

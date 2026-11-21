@@ -51,4 +51,3 @@ description: "smtptest – interactive SMTP test program"
 <dd> Verbose. Print out more information than usual.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>sendmail(8)</code> </p>
-<h2>Index</h2>

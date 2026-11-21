@@ -57,4 +57,3 @@ ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell option
 <p> <code><a href="/docs/linux/man/8-select-default-ispell/">select-default-ispell</a></code>(8), <code><a href="/docs/linux/man/1-select-default-iwrap/">select-default-iwrap</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Rafael Laboissiere </p>
-<h2>Index</h2>

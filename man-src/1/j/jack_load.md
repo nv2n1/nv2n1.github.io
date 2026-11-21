@@ -28,4 +28,3 @@ description: "jack_load – JACK toolkit client for loading in-process clients"
 <dd> Wait for a signal (eg. from Ctrl-c) and then unload the client.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Jeremy Hall </p>
-<h2>Index</h2>

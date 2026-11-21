@@ -56,4 +56,3 @@ description: "rngtest – Check the randomness of data using FIPS 140-2 tests"
 </dl>
 <h2>AUTHORS</h2>
 <p> Henrique de Moraes Holschuh &lt;hmh [at] debian.org&gt; </p>
-<h2>Index</h2>

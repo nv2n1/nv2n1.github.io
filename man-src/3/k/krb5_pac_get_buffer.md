@@ -46,4 +46,3 @@ description: "Heimdal Kerberos 5 PAC handling functions –"
 </dt><dd> Returns 0 to indicate success. Otherwise an kerberos et error code is returned, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

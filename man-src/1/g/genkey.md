@@ -81,4 +81,3 @@ description: "genkey – generate SSL certificates and certificate requests"
 <p> /etc/pki/tls/openssl.cnf</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-certwatch/">certwatch</a>(1), <a href="/docs/linux/man/1-keyrand/">keyrand</a>(1) </p>
-<h2>Index</h2>

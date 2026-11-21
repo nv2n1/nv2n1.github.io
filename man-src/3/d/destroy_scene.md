@@ -16,4 +16,3 @@ description: "destroy_scene – Deallocates the memory used by a scene. Allegro 
 <p> Deallocate memory previously allocated by create_scene. Use this to avoid memory leaks in your program. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-create_scene/">create_scene</a></code>(3), <code><a href="/docs/linux/man/3-scene_polygon3d/">scene_polygon3d</a></code>(3), <code><a href="/docs/linux/man/3-clear_scene/">clear_scene</a></code>(3), <code><a href="/docs/linux/man/3-render_scene/">render_scene</a></code>(3), <code><a href="/docs/linux/man/3-scene_gap/">scene_gap</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3) </p>
-<h2>Index</h2>

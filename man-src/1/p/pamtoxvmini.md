@@ -19,4 +19,3 @@ description: "pamtoxvmini – convert Netpbm image to an XV ‘thumbnail’ pict
 <p> <code><a href="/docs/linux/man/1-xvminitoppm/">xvminitoppm</a></code>(1) , <code>ppm</code>(1) , <code>xv</code> manual </p>
 <h2>HISTORY</h2>
 <p> This program was new in Netpbm 10.34 (April 2006). </p>
-<h2>Index</h2>

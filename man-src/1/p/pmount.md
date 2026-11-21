@@ -93,4 +93,3 @@ description: "pmount – mount arbitrary hotpluggable devices as normal user"
 <p> <code>NOTE:</code> Starting from version <i>0.9.17</i>, <code>pmount</code> uses the same mechanism as <code>mount</code> (1) to autodetect the filesystem type, so this kind of problems should not happen anymore. </p>
 <h2>AUTHOR</h2>
 <p> <code>pmount </code> was originally developed by Martin Pitt &lt;martin.pitt [at] canonical.com&gt;. It is now maintained by Vincent Fourmond &lt;fourmond [at] debian.org&gt;. </p>
-<h2>Index</h2>

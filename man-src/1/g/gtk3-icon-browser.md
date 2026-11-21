@@ -21,4 +21,3 @@ description: "gtk3-icon-browser – List themed icons"
 <dl>
 <dt>
 </dt><dd> Show help options</dd></dl>
-<h2>Index</h2>

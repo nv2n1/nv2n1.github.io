@@ -217,4 +217,3 @@ and PerlIO_binmode(f, ptype, O_TEXT, ":crlf");
 </pre>
 <p> On a Perl built without <tt>&quot;-DDEBUGGING&quot;</tt>, or when the <tt>&quot;-Di&quot;</tt> command-line switch is not specified, or under taint, <code>PerlIO_debug()</code> is a no-op. </p>
 </dl>
-<h2>Index</h2>

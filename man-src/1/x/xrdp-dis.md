@@ -30,4 +30,3 @@ description: "xrdp-dis – xrdp disconnect utility"
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8). </p>
-<h2>Index</h2>

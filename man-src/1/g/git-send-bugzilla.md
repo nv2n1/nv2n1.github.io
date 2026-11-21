@@ -69,4 +69,3 @@ git - send - bugzilla[OPTIONS](--dry - run | &lt;bugid&gt;)&lt;since&gt;[..&lt;u
 <dt>
 </dt><dd> mailto:code [at] istique.net</dd></dl>
 </dl>
-<h2>Index</h2>

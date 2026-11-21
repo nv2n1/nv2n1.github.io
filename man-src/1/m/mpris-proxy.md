@@ -25,4 +25,3 @@ description: "mpris-proxy – Bluetooth mpris-proxy"
 <dt><code>-e</code>, <code>&#8211;export</code></dt>
 <dd> Export remote players</dd></dl>
 <p> Usage: </p>
-<h2>Index</h2>

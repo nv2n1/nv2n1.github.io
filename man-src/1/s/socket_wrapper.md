@@ -104,4 +104,3 @@ $ LD_PRELOAD=libsocket_wrapper.so \
 # in the console output of the server.
 </pre>
 </dd></dl>
-<h2>Index</h2>

@@ -137,4 +137,3 @@ description: "XMMS – an audio player for X."
 <p> The webpage for XMMS is at <a rel="nofollow" href="http://www.xmms.org.">http://www.xmms.org.</a> Here you can find info about XMMS, download the latest version, plugins, and skins.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wmxmms/">wmxmms</a></code>(1) </p>
-<h2>Index</h2>

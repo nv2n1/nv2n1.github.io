@@ -22,4 +22,3 @@ description: "globus_logging.h –"
 <p> Reset the cached version of the pid used for logging. Call this after fork() to keep logging working in a child process</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

@@ -103,4 +103,3 @@ description: "ginfo – fetch service information"
 </dl>
 <h2>AUTHOR</h2>
 <p> Ivan Calvet &lt;ivan.calvet at cern dot ch&gt; </p>
-<h2>Index</h2>

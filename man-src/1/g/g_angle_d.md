@@ -83,4 +83,3 @@ description: "g_angle – calculates distributions and correlations for angles a
 <h2>SEE ALSO</h2>
 <p> <code>gromacs(7)</code> </p>
 <p> More information about <code>GROMACS</code> is available at &lt;<i><a rel="nofollow" href="http://www.gromacs.org/">http://www.gromacs.org/</a></i>&gt;. </p>
-<h2>Index</h2>

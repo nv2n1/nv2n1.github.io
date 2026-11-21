@@ -569,4 +569,3 @@ $ git merge --no-commit maint
 <p> <code><a href="/docs/linux/man/1-git-fmt-merge-msg/">git-fmt-merge-msg</a></code>(1), <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1), <code><a href="/docs/linux/man/5-gitattributes/">gitattributes</a></code>(5), <code><a href="/docs/linux/man/1-git-reset/">git-reset</a></code>(1), <code><a href="/docs/linux/man/1-git-diff/">git-diff</a></code>(1), <code><a href="/docs/linux/man/1-git-ls-files/">git-ls-files</a></code>(1), <code><a href="/docs/linux/man/1-git-add/">git-add</a></code>(1), <code><a href="/docs/linux/man/1-git-rm/">git-rm</a></code>(1), <code><a href="/docs/linux/man/1-git-mergetool/">git-mergetool</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

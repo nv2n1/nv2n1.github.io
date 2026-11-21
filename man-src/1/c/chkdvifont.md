@@ -68,4 +68,3 @@ description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FO
 <h2>AUTHOR</h2>
 <p> The program <code>chkdvifont</code> (original name &quot;chkfont&quot;) is derived from the DVIOUT package (DVI previewer for Windows) by Toshio OSHIMA (&quot;SHIMA&quot;), Yoshiki OTOBE, and Kazunori ASAYAMA. Current version is maintained by Japanese TeX Development Community &lt;<a rel="nofollow" href="https://texjp.org">https://texjp.org</a>&gt;.<br />
  For more information, please refer to chkdvifont-ja.txt (in Japanese) on our GitHub repository, &lt;<a rel="nofollow" href="https://github.com/texjporg/tex-jp-build">https://github.com/texjporg/tex-jp-build</a>&gt; (under source/texk/dviout-util directory). </p>
-<h2>Index</h2>

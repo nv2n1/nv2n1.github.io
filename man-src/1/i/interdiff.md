@@ -130,4 +130,3 @@ filterdiff -i file.c patchfile | \
 <dl>
 <dt>
 </dt><dd> Original man page contributor</dd></dl>
-<h2>Index</h2>

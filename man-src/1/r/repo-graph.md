@@ -31,4 +31,3 @@ description: "repo-graph – output a full package dependency graph in dot forma
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

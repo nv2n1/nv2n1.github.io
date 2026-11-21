@@ -50,4 +50,3 @@ extern char **gvPluginList(GVC_t *gvc, char *kind, int *cnt, char *);
 <p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code>libcdt</code>(3) <code>libgraph</code>(3) </p>
 <h2>AUTHOR</h2>
 <p> John Ellson (ellson [at] research.att.com), AT&amp;T </p>
-<h2>Index</h2>

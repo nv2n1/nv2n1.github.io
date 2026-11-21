@@ -18,4 +18,3 @@ description: "docker-context-export – Export a context to a tar or kubeconfig 
 <p> <code>&#8211;kubeconfig</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Export as a kubeconfig file</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-context/">docker-context</a>(1)</code> </p>
-<h2>Index</h2>

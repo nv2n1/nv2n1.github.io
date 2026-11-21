@@ -65,4 +65,3 @@ description: "htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyr
 <p> htproxyput is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-htcp/">htcp</a>(1),</code> <code><a href="/docs/linux/man/8-gridsite-delegation/">gridsite-delegation</a>(8)</code> </p>
-<h2>Index</h2>

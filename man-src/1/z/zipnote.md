@@ -54,4 +54,3 @@ description: "zipnote – write the comments in zipfile to stdout, edit comments
 <p> <a href="/docs/linux/man/1-zip/">zip</a>(1), <a href="/docs/linux/man/1-unzip/">unzip</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Info-ZIP </p>
-<h2>Index</h2>

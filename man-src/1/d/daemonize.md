@@ -69,4 +69,3 @@ description: "daemonize – run a program as a Unix daemon"
 <h2>CONTRIBUTORS</h2>
 <p> Support for the <i>-e</i> and <i>-o</i> options is based on a patch submitted by Tim Starling <i>(tstarling &lt;at&gt; wikimedia &lt;dot&gt; org).</i> </p>
 <p> Support for the <i>-l</i> option is based on a patch submitted by Yakov Lerner <i>(iler.ml &lt;at&gt; gmail &lt;dot&gt; com).</i> </p>
-<h2>Index</h2>

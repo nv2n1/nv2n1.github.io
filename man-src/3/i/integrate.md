@@ -33,4 +33,3 @@ description: "QuantLib::NumericHaganPricer – CMS-coupon pricer."
 <p> Prices a cms coupon via static replication as in Hagan&#8217;s &#8216;Conundrums&#8230;&#8217; article via numerical integration based on prices of vanilla swaptions </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -2305,4 +2305,3 @@ description: "ps – report a snapshot of the current processes."
 <h2>AUTHOR</h2>
 <p> <code>ps</code> was originally written by Branko Lankester Michael K. Johnson re-wrote it significantly to use the proc filesystem, changing a few things in the process. Michael Shields added the pid-list feature. Charles Blake added multi-level sorting, the dirent-style library, the device name-to-number mmaped database, the approximate binary search directly on System.map, and many code and documentation cleanups. David Mossberger-Tang wrote the generic BFD support for psupdate. Albert Cahalan rewrote ps for full Unix98 and BSD support, along with some ugly hacks for obsolete and foreign syntax. </p>
 <p> Please send bug reports to No subscription is required or suggested. </p>
-<h2>Index</h2>

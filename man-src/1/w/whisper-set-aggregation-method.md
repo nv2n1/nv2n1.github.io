@@ -23,4 +23,3 @@ whisper-set-aggregation-method path &lt;average|sum|last|max|min&gt;
 <h2>AUTHOR</h2>
 <p> <code>whisper</code> is a fixed size database, created by Chris Davis. </p>
 <p> This manual page was written by Jonas Genannt &lt;jonas.genannt [at] capi2name.de&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ then
 <p> <tt>$Id:</tt> shlock.pod 9304 2011-08-04 22:10:47Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i>INN::Utils::Shlock</i>(3pm). </p>
-<h2>Index</h2>

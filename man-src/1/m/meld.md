@@ -79,4 +79,3 @@ description: "meld – Visual diff and merge tool for the GNOME Desktop"
 <p> If you find a bug, please report it at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/meld/issues">https://gitlab.gnome.org/GNOME/meld/issues</a> or mail a description of the issue to meld-list [at] gnome.org.</p>
 <h2>AUTHORS</h2>
 <p> See the AUTHORS text file in <code>meld&#8217;s</code> source code (<a rel="nofollow" href="http://git.gnome.org/browse/meld/tree/AUTHORS">http://git.gnome.org/browse/meld/tree/AUTHORS</a>). </p>
-<h2>Index</h2>

@@ -106,4 +106,3 @@ description: "ms-sys – write Microsoft boot block"
 <p> This manual page was originally written by G&uuml;rkan Seng&uuml;n and since edited by Henrik Carlqvist. The program ms-sys is mostly written by Henrik Carlqvist, the file CONTRIBUTORS in the source archive contains a complete list of contributors.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mformat/">mformat</a>(1) <a href="/docs/linux/man/8-fdformat/">fdformat</a>(8) <a href="/docs/linux/man/8-mkdosfs/">mkdosfs</a>(8) mkisofs(8) <a href="/docs/linux/man/8-parted/">parted</a>(8) </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "ffi_prep_cif – Prepare a ffi_cif structure for use with ffi_call
 <p> Upon successful completion, <code>ffi_prep_cif</code> returns <code>FFI_OK</code> It will return <code>FFI_BAD_TYPEDEF</code> if Fa cif is <code>NULL</code> or Fa atypes or Fa rtype is malformed. If Fa abi does not refer to a valid ABI, <code>FFI_BAD_ABI</code> will be returned. Available ABIs are defined in <code>&lt;ffitarget.h&gt;</code></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-ffi/">ffi</a>(3), ffi_call3, ffi_prep_cif_var3 </p>
-<h2>Index</h2>

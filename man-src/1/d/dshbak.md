@@ -30,4 +30,3 @@ description: "dshbak – format output from pdsh command"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pdsh/">pdsh</a></code>(1) </p>
 <p> <code><a rel="nofollow" href="http://pdsh.googlecode.com">http://pdsh.googlecode.com</a></code> </p>
-<h2>Index</h2>

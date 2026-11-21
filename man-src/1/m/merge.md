@@ -61,4 +61,3 @@ description: "merge – three-way file merge"
 <p> has news and links to the latest release, development site, etc.</p>
 <h2>BUGS</h2>
 <p> It normally does not make sense to merge binary files as if they were text, but <code>merge</code> tries to do it anyway. </p>
-<h2>Index</h2>

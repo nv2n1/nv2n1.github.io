@@ -35,4 +35,3 @@ description: "glib-gettextize – gettext internationalization utility"
 </dt><dd> force writing of new files even if old ones exist</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gettextize/">gettextize</a></code>(1) </p>
-<h2>Index</h2>

@@ -110,4 +110,3 @@ gmt psmask africa_grav.xyg -R20/40/20/40 -I5m -JM10i -T -O -K -Gwhite &gt; mask.
 <p> <code>gmt</code>, <code>gmtcolors</code>, <code>grdmask</code>, <code>surface</code>, <code>psbasemap</code>, <code>psclip</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

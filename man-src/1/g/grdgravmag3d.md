@@ -89,4 +89,3 @@ gmt grdgravmag3d bat.grd -E10000 -Gcomp_Z.grd -Hz -H+n -H+mmag.grd -x4 -V -S50
 <p> Okabe, M., Analytical expressions for gravity anomalies due to polyhedral bodies and translation into magnetic anomalies, <i>Geophysics</i>, 44, (1979), p 730-741.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

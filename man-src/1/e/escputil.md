@@ -65,4 +65,3 @@ description: "escputil – maintain Epson Stylus inkjet printers"
 <p> The homepage of the Gutenprint project from which this utility was contributed is located at <a rel="nofollow" href="http://gimp-print.sourceforge.net/.">http://gimp-print.sourceforge.net/.</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/4-lp/">lp</a></code>(4), <code><a href="/docs/linux/man/8-tunelp/">tunelp</a></code>(8). </p>
-<h2>Index</h2>

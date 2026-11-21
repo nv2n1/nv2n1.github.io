@@ -19,4 +19,3 @@ description: "libssh2_channel_eof – check a channel’s EOF status"
 <p> Returns 1 if the remote host has sent EOF, otherwise 0. Negative on failure.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_close/">libssh2_channel_close</a>(3)</code> </p>
-<h2>Index</h2>

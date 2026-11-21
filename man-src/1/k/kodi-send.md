@@ -28,4 +28,3 @@ description: "xbmc-send – program to send some action to Kodi"
 <dt><code>&#8211;action</code>=<i>ACTION</i></dt>
 <dd> Sends an action to Kodi, this option can be added multiple times to create a macro. </dd>
 </dl>
-<h2>Index</h2>

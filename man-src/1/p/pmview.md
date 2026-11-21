@@ -140,4 +140,3 @@ description: "pmview – performance metrics 3D visualization back-end"
 <p> Relevant information is also available from the on-line PCP Tutorial. Provided the <code>pcp.man.tutorial</code> subsystem from the PCP images has been installed, access the URL <code>file:$PCP_DOC_DIR/Tutorial/pmview.html </code> from your web browser. </p>
 <h2>DIAGNOSTICS</h2>
 <p> Are intended to be self-explanatory. The environment variable <code>PCP_STDERR</code> can be set to force most startup warnings and errors to be sent to the standard error stream rather than posted in a dialog. </p>
-<h2>Index</h2>

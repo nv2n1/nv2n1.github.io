@@ -67,4 +67,3 @@ description: "nxtrc – a program to interact with LEGO NXT via BlueTooth"
 <p> <code>nxtrc</code> returns a zero exit status if it succeeds. Non zero is returned in case of failure.</p>
 <h2>AUTHOR</h2>
 <p> Gian Piero Puccioni (gianpiero.puccioni (at) isc.cnr.it) </p>
-<h2>Index</h2>

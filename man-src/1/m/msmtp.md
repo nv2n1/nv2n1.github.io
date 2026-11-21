@@ -320,4 +320,3 @@ description: "msmtp – An SMTP client"
  Other authors are listed in the AUTHORS file in the source distribution.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code>sendmail</code>(8), <code><a href="/docs/linux/man/5-netrc/">netrc</a></code>(5) or <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) </p>
-<h2>Index</h2>

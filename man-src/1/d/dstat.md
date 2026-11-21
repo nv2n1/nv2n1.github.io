@@ -334,4 +334,3 @@ dmidecode, ifinfo(1), lsdev(1), <a href="//www.systutorials.com/docs/linux/man/1
 <dt>3. apollock [at] debian.org</dt>
 <dd> mailto:apollock [at] debian.org </dd>
 </dl>
-<h2>Index</h2>

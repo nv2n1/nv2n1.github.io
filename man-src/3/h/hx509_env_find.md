@@ -89,4 +89,3 @@ description: "hx509 enviroment functions –"
 </dt><dd> the value if the key is found, NULL otherwise.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>

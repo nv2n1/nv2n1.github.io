@@ -45,4 +45,3 @@ description: "peekfd – peek at file descriptors of running processes"
 <p> Trent Waddington</p>
 <h2>SEE ALSO</h2>
 <p> <code>ttysnoop</code>(8) </p>
-<h2>Index</h2>

@@ -76,4 +76,3 @@ description: "systemd-coredumpctl – Retrieve coredumps from the journal"
 <p> On success, 0 is returned; otherwise, a non-zero failure code is returned. Not finding any matching coredumps is treated as failure.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) </p>
-<h2>Index</h2>

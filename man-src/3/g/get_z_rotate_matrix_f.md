@@ -17,4 +17,3 @@ description: "get_z_rotate_matrix, get_z_rotate_matrix_f – Construct Z axis ro
 <p> Construct Z axis rotation matrices, storing them in m. When applied to a point, these matrices will rotate it about the Z axis by the specified angle (given in binary, 256 degrees to a circle format). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_rotation_matrix/">get_rotation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_x_rotate_matrix/">get_x_rotate_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_y_rotate_matrix/">get_y_rotate_matrix</a></code>(3) </p>
-<h2>Index</h2>

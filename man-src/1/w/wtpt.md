@@ -20,4 +20,3 @@ description: "wtpt – Show media white of profiles, identifying black body locu
 <p> <code><a href="/docs/linux/man/1-jpegicc/">jpegicc</a></code>(1), <code><a href="/docs/linux/man/1-tifficc/">tifficc</a></code>(1), <code><a href="/docs/linux/man/1-icc2ps/">icc2ps</a></code>(1), <code><a href="/docs/linux/man/1-icclink/">icclink</a></code>(1), <code>icctrans</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Shiju p. Nair &lt;shiju.p [at] gmail.com&gt;, for the Debian project. </p>
-<h2>Index</h2>

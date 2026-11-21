@@ -698,4 +698,3 @@ ${CAD_ROOT}/displaysconfiguration file for Magic serial-line displays
 <h2>BUGS</h2>
 <p> If Magic gets stuck for some reason, first try typing Control-C into the terminal window (in the Tcl/Tk version, this is the <i>original</i> terminal, not the Tk console window). Most of Magic&#8217;s lengthy database searches are interruptible. If this doesn&#8217;t work, kill the process. The Tcl/Tk version automatically creates periodic backups that may be recovered with &quot;magic -r&quot;. </p>
 <p> Report bugs to <code>magic-dev [at] csl.cornell.edu</code>. Please be specific: tell us exactly what you did to cause the problem, what you expected to happen, and what happened instead. If possible send along small files that we can use to reproduce the bug. A list of known bugs and fixes is also available from the above address. Tell us which version of magic you are running. </p>
-<h2>Index</h2>

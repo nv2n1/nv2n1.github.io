@@ -43,4 +43,3 @@ description: "truncate – shrink or extend the size of a file to the specified 
 <p> <a href="/docs/linux/man/1-dd/">dd</a>(1), <a href="/docs/linux/man/2-truncate/">truncate</a>(2), <a href="/docs/linux/man/2-ftruncate/">ftruncate</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/truncate">https://www.gnu.org/software/coreutils/truncate</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) truncate invocation&#8217; </p>
-<h2>Index</h2>

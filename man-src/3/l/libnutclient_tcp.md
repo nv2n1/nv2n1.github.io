@@ -37,4 +37,3 @@ long nutclient_tcp_get_timeout(NUTCLIENT_TCP_t client);
 <p> <i>timeout</i> values are specified in seconds, negatives values for blocking.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) <code><a href="/docs/linux/man/3-libnutclient_general/">libnutclient_general</a></code>(3) </p>
-<h2>Index</h2>

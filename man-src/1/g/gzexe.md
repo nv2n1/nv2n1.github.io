@@ -30,4 +30,3 @@ description: "gzexe – compress executable files in place"
 <p> The compressed executable is a shell script. This may create some security holes. In particular, the compressed executable relies on the PATH environment variable to find <i>gzip</i> and some standard utilities (<i>basename</i>, <i>chmod</i>, <i>ln</i>, <i>mkdir</i>, <i>mktemp</i>, <i>rm</i>, <i>sleep</i>, and <i>tail</i>).</p>
 <h2>BUGS</h2>
 <p> <i>gzexe</i> attempts to retain the original file attributes on the compressed executable, but you may have to fix them manually in some cases, using <i>chmod</i> or <i>chown</i>. </p>
-<h2>Index</h2>

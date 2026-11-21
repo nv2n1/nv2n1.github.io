@@ -40,4 +40,3 @@ description: "gdnc – GNUstep Distributed Notification Center"
 <h2>AUTHORS</h2>
 <p> <code>gdnc </code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt;. </p>
 <p> This man page was written by Martin Brecher &lt;martin [at] mb-itconsulting.com&gt;. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "libsolv – package dependency solver library using a satisfiabili
 <p> The language bindings already deal with pointer validity, so you do not have to worry about this issue when using the bindings.</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>

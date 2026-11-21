@@ -56,4 +56,3 @@ description: "gcj-dbtool – Manipulate class file mapping databases for libgcj"
      software.  Copies published by the Free Software Foundation raise
      funds for GNU development.
 </pre>
-<h2>Index</h2>

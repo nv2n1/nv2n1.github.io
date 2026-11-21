@@ -34,4 +34,3 @@ description: "poclean – Produces a clean file from an unclean file (Trados/Wor
 <dt>-S/&#8211;timestamp</dt>
 <dd> skip conversion if the output file has newer timestamp </dd>
 </dl>
-<h2>Index</h2>

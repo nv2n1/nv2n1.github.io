@@ -86,4 +86,3 @@ description: "fpaste – A cli frontend for the fpaste.org pastebin"
  or to: Jason &#8216;zcat&#8217; Farrell &lt;farrellj AT gmail DOT com&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Fedora Unity </p>
-<h2>Index</h2>

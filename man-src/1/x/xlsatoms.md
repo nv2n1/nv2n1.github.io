@@ -33,4 +33,3 @@ description: "xlsatoms – list interned atoms defined on server"
 <dd> to get the default host and display to use.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium </p>
-<h2>Index</h2>

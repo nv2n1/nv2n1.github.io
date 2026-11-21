@@ -54,4 +54,3 @@ description: "id3v2 – Adds/Modifies/Removes/Views id3v2 tags, converts/lists i
 <p> <a href="/docs/linux/man/1-id3tag/">id3tag</a>(1), <a href="/docs/linux/man/1-id3info/">id3info</a>(1), <a href="/docs/linux/man/1-id3convert/">id3convert</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> <code>id3v2</code> is by myers &lt;myers_carpenter [at] users.sourceforge.net&gt; with major portions used from id3lib examples. Manual page written for Debian GNU/Linux by Robert Woodcock &lt;rcw [at] debian.org&gt;. </p>
-<h2>Index</h2>

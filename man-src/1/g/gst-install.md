@@ -29,4 +29,3 @@ description: "gst-install – installs missing GStreamer plugins"
 <p> Sebastian Heinlein &lt;devel at glatzor dot de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-aptd/">aptd</a></code>(1)<code> <a href="/docs/linux/man/1-session-installer/">session-installer</a></code>(1) </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "nwtrustee – List an object’s trustee directory assignments"
 </dt><dd> Verbose listing. Also list the specific rights that are assigned to the user.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwtrustee was written by Jacek Stepniewski &lt;cunio [at] gazeta.pl&gt;. This manual page was written by Volker Lendecke. </p>
-<h2>Index</h2>

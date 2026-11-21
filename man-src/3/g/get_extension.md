@@ -24,4 +24,3 @@ allegro_message("The binary has the extension `%s'
 <p> Returns a pointer to the portion of `filename&#8217; where the extension starts, or a pointer to the trailing null character if there is no filename or it doesn&#8217;t have extension. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_filename/">get_filename</a></code>(3), <code><a href="/docs/linux/man/3-put_backslash/">put_backslash</a></code>(3), <code><a href="/docs/linux/man/3-replace_extension/">replace_extension</a></code>(3) </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "clip3d_f – Clips the polygon given in vtx using floating point m
 <p> Returns the number of vertices after clipping is done. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-polygon3d/">polygon3d</a></code>(3), <code><a href="/docs/linux/man/3-clip3d/">clip3d</a></code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3) </p>
-<h2>Index</h2>

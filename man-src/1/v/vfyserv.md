@@ -36,4 +36,3 @@ description: "vfyserv_ – TBD"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://bugzilla.mozilla.org/show_bug.cgi?id=836477">https://bugzilla.mozilla.org/show_bug.cgi?id=836477</a></dd></dl>
 </dl>
-<h2>Index</h2>

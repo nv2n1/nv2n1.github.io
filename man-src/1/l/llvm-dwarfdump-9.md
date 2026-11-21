@@ -76,4 +76,3 @@ description: "llvm-dwarfdump – manual page for llvm-dwarfdump 9"
 <dt> <code>&#8211;verbose</code> &#8211; Print more low-level encoding details.</dt>
 <dt> <code>&#8211;verify</code> &#8211; Verify the DWARF debug info.</dt></dl>
 <dd>Pass @FILE as argument to read options from FILE. </dd>
-<h2>Index</h2>

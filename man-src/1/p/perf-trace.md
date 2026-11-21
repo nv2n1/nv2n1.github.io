@@ -156,4 +156,3 @@ CRYPTO_push_info_ routine which faulted somewhere in libcrypto.so.
 <dt>
 </dt><dd> mailto:dso [at] symbol</dd></dl>
 </dl>
-<h2>Index</h2>

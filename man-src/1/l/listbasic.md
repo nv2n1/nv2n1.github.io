@@ -28,4 +28,3 @@ description: "listbasic – Extract the BASIC from a ZX Spectrum file"
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
 <p> Chris Cowley wrote <i>SnapList</i>, (<i><a rel="nofollow" href="http://freestuff.grok.co.uk/snaplist/index.html">http://freestuff.grok.co.uk/snaplist/index.html</a></i>), on which listbasic is very heavily based. </p>
-<h2>Index</h2>

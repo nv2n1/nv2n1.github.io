@@ -17,4 +17,3 @@ description: "ocamldumpobj – disassembler for OCaml executable and .cmo object
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1), <code><a href="/docs/linux/man/1-ocamlobjinfo/">ocamlobjinfo</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Samuel Mimram &lt;smimram [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

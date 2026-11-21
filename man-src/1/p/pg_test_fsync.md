@@ -36,4 +36,3 @@ description: "pg_test_fsync – determine fastest wal_sync_method for PostgreSQL
 <p> Bruce Momjian &lt;bruce [at] momjian.us&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1) </p>
-<h2>Index</h2>

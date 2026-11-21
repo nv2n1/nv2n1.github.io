@@ -34,4 +34,3 @@ bson_iter_as_int64(const bson_iter_t *iter);
 <p> A 64-bit signed integer. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

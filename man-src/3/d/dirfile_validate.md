@@ -36,4 +36,3 @@ description: "dirfile_validate — check a dirfile field code for validity"
 <p> It is not necessary to call this function before passing a field code to another GetData function: all functions which accept field codes perform these checks themselves.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3) </p>
-<h2>Index</h2>

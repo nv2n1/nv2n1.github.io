@@ -350,4 +350,3 @@ complete any file; else
 complete user names.
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

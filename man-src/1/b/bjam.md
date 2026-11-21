@@ -106,4 +106,3 @@ description: "Boost.Build – software build tool"
 <dt>
 </dt><dd> * <code>&#8211;help-options</code> Print more obscure command line options. * <code>&#8211;help-internal</code> Boost.Build implementation details. * <code>&#8211;help-doc-options</code> Implementation details doc formatting.</dd></dl>
 <p> &#8230;found 1 target&#8230; </p>
-<h2>Index</h2>

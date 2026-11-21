@@ -80,4 +80,3 @@ Jens Axboe&lt;axboe[at] suse.de&gt;
 <p> <code>cdrwtool</code> is part of the udftools package and is available from <a rel="nofollow" href="http://linux-udf.sourceforge.net.">http://linux-udf.sourceforge.net.</a> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pktsetup/">pktsetup</a></code>(8) </p>
-<h2>Index</h2>

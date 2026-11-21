@@ -28,4 +28,3 @@ description: "rpmfile – list file modes and types in RPM packages"
 <p> This is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-rpmargs/">rpmargs</a></i>(1), <i><a href="/docs/linux/man/8-rpm/">rpm</a></i>(8), <i><a href="/docs/linux/man/8-rpm2cpio/">rpm2cpio</a></i>(8), <i><a href="/docs/linux/man/1-file/">file</a></i>(1) </p>
-<h2>Index</h2>

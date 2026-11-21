@@ -19,4 +19,3 @@ description: "rdiscount — humane markup to HTML conversion tool"
 <p> <a href="/docs/linux/man/7-markdown/">markdown</a>(7)</p>
 <h2>AUTHOR</h2>
 <p> Ryan Tomayko <i><a rel="nofollow" href="http://tomayko.com/about">http://tomayko.com/about</a></i> </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "pamchannel – extract channels from a PAM image"
 <p> <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamchannel</code> was new, along with the PAM format, in Netpbm 9.7 (August 2000). </p>
-<h2>Index</h2>

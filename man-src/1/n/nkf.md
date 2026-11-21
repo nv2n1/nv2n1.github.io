@@ -230,4 +230,3 @@ description: "nkf – Network Kanji Filter"
 <h2>AUTHOR</h2>
 <p> Copyright (c) 1987, Fujitsu <font SIZE="-1">LTD</font>. (Itaru <font SIZE="-1">ICHIKAWA</font>). </p>
 <p> Copyright (c) 1996-2013, The nkf Project. </p>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ description: "pygmentize – highlights the input file"
 <h2>AUTHOR</h2>
 <p> pygmentize was written by Georg Brandl &lt;g.brandl [at] gmx.net&gt;. </p>
 <p> This manual page was written by Piotr Ozarowski &lt;ozarow [at] gmail.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

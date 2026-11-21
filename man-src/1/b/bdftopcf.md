@@ -39,4 +39,3 @@ description: "bdftopcf – convert X font from Bitmap Distribution Format to Por
 <p> <a href="/docs/linux/man/7-x/">X</a>(7)</p>
 <h2>AUTHOR</h2>
 <p> Keith Packard, MIT X Consortium </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "tv_grab_eu_epgdata – Grab TV listings for parts of Europe."
 &nbsp;<wbr><a rel="nofollow" href="http://thread.gmane.org/gmane.comp.tv.xmltv.devel/7919">http://thread.gmane.org/gmane.comp.tv.xmltv.devel/7919</a> <font SIZE="-1">FYI:</font> you can modify the time zone directly in the config file which is usually located at ~/.xmltv/tv_grab_eu_epgdata.conf or ~/.mythtv/FOO.xmltv where <font SIZE="-1">FOO</font> is the name of your video source in MythTV. </p>
 <p> If the data source gives us data for one day, they&#8217;ll also cover a part of the following day. Maybe this should be fixed. Please note: data is not overlapping! So if we want to get data for today, we might as well grab yesterday because that&#8217;ll give us <font SIZE="-1">EPG</font> till ~5am for today. </p>
 <p> I&#8217;m sure this list is not complete. Let me know if you encounter additional problems. </p>
-<h2>Index</h2>

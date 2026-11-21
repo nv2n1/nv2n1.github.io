@@ -213,4 +213,3 @@ description: "gpsdrive – displays GPS position on a map"
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. Indeed, you are encouraged to do so! </p>
 <h3>This document last modified</h3>
 <p> $Date: 2009-06-13 00:14:17 +0200 (Sat, 13 Jun 2009) $ </p>
-<h2>Index</h2>

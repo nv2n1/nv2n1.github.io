@@ -111,4 +111,3 @@ description: "mussh – MUltihost SSH"
 <p> Dave Fogarty &lt;doughnut at doughnut dot net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1), <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1) </p>
-<h2>Index</h2>

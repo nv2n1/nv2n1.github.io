@@ -32,4 +32,3 @@ description: "acl_error – convert an ACL error code to a text message"
 <p> acl_check3, acl_valid3, <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Written by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

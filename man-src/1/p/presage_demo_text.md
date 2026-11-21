@@ -26,4 +26,3 @@ description: "presage_demo_text – presage demo program (text)"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004 Matteo Vescovi.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE, to the extent permitted by law. </p>
-<h2>Index</h2>

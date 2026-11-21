@@ -30,4 +30,3 @@ description: "gnome-software – Install applications"
 </dt><dd> Starts gnome-software in the given mode. <i>MODE</i> can be &#8216;updates&#8217;, &#8216;updated&#8217;, &#8216;installed&#8217; or &#8216;overview&#8217;. The default mode is &#8216;overview&#8217;.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

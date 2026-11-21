@@ -35,4 +35,3 @@ description: "mdb_stat – LMDB environment status tool"
 <p> <code><a href="/docs/linux/man/1-mdb_copy/">mdb_copy</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Howard Chu of Symas Corporation &lt;<a rel="nofollow" href="http://www.symas.com">http://www.symas.com</a>&gt; </p>
-<h2>Index</h2>

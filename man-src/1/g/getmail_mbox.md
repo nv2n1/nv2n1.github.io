@@ -26,4 +26,3 @@ description: "getmail_mbox – read a message from stdin and deliver to a named 
  This is free software; see the file COPYING for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>getmail_mbox</code> is maintained in HTML and plaintext formats. See the included files for details. </p>
-<h2>Index</h2>

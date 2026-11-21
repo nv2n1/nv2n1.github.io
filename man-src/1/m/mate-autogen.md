@@ -20,4 +20,3 @@ description: "mate-autogen – generates all makefiles for MATE packages"
 <p> <code><a href="/docs/linux/man/1-autoconf/">autoconf</a></code>(1), <code><a href="/docs/linux/man/1-automake/">automake</a></code>(1), <code><a href="/docs/linux/man/1-autoreconf/">autoreconf</a></code>(1), <code><a href="/docs/linux/man/1-mate-doc-common/">mate-doc-common</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Perberos &lt;perberos [at] gmail.com&gt; </p>
-<h2>Index</h2>

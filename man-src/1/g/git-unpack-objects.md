@@ -40,4 +40,3 @@ git unpack - objects[-n][-q][-r][--strict]
 </dt><dd> Die, if the pack is larger than &lt;size&gt;.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

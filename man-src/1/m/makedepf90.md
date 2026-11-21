@@ -165,4 +165,3 @@ description: "makedepf90 – creates Makefile dependency list for Fortran source
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA </p>
 <h2>AUTHOR</h2>
 <p> Erik Edelmann &lt;Erik.Edelmann [at] iki.fi&gt; </p>
-<h2>Index</h2>

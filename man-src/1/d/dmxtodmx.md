@@ -15,4 +15,3 @@ description: "dmxtodmx – dmx configuration file parser and printer"
 <p> <i>dmxtodmx</i> reads the standard input, parsing a configuration file for the <i>Xdmx</i> distributed multi-head X server. After a successful parse, the file is pretty-printed to standard output.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xdmx/">Xdmx</a>(1), <a href="/docs/linux/man/1-vdltodmx/">vdltodmx</a>(1), <a href="/docs/linux/man/1-xdmxconfig/">xdmxconfig</a>(1) </p>
-<h2>Index</h2>

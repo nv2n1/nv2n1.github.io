@@ -36,4 +36,3 @@ description: "xliff2odf – Convert XLIFF translation files to OpenDocument (ODF
 <dt>-S/&#8211;timestamp</dt>
 <dd> skip conversion if the output file has newer timestamp </dd>
 </dl>
-<h2>Index</h2>

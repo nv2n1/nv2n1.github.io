@@ -44,4 +44,3 @@ description: "guilt-header – Print a patch header"
 <dt>
 </dt><dd> mailto:brandon [at] ifup.org</dd></dl>
 </dl>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ description: "Backup-light – backups up the active users $HOME directory"
 <dd>
 </dd><dt>Robert A. Kelly III &lt;bluethegrappler [at] gmail.com&gt;</dt>
 <dd></dd></dl>
-<h2>Index</h2>

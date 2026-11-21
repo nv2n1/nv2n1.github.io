@@ -83,4 +83,3 @@ description: "tv_grab_uk_rt – Grab TV listings for United Kingdom/Republic of 
 <h2>AUTHOR</h2>
 <p> Since 2007 the maintainer has been Nick Morrott (knowledgejunkie at gmail dot com). </p>
 <p> The original author was Ed Avis (ed at membled dot com). Parts of this code were copied from tv_grab_se_swedb by Mattias Holmlund, and from the <font SIZE="-1">XMLTV</font> wiki &lt;<a rel="nofollow" href="http://wiki.xmltv.org/">http://wiki.xmltv.org/</a>&gt;. Regional postcode information was kindly made available from &lt;<a rel="nofollow" href="http://www.ukfree.tv">http://www.ukfree.tv</a>&gt;. </p>
-<h2>Index</h2>

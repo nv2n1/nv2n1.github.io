@@ -17,4 +17,3 @@ description: "pnmtile – replicate a portable anymap into a specified size"
 <p> <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

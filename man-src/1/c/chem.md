@@ -259,4 +259,3 @@ moiety
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-pic/">pic</a></code>(1), <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1). </p>
 <p> You can still get the original chem awk source Its <code>README</code> file was used for this manual page. </p>
 <p> The other classical document on <i>chem</i> is <i>CHEM &#8211; A Program for Typesetting Chemical Structure Diagrams</i> [CSTR~#122] </p>
-<h2>Index</h2>

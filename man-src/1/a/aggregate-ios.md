@@ -40,4 +40,3 @@ description: "aggregate-ios – optimise a concatenated set of cisco/IOS prefix 
 <p> <code>Aggregate-ios</code> was written by Joe Abley &lt;jabley [at] mfnx.net&gt;. </p>
 <h2>BUGS</h2>
 <p> All those in <code><a href="/docs/linux/man/1-aggregate/">aggregate</a>(1)</code> and then some :) </p>
-<h2>Index</h2>

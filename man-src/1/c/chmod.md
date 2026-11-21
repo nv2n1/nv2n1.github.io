@@ -60,4 +60,3 @@ description: "chmod – change file mode bits"
 <p> <a href="/docs/linux/man/2-chmod/">chmod</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chmod">https://www.gnu.org/software/coreutils/chmod</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) chmod invocation&#8217; </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "synclient – commandline utility to query and modify Synaptics dr
 <dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xorg/">Xorg</a>(1), <a href="/docs/linux/man/1-syndaemon/">syndaemon</a>(1), <a href="/docs/linux/man/4-synaptics/">synaptics</a>(4) </p>
-<h2>Index</h2>

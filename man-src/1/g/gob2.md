@@ -572,4 +572,3 @@ foo = my_class_long_name;
 <h2>AUTHOR</h2>
 <p> George Lebl &lt;jirka [at] 5z.com&gt; </p>
 <p> GOB2 Homepage: <a rel="nofollow" href="http://www.jirka.org/gob.html">http://www.jirka.org/gob.html</a> </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "ppmrainbow – Generate a rainbow"
 <p> <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1), <code><a href="/docs/linux/man/1-pnmcomp/">pnmcomp</a></code>(1), <code><a href="/docs/linux/man/1-pbmtext/">pbmtext</a></code>(1), <code><a href="/docs/linux/man/1-ppmfade/">ppmfade</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5). </p>
 <h2>AUTHOR</h2>
 <p> Arjen Bax wrote <code>ppmrainbow</code> in June 2001 and contributed it to the Netpbm package. Bryan Henderson wrote this man page in July 2001. </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "ql/models/shortrate/onefactormodel.hpp – Abstract one-factor int
 <p> Abstract one-factor interest rate model class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

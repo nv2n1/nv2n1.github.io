@@ -53,4 +53,3 @@ SELECT dblink_build_sql_update('foo', '1 2', 2, '{"1", "a"}', '{"1", "b"}');
 dblink_build_sql_update-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -UPDATE foo SET f1 = '1', f2 = 'b', f3 = '1' WHERE f1 = '1' AND f2 = 'b'(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

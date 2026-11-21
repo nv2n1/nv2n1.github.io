@@ -78,4 +78,3 @@ description: "vcdxrip – manual page for vcdxrip 0.7.24"
 <dt>
 </dt><dd> <code>info vcdxrip</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

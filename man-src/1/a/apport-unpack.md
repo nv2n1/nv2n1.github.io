@@ -17,4 +17,3 @@ description: "apport-unpack – extract the fields of a problem report to separa
 <p> The <i>target-directory</i> must either be nonexisting or empty. </p>
 <h2>AUTHOR</h2>
 <p> <code>apport</code> and the accompanying tools are developed by Martin Pitt &lt;martin.pitt [at] ubuntu.com&gt;. </p>
-<h2>Index</h2>

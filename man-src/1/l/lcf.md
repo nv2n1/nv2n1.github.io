@@ -32,4 +32,3 @@ description: "lcf – Determine which of the historical versions of a config is 
 <p> There are no bugs. Any resemblance thereof is delirium. Really.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written Manoj Srivastava &lt;srivasta [at] debian.org&gt;, for the Debian GNU/Linux system. </p>
-<h2>Index</h2>

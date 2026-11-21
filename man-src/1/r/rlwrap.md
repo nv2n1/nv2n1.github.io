@@ -187,4 +187,3 @@ description: "rlwrap – readline wrapper"
 <dt><code><a href="/docs/linux/man/3-readline/">readline</a>(3), RlwrapFilter(3pm)</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

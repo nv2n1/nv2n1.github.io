@@ -17,4 +17,3 @@ description: "stg-init – Initialise the current branch for use with StGIT"
 <p> Initialise the current git branch to be used as an StGIT stack. The branch (and the git repository it is in) must already exist and contain at least one commit.</p>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

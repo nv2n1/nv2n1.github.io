@@ -26,4 +26,3 @@ description: "bluetoothctl: – interactive bluetooth control tool"
 <dt><code>&#8211;help</code></dt>
 <dd> Display help </dd>
 </dl>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "tv_grab_fi_sv – Grab TV listings for Finland in Swedish."
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Per Lundberg, (perlun at gmail dot com). Inspired/based on other grabbers, like tv_grab_uk_rt, tv_grab_se_swedb and tv_grab_fi. </p>
-<h2>Index</h2>

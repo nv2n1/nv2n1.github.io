@@ -53,4 +53,3 @@ description: "euform-update-stack – Update a stack’s template, parameters, o
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

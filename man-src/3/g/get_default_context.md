@@ -35,4 +35,3 @@ description: "get_ordered_context_list, get_ordered_context_list_with_level, get
 <p> <code>get_ordered_context_list</code>() and <code>get_ordered_context_list_with_level</code>() return the number of contexts in the list upon success or -1 upon errors. The other functions return 0 for success or -1 for errors.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-freeconary/">freeconary</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-security_compute_av/">security_compute_av</a></code>(3), <code><a href="/docs/linux/man/3-getseuserbyname/">getseuserbyname</a></code>(3) </p>
-<h2>Index</h2>

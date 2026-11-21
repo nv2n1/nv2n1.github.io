@@ -27,4 +27,3 @@ description: "vprerex – graphical front-end and viewer for the"
 <p> R. D. Tennent (rdt [at] cs.queensu.ca), adapted from David Boddie&#8217;s PDFviewer, described in the QT Quarterly: <code><a rel="nofollow" href="http://doc.trolltech.com/qq/QtQuarterly27.pdf.">http://doc.trolltech.com/qq/QtQuarterly27.pdf.</a></code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1), <code><a href="/docs/linux/man/5-prerex/">prerex</a></code>(5), <code>prerex.sty</code>(7), and <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1). </p>
-<h2>Index</h2>

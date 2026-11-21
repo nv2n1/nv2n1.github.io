@@ -112,4 +112,3 @@ xset dpms force off
 <h2>AUTHOR</h2>
 <p> Jamie Zawinski &lt;jwz [at] jwz.org&gt;, 13-aug-1992. </p>
 <p> Please let me know if you find any bugs or make any improvements. </p>
-<h2>Index</h2>

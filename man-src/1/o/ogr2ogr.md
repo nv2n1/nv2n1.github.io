@@ -162,4 +162,3 @@ Usage : ogr2ogr[--help - general][-skipfailures][-append][-update]
 <p> More examples are given in the individual format pages.</p>
 <h2>AUTHOR</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

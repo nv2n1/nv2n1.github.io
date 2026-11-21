@@ -31,4 +31,3 @@ description: "gnutls_transport_set_global_errno – API function"
 <dt>
 </dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

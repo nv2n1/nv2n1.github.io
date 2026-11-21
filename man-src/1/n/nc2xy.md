@@ -35,4 +35,3 @@ description: "nc2xy – Converting netCDF column file(s) to ASCII xy data"
 <p> <code>nc2xy</code> <code>-F</code>lat/lon/height <code>-S</code> trackfile.nc &gt; trackfile.xy</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmtdefaults/">gmtdefaults</a></i>(1), <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-psxy/">psxy</a></i>(1), <i><a href="/docs/linux/man/1-psxyz/">psxyz</a></i>(1), <i><a href="/docs/linux/man/1-xyz2grd/">xyz2grd</a></i>(1) </p>
-<h2>Index</h2>

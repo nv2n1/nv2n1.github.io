@@ -54,4 +54,3 @@ description: "mmafm – creates AFM font metrics for multiple master fonts"
  <a rel="nofollow" href="http://www.lcdf.org/type/">http://www.lcdf.org/type/</a><br />
  AMFM and AFM files for Adobe Type Library fonts are also available at that URL. </p>
 <p> Thanks to Melissa O&#8217;Neill for suggestions and patient debugging. </p>
-<h2>Index</h2>

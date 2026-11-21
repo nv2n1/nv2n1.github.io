@@ -39,4 +39,3 @@ description: "dicar – Archive Binary Dictionary"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dpbindic/">dpbindic</a>(1), <a href="/docs/linux/man/1-mkbindic/">mkbindic</a>(1) </p>
-<h2>Index</h2>

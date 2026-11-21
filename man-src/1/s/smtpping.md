@@ -44,4 +44,3 @@ description: "smtpping – SMTP benchmarking and measurement tool"
 <dd> Display more verbose output.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An -nosplit The program was written by An Anders Berggren Aq Mt anders [at] desh.se and An Erik Lax Aq Mt erik [at] datahack.se for Halon Security AB. </p>
-<h2>Index</h2>

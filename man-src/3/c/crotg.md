@@ -37,4 +37,3 @@ description: "crotg.f –"
 <p> Definition at line 40 of file crotg.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

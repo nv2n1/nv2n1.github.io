@@ -40,4 +40,3 @@ description: "tv_grab_is – Grab TV listings for Iceland."
 <dt>Around line 64:</dt>
 <dd> Non-ASCII character seen before =encoding in &#8216;<font SIZE="+2">I</font>oor&#8217;. Assuming <font SIZE="-1">UTF-8</font> </dd>
 </dl>
-<h2>Index</h2>

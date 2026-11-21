@@ -20,4 +20,3 @@ description: "ppmquantall – run ppmquant on a bunch of files all at once, so t
 <p> <code><a href="/docs/linux/man/1-ppmquant/">ppmquant</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a>(5)</code> </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

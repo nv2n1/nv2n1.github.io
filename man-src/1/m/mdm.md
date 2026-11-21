@@ -36,4 +36,3 @@ description: "MDM – The MDM Display Manager"
 <p> <code>MDM</code> is being written and maintained by George (Jiri) Lebl &lt;jirka [at] 5z.com&gt; based on the original codebase by Martin K. Peterson &lt;mkp [at] mkp.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code>X</code>(7x), <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1), <code>Xsecurity</code>(7x), <code><a href="/docs/linux/man/1-xserver/">Xserver</a></code>(1), </p>
-<h2>Index</h2>

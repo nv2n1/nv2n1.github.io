@@ -119,4 +119,3 @@ $ git reauthor-- all-- correct - email jack[at] perso.me-- correct - name Jack--
 <p> &lt;<i><a rel="nofollow" href="http://github.com/tj/git-extras/issues">http://github.com/tj/git-extras/issues</a></i>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
-<h2>Index</h2>

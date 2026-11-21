@@ -15,4 +15,3 @@ description: "xsetpointer – set an X Input device as the main pointer"
 <p> Xsetpointer sets an XInput device as the main pointer. When called with the -l flag it lists the available devices. When called with the -c/+c flag, it toggles the sending of core input events, for servers which implement a virtual core pointer; -c disables core events, and +c enables.</p>
 <h2>AUTHOR</h2>
 <p> Frederic Lepied </p>
-<h2>Index</h2>

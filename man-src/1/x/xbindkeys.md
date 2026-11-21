@@ -134,4 +134,3 @@ $HOME/.xbindkeysrc.scm
 <code>/usr/include/X11/keysymdef.h</code>
     X11 KeySym definitions.
 </pre>
-<h2>Index</h2>

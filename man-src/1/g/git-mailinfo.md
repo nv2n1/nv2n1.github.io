@@ -88,4 +88,3 @@ git mailinfo[-k | -b][-u | --encoding = &lt;encoding&gt; | -n]
 </dt><dd> The patch extracted from e-mail.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "mkindex – script to process LaTeX index and glossary files"
 <h2>AUTHOR</h2>
 <p> Written by Thomas Esser &lt;te [at] informatik.uni-hannover.de&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;c@eskimo.com&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

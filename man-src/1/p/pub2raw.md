@@ -14,4 +14,3 @@ description: "Usage: – debug the conversion library"
 <h2>OPTIONS</h2>
 <p> <code>&#8211;callgraph</code> Display the call graph nesting level <code>&#8211;help</code> Shows this help message </p>
 <p> <code>&#8211;callgraph</code> Display the call graph nesting level <code>&#8211;help</code> Shows this help message </p>
-<h2>Index</h2>

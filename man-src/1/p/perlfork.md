@@ -162,4 +162,3 @@ if (pipe_from_fork('BAR')) {
 <p> This document is authored and maintained by Gurusamy Sarathy &lt;gsar [at] activestate.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> &#8220;fork&#8221; in perlfunc, perlipc </p>
-<h2>Index</h2>

@@ -14,4 +14,3 @@ description: "cinnamon-menu-editor – Editor for the panel menu"
 <p> <code>cinnamon-menu-editor</code> runs the graphical user interface allowing to edit the menu displayed in cinnamon.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon-settings/">cinnamon-settings</a></code>(1) </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "compface, uncompface – compress and expand 48x48x1 face image fi
 <p> The return value is normally 0. 1 will be returned if extra input has been ignored during a compress operation. -1 is returned in the case of an invalid input format. -2 is returned if an internal buffer overrun occurs.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-compface/">Compface</a>(1) </p>
-<h2>Index</h2>

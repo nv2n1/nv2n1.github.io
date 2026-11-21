@@ -51,4 +51,3 @@ description: "krb5_initlog krb5_openlog krb5_closelog krb5_addlog_dest krb5_addl
 <h2>BUGS</h2>
 <p> These functions use Fn asprintf to format the message. If your operating system does not have a working Fn asprintf , a replacement will be used. At present this replacement does not handle some correct conversion specifications (like floating point numbers). Until this is fixed, the use of these conversions should be avoided. </p>
 <p> If logging is done to the syslog facility, these functions might not be thread-safe, depending on the implementation of Fn openlog , and Fn syslog . </p>
-<h2>Index</h2>

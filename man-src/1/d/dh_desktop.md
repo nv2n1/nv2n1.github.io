@@ -19,4 +19,3 @@ description: "dh_desktop – deprecated no-op"
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Ross Burton &lt;ross [at] burtonini.com&gt; </p>
-<h2>Index</h2>

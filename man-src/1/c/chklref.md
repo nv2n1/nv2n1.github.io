@@ -42,4 +42,3 @@ description: "chklref – manual page for chklref 3.1.2"
 <dt>
 </dt><dd> <code>info chklref</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

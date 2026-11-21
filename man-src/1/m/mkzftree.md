@@ -58,4 +58,3 @@ description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>mkisofs</code>(8) </p>
-<h2>Index</h2>

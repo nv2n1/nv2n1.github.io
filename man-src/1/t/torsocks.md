@@ -56,4 +56,3 @@ $ . torsocks off
 <p> Mailing list for help is &lt;tor-talk [at] lists.torproject.org&gt; and for development use &lt;tor-dev [at] lists.torproject.org&gt;. You can find the project also on IRC server irc.oftc.net (OFTC) in #tor and #tor-dev. </p>
 <h2>AUTHOR</h2>
 <p> torsocks was originally written by Robert Hogan and has been rewritten by David Goulet &lt;dgoulet [at] torproject.org&gt; in 2013. </p>
-<h2>Index</h2>

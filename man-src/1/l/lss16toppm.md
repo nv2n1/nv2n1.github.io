@@ -23,4 +23,3 @@ description: "lss16toppm — Convert an LSS-16 image to PPM"
 <p> <code><a href="/docs/linux/man/1-ppmtolss16/">ppmtolss16</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was compiled by dann frazier &lt;dannf [at] debian.org&gt; for the <code>Debian GNU/Linux</code> system (but may be used by others). </p>
-<h2>Index</h2>

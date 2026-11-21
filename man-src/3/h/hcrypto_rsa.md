@@ -97,4 +97,3 @@ description: "RSA functions –"
 </dt><dd> the current reference count, can&#8217;t safely be used except for debug printing.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdal crypto library from the source code. </p>
-<h2>Index</h2>

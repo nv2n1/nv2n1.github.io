@@ -20,4 +20,3 @@ description: "vo_maketags – build TAGS for vim outliner"
 <p> <code><a href="/docs/linux/man/1-vim/">vim</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Matej Cepl &lt;matej [at] ceplovi.cz&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -415,4 +415,3 @@ the original value before and after the filter is applied.
 </dt><dd> Show only perf.data header (forces &#8211;stdio).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-stat/">perf-stat</a></code>(1), <code><a href="/docs/linux/man/1-perf-annotate/">perf-annotate</a></code>(1) </p>
-<h2>Index</h2>

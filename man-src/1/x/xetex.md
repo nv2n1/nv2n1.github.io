@@ -35,4 +35,3 @@ description: "xetex – extended TeX with native support for Unicode, OpenType, 
  Public discussion list: &lt;<a rel="nofollow" href="http://lists.tug.org/xetex">http://lists.tug.org/xetex</a>&gt;<br />
  Bug reports: &lt;<a rel="nofollow" href="http://sourceforge.net/p/xetex/bugs/">http://sourceforge.net/p/xetex/bugs/</a>&gt; </p>
 <p> This manual page was written by Karl Berry. It is released to the public domain. </p>
-<h2>Index</h2>

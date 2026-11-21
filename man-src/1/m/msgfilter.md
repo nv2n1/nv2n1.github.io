@@ -100,4 +100,3 @@ description: "msgfilter – edit translations of message catalog"
 <dt>
 </dt><dd> <code>info msgfilter</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

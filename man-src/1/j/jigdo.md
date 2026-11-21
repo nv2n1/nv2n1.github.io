@@ -19,4 +19,3 @@ description: "jigdo – GTK+ download manager."
 <p> <code><a href="/docs/linux/man/1-jigdo-lite/">jigdo-lite</a></code>(1), <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1), <code>jigdo-mirror</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Jigsaw Download &lt;URL:<a rel="nofollow" href="http://atterer.net/jigdo/">http://atterer.net/jigdo/</a>&gt; was written by Richard Atterer &lt;jigdo atterer.net&gt;, to make downloading of CD ROM images for the Debian Linux distribution more convenient. </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "yubikey-personalization-gui – personalize YubiKey OTP tokens"
 <p> Report yubikey-personalization-gui bugs in the issue tracker &lt;URL: <a rel="nofollow" href="https://github.com/Yubico/yubikey-personalization-gui/issues">https://github.com/Yubico/yubikey-personalization-gui/issues</a> &gt;</p>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico &lt;URL: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> &gt;. </p>
-<h2>Index</h2>

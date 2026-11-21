@@ -19,4 +19,3 @@ description: "system-switch-displaymanager – graphical and text mode interface
 <pre>
 Than Ngo &lt;than [at] redhat.com&gt;
 </pre>
-<h2>Index</h2>

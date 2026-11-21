@@ -63,4 +63,3 @@ description: "deghosting_mask – Creates mask for removing ghosting in images"
 <dd> Verbose, repeat for more verbose output</dd></dl>
 <h2>AUTHORS</h2>
 <p> LukaX Jirkovsky </p>
-<h2>Index</h2>
