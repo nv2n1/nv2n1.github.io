@@ -1,7 +1,9 @@
 {{ define "main" }}
 <p class="crumbs"><a href="/docs/linux/man/">Linux Manual Pages</a> › <a href="/docs/linux/man/{{ .Params.section }}/">Section {{ .Params.section }}</a></p>
 <article>
-<h1>{{ .Title }}</h1>
+<header class="man-header">
+  <h1>{{ .Title }}</h1>
+</header>
 {{ $lengthTag := "" }}
 {{ with index .Site.Data "man-page-length" }}
 {{ $lengthTag = index . $.Params.url }}
