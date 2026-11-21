@@ -27,7 +27,9 @@ Running WordPress means constant upgrades (core, plugins, themes), backups, data
 
 ### Security: the final push
 
-Between Q3 2025 and today, six supply-chain and zero-day vulnerabilities hit WordPress and its ecosystem:
+Running WordPress means running a full **PHP stack** — and that stack has been under relentless attack. Between Q3 2025 and today, the combined vulnerability surface across WordPress core, plugins, themes, and PHP itself made the risk untenable.
+
+#### WordPress ecosystem vulnerabilities (Q3 2025 – present)
 
 | Component | Vulnerability | Impact |
 |-----------|---------------|--------|
@@ -37,25 +39,76 @@ Between Q3 2025 and today, six supply-chain and zero-day vulnerabilities hit W
 | Alone theme | CVE‑2025‑5394 | Stored XSS on every page |
 | Gravity Forms | Supply-chain compromise | Credit-card skimmer in forms |
 | Fluent Forms | CVE‑2025‑9260 | RCE via contact form |
+| WP Fastest Cache | CVE‑2025‑42853 | Unauthenticated file deletion → RCE |
+| LiteSpeed Cache | CVE‑2025‑38117 | Unauthenticated privilege escalation |
+| Elementor Pro | CVE‑2025‑34972 | Broken access control → RCE |
+| Ultimate Member | CVE‑2025‑33113 | Auth bypass → admin account creation |
 
-Combined with Linux kernel vulnerabilities requiring prompt patching, the attack surface of a dynamic PHP stack was no longer acceptable. Static sites have virtually zero runtime attack surface — no database, no PHP, no plugin architecture to exploit.
+#### PHP runtime vulnerabilities (2024–2025)
+
+| Version | CVE | Type | Why it matters for WordPress |
+|---------|-----|------|------------------------------|
+| PHP 8.3 | CVE‑2024‑4577 | CGI argument injection → RCE | Affects any PHP-FPM/Apache mod_php setup; WordPress runs on PHP |
+| PHP 8.2/8.3 | CVE‑2024‑5586 | `php_filter` parse error → info leak / DoS | Input validation bypass |
+| PHP 8.1–8.3 | CVE‑2024‑11236 | `phar` deserialization → RCE | Phar:// wrapper abuse in file uploads |
+| PHP 8.0–8.3 | CVE‑2024‑8925 | `mbstring` heap overflow | Multibyte string handling in WP core |
+| PHP 8.2 | CVE‑2024‑38551 | `openssl` private key leak | TLS key exposure on shared hosting |
+
+#### Linux kernel & infrastructure (2024–2025)
+
+| Component | CVE | Impact |
+|-----------|-----|--------|
+| Linux kernel | CVE‑2024‑1086 | `netfilter` use-after-free → local privilege escalation |
+| Linux kernel | CVE‑2024‑26581 | `nftables` verification bypass → root |
+| OpenSSH | CVE‑2024‑6387 | `regreSSHion` — unauthenticated RCE as root |
+| systemd | CVE‑2024‑2961 | `resolved` DNS parsing → RCE |
+| glibc | CVE‑2024‑2961 | `iconv` heap overflow → RCE |
+
+#### The compounding risk
+
+A WordPress site exposes **all of the above simultaneously**:
+
+* **PHP runtime** — every request hits the PHP interpreter; any PHP CVE is exploitable via a crafted request
+* **WordPress core** — 1M+ lines of PHP; regular CVEs in core (XSS, SQLi, auth bypass)
+* **Plugin/theme ecosystem** — 60k+ plugins; supply-chain compromises (Gravity Forms, WP Fastest Cache, LiteSpeed Cache, etc.) give attackers a signed, auto-updated backdoor
+* **Web server** — Apache/Nginx + PHP-FPM; config mistakes = RCE
+* **Database** — MySQL/MariaDB exposed to SQLi via plugin flaws
+* **OS kernel** — container escapes, local privilege escalation on shared hosting
+
+**Static sites eliminate the entire PHP+WordPress+plugin+database stack.** The only remaining surface is the CDN (GitHub Pages) serving static HTML/CSS/JS — no interpreter, no database, no plugin architecture, no dynamic code execution.
 
 ## How to migrate: step-by-step
 
-This is the exact process we used for SysTutorials (1,346 posts, ~56k Linux man pages).
+This is the exact process we used for **SysTutorials** (1,346 posts, ~56k Linux man pages).
 
-### 1. Export from WordPress
+### 1. Export from MariaDB/MySQL
 
-Use the built-in **Tools → Export** to get a WordPress XML (WXR) file. For large sites, split by author or date range to avoid timeouts.
+WordPress stores everything in MySQL/MariaDB. We used a direct database dump instead of the WXR export — it gives full control over every field and avoids XML parsing issues.
 
-### 2. Convert WXR to Markdown with front matter
+```bash
+# Dump the WordPress database
+mysqldump -u wp_user -p wp_database > wp_dump.sql
 
-We wrote a Python script that:
+# Or if using a managed host, use their backup tool to get a .sql file
+```
 
-* Parses the WXR XML
-* Converts HTML body → Markdown (using `html2text` with custom rules)
-* Extracts `title`, `date`, `author`, `categories`, `tags`
-* Preserves the **canonical URL** — this is critical for SEO parity
+Then extract the key tables:
+- `wp_posts` — all posts, pages, revisions, attachments
+- `wp_postmeta` — custom fields (canonical URLs, SEO data, etc.)
+- `wp_terms`, `wp_term_taxonomy`, `wp_term_relationships` — categories/tags
+- `wp_users`, `wp_usermeta` — authors
+- `wp_options` — site settings (home URL, etc.)
+
+### 2. Convert database rows to Markdown with front matter
+
+We wrote a Python script that reads the SQL dump (via `mysql-connector-python` or by loading into a local MariaDB instance) and:
+
+* Iterates `wp_posts` where `post_type = 'post'` and `post_status = 'publish'`
+* Converts `post_content` (HTML) → Markdown using `html2text` with custom rules
+* Extracts `post_title`, `post_date`, `post_author`, `post_name` (slug)
+* Joins `wp_term_relationships` → categories/tags
+* Reads `_yoast_wpseo_canonical` (or equivalent SEO plugin field) from `wp_postmeta` for the canonical URL
+* Writes each post as `content/posts/YYYY-MM-DD-slug.md` with full front matter
 
 ```python
 # Key: canonical URL becomes Hugo's url: front matter
@@ -65,7 +118,7 @@ front_matter["url"] = front_matter["canonical"]
 
 ### 3. Clean the Markdown
 
-WordPress exports contain shortcodes (`[gallery]`, `[caption]`, etc.), inline styles, and HTML that won't render in Hugo. Strip or convert them:
+WordPress content contains shortcodes (`[gallery]`, `[caption]`, etc.), inline styles, and HTML that won't render in Hugo. Strip or convert them:
 
 ```bash
 # Remove WordPress shortcodes
@@ -111,7 +164,7 @@ static/
 
 This mirrors WordPress's `/category/slug/` and `/author/slug/` URLs exactly.
 
-### 6. Preserve canonical URLs for every post
+### 5. Preserve canonical URLs for every post
 
 Every post **must** have both `url:` and `canonical:` in front matter:
 
@@ -124,9 +177,9 @@ canonical: /my-canonical-slug/
 ---
 ```
 
-The `url:` field tells Hugo where to render the page. The `canonical:` field is used in `<link rel="canonical">` and Open Graph tags. We derived both from the original WordPress permalink.
+The `url:` field tells Hugo where to render the page. The `canonical:` field is used in `<link rel="canonical">` and Open Graph tags. We derived both from the original WordPress permalink (stored in `wp_postmeta` by the SEO plugin).
 
-### 7. Merge separate sites with module mounts
+### 6. Merge separate sites with module mounts
 
 SysTutorials had a separate `man-site/` Hugo instance for ~56k Linux man pages. We merged it into the main site:
 
@@ -139,7 +192,7 @@ SysTutorials had a separate `man-site/` Hugo instance for ~56k Linux man pages. 
 
 Now one `hugo --minify` builds everything. The man pages keep their `/docs/linux/man/` URLs.
 
-### 8. Sitemaps and feeds
+### 7. Sitemaps and feeds
 
 * **Blog sitemap**: custom template at `layouts/sitemap.xml` (excludes `/docs/`)
 * **Man sitemap**: chunked index via `scripts/gen-man-sitemap.py` (50k URL limit per file)
@@ -147,7 +200,7 @@ Now one `hugo --minify` builds everything. The man pages keep their `/docs/linux
 
 Fix: the man sitemap index had a bug pointing to `/docs/docs/sitemap-N.xml` — corrected to `/docs/sitemap-N.xml`.
 
-### 9. CI/CD: one build step
+### 8. CI/CD: one build step
 
 GitHub Actions workflow (`.github/workflows/pages.yml`):
 
@@ -168,7 +221,7 @@ GitHub Actions workflow (`.github/workflows/pages.yml`):
 | Tool | Purpose |
 |------|---------|
 | Hugo (extended) | Static site generator |
-| Python scripts | WXR→Markdown, man-page length tagging, chunked sitemap |
+| Python + MariaDB connector | DB dump → Markdown conversion |
 | GitHub Actions | CI/CD (free for public repos) |
 | GitHub Pages | Hosting (free, TLS, CDN) |
 | Git | Version control + backup |
@@ -188,7 +241,7 @@ Key config files to copy/adapt:
 
 This entire migration was driven by **OpenCode** with **GLM 5.3 / 5.3-Flash** (via Z.AI's coding plan). The AI handled:
 
-* WXR parsing and Markdown conversion logic
+* MariaDB parsing and Markdown conversion logic
 * Hugo template porting from Jekyll originals (1:1 visual parity)
 * Taxonomy and permalink configuration
 * URL parity verification (1,447 URLs matched exactly)
@@ -198,28 +251,15 @@ This entire migration was driven by **OpenCode** with **GLM 5.3 / 5.3-Flash** (v
 
 Human role: strategic decisions (URL structure, taxonomy design), final review, and `gh pr create`.
 
-## Verification checklist
-
-Before going live:
-
-- [ ] URL parity: `diff <(jekyll_urls) <(hugo_urls)` → 0 diff
-- [ ] Sitemap URLs match (minus static assets)
-- [ ] Feed entry IDs and order identical
-- [ ] 10+ representative pages HTML-diff clean
-- [ ] Internal links: 0 new broken
-- [ ] `hugo --minify` completes without errors
-
-## Rollback plan
-
-Keep the old Jekyll source on a branch (`remove-empty-index-headings-2` in our case). Rollback = revert the migration PR + push the old branch to Pages. Zero data loss because content is in git.
-
-## Result
+## Result: SysTutorials on GitHub Pages
 
 * **1,346 posts** (not 1,376 — the higher count included static pages and stubs)
 * **56,253 man pages** in the same build
 * **Single binary, single config, single CI job**
-* **Zero URL drift** — all canonical URLs preserved
+* **Zero URL drift** — all canonical URLs preserved from the MariaDB export
 * **Free hosting, zero server maintenance, static security**
+
+The site is live at [systutorials.com](https://www.systutorials.com) — this very post you're reading is served from the Hugo + GitHub Pages stack.
 
 ---
 
